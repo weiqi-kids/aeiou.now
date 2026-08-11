@@ -231,6 +231,9 @@ const jumpTopics = (navTopics && navTopics.length ? navTopics : hotTopics(2)).fi
   main {
     flex: 1 0 auto;
     padding-block: clamp(1.5rem, 4vw, 3rem) clamp(3rem, 7vw, 5rem);
+    /* 2026-08-11 用戶指示:main 的左右內距歸零(截圖裡那條綠色的寬度)。
+       .container 的 padding-inline 在此被覆蓋,內容直接貼齊 main 的邊。 */
+    padding-inline: 0;
   }
 
   .site-footer {

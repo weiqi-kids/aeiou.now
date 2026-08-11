@@ -36,7 +36,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import DiscussionRoom from '../../components/DiscussionRoom.astro';
 import { t } from '../../lib/i18n.mjs';
-import { LOCALE, LOCALES, REACTION_SET } from '../../lib/config.mjs';
+import { LOCALE, REACTION_SET } from '../../lib/config.mjs';
 import { monthDay, dateTime, countryFlag } from '../../lib/format.mjs';
 import { withBase } from '../../lib/paths.mjs';
 import {
@@ -55,27 +55,10 @@ export function getStaticPaths() {
     .filter(Boolean);
 }
 
-const ASK_THE_WORLD_SLUG = 'ask-the-world'; // §45 的跨國提問就是這個長青 Topic
-
 const { topicId } = Astro.props;
-const { facts, i18n, highlightItems } = getTopicBundle(topicId);
+const { facts, i18n } = getTopicBundle(topicId);
 const loc = (i18n && i18n.locales && i18n.locales[LOCALE]) || {};
 const title = loc.title || (facts && facts.canonical_name) || topicId;
-
-// 頁首的「多國語言並陳」:當前站台語系排第一(主角),其餘六語照 LOCALES 的順序跟在後面,
-// 全部疊在同一個 .head-primary 裡當成一串 <p class="topic-lede">——**不另開區塊**。
-// 每一段取**該語系自己的 summary**(i18n.json 的 locales.<code>.summary,七語各寫各的)。
-// 語系標示用該語系的自稱(endonym),走 i18n 的 locale.<code> key,模板不寫死任何語言的字。
-// 沒有 summary 的語系直接不列(資料還沒補上就不假造)。
-const ledes = [LOCALE, ...LOCALES.filter((code) => code !== LOCALE)]
-  .map((code) => {
-    const entry =
-      code === LOCALE ? loc : (i18n && i18n.locales && i18n.locales[code]) || null;
-    const summary = (entry && entry.summary) || '';
-    if (!summary) return null;
-    return { code, label: t(`locale.${code}`), summary, primary: code === LOCALE };
-  })
-  .filter(Boolean);
 
 // cover 圖(1200×630,同時餵 og:image)。檔案不存在時 coverPath() 回 null,
 // 整個 <figure> 就不渲染——不留破圖,版面照樣成立。
@@ -86,11 +69,8 @@ const coverSrc = coverRel ? withBase(coverRel) : null;
 const countries = ((facts && facts.countries) || [])
   .slice()
   .sort((a, b) => (a.popularity_rank || 99) - (b.popularity_rank || 99));
-const hlList = highlightItems;
 const places = placesForTopic(topicId);
 const events = eventsForTopic(topicId);
-const isAskTheWorld = (facts && facts.slug) === ASK_THE_WORLD_SLUG;
-const askHref = withBase(`topic/${ASK_THE_WORLD_SLUG}/`);
 
 // 導覽列尾端的「直接跳進看板」在 Topic 頁上改列**相關議題**(facts.json 的 relations,
 // 草案 §48 Topic Graph);沒有相關議題就退回熱門 Topic。當前這一頁自己不列(BaseLayout 會濾掉)。
@@ -146,15 +126,9 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
               {t('topic.how_world_celebrates')} <span aria-hidden="true">↓</span>
             </a>
           )}
-          {ledes.map((lang) => (
-            <p
-              class:list={['topic-lede', lang.primary && 'topic-lede--primary']}
-              lang={lang.code}
-            >
-              <span class="lang-label">{lang.label}</span>
-              {lang.summary}
-            </p>
-          ))}
+          {/* 只有本站語系的說明。「不同語系顯示相同 Topic 說明」指的是**七個站各自顯示自己的語言**
+              (ja 站看到日文、pt-BR 站看到葡文),不是把七語堆在同一頁,也不標示這是哪一國語言。 */}
+          {loc.summary && <p class="topic-lede">{loc.summary}</p>}
         </div>
       </div>
     </header>
@@ -243,45 +217,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
 
     <!-- 🌎 Ask the World(§45):M1 只做入口,跨國提問功能屬後續里程碑。
          ask-the-world 自己就是那個長青 Topic,所以在它自己的頁面上不再放入口。 -->
-    {!isAskTheWorld && (
-      <section class="zone-ask" id="ask">
-        <a class="ask-link" href={askHref}>
-          <span class="ask-emoji" aria-hidden="true">🌎</span>
-          <span class="ask-body">
-            <span class="ask-title">{t('topic.ask_the_world')}</span>
-            <span class="ask-cta">{t('topic.ask_the_world_cta')}</span>
-          </span>
-          <span class="ask-arrow" aria-hidden="true">→</span>
-        </a>
-      </section>
-    )}
 
-    <!-- 歷史精華:不在 §44 的清單裡,資料恆為空,收在最後、最低視覺權重 -->
-    <section class="zone-highlights" id="highlights">
-      <h2 class="quiet-head">{t('topic.highlights')}</h2>
-      {hlList.length === 0 && <p class="empty">{t('topic.highlights_empty')}</p>}
-      {hlList.map((hl) => {
-        const text =
-          hl.original_locale === LOCALE
-            ? hl.content
-            : (hl.translations && hl.translations[LOCALE]) || hl.content;
-        const translated = hl.original_locale !== LOCALE && hl.translations && hl.translations[LOCALE];
-        return (
-          <article class="highlight">
-            <p class="highlight-content">{text}</p>
-            <p class="highlight-meta">
-              {countryName(hl.country_code)} · {hl.cycle_label}
-            </p>
-            {translated && (
-              <details>
-                <summary>{t('post.show_original')}</summary>
-                <p class="highlight-original">{hl.content}</p>
-              </details>
-            )}
-          </article>
-        );
-      })}
-    </section>
 
     <!-- 🌎 全世界怎麼過:整頁最後一段(第 11 輪用戶指示)。頁首那個「🌎 … ↓」連結照舊指過來,
          現在等於捲到頁尾。國旗列是這一段的索引,所以緊貼在它前面。 -->
