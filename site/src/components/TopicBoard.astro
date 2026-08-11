@@ -5,17 +5,18 @@
 //
 // 一律用 <ol>:四個頁面列出來的都是「排過序的」Topic,順序本身有意義(名次、當令、在地資訊多寡、
 // 最近的活動)。名次數字只有全球熱門那一組有,其他排序不硬掰名次。
+//
+// 每一列都帶貼文(2026-08-11 用戶指正:「全球熱門、熱門話題、附近訊息、活動資訊都是像
+// #trending > ol 這樣以看板為主的清單」)。四個頁面的列長得一模一樣——左欄主題介紹、
+// 右欄該 Topic 最高的三篇——所以沒有「要不要掛貼文」這個開關,掛貼文是看板列的定義。
 import TopicRow from './TopicRow.astro';
 
-// withPosts:首頁把每個 Topic 底下的 N 則 Post 一起列出來(階層 Topic → Post)。
-// 其他三個排序頁只是清單,不掛貼文,所以預設 false。
 interface Props {
   rows: Array<Record<string, any>>;
   empty: string;
   win?: string;
-  withPosts?: boolean;
 }
-const { rows, empty, win = '24h', withPosts = false } = Astro.props;
+const { rows, empty, win = '24h' } = Astro.props;
 ---
 
 {rows.length === 0 && <p class="board-empty">{empty}</p>}
@@ -29,7 +30,6 @@ const { rows, empty, win = '24h', withPosts = false } = Astro.props;
         marker={row.marker ?? null}
         tags={row.tags || []}
         note={row.note ?? null}
-        showPosts={withPosts}
       />
     ))}
   </ol>

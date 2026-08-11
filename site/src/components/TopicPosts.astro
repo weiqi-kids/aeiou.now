@@ -2,14 +2,17 @@
 // 首頁每個 Topic 底下掛的 N 則 Post(2026-08-11 用戶指正的階層:
 // World → Topic(看板) → Post(討論串) → Comment)。
 //
-// 首頁列的是 Topic 清單,但 Topic 不是一條光禿禿的標題:那個議題裡「現在正在被討論的貼文」
-// 本來就屬於它底下,所以貼文直接掛在該 Topic 那一列下面,不另開一區把同一批資料重排一次
+// 四個排序頁(全球熱門 = 首頁 / 熱門話題 / 附近訊息 / 活動資訊)列的都是 Topic 清單,而 Topic
+// 不是一條光禿禿的標題:那個議題裡正在被討論的貼文本來就屬於它底下,所以每一列都是
+// 「左邊主題介紹、右邊該 Topic 最高的三篇」,不另開一區把同一批資料重排一次
 // ——同一批資料在同一頁出現兩次就是階層沒分清楚(這一輪刪掉 #talking 的理由)。
 //
-// 資料來源是**現有端點**:GET /v1/topics/:id/feed?sort=new&limit=3&comments=0
-//   · sort=new  → 草案 §55「首頁必須有現在」的 NOW/NEW,取最新
+// 資料來源是**現有端點**:GET /v1/topics/:id/feed?sort=hot&limit=3&comments=0
+//   · sort=hot  → 用戶指正(2026-08-11):右欄要的是該 Topic「最高的三篇」,不是最新的三篇。
+//                 hot 的 M1 定義見 api-contract §1:reactions 的 distinct actor 數 + comments,
+//                 tie-break created_at DESC(不是 posts.hot_score,那個 M1 恆 0)。
 //   · limit=3   → 每個看板露 3 則,列表頁不是討論頁,要進去才看全部
-//   · comments=0→ 首頁不列留言內容,只給留言總數(comment_count 與 comments 陣列是兩回事)
+//   · comments=0→ 清單頁不列留言內容,只給留言總數(comment_count 與 comments 陣列是兩回事)
 // 沒有新增任何端點、沒有動 Worker。
 //
 // 降級模型(與 DiscussionRoom 一致,不可動):
@@ -19,6 +22,11 @@
 //   · PUBLIC_API_URL 未設 → 完全不發 fetch,永遠 closed
 //   · 一律 credentials: 'include'(anon_id 是跨站 cookie)
 //   · 使用者內容一律 textContent / createTextNode,絕不 innerHTML
+//
+// 「關閉」與「空」是兩件事,不可混用(用戶 2026-08-11 指正):
+//   · 關閉 data-room-state="closed" = 動態層不可用(fetch 失敗/非 2xx/JSON 壞/未設 API 位址)
+//   · 空                              = fetch **成功**但 posts 為 0 筆 → 容器照樣是 "open",
+//                                       改印「還沒有人在這個議題發言」+ 進 Topic 頁的入口
 //
 // 譯文規則照 api-contract §1:original_locale === LOCALE 直接顯示 content;
 // 有 translations[LOCALE] 顯示譯文;缺席顯示原文 + 「翻譯中」。
@@ -39,7 +47,10 @@ const postsConfig = {
   href: topicHref,
   reactions: REACTION_SET,
   i18n: {
-    empty: t('room.empty'),
+    // 「空」狀態專用文案:room.empty 是討論室(8H 視窗)的說法,語意對不上看板列的空欄,
+    // 所以另開 key,不硬借。
+    noPosts: t('room.no_posts'),
+    beFirst: t('room.be_first'),
     translating: t('post.translating'),
     viewTopic: t('room.view_topic'),
   },
@@ -124,6 +135,17 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
     return item;
   }
 
+  // fetch 成功但這個看板一則貼文都沒有:講清楚是「沒有人發言」而不是「壞掉」,
+  // 並給一個進該 Topic 頁發言的入口(連的是這一列自己的 Topic,不串台)。
+  function renderEmpty(cfg) {
+    const box = el('div', 'posts-empty');
+    box.appendChild(el('p', 'posts-empty-text', cfg.i18n.noPosts));
+    const cta = el('a', 'post-link', cfg.i18n.beFirst);
+    cta.href = cfg.href;
+    box.appendChild(cta);
+    return box;
+  }
+
   function initPosts(root) {
     const api = root.dataset.apiUrl;
     const topicId = root.dataset.topicId;
@@ -136,7 +158,7 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
       return; // 設定壞掉一律保持 closed
     }
 
-    const url = api + '/v1/topics/' + topicId + '/feed?sort=new&limit=3&comments=0';
+    const url = api + '/v1/topics/' + topicId + '/feed?sort=hot&limit=3&comments=0';
     fetch(url, { credentials: 'include' })
       .then((res) => {
         if (!res.ok) throw new Error('http ' + res.status);
@@ -149,13 +171,14 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
         if (!live || !fallback) return;
         live.textContent = '';
         if (data.posts.length === 0) {
-          live.appendChild(el('p', 'posts-empty', cfg.i18n.empty));
+          // 空 ≠ 關閉:動態層是好的,只是這個看板還沒有人發言 → 印空狀態 + 進 Topic 頁的入口
+          live.appendChild(renderEmpty(cfg));
         } else {
           data.posts.forEach((post) => live.appendChild(renderPost(post, cfg)));
         }
         fallback.hidden = true;
         live.hidden = false;
-        root.dataset.roomState = 'open'; // 成功解析 posts 陣列後才切 open
+        root.dataset.roomState = 'open'; // 成功解析 posts 陣列後才切 open(空也是 open)
       })
       .catch(() => {
         /* 任何失敗一律保持 closed,不顯示過期資料、不做 fallback 快照 */
@@ -166,7 +189,8 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
 </script>
 
 <style>
-  /* 貼文區塊縮排掛在 Topic 那一列底下,靠一條主色直線表示「這些屬於上面那個看板」。 */
+  /* 靠一條主色直線表示「這些貼文屬於旁邊(窄螢幕是上面)那個看板」。
+     兩欄並排時它同時當左右欄的分界;直線變灰 = 討論室關閉。 */
   .posts {
     border-inline-start: 0.1875rem solid var(--color-accent);
     padding: 0.25rem 0 0.75rem 0.875rem;
@@ -238,7 +262,15 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
   .posts :global(.post-link:hover) {
     text-decoration: underline;
   }
+  /* 空狀態(fetch 成功、0 筆):容器仍是 open,所以邊線維持主色,只有字是弱化的 */
   .posts :global(.posts-empty) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    padding-block: 0.625rem;
+  }
+  .posts :global(.posts-empty-text) {
     margin: 0;
     font-size: var(--text-sm);
     color: var(--color-ink-muted);

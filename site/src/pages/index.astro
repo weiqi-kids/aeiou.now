@@ -19,7 +19,10 @@
 //      對應的 PeopleTalking.astro 一併刪除。
 //
 // 留下的:草案 §54 第一段 Global Trending + §55「首頁必須有現在」——「現在」不是靠標語喊的,
-// 是靠每個看板底下那幾則剛發的貼文(sort=new,見 TopicPosts.astro)。
+// 是靠每一列右邊那幾則正在被討論的貼文(8H 即時 feed,sort=hot,見 TopicPosts.astro)。
+//
+// 首頁沒有專屬版面:它就是「全球熱門」這個排序下的看板清單,跟 /topics/{today,nearby,events}/
+// 用同一支 TopicBoard、同一種列(2026-08-11 用戶指正)。
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TopicBoard from '../components/TopicBoard.astro';
 import { t } from '../lib/i18n.mjs';
@@ -42,7 +45,7 @@ const rows = globalRankRows(HOME_WINDOW).slice(0, HOME_TOPIC_LIMIT);
       </a>
     </div>
 
-    <TopicBoard rows={rows} win={HOME_WINDOW} empty={t('common.empty')} withPosts />
+    <TopicBoard rows={rows} win={HOME_WINDOW} empty={t('common.empty')} />
   </section>
 </BaseLayout>
 

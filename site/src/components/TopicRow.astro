@@ -1,11 +1,23 @@
 ---
-// 看板列(草案 §54 首頁的基本單位)。
-// 首頁不是雜誌封面而是看板列表,所以一則議題 = 一列,不是一張大卡:
-// 名次 → 國旗 → 標題 → 分類/長青徽章 → 一行摘要 → 熱度級距。
-// 名次來自 rankings/global/<win>.json;熱度只給級距,原始分數不上畫面(見 src/lib/heat.mjs)。
+// 看板列(草案 §54 前台首頁的基本單位;四個排序頁共用同一種長相)。
+// 這不是雜誌封面而是看板列表,所以一則議題 = 一列,不是一張大卡。
 //
-// showPosts:首頁專用。Topic 底下本來就掛著該議題的討論串(World → Topic → Post → Comment),
-// 所以首頁的每一列在標題之後接一個 TopicPosts,列出該 Topic 最新的 N 則 Post。
+// 一列分左右兩欄(2026-08-11 用戶指正的版面):
+//
+//   ┌──────────────────────────────┬────────────────────┐
+//   │ 1  問世界                     │ 貼文 1              │
+//   │    [社群][長青主題]            │ 貼文 2              │
+//   │    對其他國家的日常感到好奇?…   │ 貼文 3              │
+//   │                 24小時 ▮▮▮ 高熱│                    │
+//   │        ← 左:主題介紹           │ 右:該 Topic 最高三篇│
+//   └──────────────────────────────┴────────────────────┘
+//
+//   · 左欄 = 主題介紹:名次 → 國旗 → 標題 → 分類/長青徽章 → 一行摘要 → 熱度級距。
+//     名次來自 rankings/global/<win>.json;熱度只給級距,原始分數不上畫面(見 src/lib/heat.mjs)。
+//   · 右欄 = 該 Topic 熱度最高的三篇(TopicPosts,sort=hot)。Topic 底下本來就掛著該議題的
+//     討論串(World → Topic → Post → Comment),所以每一列都要看得到它。
+//   · 窄螢幕自然堆疊成上下(先左欄再右欄),≥1024px 才真的分兩欄——斷點只用 min-width。
+//
 // 貼文區塊放在整列連結**之外**(a 裡不能再包 a),仍在同一個 <li> 裡,階層才對得上。
 import { t, tOr } from '../lib/i18n.mjs';
 import { withBase } from '../lib/paths.mjs';
@@ -23,22 +35,13 @@ interface Props {
   tags?: Array<{ label: string; value: string | number }>;
   // 該排序特有的一行說明(當令的國家與日期、最近一場活動的時間…)
   note?: string | null;
-  // 首頁:在這一列底下掛該 Topic 最新的 N 則 Post
-  showPosts?: boolean;
 }
-const {
-  topic,
-  rank = null,
-  win = '24h',
-  marker = null,
-  tags = [],
-  note = null,
-  showPosts = false,
-} = Astro.props;
+const { topic, rank = null, win = '24h', marker = null, tags = [], note = null } = Astro.props;
 const codes = (topic.country_codes || []).slice(0, 8);
 const scores = topic.scores || {};
 const topicHref = withBase(`topic/${topic.slug}/`);
-const withPosts = showPosts && !!topic.topic_id;
+// 沒有 topic_id 就打不到 /v1/topics/:id/feed(:id 是 ULID 不是 slug),那一列只出左欄。
+const withPosts = !!topic.topic_id;
 ---
 
 <li class:list={['row', { 'row--flush': rank === null }]}>
@@ -75,11 +78,18 @@ const withPosts = showPosts && !!topic.topic_id;
       <HeatMeter score={scores[win]} caption={t(`rankings.window.${win}`)} />
     </span>
   </a>
-  {withPosts && <TopicPosts topicId={topic.topic_id} topicHref={topicHref} />}
+  {withPosts && (
+    <div class="row-thread">
+      <TopicPosts topicId={topic.topic_id} topicHref={topicHref} />
+    </div>
+  )}
 </li>
 
 <style>
+  /* 一列 = 一個 grid。窄螢幕單欄(左欄在上、貼文在下),≥1024px 才真的左右並排。 */
   .row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
     border-block-start: 0.0625rem solid var(--color-line);
   }
   .row:first-child {
@@ -169,15 +179,13 @@ const withPosts = showPosts && !!topic.topic_id;
     grid-column: 1;
   }
 
-  /* 貼文區塊(首頁)在寬螢幕縮到標題那一欄下方,讓「這些貼文屬於上面那個看板」看得出來。
+  /* 中寬度(768–1023):還是上下堆疊,但貼文縮到標題那一欄下方,
+     讓「這些貼文屬於上面那個看板」看得出來。
      窄螢幕不縮排:寬度本來就不夠,再縮排只會把貼文擠成一字一行。 */
   @media (min-width: 768px) {
-    .row :global(.posts) {
+    .row-thread {
       margin-inline-start: 3rem;
     }
-  }
-
-  @media (min-width: 768px) {
     .row-link {
       grid-template-columns: 3rem minmax(0, 1fr) auto;
       padding-block: 1.25rem;
@@ -195,6 +203,33 @@ const withPosts = showPosts && !!topic.topic_id;
     }
     .row-title {
       font-size: var(--text-xl);
+    }
+  }
+
+  /* 桌機:左欄主題介紹 / 右欄該 Topic 最高的三篇,水平並排。
+     左欄變窄了,所以熱度級距收回標題底下靠右(就是草案版面那一格),不再跟標題搶同一行。 */
+  @media (min-width: 1024px) {
+    .row {
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+      column-gap: clamp(1.25rem, 3vw, 2.5rem);
+      align-items: start;
+    }
+    .row-link {
+      grid-template-columns: 3rem minmax(0, 1fr);
+    }
+    .row--flush .row-link {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .row-heat {
+      grid-column: 2;
+      justify-self: end;
+    }
+    .row--flush .row-heat {
+      grid-column: 1;
+    }
+    .row-thread {
+      margin-inline-start: 0;
+      padding-block-start: 1.25rem;
     }
   }
 </style>

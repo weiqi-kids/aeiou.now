@@ -2,6 +2,10 @@
 // Topic 清單的排序頁。三個網址(today / nearby / events)＋首頁(global)= 導覽列的四項,
 // 四頁共用同一支 TopicBoard,差別只在排序/篩選與空狀態文案。
 //
+// 「長相一致」是硬要求(2026-08-11 用戶指正):這三頁不是光禿禿的 Topic 標題列,
+// 每一列跟首頁一樣是左欄主題介紹 + 右欄該 Topic 最高的三篇(見 TopicRow / TopicPosts)。
+// nearby / events 的城市分組保留——那是分組,不是另一種列。
+//
 // 用戶原話:「全球熱門、熱門話題、附近訊息、活動資訊……這些其實都是 Topic 的排序。」
 // 所以這三頁列出來的一律是 **Topic**:
 //   · today  熱門話題 = 當令的 Topic(facts.json 的 observed_date / date_range_end 落在今天 UTC
