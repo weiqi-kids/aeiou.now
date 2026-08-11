@@ -1,0 +1,203 @@
+# aeiou.now — 七語系靜態站 build & deploy(Track E / W5)
+#
+# 三個必守事實(踩過的坑,不要改掉):
+#  1. publish repo 走 GitHub Pages deploy-from-branch = Jekyll 管線,`_astro/` 這種
+#     底線開頭目錄會被丟棄 → 每次推送都必須寫入 `.nojekyll`(見 Deploy step)。
+#  2. deploy key 是 SSH 機制,HTTPS remote 一律失敗 → remote 用
+#     git@github.com:weiqi-kids/aeiou-pages-<x>.git,配 GIT_SSH_COMMAND + known_hosts。
+#  3. Pages 部署在 publish repo 非同步發生,push 完立刻 curl 必 404 → 必須輪詢。
+#     且不得用 `gh api repos/<publish>/pages/builds` 輪詢(CI 的 GITHUB_TOKEN
+#     對他 repo 無權限,必 403),只能打站台 URL 本身。
+#
+# 明確不做:IndexNow / GSC / sitemap 提交 job —— 網域未註冊,全部延後。
+
+name: build
+
+on:
+  schedule:
+    # 刻意錯開整點:主機 cron 在整點 push,錯開避免互踩。
+    - cron: '17 * * * *'
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  PUBLIC_API_URL: https://aeiou-api.lightman-chang.workers.dev
+  SITE_URL: https://weiqi-kids.github.io
+
+jobs:
+  build-deploy:
+    name: ${{ matrix.locale }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - locale: zh-TW
+            repo: weiqi-kids/aeiou-pages-zh-tw
+            secret_suffix: ZH_TW
+            base_path: /aeiou-pages-zh-tw
+          - locale: en
+            repo: weiqi-kids/aeiou-pages-en
+            secret_suffix: EN
+            base_path: /aeiou-pages-en
+          - locale: ja
+            repo: weiqi-kids/aeiou-pages-ja
+            secret_suffix: JA
+            base_path: /aeiou-pages-ja
+          - locale: zh-CN
+            repo: weiqi-kids/aeiou-pages-zh-cn
+            secret_suffix: ZH_CN
+            base_path: /aeiou-pages-zh-cn
+          - locale: hi
+            repo: weiqi-kids/aeiou-pages-hi
+            secret_suffix: HI
+            base_path: /aeiou-pages-hi
+          - locale: id
+            repo: weiqi-kids/aeiou-pages-id
+            secret_suffix: ID
+            base_path: /aeiou-pages-id
+          - locale: pt-BR
+            repo: weiqi-kids/aeiou-pages-pt-br
+            secret_suffix: PT_BR
+            base_path: /aeiou-pages-pt-br
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: site/pnpm-lock.yaml
+
+      - name: Install deps
+        working-directory: site
+        run: pnpm install --frozen-lockfile
+
+      # build 鏈完全等同 site/package.json 的 `build`
+      # (copy-data → check-design → check-content → astro build),
+      # CI 不另寫一條。cwd 必須是 site/(check-design.mjs 寫死掃相對 cwd 的 src/)。
+      - name: Build
+        working-directory: site
+        env:
+          LOCALE: ${{ matrix.locale }}
+          BASE_PATH: ${{ matrix.base_path }}
+          SITE_URL: ${{ env.SITE_URL }}
+          PUBLIC_API_URL: ${{ env.PUBLIC_API_URL }}
+        run: pnpm build
+
+      - name: Setup deploy key (SSH)
+        env:
+          DEPLOY_KEY: ${{ secrets[format('DEPLOY_KEY_{0}', matrix.secret_suffix)] }}
+        run: |
+          set -euo pipefail
+          if [ -z "${DEPLOY_KEY:-}" ]; then
+            echo "::error::secret DEPLOY_KEY_${{ matrix.secret_suffix }} 不存在或為空"
+            exit 1
+          fi
+          mkdir -p "$HOME/.ssh"
+          chmod 700 "$HOME/.ssh"
+          printf '%s\n' "$DEPLOY_KEY" > "$HOME/.ssh/deploy_key"
+          chmod 600 "$HOME/.ssh/deploy_key"
+          ssh-keyscan -t rsa,ecdsa,ed25519 github.com >> "$HOME/.ssh/known_hosts" 2>/dev/null
+          chmod 644 "$HOME/.ssh/known_hosts"
+
+      - name: Deploy to publish repo
+        id: deploy
+        env:
+          GIT_SSH_COMMAND: ssh -i /home/runner/.ssh/deploy_key -o IdentitiesOnly=yes -o UserKnownHostsFile=/home/runner/.ssh/known_hosts -o StrictHostKeyChecking=yes
+        run: |
+          set -euo pipefail
+          PUB_DIR="$RUNNER_TEMP/publish"
+          rm -rf "$PUB_DIR"
+          # SSH remote(deploy key 是 SSH 機制,HTTPS 走不通)
+          git clone --depth 1 "git@github.com:${{ matrix.repo }}.git" "$PUB_DIR"
+
+          git -C "$PUB_DIR" config user.name  "aeiou-ci"
+          git -C "$PUB_DIR" config user.email "lightman.chang@gmail.com"
+
+          # 清空舊內容(保留 .git),再鋪上新 dist/
+          find "$PUB_DIR" -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -a site/dist/. "$PUB_DIR"/
+
+          # Jekyll 會丟掉 _astro/,.nojekyll 不是選配
+          touch "$PUB_DIR/.nojekyll"
+
+          git -C "$PUB_DIR" add -A
+          if git -C "$PUB_DIR" diff --cached --quiet; then
+            echo "dist 無變更,skip push(${{ matrix.repo }})"
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+          else
+            git -C "$PUB_DIR" commit -m "deploy ${{ matrix.locale }} @ ${GITHUB_SHA::7}"
+            git -C "$PUB_DIR" push origin HEAD:main
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # W5.3 verify:只打站台 URL 本身,絕不打他 repo 的 Pages API(必 403)。
+      # 間隔 15s、上限 5 分鐘(20 次)。
+      - name: Verify homepage + _astro asset
+        id: verify
+        run: |
+          set -uo pipefail
+          BASE="${SITE_URL}${{ matrix.base_path }}"
+          HOME_URL="$BASE/"
+
+          # 從本次 build 的 dist/ 取一個實際 _astro 資產(hash 檔名 = 新版真的上線的證據)
+          ASSET_FILE="$(ls site/dist/_astro 2>/dev/null | head -n 1 || true)"
+          if [ -z "$ASSET_FILE" ]; then
+            echo "::error::site/dist/_astro 沒有任何資產,build 結果不對"
+            exit 1
+          fi
+          ASSET_URL="$BASE/_astro/$ASSET_FILE"
+          echo "homepage: $HOME_URL"
+          echo "asset:    $ASSET_URL"
+
+          poll() {
+            local url="$1" label="$2" code=""
+            for i in $(seq 1 20); do   # 20 × 15s = 5 分鐘上限
+              code="$(curl -s -o /dev/null -w '%{http_code}' -L --max-time 20 "$url" || echo 000)"
+              echo "  [$label] attempt $i/20 -> HTTP $code"
+              if [ "$code" = "200" ]; then
+                return 0
+              fi
+              sleep 15
+            done
+            echo "::error::[$label] $url 在 5 分鐘內未回 200(最後 HTTP $code)"
+            return 1
+          }
+
+          poll "$HOME_URL" homepage || exit 1
+          poll "$ASSET_URL" _astro   || exit 1
+          echo "verify OK: ${{ matrix.locale }}"
+
+      # Slack 告警:secret 未設(M1 常態)時 gracefully skip,不讓整條紅掉。
+      - name: Slack alert on failure
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          set -uo pipefail
+          if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
+            echo "SLACK_WEBHOOK_URL 未設定,跳過 Slack 告警(不視為失敗)。"
+            exit 0
+          fi
+          RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          TEXT="aeiou.now build 失敗:locale=${{ matrix.locale }} repo=${{ matrix.repo }}\n${RUN_URL}"
+          curl -s -X POST -H 'Content-Type: application/json' \
+            --data "$(printf '{"text":"%s"}' "$TEXT")" \
+            "$SLACK_WEBHOOK_URL" || echo "Slack 送出失敗(忽略,不影響 job 結果)"
