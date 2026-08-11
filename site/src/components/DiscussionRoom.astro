@@ -127,7 +127,7 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     // 每一次正常載入都會先閃一下「討論室暫時關閉」。
     setRoomState(root, 'loading');
 
-    const feedUrl = api + '/v1/topics/' + topicId + '/feed?sort=hot&limit=20&comments=3';
+    const feedUrl = api + '/v1/topics/' + topicId + '/feed?sort=hot&limit=20&comments=8';
     fetch(feedUrl, { credentials: 'include' })
       .then((res) => {
         if (!res.ok) throw new Error('http ' + res.status);
