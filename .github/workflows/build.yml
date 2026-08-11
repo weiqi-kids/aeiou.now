@@ -138,11 +138,18 @@ jobs:
           # Jekyll 會丟掉 _astro/,.nojekyll 不是選配
           touch "$PUB_DIR/.nojekyll"
 
+          # 先判斷 dist 有沒有實質變更。指紋檔 .build-id 每次 commit 都不同,
+          # 若在此之前就寫下去,「無變更則 skip」會永遠失效、每輪都推。
           git -C "$PUB_DIR" add -A
           if git -C "$PUB_DIR" diff --cached --quiet; then
             echo "dist 無變更,skip push(${{ matrix.repo }})"
             echo "pushed=false" >> "$GITHUB_OUTPUT"
           else
+            # 部署指紋:verify 用它判斷「線上真的換成這一版了」。
+            # 沒有它的話,GitHub Pages 還在服務舊版時同樣回 200,verify 會假綠
+            # (2026-08-11 實測:CI 綠燈後 zh-tw 仍送舊首頁約 80 秒)。
+            echo "${GITHUB_SHA}" > "$PUB_DIR/.build-id"
+            git -C "$PUB_DIR" add .build-id
             git -C "$PUB_DIR" commit -m "deploy ${{ matrix.locale }} @ ${GITHUB_SHA::7}"
             git -C "$PUB_DIR" push origin HEAD:main
             echo "pushed=true" >> "$GITHUB_OUTPUT"
@@ -181,9 +188,35 @@ jobs:
             return 1
           }
 
+          # 輪詢 .build-id 直到它等於本次 commit —— 這才是「新版真的上線」的證據。
+          # 只驗 200 不夠:舊部署同樣回 200;_astro 資產只在 CSS/JS 內容有變(檔名 hash 換掉)
+          # 時才擋得住,純文字或結構改動時檔名不變,舊版照樣 200 → 假綠。
+          poll_build_id() {
+            local url="$BASE/.build-id" got=""
+            for i in $(seq 1 20); do   # 20 × 15s = 5 分鐘上限
+              got="$(curl -s -L --max-time 20 "$url" | tr -d '[:space:]' || true)"
+              if [ "$got" = "$GITHUB_SHA" ]; then
+                echo "  [build-id] attempt $i/20 -> 命中 ${GITHUB_SHA::7}"
+                return 0
+              fi
+              echo "  [build-id] attempt $i/20 -> 線上為 '${got:0:7}',等待 ${GITHUB_SHA::7}"
+              sleep 15
+            done
+            echo "::error::[build-id] $url 在 5 分鐘內未更新為 ${GITHUB_SHA::7}(最後為 '${got:0:7}')"
+            return 1
+          }
+
           poll "$HOME_URL" homepage || exit 1
           poll "$ASSET_URL" _astro   || exit 1
-          echo "verify OK: ${{ matrix.locale }}"
+
+          # 只有這輪真的推了新內容才驗指紋。skip 的情況下線上本來就是對的,
+          # 而 .build-id 仍是上一次的 SHA,驗它只會誤報。
+          if [ "${{ steps.deploy.outputs.pushed }}" = "true" ]; then
+            poll_build_id || exit 1
+            echo "verify OK: ${{ matrix.locale }}(內容已確認為本次 build)"
+          else
+            echo "verify OK: ${{ matrix.locale }}(dist 無變更,線上維持上一版)"
+          fi
 
       # Slack 告警:secret 未設(M1 常態)時 gracefully skip,不讓整條紅掉。
       - name: Slack alert on failure
