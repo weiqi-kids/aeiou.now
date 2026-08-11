@@ -1,0 +1,63 @@
+# Ask the World
+
+## meta
+- slug: ask-the-world
+- canonical: Ask the World
+- category: community
+- perennial: yes
+
+## locale zh-TW
+### title
+問世界
+### summary
+對其他國家的日常感到好奇?在這裡向全世界發問,讓當地人來回答。長青主題,全年開放。
+### keywords
+問世界, 跨國問答, 文化交流
+
+## locale en
+### title
+Ask the World
+### summary
+Curious about everyday life in other countries? Post your question here and let locals answer. A perennial topic, open all year round.
+### keywords
+ask the world, cross-country Q&A, culture exchange
+
+## locale ja
+### title
+世界に聞く
+### summary
+他の国の日常が気になる?ここで世界に質問して、現地の人に答えてもらおう。一年中開かれている常設トピック。
+### keywords
+世界に聞く, 国際Q&A, 文化交流
+
+## locale zh-CN
+### title
+问世界
+### summary
+对其他国家的日常感到好奇?在这里向全世界提问,让当地人来回答。长青主题,全年开放。
+### keywords
+问世界, 跨国问答, 文化交流
+
+## locale hi
+### title
+दुनिया से पूछो
+### summary
+दूसरे देशों की रोज़मर्रा की ज़िंदगी के बारे में जानना चाहते हैं? यहाँ सवाल पूछें और स्थानीय लोगों से जवाब पाएँ। साल भर खुला रहने वाला सदाबहार विषय।
+### keywords
+दुनिया से पूछो, अंतरराष्ट्रीय प्रश्नोत्तर, संस्कृति
+
+## locale id
+### title
+Tanya Dunia
+### summary
+Penasaran dengan kehidupan sehari-hari di negara lain? Ajukan pertanyaanmu di sini dan biarkan warga lokal menjawab. Topik abadi, terbuka sepanjang tahun.
+### keywords
+tanya dunia, tanya jawab lintas negara, pertukaran budaya
+
+## locale pt-BR
+### title
+Pergunte ao Mundo
+### summary
+Curioso sobre o dia a dia em outros países? Publique sua pergunta aqui e deixe os moradores locais responderem. Um tópico perene, aberto o ano todo.
+### keywords
+pergunte ao mundo, perguntas entre países, intercâmbio cultural

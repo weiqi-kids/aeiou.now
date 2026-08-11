@@ -50,6 +50,12 @@ record_job() {
 }
 
 # --- 1. 匯出 ---------------------------------------------------------------
+# 0.(2026-08-11 加)先把 content/topics/*.md 匯入 SQLite——Topic 內容的人工維護入口。
+#    冪等;md 解析失敗只擋該檔並回非零,此時**不中斷** export(舊資料照出,錯誤記 jobs)。
+log "import-topics.mjs ..."
+IMPORT_OUT="$("$NODE_BIN" "$REPO/scripts/import-topics.mjs" 2>&1)" || \
+  log "WARN: import-topics 有檔案失敗(不中斷 export):$(echo "$IMPORT_OUT" | grep '✗' | head -2 | tr '\n' ' ')"
+
 log "export-data.mjs ..."
 EXPORT_OUT="$("$NODE_BIN" "$REPO/scripts/export-data.mjs" 2>&1)"
 EXPORT_RC=$?
