@@ -1,0 +1,22 @@
+// aeiou-api — Cloudflare Worker(動態互動層:討論室 + 8H 即時 feed)
+// 介面常數皆來自 docs/briefs/_shared-context.md,不得改名。
+// 保持 Workers Free:只用 Worker + D1。不用 DO / Queues / Workflows / Cron Triggers / Analytics Engine。
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "aeiou-api",
+  "account_id": "9d9e58b5e0d1657b8f74bd2cbfc91ee3", // Lightman.chang@gmail.com's Account(pin 死;勿用 Gcmgcm 帳號)
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true // 免費,head_sampling_rate 預設 1
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "aeiou-ugc",
+      "database_id": "75c7322a-9cdc-43d8-9d2b-4fe62aa51d9a"
+    }
+  ]
+  // secret:SYNC_SECRET(npx wrangler secret put SYNC_SECRET;值不進 git)
+}
