@@ -149,6 +149,14 @@ cron 環境的 PATH 必須含 `/root/.local/bin`(`claude` CLI 在此)。
 
 ---
 
+## 顯示層規則(2026-08-11 用戶拍板)
+
+- **熱度一律以級距呈現,原始分數不得出現在畫面上**(首頁卡片、topic 頁六窗、排行頁三處一致)。排行頁的**名次**可以顯示,那是名次不是分數。級距定義集中在 `site/src/lib/heat.mjs`,呈現走 `HeatMeter.astro`,標籤進七語系 i18n。
+- **級距門檻是暫定值**:M1 的 HotScore 未完整實作(瀏覽面待 GA4,屬 M2),現有分數是 seed demo 值。**M2 真實 HotScore 上線後必須重新校準**,理由與現行門檻寫在 `heat.mjs` 檔頭。
+- **級距不得只靠顏色區分**(灰階/色盲要能讀),需同時有文字標籤與形狀/長度差異。
+- 品牌配色定義在 `site/src/styles/variables.css`(oklch + hex 兩處),選色理由寫在檔頭。**已非模板佔位色,不要改回 `#1a4f8a`**。
+- 活動時間一律鎖 `timeZone: 'UTC'`(否則主機與 CI 的 TZ 差異會 build 出不同字串);落在整點午夜的時間戳視為整日活動,只印日期。
+
 ## 明確延後(M2+;不得自行提前)
 
 來源清冊、Moderation 啟用範圍、OAuth、**Bot 防護(Turnstile / rate limit —— M1 刻意不做,是有意識的裸奔;M2 上線自訂網域前必須補)**、IndexNow/GSC/sitemap 提交、GA4 property 與專屬 GCP 專案+SA(紅線:**不共用其他站金鑰**)、Markdown 渲染、圖片上傳(R2+審核)、「回報錯誤/補充」按鈕、「加入行事曆」按鈕、19 job 完整管線、Vectorize/Topic Detection、R2 歸檔。
