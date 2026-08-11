@@ -13,6 +13,13 @@ aeiou.now = 全球議題平台(World → Topic → People → Place → Action),
 **資料結構的權威文件**:`/root/aeiou.now/docs/02-data-model.md`(定案,照做)
 **架構文件**:`/root/aeiou.now/docs/01-architecture.md`
 **API 契約**:`/root/aeiou.now/docs/briefs/api-contract.md`
+**版面與資訊架構的權威來源**:`/root/.claude/uploads/83eae670-5a5c-4c2f-a5cf-010b9c859fc1/e4a71c35-global_topic_platform_full_spec.md`
+—— **要碰版面就必須打開它讀**(§44 主題頁、§54 首頁、§55「現在」),
+**不准只憑本檔或計劃裡引的「草案 §44」這種編號辦事**。2026-08-11 的整站重做事故就是這樣發生的:
+交辦書照抄編號往下發,沒人打開過草案,結果把主題頁論壇做成了雜誌文章網站。
+
+**這是主題頁論壇**:每個 Topic 自己就是一個看板,主題頁 = 議題介紹 + 討論串本身。
+**七語系是七個獨立的站**,讀者只看得到一種語言——「本站有七種語言」不得出現在版面上。
 
 ---
 
