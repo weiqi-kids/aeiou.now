@@ -1,0 +1,156 @@
+{
+  "topic_id": "top_01KZRR9MFVDX5QSGEZAKM9ABSH",
+  "slug": "national-belonging",
+  "canonical_name": "National Belonging and Public Memory",
+  "category": "civic",
+  "status": "active",
+  "is_perennial": 0,
+  "access_level": 0,
+  "observances": [
+    {
+      "observance_id": "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_BR_independence-day",
+      "observance_key": "independence-day",
+      "country_code": "BR",
+      "local_name": "Dia da Independência do Brasil",
+      "observed_date": "09-07",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_242A0D06E8A421F48C6F258A"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_CN_national-day",
+      "observance_key": "national-day",
+      "country_code": "CN",
+      "local_name": "国庆节",
+      "observed_date": "10-01",
+      "date_rule": null,
+      "date_range_end": "10-07",
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_BC89514E4D7BF213AE54D2E0"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_ID_independence-day",
+      "observance_key": "independence-day",
+      "country_code": "ID",
+      "local_name": "Hari Kemerdekaan Republik Indonesia",
+      "observed_date": "08-17",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_4E7E151DED2D9D7D8291FD00"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_IN_independence-day",
+      "observance_key": "independence-day",
+      "country_code": "IN",
+      "local_name": "Independence Day",
+      "observed_date": "08-15",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_8881C7B43193D1F50ED0E47C"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_JP_national-foundation-day",
+      "observance_key": "national-foundation-day",
+      "country_code": "JP",
+      "local_name": "建國記念の日",
+      "observed_date": "02-11",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_4D5C39BF5379FD2F196028DD"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_TW_national-day",
+      "observance_key": "national-day",
+      "country_code": "TW",
+      "local_name": "國慶日／雙十國慶",
+      "observed_date": "10-10",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_35289CEE1B6C357FD2D98A79"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_US_independence-day",
+      "observance_key": "independence-day",
+      "country_code": "US",
+      "local_name": "Independence Day",
+      "observed_date": "07-04",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_F936765E8EFFBF4BDCD32B47"
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "country_code": "BR",
+      "observance_ids": [
+        "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_BR_independence-day"
+      ]
+    },
+    {
+      "country_code": "CN",
+      "observance_ids": [
+        "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_CN_national-day"
+      ]
+    },
+    {
+      "country_code": "ID",
+      "observance_ids": [
+        "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_ID_independence-day"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "observance_ids": [
+        "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_IN_independence-day"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "observance_ids": [
+        "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_JP_national-foundation-day"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "observance_ids": [
+        "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_TW_national-day"
+      ]
+    },
+    {
+      "country_code": "US",
+      "observance_ids": [
+        "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_US_independence-day"
+      ]
+    }
+  ],
+  "relations": [],
+  "source_ids": [
+    "src_242A0D06E8A421F48C6F258A",
+    "src_35289CEE1B6C357FD2D98A79",
+    "src_4D5C39BF5379FD2F196028DD",
+    "src_4E7E151DED2D9D7D8291FD00",
+    "src_8881C7B43193D1F50ED0E47C",
+    "src_BC89514E4D7BF213AE54D2E0",
+    "src_F936765E8EFFBF4BDCD32B47"
+  ]
+}

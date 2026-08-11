@@ -1,0 +1,96 @@
+{
+  "topic_id": "top_01KZRR82E8X3TBJF6ZZZE979NM",
+  "slug": "protection-and-play",
+  "canonical_name": "Protection and Play",
+  "category": "community",
+  "status": "active",
+  "is_perennial": 0,
+  "access_level": 0,
+  "observances": [
+    {
+      "observance_id": "obs_top_01KZRR82E8X3TBJF6ZZZE979NM_CN_zhongyuan",
+      "observance_key": "zhongyuan",
+      "country_code": "CN",
+      "local_name": "中元節",
+      "observed_date": null,
+      "date_rule": "農曆七月十五前後，地方做法不同",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_BC89514E4D7BF213AE54D2E0"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR82E8X3TBJF6ZZZE979NM_JP_setsubun",
+      "observance_key": "setsubun",
+      "country_code": "JP",
+      "local_name": "節分",
+      "observed_date": null,
+      "date_rule": "立春前一日左右，日期每年略有差異",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_896FE82C2D1B93867E0BB2D7"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR82E8X3TBJF6ZZZE979NM_TW_ghost-month",
+      "observance_key": "ghost-month",
+      "country_code": "TW",
+      "local_name": "農曆七月／中元普渡",
+      "observed_date": null,
+      "date_rule": "農曆七月，地方普渡日期依社區而異",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_7B3BF8859B369D77C0F76374"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR82E8X3TBJF6ZZZE979NM_US_halloween",
+      "observance_key": "halloween",
+      "country_code": "US",
+      "local_name": "Halloween",
+      "observed_date": "10-31",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_F936765E8EFFBF4BDCD32B47"
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "country_code": "CN",
+      "observance_ids": [
+        "obs_top_01KZRR82E8X3TBJF6ZZZE979NM_CN_zhongyuan"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "observance_ids": [
+        "obs_top_01KZRR82E8X3TBJF6ZZZE979NM_JP_setsubun"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "observance_ids": [
+        "obs_top_01KZRR82E8X3TBJF6ZZZE979NM_TW_ghost-month"
+      ]
+    },
+    {
+      "country_code": "US",
+      "observance_ids": [
+        "obs_top_01KZRR82E8X3TBJF6ZZZE979NM_US_halloween"
+      ]
+    }
+  ],
+  "relations": [],
+  "source_ids": [
+    "src_7B3BF8859B369D77C0F76374",
+    "src_896FE82C2D1B93867E0BB2D7",
+    "src_BC89514E4D7BF213AE54D2E0",
+    "src_F936765E8EFFBF4BDCD32B47"
+  ]
+}

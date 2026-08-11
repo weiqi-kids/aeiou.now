@@ -1,0 +1,116 @@
+{
+  "topic_id": "top_01KZRR9MFRQ664J60A6TDVBPS8",
+  "slug": "light-and-renewal",
+  "canonical_name": "Light and Renewal",
+  "category": "festival",
+  "status": "active",
+  "is_perennial": 0,
+  "access_level": 0,
+  "observances": [
+    {
+      "observance_id": "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_BR_christmas",
+      "observance_key": "christmas",
+      "country_code": "BR",
+      "local_name": "Natal",
+      "observed_date": "12-25",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_242A0D06E8A421F48C6F258A"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_CN_lantern-festival",
+      "observance_key": "lantern-festival",
+      "country_code": "CN",
+      "local_name": "元宵节",
+      "observed_date": null,
+      "date_rule": "农历正月十五",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_BC89514E4D7BF213AE54D2E0"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_IN_diwali",
+      "observance_key": "diwali",
+      "country_code": "IN",
+      "local_name": "Diwali / Deepavali",
+      "observed_date": null,
+      "date_rule": "印度陰陽曆 Kartika 月新月前後",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_CF4E2673DF39A2EF184903B2"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_TW_lantern-festival",
+      "observance_key": "lantern-festival",
+      "country_code": "TW",
+      "local_name": "元宵節",
+      "observed_date": null,
+      "date_rule": "農曆正月十五",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_F12F15DB053D422FA98E2E78"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas",
+      "observance_key": "christmas",
+      "country_code": "US",
+      "local_name": "Christmas Day",
+      "observed_date": "12-25",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_F936765E8EFFBF4BDCD32B47"
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "country_code": "BR",
+      "observance_ids": [
+        "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_BR_christmas"
+      ]
+    },
+    {
+      "country_code": "CN",
+      "observance_ids": [
+        "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_CN_lantern-festival"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "observance_ids": [
+        "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_IN_diwali"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "observance_ids": [
+        "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_TW_lantern-festival"
+      ]
+    },
+    {
+      "country_code": "US",
+      "observance_ids": [
+        "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas"
+      ]
+    }
+  ],
+  "relations": [],
+  "source_ids": [
+    "src_242A0D06E8A421F48C6F258A",
+    "src_BC89514E4D7BF213AE54D2E0",
+    "src_CF4E2673DF39A2EF184903B2",
+    "src_F12F15DB053D422FA98E2E78",
+    "src_F936765E8EFFBF4BDCD32B47"
+  ]
+}

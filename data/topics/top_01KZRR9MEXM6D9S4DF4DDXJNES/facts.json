@@ -1,0 +1,129 @@
+{
+  "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+  "slug": "affection-and-reciprocity",
+  "canonical_name": "Affection and Reciprocity",
+  "category": "relationship",
+  "status": "active",
+  "is_perennial": 0,
+  "access_level": 0,
+  "observances": [
+    {
+      "observance_id": "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_BR_dia-dos-namorados",
+      "observance_key": "dia-dos-namorados",
+      "country_code": "BR",
+      "local_name": "Dia dos Namorados",
+      "observed_date": "06-12",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_22199C1201C93256B927C8CD"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_IN_valentine-week",
+      "observance_key": "valentine-week",
+      "country_code": "IN",
+      "local_name": "Valentine Week",
+      "observed_date": "02-07",
+      "date_rule": null,
+      "date_range_end": "02-14",
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_C4BCAFCEF395471F742E6784"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_JP_valentine",
+      "observance_key": "valentine",
+      "country_code": "JP",
+      "local_name": "バレンタインデー",
+      "observed_date": "02-14",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_C4BAA52048297F2FA1A9F791"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_JP_white-day",
+      "observance_key": "white-day",
+      "country_code": "JP",
+      "local_name": "ホワイトデー",
+      "observed_date": "03-14",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 2,
+      "source_ids": [
+        "src_C4BAA52048297F2FA1A9F791"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_TW_qixi",
+      "observance_key": "qixi",
+      "country_code": "TW",
+      "local_name": "七夕情人節",
+      "observed_date": null,
+      "date_rule": "農曆七月初七",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_6615FC37B36E4CC8B9C9F802"
+      ]
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_US_valentine",
+      "observance_key": "valentine",
+      "country_code": "US",
+      "local_name": "Valentine's Day",
+      "observed_date": "02-14",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_C4BCAFCEF395471F742E6784"
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "country_code": "BR",
+      "observance_ids": [
+        "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_BR_dia-dos-namorados"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "observance_ids": [
+        "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_IN_valentine-week"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "observance_ids": [
+        "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_JP_valentine",
+        "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_JP_white-day"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "observance_ids": [
+        "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_TW_qixi"
+      ]
+    },
+    {
+      "country_code": "US",
+      "observance_ids": [
+        "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_US_valentine"
+      ]
+    }
+  ],
+  "relations": [],
+  "source_ids": [
+    "src_22199C1201C93256B927C8CD",
+    "src_6615FC37B36E4CC8B9C9F802",
+    "src_C4BAA52048297F2FA1A9F791",
+    "src_C4BCAFCEF395471F742E6784"
+  ]
+}
