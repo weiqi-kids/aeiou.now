@@ -218,19 +218,24 @@ jobs:
             echo "verify OK: ${{ matrix.locale }}(dist 無變更,線上維持上一版)"
           fi
 
-      # Slack 告警:secret 未設(M1 常態)時 gracefully skip,不讓整條紅掉。
+      # Slack 告警:secret 未設時 gracefully skip,不讓整條紅掉。
+      # bot-token 式(chat.postMessage),與其他站台 deploy.yml 慣例一致;
+      # 需 repo secrets:SLACK_BOT_TOKEN + SLACK_CHANNEL_ID(頻道建好後設定)。
       - name: Slack alert on failure
         if: failure()
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
         run: |
           set -uo pipefail
-          if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
-            echo "SLACK_WEBHOOK_URL 未設定,跳過 Slack 告警(不視為失敗)。"
+          if [ -z "${SLACK_BOT_TOKEN:-}" ] || [ -z "${SLACK_CHANNEL_ID:-}" ]; then
+            echo "SLACK_BOT_TOKEN/SLACK_CHANNEL_ID 未設定,跳過 Slack 告警(不視為失敗)。"
             exit 0
           fi
           RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
           TEXT="aeiou.now build 失敗:locale=${{ matrix.locale }} repo=${{ matrix.repo }}\n${RUN_URL}"
-          curl -s -X POST -H 'Content-Type: application/json' \
-            --data "$(printf '{"text":"%s"}' "$TEXT")" \
-            "$SLACK_WEBHOOK_URL" || echo "Slack 送出失敗(忽略,不影響 job 結果)"
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data "$(printf '{"channel":"%s","text":"%s"}' "$SLACK_CHANNEL_ID" "$TEXT")" \
+            || echo "Slack 送出失敗(忽略,不影響 job 結果)"
