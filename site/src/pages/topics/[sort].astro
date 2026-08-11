@@ -1,0 +1,160 @@
+---
+// Topic 清單的排序頁。三個網址(today / nearby / events)＋首頁(global)= 導覽列的四項,
+// 四頁共用同一支 TopicBoard,差別只在排序/篩選與空狀態文案。
+//
+// 用戶原話:「全球熱門、熱門話題、附近訊息、活動資訊……這些其實都是 Topic 的排序。」
+// 所以這三頁列出來的一律是 **Topic**:
+//   · today  熱門話題 = 當令的 Topic(facts.json 的 observed_date / date_range_end 落在今天 UTC
+//            前後,或 is_perennial=1)
+//   · nearby 附近訊息 = 有在地資訊(places/<city>.json 有條目)的 Topic
+//   · events 活動資訊 = 有活動(events/<city>.json 有條目)的 Topic
+// 店家與活動本身不在這裡列——它們屬於各自的 Topic 頁(草案 §44 的 📍 Near You / 🎉 Events)。
+//
+// 誠實限制(寫在頁面上給讀者看,不只寫在註解裡):
+//   M1 是靜態層,build 出來的 HTML 對每個讀者都一樣,**不知道讀者在哪裡**。真正依讀者定位排序
+//   要靠 Worker 的 request.cf,那屬動態層。所以「附近」在這裡的意思是「有在地資訊的議題」,
+//   按城市分組讓讀者自己挑,絕不假裝知道你在哪、也不編造定位。
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TopicBoard from '../../components/TopicBoard.astro';
+import { t } from '../../lib/i18n.mjs';
+import { sortLabel } from '../../lib/nav.mjs';
+import { monthDay, dateTime } from '../../lib/format.mjs';
+import {
+  todaysTopics, topicsWithPlacesByCity, topicsWithEventsByCity, cityName, countryName,
+} from '../../lib/data.mjs';
+
+export function getStaticPaths() {
+  return [
+    { params: { sort: 'today' } },
+    { params: { sort: 'nearby' } },
+    { params: { sort: 'events' } },
+  ];
+}
+
+const { sort } = Astro.params;
+
+// 當令的理由要看得見:是哪一國、哪一天讓它今天上榜。
+function seasonNote(topic) {
+  const hits = (topic.season_countries || []).slice(0, 3);
+  if (hits.length === 0) return null;
+  return hits
+    .map((c) => {
+      const when = c.date_range_end
+        ? `${monthDay(c.observed_date)} – ${monthDay(c.date_range_end)}`
+        : monthDay(c.observed_date);
+      return `${countryName(c.country_code)} · ${when}`;
+    })
+    .join('　');
+}
+
+let groups = [];
+let empty = '';
+let note = null;
+
+if (sort === 'today') {
+  empty = t('sort.hot_topics_empty');
+  groups = [
+    {
+      city_code: null,
+      rows: todaysTopics().map((topic) => ({
+        topic,
+        marker: t('marker.new'),
+        note: seasonNote(topic),
+      })),
+    },
+  ];
+} else if (sort === 'nearby') {
+  empty = t('sort.nearby_empty');
+  note = t('sort.nearby_note');
+  groups = topicsWithPlacesByCity().map((city) => ({
+    city_code: city.city_code,
+    rows: city.topics.map((topic) => ({
+      topic,
+      tags: [{ label: t('sort.places_label'), value: topic.place_count }],
+    })),
+  }));
+} else {
+  empty = t('sort.events_empty');
+  note = t('sort.events_note');
+  groups = topicsWithEventsByCity().map((city) => ({
+    city_code: city.city_code,
+    rows: city.topics.map((topic) => ({
+      topic,
+      tags: [{ label: t('sort.events_label'), value: topic.event_count }],
+      note: topic.next_start_at ? dateTime(topic.next_start_at) : null,
+    })),
+  }));
+}
+
+const total = groups.reduce((n, group) => n + group.rows.length, 0);
+const label = sortLabel(sort);
+const emoji = { today: '🆕', nearby: '📍', events: '🎉' }[sort];
+---
+
+<BaseLayout title={`${label} — aeiou.now`} activeSort={sort}>
+  <header class="sort-head">
+    <p class="eyebrow">{t('sort.eyebrow')}</p>
+    <h1><span class="sort-emoji" aria-hidden="true">{emoji}</span>{label}</h1>
+    {note && <p class="sort-note measure">{note}</p>}
+  </header>
+
+  {total === 0 && <p class="sort-empty">{empty}</p>}
+
+  {groups.map((group) =>
+    group.rows.length === 0 ? null : (
+      <section class="sort-group">
+        {group.city_code && (
+          <h2 class="sort-city">
+            <span class="sort-city-label">{t('sort.city_label')}</span>
+            {cityName(group.city_code)}
+          </h2>
+        )}
+        <TopicBoard rows={group.rows} empty={empty} />
+      </section>
+    )
+  )}
+</BaseLayout>
+
+<style>
+  .sort-head {
+    padding-block-end: 1.25rem;
+    margin-block-end: clamp(1.5rem, 4vw, 2.5rem);
+    border-block-end: 0.0625rem solid var(--color-line);
+  }
+  .sort-head h1 {
+    margin: 0.5rem 0 0;
+  }
+  .sort-emoji {
+    margin-inline-end: 0.4rem;
+  }
+  /* 靜態層不知道讀者在哪裡——這句話要讓讀者看得見,不是只寫在註解裡 */
+  .sort-note {
+    margin: 0.75rem 0 0;
+    font-size: var(--text-sm);
+    color: var(--color-ink-soft);
+  }
+  .sort-empty {
+    color: var(--color-ink-muted);
+    max-width: 42rem;
+  }
+  .sort-group {
+    margin-block-end: clamp(2rem, 5vw, 3rem);
+  }
+  .sort-city {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.75rem;
+    font-size: var(--text-lg);
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .sort-city-label {
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+  }
+</style>

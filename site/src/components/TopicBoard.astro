@@ -1,0 +1,44 @@
+---
+// 一份 Topic 清單。四個排序頁(全球熱門 = 首頁 / 熱門話題 / 附近訊息 / 活動資訊)全部共用這一支,
+// 差別只在傳進來的 rows(排序與篩選)與 empty(空狀態文案)——因為那四項本來就是同一份清單的
+// 四種排序,不是四種不同的內容(2026-08-11 用戶指正)。
+//
+// 一律用 <ol>:四個頁面列出來的都是「排過序的」Topic,順序本身有意義(名次、當令、在地資訊多寡、
+// 最近的活動)。名次數字只有全球熱門那一組有,其他排序不硬掰名次。
+import TopicRow from './TopicRow.astro';
+
+interface Props {
+  rows: Array<Record<string, any>>;
+  empty: string;
+  win?: string;
+}
+const { rows, empty, win = '24h' } = Astro.props;
+---
+
+{rows.length === 0 && <p class="board-empty">{empty}</p>}
+{rows.length > 0 && (
+  <ol class="board-list">
+    {rows.map((row) => (
+      <TopicRow
+        topic={row.topic}
+        rank={row.rank ?? null}
+        win={row.win || win}
+        marker={row.marker ?? null}
+        tags={row.tags || []}
+        note={row.note ?? null}
+      />
+    ))}
+  </ol>
+)}
+
+<style>
+  .board-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .board-empty {
+    color: var(--color-ink-muted);
+    max-width: 42rem;
+  }
+</style>

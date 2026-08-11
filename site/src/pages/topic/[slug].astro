@@ -30,6 +30,7 @@ import { withBase } from '../../lib/paths.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
   customsText, scoresFor, topicRowBySlug, globalRankOf, aliasNames,
+  relatedTopics, hotTopics,
 } from '../../lib/data.mjs';
 
 export function getStaticPaths() {
@@ -63,9 +64,19 @@ const category = (facts && facts.category) || row.category;
 const isPerennial = (facts && facts.is_perennial) || row.is_perennial;
 const isAskTheWorld = (facts && facts.slug) === ASK_THE_WORLD_SLUG;
 const askHref = withBase(`topic/${ASK_THE_WORLD_SLUG}/`);
+
+// 導覽列尾端的「直接跳進看板」在 Topic 頁上改列**相關議題**(facts.json 的 relations,
+// 草案 §48 Topic Graph);沒有相關議題就退回熱門 Topic。當前這一頁自己不列(BaseLayout 會濾掉)。
+const related = relatedTopics(topicId, 2);
+const navTopics = related.length ? related : hotTopics(3);
 ---
 
-<BaseLayout title={`${title} — aeiou.now`} description={loc.summary}>
+<BaseLayout
+  title={`${title} — aeiou.now`}
+  description={loc.summary}
+  navTopics={navTopics}
+  currentTopicId={topicId}
+>
   <article class="topic">
     <header class="topic-head">
       <ul class="badge-row">

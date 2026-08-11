@@ -2,24 +2,47 @@
 // 源自 new-astro-site 模板,依 track-b.md 增修:
 // - lang 依 LOCALE
 // - GA4:PUBLIC_GA4_ID 有值才輸出 gtag(googletagmanager.com 是守門唯一外部例外);未設完全不輸出
-// - 站內導覽(nav.home / nav.rankings)
 // - 移除 sitemap <link>(sitemap 提交屬明確延後,M1 不產 sitemap)
 //
-// 2026-08-11 資訊架構重做:
-//   ① 頁尾原本列出七語系自稱(繁體中文 / English / 日本語 …)——結構性錯誤,已整塊移除。
-//      七個語系是七個各自獨立的站(各自 repo、各自子網域,每次 build 只吃一個 LOCALE),
-//      打開日文站的讀者從頭到尾只會看到日文;「本站有七種語言」是後台的事,不是給讀者看的資訊。
-//   ② 刊頭的標語(footer.tagline)與關於頁一併移除:那些文案是前一輪自行編寫的,非用戶提供。
+// 2026-08-11 ①:頁尾原本列出七語系自稱(繁體中文 / English / 日本語 …)——結構性錯誤,已整塊移除。
+//   七個語系是七個各自獨立的站(各自 repo、各自子網域,每次 build 只吃一個 LOCALE),
+//   打開日文站的讀者從頭到尾只會看到日文;「本站有七種語言」是後台的事,不是給讀者看的資訊。
+//
+// 2026-08-11 ②(用戶當面指正):刊頭右上角的導覽 = **Topic 清單的四種排序**,
+//   不再是「看板 / 排行榜」兩個入口,也不該擠在標題下方當一排 chip。導覽定義見 lib/nav.mjs。
+//   導覽尾端再直接列幾個 Topic,讓人一步跳進看板(首頁/排序頁列熱門 Topic,Topic 頁列相關議題)。
+//   排行榜不進主導覽(用戶列的項目裡沒有它):它是「全球熱門」這個排序的完整版,
+//   入口在首頁全球熱門區塊與 Topic 頁的熱度時窗。關於頁同理,只在頁尾。
+//
+// 手機收納:**折行**,不橫捲。
+//   第一版做成 overflow-x 橫捲,390px 的 hi(天城文,標籤長度是 zh-TW 的兩三倍)直接被切在
+//   視窗右緣:後面的排序項與 Topic 捷徑看不到也點不到,而且畫面上沒有任何「右邊還有東西」的暗示。
+//   導覽項目點不到 = 導覽壞掉,這不是邊緣情況(七個市場的標籤長度本來就差很多)。
+//   折行則保證每一項都在畫面內、都在 tab 焦點順序裡,不需要任何捲動暗示或 JS。
+//   代價是窄螢幕的刊頭會高幾行——那是可以接受的,點不到不行。
+//   同一病灶的時窗切換列(首頁 .board-tabs、rankings .window-nav、Topic 頁 .trend-tabs)一併改折行。
 import '../styles/variables.css';
 import '../styles/global.css';
 import { LOCALE } from '../lib/config.mjs';
 import { t } from '../lib/i18n.mjs';
+import { navSorts } from '../lib/nav.mjs';
+import { hotTopics } from '../lib/data.mjs';
+import { withBase } from '../lib/paths.mjs';
 
 interface Props {
   title: string;
   description?: string;
+  activeSort?: string | null;
+  navTopics?: Array<Record<string, any>>;
+  currentTopicId?: string | null;
 }
-const { title, description } = Astro.props;
+const {
+  title,
+  description,
+  activeSort = null,
+  navTopics,
+  currentTopicId = null,
+} = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 // 站內絕對路徑一律用 base 組:GitHub Pages 專案站有 base path,不能掉到主機根目錄。
 const base = import.meta.env.BASE_URL.endsWith('/')
@@ -27,15 +50,11 @@ const base = import.meta.env.BASE_URL.endsWith('/')
   : `${import.meta.env.BASE_URL}/`;
 const GA4_ID = import.meta.env.PUBLIC_GA4_ID || '';
 
-const path = Astro.url.pathname;
-const nav = [
-  { href: base, label: t('nav.home'), current: path === base || `${path}/` === base },
-  {
-    href: `${base}rankings/24h/`,
-    label: t('nav.rankings'),
-    current: path.startsWith(`${base}rankings`),
-  },
-];
+const sorts = navSorts(activeSort);
+// 導覽尾端的「直接跳進某個看板」:頁面沒指定就用當前排序下的熱門 Topic。
+const jumpTopics = (navTopics && navTopics.length ? navTopics : hotTopics(2)).filter(
+  (topic) => topic && topic.slug && topic.topic_id !== currentTopicId
+);
 ---
 
 <!doctype html>
@@ -67,10 +86,26 @@ const nav = [
         <a class="wordmark" href={base}>
           <span class="wordmark-name">aeiou.now</span>
         </a>
-        <nav class="site-nav" aria-label="site">
-          {nav.map((item) => (
-            <a href={item.href} aria-current={item.current ? 'page' : undefined}>{item.label}</a>
-          ))}
+        <nav class="site-nav" aria-label={t('nav.label')}>
+          <div class="nav-scroll">
+            {sorts.map((item) => (
+              <a
+                class="nav-link"
+                href={item.href}
+                aria-current={item.current ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            ))}
+            {jumpTopics.length > 0 && (
+              <span class="nav-divider" aria-hidden="true"></span>
+            )}
+            {jumpTopics.map((topic) => (
+              <a class="nav-link nav-link--topic" href={withBase(`topic/${topic.slug}/`)}>
+                {topic.title}
+              </a>
+            ))}
+          </div>
         </nav>
       </div>
     </header>
@@ -82,6 +117,7 @@ const nav = [
     <footer class="site-footer">
       <div class="container footer-inner">
         <p class="footer-name">aeiou.now</p>
+        <a class="footer-link" href={withBase('about/')}>{t('nav.about')}</a>
       </div>
     </footer>
   </body>
@@ -115,24 +151,69 @@ const nav = [
     letter-spacing: 0.01em;
     color: var(--color-primary);
   }
+  /* 導覽:一律折行。七語系標籤長度差很多(hi 天城文最長),橫捲會把後面的項目切在視窗外、
+     使用者既看不到也點不到;折行則每一項都在畫面內,也都在鍵盤 tab 順序裡。 */
   .site-nav {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+  .nav-scroll {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    align-items: baseline;
+    gap: 0.25rem 1.125rem;
   }
-  .site-nav a {
+  .nav-link {
+    flex: 0 1 auto;
+    min-width: 0;
+    /* 保險:萬一單一標籤比整行還寬(超窄螢幕 + 超長語系),讓它自己斷行而不是撐爆版面 */
+    overflow-wrap: break-word;
     color: var(--color-ink-soft);
     font-size: var(--text-sm);
     text-decoration: none;
     padding-block: 0.125rem;
     border-block-end: 0.125rem solid transparent;
   }
-  .site-nav a:hover {
+  .nav-link:hover {
     color: var(--color-accent-dark);
   }
-  .site-nav a[aria-current='page'] {
+  .nav-link[aria-current='page'] {
     color: var(--color-text);
+    font-weight: 700;
     border-block-end-color: var(--color-accent);
+  }
+  /* 直接跳進看板的那幾個 Topic:同一條導覽,但用主色與前綴符號跟排序項區分開 */
+  .nav-link--topic {
+    color: var(--color-primary);
+  }
+  .nav-link--topic::before {
+    content: '#';
+    margin-inline-end: 0.15em;
+    color: var(--color-ink-muted);
+  }
+  /* 分隔線只在放得下一整列的寬度出現;窄螢幕折行時它會落在行首,是雜訊,而且 Topic 捷徑
+     本來就有 # 前綴可辨識,所以直接不畫。 */
+  .nav-divider {
+    display: none;
+    flex: 0 0 auto;
+    align-self: stretch;
+    inline-size: 0.0625rem;
+    background: var(--color-line-strong);
+  }
+
+  @media (min-width: 768px) {
+    .site-nav {
+      flex: 0 1 auto;
+    }
+    .nav-scroll {
+      justify-content: flex-end;
+    }
+    .nav-link {
+      white-space: nowrap;
+    }
+    .nav-divider {
+      display: block;
+    }
   }
 
   main {
@@ -145,11 +226,29 @@ const nav = [
     color: var(--color-primary-line);
     padding-block: 2rem;
   }
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+  }
   .footer-name {
     font-family: var(--font-display);
     font-size: var(--text-lg);
     font-weight: 700;
     color: var(--color-white);
     margin: 0;
+  }
+  /* 關於頁只在頁尾:用戶列的主導覽項目裡沒有它 */
+  .footer-link {
+    font-size: var(--text-sm);
+    color: var(--color-primary-line);
+    text-decoration: none;
+    border-block-end: 0.0625rem solid var(--color-primary-line);
+  }
+  .footer-link:hover {
+    color: var(--color-white);
+    border-block-end-color: var(--color-white);
   }
 </style>

@@ -1,60 +1,45 @@
 ---
-// 首頁 = 看板列表(草案 §54 逐字的六段順序):
-//   Global Trending → Country Trending → Today's Topics → People Are Talking → Nearby → Events
-// 加上 §55:首頁要回答的是「現在世界正在發生什麼」,所以 NOW / TRENDING / NEW / ACTIVE
-// 四個標記直接掛在段落抬頭上,而不是靠一段介紹文字去講。
+// 首頁 = 「全球熱門」這個預設排序下的看板列表(2026-08-11 用戶當面拍板)。
 //
-// 2026-08-11 資訊架構重做刪掉的東西(前一輪自行編寫、非用戶提供,一併從 i18n 七檔移除):
-//   大標語(home.lede)、產品介紹段(home.intro)、統計數字排(home.stat_*)、頁尾七語系名稱列。
-//   統計數字那一排尤其有害:它等於在首頁昭告「我們只有 N 個議題」。
+// 這一輪改掉的三件事(用戶原話:「這些其實都是 Topic 的排序」):
+//   ① 標題下那排重複導覽的 chip(全球熱門/各國熱門/今天的議題/大家正在聊/附近/活動)整列移除——
+//      那些歸右上角的主導覽(見 lib/nav.mjs 與 BaseLayout)。
+//   ② 首頁獨立的「附近」店家清單、「活動」活動清單整段移除。那是把 Topic 的屬性誤當成獨立內容:
+//      附近與活動是 Topic 的排序條件(/topics/nearby/、/topics/events/ 列的是 Topic),
+//      店家與活動本身屬於各自的 Topic 頁(草案 §44 的 📍 Near You / 🎉 Events)。
+//   ③ 「各國熱門」整段移除。seed 的 topic_scores 只有 scope='global',rankings/ 底下也只有 global/,
+//      國家別排行沒有任何資料;而用戶列的導覽項目裡本來就沒有它。永遠空著的區塊擺在首頁,
+//      等於昭告「這裡沒東西」——寧可拿掉,等 scope='country' 的資料進來再照 §46/§54 補回。
+//      (不假造:一行假資料都沒有寫。)
 //
-// M1 資料現實(照實留白,不假造):
-//   · Country Trending —— seed 的 topic_scores 只有 scope='global',沒有國家別排行,這一段留空狀態。
-//   · People Are Talking —— 動態層,沒有跨 Topic 端點,前端對每個 Topic 各打一次現有 feed 端點合併。
+// 留下的:草案 §54 的 Global Trending → Today's Topics → People Are Talking 三段,
+// 加上 §55「首頁必須有現在」——NOW / TRENDING / NEW / ACTIVE 直接掛在段落抬頭上。
+// 「大家正在聊」是跨 Topic 的即時討論流,不是 Topic 排序,所以留在首頁而不進導覽。
 import BaseLayout from '../layouts/BaseLayout.astro';
-import TopicRow from '../components/TopicRow.astro';
+import TopicBoard from '../components/TopicBoard.astro';
 import PeopleTalking from '../components/PeopleTalking.astro';
 import { t } from '../lib/i18n.mjs';
-import { LOCALE, WINDOWS } from '../lib/config.mjs';
+import { WINDOWS } from '../lib/config.mjs';
 import { withBase } from '../lib/paths.mjs';
-import { countryFlag, dateTime } from '../lib/format.mjs';
-import {
-  globalRankRows, todaysTopics, allPlacesByCity, allEvents, cityName,
-} from '../lib/data.mjs';
+import { sortHref } from '../lib/nav.mjs';
+import { globalRankRows, todaysTopics } from '../lib/data.mjs';
 
 const boards = WINDOWS.map((win) => ({ win, rows: globalRankRows(win) }));
-const today = todaysTopics();
-const cities = allPlacesByCity();
-const events = allEvents();
+const today = todaysTopics().map((topic) => ({ topic, marker: t('marker.new') }));
 
 // People Are Talking 要打哪幾個 Topic 的 feed:照 24h 排行的順序,取前幾名。
 const talkTopics = (boards.find((b) => b.win === '24h') || { rows: [] }).rows
   .map((row) => row.topic)
   .filter((topic) => topic && topic.topic_id)
   .slice(0, 6);
-
-const sections = [
-  { id: 'trending', label: t('home.global_trending') },
-  { id: 'country-trending', label: t('home.country_trending') },
-  { id: 'today', label: t('home.today_topics') },
-  { id: 'talking', label: t('home.people_talking') },
-  { id: 'nearby', label: t('home.nearby') },
-  { id: 'events', label: t('home.events') },
-];
 ---
 
-<BaseLayout title={`aeiou.now — ${t('home.global_trending')}`}>
-  <nav class="board-nav" aria-label={t('home.sections_label')}>
-    {sections.map((section) => (
-      <a class="board-nav-link" href={`#${section.id}`}>{section.label}</a>
-    ))}
-  </nav>
-
-  <!-- ① Global Trending(§54 第一段 / §46 的時窗切換) -->
+<BaseLayout title={`aeiou.now — ${t('nav.global_trending')}`} activeSort="global">
+  <!-- ① Global Trending(§54 第一段 / §46 的時窗切換)= 首頁的預設排序 -->
   <section class="board" id="trending">
     <div class="section-head">
       <p class="eyebrow">{t('marker.trending')}</p>
-      <h2><span class="section-emoji" aria-hidden="true">🔥</span>{t('home.global_trending')}</h2>
+      <h2><span class="section-emoji" aria-hidden="true">🔥</span>{t('nav.global_trending')}</h2>
       <a class="section-link" href={withBase('rankings/24h/')}>
         {t('home.rankings_cta')} <span aria-hidden="true">→</span>
       </a>
@@ -84,39 +69,27 @@ const sections = [
       {boards.map((board) => (
         <div class="board-panel" data-board-panel={board.win}>
           <p class="board-panel-name">{t(`rankings.window.${board.win}`)}</p>
-          {board.rows.length === 0 && <p class="empty">{t('common.empty')}</p>}
-          <ol class="board-list">
-            {board.rows.map((row) => (
-              <TopicRow topic={row.topic} rank={row.rank} win={board.win} />
-            ))}
-          </ol>
+          <TopicBoard rows={board.rows} win={board.win} empty={t('common.empty')} />
         </div>
       ))}
     </div>
   </section>
 
-  <!-- ② Country Trending(§54 第二段):M1 沒有國家別排行資料,如實留空,不假造 -->
-  <section class="board" id="country-trending">
-    <div class="section-head">
-      <p class="eyebrow">{t('marker.trending')}</p>
-      <h2><span class="section-emoji" aria-hidden="true">🌍</span>{t('home.country_trending')}</h2>
-    </div>
-    <p class="empty">{t('home.country_trending_empty')}</p>
-  </section>
-
-  <!-- ③ Today's Topics(§54 第三段):當令與否只看資料裡的 observed_date 與 is_perennial -->
+  <!-- ② Today's Topics(§54 第三段)= 導覽上的「熱門話題」:當令與否只看資料裡的
+       observed_date / date_range_end 與 is_perennial,不看點閱。 -->
   <section class="board" id="today">
     <div class="section-head">
       <p class="eyebrow">{t('marker.new')}</p>
-      <h2><span class="section-emoji" aria-hidden="true">🆕</span>{t('home.today_topics')}</h2>
+      <h2><span class="section-emoji" aria-hidden="true">🆕</span>{t('nav.hot_topics')}</h2>
+      <a class="section-link" href={sortHref('today')}>
+        {t('common.see_all')} <span aria-hidden="true">→</span>
+      </a>
     </div>
-    {today.length === 0 && <p class="empty">{t('home.today_topics_empty')}</p>}
-    <ul class="board-list">
-      {today.map((topic) => <TopicRow topic={topic} marker={t('marker.new')} />)}
-    </ul>
+    <TopicBoard rows={today} empty={t('sort.hot_topics_empty')} />
   </section>
 
-  <!-- ④ People Are Talking(§54 第四段 / §55 的 NOW 與 ACTIVE):唯一的即時層 -->
+  <!-- ③ People Are Talking(§54 第四段 / §55 的 NOW 與 ACTIVE):唯一的即時層,
+       跨 Topic 的討論流,不是 Topic 的排序,所以留在首頁、不進導覽。 -->
   <section class="board" id="talking">
     <div class="section-head">
       <p class="eyebrow">{t('marker.now')}</p>
@@ -124,75 +97,6 @@ const sections = [
       <span class="badge badge--accent">{t('marker.active')}</span>
     </div>
     <PeopleTalking topics={talkTopics} />
-  </section>
-
-  <!-- ⑤ Nearby(§54 第五段):M1 沒有定位,城市就是誠實的分組單位 -->
-  <section class="board" id="nearby">
-    <div class="section-head">
-      <h2><span class="section-emoji" aria-hidden="true">📍</span>{t('home.nearby')}</h2>
-    </div>
-    {cities.length === 0 && <p class="empty">{t('common.empty')}</p>}
-    {cities.map((city) => (
-      <div class="city">
-        <h3 class="city-name">{cityName(city.city_code)}</h3>
-        <ul class="mini-list">
-          {city.places.map((pl) => (
-            <li class="mini-card">
-              <h4 class="mini-title">
-                <span class="mini-flag" aria-hidden="true">{countryFlag(pl.country_code)}</span>
-                {pl.name}
-              </h4>
-              {pl.descriptions && pl.descriptions[LOCALE] && <p>{pl.descriptions[LOCALE]}</p>}
-              {pl.address && <p class="card-meta">{pl.address}</p>}
-              <p class="mini-links">
-                {pl.topics_ref.map((topic) => (
-                  <a class="topic-chip" href={withBase(`topic/${topic.slug}/`)}>{topic.title}</a>
-                ))}
-                {pl.map_url && (
-                  <a class="card-link" href={pl.map_url} rel="noopener" target="_blank">
-                    {t('topic.navigate')} <span aria-hidden="true">↗</span>
-                  </a>
-                )}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </div>
-    ))}
-  </section>
-
-  <!-- ⑥ Events(§54 第六段) -->
-  <section class="board" id="events">
-    <div class="section-head">
-      <h2><span class="section-emoji" aria-hidden="true">🎉</span>{t('home.events')}</h2>
-    </div>
-    {events.length === 0 && <p class="empty">{t('common.empty')}</p>}
-    <ul class="mini-list">
-      {events.map((ev) => (
-        <li class="mini-card">
-          <h4 class="mini-title">
-            <span class="mini-flag" aria-hidden="true">{countryFlag(ev.country_code)}</span>
-            {ev.name}
-          </h4>
-          {ev.descriptions && ev.descriptions[LOCALE] && <p>{ev.descriptions[LOCALE]}</p>}
-          <p class="card-meta">
-            {cityName(ev.city_code)} · {ev.venue}
-            {ev.start_at && ` · ${dateTime(ev.start_at)}`}
-            {ev.end_at && ` – ${dateTime(ev.end_at)}`}
-          </p>
-          <p class="mini-links">
-            {ev.topics_ref.map((topic) => (
-              <a class="topic-chip" href={withBase(`topic/${topic.slug}/`)}>{topic.title}</a>
-            ))}
-            {ev.ticket_url && (
-              <a class="card-link" href={ev.ticket_url} rel="noopener" target="_blank">
-                {t('topic.tickets')} <span aria-hidden="true">↗</span>
-              </a>
-            )}
-          </p>
-        </li>
-      ))}
-    </ul>
   </section>
 </BaseLayout>
 
@@ -222,29 +126,6 @@ const sections = [
 </script>
 
 <style>
-  /* 看板分區導覽:一進站就看得到這個板有哪幾區,像看板頂端的分類列。 */
-  .board-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding-block: 0.5rem 1.5rem;
-    margin-block-end: 1rem;
-    border-block-end: 0.0625rem solid var(--color-line);
-  }
-  .board-nav-link {
-    font-size: var(--text-sm);
-    text-decoration: none;
-    color: var(--color-ink-soft);
-    border: 0.0625rem solid var(--color-line-strong);
-    border-radius: var(--radius-pill);
-    padding: 0.15rem 1rem;
-    background: var(--color-white);
-  }
-  .board-nav-link:hover {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
-  }
-
   .board {
     margin-block-end: clamp(2.5rem, 6vw, 4rem);
     scroll-margin-block-start: 1rem;
@@ -267,20 +148,17 @@ const sections = [
   .section-link:hover {
     text-decoration: underline;
   }
-  .empty {
-    color: var(--color-ink-muted);
-    max-width: 42rem;
-  }
 
+  /* 時窗切換列一律折行,不橫捲:橫捲在窄螢幕會把後面的時窗切在視窗外(hi 的「1 महीना」
+     這種長標籤尤其明顯),使用者看不到也點不到。折行後六個時窗都在畫面內、都能鍵盤操作。 */
   .board-tabs {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
-    overflow-x: auto;
-    padding-block-end: 0.5rem;
     margin-block-end: 1rem;
   }
   .board-tab {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     font-family: var(--font-sans);
     font-size: var(--text-sm);
     border: 0.0625rem solid var(--color-line-strong);
@@ -314,85 +192,5 @@ const sections = [
   }
   .board-panel {
     margin-block-end: 1.5rem;
-  }
-  .board-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .city {
-    margin-block-end: 2rem;
-  }
-  .city-name {
-    font-size: var(--text-lg);
-    margin: 0 0 0.75rem;
-    padding-block-end: 0.35rem;
-    border-block-end: 0.0625rem solid var(--color-line);
-    color: var(--color-ink-soft);
-  }
-  .mini-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 1rem;
-  }
-  .mini-card {
-    background: var(--color-white);
-    border: 0.0625rem solid var(--color-line);
-    border-radius: var(--radius-md);
-    padding: 1rem 1.25rem;
-    box-shadow: var(--shadow-card);
-  }
-  .mini-title {
-    font-family: var(--font-display);
-    font-size: var(--text-lg);
-    font-weight: 700;
-    margin: 0 0 0.375rem;
-    line-height: 1.3;
-  }
-  .mini-flag {
-    margin-inline-end: 0.4rem;
-  }
-  .mini-card p {
-    font-size: var(--text-sm);
-    margin: 0 0 0.5rem;
-    color: var(--color-ink-soft);
-  }
-  .card-meta {
-    font-size: var(--text-xs);
-    color: var(--color-ink-muted);
-  }
-  .mini-links {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0.5rem 0.75rem;
-    margin: 0;
-  }
-  .topic-chip {
-    font-size: var(--text-xs);
-    text-decoration: none;
-    color: var(--color-primary);
-    background: var(--color-primary-soft);
-    border: 0.0625rem solid var(--color-primary-line);
-    border-radius: var(--radius-pill);
-    padding: 0.1rem 0.8rem;
-  }
-  .card-link {
-    font-size: var(--text-sm);
-    font-weight: 600;
-    color: var(--color-accent-dark);
-    text-decoration: none;
-  }
-  .card-link:hover {
-    text-decoration: underline;
-  }
-
-  @media (min-width: 768px) {
-    .mini-list {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
   }
 </style>

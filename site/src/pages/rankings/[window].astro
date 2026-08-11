@@ -89,15 +89,14 @@ const items = (ranking.items || [])
     margin-block-end: 0.625rem;
   }
 
-  /* 時窗切換:分頁列。行動裝置橫向捲動,不換行擠版。 */
+  /* 時窗切換:分頁列。一律折行,不橫捲——橫捲會把後面的時窗切在窄螢幕視窗外,點不到。 */
   .window-nav {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
-    overflow-x: auto;
-    padding-block-end: 0.25rem;
   }
   .window-nav a {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     font-size: var(--text-sm);
     text-decoration: none;
     border: 0.0625rem solid var(--color-line-strong);

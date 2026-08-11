@@ -1,0 +1,116 @@
+---
+// 關於頁(2026-08-11 用戶要求復原:「關於頁被整頁刪掉了。這不對,應該是要介紹服務內容。」)
+//
+// 內容一律取自產品草案,一個字都不是這裡編的:
+//   · about.one_liner        = 草案 §1.1 的一句話定位(逐字)
+//   · about.not_a / it_is    = 草案 §1「平台不是單純新聞網站,也不是傳統論壇。它是一個:」
+//   · about.position_1..5    = 草案 §1 列的五個定位(逐字)
+//   · about.flow_title/1..10 = 草案 §1 的核心流程圖(逐段逐字)
+// zh-TW 是準源(草案本文即繁中),其餘六語忠實翻譯,不加油添醋、不改寫語氣、不補行銷文案。
+//
+// 入口只在頁尾:用戶列的主導覽項目(全球熱門/熱門話題/附近訊息/活動資訊/具體 Topic)沒有它。
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t } from '../lib/i18n.mjs';
+
+const POSITIONS = [1, 2, 3, 4, 5];
+const FLOW = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+---
+
+<BaseLayout title={`${t('about.title')} — aeiou.now`} description={t('about.one_liner')}>
+  <article class="about">
+    <header class="about-head">
+      <h1>{t('about.title')}</h1>
+      <p class="about-lede measure">{t('about.one_liner')}</p>
+    </header>
+
+    <section class="about-block">
+      <p class="measure">{t('about.not_a')}</p>
+      <p class="measure">{t('about.it_is')}</p>
+      <ul class="about-list">
+        {POSITIONS.map((n) => <li>{t(`about.position_${n}`)}</li>)}
+      </ul>
+    </section>
+
+    <section class="about-block">
+      <h2>{t('about.flow_title')}</h2>
+      <ol class="about-flow">
+        {FLOW.map((n) => (
+          <li>
+            <span class="flow-num" aria-hidden="true">{n}</span>
+            <span class="flow-text">{t(`about.flow_${n}`)}</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .about-head {
+    padding-block-end: 1.25rem;
+    margin-block-end: clamp(2rem, 5vw, 3rem);
+    border-block-end: 0.0625rem solid var(--color-line);
+  }
+  .about-head h1 {
+    margin: 0 0 1rem;
+  }
+  .about-lede {
+    font-size: var(--text-lg);
+    line-height: 1.5;
+    color: var(--color-ink-soft);
+    margin: 0;
+  }
+  .about-block {
+    margin-block-end: clamp(2rem, 5vw, 3rem);
+  }
+  .about-block h2 {
+    margin: 0 0 1rem;
+    border-block-start: 0.125rem solid var(--color-text);
+    padding-block-start: 0.75rem;
+  }
+  .about-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+    max-width: 42rem;
+  }
+  .about-list li {
+    border-inline-start: 0.1875rem solid var(--color-primary);
+    padding: 0.15rem 0 0.15rem 1rem;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    line-height: 1.4;
+    color: var(--color-primary);
+  }
+  /* 核心流程:一步一列,號碼在左,不畫成裝飾性的流程圖 */
+  .about-flow {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 42rem;
+  }
+  .about-flow li {
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: baseline;
+    padding-block: 0.6rem;
+    border-block-start: 0.0625rem solid var(--color-line);
+  }
+  .about-flow li:first-child {
+    border-block-start: 0;
+  }
+  .flow-num {
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--color-accent);
+    font-variant-numeric: tabular-nums;
+  }
+  .flow-text {
+    font-size: var(--text-base);
+    line-height: 1.5;
+  }
+</style>

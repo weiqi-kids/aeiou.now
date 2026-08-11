@@ -165,38 +165,97 @@ export function cityName(code) {
   return (meta && meta[code]) || code;
 }
 
-function topicRefs(entry) {
-  const ids = Array.isArray(entry.topics)
-    ? entry.topics.map((x) => x && x.topic_id).filter(Boolean)
-    : Array.isArray(entry.topic_ids)
-      ? entry.topic_ids
-      : [];
-  const byId = new Map(getTopicsIndex().map((topic) => [topic.topic_id, topic]));
-  return ids.map((id) => byId.get(id)).filter(Boolean);
-}
-
-/** 首頁 Nearby:所有城市的店家,依城市分組(M1 沒有定位,城市就是誠實的分組單位)。 */
-export function allPlacesByCity() {
-  return listCityJson('places')
-    .map((city) => ({
-      city_code: city.city_code,
-      places: (city.places || [])
-        .slice()
-        .sort((a, b) => (b.mention_count || 0) - (a.mention_count || 0))
-        .map((pl) => ({ ...pl, topics_ref: topicRefs(pl) })),
-    }))
-    .filter((city) => city.places.length > 0);
-}
-
-/** 首頁 Events:所有城市的活動,依開始時間排序(跨城市混排,近的先來)。 */
-export function allEvents() {
-  const out = [];
-  for (const city of listCityJson('events')) {
-    for (const ev of city.events || []) {
-      out.push({ ...ev, city_code: city.city_code, topics_ref: topicRefs(ev) });
-    }
+/** 一筆店家/活動關聯到哪些 topic_id(兩種資料形狀都吃)。 */
+function entryTopicIds(entry) {
+  if (Array.isArray(entry.topics)) {
+    return entry.topics.map((x) => x && x.topic_id).filter(Boolean);
   }
-  return out.sort((a, b) => (a.start_at || 0) - (b.start_at || 0));
+  if (Array.isArray(entry.topic_ids)) return entry.topic_ids.filter(Boolean);
+  return [];
+}
+
+/** 「附近訊息」排序:**有在地資訊的 Topic**,按城市分組。
+ *
+ * 這一支回的是 Topic 不是店家——導覽上的「附近」是 Topic 的篩選條件,店家本身屬於各自的
+ * Topic 頁(草案 §44 的 📍 Near You)。
+ *
+ * 誠實限制:M1 是靜態層,build 時不可能知道讀者在哪裡(真的要依讀者定位排序得靠 Worker 的
+ * request.cf,那是動態層)。所以這裡**按城市分組**、由讀者自己挑城市,不假裝知道位置。 */
+export function topicsWithPlacesByCity() {
+  const byId = new Map(getTopicsIndex().map((topic) => [topic.topic_id, topic]));
+  const cities = [];
+  for (const city of listCityJson('places')) {
+    const counts = new Map();
+    for (const pl of city.places || []) {
+      for (const id of entryTopicIds(pl)) counts.set(id, (counts.get(id) || 0) + 1);
+    }
+    const topics = [...counts.entries()]
+      .map(([id, count]) => (byId.has(id) ? { ...byId.get(id), place_count: count } : null))
+      .filter(Boolean)
+      .sort((a, b) => b.place_count - a.place_count);
+    if (topics.length) cities.push({ city_code: city.city_code, topics });
+  }
+  return cities.sort((a, b) => String(a.city_code).localeCompare(String(b.city_code)));
+}
+
+/** 「活動資訊」排序:**有活動的 Topic**,按城市分組(理由同上一支)。
+ * 每個 Topic 額外帶最近一場活動的開始時間,讓列表能排序也能給讀者一個時間感。 */
+export function topicsWithEventsByCity() {
+  const byId = new Map(getTopicsIndex().map((topic) => [topic.topic_id, topic]));
+  const cities = [];
+  for (const city of listCityJson('events')) {
+    const agg = new Map();
+    for (const ev of city.events || []) {
+      for (const id of entryTopicIds(ev)) {
+        const prev = agg.get(id) || { count: 0, next_start_at: null };
+        const start = typeof ev.start_at === 'number' ? ev.start_at : null;
+        const next =
+          prev.next_start_at === null
+            ? start
+            : start === null
+              ? prev.next_start_at
+              : Math.min(prev.next_start_at, start);
+        agg.set(id, { count: prev.count + 1, next_start_at: next });
+      }
+    }
+    const topics = [...agg.entries()]
+      .map(([id, v]) =>
+        byId.has(id)
+          ? { ...byId.get(id), event_count: v.count, next_start_at: v.next_start_at }
+          : null
+      )
+      .filter(Boolean)
+      .sort((a, b) => (a.next_start_at || 0) - (b.next_start_at || 0));
+    if (topics.length) cities.push({ city_code: city.city_code, topics });
+  }
+  return cities.sort((a, b) => String(a.city_code).localeCompare(String(b.city_code)));
+}
+
+/** 導覽列尾端「直接跳進某個看板」用的 Topic:當前排序(預設 24h 全球熱度)的前幾名。 */
+export function hotTopics(limit = 2, win = '24h') {
+  return globalRankRows(win)
+    .map((row) => row.topic)
+    .filter((topic) => topic && topic.slug)
+    .slice(0, limit);
+}
+
+/** Topic 頁導覽列尾端要列的「相關議題」:facts.json 的 relations(草案 §48 Topic Graph)。
+ * 沒有相關議題時由呼叫端退回 hotTopics()。 */
+export function relatedTopics(topicId, limit = 2) {
+  const facts = readJson(`topics/${topicId}/facts.json`, null);
+  const rels = ((facts && facts.relations) || []).slice();
+  const byId = new Map(getTopicsIndex().map((topic) => [topic.topic_id, topic]));
+  const seen = new Set([topicId]);
+  return rels
+    .sort((a, b) => (b.weight || 0) - (a.weight || 0))
+    .map((rel) => rel && rel.to_topic_id)
+    .filter((id) => {
+      if (!id || seen.has(id) || !byId.has(id)) return false;
+      seen.add(id);
+      return true;
+    })
+    .map((id) => byId.get(id))
+    .slice(0, limit);
 }
 
 /** Topic 的「各地叫法」(草案 §44 標題下那一行):

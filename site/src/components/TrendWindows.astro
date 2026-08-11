@@ -134,15 +134,15 @@ const trendConfigJson = JSON.stringify(trendConfig).replace(/</g, '\\u003c');
 </script>
 
 <style>
+  /* 七個時窗一律折行,不橫捲:橫捲在窄螢幕會把後面的時窗切在視窗外,點不到(同 BaseLayout 導覽)。 */
   .trend-tabs {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
-    overflow-x: auto;
-    padding-block-end: 0.5rem;
     margin-block-end: 1.25rem;
   }
   .trend-tab {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     font-family: var(--font-sans);
     font-size: var(--text-sm);
     border: 0.0625rem solid var(--color-line-strong);

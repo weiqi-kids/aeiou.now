@@ -13,8 +13,20 @@ interface Props {
   rank?: number | null;
   win?: string;
   marker?: string | null;
+  // 該排序特有的計數(附近訊息 = 地點數、活動資訊 = 活動場次)。標籤在前、數字在後,
+  // 才不必為七語系處理單複數。
+  tags?: Array<{ label: string; value: string | number }>;
+  // 該排序特有的一行說明(當令的國家與日期、最近一場活動的時間…)
+  note?: string | null;
 }
-const { topic, rank = null, win = '24h', marker = null } = Astro.props;
+const {
+  topic,
+  rank = null,
+  win = '24h',
+  marker = null,
+  tags = [],
+  note = null,
+} = Astro.props;
 const codes = (topic.country_codes || []).slice(0, 8);
 const scores = topic.scores || {};
 ---
@@ -39,7 +51,14 @@ const scores = topic.scores || {};
           </span>
         )}
         {topic.is_perennial ? <span class="badge">{t('topic.perennial')}</span> : null}
+        {tags.map((tag) => (
+          <span class="badge">
+            {tag.label}
+            <span class="row-tag-value">{tag.value}</span>
+          </span>
+        ))}
       </span>
+      {note && <span class="row-note">{note}</span>}
       {topic.summary && <span class="row-summary">{topic.summary}</span>}
     </span>
     <span class="row-heat">
@@ -107,6 +126,17 @@ const scores = topic.scores || {};
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
+  }
+  .row-tag-value {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--color-text);
+    font-variant-numeric: tabular-nums;
+  }
+  /* 該排序為什麼收錄這一則(當令的國家日期、最近一場活動…) */
+  .row-note {
+    font-size: var(--text-xs);
+    color: var(--color-accent-dark);
   }
   .row-summary {
     font-size: var(--text-sm);
