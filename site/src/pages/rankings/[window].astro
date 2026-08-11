@@ -1,9 +1,13 @@
 ---
 // 排行頁:六個 window 各一頁(24h/72h/7d/1m/3m/1y;8h 屬動態,不出靜態)
+// 視覺重點:① 六個時窗做成可互相切換的分頁列(以前要手改網址)
+//           ② 名次感靠襯線大字號碼 + 前三名的規線與朱紅
+//           ③ 分數不上畫面,只呈現熱度級距(見 src/lib/heat.mjs)
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { t } from '../../lib/i18n.mjs';
+import HeatMeter from '../../components/HeatMeter.astro';
+import { t, tOr } from '../../lib/i18n.mjs';
 import { WINDOWS } from '../../lib/config.mjs';
-import { getGlobalRanking, getTopicsIndex } from '../../lib/data.mjs';
+import { getGlobalRanking, getTopicsIndex, countryName } from '../../lib/data.mjs';
 import { withBase } from '../../lib/paths.mjs';
 
 export function getStaticPaths() {
@@ -19,84 +23,191 @@ const items = (ranking.items || [])
   .map((item) => ({ ...item, topic: byId.get(item.topic_id) }));
 ---
 
-<BaseLayout title={`${t('rankings.title')} — ${t(`rankings.window.${win}`)}`}>
-  <h1>{t('rankings.title')}</h1>
-  <nav class="window-nav" aria-label="ranking windows">
-    {WINDOWS.map((w) => (
-      <a href={withBase(`rankings/${w}/`)} class:list={[{ current: w === win }]}>
-        {t(`rankings.window.${w}`)}
-      </a>
-    ))}
-  </nav>
-  {items.length === 0 && <p class="empty">{t('common.empty')}</p>}
-  <ol class="ranking-list">
-    {items.map((item) => (
-      <li>
+<BaseLayout
+  title={`${t('rankings.title')} — ${t(`rankings.window.${win}`)}`}
+  description={t('home.lede')}
+>
+  <header class="rank-head">
+    <h1>{t('rankings.title')}</h1>
+    <p class="eyebrow" id="window-label">{t('rankings.window_label')}</p>
+    <nav class="window-nav" aria-labelledby="window-label">
+      {WINDOWS.map((w) => (
         <a
-          class="ranking-row"
-          href={withBase(`topic/${(item.topic && item.topic.slug) || item.slug}/`)}
+          href={withBase(`rankings/${w}/`)}
+          aria-current={w === win ? 'page' : undefined}
         >
-          <span class="rank">{item.rank}</span>
-          <span class="name">{(item.topic && item.topic.title) || item.slug}</span>
-          <span class="score">{t('rankings.score')} {item.score.toFixed(1)}</span>
+          {t(`rankings.window.${w}`)}
         </a>
-      </li>
-    ))}
+      ))}
+    </nav>
+  </header>
+
+  {items.length === 0 && <p class="empty">{t('common.empty')}</p>}
+
+  <ol class="ranking-list">
+    {items.map((item) => {
+      const topic = item.topic || {};
+      const codes = topic.country_codes || [];
+      return (
+        <li class:list={['ranking-item', { top: item.rank <= 3 }]}>
+          <a class="ranking-row" href={withBase(`topic/${topic.slug || item.slug}/`)}>
+            <span class="rank" aria-hidden="true">{item.rank}</span>
+            <span class="rank-main">
+              <span class="rank-title">{topic.title || item.slug}</span>
+              {topic.summary && <span class="rank-summary">{topic.summary}</span>}
+              <span class="rank-meta">
+                {topic.category && (
+                  <span class="badge badge--primary">
+                    {tOr(`category.${topic.category}`, topic.category)}
+                  </span>
+                )}
+                {codes.length > 0 && (
+                  <span class="rank-countries">
+                    {codes.slice(0, 3).map((code) => countryName(code)).join(' · ')}
+                    {codes.length > 3 ? ` +${codes.length - 3}` : ''}
+                  </span>
+                )}
+                <HeatMeter score={item.score} />
+              </span>
+            </span>
+          </a>
+        </li>
+      );
+    })}
   </ol>
+
+  <p class="scale-note">{t('heat.scale_note')}</p>
 </BaseLayout>
 
 <style>
+  .rank-head {
+    padding-block-end: 1.5rem;
+    margin-block-end: 2rem;
+    border-block-end: 0.0625rem solid var(--color-line);
+  }
+  .rank-head h1 {
+    margin: 0 0 1.5rem;
+  }
+  .rank-head .eyebrow {
+    margin-block-end: 0.625rem;
+  }
+
+  /* 時窗切換:分頁列。行動裝置橫向捲動,不換行擠版。 */
   .window-nav {
     display: flex;
-    flex-wrap: wrap;
     gap: 0.5rem;
-    margin-block-end: 1.5rem;
+    overflow-x: auto;
+    padding-block-end: 0.25rem;
   }
   .window-nav a {
+    flex: 0 0 auto;
     font-size: var(--text-sm);
     text-decoration: none;
-    border: 1px solid var(--color-line);
-    border-radius: 1.5rem;
-    padding: 0.25rem 1rem;
-    color: var(--color-text);
+    border: 0.0625rem solid var(--color-line-strong);
+    border-radius: var(--radius-pill);
+    padding: 0.2rem 1.1rem;
+    color: var(--color-ink-soft);
+    background: var(--color-white);
+    white-space: nowrap;
   }
-  .window-nav a.current {
+  .window-nav a:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  .window-nav a[aria-current='page'] {
     background: var(--color-primary);
     border-color: var(--color-primary);
     color: var(--color-white);
+    font-weight: 700;
   }
+
   .ranking-list {
     list-style: none;
     padding: 0;
-    display: grid;
-    gap: 0.75rem;
+    margin: 0;
+  }
+  .ranking-item {
+    border-block-start: 0.0625rem solid var(--color-line);
+  }
+  .ranking-item:first-child {
+    border-block-start: 0.125rem solid var(--color-text);
+  }
+  /* 前三名:朱紅號碼 + 較粗的上緣規線,名次感不靠底色 */
+  .ranking-item.top .rank {
+    color: var(--color-accent);
   }
   .ranking-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 0.75rem 1rem;
     align-items: baseline;
-    gap: 1rem;
-    border: 1px solid var(--color-line);
-    border-radius: 0.75rem;
-    padding: 0.875rem 1.25rem;
+    padding-block: 1.25rem;
     text-decoration: none;
     color: var(--color-text);
-    background: var(--color-white);
+  }
+  .ranking-row:hover .rank-title {
+    color: var(--color-accent-dark);
+    text-decoration: underline;
   }
   .rank {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-ink-muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .rank-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 0;
+  }
+  .rank-title {
+    font-family: var(--font-display);
     font-size: var(--text-lg);
     font-weight: 700;
-    color: var(--color-accent);
-    min-width: 2rem;
+    line-height: 1.3;
+    color: var(--color-primary);
   }
-  .name {
-    font-size: var(--text-lg);
-    flex: 1;
+  .rank-summary {
+    font-size: var(--text-sm);
+    color: var(--color-ink-soft);
+    max-width: 42rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
-  .score {
+  .rank-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+  }
+  .rank-countries {
     font-size: var(--text-xs);
     color: var(--color-ink-muted);
   }
   .empty {
     color: var(--color-ink-muted);
+  }
+  .scale-note {
+    margin-block-start: 2rem;
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+  }
+
+  @media (min-width: 768px) {
+    .ranking-row {
+      grid-template-columns: 5rem minmax(0, 1fr);
+      padding-block: 1.75rem;
+    }
+    .rank {
+      font-size: var(--text-2xl);
+    }
+    .rank-title {
+      font-size: var(--text-xl);
+    }
   }
 </style>

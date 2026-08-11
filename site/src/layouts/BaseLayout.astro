@@ -4,9 +4,11 @@
 // - GA4:PUBLIC_GA4_ID 有值才輸出 gtag(googletagmanager.com 是守門唯一外部例外);未設完全不輸出
 // - 站內導覽(nav.home / nav.rankings / nav.about)
 // - 移除 sitemap <link>(sitemap 提交屬明確延後,M1 不產 sitemap)
+// 2026-08-11 視覺重做:報頭改「淺色刊頭 + 細規線」,頁尾改深色錨定塊,
+// 頁尾列出七語系自稱(endonym),把「一個議題七種語言」這件事講在版面上。
 import '../styles/variables.css';
 import '../styles/global.css';
-import { LOCALE } from '../lib/config.mjs';
+import { LOCALE, LOCALES, LOCALE_NAMES } from '../lib/config.mjs';
 import { t } from '../lib/i18n.mjs';
 
 interface Props {
@@ -20,6 +22,17 @@ const base = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
 const GA4_ID = import.meta.env.PUBLIC_GA4_ID || '';
+
+const path = Astro.url.pathname;
+const nav = [
+  { href: base, label: t('nav.home'), current: path === base || `${path}/` === base },
+  {
+    href: `${base}rankings/24h/`,
+    label: t('nav.rankings'),
+    current: path.startsWith(`${base}rankings`),
+  },
+  { href: `${base}about/`, label: t('nav.about'), current: path.startsWith(`${base}about`) },
+];
 ---
 
 <!doctype html>
@@ -46,65 +59,154 @@ const GA4_ID = import.meta.env.PUBLIC_GA4_ID || '';
     )}
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href={base}>aeiou.now</a>
+    <header class="masthead">
+      <div class="container masthead-inner">
+        <a class="wordmark" href={base}>
+          <span class="wordmark-name">aeiou.now</span>
+          <span class="wordmark-tag">{t('footer.tagline')}</span>
+        </a>
         <nav class="site-nav" aria-label="site">
-          <a href={base}>{t('nav.home')}</a>
-          <a href={`${base}rankings/24h/`}>{t('nav.rankings')}</a>
-          <a href={`${base}about/`}>{t('nav.about')}</a>
+          {nav.map((item) => (
+            <a href={item.href} aria-current={item.current ? 'page' : undefined}>{item.label}</a>
+          ))}
         </nav>
       </div>
     </header>
+
     <main class="container">
       <slot />
     </main>
+
     <footer class="site-footer">
-      <div class="container">
-        <small>aeiou.now · {t('footer.tagline')}</small>
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <p class="footer-name">aeiou.now</p>
+          <p class="footer-tagline">{t('footer.tagline')}</p>
+        </div>
+        <div class="footer-langs">
+          <p class="footer-langs-label">{t('footer.languages')}</p>
+          <ul class="footer-langs-list">
+            {LOCALES.map((code) => (
+              <li aria-current={code === LOCALE ? 'true' : undefined}>{LOCALE_NAMES[code]}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
 </html>
 
 <style>
-  .site-header {
-    background: var(--color-primary);
-    color: var(--color-white);
+  .masthead {
+    background: var(--color-white);
+    border-block-end: 0.0625rem solid var(--color-line-strong);
   }
-  .header-inner {
+  .masthead-inner {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 0.5rem 1.5rem;
-    padding-block: 0.75rem;
+    gap: 0.25rem 1.5rem;
+    padding-block: 0.875rem;
   }
-  .brand {
+  .wordmark {
+    text-decoration: none;
+    color: var(--color-text);
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+  }
+  .wordmark-name {
+    font-family: var(--font-display);
     font-size: var(--text-lg);
     font-weight: 700;
-    color: var(--color-white);
-    text-decoration: none;
+    letter-spacing: 0.01em;
+    color: var(--color-primary);
+  }
+  .wordmark-tag {
+    display: none;
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
   }
   .site-nav {
     display: flex;
-    gap: 1.25rem;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
   .site-nav a {
-    color: var(--color-white);
+    color: var(--color-ink-soft);
     font-size: var(--text-sm);
     text-decoration: none;
+    padding-block: 0.125rem;
+    border-block-end: 0.125rem solid transparent;
   }
   .site-nav a:hover {
-    color: var(--color-bg-light);
-    text-decoration: underline;
+    color: var(--color-accent-dark);
   }
+  .site-nav a[aria-current='page'] {
+    color: var(--color-text);
+    border-block-end-color: var(--color-accent);
+  }
+
   main {
-    padding-block: 2rem 3rem;
+    flex: 1 0 auto;
+    padding-block: clamp(1.5rem, 4vw, 3rem) clamp(3rem, 7vw, 5rem);
   }
+
   .site-footer {
-    border-top: 1px solid var(--color-line);
-    padding-block: 1.5rem;
-    color: var(--color-ink-soft);
+    background: var(--color-primary-deep);
+    color: var(--color-primary-line);
+    padding-block: 2.5rem;
+  }
+  .footer-inner {
+    display: grid;
+    gap: 1.75rem;
+  }
+  .footer-name {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0;
+  }
+  .footer-tagline {
+    margin: 0;
+    font-size: var(--text-sm);
+  }
+  .footer-langs-label {
+    font-size: var(--text-xs);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+  }
+  .footer-langs-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.1rem;
+    font-size: var(--text-sm);
+  }
+  .footer-langs-list li[aria-current] {
+    color: var(--color-white);
+    font-weight: 700;
+    border-block-end: 0.125rem solid var(--color-accent);
+  }
+
+  @media (min-width: 640px) {
+    .wordmark-tag {
+      display: inline;
+      border-inline-start: 0.0625rem solid var(--color-line-strong);
+      padding-inline-start: 0.75rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .footer-inner {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+      align-items: start;
+      gap: 2.5rem;
+    }
   }
 </style>

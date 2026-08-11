@@ -11,4 +11,11 @@ export function t(key) {
   if (!(key in dict)) throw new Error(`i18n key 缺漏:${LOCALE} 缺 "${key}"`);
   return dict[key];
 }
+
+// 資料驅動的 key(如 category.<資料裡的分類代碼>)才用這支:
+// 生產端隨時可能出現前端沒見過的分類,那不該把 build 打紅,退回顯示原始代碼即可。
+// UI 固定文案一律用 t(),缺 key 就要紅。
+export function tOr(key, fallback) {
+  return key in dict ? dict[key] : fallback;
+}
 export { dict };

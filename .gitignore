@@ -16,3 +16,6 @@ site/src/data/
 !.env.example
 *.log
 .wrangler/
+
+# 視覺驗收截圖(本機產物,不進 git)
+.screenshots/

@@ -1,14 +1,24 @@
 ---
-// Topic 頁(草案 §44 版面,六區塊):
+// Topic 頁(草案 §44 版面,六區塊,區塊與資料不增不減):
 // 1 全世界怎麼過 2 熱度(靜態六窗;8h 屬動態不出靜態) 3 討論室(動態)
 // 4 歷史精華 5 店家(含導航連結) 6 活動
+//
+// 2026-08-11 視覺重做的分區原則(六塊要分得出主次):
+//   ① 全世界怎麼過 = 招牌內容 → 唯一有底色的整段色帶、日期用襯線大字、最大留白。
+//   ② 熱度 = 一條薄薄的量表帶,只給級距不給數字,視覺重量刻意低。
+//   ③ 討論室 = 獨立面板(深色抬頭 + 白底),讓「這裡是會動的」跟靜態內容分開。
+//   ④ 歷史精華 = 引文排版,安靜。
+//   ⑤⑥ 店家與活動 = 併成一個「在地」低權重欄位區,兩欄並排,收在頁尾前。
+//   每塊上緣一致的粗規線 + 序號(01–06),讓讀者一眼數得出這頁有幾段。
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import DiscussionRoom from '../../components/DiscussionRoom.astro';
-import { t } from '../../lib/i18n.mjs';
+import HeatMeter from '../../components/HeatMeter.astro';
+import { t, tOr } from '../../lib/i18n.mjs';
 import { LOCALE, WINDOWS } from '../../lib/config.mjs';
+import { monthDay, dateTime } from '../../lib/format.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
-  customsText, scoresFor,
+  customsText, scoresFor, topicRowBySlug,
 } from '../../lib/data.mjs';
 
 export function getStaticPaths() {
@@ -25,223 +35,351 @@ const { topicId } = Astro.props;
 const { facts, i18n, highlightItems } = getTopicBundle(topicId);
 const loc = (i18n && i18n.locales && i18n.locales[LOCALE]) || {};
 const title = loc.title || (facts && facts.canonical_name) || topicId;
-const countries = (facts && facts.countries) || [];
+// popularity_rank 是資料裡本來就有的順位,拿來決定「先讀哪一國」
+const countries = ((facts && facts.countries) || [])
+  .slice()
+  .sort((a, b) => (a.popularity_rank || 99) - (b.popularity_rank || 99));
 const scores = scoresFor(topicId); // 六窗分數的來源是 topics index
 const hlList = highlightItems;
 const places = placesForTopic(topicId);
 const events = eventsForTopic(topicId);
-
-function fmtDate(epochSec) {
-  return new Intl.DateTimeFormat(LOCALE, { dateStyle: 'medium', timeStyle: 'short' })
-    .format(new Date(epochSec * 1000));
-}
+const row = topicRowBySlug(facts && facts.slug) || {};
+const category = (facts && facts.category) || row.category;
+const isPerennial = (facts && facts.is_perennial) || row.is_perennial;
 ---
 
 <BaseLayout title={`${title} — aeiou.now`} description={loc.summary}>
-  <h1>{title}</h1>
-  {loc.summary && <p class="topic-summary">{loc.summary}</p>}
-
-  <!-- 1. 全世界怎麼過 -->
-  <section>
-    <h2>{t('topic.how_world_celebrates')}</h2>
-    {countries.length === 0 && <p class="empty">{t('common.empty')}</p>}
-    <ul class="country-list">
-      {countries.map((c) => (
-        <li class="country-item">
-          <h3>
-            {countryName(c.country_code)}
-            <span class="local-name">{c.local_name}</span>
-          </h3>
-          <p class="country-date">
-            {c.observed_date}
-            {c.date_range_end && ` – ${c.date_range_end}`}
-            {c.date_rule && `(${c.date_rule})`}
+  <article class="topic">
+    <header class="topic-head">
+      <ul class="badge-row">
+        {category && (
+          <li><span class="badge badge--primary">{tOr(`category.${category}`, category)}</span></li>
+        )}
+        {isPerennial ? <li><span class="badge">{t('topic.perennial')}</span></li> : null}
+      </ul>
+      <h1>{title}</h1>
+      {loc.summary && <p class="topic-lede measure">{loc.summary}</p>}
+      <div class="topic-meta">
+        {countries.length > 0 && (
+          <p class="topic-countries">
+            <span class="topic-meta-label">{t('topic.countries_label')}</span>
+            <span class="topic-countries-names">
+              {countries.map((c) => countryName(c.country_code)).join(' · ')}
+            </span>
           </p>
-          {customsText(i18n, c.country_code) && (
-            <p class="country-customs">{customsText(i18n, c.country_code)}</p>
-          )}
-        </li>
-      ))}
-    </ul>
-  </section>
+        )}
+        <HeatMeter score={scores['24h']} caption={t('rankings.window.24h')} size="md" />
+      </div>
+    </header>
 
-  <!-- 2. 熱度(靜態六窗) -->
-  <section>
-    <h2>{t('topic.heat')}</h2>
-    <ul class="heat-grid">
-      {WINDOWS.map((win) => (
-        <li class="heat-cell">
-          <span class="heat-window">{t(`rankings.window.${win}`)}</span>
-          <span class="heat-score">{(scores[win] ?? 0).toFixed(1)}</span>
-        </li>
-      ))}
-    </ul>
-  </section>
+    <!-- 1. 全世界怎麼過 -->
+    <section class="zone-world">
+      <div class="section-head">
+        <span class="section-num" aria-hidden="true">01</span>
+        <h2>{t('topic.how_world_celebrates')}</h2>
+      </div>
+      {countries.length === 0 && <p class="empty">{t('common.empty')}</p>}
+      <ul class="country-list">
+        {countries.map((c) => (
+          <li class="country">
+            <div class="country-when">
+              <span class="country-date">{monthDay(c.observed_date)}</span>
+              {c.date_range_end && (
+                <span class="country-date-end">– {monthDay(c.date_range_end)}</span>
+              )}
+              <span class="country-when-label">{t('topic.local_date')}</span>
+              {c.date_rule && <span class="country-rule">{c.date_rule}</span>}
+            </div>
+            <div class="country-body">
+              <h3 class="country-name">
+                {countryName(c.country_code)}
+                <span class="local-name">{c.local_name}</span>
+              </h3>
+              {customsText(i18n, c.country_code) && (
+                <p class="country-customs">{customsText(i18n, c.country_code)}</p>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
 
-  <!-- 3. 討論室(動態,降級模型) -->
-  <section>
-    <h2>{t('topic.room')}</h2>
-    <DiscussionRoom topicId={topicId} />
-  </section>
+    <!-- 2. 熱度(靜態六窗) -->
+    <section class="zone-heat">
+      <div class="section-head">
+        <span class="section-num" aria-hidden="true">02</span>
+        <h2>{t('topic.heat')}</h2>
+        <p class="section-note">{t('heat.scale_note')}</p>
+      </div>
+      <ul class="heat-row">
+        {WINDOWS.map((win) => (
+          <li class="heat-cell">
+            <span class="heat-window">{t(`rankings.window.${win}`)}</span>
+            <HeatMeter score={scores[win]} />
+          </li>
+        ))}
+      </ul>
+    </section>
 
-  <!-- 4. 歷史精華 -->
-  <section>
-    <h2>{t('topic.highlights')}</h2>
-    {hlList.length === 0 && <p class="empty">{t('topic.highlights_empty')}</p>}
-    {hlList.map((hl) => {
-      const text =
-        hl.original_locale === LOCALE
-          ? hl.content
-          : (hl.translations && hl.translations[LOCALE]) || hl.content;
-      const translated = hl.original_locale !== LOCALE && hl.translations && hl.translations[LOCALE];
-      return (
-        <article class="highlight">
-          <p class="highlight-meta">
-            {countryName(hl.country_code)} · {hl.cycle_label}
-          </p>
-          <p class="highlight-content">{text}</p>
-          {translated && (
-            <details>
-              <summary>{t('post.show_original')}</summary>
-              <p class="highlight-original">{hl.content}</p>
-            </details>
-          )}
-        </article>
-      );
-    })}
-  </section>
+    <!-- 3. 討論室(動態,降級模型) -->
+    <section class="zone-room">
+      <div class="section-head">
+        <span class="section-num" aria-hidden="true">03</span>
+        <h2>{t('topic.room')}</h2>
+      </div>
+      <DiscussionRoom topicId={topicId} />
+    </section>
 
-  <!-- 5. 相關店家 -->
-  <section>
-    <h2>{t('topic.places')}</h2>
-    {places.length === 0 && <p class="empty">{t('common.empty')}</p>}
-    <ul class="card-list">
-      {places.map((pl) => (
-        <li class="card">
-          <h3>{pl.name}</h3>
-          {pl.descriptions && pl.descriptions[LOCALE] && <p>{pl.descriptions[LOCALE]}</p>}
-          {pl.address && <p class="card-meta">{pl.address}</p>}
-          {pl.map_url && (
-            <a class="card-link" href={pl.map_url} rel="noopener" target="_blank">
-              {t('topic.navigate')}
-            </a>
-          )}
-        </li>
-      ))}
-    </ul>
-  </section>
+    <!-- 4. 歷史精華 -->
+    <section class="zone-highlights">
+      <div class="section-head">
+        <span class="section-num" aria-hidden="true">04</span>
+        <h2>{t('topic.highlights')}</h2>
+      </div>
+      {hlList.length === 0 && <p class="empty">{t('topic.highlights_empty')}</p>}
+      {hlList.map((hl) => {
+        const text =
+          hl.original_locale === LOCALE
+            ? hl.content
+            : (hl.translations && hl.translations[LOCALE]) || hl.content;
+        const translated = hl.original_locale !== LOCALE && hl.translations && hl.translations[LOCALE];
+        return (
+          <article class="highlight">
+            <p class="highlight-content">{text}</p>
+            <p class="highlight-meta">
+              {countryName(hl.country_code)} · {hl.cycle_label}
+            </p>
+            {translated && (
+              <details>
+                <summary>{t('post.show_original')}</summary>
+                <p class="highlight-original">{hl.content}</p>
+              </details>
+            )}
+          </article>
+        );
+      })}
+    </section>
 
-  <!-- 6. 相關活動 -->
-  <section>
-    <h2>{t('topic.events')}</h2>
-    {events.length === 0 && <p class="empty">{t('common.empty')}</p>}
-    <ul class="card-list">
-      {events.map((ev) => (
-        <li class="card">
-          <h3>{ev.name}</h3>
-          {ev.descriptions && ev.descriptions[LOCALE] && <p>{ev.descriptions[LOCALE]}</p>}
-          <p class="card-meta">
-            {ev.venue}
-            {ev.start_at && ` · ${fmtDate(ev.start_at)}`}
-            {ev.end_at && ` – ${fmtDate(ev.end_at)}`}
-          </p>
-          {ev.ticket_url && (
-            <a class="card-link" href={ev.ticket_url} rel="noopener" target="_blank">
-              {t('topic.tickets')}
-            </a>
-          )}
-        </li>
-      ))}
-    </ul>
-  </section>
+    <div class="zone-local">
+      <!-- 5. 相關店家 -->
+      <section>
+        <div class="section-head">
+          <span class="section-num" aria-hidden="true">05</span>
+          <h2>{t('topic.places')}</h2>
+        </div>
+        {places.length === 0 && <p class="empty">{t('common.empty')}</p>}
+        <ul class="card-list">
+          {places.map((pl) => (
+            <li class="mini-card">
+              <h3>{pl.name}</h3>
+              {pl.descriptions && pl.descriptions[LOCALE] && <p>{pl.descriptions[LOCALE]}</p>}
+              {pl.address && <p class="card-meta">{pl.address}</p>}
+              {pl.map_url && (
+                <a class="card-link" href={pl.map_url} rel="noopener" target="_blank">
+                  {t('topic.navigate')} <span aria-hidden="true">↗</span>
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <!-- 6. 相關活動 -->
+      <section>
+        <div class="section-head">
+          <span class="section-num" aria-hidden="true">06</span>
+          <h2>{t('topic.events')}</h2>
+        </div>
+        {events.length === 0 && <p class="empty">{t('common.empty')}</p>}
+        <ul class="card-list">
+          {events.map((ev) => (
+            <li class="mini-card">
+              <h3>{ev.name}</h3>
+              {ev.descriptions && ev.descriptions[LOCALE] && <p>{ev.descriptions[LOCALE]}</p>}
+              <p class="card-meta">
+                {ev.venue}
+                {ev.start_at && ` · ${dateTime(ev.start_at)}`}
+                {ev.end_at && ` – ${dateTime(ev.end_at)}`}
+              </p>
+              {ev.ticket_url && (
+                <a class="card-link" href={ev.ticket_url} rel="noopener" target="_blank">
+                  {t('topic.tickets')} <span aria-hidden="true">↗</span>
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
+  </article>
 </BaseLayout>
 
 <style>
-  section {
-    margin-block-end: 2.5rem;
-  }
-  .topic-summary {
-    color: var(--color-ink-soft);
+  .topic > section,
+  .topic > .zone-local {
+    margin-block-end: clamp(2.5rem, 6vw, 4.5rem);
   }
   .empty {
     color: var(--color-ink-muted);
+    font-size: var(--text-sm);
   }
-  .country-list,
-  .card-list {
+
+  /* ── 標題區:分類 → 大標 → 導言 → 涵蓋國家與熱度 ── */
+  .topic-head {
+    padding-block-end: 1.5rem;
+    margin-block-end: clamp(2rem, 5vw, 3.5rem);
+    border-block-end: 0.0625rem solid var(--color-line);
+  }
+  .topic-head h1 {
+    margin: 0.75rem 0 1rem;
+  }
+  .topic-lede {
+    font-size: var(--text-lg);
+    line-height: 1.6;
+    color: var(--color-ink-soft);
+    margin: 0 0 1.5rem;
+  }
+  .topic-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 2rem;
+  }
+  .topic-countries {
+    margin: 0;
+    font-size: var(--text-xs);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.6rem;
+    align-items: baseline;
+  }
+  .topic-meta-label {
+    color: var(--color-ink-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .topic-countries-names {
+    font-weight: 600;
+  }
+
+  /* ── 01 全世界怎麼過:唯一有底色的整段色帶,是這頁的視覺重心 ── */
+  .zone-world {
+    background: var(--color-primary-soft);
+    border-block: 0.0625rem solid var(--color-primary-line);
+    padding: clamp(1.5rem, 4vw, 2.75rem) clamp(1rem, 4vw, 2.5rem);
+    margin-inline: calc(-1 * clamp(1rem, 4vw, 2.5rem));
+  }
+  .country-list {
     list-style: none;
+    margin: 0;
     padding: 0;
     display: grid;
-    gap: 1rem;
+    gap: 0;
   }
-  .country-item,
-  .card {
-    border: 1px solid var(--color-line);
-    border-radius: 0.75rem;
-    padding: 1rem 1.25rem;
-    background: var(--color-white);
+  .country {
+    display: grid;
+    gap: 0.5rem 2rem;
+    padding-block: clamp(1.25rem, 3vw, 1.75rem);
+    border-block-start: 0.0625rem solid var(--color-primary-line);
   }
-  .country-item h3,
-  .card h3 {
-    margin: 0 0 0.25rem;
+  .country:first-child {
+    border-block-start: 0;
+    padding-block-start: 0;
   }
-  .local-name {
-    font-size: var(--text-sm);
-    color: var(--color-ink-muted);
-    margin-inline-start: 0.5rem;
-    font-weight: 400;
+  .country-when {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.5rem;
   }
-  .country-date,
-  .card-meta {
+  .country-date {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-accent-dark);
+  }
+  .country-date-end {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    color: var(--color-accent-dark);
+  }
+  .country-when-label {
     font-size: var(--text-xs);
     color: var(--color-ink-muted);
-    margin: 0 0 0.5rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    flex-basis: 100%;
+  }
+  .country-rule {
+    font-size: var(--text-xs);
+    color: var(--color-ink-soft);
+    flex-basis: 100%;
+  }
+  .country-name {
+    margin: 0 0 0.375rem;
+    color: var(--color-primary);
+  }
+  .local-name {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    color: var(--color-ink-soft);
+    margin-inline-start: 0.6rem;
+    font-weight: 400;
   }
   .country-customs {
     margin: 0;
+    max-width: 42rem;
   }
-  .heat-grid {
+
+  /* ── 02 熱度:低視覺重量的量表帶,只有級距沒有數字 ── */
+  .heat-row {
     list-style: none;
+    margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
-    gap: 0.75rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
   }
   .heat-cell {
-    border: 1px solid var(--color-line);
-    border-radius: 0.5rem;
-    padding: 0.75rem;
-    text-align: center;
-    display: grid;
-    gap: 0.25rem;
-    background: var(--color-bg-light);
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    padding-inline-start: 0.875rem;
+    border-inline-start: 0.1875rem solid var(--color-line);
   }
   .heat-window {
     font-size: var(--text-xs);
-    color: var(--color-ink-soft);
+    color: var(--color-ink-muted);
+    letter-spacing: 0.06em;
   }
-  .heat-score {
-    font-size: var(--text-lg);
-    font-weight: 700;
-    color: var(--color-primary);
+
+  /* ── 03 討論室:白底面板,跟靜態內容視覺分開 ── */
+  .zone-room :global(.room) {
+    border-radius: var(--radius-md);
   }
+
+  /* ── 04 歷史精華:引文排版 ── */
   .highlight {
-    border: 1px solid var(--color-line);
-    border-radius: 0.75rem;
-    padding: 1rem 1.25rem;
-    margin-block-end: 0.75rem;
-    background: var(--color-white);
+    border-inline-start: 0.1875rem solid var(--color-accent);
+    padding-inline-start: 1.25rem;
+    margin-block-end: 1.75rem;
+    max-width: 42rem;
+  }
+  .highlight-content {
+    margin: 0 0 0.5rem;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    line-height: 1.55;
   }
   .highlight-meta {
     font-size: var(--text-xs);
     color: var(--color-ink-muted);
-    margin: 0 0 0.5rem;
-  }
-  .highlight-content {
     margin: 0;
   }
   .highlight-original {
     color: var(--color-ink-soft);
-    border-inline-start: 3px solid var(--color-line);
+    border-inline-start: 0.125rem solid var(--color-line);
     padding-inline-start: 0.75rem;
   }
   details summary {
@@ -250,7 +388,69 @@ function fmtDate(epochSec) {
     font-size: var(--text-xs);
     margin-block-start: 0.5rem;
   }
+
+  /* ── 05/06 在地資訊:低權重,兩欄並排收尾 ── */
+  .zone-local {
+    display: grid;
+    gap: clamp(2.5rem, 6vw, 3.5rem);
+  }
+  .card-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+  }
+  .mini-card {
+    background: var(--color-white);
+    border: 0.0625rem solid var(--color-line);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    box-shadow: var(--shadow-card);
+  }
+  .mini-card h3 {
+    font-size: var(--text-lg);
+    margin: 0 0 0.375rem;
+  }
+  .mini-card p {
+    font-size: var(--text-sm);
+    margin: 0 0 0.5rem;
+    color: var(--color-ink-soft);
+  }
+  .card-meta {
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+  }
   .card-link {
     font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-accent-dark);
+    text-decoration: none;
+  }
+  .card-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (min-width: 640px) {
+    .heat-row {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 768px) {
+    .country {
+      grid-template-columns: minmax(9rem, 14rem) minmax(0, 1fr);
+    }
+    .zone-local {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 1024px) {
+    .heat-row {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+    .topic-head h1 {
+      font-size: var(--text-3xl);
+      line-height: 1.1;
+    }
   }
 </style>

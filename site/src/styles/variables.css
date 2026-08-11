@@ -1,37 +1,72 @@
 /* 設計 token（全站唯一來源）。
  * 規範（團隊網站共用，同 dreamer868/credo/folk.tw/yao.care）：
- * - 顏色一律在此定義：oklch 為準、hex 為 fallback；元件只准 var(--…)，不寫 hex/rgb。
+ * - 顏色一律在此定義：oklch 為準、hex 為 fallback；元件只准 var(--…)，不寫 hex/rgb/oklch 字面值。
  * - 字級一律 --text-* 階梯（最小 18px；內文不得小於 --text-base），禁 px 硬編字級、禁 important 覆寫。
  * - 字型自託管或系統堆疊，禁外部 CDN。
  * - RWD mobile-first，斷點只用 min-width（sm 640 / md 768 / lg 1024 / xl 1280）。
- * 守門：scripts/check-design.mjs（pnpm build 自動先跑，違規直接 fail）。 */
+ * 守門：scripts/check-design.mjs（pnpm build 自動先跑，違規直接 fail）。
+ *
+ * ─────────────────────────────────────────────────────────────
+ * aeiou.now 選色理由（2026-08-11 整站視覺重做時定案，非佔位色）
+ * ─────────────────────────────────────────────────────────────
+ * 這個站的內容是「同一個議題，七個市場怎麼看它」——講事實、講來源、講文化差異。
+ * 調性要編輯感與國際新聞感，所以配色只用三個角色，不用漸層、不用發光。
+ *
+ * 1) 底色是「紙」不是「白」：--color-bg-light 是帶暖度的米白（oklch 色相 85），
+ *    卡片才用純白墊高。純白通版會讓大字級階梯顯得刺眼，暖白讀起來像印刷品。
+ * 2) 主色 = 深墨綠松（petrol / 地圖綠，oklch 色相 196，明度 0.36）。
+ *    選它的理由：這是舊地圖、護照、地理圖鑑的顏色，帶「跨國、檔案、可查證」的語意，
+ *    而不是通用科技藍（原佔位色 #1a4f8a 就是那條藍）。明度壓到 0.36 讓它可以同時當
+ *    連結色（對紙底對比 9.8:1）與深色底塊（白字對比 10.6:1），一色兩用，版面才乾淨。
+ * 3) 強調色 = 朱紅（vermilion，色相 34）。取自印泥／報頭紅的語意，在七個市場都讀得懂
+ *    「這裡要注意」，且在 zh/ja/hi/id 市場另有喜慶語意，配情人節這類節日題材不突兀。
+ *    用量刻意稀少：只給熱度最高階、名次前三、區塊編號。
+ * 4) 熱度級距（--color-heat-*）是一條從中性灰 → 沙 → 琥珀 → 橘 → 朱紅的暖色斜坡，
+ *    末端刻意收斂到強調色本身，讓「爆」和站的強調色是同一個紅，而不是另開一個警示色。
+ *    ⚠ 級距絕不只靠顏色分辨：HeatMeter 同時給文字標籤與「填滿格數」的長度差異
+ *    （色盲／灰階列印仍可讀），顏色只是加強。
+ * 5) 文字色一律偏暖（色相 60）而非中性灰，跟暖紙底同一個色溫，避免「白底黑字」的螢幕感。
+ */
 
 :root {
-  /* ── 色彩（hex fallback；下方 @supports 區塊以 oklch 覆寫） ──
-   * ⚠ primary/accent 為佔位色，建站時依用戶提供的品牌色改掉（oklch 與 hex 兩處都要改）。 */
-  --color-primary: #1a4f8a;      /* 品牌主色（佔位） */
-  --color-accent: #c25e2e;       /* 品牌強調色（佔位） */
-  --color-accent-dark: #a54d22;  /* 強調色 hover（佔位） */
-  --color-bg-light: #F4F4F4;     /* 淺灰底 */
-  --color-text: #1F1F1F;         /* 主文字 */
-  --color-white: #ffffff;
-  --color-ink-soft: #555555;     /* 次要文字 */
-  --color-ink-muted: #999999;    /* 註記/弱化文字 */
-  --color-line: #dddddd;         /* 邊線/分隔 */
+  /* ── 色彩（hex fallback；下方 @supports 區塊以 oklch 覆寫） ── */
+  --color-primary: #194545;       /* 深墨綠松：主色、連結、深色底塊 */
+  --color-primary-deep: #082a2b;  /* 更深一階：頁尾／深色面 */
+  --color-primary-soft: #e7f2f2;  /* 主色淡底：招牌區塊的底色 */
+  --color-primary-line: #c0dada;  /* 主色淡底上的邊線 */
+  --color-accent: #c34b30;        /* 朱紅：強調（用量刻意稀少） */
+  --color-accent-dark: #9d3721;   /* 朱紅深階：紙底上的強調文字／hover */
+  --color-accent-soft: #fbe7df;   /* 朱紅淡底：徽章 */
+  --color-bg-light: #f9f6f2;      /* 暖米白「紙」：頁面底色 */
+  --color-text: #241e1a;          /* 主文字（暖墨） */
+  --color-white: #ffffff;         /* 卡片／浮起面 */
+  --color-ink-soft: #47413d;      /* 次要文字 */
+  --color-ink-muted: #686460;     /* 註記/弱化文字（對紙底 5.4:1） */
+  --color-line: #dfdedb;          /* 邊線/分隔 */
+  --color-line-strong: #bfbdb9;   /* 主分隔線（區塊上緣的粗規線） */
+
+  /* ── 熱度級距（PTT「爆」式量級；定義在 src/lib/heat.mjs） ── */
+  --color-heat-quiet: #a7a49e;
+  --color-heat-warm: #d0b477;
+  --color-heat-rising: #e7963d;
+  --color-heat-hot: #e36927;
+  --color-heat-blast: #c34b30;
+  --color-heat-track: #e8e6e2;    /* 未填滿的格子 */
 
   /* ── 透明度變體與陰影（元件內禁 rgba/hex，一律引用這些） ── */
-  --color-primary-a80: rgba(26, 79, 138, 0.8);
-  --color-primary-a60: rgba(26, 79, 138, 0.6);
+  --color-primary-a80: rgba(25, 69, 69, 0.8);
+  --color-primary-a60: rgba(25, 69, 69, 0.6);
   --color-white-a20: rgba(255, 255, 255, 0.2);
   --color-white-a10: rgba(255, 255, 255, 0.1);
   --scrim-50: rgba(0, 0, 0, 0.5);
   --scrim-30: rgba(0, 0, 0, 0.3);
   --scrim-20: rgba(0, 0, 0, 0.2);
   --scrim-0: rgba(0, 0, 0, 0);
-  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.08);
-  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
-  --shadow-float: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 1px 2px rgba(36, 30, 26, 0.05);
+  --shadow-card-hover: 0 6px 20px rgba(36, 30, 26, 0.1);
+  --shadow-float: 0 4px 12px rgba(36, 30, 26, 0.18);
   --shadow-text: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --focus-ring: 0 0 0 0.1875rem rgba(195, 75, 48, 0.45);
 
   /* ── 字級階梯（rem；最小 18px；--text-base 為內文下限）——全站鎖死，勿改小 ── */
   --text-xs: 1.125rem;   /* 18px 標籤/徽章/免責註記 */
@@ -42,33 +77,65 @@
   --text-2xl: clamp(2rem, 1.5rem + 2vw, 2.75rem);   /* 32→44px 頁面主標 */
   --text-3xl: clamp(2.75rem, 2rem + 3.5vw, 4.5rem); /* 44→72px Hero/裝飾大字 */
 
-  /* ── 字型（系統堆疊，不載外部字型） ── */
-  --font-sans: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', system-ui, sans-serif;
-  --font-serif: 'Noto Serif TC', 'PingFang TC', 'Microsoft JhengHei', serif;
+  /* ── 字型（系統堆疊，不載外部字型） ──
+   * 排序原則：拉丁字面先行（en/id/pt-BR 用系統 UI 字），CJK 與天城文靠逐字 fallback 接手，
+   * 所以七語系共用同一組堆疊也不會爆版。*/
+  --font-sans:
+    system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', 'Noto Sans',
+    'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei',
+    'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic',
+    'Noto Sans Devanagari', 'Nirmala UI', 'Kohinoor Devanagari',
+    'Noto Sans CJK TC', 'Noto Sans CJK JP', 'FreeSans', sans-serif;
+  --font-display:
+    Georgia, 'Times New Roman', 'Noto Serif',
+    'Noto Serif TC', 'Songti TC', 'PMingLiU',
+    'Hiragino Mincho ProN', 'Noto Serif JP', 'Yu Mincho',
+    'Noto Serif Devanagari',
+    'Noto Serif CJK TC', 'Noto Serif CJK JP', 'FreeSerif', serif;
+  --font-serif: var(--font-display);
+
+  /* ── 圓角（編輯感 = 直角為主，卡片只給一點點） ── */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-pill: 62.5rem;
 }
 
 @supports (color: oklch(0.5 0.1 250)) {
   :root {
-    --color-primary: oklch(0.42 0.11 255);
-    --color-accent: oklch(0.58 0.13 45);
-    --color-accent-dark: oklch(0.51 0.12 45);
-    --color-bg-light: oklch(0.967 0 0);
-    --color-text: oklch(0.239 0 0);
+    --color-primary: oklch(0.36 0.048 196);
+    --color-primary-deep: oklch(0.26 0.038 198);
+    --color-primary-soft: oklch(0.955 0.014 196);
+    --color-primary-line: oklch(0.87 0.028 196);
+    --color-accent: oklch(0.57 0.16 34);
+    --color-accent-dark: oklch(0.48 0.14 34);
+    --color-accent-soft: oklch(0.94 0.03 40);
+    --color-bg-light: oklch(0.975 0.006 85);
+    --color-text: oklch(0.24 0.012 60);
     --color-white: oklch(1 0 0);
-    --color-ink-soft: oklch(0.45 0 0);
-    --color-ink-muted: oklch(0.683 0 0);
-    --color-line: oklch(0.898 0 0);
-    --color-primary-a80: oklch(0.42 0.11 255 / 0.8);
-    --color-primary-a60: oklch(0.42 0.11 255 / 0.6);
+    --color-ink-soft: oklch(0.38 0.01 60);
+    --color-ink-muted: oklch(0.505 0.008 60);
+    --color-line: oklch(0.9 0.004 85);
+    --color-line-strong: oklch(0.8 0.006 85);
+
+    --color-heat-quiet: oklch(0.72 0.01 85);
+    --color-heat-warm: oklch(0.78 0.085 85);
+    --color-heat-rising: oklch(0.74 0.14 65);
+    --color-heat-hot: oklch(0.66 0.17 45);
+    --color-heat-blast: oklch(0.57 0.16 34);
+    --color-heat-track: oklch(0.925 0.004 85);
+
+    --color-primary-a80: oklch(0.36 0.048 196 / 0.8);
+    --color-primary-a60: oklch(0.36 0.048 196 / 0.6);
     --color-white-a20: oklch(1 0 0 / 0.2);
     --color-white-a10: oklch(1 0 0 / 0.1);
     --scrim-50: oklch(0 0 0 / 0.5);
     --scrim-30: oklch(0 0 0 / 0.3);
     --scrim-20: oklch(0 0 0 / 0.2);
     --scrim-0: oklch(0 0 0 / 0);
-    --shadow-card: 0 2px 12px oklch(0 0 0 / 0.08);
-    --shadow-card-hover: 0 8px 24px oklch(0 0 0 / 0.12);
-    --shadow-float: 0 4px 12px oklch(0 0 0 / 0.3);
+    --shadow-card: 0 1px 2px oklch(0.24 0.012 60 / 0.05);
+    --shadow-card-hover: 0 6px 20px oklch(0.24 0.012 60 / 0.1);
+    --shadow-float: 0 4px 12px oklch(0.24 0.012 60 / 0.18);
     --shadow-text: 0 2px 12px oklch(0 0 0 / 0.3);
+    --focus-ring: 0 0 0 0.1875rem oklch(0.57 0.16 34 / 0.45);
   }
 }

@@ -1,10 +1,55 @@
 ---
-// 關於頁(M1 佔位)
+// 關於頁(M1 佔位內容,版面與全站同一套編輯排版)
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { t } from '../lib/i18n.mjs';
+import { LOCALES, LOCALE_NAMES } from '../lib/config.mjs';
 ---
 
-<BaseLayout title={t('about.title')} description={t('footer.tagline')}>
-  <h1>{t('about.title')}</h1>
-  <p>{t('about.body')}</p>
+<BaseLayout title={t('about.title')} description={t('home.lede')}>
+  <article class="about">
+    <p class="eyebrow">aeiou.now</p>
+    <h1>{t('about.title')}</h1>
+    <p class="about-lede measure">{t('home.lede')}</p>
+    <p class="measure">{t('about.body')}</p>
+
+    <h2 class="about-sub">{t('footer.languages')}</h2>
+    <ul class="lang-list">
+      {LOCALES.map((code) => <li>{LOCALE_NAMES[code]}</li>)}
+    </ul>
+  </article>
 </BaseLayout>
+
+<style>
+  .about {
+    padding-block-start: 1rem;
+  }
+  .about h1 {
+    margin: 0.5rem 0 1.25rem;
+  }
+  .about-lede {
+    font-size: var(--text-lg);
+    line-height: 1.6;
+    color: var(--color-ink-soft);
+    margin-block-end: 1.5rem;
+  }
+  .about-sub {
+    margin-block-start: 2.5rem;
+    border-block-start: 0.125rem solid var(--color-text);
+    padding-block-start: 0.75rem;
+  }
+  .lang-list {
+    list-style: none;
+    margin: 1rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+  }
+  .lang-list li {
+    font-size: var(--text-sm);
+    border: 0.0625rem solid var(--color-line-strong);
+    border-radius: var(--radius-pill);
+    padding: 0.15rem 1rem;
+    background: var(--color-white);
+  }
+</style>

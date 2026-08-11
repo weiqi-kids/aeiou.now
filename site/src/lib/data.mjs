@@ -13,11 +13,42 @@ export function readJson(rel, fallback = null) {
   return JSON.parse(readFileSync(p, 'utf8'));
 }
 
-/** Topic 清單(本 locale):topics/index/<locale>.json = 裸陣列 */
+/** Topic 清單(本 locale):topics/index/<locale>.json = 裸陣列。
+ * index 檔只有 category / is_perennial / scores / slug / status / title / topic_id,
+ * 沒有 summary,也沒有國家資訊——摘要在 topics/<id>/i18n.json 的 locales.<locale>.summary,
+ * 國家在 topics/<id>/facts.json 的 countries。列表頁要用,所以在讀取層補齊,
+ * 不動 scripts/export-data.mjs(那支是生產者的匯出腳本,不是靜態站的責任範圍)。
+ * 缺檔一律回退為 null/空陣列——不能依賴任何檔存在。 */
+let topicsIndexCache = null;
+
 export function getTopicsIndex() {
+  if (topicsIndexCache) return topicsIndexCache;
   const idx = readJson(`topics/index/${LOCALE}.json`, []);
-  if (Array.isArray(idx)) return idx;
-  return (idx && Array.isArray(idx.topics) && idx.topics) || [];
+  const rows = Array.isArray(idx) ? idx : (idx && Array.isArray(idx.topics) && idx.topics) || [];
+  topicsIndexCache = rows.map(enrichTopicRow);
+  return topicsIndexCache;
+}
+
+function enrichTopicRow(row) {
+  const id = row && row.topic_id;
+  if (!id) return row;
+  const i18n = readJson(`topics/${id}/i18n.json`, null);
+  const loc = (i18n && i18n.locales && i18n.locales[LOCALE]) || {};
+  const facts = readJson(`topics/${id}/facts.json`, null);
+  const countries = (facts && facts.countries) || [];
+  return {
+    ...row,
+    title: row.title || loc.title || (facts && facts.canonical_name) || id,
+    summary: row.summary || loc.summary || null,
+    keywords: (loc.keywords || []).slice(),
+    country_codes: countries.map((c) => c.country_code).filter(Boolean),
+    country_count: countries.length,
+  };
+}
+
+/** 依 slug 取列表列(排行頁補資料用)。 */
+export function topicRowBySlug(slug) {
+  return getTopicsIndex().find((row) => row.slug === slug) || null;
 }
 
 /** 全部 topic 目錄(排除 index/) */

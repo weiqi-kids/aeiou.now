@@ -1,68 +1,195 @@
 ---
-// 首頁:Global Trending(靜態,讀 topics/index/<locale>.json)
+// 首頁:先講清楚「這是什麼站」,再給頭條議題,最後給排行榜入口。
+// 資料:topics/index/<locale>.json(經 data.mjs 補上 i18n.json 的 summary 與 facts.json 的國家)
 import BaseLayout from '../layouts/BaseLayout.astro';
+import TopicCard from '../components/TopicCard.astro';
 import { t } from '../lib/i18n.mjs';
 import { getTopicsIndex } from '../lib/data.mjs';
 import { withBase } from '../lib/paths.mjs';
+import { LOCALES, WINDOWS } from '../lib/config.mjs';
 
 const topics = getTopicsIndex()
   .slice()
   .sort((a, b) => ((b.scores || {})['24h'] || 0) - ((a.scores || {})['24h'] || 0));
+
+const [lead, ...rest] = topics;
+const countryCount = new Set(topics.flatMap((topic) => topic.country_codes || [])).size;
+const stats = [
+  { value: topics.length, label: t('home.stat_topics') },
+  { value: LOCALES.length, label: t('home.stat_languages') },
+  { value: countryCount, label: t('home.stat_countries') },
+];
 ---
 
-<BaseLayout title={`aeiou.now — ${t('home.trending')}`} description={t('footer.tagline')}>
-  <h1>{t('home.trending')}</h1>
-  {topics.length === 0 && <p class="empty">{t('common.empty')}</p>}
-  <ul class="topic-grid">
-    {topics.map((topic) => (
-      <li class="topic-card">
-        <a href={withBase(`topic/${topic.slug}/`)}>
-          <h2>{topic.title}</h2>
-          {topic.summary && <p class="summary">{topic.summary}</p>}
-          <p class="score">
-            {t('topic.heat')}({t('rankings.window.24h')}):{((topic.scores || {})['24h'] || 0).toFixed(1)}
-          </p>
-        </a>
-      </li>
-    ))}
-  </ul>
+<BaseLayout title={`aeiou.now — ${t('home.trending')}`} description={t('home.lede')}>
+  <section class="hero">
+    <p class="eyebrow">aeiou.now</p>
+    <h1 class="hero-title">{t('home.lede')}</h1>
+    <p class="hero-intro measure">{t('home.intro')}</p>
+    <dl class="hero-stats">
+      {stats.map((stat) => (
+        <div class="stat">
+          <dt class="stat-label">{stat.label}</dt>
+          <dd class="stat-value">{stat.value}</dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+
+  <section class="trending">
+    <div class="section-head">
+      <h2>{t('home.trending')}</h2>
+      <a class="section-link" href={withBase('rankings/24h/')}>
+        {t('home.rankings_cta')} <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    {topics.length === 0 && <p class="empty">{t('common.empty')}</p>}
+
+    <div class="topic-grid">
+      {lead && <div class="grid-lead"><TopicCard topic={lead} lead /></div>}
+      {rest.map((topic) => <TopicCard topic={topic} />)}
+    </div>
+  </section>
+
+  <section class="rankings-entry">
+    <div class="section-head">
+      <h2>{t('rankings.title')}</h2>
+    </div>
+    <p class="rankings-entry-label">{t('rankings.window_label')}</p>
+    <ul class="window-links">
+      {WINDOWS.map((win) => (
+        <li>
+          <a href={withBase(`rankings/${win}/`)}>{t(`rankings.window.${win}`)}</a>
+        </li>
+      ))}
+    </ul>
+  </section>
 </BaseLayout>
 
 <style>
-  .topic-grid {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  /* Hero:大字階梯的正面用法——一句定位話用 --text-3xl 撐版面,
+     其餘資訊逐級降到 --text-base,層次靠字級落差而不是靠色塊。 */
+  .hero {
+    padding-block: 1rem 2.5rem;
+    border-block-end: 0.0625rem solid var(--color-line);
+    margin-block-end: 3rem;
   }
-  .topic-card a {
-    display: block;
-    border: 1px solid var(--color-line);
-    border-radius: 0.75rem;
-    padding: 1.25rem;
-    text-decoration: none;
-    color: var(--color-text);
-    box-shadow: var(--shadow-card);
-    background: var(--color-white);
+  .hero-title {
+    font-size: var(--text-2xl);
+    margin: 0.5rem 0 1rem;
+    max-width: 24em;
   }
-  .topic-card a:hover {
-    box-shadow: var(--shadow-card-hover);
-  }
-  .topic-card h2 {
-    margin: 0 0 0.5rem;
-    color: var(--color-primary);
-  }
-  .summary {
-    margin: 0 0 0.75rem;
+  .hero-intro {
+    margin: 0 0 2rem;
     color: var(--color-ink-soft);
   }
-  .score {
+  .hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem 2.5rem;
     margin: 0;
+  }
+  .stat {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.125rem;
+  }
+  .stat-value {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+    color: var(--color-primary);
+  }
+  .stat-label {
     font-size: var(--text-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--color-ink-muted);
+  }
+
+  .section-link {
+    font-size: var(--text-sm);
+    text-decoration: none;
+    color: var(--color-accent-dark);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .section-link:hover {
+    text-decoration: underline;
+  }
+
+  .topic-grid {
+    display: grid;
+    gap: 1.25rem;
+  }
+  /* 頭條卡在格線裡要撐滿整格,否則旁邊的次條卡會比它高 */
+  .grid-lead {
+    display: grid;
   }
   .empty {
     color: var(--color-ink-muted);
+  }
+
+  .rankings-entry {
+    margin-block-start: 3.5rem;
+  }
+  .rankings-entry-label {
+    font-size: var(--text-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+    margin: 0 0 0.75rem;
+  }
+  .window-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+  }
+  .window-links a {
+    display: inline-block;
+    font-size: var(--text-sm);
+    text-decoration: none;
+    color: var(--color-primary);
+    background: var(--color-primary-soft);
+    border: 0.0625rem solid var(--color-primary-line);
+    border-radius: var(--radius-pill);
+    padding: 0.25rem 1.1rem;
+  }
+  .window-links a:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: var(--text-3xl);
+      line-height: 1.05;
+    }
+    .hero-intro {
+      font-size: var(--text-lg);
+    }
+    .topic-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+    .grid-lead {
+      grid-column: 1 / -1;
+    }
+  }
+  @media (min-width: 1024px) {
+    .topic-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    /* 三欄時頭條佔兩欄,次條補滿第三欄——一版一頭條的報紙排法 */
+    .grid-lead {
+      grid-column: span 2;
+    }
   }
 </style>

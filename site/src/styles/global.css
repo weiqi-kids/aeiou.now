@@ -1,5 +1,8 @@
 /* 全站基礎樣式：只准引用 variables.css 的 token；
- * 禁 hex/rgb、禁 px 字級、禁 important 覆寫（scripts/check-design.mjs 守門）。 */
+ * 禁 hex/rgb/oklch 字面值、禁 px 字級、禁 important 覆寫（scripts/check-design.mjs 守門）。
+ *
+ * 這裡只放「跨頁面共用的編輯排版原語」：容器、規線、區塊抬頭、徽章、行文寬度。
+ * 單一頁面／元件的樣式一律寫在該 .astro 的 scoped <style>（css 白名單只有兩檔）。 */
 *,
 *::before,
 *::after {
@@ -9,7 +12,7 @@
 html {
   font-family: var(--font-sans);
   color: var(--color-text);
-  background: var(--color-white);
+  background: var(--color-bg-light);
   -webkit-text-size-adjust: 100%;
 }
 
@@ -17,15 +20,36 @@ body {
   margin: 0;
   font-size: var(--text-base);
   line-height: 1.75;
+  background: var(--color-bg-light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-h1 { font-size: var(--text-2xl); line-height: 1.25; }
+/* 標題走襯線顯示字（報頭感）；內文維持無襯線，兩者對比就是層次的第一層。 */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--text-2xl); line-height: 1.2; letter-spacing: -0.01em; }
 h2 { font-size: var(--text-xl); line-height: 1.3; }
 h3 { font-size: var(--text-lg); line-height: 1.4; }
 small { font-size: var(--text-xs); }
 
-a { color: var(--color-primary); }
-a:hover { color: var(--color-accent); }
+p { margin-block: 0 0.75em; }
+
+a { color: var(--color-primary); text-underline-offset: 0.2em; }
+a:hover { color: var(--color-accent-dark); }
+
+:focus-visible {
+  outline: 0.125rem solid var(--color-accent-dark);
+  outline-offset: 0.125rem;
+  border-radius: var(--radius-sm);
+}
 
 img,
 video {
@@ -33,9 +57,100 @@ video {
   height: auto;
 }
 
-/* RWD：mobile-first，斷點只用 min-width 640 / 768 / 1024 / 1280；spacing 建議 clamp() */
+/* RWD：mobile-first，斷點只用 min-width 640 / 768 / 1024 / 1280 */
 .container {
+  width: 100%;
   max-width: 72rem;
   margin-inline: auto;
-  padding-inline: clamp(1rem, 4vw, 2rem);
+  padding-inline: clamp(1rem, 4vw, 2.5rem);
+}
+
+/* 行文寬度：CJK 約 30 字、拉丁約 60 字一行，七語系都不會拉成長條 */
+.measure {
+  max-width: 42rem;
+}
+
+/* 小字抬頭（區塊上方的分類標）：全大寫＋字距，天城文/CJK 不受 uppercase 影響 */
+.eyebrow {
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  margin: 0;
+  font-weight: 600;
+}
+
+/* 區塊抬頭：粗規線 + 序號 + 標題。六個區塊靠這個一致的抬頭建立分區感。 */
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  border-block-start: 0.125rem solid var(--color-text);
+  padding-block-start: 0.75rem;
+  margin-block-end: 1.5rem;
+  flex-wrap: wrap;
+}
+.section-head > h2 {
+  margin: 0;
+  flex: 1 1 auto;
+}
+.section-num {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+  flex: 0 0 auto;
+}
+.section-note {
+  flex: 1 0 100%;
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  margin: 0;
+}
+
+/* 徽章：分類、長青、國家數 */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  padding: 0.1em 0.7em;
+  border-radius: var(--radius-pill);
+  border: 0.0625rem solid var(--color-line-strong);
+  color: var(--color-ink-soft);
+  background: var(--color-white);
+  white-space: nowrap;
+}
+.badge--primary {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+.badge--accent {
+  border-color: var(--color-accent);
+  color: var(--color-accent-dark);
+  background: var(--color-accent-soft);
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  padding: 0;
+  margin: -0.0625rem;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
