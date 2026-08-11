@@ -7,12 +7,15 @@
 // 最近的活動)。名次數字只有全球熱門那一組有,其他排序不硬掰名次。
 import TopicRow from './TopicRow.astro';
 
+// withPosts:首頁把每個 Topic 底下的 N 則 Post 一起列出來(階層 Topic → Post)。
+// 其他三個排序頁只是清單,不掛貼文,所以預設 false。
 interface Props {
   rows: Array<Record<string, any>>;
   empty: string;
   win?: string;
+  withPosts?: boolean;
 }
-const { rows, empty, win = '24h' } = Astro.props;
+const { rows, empty, win = '24h', withPosts = false } = Astro.props;
 ---
 
 {rows.length === 0 && <p class="board-empty">{empty}</p>}
@@ -26,6 +29,7 @@ const { rows, empty, win = '24h' } = Astro.props;
         marker={row.marker ?? null}
         tags={row.tags || []}
         note={row.note ?? null}
+        showPosts={withPosts}
       />
     ))}
   </ol>

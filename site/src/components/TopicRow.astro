@@ -3,10 +3,15 @@
 // 首頁不是雜誌封面而是看板列表,所以一則議題 = 一列,不是一張大卡:
 // 名次 → 國旗 → 標題 → 分類/長青徽章 → 一行摘要 → 熱度級距。
 // 名次來自 rankings/global/<win>.json;熱度只給級距,原始分數不上畫面(見 src/lib/heat.mjs)。
+//
+// showPosts:首頁專用。Topic 底下本來就掛著該議題的討論串(World → Topic → Post → Comment),
+// 所以首頁的每一列在標題之後接一個 TopicPosts,列出該 Topic 最新的 N 則 Post。
+// 貼文區塊放在整列連結**之外**(a 裡不能再包 a),仍在同一個 <li> 裡,階層才對得上。
 import { t, tOr } from '../lib/i18n.mjs';
 import { withBase } from '../lib/paths.mjs';
 import { countryFlag } from '../lib/format.mjs';
 import HeatMeter from './HeatMeter.astro';
+import TopicPosts from './TopicPosts.astro';
 
 interface Props {
   topic: Record<string, any>;
@@ -18,6 +23,8 @@ interface Props {
   tags?: Array<{ label: string; value: string | number }>;
   // 該排序特有的一行說明(當令的國家與日期、最近一場活動的時間…)
   note?: string | null;
+  // 首頁:在這一列底下掛該 Topic 最新的 N 則 Post
+  showPosts?: boolean;
 }
 const {
   topic,
@@ -26,13 +33,16 @@ const {
   marker = null,
   tags = [],
   note = null,
+  showPosts = false,
 } = Astro.props;
 const codes = (topic.country_codes || []).slice(0, 8);
 const scores = topic.scores || {};
+const topicHref = withBase(`topic/${topic.slug}/`);
+const withPosts = showPosts && !!topic.topic_id;
 ---
 
 <li class:list={['row', { 'row--flush': rank === null }]}>
-  <a class="row-link" href={withBase(`topic/${topic.slug}/`)}>
+  <a class="row-link" href={topicHref}>
     {rank !== null && <span class="row-rank" aria-hidden="true">{rank}</span>}
     <span class="row-main">
       <span class="row-head">
@@ -65,6 +75,7 @@ const scores = topic.scores || {};
       <HeatMeter score={scores[win]} caption={t(`rankings.window.${win}`)} />
     </span>
   </a>
+  {withPosts && <TopicPosts topicId={topic.topic_id} topicHref={topicHref} />}
 </li>
 
 <style>
@@ -156,6 +167,14 @@ const scores = topic.scores || {};
   }
   .row--flush .row-heat {
     grid-column: 1;
+  }
+
+  /* 貼文區塊(首頁)在寬螢幕縮到標題那一欄下方,讓「這些貼文屬於上面那個看板」看得出來。
+     窄螢幕不縮排:寬度本來就不夠,再縮排只會把貼文擠成一字一行。 */
+  @media (min-width: 768px) {
+    .row :global(.posts) {
+      margin-inline-start: 3rem;
+    }
   }
 
   @media (min-width: 768px) {

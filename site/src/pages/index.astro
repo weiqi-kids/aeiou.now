@@ -1,129 +1,50 @@
 ---
-// 首頁 = 「全球熱門」這個預設排序下的看板列表(2026-08-11 用戶當面拍板)。
+// 首頁 = 全球熱門(2026-08-11 用戶當面拍板的階層,這一版照它重做)。
 //
-// 這一輪改掉的三件事(用戶原話:「這些其實都是 Topic 的排序」):
-//   ① 標題下那排重複導覽的 chip(全球熱門/各國熱門/今天的議題/大家正在聊/附近/活動)整列移除——
-//      那些歸右上角的主導覽(見 lib/nav.mjs 與 BaseLayout)。
-//   ② 首頁獨立的「附近」店家清單、「活動」活動清單整段移除。那是把 Topic 的屬性誤當成獨立內容:
-//      附近與活動是 Topic 的排序條件(/topics/nearby/、/topics/events/ 列的是 Topic),
-//      店家與活動本身屬於各自的 Topic 頁(草案 §44 的 📍 Near You / 🎉 Events)。
-//   ③ 「各國熱門」整段移除。seed 的 topic_scores 只有 scope='global',rankings/ 底下也只有 global/,
-//      國家別排行沒有任何資料;而用戶列的導覽項目裡本來就沒有它。永遠空著的區塊擺在首頁,
-//      等於昭告「這裡沒東西」——寧可拿掉,等 scope='country' 的資料進來再照 §46/§54 補回。
-//      (不假造:一行假資料都沒有寫。)
+//   World
+//   └── Topic(看板)   情人節、問世界
+//       ├── 議題介紹    ← Topic 頁的靜態內容,不在首頁
+//       └── Post(討論串) N 則貼文  ← 首頁在每個 Topic 底下就要看得到
+//           └── Comment
 //
-// 留下的:草案 §54 的 Global Trending → Today's Topics → People Are Talking 三段,
-// 加上 §55「首頁必須有現在」——NOW / TRENDING / NEW / ACTIVE 直接掛在段落抬頭上。
-// 「大家正在聊」是跨 Topic 的即時討論流,不是 Topic 排序,所以留在首頁而不進導覽。
+// 首頁 = **Topic 清單,每個 Topic 底下掛該議題的 N 則 Post**。就這樣,沒有別的區塊。
+//
+// 這一輪刪掉的三件事(用戶原話:「你是沒有階層概念嗎?」):
+//   ① 時窗切換(24H/72H/7D/1M/3M/1Y)整組——那是**排行榜層**的東西,只在 /rankings/<窗>/。
+//      首頁只呈現「現在最熱」,不讓人選時間範圍,排序固定 24h 全球熱度。
+//      (Topic 頁 §44 的七窗與排行榜頁的時窗切換都還在,那兩處是規格,沒動。)
+//   ② #today 熱門話題整段——它是導覽列四種排序之一,有自己的頁 /topics/today/,首頁不重複。
+//   ③ #talking 大家正在聊整段——首頁每個 Topic 底下本來就有 Post,貼文就是「正在聊」的內容;
+//      另開一區把同一批資料抽出來重排一次 = 同一批資料在同一頁出現兩次 = 階層沒分清楚。
+//      對應的 PeopleTalking.astro 一併刪除。
+//
+// 留下的:草案 §54 第一段 Global Trending + §55「首頁必須有現在」——「現在」不是靠標語喊的,
+// 是靠每個看板底下那幾則剛發的貼文(sort=new,見 TopicPosts.astro)。
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TopicBoard from '../components/TopicBoard.astro';
-import PeopleTalking from '../components/PeopleTalking.astro';
 import { t } from '../lib/i18n.mjs';
-import { WINDOWS } from '../lib/config.mjs';
 import { withBase } from '../lib/paths.mjs';
-import { sortHref } from '../lib/nav.mjs';
-import { globalRankRows, todaysTopics } from '../lib/data.mjs';
+import { globalRankRows } from '../lib/data.mjs';
 
-const boards = WINDOWS.map((win) => ({ win, rows: globalRankRows(win) }));
-const today = todaysTopics().map((topic) => ({ topic, marker: t('marker.new') }));
-
-// People Are Talking 要打哪幾個 Topic 的 feed:照 24h 排行的順序,取前幾名。
-const talkTopics = (boards.find((b) => b.win === '24h') || { rows: [] }).rows
-  .map((row) => row.topic)
-  .filter((topic) => topic && topic.topic_id)
-  .slice(0, 6);
+// 首頁列全球熱度(24h)前 10 個 Topic,超過的走排行榜。
+const HOME_TOPIC_LIMIT = 10;
+const HOME_WINDOW = '24h';
+const rows = globalRankRows(HOME_WINDOW).slice(0, HOME_TOPIC_LIMIT);
 ---
 
 <BaseLayout title={`aeiou.now — ${t('nav.global_trending')}`} activeSort="global">
-  <!-- ① Global Trending(§54 第一段 / §46 的時窗切換)= 首頁的預設排序 -->
   <section class="board" id="trending">
     <div class="section-head">
       <p class="eyebrow">{t('marker.trending')}</p>
       <h2><span class="section-emoji" aria-hidden="true">🔥</span>{t('nav.global_trending')}</h2>
-      <a class="section-link" href={withBase('rankings/24h/')}>
+      <a class="section-link" href={withBase(`rankings/${HOME_WINDOW}/`)}>
         {t('home.rankings_cta')} <span aria-hidden="true">→</span>
       </a>
     </div>
 
-    <div class="board-windows" data-board>
-      <div
-        class="board-tabs"
-        role="tablist"
-        aria-label={t('rankings.window_label')}
-        hidden
-        data-board-tabs
-      >
-        {WINDOWS.map((win) => (
-          <button
-            type="button"
-            role="tab"
-            class="board-tab"
-            data-board-window={win}
-            aria-selected={win === '24h' ? 'true' : 'false'}
-          >
-            {t(`rankings.window.${win}`)}
-          </button>
-        ))}
-      </div>
-
-      {boards.map((board) => (
-        <div class="board-panel" data-board-panel={board.win}>
-          <p class="board-panel-name">{t(`rankings.window.${board.win}`)}</p>
-          <TopicBoard rows={board.rows} win={board.win} empty={t('common.empty')} />
-        </div>
-      ))}
-    </div>
-  </section>
-
-  <!-- ② Today's Topics(§54 第三段)= 導覽上的「熱門話題」:當令與否只看資料裡的
-       observed_date / date_range_end 與 is_perennial,不看點閱。 -->
-  <section class="board" id="today">
-    <div class="section-head">
-      <p class="eyebrow">{t('marker.new')}</p>
-      <h2><span class="section-emoji" aria-hidden="true">🆕</span>{t('nav.hot_topics')}</h2>
-      <a class="section-link" href={sortHref('today')}>
-        {t('common.see_all')} <span aria-hidden="true">→</span>
-      </a>
-    </div>
-    <TopicBoard rows={today} empty={t('sort.hot_topics_empty')} />
-  </section>
-
-  <!-- ③ People Are Talking(§54 第四段 / §55 的 NOW 與 ACTIVE):唯一的即時層,
-       跨 Topic 的討論流,不是 Topic 的排序,所以留在首頁、不進導覽。 -->
-  <section class="board" id="talking">
-    <div class="section-head">
-      <p class="eyebrow">{t('marker.now')}</p>
-      <h2><span class="section-emoji" aria-hidden="true">💬</span>{t('home.people_talking')}</h2>
-      <span class="badge badge--accent">{t('marker.active')}</span>
-    </div>
-    <PeopleTalking topics={talkTopics} />
+    <TopicBoard rows={rows} win={HOME_WINDOW} empty={t('common.empty')} withPosts />
   </section>
 </BaseLayout>
-
-<script>
-  // 時窗切換是漸進增強:沒有 JS 就把六個時窗攤開成連續的列表,資訊一則不少。
-  document.querySelectorAll('[data-board]').forEach((root) => {
-    const tabs = root.querySelector('[data-board-tabs]');
-    const panels = Array.from(root.querySelectorAll('[data-board-panel]'));
-    if (!tabs || panels.length === 0) return;
-
-    function select(win) {
-      panels.forEach((panel) => {
-        panel.hidden = panel.dataset.boardPanel !== win;
-      });
-      tabs.querySelectorAll('[data-board-window]').forEach((btn) => {
-        btn.setAttribute('aria-selected', btn.dataset.boardWindow === win ? 'true' : 'false');
-      });
-    }
-
-    tabs.querySelectorAll('[data-board-window]').forEach((btn) => {
-      btn.addEventListener('click', () => select(btn.dataset.boardWindow));
-    });
-    tabs.hidden = false;
-    root.classList.add('is-tabbed');
-    select('24h');
-  });
-</script>
 
 <style>
   .board {
@@ -147,50 +68,5 @@ const talkTopics = (boards.find((b) => b.win === '24h') || { rows: [] }).rows
   }
   .section-link:hover {
     text-decoration: underline;
-  }
-
-  /* 時窗切換列一律折行,不橫捲:橫捲在窄螢幕會把後面的時窗切在視窗外(hi 的「1 महीना」
-     這種長標籤尤其明顯),使用者看不到也點不到。折行後六個時窗都在畫面內、都能鍵盤操作。 */
-  .board-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-block-end: 1rem;
-  }
-  .board-tab {
-    flex: 0 1 auto;
-    font-family: var(--font-sans);
-    font-size: var(--text-sm);
-    border: 0.0625rem solid var(--color-line-strong);
-    border-radius: var(--radius-pill);
-    padding: 0.2rem 1.1rem;
-    color: var(--color-ink-soft);
-    background: var(--color-white);
-    white-space: nowrap;
-    cursor: pointer;
-  }
-  .board-tab:hover {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
-  }
-  .board-tab[aria-selected='true'] {
-    background: var(--color-primary);
-    border-color: var(--color-primary);
-    color: var(--color-white);
-    font-weight: 700;
-  }
-  .board-panel-name {
-    font-size: var(--text-xs);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-ink-muted);
-    margin: 0 0 0.25rem;
-  }
-  /* tab 生效後就不必再重複印時窗名字(tab 本身就是) */
-  .board-windows.is-tabbed .board-panel-name {
-    display: none;
-  }
-  .board-panel {
-    margin-block-end: 1.5rem;
   }
 </style>

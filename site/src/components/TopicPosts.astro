@@ -1,0 +1,246 @@
+---
+// 首頁每個 Topic 底下掛的 N 則 Post(2026-08-11 用戶指正的階層:
+// World → Topic(看板) → Post(討論串) → Comment)。
+//
+// 首頁列的是 Topic 清單,但 Topic 不是一條光禿禿的標題:那個議題裡「現在正在被討論的貼文」
+// 本來就屬於它底下,所以貼文直接掛在該 Topic 那一列下面,不另開一區把同一批資料重排一次
+// ——同一批資料在同一頁出現兩次就是階層沒分清楚(這一輪刪掉 #talking 的理由)。
+//
+// 資料來源是**現有端點**:GET /v1/topics/:id/feed?sort=new&limit=3&comments=0
+//   · sort=new  → 草案 §55「首頁必須有現在」的 NOW/NEW,取最新
+//   · limit=3   → 每個看板露 3 則,列表頁不是討論頁,要進去才看全部
+//   · comments=0→ 首頁不列留言內容,只給留言總數(comment_count 與 comments 陣列是兩回事)
+// 沒有新增任何端點、沒有動 Worker。
+//
+// 降級模型(與 DiscussionRoom 一致,不可動):
+//   · 靜態 HTML 預設就渲染該 locale 的 fallback 文案,容器帶 data-room-state="closed"
+//   · fetch 成功且解析出 posts 陣列才切 "open";任何失敗一律維持 closed,
+//     不顯示過期資料、不做 fallback 快照
+//   · PUBLIC_API_URL 未設 → 完全不發 fetch,永遠 closed
+//   · 一律 credentials: 'include'(anon_id 是跨站 cookie)
+//   · 使用者內容一律 textContent / createTextNode,絕不 innerHTML
+//
+// 譯文規則照 api-contract §1:original_locale === LOCALE 直接顯示 content;
+// 有 translations[LOCALE] 顯示譯文;缺席顯示原文 + 「翻譯中」。
+// emoji 照 REACTION_SET 七顆全渲染(缺席顯示 0);首頁只列計數不放按鈕——
+// 按讚屬於討論行為,要在 Topic 頁的討論室做。
+import { t } from '../lib/i18n.mjs';
+import { LOCALE, REACTION_SET } from '../lib/config.mjs';
+
+interface Props {
+  topicId: string; // API 路徑參數是 topic_id(ULID),不是 slug
+  topicHref: string; // M1 沒有單則貼文頁,點貼文一律回該 Topic 頁
+}
+const { topicId, topicHref } = Astro.props;
+const apiUrl = import.meta.env.PUBLIC_API_URL || '';
+
+const postsConfig = {
+  locale: LOCALE,
+  href: topicHref,
+  reactions: REACTION_SET,
+  i18n: {
+    empty: t('room.empty'),
+    translating: t('post.translating'),
+    viewTopic: t('room.view_topic'),
+  },
+};
+// </script> 防拆:JSON 內任何 "<" 都轉義
+const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
+---
+
+<div
+  class="posts"
+  data-posts
+  data-room-state="closed"
+  data-topic-id={topicId}
+  data-api-url={apiUrl}
+>
+  <script type="application/json" data-posts-config set:html={postsConfigJson} />
+  <div class="posts-fallback">
+    <p class="posts-closed-title">{t('room.closed')}</p>
+    <p class="posts-closed-hint">{t('room.closed_hint')}</p>
+  </div>
+  <div class="posts-live" hidden></div>
+</div>
+
+<script>
+  function el(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = text; // 使用者內容只走 textContent
+    return node;
+  }
+
+  function fmtTime(epochSec, locale) {
+    try {
+      return new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeStyle: 'short' })
+        .format(new Date(epochSec * 1000));
+    } catch {
+      return new Date(epochSec * 1000).toISOString();
+    }
+  }
+
+  function pickText(post, locale) {
+    if (post.original_locale === locale) return { text: post.content, pending: false };
+    const tr = post.translations && post.translations[locale];
+    if (tr) return { text: tr, pending: false };
+    return { text: post.content, pending: true }; // 缺譯:原文 + 翻譯中
+  }
+
+  function renderPost(post, cfg) {
+    const item = el('article', 'post');
+
+    const origin = [post.country_code, post.city_code].filter(Boolean).join(' · ');
+    const when = fmtTime(post.created_at, cfg.locale);
+    item.appendChild(el('p', 'post-meta', origin ? origin + ' · ' + when : when));
+
+    const picked = pickText(post, cfg.locale);
+    item.appendChild(el('p', 'post-content', picked.text));
+    if (picked.pending) item.appendChild(el('p', 'post-note', cfg.i18n.translating));
+
+    const stats = el('p', 'post-stats');
+    const talk = el('span', 'post-comments');
+    talk.append(
+      el('span', 'post-comments-icon', '💬'),
+      el('span', 'post-comments-count', String(post.comment_count || 0))
+    );
+    stats.appendChild(talk);
+
+    const counts = post.reactions || {};
+    cfg.reactions.forEach((emoji) => {
+      const tag = el('span', 'post-reaction');
+      tag.append(
+        el('span', 'post-reaction-emoji', emoji),
+        el('span', 'post-reaction-count', String(counts[emoji] || 0))
+      );
+      stats.appendChild(tag);
+    });
+    item.appendChild(stats);
+
+    const more = el('a', 'post-link', cfg.i18n.viewTopic);
+    more.href = cfg.href; // M1 沒有單則貼文頁 → 連回該 Topic 頁
+    item.appendChild(more);
+
+    return item;
+  }
+
+  function initPosts(root) {
+    const api = root.dataset.apiUrl;
+    const topicId = root.dataset.topicId;
+    if (!api || !topicId) return; // PUBLIC_API_URL 未設:完全不發 fetch,永遠 closed
+
+    let cfg;
+    try {
+      cfg = JSON.parse(root.querySelector('[data-posts-config]').textContent);
+    } catch {
+      return; // 設定壞掉一律保持 closed
+    }
+
+    const url = api + '/v1/topics/' + topicId + '/feed?sort=new&limit=3&comments=0';
+    fetch(url, { credentials: 'include' })
+      .then((res) => {
+        if (!res.ok) throw new Error('http ' + res.status);
+        return res.json();
+      })
+      .then((data) => {
+        if (!data || !Array.isArray(data.posts)) throw new Error('bad shape');
+        const live = root.querySelector('.posts-live');
+        const fallback = root.querySelector('.posts-fallback');
+        if (!live || !fallback) return;
+        live.textContent = '';
+        if (data.posts.length === 0) {
+          live.appendChild(el('p', 'posts-empty', cfg.i18n.empty));
+        } else {
+          data.posts.forEach((post) => live.appendChild(renderPost(post, cfg)));
+        }
+        fallback.hidden = true;
+        live.hidden = false;
+        root.dataset.roomState = 'open'; // 成功解析 posts 陣列後才切 open
+      })
+      .catch(() => {
+        /* 任何失敗一律保持 closed,不顯示過期資料、不做 fallback 快照 */
+      });
+  }
+
+  document.querySelectorAll('[data-posts]').forEach(initPosts);
+</script>
+
+<style>
+  /* 貼文區塊縮排掛在 Topic 那一列底下,靠一條主色直線表示「這些屬於上面那個看板」。 */
+  .posts {
+    border-inline-start: 0.1875rem solid var(--color-accent);
+    padding: 0.25rem 0 0.75rem 0.875rem;
+    margin-block-end: 1rem;
+  }
+  .posts[data-room-state='closed'] {
+    border-inline-start-color: var(--color-line-strong);
+  }
+  .posts-closed-title {
+    margin: 0 0 0.15rem;
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--color-ink-soft);
+  }
+  .posts-closed-hint {
+    margin: 0;
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+  }
+  .posts :global(.post) {
+    padding-block: 0.625rem;
+  }
+  .posts :global(.post + .post) {
+    border-block-start: 0.0625rem solid var(--color-line);
+  }
+  .posts :global(.post-meta) {
+    margin: 0 0 0.25rem;
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+  }
+  .posts :global(.post-content) {
+    margin: 0 0 0.35rem;
+    font-size: var(--text-base);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+  .posts :global(.post-note) {
+    margin: 0 0 0.35rem;
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+  }
+  /* 留言數與七顆 emoji 的計數:一律折行,窄螢幕不橫捲 */
+  .posts :global(.post-stats) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.75rem;
+    margin: 0 0 0.35rem;
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+  }
+  .posts :global(.post-comments),
+  .posts :global(.post-reaction) {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.2rem;
+  }
+  .posts :global(.post-comments-count),
+  .posts :global(.post-reaction-count) {
+    font-variant-numeric: tabular-nums;
+    color: var(--color-ink-soft);
+  }
+  .posts :global(.post-link) {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--color-accent-dark);
+    text-decoration: none;
+  }
+  .posts :global(.post-link:hover) {
+    text-decoration: underline;
+  }
+  .posts :global(.posts-empty) {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+</style>
