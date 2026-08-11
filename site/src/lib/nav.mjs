@@ -17,8 +17,11 @@ import { withBase } from './paths.mjs';
 
 export const SORTS = ['global', 'today', 'nearby', 'events'];
 
+// 導覽第一項的標籤是「首頁」(2026-08-11 用戶指示),不是「全球熱門」:
+// 那一項連的就是站根路徑,對讀者而言它就是首頁;「全球熱門」是首頁上那份清單的排序名稱,
+// 仍留在首頁的 <title> 與區塊標題(i18n key nav.global_trending)。連結目標未變。
 const LABEL_KEY = {
-  global: 'nav.global_trending',
+  global: 'nav.home',
   today: 'nav.hot_topics',
   nearby: 'nav.nearby',
   events: 'nav.events',

@@ -456,7 +456,9 @@ CREATE INDEX idx_comments_post ON comments(post_id, created_at);
 
 ```sql
 CREATE TABLE reactions (
-  target_type TEXT NOT NULL,                -- post|comment
+  target_type TEXT NOT NULL,                -- post|comment|place|event
+                                            -- (2026-08-11 補:店家與活動本來就規劃可按 emoji,
+                                            --  當初落 schema 時漏列)
   target_id   TEXT NOT NULL,
   actor_id    TEXT NOT NULL,                -- user_id 或 anon_id
   kind        TEXT NOT NULL,                -- emoji,固定集合(2026-08-11 拍板,無獨立 like,不含 👍):

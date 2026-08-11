@@ -421,8 +421,14 @@ async function handleReaction(request, env, cors) {
   if (!body) return err(400, "invalid_body", "Malformed JSON body", cors);
   const { target_type, target_id, kind } = body;
   const op = body.op === undefined ? "add" : body.op;
-  if (target_type !== "post" && target_type !== "comment")
-    return err(400, "invalid_body", "target_type must be 'post' or 'comment'", cors);
+  // post/comment 的權威在 D1,可以查存在性與 access gate。
+  // place/event 的權威在主機 SQLite(不同步進 D1),Worker 查不到,M1 因此不做存在性驗證——
+  // target_id 來自靜態站產生的 data/,不是使用者自由輸入。兩者都不受 access_level gate
+  // (那只 gate 討論室)。
+  const REACTABLE = ["post", "comment", "place", "event"];
+  if (!REACTABLE.includes(target_type))
+    return err(400, "invalid_body", `target_type must be one of ${REACTABLE.join("/")}`, cors);
+  const isUgcTarget = target_type === "post" || target_type === "comment";
   if (typeof target_id !== "string" || target_id === "")
     return err(400, "invalid_body", "target_id is required", cors);
   if (!REACTION_SET.includes(kind))
@@ -430,8 +436,9 @@ async function handleReaction(request, env, cors) {
   if (op !== "add" && op !== "remove")
     return err(400, "invalid_body", "op must be 'add' or 'remove'", cors);
 
-  const row =
-    target_type === "post"
+  const row = !isUgcTarget
+    ? null
+    : target_type === "post"
       ? await env.DB.prepare(
           `SELECT p.status AS post_status,
                   COALESCE(t.access_level, 0) AS access_level, t.status AS topic_status
@@ -450,11 +457,13 @@ async function handleReaction(request, env, cors) {
         )
           .bind(target_id)
           .first();
-  if (!row) return err(404, "not_found", `${target_type} not found`, cors);
-  const gate = topicGate(row, cors);
-  if (gate) return gate;
-  if (row.post_status !== "active" && row.post_status !== "cooling")
-    return err(403, "post_locked", "post is locked", cors);
+  if (isUgcTarget) {
+    if (!row) return err(404, "not_found", `${target_type} not found`, cors);
+    const gate = topicGate(row, cors);
+    if (gate) return gate;
+    if (row.post_status !== "active" && row.post_status !== "cooling")
+      return err(403, "post_locked", "post is locked", cors);
+  }
 
   let anonId = getAnonId(request);
   let setCookie = null;

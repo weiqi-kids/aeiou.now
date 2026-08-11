@@ -23,15 +23,21 @@
 //   · 一律 credentials: 'include'(anon_id 是跨站 cookie)
 //   · 使用者內容一律 textContent / createTextNode,絕不 innerHTML
 //
-// 「關閉」與「空」是兩件事,不可混用(用戶 2026-08-11 指正):
-//   · 關閉 data-room-state="closed" = 動態層不可用(fetch 失敗/非 2xx/JSON 壞/未設 API 位址)
-//   · 空                              = fetch **成功**但 posts 為 0 筆 → 容器照樣是 "open",
-//                                       改印「還沒有人在這個議題發言」+ 進 Topic 頁的入口
+// 「關閉」「載入中」「空」是三件事,不可混用(用戶 2026-08-11 兩次指正):
+//   · 關閉   data-room-state="closed"  = 動態層不可用(fetch 失敗/非 2xx/JSON 壞/未設 API 位址),
+//                                        也是沒有 JS 時看到的靜態預設值
+//   · 載入中 data-room-state="loading" = JS 已啟動、fetch 還沒回來。**發 fetch 之前就切**,
+//                                        等回應才切的話每次正常載入都會先閃一下關閉文案
+//   · 空                                = fetch **成功**但 posts 為 0 筆 → 容器照樣是 "open",
+//                                        改印「還沒有人在這個議題發言」+ 進 Topic 頁的入口
 //
 // 譯文規則照 api-contract §1:original_locale === LOCALE 直接顯示 content;
 // 有 translations[LOCALE] 顯示譯文;缺席顯示原文 + 「翻譯中」。
-// emoji 照 REACTION_SET 七顆全渲染(缺席顯示 0);首頁只列計數不放按鈕——
-// 按讚屬於討論行為,要在 Topic 頁的討論室做。
+//
+// emoji 照 REACTION_SET 七顆全渲染(缺席顯示 0),而且**是可以按的**(用戶 2026-08-11 指示)。
+// 行為與 Topic 頁討論室共用同一份實作 src/lib/reactions.mjs(契約 §4 POST /v1/reactions),
+// 兩處不可以有兩種行為。⚠ 該檔檔頭記著一條 M1 契約限制:feed 回傳沒有 mine,
+// 所以載入時一律顯示未按狀態,按下拿到回應後才知道自己按過哪些——那是契約缺口不是 bug。
 import { t } from '../lib/i18n.mjs';
 import { LOCALE, REACTION_SET } from '../lib/config.mjs';
 
@@ -53,6 +59,8 @@ const postsConfig = {
     beFirst: t('room.be_first'),
     translating: t('post.translating'),
     viewTopic: t('room.view_topic'),
+    reactionLabel: t('reaction.label'),
+    reactionFailed: t('reaction.failed'),
   },
 };
 // </script> 防拆:JSON 內任何 "<" 都轉義
@@ -71,10 +79,31 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
     <p class="posts-closed-title">{t('room.closed')}</p>
     <p class="posts-closed-hint">{t('room.closed_hint')}</p>
   </div>
+  <!-- 載入中:靜態渲染但預設 hidden,JS 一啟動就換上來(骨架條純裝飾) -->
+  <div class="posts-loading" hidden>
+    <p class="posts-loading-text" role="status">{t('room.loading')}</p>
+    <div class="posts-skeleton" aria-hidden="true">
+      <span class="posts-skeleton-bar"></span>
+      <span class="posts-skeleton-bar"></span>
+    </div>
+  </div>
   <div class="posts-live" hidden></div>
 </div>
 
 <script>
+  import { createReactions } from '../lib/reactions.mjs';
+
+  // 四態切換集中在這一支(closed / loading / open),免得各處各自 hidden 一半。
+  function setPostsState(root, state) {
+    const fallback = root.querySelector('.posts-fallback');
+    const loading = root.querySelector('.posts-loading');
+    const live = root.querySelector('.posts-live');
+    if (fallback) fallback.hidden = state !== 'closed';
+    if (loading) loading.hidden = state !== 'loading';
+    if (live) live.hidden = state !== 'open';
+    root.dataset.roomState = state;
+  }
+
   function el(tag, className, text) {
     const node = document.createElement(tag);
     if (className) node.className = className;
@@ -98,7 +127,7 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
     return { text: post.content, pending: true }; // 缺譯:原文 + 翻譯中
   }
 
-  function renderPost(post, cfg) {
+  function renderPost(post, cfg, api) {
     const item = el('article', 'post');
 
     const origin = [post.country_code, post.city_code].filter(Boolean).join(' · ');
@@ -117,15 +146,24 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
     );
     stats.appendChild(talk);
 
-    const counts = post.reactions || {};
-    cfg.reactions.forEach((emoji) => {
-      const tag = el('span', 'post-reaction');
-      tag.append(
-        el('span', 'post-reaction-emoji', emoji),
-        el('span', 'post-reaction-count', String(counts[emoji] || 0))
-      );
-      stats.appendChild(tag);
+    // 七顆 emoji:同一列裡的真按鈕(共用 src/lib/reactions.mjs,行為同討論室)
+    const reactions = createReactions({
+      targetType: 'post',
+      targetId: post.post_id,
+      emojis: cfg.reactions,
+      counts: post.reactions,
+      api: api,
+      i18n: { label: cfg.i18n.reactionLabel, failed: cfg.i18n.reactionFailed },
+      classes: {
+        btn: 'post-reaction',
+        emoji: 'post-reaction-emoji',
+        count: 'post-reaction-count',
+        status: 'post-reaction-status',
+        mine: 'is-mine',
+        error: 'is-error',
+      },
     });
+    reactions.nodes.forEach((node) => stats.appendChild(node));
     item.appendChild(stats);
 
     const more = el('a', 'post-link', cfg.i18n.viewTopic);
@@ -149,7 +187,7 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
   function initPosts(root) {
     const api = root.dataset.apiUrl;
     const topicId = root.dataset.topicId;
-    if (!api || !topicId) return; // PUBLIC_API_URL 未設:完全不發 fetch,永遠 closed
+    if (!api || !topicId) return; // PUBLIC_API_URL 未設:完全不發 fetch,不切 loading,永遠 closed
 
     let cfg;
     try {
@@ -157,6 +195,10 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
     } catch {
       return; // 設定壞掉一律保持 closed
     }
+
+    // 發 fetch **之前**就切 loading:等回應才切的話,這段空窗期畫面上是關閉文案,
+    // 每一次正常載入都會先閃一下「討論室暫時關閉」。
+    setPostsState(root, 'loading');
 
     const url = api + '/v1/topics/' + topicId + '/feed?sort=hot&limit=3&comments=0';
     fetch(url, { credentials: 'include' })
@@ -167,21 +209,19 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
       .then((data) => {
         if (!data || !Array.isArray(data.posts)) throw new Error('bad shape');
         const live = root.querySelector('.posts-live');
-        const fallback = root.querySelector('.posts-fallback');
-        if (!live || !fallback) return;
+        if (!live) return;
         live.textContent = '';
         if (data.posts.length === 0) {
           // 空 ≠ 關閉:動態層是好的,只是這個看板還沒有人發言 → 印空狀態 + 進 Topic 頁的入口
           live.appendChild(renderEmpty(cfg));
         } else {
-          data.posts.forEach((post) => live.appendChild(renderPost(post, cfg)));
+          data.posts.forEach((post) => live.appendChild(renderPost(post, cfg, api)));
         }
-        fallback.hidden = true;
-        live.hidden = false;
-        root.dataset.roomState = 'open'; // 成功解析 posts 陣列後才切 open(空也是 open)
+        setPostsState(root, 'open'); // 成功解析 posts 陣列後才切 open(空也是 open)
       })
       .catch(() => {
-        /* 任何失敗一律保持 closed,不顯示過期資料、不做 fallback 快照 */
+        // 任何失敗退回 closed(不是停在 loading),不顯示過期資料、不做 fallback 快照
+        setPostsState(root, 'closed');
       });
   }
 
@@ -209,6 +249,45 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
     margin: 0;
     font-size: var(--text-xs);
     color: var(--color-ink-muted);
+  }
+  /* 載入中:邊線維持中性(還不知道結果),不長得像錯誤 */
+  .posts[data-room-state='loading'] {
+    border-inline-start-color: var(--color-line-strong);
+  }
+  .posts-loading-text {
+    margin: 0 0 0.4rem;
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+  }
+  .posts-skeleton {
+    display: grid;
+    gap: 0.4rem;
+    max-inline-size: 26rem;
+  }
+  .posts-skeleton-bar {
+    display: block;
+    block-size: 0.875rem;
+    border-radius: var(--radius-sm);
+    background: var(--color-line);
+    animation: posts-skeleton-pulse 1.4s ease-in-out infinite;
+  }
+  .posts-skeleton-bar:nth-child(2) {
+    inline-size: 68%;
+    animation-delay: 0.15s;
+  }
+  @keyframes posts-skeleton-pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.45;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .posts-skeleton-bar {
+      animation: none;
+    }
   }
   .posts :global(.post) {
     padding-block: 0.625rem;
@@ -242,8 +321,7 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
     font-size: var(--text-xs);
     color: var(--color-ink-muted);
   }
-  .posts :global(.post-comments),
-  .posts :global(.post-reaction) {
+  .posts :global(.post-comments) {
     display: inline-flex;
     align-items: baseline;
     gap: 0.2rem;
@@ -252,6 +330,50 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
   .posts :global(.post-reaction-count) {
     font-variant-numeric: tabular-nums;
     color: var(--color-ink-soft);
+  }
+  /* 七顆 emoji 是真按鈕:看得出可按(藥丸外框 + 指標),但用量克制,
+     不能把看板列變成一排大按鈕。按下狀態走 aria-pressed,不是只靠 class。 */
+  .posts :global(.post-reaction) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    line-height: 1.3;
+    padding: 0.1rem 0.5rem;
+    border: 0.0625rem solid var(--color-line);
+    border-radius: var(--radius-pill);
+    background: var(--color-white);
+    color: var(--color-ink-muted);
+  }
+  /* 可按的樣子只給真的 <button>:PUBLIC_API_URL 未設時退成 <span>,不做成看似可按 */
+  .posts :global(button.post-reaction) {
+    cursor: pointer;
+  }
+  .posts :global(button.post-reaction:hover:not(:disabled)) {
+    border-color: var(--color-primary-line);
+  }
+  .posts :global(.post-reaction[aria-pressed='true']) {
+    border-color: var(--color-accent);
+    background: var(--color-accent-soft);
+  }
+  .posts :global(.post-reaction[aria-pressed='true'] .post-reaction-count) {
+    color: var(--color-accent-dark);
+    font-weight: 700;
+  }
+  /* 送出中:同一顆按鈕 disable(連點只送一次),外觀要看得出「正在處理」 */
+  .posts :global(.post-reaction:disabled) {
+    cursor: progress;
+    opacity: 0.55;
+  }
+  /* 失敗:不假裝成功——按鈕短暫改成警示外框,旁邊同時出現一行文字(role=status) */
+  .posts :global(.post-reaction.is-error) {
+    border-color: var(--color-accent-dark);
+    border-style: dashed;
+  }
+  .posts :global(.post-reaction-status) {
+    font-size: var(--text-xs);
+    color: var(--color-accent-dark);
   }
   .posts :global(.post-link) {
     font-size: var(--text-xs);

@@ -1,35 +1,32 @@
 ---
-// Topic 頁 = 一個看板(草案 §44 的版面,逐段照抄它的順序):
+// Topic 頁 = 一個看板。版面(2026-08-11 用戶拍板的三區塊):
 //
-//   ❤️ 標題 + 各地叫法(情人節 / バレンタイン / …)
-//   🌎 How the World Celebrates
-//   🇺🇸 🇯🇵 🇰🇷 🇹🇼 …          ← 國旗列
-//   🔥 Trending [8H][24H][72H][7D][1M][3M][1Y]
-//   💬 People Are Talking About  ← 這一頁存在的理由,版面主體
-//   📍 Near You
-//   🎉 Events
-//   🌎 Ask the World
+//   頁首(整幅寬)  ❤️ 標題 + 各地叫法 + 🌎 全世界怎麼過 + 🇺🇸🇯🇵🇹🇼… 國旗列
+//   ├─ 左上 📍 你附近      ─┐
+//   ├─ 左下 🎉 相關活動     ├─ 右 💬 大家正在聊(佔滿整欄高)
+//   歷史精華 + 🌎 問世界入口(整幅寬,收在最後)
 //
-// 2026-08-11 資訊架構重做的重點:
-//   ① 討論回到主位。前一版把「全世界怎麼過」做成招牌大圖、討論縮成半頁以下的小面板,
+// 2026-08-11 的兩次修正:
+//   ① 資訊架構:討論回到主位。更早的版本把「全世界怎麼過」做成招牌大圖、討論縮成小面板,
 //      那是雜誌文章網站的排法;這是主題頁論壇,討論串就是內容本身。
-//   ② 國旗列是新的(§44 有、前一版沒有)。國旗用 Unicode regional indicator 由 ISO 3166-1
-//      alpha-2 組出來(見 lib/format.mjs),不用圖檔、不用外部 CDN。
-//   ③ Trending 從六窗變成七窗:8H 是動態層(Worker feed),24H 以上是靜態層。
-//   ④ 「歷史精華」不在 §44 的清單裡,資料也恆為空,所以降到最低視覺權重、收在最後。
+//   ② 版面:🔥 熱門趨勢(七個時窗切換)整區移除。時窗切換屬**排行榜層**,
+//      只在 /rankings/<窗>/;Topic 頁不是排行榜,不該再放一次時窗切換。
+//      連帶刪掉只有這裡用的 TrendWindows.astro 與它的四個 i18n key。
+//   ③ 國旗列用 Unicode regional indicator 由 ISO 3166-1 alpha-2 組出來(見 lib/format.mjs),
+//      不用圖檔、不用外部 CDN。
+//   ④ 「歷史精華」資料恆為空,降到最低視覺權重、收在最後。
 //
 // 資料現實:facts.json 的 countries 為空的 Topic(如長青的 ask-the-world)不會有
-// 「全世界怎麼過」與國旗列,那兩段就整段不出現——空著比硬做假的好。
+// 「全世界怎麼過」與國旗列,頁首就只剩標題——空著比硬做假的好,底下三區塊照樣成立。
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import DiscussionRoom from '../../components/DiscussionRoom.astro';
-import TrendWindows from '../../components/TrendWindows.astro';
 import { t, tOr } from '../../lib/i18n.mjs';
-import { LOCALE, WINDOWS } from '../../lib/config.mjs';
+import { LOCALE, REACTION_SET } from '../../lib/config.mjs';
 import { monthDay, dateTime, countryFlag } from '../../lib/format.mjs';
 import { withBase } from '../../lib/paths.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
-  customsText, scoresFor, topicRowBySlug, globalRankOf, aliasNames,
+  customsText, topicRowBySlug, aliasNames,
   relatedTopics, hotTopics,
 } from '../../lib/data.mjs';
 
@@ -54,8 +51,6 @@ const aliases = aliasNames(topicId, title);
 const countries = ((facts && facts.countries) || [])
   .slice()
   .sort((a, b) => (a.popularity_rank || 99) - (b.popularity_rank || 99));
-const scores = scoresFor(topicId);
-const ranks = Object.fromEntries(WINDOWS.map((win) => [win, globalRankOf(topicId, win)]));
 const hlList = highlightItems;
 const places = placesForTopic(topicId);
 const events = eventsForTopic(topicId);
@@ -69,6 +64,24 @@ const askHref = withBase(`topic/${ASK_THE_WORLD_SLUG}/`);
 // 草案 §48 Topic Graph);沒有相關議題就退回熱門 Topic。當前這一頁自己不列(BaseLayout 會濾掉)。
 const related = relatedTopics(topicId, 2);
 const navTopics = related.length ? related : hotTopics(3);
+
+// 📍 店家與 🎉 活動的 emoji reaction(2026-08-11 用戶:「店家和活動本來就有規劃 emoji,要補上」)。
+// 行為沿用 src/lib/reactions.mjs——與貼文、留言同一份實作,同一顆 emoji 在站上任何地方
+// 按下去的意義都一樣。契約 §4 的 target_type 已含 place / event,Worker 已支援,沒有新增端點。
+//
+// ⚠ 已知限制(不是 bug,不要「修」):店家與活動的權威在主機 SQLite,不同步進 D1,
+//   靜態 data/places/*.json、data/events/*.json 裡**沒有 reaction 計數**(計數只在 D1),
+//   而契約也沒有「讀取某個 place/event 現有 reactions」的端點。所以初始一律顯示 0,
+//   使用者按下去、拿到 POST /v1/reactions 回應的 reactions / mine 之後才是真值。
+//   要顯示真實初始計數得先改契約(新增讀取端點或把計數帶進靜態匯出),M1 刻意不做。
+const apiUrl = import.meta.env.PUBLIC_API_URL || '';
+const cardReactionsConfig = {
+  emojis: REACTION_SET, // 七顆全渲染(不含 👍)
+  api: apiUrl, // 空字串 → reactions.mjs 退成唯讀 <span>,不做成看似可按的樣子
+  i18n: { label: t('reaction.label'), failed: t('reaction.failed') },
+};
+// </script> 防拆:JSON 內任何 "<" 都轉義
+const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g, '\\u003c');
 ---
 
 <BaseLayout
@@ -138,74 +151,87 @@ const navTopics = related.length ? related : hotTopics(3);
       </Fragment>
     )}
 
-    <section class="zone-trend" id="trending">
-      <div class="section-head">
-        <h2><span class="section-emoji" aria-hidden="true">🔥</span>{t('topic.trending')}</h2>
-        <p class="section-note">{t('heat.scale_note')}</p>
-      </div>
-      <TrendWindows topicId={topicId} scores={scores} ranks={ranks} discussionHref="#talking" />
-    </section>
+    <!-- 三區塊:左上 📍 你附近、左下 🎉 相關活動、右 💬 大家正在聊(桌機佔滿整欄高)。
+         DOM 順序就是窄螢幕的堆疊順序(你附近 → 相關活動 → 大家正在聊),不靠 order 調換,
+         免得視覺順序與 tab 焦點順序對不上。 -->
+    <script type="application/json" data-card-reactions-config set:html={cardReactionsConfigJson} />
 
-    <!-- 💬 討論串:這一頁的主體,不是附掛在文章底下的留言區 -->
-    <section class="zone-talk" id="talking">
-      <div class="section-head">
-        <p class="eyebrow">{t('marker.now')}</p>
-        <h2><span class="section-emoji" aria-hidden="true">💬</span>{t('topic.people_talking')}</h2>
-      </div>
-      <DiscussionRoom topicId={topicId} />
-    </section>
+    <div class="topic-zones">
+      <div class="zone-col">
+        <section class="zone-local" id="nearby">
+          <div class="section-head">
+            <h2><span class="section-emoji" aria-hidden="true">📍</span>{t('topic.near_you')}</h2>
+          </div>
+          {places.length === 0 && <p class="empty">{t('common.empty')}</p>}
+          <ul class="card-list">
+            {places.map((pl) => (
+              <li class="mini-card">
+                <h3>
+                  <span class="mini-flag" aria-hidden="true">{countryFlag(pl.country_code)}</span>
+                  {pl.name}
+                </h3>
+                {pl.descriptions && pl.descriptions[LOCALE] && <p>{pl.descriptions[LOCALE]}</p>}
+                {pl.address && <p class="card-meta">{pl.address}</p>}
+                {pl.map_url && (
+                  <a class="card-link" href={pl.map_url} rel="noopener" target="_blank">
+                    {t('topic.navigate')} <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+                <div
+                  class="card-reactions"
+                  data-card-reactions
+                  data-target-type="place"
+                  data-target-id={pl.place_id}
+                ></div>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-    <section class="zone-local" id="nearby">
-      <div class="section-head">
-        <h2><span class="section-emoji" aria-hidden="true">📍</span>{t('topic.near_you')}</h2>
+        <section class="zone-local" id="events">
+          <div class="section-head">
+            <h2><span class="section-emoji" aria-hidden="true">🎉</span>{t('topic.events')}</h2>
+          </div>
+          {events.length === 0 && <p class="empty">{t('common.empty')}</p>}
+          <ul class="card-list">
+            {events.map((ev) => (
+              <li class="mini-card">
+                <h3>
+                  <span class="mini-flag" aria-hidden="true">{countryFlag(ev.country_code)}</span>
+                  {ev.name}
+                </h3>
+                {ev.descriptions && ev.descriptions[LOCALE] && <p>{ev.descriptions[LOCALE]}</p>}
+                <p class="card-meta">
+                  {ev.venue}
+                  {ev.start_at && ` · ${dateTime(ev.start_at)}`}
+                  {ev.end_at && ` – ${dateTime(ev.end_at)}`}
+                </p>
+                {ev.ticket_url && (
+                  <a class="card-link" href={ev.ticket_url} rel="noopener" target="_blank">
+                    {t('topic.tickets')} <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+                <div
+                  class="card-reactions"
+                  data-card-reactions
+                  data-target-type="event"
+                  data-target-id={ev.event_id}
+                ></div>
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
-      {places.length === 0 && <p class="empty">{t('common.empty')}</p>}
-      <ul class="card-list">
-        {places.map((pl) => (
-          <li class="mini-card">
-            <h3>
-              <span class="mini-flag" aria-hidden="true">{countryFlag(pl.country_code)}</span>
-              {pl.name}
-            </h3>
-            {pl.descriptions && pl.descriptions[LOCALE] && <p>{pl.descriptions[LOCALE]}</p>}
-            {pl.address && <p class="card-meta">{pl.address}</p>}
-            {pl.map_url && (
-              <a class="card-link" href={pl.map_url} rel="noopener" target="_blank">
-                {t('topic.navigate')} <span aria-hidden="true">↗</span>
-              </a>
-            )}
-          </li>
-        ))}
-      </ul>
-    </section>
 
-    <section class="zone-local" id="events">
-      <div class="section-head">
-        <h2><span class="section-emoji" aria-hidden="true">🎉</span>{t('topic.events')}</h2>
-      </div>
-      {events.length === 0 && <p class="empty">{t('common.empty')}</p>}
-      <ul class="card-list">
-        {events.map((ev) => (
-          <li class="mini-card">
-            <h3>
-              <span class="mini-flag" aria-hidden="true">{countryFlag(ev.country_code)}</span>
-              {ev.name}
-            </h3>
-            {ev.descriptions && ev.descriptions[LOCALE] && <p>{ev.descriptions[LOCALE]}</p>}
-            <p class="card-meta">
-              {ev.venue}
-              {ev.start_at && ` · ${dateTime(ev.start_at)}`}
-              {ev.end_at && ` – ${dateTime(ev.end_at)}`}
-            </p>
-            {ev.ticket_url && (
-              <a class="card-link" href={ev.ticket_url} rel="noopener" target="_blank">
-                {t('topic.tickets')} <span aria-hidden="true">↗</span>
-              </a>
-            )}
-          </li>
-        ))}
-      </ul>
-    </section>
+      <!-- 💬 討論串:這一頁的主體,不是附掛在文章底下的留言區 -->
+      <section class="zone-talk" id="talking">
+        <div class="section-head">
+          <p class="eyebrow">{t('marker.now')}</p>
+          <h2><span class="section-emoji" aria-hidden="true">💬</span>{t('topic.people_talking')}</h2>
+        </div>
+        <DiscussionRoom topicId={topicId} />
+      </section>
+    </div>
 
     <!-- 🌎 Ask the World(§45):M1 只做入口,跨國提問功能屬後續里程碑。
          ask-the-world 自己就是那個長青 Topic,所以在它自己的頁面上不再放入口。 -->
@@ -250,6 +276,46 @@ const navTopics = related.length ? related : hotTopics(3);
     </section>
   </article>
 </BaseLayout>
+
+<script>
+  // 店家/活動的 emoji 列:沿用 src/lib/reactions.mjs(與貼文、留言同一份實作)。
+  // 這裡只負責把每個 [data-card-reactions] 容器接上去,行為一律由 reactions.mjs 決定。
+  import { createReactions } from '../../lib/reactions.mjs';
+
+  const cfgNode = document.querySelector('[data-card-reactions-config]');
+  if (cfgNode) {
+    let cfg = null;
+    try {
+      cfg = JSON.parse(cfgNode.textContent);
+    } catch {
+      cfg = null; // 設定壞掉就整段不掛,寧可沒有 emoji 也不要半殘的控制項
+    }
+    if (cfg) {
+      document.querySelectorAll('[data-card-reactions]').forEach((box) => {
+        const targetId = box.dataset.targetId;
+        if (!targetId) return;
+        const row = createReactions({
+          targetType: box.dataset.targetType, // 'place' | 'event'(契約 §4 已含這兩種)
+          targetId: targetId,
+          emojis: cfg.emojis,
+          // counts 刻意不傳:靜態資料沒有 reaction 計數(在 D1),初始一律 0,
+          // 按下之後才用伺服器回應的 reactions / mine 重繪。見上方 frontmatter 的限制說明。
+          api: cfg.api,
+          i18n: cfg.i18n,
+          classes: {
+            btn: 'card-reaction',
+            emoji: 'card-reaction-emoji',
+            count: 'card-reaction-count',
+            status: 'card-reaction-status',
+            mine: 'is-mine',
+            error: 'is-error',
+          },
+        });
+        row.nodes.forEach((node) => box.appendChild(node));
+      });
+    }
+  }
+</script>
 
 <style>
   .topic > section {
@@ -390,9 +456,27 @@ const navTopics = related.length ? related : hotTopics(3);
     font-size: var(--text-xs);
   }
 
-  /* ── 💬 討論串:整頁的主體,給它最大的上下留白與最寬的版心 ── */
+  /* ── 三區塊(左上 📍 你附近 / 左下 🎉 相關活動 / 右 💬 大家正在聊)──
+     窄螢幕:單欄堆疊,順序照 DOM = 你附近 → 相關活動 → 大家正在聊。
+     桌機:兩欄,左欄自己再上下堆兩段,右欄的討論串靠 grid 預設的 stretch 佔滿整列高度。
+     這一層是 div 不是 section,所以 `.topic > section` 的間距不會套到裡面的段落,
+     間距一律由這裡的 gap 給,避免最後一段多出一截空白。 */
+  .topic-zones {
+    display: grid;
+    gap: clamp(2.5rem, 6vw, 4rem);
+    margin-block-end: clamp(2.5rem, 6vw, 4rem);
+  }
+  .topic-zones section {
+    scroll-margin-block-start: 1rem;
+  }
+  .zone-col {
+    display: grid;
+    align-content: start;
+    gap: clamp(2.5rem, 6vw, 4rem);
+    min-width: 0;
+  }
   .zone-talk {
-    margin-block-end: clamp(3rem, 8vw, 5rem);
+    min-width: 0;
   }
 
   /* ── 🌎 Ask the World 入口 ── */
@@ -477,6 +561,64 @@ const navTopics = related.length ? related : hotTopics(3);
     text-decoration: underline;
   }
 
+  /* ── 店家/活動的 emoji 列 ──
+     節點是 reactions.mjs 在執行期 createElement 出來的,拿不到 Astro 的 scoped 屬性,
+     所以一律包在 .card-reactions 底下用 :global()(與 TopicPosts 同一種寫法)。 */
+  .card-reactions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem;
+    margin-block-start: 0.7rem;
+  }
+  .card-reactions :global(.card-reaction) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
+    line-height: 1.3;
+    padding: 0.1rem 0.5rem;
+    border: 0.0625rem solid var(--color-line);
+    border-radius: var(--radius-pill);
+    background: var(--color-white);
+    color: var(--color-ink-muted);
+  }
+  .card-reactions :global(.card-reaction-count) {
+    font-variant-numeric: tabular-nums;
+    color: var(--color-ink-soft);
+  }
+  /* 可按的樣子只給真的 <button>:PUBLIC_API_URL 未設時 reactions.mjs 退成 <span> */
+  .card-reactions :global(button.card-reaction) {
+    cursor: pointer;
+  }
+  .card-reactions :global(button.card-reaction:hover:not(:disabled)) {
+    border-color: var(--color-primary-line);
+  }
+  .card-reactions :global(.card-reaction[aria-pressed='true']) {
+    border-color: var(--color-accent);
+    background: var(--color-accent-soft);
+  }
+  .card-reactions :global(.card-reaction[aria-pressed='true'] .card-reaction-count) {
+    color: var(--color-accent-dark);
+    font-weight: 700;
+  }
+  /* 送出中:同一顆按鈕 disable(連點只送一次) */
+  .card-reactions :global(.card-reaction:disabled) {
+    cursor: progress;
+    opacity: 0.55;
+  }
+  /* 失敗:不假裝成功——警示外框 + 旁邊一行 role=status 文字 */
+  .card-reactions :global(.card-reaction.is-error) {
+    border-color: var(--color-accent-dark);
+    border-style: dashed;
+  }
+  .card-reactions :global(.card-reaction-status) {
+    flex-basis: 100%;
+    font-size: var(--text-xs);
+    color: var(--color-accent-dark);
+  }
+
   /* ── 歷史精華:安靜到底,不跟討論搶版面 ── */
   .quiet-head {
     font-size: var(--text-lg);
@@ -525,6 +667,17 @@ const navTopics = related.length ? related : hotTopics(3);
     .topic-head h1 {
       font-size: var(--text-3xl);
       line-height: 1.1;
+    }
+    /* 左欄(你附近 / 相關活動)與右欄(大家正在聊)並排。
+       討論串是這一頁的主體,所以右欄給多一點寬;grid 預設 align-items: stretch,
+       右欄那一格因此佔滿整列高度。 */
+    .topic-zones {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+      column-gap: clamp(2rem, 4vw, 3rem);
+    }
+    /* 左欄變窄了,店家/活動卡片回到單欄——兩欄的話一張卡放不下七顆 emoji 加地址 */
+    .zone-col .card-list {
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 </style>

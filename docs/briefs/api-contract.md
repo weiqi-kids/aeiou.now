@@ -177,7 +177,8 @@ Worker 端補齊:`post_id`(新 ULID)、`anon_id`(cookie 或新發)、`cycle_id`(
 
 | 欄位 | 值 |
 |---|---|
-| `target_type` | `post` \| `comment` |
+| `target_type` | `post` \| `comment` \| `place` \| `event` |
+| | `place`/`event` 的權威在主機 SQLite(不同步進 D1),Worker **不做存在性驗證**;`target_id` 來自靜態站的 `data/`。兩者都不受 `access_level` gate(那只 gate 討論室) |
 | `kind` | 必須在 `REACTION_SET` 內,否則 400 `invalid_kind` |
 | `op` | `add`(預設)\| `remove`。`add` 為冪等 upsert(PK 已允許同一 actor 按多個不同 emoji) |
 
