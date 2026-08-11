@@ -533,7 +533,9 @@ CREATE TABLE jobs (
   scheduled_at    INTEGER NOT NULL,
   started_at      INTEGER,
   finished_at     INTEGER,
-  status          TEXT NOT NULL,            -- queued|running|success|partial_success|failed|skipped
+  status          TEXT NOT NULL,            -- queued|running|success|partial_success|failed|skipped|dlq
+                                            -- dlq（2026-08-11 補列）= 已第 3 次失敗、next_retry_at IS NULL，
+                                            -- 不再自動重試，需人工處理。§66 的重試曲線（+5 分／+10 分）終點。
   attempt         INTEGER NOT NULL DEFAULT 0,
   next_retry_at   INTEGER,                  -- 失敗 +5 分、再失敗 +10 分、第三次進 DLQ
   records_read    INTEGER NOT NULL DEFAULT 0,
