@@ -23,10 +23,7 @@ const items = (ranking.items || [])
   .map((item) => ({ ...item, topic: byId.get(item.topic_id) }));
 ---
 
-<BaseLayout
-  title={`${t('rankings.title')} — ${t(`rankings.window.${win}`)}`}
-  description={t('home.lede')}
->
+<BaseLayout title={`${t('rankings.title')} — ${t(`rankings.window.${win}`)}`}>
   <header class="rank-head">
     <h1>{t('rankings.title')}</h1>
     <p class="eyebrow" id="window-label">{t('rankings.window_label')}</p>

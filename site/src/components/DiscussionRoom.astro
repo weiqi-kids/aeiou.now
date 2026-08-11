@@ -1,9 +1,17 @@
 ---
-// 討論室(W2.4,降級模型):
+// 討論串本體(草案 §44 的「💬 People Are Talking About」)。
+// 這不是文章底下的留言區,而是主題頁存在的理由,所以它是整頁最大的一塊:
+// 發文框 → 貼文列表 → 每則貼文的七顆 emoji 列 → 留言 → 回覆框。
+//
+// 降級模型(不可動的行為):
 // - 靜態 HTML 預設渲染 fallback(room.closed),容器帶 data-room-state="closed"
-// - JS fetch 成功且解析出 posts 陣列 → data-room-state="open",替換為 feed + 發文框 + reaction 列
+// - JS fetch 成功且解析出 posts 陣列 → data-room-state="open",才替換為即時內容
 // - 任何失敗(網路、非 2xx、JSON 壞掉)一律保持 closed;PUBLIC_API_URL 未設時完全不發 fetch
-// - 貼文內容 M1 一律純文字轉義顯示(textContent),絕不 innerHTML 塞使用者內容
+// - 不做 fallback 快照、不顯示過期資料
+// - 貼文與留言 M1 一律純文字轉義顯示(textContent),絕不 innerHTML 塞使用者內容
+//
+// 成功開室後會發 aeiou:room-open 事件(detail: {topicId, posts}),讓同頁的 8H 時窗共用
+// 這一次 fetch 的結果——同一份資料不打第二次 API。
 import { t } from '../lib/i18n.mjs';
 import { LOCALE, REACTION_SET } from '../lib/config.mjs';
 
@@ -20,11 +28,11 @@ const roomConfig = {
     empty: t('room.empty'),
     composePlaceholder: t('room.compose_placeholder'),
     submit: t('room.submit'),
+    commentPlaceholder: t('room.comment_placeholder'),
+    commentSubmit: t('room.comment_submit'),
     translating: t('post.translating'),
-    original: t('post.original'),
     showOriginal: t('post.show_original'),
     hideOriginal: t('post.hide_original'),
-    loading: t('common.loading'),
     error: t('common.error'),
   },
 };
@@ -32,7 +40,7 @@ const roomConfig = {
 const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
 ---
 
-<section
+<div
   class="room"
   data-room
   data-room-state="closed"
@@ -45,7 +53,7 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     <p class="room-closed-hint">{t('room.closed_hint')}</p>
   </div>
   <div class="room-live" hidden></div>
-</section>
+</div>
 
 <script>
   // 原生 script(無框架)。開狀態的 DOM 全用 createElement/textContent 組——不進 innerHTML。
@@ -70,6 +78,9 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
       .then((data) => {
         if (!data || !Array.isArray(data.posts)) throw new Error('bad shape');
         openRoom(root, cfg, topicId, api, data.posts);
+        document.dispatchEvent(
+          new CustomEvent('aeiou:room-open', { detail: { topicId: topicId, posts: data.posts } })
+        );
       })
       .catch(() => {
         /* 任何失敗一律保持 closed,不顯示過期資料、不做 fallback 快照 */
@@ -83,7 +94,7 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     return node;
   }
 
-  function pickText(post, locale, cfg) {
+  function pickText(post, locale) {
     if (post.original_locale === locale) {
       return { text: post.content, showToggle: false, pending: false };
     }
@@ -142,6 +153,56 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     return bar;
   }
 
+  function renderComment(comment, cfg) {
+    const row = el('p', 'room-comment');
+    const who = [comment.country_code, comment.city_code].filter(Boolean).join(' · ');
+    row.appendChild(el('span', 'room-comment-meta', who ? who + ' — ' : ''));
+    row.appendChild(document.createTextNode(comment.content)); // 留言不翻譯,純文字
+    return row;
+  }
+
+  // 每則貼文自己的回覆框(契約 §3 POST /v1/comments;沒有新端點)
+  function renderCommentForm(post, cfg, api, list, counter) {
+    const form = el('form', 'room-comment-form');
+    const box = el('input', 'room-comment-input');
+    box.type = 'text';
+    box.required = true;
+    box.maxLength = 2000;
+    box.placeholder = cfg.i18n.commentPlaceholder;
+    const send = el('button', 'room-comment-submit', cfg.i18n.commentSubmit);
+    send.type = 'submit';
+    form.append(box, send);
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      const content = box.value.trim();
+      if (!content) return;
+      send.disabled = true;
+      fetch(api + '/v1/comments', {
+        method: 'POST',
+        credentials: 'include',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ post_id: post.post_id, content: content, locale: cfg.locale }),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error('http ' + res.status);
+          return res.json();
+        })
+        .then((comment) => {
+          if (!comment || !comment.comment_id) throw new Error('bad shape');
+          list.appendChild(renderComment(comment, cfg));
+          if (counter && typeof comment.comment_count === 'number') {
+            counter.textContent = String(comment.comment_count);
+          }
+          box.value = '';
+        })
+        .catch(() => {})
+        .finally(() => {
+          send.disabled = false;
+        });
+    });
+    return form;
+  }
+
   function renderPost(post, cfg, api) {
     const item = el('article', 'room-post');
     const meta = el('p', 'room-post-meta');
@@ -151,7 +212,7 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
       : fmtTime(post.created_at, cfg.locale);
     item.appendChild(meta);
 
-    const picked = pickText(post, cfg.locale, cfg);
+    const picked = pickText(post, cfg.locale);
     item.appendChild(el('p', 'room-post-content', picked.text));
     if (picked.pending) {
       item.appendChild(el('p', 'room-post-note', cfg.i18n.translating));
@@ -170,17 +231,20 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
 
     item.appendChild(renderReactionBar(post, cfg, api));
 
-    if (Array.isArray(post.comments) && post.comments.length) {
-      const list = el('div', 'room-comments');
-      post.comments.forEach((c) => {
-        const row = el('p', 'room-comment');
-        const who = [c.country_code, c.city_code].filter(Boolean).join(' · ');
-        row.appendChild(el('span', 'room-comment-meta', who ? who + ' — ' : ''));
-        row.appendChild(document.createTextNode(c.content)); // 留言不翻譯,純文字
-        list.appendChild(row);
-      });
-      item.appendChild(list);
+    const thread = el('div', 'room-comments');
+    const head = el('p', 'room-comments-head');
+    head.appendChild(el('span', 'room-comments-icon', '💬'));
+    const counter = el('span', 'room-comments-count', String(post.comment_count || 0));
+    head.appendChild(counter);
+    thread.appendChild(head);
+    const list = el('div', 'room-comment-list');
+    if (Array.isArray(post.comments)) {
+      post.comments.forEach((c) => list.appendChild(renderComment(c, cfg)));
     }
+    thread.appendChild(list);
+    thread.appendChild(renderCommentForm(post, cfg, api, list, counter));
+    item.appendChild(thread);
+
     return item;
   }
 
@@ -253,21 +317,25 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
 </script>
 
 <style>
-  /* 2026-08-11 視覺重做:只改外觀,行為(closed→open 的切換、fetch、reaction)一律不動。
-     頁面底色已是暖米白,討論室改用白底 + 主色上緣,才看得出「這一塊是會動的」。 */
+  /* 討論串是主題頁的主體,不是附屬面板:白底大面積 + 主色上緣,關閉時退成安靜的告示。 */
   .room {
     border: 0.0625rem solid var(--color-line);
-    border-block-start: 0.1875rem solid var(--color-primary);
-    border-radius: 0.5rem;
-    padding: clamp(1.25rem, 3vw, 2rem);
+    border-block-start: 0.25rem solid var(--color-accent);
+    border-radius: var(--radius-md);
+    padding: clamp(1.25rem, 4vw, 2.5rem);
     background: var(--color-white);
     box-shadow: var(--shadow-card);
   }
-  /* 關閉狀態刻意做成「安靜的告示」而不是錯誤警告:降級不是故障 */
+  /* 關閉狀態刻意做成「安靜的告示」而不是錯誤警告:降級不是故障。
+     但版位要留著——討論串是這一頁的主體,關閉時也不該縮成一條細線。 */
   .room[data-room-state='closed'] {
     border-block-start-color: var(--color-line-strong);
     background: var(--color-bg-light);
     box-shadow: none;
+    min-block-size: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .room-closed-title {
     margin: 0 0 0.25rem;
@@ -284,22 +352,23 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
   .room :global(.room-composer) {
     display: grid;
     gap: 0.5rem;
-    margin-block-end: 1.25rem;
+    margin-block-end: 2rem;
   }
   .room :global(.room-composer-input) {
     font-family: var(--font-sans);
     font-size: var(--text-base);
-    padding: 0.5rem 0.75rem;
-    border: 1px solid var(--color-line);
-    border-radius: 0.5rem;
-    min-height: 5rem;
+    padding: 0.625rem 0.875rem;
+    border: 0.0625rem solid var(--color-line-strong);
+    border-radius: var(--radius-md);
+    min-height: 6rem;
   }
   .room :global(.room-composer-submit) {
     justify-self: end;
+    font-family: var(--font-sans);
     font-size: var(--text-sm);
-    padding: 0.4rem 1.25rem;
+    padding: 0.4rem 1.75rem;
     border: 0;
-    border-radius: 0.5rem;
+    border-radius: var(--radius-md);
     background: var(--color-primary);
     color: var(--color-white);
     cursor: pointer;
@@ -312,9 +381,9 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
   .room :global(.room-post) {
     background: var(--color-bg-light);
     border: 0.0625rem solid var(--color-line);
-    border-radius: 0.375rem;
-    padding: 0.75rem 1rem;
-    margin-block-end: 0.75rem;
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    margin-block-end: 1.25rem;
   }
   .room :global(.room-post-meta),
   .room :global(.room-comment-meta) {
@@ -333,12 +402,13 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
   }
   .room :global(.room-post-original) {
     color: var(--color-ink-soft);
-    border-inline-start: 3px solid var(--color-line);
+    border-inline-start: 0.1875rem solid var(--color-line);
     padding-inline-start: 0.75rem;
     margin: 0.5rem 0;
     white-space: pre-wrap;
   }
   .room :global(.room-toggle) {
+    font-family: var(--font-sans);
     font-size: var(--text-xs);
     background: none;
     border: 0;
@@ -350,16 +420,17 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     display: flex;
     flex-wrap: wrap;
     gap: 0.375rem;
-    margin-block: 0.5rem;
+    margin-block: 0.75rem;
   }
   .room :global(.room-reaction-btn) {
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
+    font-family: var(--font-sans);
     font-size: var(--text-xs);
     padding: 0.15rem 0.6rem;
-    border: 1px solid var(--color-line);
-    border-radius: 1rem;
+    border: 0.0625rem solid var(--color-line);
+    border-radius: var(--radius-pill);
     background: var(--color-white);
     cursor: pointer;
   }
@@ -368,12 +439,45 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     background: var(--color-accent-soft);
   }
   .room :global(.room-comments) {
-    border-block-start: 1px solid var(--color-line);
-    padding-block-start: 0.5rem;
+    border-block-start: 0.0625rem solid var(--color-line);
+    padding-block-start: 0.625rem;
+  }
+  .room :global(.room-comments-head) {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    margin: 0 0 0.5rem;
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
   }
   .room :global(.room-comment) {
     margin: 0 0 0.375rem;
     font-size: var(--text-sm);
+  }
+  .room :global(.room-comment-form) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-block-start: 0.75rem;
+  }
+  .room :global(.room-comment-input) {
+    flex: 1 1 12rem;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    padding: 0.35rem 0.75rem;
+    border: 0.0625rem solid var(--color-line-strong);
+    border-radius: var(--radius-pill);
+    background: var(--color-white);
+  }
+  .room :global(.room-comment-submit) {
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    padding: 0.35rem 1.25rem;
+    border: 0.0625rem solid var(--color-primary);
+    border-radius: var(--radius-pill);
+    background: var(--color-white);
+    color: var(--color-primary);
+    cursor: pointer;
   }
   .room :global(.room-empty) {
     color: var(--color-ink-muted);

@@ -1,0 +1,248 @@
+---
+// 草案 §44 的「🔥 Trending / [8H][24H][72H][7D][1M][3M][1Y]」——七個時窗的切換器。
+//
+// 分層很重要,兩層的可用性不一樣:
+//   · 8H  = 動態層。來源是 Worker 的 /v1/topics/:id/feed(唯一即時端點),
+//           所以套降級模型:靜態 HTML 預設 data-room-state="closed" + 該 locale 的 fallback 文案;
+//           只有討論室 fetch 成功並解析出 posts 陣列時才切 "open"。
+//           它不自己再打一次 API——討論室 fetch 成功後會發 aeiou:room-open 事件,這裡只是聽眾。
+//   · 24H 以上 = 靜態層。分數來自 topics/index/<locale>.json,名次來自 rankings/global/<win>.json。
+//           熱度一律級距呈現,原始分數不上畫面(見 src/lib/heat.mjs)。
+//
+// 無 JS 時:tab 列不顯示(它沒有 JS 就不會動),七個面板全部攤開成列表,資訊一則不少。
+import HeatMeter from './HeatMeter.astro';
+import { t } from '../lib/i18n.mjs';
+import { TREND_WINDOWS } from '../lib/config.mjs';
+import { withBase } from '../lib/paths.mjs';
+
+interface Props {
+  topicId: string;
+  scores: Record<string, number>;
+  ranks: Record<string, number | null>;
+  discussionHref: string;
+}
+const { topicId, scores, ranks, discussionHref } = Astro.props;
+
+const trendConfig = {
+  i18n: { posts8h: t('trend.posts_8h') },
+};
+const trendConfigJson = JSON.stringify(trendConfig).replace(/</g, '\\u003c');
+---
+
+<div class="trend" data-trend data-topic-id={topicId}>
+  <script type="application/json" data-trend-config set:html={trendConfigJson} />
+
+  <div class="trend-tabs" role="tablist" aria-label={t('rankings.window_label')} hidden data-trend-tabs>
+    {TREND_WINDOWS.map((win) => (
+      <button
+        type="button"
+        role="tab"
+        class="trend-tab"
+        data-trend-window={win}
+        aria-selected={win === '24h' ? 'true' : 'false'}
+      >
+        {t(`rankings.window.${win}`)}
+      </button>
+    ))}
+  </div>
+
+  <div class="trend-panels">
+    <section class="trend-panel trend-panel--live" data-trend-panel="8h" data-room-state="closed">
+      <p class="trend-window-name">{t('rankings.window.8h')}</p>
+      <div class="trend-live-fallback">
+        <p class="trend-offline">{t('trend.offline')}</p>
+      </div>
+      <p class="trend-live" hidden></p>
+      <a class="trend-link" href={discussionHref}>{t('room.view_topic')}</a>
+    </section>
+
+    {TREND_WINDOWS.filter((win) => win !== '8h').map((win) => (
+      <section class="trend-panel" data-trend-panel={win}>
+        <p class="trend-window-name">{t(`rankings.window.${win}`)}</p>
+        <HeatMeter score={scores[win]} size="md" />
+        {ranks[win] ? (
+          <p class="trend-rank">
+            <span class="trend-rank-label">{t('topic.rank_label')}</span>
+            <span class="trend-rank-value">{ranks[win]}</span>
+          </p>
+        ) : null}
+        <a class="trend-link" href={withBase(`rankings/${win}/`)}>{t('home.rankings_cta')}</a>
+      </section>
+    ))}
+  </div>
+</div>
+
+<script>
+  // tab 化是漸進增強:沒有 JS 就維持七個面板全開的列表。
+  function initTrend(root) {
+    const tabs = root.querySelector('[data-trend-tabs]');
+    const panels = Array.from(root.querySelectorAll('[data-trend-panel]'));
+    if (!tabs || panels.length === 0) return;
+
+    function select(win) {
+      panels.forEach((panel) => {
+        panel.hidden = panel.dataset.trendPanel !== win;
+      });
+      tabs.querySelectorAll('[data-trend-window]').forEach((btn) => {
+        btn.setAttribute('aria-selected', btn.dataset.trendWindow === win ? 'true' : 'false');
+      });
+    }
+
+    tabs.querySelectorAll('[data-trend-window]').forEach((btn) => {
+      btn.addEventListener('click', () => select(btn.dataset.trendWindow));
+    });
+    tabs.hidden = false;
+    select('24h');
+  }
+
+  // 8H 那一格的資料只有一個來源:討論室那一次 fetch。成功才發事件,失敗不發,
+  // 面板就維持 closed —— 不做 fallback 快照、不顯示過期資料。
+  function initLive(root) {
+    let cfg;
+    try {
+      cfg = JSON.parse(root.querySelector('[data-trend-config]').textContent);
+    } catch {
+      return;
+    }
+    const panel = root.querySelector('[data-trend-panel="8h"]');
+    if (!panel) return;
+
+    document.addEventListener('aeiou:room-open', (ev) => {
+      const detail = ev.detail || {};
+      if (detail.topicId !== root.dataset.topicId) return;
+      if (!Array.isArray(detail.posts)) return;
+      const fallback = panel.querySelector('.trend-live-fallback');
+      const live = panel.querySelector('.trend-live');
+      if (!fallback || !live) return;
+      live.textContent = '';
+      const count = document.createElement('strong');
+      count.className = 'trend-live-count';
+      count.textContent = String(detail.posts.length);
+      const label = document.createElement('span');
+      label.textContent = ' ' + cfg.i18n.posts8h;
+      live.append(count, label);
+      fallback.hidden = true;
+      live.hidden = false;
+      panel.dataset.roomState = 'open';
+    });
+  }
+
+  document.querySelectorAll('[data-trend]').forEach((root) => {
+    initLive(root);
+    initTrend(root);
+  });
+</script>
+
+<style>
+  .trend-tabs {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-block-end: 0.5rem;
+    margin-block-end: 1.25rem;
+  }
+  .trend-tab {
+    flex: 0 0 auto;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    border: 0.0625rem solid var(--color-line-strong);
+    border-radius: var(--radius-pill);
+    padding: 0.2rem 1.1rem;
+    color: var(--color-ink-soft);
+    background: var(--color-white);
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .trend-tab:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  .trend-tab[aria-selected='true'] {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 700;
+  }
+
+  .trend-panels {
+    display: grid;
+    gap: 1rem;
+  }
+  /* .trend-panel 有 display:flex,會蓋掉 UA 的 [hidden]{display:none} —— 補回來,
+     否則 tab 切換等於沒切(七個面板照樣全開)。 */
+  .trend-panel[hidden] {
+    display: none;
+  }
+  .trend-panel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 1.25rem;
+    border-inline-start: 0.1875rem solid var(--color-line);
+    padding: 0.25rem 0 0.25rem 0.875rem;
+  }
+  /* 8H 是這一頁唯一會動的時窗,給它主色的邊,關閉時退回灰邊 */
+  .trend-panel--live {
+    border-inline-start-color: var(--color-accent);
+  }
+  .trend-panel--live[data-room-state='closed'] {
+    border-inline-start-color: var(--color-line-strong);
+  }
+  .trend-window-name {
+    margin: 0;
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--color-ink-muted);
+    letter-spacing: 0.06em;
+    min-width: 6em;
+  }
+  .trend-offline {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+  .trend-live {
+    margin: 0;
+    font-size: var(--text-base);
+  }
+  .trend-live :global(.trend-live-count) {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    color: var(--color-accent-dark);
+  }
+  .trend-rank {
+    margin: 0;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    font-size: var(--text-xs);
+  }
+  .trend-rank-label {
+    color: var(--color-ink-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .trend-rank-value {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-text);
+    font-variant-numeric: tabular-nums;
+  }
+  .trend-link {
+    font-size: var(--text-xs);
+    color: var(--color-accent-dark);
+    text-decoration: none;
+    font-weight: 600;
+    margin-inline-start: auto;
+  }
+  .trend-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (min-width: 640px) {
+    .trend-panel {
+      gap: 0.5rem 2rem;
+    }
+  }
+</style>

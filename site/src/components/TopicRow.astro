@@ -1,0 +1,151 @@
+---
+// 看板列(草案 §54 首頁的基本單位)。
+// 首頁不是雜誌封面而是看板列表,所以一則議題 = 一列,不是一張大卡:
+// 名次 → 國旗 → 標題 → 分類/長青徽章 → 一行摘要 → 熱度級距。
+// 名次來自 rankings/global/<win>.json;熱度只給級距,原始分數不上畫面(見 src/lib/heat.mjs)。
+import { t, tOr } from '../lib/i18n.mjs';
+import { withBase } from '../lib/paths.mjs';
+import { countryFlag } from '../lib/format.mjs';
+import HeatMeter from './HeatMeter.astro';
+
+interface Props {
+  topic: Record<string, any>;
+  rank?: number | null;
+  win?: string;
+  marker?: string | null;
+}
+const { topic, rank = null, win = '24h', marker = null } = Astro.props;
+const codes = (topic.country_codes || []).slice(0, 8);
+const scores = topic.scores || {};
+---
+
+<li class:list={['row', { 'row--flush': rank === null }]}>
+  <a class="row-link" href={withBase(`topic/${topic.slug}/`)}>
+    {rank !== null && <span class="row-rank" aria-hidden="true">{rank}</span>}
+    <span class="row-main">
+      <span class="row-head">
+        {codes.length > 0 && (
+          <span class="row-flags" aria-hidden="true">
+            {codes.map((code) => <span class="row-flag">{countryFlag(code)}</span>)}
+          </span>
+        )}
+        <span class="row-title">{topic.title}</span>
+      </span>
+      <span class="row-badges">
+        {marker && <span class="badge badge--accent">{marker}</span>}
+        {topic.category && (
+          <span class="badge badge--primary">
+            {tOr(`category.${topic.category}`, topic.category)}
+          </span>
+        )}
+        {topic.is_perennial ? <span class="badge">{t('topic.perennial')}</span> : null}
+      </span>
+      {topic.summary && <span class="row-summary">{topic.summary}</span>}
+    </span>
+    <span class="row-heat">
+      <HeatMeter score={scores[win]} caption={t(`rankings.window.${win}`)} />
+    </span>
+  </a>
+</li>
+
+<style>
+  .row {
+    border-block-start: 0.0625rem solid var(--color-line);
+  }
+  .row:first-child {
+    border-block-start: 0.125rem solid var(--color-text);
+  }
+  .row-link {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.25rem 0.875rem;
+    align-items: baseline;
+    padding-block: 1rem;
+    text-decoration: none;
+    color: var(--color-text);
+  }
+  .row-link:hover .row-title {
+    color: var(--color-accent-dark);
+    text-decoration: underline;
+  }
+  .row-rank {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-ink-muted);
+    font-variant-numeric: tabular-nums;
+    grid-row: span 2;
+  }
+  .row-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+  }
+  .row-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.6rem;
+  }
+  /* 國旗列:字元本身就是內容,給它比內文大一階,才看得出「這個議題涵蓋哪些國家」 */
+  .row-flags {
+    display: inline-flex;
+    gap: 0.15em;
+    font-size: var(--text-lg);
+    line-height: 1;
+  }
+  .row-title {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-primary);
+  }
+  .row-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .row-summary {
+    font-size: var(--text-sm);
+    color: var(--color-ink-soft);
+    max-width: 46rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .row-heat {
+    grid-column: 2;
+  }
+  /* 沒有名次的列(今天的議題)不留名次欄,否則第一欄的 auto 會把標題壓成一字一行 */
+  .row--flush .row-link {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .row--flush .row-heat {
+    grid-column: 1;
+  }
+
+  @media (min-width: 768px) {
+    .row-link {
+      grid-template-columns: 3rem minmax(0, 1fr) auto;
+      padding-block: 1.25rem;
+    }
+    .row--flush .row-link {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+    .row-rank {
+      font-size: var(--text-xl);
+      grid-row: auto;
+    }
+    .row-heat {
+      grid-column: auto;
+      justify-self: end;
+    }
+    .row-title {
+      font-size: var(--text-xl);
+    }
+  }
+</style>

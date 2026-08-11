@@ -37,3 +37,14 @@ export function dateTime(epochSec) {
     return d.toISOString();
   }
 }
+
+// 國旗 = ISO 3166-1 alpha-2 兩個字母各自映射到 Unicode regional indicator(U+1F1E6 起)。
+// 純字元組合:不用圖檔、不用外部 CDN(守門第 4 條),也不需要任何字型檔——
+// 系統沒有旗幟字符時會退化成兩個字母(例:🇯🇵 → JP),仍然讀得懂。
+export function countryFlag(code) {
+  if (typeof code !== 'string' || !/^[A-Za-z]{2}$/.test(code)) return '';
+  const base = 0x1f1e6;
+  return String.fromCodePoint(
+    ...[...code.toUpperCase()].map((ch) => base + ch.charCodeAt(0) - 65)
+  );
+}

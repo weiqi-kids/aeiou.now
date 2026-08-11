@@ -87,6 +87,141 @@ export function getGlobalRanking(win) {
   return readJson(`rankings/global/${win}.json`, { items: [] });
 }
 
+/** 全球排行 + topics index 併好的列(首頁看板與排行頁共用)。分數不外流到畫面,
+ * 這裡照樣帶著 score 只為了餵 HeatMeter 換算級距(見 src/lib/heat.mjs)。 */
+export function globalRankRows(win) {
+  const ranking = getGlobalRanking(win) || { items: [] };
+  const byId = new Map(getTopicsIndex().map((topic) => [topic.topic_id, topic]));
+  return (ranking.items || [])
+    .slice()
+    .sort((a, b) => a.rank - b.rank)
+    .map((item) => ({ ...item, topic: byId.get(item.topic_id) || { slug: item.slug } }));
+}
+
+/** 某 topic 在某窗的全球名次(草案 §47:同一議題在不同層級有不同名次)。
+ * M1 只有 scope='global' 的排行,國家別名次沒有資料,不補、不猜。 */
+export function globalRankOf(topicId, win) {
+  const hit = (getGlobalRanking(win) || { items: [] }).items.find(
+    (item) => item.topic_id === topicId
+  );
+  return hit ? hit.rank : null;
+}
+
+// ── 「今天當令」判斷 ────────────────────────────────────────────
+// facts.json 的 observed_date / date_range_end 是不帶年份的 "MM-DD",所以只能在
+// 「一年 365 天的環」上比對:用固定非閏年 2001 換成 day-of-year,再算環狀距離。
+// 前後各留 SEASON_DAYS 天的緩衝——節日的話題在當天之前就起來、之後才退。
+const SEASON_DAYS = 7;
+const YEAR_DAYS = 365;
+
+function doy(mmdd) {
+  if (typeof mmdd !== 'string') return null;
+  const m = /^(\d{2})-(\d{2})$/.exec(mmdd.trim());
+  if (!m) return null;
+  const month = Number(m[1]);
+  const day = Number(m[2]);
+  if (!(month >= 1 && month <= 12 && day >= 1 && day <= 31)) return null;
+  return Math.round(Date.UTC(2001, month - 1, day) / 86400000) - Math.round(Date.UTC(2001, 0, 1) / 86400000);
+}
+
+function ringDistance(a, b) {
+  const raw = Math.abs(a - b) % YEAR_DAYS;
+  return Math.min(raw, YEAR_DAYS - raw);
+}
+
+function inSeason(country, today) {
+  const start = doy(country.observed_date);
+  if (start === null) return false;
+  const end = doy(country.date_range_end);
+  if (ringDistance(today, start) <= SEASON_DAYS) return true;
+  if (end === null) return false;
+  if (ringDistance(today, end) <= SEASON_DAYS) return true;
+  const span = (end - start + YEAR_DAYS) % YEAR_DAYS;
+  const offset = (today - start + YEAR_DAYS) % YEAR_DAYS;
+  return offset <= span;
+}
+
+/** 草案 §54 的 Today's Topics:今天(UTC)當令的議題。
+ * 判準只有兩個,都是資料裡本來就有的事實:
+ *   ① is_perennial=1 的長青 Topic 全年當令;
+ *   ② 任一國家的 observed_date / date_range_end 落在今天前後 SEASON_DAYS 天內。
+ * 沒有命中就是空——不補、不假造。用 UTC 是為了主機與 CI 的 TZ 差異不會 build 出不同結果。 */
+export function todaysTopics(now = new Date()) {
+  const today = Math.round(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()) / 86400000)
+    - Math.round(Date.UTC(now.getUTCFullYear(), 0, 1) / 86400000);
+  return getTopicsIndex()
+    .map((topic) => {
+      if (topic.is_perennial) return { ...topic, season_countries: [] };
+      const facts = readJson(`topics/${topic.topic_id}/facts.json`, null);
+      const hits = ((facts && facts.countries) || []).filter((c) => inSeason(c, today));
+      return hits.length ? { ...topic, season_countries: hits } : null;
+    })
+    .filter(Boolean);
+}
+
+/** 城市代碼 → 顯示名(meta/cities.json = {code: name};專有名詞,不分語系) */
+export function cityName(code) {
+  const meta = readJson('meta/cities.json', {});
+  return (meta && meta[code]) || code;
+}
+
+function topicRefs(entry) {
+  const ids = Array.isArray(entry.topics)
+    ? entry.topics.map((x) => x && x.topic_id).filter(Boolean)
+    : Array.isArray(entry.topic_ids)
+      ? entry.topic_ids
+      : [];
+  const byId = new Map(getTopicsIndex().map((topic) => [topic.topic_id, topic]));
+  return ids.map((id) => byId.get(id)).filter(Boolean);
+}
+
+/** 首頁 Nearby:所有城市的店家,依城市分組(M1 沒有定位,城市就是誠實的分組單位)。 */
+export function allPlacesByCity() {
+  return listCityJson('places')
+    .map((city) => ({
+      city_code: city.city_code,
+      places: (city.places || [])
+        .slice()
+        .sort((a, b) => (b.mention_count || 0) - (a.mention_count || 0))
+        .map((pl) => ({ ...pl, topics_ref: topicRefs(pl) })),
+    }))
+    .filter((city) => city.places.length > 0);
+}
+
+/** 首頁 Events:所有城市的活動,依開始時間排序(跨城市混排,近的先來)。 */
+export function allEvents() {
+  const out = [];
+  for (const city of listCityJson('events')) {
+    for (const ev of city.events || []) {
+      out.push({ ...ev, city_code: city.city_code, topics_ref: topicRefs(ev) });
+    }
+  }
+  return out.sort((a, b) => (a.start_at || 0) - (b.start_at || 0));
+}
+
+/** Topic 的「各地叫法」(草案 §44 標題下那一行):
+ * 七個 locale 的 localized_title(§18)＋ 各國 local_name(§6),去重、去掉現正顯示的標題。
+ * 注意:這是「同一個議題的多個名字」,不是語系切換器——七語系是七個獨立站。 */
+export function aliasNames(topicId, currentTitle) {
+  const i18n = readJson(`topics/${topicId}/i18n.json`, null);
+  const facts = readJson(`topics/${topicId}/facts.json`, null);
+  const names = [];
+  if (facts && facts.canonical_name) names.push(facts.canonical_name);
+  const locales = (i18n && i18n.locales) || {};
+  for (const key of Object.keys(locales)) {
+    if (locales[key] && locales[key].title) names.push(locales[key].title);
+  }
+  for (const c of (facts && facts.countries) || []) {
+    if (c.local_name) names.push(c.local_name);
+  }
+  const seen = new Set([currentTitle]);
+  return names.filter((name) => {
+    if (seen.has(name)) return false;
+    seen.add(name);
+    return true;
+  });
+}
+
 function listCityJson(dir) {
   const p = join(DATA_ROOT, dir);
   if (!existsSync(p)) return [];

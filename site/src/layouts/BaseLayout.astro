@@ -2,13 +2,17 @@
 // 源自 new-astro-site 模板,依 track-b.md 增修:
 // - lang 依 LOCALE
 // - GA4:PUBLIC_GA4_ID 有值才輸出 gtag(googletagmanager.com 是守門唯一外部例外);未設完全不輸出
-// - 站內導覽(nav.home / nav.rankings / nav.about)
+// - 站內導覽(nav.home / nav.rankings)
 // - 移除 sitemap <link>(sitemap 提交屬明確延後,M1 不產 sitemap)
-// 2026-08-11 視覺重做:報頭改「淺色刊頭 + 細規線」,頁尾改深色錨定塊,
-// 頁尾列出七語系自稱(endonym),把「一個議題七種語言」這件事講在版面上。
+//
+// 2026-08-11 資訊架構重做:
+//   ① 頁尾原本列出七語系自稱(繁體中文 / English / 日本語 …)——結構性錯誤,已整塊移除。
+//      七個語系是七個各自獨立的站(各自 repo、各自子網域,每次 build 只吃一個 LOCALE),
+//      打開日文站的讀者從頭到尾只會看到日文;「本站有七種語言」是後台的事,不是給讀者看的資訊。
+//   ② 刊頭的標語(footer.tagline)與關於頁一併移除:那些文案是前一輪自行編寫的,非用戶提供。
 import '../styles/variables.css';
 import '../styles/global.css';
-import { LOCALE, LOCALES, LOCALE_NAMES } from '../lib/config.mjs';
+import { LOCALE } from '../lib/config.mjs';
 import { t } from '../lib/i18n.mjs';
 
 interface Props {
@@ -31,7 +35,6 @@ const nav = [
     label: t('nav.rankings'),
     current: path.startsWith(`${base}rankings`),
   },
-  { href: `${base}about/`, label: t('nav.about'), current: path.startsWith(`${base}about`) },
 ];
 ---
 
@@ -63,7 +66,6 @@ const nav = [
       <div class="container masthead-inner">
         <a class="wordmark" href={base}>
           <span class="wordmark-name">aeiou.now</span>
-          <span class="wordmark-tag">{t('footer.tagline')}</span>
         </a>
         <nav class="site-nav" aria-label="site">
           {nav.map((item) => (
@@ -79,18 +81,7 @@ const nav = [
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <div class="footer-brand">
-          <p class="footer-name">aeiou.now</p>
-          <p class="footer-tagline">{t('footer.tagline')}</p>
-        </div>
-        <div class="footer-langs">
-          <p class="footer-langs-label">{t('footer.languages')}</p>
-          <ul class="footer-langs-list">
-            {LOCALES.map((code) => (
-              <li aria-current={code === LOCALE ? 'true' : undefined}>{LOCALE_NAMES[code]}</li>
-            ))}
-          </ul>
-        </div>
+        <p class="footer-name">aeiou.now</p>
       </div>
     </footer>
   </body>
@@ -124,11 +115,6 @@ const nav = [
     letter-spacing: 0.01em;
     color: var(--color-primary);
   }
-  .wordmark-tag {
-    display: none;
-    font-size: var(--text-xs);
-    color: var(--color-ink-muted);
-  }
   .site-nav {
     display: flex;
     flex-wrap: wrap;
@@ -157,11 +143,7 @@ const nav = [
   .site-footer {
     background: var(--color-primary-deep);
     color: var(--color-primary-line);
-    padding-block: 2.5rem;
-  }
-  .footer-inner {
-    display: grid;
-    gap: 1.75rem;
+    padding-block: 2rem;
   }
   .footer-name {
     font-family: var(--font-display);
@@ -169,44 +151,5 @@ const nav = [
     font-weight: 700;
     color: var(--color-white);
     margin: 0;
-  }
-  .footer-tagline {
-    margin: 0;
-    font-size: var(--text-sm);
-  }
-  .footer-langs-label {
-    font-size: var(--text-xs);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    margin: 0 0 0.5rem;
-  }
-  .footer-langs-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem 1.1rem;
-    font-size: var(--text-sm);
-  }
-  .footer-langs-list li[aria-current] {
-    color: var(--color-white);
-    font-weight: 700;
-    border-block-end: 0.125rem solid var(--color-accent);
-  }
-
-  @media (min-width: 640px) {
-    .wordmark-tag {
-      display: inline;
-      border-inline-start: 0.0625rem solid var(--color-line-strong);
-      padding-inline-start: 0.75rem;
-    }
-  }
-  @media (min-width: 768px) {
-    .footer-inner {
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
-      align-items: start;
-      gap: 2.5rem;
-    }
   }
 </style>

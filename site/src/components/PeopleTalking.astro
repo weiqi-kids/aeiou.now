@@ -1,0 +1,253 @@
+---
+// 首頁的「💬 People Are Talking」(草案 §54 第四段;§55 的 NOW/ACTIVE 就落在這一塊)。
+//
+// 資料來源的現實:Worker 只有 /v1/topics/:id/feed 這一個即時端點,沒有跨 Topic 的即時端點,
+// 而新增端點不是本 Track 的權責。所以做法是:對首頁列出的每個 Topic 各打一次現有端點,
+// 前端合併後依時間排序(M1 只有兩個 Topic,成本可忽略)。
+//
+// 降級模型照舊、而且更嚴:多支 fetch 必須「全部成功」才切 open——
+// 只要有一支失敗就維持 data-room-state="closed",不顯示半套、不顯示過期資料。
+// PUBLIC_API_URL 未設就完全不發 fetch。使用者內容一律 textContent。
+import { t } from '../lib/i18n.mjs';
+import { LOCALE } from '../lib/config.mjs';
+import { withBase } from '../lib/paths.mjs';
+
+interface Props {
+  topics: Array<Record<string, any>>;
+}
+const { topics } = Astro.props;
+const apiUrl = import.meta.env.PUBLIC_API_URL || '';
+
+const talkConfig = {
+  locale: LOCALE,
+  topics: topics.map((topic) => ({
+    id: topic.topic_id,
+    title: topic.title,
+    href: withBase(`topic/${topic.slug}/`),
+  })),
+  i18n: {
+    empty: t('room.empty'),
+    translating: t('post.translating'),
+    viewTopic: t('room.view_topic'),
+    active: t('marker.active'),
+    activeCountLabel: t('home.active_count_label'),
+  },
+};
+const talkConfigJson = JSON.stringify(talkConfig).replace(/</g, '\\u003c');
+---
+
+<div class="talk" data-talk data-room-state="closed" data-api-url={apiUrl}>
+  <script type="application/json" data-talk-config set:html={talkConfigJson} />
+  <div class="talk-fallback">
+    <p class="talk-closed-title">{t('room.closed')}</p>
+    <p class="talk-closed-hint">{t('room.closed_hint')}</p>
+  </div>
+  <div class="talk-live" hidden>
+    <p class="talk-count" data-talk-count></p>
+    <div class="talk-stream" data-talk-stream></div>
+  </div>
+</div>
+
+<script>
+  function el(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = text; // 使用者內容只走 textContent
+    return node;
+  }
+
+  function fmtTime(epochSec, locale) {
+    try {
+      return new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeStyle: 'short' })
+        .format(new Date(epochSec * 1000));
+    } catch {
+      return new Date(epochSec * 1000).toISOString();
+    }
+  }
+
+  function pickText(post, locale, cfg) {
+    if (post.original_locale === locale) return { text: post.content, pending: false };
+    const tr = post.translations && post.translations[locale];
+    if (tr) return { text: tr, pending: false };
+    return { text: post.content, pending: true };
+  }
+
+  function renderRow(entry, cfg) {
+    const post = entry.post;
+    const item = el('article', 'talk-post');
+
+    const head = el('p', 'talk-post-head');
+    const link = el('a', 'talk-post-topic', entry.topic.title);
+    link.href = entry.topic.href;
+    head.appendChild(link);
+    head.appendChild(el('span', 'badge badge--accent', cfg.i18n.active));
+    item.appendChild(head);
+
+    const origin = [post.country_code, post.city_code].filter(Boolean).join(' · ');
+    item.appendChild(
+      el(
+        'p',
+        'talk-post-meta',
+        origin
+          ? origin + ' · ' + fmtTime(post.created_at, cfg.locale)
+          : fmtTime(post.created_at, cfg.locale)
+      )
+    );
+
+    const picked = pickText(post, cfg.locale, cfg);
+    item.appendChild(el('p', 'talk-post-content', picked.text));
+    if (picked.pending) item.appendChild(el('p', 'talk-post-note', cfg.i18n.translating));
+
+    const more = el('a', 'talk-post-link', cfg.i18n.viewTopic);
+    more.href = entry.topic.href + '#talking';
+    item.appendChild(more);
+    return item;
+  }
+
+  function initTalk(root) {
+    const api = root.dataset.apiUrl;
+    if (!api) return; // PUBLIC_API_URL 未設:完全不發 fetch,永遠 closed
+
+    let cfg;
+    try {
+      cfg = JSON.parse(root.querySelector('[data-talk-config]').textContent);
+    } catch {
+      return;
+    }
+    if (!Array.isArray(cfg.topics) || cfg.topics.length === 0) return;
+
+    const jobs = cfg.topics.map((topic) =>
+      fetch(api + '/v1/topics/' + topic.id + '/feed?sort=new&limit=10&comments=0', {
+        credentials: 'include',
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error('http ' + res.status);
+          return res.json();
+        })
+        .then((data) => {
+          if (!data || !Array.isArray(data.posts)) throw new Error('bad shape');
+          return { topic: topic, posts: data.posts };
+        })
+    );
+
+    // 全部成功才開;任何一支失敗就整塊維持 closed
+    Promise.all(jobs)
+      .then((results) => {
+        const live = root.querySelector('.talk-live');
+        const fallback = root.querySelector('.talk-fallback');
+        const stream = root.querySelector('[data-talk-stream]');
+        const counter = root.querySelector('[data-talk-count]');
+        if (!live || !fallback || !stream || !counter) return;
+
+        const merged = [];
+        let activeTopics = 0;
+        results.forEach((res) => {
+          if (res.posts.length > 0) activeTopics += 1;
+          res.posts.forEach((post) => merged.push({ topic: res.topic, post: post }));
+        });
+        merged.sort((a, b) => (b.post.created_at || 0) - (a.post.created_at || 0));
+
+        counter.textContent = '';
+        counter.append(
+          el('strong', 'talk-count-value', String(activeTopics)),
+          el('span', 'talk-count-label', ' ' + cfg.i18n.activeCountLabel)
+        );
+
+        stream.textContent = '';
+        if (merged.length === 0) {
+          stream.appendChild(el('p', 'talk-empty', cfg.i18n.empty));
+        } else {
+          merged.slice(0, 12).forEach((entry) => stream.appendChild(renderRow(entry, cfg)));
+        }
+
+        fallback.hidden = true;
+        live.hidden = false;
+        root.dataset.roomState = 'open';
+      })
+      .catch(() => {
+        /* 任何失敗一律保持 closed */
+      });
+  }
+
+  document.querySelectorAll('[data-talk]').forEach(initTalk);
+</script>
+
+<style>
+  .talk {
+    border: 0.0625rem solid var(--color-line);
+    border-block-start: 0.25rem solid var(--color-accent);
+    border-radius: var(--radius-md);
+    padding: clamp(1.25rem, 3vw, 2rem);
+    background: var(--color-white);
+    box-shadow: var(--shadow-card);
+  }
+  .talk[data-room-state='closed'] {
+    border-block-start-color: var(--color-line-strong);
+    background: var(--color-bg-light);
+    box-shadow: none;
+  }
+  .talk-closed-title {
+    margin: 0 0 0.25rem;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-ink-soft);
+  }
+  .talk-closed-hint {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+  .talk-count {
+    margin: 0 0 1rem;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+  .talk :global(.talk-count-value) {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    color: var(--color-accent-dark);
+  }
+  .talk :global(.talk-post) {
+    border-block-start: 0.0625rem solid var(--color-line);
+    padding-block: 1rem;
+  }
+  .talk :global(.talk-post-head) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 0.75rem;
+    margin: 0 0 0.25rem;
+  }
+  .talk :global(.talk-post-topic) {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+  .talk :global(.talk-post-meta) {
+    margin: 0 0 0.35rem;
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+  }
+  .talk :global(.talk-post-content) {
+    margin: 0 0 0.35rem;
+    white-space: pre-wrap;
+  }
+  .talk :global(.talk-post-note) {
+    margin: 0 0 0.35rem;
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+  }
+  .talk :global(.talk-post-link) {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--color-accent-dark);
+    text-decoration: none;
+  }
+  .talk :global(.talk-empty) {
+    margin: 0;
+    color: var(--color-ink-muted);
+  }
+</style>
