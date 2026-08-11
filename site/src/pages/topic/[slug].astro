@@ -117,15 +117,16 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
           </figure>
         )}
         <div class="head-primary">
-          <h1>{title}</h1>
-          {/* 「🌎 全世界怎麼過 ↓」放在七段 lede **之前**:這一欄在桌機是有限高度、內容自己捲,
-              放最後等於捲下去才看得到,那條連結就形同不存在。指向不變(#world,現在在頁尾)。 */}
-          {countries.length > 0 && (
-            <a class="section-link" href="#world">
-              <span class="section-emoji" aria-hidden="true">🌎</span>
-              {t('topic.how_world_celebrates')} <span aria-hidden="true">↓</span>
-            </a>
-          )}
+          {/* 標題與「🌎 全世界怎麼過 ↓」排同一行(2026-08-11 用戶指示) */}
+          <div class="head-title-row">
+            <h1>{title}</h1>
+            {countries.length > 0 && (
+              <a class="section-link" href="#world">
+                <span class="section-emoji" aria-hidden="true">🌎</span>
+                {t('topic.how_world_celebrates')} <span aria-hidden="true">↓</span>
+              </a>
+            )}
+          </div>
           {/* 只有本站語系的說明。「不同語系顯示相同 Topic 說明」指的是**七個站各自顯示自己的語言**
               (ja 站看到日文、pt-BR 站看到葡文),不是把七語堆在同一頁,也不標示這是哪一國語言。 */}
           {loc.summary && <p class="topic-lede">{loc.summary}</p>}
@@ -413,6 +414,16 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     min-width: 0;
     border-inline-start: 0.25rem solid var(--color-accent);
     padding-inline-start: clamp(0.75rem, 2vw, 1.25rem);
+  }
+  /* 標題與「🌎 全世界怎麼過 ↓」同一行(2026-08-11 用戶指示) */
+  .head-title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 1rem;
+  }
+  .head-title-row h1 {
+    margin: 0;
   }
   .head-primary h1 {
     margin: 0 0 0.5rem;
@@ -780,73 +791,46 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
        扣 8rem = 128px,留幾 px 餘裕。導覽折行讓刊頭變高時第一屏就往下讓一點,不硬擠。
        分配:head-main 40%、中間留 2%、三區塊 58%。head-main 不獨佔整屏,
        三區塊一定在第一眼看得到;各區塊超出的內容在自己裡面捲,不把第一屏撐開。 */
-    .topic {
-      --first-screen: calc(100vh - 8rem);
-    }
+    /* 2026-08-11 用戶指示:頁首高度 = 標題那一行 + 說明文字的高度,不再固定成第一屏的 40%。
+       三區塊改成吃「第一屏扣掉頁首實際高度」的剩餘空間。 */
     .topic-head {
-      block-size: calc(var(--first-screen) * 0.4);
-      margin-block-end: calc(var(--first-screen) * 0.02);
+      margin-block-end: 1rem;
       padding-block-end: 0.75rem;
     }
     /* 頁首:cover 圖與文字並排,兩邊都吃滿這一格的高度 */
     .head-main {
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       align-items: stretch;
-      block-size: 100%;
-      min-block-size: 0;
     }
     .head-main > * {
       min-block-size: 0;
     }
     /* 這一格高度是固定的,所以 cover 改成填滿高度(aspect-ratio 讓位),
        object-fit: cover 保證構圖不變形;og:image 的 1200×630 是檔案本身的事,不受影響。 */
+    /* cover 高度 = 右欄文字的高度(align-items: stretch),不自己撐高 */
     .topic-cover {
       block-size: 100%;
+      min-block-size: 0;
     }
     .topic-cover img {
       block-size: 100%;
+      inline-size: 100%;
       aspect-ratio: auto;
-    }
-    /* 七段 lede 疊起來一定高過這一格 → 在自己這一欄內捲,不擠掉下面的三區塊 */
-    .head-primary {
-      block-size: 100%;
-      overflow-y: auto;
+      object-fit: cover;
     }
 
-    /* ── 桌面版三區塊:左右各半,高度用 % ──
-       欄寬 1fr/1fr + 一個克制的 column-gap(1.25rem):左右各約 50%,
-       中間不再是兩個 2rem padding 疊出來的一大條空白,兩欄的可用寬度因此變大。
-       百分比高度要有依據,容器本身得先有確定高度,所以 .topic-zones 吃第一屏的 58%;
-       左欄 100%、左欄內兩段各 50%、右欄 100% —— 全部是 %,不是讓內容自己撐開。
-       內容超出時各自 overflow-y: auto 在區塊內部捲,不把整頁撐長。 */
+    /* ── 桌面版三區塊:左右各半,高度不設限 ──
+       2026-08-11 用戶修正:「只要維持現在左右排版就好,上下不用有 scroll 和高度限制,
+       要全部都出現。」所以這裡刻意**不給 block-size、不給 overflow-y**——
+       左欄(你附近/相關活動)與右欄(大家正在聊)各自照內容長,整頁跟著長。
+       欄寬 1fr/1fr + column-gap 1.25rem:左右各約 50%,中間不再是兩個 2rem padding 疊出的空白。 */
     .topic-zones {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      /* 列高也要明寫 100%:留給 grid 自動算的話那一列會被內容撐成 max-content
-         (實測左欄變成 1489px 而不是一屏),% 高度就整組失效。 */
-      grid-template-rows: 100%;
       column-gap: 1.25rem;
-      block-size: calc(var(--first-screen) * 0.58);
-    }
-    /* grid item 的 min-block-size 預設是 auto(內容的自動最小尺寸),不歸零的話
-       內容一多就會頂開那一格,overflow-y: auto 也就永遠不會捲。 */
-    .topic-zones > * {
-      min-block-size: 0;
+      align-items: start;
     }
     .zone-col {
-      grid-template-rows: 50% 50%;
-      align-content: stretch;
-      gap: 0;
-      block-size: 100%;
-    }
-    .zone-col > section {
-      block-size: 100%;
-      min-block-size: 0;
-      overflow-y: auto;
-      padding-block-end: 1rem;
-    }
-    .zone-talk {
-      block-size: 100%;
-      overflow-y: auto;
+      gap: clamp(1.25rem, 3vw, 2rem);
     }
     /* 左欄變窄了,店家/活動卡片回到單欄——兩欄的話一張卡放不下七顆 emoji 加地址 */
     .zone-col .card-list {
