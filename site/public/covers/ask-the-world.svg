@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="presentation">
+  <!--
+    純色塊佔位圖(1200×630 = 1.91:1,同時是 Open Graph 標準尺寸)。
+    色值逐字取自 site/src/styles/variables.css 既有 token 的 hex fallback 值,沒有另創顏色:
+      #f9f6f2 = token color-bg-light
+      #194545 = token color-primary
+      #082a2b = token color-primary-deep
+      #c0dada = token color-primary-line
+      #c34b30 = token color-accent
+    (token 在 variables.css 裡帶兩個前置連字號;XML 註解不得含連續兩個連字號,故此處省略。)
+    刻意不放文字:真圖(同尺寸 .png)換檔名即可替換,版面不必改(見 src/lib/data.mjs 的 coverPath)。
+  -->
+  <rect width="1200" height="630" fill="#f9f6f2"/>
+  <rect x="0" y="0" width="1200" height="180" fill="#194545"/>
+  <circle cx="360" cy="400" r="170" fill="#c0dada"/>
+  <circle cx="700" cy="430" r="120" fill="#c34b30"/>
+  <rect x="900" y="280" width="220" height="300" fill="#082a2b"/>
+</svg>

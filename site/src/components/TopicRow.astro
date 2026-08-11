@@ -44,7 +44,7 @@ const topicHref = withBase(`topic/${topic.slug}/`);
 const withPosts = !!topic.topic_id;
 ---
 
-<li class:list={['row', { 'row--flush': rank === null }]}>
+<li class:list={['row', { 'row--flush': rank === null }]} data-topic-id={topic.topic_id || undefined}>
   <a class="row-link" href={topicHref}>
     {rank !== null && <span class="row-rank" aria-hidden="true">{rank}</span>}
     <span class="row-main">

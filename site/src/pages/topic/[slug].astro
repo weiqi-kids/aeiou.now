@@ -1,32 +1,46 @@
 ---
-// Topic 頁 = 一個看板。版面(2026-08-11 用戶拍板的三區塊):
+// Topic 頁 = 一個看板。版面(2026-08-11 用戶拍板):
 //
-//   頁首(整幅寬)  ❤️ 標題 + 各地叫法 + 🌎 全世界怎麼過 + 🇺🇸🇯🇵🇹🇼… 國旗列
-//   ├─ 左上 📍 你附近      ─┐
-//   ├─ 左下 🎉 相關活動     ├─ 右 💬 大家正在聊(佔滿整欄高)
-//   歷史精華 + 🌎 問世界入口(整幅寬,收在最後)
+//   ┌───────────────────────────────────────────────┐
+//   │ header:cover 圖 + 七語言並陳 + 🌎 連結           │ ← 第一屏(整幅寬,滿一個視窗高)
+//   ├───────────────────────┬───────────────────────┤
+//   │ 左 50%                 │ 右 50%                │
+//   │  ├ 📍 #nearby(上半)    │  💬 #talking          │
+//   │  └ 🎉 #events(下半)    │  (整欄高)              │
+//   └───────────────────────┴───────────────────────┘
+//   🌎 全世界怎麼過 / 🌎 問世界入口 / 歷史精華 在三區塊之外(整幅寬)
 //
-// 2026-08-11 的兩次修正:
+// 2026-08-11 的修正史:
 //   ① 資訊架構:討論回到主位。更早的版本把「全世界怎麼過」做成招牌大圖、討論縮成小面板,
 //      那是雜誌文章網站的排法;這是主題頁論壇,討論串就是內容本身。
 //   ② 版面:🔥 熱門趨勢(七個時窗切換)整區移除。時窗切換屬**排行榜層**,
 //      只在 /rankings/<窗>/;Topic 頁不是排行榜,不該再放一次時窗切換。
-//      連帶刪掉只有這裡用的 TrendWindows.astro 與它的四個 i18n key。
 //   ③ 國旗列用 Unicode regional indicator 由 ISO 3166-1 alpha-2 組出來(見 lib/format.mjs),
 //      不用圖檔、不用外部 CDN。
 //   ④ 「歷史精華」資料恆為空,降到最低視覺權重、收在最後。
+//   ⑤(本輪,用戶當面指正)頁首從「把各地叫法用 / 串成一行」改成**多國語言並陳**:
+//      七個語系各自一區,各自的 title **與各自的 summary**(i18n.json 的 locales.<locale>.summary,
+//      七語內容各寫各的,先前只讀了當前語系那一份,其餘六份根本沒上畫面)。
+//      當前站台語系是主角(大字級 + 朱紅側規線),其餘六語降一級。
+//      這**不是語系切換器**、也不是「本站有七種語言」的宣傳——七語系是七個獨立的站,
+//      這裡呈現的是「同一個議題,七個市場各自怎麼說它」。
+//   ⑥(本輪)分類/長青徽章列移出 header:header 內不得再有 <ul>。
+//   ⑦(本輪)「🌎 全世界怎麼過」在頁首只留一個**連結**,實際區塊落在一屏之下,
+//      預設收合、點了才展開並捲過去。收合用原生 <details>:HTML 出廠是 open,
+//      **有 JS 才收起來**——沒有 JS 的讀者照樣讀得到各國怎麼過,不是永遠看不到。
+//      捲動一律原生錨點 + CSS scroll-behavior(global.css,含 reduced-motion 保護),不寫 JS 動畫。
 //
 // 資料現實:facts.json 的 countries 為空的 Topic(如長青的 ask-the-world)不會有
-// 「全世界怎麼過」與國旗列,頁首就只剩標題——空著比硬做假的好,底下三區塊照樣成立。
+// 「全世界怎麼過」與國旗列,頁首也就不放那個連結——空著比硬做假的好,底下三區塊照樣成立。
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import DiscussionRoom from '../../components/DiscussionRoom.astro';
 import { t, tOr } from '../../lib/i18n.mjs';
-import { LOCALE, REACTION_SET } from '../../lib/config.mjs';
+import { LOCALE, LOCALES, REACTION_SET } from '../../lib/config.mjs';
 import { monthDay, dateTime, countryFlag } from '../../lib/format.mjs';
 import { withBase } from '../../lib/paths.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
-  customsText, topicRowBySlug, aliasNames,
+  customsText, topicRowBySlug, coverPath,
   relatedTopics, hotTopics,
 } from '../../lib/data.mjs';
 
@@ -46,7 +60,30 @@ const { topicId } = Astro.props;
 const { facts, i18n, highlightItems } = getTopicBundle(topicId);
 const loc = (i18n && i18n.locales && i18n.locales[LOCALE]) || {};
 const title = loc.title || (facts && facts.canonical_name) || topicId;
-const aliases = aliasNames(topicId, title);
+
+// 頁首的「多國語言並陳」:當前站台語系排第一(主角),其餘六語照 LOCALES 的順序跟在後面。
+// 每一區的 title 與 summary 都取**該語系自己那一份**——七語內容各寫各的,不是同一段翻七次。
+// 語系標示用該語系的自稱(endonym),走 i18n 的 locale.<code> key,模板不寫死任何語言的字。
+// 缺 title 的語系直接不列(資料還沒補上就不假造)。
+const primaryLang = {
+  code: LOCALE,
+  label: t(`locale.${LOCALE}`),
+  title,
+  summary: loc.summary || '',
+};
+const otherLangs = LOCALES.filter((code) => code !== LOCALE)
+  .map((code) => {
+    const entry = (i18n && i18n.locales && i18n.locales[code]) || null;
+    if (!entry || !entry.title) return null;
+    return { code, label: t(`locale.${code}`), title: entry.title, summary: entry.summary || '' };
+  })
+  .filter(Boolean);
+
+// cover 圖(1200×630,同時餵 og:image)。檔案不存在時 coverPath() 回 null,
+// 整個 <figure> 就不渲染——不留破圖,版面照樣成立。
+const coverRel = coverPath(facts && facts.slug);
+const coverSrc = coverRel ? withBase(coverRel) : null;
+
 // popularity_rank 是資料裡本來就有的順位,拿來決定「先讀哪一國」
 const countries = ((facts && facts.countries) || [])
   .slice()
@@ -69,11 +106,12 @@ const navTopics = related.length ? related : hotTopics(3);
 // 行為沿用 src/lib/reactions.mjs——與貼文、留言同一份實作,同一顆 emoji 在站上任何地方
 // 按下去的意義都一樣。契約 §4 的 target_type 已含 place / event,Worker 已支援,沒有新增端點。
 //
-// ⚠ 已知限制(不是 bug,不要「修」):店家與活動的權威在主機 SQLite,不同步進 D1,
-//   靜態 data/places/*.json、data/events/*.json 裡**沒有 reaction 計數**(計數只在 D1),
-//   而契約也沒有「讀取某個 place/event 現有 reactions」的端點。所以初始一律顯示 0,
-//   使用者按下去、拿到 POST /v1/reactions 回應的 reactions / mine 之後才是真值。
-//   要顯示真實初始計數得先改契約(新增讀取端點或把計數帶進靜態匯出),M1 刻意不做。
+// 初始計數:靜態 data/places/*.json、data/events/*.json 裡沒有 reaction 計數(權威在 D1),
+//   所以 HTML 先渲染 0,再用 GET /v1/reactions/summary?target_type=place|event&ids=… 把真實
+//   計數補上(2026-08-11 用戶指示;端點已上線,沒有新增或修改任何端點)。
+//   拿不到就維持 0——不清空、不顯示錯誤。
+// ⚠ 仍在的契約限制(不是 bug,不要「修」):summary 只回計數,**不回 mine**,
+//   所以載入時一律是未按狀態,要按下去拿到 POST /v1/reactions 的回應才知道自己按過哪些。
 const apiUrl = import.meta.env.PUBLIC_API_URL || '';
 const cardReactionsConfig = {
   emojis: REACTION_SET, // 七顆全渲染(不含 👍)
@@ -89,31 +127,62 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
   description={loc.summary}
   navTopics={navTopics}
   currentTopicId={topicId}
+  image={coverSrc}
 >
   <article class="topic">
+    <!-- 頁首 = 第一屏:cover 圖 + 七語言並陳 + 「🌎 全世界怎麼過」的連結。
+         這裡刻意沒有 <ul>(徽章列已移到 header 之外),也沒有把各地叫法用 / 串成一行。 -->
     <header class="topic-head">
-      <ul class="badge-row">
+      <div class="head-main">
+        {coverSrc && (
+          <figure class="topic-cover">
+            {/* alt="" :現在是純色塊佔位圖,沒有可描述的內容,硬編一句描述等於騙螢幕閱讀器。
+                換上真圖時才會有值得寫的 alt。width/height 給瀏覽器先留位,載入時不跳版。 */}
+            <img src={coverSrc} alt="" width="1200" height="630" decoding="async" />
+          </figure>
+        )}
+        <div class="head-primary" lang={primaryLang.code}>
+          <p class="lang-label">{primaryLang.label}</p>
+          <h1>{primaryLang.title}</h1>
+          {primaryLang.summary && <p class="topic-lede">{primaryLang.summary}</p>}
+          {countries.length > 0 && (
+            <a class="section-link" href="#world">
+              <span class="section-emoji" aria-hidden="true">🌎</span>
+              {t('topic.how_world_celebrates')} <span aria-hidden="true">↓</span>
+            </a>
+          )}
+        </div>
+      </div>
+
+      <div class="head-langs">
+        {otherLangs.map((lang) => (
+          <div class="lang-block" lang={lang.code}>
+            <p class="lang-label">{lang.label}</p>
+            <p class="lang-title">{lang.title}</p>
+            {lang.summary && <p class="lang-summary">{lang.summary}</p>}
+          </div>
+        ))}
+      </div>
+    </header>
+
+    <!-- 分類/長青徽章:從 header 移出來(header 內不得再有 <ul>),但資訊本身沒有被砍掉 -->
+    {(category || isPerennial) && (
+      <ul class="badge-row topic-badges">
         {category && (
           <li><span class="badge badge--primary">{tOr(`category.${category}`, category)}</span></li>
         )}
         {isPerennial ? <li><span class="badge">{t('topic.perennial')}</span></li> : null}
       </ul>
-      <h1>{title}</h1>
-      {aliases.length > 0 && (
-        <p class="topic-aliases">
-          <span class="visually-hidden">{t('topic.also_known_as')}</span>
-          {aliases.join(' / ')}
-        </p>
-      )}
-      {loc.summary && <p class="topic-lede measure">{loc.summary}</p>}
-    </header>
+    )}
 
     {countries.length > 0 && (
       <Fragment>
-      <section class="zone-world" id="world">
-        <div class="section-head">
+      <!-- 出廠就是 open:沒有 JS 的讀者要能讀到各國怎麼過。
+           下面那支 is:inline 的小 script 才把它收起來(有 JS 才有「點了才展開」)。 -->
+      <details class="zone-world" id="world" open>
+        <summary class="world-summary">
           <h2><span class="section-emoji" aria-hidden="true">🌎</span>{t('topic.how_world_celebrates')}</h2>
-        </div>
+        </summary>
         <ul class="country-list">
           {countries.map((c) => (
             <li class="country" id={`country-${c.country_code}`}>
@@ -138,7 +207,25 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
             </li>
           ))}
         </ul>
-      </section>
+      </details>
+
+      <!-- 只做兩件事,都不是捲動動畫:
+           ① 有 JS 就把 <details> 收起來(無 JS 時 HTML 停在 open,內容照樣看得到)
+           ② 點頁首那個連結、或點國旗列的某一國時,先展開再讓瀏覽器自己捲過去
+           捲動本身完全交給原生錨點 + CSS scroll-behavior(reduced-motion 下不平滑)。
+           放在這裡(元素之後、就地執行)是為了在畫到這一段之前就收合,不會先閃一下全展開。 -->
+      <script is:inline>
+        (function () {
+          var world = document.getElementById('world');
+          if (!world) return;
+          world.open = false;
+          document.addEventListener('click', function (ev) {
+            var node = ev.target;
+            if (!node || typeof node.closest !== 'function') return;
+            if (node.closest('a[href="#world"], a[href^="#country-"]')) world.open = true;
+          });
+        })();
+      </script>
 
       <nav class="flag-band" aria-label={t('topic.countries_label')}>
         {countries.map((c) => (
@@ -291,15 +378,14 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
       cfg = null; // 設定壞掉就整段不掛,寧可沒有 emoji 也不要半殘的控制項
     }
     if (cfg) {
-      document.querySelectorAll('[data-card-reactions]').forEach((box) => {
-        const targetId = box.dataset.targetId;
-        if (!targetId) return;
+      // counts 為 null 時 reactions.mjs 一律畫 0(靜態資料沒有 reaction 計數,權威在 D1)。
+      // summary 回來之後用同一支重畫一次,計數才是真值——reactions.mjs 只讀不改。
+      const mount = (box, counts) => {
         const row = createReactions({
           targetType: box.dataset.targetType, // 'place' | 'event'(契約 §4 已含這兩種)
-          targetId: targetId,
+          targetId: box.dataset.targetId,
           emojis: cfg.emojis,
-          // counts 刻意不傳:靜態資料沒有 reaction 計數(在 D1),初始一律 0,
-          // 按下之後才用伺服器回應的 reactions / mine 重繪。見上方 frontmatter 的限制說明。
+          counts: counts || undefined,
           api: cfg.api,
           i18n: cfg.i18n,
           classes: {
@@ -311,8 +397,43 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
             error: 'is-error',
           },
         });
+        box.textContent = '';
         row.nodes.forEach((node) => box.appendChild(node));
-      });
+      };
+
+      const boxes = Array.prototype.filter.call(
+        document.querySelectorAll('[data-card-reactions]'),
+        (box) => !!box.dataset.targetId
+      );
+      boxes.forEach((box) => mount(box, null));
+
+      // 真實計數:一種 target_type 一支請求,一次最多 100 個 id(契約 §4 的 summary)。
+      // 失敗就靜靜留著 0——不清空、不顯示錯誤內容。
+      if (cfg.api) {
+        ['place', 'event'].forEach((type) => {
+          const mine = boxes.filter((box) => box.dataset.targetType === type);
+          const ids = mine.map((box) => box.dataset.targetId).slice(0, 100);
+          if (ids.length === 0) return;
+          fetch(
+            cfg.api +
+              '/v1/reactions/summary?target_type=' +
+              encodeURIComponent(type) +
+              '&ids=' +
+              ids.map(encodeURIComponent).join(','),
+            { credentials: 'include' } // anon_id 是跨站 cookie
+          )
+            .then((res) => (res.ok ? res.json() : null))
+            .then((data) => {
+              const items = (data && data.items) || null;
+              if (!items) return;
+              mine.forEach((box) => {
+                const hit = items[box.dataset.targetId];
+                if (hit && hit.reactions) mount(box, hit.reactions);
+              });
+            })
+            .catch(() => {});
+        });
+      }
     }
   }
 </script>
@@ -334,31 +455,115 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     color: var(--color-accent-dark);
   }
 
-  /* ── 標題區:分類 → 大標 → 各地叫法 → 導言 ── */
+  /* ── 頁首 = 第一屏 ──
+     min-block-size 給滿一個視窗高(扣掉刊頭那一截),所以「🌎 全世界怎麼過」一定落在
+     一屏之下:第一屏只看得到頁首。內容比這高就自然長高,這只是下限不是鎖死。 */
   .topic-head {
+    min-block-size: calc(100vh - 5rem);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
     padding-block-end: 1.25rem;
     margin-block-end: clamp(2rem, 5vw, 3rem);
     border-block-end: 0.0625rem solid var(--color-line);
   }
-  .topic-head h1 {
-    margin: 0.75rem 0 0.5rem;
+  .head-main {
+    display: grid;
+    gap: clamp(1.25rem, 3vw, 2rem);
+    align-items: start;
   }
-  /* 同一個議題在各地的名字(§44 標題下那一行) */
-  .topic-aliases {
-    margin: 0 0 1rem;
-    font-family: var(--font-display);
-    font-size: var(--text-lg);
-    line-height: 1.4;
-    color: var(--color-ink-muted);
+  /* cover 圖:1.91:1(= 1200×630,同時是 og:image 尺寸)。
+     object-fit: cover 讓之後換上的真圖不管內部構圖如何都不會撐歪版面。 */
+  .topic-cover {
+    margin: 0;
+    min-width: 0;
+  }
+  .topic-cover img {
+    display: block;
+    inline-size: 100%;
+    aspect-ratio: 1200 / 630;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    background: var(--color-primary-soft);
+  }
+  /* 當前站台語系那一份是主角:大字級 + 朱紅側規線。
+     用視覺層級講「這是你在看的語言」,不寫任何一句「本站有七種語言」。 */
+  .head-primary {
+    min-width: 0;
+    border-inline-start: 0.25rem solid var(--color-accent);
+    padding-inline-start: clamp(0.75rem, 2vw, 1.25rem);
+  }
+  .head-primary h1 {
+    margin: 0.25rem 0 0.5rem;
   }
   .topic-lede {
     font-size: var(--text-base);
     line-height: 1.6;
     color: var(--color-ink-soft);
+    margin: 0 0 0.75rem;
+    max-width: 34rem;
+  }
+  /* 「🌎 全世界怎麼過 ↓」:樣式與首頁「看完整排行榜 →」同一種(.section-link) */
+  .section-link {
+    display: inline-block;
+    font-size: var(--text-sm);
+    text-decoration: none;
+    color: var(--color-accent-dark);
+    font-weight: 600;
+  }
+  .section-link:hover {
+    text-decoration: underline;
+  }
+  /* 其餘六語:同一個議題,各市場自己的說法與自己的摘要,降一級但不是註腳 */
+  .head-langs {
+    display: grid;
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+  }
+  .lang-block {
+    min-width: 0;
+  }
+  .lang-label {
+    margin: 0 0 0.15rem;
+    font-size: var(--text-xs);
+    letter-spacing: 0.06em;
+    color: var(--color-ink-muted);
+  }
+  .lang-title {
+    margin: 0 0 0.3rem;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--color-primary);
+  }
+  .lang-summary {
     margin: 0;
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    color: var(--color-ink-soft);
+  }
+  /* 徽章列:移出 header 之後自己的間距 */
+  .topic-badges {
+    margin-block-end: clamp(1.5rem, 4vw, 2rem);
   }
 
-  /* ── 🌎 全世界怎麼過 ── */
+  /* ── 🌎 全世界怎麼過(<details>:出廠 open,有 JS 才收合) ── */
+  .zone-world {
+    margin-block-end: clamp(2.5rem, 6vw, 4rem);
+    scroll-margin-block-start: 1rem;
+  }
+  .world-summary {
+    cursor: pointer;
+    border-block-start: 0.125rem solid var(--color-text);
+    padding-block-start: 0.75rem;
+    margin-block: 0 1.5rem;
+    color: var(--color-text);
+    font-size: var(--text-base);
+  }
+  .world-summary h2 {
+    display: inline;
+    margin: 0;
+  }
   .country-list {
     list-style: none;
     margin: 0;
@@ -456,9 +661,10 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     font-size: var(--text-xs);
   }
 
-  /* ── 三區塊(左上 📍 你附近 / 左下 🎉 相關活動 / 右 💬 大家正在聊)──
-     窄螢幕:單欄堆疊,順序照 DOM = 你附近 → 相關活動 → 大家正在聊。
-     桌機:兩欄,左欄自己再上下堆兩段,右欄的討論串靠 grid 預設的 stretch 佔滿整列高度。
+  /* ── 三區塊(左中 📍 #nearby / 左下 🎉 #events / 右 💬 #talking)──
+     窄螢幕(這一層,mobile-first):單欄堆疊,順序照 DOM = 你附近 → 相關活動 → 大家正在聊,
+     **高度完全不鎖**——手機上把區塊鎖死高度再開內部捲動,等於在捲動裡面再捲一層,很難用。
+     桌機的 50/50 與 % 高度全部關在 @media (min-width: 1024px) 裡。
      這一層是 div 不是 section,所以 `.topic > section` 的間距不會套到裡面的段落,
      間距一律由這裡的 gap 給,避免最後一段多出一截空白。 */
   .topic-zones {
@@ -655,6 +861,11 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     margin-block-start: 0.5rem;
   }
 
+  @media (min-width: 640px) {
+    .head-langs {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   @media (min-width: 768px) {
     .country {
       grid-template-columns: minmax(9rem, 14rem) minmax(0, 1fr);
@@ -664,16 +875,51 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     }
   }
   @media (min-width: 1024px) {
-    .topic-head h1 {
-      font-size: var(--text-3xl);
-      line-height: 1.1;
+    /* 頁首:cover 圖與主角語系並排,其餘六語在下方排成 3×2 */
+    .head-main {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: center;
     }
-    /* 左欄(你附近 / 相關活動)與右欄(大家正在聊)並排。
-       討論串是這一頁的主體,所以右欄給多一點寬;grid 預設 align-items: stretch,
-       右欄那一格因此佔滿整列高度。 */
+    .head-langs {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* ── 桌面版三區塊:左右**各 50%**,高度用 % ──
+       column-gap 設 0、欄寬直接寫 50% / 50%,量到的左右欄就是剛好各半(欄間距改由各欄
+       自己的 padding 給,不吃掉那 50%)。
+       百分比高度要有依據,容器本身得先有確定高度,所以 .topic-zones 給一個視窗高;
+       左欄 100%、左欄內兩段各 50%、右欄 100% —— 全部是 %,不是讓內容自己撐開。
+       內容超出時各自 overflow-y: auto 在區塊內部捲,不把整頁撐長。 */
     .topic-zones {
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-      column-gap: clamp(2rem, 4vw, 3rem);
+      grid-template-columns: 50% 50%;
+      /* 列高也要明寫 100%:留給 grid 自動算的話那一列會被內容撐成 max-content
+         (實測左欄變成 1489px 而不是 800px),% 高度就整組失效。 */
+      grid-template-rows: 100%;
+      column-gap: 0;
+      block-size: 100vh;
+    }
+    /* grid item 的 min-block-size 預設是 auto(內容的自動最小尺寸),不歸零的話
+       內容一多就會頂開那一格,overflow-y: auto 也就永遠不會捲。 */
+    .topic-zones > * {
+      min-block-size: 0;
+    }
+    .zone-col {
+      grid-template-rows: 50% 50%;
+      align-content: stretch;
+      gap: 0;
+      block-size: 100%;
+      padding-inline-end: clamp(1rem, 2.5vw, 2rem);
+    }
+    .zone-col > section {
+      block-size: 100%;
+      min-block-size: 0;
+      overflow-y: auto;
+      padding-block-end: 1rem;
+    }
+    .zone-talk {
+      block-size: 100%;
+      overflow-y: auto;
+      padding-inline-start: clamp(1rem, 2.5vw, 2rem);
     }
     /* 左欄變窄了,店家/活動卡片回到單欄——兩欄的話一張卡放不下七顆 emoji 加地址 */
     .zone-col .card-list {

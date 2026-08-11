@@ -27,19 +27,38 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import TopicBoard from '../components/TopicBoard.astro';
 import { t } from '../lib/i18n.mjs';
 import { withBase } from '../lib/paths.mjs';
-import { globalRankRows } from '../lib/data.mjs';
+import { monthDay } from '../lib/format.mjs';
+import { recentTopics, countryName } from '../lib/data.mjs';
 
-// 首頁列全球熱度(24h)前 10 個 Topic,超過的走排行榜。
+// 首頁 = 近期話題(2026-08-11 用戶指示):快要到的議題排前面——「像是最近要到的七夕、
+// 鬼門開、普渡……等等」。排序鍵見 lib/data.mjs 的 recentTopics():各國 observed_date /
+// date_range_end 離今天(UTC)還有幾天,由近到遠,長青主題全年當令算 0。
+// 「熱門」的語意搬到 /topics/today/ 那一頁去了,兩頁**對調**,首頁不再是熱度排序。
 const HOME_TOPIC_LIMIT = 10;
 const HOME_WINDOW = '24h';
-const rows = globalRankRows(HOME_WINDOW).slice(0, HOME_TOPIC_LIMIT);
+const rows = recentTopics(new Date(), HOME_WINDOW)
+  .slice(0, HOME_TOPIC_LIMIT)
+  .map((topic) => ({ topic, note: seasonNote(topic) }));
+
+// 為什麼它是「近期」:哪一國、哪一天。這是列上的事實,不是頁首的說明文字。
+function seasonNote(topic) {
+  const hits = (topic.season_countries || []).slice(0, 3);
+  if (hits.length === 0) return null;
+  return hits
+    .map((c) => {
+      const when = c.date_range_end
+        ? `${monthDay(c.observed_date)} – ${monthDay(c.date_range_end)}`
+        : monthDay(c.observed_date);
+      return `${countryName(c.country_code)} · ${when}`;
+    })
+    .join('　');
+}
 ---
 
-<BaseLayout title={`aeiou.now — ${t('nav.global_trending')}`} activeSort="global">
+<BaseLayout title={`aeiou.now — ${t('home.recent_topics')}`} activeSort="global">
   <section class="board" id="trending">
     <div class="section-head">
-      <p class="eyebrow">{t('marker.trending')}</p>
-      <h2><span class="section-emoji" aria-hidden="true">🔥</span>{t('nav.global_trending')}</h2>
+      <h2>{t('home.recent_topics')}</h2>
       <a class="section-link" href={withBase(`rankings/${HOME_WINDOW}/`)}>
         {t('home.rankings_cta')} <span aria-hidden="true">→</span>
       </a>
@@ -53,14 +72,6 @@ const rows = globalRankRows(HOME_WINDOW).slice(0, HOME_TOPIC_LIMIT);
   .board {
     margin-block-end: clamp(2.5rem, 6vw, 4rem);
     scroll-margin-block-start: 1rem;
-  }
-  .section-head .eyebrow {
-    flex: 0 0 100%;
-    order: -1;
-    color: var(--color-accent-dark);
-  }
-  .section-emoji {
-    margin-inline-end: 0.4rem;
   }
   .section-link {
     font-size: var(--text-sm);

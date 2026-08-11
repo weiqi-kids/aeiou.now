@@ -656,6 +656,72 @@ async function handleTranslations(request, env) {
   return json({ i18n_upserted: translations.length, posts_done: doneIds.length }, 200);
 }
 
+// GET /v1/me —— 讀者是誰、在哪裡。
+// 位置以 Cloudflare 的 request.cf 為準:每一次請求都帶,不必等使用者發過文,
+// 也不需要 GPS(GPS 給經緯度,換成城市要反向地理編碼,而資料模型刻意不存座標)。
+// has_posted 供前端判斷「這個人有沒有在站上留下過足跡」。
+async function handleMe(request, env, cors) {
+  const anonId = getAnonId(request);
+  let hasPosted = false;
+  if (anonId) {
+    const row = await env.DB.prepare(
+      `SELECT 1 AS x FROM posts WHERE anon_id = ? LIMIT 1`
+    )
+      .bind(anonId)
+      .first();
+    hasPosted = !!row;
+  }
+  return json(
+    {
+      country_code: request.cf?.country ?? null,
+      city_code: cityCode(request.cf),
+      has_posted: hasPosted,
+    },
+    200,
+    cors
+  );
+}
+
+// GET /v1/reactions/summary?target_type=place|event&ids=a,b,c
+// 靜態層拿不到 reaction 計數(它們只在 D1),排序需要,所以開一支唯讀彙總端點。
+// 一次最多 100 個 id;不存在的 id 就不出現在回應裡。
+async function handleReactionSummary(env, url, cors) {
+  const targetType = url.searchParams.get("target_type") || "";
+  if (!["post", "comment", "place", "event"].includes(targetType))
+    return err(400, "invalid_body", "target_type must be post/comment/place/event", cors);
+  const ids = (url.searchParams.get("ids") || "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .slice(0, 100);
+  if (ids.length === 0) return json({ target_type: targetType, items: {} }, 200, cors);
+
+  // SQLite 的視窗函數不支援 COUNT(DISTINCT …) OVER (…),所以拆兩段查:
+  // 一段算每個 emoji 的計數,一段算每個目標的 distinct actor 數。
+  const ph = ids.map(() => "?").join(",");
+  const [kinds, actors] = await env.DB.batch([
+    env.DB.prepare(
+      `SELECT target_id, kind, COUNT(DISTINCT actor_id) AS n FROM reactions
+       WHERE target_type = ? AND target_id IN (${ph}) GROUP BY target_id, kind`
+    ).bind(targetType, ...ids),
+    env.DB.prepare(
+      `SELECT target_id, COUNT(DISTINCT actor_id) AS actors FROM reactions
+       WHERE target_type = ? AND target_id IN (${ph}) GROUP BY target_id`
+    ).bind(targetType, ...ids),
+  ]);
+
+  const items = {};
+  for (const r of kinds.results || []) {
+    if (!items[r.target_id]) items[r.target_id] = { reactions: {}, reaction_actors: 0 };
+    items[r.target_id].reactions[r.kind] = r.n;
+  }
+  for (const r of actors.results || []) {
+    if (!items[r.target_id]) items[r.target_id] = { reactions: {}, reaction_actors: 0 };
+    items[r.target_id].reaction_actors = r.actors;
+  }
+  return json({ target_type: targetType, items }, 200, cors);
+}
+
 // ---------- 路由 ----------
 
 export default {
@@ -683,6 +749,16 @@ export default {
         if (request.method !== "GET")
           return err(405, "method_not_allowed", "Use GET", cors);
         return await handleFeed(request, env, decodeURIComponent(feedMatch[1]), url, cors);
+      }
+      if (path === "/v1/me") {
+        if (request.method !== "GET")
+          return err(405, "method_not_allowed", "Use GET", cors);
+        return await handleMe(request, env, cors);
+      }
+      if (path === "/v1/reactions/summary") {
+        if (request.method !== "GET")
+          return err(405, "method_not_allowed", "Use GET", cors);
+        return await handleReactionSummary(env, url, cors);
       }
       if (path === "/v1/posts" || path === "/v1/comments" || path === "/v1/reactions") {
         if (request.method !== "POST")

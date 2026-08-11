@@ -16,6 +16,15 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+/* 站內錨點捲動:原生 + CSS，不寫 JS 捲動動畫。
+   prefers-reduced-motion 下不平滑（前庭失調者的動暈是真的會不舒服），
+   所以預設值不動，只在使用者「沒有表示要減少動態」時才開。 */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 body {
   margin: 0;
   font-size: var(--text-base);

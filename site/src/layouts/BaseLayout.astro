@@ -35,6 +35,8 @@ interface Props {
   activeSort?: string | null;
   navTopics?: Array<Record<string, any>>;
   currentTopicId?: string | null;
+  /** cover 圖的**站內路徑**(呼叫端已過 withBase);這裡再組成絕對網址給 og:image。 */
+  image?: string | null;
 }
 const {
   title,
@@ -42,8 +44,15 @@ const {
   activeSort = null,
   navTopics,
   currentTopicId = null,
+  image = null,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+// og:image 必須是絕對網址(抓取端不解析相對路徑),所以拿 SITE_URL(Astro.site)當基底,
+// 路徑那半段已經含 base path。頁面沒有 cover 就整組 meta 不輸出——不指到不存在的檔。
+const ogImage = image ? new URL(image, Astro.site) : null;
+// cover 的版面契約:1200×630(1.91:1),與 public/covers/*.svg 一致。
+const OG_IMAGE_W = 1200;
+const OG_IMAGE_H = 630;
 // 站內絕對路徑一律用 base 組:GitHub Pages 專案站有 base path,不能掉到主機根目錄。
 const base = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
@@ -68,6 +77,9 @@ const jumpTopics = (navTopics && navTopics.length ? navTopics : hotTopics(2)).fi
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
     <meta property="og:url" content={canonical} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    {ogImage && <meta property="og:image:width" content={String(OG_IMAGE_W)} />}
+    {ogImage && <meta property="og:image:height" content={String(OG_IMAGE_H)} />}
     {GA4_ID && (
       <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}></script>
     )}

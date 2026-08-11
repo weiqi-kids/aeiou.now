@@ -9,5 +9,19 @@ export const WINDOWS = ['24h', '72h', '7d', '1m', '3m', '1y'];
 // 24H 以上屬靜態層。順序照草案逐字:[8H][24H][72H][7D][1M][3M][1Y]。
 export const TREND_WINDOWS = ['8h', ...WINDOWS];
 
+// 語系 → 該語系的市場國家(ISO 3166-1 alpha-2)。
+// 七語系是七個獨立的站,每個站服務一個市場,所以「附近訊息 / 活動資訊」在還不知道讀者位置時
+// 一律先以本語系市場的城市為主(用戶 2026-08-11:「都已經語系了,就是以當語系為主」)。
+// en 沒有單一市場,故為 null:沒有市場可偏袒時就退到下一層排序鍵。
+export const MARKET_COUNTRY = {
+  'zh-TW': 'TW',
+  en: null,
+  ja: 'JP',
+  'zh-CN': 'CN',
+  hi: 'IN',
+  id: 'ID',
+  'pt-BR': 'BR',
+};
+
 // REACTION_SET 跨 Track 契約常數(不含 👍,用戶明示排除)
 export const REACTION_SET = ['❤️', '😂', '😮', '😢', '🤔', '🎉', '👏'];

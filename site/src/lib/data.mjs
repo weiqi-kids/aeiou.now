@@ -141,22 +141,54 @@ function inSeason(country, today) {
   return offset <= span;
 }
 
-/** 草案 §54 的 Today's Topics:今天(UTC)當令的議題。
- * 判準只有兩個,都是資料裡本來就有的事實:
- *   ① is_perennial=1 的長青 Topic 全年當令;
- *   ② 任一國家的 observed_date / date_range_end 落在今天前後 SEASON_DAYS 天內。
- * 沒有命中就是空——不補、不假造。用 UTC 是為了主機與 CI 的 TZ 差異不會 build 出不同結果。 */
-export function todaysTopics(now = new Date()) {
+/** 一個國家的日期離今天還有幾天(往前看)。正在當令中 = 0。無法判讀日期 = null。
+ * 「近期」看的是**還有多久到**,不是絕對差距——剛過去的節日已經退燒,要到的才是話題。
+ * 只有還在 SEASON_DAYS 緩衝內的才算仍然當令(inSeason 已含這個判斷)。 */
+function seasonDistance(country, today) {
+  const start = doy(country.observed_date);
+  if (start === null) return null;
+  if (inSeason(country, today)) return 0;
+  const end = doy(country.date_range_end);
+  const forward = (d) => (d - today + YEAR_DAYS) % YEAR_DAYS;
+  return end === null ? forward(start) : Math.min(forward(start), forward(end));
+}
+
+function heatOf(topic, win) {
+  const raw = topic && topic.scores && topic.scores[win];
+  return typeof raw === 'number' ? raw : 0;
+}
+
+/** 首頁的「近期話題」:快要到的議題排前面(用戶 2026-08-11:「像是最近要到的七夕、鬼門開、
+ * 普渡……」)。排序鍵 = facts.json 各國 observed_date / date_range_end 離今天(UTC)還有幾天,
+ * 由近到遠;is_perennial=1 的長青主題全年當令,距離視為 0。
+ * 同距離再比 24h 熱度。日期讀不出來又不是長青的就不列——不補、不假造。
+ * 用 UTC 是為了主機與 CI 的 TZ 差異不會 build 出不同結果。 */
+export function recentTopics(now = new Date(), win = '24h') {
   const today = Math.round(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()) / 86400000)
     - Math.round(Date.UTC(now.getUTCFullYear(), 0, 1) / 86400000);
   return getTopicsIndex()
     .map((topic) => {
-      if (topic.is_perennial) return { ...topic, season_countries: [] };
+      if (topic.is_perennial) return { ...topic, season_countries: [], season_distance: 0 };
       const facts = readJson(`topics/${topic.topic_id}/facts.json`, null);
-      const hits = ((facts && facts.countries) || []).filter((c) => inSeason(c, today));
-      return hits.length ? { ...topic, season_countries: hits } : null;
+      const dated = ((facts && facts.countries) || [])
+        .map((c) => ({ ...c, season_distance: seasonDistance(c, today) }))
+        .filter((c) => c.season_distance !== null)
+        .sort((a, b) => a.season_distance - b.season_distance);
+      if (dated.length === 0) return null;
+      return { ...topic, season_countries: dated, season_distance: dated[0].season_distance };
     })
-    .filter(Boolean);
+    .filter(Boolean)
+    .sort((a, b) => a.season_distance - b.season_distance || heatOf(b, win) - heatOf(a, win));
+}
+
+/** 「熱門話題」/topics/today/ 的排序:topics/index/<locale>.json 的 scores[win] 由高到低。
+ * 分數本身不上畫面(顯示層規則:熱度只給級距),這裡只拿來排序。 */
+export function topicsByHeat(win = '24h') {
+  return getTopicsIndex()
+    .slice()
+    .sort(
+      (a, b) => heatOf(b, win) - heatOf(a, win) || String(a.slug).localeCompare(String(b.slug))
+    );
 }
 
 /** 城市代碼 → 顯示名(meta/cities.json = {code: name};專有名詞,不分語系) */
@@ -174,26 +206,49 @@ function entryTopicIds(entry) {
   return [];
 }
 
+/** 一個城市檔屬於哪個國家:條目自己帶 country_code(不另建對照表,也不猜)。 */
+function cityCountry(entries) {
+  for (const entry of entries) {
+    if (entry && entry.country_code) return entry.country_code;
+  }
+  return null;
+}
+
 /** 「附近訊息」排序:**有在地資訊的 Topic**,按城市分組。
  *
  * 這一支回的是 Topic 不是店家——導覽上的「附近」是 Topic 的篩選條件,店家本身屬於各自的
  * Topic 頁(草案 §44 的 📍 Near You)。
  *
- * 誠實限制:M1 是靜態層,build 時不可能知道讀者在哪裡(真的要依讀者定位排序得靠 Worker 的
- * request.cf,那是動態層)。所以這裡**按城市分組**、由讀者自己挑城市,不假裝知道位置。 */
+ * 城市帶 country_code 與該 Topic 底下的 place_id 清單:前者供「同城市 > 同國家 > 其他」的
+ * 階層排序(docs/02 §5.2:geo 只到城市級,不算距離、不存座標),後者供前端向
+ * GET /v1/reactions/summary 問 emoji 數當同層的 tie-break。兩者都在用戶端做,
+ * 靜態層只負責排出一個以本語系市場為主的預設順序。 */
 export function topicsWithPlacesByCity() {
   const byId = new Map(getTopicsIndex().map((topic) => [topic.topic_id, topic]));
   const cities = [];
   for (const city of listCityJson('places')) {
-    const counts = new Map();
+    const agg = new Map();
     for (const pl of city.places || []) {
-      for (const id of entryTopicIds(pl)) counts.set(id, (counts.get(id) || 0) + 1);
+      for (const id of entryTopicIds(pl)) {
+        const prev = agg.get(id) || { count: 0, ids: [] };
+        prev.count += 1;
+        if (pl.place_id) prev.ids.push(pl.place_id);
+        agg.set(id, prev);
+      }
     }
-    const topics = [...counts.entries()]
-      .map(([id, count]) => (byId.has(id) ? { ...byId.get(id), place_count: count } : null))
+    const topics = [...agg.entries()]
+      .map(([id, v]) =>
+        byId.has(id) ? { ...byId.get(id), place_count: v.count, target_ids: v.ids } : null
+      )
       .filter(Boolean)
       .sort((a, b) => b.place_count - a.place_count);
-    if (topics.length) cities.push({ city_code: city.city_code, topics });
+    if (topics.length) {
+      cities.push({
+        city_code: city.city_code,
+        country_code: cityCountry(city.places || []),
+        topics,
+      });
+    }
   }
   return cities.sort((a, b) => String(a.city_code).localeCompare(String(b.city_code)));
 }
@@ -207,7 +262,7 @@ export function topicsWithEventsByCity() {
     const agg = new Map();
     for (const ev of city.events || []) {
       for (const id of entryTopicIds(ev)) {
-        const prev = agg.get(id) || { count: 0, next_start_at: null };
+        const prev = agg.get(id) || { count: 0, next_start_at: null, ids: [] };
         const start = typeof ev.start_at === 'number' ? ev.start_at : null;
         const next =
           prev.next_start_at === null
@@ -215,18 +270,30 @@ export function topicsWithEventsByCity() {
             : start === null
               ? prev.next_start_at
               : Math.min(prev.next_start_at, start);
-        agg.set(id, { count: prev.count + 1, next_start_at: next });
+        if (ev.event_id) prev.ids.push(ev.event_id);
+        agg.set(id, { count: prev.count + 1, next_start_at: next, ids: prev.ids });
       }
     }
     const topics = [...agg.entries()]
       .map(([id, v]) =>
         byId.has(id)
-          ? { ...byId.get(id), event_count: v.count, next_start_at: v.next_start_at }
+          ? {
+              ...byId.get(id),
+              event_count: v.count,
+              next_start_at: v.next_start_at,
+              target_ids: v.ids,
+            }
           : null
       )
       .filter(Boolean)
       .sort((a, b) => (a.next_start_at || 0) - (b.next_start_at || 0));
-    if (topics.length) cities.push({ city_code: city.city_code, topics });
+    if (topics.length) {
+      cities.push({
+        city_code: city.city_code,
+        country_code: cityCountry(city.events || []),
+        topics,
+      });
+    }
   }
   return cities.sort((a, b) => String(a.city_code).localeCompare(String(b.city_code)));
 }
@@ -258,27 +325,25 @@ export function relatedTopics(topicId, limit = 2) {
     .slice(0, limit);
 }
 
-/** Topic 的「各地叫法」(草案 §44 標題下那一行):
- * 七個 locale 的 localized_title(§18)＋ 各國 local_name(§6),去重、去掉現正顯示的標題。
- * 注意:這是「同一個議題的多個名字」,不是語系切換器——七語系是七個獨立站。 */
-export function aliasNames(topicId, currentTitle) {
-  const i18n = readJson(`topics/${topicId}/i18n.json`, null);
-  const facts = readJson(`topics/${topicId}/facts.json`, null);
-  const names = [];
-  if (facts && facts.canonical_name) names.push(facts.canonical_name);
-  const locales = (i18n && i18n.locales) || {};
-  for (const key of Object.keys(locales)) {
-    if (locales[key] && locales[key].title) names.push(locales[key].title);
+/** Topic 的 cover 圖(1200×630 = 1.91:1,同時是 Open Graph 標準尺寸)。
+ *
+ * 回傳的是**站內相對路徑**(不含 base),呼叫端一律再過 withBase()——GitHub Pages 專案站有
+ * base path,寫死 /covers/… 會 404。
+ *
+ * .png 優先於 .svg:現在放的是純色塊 SVG 佔位,之後把同尺寸真圖丟成 <slug>.png 就會自動接手,
+ * 版面與模板都不必改。兩者都不存在時回 null,呼叫端整個 <figure> 不渲染(不留破圖、不破版)。
+ *
+ * 為什麼在 build 時查檔而不是交給瀏覽器 onerror:靜態站沒有執行期可以退場,
+ * 而且 og:image 指到不存在的檔會被抓取端記成壞連結。 */
+const COVER_EXTS = ['.png', '.svg'];
+
+export function coverPath(slug) {
+  if (!slug) return null;
+  for (const ext of COVER_EXTS) {
+    const rel = `covers/${slug}${ext}`;
+    if (existsSync(join(process.cwd(), 'public', rel))) return rel;
   }
-  for (const c of (facts && facts.countries) || []) {
-    if (c.local_name) names.push(c.local_name);
-  }
-  const seen = new Set([currentTitle]);
-  return names.filter((name) => {
-    if (seen.has(name)) return false;
-    seen.add(name);
-    return true;
-  });
+  return null;
 }
 
 function listCityJson(dir) {
