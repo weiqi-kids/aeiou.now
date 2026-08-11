@@ -1,0 +1,370 @@
+---
+// 討論室(W2.4,降級模型):
+// - 靜態 HTML 預設渲染 fallback(room.closed),容器帶 data-room-state="closed"
+// - JS fetch 成功且解析出 posts 陣列 → data-room-state="open",替換為 feed + 發文框 + reaction 列
+// - 任何失敗(網路、非 2xx、JSON 壞掉)一律保持 closed;PUBLIC_API_URL 未設時完全不發 fetch
+// - 貼文內容 M1 一律純文字轉義顯示(textContent),絕不 innerHTML 塞使用者內容
+import { t } from '../lib/i18n.mjs';
+import { LOCALE, REACTION_SET } from '../lib/config.mjs';
+
+interface Props {
+  topicId: string; // API 路徑參數是 topic_id(ULID),不是 slug
+}
+const { topicId } = Astro.props;
+const apiUrl = import.meta.env.PUBLIC_API_URL || '';
+
+const roomConfig = {
+  locale: LOCALE,
+  reactions: REACTION_SET,
+  i18n: {
+    empty: t('room.empty'),
+    composePlaceholder: t('room.compose_placeholder'),
+    submit: t('room.submit'),
+    translating: t('post.translating'),
+    original: t('post.original'),
+    showOriginal: t('post.show_original'),
+    hideOriginal: t('post.hide_original'),
+    loading: t('common.loading'),
+    error: t('common.error'),
+  },
+};
+// </script> 防拆:JSON 內任何 "<" 都轉義,靜態字串也照做(衛生習慣)
+const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
+---
+
+<section
+  class="room"
+  data-room
+  data-room-state="closed"
+  data-topic-id={topicId}
+  data-api-url={apiUrl}
+>
+  <script type="application/json" data-room-config set:html={roomConfigJson} />
+  <div class="room-fallback">
+    <p class="room-closed-title">{t('room.closed')}</p>
+    <p class="room-closed-hint">{t('room.closed_hint')}</p>
+  </div>
+  <div class="room-live" hidden></div>
+</section>
+
+<script>
+  // 原生 script(無框架)。開狀態的 DOM 全用 createElement/textContent 組——不進 innerHTML。
+  function initRoom(root) {
+    const api = root.dataset.apiUrl;
+    const topicId = root.dataset.topicId;
+    if (!api || !topicId) return; // PUBLIC_API_URL 未設:完全不發 fetch,永遠 closed
+
+    let cfg;
+    try {
+      cfg = JSON.parse(root.querySelector('[data-room-config]').textContent);
+    } catch {
+      return; // 設定壞掉一律保持 closed
+    }
+
+    const feedUrl = api + '/v1/topics/' + topicId + '/feed?sort=hot&limit=20&comments=3';
+    fetch(feedUrl, { credentials: 'include' })
+      .then((res) => {
+        if (!res.ok) throw new Error('http ' + res.status);
+        return res.json();
+      })
+      .then((data) => {
+        if (!data || !Array.isArray(data.posts)) throw new Error('bad shape');
+        openRoom(root, cfg, topicId, api, data.posts);
+      })
+      .catch(() => {
+        /* 任何失敗一律保持 closed,不顯示過期資料、不做 fallback 快照 */
+      });
+  }
+
+  function el(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = text; // 使用者內容只走 textContent
+    return node;
+  }
+
+  function pickText(post, locale, cfg) {
+    if (post.original_locale === locale) {
+      return { text: post.content, showToggle: false, pending: false };
+    }
+    const tr = post.translations && post.translations[locale];
+    if (tr) return { text: tr, showToggle: true, pending: false };
+    return { text: post.content, showToggle: false, pending: true }; // 缺譯:原文 + 翻譯中
+  }
+
+  function fmtTime(epochSec, locale) {
+    try {
+      return new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeStyle: 'short' })
+        .format(new Date(epochSec * 1000));
+    } catch {
+      return new Date(epochSec * 1000).toISOString();
+    }
+  }
+
+  function renderReactionBar(post, cfg, api) {
+    const bar = el('div', 'room-reactions');
+    const counts = post.reactions || {};
+    cfg.reactions.forEach((emoji) => {
+      const btn = el('button', 'room-reaction-btn');
+      btn.type = 'button';
+      const face = el('span', 'room-reaction-emoji', emoji);
+      const num = el('span', 'room-reaction-count', String(counts[emoji] || 0));
+      btn.append(face, num);
+      btn.addEventListener('click', () => {
+        fetch(api + '/v1/reactions', {
+          method: 'POST',
+          credentials: 'include',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            target_type: 'post',
+            target_id: post.post_id,
+            kind: emoji,
+            op: 'add',
+          }),
+        })
+          .then((res) => {
+            if (!res.ok) throw new Error('http ' + res.status);
+            return res.json();
+          })
+          .then((data) => {
+            if (!data || !data.reactions) return;
+            bar.querySelectorAll('.room-reaction-btn').forEach((b, i) => {
+              const kind = cfg.reactions[i];
+              b.querySelector('.room-reaction-count').textContent =
+                String(data.reactions[kind] || 0);
+              b.classList.toggle('is-mine', !!(data.mine && data.mine.includes(kind)));
+            });
+          })
+          .catch(() => {});
+      });
+      bar.appendChild(btn);
+    });
+    return bar;
+  }
+
+  function renderPost(post, cfg, api) {
+    const item = el('article', 'room-post');
+    const meta = el('p', 'room-post-meta');
+    const origin = [post.country_code, post.city_code].filter(Boolean).join(' · ');
+    meta.textContent = origin
+      ? origin + ' · ' + fmtTime(post.created_at, cfg.locale)
+      : fmtTime(post.created_at, cfg.locale);
+    item.appendChild(meta);
+
+    const picked = pickText(post, cfg.locale, cfg);
+    item.appendChild(el('p', 'room-post-content', picked.text));
+    if (picked.pending) {
+      item.appendChild(el('p', 'room-post-note', cfg.i18n.translating));
+    }
+    if (picked.showToggle) {
+      const orig = el('p', 'room-post-original', post.content);
+      orig.hidden = true;
+      const toggle = el('button', 'room-toggle', cfg.i18n.showOriginal);
+      toggle.type = 'button';
+      toggle.addEventListener('click', () => {
+        orig.hidden = !orig.hidden;
+        toggle.textContent = orig.hidden ? cfg.i18n.showOriginal : cfg.i18n.hideOriginal;
+      });
+      item.append(toggle, orig);
+    }
+
+    item.appendChild(renderReactionBar(post, cfg, api));
+
+    if (Array.isArray(post.comments) && post.comments.length) {
+      const list = el('div', 'room-comments');
+      post.comments.forEach((c) => {
+        const row = el('p', 'room-comment');
+        const who = [c.country_code, c.city_code].filter(Boolean).join(' · ');
+        row.appendChild(el('span', 'room-comment-meta', who ? who + ' — ' : ''));
+        row.appendChild(document.createTextNode(c.content)); // 留言不翻譯,純文字
+        list.appendChild(row);
+      });
+      item.appendChild(list);
+    }
+    return item;
+  }
+
+  function renderComposer(cfg, topicId, api, feedList) {
+    const form = el('form', 'room-composer');
+    const box = el('textarea', 'room-composer-input');
+    box.placeholder = cfg.i18n.composePlaceholder;
+    box.required = true;
+    box.maxLength = 5000;
+    const send = el('button', 'room-composer-submit', cfg.i18n.submit);
+    send.type = 'submit';
+    const err = el('p', 'room-composer-error');
+    err.hidden = true;
+    form.append(box, send, err);
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      const content = box.value.trim();
+      if (!content) return;
+      err.hidden = true;
+      send.disabled = true;
+      fetch(api + '/v1/posts', {
+        method: 'POST',
+        credentials: 'include',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ topic_id: topicId, content: content, locale: cfg.locale }),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error('http ' + res.status);
+          return res.json();
+        })
+        .then((post) => {
+          if (!post || !post.post_id) throw new Error('bad shape');
+          const emptyNote = feedList.querySelector('.room-empty');
+          if (emptyNote) emptyNote.remove();
+          feedList.prepend(renderPost(post, cfg, api));
+          box.value = '';
+        })
+        .catch(() => {
+          err.textContent = cfg.i18n.error;
+          err.hidden = false;
+        })
+        .finally(() => {
+          send.disabled = false;
+        });
+    });
+    return form;
+  }
+
+  function openRoom(root, cfg, topicId, api, posts) {
+    const live = root.querySelector('.room-live');
+    const fallback = root.querySelector('.room-fallback');
+    if (!live || !fallback) return;
+    live.textContent = '';
+
+    const feedList = el('div', 'room-feed');
+    if (posts.length === 0) {
+      feedList.appendChild(el('p', 'room-empty', cfg.i18n.empty));
+    } else {
+      posts.forEach((p) => feedList.appendChild(renderPost(p, cfg, api)));
+    }
+    live.appendChild(renderComposer(cfg, topicId, api, feedList));
+    live.appendChild(feedList);
+
+    fallback.hidden = true;
+    live.hidden = false;
+    root.dataset.roomState = 'open'; // 成功解析 posts 陣列後才切 open
+  }
+
+  document.querySelectorAll('[data-room]').forEach(initRoom);
+</script>
+
+<style>
+  .room {
+    border: 1px solid var(--color-line);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    background: var(--color-bg-light);
+  }
+  .room-closed-title {
+    margin: 0 0 0.25rem;
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-ink-soft);
+  }
+  .room-closed-hint {
+    margin: 0;
+    color: var(--color-ink-muted);
+  }
+  .room :global(.room-composer) {
+    display: grid;
+    gap: 0.5rem;
+    margin-block-end: 1.25rem;
+  }
+  .room :global(.room-composer-input) {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-line);
+    border-radius: 0.5rem;
+    min-height: 5rem;
+  }
+  .room :global(.room-composer-submit) {
+    justify-self: end;
+    font-size: var(--text-sm);
+    padding: 0.4rem 1.25rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background: var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+  }
+  .room :global(.room-composer-error) {
+    margin: 0;
+    color: var(--color-accent-dark);
+    font-size: var(--text-sm);
+  }
+  .room :global(.room-post) {
+    background: var(--color-white);
+    border: 1px solid var(--color-line);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin-block-end: 0.75rem;
+  }
+  .room :global(.room-post-meta),
+  .room :global(.room-comment-meta) {
+    color: var(--color-ink-muted);
+    font-size: var(--text-xs);
+    margin: 0 0 0.25rem;
+  }
+  .room :global(.room-post-content) {
+    margin: 0 0 0.5rem;
+    white-space: pre-wrap;
+  }
+  .room :global(.room-post-note) {
+    color: var(--color-ink-muted);
+    font-size: var(--text-xs);
+    margin: 0 0 0.5rem;
+  }
+  .room :global(.room-post-original) {
+    color: var(--color-ink-soft);
+    border-inline-start: 3px solid var(--color-line);
+    padding-inline-start: 0.75rem;
+    margin: 0.5rem 0;
+    white-space: pre-wrap;
+  }
+  .room :global(.room-toggle) {
+    font-size: var(--text-xs);
+    background: none;
+    border: 0;
+    color: var(--color-primary);
+    cursor: pointer;
+    padding: 0;
+  }
+  .room :global(.room-reactions) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin-block: 0.5rem;
+  }
+  .room :global(.room-reaction-btn) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: var(--text-xs);
+    padding: 0.15rem 0.6rem;
+    border: 1px solid var(--color-line);
+    border-radius: 1rem;
+    background: var(--color-white);
+    cursor: pointer;
+  }
+  .room :global(.room-reaction-btn.is-mine) {
+    border-color: var(--color-primary);
+    background: var(--color-bg-light);
+  }
+  .room :global(.room-comments) {
+    border-block-start: 1px solid var(--color-line);
+    padding-block-start: 0.5rem;
+  }
+  .room :global(.room-comment) {
+    margin: 0 0 0.375rem;
+    font-size: var(--text-sm);
+  }
+  .room :global(.room-empty) {
+    color: var(--color-ink-muted);
+    margin: 0;
+  }
+</style>

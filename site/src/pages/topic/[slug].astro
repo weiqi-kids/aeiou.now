@@ -1,0 +1,256 @@
+---
+// Topic 頁(草案 §44 版面,六區塊):
+// 1 全世界怎麼過 2 熱度(靜態六窗;8h 屬動態不出靜態) 3 討論室(動態)
+// 4 歷史精華 5 店家(含導航連結) 6 活動
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import DiscussionRoom from '../../components/DiscussionRoom.astro';
+import { t } from '../../lib/i18n.mjs';
+import { LOCALE, WINDOWS } from '../../lib/config.mjs';
+import {
+  listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
+  customsText, scoresFor,
+} from '../../lib/data.mjs';
+
+export function getStaticPaths() {
+  // 模組頂層無法 await 匯入的環境:直接同步讀 data 目錄(build time)
+  return listTopicIds()
+    .map((topicId) => {
+      const { facts } = getTopicBundle(topicId);
+      return facts && facts.slug ? { params: { slug: facts.slug }, props: { topicId } } : null;
+    })
+    .filter(Boolean);
+}
+
+const { topicId } = Astro.props;
+const { facts, i18n, highlightItems } = getTopicBundle(topicId);
+const loc = (i18n && i18n.locales && i18n.locales[LOCALE]) || {};
+const title = loc.title || (facts && facts.canonical_name) || topicId;
+const countries = (facts && facts.countries) || [];
+const scores = scoresFor(topicId); // 六窗分數的來源是 topics index
+const hlList = highlightItems;
+const places = placesForTopic(topicId);
+const events = eventsForTopic(topicId);
+
+function fmtDate(epochSec) {
+  return new Intl.DateTimeFormat(LOCALE, { dateStyle: 'medium', timeStyle: 'short' })
+    .format(new Date(epochSec * 1000));
+}
+---
+
+<BaseLayout title={`${title} — aeiou.now`} description={loc.summary}>
+  <h1>{title}</h1>
+  {loc.summary && <p class="topic-summary">{loc.summary}</p>}
+
+  <!-- 1. 全世界怎麼過 -->
+  <section>
+    <h2>{t('topic.how_world_celebrates')}</h2>
+    {countries.length === 0 && <p class="empty">{t('common.empty')}</p>}
+    <ul class="country-list">
+      {countries.map((c) => (
+        <li class="country-item">
+          <h3>
+            {countryName(c.country_code)}
+            <span class="local-name">{c.local_name}</span>
+          </h3>
+          <p class="country-date">
+            {c.observed_date}
+            {c.date_range_end && ` – ${c.date_range_end}`}
+            {c.date_rule && `(${c.date_rule})`}
+          </p>
+          {customsText(i18n, c.country_code) && (
+            <p class="country-customs">{customsText(i18n, c.country_code)}</p>
+          )}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- 2. 熱度(靜態六窗) -->
+  <section>
+    <h2>{t('topic.heat')}</h2>
+    <ul class="heat-grid">
+      {WINDOWS.map((win) => (
+        <li class="heat-cell">
+          <span class="heat-window">{t(`rankings.window.${win}`)}</span>
+          <span class="heat-score">{(scores[win] ?? 0).toFixed(1)}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- 3. 討論室(動態,降級模型) -->
+  <section>
+    <h2>{t('topic.room')}</h2>
+    <DiscussionRoom topicId={topicId} />
+  </section>
+
+  <!-- 4. 歷史精華 -->
+  <section>
+    <h2>{t('topic.highlights')}</h2>
+    {hlList.length === 0 && <p class="empty">{t('topic.highlights_empty')}</p>}
+    {hlList.map((hl) => {
+      const text =
+        hl.original_locale === LOCALE
+          ? hl.content
+          : (hl.translations && hl.translations[LOCALE]) || hl.content;
+      const translated = hl.original_locale !== LOCALE && hl.translations && hl.translations[LOCALE];
+      return (
+        <article class="highlight">
+          <p class="highlight-meta">
+            {countryName(hl.country_code)} · {hl.cycle_label}
+          </p>
+          <p class="highlight-content">{text}</p>
+          {translated && (
+            <details>
+              <summary>{t('post.show_original')}</summary>
+              <p class="highlight-original">{hl.content}</p>
+            </details>
+          )}
+        </article>
+      );
+    })}
+  </section>
+
+  <!-- 5. 相關店家 -->
+  <section>
+    <h2>{t('topic.places')}</h2>
+    {places.length === 0 && <p class="empty">{t('common.empty')}</p>}
+    <ul class="card-list">
+      {places.map((pl) => (
+        <li class="card">
+          <h3>{pl.name}</h3>
+          {pl.descriptions && pl.descriptions[LOCALE] && <p>{pl.descriptions[LOCALE]}</p>}
+          {pl.address && <p class="card-meta">{pl.address}</p>}
+          {pl.map_url && (
+            <a class="card-link" href={pl.map_url} rel="noopener" target="_blank">
+              {t('topic.navigate')}
+            </a>
+          )}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- 6. 相關活動 -->
+  <section>
+    <h2>{t('topic.events')}</h2>
+    {events.length === 0 && <p class="empty">{t('common.empty')}</p>}
+    <ul class="card-list">
+      {events.map((ev) => (
+        <li class="card">
+          <h3>{ev.name}</h3>
+          {ev.descriptions && ev.descriptions[LOCALE] && <p>{ev.descriptions[LOCALE]}</p>}
+          <p class="card-meta">
+            {ev.venue}
+            {ev.start_at && ` · ${fmtDate(ev.start_at)}`}
+            {ev.end_at && ` – ${fmtDate(ev.end_at)}`}
+          </p>
+          {ev.ticket_url && (
+            <a class="card-link" href={ev.ticket_url} rel="noopener" target="_blank">
+              {t('topic.tickets')}
+            </a>
+          )}
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin-block-end: 2.5rem;
+  }
+  .topic-summary {
+    color: var(--color-ink-soft);
+  }
+  .empty {
+    color: var(--color-ink-muted);
+  }
+  .country-list,
+  .card-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+  }
+  .country-item,
+  .card {
+    border: 1px solid var(--color-line);
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: var(--color-white);
+  }
+  .country-item h3,
+  .card h3 {
+    margin: 0 0 0.25rem;
+  }
+  .local-name {
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+    margin-inline-start: 0.5rem;
+    font-weight: 400;
+  }
+  .country-date,
+  .card-meta {
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+    margin: 0 0 0.5rem;
+  }
+  .country-customs {
+    margin: 0;
+  }
+  .heat-grid {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+    gap: 0.75rem;
+  }
+  .heat-cell {
+    border: 1px solid var(--color-line);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    text-align: center;
+    display: grid;
+    gap: 0.25rem;
+    background: var(--color-bg-light);
+  }
+  .heat-window {
+    font-size: var(--text-xs);
+    color: var(--color-ink-soft);
+  }
+  .heat-score {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  .highlight {
+    border: 1px solid var(--color-line);
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    margin-block-end: 0.75rem;
+    background: var(--color-white);
+  }
+  .highlight-meta {
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+    margin: 0 0 0.5rem;
+  }
+  .highlight-content {
+    margin: 0;
+  }
+  .highlight-original {
+    color: var(--color-ink-soft);
+    border-inline-start: 3px solid var(--color-line);
+    padding-inline-start: 0.75rem;
+  }
+  details summary {
+    cursor: pointer;
+    color: var(--color-primary);
+    font-size: var(--text-xs);
+    margin-block-start: 0.5rem;
+  }
+  .card-link {
+    font-size: var(--text-sm);
+  }
+</style>

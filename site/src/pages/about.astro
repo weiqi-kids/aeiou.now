@@ -1,0 +1,10 @@
+---
+// 關於頁(M1 佔位)
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t } from '../lib/i18n.mjs';
+---
+
+<BaseLayout title={t('about.title')} description={t('footer.tagline')}>
+  <h1>{t('about.title')}</h1>
+  <p>{t('about.body')}</p>
+</BaseLayout>

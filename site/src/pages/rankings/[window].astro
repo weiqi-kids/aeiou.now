@@ -1,0 +1,102 @@
+---
+// 排行頁:六個 window 各一頁(24h/72h/7d/1m/3m/1y;8h 屬動態,不出靜態)
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { t } from '../../lib/i18n.mjs';
+import { WINDOWS } from '../../lib/config.mjs';
+import { getGlobalRanking, getTopicsIndex } from '../../lib/data.mjs';
+import { withBase } from '../../lib/paths.mjs';
+
+export function getStaticPaths() {
+  return ['24h', '72h', '7d', '1m', '3m', '1y'].map((win) => ({ params: { window: win } }));
+}
+
+const { window: win } = Astro.params;
+const ranking = getGlobalRanking(win) || { items: [] };
+const byId = new Map(getTopicsIndex().map((topic) => [topic.topic_id, topic]));
+const items = (ranking.items || [])
+  .slice()
+  .sort((a, b) => a.rank - b.rank)
+  .map((item) => ({ ...item, topic: byId.get(item.topic_id) }));
+---
+
+<BaseLayout title={`${t('rankings.title')} — ${t(`rankings.window.${win}`)}`}>
+  <h1>{t('rankings.title')}</h1>
+  <nav class="window-nav" aria-label="ranking windows">
+    {WINDOWS.map((w) => (
+      <a href={withBase(`rankings/${w}/`)} class:list={[{ current: w === win }]}>
+        {t(`rankings.window.${w}`)}
+      </a>
+    ))}
+  </nav>
+  {items.length === 0 && <p class="empty">{t('common.empty')}</p>}
+  <ol class="ranking-list">
+    {items.map((item) => (
+      <li>
+        <a
+          class="ranking-row"
+          href={withBase(`topic/${(item.topic && item.topic.slug) || item.slug}/`)}
+        >
+          <span class="rank">{item.rank}</span>
+          <span class="name">{(item.topic && item.topic.title) || item.slug}</span>
+          <span class="score">{t('rankings.score')} {item.score.toFixed(1)}</span>
+        </a>
+      </li>
+    ))}
+  </ol>
+</BaseLayout>
+
+<style>
+  .window-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-block-end: 1.5rem;
+  }
+  .window-nav a {
+    font-size: var(--text-sm);
+    text-decoration: none;
+    border: 1px solid var(--color-line);
+    border-radius: 1.5rem;
+    padding: 0.25rem 1rem;
+    color: var(--color-text);
+  }
+  .window-nav a.current {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+  }
+  .ranking-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+  .ranking-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    border: 1px solid var(--color-line);
+    border-radius: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    text-decoration: none;
+    color: var(--color-text);
+    background: var(--color-white);
+  }
+  .rank {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-accent);
+    min-width: 2rem;
+  }
+  .name {
+    font-size: var(--text-lg);
+    flex: 1;
+  }
+  .score {
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+  }
+  .empty {
+    color: var(--color-ink-muted);
+  }
+</style>

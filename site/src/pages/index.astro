@@ -1,0 +1,68 @@
+---
+// 首頁:Global Trending(靜態,讀 topics/index/<locale>.json)
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t } from '../lib/i18n.mjs';
+import { getTopicsIndex } from '../lib/data.mjs';
+import { withBase } from '../lib/paths.mjs';
+
+const topics = getTopicsIndex()
+  .slice()
+  .sort((a, b) => ((b.scores || {})['24h'] || 0) - ((a.scores || {})['24h'] || 0));
+---
+
+<BaseLayout title={`aeiou.now — ${t('home.trending')}`} description={t('footer.tagline')}>
+  <h1>{t('home.trending')}</h1>
+  {topics.length === 0 && <p class="empty">{t('common.empty')}</p>}
+  <ul class="topic-grid">
+    {topics.map((topic) => (
+      <li class="topic-card">
+        <a href={withBase(`topic/${topic.slug}/`)}>
+          <h2>{topic.title}</h2>
+          {topic.summary && <p class="summary">{topic.summary}</p>}
+          <p class="score">
+            {t('topic.heat')}({t('rankings.window.24h')}):{((topic.scores || {})['24h'] || 0).toFixed(1)}
+          </p>
+        </a>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
+
+<style>
+  .topic-grid {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  }
+  .topic-card a {
+    display: block;
+    border: 1px solid var(--color-line);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    text-decoration: none;
+    color: var(--color-text);
+    box-shadow: var(--shadow-card);
+    background: var(--color-white);
+  }
+  .topic-card a:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  .topic-card h2 {
+    margin: 0 0 0.5rem;
+    color: var(--color-primary);
+  }
+  .summary {
+    margin: 0 0 0.75rem;
+    color: var(--color-ink-soft);
+  }
+  .score {
+    margin: 0;
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
+  }
+  .empty {
+    color: var(--color-ink-muted);
+  }
+</style>
