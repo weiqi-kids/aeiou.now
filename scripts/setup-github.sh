@@ -23,6 +23,18 @@ SUFFIXES=(ZH_TW EN JA ZH_CN HI ID PT_BR)
 
 say() { printf '\n\033[1m==> %s\033[0m\n' "$*"; }
 
+# ---------- 0. 組織層級 deploy key 開關 ----------
+# 2026-08-11 實測:weiqi-kids 組織的 deploy_keys_enabled_for_repositories 預設為 false,
+# 於是 `gh repo deploy-key add` 回 HTTP 422 "Deploy keys are disabled for this repository"。
+# 這是組織設定,不是 repo 設定,必須先打開(需 gh token 有 admin:org 或組織 owner 身分)。
+say "0/5 組織 deploy key 開關"
+if [ "$(gh api "/orgs/$OWNER" --jq '.deploy_keys_enabled_for_repositories')" = "true" ]; then
+  echo "已啟用"
+else
+  gh api -X PATCH "/orgs/$OWNER" -F deploy_keys_enabled_for_repositories=true \
+    --jq '"deploy_keys_enabled_for_repositories = \(.deploy_keys_enabled_for_repositories)"'
+fi
+
 # ---------- 1. source repo ----------
 say "1/5 source repo $SOURCE_REPO"
 if gh repo view "$SOURCE_REPO" >/dev/null 2>&1; then

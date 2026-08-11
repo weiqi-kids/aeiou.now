@@ -1,0 +1,53 @@
+{
+  "city_code": "tokyo",
+  "places": [
+    {
+      "place_id": "plc_01J50000000000000000000P01",
+      "name": "GODIVA 銀座本店",
+      "country_code": "JP",
+      "address": "東京都中央区銀座",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=GODIVA%20Ginza%20Tokyo",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/search/?api=1&query=GODIVA%20Ginza%20Tokyo",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=GODIVA%20Ginza%20Tokyo",
+        "amap": "https://uri.amap.com/search?keyword=GODIVA%20Ginza%20Tokyo"
+      },
+      "mention_count": 12,
+      "descriptions": {
+        "zh-TW": "銀座的比利時巧克力名店,情人節前排隊人潮眾多,常被討論為送禮首選。",
+        "en": "Belgian chocolatier's flagship in Ginza; long queues before Valentine's Day, often mentioned as a go-to gift shop.",
+        "ja": "銀座のベルギー系チョコレート名店。バレンタイン前は行列ができ、贈り物の定番としてよく話題になる。"
+      },
+      "topics": [
+        {
+          "topic_id": "top_01J50000000000000000000T01",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_01J50000000000000000000P03",
+      "name": "青山フラワーマーケット 表参道店",
+      "country_code": "JP",
+      "address": "東京都港区北青山",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Aoyama%20Flower%20Market%20Omotesando",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/search/?api=1&query=Aoyama%20Flower%20Market%20Omotesando",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Aoyama%20Flower%20Market%20Omotesando",
+        "amap": "https://uri.amap.com/search?keyword=Aoyama%20Flower%20Market%20Omotesando"
+      },
+      "mention_count": 5,
+      "descriptions": {
+        "zh-TW": "表參道的人氣花店,情人節玫瑰花束的熱門選擇。",
+        "en": "Popular flower shop in Omotesando, a favorite for Valentine's Day rose bouquets.",
+        "ja": "表参道の人気フラワーショップ。バレンタインのバラの花束の定番。"
+      },
+      "topics": [
+        {
+          "topic_id": "top_01J50000000000000000000T01",
+          "relevance": 0.6
+        }
+      ]
+    }
+  ]
+}

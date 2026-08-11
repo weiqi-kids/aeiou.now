@@ -1,0 +1,26 @@
+{
+  "city_code": "tokyo",
+  "events": [
+    {
+      "event_id": "evt_01J50000000000000000000E01",
+      "name": "サロン・デュ・ショコラ 東京 2027",
+      "country_code": "JP",
+      "venue": "新宿NSビル",
+      "start_at": 1800403200,
+      "end_at": 1800748800,
+      "ticket_url": null,
+      "source_id": "src_01J50000000000000000000S02",
+      "descriptions": {
+        "zh-TW": "世界最大巧克力展的東京場,每年 1 月底登場,是日本情人節採購季的起點。",
+        "en": "Tokyo edition of the world's largest chocolate fair, held in late January and marking the start of Japan's Valentine shopping season.",
+        "ja": "世界最大級のチョコレートの祭典の東京会場。毎年1月下旬に開かれ、日本のバレンタイン商戦の幕開けとなる。"
+      },
+      "topics": [
+        {
+          "topic_id": "top_01J50000000000000000000T01",
+          "relevance": 0.9
+        }
+      ]
+    }
+  ]
+}

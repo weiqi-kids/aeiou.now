@@ -1,0 +1,74 @@
+{
+  "topic_id": "top_01J50000000000000000000T01",
+  "slug": "valentines-day",
+  "canonical_name": "Valentine's Day",
+  "category": "festival",
+  "status": "active",
+  "is_perennial": 0,
+  "access_level": 0,
+  "countries": [
+    {
+      "country_code": "BR",
+      "local_name": "Dia dos Namorados",
+      "observed_date": "06-12",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 3,
+      "source_ids": [
+        "src_01J50000000000000000000S01",
+        "src_01J50000000000000000000S03"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "local_name": "Valentine Week",
+      "observed_date": "02-07",
+      "date_rule": null,
+      "date_range_end": "02-14",
+      "popularity_rank": 4,
+      "source_ids": [
+        "src_01J50000000000000000000S01",
+        "src_01J50000000000000000000S04"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "local_name": "バレンタインデー",
+      "observed_date": "02-14",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_01J50000000000000000000S01",
+        "src_01J50000000000000000000S02"
+      ]
+    },
+    {
+      "country_code": "US",
+      "local_name": "Valentine's Day",
+      "observed_date": "02-14",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 2,
+      "source_ids": [
+        "src_01J50000000000000000000S01",
+        "src_01J50000000000000000000S05"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "to_topic_id": "top_01J50000000000000000000T02",
+      "relation": "related",
+      "country_code": null,
+      "weight": 0.2
+    }
+  ],
+  "source_ids": [
+    "src_01J50000000000000000000S01",
+    "src_01J50000000000000000000S02",
+    "src_01J50000000000000000000S03",
+    "src_01J50000000000000000000S04",
+    "src_01J50000000000000000000S05"
+  ]
+}

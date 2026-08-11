@@ -1,0 +1,26 @@
+{
+  "city_code": "taipei",
+  "events": [
+    {
+      "event_id": "evt_01J50000000000000000000E02",
+      "name": "2027 台北巧克力沙龍",
+      "country_code": "TW",
+      "venue": "圓山花博爭艷館",
+      "start_at": 1801785600,
+      "end_at": 1801958400,
+      "ticket_url": null,
+      "source_id": "src_01J50000000000000000000S06",
+      "descriptions": {
+        "zh-TW": "台北的巧克力主題市集,集合本地與國際品牌,情人節前夕的採購與試吃活動。",
+        "en": "Chocolate-themed fair in Taipei gathering local and international brands, with tastings ahead of Valentine's Day.",
+        "ja": "台北のチョコレートをテーマにしたフェア。地元と海外のブランドが集まり、バレンタイン前に試食や購入ができる。"
+      },
+      "topics": [
+        {
+          "topic_id": "top_01J50000000000000000000T01",
+          "relevance": 0.8
+        }
+      ]
+    }
+  ]
+}

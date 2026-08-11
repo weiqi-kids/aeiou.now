@@ -1,0 +1,29 @@
+{
+  "city_code": "taipei",
+  "places": [
+    {
+      "place_id": "plc_01J50000000000000000000P02",
+      "name": "畬室法式巧克力甜點創作",
+      "country_code": "TW",
+      "address": "台北市大安區",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Yu%20Chocolatier%20Taipei",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/search/?api=1&query=Yu%20Chocolatier%20Taipei",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Yu%20Chocolatier%20Taipei",
+        "amap": "https://uri.amap.com/search?keyword=Yu%20Chocolatier%20Taipei"
+      },
+      "mention_count": 8,
+      "descriptions": {
+        "zh-TW": "台北知名法式巧克力專門店,曾獲國際巧克力賽事獎項,情人節限定禮盒常被推薦。",
+        "en": "Award-winning French-style chocolate atelier in Taipei; its Valentine gift boxes are frequently recommended in discussions.",
+        "ja": "台北の有名なフレンチスタイルのショコラトリー。国際コンクール受賞歴があり、バレンタイン限定ボックスがよく薦められる。"
+      },
+      "topics": [
+        {
+          "topic_id": "top_01J50000000000000000000T01",
+          "relevance": 0.8
+        }
+      ]
+    }
+  ]
+}
