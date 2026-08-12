@@ -72,28 +72,54 @@ function validateShape() {
     if (!Array.isArray(source.markers) || source.markers.length === 0) {
       fail(`來源缺 markers：${source.url}`);
     }
+    if (!['place', 'event'].includes(source.kind)) {
+      fail(`來源 kind 必須是 place 或 event：${source.url}`);
+    }
     catalogByUrl.set(source.url, source);
   }
 
   const placeUrls = (sample.places || []).flatMap((place) => place.source_urls || []);
   const eventUrls = (sample.events || []).map((event) => event.source_url);
   const managedEventUrls = sample.managed_event_source_urls || eventUrls;
-  const requiredUrls = unique([...placeUrls, ...eventUrls, ...managedEventUrls]);
+  const managedPlaceUrls = sample.managed_place_source_urls || placeUrls;
+  const retiredPlaceIds = sample.retired_place_ids || [];
+  const requiredUrls = unique([...placeUrls, ...eventUrls, ...managedEventUrls, ...managedPlaceUrls]);
   for (const url of requiredUrls) {
     if (!catalogByUrl.has(url)) fail(`資料 URL 沒有來源目錄設定：${url}`);
   }
   for (const url of managedEventUrls) {
     if (!/^https?:\/\//.test(url)) fail(`managed_event_source_urls 含無效 URL：${url}`);
+    if (catalogByUrl.get(url)?.kind !== "event") fail(`managed_event_source_urls 只能包含 event 來源：${url}`);
+  }
+  for (const url of managedPlaceUrls) {
+    if (!/^https?:\/\//.test(url)) fail(`managed_place_source_urls 含無效 URL：${url}`);
+    if (catalogByUrl.get(url)?.kind !== "place") fail(`managed_place_source_urls 只能包含 place 來源：${url}`);
+  }
+  for (const id of retiredPlaceIds) {
+    if (!/^plc_[A-Z0-9]{24,26}$/.test(id)) fail(`retired_place_ids 含無效 place_id：${id}`);
   }
   for (const event of sample.events || []) {
     if (!event.start_at) fail(`活動缺 start_at：${event.name}`);
     if (event.end_at && event.end_at < event.start_at) fail(`活動日期逆序：${event.name}`);
     const source = catalogByUrl.get(event.source_url);
+    if (source?.kind !== "event") {
+      fail(`活動來源 kind 必須是 event：${event.source_url}`);
+    }
     if (!Array.isArray(source?.date_markers) || source.date_markers.length === 0) {
       fail(`活動來源缺 date_markers：${event.source_url}`);
     }
   }
-  return { catalogByUrl, requiredUrls, managedEventUrls, placeUrls };
+  for (const place of sample.places || []) {
+    if (place.place_type !== "permanent") fail(`地點必須是 permanent：${place.name}`);
+    if (place.topic_relevance !== "direct") fail(`地點與 Topic 的關聯必須是 direct：${place.name}`);
+    for (const url of place.source_urls || []) {
+      const source = catalogByUrl.get(url);
+      if (source?.kind !== "place") {
+        fail(`地點來源 kind 必須是 place：${url}`);
+      }
+    }
+  }
+  return { catalogByUrl, requiredUrls, managedEventUrls, placeUrls, retiredPlaceIds };
 }
 
 async function verifySource(url, source, event) {
@@ -137,14 +163,12 @@ function activeEventsForDate(events) {
 }
 
 async function main() {
-  const { catalogByUrl, requiredUrls, managedEventUrls, placeUrls } = validateShape();
+  const { catalogByUrl, placeUrls, managedEventUrls } = validateShape();
   const activeEvents = activeEventsForDate(sample.events || []);
   const activeEventUrls = new Set(activeEvents.map((event) => event.source_url));
-  const urlsToVerify = requiredUrls.filter((url) => {
-    // 已結束活動的來源仍保留在 managed 清單，用來讓匯入器安全清掉 DB 舊列；
-    // 不要求過期頁面今天仍可連線。
-    return placeUrls.includes(url) || !managedEventUrls.includes(url) || activeEventUrls.has(url);
-  });
+  // 只重新核對目前仍要發布的常設地點與活動；退役來源僅用於清除舊列，
+  // 不會被當成目前地點或活動再次抓取。
+  const urlsToVerify = unique([...placeUrls, ...activeEventUrls]);
 
   console.log(`來源驗證：${urlsToVerify.length} 個目前仍使用的 URL（${offline ? "offline" : "online"}）`);
   const checks = [];

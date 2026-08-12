@@ -11,6 +11,24 @@
     "https://www.soehannahall.com/news_and_event/night-music-lights-candlelight-concerts-soehanna-hall/",
     "https://eventos.sp.senac.br/evento/workshop-mesa-para-dois-food-design-para-o-dia-dos-namorados/"
   ],
+  "managed_place_source_urls": [
+    "https://www.chocoholic.com.tw/about_2.htm",
+    "https://mini-mal.tokyo/pages/access",
+    "https://english.shanghai.gov.cn/en-FirstStores/20260624/50f678163fcf42a1b0dc4409376de73b.html",
+    "https://visitloveland.com/visitors-center/",
+    "https://www.choconuts.in/",
+    "https://www.godiva.co.id/our-location/",
+    "https://www.dengo.com.br/nossas-lojas"
+  ],
+  "retired_place_ids": [
+    "plc_DC1354E38584ADE45E79C7859F",
+    "plc_53E4F4151B72E03376E6B7BC7B",
+    "plc_74CC3D0401B6930DED08A8133F",
+    "plc_6B0018B4DED2DAF41380037767",
+    "plc_D6DDF357A54863722A3312B5E4",
+    "plc_D16C9C202DD07061BC2462EF4B",
+    "plc_56A587977C8FF926C1640EAF93"
+  ],
   "markets": [
     {"locale":"zh-TW","country_code":"TW","city_code":"taipei","city_name":"Taipei"},
     {"locale":"ja","country_code":"JP","city_code":"tokyo","city_name":"Tokyo"},
@@ -22,141 +40,150 @@
   ],
   "places": [
     {
-      "name": "臺北市立天文科學教育館",
+      "name": "Chocoholic 巧克哈客（永康店）",
       "city_code": "taipei",
       "country_code": "TW",
-      "address": "111013 臺北市士林區基河路 363 號",
-      "map_query": "臺北市立天文科學教育館 臺北",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "address": "台北市大安區永康街 7 巷 2 號",
+      "map_query": "Chocoholic 巧克哈客 永康店 台北",
       "source_urls": [
-        "https://tam.gov.taipei/News_Content.aspx?n=794B17A953424610&s=259D7CDEDEAEC283&sms=9D72E82EC16F3E64",
-        "https://tam.gov.taipei/Default.aspx"
+        "https://www.chocoholic.com.tw/about_2.htm"
       ],
       "descriptions": {
-        "zh-TW": "2026 年七夕，天文館在宇宙劇場舉辦「星空愛戀音樂會」。",
-        "en": "The museum hosts the Starry Sky Romance Concert for Qixi on August 19, 2026.",
-        "ja": "2026年8月19日の七夕に「星空愛戀音樂會」が開かれる会場です。",
-        "zh-CN": "天文馆将在 2026 年七夕举办“星空爱恋音乐会”。",
-        "hi": "19 अगस्त 2026 को क़ीशी के लिए यहाँ Starry Sky Romance Concert होगा।",
-        "id": "Museum ini menjadi lokasi Starry Sky Romance Concert pada 19 Agustus 2026 untuk Qixi.",
-        "pt-BR": "O museu recebe o Starry Sky Romance Concert em 19 de agosto de 2026, no Qixi."
+        "zh-TW": "台北永康街的巧克力專飲店，官網列有巧克力飲品、料理、甜點與禮盒，設有固定門市。",
+        "en": "A chocolate drink shop on Yongkang Street in Taipei. Its official site lists chocolate drinks, desserts, dishes and gift boxes at a fixed storefront.",
+        "ja": "台北・永康街にあるチョコレート専門店。公式サイトにはチョコレートドリンク、デザート、料理、ギフト商品と常設店の案内があります。",
+        "zh-CN": "台北永康街的巧克力专饮店，官网列有巧克力饮品、料理、甜点和礼盒，并提供固定门店地址。",
+        "hi": "ताइपे की योंगकांग स्ट्रीट पर चॉकलेट ड्रिंक की दुकान। आधिकारिक साइट पर चॉकलेट पेय, मिठाइयाँ, व्यंजन और गिफ्ट बॉक्स सूचीबद्ध हैं।",
+        "id": "Kedai minuman cokelat di Yongkang Street, Taipei. Situs resminya mencantumkan minuman, hidangan, makanan penutup, dan kotak hadiah berbahan cokelat.",
+        "pt-BR": "Uma loja de bebidas de chocolate na Yongkang Street, em Taipei. O site oficial lista bebidas, sobremesas, pratos e caixas de presente de chocolate."
       }
     },
     {
-      "name": "東京たま未来メッセ（東京都立多摩産業交流センター）",
+      "name": "Minimal 富ヶ谷本店",
       "city_code": "tokyo",
       "country_code": "JP",
-      "address": "〒192-0046 東京都八王子市明神町3丁目19-2",
-      "map_query": "東京たま未来メッセ 八王子",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "address": "〒151-0063 東京都渋谷区富ヶ谷 2-1-9",
+      "map_query": "Minimal 富ヶ谷本店 東京",
       "source_urls": [
-        "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/350/detail.html",
-        "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/index.html"
+        "https://mini-mal.tokyo/pages/access"
       ],
       "descriptions": {
-        "zh-TW": "東京たま未来メッセ曾於 2026 年 2 月 1 日舉辦「煌めきバレンタインマルシェ」。",
-        "en": "Tokyo Tama Mirai Messe hosted the Kirameki Valentine Marche on February 1, 2026.",
-        "ja": "東京たま未来メッセでは、2026年2月1日に「煌めきバレンタインマルシェ」が開かれました。",
-        "zh-CN": "东京多摩未来会展中心曾于 2026 年 2 月 1 日举办“闪耀情人节市集”。",
-        "hi": "Tokyo Tama Mirai Messe में 1 फ़रवरी 2026 को Kirameki Valentine Marche हुआ था।",
-        "id": "Tokyo Tama Mirai Messe menjadi lokasi Kirameki Valentine Marche pada 1 Februari 2026.",
-        "pt-BR": "O Tokyo Tama Mirai Messe recebeu a Kirameki Valentine Marche em 1º de fevereiro de 2026."
+        "zh-TW": "東京富ヶ谷的常設巧克力店，官方列明可內用、外帶與營業地址，主打可可風味的巧克力。",
+        "en": "A permanent chocolate shop in Tomigaya, Tokyo. The official shop page lists dine-in and takeaway service, its address and a cacao-focused product line.",
+        "ja": "東京・富ヶ谷の常設チョコレート店。公式サイトにはイートインとテイクアウト、住所、カカオの魅力を生かした商品が案内されています。",
+        "zh-CN": "东京富谷的常设巧克力店，官网列有堂食、外带、门店地址和以可可风味为主的产品。",
+        "hi": "टोक्यो के तोमिगाया में स्थायी चॉकलेट दुकान। आधिकारिक पेज पर बैठकर खाने और टेकअवे, पता और कोको पर आधारित उत्पादों की जानकारी है।",
+        "id": "Toko cokelat permanen di Tomigaya, Tokyo. Halaman resminya mencantumkan layanan makan di tempat dan bawa pulang, alamat, serta produk yang menonjolkan rasa kakao.",
+        "pt-BR": "Uma loja permanente de chocolate em Tomigaya, Tóquio. A página oficial informa serviço para consumo no local e para viagem, endereço e produtos centrados no cacau."
       }
     },
     {
-      "name": "龙盛活力小镇",
+      "name": "Godiva 巧克力体验旗舰店（新天地）",
       "city_code": "shanghai",
       "country_code": "CN",
-      "address": "上海市宝山区呼兰西路 123 号",
-      "map_query": "龙盛活力小镇 上海 呼兰西路123号",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "address": "上海市黄浦区马当路 119 号 102 室",
+      "map_query": "Godiva 巧克力体验旗舰店 新天地 上海",
       "source_urls": [
-        "https://xxgk.shbsq.gov.cn/article.html?infoid=ad7e7534-18a7-45bc-bda1-99b3ce4ca731"
+        "https://english.shanghai.gov.cn/en-FirstStores/20260624/50f678163fcf42a1b0dc4409376de73b.html"
       ],
       "descriptions": {
-        "zh-TW": "上海寶山區 2026 年七夕「七夕甜蜜季」的活動會場，地址為呼蘭西路 123 號。",
-        "en": "Longsheng Vitality Town is the venue for Baoshan’s Qixi Sweet Season on August 19, 2026.",
-        "ja": "上海市宝山区の2026年七夕イベント「七夕甜蜜季」の会場です。住所は呼蘭西路123号。",
-        "zh-CN": "龙盛活力小镇是宝山区 2026 年“七夕甜蜜季”的活动场地，地址为呼兰西路 123 号。",
-        "hi": "Longsheng Vitality Town 19 अगस्त 2026 को Baoshan Qixi Sweet Season का स्थल है।",
-        "id": "Longsheng Vitality Town menjadi lokasi Qixi Sweet Season di Baoshan pada 19 Agustus 2026.",
-        "pt-BR": "O Longsheng Vitality Town é o local do Qixi Sweet Season de Baoshan em 19 de agosto de 2026."
+        "zh-TW": "上海新天地的巧克力體驗店，上海市政府英文頁面列有試吃、現做巧克力飲品、客製禮盒與門市地址。",
+        "en": "A chocolate experience store in Shanghai’s Xintiandi. The Shanghai government’s listing mentions tastings, made-to-order chocolate drinks, personalised gift boxes and the store address.",
+        "ja": "上海・新天地にあるチョコレート体験店。上海市政府の案内には試食、店内で作るチョコレートドリンク、ギフトのカスタマイズ、住所が掲載されています。",
+        "zh-CN": "上海新天地的巧克力体验店，上海市政府页面介绍了试吃、现做巧克力饮品、定制礼盒和门店地址。",
+        "hi": "शंघाई के शिन्तियानदी में चॉकलेट अनुभव स्टोर। शंघाई सरकार के पेज पर चखने, वहीं तैयार चॉकलेट पेय, कस्टम गिफ्ट बॉक्स और पते की जानकारी है।",
+        "id": "Toko pengalaman cokelat di Xintiandi, Shanghai. Halaman pemerintah Shanghai mencantumkan sesi mencicipi, minuman cokelat yang dibuat di tempat, kotak hadiah kustom, dan alamat toko.",
+        "pt-BR": "Uma loja de experiência com chocolate em Xintiandi, Xangai. A página do governo de Xangai menciona degustações, bebidas de chocolate preparadas na hora, caixas de presente personalizadas e o endereço."
       }
     },
     {
-      "name": "Loveland Visitors Center",
+      "name": "Loveland East Gateway Visitors Center",
       "city_code": "loveland",
       "country_code": "US",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
       "address": "5400 Stone Creek Circle, Loveland, Colorado 80538",
-      "map_query": "Loveland Visitors Center Colorado",
+      "map_query": "Loveland East Gateway Visitors Center Colorado",
       "source_urls": [
-        "https://visitloveland.com/sweetheartfestival/"
+        "https://visitloveland.com/visitors-center/"
       ],
       "descriptions": {
-        "zh-TW": "Loveland 的官方旅遊資訊中心；2027 年 Sweetheart Festival 將於 2 月 12–13 日在市中心舉行。",
-        "en": "Loveland’s official visitor center; the 2027 Sweetheart Festival is scheduled downtown for February 12–13.",
-        "ja": "Lovelandの公式観光案内所。2027年のSweetheart Festivalは2月12～13日にダウンタウンで開催されます。",
-        "zh-CN": "Loveland 的官方游客中心；2027 年 Sweetheart Festival 将于 2 月 12–13 日在市中心举行。",
-        "hi": "यह Loveland का आधिकारिक पर्यटक केंद्र है। 2027 Sweetheart Festival 12–13 फ़रवरी को डाउनटाउन में होगा।",
-        "id": "Ini pusat informasi wisata resmi Loveland. Sweetheart Festival 2027 dijadwalkan pada 12–13 Februari di pusat kota.",
-        "pt-BR": "É o centro oficial de informações turísticas de Loveland. O Sweetheart Festival 2027 será realizado em 12 e 13 de fevereiro no centro da cidade."
+        "zh-TW": "Loveland 的常設旅遊資訊中心，官方介紹這裡有 LOVE 鎖雕塑、地方工藝品與旅遊資訊。",
+        "en": "A permanent visitor centre in Loveland. The official listing describes its LOVE lock sculpture, locally made goods and visitor information.",
+        "ja": "Lovelandの常設観光案内所。公式案内では、LOVEロックの彫刻、地元の作り手の商品、観光情報を紹介しています。",
+        "zh-CN": "Loveland 的常设游客中心，官网介绍了 LOVE 锁雕塑、当地手工艺品和旅游信息。",
+        "hi": "Loveland का स्थायी पर्यटक केंद्र। आधिकारिक जानकारी में LOVE lock मूर्ति, स्थानीय कारीगरों की वस्तुएँ और यात्रा संबंधी जानकारी दी गई है।",
+        "id": "Pusat informasi wisata permanen di Loveland. Situs resminya menyebutkan patung LOVE lock, barang buatan perajin lokal, dan informasi untuk pengunjung.",
+        "pt-BR": "Um centro permanente de informações turísticas em Loveland. O site oficial destaca a escultura LOVE lock, produtos de artesãos locais e informações para visitantes."
       }
     },
     {
-      "name": "Nehru Memorial Hall",
+      "name": "Choconuts",
       "city_code": "pune",
       "country_code": "IN",
-      "address": "Atur Foundation House, 4, Dr Baba Saheb Ambedkar Rd, Camp, Pune, Maharashtra 411001",
-      "map_query": "Nehru Memorial Hall Pune",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "address": "Shop No 1, Kumar Pavilion, East St, Pune Cantonment, Pune, Maharashtra 411001",
+      "map_query": "Choconuts Kumar Pavilion East Street Pune",
       "source_urls": [
-        "https://newsroom.feverup.com/en-IN/262080-candlelight-s-valentine-s-day-special-brings-a-romantic-experience-to-pune-on-14th-february/",
-        "https://nehruhall.com/contact/"
+        "https://www.choconuts.in/"
       ],
       "descriptions": {
-        "zh-TW": "Pune 的文化場館；Fever 曾在此安排 2026 年 2 月 14 日的情人節燭光音樂會。",
-        "en": "A cultural venue in Pune where Fever held a Valentine’s Day Candlelight concert on February 14, 2026.",
-        "ja": "プネーの文化施設。Feverが2026年2月14日にバレンタイン特別公演を開きました。",
-        "zh-CN": "Pune 的文化场馆；Fever 曾在此于 2026 年 2 月 14 日举办情人节烛光音乐会。",
-        "hi": "पुणे का सांस्कृतिक स्थल जहाँ Fever ने 14 फ़रवरी 2026 को Valentine’s Day Candlelight concert किया था।",
-        "id": "Tempat budaya di Pune yang menjadi lokasi konser Candlelight Valentine’s Day dari Fever pada 14 Februari 2026.",
-        "pt-BR": "Espaço cultural em Pune que recebeu um concerto Candlelight de Dia dos Namorados da Fever em 14 de fevereiro de 2026."
+        "zh-TW": "Pune 的巧克力與乾果店，官方頁面列有手工巧克力、禮盒與門市地址。",
+        "en": "A chocolate and dry-fruit shop in Pune. Its official page lists handmade chocolates, gift hampers and the shop address.",
+        "ja": "プネーのチョコレート・ドライフルーツ店。公式ページには手作りチョコレート、ギフト用ハンパー、店舗住所が案内されています。",
+        "zh-CN": "Pune 的巧克力和干果店，官网列有手工巧克力、礼盒和门店地址。",
+        "hi": "पुणे की चॉकलेट और ड्राय-फ्रूट की दुकान। आधिकारिक पेज पर हाथ से बनी चॉकलेट, गिफ्ट हैम्पर और दुकान का पता दिया गया है।",
+        "id": "Toko cokelat dan buah kering di Pune. Halaman resminya mencantumkan cokelat buatan tangan, hampers hadiah, dan alamat toko.",
+        "pt-BR": "Uma loja de chocolates e frutas secas em Pune. A página oficial informa os chocolates artesanais, cestas para presente e o endereço da loja."
       }
     },
     {
-      "name": "Soehanna Hall",
+      "name": "GODIVA Plaza Indonesia",
       "city_code": "jakarta",
       "country_code": "ID",
-      "address": "Energy Building 2nd Fl., SCBD Lot 11A, Jl. Jendral Sudirman Kav 52-53, Jakarta 12190, Indonesia",
-      "map_query": "Soehanna Hall Jakarta",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "address": "Level 1 Unit 114, Jalan M.H. Thamrin No. 28-30, Jakarta Pusat, DKI Jakarta 10350",
+      "map_query": "GODIVA Plaza Indonesia Jakarta",
       "source_urls": [
-        "https://www.soehannahall.com/contact-us/",
-        "https://www.soehannahall.com/news_and_event/night-music-lights-candlelight-concerts-soehanna-hall/"
+        "https://www.godiva.co.id/our-location/"
       ],
       "descriptions": {
-        "zh-TW": "雅加達 SCBD 的音樂場館；官方頁面記錄 2026 年 2 月 13 日的 Valentine’s Day Special。",
-        "en": "A music venue in Jakarta’s SCBD that hosted a Valentine’s Day Special on February 13, 2026.",
-        "ja": "ジャカルタのSCBDにある音楽会場。2026年2月13日にValentine’s Day Specialが開かれました。",
-        "zh-CN": "雅加达 SCBD 的音乐场馆；官网记录了 2026 年 2 月 13 日的 Valentine’s Day Special。",
-        "hi": "जकार्ता के SCBD में स्थित संगीत स्थल जहाँ 13 फ़रवरी 2026 को Valentine’s Day Special हुआ था।",
-        "id": "Venue musik di SCBD, Jakarta yang menjadi tempat Valentine’s Day Special pada 13 Februari 2026.",
-        "pt-BR": "Casa de música no SCBD, em Jacarta, que recebeu um Valentine’s Day Special em 13 de fevereiro de 2026."
+        "zh-TW": "雅加達 Plaza Indonesia 的巧克力專門店，官方門市頁列出 GODIVA 店面、樓層與地址。",
+        "en": "A GODIVA chocolate shop at Plaza Indonesia in Jakarta. The official store page lists the branch, floor and address for a local chocolate-gifting stop.",
+        "ja": "ジャカルタのPlaza IndonesiaにあるGODIVAのチョコレート店。公式の店舗ページに店舗名、階数、住所が案内されています。",
+        "zh-CN": "雅加达 Plaza Indonesia 的 GODIVA 巧克力店，官网列出门店、楼层和地址，可作为当地送礼去处。",
+        "hi": "जकार्ता के Plaza Indonesia में GODIVA की चॉकलेट दुकान। आधिकारिक स्टोर पेज पर शाखा, मंज़िल और पता दिया गया है।",
+        "id": "Toko cokelat GODIVA di Plaza Indonesia, Jakarta. Halaman lokasi resmi mencantumkan cabang, lantai, dan alamatnya.",
+        "pt-BR": "Uma loja de chocolates GODIVA no Plaza Indonesia, em Jacarta. A página oficial informa a filial, o andar e o endereço."
       }
     },
     {
-      "name": "Senac Aclimação",
+      "name": "Fábrica de Dengo",
       "city_code": "sao-paulo",
       "country_code": "BR",
-      "address": "Rua Pires da Mota, 838, Aclimação, São Paulo - SP, 01529-000",
-      "map_query": "Senac Aclimação São Paulo",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "address": "Avenida Brigadeiro Faria Lima, 196, Pinheiros, São Paulo - SP",
+      "map_query": "Fábrica de Dengo São Paulo",
       "source_urls": [
-        "https://eventos.sp.senac.br/evento/workshop-mesa-para-dois-food-design-para-o-dia-dos-namorados/",
-        "https://eventos.sp.senac.br/unidades/senac-aclimacao/"
+        "https://www.dengo.com.br/nossas-lojas"
       ],
       "descriptions": {
-        "zh-TW": "São Paulo 的 Senac 教學據點；官方活動頁曾列出 2026 年情人節主題的「Mesa para Dois」工作坊。",
-        "en": "A Senac education site in São Paulo that hosted the 2026 Valentine-themed Mesa para Dois workshop.",
-        "ja": "サンパウロにあるSenacの教育拠点。2026年のバレンタイン企画「Mesa para Dois」が開かれました。",
-        "zh-CN": "São Paulo 的 Senac 教学点；官方活动页曾列出 2026 年情人节主题的“为两人准备的餐桌”工作坊。",
-        "hi": "साओ पाउलो का Senac शिक्षा केंद्र जहाँ 2026 का Valentine-themed Mesa para Dois workshop हुआ था।",
-        "id": "Lokasi pendidikan Senac di São Paulo yang menjadi tempat lokakarya bertema Valentine, Mesa para Dois, pada 2026.",
-        "pt-BR": "Unidade educacional do Senac em São Paulo que recebeu em 2026 o workshop de Dia dos Namorados Mesa para Dois."
+        "zh-TW": "São Paulo 的巧克力店與體驗空間，官方門市頁列出 Fábrica de Dengo 的地址與巧克力、咖啡等現場服務。",
+        "en": "A chocolate shop and experience space in São Paulo. The official store listing gives the Fábrica de Dengo address and its chocolate and café services.",
+        "ja": "サンパウロのチョコレート店・体験スペース。公式の店舗一覧にFábrica de Dengoの住所と、チョコレートやカフェのサービスが掲載されています。",
+        "zh-CN": "São Paulo 的巧克力店和体验空间，官方门店页面列出了 Fábrica de Dengo 的地址以及巧克力、咖啡等现场服务。",
+        "hi": "साओ पाउलो में चॉकलेट की दुकान और अनुभव केंद्र। आधिकारिक स्टोर सूची में Fábrica de Dengo का पता और चॉकलेट व कैफ़े सेवाएँ दी गई हैं।",
+        "id": "Toko cokelat dan ruang pengalaman di São Paulo. Daftar toko resmi mencantumkan alamat Fábrica de Dengo serta layanan cokelat dan kafe.",
+        "pt-BR": "Loja de chocolate e espaço de experiências em São Paulo. A lista oficial de lojas informa o endereço da Fábrica de Dengo e seus serviços de chocolate e café."
       }
     }
   ],

@@ -2,28 +2,30 @@
   "city_code": "loveland",
   "places": [
     {
-      "place_id": "plc_6B0018B4DED2DAF41380037767",
-      "name": "Loveland Visitors Center",
+      "place_id": "plc_6A92382AA73EE92091388D3B85",
+      "name": "Loveland East Gateway Visitors Center",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
       "country_code": "US",
       "address": "5400 Stone Creek Circle, Loveland, Colorado 80538",
-      "map_url": "https://www.google.com/maps/search/?api=1&query=Loveland%20Visitors%20Center%20Colorado",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Loveland%20East%20Gateway%20Visitors%20Center%20Colorado",
       "nav_urls": {
-        "google": "https://www.google.com/maps/dir/?api=1&destination=Loveland%20Visitors%20Center%20Colorado",
-        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Loveland%20Visitors%20Center%20Colorado",
-        "amap": "https://uri.amap.com/search?keyword=Loveland%20Visitors%20Center%20Colorado"
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Loveland%20East%20Gateway%20Visitors%20Center%20Colorado",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Loveland%20East%20Gateway%20Visitors%20Center%20Colorado",
+        "amap": "https://uri.amap.com/search?keyword=Loveland%20East%20Gateway%20Visitors%20Center%20Colorado"
       },
       "source_urls": [
-        "https://visitloveland.com/sweetheartfestival/"
+        "https://visitloveland.com/visitors-center/"
       ],
       "mention_count": 0,
       "descriptions": {
-        "zh-TW": "Loveland 的官方旅遊資訊中心；2027 年 Sweetheart Festival 將於 2 月 12–13 日在市中心舉行。",
-        "en": "Loveland’s official visitor center; the 2027 Sweetheart Festival is scheduled downtown for February 12–13.",
-        "ja": "Lovelandの公式観光案内所。2027年のSweetheart Festivalは2月12～13日にダウンタウンで開催されます。",
-        "zh-CN": "Loveland 的官方游客中心；2027 年 Sweetheart Festival 将于 2 月 12–13 日在市中心举行。",
-        "hi": "यह Loveland का आधिकारिक पर्यटक केंद्र है। 2027 Sweetheart Festival 12–13 फ़रवरी को डाउनटाउन में होगा।",
-        "id": "Ini pusat informasi wisata resmi Loveland. Sweetheart Festival 2027 dijadwalkan pada 12–13 Februari di pusat kota.",
-        "pt-BR": "É o centro oficial de informações turísticas de Loveland. O Sweetheart Festival 2027 será realizado em 12 e 13 de fevereiro no centro da cidade."
+        "zh-TW": "Loveland 的常設旅遊資訊中心，官方介紹這裡有 LOVE 鎖雕塑、地方工藝品與旅遊資訊。",
+        "en": "A permanent visitor centre in Loveland. The official listing describes its LOVE lock sculpture, locally made goods and visitor information.",
+        "ja": "Lovelandの常設観光案内所。公式案内では、LOVEロックの彫刻、地元の作り手の商品、観光情報を紹介しています。",
+        "zh-CN": "Loveland 的常设游客中心，官网介绍了 LOVE 锁雕塑、当地手工艺品和旅游信息。",
+        "hi": "Loveland का स्थायी पर्यटक केंद्र। आधिकारिक जानकारी में LOVE lock मूर्ति, स्थानीय कारीगरों की वस्तुएँ और यात्रा संबंधी जानकारी दी गई है।",
+        "id": "Pusat informasi wisata permanen di Loveland. Situs resminya menyebutkan patung LOVE lock, barang buatan perajin lokal, dan informasi untuk pengunjung.",
+        "pt-BR": "Um centro permanente de informações turísticas em Loveland. O site oficial destaca a escultura LOVE lock, produtos de artesãos locais e informações para visitantes."
       },
       "topics": [
         {

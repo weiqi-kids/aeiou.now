@@ -36,7 +36,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import DiscussionRoom from '../../components/DiscussionRoom.astro';
 import { t } from '../../lib/i18n.mjs';
-import { LOCALE, REACTION_SET } from '../../lib/config.mjs';
+import { LOCALE, MARKET_CITY, REACTION_SET } from '../../lib/config.mjs';
 import { calendarDate, dateTime, countryFlag } from '../../lib/format.mjs';
 import { withBase } from '../../lib/paths.mjs';
 import {
@@ -82,8 +82,11 @@ const observances = observancesForFacts(facts)
 const countries = [...new Map(observances.map((o) => [o.country_code, o])).values()];
 const observanceAnchor = (observance) =>
   `observance-${observance.observance_id || `${observance.country_code}-${observance.observance_key || 'default'}`}`;
-const places = placesForTopic(topicId);
-const events = eventsForTopic(topicId);
+// 「你附近／相關活動」是本語系站代表城市的在地資料，不是七市場資料總覽。
+// 📍 只收可被拜訪的常設地點；🎉 只收有日期與來源的活動。七市場文化比較在 🌎。
+const marketCity = MARKET_CITY[LOCALE] || null;
+const places = placesForTopic(topicId, marketCity);
+const events = eventsForTopic(topicId, marketCity);
 
 // 📍 店家與 🎉 活動的 emoji reaction(2026-08-11 用戶:「店家和活動本來就有規劃 emoji,要補上」)。
 // 行為沿用 src/lib/reactions.mjs——與貼文、留言同一份實作,同一顆 emoji 在站上任何地方

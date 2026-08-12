@@ -2,7 +2,7 @@
 // 將一次人工採集的在地資料樣本匯入主機 SQLite。
 //
 // 來源：content/local-sample-data.json
-// 規則：每個七語市場至少一個有官方來源的地點；只有來源明確列出未來日期的
+// 規則：每個七語市場至少一個有官方來源的常設地點；只有來源明確列出日期的
 // 活動才進 events。這是可重跑的人工樣本匯入，不是爬蟲，也不使用 Places API。
 import { DatabaseSync } from "node:sqlite";
 import { createHash } from "node:crypto";
@@ -93,6 +93,8 @@ function validateInput() {
     requireString(place.name, "place.name");
     requireString(place.city_code, `place(${place.name}).city_code`);
     requireString(place.country_code, `place(${place.name}).country_code`);
+    if (place.place_type !== "permanent") fail(`地點必須標為 permanent：${place.name}`);
+    if (place.topic_relevance !== "direct") fail(`地點與 Topic 的關聯必須是 direct：${place.name}`);
     requireString(place.address, `place(${place.name}).address`);
     if (!Array.isArray(place.source_urls) || place.source_urls.length === 0) fail(`地點缺 source_urls：${place.name}`);
     for (const url of place.source_urls) new URL(requireString(url, "place.source_url"));
@@ -128,7 +130,23 @@ function validateInput() {
   for (const url of eventSourceUrls) {
     if (!managedEventSourceUrls.includes(url)) fail(`活動來源未列入 managed_event_source_urls：${url}`);
   }
-  return { markets, citiesWithPlaces };
+  const managedPlaceSourceUrls = input.managed_place_source_urls || [...new Set((input.places || []).flatMap((place) => place.source_urls || []))];
+  if (!Array.isArray(managedPlaceSourceUrls)) fail("managed_place_source_urls 必須是陣列");
+  for (const url of managedPlaceSourceUrls) {
+    requireString(url, "managed_place_source_urls.url");
+    new URL(url);
+  }
+  for (const url of (input.places || []).flatMap((place) => place.source_urls || [])) {
+    if (!managedPlaceSourceUrls.includes(url)) fail(`地點來源未列入 managed_place_source_urls：${url}`);
+  }
+  const retiredPlaceIds = input.retired_place_ids || [];
+  if (!Array.isArray(retiredPlaceIds)) fail("retired_place_ids 必須是陣列");
+  for (const id of retiredPlaceIds) {
+    if (!/^plc_[A-Z0-9]{24,26}$/.test(requireString(id, "retired_place_ids.id"))) {
+      fail(`retired_place_ids 含無效 place_id：${id}`);
+    }
+  }
+  return { markets, citiesWithPlaces, managedPlaceSourceUrls, retiredPlaceIds };
 }
 
 function deleteByIds(table, idColumn, ids) {
@@ -182,6 +200,30 @@ function deleteManagedEventRows(topicId, managedEventSourceUrls, currentEventIds
   return removed;
 }
 
+function deleteManagedPlaceRows(topicId, retiredPlaceIds, currentPlaceIds) {
+  const placeIds = [...new Set(retiredPlaceIds)];
+  if (placeIds.length === 0) return 0;
+  const placeholders = placeIds.map(() => "?").join(",");
+  const rows = db.prepare(
+    `SELECT p.place_id
+       FROM places p
+       JOIN place_topics pt ON pt.place_id = p.place_id
+      WHERE pt.topic_id = ? AND p.place_id IN (${placeholders})`
+  ).all(topicId, ...placeIds);
+  let removed = 0;
+  for (const row of rows) {
+    if (currentPlaceIds.has(row.place_id)) continue;
+    db.prepare("DELETE FROM place_topics WHERE place_id = ? AND topic_id = ?").run(row.place_id, topicId);
+    const remainingRefs = db.prepare("SELECT count(*) AS n FROM place_topics WHERE place_id = ?").get(row.place_id).n;
+    if (remainingRefs === 0) {
+      db.prepare("DELETE FROM place_i18n WHERE place_id = ?").run(row.place_id);
+      db.prepare("DELETE FROM places WHERE place_id = ?").run(row.place_id);
+      removed += 1;
+    }
+  }
+  return removed;
+}
+
 function upsertSource(url, row, collectedAt) {
   const parsed = new URL(url);
   const id = sourceId(url);
@@ -213,21 +255,29 @@ function upsertSource(url, row, collectedAt) {
 }
 
 function importSample() {
-  const { markets } = validateInput();
+  const { markets, managedPlaceSourceUrls, retiredPlaceIds } = validateInput();
   const topic = db.prepare("SELECT topic_id FROM topics WHERE slug = ? AND status NOT IN ('merged', 'candidate')").get(input.topic_slug);
   if (!topic) fail(`找不到可用 Topic：${input.topic_slug}`);
   const collectedAt = epoch(`${input.as_of}T00:00:00Z`, "as_of");
   const now = Math.floor(Date.now() / 1000);
   const placeIds = [];
   const eventIds = [];
+  const currentPlaceIds = new Set((input.places || []).map((place) =>
+    stableId("plc", `${place.country_code}:${place.city_code}:${place.name}`)));
   const managedEventSourceUrls = input.managed_event_source_urls || (input.events || []).map((event) => event.source_url);
   const currentEventIds = new Set((input.events || []).map((event) =>
     stableId("evt", `${event.country_code}:${event.city_code}:${event.name}`)));
   let removedManagedEvents = 0;
+  let removedManagedPlaces = 0;
 
   db.exec("BEGIN");
   try {
     deleteOldDemoData();
+    removedManagedPlaces = deleteManagedPlaceRows(
+      topic.topic_id,
+      retiredPlaceIds,
+      currentPlaceIds,
+    );
     removedManagedEvents = deleteManagedEventRows(topic.topic_id, managedEventSourceUrls, currentEventIds);
 
     for (const place of input.places || []) {
@@ -295,6 +345,7 @@ function importSample() {
 
   const marketSummary = markets.map((market) => `${market.locale}:${market.city_code}`).join(" ");
   console.log(`已匯入 ${placeIds.length} 個地點、${eventIds.length} 個活動；市場 ${marketSummary}`);
+  console.log(`已清除受管理來源中不在目前清單的舊地點 ${removedManagedPlaces} 個`);
   console.log(`已清除受管理來源中不在目前清單的舊活動 ${removedManagedEvents} 個`);
   console.log(`已刪除舊 demo 地點 ${OLD_DEMO_PLACE_IDS.length} 個、活動 ${OLD_DEMO_EVENT_IDS.length} 個及未被引用的假來源 ${OLD_DEMO_SOURCE_IDS.length} 個`);
 }
