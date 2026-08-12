@@ -1,7 +1,7 @@
 // fixture 種子(dev 輔助,不在 build 鏈):寫進 site/src/data/(gitignored)。
 // 用途:根層 data/ 為空(Track A 尚未產出)時,讓每個頁面區塊都渲染得出東西。
-// 形狀對齊 Track A 生產者 2026-08-11 的實際輸出(topics/index=裸陣列、customs 在 i18n.json
-// 的 countries 區塊、places/events 用 topics:[{topic_id,relevance}]、meta 為 map、highlights 用 items)。
+// 形狀對齊 Track A 生產者的實際輸出(topics/index=裸陣列、customs 在 i18n.json
+// 的 observances 區塊、places/events 用 topics:[{topic_id,relevance}]、meta 為 map、highlights 用 items)。
 // ⚠ 根層 data/ 非空時,pnpm build 的 copy-data 會鏡像覆蓋本 fixture——這是規格內行為。
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
@@ -22,17 +22,17 @@ function w(rel, obj) {
 }
 
 const vdTitle = {
-  'zh-TW': '情人節', en: "Valentine's Day", ja: 'バレンタインデー', 'zh-CN': '情人节',
-  hi: 'वैलेंटाइन डे', id: 'Hari Valentine', 'pt-BR': 'Dia dos Namorados',
+  'zh-TW': '表達愛意與互惠', en: 'Affection and reciprocity', ja: '愛情表現とお返し', 'zh-CN': '表达爱意与互惠',
+  hi: 'स्नेह और पारस्परिकता', id: 'Kasih sayang dan timbal balik', 'pt-BR': 'Afeto e reciprocidade',
 };
 const vdSummary = {
-  'zh-TW': '2 月 14 日前後,全球用巧克力、鮮花與約會表達心意的節日;巴西則在 6 月 12 日過。',
-  en: 'Around February 14, people worldwide mark the day with chocolate, flowers and dates; Brazil celebrates on June 12.',
-  ja: '2月14日前後、チョコレートや花、デートで気持ちを伝える日。ブラジルでは6月12日に祝われます。',
-  'zh-CN': '2 月 14 日前后,全球用巧克力、鲜花与约会表达心意的节日;巴西则在 6 月 12 日过。',
-  hi: '14 फ़रवरी के आसपास दुनिया भर में चॉकलेट, फूल और डेट के साथ मनाया जाने वाला दिन; ब्राज़ील में यह 12 जून को होता है।',
-  id: 'Sekitar 14 Februari, orang di seluruh dunia merayakannya dengan cokelat, bunga, dan kencan; Brasil merayakannya pada 12 Juni.',
-  'pt-BR': 'Perto de 14 de fevereiro, o mundo comemora com chocolate, flores e encontros; no Brasil a data é 12 de junho.',
+  'zh-TW': '各地用節日、禮物、陪伴與回禮表達親密關係;日本有情人節與白色情人節,巴西在 6 月 12 日過戀人節。',
+  en: 'People express intimacy through holidays, gifts, attention and return gestures; Japan has Valentine and White Day, while Brazil celebrates on June 12.',
+  ja: '祝日、贈り物、気遣い、お返しで親密さを表す方法は社会ごとに異なる。日本にはバレンタインとホワイトデーがあり、ブラジルは6月12日です。',
+  'zh-CN': '各地用节日、礼物、陪伴和回礼表达亲密关系;日本有情人节与白色情人节,巴西在 6 月 12 日过恋人节。',
+  hi: 'समाज त्योहारों, उपहारों, साथ और लौटाए गए उपहारों से निकटता व्यक्त करते हैं; जापान में वैलेंटाइन और व्हाइट डे, ब्राज़ील में 12 जून है।',
+  id: 'Masyarakat mengekspresikan kedekatan melalui perayaan, hadiah, perhatian, dan balasan; Jepang memiliki Valentine dan White Day, sedangkan Brasil merayakannya pada 12 Juni.',
+  'pt-BR': 'As sociedades expressam intimidade por datas, presentes, atenção e retribuição; o Japão tem Valentine e White Day, enquanto o Brasil celebra em 12 de junho.',
 };
 const atwTitle = {
   'zh-TW': '問世界', en: 'Ask the World', ja: '世界に聞く', 'zh-CN': '问世界',
@@ -53,36 +53,54 @@ const atwScores = { '24h': 63.8, '72h': 66.1, '7d': 68.4, '1m': 70.2, '3m': 69.5
 // topics/index/<locale>.json(裸陣列,形狀同生產者)
 for (const loc of LOCALES) {
   w(`topics/index/${loc}.json`, [
-    { topic_id: VD, slug: 'valentines-day', title: vdTitle[loc], category: 'festival',
+    { topic_id: VD, slug: 'affection-and-reciprocity', title: vdTitle[loc], category: 'relationship',
       status: 'active', is_perennial: 0, scores: vdScores },
     { topic_id: ATW, slug: 'ask-the-world', title: atwTitle[loc], category: 'community',
       status: 'active', is_perennial: 1, scores: atwScores },
   ]);
 }
 
-// valentines-day facts
+// affection-and-reciprocity facts
 w(`topics/${VD}/facts.json`, {
-  topic_id: VD, slug: 'valentines-day', canonical_name: "Valentine's Day",
-  category: 'festival', status: 'active', is_perennial: 0, access_level: 0,
-  countries: [
-    { country_code: 'JP', local_name: 'バレンタインデー', observed_date: '02-14', date_rule: null,
+  topic_id: VD, slug: 'affection-and-reciprocity', canonical_name: 'Affection and Reciprocity',
+  category: 'relationship', status: 'active', is_perennial: 0, access_level: 0,
+  observances: [
+    { observance_id: `${VD}_jp_valentine`, observance_key: 'valentine', country_code: 'JP',
+      local_name: 'バレンタインデー', observed_date: '02-14', date_rule: null,
       date_range_end: null, popularity_rank: 1, source_ids: ['src_fixture_jp_01'] },
-    { country_code: 'TW', local_name: '情人節', observed_date: '02-14', date_rule: '另有農曆七月初七的七夕情人節',
-      date_range_end: null, popularity_rank: 2, source_ids: ['src_fixture_tw_01'] },
-    { country_code: 'US', local_name: "Valentine's Day", observed_date: '02-14', date_rule: null,
+    { observance_id: `${VD}_jp_white-day`, observance_key: 'white-day', country_code: 'JP',
+      local_name: 'ホワイトデー', observed_date: '03-14', date_rule: null,
+      date_range_end: null, popularity_rank: 2, source_ids: ['src_fixture_jp_02'] },
+    { observance_id: `${VD}_tw_valentine`, observance_key: 'valentine', country_code: 'TW',
+      local_name: '情人節', observed_date: '02-14', date_rule: null,
+      date_range_end: null, popularity_rank: 3, source_ids: ['src_fixture_tw_01'] },
+    { observance_id: `${VD}_tw_qixi`, observance_key: 'qixi', country_code: 'TW',
+      local_name: '七夕情人節', observed_date: null, date_rule: '農曆七月初七',
+      date_range_end: null, popularity_rank: 4, source_ids: ['src_fixture_tw_02'] },
+    { observance_id: `${VD}_us_valentine`, observance_key: 'valentine', country_code: 'US',
+      local_name: "Valentine's Day", observed_date: '02-14', date_rule: null,
       date_range_end: null, popularity_rank: 1, source_ids: ['src_fixture_us_01'] },
-    { country_code: 'BR', local_name: 'Dia dos Namorados', observed_date: '06-12', date_rule: null,
+    { observance_id: `${VD}_br_dia-dos-namorados`, observance_key: 'dia-dos-namorados', country_code: 'BR',
+      local_name: 'Dia dos Namorados', observed_date: '06-12', date_rule: null,
       date_range_end: null, popularity_rank: 1, source_ids: ['src_fixture_br_01'] },
-    { country_code: 'ID', local_name: 'Hari Valentine', observed_date: '02-14', date_rule: null,
+    { observance_id: `${VD}_id_valentine`, observance_key: 'valentine', country_code: 'ID',
+      local_name: 'Hari Valentine', observed_date: '02-14', date_rule: null,
       date_range_end: null, popularity_rank: 3, source_ids: ['src_fixture_id_01'] },
+  ],
+  countries: [
+    { country_code: 'JP', observance_ids: [`${VD}_jp_valentine`, `${VD}_jp_white-day`] },
+    { country_code: 'TW', observance_ids: [`${VD}_tw_valentine`, `${VD}_tw_qixi`] },
+    { country_code: 'US', observance_ids: [`${VD}_us_valentine`] },
+    { country_code: 'BR', observance_ids: [`${VD}_br_dia-dos-namorados`] },
+    { country_code: 'ID', observance_ids: [`${VD}_id_valentine`] },
   ],
   relations: [],
   source_ids: ['src_fixture_global_01'],
 });
 
-// valentines-day i18n(customs 在 countries 區塊:國 × 語)
+// affection-and-reciprocity i18n(customs 在 observances 區塊:地方表現 × 語)
 const customs = {
-  JP: {
+  [`${VD}_jp_valentine`]: {
     'zh-TW': '女生送巧克力給男生,還分「本命巧克力」與「義理巧克力」;3 月 14 日白色情人節男生回禮。',
     en: 'Women give chocolate to men, split into "honmei" (true feelings) and "giri" (obligation); men return the favor on White Day, March 14.',
     ja: '女性から男性へチョコレートを贈り、本命チョコと義理チョコを使い分けます。3月14日のホワイトデーに男性がお返しをします。',
@@ -91,7 +109,16 @@ const customs = {
     id: 'Perempuan memberi cokelat kepada laki-laki, dibedakan antara "honmei" (cinta sungguhan) dan "giri" (formalitas); laki-laki membalasnya pada White Day, 14 Maret.',
     'pt-BR': 'As mulheres dão chocolate aos homens, divididos em "honmei" (sentimento verdadeiro) e "giri" (cortesia); os homens retribuem no White Day, 14 de março.',
   },
-  TW: {
+  [`${VD}_jp_white-day`]: {
+    'zh-TW': '日本在 3 月 14 日以白色情人節回應 2 月 14 日收到的心意,但實際回禮方式與人際關係而異。',
+    en: 'In Japan, White Day on March 14 is associated with returning gifts received on February 14, though practices vary by relationship and person.',
+    ja: '日本のホワイトデーは、2月14日に受け取った贈り物へのお返しと結びついていますが、関係性や個人によって実践は異なります。',
+    'zh-CN': '日本在 3 月 14 日以白色情人节回应 2 月 14 日收到的心意,但实际回礼方式因关系和个人而异。',
+    hi: 'जापान में 14 मार्च का व्हाइट डे 14 फ़रवरी को मिले उपहार लौटाने से जुड़ा है, लेकिन व्यवहार रिश्ते और व्यक्ति के अनुसार बदलता है।',
+    id: 'Di Jepang, White Day pada 14 Maret berkaitan dengan membalas hadiah yang diterima pada 14 Februari, tetapi praktiknya berbeda menurut hubungan dan orangnya.',
+    'pt-BR': 'No Japão, o White Day em 14 de março está ligado à retribuição dos presentes recebidos em 14 de fevereiro, mas a prática varia conforme a relação e a pessoa.',
+  },
+  [`${VD}_tw_valentine`]: {
     'zh-TW': '除了 2 月 14 日,還有農曆七夕情人節;情侶吃大餐、送花,巧克力品牌檔期一年兩次。',
     en: 'Besides February 14, couples also celebrate Qixi on the seventh day of the seventh lunar month — dinner dates, flowers, and two chocolate seasons a year.',
     ja: '2月14日のほかに旧暦七夕の「七夕情人節」もあり、カップルはディナーや花を楽しみます。チョコ商戦は年に2回です。',
@@ -100,7 +127,16 @@ const customs = {
     id: 'Selain 14 Februari, ada juga Qixi menurut kalender lunar — makan malam romantis, bunga, dan dua musim cokelat setiap tahun.',
     'pt-BR': 'Além de 14 de fevereiro, casais também celebram o Qixi no calendário lunar — jantares, flores e duas temporadas de chocolate por ano.',
   },
-  US: {
+  [`${VD}_tw_qixi`]: {
+    'zh-TW': '台灣也常把農曆七月初七的七夕稱為七夕情人節,但不同家庭、年齡層與商業脈絡的過法並不相同。',
+    en: 'In Taiwan, the seventh day of the seventh lunar month is also often framed as Qixi Valentine’s Day, but practices differ across families, generations, and commercial settings.',
+    ja: '台湾では旧暦七月七日の七夕を「七夕情人節」と呼ぶこともありますが、家庭や世代、商業的な文脈によって過ごし方は異なります。',
+    'zh-CN': '在台湾,农历七月初七的七夕也常被称为七夕情人节,但不同家庭、年龄层和商业语境的过法并不相同。',
+    hi: 'ताइवान में सातवें चंद्र महीने के सातवें दिन को अक्सर चीशी वैलेंटाइन डे के रूप में भी देखा जाता है, लेकिन परिवारों, पीढ़ियों और व्यावसायिक संदर्भों में रिवाज़ अलग हैं।',
+    id: 'Di Taiwan, hari ketujuh bulan ketujuh kalender lunar juga sering disebut Valentine Qixi, tetapi praktiknya berbeda menurut keluarga, generasi, dan konteks komersial.',
+    'pt-BR': 'Em Taiwan, o sétimo dia do sétimo mês lunar também é chamado de Dia dos Namorados de Qixi, mas os costumes variam entre famílias, gerações e contextos comerciais.',
+  },
+  [`${VD}_us_valentine`]: {
     'zh-TW': '互送卡片、鮮花與糖果,小學生會在班上發情人節卡片給每個同學。',
     en: 'Cards, flowers and candy all around; grade-schoolers hand out valentines to every classmate.',
     ja: 'カードや花、キャンディを贈り合います。小学生はクラス全員にバレンタインカードを配る習慣があります。',
@@ -109,7 +145,7 @@ const customs = {
     id: 'Saling memberi kartu, bunga, dan permen; anak SD membagikan kartu valentine ke semua teman sekelas.',
     'pt-BR': 'Troca de cartões, flores e doces; crianças do primário distribuem cartõezinhos para toda a turma.',
   },
-  BR: {
+  [`${VD}_br_dia-dos-namorados`]: {
     'zh-TW': '不過 2 月 14 日,改在 6 月 12 日「戀人節」,隔天是聖安東尼日——傳說中的婚姻守護者。',
     en: "Skips February 14 entirely: Dia dos Namorados falls on June 12, the eve of St. Anthony's Day, the legendary matchmaker saint.",
     ja: '2月14日ではなく6月12日に「恋人の日」を祝います。翌日は縁結びの聖人、聖アントニオの日です。',
@@ -118,7 +154,7 @@ const customs = {
     id: 'Tidak merayakan 14 Februari: Dia dos Namorados jatuh pada 12 Juni, sehari sebelum hari Santo Antonius, santo pelindung jodoh.',
     'pt-BR': 'Nada de 14 de fevereiro: o Dia dos Namorados é 12 de junho, véspera do dia de Santo Antônio, o santo casamenteiro.',
   },
-  ID: {
+  [`${VD}_id_valentine`]: {
     'zh-TW': '大城市年輕人會慶祝,送巧克力與玫瑰;部分地區出於宗教考量不鼓勵過節。',
     en: 'Young people in big cities celebrate with chocolate and roses; some regions discourage it on religious grounds.',
     ja: '大都市の若者はチョコレートやバラで祝いますが、宗教上の理由で祝わない地域もあります。',
@@ -133,10 +169,10 @@ w(`topics/${VD}/i18n.json`, {
   locales: Object.fromEntries(LOCALES.map((loc) => [loc, {
     title: vdTitle[loc], summary: vdSummary[loc], keywords: [vdTitle[loc]],
   }])),
-  countries: customs,
+  observances: customs,
 });
 
-// valentines-day highlights(1 則凍結貼文:原文 ja + 六語譯文)
+// affection-and-reciprocity highlights(1 則凍結貼文:原文 ja + 六語譯文)
 w(`topics/${VD}/highlights.json`, {
   topic_id: VD,
   items: [
@@ -160,14 +196,14 @@ w(`topics/${VD}/highlights.json`, {
 w(`topics/${ATW}/facts.json`, {
   topic_id: ATW, slug: 'ask-the-world', canonical_name: 'Ask the World',
   category: 'community', status: 'active', is_perennial: 1, access_level: 0,
-  countries: [], relations: [], source_ids: [],
+  observances: [], countries: [], relations: [], source_ids: [],
 });
 w(`topics/${ATW}/i18n.json`, {
   topic_id: ATW,
   locales: Object.fromEntries(LOCALES.map((loc) => [loc, {
     title: atwTitle[loc], summary: atwSummary[loc], keywords: [atwTitle[loc]],
   }])),
-  countries: {},
+  observances: {},
 });
 w(`topics/${ATW}/highlights.json`, { topic_id: ATW, items: [] });
 
@@ -228,7 +264,7 @@ w('events/taipei.json', {
 });
 
 // rankings/global/<window>.json
-const vdRow = (win) => ({ rank: 0, topic_id: VD, slug: 'valentines-day', score: vdScores[win] });
+const vdRow = (win) => ({ rank: 0, topic_id: VD, slug: 'affection-and-reciprocity', score: vdScores[win] });
 const atwRow = (win) => ({ rank: 0, topic_id: ATW, slug: 'ask-the-world', score: atwScores[win] });
 for (const win of WINDOWS) {
   const pair = vdScores[win] >= atwScores[win] ? [vdRow(win), atwRow(win)] : [atwRow(win), vdRow(win)];

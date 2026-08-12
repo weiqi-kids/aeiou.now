@@ -13,10 +13,20 @@ export function readJson(rel, fallback = null) {
   return JSON.parse(readFileSync(p, 'utf8'));
 }
 
+/** Topic 的地方表現。新資料使用 observances；舊 fixture/data 可用 countries 讀取。 */
+export function observancesForFacts(facts) {
+  if (facts && Array.isArray(facts.observances)) return facts.observances;
+  return ((facts && facts.countries) || []).map((country) => ({
+    ...country,
+    observance_id: country.observance_id || `legacy-${country.country_code}`,
+    observance_key: country.observance_key || 'default',
+  }));
+}
+
 /** Topic 清單(本 locale):topics/index/<locale>.json = 裸陣列。
- * index 檔只有 category / is_perennial / scores / slug / status / title / topic_id,
+ * index 檔有 commonality / category / is_perennial / scores / slug / status / title / topic_id,
  * 沒有 summary,也沒有國家資訊——摘要在 topics/<id>/i18n.json 的 locales.<locale>.summary,
- * 國家在 topics/<id>/facts.json 的 countries。列表頁要用,所以在讀取層補齊,
+ * 地方表現在 topics/<id>/facts.json 的 observances。列表頁要用,所以在讀取層補齊,
  * 不動 scripts/export-data.mjs(那支是生產者的匯出腳本,不是靜態站的責任範圍)。
  * 缺檔一律回退為 null/空陣列——不能依賴任何檔存在。 */
 let topicsIndexCache = null;
@@ -35,14 +45,14 @@ function enrichTopicRow(row) {
   const i18n = readJson(`topics/${id}/i18n.json`, null);
   const loc = (i18n && i18n.locales && i18n.locales[LOCALE]) || {};
   const facts = readJson(`topics/${id}/facts.json`, null);
-  const countries = (facts && facts.countries) || [];
+  const observances = observancesForFacts(facts);
   return {
     ...row,
     title: row.title || loc.title || (facts && facts.canonical_name) || id,
     summary: row.summary || loc.summary || null,
     keywords: (loc.keywords || []).slice(),
-    country_codes: countries.map((c) => c.country_code).filter(Boolean),
-    country_count: countries.length,
+    country_codes: [...new Set(observances.map((o) => o.country_code).filter(Boolean))],
+    country_count: new Set(observances.map((o) => o.country_code).filter(Boolean)).size,
   };
 }
 
@@ -55,8 +65,9 @@ export function topicRowBySlug(slug) {
 export function listTopicIds() {
   const p = join(DATA_ROOT, 'topics');
   if (!existsSync(p)) return [];
+  const indexedIds = new Set(getTopicsIndex().map((row) => row && row.topic_id).filter(Boolean));
   return readdirSync(p).filter(
-    (name) => name !== 'index' && statSync(join(p, name)).isDirectory()
+    (name) => name !== 'index' && indexedIds.has(name) && statSync(join(p, name)).isDirectory()
   );
 }
 
@@ -70,10 +81,16 @@ export function getTopicBundle(topicId) {
   };
 }
 
-/** customs 文字:i18n.json 的 countries[country_code][locale] */
-export function customsText(i18n, countryCode) {
-  const c = i18n && i18n.countries;
-  return (c && c[countryCode] && c[countryCode][LOCALE]) || null;
+/** customs 文字:i18n.json 的 observances[observance_id][locale]。 */
+export function customsText(i18n, observance) {
+  if (!i18n || !observance) return null;
+  const id = typeof observance === 'string' ? observance : observance.observance_id;
+  const current = i18n.observances && i18n.observances[id];
+  if (current && current[LOCALE]) return current[LOCALE];
+  // 舊 fixture/data 相容:customs 仍以 country_code 為 key。
+  const countryCode = typeof observance === 'string' ? observance : observance.country_code;
+  const legacy = i18n.countries && i18n.countries[countryCode];
+  return (legacy && legacy[LOCALE]) || null;
 }
 
 /** 六窗分數:topics index 是分數的來源(facts.json 不帶 scores) */
@@ -170,7 +187,7 @@ export function recentTopics(now = new Date(), win = '24h') {
     .map((topic) => {
       if (topic.is_perennial) return { ...topic, season_countries: [], season_distance: 0 };
       const facts = readJson(`topics/${topic.topic_id}/facts.json`, null);
-      const dated = ((facts && facts.countries) || [])
+      const dated = observancesForFacts(facts)
         .map((c) => ({ ...c, season_distance: seasonDistance(c, today) }))
         .filter((c) => c.season_distance !== null)
         .sort((a, b) => a.season_distance - b.season_distance);
@@ -325,17 +342,17 @@ export function relatedTopics(topicId, limit = 2) {
     .slice(0, limit);
 }
 
-/** Topic 的 cover 圖(1200×630 = 1.91:1,同時是 Open Graph 標準尺寸)。
+/** Topic 的 cover 圖(1200×675 = 16:9,Google Discover 建議的大圖尺寸)。
  *
  * 回傳的是**站內相對路徑**(不含 base),呼叫端一律再過 withBase()——GitHub Pages 專案站有
  * base path,寫死 /covers/… 會 404。
  *
- * .png 優先於 .svg:現在放的是純色塊 SVG 佔位,之後把同尺寸真圖丟成 <slug>.png 就會自動接手,
- * 版面與模板都不必改。兩者都不存在時回 null,呼叫端整個 <figure> 不渲染(不留破圖、不破版)。
+ * 正式 Topic 必須提供同尺寸 PNG 真圖；不再以純色 SVG 佔位。
+ * PNG 不存在時回 null,呼叫端整個 <figure> 不渲染(不留破圖、不破版)。
  *
  * 為什麼在 build 時查檔而不是交給瀏覽器 onerror:靜態站沒有執行期可以退場,
  * 而且 og:image 指到不存在的檔會被抓取端記成壞連結。 */
-const COVER_EXTS = ['.png', '.svg'];
+const COVER_EXTS = ['.png'];
 
 export function coverPath(slug) {
   if (!slug) return null;

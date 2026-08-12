@@ -9,17 +9,21 @@
 // 格式規格(權威版在 docs/03-topic-content.md,兩處同步):
 //   # 任意標題(給人看的,解析時忽略)
 //   ## meta                    - slug/canonical/category/perennial 的 key: value 清單
-//   ## country <ISO2>          - local_name/date/date_end/date_rule/rank/source 清單(source 可重複)
-//   ## locale <code>           - 底下用 ### title / ### summary / ### keywords / ### customs <ISO2>
+//   ## observance <ISO2> <key> - 一個 Topic 在一國的地方表現;可有多個
+//                                local_name/date/date_end/date_rule/rank/source 清單
+//   ## country <ISO2>          - 舊格式相容讀法,轉成各國唯一的 legacy-<iso2> key
+//   ## locale <code>           - 底下用 ### title / ### summary / ### keywords /
+//                                ### customs <ISO2> <key>
 //
 // 寫入語意:
 //   - topics:以 slug 對應;已存在就沿用 topic_id 與 status,不存在就發新 ULID、status='active'
-//   - topic_countries / topic_country_i18n / topic_i18n:**整組替換**(md 是這些表的權威)
+//   - topic_observances / topic_observance_i18n / topic_i18n:**整組替換**(md 是這些表的權威)
 //   - sources:每個 source URL upsert 一筆(source_type='manual'),country 的 source_ids_json 指向它們
 //   - topic_cycles:沒有進行中 cycle 就開一個(貼文需要 current_cycle_id)
 //   - topic_scores:**不碰**(分數屬排程/演算法,不是內容)
 import { DatabaseSync } from "node:sqlite";
 import { readFileSync, readdirSync, existsSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 import { join, resolve, dirname, basename } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
@@ -41,11 +45,11 @@ function ulid(now = Date.now()) {
 }
 
 // ---------- 解析 ----------
-// 回傳 { meta:{}, countries:{XX:{...}}, locales:{code:{title,summary,keywords,customs:{XX:text}}} }
+// 回傳 { meta:{}, observances:{"XX:key":{...}}, locales:{code:{title,summary,keywords,customs:{"XX:key":text}}} }
 function parseTopicMd(text, file) {
-  const doc = { meta: {}, countries: {}, locales: {} };
-  // 目前所在的容器:['meta'] / ['country','JP'] / ['locale','zh-TW'] / ['locale','zh-TW','title'] …
-  let h2 = null;      // {kind:'meta'|'country'|'locale', arg}
+  const doc = { meta: {}, observances: {}, locales: {} };
+  // 目前所在的容器:['meta'] / ['observance','JP','valentine'] / ['locale','zh-TW'] / ['locale','zh-TW','title'] …
+  let h2 = null;      // {kind:'meta'|'observance'|'locale', arg}
   let h3 = null;      // {key:'title'|'summary'|'keywords'|'customs', arg}
   let buf = [];
 
@@ -71,14 +75,28 @@ function parseTopicMd(text, file) {
       const head = mH2[1];
       let m;
       if (head === "meta") h2 = { kind: "meta" };
-      else if ((m = head.match(/^country\s+([A-Za-z]{2})$/))) {
-        h2 = { kind: "country", arg: m[1].toUpperCase() };
-        doc.countries[h2.arg] ??= { sources: [] };
+      else if ((m = head.match(/^observance\s+([A-Za-z]{2})\s+([a-z0-9-]+)$/))) {
+        h2 = { kind: "observance", country: m[1].toUpperCase(), key: m[2] };
+        h2.id = `${h2.country}:${h2.key}`;
+        doc.observances[h2.id] ??= {
+          country_code: h2.country,
+          observance_key: h2.key,
+          sources: [],
+        };
+      } else if ((m = head.match(/^country\s+([A-Za-z]{2})$/))) {
+        // 舊格式可繼續讀,但要為每個國家生成不同 key,避免多國資料互相衝突。
+        h2 = { kind: "observance", country: m[1].toUpperCase(), key: `legacy-${m[1].toLowerCase()}` };
+        h2.id = `${h2.country}:${h2.key}`;
+        doc.observances[h2.id] ??= {
+          country_code: h2.country,
+          observance_key: h2.key,
+          sources: [],
+        };
       } else if ((m = head.match(/^locale\s+(\S+)$/))) {
         if (!LOCALES.includes(m[1])) throw new Error(`${file}: 不認識的 locale「${m[1]}」(合法:${LOCALES.join(" ")})`);
         h2 = { kind: "locale", arg: m[1] };
         doc.locales[h2.arg] ??= { customs: {} };
-      } else throw new Error(`${file}: 不認識的段落「## ${head}」(只准 meta / country XX / locale <code>)`);
+      } else throw new Error(`${file}: 不認識的段落「## ${head}」(只准 meta / observance XX key / locale <code>)`);
       continue;
     }
     if (mH3) {
@@ -87,17 +105,21 @@ function parseTopicMd(text, file) {
       const head = mH3[1];
       let m;
       if (["title", "summary", "keywords"].includes(head)) h3 = { key: head };
-      else if ((m = head.match(/^customs\s+([A-Za-z]{2})$/))) h3 = { key: "customs", arg: m[1].toUpperCase() };
-      else throw new Error(`${file}: 不認識的小節「### ${head}」(只准 title/summary/keywords/customs XX)`);
+      else if ((m = head.match(/^customs\s+([A-Za-z]{2})\s+([a-z0-9-]+)$/))) {
+        h3 = { key: "customs", arg: `${m[1].toUpperCase()}:${m[2]}` };
+      } else if ((m = head.match(/^customs\s+([A-Za-z]{2})$/))) {
+        // 舊格式相容讀法。
+        h3 = { key: "customs", arg: `${m[1].toUpperCase()}:legacy-${m[1].toLowerCase()}` };
+      } else throw new Error(`${file}: 不認識的小節「### ${head}」(只准 title/summary/keywords/customs XX key)`);
       continue;
     }
-    // 清單項(meta 與 country 用)
+    // 清單項(meta 與 observance 用)
     const mLi = line.match(/^-\s+([a-z_]+)\s*:\s*(.*)$/);
     if (mLi && h2 && h2.kind !== "locale") {
       const [, k, v] = mLi;
       if (h2.kind === "meta") doc.meta[k] = v.trim();
-      else if (h2.kind === "country") {
-        const c = doc.countries[h2.arg];
+      else if (h2.kind === "observance") {
+        const c = doc.observances[h2.id];
         if (k === "source") c.sources.push(v.trim());
         else c[k] = v.trim();
       }
@@ -109,22 +131,24 @@ function parseTopicMd(text, file) {
 
   // 驗證(缺什麼講清楚,不要默默吞)
   const errs = [];
-  for (const k of ["slug", "canonical", "category"]) if (!doc.meta[k]) errs.push(`meta 缺 ${k}`);
+  for (const k of ["slug", "canonical", "category", "commonality"]) if (!doc.meta[k]) errs.push(`meta 缺 ${k}`);
   if (!/^[a-z0-9-]+$/.test(doc.meta.slug || "")) errs.push(`slug 只准小寫英數與連字號:「${doc.meta.slug}」`);
-  for (const [cc, c] of Object.entries(doc.countries)) {
-    if (!c.local_name) errs.push(`country ${cc} 缺 local_name`);
-    if (!c.sources.length) errs.push(`country ${cc} 至少要一個 source(source_ids_json 是必填,這是 SEO 的抗辯基礎)`);
-    if (c.date && !/^\d{2}-\d{2}$/.test(c.date)) errs.push(`country ${cc} 的 date 要是 MM-DD:「${c.date}」`);
+  for (const [id, c] of Object.entries(doc.observances)) {
+    if (!c.local_name) errs.push(`observance ${id} 缺 local_name`);
+    if (!c.sources.length) errs.push(`observance ${id} 至少要一個 source(source_ids_json 是必填,這是 SEO 的抗辯基礎)`);
+    if (!c.date && !c.date_rule) errs.push(`observance ${id} 必須有 date 或 date_rule,不可只有名稱`);
+    if (c.date && !/^\d{2}-\d{2}$/.test(c.date)) errs.push(`observance ${id} 的 date 要是 MM-DD:「${c.date}」`);
+    if (c.date_end && !/^\d{2}-\d{2}$/.test(c.date_end)) errs.push(`observance ${id} 的 date_end 要是 MM-DD:「${c.date_end}」`);
   }
   for (const [code, l] of Object.entries(doc.locales)) {
     if (!l.title) errs.push(`locale ${code} 缺 ### title`);
-    for (const cc of Object.keys(l.customs)) if (!doc.countries[cc]) errs.push(`locale ${code} 有 customs ${cc},但沒有對應的 ## country ${cc}`);
+    for (const id of Object.keys(l.customs)) if (!doc.observances[id]) errs.push(`locale ${code} 有 customs ${id},但沒有對應的 ## observance`);
   }
   const missing = LOCALES.filter((c) => !doc.locales[c]);
   if (missing.length) errs.push(`缺 locale:${missing.join(" ")}(七語都要有;先寫 zh-TW 再請 Claude 翻其餘六語也行,但檔案裡要齊)`);
-  for (const cc of Object.keys(doc.countries)) {
-    const lacking = LOCALES.filter((code) => !doc.locales[code]?.customs[cc]);
-    if (lacking.length) errs.push(`country ${cc} 的 customs 缺:${lacking.join(" ")}`);
+  for (const id of Object.keys(doc.observances)) {
+    const lacking = LOCALES.filter((code) => !doc.locales[code]?.customs[id]);
+    if (lacking.length) errs.push(`observance ${id} 的 customs 缺:${lacking.join(" ")}`);
   }
   if (errs.length) throw new Error(`${file}:\n  - ` + errs.join("\n  - "));
   return doc;
@@ -138,13 +162,13 @@ function importOne(db, doc, now) {
   const isPerennial = ["true", "yes", "1"].includes(String(meta.perennial || "").toLowerCase()) ? 1 : 0;
 
   db.prepare(
-    `INSERT INTO topics (topic_id, slug, canonical_name, category, status, is_perennial,
+    `INSERT INTO topics (topic_id, slug, canonical_name, commonality, category, status, is_perennial,
                          access_level, access_source, global_score, first_seen_at, last_activity_at, created_at, updated_at)
-     VALUES (?, ?, ?, ?, ?, ?, 0, 'manual', COALESCE((SELECT global_score FROM topics WHERE topic_id = ?), 0), ?, ?, ?, ?)
+     VALUES (?, ?, ?, ?, ?, ?, ?, 0, 'manual', COALESCE((SELECT global_score FROM topics WHERE topic_id = ?), 0), ?, ?, ?, ?)
      ON CONFLICT(topic_id) DO UPDATE SET
-       canonical_name = excluded.canonical_name, category = excluded.category,
+       canonical_name = excluded.canonical_name, commonality = excluded.commonality, category = excluded.category,
        is_perennial = excluded.is_perennial, updated_at = excluded.updated_at`
-  ).run(topicId, meta.slug, meta.canonical, meta.category,
+  ).run(topicId, meta.slug, meta.canonical, meta.commonality, meta.category,
         existing ? existing.status : "active", isPerennial, topicId,
         existing ? existing.first_seen_at : now, now, existing ? existing.created_at : now, now);
 
@@ -157,21 +181,28 @@ function importOne(db, doc, now) {
   );
 
   // 三張內容表整組替換(md 是權威)
-  db.prepare("DELETE FROM topic_countries WHERE topic_id = ?").run(topicId);
-  db.prepare("DELETE FROM topic_country_i18n WHERE topic_id = ?").run(topicId);
+  db.prepare(
+    "DELETE FROM topic_observance_i18n WHERE observance_id IN (SELECT observance_id FROM topic_observances WHERE topic_id = ?)"
+  ).run(topicId);
+  db.prepare("DELETE FROM topic_observances WHERE topic_id = ?").run(topicId);
   db.prepare("DELETE FROM topic_i18n WHERE topic_id = ?").run(topicId);
 
-  for (const [cc, c] of Object.entries(doc.countries)) {
+  const observanceIds = new Map();
+  for (const [id, c] of Object.entries(doc.observances)) {
+    const observanceId = `obs_${topicId}_${c.country_code}_${c.observance_key}`;
+    observanceIds.set(id, observanceId);
     const ids = c.sources.map((u) => {
       const id = srcIdOf(u);
       upSrc.run(id, u, new URL(u).hostname, now + 365 * 86400, now);
       return id;
     });
     db.prepare(
-      `INSERT INTO topic_countries (topic_id, country_code, local_name, observed_date, date_rule,
-                                    date_range_end, popularity_rank, source_ids_json, updated_at)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
-    ).run(topicId, cc, c.local_name, c.date || null, c.date_rule || null,
+      `INSERT INTO topic_observances (observance_id, topic_id, observance_key, country_code,
+                                      local_name, observed_date, date_rule, date_range_end,
+                                      popularity_rank, source_ids_json, updated_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+    ).run(observanceId, topicId, c.observance_key, c.country_code, c.local_name,
+          c.date || null, c.date_rule || null,
           c.date_end || null, c.rank ? Number(c.rank) : null, JSON.stringify(ids), now);
   }
   for (const [code, l] of Object.entries(doc.locales)) {
@@ -180,10 +211,10 @@ function importOne(db, doc, now) {
       `INSERT INTO topic_i18n (topic_id, locale, title, summary, keywords_json, updated_at)
        VALUES (?, ?, ?, ?, ?, ?)`
     ).run(topicId, code, l.title, l.summary || null, JSON.stringify(kw), now);
-    for (const [cc, textVal] of Object.entries(l.customs)) {
+    for (const [id, textVal] of Object.entries(l.customs)) {
       db.prepare(
-        `INSERT INTO topic_country_i18n (topic_id, country_code, locale, customs_text) VALUES (?, ?, ?, ?)`
-      ).run(topicId, cc, code, textVal);
+        `INSERT INTO topic_observance_i18n (observance_id, locale, customs_text) VALUES (?, ?, ?)`
+      ).run(observanceIds.get(id), code, textVal);
     }
   }
 
@@ -206,6 +237,12 @@ if (!existsSync(CONTENT_DIR)) {
 const files = readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".md")).sort();
 if (files.length === 0) { console.log("content/topics/ 沒有 .md,無事可做。"); process.exit(0); }
 
+// 讓直接執行 import-topics 也不會繞過舊資料遷移。
+execFileSync(process.execPath, [join(ROOT, "scripts", "migrate-topic-observances.mjs")], {
+  cwd: ROOT,
+  stdio: "inherit",
+});
+
 const db = new DatabaseSync(DB_PATH);
 db.exec("PRAGMA foreign_keys = ON;");
 const now = Math.floor(Date.now() / 1000);
@@ -225,5 +262,9 @@ for (const f of files) {
   }
 }
 db.close();
+execFileSync(process.execPath, [join(ROOT, "scripts", "retire-merged-topics.mjs")], {
+  cwd: ROOT,
+  stdio: "inherit",
+});
 console.log(`\n完成:新增 ${created}、更新 ${updated}、失敗 ${failed}(共 ${files.length} 檔)`);
 process.exit(failed ? 1 : 0);

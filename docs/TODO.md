@@ -22,10 +22,10 @@
   (加一支 cron 腳本 + export 欄位)。
 - [ ] **重新整理後「我按過的 emoji」會消失**:feed 端點不回 `mine`(契約 §1 限制)。
   要修就改契約讓 feed 依 anon_id 附 `mine`,Worker 一條 JOIN 的事,但屬契約變更。
-- [ ] **cover 圖是純色塊佔位**(`site/public/covers/<slug>.svg`,1200×630)。
-  用戶說之後用 codex 產圖:出同尺寸 `.png` 放同目錄即可(`coverPath()` 會優先取 `.png`),版面不用動。
-- [ ] **首頁「近期話題」內容稀疏**:等用戶用 `content/topics/*.md` 撰寫節日
-  (格式見 `docs/03-topic-content.md`)。**這是用戶接下來要做的事,不要代寫內容。**
+- [x] **每個 Topic 都要有正式 cover 圖**(`site/public/covers/<slug>.png`,1200×675、16:9)。
+  Google Discover 的大圖最低寬度與預覽比例以此為驗收；`coverPath()` 只接受 `.png`。
+- [x] **首頁「近期話題」內容稀疏**:已建立共通性 Topic、`content/topic-calendar.json` 的 52 週排程與七語內容；
+  `scripts/check-topic-calendar.mjs` 會阻擋缺週或缺圖的匯出。
 - [ ] **新 Topic 沒有熱度分數**(import 不碰 `topic_scores`),級距顯示最低階。
   排名 job 屬 M2 的 19 job 管線;過渡期可決定要不要手動塞 demo 分數(要問用戶,不要自作主張)。
 

@@ -50,9 +50,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 // og:image 必須是絕對網址(抓取端不解析相對路徑),所以拿 SITE_URL(Astro.site)當基底,
 // 路徑那半段已經含 base path。頁面沒有 cover 就整組 meta 不輸出——不指到不存在的檔。
 const ogImage = image ? new URL(image, Astro.site) : null;
-// cover 的版面契約:1200×630(1.91:1),與 public/covers/*.svg 一致。
+// cover 的版面契約:1200×675(16:9),符合 Google Discover 的大圖比例。
 const OG_IMAGE_W = 1200;
-const OG_IMAGE_H = 630;
+const OG_IMAGE_H = 675;
 // 站內絕對路徑一律用 base 組:GitHub Pages 專案站有 base path,不能掉到主機根目錄。
 const base = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
@@ -71,6 +71,7 @@ const jumpTopics = (navTopics && navTopics.length ? navTopics : hotTopics(2)).fi
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="max-image-preview:large" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     <link rel="canonical" href={canonical} />

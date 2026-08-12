@@ -205,7 +205,7 @@ Worker 端補齊:`post_id`(新 ULID)、`anon_id`(cookie 或新發)、`cycle_id`(
 ```json
 {
   "topics": [
-    { "topic_id": "top_01J...", "slug": "valentines-day", "status": "active",
+    { "topic_id": "top_01J...", "slug": "affection-and-reciprocity", "status": "active",
       "access_level": 0, "is_perennial": 0, "global_score": 87.5,
       "current_cycle_id": "cyc_01J..." }
   ],

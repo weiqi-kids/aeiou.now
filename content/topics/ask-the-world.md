@@ -5,6 +5,7 @@
 - canonical: Ask the World
 - category: community
 - perennial: yes
+- commonality: year-round curiosity and respectful exchange between people in different places
 
 ## locale zh-TW
 ### title

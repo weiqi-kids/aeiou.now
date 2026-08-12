@@ -178,7 +178,7 @@ content/topics/<slug>.md   ←── 人工編輯(唯一入口)
 
 - 每小時 cron 會自動跑匯入+匯出,**存檔後最慢一小時上線**;要立即看就手動跑再 build。
 - 七語都要在檔案裡(可先寫 zh-TW 再請 Claude 補其餘六語);每個國家至少一個 source。
-- `data/` 與 `db/aeiou.sqlite` 的這三張表(topic_i18n/topic_countries/topic_country_i18n)
+- `data/` 與 `db/aeiou.sqlite` 的這三張表(topic_i18n/topic_observances/topic_observance_i18n)
   都是**產物**,直接改會被下次匯入/匯出蓋掉。
 - import **不碰 `topic_scores`**(分數屬排程,不是內容)。
 

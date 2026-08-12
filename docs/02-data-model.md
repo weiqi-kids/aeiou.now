@@ -49,8 +49,9 @@
 ```sql
 CREATE TABLE topics (
   topic_id        TEXT PRIMARY KEY,
-  slug            TEXT NOT NULL UNIQUE,      -- 'valentines-day',URL 用
+  slug            TEXT NOT NULL UNIQUE,      -- 'affection-and-reciprocity',URL 用
   canonical_name  TEXT NOT NULL,             -- 語言中立的正規名稱(英文為主)
+  commonality     TEXT NOT NULL DEFAULT '',  -- 跨國共通性分類依據,不是日期名稱
   category        TEXT NOT NULL,             -- 草案 §4.1 的 15 類
   status          TEXT NOT NULL,             -- candidate|active|cooling|archived|merged
   merged_into     TEXT,                      -- status='merged' 時指向合併目標
@@ -100,36 +101,44 @@ CREATE TABLE topic_i18n (
 );
 ```
 
-### 2.3 `topic_countries` —— 「全世界怎麼過」的事實層
+### 2.3 `topic_observances` —— 「全世界怎麼過」的地方表現層
 
 **這是草案 §44「🌎 How the World Celebrates」的核心表,也是討論中「一份事實、七語呈現」的落點。**
+一個 Topic 是跨國共通性；同一國在同一 Topic 下可以有多個地方表現(observance),
+每個表現各自擁有名稱、日期／日期規則、來源與七語 customs。日期不是 Topic 的主鍵,
+也不能用 `(topic_id, country_code)` 把同一國的多個時間點壓成一筆。
 
 ```sql
-CREATE TABLE topic_countries (
+CREATE TABLE topic_observances (
+  observance_id  TEXT PRIMARY KEY,
   topic_id       TEXT NOT NULL,
+  observance_key TEXT NOT NULL,            -- 該國在 Topic 內穩定 key:'valentine'/'white-day'
   country_code   TEXT NOT NULL,
-  local_name     TEXT NOT NULL,            -- 語言中立:'バレンタイン'、'Dia dos Namorados'
+  local_name     TEXT NOT NULL,            -- 地方表現的原文名稱
   observed_date  TEXT,                     -- 'MM-DD' 固定日期,如 '02-14'
   date_rule      TEXT,                     -- 非固定日期的規則,如 '農曆七月初七'
   date_range_end TEXT,                     -- 跨日期間的結束(如印度 Valentine Week)
   popularity_rank INTEGER,                 -- 該 Topic 在該國的熱度排名(草案 §47)
   source_ids_json TEXT NOT NULL,           -- 佐證來源,SEO 的抗辯基礎
   updated_at     INTEGER NOT NULL,
-  PRIMARY KEY (topic_id, country_code)
+  UNIQUE (topic_id, country_code, observance_key)
 );
+CREATE INDEX idx_topic_observances_topic
+  ON topic_observances(topic_id, country_code, observed_date);
+CREATE INDEX idx_topic_observances_date
+  ON topic_observances(observed_date, date_range_end);
 
-CREATE TABLE topic_country_i18n (
-  topic_id     TEXT NOT NULL,
-  country_code TEXT NOT NULL,
+CREATE TABLE topic_observance_i18n (
+  observance_id TEXT NOT NULL,
   locale       TEXT NOT NULL,
   customs_text TEXT NOT NULL,              -- 「女生送巧克力,分本命/義理」的該語系版本
-  PRIMARY KEY (topic_id, country_code, locale)
+  PRIMARY KEY (observance_id, locale)
 );
 ```
 
 > `source_ids_json` 是必填,不是選填。每一條文化事實都要能點回原始來源——這既是內容品質,也是對 Google「scaled content abuse」政策的正面抗辯:這一頁的價值來自跨國真實來源的彙整,不是生成的散文。
 >
-> **「追蹤 Topic」= 行事曆(2026-08-11 拍板)**:`observed_date` / `date_rule` 驅動每國一顆「加入行事曆」按鈕——Google Calendar URL 模板 + 靜態 .ics 下載(cn 市場不依賴 Google)。純靜態層功能,無 follow 表、無通知子系統,CF 掛掉照常可用。站內「我追蹤的 Topic」清單需登入,遠期再議。
+> **「追蹤地方表現」= 行事曆(2026-08-11 拍板)**:`observed_date` / `date_rule` 驅動每個 observance 的「加入行事曆」按鈕——Google Calendar URL 模板 + 靜態 .ics 下載(cn 市場不依賴 Google)。純靜態層功能,無 follow 表、無通知子系統,CF 掛掉照常可用。站內「我追蹤的 Topic」清單需登入,遠期再議。
 
 ### 2.4 `topic_aliases` / `topic_relations` —— Topic Graph(草案 §48)
 
@@ -618,8 +627,8 @@ data/
 ├── topics/
 │   ├── index/<locale>.json          Topic 清單(id, slug, title, category, 各窗分數, status)
 │   └── <topic-id>/
-│       ├── facts.json               語言中立:topic_countries、relations、source ids
-│       ├── i18n.json                七語一檔(title/summary/keywords + 各國 customs_text)
+│       ├── facts.json               語言中立:topic_observances、relations、source ids
+│       ├── i18n.json                七語一檔(title/summary/keywords + 各地方表現 customs_text)
 │       └── highlights.json          歷史精華(凍結貼文的原文 + 七語譯文)
 ├── places/<city_code>.json          語言中立事實 + 各語系描述
 ├── events/<city_code>.json

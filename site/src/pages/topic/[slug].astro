@@ -31,7 +31,7 @@
 //      **有 JS 才收起來**——沒有 JS 的讀者照樣讀得到各國怎麼過,不是永遠看不到。
 //      捲動一律原生錨點 + CSS scroll-behavior(global.css,含 reduced-motion 保護),不寫 JS 動畫。
 //
-// 資料現實:facts.json 的 countries 為空的 Topic(如長青的 ask-the-world)不會有
+// 資料現實:facts.json 的 observances 為空的 Topic(如長青的 ask-the-world)不會有
 // 「全世界怎麼過」與國旗列,頁首也就不放那個連結——空著比硬做假的好,底下三區塊照樣成立。
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import DiscussionRoom from '../../components/DiscussionRoom.astro';
@@ -41,7 +41,7 @@ import { monthDay, dateTime, countryFlag } from '../../lib/format.mjs';
 import { withBase } from '../../lib/paths.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
-  customsText, coverPath,
+  observancesForFacts, customsText, coverPath,
   relatedTopics, hotTopics,
 } from '../../lib/data.mjs';
 
@@ -60,15 +60,18 @@ const { facts, i18n } = getTopicBundle(topicId);
 const loc = (i18n && i18n.locales && i18n.locales[LOCALE]) || {};
 const title = loc.title || (facts && facts.canonical_name) || topicId;
 
-// cover 圖(1200×630,同時餵 og:image)。檔案不存在時 coverPath() 回 null,
+// cover 圖(1200×675,Google Discover 建議的 16:9 大圖,同時餵 og:image)。檔案不存在時 coverPath() 回 null,
 // 整個 <figure> 就不渲染——不留破圖,版面照樣成立。
 const coverRel = coverPath(facts && facts.slug);
 const coverSrc = coverRel ? withBase(coverRel) : null;
 
-// popularity_rank 是資料裡本來就有的順位,拿來決定「先讀哪一國」
-const countries = ((facts && facts.countries) || [])
+// popularity_rank 是資料裡本來就有的順位,拿來決定「先讀哪一個地方表現」
+const observances = observancesForFacts(facts)
   .slice()
   .sort((a, b) => (a.popularity_rank || 99) - (b.popularity_rank || 99));
+const countries = [...new Map(observances.map((o) => [o.country_code, o])).values()];
+const observanceAnchor = (observance) =>
+  `observance-${observance.observance_id || `${observance.country_code}-${observance.observance_key || 'default'}`}`;
 const places = placesForTopic(topicId);
 const events = eventsForTopic(topicId);
 
@@ -113,7 +116,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
           <figure class="topic-cover">
             {/* alt="" :現在是純色塊佔位圖,沒有可描述的內容,硬編一句描述等於騙螢幕閱讀器。
                 換上真圖時才會有值得寫的 alt。width/height 給瀏覽器先留位,載入時不跳版。 */}
-            <img src={coverSrc} alt="" width="1200" height="630" decoding="async" />
+            <img src={coverSrc} alt="" width="1200" height="675" decoding="async" />
           </figure>
         )}
         <div class="head-primary">
@@ -226,7 +229,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
       <Fragment>
       <nav class="flag-band" aria-label={t('topic.countries_label')}>
         {countries.map((c) => (
-          <a class="flag-chip" href={`#country-${c.country_code}`}>
+          <a class="flag-chip" href={`#${observanceAnchor(c)}`}>
             <span class="flag-glyph" aria-hidden="true">{countryFlag(c.country_code)}</span>
             <span class="flag-name">{countryName(c.country_code)}</span>
           </a>
@@ -240,8 +243,8 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
           <h2><span class="section-emoji" aria-hidden="true">🌎</span>{t('topic.how_world_celebrates')}</h2>
         </summary>
         <ul class="country-list">
-          {countries.map((c) => (
-            <li class="country" id={`country-${c.country_code}`}>
+          {observances.map((c) => (
+            <li class="country" id={observanceAnchor(c)}>
               <div class="country-when">
                 <span class="country-date">{monthDay(c.observed_date)}</span>
                 {c.date_range_end && (
@@ -256,8 +259,8 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
                   {countryName(c.country_code)}
                   <span class="local-name">{c.local_name}</span>
                 </h3>
-                {customsText(i18n, c.country_code) && (
-                  <p class="country-customs">{customsText(i18n, c.country_code)}</p>
+                {customsText(i18n, c) && (
+                  <p class="country-customs">{customsText(i18n, c)}</p>
                 )}
               </div>
             </li>
@@ -278,7 +281,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
           document.addEventListener('click', function (ev) {
             var node = ev.target;
             if (!node || typeof node.closest !== 'function') return;
-            if (node.closest('a[href="#world"], a[href^="#country-"]')) world.open = true;
+            if (node.closest('a[href="#world"], a[href^="#observance-"]')) world.open = true;
           });
         })();
       </script>
@@ -393,7 +396,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     gap: clamp(1.25rem, 3vw, 2rem);
     align-items: start;
   }
-  /* cover 圖:1.91:1(= 1200×630,同時是 og:image 尺寸)。
+  /* cover 圖:16:9(= 1200×675,Google Discover 建議尺寸)。
      object-fit: cover 讓之後換上的真圖不管內部構圖如何都不會撐歪版面。 */
   .topic-cover {
     margin: 0;
@@ -402,7 +405,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
   .topic-cover img {
     display: block;
     inline-size: 100%;
-    aspect-ratio: 1200 / 630;
+    aspect-ratio: 1200 / 675;
     object-fit: cover;
     border-radius: var(--radius-md);
     background: var(--color-primary-soft);
@@ -806,7 +809,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
       min-block-size: 0;
     }
     /* 這一格高度是固定的,所以 cover 改成填滿高度(aspect-ratio 讓位),
-       object-fit: cover 保證構圖不變形;og:image 的 1200×630 是檔案本身的事,不受影響。 */
+       object-fit: cover 保證構圖不變形;og:image 的 1200×675 是檔案本身的事,不受影響。 */
     /* cover 高度 = 右欄文字的高度(align-items: stretch),不自己撐高 */
     .topic-cover {
       block-size: 100%;

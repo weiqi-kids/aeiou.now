@@ -56,6 +56,19 @@ log "import-topics.mjs ..."
 IMPORT_OUT="$("$NODE_BIN" "$REPO/scripts/import-topics.mjs" 2>&1)" || \
   log "WARN: import-topics 有檔案失敗(不中斷 export):$(echo "$IMPORT_OUT" | grep '✗' | head -2 | tr '\n' ' ')"
 
+log "check-topic-calendar.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/check-topic-calendar.mjs"; then
+  log "FAILED: 52 週覆蓋或 Topic cover 驗收未通過"
+  record_job failed 0 0 0 1 "check-topic-calendar.mjs failed"
+  exit 1
+fi
+log "review-topic-content.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/review-topic-content.mjs"; then
+  log "FAILED: 七人格 Topic 審查未通過"
+  record_job failed 0 0 0 1 "review-topic-content.mjs failed"
+  exit 1
+fi
+
 log "export-data.mjs ..."
 EXPORT_OUT="$("$NODE_BIN" "$REPO/scripts/export-data.mjs" 2>&1)"
 EXPORT_RC=$?

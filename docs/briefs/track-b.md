@@ -89,7 +89,7 @@
 
 - **首頁 `/`**:Global Trending(靜態,讀 `topics/index/<locale>.json`),列出 Topic 卡片連到 topic 頁。
 - **`/topic/[slug]/`**:照草案 §44 版面,六個區塊都要有:
-  1. **全世界怎麼過**(`topic_countries` + `topic_country_i18n` 的 customs)
+  1. **全世界怎麼過**(`topic_observances` + `topic_observance_i18n` 的 customs;同一國可有多個地方表現)
   2. **熱度七窗**(靜態只有六窗:24h/72h/7d/1m/3m/1y;**8h 屬動態,不出靜態**)
   3. **討論室**(W2.4,動態)
   4. **歷史精華**(`highlights.json`,M1 可為空陣列 → 顯示空狀態)
@@ -99,7 +99,7 @@
 - **`/about/`**:佔位頁即可。
 
 **資料讀取**:讀 `site/src/data/`(結構照 `docs/02-data-model.md` §9)。
-**fixture 直接預置在 `site/src/data/`**(該目錄本來就在根 `.gitignore` 裡,不會進 git)。fixture 要涵蓋兩個 topic(`valentines-day`、`ask-the-world`)、≥4 國 customs、六窗 rankings、places/events 各一城市,好讓每個區塊都渲染得出東西。
+**fixture 直接預置在 `site/src/data/`**(該目錄本來就在根 `.gitignore` 裡,不會進 git)。fixture 要涵蓋兩個 topic(`affection-and-reciprocity`、`ask-the-world`)、≥4 國 customs、六窗 rankings、places/events 各一城市,好讓每個區塊都渲染得出東西。
 **`topic_id` 必須從資料帶到討論室元件**——API 路徑參數是 topic_id,不是 slug。
 
 **`copy-data` 腳本**(`site/scripts/copy-data.mjs`):從根層 `data/` 鏡像到 `site/src/data/`,但**只在根層 `data/` 非空時才覆蓋**;為空時**不動作**(保住你的 fixture)。本地與 CI 同一條鏈。

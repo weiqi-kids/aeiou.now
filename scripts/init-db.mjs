@@ -36,20 +36,34 @@ function initHost() {
     db.exec(readFileSync(sqlFile(f), "utf8"));
     console.log(`已套用 ${f}`);
   }
+  db.close();
+  execFileSync(process.execPath, [join(ROOT, "scripts", "migrate-topic-observances.mjs")], {
+    cwd: ROOT,
+    stdio: "inherit",
+  });
+  const migratedDb = new DatabaseSync(DB_PATH);
+  migratedDb.exec("PRAGMA foreign_keys = ON;");
   if (withSeed) {
     const seedDir = join(ROOT, "db", "seed");
     if (existsSync(seedDir)) {
       for (const f of readdirSync(seedDir).filter((n) => n.endsWith(".sql")).sort()) {
-        db.exec(readFileSync(join(seedDir, f), "utf8"));
+        migratedDb.exec(readFileSync(join(seedDir, f), "utf8"));
         console.log(`已灌 seed/${f}`);
       }
     }
   }
-  const tables = db
+  migratedDb.close();
+  execFileSync(process.execPath, [join(ROOT, "scripts", "retire-merged-topics.mjs")], {
+    cwd: ROOT,
+    stdio: "inherit",
+  });
+  const finalDb = new DatabaseSync(DB_PATH);
+  finalDb.exec("PRAGMA foreign_keys = ON;");
+  const tables = finalDb
     .prepare("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name")
     .all()
     .map((r) => r.name);
-  db.close();
+  finalDb.close();
   console.log(`\n主機庫 ${DB_PATH}`);
   console.log(`表 ${tables.length} 張:\n  ${tables.join("\n  ")}`);
 }
