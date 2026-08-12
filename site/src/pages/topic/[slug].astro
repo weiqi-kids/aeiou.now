@@ -42,7 +42,6 @@ import { withBase } from '../../lib/paths.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
   observancesForFacts, customsText, coverPath,
-  relatedTopics, hotTopics,
 } from '../../lib/data.mjs';
 
 export function getStaticPaths() {
@@ -75,11 +74,6 @@ const observanceAnchor = (observance) =>
 const places = placesForTopic(topicId);
 const events = eventsForTopic(topicId);
 
-// 導覽列尾端的「直接跳進看板」在 Topic 頁上改列**相關議題**(facts.json 的 relations,
-// 草案 §48 Topic Graph);沒有相關議題就退回熱門 Topic。當前這一頁自己不列(BaseLayout 會濾掉)。
-const related = relatedTopics(topicId, 2);
-const navTopics = related.length ? related : hotTopics(3);
-
 // 📍 店家與 🎉 活動的 emoji reaction(2026-08-11 用戶:「店家和活動本來就有規劃 emoji,要補上」)。
 // 行為沿用 src/lib/reactions.mjs——與貼文、留言同一份實作,同一顆 emoji 在站上任何地方
 // 按下去的意義都一樣。契約 §4 的 target_type 已含 place / event,Worker 已支援,沒有新增端點。
@@ -103,8 +97,6 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
 <BaseLayout
   title={`${title} — aeiou.now`}
   description={loc.summary}
-  navTopics={navTopics}
-  currentTopicId={topicId}
   image={coverSrc}
 >
   <article class="topic">

@@ -10,7 +10,7 @@
 //
 // 2026-08-11 ②(用戶當面指正):刊頭右上角的導覽 = **Topic 清單的四種排序**,
 //   不再是「看板 / 排行榜」兩個入口,也不該擠在標題下方當一排 chip。導覽定義見 lib/nav.mjs。
-//   導覽尾端再直接列幾個 Topic,讓人一步跳進看板(首頁/排序頁列熱門 Topic,Topic 頁列相關議題)。
+//   導覽尾端再直接列幾個 Topic,讓人一步跳進看板。所有頁面共用同一組捷徑，header 不因目前頁面改變。
 //   排行榜不進主導覽(用戶列的項目裡沒有它):它是「全球熱門」這個排序的完整版,
 //   入口在首頁全球熱門區塊與 Topic 頁的熱度時窗。關於頁同理,只在頁尾。
 //
@@ -33,8 +33,6 @@ interface Props {
   title: string;
   description?: string;
   activeSort?: string | null;
-  navTopics?: Array<Record<string, any>>;
-  currentTopicId?: string | null;
   /** cover 圖的**站內路徑**(呼叫端已過 withBase);這裡再組成絕對網址給 og:image。 */
   image?: string | null;
 }
@@ -42,8 +40,6 @@ const {
   title,
   description,
   activeSort = null,
-  navTopics,
-  currentTopicId = null,
   image = null,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -60,10 +56,9 @@ const base = import.meta.env.BASE_URL.endsWith('/')
 const GA4_ID = import.meta.env.PUBLIC_GA4_ID || '';
 
 const sorts = navSorts(activeSort);
-// 導覽尾端的「直接跳進某個看板」:頁面沒指定就用當前排序下的熱門 Topic。
-const jumpTopics = (navTopics && navTopics.length ? navTopics : hotTopics(2)).filter(
-  (topic) => topic && topic.slug && topic.topic_id !== currentTopicId
-);
+// 導覽尾端的「直接跳進某個看板」:所有頁面固定使用首頁同一組熱門 Topic 捷徑，
+// 不因目前所在頁面排除或改換，避免 header 在不同 URL 變形。
+const jumpTopics = hotTopics(2).filter((topic) => topic && topic.slug);
 ---
 
 <!doctype html>
