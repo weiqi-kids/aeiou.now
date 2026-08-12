@@ -3,6 +3,7 @@
 // 這是可重跑的自動檢查，不冒充真人語言專家；它固定檢查內容結構、標題可辨識度、
 // 未翻譯／舊模板殘留、跨國地方表現、日期規則、來源、七語 customs、主圖與 52 週覆蓋。
 import { DatabaseSync } from 'node:sqlite';
+import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -65,6 +66,7 @@ const forbiddenProse = [
 ];
 const errors = [];
 const fail = (message) => errors.push(message);
+const coverHashes = new Map();
 
 const contentFiles = readdirSync(CONTENT_DIR).filter((file) => file.endsWith('.md')).sort();
 const contentMeta = new Map();
@@ -156,6 +158,12 @@ for (const topic of activeTopics) {
     const bytes = readFileSync(cover);
     const png = bytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
     if (!png || bytes.readUInt32BE(16) !== 1200 || bytes.readUInt32BE(20) !== 675) fail(`${topic.slug}:cover 不是 1200×675 PNG`);
+    else {
+      const hash = createHash('sha256').update(bytes).digest('hex');
+      const previous = coverHashes.get(hash);
+      if (previous) fail(`${topic.slug}:cover 與 ${previous} 相同；每個 active Topic 必須有獨立圖片`);
+      else coverHashes.set(hash, topic.slug);
+    }
   }
 }
 

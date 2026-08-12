@@ -22,6 +22,7 @@
 import { t, tOr } from '../lib/i18n.mjs';
 import { withBase } from '../lib/paths.mjs';
 import { countryFlag } from '../lib/format.mjs';
+import { coverPath } from '../lib/data.mjs';
 import HeatMeter from './HeatMeter.astro';
 import TopicPosts from './TopicPosts.astro';
 
@@ -40,6 +41,8 @@ const { topic, rank = null, win = '24h', marker = null, tags = [], note = null }
 const codes = (topic.country_codes || []).slice(0, 8);
 const scores = topic.scores || {};
 const topicHref = withBase(`topic/${topic.slug}/`);
+const coverRel = coverPath(topic.slug);
+const coverSrc = coverRel ? withBase(coverRel) : null;
 // 沒有 topic_id 就打不到 /v1/topics/:id/feed(:id 是 ULID 不是 slug),那一列只出左欄。
 const withPosts = !!topic.topic_id;
 ---
@@ -48,31 +51,38 @@ const withPosts = !!topic.topic_id;
   <a class="row-link" href={topicHref}>
     {rank !== null && <span class="row-rank" aria-hidden="true">{rank}</span>}
     <span class="row-main">
-      <span class="row-head">
-        {codes.length > 0 && (
-          <span class="row-flags" aria-hidden="true">
-            {codes.map((code) => <span class="row-flag">{countryFlag(code)}</span>)}
-          </span>
-        )}
-        <span class="row-title">{topic.title}</span>
+      {coverSrc && (
+        <span class="row-cover" aria-hidden="true">
+          <img src={coverSrc} alt="" width="1200" height="675" loading="lazy" decoding="async" />
+        </span>
+      )}
+      <span class="row-copy">
+        <span class="row-head">
+          {codes.length > 0 && (
+            <span class="row-flags" aria-hidden="true">
+              {codes.map((code) => <span class="row-flag">{countryFlag(code)}</span>)}
+            </span>
+          )}
+          <span class="row-title">{topic.title}</span>
+        </span>
+        <span class="row-badges">
+          {marker && <span class="badge badge--accent">{marker}</span>}
+          {topic.category && (
+            <span class="badge badge--primary">
+              {tOr(`category.${topic.category}`, topic.category)}
+            </span>
+          )}
+          {topic.is_perennial ? <span class="badge">{t('topic.perennial')}</span> : null}
+          {tags.map((tag) => (
+            <span class="badge">
+              {tag.label}
+              <span class="row-tag-value">{tag.value}</span>
+            </span>
+          ))}
+        </span>
+        {note && <span class="row-note">{note}</span>}
+        {topic.summary && <span class="row-summary">{topic.summary}</span>}
       </span>
-      <span class="row-badges">
-        {marker && <span class="badge badge--accent">{marker}</span>}
-        {topic.category && (
-          <span class="badge badge--primary">
-            {tOr(`category.${topic.category}`, topic.category)}
-          </span>
-        )}
-        {topic.is_perennial ? <span class="badge">{t('topic.perennial')}</span> : null}
-        {tags.map((tag) => (
-          <span class="badge">
-            {tag.label}
-            <span class="row-tag-value">{tag.value}</span>
-          </span>
-        ))}
-      </span>
-      {note && <span class="row-note">{note}</span>}
-      {topic.summary && <span class="row-summary">{topic.summary}</span>}
     </span>
     <span class="row-heat">
       <HeatMeter score={scores[win]} caption={t(`rankings.window.${win}`)} />
@@ -118,6 +128,26 @@ const withPosts = !!topic.topic_id;
     grid-row: span 2;
   }
   .row-main {
+    display: grid;
+    grid-template-columns: minmax(7rem, 12rem) minmax(0, 1fr);
+    gap: 0.35rem;
+    min-width: 0;
+    align-items: start;
+  }
+  .row-cover {
+    display: block;
+    aspect-ratio: 1200 / 675;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    background: var(--color-primary-soft);
+  }
+  .row-cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .row-copy {
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
@@ -203,6 +233,9 @@ const withPosts = !!topic.topic_id;
     }
     .row-title {
       font-size: var(--text-xl);
+    }
+    .row-main {
+      grid-template-columns: minmax(9rem, 12rem) minmax(0, 1fr);
     }
   }
 

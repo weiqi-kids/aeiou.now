@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // 年度 Topic 覆蓋與素材驗收：52 週每週至少一個未合併 Topic，且每個 Topic 有 1200×675 PNG。
 import { DatabaseSync } from 'node:sqlite';
+import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -25,7 +26,8 @@ if (new Set(weekNumbers).size !== weekNumbers.length) errors.push('calendar.week
 if (weeks.some((row) => !Number.isInteger(row.week) || row.week < 1 || row.week > 52)) errors.push('calendar.week 必須是 1–52 的整數');
 
 const db = new DatabaseSync(DB_PATH, { readOnly: true });
-const active = new Map(db.prepare("SELECT slug, status FROM topics WHERE status NOT IN ('candidate','merged')").all().map((row) => [row.slug, row.status]));
+const activeRows = db.prepare("SELECT slug, status FROM topics WHERE status NOT IN ('candidate','merged') ORDER BY slug").all();
+const active = new Map(activeRows.map((row) => [row.slug, row.status]));
 for (const row of weeks) {
   for (const slug of row.topics || []) {
     if (!active.has(slug)) errors.push(`第 ${row.week} 週引用不存在或已合併 Topic:${slug}`);
@@ -36,7 +38,8 @@ db.close();
 const contentSlugs = readdirSync(join(ROOT, 'content', 'topics'))
   .filter((file) => file.endsWith('.md'))
   .map((file) => file.slice(0, -3));
-for (const slug of contentSlugs) {
+const coverHashes = new Map();
+for (const slug of active.keys()) {
   const cover = join(COVER_DIR, `${slug}.png`);
   if (!existsSync(cover)) {
     errors.push(`Topic ${slug} 缺少 PNG cover:${cover}`);
@@ -48,7 +51,12 @@ for (const slug of contentSlugs) {
   const height = isPng ? bytes.readUInt32BE(20) : null;
   if (!isPng || width !== 1200 || height !== 675) {
     errors.push(`Topic ${slug} cover 必須是 PNG 1200 x 675,實際 ${isPng ? `${width} x ${height}` : '非 PNG'}`);
+    continue;
   }
+  const hash = createHash('sha256').update(bytes).digest('hex');
+  const previous = coverHashes.get(hash);
+  if (previous) errors.push(`Topic ${slug} 與 ${previous} 共用同一張 cover；每個 active Topic 必須有獨立圖片`);
+  else coverHashes.set(hash, slug);
 }
 
 if (errors.length) {
@@ -56,4 +64,4 @@ if (errors.length) {
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
-console.log(`Topic calendar / cover 驗收通過:52 週、${contentSlugs.length} 個 Topic、每週至少 1 個、每個 cover 1200×675。`);
+console.log(`Topic calendar / cover 驗收通過:52 週、${activeRows.length} 個 active Topic、每週至少 1 個、每個 Topic 有獨立 cover 1200×675。`);
