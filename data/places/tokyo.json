@@ -2,50 +2,34 @@
   "city_code": "tokyo",
   "places": [
     {
-      "place_id": "plc_01J50000000000000000000P01",
-      "name": "GODIVA 銀座本店",
+      "place_id": "plc_53E4F4151B72E03376E6B7BC7B",
+      "name": "東京たま未来メッセ（東京都立多摩産業交流センター）",
       "country_code": "JP",
-      "address": "東京都中央区銀座",
-      "map_url": "https://www.google.com/maps/search/?api=1&query=GODIVA%20Ginza%20Tokyo",
+      "address": "〒192-0046 東京都八王子市明神町3丁目19-2",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E3%81%9F%E3%81%BE%E6%9C%AA%E6%9D%A5%E3%83%A1%E3%83%83%E3%82%BB%20%E5%85%AB%E7%8E%8B%E5%AD%90",
       "nav_urls": {
-        "google": "https://www.google.com/maps/search/?api=1&query=GODIVA%20Ginza%20Tokyo",
-        "baidu": "https://map.baidu.com/search/?querytype=s&wd=GODIVA%20Ginza%20Tokyo",
-        "amap": "https://uri.amap.com/search?keyword=GODIVA%20Ginza%20Tokyo"
+        "google": "https://www.google.com/maps/dir/?api=1&destination=%E6%9D%B1%E4%BA%AC%E3%81%9F%E3%81%BE%E6%9C%AA%E6%9D%A5%E3%83%A1%E3%83%83%E3%82%BB%20%E5%85%AB%E7%8E%8B%E5%AD%90",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=%E6%9D%B1%E4%BA%AC%E3%81%9F%E3%81%BE%E6%9C%AA%E6%9D%A5%E3%83%A1%E3%83%83%E3%82%BB%20%E5%85%AB%E7%8E%8B%E5%AD%90",
+        "amap": "https://uri.amap.com/search?keyword=%E6%9D%B1%E4%BA%AC%E3%81%9F%E3%81%BE%E6%9C%AA%E6%9D%A5%E3%83%A1%E3%83%83%E3%82%BB%20%E5%85%AB%E7%8E%8B%E5%AD%90"
       },
-      "mention_count": 12,
+      "source_urls": [
+        "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/350/detail.html",
+        "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/index.html"
+      ],
+      "mention_count": 0,
       "descriptions": {
-        "zh-TW": "銀座的比利時巧克力名店,情人節前排隊人潮眾多,常被討論為送禮首選。",
-        "en": "Belgian chocolatier's flagship in Ginza; long queues before Valentine's Day, often mentioned as a go-to gift shop.",
-        "ja": "銀座のベルギー系チョコレート名店。バレンタイン前は行列ができ、贈り物の定番としてよく話題になる。"
+        "zh-TW": "東京たま未来メッセ曾於 2026 年 2 月 1 日舉辦「煌めきバレンタインマルシェ」。",
+        "en": "Tokyo Tama Mirai Messe hosted the Kirameki Valentine Marche on February 1, 2026.",
+        "ja": "東京たま未来メッセでは、2026年2月1日に「煌めきバレンタインマルシェ」が開かれました。",
+        "zh-CN": "东京多摩未来会展中心曾于 2026 年 2 月 1 日举办“闪耀情人节市集”。",
+        "hi": "Tokyo Tama Mirai Messe में 1 फ़रवरी 2026 को Kirameki Valentine Marche हुआ था।",
+        "id": "Tokyo Tama Mirai Messe menjadi lokasi Kirameki Valentine Marche pada 1 Februari 2026.",
+        "pt-BR": "O Tokyo Tama Mirai Messe recebeu a Kirameki Valentine Marche em 1º de fevereiro de 2026."
       },
       "topics": [
         {
           "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
           "relevance": 0.9
-        }
-      ]
-    },
-    {
-      "place_id": "plc_01J50000000000000000000P03",
-      "name": "青山フラワーマーケット 表参道店",
-      "country_code": "JP",
-      "address": "東京都港区北青山",
-      "map_url": "https://www.google.com/maps/search/?api=1&query=Aoyama%20Flower%20Market%20Omotesando",
-      "nav_urls": {
-        "google": "https://www.google.com/maps/search/?api=1&query=Aoyama%20Flower%20Market%20Omotesando",
-        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Aoyama%20Flower%20Market%20Omotesando",
-        "amap": "https://uri.amap.com/search?keyword=Aoyama%20Flower%20Market%20Omotesando"
-      },
-      "mention_count": 5,
-      "descriptions": {
-        "zh-TW": "表參道的人氣花店,情人節玫瑰花束的熱門選擇。",
-        "en": "Popular flower shop in Omotesando, a favorite for Valentine's Day rose bouquets.",
-        "ja": "表参道の人気フラワーショップ。バレンタインのバラの花束の定番。"
-      },
-      "topics": [
-        {
-          "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
-          "relevance": 0.6
         }
       ]
     }

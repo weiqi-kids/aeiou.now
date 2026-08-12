@@ -56,6 +56,24 @@ CREATE INDEX IF NOT EXISTS idx_topic_observances_topic
 CREATE INDEX IF NOT EXISTS idx_topic_observances_date
   ON topic_observances(observed_date, date_range_end);
 
+CREATE TABLE IF NOT EXISTS topic_observance_occurrences (
+  occurrence_id   TEXT PRIMARY KEY,
+  observance_id   TEXT NOT NULL,
+  occurrence_year INTEGER NOT NULL,
+  starts_on       TEXT NOT NULL,
+  ends_on         TEXT,
+  calendar_system TEXT NOT NULL,
+  timezone        TEXT NOT NULL,
+  date_status     TEXT NOT NULL,
+  source_ids_json TEXT NOT NULL,
+  updated_at      INTEGER NOT NULL,
+  UNIQUE (observance_id, occurrence_year, starts_on)
+);
+CREATE INDEX IF NOT EXISTS idx_topic_observance_occurrences_date
+  ON topic_observance_occurrences(starts_on, ends_on);
+CREATE INDEX IF NOT EXISTS idx_topic_observance_occurrences_observance
+  ON topic_observance_occurrences(observance_id, occurrence_year, starts_on);
+
 CREATE TABLE IF NOT EXISTS topic_observance_i18n (
   observance_id TEXT NOT NULL,
   locale        TEXT NOT NULL,

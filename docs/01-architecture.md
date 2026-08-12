@@ -132,7 +132,7 @@ source repo:`weiqi-kids/aeiou.now`(唯一有人 commit)。語系用**目錄**分
 ├── docs/                 架構與資料模型文件、briefs/
 ├── db/                   schema-common.sql / schema-host.sql / schema-d1.sql、seed/
 ├── data/                 匯出的靜態 JSON(commit 進 git)
-├── scripts/              init-db、export-data、sync-topics-to-d1、translate-posts、hourly-export
+├── scripts/              init-db、export-data、update-local-data、sync-topics-to-d1、translate-posts、hourly-export
 ├── site/                 Astro 專案(build cwd 一律 site/;site/scripts/ 放守門腳本)
 ├── api/                  Cloudflare Worker(aeiou-api)
 └── .github/workflows/build.yml
@@ -201,7 +201,7 @@ M1 = 走通式骨架:1–2 個示範 Topic 打通全鏈路,每層薄,端到端�
 | 位置 | 排程 | 入口 | 內容 |
 |---|---|---|---|
 | 主機 `/etc/cron.d/aeiou` | `*/15 * * * *` | `scripts/cron-15min.sh` | 依序跑 `translate-posts.mjs`(翻譯 + UGC 回流主機)與 `sync-topics-to-d1.mjs`(Topic 副本同步) |
-| 主機 `/etc/cron.d/aeiou` | `0 * * * *` | `scripts/hourly-export.sh` | `export-data.mjs` → **只 commit 根層 `data/`** → push source repo |
+| 主機 `/etc/cron.d/aeiou` | `0 * * * *` | `scripts/hourly-export.sh` | `update-local-data.mjs` → `export-data.mjs` → **只 commit 受管理的 `data/` 與活動快照** → push source repo |
 | GitHub Actions `build.yml` | `17 * * * *` | — | 七語系重建與部署(刻意錯開整點,避免與主機 push 互踩) |
 
 cron 環境的 PATH 必須含 `/root/.local/bin`(`claude` CLI 在此),`HOME=/root`(claude CLI 與 gh credential helper 都讀 `$HOME`)。
@@ -210,7 +210,7 @@ cron 環境的 PATH 必須含 `/root/.local/bin`(`claude` CLI 在此),`HOME=/roo
 
 - **`translate-posts.mjs`**:`GET /internal/ugc/pending-translation`(上限 50 則)→ 每則翻**六語**(七語系扣掉 `original_locale`)→ **先** upsert 進主機 `posts`/`post_i18n`,**再** `POST /internal/translations` 回寫 D1。順序刻意:主機先落地,萬一回寫 D1 失敗,D1 那幾則仍是 `translating`,下一輪重抓且主機 upsert 冪等,不會掉資料。翻譯一律用 `claude -p`(訂閱 CLI),**不是 Anthropic API**。
 - **`sync-topics-to-d1.mjs`**:主機 `topics`/`topic_i18n` → `POST /internal/sync/topics`。`current_cycle_id` 取自主機 `topic_cycles` 裡 `ended_at IS NULL` 的那一筆;沒有進行中的期就給 NULL。upsert 覆蓋語意,M1 不刪 D1 上多出來的列。
-- **`hourly-export.sh`**:`git add -- data/`(**刻意不用 `git add -A`**);`data/` 無變更則 skip,不產生空 commit;無 `origin` remote 時只 skip push 不整支噴掉。author 用 **repo local git config**,**絕不動 `git config --global`**。
+- **`hourly-export.sh`**:`git add -- data/ content/local-sample-data.json`(**刻意不用 `git add -A`**);受管理輸出無變更則 skip,不產生空 commit;無 `origin` remote 時只 skip push 不整支噴掉。author 用 **repo local git config**,**絕不動 `git config --global`**。
 
 ### 可觀測性與失敗處理
 

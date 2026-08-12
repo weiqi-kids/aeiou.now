@@ -3,7 +3,7 @@
 > **這是撰寫 Topic(節日/議題)的唯一人工入口。** 一個 Topic 一個檔:`content/topics/<slug>.md`。
 > 匯入鏈:`content/topics/*.md` → `node scripts/import-topics.mjs` → 主機 SQLite →
 > `node scripts/export-data.mjs` → `data/*.json` → 靜態站 build。
-> 每小時的 cron(`scripts/hourly-export.sh`)會自動跑匯入+匯出,所以**存檔後最慢一小時上線**;
+> 每小時的 cron(`scripts/hourly-export.sh`)會自動跑匯入、年度日期驗證+匯出,所以**存檔後最慢一小時上線**;
 > 要立即看結果就手動跑上面兩支再 build。
 
 ## 完整範例(可直接複製當模板)
@@ -22,23 +22,23 @@
 - local_name: 情人節               ← 該地方表現的在地名稱
 - date: 02-14                      ← 固定日期,MM-DD
 - rank: 1                          ← 該地方表現在該國的排序(可省略)
-- source: https://example.com/a     ← 佐證來源,**至少一個,可重複多行**
-- source: https://example.com/b
+- source: https://www.japan.travel/en/us/blog/valentines-day-white-day-in-japan/     ← 佐證來源,**至少一個,可重複多行**
+- source: https://www.britannica.com/topic/Valentines-Day
 
 ## observance TW qixi
 - local_name: 七夕情人節
 - date_rule: 農曆七月初七           ← 非固定日期用 date_rule
-- source: https://example.com/c
+- source: https://nit.immigration.gov.tw/Multicultural/Detail/1000013
 
 ## observance JP tanabata
 - local_name: 七夕(たなばた)
 - date: 07-07
-- source: https://example.com/d
+- source: https://www.japan.travel/en/see-and-do/festivals-and-events/
 
 ## observance JP white-day
 - local_name: ホワイトデー
 - date: 03-14
-- source: https://example.com/e
+- source: https://www.japan.travel/en/us/blog/valentines-day-white-day-in-japan/
 
 ## locale zh-TW                    ← 七語各一段,**缺一個匯入就報錯**
 ### title
@@ -82,6 +82,25 @@ How do people express affection?
 4. `date` 格式 `MM-DD`;非固定日期(農曆、第 N 個星期日…)寫 `date_rule`,跨日區間用 `date_end`。
 5. Topic slug 與 observance key 只准 `a-z0-9-`。
 6. **每個 Topic 都要填 `commonality`**——它是分類依據；日期是 observance 的觸發資料，不是 Topic 的主鍵。
+
+### 年度日期(上線排序的權威資料)
+
+`date_rule` 只給讀者看文化規則，不能拿來在前端推算公曆日期。每個 active observance 都必須在
+`content/observance-occurrences.json` 有目前年度與下一年度的 occurrence；每筆包含 `starts_on`、
+`ends_on`、`calendar_system`、IANA `timezone`、`date_status` 與該年度日期來源。日期未確認時填
+`estimated` 或 `local-variant`，不能省略，也不能自行捏造固定日。
+
+在地地點與活動不是 Topic markdown 的欄位。第一批人工採集樣本放在
+`content/local-sample-data.json`，由 `node scripts/update-local-data.mjs` 驗證來源、清理過期活動後匯入；
+`content/local-data-sources.json` 保存七市場的搜尋候選詞與官方頁面核對規則；
+每筆都要有官方或主辦方來源，未查到可核對日期的活動不建立 `events` 資料列。
+
+```bash
+node scripts/import-topics.mjs
+node scripts/import-topic-occurrences.mjs
+node scripts/update-local-data.mjs
+node scripts/export-data.mjs
+```
 
 ## 匯入語意(重跑安全)
 

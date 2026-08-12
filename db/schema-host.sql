@@ -59,6 +59,27 @@ CREATE INDEX IF NOT EXISTS idx_topic_observances_topic
 CREATE INDEX IF NOT EXISTS idx_topic_observances_date
   ON topic_observances(observed_date, date_range_end);
 
+-- §2.3a 「全世界怎麼過」的年度實際發生日
+-- date_rule 保留文化規則；occurrence 才是某一年的可排序公曆日期。
+-- 同一個地方表現同一年可以有多個日期區段，不能再把它壓回 observance 一列。
+CREATE TABLE IF NOT EXISTS topic_observance_occurrences (
+  occurrence_id   TEXT PRIMARY KEY,
+  observance_id   TEXT NOT NULL,
+  occurrence_year INTEGER NOT NULL,
+  starts_on       TEXT NOT NULL,              -- 'YYYY-MM-DD',地方時區的日期
+  ends_on         TEXT,                       -- NULL = 單日；含首尾日
+  calendar_system TEXT NOT NULL,              -- gregorian|chinese-lunisolar|hindu-lunisolar|islamic|solar-term|local
+  timezone        TEXT NOT NULL,              -- IANA timezone,例如 Asia/Taipei
+  date_status     TEXT NOT NULL,              -- confirmed|estimated|local-variant
+  source_ids_json TEXT NOT NULL,              -- 該年度日期的佐證來源
+  updated_at      INTEGER NOT NULL,
+  UNIQUE (observance_id, occurrence_year, starts_on)
+);
+CREATE INDEX IF NOT EXISTS idx_topic_observance_occurrences_date
+  ON topic_observance_occurrences(starts_on, ends_on);
+CREATE INDEX IF NOT EXISTS idx_topic_observance_occurrences_observance
+  ON topic_observance_occurrences(observance_id, occurrence_year, starts_on);
+
 CREATE TABLE IF NOT EXISTS topic_observance_i18n (
   observance_id TEXT NOT NULL,
   locale        TEXT NOT NULL,

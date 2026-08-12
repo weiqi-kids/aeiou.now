@@ -19,6 +19,29 @@ export function monthDay(mmdd) {
   }
 }
 
+// occurrence 的日期是「地方時區的日曆日」而不是 UTC timestamp；用 UTC 建立中午以外的
+// 純日期，只為了讓 Intl 顯示正確年月日，不讓 build 機器的時區改變畫面上的日期。
+export function calendarDate(isoDate) {
+  if (typeof isoDate !== 'string') return '';
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(isoDate.trim());
+  if (!m) return isoDate;
+  const year = Number(m[1]);
+  const month = Number(m[2]);
+  const day = Number(m[3]);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month - 1 || date.getUTCDate() !== day) return isoDate;
+  try {
+    return new Intl.DateTimeFormat(LOCALE, {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      timeZone: 'UTC',
+    }).format(date);
+  } catch {
+    return isoDate;
+  }
+}
+
 // 活動時間。兩個刻意的選擇:
 // 1. 時區固定 UTC —— 不指定的話會吃 build 機器的 TZ,主機與 GitHub Actions 若不同,
 //    同一筆資料會 build 出不同字串,製造沒必要的 diff(export 那層的 hash 防空寫也救不了顯示層)。

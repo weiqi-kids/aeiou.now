@@ -37,7 +37,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import DiscussionRoom from '../../components/DiscussionRoom.astro';
 import { t } from '../../lib/i18n.mjs';
 import { LOCALE, REACTION_SET } from '../../lib/config.mjs';
-import { monthDay, dateTime, countryFlag } from '../../lib/format.mjs';
+import { calendarDate, dateTime, countryFlag } from '../../lib/format.mjs';
 import { withBase } from '../../lib/paths.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
@@ -64,10 +64,21 @@ const title = loc.title || (facts && facts.canonical_name) || topicId;
 const coverRel = coverPath(facts && facts.slug);
 const coverSrc = coverRel ? withBase(coverRel) : null;
 
-// popularity_rank 是資料裡本來就有的順位,拿來決定「先讀哪一個地方表現」
+// next_occurrence 是匯出層依地方時區產出的下一次實際日期；頁面不解析 date_rule。
+// 日期相同時才用 popularity_rank，沒有 occurrence 的舊資料排在最後，且不補猜日期。
 const observances = observancesForFacts(facts)
   .slice()
-  .sort((a, b) => (a.popularity_rank || 99) - (b.popularity_rank || 99));
+  .sort((a, b) => {
+    const aDistance = a.next_occurrence?.distance_days;
+    const bDistance = b.next_occurrence?.distance_days;
+    if (aDistance == null && bDistance == null) return (a.popularity_rank || 99) - (b.popularity_rank || 99);
+    if (aDistance == null) return 1;
+    if (bDistance == null) return -1;
+    return aDistance - bDistance
+      || (a.next_occurrence?.starts_on || '').localeCompare(b.next_occurrence?.starts_on || '')
+      || (a.popularity_rank || 99) - (b.popularity_rank || 99)
+      || String(a.observance_id).localeCompare(String(b.observance_id));
+  });
 const countries = [...new Map(observances.map((o) => [o.country_code, o])).values()];
 const observanceAnchor = (observance) =>
   `observance-${observance.observance_id || `${observance.country_code}-${observance.observance_key || 'default'}`}`;
@@ -238,11 +249,23 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
           {observances.map((c) => (
             <li class="country" id={observanceAnchor(c)}>
               <div class="country-when">
-                <span class="country-date">{monthDay(c.observed_date)}</span>
-                {c.date_range_end && (
-                  <span class="country-date-end">– {monthDay(c.date_range_end)}</span>
+                {c.next_occurrence ? (
+                  <>
+                    <span class="country-date">{calendarDate(c.next_occurrence.starts_on)}</span>
+                    {c.next_occurrence.ends_on && (
+                      <span class="country-date-end">– {calendarDate(c.next_occurrence.ends_on)}</span>
+                    )}
+                  </>
+                ) : (
+                  <span class="country-date">{t('topic.date_unavailable')}</span>
                 )}
                 <span class="country-when-label">{t('topic.local_date')}</span>
+                {c.next_occurrence?.date_status === 'estimated' && (
+                  <span class="country-date-status">{t('topic.date_estimated')}</span>
+                )}
+                {c.next_occurrence?.date_status === 'local-variant' && (
+                  <span class="country-date-status">{t('topic.date_local_variant')}</span>
+                )}
                 {c.date_rule && <span class="country-rule">{c.date_rule}</span>}
               </div>
               <div class="country-body">
@@ -520,6 +543,10 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     font-size: var(--text-xs);
     color: var(--color-ink-soft);
     flex-basis: 100%;
+  }
+  .country-date-status {
+    font-size: var(--text-xs);
+    color: var(--color-ink-soft);
   }
   .country-name {
     margin: 0 0 0.375rem;

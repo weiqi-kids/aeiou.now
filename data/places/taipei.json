@@ -2,26 +2,34 @@
   "city_code": "taipei",
   "places": [
     {
-      "place_id": "plc_01J50000000000000000000P02",
-      "name": "畬室法式巧克力甜點創作",
+      "place_id": "plc_DC1354E38584ADE45E79C7859F",
+      "name": "臺北市立天文科學教育館",
       "country_code": "TW",
-      "address": "台北市大安區",
-      "map_url": "https://www.google.com/maps/search/?api=1&query=Yu%20Chocolatier%20Taipei",
+      "address": "111013 臺北市士林區基河路 363 號",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E5%A4%A9%E6%96%87%E7%A7%91%E5%AD%B8%E6%95%99%E8%82%B2%E9%A4%A8%20%E8%87%BA%E5%8C%97",
       "nav_urls": {
-        "google": "https://www.google.com/maps/search/?api=1&query=Yu%20Chocolatier%20Taipei",
-        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Yu%20Chocolatier%20Taipei",
-        "amap": "https://uri.amap.com/search?keyword=Yu%20Chocolatier%20Taipei"
+        "google": "https://www.google.com/maps/dir/?api=1&destination=%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E5%A4%A9%E6%96%87%E7%A7%91%E5%AD%B8%E6%95%99%E8%82%B2%E9%A4%A8%20%E8%87%BA%E5%8C%97",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E5%A4%A9%E6%96%87%E7%A7%91%E5%AD%B8%E6%95%99%E8%82%B2%E9%A4%A8%20%E8%87%BA%E5%8C%97",
+        "amap": "https://uri.amap.com/search?keyword=%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E5%A4%A9%E6%96%87%E7%A7%91%E5%AD%B8%E6%95%99%E8%82%B2%E9%A4%A8%20%E8%87%BA%E5%8C%97"
       },
-      "mention_count": 8,
+      "source_urls": [
+        "https://tam.gov.taipei/News_Content.aspx?n=794B17A953424610&s=259D7CDEDEAEC283&sms=9D72E82EC16F3E64",
+        "https://tam.gov.taipei/Default.aspx"
+      ],
+      "mention_count": 0,
       "descriptions": {
-        "zh-TW": "台北知名法式巧克力專門店,曾獲國際巧克力賽事獎項,情人節限定禮盒常被推薦。",
-        "en": "Award-winning French-style chocolate atelier in Taipei; its Valentine gift boxes are frequently recommended in discussions.",
-        "ja": "台北の有名なフレンチスタイルのショコラトリー。国際コンクール受賞歴があり、バレンタイン限定ボックスがよく薦められる。"
+        "zh-TW": "2026 年七夕，天文館在宇宙劇場舉辦「星空愛戀音樂會」。",
+        "en": "The museum hosts the Starry Sky Romance Concert for Qixi on August 19, 2026.",
+        "ja": "2026年8月19日の七夕に「星空愛戀音樂會」が開かれる会場です。",
+        "zh-CN": "天文馆将在 2026 年七夕举办“星空爱恋音乐会”。",
+        "hi": "19 अगस्त 2026 को क़ीशी के लिए यहाँ Starry Sky Romance Concert होगा।",
+        "id": "Museum ini menjadi lokasi Starry Sky Romance Concert pada 19 Agustus 2026 untuk Qixi.",
+        "pt-BR": "O museu recebe o Starry Sky Romance Concert em 19 de agosto de 2026, no Qixi."
       },
       "topics": [
         {
           "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
-          "relevance": 0.8
+          "relevance": 0.9
         }
       ]
     }
