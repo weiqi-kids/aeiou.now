@@ -379,10 +379,12 @@ function linkedToTopic(entry, topicId) {
 }
 
 /** 跟某 topic 相關的店家(掃 places/<city>.json,依 topics 關聯過濾) */
-export function placesForTopic(topicId) {
+export function placesForTopic(topicId, cityCode = null) {
   const out = [];
   for (const city of listCityJson('places')) {
+    if (cityCode && city.city_code !== cityCode) continue;
     for (const pl of city.places || []) {
+      if (pl.place_type !== 'permanent' || pl.topic_relevance !== 'direct') continue;
       if (linkedToTopic(pl, topicId)) out.push({ ...pl, city_code: city.city_code });
     }
   }
@@ -390,10 +392,12 @@ export function placesForTopic(topicId) {
 }
 
 /** 跟某 topic 相關的活動(掃 events/<city>.json) */
-export function eventsForTopic(topicId) {
+export function eventsForTopic(topicId, cityCode = null) {
   const out = [];
   for (const city of listCityJson('events')) {
+    if (cityCode && city.city_code !== cityCode) continue;
     for (const ev of city.events || []) {
+      if (ev.start_at == null || !ev.venue || !ev.source_url) continue;
       if (linkedToTopic(ev, topicId)) out.push({ ...ev, city_code: city.city_code });
     }
   }

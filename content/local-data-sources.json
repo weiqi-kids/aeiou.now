@@ -5,75 +5,75 @@
     {
       "url": "https://tam.gov.taipei/News_Content.aspx?n=794B17A953424610&s=259D7CDEDEAEC283&sms=9D72E82EC16F3E64",
       "market": "zh-TW",
-      "kind": "place-and-event",
+      "kind": "event",
       "discovery_query": "site:tam.gov.taipei 七夕 星空愛戀音樂會 天文館",
       "markers": ["星空愛戀音樂會", "天文科學教育館"],
       "date_markers": ["8月19日"]
     },
     {
-      "url": "https://tam.gov.taipei/Default.aspx",
+      "url": "https://www.chocoholic.com.tw/about_2.htm",
       "market": "zh-TW",
       "kind": "place",
-      "discovery_query": "臺北市立天文科學教育館 官方 地址",
-      "markers": ["天文科學教育館", "基河路"]
+      "discovery_query": "Chocoholic 巧克哈客 永康店 台北 官方 地址",
+      "markers": ["巧克哈客", "永康街7巷2號"]
     },
     {
       "url": "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/350/detail.html",
       "market": "ja",
-      "kind": "place-and-event",
+      "kind": "event",
       "discovery_query": "site:tamaskc.metro.tokyo.lg.jp 煌めきバレンタインマルシェ 東京たま未来メッセ",
       "markers": ["煌めきバレンタインマルシェ", "東京たま未来メッセ"],
       "date_markers": ["2026年2月1日", "2026/2/1", "2026.2.1"]
     },
     {
-      "url": "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/index.html",
+      "url": "https://mini-mal.tokyo/pages/access",
       "market": "ja",
       "kind": "place",
-      "discovery_query": "東京たま未来メッセ 公式 八王子 明神町",
-      "markers": ["東京たま未来メッセ", "明神町"]
+      "discovery_query": "Minimal 富ヶ谷本店 東京 公式 店舗住所",
+      "markers": ["Minimal 富ヶ谷本店", "富ヶ谷2-1-9"]
     },
     {
       "url": "https://xxgk.shbsq.gov.cn/article.html?infoid=ad7e7534-18a7-45bc-bda1-99b3ce4ca731",
       "market": "zh-CN",
-      "kind": "place-and-event",
+      "kind": "event",
       "discovery_query": "site:shbsq.gov.cn 2026 七夕甜蜜季 龙盛活力小镇",
       "markers": ["七夕甜蜜季", "龙盛活力小镇"],
       "date_markers": ["2026年8月19日"]
     },
     {
+      "url": "https://english.shanghai.gov.cn/en-FirstStores/20260624/50f678163fcf42a1b0dc4409376de73b.html",
+      "market": "zh-CN",
+      "kind": "place",
+      "discovery_query": "Shanghai government Godiva Xintiandi flagship store 119 Madang Road",
+      "markers": ["Godiva", "119 Madang Road"]
+    },
+    {
       "url": "https://visitloveland.com/sweetheartfestival/",
       "market": "en",
-      "kind": "place-and-event",
+      "kind": "event",
       "discovery_query": "site:visitloveland.com Sweetheart Festival 2027 Loveland",
       "markers": ["Sweetheart Festival", "2027"],
       "date_markers": ["FEBRUARY 12", "February 12"]
     },
     {
+      "url": "https://visitloveland.com/visitors-center/",
+      "market": "en",
+      "kind": "place",
+      "discovery_query": "Visit Loveland East Gateway Visitors Center official address",
+      "markers": ["East Gateway Visitor Center", "5400 Stone Creek Circle"]
+    },
+    {
       "url": "https://newsroom.feverup.com/en-IN/262080-candlelight-s-valentine-s-day-special-brings-a-romantic-experience-to-pune-on-14th-february/",
       "market": "hi",
-      "kind": "place-and-event",
+      "kind": "event",
       "discovery_query": "site:feverup.com Pune Candlelight Valentine's Day Nehru Memorial Hall 2026",
       "markers": ["Valentine", "Pune"],
       "date_markers": ["14th February", "February 14"]
     },
     {
-      "url": "https://nehruhall.com/contact/",
-      "market": "hi",
-      "kind": "place",
-      "discovery_query": "Nehru Memorial Hall Pune official contact Atur Foundation House",
-      "markers": ["Nehru Memorial Hall", "Atur Foundation"]
-    },
-    {
-      "url": "https://www.soehannahall.com/contact-us/",
-      "market": "id",
-      "kind": "place",
-      "discovery_query": "Soehanna Hall Jakarta official contact SCBD",
-      "markers": ["Soehanna Hall", "SCBD"]
-    },
-    {
       "url": "https://www.soehannahall.com/news_and_event/night-music-lights-candlelight-concerts-soehanna-hall/",
       "market": "id",
-      "kind": "place-and-event",
+      "kind": "event",
       "discovery_query": "site:soehannahall.com Valentine's Day Special February 2026 Jakarta",
       "markers": ["Valentine", "Soehanna"],
       "date_markers": ["13 February", "February 13"]
@@ -81,17 +81,31 @@
     {
       "url": "https://eventos.sp.senac.br/evento/workshop-mesa-para-dois-food-design-para-o-dia-dos-namorados/",
       "market": "pt-BR",
-      "kind": "place-and-event",
+      "kind": "event",
       "discovery_query": "site:eventos.sp.senac.br Mesa para Dois Dia dos Namorados Senac Aclimação",
       "markers": ["Mesa para Dois", "Dia dos Namorados"],
       "date_markers": ["08/06/2026", "8/6/2026"]
     },
     {
-      "url": "https://eventos.sp.senac.br/unidades/senac-aclimacao/",
+      "url": "https://www.choconuts.in/",
+      "market": "hi",
+      "kind": "place",
+      "discovery_query": "Choconuts Pune official chocolate shop Kumar Pavilion address",
+      "markers": ["Choconuts", "Kumar Pavilion", "chocolates"]
+    },
+    {
+      "url": "https://www.godiva.co.id/our-location/",
+      "market": "id",
+      "kind": "place",
+      "discovery_query": "GODIVA Plaza Indonesia official store address Jakarta",
+      "markers": ["GODIVA Plaza Indonesia", "Level 1 Unit 114", "Thamrin"]
+    },
+    {
+      "url": "https://www.dengo.com.br/nossas-lojas",
       "market": "pt-BR",
       "kind": "place",
-      "discovery_query": "site:eventos.sp.senac.br/unidades Senac Aclimação eventos",
-      "markers": ["Senac Aclimação"]
+      "discovery_query": "Dengo Fábrica de Dengo São Paulo endereço oficial",
+      "markers": ["Fábrica de Dengo", "Avenida Brigadeiro Faria Lima, 196"]
     }
   ]
 }

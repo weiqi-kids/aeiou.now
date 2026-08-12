@@ -2,29 +2,30 @@
   "city_code": "tokyo",
   "places": [
     {
-      "place_id": "plc_53E4F4151B72E03376E6B7BC7B",
-      "name": "東京たま未来メッセ（東京都立多摩産業交流センター）",
+      "place_id": "plc_3DFEF487A8164B5C5C418583C3",
+      "name": "Minimal 富ヶ谷本店",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
       "country_code": "JP",
-      "address": "〒192-0046 東京都八王子市明神町3丁目19-2",
-      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E3%81%9F%E3%81%BE%E6%9C%AA%E6%9D%A5%E3%83%A1%E3%83%83%E3%82%BB%20%E5%85%AB%E7%8E%8B%E5%AD%90",
+      "address": "〒151-0063 東京都渋谷区富ヶ谷 2-1-9",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Minimal%20%E5%AF%8C%E3%83%B6%E8%B0%B7%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC",
       "nav_urls": {
-        "google": "https://www.google.com/maps/dir/?api=1&destination=%E6%9D%B1%E4%BA%AC%E3%81%9F%E3%81%BE%E6%9C%AA%E6%9D%A5%E3%83%A1%E3%83%83%E3%82%BB%20%E5%85%AB%E7%8E%8B%E5%AD%90",
-        "baidu": "https://map.baidu.com/search/?querytype=s&wd=%E6%9D%B1%E4%BA%AC%E3%81%9F%E3%81%BE%E6%9C%AA%E6%9D%A5%E3%83%A1%E3%83%83%E3%82%BB%20%E5%85%AB%E7%8E%8B%E5%AD%90",
-        "amap": "https://uri.amap.com/search?keyword=%E6%9D%B1%E4%BA%AC%E3%81%9F%E3%81%BE%E6%9C%AA%E6%9D%A5%E3%83%A1%E3%83%83%E3%82%BB%20%E5%85%AB%E7%8E%8B%E5%AD%90"
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Minimal%20%E5%AF%8C%E3%83%B6%E8%B0%B7%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Minimal%20%E5%AF%8C%E3%83%B6%E8%B0%B7%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC",
+        "amap": "https://uri.amap.com/search?keyword=Minimal%20%E5%AF%8C%E3%83%B6%E8%B0%B7%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC"
       },
       "source_urls": [
-        "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/350/detail.html",
-        "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/index.html"
+        "https://mini-mal.tokyo/pages/access"
       ],
       "mention_count": 0,
       "descriptions": {
-        "zh-TW": "東京たま未来メッセ曾於 2026 年 2 月 1 日舉辦「煌めきバレンタインマルシェ」。",
-        "en": "Tokyo Tama Mirai Messe hosted the Kirameki Valentine Marche on February 1, 2026.",
-        "ja": "東京たま未来メッセでは、2026年2月1日に「煌めきバレンタインマルシェ」が開かれました。",
-        "zh-CN": "东京多摩未来会展中心曾于 2026 年 2 月 1 日举办“闪耀情人节市集”。",
-        "hi": "Tokyo Tama Mirai Messe में 1 फ़रवरी 2026 को Kirameki Valentine Marche हुआ था।",
-        "id": "Tokyo Tama Mirai Messe menjadi lokasi Kirameki Valentine Marche pada 1 Februari 2026.",
-        "pt-BR": "O Tokyo Tama Mirai Messe recebeu a Kirameki Valentine Marche em 1º de fevereiro de 2026."
+        "zh-TW": "東京富ヶ谷的常設巧克力店，官方列明可內用、外帶與營業地址，主打可可風味的巧克力。",
+        "en": "A permanent chocolate shop in Tomigaya, Tokyo. The official shop page lists dine-in and takeaway service, its address and a cacao-focused product line.",
+        "ja": "東京・富ヶ谷の常設チョコレート店。公式サイトにはイートインとテイクアウト、住所、カカオの魅力を生かした商品が案内されています。",
+        "zh-CN": "东京富谷的常设巧克力店，官网列有堂食、外带、门店地址和以可可风味为主的产品。",
+        "hi": "टोक्यो के तोमिगाया में स्थायी चॉकलेट दुकान। आधिकारिक पेज पर बैठकर खाने और टेकअवे, पता और कोको पर आधारित उत्पादों की जानकारी है।",
+        "id": "Toko cokelat permanen di Tomigaya, Tokyo. Halaman resminya mencantumkan layanan makan di tempat dan bawa pulang, alamat, serta produk yang menonjolkan rasa kakao.",
+        "pt-BR": "Uma loja permanente de chocolate em Tomigaya, Tóquio. A página oficial informa serviço para consumo no local e para viagem, endereço e produtos centrados no cacau."
       },
       "topics": [
         {

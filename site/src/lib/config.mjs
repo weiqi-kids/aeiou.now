@@ -9,18 +9,29 @@ export const WINDOWS = ['24h', '72h', '7d', '1m', '3m', '1y'];
 // 24H 以上屬靜態層。順序照草案逐字:[8H][24H][72H][7D][1M][3M][1Y]。
 export const TREND_WINDOWS = ['8h', ...WINDOWS];
 
-// 語系 → 該語系的市場國家(ISO 3166-1 alpha-2)。
-// 七語系是七個獨立的站,每個站服務一個市場,所以「附近訊息 / 活動資訊」在還不知道讀者位置時
-// 一律先以本語系市場的城市為主(用戶 2026-08-11:「都已經語系了,就是以當語系為主」)。
-// en 沒有單一市場,故為 null:沒有市場可偏袒時就退到下一層排序鍵。
+// 語系 → 該語系站的代表市場國家(ISO 3166-1 alpha-2)。
+// 七語系是七個獨立的站,每個站服務一個代表市場；「附近訊息 / 活動資訊」
+// 在靜態頁先以這個市場為預設，不把七市場資料混在每一頁。
 export const MARKET_COUNTRY = {
   'zh-TW': 'TW',
-  en: null,
+  en: 'US',
   ja: 'JP',
   'zh-CN': 'CN',
   hi: 'IN',
   id: 'ID',
   'pt-BR': 'BR',
+};
+
+// 靜態站 Topic 內「你附近／相關活動」的代表城市。
+// data/ 仍保留七市場；單一語系頁只渲染自己的城市，跨市場比較留在 🌎 區塊。
+export const MARKET_CITY = {
+  'zh-TW': 'taipei',
+  en: 'loveland',
+  ja: 'tokyo',
+  'zh-CN': 'shanghai',
+  hi: 'pune',
+  id: 'jakarta',
+  'pt-BR': 'sao-paulo',
 };
 
 // REACTION_SET 跨 Track 契約常數(不含 👍,用戶明示排除)

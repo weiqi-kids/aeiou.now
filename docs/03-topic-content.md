@@ -93,7 +93,10 @@ How do people express affection?
 在地地點與活動不是 Topic markdown 的欄位。第一批人工採集樣本放在
 `content/local-sample-data.json`，由 `node scripts/update-local-data.mjs` 驗證來源、清理過期活動後匯入；
 `content/local-data-sources.json` 保存七市場的搜尋候選詞與官方頁面核對規則；
-每筆都要有官方或主辦方來源，未查到可核對日期的活動不建立 `events` 資料列。
+每筆都要有官方或主辦方來源。`places` 只收可持續到訪、且與該 Topic 直接相關的常設地點
+（`place_type: "permanent"`、`topic_relevance: "direct"`），`events` 只收有明確日期、
+場地與來源的活動；活動場地不能因為辦過一場活動就直接變成 `places`。替換錯誤地點時，
+舊列可列在 `retired_place_ids` 供一次性清理，但不會再被發布。
 
 ```bash
 node scripts/import-topics.mjs

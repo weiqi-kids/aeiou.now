@@ -326,6 +326,13 @@ CREATE INDEX idx_events_time ON events(city_code, start_at);
 `data/events/<city_code>.json`。每個地點保留 `source_urls`；每個活動保留
 `source_id` 與匯出後的 `source_url`。沒有可核對的官方或主辦方來源，不建立資料列。
 
+兩個集合的語意不能互換：`places` 只放有可持續到訪依據的常設地點（匯出欄位
+`place_type: "permanent"`）；`events` 只放有明確日期、場地與來源的單次或期間活動。
+地點還必須在人工輸入中標為 `topic_relevance: "direct"`；活動在哪裡舉辦，不代表該場地
+就應複製成這個 Topic 的 `place`。只有另有常設地點來源時才建立 `places` 列。
+`retired_place_ids` 僅是清掉舊錯誤資料的遷移清單，
+不會被重新發布或當成目前地點來源。
+
 手動執行：
 
 ```bash
