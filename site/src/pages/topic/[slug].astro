@@ -8,7 +8,7 @@
 //   │  ├ 📍 #nearby(上半)    │  💬 #talking          │
 //   │  └ 🎉 #events(下半)    │  (整欄高)              │
 //   └───────────────────────┴───────────────────────┘
-//   之後依序:🌎 #ask 入口 → 歷史精華 #highlights → 國旗列 + 🌎 #world(整頁最後)
+//   之後依序:🌎 #ask 入口 → 歷史精華 #highlights → 🌎 #world(整頁最後)
 //
 // 2026-08-11 的修正史:
 //   ① 資訊架構:討論回到主位。更早的版本把「全世界怎麼過」做成招牌大圖、討論縮成小面板,
@@ -27,6 +27,7 @@
 //      這裡呈現的是「同一個議題,七個市場各自怎麼說它」。
 //   ⑥(第 11 輪)分類/長青徽章列**整列刪除**:header 內不得有 <ul>,article 直屬也不得有 <ul>。
 //   ⑦「🌎 全世界怎麼過」在頁首只留一個**連結**,實際區塊在**整頁最下面**(第 11 輪),
+//      國家導覽直接放在 #world > summary > h2 右側,不另開 article 直屬 nav 區塊。
 //      預設收合、點了才展開並捲過去。收合用原生 <details>:HTML 出廠是 open,
 //      **有 JS 才收起來**——沒有 JS 的讀者照樣讀得到各國怎麼過,不是永遠看不到。
 //      捲動一律原生錨點 + CSS scroll-behavior(global.css,含 reduced-motion 保護),不寫 JS 動畫。
@@ -230,23 +231,22 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
 
 
     <!-- 🌎 全世界怎麼過:整頁最後一段(第 11 輪用戶指示)。頁首那個「🌎 … ↓」連結照舊指過來,
-         現在等於捲到頁尾。國旗列是這一段的索引,所以緊貼在它前面。 -->
+         現在等於捲到頁尾。國家導覽是 #world summary 的一部分,緊貼在標題右側。 -->
     {countries.length > 0 && (
       <Fragment>
-      <nav class="flag-band" aria-label={t('topic.countries_label')}>
-        {countries.map((c) => (
-          <a class="flag-chip" href={`#${observanceAnchor(c)}`}>
-            <span class="flag-glyph" aria-hidden="true">{countryFlag(c.country_code)}</span>
-            <span class="flag-name">{countryName(c.country_code)}</span>
-          </a>
-        ))}
-      </nav>
-
       <!-- 出廠就是 open:沒有 JS 的讀者要能讀到各國怎麼過。
            下面那支 is:inline 的小 script 才把它收起來(有 JS 才有「點了才展開」)。 -->
       <details class="zone-world" id="world" open>
         <summary class="world-summary">
           <h2><span class="section-emoji" aria-hidden="true">🌎</span>{t('topic.how_world_celebrates')}</h2>
+          <nav class="world-countries" aria-label={t('topic.countries_label')}>
+            {countries.map((c) => (
+              <a class="flag-chip" href={`#${observanceAnchor(c)}`}>
+                <span class="flag-glyph" aria-hidden="true">{countryFlag(c.country_code)}</span>
+                <span class="flag-name">{countryName(c.country_code)}</span>
+              </a>
+            ))}
+          </nav>
         </summary>
         <ul class="country-list">
           {observances.map((c) => (
@@ -488,6 +488,10 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     scroll-margin-block-start: 1rem;
   }
   .world-summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
     cursor: pointer;
     border-block-start: 0.125rem solid var(--color-text);
     padding-block-start: 0.75rem;
@@ -496,7 +500,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     font-size: var(--text-base);
   }
   .world-summary h2 {
-    display: inline;
+    flex: 0 0 auto;
     margin: 0;
   }
   .country-list {
@@ -571,32 +575,31 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     font-size: var(--text-sm);
   }
 
-  /* ── 🇺🇸🇯🇵🇹🇼… 國旗列:整段色帶,是這一頁「跨國」身分的招牌 ── */
-  .flag-band {
-    display: flex;
+  /* ── 🇺🇸🇯🇵🇹🇼… 國家導覽:直接在 #world summary 標題右側,不另開區塊 ── */
+  .world-countries {
+    display: inline-flex;
     flex-wrap: wrap;
-    gap: 0.5rem 1rem;
-    background: var(--color-primary-soft);
-    border-block: 0.0625rem solid var(--color-primary-line);
-    padding: 1rem clamp(1rem, 4vw, 2rem);
-    margin-inline: calc(-1 * clamp(1rem, 4vw, 2rem));
-    margin-block-end: clamp(1.5rem, 4vw, 2rem);
+    align-items: baseline;
+    justify-content: flex-end;
+    gap: 0.35rem 0.9rem;
+    margin-inline-start: auto;
+    vertical-align: middle;
   }
-  .flag-chip {
+  .world-countries .flag-chip {
     display: inline-flex;
     align-items: baseline;
     gap: 0.4rem;
     text-decoration: none;
     color: var(--color-primary);
   }
-  .flag-chip:hover .flag-name {
+  .world-countries .flag-chip:hover .flag-name {
     text-decoration: underline;
   }
-  .flag-glyph {
+  .world-countries .flag-glyph {
     font-size: var(--text-xl);
     line-height: 1;
   }
-  .flag-name {
+  .world-countries .flag-name {
     font-size: var(--text-xs);
   }
 

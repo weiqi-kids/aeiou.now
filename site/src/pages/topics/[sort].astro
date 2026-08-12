@@ -4,34 +4,29 @@
 //
 // 「長相一致」是硬要求(2026-08-11 用戶指正):這三頁不是光禿禿的 Topic 標題列,
 // 每一列跟首頁一樣是左欄主題介紹 + 右欄該 Topic 最高的三篇(見 TopicRow / TopicPosts)。
-// nearby / events 的城市分組保留——那是分組,不是另一種列。
+// nearby / events 只讀本語系站的代表城市；頁面不把七個市場的資料混在一起。
 //
 // 用戶原話:「全球熱門、熱門話題、附近訊息、活動資訊……這些其實都是 Topic 的排序。」
 // 所以這三頁列出來的一律是 **Topic**:
 //   · today  熱門話題 = 依熱度(topics index 的 scores['24h'])由高到低的 Topic
 //            (2026-08-11 用戶指示:「/topics/today/ 的 h1 才是『🔥熱門話題』」——
 //             首頁與這一頁的語意對調了,首頁是近期/當令,這一頁是熱門)
-//   · nearby 附近訊息 = 有在地資訊(places/<city>.json 有條目)的 Topic
-//   · events 活動資訊 = 有活動(events/<city>.json 有條目)的 Topic
+//   · nearby 附近訊息 = 本語系代表城市有永久、直接相關地點的 Topic
+//   · events 活動資訊 = 本語系代表城市有日期、場地、來源完整活動的 Topic
 // 店家與活動本身不在這裡列——它們屬於各自的 Topic 頁(草案 §44 的 📍 Near You / 🎉 Events)。
 //
 // 頁首只有 <h1>(2026-08-11 用戶指示):眉標「議題排序」與所有說明段落整批刪除,
 // 「你多個『議題排序』要幹嘛?浪費空間!」不知道讀者在哪裡也不要寫成一句給讀者看的自白。
 //
-// nearby / events 的排序不再只是「按城市分組讓讀者自己挑」:
-//   ① 靜態層先以**本語系市場**(config.mjs 的 MARKET_COUNTRY)的城市排前面——
-//      七語系是七個獨立的站,一個站服務一個市場;
-//   ② 用戶端拿 GET /v1/me(Cloudflare 每次請求都給位置,不必等使用者發過文、也不問 GPS)
-//      之後改以**讀者實際位置**為準:同城市 > 同國家 > 其他(docs/02 §5.2 的階層,
-//      不算距離、不存座標)。讀者的國家問不出來時才退回本語系市場當預設位置;
-//   ③ 同一層再比 emoji 數(GET /v1/reactions/summary 的 reaction 總數),高的在前。
-// 任何一支 fetch 失敗 → 維持靜態的預設順序,不清空、不顯示錯誤(見頁尾 script)。
+// nearby / events 的排序只在這個代表城市的 Topic 之間進行；
+// 以 GET /v1/reactions/summary 取得 emoji 總數後在同一城市內重排。
+// 任何 fetch 失敗 → 維持靜態順序,不清空、不顯示錯誤(見頁尾 script)。
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import TopicBoard from '../../components/TopicBoard.astro';
 import { t } from '../../lib/i18n.mjs';
 import { sortLabel } from '../../lib/nav.mjs';
 import { dateTime } from '../../lib/format.mjs';
-import { LOCALE, MARKET_COUNTRY } from '../../lib/config.mjs';
+import { LOCALE, MARKET_CITY } from '../../lib/config.mjs';
 import {
   topicsByHeat, topicsWithPlacesByCity, topicsWithEventsByCity, cityName,
 } from '../../lib/data.mjs';
@@ -46,19 +41,7 @@ export function getStaticPaths() {
 
 const { sort } = Astro.params;
 const HEAT_WINDOW = '24h';
-const market = MARKET_COUNTRY[LOCALE] || null;
-
-// 靜態預設順序:本語系市場的城市在前,其餘照城市代碼(build 出來的順序對每個讀者都一樣,
-// 所以只能靠市場,不能靠讀者——讀者那一層由用戶端接手)。
-function byMarketFirst(cities) {
-  return cities
-    .slice()
-    .sort(
-      (a, b) =>
-        (a.country_code === market ? 0 : 1) - (b.country_code === market ? 0 : 1) ||
-        String(a.city_code).localeCompare(String(b.city_code))
-    );
-}
+const marketCity = MARKET_CITY[LOCALE] || null;
 
 let groups = [];
 let empty = '';
@@ -75,7 +58,9 @@ if (sort === 'today') {
 } else {
   const isNearby = sort === 'nearby';
   empty = isNearby ? t('sort.nearby_empty') : t('sort.events_empty');
-  const cities = byMarketFirst(isNearby ? topicsWithPlacesByCity() : topicsWithEventsByCity());
+  const cities = isNearby
+    ? topicsWithPlacesByCity(marketCity)
+    : topicsWithEventsByCity(marketCity);
   groups = cities.map((city) => ({
     city_code: city.city_code,
     rows: city.topics.map((topic) => ({
@@ -91,7 +76,6 @@ if (sort === 'today') {
   sortConfig = {
     api: import.meta.env.PUBLIC_API_URL || '',
     targetType: isNearby ? 'place' : 'event',
-    market: market,
     groups: cities.map((city) => ({
       city: city.city_code,
       country: city.country_code || null,
@@ -144,15 +128,11 @@ const sortConfigJson = sortConfig
   // 附近訊息 / 活動資訊的用戶端重排(today 頁沒有 [data-sort-config],這一段整個不跑)。
   //
   // 排序鍵(由高到低):
-  //   ① 讀者位置階層:同城市 > 同國家 > 其他(docs/02 §5.2;不算距離、不存座標)。
-  //      讀者的國家問不出來(/v1/me 失敗、country_code 為 null、或 PUBLIC_API_URL 未設)時,
-  //      **退回本語系市場當預設位置**——也就是靜態 HTML 已經排好的那個順序。
-  //   ② 同一層比 emoji 數:該 Topic 底下 places/events 的 reaction 總數,高的在前。
+  //   ① 本語系代表城市只有一組,不做跨城市搬移。
+  //   ② 該 Topic 底下 places/events 的 reaction 總數,高的在前。
   //   ③ 再同分就照靜態順序,結果才穩定。
   //
-  // 降級:兩支 fetch 都拿不到東西就原地不動——維持靜態順序,不清空、不顯示錯誤文字。
-  // 讀者位置一律問 GET /v1/me(Cloudflare 的 request.cf,每次請求都帶),不問 GPS:
-  // GPS 給的是經緯度,換成城市要反向地理編碼,而資料模型刻意只存到城市級。
+  // 降級:fetch 拿不到東西就原地不動——維持靜態順序,不清空、不顯示錯誤文字。
   const cfgNode = document.querySelector('[data-sort-config]');
   const container = document.querySelector('[data-sort-groups]');
   let cfg = null;
@@ -173,9 +153,6 @@ const sortConfigJson = sortConfig
     });
 
     const ok = (res) => (res.ok ? res.json() : null);
-    const me = fetch(cfg.api + '/v1/me', { credentials: 'include' })
-      .then(ok)
-      .catch(() => null);
     const summary = ids.length
       ? fetch(
           cfg.api +
@@ -189,8 +166,8 @@ const sortConfigJson = sortConfig
           .catch(() => null)
       : Promise.resolve(null);
 
-    Promise.all([me, summary]).then(([who, sums]) => {
-      if (!who && !sums) return; // 兩邊都掛 → 靜態順序原樣留著
+    summary.then((sums) => {
+      if (!sums) return; // 請求掛掉 → 靜態順序原樣留著
       const items = (sums && sums.items) || {};
       const emojiTotal = (targets) => {
         let n = 0;
@@ -205,31 +182,20 @@ const sortConfigJson = sortConfig
         return n;
       };
 
-      const readerCity = (who && who.city_code) || null;
-      // 國家問不出來就用本語系市場頂上:靜態順序本來就是照它排的,所以等於不動。
-      const readerCountry = (who && who.country_code) || cfg.market || null;
-
       const ranked = cfg.groups.map((group, i) => {
         const topics = (group.topics || []).map((topic, j) => ({
           id: topic.id,
           emoji: emojiTotal(topic.targets),
           i: j,
         }));
-        const tier =
-          readerCity && group.city === readerCity
-            ? 0
-            : readerCountry && group.country === readerCountry
-              ? 1
-              : 2;
         return {
           city: group.city,
-          tier: tier,
           emoji: topics.reduce((n, topic) => n + topic.emoji, 0),
           i: i,
           topics: topics.sort((a, b) => b.emoji - a.emoji || a.i - b.i),
         };
       });
-      ranked.sort((a, b) => a.tier - b.tier || b.emoji - a.emoji || a.i - b.i);
+      ranked.sort((a, b) => b.emoji - a.emoji || a.i - b.i);
 
       const sections = new Map();
       container.querySelectorAll('[data-city]').forEach((node) => {
