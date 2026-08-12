@@ -19,7 +19,46 @@
       "popularity_rank": 1,
       "source_ids": [
         "src_242A0D06E8A421F48C6F258A"
-      ]
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_BR_independence-day_2026_2026-09-07",
+          "occurrence_year": 2026,
+          "starts_on": "2026-09-07",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_242A0D06E8A421F48C6F258A"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_BR_independence-day_2027_2027-09-07",
+          "occurrence_year": 2027,
+          "starts_on": "2027-09-07",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_242A0D06E8A421F48C6F258A"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_BR_independence-day_2026_2026-09-07",
+        "occurrence_year": 2026,
+        "starts_on": "2026-09-07",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "America/Sao_Paulo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_242A0D06E8A421F48C6F258A"
+        ],
+        "distance_days": 26
+      }
     },
     {
       "observance_id": "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_CN_national-day",
@@ -32,7 +71,46 @@
       "popularity_rank": 1,
       "source_ids": [
         "src_BC89514E4D7BF213AE54D2E0"
-      ]
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_CN_national-day_2026_2026-10-01",
+          "occurrence_year": 2026,
+          "starts_on": "2026-10-01",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_B85FD60157689DB2DE3829B8"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_CN_national-day_2027_2027-10-01",
+          "occurrence_year": 2027,
+          "starts_on": "2027-10-01",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_B85FD60157689DB2DE3829B8"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_CN_national-day_2026_2026-10-01",
+        "occurrence_year": 2026,
+        "starts_on": "2026-10-01",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Shanghai",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_B85FD60157689DB2DE3829B8"
+        ],
+        "distance_days": 50
+      }
     },
     {
       "observance_id": "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_ID_independence-day",
@@ -45,7 +123,46 @@
       "popularity_rank": 1,
       "source_ids": [
         "src_4E7E151DED2D9D7D8291FD00"
-      ]
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_ID_independence-day_2026_2026-08-17",
+          "occurrence_year": 2026,
+          "starts_on": "2026-08-17",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_4E7E151DED2D9D7D8291FD00"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_ID_independence-day_2027_2027-08-17",
+          "occurrence_year": 2027,
+          "starts_on": "2027-08-17",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_4E7E151DED2D9D7D8291FD00"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_ID_independence-day_2026_2026-08-17",
+        "occurrence_year": 2026,
+        "starts_on": "2026-08-17",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Jakarta",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_4E7E151DED2D9D7D8291FD00"
+        ],
+        "distance_days": 5
+      }
     },
     {
       "observance_id": "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_IN_independence-day",
@@ -58,7 +175,46 @@
       "popularity_rank": 1,
       "source_ids": [
         "src_8881C7B43193D1F50ED0E47C"
-      ]
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_IN_independence-day_2026_2026-08-15",
+          "occurrence_year": 2026,
+          "starts_on": "2026-08-15",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_8881C7B43193D1F50ED0E47C"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_IN_independence-day_2027_2027-08-15",
+          "occurrence_year": 2027,
+          "starts_on": "2027-08-15",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_8881C7B43193D1F50ED0E47C"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_IN_independence-day_2026_2026-08-15",
+        "occurrence_year": 2026,
+        "starts_on": "2026-08-15",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Kolkata",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_8881C7B43193D1F50ED0E47C"
+        ],
+        "distance_days": 3
+      }
     },
     {
       "observance_id": "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_JP_national-foundation-day",
@@ -71,7 +227,46 @@
       "popularity_rank": 1,
       "source_ids": [
         "src_4D5C39BF5379FD2F196028DD"
-      ]
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_JP_national-foundation-day_2026_2026-02-11",
+          "occurrence_year": 2026,
+          "starts_on": "2026-02-11",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_4D5C39BF5379FD2F196028DD"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_JP_national-foundation-day_2027_2027-02-11",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-11",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_4D5C39BF5379FD2F196028DD"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_JP_national-foundation-day_2027_2027-02-11",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-11",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Tokyo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_4D5C39BF5379FD2F196028DD"
+        ],
+        "distance_days": 183
+      }
     },
     {
       "observance_id": "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_TW_national-day",
@@ -84,7 +279,46 @@
       "popularity_rank": 1,
       "source_ids": [
         "src_35289CEE1B6C357FD2D98A79"
-      ]
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_TW_national-day_2026_2026-10-10",
+          "occurrence_year": 2026,
+          "starts_on": "2026-10-10",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_35289CEE1B6C357FD2D98A79"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_TW_national-day_2027_2027-10-10",
+          "occurrence_year": 2027,
+          "starts_on": "2027-10-10",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_35289CEE1B6C357FD2D98A79"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_TW_national-day_2026_2026-10-10",
+        "occurrence_year": 2026,
+        "starts_on": "2026-10-10",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Taipei",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_35289CEE1B6C357FD2D98A79"
+        ],
+        "distance_days": 59
+      }
     },
     {
       "observance_id": "obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_US_independence-day",
@@ -97,7 +331,46 @@
       "popularity_rank": 1,
       "source_ids": [
         "src_F936765E8EFFBF4BDCD32B47"
-      ]
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_US_independence-day_2026_2026-07-04",
+          "occurrence_year": 2026,
+          "starts_on": "2026-07-04",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_F936765E8EFFBF4BDCD32B47"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_US_independence-day_2027_2027-07-04",
+          "occurrence_year": 2027,
+          "starts_on": "2027-07-04",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_F936765E8EFFBF4BDCD32B47"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFVDX5QSGEZAKM9ABSH_US_independence-day_2027_2027-07-04",
+        "occurrence_year": 2027,
+        "starts_on": "2027-07-04",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "America/New_York",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_F936765E8EFFBF4BDCD32B47"
+        ],
+        "distance_days": 326
+      }
     }
   ],
   "countries": [
@@ -151,6 +424,7 @@
     "src_4D5C39BF5379FD2F196028DD",
     "src_4E7E151DED2D9D7D8291FD00",
     "src_8881C7B43193D1F50ED0E47C",
+    "src_B85FD60157689DB2DE3829B8",
     "src_BC89514E4D7BF213AE54D2E0",
     "src_F936765E8EFFBF4BDCD32B47"
   ]

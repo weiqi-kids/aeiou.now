@@ -19,7 +19,46 @@
       "popularity_rank": 1,
       "source_ids": [
         "src_242A0D06E8A421F48C6F258A"
-      ]
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_BR_christmas_2026_2026-12-25",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_242A0D06E8A421F48C6F258A"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_BR_christmas_2027_2027-12-25",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_242A0D06E8A421F48C6F258A"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_BR_christmas_2026_2026-12-25",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-25",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "America/Sao_Paulo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_242A0D06E8A421F48C6F258A"
+        ],
+        "distance_days": 135
+      }
     },
     {
       "observance_id": "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_CN_lantern-festival",
@@ -32,7 +71,46 @@
       "popularity_rank": 1,
       "source_ids": [
         "src_BC89514E4D7BF213AE54D2E0"
-      ]
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_CN_lantern-festival_2026_2026-03-03",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-03",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E405440D6A7FBA9FBC2398FD"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_CN_lantern-festival_2027_2027-02-20",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-20",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_509D6FE3CDE66C39605277AB"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_CN_lantern-festival_2027_2027-02-20",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-20",
+        "ends_on": null,
+        "calendar_system": "chinese-lunisolar",
+        "timezone": "Asia/Shanghai",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_509D6FE3CDE66C39605277AB"
+        ],
+        "distance_days": 192
+      }
     },
     {
       "observance_id": "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_IN_diwali",
@@ -45,7 +123,46 @@
       "popularity_rank": 1,
       "source_ids": [
         "src_CF4E2673DF39A2EF184903B2"
-      ]
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_IN_diwali_2026_2026-11-08",
+          "occurrence_year": 2026,
+          "starts_on": "2026-11-08",
+          "ends_on": null,
+          "calendar_system": "hindu-lunisolar",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_CF4E2673DF39A2EF184903B2"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_IN_diwali_2027_2027-10-29",
+          "occurrence_year": 2027,
+          "starts_on": "2027-10-29",
+          "ends_on": null,
+          "calendar_system": "hindu-lunisolar",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_74F3E296414F83CD9774DF30"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_IN_diwali_2026_2026-11-08",
+        "occurrence_year": 2026,
+        "starts_on": "2026-11-08",
+        "ends_on": null,
+        "calendar_system": "hindu-lunisolar",
+        "timezone": "Asia/Kolkata",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_CF4E2673DF39A2EF184903B2"
+        ],
+        "distance_days": 88
+      }
     },
     {
       "observance_id": "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_TW_lantern-festival",
@@ -58,7 +175,46 @@
       "popularity_rank": 1,
       "source_ids": [
         "src_F12F15DB053D422FA98E2E78"
-      ]
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_TW_lantern-festival_2026_2026-03-03",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-03",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E405440D6A7FBA9FBC2398FD"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_TW_lantern-festival_2027_2027-02-20",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-20",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_509D6FE3CDE66C39605277AB"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_TW_lantern-festival_2027_2027-02-20",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-20",
+        "ends_on": null,
+        "calendar_system": "chinese-lunisolar",
+        "timezone": "Asia/Taipei",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_509D6FE3CDE66C39605277AB"
+        ],
+        "distance_days": 192
+      }
     },
     {
       "observance_id": "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas",
@@ -71,7 +227,46 @@
       "popularity_rank": 1,
       "source_ids": [
         "src_F936765E8EFFBF4BDCD32B47"
-      ]
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas_2026_2026-12-25",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_F936765E8EFFBF4BDCD32B47"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas_2027_2027-12-25",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_F936765E8EFFBF4BDCD32B47"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas_2026_2026-12-25",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-25",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "America/New_York",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_F936765E8EFFBF4BDCD32B47"
+        ],
+        "distance_days": 135
+      }
     }
   ],
   "countries": [
@@ -109,8 +304,11 @@
   "relations": [],
   "source_ids": [
     "src_242A0D06E8A421F48C6F258A",
+    "src_509D6FE3CDE66C39605277AB",
+    "src_74F3E296414F83CD9774DF30",
     "src_BC89514E4D7BF213AE54D2E0",
     "src_CF4E2673DF39A2EF184903B2",
+    "src_E405440D6A7FBA9FBC2398FD",
     "src_F12F15DB053D422FA98E2E78",
     "src_F936765E8EFFBF4BDCD32B47"
   ]
