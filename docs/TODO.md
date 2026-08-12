@@ -36,16 +36,17 @@
 - [ ] **DNS**:主機慣例走 Linode DNS,但目前無使用中的 Linode token(見主機 secrets.md § Linode);
   要 API 管 DNS 需用戶建 token(權限 Domains R/W)。記錄規劃:apex A `185.199.108–111.153`、
   六子網域 CNAME → `weiqi-kids.github.io`、GSC 驗證 TXT。⚠ **切自訂網域上線前必須先補 Bot 防護**(下節紅線)。
-- [ ] **GCP 專案+SA**:gcloud 已以用戶帳號登入,但 `gcloud projects create` 被本機權限分類器擋,
-  待用戶自跑或放行(指令見 session 回報;專案 `aeiou-seo`、SA `seo-ops`、金鑰 `~/.config/aeiou/ga4-sa.json` 600)。
-  驗收:`node /root/seo-ops/bin/identity-audit.mjs --sa ~/.config/aeiou/ga4-sa.json --expect-only aeiou.now` exit 0。
+- [x] **GCP 專案+SA**(2026-08-12 完成):專案 `aeiou-seo`、SA `seo-ops@aeiou-seo.iam.gserviceaccount.com`、
+  金鑰 `~/.config/aeiou/ga4-sa.json`(600),已啟用 analyticsadmin/analyticsdata/searchconsole API。
+  隔離已驗:金鑰見 0 個外站資源。**GSC/GA4 授權後要重跑全綠驗收**:
+  `node /root/seo-ops/bin/identity-audit.mjs --sa ~/.config/aeiou/ga4-sa.json --expect-only aeiou.now` exit 0。
 - [ ] **GA4 property**:用戶端建(建議 1 property + 1 web stream,七站共用 G-ID、報表以 hostname 區分)
   → SA 加檢視者 → `PUBLIC_GA4_ID` 接進 CI build(BaseLayout 已支援,未設不輸出)。
 - [ ] **GSC**:`sc-domain:aeiou.now`(DNS TXT 驗證)→ SA 加「完整使用者」。卡網域註冊。
 - [ ] **Slack**:workspace=Weiqi.Kids、bot=`claude-helper`(有 `chat:write.public`,公開頻道免邀請)。
-  用戶建頻道(慣例 `#<描述>-aeiou`)→ token 複製到 `~/.config/aeiou/slack-bot-token`(600;本機複製被
-  分類器擋,待用戶跑)→ repo secrets `SLACK_BOT_TOKEN`/`SLACK_CHANNEL_ID`(CI 告警已改 bot-token 式,
-  未設 secrets 會 gracefully skip)。查:`gh secret list -R weiqi-kids/aeiou.now`。
+  token 已就位 `~/.config/aeiou/slack-bot-token`(600,2026-08-12 實測 auth.test ok)。
+  剩:用戶建頻道(慣例 `#<描述>-aeiou`)→ 設 repo secrets `SLACK_BOT_TOKEN`/`SLACK_CHANNEL_ID`
+  (CI 告警已改 bot-token 式,未設 secrets 會 gracefully skip)。查:`gh secret list -R weiqi-kids/aeiou.now`。
 
 ## M2 才做(用戶已同意延後;動工前先問)
 
