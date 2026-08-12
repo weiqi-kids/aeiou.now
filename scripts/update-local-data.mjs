@@ -52,7 +52,6 @@ const sample = readJson(INPUT_PATH);
 const sourceCatalog = readJson(SOURCES_PATH);
 
 function validateShape() {
-  if (sample.topic_slug !== "affection-and-reciprocity") fail("目前只允許更新 affection-and-reciprocity");
   if (!Array.isArray(sample.markets) || sample.markets.length !== LOCALES.length) {
     fail(`markets 必須正好有 ${LOCALES.length} 個市場`);
   }
@@ -99,6 +98,12 @@ function validateShape() {
     if (!/^plc_[A-Z0-9]{24,26}$/.test(id)) fail(`retired_place_ids 含無效 place_id：${id}`);
   }
   for (const event of sample.events || []) {
+    if (!Array.isArray(event.topic_slugs) || event.topic_slugs.length === 0) {
+      fail(`活動必須明確列出 topic_slugs：${event.name}`);
+    }
+    if (new Set(event.topic_slugs).size !== event.topic_slugs.length || event.topic_slugs.some((slug) => typeof slug !== 'string' || !slug.trim())) {
+      fail(`活動 topic_slugs 無效或重複：${event.name}`);
+    }
     if (!event.start_at) fail(`活動缺 start_at：${event.name}`);
     if (event.end_at && event.end_at < event.start_at) fail(`活動日期逆序：${event.name}`);
     const source = catalogByUrl.get(event.source_url);
@@ -110,6 +115,12 @@ function validateShape() {
     }
   }
   for (const place of sample.places || []) {
+    if (!Array.isArray(place.topic_slugs) || place.topic_slugs.length === 0) {
+      fail(`地點必須明確列出 topic_slugs：${place.name}`);
+    }
+    if (new Set(place.topic_slugs).size !== place.topic_slugs.length || place.topic_slugs.some((slug) => typeof slug !== 'string' || !slug.trim())) {
+      fail(`地點 topic_slugs 無效或重複：${place.name}`);
+    }
     if (place.place_type !== "permanent") fail(`地點必須是 permanent：${place.name}`);
     if (place.topic_relevance !== "direct") fail(`地點與 Topic 的關聯必須是 direct：${place.name}`);
     for (const url of place.source_urls || []) {

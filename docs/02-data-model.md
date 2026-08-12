@@ -326,6 +326,12 @@ CREATE INDEX idx_events_time ON events(city_code, start_at);
 `data/events/<city_code>.json`。每個地點保留 `source_urls`；每個活動保留
 `source_id` 與匯出後的 `source_url`。沒有可核對的官方或主辦方來源，不建立資料列。
 
+`local-sample-data.json` 不使用全域 `topic_slug`。每一筆 `place`／`event` 都必須有自己的
+`topic_slugs` 陣列；匯入器會逐筆解析 slug，寫入 `place_topics`／`event_topics` 多對多關聯。
+因此同一個市場可以在 `nearby`／`events` 索引看到多個 Topic，而資料更新不會把所有地點或
+活動重新掛回同一個 Topic。新增資料時，只有來源內容能直接支持的 Topic 才能放進陣列，
+不能因為同一城市或同一節日日期相近就自動加標籤。
+
 兩個集合的語意不能互換：`places` 只放有可持續到訪依據的常設地點（匯出欄位
 `place_type: "permanent"`）；`events` 只放有明確日期、場地與來源的單次或期間活動。
 地點還必須在人工輸入中標為 `topic_relevance: "direct"`；活動在哪裡舉辦，不代表該場地

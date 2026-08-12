@@ -69,7 +69,6 @@ const mapUrls = (query) => {
 };
 
 function validateInput() {
-  if (input.topic_slug !== "affection-and-reciprocity") fail("樣本目前必須掛在 affection-and-reciprocity");
   const markets = input.markets || [];
   if (markets.length !== LOCALES.length) fail(`markets 必須正好有 ${LOCALES.length} 個市場`);
   const marketLocales = new Set();
@@ -95,6 +94,15 @@ function validateInput() {
     requireString(place.country_code, `place(${place.name}).country_code`);
     if (place.place_type !== "permanent") fail(`地點必須標為 permanent：${place.name}`);
     if (place.topic_relevance !== "direct") fail(`地點與 Topic 的關聯必須是 direct：${place.name}`);
+    if (!Array.isArray(place.topic_slugs) || place.topic_slugs.length === 0) {
+      fail(`地點必須明確列出 topic_slugs：${place.name}`);
+    }
+    const placeTopicSlugs = new Set();
+    for (const slug of place.topic_slugs) {
+      const value = requireString(slug, `地點 ${place.name} 的 topic_slug`);
+      if (placeTopicSlugs.has(value)) fail(`地點 topic_slugs 重複：${place.name}/${value}`);
+      placeTopicSlugs.add(value);
+    }
     requireString(place.address, `place(${place.name}).address`);
     if (!Array.isArray(place.source_urls) || place.source_urls.length === 0) fail(`地點缺 source_urls：${place.name}`);
     for (const url of place.source_urls) new URL(requireString(url, "place.source_url"));
@@ -114,6 +122,15 @@ function validateInput() {
     requireString(event.country_code, `event(${event.name}).country_code`);
     requireString(event.venue, `event(${event.name}).venue`);
     requireString(event.source_url, `event(${event.name}).source_url`);
+    if (!Array.isArray(event.topic_slugs) || event.topic_slugs.length === 0) {
+      fail(`活動必須明確列出 topic_slugs：${event.name}`);
+    }
+    const eventTopicSlugs = new Set();
+    for (const slug of event.topic_slugs) {
+      const value = requireString(slug, `活動 ${event.name} 的 topic_slug`);
+      if (eventTopicSlugs.has(value)) fail(`活動 topic_slugs 重複：${event.name}/${value}`);
+      eventTopicSlugs.add(value);
+    }
     new URL(event.source_url);
     eventSourceUrls.push(event.source_url);
     const start = epoch(event.start_at, `event(${event.name}).start_at`);
@@ -176,20 +193,24 @@ function deleteOldDemoData() {
   }
 }
 
-function deleteManagedEventRows(topicId, managedEventSourceUrls, currentEventIds) {
+function deleteManagedEventRows(topicIds, managedEventSourceUrls, currentEventIds) {
   const sourceIds = [...new Set(managedEventSourceUrls.map(sourceId))];
-  if (sourceIds.length === 0) return 0;
-  const placeholders = sourceIds.map(() => "?").join(",");
+  if (sourceIds.length === 0 || topicIds.length === 0) return 0;
+  const sourcePlaceholders = sourceIds.map(() => "?").join(",");
+  const topicPlaceholders = topicIds.map(() => "?").join(",");
   const rows = db.prepare(
     `SELECT e.event_id
        FROM events e
        JOIN event_topics et ON et.event_id = e.event_id
-      WHERE et.topic_id = ? AND e.source_id IN (${placeholders})`
-  ).all(topicId, ...sourceIds);
+      WHERE et.topic_id IN (${topicPlaceholders}) AND e.source_id IN (${sourcePlaceholders})`
+  ).all(...topicIds, ...sourceIds);
   let removed = 0;
   for (const row of rows) {
     if (currentEventIds.has(row.event_id)) continue;
-    db.prepare("DELETE FROM event_topics WHERE event_id = ? AND topic_id = ?").run(row.event_id, topicId);
+    db.prepare(`DELETE FROM event_topics WHERE event_id = ? AND topic_id IN (${topicPlaceholders})`)
+      .run(row.event_id, ...topicIds);
+    // 受管理來源明確退役時，不保留同一活動的舊 Topic 關聯。
+    db.prepare("DELETE FROM event_topics WHERE event_id = ?").run(row.event_id);
     const remainingRefs = db.prepare("SELECT count(*) AS n FROM event_topics WHERE event_id = ?").get(row.event_id).n;
     if (remainingRefs === 0) {
       db.prepare("DELETE FROM event_i18n WHERE event_id = ?").run(row.event_id);
@@ -200,20 +221,24 @@ function deleteManagedEventRows(topicId, managedEventSourceUrls, currentEventIds
   return removed;
 }
 
-function deleteManagedPlaceRows(topicId, retiredPlaceIds, currentPlaceIds) {
+function deleteManagedPlaceRows(topicIds, retiredPlaceIds, currentPlaceIds) {
   const placeIds = [...new Set(retiredPlaceIds)];
-  if (placeIds.length === 0) return 0;
-  const placeholders = placeIds.map(() => "?").join(",");
+  if (placeIds.length === 0 || topicIds.length === 0) return 0;
+  const placePlaceholders = placeIds.map(() => "?").join(",");
+  const topicPlaceholders = topicIds.map(() => "?").join(",");
   const rows = db.prepare(
     `SELECT p.place_id
        FROM places p
        JOIN place_topics pt ON pt.place_id = p.place_id
-      WHERE pt.topic_id = ? AND p.place_id IN (${placeholders})`
-  ).all(topicId, ...placeIds);
+      WHERE pt.topic_id IN (${topicPlaceholders}) AND p.place_id IN (${placePlaceholders})`
+  ).all(...topicIds, ...placeIds);
   let removed = 0;
   for (const row of rows) {
     if (currentPlaceIds.has(row.place_id)) continue;
-    db.prepare("DELETE FROM place_topics WHERE place_id = ? AND topic_id = ?").run(row.place_id, topicId);
+    db.prepare(`DELETE FROM place_topics WHERE place_id = ? AND topic_id IN (${topicPlaceholders})`)
+      .run(row.place_id, ...topicIds);
+    // retired_place_ids 是明確的受管理退役清單，清掉該列剩餘的舊關聯，避免孤兒資料復活。
+    db.prepare("DELETE FROM place_topics WHERE place_id = ?").run(row.place_id);
     const remainingRefs = db.prepare("SELECT count(*) AS n FROM place_topics WHERE place_id = ?").get(row.place_id).n;
     if (remainingRefs === 0) {
       db.prepare("DELETE FROM place_i18n WHERE place_id = ?").run(row.place_id);
@@ -256,8 +281,21 @@ function upsertSource(url, row, collectedAt) {
 
 function importSample() {
   const { markets, managedPlaceSourceUrls, retiredPlaceIds } = validateInput();
-  const topic = db.prepare("SELECT topic_id FROM topics WHERE slug = ? AND status NOT IN ('merged', 'candidate')").get(input.topic_slug);
-  if (!topic) fail(`找不到可用 Topic：${input.topic_slug}`);
+  const topicsBySlug = new Map(
+    db.prepare("SELECT topic_id, slug FROM topics WHERE status NOT IN ('merged', 'candidate')")
+      .all()
+      .map((topic) => [topic.slug, topic.topic_id])
+  );
+  const topicIds = [...topicsBySlug.values()];
+  const resolveTopicIds = (entry, label) => {
+    const slugs = entry.topic_slugs || [];
+    const ids = slugs.map((slug) => {
+      const topicId = topicsBySlug.get(slug);
+      if (!topicId) fail(`${label} 指定了不存在或未啟用的 Topic：${slug}`);
+      return topicId;
+    });
+    return [...new Set(ids)];
+  };
   const collectedAt = epoch(`${input.as_of}T00:00:00Z`, "as_of");
   const now = Math.floor(Date.now() / 1000);
   const placeIds = [];
@@ -274,11 +312,11 @@ function importSample() {
   try {
     deleteOldDemoData();
     removedManagedPlaces = deleteManagedPlaceRows(
-      topic.topic_id,
+      topicIds,
       retiredPlaceIds,
       currentPlaceIds,
     );
-    removedManagedEvents = deleteManagedEventRows(topic.topic_id, managedEventSourceUrls, currentEventIds);
+    removedManagedEvents = deleteManagedEventRows(topicIds, managedEventSourceUrls, currentEventIds);
 
     for (const place of input.places || []) {
       const id = stableId("plc", `${place.country_code}:${place.city_code}:${place.name}`);
@@ -304,8 +342,10 @@ function importSample() {
         db.prepare("INSERT INTO place_i18n (place_id, locale, description) VALUES (?, ?, ?)")
           .run(id, locale, place.descriptions[locale]);
       }
-      db.prepare("INSERT INTO place_topics (place_id, topic_id, relevance) VALUES (?, ?, 0.9) ON CONFLICT(place_id, topic_id) DO UPDATE SET relevance = excluded.relevance")
-        .run(id, topic.topic_id);
+      db.prepare("DELETE FROM place_topics WHERE place_id = ?").run(id);
+      const placeTopicIds = resolveTopicIds(place, `地點 ${place.name}`);
+      const placeTopicStmt = db.prepare("INSERT INTO place_topics (place_id, topic_id, relevance) VALUES (?, ?, 0.9)");
+      for (const topicId of placeTopicIds) placeTopicStmt.run(id, topicId);
       placeIds.push(id);
     }
 
@@ -332,8 +372,10 @@ function importSample() {
         db.prepare("INSERT INTO event_i18n (event_id, locale, description) VALUES (?, ?, ?)")
           .run(id, locale, event.descriptions[locale]);
       }
-      db.prepare("INSERT INTO event_topics (event_id, topic_id, relevance) VALUES (?, ?, 0.9) ON CONFLICT(event_id, topic_id) DO UPDATE SET relevance = excluded.relevance")
-        .run(id, topic.topic_id);
+      db.prepare("DELETE FROM event_topics WHERE event_id = ?").run(id);
+      const eventTopicIds = resolveTopicIds(event, `活動 ${event.name}`);
+      const eventTopicStmt = db.prepare("INSERT INTO event_topics (event_id, topic_id, relevance) VALUES (?, ?, 0.9)");
+      for (const topicId of eventTopicIds) eventTopicStmt.run(id, topicId);
       eventIds.push(id);
     }
 
