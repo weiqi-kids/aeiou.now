@@ -3,13 +3,13 @@
 #   /root/aeiou.now/scripts/hourly-export.sh
 #
 # 1. node scripts/export-data.mjs  → 主機 SQLite 匯出到根層 data/(內容 hash 沒變就不寫檔)
-# 2. **只 commit 根層 data/**(git add data/ —— 刻意不用 git add -A;
+# 2. **只 commit 受管理的 data/ 與過期活動快照**(git add 明確路徑 —— 刻意不用 git add -A;
 #    site/ api/ db/ docs/ 的變動不歸這支管,由人工/其他流程處理)
 # 3. push 到 source repo(weiqi-kids/aeiou.now)
 #    - HTTPS credential 走 gh 的 credential helper(主機已 gh auth login 為 LightChang)
 #    - author/committer 用 **repo local git config**(/root/aeiou.now 已設 weiqi-kids <lightman.chang@gmail.com>)
 #    - **絕不動 git config --global**(主機紅線:曾有 session 用 --global 設假身分,污染全機 cron 的 commit 作者)
-# 4. data/ 無變更 → skip,不產生空 commit
+# 4. data/ 與活動快照無變更 → skip,不產生空 commit
 # 5. 無 remote / push 失敗 → 不整支噴掉,記進 jobs 表(status=failed,error_message 寫清楚)
 #
 # jobs 紀錄:job_name='hourly-export'(記錄寫檔數與 commit/push 結果)
@@ -62,6 +62,19 @@ if ! "$NODE_BIN" "$REPO/scripts/check-topic-calendar.mjs"; then
   record_job failed 0 0 0 1 "check-topic-calendar.mjs failed"
   exit 1
 fi
+log "import-topic-occurrences.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/import-topic-occurrences.mjs"; then
+  log "FAILED: 年度 occurrence 匯入未通過；停止輸出，避免線上日期排序使用不完整資料"
+  record_job failed 0 0 0 1 "import-topic-occurrences.mjs failed"
+  exit 1
+fi
+log "update-local-data.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/update-local-data.mjs"; then
+  log "FAILED: 在地資料來源驗證／更新未通過；停止輸出，避免線上顯示未核對資料"
+  record_job failed 0 0 0 1 "update-local-data.mjs failed"
+  exit 1
+fi
+
 log "review-topic-content.mjs ..."
 if ! "$NODE_BIN" "$REPO/scripts/review-topic-content.mjs"; then
   log "FAILED: Topic 內容與結構自動守門未通過"
@@ -80,20 +93,20 @@ if [ $EXPORT_RC -ne 0 ]; then
 fi
 WROTE="$(echo "$EXPORT_OUT" | grep -c '^write ')"
 
-# --- 2. 只看根層 data/ 有沒有變 ---------------------------------------------
-CHANGED="$(git status --porcelain -- data/ | wc -l)"
+# --- 2. 只看受管理輸出有沒有變 -----------------------------------------------
+CHANGED="$(git status --porcelain -- data/ content/local-sample-data.json | wc -l)"
 if [ "$CHANGED" -eq 0 ]; then
-  log "data/ unchanged — skip commit & push (files written this run: $WROTE)"
+  log "managed output unchanged — skip commit & push (files written this run: $WROTE)"
   record_job skipped "$WROTE" 0 0 0
   exit 0
 fi
-log "data/ has $CHANGED changed path(s) — committing"
+log "managed output has $CHANGED changed path(s) — committing"
 
-# --- 3. commit(只加 data/,不用 git add -A) --------------------------------
-git add -- data/ || { log "FAILED: git add"; record_job failed "$WROTE" 0 0 1 "git add data/ failed"; exit 1; }
+# --- 3. commit(只加受管理輸出,不用 git add -A) -------------------------------
+git add -- data/ content/local-sample-data.json || { log "FAILED: git add"; record_job failed "$WROTE" 0 0 1 "git add managed output failed"; exit 1; }
 
-# 保險:即使 index 裡混進別的東西也只 commit data/(-- data/ 限定路徑)
-if ! git commit -q -m "chore(data): hourly export $(date -u +%Y-%m-%dT%H:%MZ)" -- data/; then
+# 保險:即使 index 裡混進別的東西也只 commit 受管理輸出(限定路徑)
+if ! git commit -q -m "chore(data): hourly export $(date -u +%Y-%m-%dT%H:%MZ)" -- data/ content/local-sample-data.json; then
   log "FAILED: git commit"
   record_job failed "$WROTE" 0 0 1 "git commit failed"
   exit 1

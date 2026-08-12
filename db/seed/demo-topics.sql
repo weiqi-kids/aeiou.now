@@ -1,4 +1,4 @@
--- aeiou.now — M1 示範資料(Track A / W1.1)
+-- aeiou.now — M1 基礎資料(Track A / W1.1)
 -- 可重跑:全部 INSERT OR REPLACE,連跑兩次不報錯、結果相同。
 -- ID 格式 <prefix>_<ULID>,ULID 為手寫合法 Crockford Base32(26 字元,不含 I/L/O/U)。
 -- 時間一律 Unix epoch 秒。基準:2026-08-11 00:00:00 UTC = 1786406400。
@@ -8,18 +8,15 @@
 --   top_01J50000000000000000000T02  ask-the-world
 --   cyc_01J50000000000000000000C01  affection-and-reciprocity 2026-02(進行中)
 --   cyc_01J50000000000000000000C02  ask-the-world 2026-01(進行中)
---   src_...S01~S06  假來源;plc_...P01~P03  places;evt_...E01~E02  events
+--   sources 只放 Topic 事實層需要的可追溯來源;places/events 由人工採集樣本匯入
 --   als_...A01~A02  aliases;snp_...R01  ranking snapshot
 
--- ============ sources(假來源,供 source_ids_json / events.source_id 指向) ============
+-- ============ sources(供 source_ids_json 指向) ============
 
 INSERT OR REPLACE INTO sources (source_id, url, domain, source_type, language, country_code, city_code, title, published_at, crawled_at, next_crawl_at, crawl_freq_s, content_hash, quality_score, trust_score, status, updated_at) VALUES
-  ('src_01J50000000000000000000S01', 'https://en.wikipedia.org/wiki/Valentine%27s_Day', 'en.wikipedia.org', 'encyclopedia', 'en', NULL, NULL, 'Valentine''s Day - Wikipedia', 1769904000, 1786320000, 1786492800, 86400, NULL, 0.9, 0.9, 'processed', 1786320000),
-  ('src_01J50000000000000000000S02', 'https://www.japantimes.co.jp/culture/2026/02/valentine-chocolate-guide/', 'japantimes.co.jp', 'news', 'ja', 'JP', 'tokyo', 'Honmei or giri? Japan''s Valentine chocolate culture', 1770595200, 1786320000, 1786492800, 86400, NULL, 0.8, 0.8, 'processed', 1786320000),
-  ('src_01J50000000000000000000S03', 'https://g1.globo.com/economia/noticia/2026/06/dia-dos-namorados-comercio.html', 'g1.globo.com', 'news', 'pt-BR', 'BR', NULL, 'Dia dos Namorados movimenta o comércio em 12 de junho', 1781222400, 1786320000, 1786492800, 86400, NULL, 0.8, 0.8, 'processed', 1786320000),
-  ('src_01J50000000000000000000S04', 'https://timesofindia.indiatimes.com/life-style/relationships/valentine-week-2026-full-list', 'timesofindia.indiatimes.com', 'news', 'en', 'IN', NULL, 'Valentine Week 2026: Rose Day to Kiss Day, the full list', 1770508800, 1786320000, 1786492800, 86400, NULL, 0.7, 0.7, 'processed', 1786320000),
-  ('src_01J50000000000000000000S05', 'https://www.history.com/topics/valentines-day/history-of-valentines-day-2', 'history.com', 'news', 'en', 'US', NULL, 'History of Valentine''s Day', 1769904000, 1786320000, 1786492800, 86400, NULL, 0.8, 0.8, 'processed', 1786320000),
-  ('src_01J50000000000000000000S06', 'https://www.travel.taipei/event/chocolate-salon-2027', 'www.travel.taipei', 'official', 'zh-TW', 'TW', 'taipei', '2027 台北巧克力沙龍活動資訊', 1785801600, 1786320000, 1786492800, 86400, NULL, 0.8, 0.9, 'processed', 1786320000);
+  ('src_C4BAA52048297F2FA1A9F791', 'https://www.japan.travel/en/us/blog/valentines-day-white-day-in-japan/', 'www.japan.travel', 'official', 'en', 'JP', NULL, 'Valentine''s Day and White Day in Japan', NULL, 1786406400, 1817942400, 86400, NULL, 0.9, 0.9, 'processed', 1786406400),
+  ('src_C4BCAFCEF395471F742E6784', 'https://www.britannica.com/topic/Valentines-Day', 'www.britannica.com', 'encyclopedia', 'en', NULL, NULL, 'Valentine''s Day', NULL, 1786406400, 1817942400, 86400, NULL, 0.9, 0.9, 'processed', 1786406400),
+  ('src_22199C1201C93256B927C8CD', 'https://www.justica.pr.gov.br/Noticia/Dia-dos-Namorados-Procon-PR-orienta-consumidores-sobre-compras-e-trocas-de-presentes', 'www.justica.pr.gov.br', 'official', 'pt-BR', 'BR', NULL, 'Dia dos Namorados', NULL, 1786406400, 1817942400, 86400, NULL, 0.9, 0.9, 'processed', 1786406400);
 
 -- ============ ① affection-and-reciprocity(週期性) ============
 
@@ -39,10 +36,10 @@ INSERT OR REPLACE INTO topic_i18n (topic_id, locale, title, summary, keywords_js
 INSERT OR REPLACE INTO topic_observances
   (observance_id, topic_id, observance_key, country_code, local_name, observed_date, date_rule,
    date_range_end, popularity_rank, source_ids_json, updated_at) VALUES
-  ('obs_top_01J50000000000000000000T01_valentine', 'top_01J50000000000000000000T01', 'valentine', 'JP', 'バレンタインデー', '02-14', NULL, NULL, 1, '["src_01J50000000000000000000S01","src_01J50000000000000000000S02"]', 1786406400),
-  ('obs_top_01J50000000000000000000T01_valentine-us', 'top_01J50000000000000000000T01', 'valentine-us', 'US', 'Valentine''s Day', '02-14', NULL, NULL, 2, '["src_01J50000000000000000000S01","src_01J50000000000000000000S05"]', 1786406400),
-  ('obs_top_01J50000000000000000000T01_dia-dos-namorados', 'top_01J50000000000000000000T01', 'dia-dos-namorados', 'BR', 'Dia dos Namorados', '06-12', NULL, NULL, 3, '["src_01J50000000000000000000S01","src_01J50000000000000000000S03"]', 1786406400),
-  ('obs_top_01J50000000000000000000T01_valentine-week', 'top_01J50000000000000000000T01', 'valentine-week', 'IN', 'Valentine Week', '02-07', NULL, '02-14', 4, '["src_01J50000000000000000000S01","src_01J50000000000000000000S04"]', 1786406400);
+  ('obs_top_01J50000000000000000000T01_valentine', 'top_01J50000000000000000000T01', 'valentine', 'JP', 'バレンタインデー', '02-14', NULL, NULL, 1, '["src_C4BAA52048297F2FA1A9F791"]', 1786406400),
+  ('obs_top_01J50000000000000000000T01_valentine-us', 'top_01J50000000000000000000T01', 'valentine-us', 'US', 'Valentine''s Day', '02-14', NULL, NULL, 2, '["src_C4BCAFCEF395471F742E6784"]', 1786406400),
+  ('obs_top_01J50000000000000000000T01_dia-dos-namorados', 'top_01J50000000000000000000T01', 'dia-dos-namorados', 'BR', 'Dia dos Namorados', '06-12', NULL, NULL, 3, '["src_22199C1201C93256B927C8CD"]', 1786406400),
+  ('obs_top_01J50000000000000000000T01_valentine-week', 'top_01J50000000000000000000T01', 'valentine-week', 'IN', 'Valentine Week', '02-07', NULL, '02-14', 4, '["src_C4BCAFCEF395471F742E6784"]', 1786406400);
 
 -- 每國 × 七語 customs(真實文化事實,非佔位)
 INSERT OR REPLACE INTO topic_observance_i18n (observance_id, locale, customs_text) VALUES
@@ -136,43 +133,5 @@ INSERT OR REPLACE INTO ranking_items (snapshot_id, rank, topic_id, score) VALUES
   ('snp_01J50000000000000000000R01', 1, 'top_01J50000000000000000000T02', 19.8),
   ('snp_01J50000000000000000000R01', 2, 'top_01J50000000000000000000T01', 4.1);
 
--- ============ ④ places(map_url / nav_urls_json 皆為純字串組裝,絕無 Places API) ============
-
-INSERT OR REPLACE INTO places (place_id, name, city_code, country_code, address, map_url, nav_urls_json, mention_count, discovered_via, source_urls_json, first_seen_at, updated_at) VALUES
-  ('plc_01J50000000000000000000P01', 'GODIVA 銀座本店', 'tokyo', 'JP', '東京都中央区銀座', 'https://www.google.com/maps/search/?api=1&query=GODIVA%20Ginza%20Tokyo', '{"google":"https://www.google.com/maps/search/?api=1&query=GODIVA%20Ginza%20Tokyo","baidu":"https://map.baidu.com/search/?querytype=s&wd=GODIVA%20Ginza%20Tokyo","amap":"https://uri.amap.com/search?keyword=GODIVA%20Ginza%20Tokyo"}', 12, 'mention', NULL, 1769904000, 1786406400),
-  ('plc_01J50000000000000000000P02', '畬室法式巧克力甜點創作', 'taipei', 'TW', '台北市大安區', 'https://www.google.com/maps/search/?api=1&query=Yu%20Chocolatier%20Taipei', '{"google":"https://www.google.com/maps/search/?api=1&query=Yu%20Chocolatier%20Taipei","baidu":"https://map.baidu.com/search/?querytype=s&wd=Yu%20Chocolatier%20Taipei","amap":"https://uri.amap.com/search?keyword=Yu%20Chocolatier%20Taipei"}', 8, 'mention', NULL, 1770595200, 1786406400),
-  ('plc_01J50000000000000000000P03', '青山フラワーマーケット 表参道店', 'tokyo', 'JP', '東京都港区北青山', 'https://www.google.com/maps/search/?api=1&query=Aoyama%20Flower%20Market%20Omotesando', '{"google":"https://www.google.com/maps/search/?api=1&query=Aoyama%20Flower%20Market%20Omotesando","baidu":"https://map.baidu.com/search/?querytype=s&wd=Aoyama%20Flower%20Market%20Omotesando","amap":"https://uri.amap.com/search?keyword=Aoyama%20Flower%20Market%20Omotesando"}', 5, 'mention', NULL, 1771027200, 1786406400);
-
-INSERT OR REPLACE INTO place_i18n (place_id, locale, description) VALUES
-  ('plc_01J50000000000000000000P01', 'zh-TW', '銀座的比利時巧克力名店,情人節前排隊人潮眾多,常被討論為送禮首選。'),
-  ('plc_01J50000000000000000000P01', 'en', 'Belgian chocolatier''s flagship in Ginza; long queues before Valentine''s Day, often mentioned as a go-to gift shop.'),
-  ('plc_01J50000000000000000000P01', 'ja', '銀座のベルギー系チョコレート名店。バレンタイン前は行列ができ、贈り物の定番としてよく話題になる。'),
-  ('plc_01J50000000000000000000P02', 'zh-TW', '台北知名法式巧克力專門店,曾獲國際巧克力賽事獎項,情人節限定禮盒常被推薦。'),
-  ('plc_01J50000000000000000000P02', 'en', 'Award-winning French-style chocolate atelier in Taipei; its Valentine gift boxes are frequently recommended in discussions.'),
-  ('plc_01J50000000000000000000P02', 'ja', '台北の有名なフレンチスタイルのショコラトリー。国際コンクール受賞歴があり、バレンタイン限定ボックスがよく薦められる。'),
-  ('plc_01J50000000000000000000P03', 'zh-TW', '表參道的人氣花店,情人節玫瑰花束的熱門選擇。'),
-  ('plc_01J50000000000000000000P03', 'en', 'Popular flower shop in Omotesando, a favorite for Valentine''s Day rose bouquets.'),
-  ('plc_01J50000000000000000000P03', 'ja', '表参道の人気フラワーショップ。バレンタインのバラの花束の定番。');
-
-INSERT OR REPLACE INTO place_topics (place_id, topic_id, relevance) VALUES
-  ('plc_01J50000000000000000000P01', 'top_01J50000000000000000000T01', 0.9),
-  ('plc_01J50000000000000000000P02', 'top_01J50000000000000000000T01', 0.8),
-  ('plc_01J50000000000000000000P03', 'top_01J50000000000000000000T01', 0.6);
-
--- ============ events ============
-
-INSERT OR REPLACE INTO events (event_id, name, city_code, country_code, venue, start_at, end_at, ticket_url, source_id, updated_at) VALUES
-  ('evt_01J50000000000000000000E01', 'サロン・デュ・ショコラ 東京 2027', 'tokyo', 'JP', '新宿NSビル', 1800403200, 1800748800, NULL, 'src_01J50000000000000000000S02', 1786406400),
-  ('evt_01J50000000000000000000E02', '2027 台北巧克力沙龍', 'taipei', 'TW', '圓山花博爭艷館', 1801785600, 1801958400, NULL, 'src_01J50000000000000000000S06', 1786406400);
-
-INSERT OR REPLACE INTO event_i18n (event_id, locale, description) VALUES
-  ('evt_01J50000000000000000000E01', 'zh-TW', '世界最大巧克力展的東京場,每年 1 月底登場,是日本情人節採購季的起點。'),
-  ('evt_01J50000000000000000000E01', 'en', 'Tokyo edition of the world''s largest chocolate fair, held in late January and marking the start of Japan''s Valentine shopping season.'),
-  ('evt_01J50000000000000000000E01', 'ja', '世界最大級のチョコレートの祭典の東京会場。毎年1月下旬に開かれ、日本のバレンタイン商戦の幕開けとなる。'),
-  ('evt_01J50000000000000000000E02', 'zh-TW', '台北的巧克力主題市集,集合本地與國際品牌,情人節前夕的採購與試吃活動。'),
-  ('evt_01J50000000000000000000E02', 'en', 'Chocolate-themed fair in Taipei gathering local and international brands, with tastings ahead of Valentine''s Day.'),
-  ('evt_01J50000000000000000000E02', 'ja', '台北のチョコレートをテーマにしたフェア。地元と海外のブランドが集まり、バレンタイン前に試食や購入ができる。');
-
-INSERT OR REPLACE INTO event_topics (event_id, topic_id, relevance) VALUES
-  ('evt_01J50000000000000000000E01', 'top_01J50000000000000000000T01', 0.9),
-  ('evt_01J50000000000000000000E02', 'top_01J50000000000000000000T01', 0.8);
+-- ============ ④ places/events ============
+-- 不在 seed 假造地點或活動；由 content/local-sample-data.json 經匯入腳本寫入。

@@ -105,6 +105,13 @@ const allLocales = new Set(db.prepare('SELECT DISTINCT locale FROM topic_i18n').
 for (const locale of LOCALES) if (!allLocales.has(locale)) fail(`資料庫缺全域 locale:${locale}`);
 
 const obsRows = db.prepare('SELECT * FROM topic_observances ORDER BY topic_id, country_code, observance_key').all();
+const occurrenceRows = db.prepare('SELECT * FROM topic_observance_occurrences ORDER BY observance_id, starts_on').all();
+const occurrenceByObservance = new Map();
+for (const occurrence of occurrenceRows) {
+  if (!occurrenceByObservance.has(occurrence.observance_id)) occurrenceByObservance.set(occurrence.observance_id, []);
+  occurrenceByObservance.get(occurrence.observance_id).push(occurrence);
+}
+const currentYear = new Date().getUTCFullYear();
 const obsByTopic = new Map();
 for (const obs of obsRows) {
   if (!activeTopicIds.has(obs.topic_id)) continue;
@@ -118,6 +125,23 @@ for (const obs of obsRows) {
   for (const id of ids) {
     const source = db.prepare('SELECT url FROM sources WHERE source_id = ?').get(id);
     if (!source?.url) fail(`observance ${obs.observance_id}:找不到來源 ${id}`);
+  }
+  const occurrences = occurrenceByObservance.get(obs.observance_id) || [];
+  for (const year of [currentYear, currentYear + 1]) {
+    if (!occurrences.some((occurrence) => occurrence.occurrence_year === year)) {
+      fail(`observance ${obs.observance_id}:缺 ${year} 年 occurrence`);
+    }
+  }
+  for (const occurrence of occurrences) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(occurrence.starts_on)) fail(`occurrence ${occurrence.occurrence_id}:starts_on 格式錯誤`);
+    if (occurrence.ends_on && occurrence.ends_on < occurrence.starts_on) fail(`occurrence ${occurrence.occurrence_id}:ends_on 早於 starts_on`);
+    let occurrenceSourceIds = [];
+    try { occurrenceSourceIds = JSON.parse(occurrence.source_ids_json); } catch { fail(`occurrence ${occurrence.occurrence_id}:source_ids_json 不是 JSON`); }
+    if (!Array.isArray(occurrenceSourceIds) || occurrenceSourceIds.length === 0) fail(`occurrence ${occurrence.occurrence_id}:缺年度日期來源`);
+    for (const id of occurrenceSourceIds) {
+      const source = db.prepare('SELECT url FROM sources WHERE source_id = ?').get(id);
+      if (!source?.url) fail(`occurrence ${occurrence.occurrence_id}:找不到來源 ${id}`);
+    }
   }
 }
 

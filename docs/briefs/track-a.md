@@ -13,16 +13,16 @@
 
 ## 工作項目
 
-### W1.1 示範資料 → `db/seed/demo-topics.sql`
+### W1.1 基礎資料與在地樣本 → `db/seed/demo-topics.sql` / `content/local-sample-data.json`
 
 兩個示範 Topic:
 
 **① `affection-and-reciprocity`(週期性)**
 - `topics`:`slug='affection-and-reciprocity'`、`status='active'`、`is_perennial=0`、`access_level=0`、`access_source='category'`、category 自選合理值、`global_score` 給個 demo 值。
 - `topic_i18n` **七語全備**(`zh-TW` `en` `ja` `zh-CN` `hi` `id` `pt-BR`),含 `title`、`summary`、`keywords_json`。
-- `topic_observances` **≥4 個地方表現**(建議涵蓋 JP / US / BR / IN,理由:文化差異明顯、對得上七語系市場),每筆含 `country_code`、`local_name`、`observed_date` 或 `date_rule`、`popularity_rank`、`source_ids_json`(**必填**,放假的 source_id 陣列即可,但要與 `sources` 表對得起來)。同一國可有多筆。
+- `topic_observances` **≥4 個地方表現**(建議涵蓋 JP / US / BR / IN,理由:文化差異明顯、對得上七語系市場),每筆含 `country_code`、`local_name`、`observed_date` 或 `date_rule`、`popularity_rank`、`source_ids_json`(**必填**,且必須是真實來源)。同一國可有多筆。
 - `topic_observance_i18n`:**每個地方表現 × 七語** 的 `customs_text`。內容要是真的文化事實(日本本命/義理巧克力、巴西 Dia dos Namorados 在 6/12、印度 Valentine Week…),不要塞佔位字串。
-- `sources`:幾筆假來源,讓 `source_ids_json` 指得到(`next_crawl_at`、`crawl_freq_s`、`status` 等 NOT NULL 欄位要填)。
+- `sources`:只接受可追溯來源；Topic 事實來源由 markdown 匯入，在地地點/活動來源由人工樣本匯入，禁止假 URL。
 - `topic_scores`:**七時窗(8h/24h/72h/7d/1m/3m/1y)demo 分數**,`scope='global'`,含 `rank`。
 - `topic_cycles`:**1 個進行中**的 cycle(`ended_at IS NULL`),`label` 用 `'2026-02'` 格式。
 - `topic_aliases` / `topic_relations`:各給 1–2 筆(讓 Topic Graph 有東西)。
@@ -34,7 +34,7 @@
 
 **③ ranking**:1 份 `ranking_snapshots`(`scope='global'`、某個 window、`granularity`)+ 對應 `ranking_items`(把兩個 topic 都排進去)。
 
-**④ 在地域**:2–3 筆 `places`(含 `nav_urls_json`,格式 `{"google":"...","baidu":"...","amap":"..."}`;`discovered_via='mention'`;附 `place_i18n` 至少 zh-TW/en/ja 與 `place_topics` 掛到 affection-and-reciprocity)+ 1–2 筆 `events`(含 `event_i18n`、`event_topics`)。城市建議 tokyo / taipei。
+**④ 在地域**:第一批人工樣本由 `content/local-sample-data.json` 提供，透過 `scripts/update-local-data.mjs` 驗證 `content/local-data-sources.json` 的官方來源後匯入七個市場的真實地點；只有來源明確列出日期且每次重跑仍能找到日期 marker 的活動才進 `events`。過期活動會由受管理來源清除。每筆地點/活動都要保留可核對的官方或主辦方來源、七語描述與 `place_topics`/`event_topics` 關聯。
 
 **注意**:`places.map_url` / `nav_urls_json` 是**純字串組裝**的 Google Maps 搜尋連結(cn 給百度/高德),**絕不呼叫 Places API**、不儲存任何 Places API 回傳資料(評分/評論數/營業狀態)——條款紅線。
 

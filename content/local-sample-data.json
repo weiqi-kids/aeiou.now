@@ -1,0 +1,222 @@
+{
+  "topic_slug": "affection-and-reciprocity",
+  "as_of": "2026-08-12",
+  "collection_method": "manual-official-source",
+  "managed_event_source_urls": [
+    "https://tam.gov.taipei/News_Content.aspx?n=794B17A953424610&s=259D7CDEDEAEC283&sms=9D72E82EC16F3E64",
+    "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/350/detail.html",
+    "https://xxgk.shbsq.gov.cn/article.html?infoid=ad7e7534-18a7-45bc-bda1-99b3ce4ca731",
+    "https://visitloveland.com/sweetheartfestival/",
+    "https://newsroom.feverup.com/en-IN/262080-candlelight-s-valentine-s-day-special-brings-a-romantic-experience-to-pune-on-14th-february/",
+    "https://www.soehannahall.com/news_and_event/night-music-lights-candlelight-concerts-soehanna-hall/",
+    "https://eventos.sp.senac.br/evento/workshop-mesa-para-dois-food-design-para-o-dia-dos-namorados/"
+  ],
+  "markets": [
+    {"locale":"zh-TW","country_code":"TW","city_code":"taipei","city_name":"Taipei"},
+    {"locale":"ja","country_code":"JP","city_code":"tokyo","city_name":"Tokyo"},
+    {"locale":"zh-CN","country_code":"CN","city_code":"shanghai","city_name":"Shanghai"},
+    {"locale":"en","country_code":"US","city_code":"loveland","city_name":"Loveland"},
+    {"locale":"hi","country_code":"IN","city_code":"pune","city_name":"Pune"},
+    {"locale":"id","country_code":"ID","city_code":"jakarta","city_name":"Jakarta"},
+    {"locale":"pt-BR","country_code":"BR","city_code":"sao-paulo","city_name":"São Paulo"}
+  ],
+  "places": [
+    {
+      "name": "臺北市立天文科學教育館",
+      "city_code": "taipei",
+      "country_code": "TW",
+      "address": "111013 臺北市士林區基河路 363 號",
+      "map_query": "臺北市立天文科學教育館 臺北",
+      "source_urls": [
+        "https://tam.gov.taipei/News_Content.aspx?n=794B17A953424610&s=259D7CDEDEAEC283&sms=9D72E82EC16F3E64",
+        "https://tam.gov.taipei/Default.aspx"
+      ],
+      "descriptions": {
+        "zh-TW": "2026 年七夕，天文館在宇宙劇場舉辦「星空愛戀音樂會」。",
+        "en": "The museum hosts the Starry Sky Romance Concert for Qixi on August 19, 2026.",
+        "ja": "2026年8月19日の七夕に「星空愛戀音樂會」が開かれる会場です。",
+        "zh-CN": "天文馆将在 2026 年七夕举办“星空爱恋音乐会”。",
+        "hi": "19 अगस्त 2026 को क़ीशी के लिए यहाँ Starry Sky Romance Concert होगा।",
+        "id": "Museum ini menjadi lokasi Starry Sky Romance Concert pada 19 Agustus 2026 untuk Qixi.",
+        "pt-BR": "O museu recebe o Starry Sky Romance Concert em 19 de agosto de 2026, no Qixi."
+      }
+    },
+    {
+      "name": "東京たま未来メッセ（東京都立多摩産業交流センター）",
+      "city_code": "tokyo",
+      "country_code": "JP",
+      "address": "〒192-0046 東京都八王子市明神町3丁目19-2",
+      "map_query": "東京たま未来メッセ 八王子",
+      "source_urls": [
+        "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/350/detail.html",
+        "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/index.html"
+      ],
+      "descriptions": {
+        "zh-TW": "東京たま未来メッセ曾於 2026 年 2 月 1 日舉辦「煌めきバレンタインマルシェ」。",
+        "en": "Tokyo Tama Mirai Messe hosted the Kirameki Valentine Marche on February 1, 2026.",
+        "ja": "東京たま未来メッセでは、2026年2月1日に「煌めきバレンタインマルシェ」が開かれました。",
+        "zh-CN": "东京多摩未来会展中心曾于 2026 年 2 月 1 日举办“闪耀情人节市集”。",
+        "hi": "Tokyo Tama Mirai Messe में 1 फ़रवरी 2026 को Kirameki Valentine Marche हुआ था।",
+        "id": "Tokyo Tama Mirai Messe menjadi lokasi Kirameki Valentine Marche pada 1 Februari 2026.",
+        "pt-BR": "O Tokyo Tama Mirai Messe recebeu a Kirameki Valentine Marche em 1º de fevereiro de 2026."
+      }
+    },
+    {
+      "name": "龙盛活力小镇",
+      "city_code": "shanghai",
+      "country_code": "CN",
+      "address": "上海市宝山区呼兰西路 123 号",
+      "map_query": "龙盛活力小镇 上海 呼兰西路123号",
+      "source_urls": [
+        "https://xxgk.shbsq.gov.cn/article.html?infoid=ad7e7534-18a7-45bc-bda1-99b3ce4ca731"
+      ],
+      "descriptions": {
+        "zh-TW": "上海寶山區 2026 年七夕「七夕甜蜜季」的活動會場，地址為呼蘭西路 123 號。",
+        "en": "Longsheng Vitality Town is the venue for Baoshan’s Qixi Sweet Season on August 19, 2026.",
+        "ja": "上海市宝山区の2026年七夕イベント「七夕甜蜜季」の会場です。住所は呼蘭西路123号。",
+        "zh-CN": "龙盛活力小镇是宝山区 2026 年“七夕甜蜜季”的活动场地，地址为呼兰西路 123 号。",
+        "hi": "Longsheng Vitality Town 19 अगस्त 2026 को Baoshan Qixi Sweet Season का स्थल है।",
+        "id": "Longsheng Vitality Town menjadi lokasi Qixi Sweet Season di Baoshan pada 19 Agustus 2026.",
+        "pt-BR": "O Longsheng Vitality Town é o local do Qixi Sweet Season de Baoshan em 19 de agosto de 2026."
+      }
+    },
+    {
+      "name": "Loveland Visitors Center",
+      "city_code": "loveland",
+      "country_code": "US",
+      "address": "5400 Stone Creek Circle, Loveland, Colorado 80538",
+      "map_query": "Loveland Visitors Center Colorado",
+      "source_urls": [
+        "https://visitloveland.com/sweetheartfestival/"
+      ],
+      "descriptions": {
+        "zh-TW": "Loveland 的官方旅遊資訊中心；2027 年 Sweetheart Festival 將於 2 月 12–13 日在市中心舉行。",
+        "en": "Loveland’s official visitor center; the 2027 Sweetheart Festival is scheduled downtown for February 12–13.",
+        "ja": "Lovelandの公式観光案内所。2027年のSweetheart Festivalは2月12～13日にダウンタウンで開催されます。",
+        "zh-CN": "Loveland 的官方游客中心；2027 年 Sweetheart Festival 将于 2 月 12–13 日在市中心举行。",
+        "hi": "यह Loveland का आधिकारिक पर्यटक केंद्र है। 2027 Sweetheart Festival 12–13 फ़रवरी को डाउनटाउन में होगा।",
+        "id": "Ini pusat informasi wisata resmi Loveland. Sweetheart Festival 2027 dijadwalkan pada 12–13 Februari di pusat kota.",
+        "pt-BR": "É o centro oficial de informações turísticas de Loveland. O Sweetheart Festival 2027 será realizado em 12 e 13 de fevereiro no centro da cidade."
+      }
+    },
+    {
+      "name": "Nehru Memorial Hall",
+      "city_code": "pune",
+      "country_code": "IN",
+      "address": "Atur Foundation House, 4, Dr Baba Saheb Ambedkar Rd, Camp, Pune, Maharashtra 411001",
+      "map_query": "Nehru Memorial Hall Pune",
+      "source_urls": [
+        "https://newsroom.feverup.com/en-IN/262080-candlelight-s-valentine-s-day-special-brings-a-romantic-experience-to-pune-on-14th-february/",
+        "https://nehruhall.com/contact/"
+      ],
+      "descriptions": {
+        "zh-TW": "Pune 的文化場館；Fever 曾在此安排 2026 年 2 月 14 日的情人節燭光音樂會。",
+        "en": "A cultural venue in Pune where Fever held a Valentine’s Day Candlelight concert on February 14, 2026.",
+        "ja": "プネーの文化施設。Feverが2026年2月14日にバレンタイン特別公演を開きました。",
+        "zh-CN": "Pune 的文化场馆；Fever 曾在此于 2026 年 2 月 14 日举办情人节烛光音乐会。",
+        "hi": "पुणे का सांस्कृतिक स्थल जहाँ Fever ने 14 फ़रवरी 2026 को Valentine’s Day Candlelight concert किया था।",
+        "id": "Tempat budaya di Pune yang menjadi lokasi konser Candlelight Valentine’s Day dari Fever pada 14 Februari 2026.",
+        "pt-BR": "Espaço cultural em Pune que recebeu um concerto Candlelight de Dia dos Namorados da Fever em 14 de fevereiro de 2026."
+      }
+    },
+    {
+      "name": "Soehanna Hall",
+      "city_code": "jakarta",
+      "country_code": "ID",
+      "address": "Energy Building 2nd Fl., SCBD Lot 11A, Jl. Jendral Sudirman Kav 52-53, Jakarta 12190, Indonesia",
+      "map_query": "Soehanna Hall Jakarta",
+      "source_urls": [
+        "https://www.soehannahall.com/contact-us/",
+        "https://www.soehannahall.com/news_and_event/night-music-lights-candlelight-concerts-soehanna-hall/"
+      ],
+      "descriptions": {
+        "zh-TW": "雅加達 SCBD 的音樂場館；官方頁面記錄 2026 年 2 月 13 日的 Valentine’s Day Special。",
+        "en": "A music venue in Jakarta’s SCBD that hosted a Valentine’s Day Special on February 13, 2026.",
+        "ja": "ジャカルタのSCBDにある音楽会場。2026年2月13日にValentine’s Day Specialが開かれました。",
+        "zh-CN": "雅加达 SCBD 的音乐场馆；官网记录了 2026 年 2 月 13 日的 Valentine’s Day Special。",
+        "hi": "जकार्ता के SCBD में स्थित संगीत स्थल जहाँ 13 फ़रवरी 2026 को Valentine’s Day Special हुआ था।",
+        "id": "Venue musik di SCBD, Jakarta yang menjadi tempat Valentine’s Day Special pada 13 Februari 2026.",
+        "pt-BR": "Casa de música no SCBD, em Jacarta, que recebeu um Valentine’s Day Special em 13 de fevereiro de 2026."
+      }
+    },
+    {
+      "name": "Senac Aclimação",
+      "city_code": "sao-paulo",
+      "country_code": "BR",
+      "address": "Rua Pires da Mota, 838, Aclimação, São Paulo - SP, 01529-000",
+      "map_query": "Senac Aclimação São Paulo",
+      "source_urls": [
+        "https://eventos.sp.senac.br/evento/workshop-mesa-para-dois-food-design-para-o-dia-dos-namorados/",
+        "https://eventos.sp.senac.br/unidades/senac-aclimacao/"
+      ],
+      "descriptions": {
+        "zh-TW": "São Paulo 的 Senac 教學據點；官方活動頁曾列出 2026 年情人節主題的「Mesa para Dois」工作坊。",
+        "en": "A Senac education site in São Paulo that hosted the 2026 Valentine-themed Mesa para Dois workshop.",
+        "ja": "サンパウロにあるSenacの教育拠点。2026年のバレンタイン企画「Mesa para Dois」が開かれました。",
+        "zh-CN": "São Paulo 的 Senac 教学点；官方活动页曾列出 2026 年情人节主题的“为两人准备的餐桌”工作坊。",
+        "hi": "साओ पाउलो का Senac शिक्षा केंद्र जहाँ 2026 का Valentine-themed Mesa para Dois workshop हुआ था।",
+        "id": "Lokasi pendidikan Senac di São Paulo yang menjadi tempat lokakarya bertema Valentine, Mesa para Dois, pada 2026.",
+        "pt-BR": "Unidade educacional do Senac em São Paulo que recebeu em 2026 o workshop de Dia dos Namorados Mesa para Dois."
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "星空愛戀音樂會",
+      "city_code": "taipei",
+      "country_code": "TW",
+      "venue": "臺北市立天文科學教育館 宇宙劇場",
+      "start_at": "2026-08-19T00:00:00Z",
+      "end_at": null,
+      "ticket_url": null,
+      "source_url": "https://tam.gov.taipei/News_Content.aspx?n=794B17A953424610&s=259D7CDEDEAEC283&sms=9D72E82EC16F3E64",
+      "descriptions": {
+        "zh-TW": "臺北市立天文科學教育館公告的七夕活動，2026 年 8 月 19 日 18:00–19:00 在宇宙劇場舉行，包含音樂、星空投影與觀星。",
+        "en": "A Taipei Astronomical Museum Qixi event on August 19, 2026, 18:00–19:00 at the Space Theater, with music, projected skies and stargazing.",
+        "ja": "台北市立天文科学教育館の七夕イベント。2026年8月19日18:00～19:00に宇宙劇場で開催され、音楽、星空投影、天体観測を行います。",
+        "zh-CN": "台北天文馆公布的七夕活动，2026 年 8 月 19 日 18:00–19:00 在宇宙剧场举行，包含音乐、星空投影和观星。",
+        "hi": "Taipei Astronomical Museum का Qixi कार्यक्रम 19 अगस्त 2026 को 18:00–19:00 बजे Space Theater में होगा, जिसमें संगीत और तारों का अवलोकन शामिल है।",
+        "id": "Acara Qixi dari Taipei Astronomical Museum pada 19 Agustus 2026, pukul 18.00–19.00 di Space Theater, dengan musik, proyeksi langit, dan pengamatan bintang.",
+        "pt-BR": "Evento de Qixi do Taipei Astronomical Museum em 19 de agosto de 2026, das 18h às 19h, no Space Theater, com música, projeção do céu e observação de estrelas."
+      }
+    },
+    {
+      "name": "美庙生活 七夕甜蜜季——“庙”境织梦，缘定今夕",
+      "city_code": "shanghai",
+      "country_code": "CN",
+      "venue": "龙盛活力小镇",
+      "start_at": "2026-08-19T00:00:00Z",
+      "end_at": null,
+      "ticket_url": null,
+      "source_url": "https://xxgk.shbsq.gov.cn/article.html?infoid=ad7e7534-18a7-45bc-bda1-99b3ce4ca731",
+      "descriptions": {
+        "zh-TW": "上海寶山區公告的七夕活動，2026 年 8 月 19 日在龍盛活力小鎮舉行，內容包含市集、婚姻登記與青年交流活動。",
+        "en": "Baoshan’s Qixi Sweet Season on August 19, 2026, at Longsheng Vitality Town, with a market, marriage-registration service and a young people’s social event.",
+        "ja": "上海市宝山区が案内する七夕イベント。2026年8月19日に龍盛活力小鎮で開催され、市場、婚姻届の受付、若者の交流企画などを行います。",
+        "zh-CN": "上海宝山区公布的七夕活动，2026 年 8 月 19 日在龙盛活力小镇举行，包含市集、婚姻登记和青年交流活动。",
+        "hi": "Baoshan का Qixi Sweet Season 19 अगस्त 2026 को Longsheng Vitality Town में होगा, जिसमें बाज़ार, विवाह पंजीकरण और युवा交流 कार्यक्रम शामिल हैं।",
+        "id": "Qixi Sweet Season dari Baoshan pada 19 Agustus 2026 di Longsheng Vitality Town, dengan pasar, layanan pencatatan pernikahan, dan acara pertemuan anak muda.",
+        "pt-BR": "O Qixi Sweet Season de Baoshan ocorre em 19 de agosto de 2026 no Longsheng Vitality Town, com mercado, serviço de registro de casamento e encontro para jovens."
+      }
+    },
+    {
+      "name": "Loveland Sweetheart Festival 2027",
+      "city_code": "loveland",
+      "country_code": "US",
+      "venue": "Downtown Loveland",
+      "start_at": "2027-02-12T00:00:00Z",
+      "end_at": "2027-02-13T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://visitloveland.com/sweetheartfestival/",
+      "descriptions": {
+        "zh-TW": "Visit Loveland 官方頁面列出的 2027 年活動，2 月 12–13 日在 Loveland 市中心舉行，包含冰雕、表演、藝術與家庭活動。",
+        "en": "Visit Loveland lists this 2027 festival for February 12–13 in downtown Loveland, with ice carving, performances, art and family activities.",
+        "ja": "Visit Loveland公式ページが案内する2027年のイベント。2月12～13日にダウンタウンで開催され、氷彫刻、ステージ、アート、家族向け企画などを行います。",
+        "zh-CN": "Visit Loveland 官网列出的 2027 年活动，2 月 12–13 日在 Loveland 市中心举行，包含冰雕、表演、艺术和家庭活动。",
+        "hi": "Visit Loveland के अनुसार यह उत्सव 12–13 फ़रवरी 2027 को डाउनटाउन Loveland में होगा, जिसमें बर्फ़ की मूर्तियाँ, प्रदर्शन, कला और पारिवारिक कार्यक्रम होंगे।",
+        "id": "Menurut Visit Loveland, festival ini berlangsung pada 12–13 Februari 2027 di pusat kota Loveland, dengan pahatan es, pertunjukan, seni, dan kegiatan keluarga.",
+        "pt-BR": "Segundo o Visit Loveland, o festival acontece em 12 e 13 de fevereiro de 2027 no centro de Loveland, com esculturas de gelo, apresentações, arte e atividades para famílias."
+      }
+    }
+  ]
+}

@@ -57,6 +57,10 @@ function initHost() {
     cwd: ROOT,
     stdio: "inherit",
   });
+  execFileSync(process.execPath, [join(ROOT, "scripts", "import-local-sample-data.mjs")], {
+    cwd: ROOT,
+    stdio: "inherit",
+  });
   const finalDb = new DatabaseSync(DB_PATH);
   finalDb.exec("PRAGMA foreign_keys = ON;");
   const tables = finalDb

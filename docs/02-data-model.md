@@ -128,6 +128,24 @@ CREATE INDEX idx_topic_observances_topic
 CREATE INDEX idx_topic_observances_date
   ON topic_observances(observed_date, date_range_end);
 
+CREATE TABLE topic_observance_occurrences (
+  occurrence_id   TEXT PRIMARY KEY,
+  observance_id   TEXT NOT NULL,
+  occurrence_year INTEGER NOT NULL,
+  starts_on       TEXT NOT NULL,              -- 'YYYY-MM-DD',地方時區的日期
+  ends_on         TEXT,                       -- NULL = 單日；含首尾日
+  calendar_system TEXT NOT NULL,              -- gregorian|chinese-lunisolar|hindu-lunisolar|islamic|solar-term|local
+  timezone        TEXT NOT NULL,              -- IANA timezone
+  date_status     TEXT NOT NULL,              -- confirmed|estimated|local-variant
+  source_ids_json TEXT NOT NULL,              -- 該年度日期的佐證來源
+  updated_at      INTEGER NOT NULL,
+  UNIQUE (observance_id, occurrence_year, starts_on)
+);
+CREATE INDEX idx_topic_observance_occurrences_date
+  ON topic_observance_occurrences(starts_on, ends_on);
+CREATE INDEX idx_topic_observance_occurrences_observance
+  ON topic_observance_occurrences(observance_id, occurrence_year, starts_on);
+
 CREATE TABLE topic_observance_i18n (
   observance_id TEXT NOT NULL,
   locale       TEXT NOT NULL,
@@ -138,7 +156,7 @@ CREATE TABLE topic_observance_i18n (
 
 > `source_ids_json` 是必填,不是選填。每一條文化事實都要能點回原始來源——這既是內容品質,也是對 Google「scaled content abuse」政策的正面抗辯:這一頁的價值來自跨國真實來源的彙整,不是生成的散文。
 >
-> **「追蹤地方表現」= 行事曆(2026-08-11 拍板)**:`observed_date` / `date_rule` 驅動每個 observance 的「加入行事曆」按鈕——Google Calendar URL 模板 + 靜態 .ics 下載(cn 市場不依賴 Google)。純靜態層功能,無 follow 表、無通知子系統,CF 掛掉照常可用。站內「我追蹤的 Topic」清單需登入,遠期再議。
+> **年度日期是獨立層:**`observed_date` / `date_rule` 是文化規則與無年份的摘要；`topic_observance_occurrences` 保存每一年的實際日期、時區、狀態與來源。頁面排序只使用匯出的 `next_occurrence`，不在 Astro build 解析自然語言。 「加入行事曆」同樣以 occurrence 產生 Google Calendar URL 與靜態 `.ics`(cn 市場不依賴 Google)。
 
 ### 2.4 `topic_aliases` / `topic_relations` —— Topic Graph(草案 §48)
 
@@ -298,6 +316,27 @@ CREATE TABLE events (
 );
 CREATE INDEX idx_events_time ON events(city_code, start_at);
 ```
+
+目前的第一批在地資料樣本放在 `content/local-sample-data.json`；來源目錄
+`content/local-data-sources.json` 保留七市場的搜尋候選詞、官方 URL 與頁面核對 markers。
+排程與人工更新入口是 `node scripts/update-local-data.mjs`：它會先驗證目前仍有效的
+官方頁面與活動日期，沒有可靠回應就整次失敗，不會用猜測資料覆蓋；日期已過的活動會移除，
+再由 `scripts/import-local-sample-data.mjs` 匯入主機 SQLite，最後由
+`node scripts/export-data.mjs` 產生 `data/places/<city_code>.json` 與
+`data/events/<city_code>.json`。每個地點保留 `source_urls`；每個活動保留
+`source_id` 與匯出後的 `source_url`。沒有可核對的官方或主辦方來源，不建立資料列。
+
+手動執行：
+
+```bash
+node scripts/update-local-data.mjs --check-only   # 只驗證來源，不寫 SQLite
+node scripts/update-local-data.mjs                 # 驗證、清除過期活動、匯入 SQLite
+node scripts/update-local-data.mjs --offline       # 無網路時只做結構/日期重跑
+```
+
+新增或替換來源時，先在 `local-data-sources.json` 填官方 URL、`discovery_query`、
+至少一個 `markers`；活動來源還必須填 `date_markers`。腳本不會直接抓搜尋引擎結果當成資料，
+而是把搜尋後選出的可追溯來源固定下來並週期性重新核對。
 
 ---
 

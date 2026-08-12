@@ -3,7 +3,7 @@
 // 形狀對齊 Track A 生產者的實際輸出(topics/index=裸陣列、customs 在 i18n.json
 // 的 observances 區塊、places/events 用 topics:[{topic_id,relevance}]、meta 為 map、highlights 用 items)。
 // ⚠ 根層 data/ 非空時,pnpm build 的 copy-data 會鏡像覆蓋本 fixture——這是規格內行為。
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 
 const ROOT = join(process.cwd(), 'src', 'data');
@@ -207,61 +207,11 @@ w(`topics/${ATW}/i18n.json`, {
 });
 w(`topics/${ATW}/highlights.json`, { topic_id: ATW, items: [] });
 
-// places/taipei.json
-w('places/taipei.json', {
-  city_code: 'taipei',
-  places: [
-    { place_id: 'plc_01JTPECAKE0000000000000001', name: '可可巷手工巧克力', country_code: 'TW',
-      address: '台北市大安區示例路 12 號',
-      map_url: 'https://www.google.com/maps/search/?api=1&query=%E5%8F%AF%E5%8F%AF%E5%B7%B7%20%E5%8F%B0%E5%8C%97',
-      nav_urls: { google: 'https://www.google.com/maps/dir/?api=1&destination=%E5%8F%AF%E5%8F%AF%E5%B7%B7%20%E5%8F%B0%E5%8C%97' },
-      mention_count: 12, topics: [{ topic_id: VD, relevance: 0.9 }],
-      descriptions: {
-        'zh-TW': '討論串裡最常被點名的手工巧克力店,情人節前要排隊。',
-        en: "The hand-made chocolate shop mentioned most in the threads; expect a line before Valentine's Day.",
-        ja: 'スレッドで最も名前が挙がる手作りチョコレート店。バレンタイン前は行列必至です。',
-        'zh-CN': '讨论串里最常被点名的手工巧克力店,情人节前要排队。',
-        hi: 'चर्चाओं में सबसे ज़्यादा ज़िक्र होने वाली हस्तनिर्मित चॉकलेट की दुकान; वैलेंटाइन से पहले लाइन लगती है।',
-        id: 'Toko cokelat buatan tangan yang paling sering disebut di diskusi; antre panjang menjelang Valentine.',
-        'pt-BR': 'A loja de chocolate artesanal mais citada nas discussões; espere fila antes do Dia dos Namorados.',
-      } },
-    { place_id: 'plc_01JTPEBQT00000000000000001', name: '花間製作所', country_code: 'TW',
-      address: '台北市中山區示例街 45 號',
-      map_url: 'https://www.google.com/maps/search/?api=1&query=%E8%8A%B1%E9%96%93%E8%A3%BD%E4%BD%9C%E6%89%80%20%E5%8F%B0%E5%8C%97',
-      nav_urls: { google: 'https://www.google.com/maps/dir/?api=1&destination=%E8%8A%B1%E9%96%93%E8%A3%BD%E4%BD%9C%E6%89%80%20%E5%8F%B0%E5%8C%97' },
-      mention_count: 7, topics: [{ topic_id: VD, relevance: 0.7 }],
-      descriptions: {
-        'zh-TW': '社群推薦的花藝工作室,可以預約情人節花束。',
-        en: "A community-recommended floral studio; Valentine's bouquets by reservation.",
-        ja: 'コミュニティおすすめのフラワースタジオ。バレンタインの花束は予約制です。',
-        'zh-CN': '社群推荐的花艺工作室,可以预约情人节花束。',
-        hi: 'समुदाय द्वारा सुझाया गया फूलों का स्टूडियो; वैलेंटाइन गुलदस्ते बुकिंग पर मिलते हैं।',
-        id: 'Studio bunga rekomendasi komunitas; buket Valentine bisa dipesan lebih dulu.',
-        'pt-BR': 'Um ateliê floral recomendado pela comunidade; buquês de Dia dos Namorados sob reserva.',
-      } },
-  ],
-});
-
-// events/taipei.json
-w('events/taipei.json', {
-  city_code: 'taipei',
-  events: [
-    { event_id: 'evt_01JTPEFEST0000000000000001', name: '台北情人節巧克力市集', country_code: 'TW',
-      venue: '松山文創園區', start_at: 1771027200, end_at: 1771200000,
-      ticket_url: 'https://example.com/tickets/taipei-choco-fair',
-      source_id: 'src_fixture_event_01',
-      topics: [{ topic_id: VD, relevance: 0.8 }],
-      descriptions: {
-        'zh-TW': '五十家甜點與手作品牌齊聚的巧克力市集,情人節週末限定。',
-        en: "A chocolate fair with fifty dessert and craft brands, Valentine's weekend only.",
-        ja: 'スイーツとクラフトの50ブランドが集まるチョコレートマーケット。バレンタイン週末限定です。',
-        'zh-CN': '五十家甜点与手作品牌齐聚的巧克力市集,情人节周末限定。',
-        hi: 'पचास डेज़र्ट और हस्तशिल्प ब्रांडों वाला चॉकलेट मेला, सिर्फ़ वैलेंटाइन वीकेंड पर।',
-        id: 'Pasar cokelat dengan lima puluh merek kue dan kerajinan, hanya pada akhir pekan Valentine.',
-        'pt-BR': 'Uma feira de chocolate com cinquenta marcas de doces e artesanato, só no fim de semana do Dia dos Namorados.',
-      } },
-  ],
-});
+// places/events 不再由 fixture 產生假資料。
+// 根層 data/ 有資料時由 copy-data.mjs 鏡像人工採集結果；根層為空時保持空集合，
+// 讓缺資料如實顯示，不以示例地址或外部佔位網址佔位。
+rmSync(join(ROOT, 'places'), { recursive: true, force: true });
+rmSync(join(ROOT, 'events'), { recursive: true, force: true });
 
 // rankings/global/<window>.json
 const vdRow = (win) => ({ rank: 0, topic_id: VD, slug: 'affection-and-reciprocity', score: vdScores[win] });

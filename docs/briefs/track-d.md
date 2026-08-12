@@ -59,7 +59,7 @@ Worker 已上線(網址由派工訊息給你),`SYNC_SECRET` 已設,主機側值�
 ### W4.3 匯出推送 → `scripts/hourly-export.sh`
 
 1. 跑 `node scripts/export-data.mjs`(Track A 產出的腳本)。
-2. **只 commit 根層 `data/`**(`git add data/` —— 不要 `git add -A`,site/api/db 的變動不歸這支)。
+2. **只 commit 受管理的 `data/` 與活動快照**(`git add data/ content/local-sample-data.json` —— 不要 `git add -A`,site/api/db 的變動不歸這支)。
 3. push 到 source repo。
    - 走 gh 的 HTTPS credential helper(主機已 `gh auth login` 為 `LightChang`)。
    - author 用 **repo local git config**(`/root/aeiou.now` 已設 `weiqi-kids <lightman.chang@gmail.com>`)。
