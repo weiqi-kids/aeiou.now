@@ -231,21 +231,21 @@ function cityCountry(entries) {
   return null;
 }
 
-/** 「附近訊息」排序:**有在地資訊的 Topic**,按城市分組。
+/** 「附近訊息」排序:**有在地資訊的 Topic**,按指定城市取資料。
  *
  * 這一支回的是 Topic 不是店家——導覽上的「附近」是 Topic 的篩選條件,店家本身屬於各自的
  * Topic 頁(草案 §44 的 📍 Near You)。
  *
- * 城市帶 country_code 與該 Topic 底下的 place_id 清單:前者供「同城市 > 同國家 > 其他」的
- * 階層排序(docs/02 §5.2:geo 只到城市級,不算距離、不存座標),後者供前端向
- * GET /v1/reactions/summary 問 emoji 數當同層的 tie-break。兩者都在用戶端做,
- * 靜態層只負責排出一個以本語系市場為主的預設順序。 */
-export function topicsWithPlacesByCity() {
+ * 城市帶 country_code 與該 Topic 底下的 place_id 清單,供前端向
+ * GET /v1/reactions/summary 問 emoji 數排序。單一語系站傳入代表城市,不把七市場混在同一頁。 */
+export function topicsWithPlacesByCity(cityCode = null) {
   const byId = new Map(getTopicsIndex().map((topic) => [topic.topic_id, topic]));
   const cities = [];
   for (const city of listCityJson('places')) {
+    if (cityCode && city.city_code !== cityCode) continue;
     const agg = new Map();
     for (const pl of city.places || []) {
+      if (pl.place_type !== 'permanent' || pl.topic_relevance !== 'direct') continue;
       for (const id of entryTopicIds(pl)) {
         const prev = agg.get(id) || { count: 0, ids: [] };
         prev.count += 1;
@@ -270,14 +270,16 @@ export function topicsWithPlacesByCity() {
   return cities.sort((a, b) => String(a.city_code).localeCompare(String(b.city_code)));
 }
 
-/** 「活動資訊」排序:**有活動的 Topic**,按城市分組(理由同上一支)。
+/** 「活動資訊」排序:**有活動的 Topic**,按指定城市取資料(理由同上一支)。
  * 每個 Topic 額外帶最近一場活動的開始時間,讓列表能排序也能給讀者一個時間感。 */
-export function topicsWithEventsByCity() {
+export function topicsWithEventsByCity(cityCode = null) {
   const byId = new Map(getTopicsIndex().map((topic) => [topic.topic_id, topic]));
   const cities = [];
   for (const city of listCityJson('events')) {
+    if (cityCode && city.city_code !== cityCode) continue;
     const agg = new Map();
     for (const ev of city.events || []) {
+      if (ev.start_at == null || !ev.venue || !ev.source_url) continue;
       for (const id of entryTopicIds(ev)) {
         const prev = agg.get(id) || { count: 0, next_start_at: null, ids: [] };
         const start = typeof ev.start_at === 'number' ? ev.start_at : null;

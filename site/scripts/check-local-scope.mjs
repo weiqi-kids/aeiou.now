@@ -97,10 +97,49 @@ function assertRenderedScope(topicId) {
   }
 }
 
+function assertWorldNavPlacement(topicId) {
+  const slug = getTopicBundle(topicId).facts?.slug;
+  if (!slug) return;
+  const path = join(DIST, 'topic', slug, 'index.html');
+  if (!existsSync(path)) fail(`dist 找不到 Topic 頁：${path}`);
+  const page = readFileSync(path, 'utf8');
+  const article = page.match(/<article\b[^>]*>[\s\S]*?<\/article>/)?.[0] || '';
+  const summary = article.match(/<summary class="world-summary"[\s\S]*?<\/summary>/)?.[0] || '';
+  const articleNavs = [...article.matchAll(/<nav\b[^>]*>/g)];
+  for (const match of articleNavs) {
+    if (!summary.includes(match[0])) fail(`${LOCALE}/${slug} article 內有不屬於 #world summary 的 nav 區塊`);
+  }
+  if (!summary) {
+    if (articleNavs.length) fail(`${LOCALE}/${slug} 沒有 #world 時不應有 nav 區塊`);
+    return;
+  }
+  if (!summary.includes('<nav class="world-countries"')) {
+    fail(`${LOCALE}/${slug} 國家導覽沒有放在 #world > summary 內`);
+  }
+}
+
+function assertSortPageScope(sort) {
+  const path = join(DIST, 'topics', sort, 'index.html');
+  if (!existsSync(path)) fail(`dist 找不到排序頁：${path}`);
+  const page = readFileSync(path, 'utf8');
+  const cities = [...page.matchAll(/<section class="sort-group"[^>]*data-city="([^"]+)"/g)]
+    .map((match) => match[1]);
+  if (cities.some((city) => city !== marketCity) || cities.length > 1) {
+    fail(`${LOCALE}/topics/${sort} 混入代表城市以外的資料：${cities.join(', ') || '空'}`);
+  }
+}
+
 const topicIds = listTopicIds();
 for (const topicId of topicIds) {
   assertSourceScope(topicId);
-  if (process.argv.includes('--dist')) assertRenderedScope(topicId);
+  if (process.argv.includes('--dist')) {
+    assertRenderedScope(topicId);
+    assertWorldNavPlacement(topicId);
+  }
+}
+if (process.argv.includes('--dist')) {
+  assertSortPageScope('nearby');
+  assertSortPageScope('events');
 }
 
 console.log(`本地範圍守門通過：${LOCALE} → ${marketCountry}/${marketCity}；檢查 ${topicIds.length} 個 Topic。`);
