@@ -4,7 +4,14 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { LOCALE, MARKET_CITY, MARKET_COUNTRY } from '../src/lib/config.mjs';
-import { listTopicIds, getTopicBundle, placesForTopic, eventsForTopic } from '../src/lib/data.mjs';
+import {
+  listTopicIds,
+  getTopicBundle,
+  placesForTopic,
+  eventsForTopic,
+  topicsWithPlacesByCity,
+  topicsWithEventsByCity,
+} from '../src/lib/data.mjs';
 
 const ROOT = process.cwd();
 const DIST = join(ROOT, 'dist');
@@ -126,6 +133,28 @@ function assertSortPageScope(sort) {
     .map((match) => match[1]);
   if (cities.some((city) => city !== marketCity) || cities.length > 1) {
     fail(`${LOCALE}/topics/${sort} 混入代表城市以外的資料：${cities.join(', ') || '空'}`);
+  }
+  const expectedCities = sort === 'nearby'
+    ? topicsWithPlacesByCity(marketCity)
+    : topicsWithEventsByCity(marketCity);
+  const expected = expectedCities.find((city) => city.city_code === marketCity);
+  if (!expected) fail(`${LOCALE}/topics/${sort} 沒有代表城市資料：${marketCity}`);
+  // nearby 是在地 Topic 入口，不允許回退成單一全域 Topic；這正是此前全域 topic_slug
+  // 造成的回歸。events 至少要有一個可核對的 Topic，不能生成空白索引頁。
+  if (sort === 'nearby' && expected.topics.length < 2) {
+    fail(`${LOCALE}/topics/${sort} 覆蓋不足：代表城市只有 ${expected.topics.length} 個 Topic`);
+  }
+  if (sort === 'events' && expected.topics.length < 1) {
+    fail(`${LOCALE}/topics/${sort} 沒有可核對活動的 Topic`);
+  }
+  const renderedRows = [...page.matchAll(/<li\b[^>]*>/g)]
+    .map((match) => match[0])
+    .filter((tag) => /\bclass="[^"]*\brow\b[^"]*"/.test(tag))
+    .map((tag) => tag.match(/\bdata-topic-id="([^"]+)"/)?.[1])
+    .filter(Boolean);
+  const expectedIds = expected.topics.map((topic) => topic.topic_id);
+  if (renderedRows.length !== expectedIds.length || renderedRows.some((id, index) => id !== expectedIds[index])) {
+    fail(`${LOCALE}/topics/${sort} rendered Topic 與資料關聯不一致：資料 ${expectedIds.length}、頁面 ${renderedRows.length}`);
   }
 }
 

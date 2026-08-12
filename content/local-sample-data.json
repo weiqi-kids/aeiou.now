@@ -1,5 +1,4 @@
 {
-  "topic_slug": "affection-and-reciprocity",
   "as_of": "2026-08-12",
   "collection_method": "manual-official-source",
   "managed_event_source_urls": [
@@ -9,7 +8,14 @@
     "https://visitloveland.com/sweetheartfestival/",
     "https://newsroom.feverup.com/en-IN/262080-candlelight-s-valentine-s-day-special-brings-a-romantic-experience-to-pune-on-14th-february/",
     "https://www.soehannahall.com/news_and_event/night-music-lights-candlelight-concerts-soehanna-hall/",
-    "https://eventos.sp.senac.br/evento/workshop-mesa-para-dois-food-design-para-o-dia-dos-namorados/"
+    "https://eventos.sp.senac.br/evento/workshop-mesa-para-dois-food-design-para-o-dia-dos-namorados/",
+    "https://www.travel.taipei/en/event-calendar/details/66803",
+    "https://www.gotokyo.org/en/spot/ev093/index.html",
+    "https://english.shanghai.gov.cn/en-MajorConsumerEvents/20260706/d4819e8683d049c8a715842864ce97d2.html",
+    "https://loveland.org/events-2/corn-roast-festival/",
+    "https://www.anandampune.com/",
+    "https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026",
+    "https://agenciasp.sp.gov.br/revelando-sp-2026-sao-paulo-capital/"
   ],
   "managed_place_source_urls": [
     "https://www.chocoholic.com.tw/about_2.htm",
@@ -18,7 +24,14 @@
     "https://visitloveland.com/visitors-center/",
     "https://www.choconuts.in/",
     "https://www.godiva.co.id/our-location/",
-    "https://www.dengo.com.br/nossas-lojas"
+    "https://www.dengo.com.br/nossas-lojas",
+    "https://www.ntm.gov.tw/en/cl.aspx?n=5703",
+    "https://www.gotokyo.org/en/destinations/eastern-tokyo/fukagawa/",
+    "https://english.shanghai.gov.cn/en-MuseumsGalleries/20231218/01fdd3f62d0c4877bc289ec0b1de6afa.html",
+    "https://www.lovgov.org/services/parks-recreation/parks-facilities/parks-reservation-spaces/fairgrounds-park/-fsiteid-1",
+    "https://www.dagdushethganpati.com/?p=11699",
+    "https://www.jakarta.go.id/landmark-jakarta",
+    "https://museudofutebol.org.br/exposicoes/museu-do-futebol/"
   ],
   "retired_place_ids": [
     "plc_DC1354E38584ADE45E79C7859F",
@@ -45,6 +58,7 @@
       "country_code": "TW",
       "place_type": "permanent",
       "topic_relevance": "direct",
+      "topic_slugs": ["affection-and-reciprocity"],
       "address": "台北市大安區永康街 7 巷 2 號",
       "map_query": "Chocoholic 巧克哈客 永康店 台北",
       "source_urls": [
@@ -66,6 +80,7 @@
       "country_code": "JP",
       "place_type": "permanent",
       "topic_relevance": "direct",
+      "topic_slugs": ["affection-and-reciprocity"],
       "address": "〒151-0063 東京都渋谷区富ヶ谷 2-1-9",
       "map_query": "Minimal 富ヶ谷本店 東京",
       "source_urls": [
@@ -87,6 +102,7 @@
       "country_code": "CN",
       "place_type": "permanent",
       "topic_relevance": "direct",
+      "topic_slugs": ["affection-and-reciprocity"],
       "address": "上海市黄浦区马当路 119 号 102 室",
       "map_query": "Godiva 巧克力体验旗舰店 新天地 上海",
       "source_urls": [
@@ -108,6 +124,7 @@
       "country_code": "US",
       "place_type": "permanent",
       "topic_relevance": "direct",
+      "topic_slugs": ["affection-and-reciprocity"],
       "address": "5400 Stone Creek Circle, Loveland, Colorado 80538",
       "map_query": "Loveland East Gateway Visitors Center Colorado",
       "source_urls": [
@@ -129,6 +146,7 @@
       "country_code": "IN",
       "place_type": "permanent",
       "topic_relevance": "direct",
+      "topic_slugs": ["affection-and-reciprocity"],
       "address": "Shop No 1, Kumar Pavilion, East St, Pune Cantonment, Pune, Maharashtra 411001",
       "map_query": "Choconuts Kumar Pavilion East Street Pune",
       "source_urls": [
@@ -150,6 +168,7 @@
       "country_code": "ID",
       "place_type": "permanent",
       "topic_relevance": "direct",
+      "topic_slugs": ["affection-and-reciprocity"],
       "address": "Level 1 Unit 114, Jalan M.H. Thamrin No. 28-30, Jakarta Pusat, DKI Jakarta 10350",
       "map_query": "GODIVA Plaza Indonesia Jakarta",
       "source_urls": [
@@ -171,6 +190,7 @@
       "country_code": "BR",
       "place_type": "permanent",
       "topic_relevance": "direct",
+      "topic_slugs": ["affection-and-reciprocity"],
       "address": "Avenida Brigadeiro Faria Lima, 196, Pinheiros, São Paulo - SP",
       "map_query": "Fábrica de Dengo São Paulo",
       "source_urls": [
@@ -185,6 +205,160 @@
         "id": "Toko cokelat dan ruang pengalaman di São Paulo. Daftar toko resmi mencantumkan alamat Fábrica de Dengo serta layanan cokelat dan kafe.",
         "pt-BR": "Loja de chocolate e espaço de experiências em São Paulo. A lista oficial de lojas informa o endereço da Fábrica de Dengo e seus serviços de chocolate e café."
       }
+    },
+    {
+      "name": "國立臺灣博物館本館",
+      "city_code": "taipei",
+      "country_code": "TW",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "topic_slugs": ["national-belonging"],
+      "address": "100007 臺北市中正區襄陽路 2 號（二二八和平公園內）",
+      "map_query": "國立臺灣博物館本館 襄陽路2號 台北",
+      "source_urls": [
+        "https://www.ntm.gov.tw/en/cl.aspx?n=5703"
+      ],
+      "descriptions": {
+        "zh-TW": "國立臺灣博物館本館位在臺北二二八和平公園內，官方參觀資訊列明館址為襄陽路 2 號，館內長期保存臺灣的自然與文化資料。",
+        "en": "The National Taiwan Museum’s main building is in Taipei’s 228 Peace Park. Its official visitor information lists No. 2 Xiangyang Road and the museum’s long-running natural and cultural collections.",
+        "ja": "国立台湾博物館の本館は台北の二二八和平公園内にあります。公式案内に襄陽路2号の住所と、台湾の自然・文化資料を扱う博物館であることが掲載されています。",
+        "zh-CN": "国立台湾博物馆本馆位于台北二二八和平公园内，官方参观信息列出襄阳路 2 号馆址，长期保存台湾的自然与文化资料。",
+        "hi": "National Taiwan Museum का मुख्य भवन ताइपे के 228 Peace Park में है। आधिकारिक जानकारी में No. 2 Xiangyang Road का पता और प्राकृतिक व सांस्कृतिक संग्रहों का उल्लेख है।",
+        "id": "Gedung utama National Taiwan Museum berada di 228 Peace Park, Taipei. Informasi kunjungan resminya mencantumkan alamat No. 2 Xiangyang Road serta koleksi alam dan budaya Taiwan.",
+        "pt-BR": "O edifício principal do National Taiwan Museum fica no 228 Peace Park, em Taipei. A informação oficial de visita lista o endereço No. 2 Xiangyang Road e as coleções naturais e culturais de Taiwan."
+      }
+    },
+    {
+      "name": "富岡八幡宮",
+      "city_code": "tokyo",
+      "country_code": "JP",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "topic_slugs": ["protection-and-play"],
+      "address": "〒135-0047 東京都江東区富岡 1-20-3",
+      "map_query": "富岡八幡宮 東京都江東区富岡1-20-3",
+      "source_urls": [
+        "https://www.gotokyo.org/en/destinations/eastern-tokyo/fukagawa/"
+      ],
+      "descriptions": {
+        "zh-TW": "東京深川的富岡八幡宮，官方東京旅遊指南列出 1-20-3 Tomioka 地址，並介紹神輿與深川八幡祭的地方傳統。",
+        "en": "Tomioka Hachimangu Shrine in Fukagawa, Tokyo. The official Tokyo guide lists 1-20-3 Tomioka and describes its mikoshi floats and the local Fukagawa Hachiman festival tradition.",
+        "ja": "東京・深川の富岡八幡宮。東京の公式観光ガイドに1-20-3 Tomiokaの住所と、神輿や深川八幡祭の地域文化が紹介されています。",
+        "zh-CN": "东京深川的富冈八幡宫，东京官方旅游指南列出 1-20-3 Tomioka 地址，并介绍神舆和深川八幡祭的地方传统。",
+        "hi": "टोक्यो के फुकागावा में Tomioka Hachimangu Shrine। आधिकारिक Tokyo guide में 1-20-3 Tomioka का पता और मिकोशी तथा Fukagawa Hachiman उत्सव की स्थानीय परंपरा दी गई है।",
+        "id": "Tomioka Hachimangu Shrine di Fukagawa, Tokyo. Panduan resmi Tokyo mencantumkan alamat 1-20-3 Tomioka serta tradisi mikoshi dan festival Fukagawa Hachiman.",
+        "pt-BR": "O santuário Tomioka Hachimangu, em Fukagawa, Tóquio. O guia oficial de Tóquio informa o endereço 1-20-3 Tomioka e descreve os mikoshi e a tradição do festival Fukagawa Hachiman."
+      }
+    },
+    {
+      "name": "上海博物館人民廣場館",
+      "city_code": "shanghai",
+      "country_code": "CN",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "topic_slugs": ["national-belonging"],
+      "address": "上海市黃浦區人民大道 201 號",
+      "map_query": "上海博物館 人民大道201號",
+      "source_urls": [
+        "https://english.shanghai.gov.cn/en-MuseumsGalleries/20231218/01fdd3f62d0c4877bc289ec0b1de6afa.html"
+      ],
+      "descriptions": {
+        "zh-TW": "上海博物館人民廣場館位在人民大道 201 號，上海市政府英文頁面介紹其中國古代藝術與文物收藏。",
+        "en": "The Shanghai Museum on People’s Square is at No. 201 Renmin Avenue. A Shanghai government guide describes its collection of ancient Chinese art and cultural relics.",
+        "ja": "上海博物館の人民広場館は人民大道201号にあります。上海市政府の案内では、中国古代美術と文化財のコレクションが紹介されています。",
+        "zh-CN": "上海博物馆人民广场馆位于人民大道 201 号，上海市政府英文页面介绍了它收藏的中国古代艺术和文物。",
+        "hi": "Shanghai Museum on People’s Square का पता No. 201 Renmin Avenue है। शंघाई सरकार की जानकारी में प्राचीन चीनी कला और सांस्कृतिक अवशेषों का संग्रह बताया गया है।",
+        "id": "Shanghai Museum on People’s Square berada di No. 201 Renmin Avenue. Panduan pemerintah Shanghai menjelaskan koleksi seni Tiongkok kuno dan peninggalan budayanya.",
+        "pt-BR": "O Shanghai Museum na People’s Square fica no nº 201 da Renmin Avenue. Um guia do governo de Xangai descreve sua coleção de arte chinesa antiga e relíquias culturais."
+      }
+    },
+    {
+      "name": "Fairgrounds Park",
+      "city_code": "loveland",
+      "country_code": "US",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "topic_slugs": ["harvest-and-shared-meals"],
+      "address": "700 S. Railroad Avenue, Loveland, CO",
+      "map_query": "Fairgrounds Park 700 S Railroad Avenue Loveland Colorado",
+      "source_urls": [
+        "https://www.lovgov.org/services/parks-recreation/parks-facilities/parks-reservation-spaces/fairgrounds-park/-fsiteid-1"
+      ],
+      "descriptions": {
+        "zh-TW": "Loveland 的 Fairgrounds Park 位於 700 S. Railroad Avenue，市政府列有野餐區、遊樂場、噴水區與 Farmers Market 等用途。",
+        "en": "Fairgrounds Park is at 700 S. Railroad Avenue in Loveland. The city lists its picnic area, playgrounds, spray park and farmers market among the park’s uses.",
+        "ja": "LovelandのFairgrounds Parkは700 S. Railroad Avenueにあります。市の案内にはピクニックエリア、遊具、スプレーパーク、ファーマーズマーケットなどが掲載されています。",
+        "zh-CN": "Loveland 的 Fairgrounds Park 位于 700 S. Railroad Avenue，市政府列出野餐区、游乐场、喷泉水乐园和 Farmers Market 等用途。",
+        "hi": "Loveland का Fairgrounds Park 700 S. Railroad Avenue पर है। शहर की जानकारी में पिकनिक क्षेत्र, खेल के मैदान, स्प्रे पार्क और farmers market का उल्लेख है।",
+        "id": "Fairgrounds Park berada di 700 S. Railroad Avenue, Loveland. Pemerintah kota mencantumkan area piknik, taman bermain, spray park, dan farmers market sebagai fasilitasnya.",
+        "pt-BR": "O Fairgrounds Park fica em 700 S. Railroad Avenue, Loveland. A cidade lista área de piquenique, playgrounds, spray park e farmers market entre os usos do parque."
+      }
+    },
+    {
+      "name": "Dagdusheth Halwai Ganpati Temple",
+      "city_code": "pune",
+      "country_code": "IN",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "topic_slugs": ["new-beginnings-and-fortune"],
+      "address": "Ganpati Bhavan, 250 Budhvar Peth, Pune, Maharashtra 411002",
+      "map_query": "Dagdusheth Halwai Ganpati Temple Ganpati Bhavan 250 Budhvar Peth Pune",
+      "source_urls": [
+        "https://www.dagdushethganpati.com/?p=11699"
+      ],
+      "descriptions": {
+        "zh-TW": "Pune 的 Dagdusheth Halwai Ganpati Temple，官方頁列出 Budhvar Peth 的地址，並介紹寺廟與年度 Ganpati 節慶。",
+        "en": "The Dagdusheth Halwai Ganpati Temple in Pune. Its official site lists the Budhvar Peth address and describes the temple and its annual Ganpati festival.",
+        "ja": "プネーのDagdusheth Halwai Ganpati Temple。公式サイトにBudhvar Pethの住所と、寺院および毎年のGanpati祭の案内があります。",
+        "zh-CN": "Pune 的 Dagdusheth Halwai Ganpati Temple，官网列出 Budhvar Peth 地址，并介绍寺庙和年度 Ganpati 节庆。",
+        "hi": "पुणे का Dagdusheth Halwai Ganpati Temple। आधिकारिक साइट पर Budhvar Peth का पता और मंदिर तथा वार्षिक Ganpati उत्सव की जानकारी है।",
+        "id": "Dagdusheth Halwai Ganpati Temple di Pune. Situs resminya mencantumkan alamat di Budhvar Peth serta menjelaskan kuil dan festival Ganpati tahunannya.",
+        "pt-BR": "O Dagdusheth Halwai Ganpati Temple, em Pune. O site oficial informa o endereço em Budhvar Peth e apresenta o templo e seu festival anual de Ganpati."
+      }
+    },
+    {
+      "name": "Monumen Nasional (MONAS)",
+      "city_code": "jakarta",
+      "country_code": "ID",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "topic_slugs": ["national-belonging"],
+      "address": "Jalan Tugu Monas, Gambir, Jakarta Pusat, Indonesia",
+      "map_query": "Monumen Nasional MONAS Jalan Tugu Monas Gambir Jakarta",
+      "source_urls": [
+        "https://www.jakarta.go.id/landmark-jakarta"
+      ],
+      "descriptions": {
+        "zh-TW": "雅加達的國家紀念塔 MONAS 位在 Gambir 的 Jalan Tugu Monas，雅加達市政府稱它是印尼人民爭取獨立的象徵。",
+        "en": "Jakarta’s National Monument (MONAS) is on Jalan Tugu Monas in Gambir. The Jakarta government describes it as a symbol of the Indonesian people’s struggle for independence.",
+        "ja": "ジャカルタの国家記念塔MONASはGambirのJalan Tugu Monasにあります。ジャカルタ市政府は、インドネシア国民の独立闘争の象徴として紹介しています。",
+        "zh-CN": "雅加达的国家纪念塔 MONAS 位于 Gambir 的 Jalan Tugu Monas，雅加达市政府称它是印尼人民争取独立的象征。",
+        "hi": "जकार्ता का National Monument (MONAS) Gambir के Jalan Tugu Monas पर है। जकार्ता सरकार इसे इंडोनेशियाई लोगों के स्वतंत्रता संघर्ष का प्रतीक बताती है।",
+        "id": "Monumen Nasional (MONAS) berada di Jalan Tugu Monas, Gambir. Pemerintah Jakarta menyebutnya sebagai simbol perjuangan rakyat Indonesia memperoleh kemerdekaan.",
+        "pt-BR": "O Monumento Nacional (MONAS) de Jacarta fica na Jalan Tugu Monas, em Gambir. O governo de Jacarta o descreve como símbolo da luta do povo indonésio pela independência."
+      }
+    },
+    {
+      "name": "Museu do Futebol",
+      "city_code": "sao-paulo",
+      "country_code": "BR",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "topic_slugs": ["national-belonging"],
+      "address": "Praça Charles Miller, s/n, Pacaembu, São Paulo - SP",
+      "map_query": "Museu do Futebol Praça Charles Miller Pacaembu São Paulo",
+      "source_urls": [
+        "https://museudofutebol.org.br/exposicoes/museu-do-futebol/"
+      ],
+      "descriptions": {
+        "zh-TW": "São Paulo 的足球博物館位在 Pacaembu 的 Praça Charles Miller，官方介紹主展覽如何講述足球與巴西歷史。",
+        "en": "The Football Museum in São Paulo is at Praça Charles Miller in Pacaembu. Its official site describes a main exhibition about the history of sport and Brazil.",
+        "ja": "サンパウロのサッカー博物館はPacaembuのPraça Charles Millerにあります。公式サイトでは、スポーツとブラジルの歴史をたどる常設展示を紹介しています。",
+        "zh-CN": "São Paulo 的足球博物馆位于 Pacaembu 的 Praça Charles Miller，官网介绍了讲述足球与巴西历史的主展览。",
+        "hi": "São Paulo का Football Museum Pacaembu की Praça Charles Miller पर है। आधिकारिक साइट मुख्य प्रदर्शनी में खेल और ब्राज़ील के इतिहास का वर्णन करती है।",
+        "id": "Museu do Futebol di São Paulo berada di Praça Charles Miller, Pacaembu. Situs resminya menjelaskan pameran utama tentang sejarah olahraga dan Brasil.",
+        "pt-BR": "O Museu do Futebol fica na Praça Charles Miller, no Pacaembu, em São Paulo. O site oficial apresenta a exposição principal sobre a história do esporte e do Brasil."
+      }
     }
   ],
   "events": [
@@ -193,6 +367,7 @@
       "city_code": "taipei",
       "country_code": "TW",
       "venue": "臺北市立天文科學教育館 宇宙劇場",
+      "topic_slugs": ["affection-and-reciprocity"],
       "start_at": "2026-08-19T00:00:00Z",
       "end_at": null,
       "ticket_url": null,
@@ -212,6 +387,7 @@
       "city_code": "shanghai",
       "country_code": "CN",
       "venue": "龙盛活力小镇",
+      "topic_slugs": ["affection-and-reciprocity"],
       "start_at": "2026-08-19T00:00:00Z",
       "end_at": null,
       "ticket_url": null,
@@ -231,6 +407,7 @@
       "city_code": "loveland",
       "country_code": "US",
       "venue": "Downtown Loveland",
+      "topic_slugs": ["affection-and-reciprocity"],
       "start_at": "2027-02-12T00:00:00Z",
       "end_at": "2027-02-13T00:00:00Z",
       "ticket_url": null,
@@ -243,6 +420,146 @@
         "hi": "Visit Loveland के अनुसार यह उत्सव 12–13 फ़रवरी 2027 को डाउनटाउन Loveland में होगा, जिसमें बर्फ़ की मूर्तियाँ, प्रदर्शन, कला और पारिवारिक कार्यक्रम होंगे।",
         "id": "Menurut Visit Loveland, festival ini berlangsung pada 12–13 Februari 2027 di pusat kota Loveland, dengan pahatan es, pertunjukan, seni, dan kegiatan keluarga.",
         "pt-BR": "Segundo o Visit Loveland, o festival acontece em 12 e 13 de fevereiro de 2027 no centro de Loveland, com esculturas de gelo, apresentações, arte e atividades para famílias."
+      }
+    },
+    {
+      "name": "Taipei Burger Carnival 2026",
+      "city_code": "taipei",
+      "country_code": "TW",
+      "venue": "Taipei Expo Park – Flower Sea Area",
+      "topic_slugs": ["harvest-and-shared-meals"],
+      "start_at": "2026-08-29T00:00:00Z",
+      "end_at": "2026-08-30T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://www.travel.taipei/en/event-calendar/details/66803",
+      "descriptions": {
+        "zh-TW": "臺北旅遊網列出的 Burger Carnival 2026，8 月 29–30 日在臺北花博公園花海廣場舉行，主題是漢堡與街頭飲食。",
+        "en": "Taipei Travel lists Burger Carnival 2026 for August 29–30 at the Flower Sea Area of Taipei Expo Park, focused on burgers and street food.",
+        "ja": "台北旅遊網が案内するBurger Carnival 2026。8月29～30日に台北花博公園の花海広場で開催され、ハンバーガーとストリートフードを扱います。",
+        "zh-CN": "台北旅游网列出的 Burger Carnival 2026，8 月 29–30 日在台北花博公园花海广场举行，主题是汉堡和街头饮食。",
+        "hi": "Taipei Travel के अनुसार Burger Carnival 2026, 29–30 अगस्त को Taipei Expo Park के Flower Sea Area में होगा और इसमें बर्गर व स्ट्रीट फूड शामिल हैं।",
+        "id": "Taipei Travel mencantumkan Burger Carnival 2026 pada 29–30 Agustus di Flower Sea Area, Taipei Expo Park, dengan tema burger dan makanan jalanan.",
+        "pt-BR": "O Taipei Travel lista o Burger Carnival 2026 para 29 e 30 de agosto na Flower Sea Area do Taipei Expo Park, com foco em hambúrgueres e comida de rua."
+      }
+    },
+    {
+      "name": "深川八幡祭 2026",
+      "city_code": "tokyo",
+      "country_code": "JP",
+      "venue": "富岡八幡宮與深川地區",
+      "topic_slugs": ["protection-and-play"],
+      "start_at": "2026-08-12T00:00:00Z",
+      "end_at": "2026-08-16T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://www.gotokyo.org/en/spot/ev093/index.html",
+      "descriptions": {
+        "zh-TW": "GO TOKYO 列出的深川八幡祭，2026 年 8 月 12–16 日在富岡八幡宮與深川地區舉行，神輿巡行時會潑水淨身。",
+        "en": "GO TOKYO lists the Fukagawa Hachiman Festival for August 12–16, 2026, around Tomioka Hachimangu Shrine, where water is splashed on mikoshi as a purification custom.",
+        "ja": "GO TOKYOが案内する深川八幡祭。2026年8月12～16日に富岡八幡宮周辺で開催され、神輿に清めの水をかける習わしがあります。",
+        "zh-CN": "GO TOKYO 列出的深川八幡祭，2026 年 8 月 12–16 日在富冈八幡宫和深川地区举行，神舆巡行时会泼水净身。",
+        "hi": "GO TOKYO के अनुसार Fukagawa Hachiman Festival 12–16 अगस्त 2026 को Tomioka Hachimangu Shrine के आसपास होगा; मिकोशी पर शुद्धिकरण के लिए पानी छिड़का जाता है।",
+        "id": "GO TOKYO mencantumkan Fukagawa Hachiman Festival pada 12–16 Agustus 2026 di sekitar Tomioka Hachimangu Shrine; air dipercikkan ke mikoshi sebagai bagian dari penyucian.",
+        "pt-BR": "O GO TOKYO lista o Fukagawa Hachiman Festival de 12 a 16 de agosto de 2026, ao redor do santuário Tomioka Hachimangu, com água lançada sobre os mikoshi como rito de purificação."
+      }
+    },
+    {
+      "name": "上海國際光影節 2026",
+      "city_code": "shanghai",
+      "country_code": "CN",
+      "venue": "南京路、新天地與北外灘等 17 個地標場域",
+      "topic_slugs": ["light-and-renewal"],
+      "start_at": "2026-09-17T00:00:00Z",
+      "end_at": "2026-10-16T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://english.shanghai.gov.cn/en-MajorConsumerEvents/20260706/d4819e8683d049c8a715842864ce97d2.html",
+      "descriptions": {
+        "zh-TW": "上海市政府英文活動指南列出的第三屆上海國際光影節，2026 年 9 月 17 日至 10 月 16 日在全市 17 個地標場域展出燈光藝術。",
+        "en": "Shanghai’s government event guide lists the 3rd Shanghai International Light Festival for September 17–October 16, 2026, with light-art programmes across 17 landmark venues.",
+        "ja": "上海市政府のイベント案内に掲載された第3回上海国際ライトフェスティバル。2026年9月17日～10月16日に17のランドマーク会場で光のアートを展開します。",
+        "zh-CN": "上海市政府英文活动指南列出的第三届上海国际光影节，2026 年 9 月 17 日至 10 月 16 日在全市 17 个地标场域展出灯光艺术。",
+        "hi": "शंघाई सरकार की कार्यक्रम सूची में 3rd Shanghai International Light Festival 17 सितंबर–16 अक्टूबर 2026 के लिए है; 17 प्रमुख स्थलों पर प्रकाश-कला कार्यक्रम होंगे।",
+        "id": "Panduan acara pemerintah Shanghai mencantumkan 3rd Shanghai International Light Festival pada 17 September–16 Oktober 2026, dengan program seni cahaya di 17 lokasi penting.",
+        "pt-BR": "O guia de eventos do governo de Xangai lista o 3rd Shanghai International Light Festival de 17 de setembro a 16 de outubro de 2026, com arte luminosa em 17 locais de referência."
+      }
+    },
+    {
+      "name": "Loveland Corn Roast Festival 2026",
+      "city_code": "loveland",
+      "country_code": "US",
+      "venue": "Fairgrounds Park, 700 S. Railroad Avenue, Loveland",
+      "topic_slugs": ["harvest-and-shared-meals"],
+      "start_at": "2026-08-21T00:00:00Z",
+      "end_at": "2026-08-22T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://loveland.org/events-2/corn-roast-festival/",
+      "descriptions": {
+        "zh-TW": "Loveland Chamber of Commerce 公告的第 130 屆 Corn Roast Festival，2026 年 8 月 21–22 日在 Fairgrounds Park 舉行。",
+        "en": "The Loveland Chamber of Commerce lists the 130th Annual Old Fashioned Corn Roast Festival for August 21–22, 2026, at Fairgrounds Park.",
+        "ja": "Loveland Chamber of Commerceが案内する第130回Old Fashioned Corn Roast Festival。2026年8月21～22日にFairgrounds Parkで開催されます。",
+        "zh-CN": "Loveland 商会公告的第 130 届 Corn Roast Festival，2026 年 8 月 21–22 日在 Fairgrounds Park 举行。",
+        "hi": "Loveland Chamber of Commerce के अनुसार 130th Annual Old Fashioned Corn Roast Festival 21–22 अगस्त 2026 को Fairgrounds Park में होगा।",
+        "id": "Loveland Chamber of Commerce mencantumkan 130th Annual Old Fashioned Corn Roast Festival pada 21–22 Agustus 2026 di Fairgrounds Park.",
+        "pt-BR": "A Loveland Chamber of Commerce lista o 130th Annual Old Fashioned Corn Roast Festival para 21 e 22 de agosto de 2026 no Fairgrounds Park."
+      }
+    },
+    {
+      "name": "Anandam Durga Puja 2026",
+      "city_code": "pune",
+      "country_code": "IN",
+      "venue": "Alankaran Hall, SRPF Group 2, Wanowrie, Pune",
+      "topic_slugs": ["reunion-and-homecoming"],
+      "start_at": "2026-10-15T00:00:00Z",
+      "end_at": "2026-10-21T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://www.anandampune.com/",
+      "descriptions": {
+        "zh-TW": "Pune 的 Anandam Association 公布 2026 年 Durga Puja，10 月 15–21 日在 Wanowrie 的 Alankaran Hall 舉行，包含祭典、供食與文化演出。",
+        "en": "Anandam Association in Pune lists Durga Puja 2026 for October 15–21 at Alankaran Hall in Wanowrie, with worship, bhog and cultural programmes.",
+        "ja": "プネーのAnandam Associationが案内する2026年Durga Puja。10月15～21日にWanowrieのAlankaran Hallで行われ、礼拝、bhog、文化公演があります。",
+        "zh-CN": "Pune 的 Anandam Association 公布 2026 年 Durga Puja，10 月 15–21 日在 Wanowrie 的 Alankaran Hall 举行，包含祭典、供食和文化演出。",
+        "hi": "Pune की Anandam Association ने Durga Puja 2026 की तारीख 15–21 अक्टूबर और स्थान Wanowrie का Alankaran Hall बताया है; इसमें पूजा, भोग और सांस्कृतिक कार्यक्रम होंगे।",
+        "id": "Anandam Association di Pune mencantumkan Durga Puja 2026 pada 15–21 Oktober di Alankaran Hall, Wanowrie, dengan ibadah, bhog, dan acara budaya.",
+        "pt-BR": "A Anandam Association, em Pune, informa a Durga Puja 2026 de 15 a 21 de outubro no Alankaran Hall, em Wanowrie, com culto, bhog e programação cultural."
+      }
+    },
+    {
+      "name": "Indonesia Youth Summit 2026",
+      "city_code": "jakarta",
+      "country_code": "ID",
+      "venue": "Taman Ismail Marzuki 及雅加達省政府公共設施",
+      "topic_slugs": ["national-belonging"],
+      "start_at": "2026-10-29T00:00:00Z",
+      "end_at": "2026-10-30T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026",
+      "descriptions": {
+        "zh-TW": "雅加達省政府公告的 Indonesia Youth Summit 2026，10 月 29–30 日以 Taman Ismail Marzuki 等公共設施為主要場地，預計約 5,000 人參加。",
+        "en": "Jakarta’s provincial government lists Indonesia Youth Summit 2026 for October 29–30 at Taman Ismail Marzuki and other public facilities, with a target of about 5,000 participants.",
+        "ja": "ジャカルタ州政府が案内するIndonesia Youth Summit 2026。10月29～30日にTaman Ismail Marzukiなどの公共施設を中心に開催され、約5,000人の参加を見込んでいます。",
+        "zh-CN": "雅加达省政府公告的 Indonesia Youth Summit 2026，10 月 29–30 日以 Taman Ismail Marzuki 等公共设施为主要场地，预计约 5,000 人参加。",
+        "hi": "जकार्ता प्रांतीय सरकार के अनुसार Indonesia Youth Summit 2026, 29–30 अक्टूबर को Taman Ismail Marzuki और अन्य सार्वजनिक स्थलों पर होगा; लगभग 5,000 प्रतिभागियों का लक्ष्य है।",
+        "id": "Pemerintah Provinsi Jakarta mencantumkan Indonesia Youth Summit 2026 pada 29–30 Oktober di Taman Ismail Marzuki dan fasilitas publik lain, dengan sasaran sekitar 5.000 peserta.",
+        "pt-BR": "O governo provincial de Jacarta lista o Indonesia Youth Summit 2026 para 29 e 30 de outubro, no Taman Ismail Marzuki e outras instalações públicas, com meta de cerca de 5 mil participantes."
+      }
+    },
+    {
+      "name": "Revelando SP 2026",
+      "city_code": "sao-paulo",
+      "country_code": "BR",
+      "venue": "Parque do Trote, São Paulo",
+      "topic_slugs": ["harvest-and-shared-meals"],
+      "start_at": "2026-09-24T00:00:00Z",
+      "end_at": "2026-09-27T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://agenciasp.sp.gov.br/revelando-sp-2026-sao-paulo-capital/",
+      "descriptions": {
+        "zh-TW": "聖保羅州政府新聞頁列出的 Revelando SP 2026，9 月 24–27 日在 Parque do Trote 舉行，聚焦各地飲食、工藝與傳統文化。",
+        "en": "São Paulo state’s news agency lists Revelando SP 2026 for September 24–27 at Parque do Trote, with foodways, crafts and cultural traditions from across the state.",
+        "ja": "サンパウロ州政府のニュースが案内するRevelando SP 2026。9月24～27日にParque do Troteで開催され、各地の食、工芸、文化伝統を紹介します。",
+        "zh-CN": "圣保罗州政府新闻页列出的 Revelando SP 2026，9 月 24–27 日在 Parque do Trote 举行，聚焦各地饮食、工艺和传统文化。",
+        "hi": "São Paulo राज्य की समाचार एजेंसी के अनुसार Revelando SP 2026, 24–27 सितंबर को Parque do Trote में होगा और राज्य के खान-पान, हस्तशिल्प व सांस्कृतिक परंपराएँ प्रस्तुत करेगा।",
+        "id": "Badan berita negara bagian São Paulo mencantumkan Revelando SP 2026 pada 24–27 September di Parque do Trote, dengan kuliner, kerajinan, dan tradisi budaya dari berbagai daerah.",
+        "pt-BR": "A Agência SP lista o Revelando SP 2026 de 24 a 27 de setembro no Parque do Trote, com culinária, artesanato e tradições culturais de várias regiões do estado."
       }
     }
   ]

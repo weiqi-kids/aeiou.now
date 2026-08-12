@@ -2,6 +2,39 @@
   "city_code": "jakarta",
   "places": [
     {
+      "place_id": "plc_58E753771C98E65962EB9A9A97",
+      "name": "Monumen Nasional (MONAS)",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "ID",
+      "address": "Jalan Tugu Monas, Gambir, Jakarta Pusat, Indonesia",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Monumen%20Nasional%20MONAS%20Jalan%20Tugu%20Monas%20Gambir%20Jakarta",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Monumen%20Nasional%20MONAS%20Jalan%20Tugu%20Monas%20Gambir%20Jakarta",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Monumen%20Nasional%20MONAS%20Jalan%20Tugu%20Monas%20Gambir%20Jakarta",
+        "amap": "https://uri.amap.com/search?keyword=Monumen%20Nasional%20MONAS%20Jalan%20Tugu%20Monas%20Gambir%20Jakarta"
+      },
+      "source_urls": [
+        "https://www.jakarta.go.id/landmark-jakarta"
+      ],
+      "mention_count": 0,
+      "descriptions": {
+        "zh-TW": "雅加達的國家紀念塔 MONAS 位在 Gambir 的 Jalan Tugu Monas，雅加達市政府稱它是印尼人民爭取獨立的象徵。",
+        "en": "Jakarta’s National Monument (MONAS) is on Jalan Tugu Monas in Gambir. The Jakarta government describes it as a symbol of the Indonesian people’s struggle for independence.",
+        "ja": "ジャカルタの国家記念塔MONASはGambirのJalan Tugu Monasにあります。ジャカルタ市政府は、インドネシア国民の独立闘争の象徴として紹介しています。",
+        "zh-CN": "雅加达的国家纪念塔 MONAS 位于 Gambir 的 Jalan Tugu Monas，雅加达市政府称它是印尼人民争取独立的象征。",
+        "hi": "जकार्ता का National Monument (MONAS) Gambir के Jalan Tugu Monas पर है। जकार्ता सरकार इसे इंडोनेशियाई लोगों के स्वतंत्रता संघर्ष का प्रतीक बताती है।",
+        "id": "Monumen Nasional (MONAS) berada di Jalan Tugu Monas, Gambir. Pemerintah Jakarta menyebutnya sebagai simbol perjuangan rakyat Indonesia memperoleh kemerdekaan.",
+        "pt-BR": "O Monumento Nacional (MONAS) de Jacarta fica na Jalan Tugu Monas, em Gambir. O governo de Jacarta o descreve como símbolo da luta do povo indonésio pela independência."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZRR9MFVDX5QSGEZAKM9ABSH",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
       "place_id": "plc_C076E7897B57F90C01138F2AC0",
       "name": "GODIVA Plaza Indonesia",
       "place_type": "permanent",

@@ -33,6 +33,39 @@
           "relevance": 0.9
         }
       ]
+    },
+    {
+      "place_id": "plc_DE401444F2ED4FDE0796C3C00D",
+      "name": "Fairgrounds Park",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "US",
+      "address": "700 S. Railroad Avenue, Loveland, CO",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Fairgrounds%20Park%20700%20S%20Railroad%20Avenue%20Loveland%20Colorado",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Fairgrounds%20Park%20700%20S%20Railroad%20Avenue%20Loveland%20Colorado",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Fairgrounds%20Park%20700%20S%20Railroad%20Avenue%20Loveland%20Colorado",
+        "amap": "https://uri.amap.com/search?keyword=Fairgrounds%20Park%20700%20S%20Railroad%20Avenue%20Loveland%20Colorado"
+      },
+      "source_urls": [
+        "https://www.lovgov.org/services/parks-recreation/parks-facilities/parks-reservation-spaces/fairgrounds-park/-fsiteid-1"
+      ],
+      "mention_count": 0,
+      "descriptions": {
+        "zh-TW": "Loveland 的 Fairgrounds Park 位於 700 S. Railroad Avenue，市政府列有野餐區、遊樂場、噴水區與 Farmers Market 等用途。",
+        "en": "Fairgrounds Park is at 700 S. Railroad Avenue in Loveland. The city lists its picnic area, playgrounds, spray park and farmers market among the park’s uses.",
+        "ja": "LovelandのFairgrounds Parkは700 S. Railroad Avenueにあります。市の案内にはピクニックエリア、遊具、スプレーパーク、ファーマーズマーケットなどが掲載されています。",
+        "zh-CN": "Loveland 的 Fairgrounds Park 位于 700 S. Railroad Avenue，市政府列出野餐区、游乐场、喷泉水乐园和 Farmers Market 等用途。",
+        "hi": "Loveland का Fairgrounds Park 700 S. Railroad Avenue पर है। शहर की जानकारी में पिकनिक क्षेत्र, खेल के मैदान, स्प्रे पार्क और farmers market का उल्लेख है।",
+        "id": "Fairgrounds Park berada di 700 S. Railroad Avenue, Loveland. Pemerintah kota mencantumkan area piknik, taman bermain, spray park, dan farmers market sebagai fasilitasnya.",
+        "pt-BR": "O Fairgrounds Park fica em 700 S. Railroad Avenue, Loveland. A cidade lista área de piquenique, playgrounds, spray park e farmers market entre os usos do parque."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZRR9MFKMBNPN8XV1X3BZV53",
+          "relevance": 0.9
+        }
+      ]
     }
   ]
 }

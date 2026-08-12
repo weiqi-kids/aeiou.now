@@ -106,6 +106,111 @@
       "kind": "place",
       "discovery_query": "Dengo Fábrica de Dengo São Paulo endereço oficial",
       "markers": ["Fábrica de Dengo", "Avenida Brigadeiro Faria Lima, 196"]
+    },
+    {
+      "url": "https://www.travel.taipei/en/event-calendar/details/66803",
+      "market": "zh-TW",
+      "kind": "event",
+      "discovery_query": "site:travel.taipei 2026 Taipei Burger Carnival August 29 30",
+      "markers": ["Burger Carnival", "Taipei Expo Park"],
+      "date_markers": ["Aug 29", "Aug 30", "2026"]
+    },
+    {
+      "url": "https://www.ntm.gov.tw/en/cl.aspx?n=5703",
+      "market": "zh-TW",
+      "kind": "place",
+      "discovery_query": "National Taiwan Museum official Taipei Xiangyang Road address",
+      "markers": ["National Taiwan Museum", "No. 2, Xiangyang Rd."]
+    },
+    {
+      "url": "https://english.shanghai.gov.cn/en-MuseumsGalleries/20231218/01fdd3f62d0c4877bc289ec0b1de6afa.html",
+      "market": "zh-CN",
+      "kind": "place",
+      "discovery_query": "Shanghai government Shanghai Museum People’s Square official address",
+      "markers": ["Shanghai Museum on People's Square", "No 201 Renmin Avenue"]
+    },
+    {
+      "url": "https://www.gotokyo.org/en/spot/ev093/index.html",
+      "market": "ja",
+      "kind": "event",
+      "discovery_query": "site:gotokyo.org Fukagawa Hachiman Festival 2026 August 12 16",
+      "markers": ["Fukagawa Hachiman Festival", "Tomioka Hachimangu Shrine"],
+      "date_markers": ["2026-8-12", "2026-8-16"]
+    },
+    {
+      "url": "https://www.gotokyo.org/en/destinations/eastern-tokyo/fukagawa/",
+      "market": "ja",
+      "kind": "place",
+      "discovery_query": "site:gotokyo.org Fukagawa Tomioka Hachimangu Shrine Tokyo",
+      "markers": ["Tomioka Hachimangu Shrine", "built in 1627"]
+    },
+    {
+      "url": "https://english.shanghai.gov.cn/en-MajorConsumerEvents/20260706/d4819e8683d049c8a715842864ce97d2.html",
+      "market": "zh-CN",
+      "kind": "event",
+      "discovery_query": "site:english.shanghai.gov.cn 3rd Shanghai International Light Festival 2026",
+      "markers": ["3rd Shanghai International Light Festival", "Nanjing Road"],
+      "date_markers": ["Sept 17 to Oct 16"]
+    },
+    {
+      "url": "https://www.lovgov.org/services/parks-recreation/parks-facilities/parks-reservation-spaces/fairgrounds-park/-fsiteid-1",
+      "market": "en",
+      "kind": "place",
+      "discovery_query": "City of Loveland Fairgrounds Park official address",
+      "markers": ["Fairgrounds Park", "700 S. Railroad Avenue"]
+    },
+    {
+      "url": "https://loveland.org/events-2/corn-roast-festival/",
+      "market": "en",
+      "kind": "event",
+      "discovery_query": "Loveland Chamber 130th Corn Roast Festival 2026 official",
+      "markers": ["130th Annual Old Fashioned Corn Roast Festival", "August 21st & 22nd"],
+      "date_markers": ["August 21st & 22nd", "2026"]
+    },
+    {
+      "url": "https://www.dagdushethganpati.com/?p=11699",
+      "market": "hi",
+      "kind": "place",
+      "discovery_query": "Dagdusheth Halwai Ganpati Temple Pune official address",
+      "markers": ["Shrimant Dagdusheth Halwai Ganpati", "Ganpati Bhavan, 250"]
+    },
+    {
+      "url": "https://www.anandampune.com/",
+      "market": "hi",
+      "kind": "event",
+      "discovery_query": "Anandam Association Pune Durga Puja 2026 official dates",
+      "markers": ["Durga Puja 2026", "Alankaran Hall"],
+      "date_markers": ["15–21 October 2026", "17–21 October 2026"]
+    },
+    {
+      "url": "https://www.jakarta.go.id/landmark-jakarta",
+      "market": "id",
+      "kind": "place",
+      "discovery_query": "site:jakarta.go.id Landmark Jakarta Monumen Nasional MONAS address",
+      "markers": ["Monumen Nasional (MONAS)", "Jalan Tugu Monas"]
+    },
+    {
+      "url": "https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026",
+      "market": "id",
+      "kind": "event",
+      "discovery_query": "site:jakarta.go.id Indonesia Youth Summit 2026 Taman Ismail Marzuki",
+      "markers": ["Indonesia Youth Summit 2026", "Taman Ismail Marzuki"],
+      "date_markers": ["29–30 Oktober 2026", "29–30 October 2026"]
+    },
+    {
+      "url": "https://museudofutebol.org.br/exposicoes/museu-do-futebol/",
+      "market": "pt-BR",
+      "kind": "place",
+      "discovery_query": "Museu do Futebol official São Paulo Praça Charles Miller",
+      "markers": ["Museu do Futebol", "Praça Charles Miller"]
+    },
+    {
+      "url": "https://agenciasp.sp.gov.br/revelando-sp-2026-sao-paulo-capital/",
+      "market": "pt-BR",
+      "kind": "event",
+      "discovery_query": "site:agenciasp.sp.gov.br Revelando SP 2026 São Paulo September 24 27",
+      "markers": ["Revelando SP 2026", "Parque do Trote"],
+      "date_markers": ["24 a 27 de setembro"]
     }
   ]
 }
