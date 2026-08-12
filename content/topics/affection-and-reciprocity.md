@@ -1,11 +1,11 @@
-# How people express affection and reciprocity
+# How Valentine's Day, Qixi, and White Day express affection
 
 ## meta
 - slug: affection-and-reciprocity
-- canonical: Affection and Reciprocity
+- canonical: Valentine's Day, Qixi, and White Day
 - category: relationship
 - perennial: no
-- commonality: expressing affection through gifts, attention, and reciprocal gestures
+- commonality: expressing affection through local gift, attention, and return-gift customs
 
 ## observance JP valentine
 - local_name: バレンタインデー
@@ -46,140 +46,140 @@
 
 ## locale zh-TW
 ### title
-表達愛意與互惠
+情人節、七夕與白色情人節
 ### summary
-各地會用節日、禮物、陪伴與回禮表達親密關係。這個 Topic 比較共同的情感語言與不同的社會規則，不把情人節、七夕或白色情人節當成同一個日期。
+情人節不只是一個日期：有人送巧克力，有人交換卡片，也有人把它當成商業檔期。日本的白色情人節、台灣的七夕情人節與巴西的 Dia dos Namorados，分別把愛意放進不同的送禮、回禮與約會規矩裡。
 ### keywords
-表達愛意, 親密關係, 禮物, 回禮
+情人節, 七夕, 白色情人節, 送禮, 回禮
 ### customs JP valentine
-日本的 2 月 14 日常見由女性送巧克力；本命巧克力與義理巧克力反映不同的人際關係，並非所有人都以相同方式參與。
+日本的情人節常由女性送巧克力；本命巧克力與義理巧克力，會把戀愛與職場或朋友關係分開。近年也有不照這套分法的人。
 ### customs JP white-day
-日本的白色情人節在 3 月 14 日形成回禮節點，回禮的形式與是否回禮會依關係、年齡和個人選擇而異。
+白色情人節是 3 月 14 日的回禮日。回什麼、要不要回，會看兩人的關係，也看送禮者自己的意思。
 ### customs TW qixi
-台灣常把農曆七月初七稱為七夕情人節，商業活動與約會讓它成為表達心意的節點，但並非每個人都視為正式節日。
+台灣常把農曆七月初七當作七夕情人節，百貨與餐廳也會推出約會方案。它是流行文化與商業檔期，不是全台一致的法定節日。
 ### customs US valentine
-美國常以卡片、鮮花、糖果和約會表達情感；學校的集體卡片交換也讓這個節日不只限於伴侶。
+美國從卡片、糖果、鮮花到約會都可以過情人節。學校讓孩子交換卡片，也把收件人從伴侶擴大到同學與家人。
 ### customs BR dia-dos-namorados
-巴西的 Dia dos Namorados 在 6 月 12 日，伴侶常交換禮物、外出用餐；它與 2 月 14 日的西洋情人節不是同一個在地日期。
+巴西的 Dia dos Namorados 在 6 月 12 日，常見送禮、外出吃飯和約會。它有自己的日期與市場習慣，不是把 2 月 14 日原封不動搬過去。
 ### customs IN valentine-week
-印度部分都市青年把 2 月 7 日至 14 日拆成玫瑰、告白、巧克力等主題日；參與程度受城市、家庭與社群脈絡影響。
+印度部分城市的年輕人會把 2 月 7 日到 14 日排成玫瑰、告白、巧克力等主題日。這是都市流行文化，不代表全國家庭都用同一套方式過節。
 
 ## locale en
 ### title
-Affection and reciprocity
+Valentine's Day, Qixi, and White Day
 ### summary
-People express intimacy through holidays, gifts, attention, and return gestures. This topic compares the shared emotional language and the different social rules without treating Valentine's Day, Qixi, and White Day as one date.
+There is no single calendar for showing romantic affection. Japan's White Day, Taiwan's Qixi Valentine's Day, Brazil's Dia dos Namorados, and India's Valentine Week attach different expectations to gifts, replies, and dates.
 ### keywords
-affection, intimacy, gifts, reciprocity
+Valentine's Day, Qixi, White Day, gifts, reciprocity
 ### customs JP valentine
-In Japan, women commonly give chocolate on February 14. Honmei-choco and giri-choco signal different relationships, and participation is not universal.
+In Japan, women giving chocolate on February 14 remains a familiar custom. Honmei-choco and giri-choco distinguish romantic feelings from other relationships, although many people do not follow that script.
 ### customs JP white-day
-White Day on March 14 creates a return-gift moment in Japan. What counts as an appropriate return, and whether to make one, depends on the relationship and personal choice.
+White Day, on March 14, is a day for returning a gift. The choice of gift, and the choice to give one at all, depends on the relationship.
 ### customs TW qixi
-In Taiwan, the seventh day of the seventh lunar month is often marketed as Qixi Valentine's Day. Dates and outings are common, but not everyone treats it as an official holiday.
+Taiwan often promotes the seventh day of the seventh lunar month as Qixi Valentine's Day. Restaurants and shops build dates and packages around it, but it is not a nationwide public holiday.
 ### customs US valentine
-In the United States, cards, flowers, candy, and dates express affection. Classroom card exchanges also make the occasion broader than romantic couples.
+In the United States, cards, sweets, flowers, and dates all belong to Valentine's Day. Classroom exchanges make room for classmates, friends, and family as well as romantic partners.
 ### customs BR dia-dos-namorados
-Brazil's Dia dos Namorados is June 12. Couples commonly exchange gifts and dine out; it is a local date rather than a simple copy of February 14.
+Brazil celebrates Dia dos Namorados on June 12 with gifts, dinners, and time together. The date follows a Brazilian commercial and social calendar rather than simply copying February 14.
 ### customs IN valentine-week
-Some urban young people in India stretch the celebration from February 7 to 14 into themed days for roses, proposals, chocolate, and more. Participation varies with city, family, and community context.
+In some Indian cities, young people turn February 7–14 into a run of themed days for roses, proposals, chocolate, and other gestures. It is an urban trend, not a uniform national observance.
 
 ## locale ja
 ### title
-愛情表現とお返し
+バレンタイン、七夕、ホワイトデー
 ### summary
-祝日、贈り物、気遣い、お返しを通して親密さを表す方法は社会ごとに異なる。この Topic では、バレンタイン、七夕、ホワイトデーを同じ日として扱わず、共通点と違いを比べる。
+恋人や大切な人に気持ちを伝える日は、どの社会でも同じ日になるわけではない。日本のホワイトデー、台湾の七夕情人節、ブラジルの恋人の日、インドのバレンタイン・ウィークには、それぞれの贈り物と過ごし方がある。
 ### keywords
-愛情表現, 親密さ, 贈り物, お返し
+バレンタイン, 七夕, ホワイトデー, 贈り物, お返し
 ### customs JP valentine
-日本では2月14日に女性がチョコレートを贈ることが多い。本命チョコと義理チョコは異なる人間関係を示すが、参加の仕方は人それぞれである。
+日本では、2月14日に女性からチョコレートを贈る習慣がよく知られている。本命チョコと義理チョコで関係を表すが、誰もがその形に参加するわけではない。
 ### customs JP white-day
-日本のホワイトデーは3月14日のお返しの機会。何を返すか、返すかどうかは関係性や個人の選択によって異なる。
+ホワイトデーは3月14日に贈り物を返す日。何を返すか、返さないかは、相手との関係と本人の考えによって決まる。
 ### customs TW qixi
-台湾では旧暦七月七日を七夕情人節として紹介することがある。デートや商業企画が見られるが、全員が公的な祝日として扱うわけではない。
+台湾では旧暦七月七日を七夕情人節として紹介することがある。店や飲食店の企画は盛んだが、国の祝日として全員が祝う行事ではない。
 ### customs US valentine
-米国ではカード、花、菓子、デートなどで気持ちを表す。学校でクラス全員にカードを配ることもあり、恋人だけの行事ではない。
+米国のバレンタインには、カード、花、菓子、デートなどが登場する。学校ではクラス全員でカードを交換することもあり、恋人だけの日とは限らない。
 ### customs BR dia-dos-namorados
-ブラジルの恋人の日は6月12日。贈り物や外食で祝うカップルが多く、2月14日をそのまま移した日ではない。
+ブラジルの恋人の日は6月12日で、贈り物や外食を楽しむ。2月14日とは別の国内の日付として定着している。
 ### customs IN valentine-week
-インドの一部の都市部の若者は2月7日から14日までを、バラや告白、チョコレートなどのテーマに分けて祝う。参加の度合いは地域や家庭、共同体で異なる。
+インドの一部の都市では、若者が2月7日から14日をバラ、告白、チョコレートなどの日に分けて楽しむ。都市の流行であり、全国一律の行事ではない。
 
 ## locale zh-CN
 ### title
-表达爱意与互惠
+情人节、七夕与白色情人节
 ### summary
-不同社会通过节日、礼物、陪伴和回礼表达亲密关系。本 Topic 比较共同的情感语言和不同的社会规则，不把情人节、七夕和白色情人节当成同一个日期。
+表达爱意的日期和规矩并不只有一套。日本的白色情人节、台湾的七夕情人节、巴西的 Dia dos Namorados 和印度的 Valentine Week，都把送礼、回礼与约会安排在不同的时间里。
 ### keywords
-表达爱意, 亲密关系, 礼物, 回礼
+情人节, 七夕, 白色情人节, 送礼, 回礼
 ### customs JP valentine
-在日本，2 月 14 日常见女性送巧克力。本命巧克力和义理巧克力对应不同的人际关系，但并非人人都以同样方式参与。
+在日本，2 月 14 日由女性送巧克力的习惯广为人知。本命巧克力和义理巧克力区分不同关系，但现在并不是人人都照着这套做。
 ### customs JP white-day
-日本的白色情人节在 3 月 14 日形成回礼节点。回什么、是否回礼，会因关系和个人选择而不同。
+白色情人节是 3 月 14 日的回礼日。回什么、回不回，要看双方关系，也要看个人意愿。
 ### customs TW qixi
-在台湾，农历七月初七常被称为七夕情人节。约会和商业活动很常见，但不是每个人都把它当作正式节日。
+台湾常把农历七月初七称为七夕情人节，商场和餐厅会推出约会活动。它是流行文化和商业档期，不是全国统一的法定节日。
 ### customs US valentine
-美国人常用卡片、鲜花、糖果和约会表达感情。学校集体交换卡片，也让它不只属于情侣。
+美国人会用卡片、糖果、鲜花和约会过情人节。学校里的集体交换卡片，也让这个节日不只属于情侣。
 ### customs BR dia-dos-namorados
-巴西的 Dia dos Namorados 是 6 月 12 日，情侣常交换礼物、外出用餐；它是当地日期，不是 2 月 14 日的简单复制。
+巴西的 Dia dos Namorados 在 6 月 12 日，常见送礼、聚餐和约会。它有自己的日期和商业习惯，并不是把 2 月 14 日照搬过去。
 ### customs IN valentine-week
-印度部分城市青年把 2 月 7 日至 14 日分成玫瑰、表白、巧克力等主题日。参与程度会受到城市、家庭和社群环境影响。
+印度部分城市的年轻人会把 2 月 7 日到 14 日排成玫瑰、表白、巧克力等主题日。这是城市流行文化，不等于全国家庭都这样过。
 
 ## locale hi
 ### title
-स्नेह और पारस्परिकता
+वैलेंटाइन डे, क़ीशी और व्हाइट डे
 ### summary
-समाज त्योहारों, उपहारों, साथ और लौटाए गए उपहारों से निकटता व्यक्त करते हैं। यह विषय साझा भावनात्मक भाषा और अलग सामाजिक नियमों की तुलना करता है; वैलेंटाइन, क़िसी और व्हाइट डे को एक ही तारीख नहीं मानता।
+प्यार जताने का कैलेंडर हर जगह एक जैसा नहीं होता। जापान का व्हाइट डे, ताइवान का क़ीशी, ब्राज़ील का Dia dos Namorados और भारत का Valentine Week उपहार और जवाब देने की अपनी-अपनी उम्मीदें बनाते हैं।
 ### keywords
-स्नेह, निकटता, उपहार, पारस्परिकता
+वैलेंटाइन डे, क़ीशी, व्हाइट डे, उपहार, जवाबी उपहार
 ### customs JP valentine
-जापान में 14 फ़रवरी को महिलाओं द्वारा चॉकलेट देना आम है। होनमेई-चोको और गिरी-चोको अलग रिश्तों को दर्शाते हैं, लेकिन हर व्यक्ति एक ही तरह से भाग नहीं लेता।
+जापान में 14 फ़रवरी को महिलाओं द्वारा चॉकलेट देना एक जानी-पहचानी परंपरा है। Honmei-choco और giri-choco अलग रिश्तों का संकेत देते हैं, लेकिन हर कोई इस ढाँचे का पालन नहीं करता।
 ### customs JP white-day
-जापान में 14 मार्च का व्हाइट डे लौटाए गए उपहार का अवसर है। क्या और कितना लौटाना है, यह रिश्ते और व्यक्तिगत पसंद पर निर्भर करता है।
+14 मार्च का व्हाइट डे उपहार लौटाने का अवसर है। क्या लौटाना है या लौटाना भी है या नहीं, यह रिश्ते और व्यक्ति की इच्छा पर निर्भर करता है।
 ### customs TW qixi
-ताइवान में सातवें चंद्र महीने के सातवें दिन को क़िसी वैलेंटाइन डे के रूप में प्रचारित किया जाता है। डेट और व्यावसायिक आयोजन होते हैं, पर हर कोई इसे आधिकारिक त्योहार नहीं मानता।
+ताइवान में चीनी पंचांग के सातवें महीने की सातवीं तारीख़ को क़ीशी वैलेंटाइन डे के रूप में प्रचारित किया जाता है। दुकानें और रेस्तराँ विशेष योजनाएँ बनाते हैं, पर यह राष्ट्रीय सार्वजनिक अवकाश नहीं है।
 ### customs US valentine
-अमेरिका में कार्ड, फूल, मिठाई और डेट से स्नेह जताया जाता है। स्कूलों में पूरी कक्षा के बीच कार्ड बाँटना भी आम है, इसलिए यह केवल जोड़ों का अवसर नहीं।
+अमेरिका में कार्ड, मिठाई, फूल और डेट—सब वैलेंटाइन डे का हिस्सा हो सकते हैं। स्कूलों में कार्ड बाँटने की वजह से यह अवसर केवल प्रेमी जोड़ों तक सीमित नहीं रहता।
 ### customs BR dia-dos-namorados
-ब्राज़ील का Dia dos Namorados 12 जून को होता है। जोड़े उपहार और बाहर भोजन से मनाते हैं; यह 14 फ़रवरी की तारीख की सीधी नकल नहीं है।
+ब्राज़ील में Dia dos Namorados 12 जून को मनाया जाता है। उपहार, बाहर खाना और साथ समय बिताना आम है; इसकी तारीख़ 14 फ़रवरी से अलग है।
 ### customs IN valentine-week
-भारत के कुछ शहरी युवा 7 से 14 फ़रवरी को गुलाब, प्रस्ताव और चॉकलेट जैसे विषय-दिनों में बाँटकर मनाते हैं। भागीदारी शहर, परिवार और समुदाय के अनुसार बदलती है।
+भारत के कुछ शहरों में युवा 7 से 14 फ़रवरी तक गुलाब, प्रपोज़ल और चॉकलेट जैसे अलग-अलग दिनों में उत्सव बाँटते हैं। यह शहरी चलन है, पूरे देश की एक जैसी परंपरा नहीं।
 
 ## locale id
 ### title
-Kasih sayang dan timbal balik
+Valentine, Qixi, dan White Day
 ### summary
-Masyarakat mengekspresikan kedekatan melalui hari perayaan, hadiah, perhatian, dan balasan. Topik ini membandingkan bahasa emosional yang sama serta aturan sosial yang berbeda, tanpa menyamakan Valentine, Qixi, dan White Day sebagai satu tanggal.
+Kalender untuk menyatakan kasih sayang tidak sama di setiap tempat. White Day di Jepang, Qixi di Taiwan, Dia dos Namorados di Brasil, dan Valentine Week di India memberi hadiah, balasan, dan kencan dengan aturan yang berbeda.
 ### keywords
-kasih sayang, kedekatan, hadiah, timbal balik
+Valentine, Qixi, White Day, hadiah, balasan
 ### customs JP valentine
-Di Jepang, perempuan sering memberi cokelat pada 14 Februari. Honmei-choco dan giri-choco menandai hubungan yang berbeda, tetapi cara berpartisipasi tidak sama bagi semua orang.
+Di Jepang, perempuan memberi cokelat pada 14 Februari masih menjadi kebiasaan yang dikenal luas. Honmei-choco dan giri-choco menandai hubungan yang berbeda, tetapi tidak semua orang mengikuti pembagian itu.
 ### customs JP white-day
-White Day di Jepang pada 14 Maret menjadi momen untuk membalas hadiah. Bentuk dan keputusan untuk membalas bergantung pada hubungan serta pilihan pribadi.
+White Day pada 14 Maret adalah kesempatan untuk membalas hadiah. Bentuk balasan—atau keputusan untuk tidak membalas—bergantung pada hubungan dan pilihan pribadi.
 ### customs TW qixi
-Di Taiwan, hari ketujuh bulan ketujuh kalender lunar sering dipromosikan sebagai Qixi Valentine. Kencan dan promosi komersial ada, tetapi tidak semua orang menganggapnya hari libur resmi.
+Di Taiwan, hari ketujuh bulan ketujuh kalender lunar sering dipasarkan sebagai Qixi Valentine. Toko dan restoran membuat acara khusus, tetapi tanggal ini bukan hari libur nasional.
 ### customs US valentine
-Di Amerika Serikat, kartu, bunga, permen, dan kencan digunakan untuk menunjukkan kasih sayang. Pertukaran kartu di sekolah juga membuatnya tidak terbatas pada pasangan.
+Di Amerika Serikat, kartu, permen, bunga, dan kencan menjadi cara merayakan Valentine. Di sekolah, kartu juga dibagikan kepada teman sekelas, bukan hanya pasangan.
 ### customs BR dia-dos-namorados
-Brasil merayakan Dia dos Namorados pada 12 Juni. Pasangan bertukar hadiah dan makan di luar; tanggal ini merupakan bentuk lokal, bukan salinan sederhana 14 Februari.
+Brasil merayakan Dia dos Namorados pada 12 Juni dengan hadiah, makan bersama, dan kencan. Hari ini memiliki tanggal dan kebiasaan pasar sendiri, bukan salinan 14 Februari.
 ### customs IN valentine-week
-Sebagian anak muda perkotaan di India membagi 7–14 Februari menjadi hari bertema mawar, lamaran, cokelat, dan lainnya. Tingkat partisipasi dipengaruhi kota, keluarga, dan komunitas.
+Di beberapa kota di India, anak muda membagi 7–14 Februari menjadi hari untuk mawar, menyatakan cinta, cokelat, dan gestur lain. Ini tren perkotaan, bukan perayaan nasional yang seragam.
 
 ## locale pt-BR
 ### title
-Afeto e reciprocidade
+Dia dos Namorados, Valentine e White Day
 ### summary
-As sociedades expressam intimidade por meio de datas comemorativas, presentes, atenção e retribuições. Este tópico compara a linguagem afetiva comum e regras sociais diferentes, sem tratar Valentine, Qixi e White Day como uma única data.
+As datas para demonstrar carinho não seguem um único calendário. O White Day japonês, o Qixi taiwanês, o Dia dos Namorados brasileiro e a Valentine Week indiana criam expectativas diferentes para presentes, retribuições e encontros.
 ### keywords
-afeto, intimidade, presentes, reciprocidade
+Dia dos Namorados, Valentine, Qixi, White Day, presentes
 ### customs JP valentine
-No Japão, é comum que mulheres deem chocolate em 14 de fevereiro. Honmei-choco e giri-choco indicam relações diferentes, mas a participação não é igual para todos.
+No Japão, ainda é conhecida a prática de mulheres darem chocolate em 14 de fevereiro. Honmei-choco e giri-choco distinguem relações diferentes, mas nem todo mundo segue essa divisão.
 ### customs JP white-day
-O White Day japonês, em 14 de março, cria um momento para retribuir presentes. O que retribuir e se retribuir depende da relação e da escolha pessoal.
+O White Day, em 14 de março, é a ocasião de retribuir um presente. O que dar—ou se dar alguma coisa—depende da relação e da vontade de cada pessoa.
 ### customs TW qixi
-Em Taiwan, o sétimo dia do sétimo mês lunar é frequentemente divulgado como Qixi dos namorados. Há encontros e campanhas comerciais, mas nem todos o consideram feriado oficial.
+Em Taiwan, o sétimo dia do sétimo mês lunar é divulgado como o Qixi dos namorados. Lojas e restaurantes criam programas para casais, mas a data não é feriado nacional.
 ### customs US valentine
-Nos Estados Unidos, cartões, flores, doces e encontros expressam afeto. A troca de cartões nas escolas também torna a ocasião mais ampla que os casais.
+Nos Estados Unidos, cartões, doces, flores e encontros fazem parte do Valentine. Nas escolas, a troca de cartões também inclui colegas e amigos, não apenas namorados.
 ### customs BR dia-dos-namorados
-No Brasil, o Dia dos Namorados é celebrado em 12 de junho. Casais trocam presentes e saem para jantar; é uma data local, não uma simples cópia de 14 de fevereiro.
+No Brasil, o Dia dos Namorados é celebrado em 12 de junho com presentes, jantares e tempo a dois. A data tem calendário e hábitos comerciais próprios, diferentes de 14 de fevereiro.
 ### customs IN valentine-week
-Parte dos jovens urbanos da Índia transforma 7 a 14 de fevereiro em dias temáticos de rosas, pedidos, chocolate e outros gestos. A participação varia conforme cidade, família e comunidade.
+Em algumas cidades indianas, jovens transformam de 7 a 14 de fevereiro em uma sequência de dias para rosas, pedidos, chocolates e outros gestos. É uma tendência urbana, não uma tradição nacional uniforme.

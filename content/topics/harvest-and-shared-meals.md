@@ -1,11 +1,11 @@
-# Harvest and shared meals
+# Harvest festivals and festival tables
 
 ## meta
 - slug: harvest-and-shared-meals
-- canonical: Harvest and Shared Meals
+- canonical: Harvest, Food, and Festival Tables
 - category: food
 - perennial: no
-- commonality: giving seasonal abundance a social meaning through food and collective celebration
+- commonality: using seasonal foods and shared meals to mark harvest, gratitude, or belonging
 
 ## observance TW mid-autumn
 - local_name: 中秋節
@@ -45,140 +45,140 @@
 
 ## locale zh-TW
 ### title
-收成與共享餐桌
+收成節與節慶餐桌
 ### summary
-食物能把季節、勞動與感謝轉成共同記憶。這個 Topic 關注共享餐桌的社會功能，不假定每個節日都源自相同的農業歷史。
+有些節日把收成帶上餐桌，有些則用特定食物來說謝謝、團聚或認出自己屬於哪個地方。Pongal、月見、中秋、感恩節和巴西六月節的來源不同，但食物都不只是填飽肚子。
 ### keywords
-收成, 食物, 共享餐桌, 感謝
+收成節, 中秋, 月見, 節慶食物, 共享餐桌
 ### customs TW mid-autumn
-台灣中秋節的月餅、柚子與家人聚餐讓季節性食物成為社交語言；烤肉等現代做法也很普及，但不是唯一形式。
+台灣中秋節的月餅、柚子和家人聚餐，讓季節食物成為人情往來的一部分。烤肉很普及，卻不是每個家庭唯一的過節方式。
 ### customs JP tsukimi
-日本月見以觀賞秋月與供奉芒草、團子等象徵性食物為核心，重點是季節感與感謝收成，不只是一頓晚餐。
+日本月見看秋月，也供奉芒草、團子等食物。它重視季節感與對收成的感謝，不等於一頓固定的家庭晚餐。
 ### customs IN pongal
-印度 Pongal 是南印度重要的收成節期，常以新米烹煮、家庭活動和對太陽與牛隻的感謝連結農業生活；各地做法不同。
+印度南部的 Pongal 是重要收成節期，煮新米、感謝太陽與牛隻，也會安排家庭活動。泰米爾地區之外，形式和重點可能不同。
 ### customs US thanksgiving
-美國感恩節以共享餐食和感謝作為公共敘事，實際菜色、家庭形式與對歷史的理解並不單一。
+美國感恩節以一桌共享餐食和感謝作為核心，火雞只是常見菜色之一。家庭菜單、歷史理解與參與方式並不只有一種。
 ### customs BR festa-junina
-巴西六月節以玉米等當季食物、音樂、舞蹈和社區遊戲聚集人群，城市與鄉村的慶祝方式可能不同。
+巴西六月節以玉米食物、篝火、音樂、舞蹈和社區遊戲聚人。它也帶著天主教聖人節與鄉村文化的背景，不只是收成祭。
 ### customs CN mid-autumn
-中國中秋節常以月餅、賞月與團聚連結季節，但家庭也可能選擇旅行、工作或自己的飲食方式。
+中國中秋節常見月餅、賞月和團聚，食物把季節與家人連在一起。有人旅行、工作，或按自己的飲食習慣過節。
 
 ## locale en
 ### title
-Harvest and shared meals
+Harvest festivals and festival tables
 ### summary
-Food turns season, labour, and gratitude into shared memory. This topic looks at the social work of a common table without assuming that every celebration comes from the same agricultural history.
+Some celebrations bring a harvest to the table; others use a familiar food to say thank you, gather relatives, or mark local belonging. Pongal, tsukimi, Mid-Autumn Festival, Thanksgiving, and Brazil's June festivals arrive from different histories, but food gives each one a social life.
 ### keywords
-harvest, food, shared table, gratitude
+harvest festivals, Mid-Autumn Festival, tsukimi, festival food, shared meals
 ### customs TW mid-autumn
-In Taiwan, mooncakes, pomelos, and family meals make seasonal foods part of social life. Barbecuing is also popular today, but it is not the only way to observe the festival.
+In Taiwan, mooncakes, pomelos, and family meals make seasonal food part of social exchange. Barbecues are popular today, but no single meal defines the festival.
 ### customs JP tsukimi
-Japanese tsukimi centres on viewing the autumn moon and offering symbolic foods such as pampas grass and rice dumplings. It is about seasonality and gratitude, not only dinner.
+Japanese tsukimi looks at the autumn moon and offers foods such as rice dumplings and pampas grass. The point is a sense of season and gratitude for the harvest, not a prescribed dinner.
 ### customs IN pongal
-Pongal is an important harvest season in South India. New rice, family activities, and thanks to the sun and cattle connect it to agricultural life, with regional variation.
+Pongal is a major harvest season in South India. New rice, thanks to the sun and cattle, and family gatherings connect the festival to farming life, especially in Tamil regions.
 ### customs US thanksgiving
-Thanksgiving uses a shared meal and gratitude as a public story in the United States. Menus, family forms, and understandings of its history are not uniform.
+Thanksgiving places a shared meal and gratitude at the centre of a national holiday. Turkey is common, but menus, family arrangements, and views of the history are not uniform.
 ### customs BR festa-junina
-Brazil's June festivals bring people together through corn-based seasonal foods, music, dancing, and community games. Rural and urban celebrations can differ.
+Brazil's June festivals gather people around corn-based foods, bonfires, music, dancing, and community games. Catholic saint days and rural traditions are part of the story, so it is more than a harvest festival.
 ### customs CN mid-autumn
-In China, Mid-Autumn Festival connects mooncakes, moon-viewing, and reunion with the season. Families may also travel, work, or choose their own foods and routines.
+In China, mooncakes, moon-viewing, and reunion tie food to the season. Some people travel or work, while others keep the day through their own foods and routines.
 
 ## locale ja
 ### title
-収穫と共食
+収穫祭と祝いの食卓
 ### summary
-食べ物は季節、労働、感謝を共有する記憶に変える。この Topic では共食の社会的な働きを見つめ、すべての行事が同じ農業史に由来すると決めつけない。
+収穫を祝う行事もあれば、季節の食べ物を囲んで感謝や家族のつながりを確かめる行事もある。ポンガル、月見、中秋節、感謝祭、ブラジルのフェスタ・ジュニーナは由来が違うが、食べ物が人を集める。
 ### keywords
-収穫, 食, 食卓, 感謝
+収穫祭, 中秋節, 月見, 行事食, 共食
 ### customs TW mid-autumn
-台湾の中秋節では月餅、柚子、家族の食事が季節の食を社交の言葉にする。現在はバーベキューも盛んだが、唯一の形ではない。
+台湾の中秋節では、月餅、文旦、家族の食事が人付き合いのきっかけになる。バーベキューは広まった過ごし方だが、どの家庭にも共通するわけではない。
 ### customs JP tsukimi
-日本の月見は秋の月を眺め、すすきや団子などを供えることが中心。季節感と収穫への感謝が大切で、単なる夕食ではない。
+日本の月見は秋の月を眺め、すすきや団子を供える。決まった夕食を食べる日というより、季節と実りを味わう行事だ。
 ### customs IN pongal
-インドのポンガルは南インドの重要な収穫期の行事で、新米、家族の活動、太陽や牛への感謝が農の暮らしと結びつく。地域差がある。
+南インドのポンガルは収穫期の大切な祭りで、新米を炊き、太陽と牛に感謝する。タミル地域を離れると、祝い方や重心は変わる。
 ### customs US thanksgiving
-米国の感謝祭は共食と感謝を公共的な物語にする。献立、家族の形、歴史への理解は一つではない。
+米国の感謝祭では、料理を囲むことと感謝を言葉にすることが大きな役割を持つ。七面鳥はよく登場するが、献立も家族の形も一つではない。
 ### customs BR festa-junina
-ブラジルの六月祭は、トウモロコシなどの季節食、音楽、踊り、地域の遊びで人を集める。都市と農村で祝い方が異なることがある。
+ブラジルの六月祭は、とうもろこし料理、焚き火、音楽、踊り、地域の遊びで人を集める。カトリックの聖人祭と農村文化の影響も強い。
 ### customs CN mid-autumn
-中国の中秋節は月餅、月見、団らんと季節を結びつける。旅行や仕事を選んだり、別の食事をする家庭もある。
+中国の中秋節では月餅、月見、家族の再会が季節の食卓を作る。旅行や仕事をする人もいて、家ごとの食べ方がある。
 
 ## locale zh-CN
 ### title
-收获与共享餐桌
+收获节与节庆餐桌
 ### summary
-食物能把季节、劳动和感谢变成共同记忆。本 Topic 关注共享餐桌的社会作用，不假定所有节日都来自相同的农业历史。
+有些节日直接庆祝收获，有些则借一道熟悉的食物表达感谢、团聚或地方归属。Pongal、月见、中秋节、感恩节和巴西六月节来源不同，但食物都参与了节日的人际关系。
 ### keywords
-收获, 食物, 共享餐桌, 感谢
+收获节, 中秋节, 月见, 节庆食物, 共同用餐
 ### customs TW mid-autumn
-台湾中秋节的月饼、柚子和家庭聚餐让季节食物成为社交语言；烤肉等现代做法也很流行，但不是唯一形式。
+台湾中秋节常见月饼、柚子和家人聚餐，季节食物也成为往来的方式。烤肉很流行，但不是所有家庭唯一的过节方法。
 ### customs JP tsukimi
-日本月见以赏秋月和供奉芒草、团子等象征性食物为核心，强调季节感与感谢收获，而不只是一顿晚餐。
+日本月见会赏秋月，并供奉芒草、团子等食物。它强调季节感和对收成的感谢，不是一顿固定的家庭晚餐。
 ### customs IN pongal
-印度 Pongal 是南印度重要的收获节期，常通过煮新米、家庭活动和感谢太阳与牛只连接农业生活；各地做法不同。
+印度南部的 Pongal 是重要的收获节期，会煮新米、感谢太阳和牛，并安排家庭活动。离开泰米尔地区后，庆祝重点可能不同。
 ### customs US thanksgiving
-美国感恩节以共享餐食和感谢作为公共叙事，实际菜色、家庭形式和历史理解都不是单一的。
+美国感恩节把共享餐食和感谢放在公共节日的中心。火鸡很常见，但家庭菜单、参与方式以及对历史的理解并不统一。
 ### customs BR festa-junina
-巴西六月节用玉米等时令食物、音乐、舞蹈和社区游戏聚集人群；城市与乡村的庆祝方式可能不同。
+巴西六月节用玉米食品、篝火、音乐、舞蹈和社区游戏聚集人群。它同时带有天主教圣人节和乡村文化背景，不只是收获节。
 ### customs CN mid-autumn
-中国中秋节常以月饼、赏月和团聚连接季节，但家庭也可能选择旅行、工作或自己的饮食方式。
+中国中秋节常以月饼、赏月和团聚连接季节与家庭。有人旅行或工作，也有人按自己的饮食和生活安排度过。
 
 ## locale hi
 ### title
-फसल और साझा भोजन
+फसल, त्योहार और साझा भोजन
 ### summary
-भोजन मौसम, श्रम और कृतज्ञता को साझा स्मृति में बदल सकता है। यह विषय साझा मेज़ के सामाजिक काम को देखता है, यह मानकर नहीं चलता कि हर उत्सव का कृषि इतिहास एक ही है।
+कुछ पर्व फ़सल के लिए धन्यवाद देते हैं, तो कुछ मौसम के खाने के ज़रिए परिवार, आभार और स्थानीय पहचान को साथ लाते हैं। पोंगल, त्सुकिमी, मध्य-शरद उत्सव, Thanksgiving और ब्राज़ील के जून उत्सव अलग इतिहासों से आते हैं, फिर भी खाने की मेज़ उन्हें सामाजिक बनाती है।
 ### keywords
-फसल, भोजन, साझा मेज़, कृतज्ञता
+फसल उत्सव, पोंगल, त्सुकिमी, त्योहार का भोजन, साथ भोजन
 ### customs TW mid-autumn
-ताइवान में मूनकेक, पोमेलो और पारिवारिक भोजन मौसमी खाद्य को सामाजिक भाषा बनाते हैं। बारबेक्यू आज लोकप्रिय है, पर यही एकमात्र रूप नहीं।
+ताइवान में मध्य-शरद उत्सव के दौरान मूनकेक, पोमेलो और पारिवारिक भोजन आम हैं। बारबेक्यू लोकप्रिय है, पर हर परिवार उसी तरह नहीं मनाता।
 ### customs JP tsukimi
-जापान का tsukimi शरद चंद्रमा देखने और पम्पास घास तथा चावल के पकवान चढ़ाने पर केंद्रित है। इसमें मौसम और फसल के प्रति आभार है, केवल रात का भोजन नहीं।
+जापान का त्सुकिमी शरद चाँद देखने और घास व चावल के पकवान चढ़ाने का अवसर है। इसमें मौसम और फ़सल के प्रति आभार है, कोई तय पारिवारिक डिनर नहीं।
 ### customs IN pongal
-पोंगल दक्षिण भारत का महत्वपूर्ण फसल पर्व है। नए चावल, पारिवारिक गतिविधियाँ और सूर्य तथा पशुओं के प्रति आभार कृषि जीवन से जुड़े हैं; क्षेत्रीय भिन्नताएँ हैं।
+दक्षिण भारत का पोंगल फ़सल का बड़ा पर्व है। नया चावल पकाना, सूर्य और मवेशियों को धन्यवाद देना, तथा परिवार के साथ समय बिताना इसके अहम हिस्से हैं; तमिल इलाक़ों में भी रूप बदलते हैं।
 ### customs US thanksgiving
-अमेरिका में Thanksgiving साझा भोजन और कृतज्ञता की सार्वजनिक कहानी बनाता है। मेनू, परिवार और इतिहास की समझ एक जैसी नहीं।
+अमेरिका में Thanksgiving साझा भोजन और आभार व्यक्त करने का दिन है। टर्की आम है, लेकिन मेनू, परिवार और इतिहास को समझने के तरीके अलग-अलग हैं।
 ### customs BR festa-junina
-ब्राज़ील के जून उत्सव मक्का जैसे मौसमी खाद्य, संगीत, नृत्य और सामुदायिक खेलों से लोगों को मिलाते हैं। ग्रामीण और शहरी उत्सव अलग हो सकते हैं।
+ब्राज़ील की जून की festas में मकई के व्यंजन, अलाव, संगीत, नाच और पड़ोस के खेल लोगों को साथ लाते हैं। कैथोलिक संतों के दिन और ग्रामीण परंपराएँ भी इसकी कहानी का हिस्सा हैं।
 ### customs CN mid-autumn
-चीन में मध्य-शरद उत्सव मूनकेक, चाँद देखने और पुनर्मिलन को मौसम से जोड़ता है। परिवार यात्रा, काम या अपनी पसंद का भोजन भी चुन सकते हैं।
+चीन का मध्य-शरद उत्सव मूनकेक, चाँद और पारिवारिक मिलन को जोड़ता है। कुछ लोग यात्रा या काम करते हैं, और कुछ अपने घर के भोजन से दिन मनाते हैं।
 
 ## locale id
 ### title
-Panen dan makan bersama
+Panen, Perayaan, dan Makan Bersama
 ### summary
-Makanan mengubah musim, kerja, dan rasa syukur menjadi kenangan bersama. Topik ini melihat fungsi sosial meja makan tanpa menganggap semua perayaan berasal dari sejarah pertanian yang sama.
+Ada perayaan yang berhubungan langsung dengan panen, ada pula yang memakai makanan musiman untuk mengucapkan syukur, berkumpul, atau menegaskan rasa memiliki. Pongal, tsukimi, Festival Pertengahan Musim Gugur, Thanksgiving, dan festa junina memiliki asal-usul berbeda, tetapi makanan membuatnya hidup dalam hubungan sosial.
 ### keywords
-panen, makanan, meja bersama, syukur
+panen, Pongal, tsukimi, makanan perayaan, makan bersama
 ### customs TW mid-autumn
-Di Taiwan, kue bulan, pomelo, dan makan bersama keluarga menjadikan makanan musiman bagian dari kehidupan sosial. Barbeku populer sekarang, tetapi bukan satu-satunya bentuk.
+Di Taiwan, kue bulan, pomelo, dan makan bersama keluarga membuat makanan musiman menjadi bagian dari hubungan sosial. Barbeku populer sekarang, tetapi bukan satu-satunya cara merayakan.
 ### customs JP tsukimi
-Tsukimi di Jepang berpusat pada melihat bulan musim gugur dan mempersembahkan susuki serta kue beras. Intinya rasa musim dan syukur atas panen, bukan sekadar makan malam.
+Tsukimi di Jepang berarti menikmati bulan musim gugur sambil mempersembahkan susuki dan dango. Yang ditekankan adalah musim dan rasa syukur atas hasil bumi, bukan menu makan malam tertentu.
 ### customs IN pongal
-Pongal adalah musim panen penting di India Selatan. Nasi baru, kegiatan keluarga, serta syukur kepada matahari dan ternak menghubungkannya dengan kehidupan agraris; praktiknya beragam.
+Pongal adalah perayaan panen penting di India Selatan. Memasak beras baru, berterima kasih kepada matahari dan sapi, serta berkumpul dengan keluarga menghubungkannya dengan kehidupan agraris, terutama di wilayah Tamil.
 ### customs US thanksgiving
-Thanksgiving di Amerika Serikat memakai makan bersama dan rasa syukur sebagai narasi publik. Menu, bentuk keluarga, dan pemahaman sejarahnya tidak tunggal.
+Thanksgiving di Amerika Serikat berpusat pada makan bersama dan mengucapkan syukur. Kalkun umum disajikan, tetapi menu, bentuk keluarga, dan cara membaca sejarahnya beragam.
 ### customs BR festa-junina
-Festas Juninas di Brasil mempertemukan orang melalui makanan musiman berbahan jagung, musik, tarian, dan permainan komunitas. Perayaan kota dan desa dapat berbeda.
+Festa junina di Brasil menghadirkan makanan berbahan jagung, api unggun, musik, tarian, dan permainan warga. Hari santo Katolik dan budaya pedesaan juga membentuk perayaan ini.
 ### customs CN mid-autumn
-Festival Pertengahan Musim Gugur di Tiongkok menghubungkan kue bulan, melihat bulan, dan berkumpul dengan musim. Keluarga juga dapat bepergian, bekerja, atau memilih makanan sendiri.
+Festival Pertengahan Musim Gugur di Tiongkok menghubungkan kue bulan, melihat bulan, dan berkumpul dengan keluarga. Sebagian orang bepergian atau bekerja, sementara yang lain mengikuti kebiasaan rumahnya sendiri.
 
 ## locale pt-BR
 ### title
-Colheita e refeições compartilhadas
+Colheitas e mesas de festa
 ### summary
-A comida transforma estação, trabalho e gratidão em memória coletiva. Este tópico observa a função social da mesa comum sem presumir uma mesma história agrícola para todos os festejos.
+Algumas festas celebram diretamente a colheita; outras usam comidas da estação para agradecer, reunir a família ou afirmar um pertencimento local. Pongal, tsukimi, Meio do Outono, Thanksgiving e as festas juninas brasileiras têm origens distintas, mas a comida dá vida social a todas elas.
 ### keywords
-colheita, comida, mesa compartilhada, gratidão
+colheita, Pongal, tsukimi, comidas de festa, refeições compartilhadas
 ### customs TW mid-autumn
-Em Taiwan, bolos lunares, pomelos e refeições familiares tornam alimentos sazonais uma linguagem social. O churrasco é popular hoje, mas não é a única forma de celebrar.
+Em Taiwan, bolos lunares, pomelos e refeições em família fazem da comida da estação uma forma de convivência. O churrasco se popularizou, mas não é a única maneira de celebrar.
 ### customs JP tsukimi
-O tsukimi japonês se concentra em observar a lua de outono e oferecer capim-dos-pampas e bolinhos de arroz. Valoriza estação e gratidão pela colheita, não apenas o jantar.
+O tsukimi japonês observa a lua de outono e oferece susuki e bolinhos de arroz. A ocasião valoriza a estação e a gratidão pela colheita, não um jantar obrigatório.
 ### customs IN pongal
-Pongal é uma importante época de colheita no sul da Índia. Arroz novo, atividades familiares e agradecimento ao sol e aos animais ligam o evento à vida agrícola, com variações regionais.
+O Pongal é uma importante festa da colheita no sul da Índia. Preparar arroz novo e agradecer ao sol e ao gado aproximam a festa da vida agrícola, sobretudo nas regiões tâmeis.
 ### customs US thanksgiving
-O Thanksgiving nos Estados Unidos usa a refeição compartilhada e a gratidão como narrativa pública. Cardápios, famílias e leituras da história não são uniformes.
+Nos Estados Unidos, o Thanksgiving coloca a refeição compartilhada e a gratidão no centro do feriado. O peru é comum, mas cardápios, famílias e leituras da história variam.
 ### customs BR festa-junina
-As Festas Juninas brasileiras reúnem pessoas com comidas sazonais à base de milho, música, dança e brincadeiras comunitárias. As celebrações rurais e urbanas podem diferir.
+As festas juninas brasileiras reúnem pessoas com comidas de milho, fogueira, música, dança e brincadeiras. As festas dos santos católicos e as tradições rurais também fazem parte de sua formação.
 ### customs CN mid-autumn
-O Festival do Meio do Outono na China liga bolos lunares, observar a lua e reencontro à estação. Famílias também podem viajar, trabalhar ou escolher seus próprios alimentos.
+Na China, o Festival do Meio do Outono liga bolos lunares, contemplação da lua e reencontro familiar. Há quem viaje ou trabalhe, enquanto outras famílias mantêm seus próprios costumes à mesa.

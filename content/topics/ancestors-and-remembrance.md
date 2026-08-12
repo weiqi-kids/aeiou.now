@@ -1,11 +1,11 @@
-# Ancestors and remembrance
+# Graves, ancestors, and remembrance
 
 ## meta
 - slug: ancestors-and-remembrance
-- canonical: Ancestors and Remembrance
+- canonical: Graves, Ancestors, and Remembrance
 - category: remembrance
 - perennial: no
-- commonality: keeping relationships with the dead present through memory, visits, and public rituals
+- commonality: remembering the dead through family rites, cemetery visits, and civic memorials
 
 ## observance TW qingming
 - local_name: 清明節
@@ -39,126 +39,126 @@
 
 ## locale zh-TW
 ### title
-祖先與記憶
+祭祖與追思
 ### summary
-人們以掃墓、返鄉、祭祀、公共紀念或安靜回想，讓逝者仍存在於社會關係中。這些方式不應被簡化成同一種宗教儀式。
+清明、盂蘭盆、Dia de Finados 和 Memorial Day 都與「記得逝者」有關，但祭祖、宗教追思與軍人紀念不是同一件事。掃墓、返鄉、獻花和公共典禮，讓人看見各地紀念對象與參與方式的差別。
 ### keywords
-祖先, 記憶, 紀念, 掃墓
+清明, 盂蘭盆, 祭祖, 追思, 紀念日
 ### customs TW qingming
-台灣清明節常見掃墓、整理墓地與家族祭祀，實踐方式也會受都市生活、家族安排和個人信念影響。
+台灣清明節常見掃墓、整理墓地和家族祭祀。有人提早返鄉，也有人因都市生活、家族安排或個人信念選擇不同做法。
 ### customs CN qingming
-中國清明節常以掃墓、追思和踏青連結祖先記憶，當代家庭也可能採用網路紀念或其他方式。
+中國清明節把掃墓、追思和踏青放在同一個時節。除了家族祭祀，也有家庭改用網路紀念或更安靜的方式記住逝者。
 ### customs JP obon
-日本盂蘭盆會以迎接與送別祖先、墓地整理和盆踊り等地方活動維繫記憶；日期與儀式依地區不同。
+日本盂蘭盆會迎接並送別祖先，墓地整理、返鄉和盆踊り常出現在地方行事裡。實際日期與儀式會隨地區而變。
 ### customs US memorial-day
-美國 Memorial Day 主要紀念在服役中死亡的軍人，公共典禮、墓園旗幟與家庭休閒可能同時存在，不能等同於所有亡者祭典。
+美國 Memorial Day 紀念在服役中死亡的軍人；墓園插旗、公共典禮與家庭休閒可能同時出現。它不是紀念所有逝者的節日。
 ### customs BR finados
-巴西 Dia de Finados 常見前往墓園、獻花和追思，家庭、宗教與地方社群的做法不盡相同。
+巴西 Dia de Finados 常見到墓園獻花、祈禱和追思。家庭、宗教團體與地方社群未必用同一種方式度過這一天。
 
 ## locale en
 ### title
-Ancestors and remembrance
+Graves, ancestors, and remembrance
 ### summary
-People keep the dead present in social relationships through cemetery visits, homecoming, worship, public memorials, or quiet memory. These practices should not be flattened into one religious ritual.
+Qingming, Obon, Dia de Finados, and Memorial Day all remember people who have died, but they do not remember the same people or ask the same thing of participants. Grave visits, family rites, flowers, and civic ceremonies make those differences visible.
 ### keywords
-ancestors, memory, remembrance, cemetery visits
+Qingming, Obon, ancestors, remembrance, memorial days
 ### customs TW qingming
-In Taiwan, Qingming commonly involves visiting graves, tending them, and family rites. Urban life, family arrangements, and personal beliefs shape how people participate.
+In Taiwan, Qingming brings grave visits, cleaning, and family rites. Some people travel home early; others adapt the day to city life, family schedules, or personal belief.
 ### customs CN qingming
-In China, Qingming connects grave visits, remembrance, and spring outings with family memory. Contemporary families may also use online memorials or other forms.
+China's Qingming combines grave visits, remembrance, and spring outings. Some families now use online memorials or quieter ways of marking the loss.
 ### customs JP obon
-Japan's Obon keeps memory through welcoming and seeing off ancestors, tending graves, and local Bon odori. Dates and rituals vary by region.
+Obon is a time to welcome and see off ancestors. Returning home, tending graves, and local Bon odori are connected in some places, while dates and customs differ across Japan.
 ### customs US memorial-day
-In the United States, Memorial Day primarily honours service members who died in military service. Public ceremonies, flags at cemeteries, and leisure may coexist; it is not a festival for every deceased person.
+Memorial Day honours service members who died in military service. Flags at cemeteries, public ceremonies, and leisure can share the same weekend; it is not a festival for every deceased person.
 ### customs BR finados
-Brazil's Dia de Finados often involves cemetery visits, flowers, and remembrance. Family, religious, and local practices vary.
+On Dia de Finados, many people visit cemeteries, leave flowers, and pray or remember quietly. Families, churches, and local communities mark the day in their own ways.
 
 ## locale ja
 ### title
-先祖と記憶
+墓参りと追悼の行事
 ### summary
-墓参り、帰省、祭祀、公共の追悼、静かな回想によって、亡くなった人を社会関係の中に置き続ける。これらを一つの宗教儀礼に単純化しない。
+清明節、お盆、フィナードス、メモリアルデーは、亡くなった人を思い出す機会になる。ただし、先祖を迎える行事、宗教的な追悼、戦没軍人の記念は同じものではない。墓参りや帰省、献花、式典から、それぞれの対象と作法が見えてくる。
 ### keywords
-先祖, 記憶, 追悼, 墓参り
+清明節, お盆, 墓参り, 追悼, メモリアルデー
 ### customs TW qingming
-台湾の清明節には墓参り、墓の手入れ、家族の祭祀が見られる。都市生活、家族の予定、個人の信念が参加の仕方に影響する。
+台湾の清明節では、墓参り、墓の手入れ、家族の祭祀が行われる。帰省する人もいれば、都市での暮らしや家族の予定に合わせて別の方法を選ぶ人もいる。
 ### customs CN qingming
-中国の清明節は墓参り、追悼、春の行楽を先祖の記憶と結びつける。オンライン追悼など別の方法を選ぶ家庭もある。
+中国の清明節は、墓参りや追悼と春の行楽が重なる時期だ。家族で祭祀をするほか、オンラインで故人を偲ぶ家庭もある。
 ### customs JP obon
-日本のお盆では先祖を迎え、送り出し、墓を整え、盆踊りなど地域行事で記憶をつなぐ。日程と儀礼は地域で異なる。
+日本のお盆では先祖を迎え、送り出す。帰省、墓の手入れ、盆踊りなどが地域の行事と結びつくが、日程と過ごし方には幅がある。
 ### customs US memorial-day
-米国のメモリアルデーは主に軍務中に亡くなった兵士を追悼する。式典、墓地の旗、余暇が同時にあり、すべての死者の祭りではない。
+米国のメモリアルデーは、軍務中に亡くなった兵士を追悼する日だ。墓地の旗や式典が行われる一方、連休の余暇として過ごす人もいる。
 ### customs BR finados
-ブラジルのフィナードスでは墓参り、花、追悼がよく見られる。家庭、宗教、地域によって過ごし方は異なる。
+ブラジルのフィナードスには、墓参り、献花、祈りや静かな追憶がある。家庭、教会、地域によって一日の過ごし方は異なる。
 
 ## locale zh-CN
 ### title
-祖先与纪念
+祭祖、扫墓与追思
 ### summary
-人们通过扫墓、返乡、祭祀、公共纪念或安静回忆，让逝者继续存在于社会关系中。这些方式不应被简化为同一种宗教仪式。
+清明、盂兰盆、Dia de Finados 和 Memorial Day 都会让人想起逝者，但祭祖、宗教追思和纪念阵亡军人并不是一回事。扫墓、返乡、献花和公共仪式，呈现出不同的纪念对象与做法。
 ### keywords
-祖先, 记忆, 纪念, 扫墓
+清明, 盂兰盆, 祭祖, 扫墓, 追思
 ### customs TW qingming
-台湾清明节常见扫墓、整理墓地和家族祭祀；都市生活、家族安排和个人信念都会影响实践。
+台湾清明节常见扫墓、整理墓地和家族祭祀。有人提前返乡，也有人按照城市生活、家庭安排或个人信念改变做法。
 ### customs CN qingming
-中国清明节常以扫墓、追思和踏青连接祖先记忆，当代家庭也可能采用网络纪念或其他方式。
+中国清明节把扫墓、追思和踏青放在同一时节。除了家族祭祀，有些家庭也会用网络纪念或更安静的方式悼念逝者。
 ### customs JP obon
-日本盂兰盆会通过迎接和送别祖先、整理墓地及盆踊等地方活动维系记忆；日期和仪式因地区而异。
+日本盂兰盆会迎接并送别祖先，返乡、整理墓地和盆踊等地方活动常常相连。日期和仪式因地区而异。
 ### customs US memorial-day
-美国 Memorial Day 主要纪念服役期间死亡的军人。公共典礼、墓地插旗和家庭休闲可能同时存在，不能等同于纪念所有逝者。
+美国 Memorial Day 主要纪念服役期间死亡的军人。墓地插旗、公共典礼和家庭休闲可能同时存在，它不是纪念所有逝者的节日。
 ### customs BR finados
-巴西 Dia de Finados 常见前往墓园、献花和追思，家庭、宗教及地方社群的做法并不完全相同。
+巴西 Dia de Finados 常见前往墓园、献花、祈祷和追思。家庭、宗教团体与地方社群的做法并不相同。
 
 ## locale hi
 ### title
-पूर्वज और स्मरण
+पूर्वजों की पूजा और स्मरण
 ### summary
-लोग कब्रिस्तान जाने, घर लौटने, पूजा, सार्वजनिक स्मारक या शांत स्मृति के माध्यम से मृतकों को सामाजिक संबंधों में उपस्थित रखते हैं। इन्हें एक ही धार्मिक रस्म में नहीं बदलना चाहिए।
+क़िंगमिंग, ओबोन, Dia de Finados और Memorial Day मृत लोगों को याद करने के अवसर हैं, पर इनमें याद किए जाने वाले लोग और रस्में एक जैसी नहीं हैं। कब्र पर जाना, घर लौटना, फूल चढ़ाना और सार्वजनिक समारोह अलग-अलग सामाजिक अर्थ रखते हैं।
 ### keywords
-पूर्वज, स्मृति, स्मरण, कब्रिस्तान
+क़िंगमिंग, ओबोन, पूर्वज, स्मरण, समाधि
 ### customs TW qingming
-ताइवान में Qingming पर कब्रों पर जाना, उनकी देखभाल और पारिवारिक अनुष्ठान आम हैं। शहरी जीवन, परिवार की व्यवस्था और निजी विश्वास भागीदारी को आकार देते हैं।
+ताइवान में Qingming पर कब्रों की सफ़ाई, कब्रिस्तान जाना और पारिवारिक पूजा आम है। परिवार अपनी यात्रा, शहर की ज़िंदगी और निजी विश्वास के अनुसार तरीका बदल सकते हैं।
 ### customs CN qingming
-चीन में Qingming कब्र-भेंट, स्मरण और वसंत की सैर को पारिवारिक स्मृति से जोड़ता है। कुछ परिवार ऑनलाइन स्मारक या अन्य रूप भी अपनाते हैं।
+चीन में Qingming पर कब्र पर जाना, पूर्वजों को याद करना और वसंत की सैर साथ दिखाई देती है। कुछ परिवार ऑनलाइन स्मरण या शांत निजी रस्म चुनते हैं।
 ### customs JP obon
-जापान का ओबोन पूर्वजों का स्वागत-विदाई, कब्र की देखभाल और स्थानीय बोन ओडोरी से स्मृति जोड़ता है। तारीख और रस्म क्षेत्र के अनुसार बदलते हैं।
+जापान का Obon पूर्वजों का स्वागत और विदाई करने का समय है। घर लौटना, कब्र की देखभाल और Bon odori अलग-अलग इलाक़ों में अलग रूप लेते हैं।
 ### customs US memorial-day
-अमेरिका का Memorial Day मुख्यतः सैन्य सेवा में मारे गए सैनिकों का सम्मान करता है। समारोह, कब्रों पर झंडे और अवकाश साथ हो सकते हैं; यह हर मृत व्यक्ति का उत्सव नहीं।
+अमेरिका का Memorial Day सैन्य सेवा में मारे गए लोगों को याद करता है। कब्रिस्तानों में झंडे और सार्वजनिक समारोह होते हैं, लेकिन यह हर मृत व्यक्ति का त्योहार नहीं है।
 ### customs BR finados
-ब्राज़ील के Dia de Finados में कब्रिस्तान जाना, फूल चढ़ाना और स्मरण आम हैं। परिवार, धर्म और स्थानीय समुदाय के तौर-तरीके अलग होते हैं।
+ब्राज़ील में Dia de Finados पर लोग कब्रिस्तान जाते, फूल चढ़ाते और प्रार्थना या स्मरण करते हैं। परिवार और धार्मिक समुदाय अपने ढंग से दिन बिताते हैं।
 
 ## locale id
 ### title
-Leluhur dan kenangan
+Ziarah Makam dan Mengenang yang Wafat
 ### summary
-Orang mempertahankan kehadiran orang yang telah meninggal dalam hubungan sosial melalui ziarah, pulang, ibadah, peringatan publik, atau ingatan pribadi. Praktik ini tidak seharusnya disederhanakan menjadi satu ritual agama.
+Qingming, Obon, Dia de Finados, dan Memorial Day sama-sama berhubungan dengan mengenang orang yang telah meninggal, tetapi orang dan cara yang dikenang tidak sama. Ziarah makam, pulang, bunga, dan upacara kenegaraan menunjukkan perbedaan itu.
 ### keywords
-leluhur, kenangan, penghormatan, ziarah
+Qingming, Obon, leluhur, ziarah makam, mengenang
 ### customs TW qingming
-Qingming di Taiwan sering diisi ziarah makam, merawat makam, dan ritual keluarga. Kehidupan kota, pengaturan keluarga, dan keyakinan pribadi memengaruhi partisipasi.
+Di Taiwan, Qingming sering diisi dengan ziarah makam, membersihkan makam, dan ritual keluarga. Jadwal kerja, kehidupan kota, serta keyakinan pribadi ikut menentukan caranya.
 ### customs CN qingming
-Qingming di Tiongkok menghubungkan ziarah makam, mengenang, dan berjalan di musim semi dengan ingatan keluarga. Sebagian keluarga memakai memorial daring atau cara lain.
+Qingming di Tiongkok menggabungkan ziarah makam, mengenang leluhur, dan bepergian di musim semi. Sebagian keluarga memakai memorial daring atau cara yang lebih pribadi.
 ### customs JP obon
-Obon di Jepang menjaga ingatan melalui menyambut dan melepas leluhur, merawat makam, serta bon odori setempat. Tanggal dan ritual berbeda menurut daerah.
+Obon di Jepang menjadi waktu untuk menyambut dan melepas leluhur. Pulang kampung, merawat makam, dan Bon odori hadir dalam bentuk yang berbeda menurut daerah.
 ### customs US memorial-day
-Memorial Day di Amerika Serikat terutama menghormati anggota militer yang meninggal saat bertugas. Upacara, bendera di makam, dan rekreasi dapat berdampingan; ini bukan perayaan semua orang yang meninggal.
+Memorial Day di Amerika Serikat mengenang anggota militer yang meninggal saat bertugas. Bendera di makam dan upacara publik dapat berdampingan dengan kegiatan liburan; ini bukan hari untuk semua orang yang wafat.
 ### customs BR finados
-Dia de Finados di Brasil sering melibatkan ziarah makam, bunga, dan mengenang. Praktik keluarga, agama, dan daerah beragam.
+Pada Dia de Finados di Brasil, orang mengunjungi makam, membawa bunga, berdoa, atau mengenang dalam hening. Keluarga, gereja, dan komunitas setempat memiliki kebiasaan masing-masing.
 
 ## locale pt-BR
 ### title
-Antepassados e lembrança
+Visitas ao cemitério e memória dos mortos
 ### summary
-As pessoas mantêm os mortos presentes nas relações sociais por meio de visitas a cemitérios, retorno à terra natal, culto, memoriais públicos ou lembrança silenciosa. Essas práticas não cabem em um único ritual religioso.
+Qingming, Obon, Dia de Finados e Memorial Day lembram pessoas que morreram, mas não lembram as mesmas pessoas nem têm o mesmo sentido. Visitas ao cemitério, retorno para casa, flores e cerimônias públicas mostram essas diferenças.
 ### keywords
-antepassados, memória, lembrança, cemitério
+Qingming, Obon, ancestrais, cemitério, memória dos mortos
 ### customs TW qingming
-Em Taiwan, o Qingming costuma envolver visita e cuidado dos túmulos e ritos familiares. Vida urbana, organização da família e crenças pessoais influenciam a participação.
+Em Taiwan, o Qingming costuma envolver visita ao túmulo, limpeza e ritos familiares. A vida urbana, os horários da família e a crença de cada pessoa mudam a forma de participar.
 ### customs CN qingming
-Na China, o Qingming liga visita aos túmulos, lembrança e passeio de primavera à memória familiar. Há famílias que também usam memoriais on-line ou outras formas.
+Na China, o Qingming reúne visita aos túmulos, lembrança dos antepassados e passeios de primavera. Algumas famílias recorrem a memoriais on-line ou a uma homenagem mais reservada.
 ### customs JP obon
-O Obon japonês preserva a memória ao receber e despedir-se dos ancestrais, cuidar dos túmulos e participar de eventos como o Bon odori. Datas e ritos variam por região.
+No Japão, o Obon recebe e despede os ancestrais. Voltar para casa, cuidar dos túmulos e participar do Bon odori fazem parte de costumes que variam conforme a região.
 ### customs US memorial-day
-Nos Estados Unidos, o Memorial Day homenageia principalmente militares mortos em serviço. Cerimônias, bandeiras nos cemitérios e lazer podem coexistir; não é um festival para todas as pessoas falecidas.
+Nos Estados Unidos, o Memorial Day homenageia militares que morreram em serviço. Bandeiras nos cemitérios e cerimônias públicas convivem com o feriado prolongado; não é um dia dedicado a todos os mortos.
 ### customs BR finados
-No Dia de Finados brasileiro, são comuns visitas a cemitérios, flores e lembranças. Os costumes familiares, religiosos e locais variam.
+No Dia de Finados, muitas pessoas visitam cemitérios, levam flores e rezam ou fazem uma lembrança silenciosa. Famílias, igrejas e comunidades locais têm maneiras próprias de marcar a data.

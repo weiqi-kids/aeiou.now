@@ -1,11 +1,11 @@
-# New beginnings and good fortune
+# New Year, Diwali, and Eid
 
 ## meta
 - slug: new-beginnings-and-fortune
-- canonical: New Beginnings and Good Fortune
+- canonical: New Year, Diwali, and Eid
 - category: festival
 - perennial: no
-- commonality: marking a new cycle with reunion, hopes, gifts, and wishes for prosperity
+- commonality: marking a new year, religious renewal, or hopes for prosperity through shared rituals
 
 ## observance TW lunar-new-year
 - local_name: 農曆新年
@@ -46,140 +46,140 @@
 
 ## locale zh-TW
 ### title
-迎接新開始與好運
+新年、排燈節與開齋節
 ### summary
-新年常把時間的重新開始、家人團聚與對未來的祝願放在一起。相似的願望不代表各地使用相同曆法或相同儀式。
+元旦或農曆新年把時間翻到新的一頁；排燈節帶來清潔、繁榮與重新開始；開齋節則在齋戒後重建親族關係。它們不使用同一套曆法，卻都讓人用聚餐、祝福、禮物或和解重新安排生活。
 ### keywords
-新年, 新開始, 好運, 團聚
+新年, 排燈節, 開齋節, 迎新, 祝福
 ### customs TW lunar-new-year
-台灣農曆新年常見返鄉、圍爐、紅包與拜年；除夕到元宵的活動也會依家庭和地方而不同。
+台灣農曆新年常見返鄉、除夕圍爐、紅包和拜年。從除夕到元宵，每個家庭和地方都有自己的節奏，不一定照完整套流程。
 ### customs JP oshogatsu
-日本正月以初詣、年賀狀、御節料理和門松等習俗迎接新年，重點是新年度的開始而不只是倒數派對。
+日本正月會去初詣、寄年賀狀、吃御節料理，也會在門口放門松。重點是迎接新年度，不只是一場跨年倒數。
 ### customs US new-year
-美國元旦是聯邦假日，許多人以倒數、聚會或新年目標迎接新一年；參與方式具有家庭與地區差異。
+美國元旦是聯邦假日，有人參加跨年派對，有人寫新年目標，也有人把它當普通休息日。家庭與地區習慣差異很大。
 ### customs IN diwali
-印度排燈節常與燈火、清潔、家人聚會、贈禮和對繁榮的祝願相連；不同地區與宗教傳統的日期和做法並不完全相同。
+印度排燈節常見點燈、打掃、走訪親友、送甜食和祈求繁榮。在部分地區，它也被視為整理生活、展開新一年的時機，但各地故事與做法不同。
 ### customs ID eid-al-fitr
-印尼開齋節常見返鄉、向長輩求寬恕、家庭聚餐與互贈食物；返鄉規模和公共安排會隨年度而變。
+印尼開齋節常見返鄉、向長輩求寬恕、家庭聚餐和互贈食物。這裡的「重新開始」首先是關係上的和解，不是公曆新年。
 ### customs BR reveillon
-巴西 Réveillon 常在跨年夜以海邊聚會、煙火、白色衣物與祝願迎接元旦；做法會依城市和家庭而異。
+巴西 Réveillon 在跨年夜迎接元旦，海邊聚會、煙火、白色衣物和祝願都很常見。城市、宗教信仰和家庭會選擇不同的做法。
 
 ## locale en
 ### title
-New beginnings and good fortune
+New Year, Diwali, and Eid
 ### summary
-New-year traditions bring together a reset in time, reunion, and hopes for what comes next. Similar wishes do not mean that societies use the same calendar or rituals.
+New Year's celebrations turn the calendar, Diwali brings cleaning and hopes for prosperity, and Eid al-Fitr renews relationships after Ramadan. They do not use the same calendar, but each gives people a way to begin again through food, blessings, gifts, or reconciliation.
 ### keywords
-new year, new beginnings, good fortune, reunion
+New Year, Diwali, Eid al-Fitr, fresh starts, blessings
 ### customs TW lunar-new-year
-Taiwan's Lunar New Year commonly involves returning home, a reunion dinner, red envelopes, and visits. Practices from New Year's Eve through the Lantern season vary by family and place.
+Taiwan's Lunar New Year includes returning home, the New Year's Eve reunion dinner, red envelopes, and visits. From New Year's Eve to the Lantern season, each family keeps its own pace.
 ### customs JP oshogatsu
-Japanese New Year includes hatsumode visits, nengajo cards, osechi food, and kadomatsu decorations. It centres on the start of a new year, not only on a countdown party.
+Japanese New Year brings hatsumode visits, nengajo cards, osechi food, and kadomatsu at the door. It is about opening a new year, not only counting down at midnight.
 ### customs US new-year
-New Year's Day is a federal holiday in the United States. People mark it with countdowns, gatherings, or resolutions, with considerable family and regional variation.
+New Year's Day is a federal holiday in the United States. Some people go to a party, some make resolutions, and some simply take a day off; the holiday has no single household script.
 ### customs IN diwali
-In India, Diwali connects lamps, cleaning, family visits, gifts, and wishes for prosperity. Dates and practices differ across regional and religious traditions.
+Diwali often involves lamps, cleaning, visits, sweets, and prayers for prosperity. In some regions it is also a moment for a fresh start, while its stories and practices vary across India.
 ### customs ID eid-al-fitr
-In Indonesia, Idul Fitri is associated with homecoming, asking elders for forgiveness, family meals, and shared food. The scale of mudik and public arrangements changes each year.
+In Indonesia, Idul Fitri brings mudik, visits to elders, requests for forgiveness, family meals, and shared food. Its fresh start is about repairing relationships after fasting, not about the Gregorian calendar.
 ### customs BR reveillon
-Brazil's Réveillon welcomes the new year with beach gatherings, fireworks, white clothing, and wishes. Customs vary by city and family.
+Brazil's Réveillon welcomes January 1 with beach gatherings, fireworks, white clothing, and wishes for the year ahead. Cities, faiths, and families choose different ways to mark the night.
 
 ## locale ja
 ### title
-新しい始まりと幸運
+正月・ディワリ・イード
 ### summary
-新年の習慣には、時間の区切り直し、再会、これからへの願いが重なる。同じ願いがあっても、暦や儀礼は社会ごとに異なる。
+正月は暦を新しくし、ディワリは清めと繁栄を願い、イード・アル＝フィトルはラマダン後の関係を結び直す。暦は同じではないが、食事や祈り、贈り物、謝罪を通じて新たな区切りを作る行事だ。
 ### keywords
-新年, 新しい始まり, 幸運, 再会
+正月, ディワリ, イード, 新年, 祝福
 ### customs TW lunar-new-year
-台湾の旧正月には帰省、団らんの食事、紅包、年始回りが見られる。大晦日から元宵節までの過ごし方は家庭や地域で異なる。
+台湾の旧正月には、帰省、除夜の食事、赤い包み、年始の訪問がある。大晦日から元宵節までの過ごし方は、家族や地域で違う。
 ### customs JP oshogatsu
-日本の正月には初詣、年賀状、おせち料理、門松などがある。単なるカウントダウンではなく、新年度の始まりを迎える習慣である。
+日本の正月は、初詣、年賀状、おせち料理、門松などで新年を迎える。深夜のカウントダウンだけが正月ではない。
 ### customs US new-year
-米国の元日は連邦祝日。カウントダウン、集まり、新年の目標などで迎えるが、家庭や地域による違いも大きい。
+米国の元日は連邦祝日だ。年越しの集まりや新年の目標を楽しむ人もいれば、静かに休む人もいて、家庭ごとの過ごし方がある。
 ### customs IN diwali
-インドのディワリは灯り、掃除、家族の訪問、贈り物、繁栄への願いと結びつく。日付や実践は地域と宗教の伝統で異なる。
+インドのディワリでは、灯り、掃除、親族訪問、菓子、繁栄への祈りが見られる。新しい始まりと結びつく地域もあるが、物語と作法は一様ではない。
 ### customs ID eid-al-fitr
-インドネシアのイドゥル・フィトリには帰省、年長者への謝罪、家族の食事、食べ物の分かち合いが伴う。帰省の規模や公的な運用は年ごとに変わる。
+インドネシアのイドゥル・フィトリには、ムディック、年長者への訪問、謝罪、家族の食事がある。ここでの再出発は、ラマダン後に人間関係を整え直すことだ。
 ### customs BR reveillon
-ブラジルのレヴェイヨンでは、海辺の集まり、花火、白い服、願いごとで新年を迎える。都市や家庭によって習慣が異なる。
+ブラジルのレヴェイヨンは、海辺の集まり、花火、白い服、願いごとで新年を迎える。都市や家庭によって選ぶ習慣が違う。
 
 ## locale zh-CN
 ### title
-迎接新开始与好运
+新年、排灯节与开斋节
 ### summary
-新年把时间重启、家庭团聚和对未来的祝愿放在一起。相似的愿望不代表各地使用相同的历法或仪式。
+元旦和农历新年把日历翻到新的一页，排灯节常连着清洁与繁荣的愿望，开斋节则在斋月之后修复亲族关系。它们使用的历法不同，却都通过聚餐、祝福、送礼或和解创造新的起点。
 ### keywords
-新年, 新开始, 好运, 团聚
+新年, 排灯节, 开斋节, 迎新, 祝福
 ### customs TW lunar-new-year
-台湾农历新年常见返乡、年夜饭、红包和拜年；从除夕到元宵的做法会因家庭和地区而异。
+台湾农历新年常见返乡、年夜饭、红包和拜年。从除夕到元宵，各个家庭和地方都有自己的节奏，不一定完整照做所有习俗。
 ### customs JP oshogatsu
-日本正月有初诣、贺年卡、御节料理和门松等习俗，重点是迎接新年度，而不只是倒数聚会。
+日本正月会去初诣、寄年贺状、吃御节料理，门口也常摆门松。它迎接的是新年度，不只是午夜倒数。
 ### customs US new-year
-美国元旦是联邦假日，许多人用倒数、聚会或新年目标迎接新一年；家庭和地区差异很明显。
+美国元旦是联邦假日，有人参加跨年聚会，有人写新年目标，也有人只是休息一天。家庭和地区没有统一的过法。
 ### customs IN diwali
-印度排灯节常与灯火、清洁、走亲访友、赠礼和繁荣愿望相连；日期及做法因地区和宗教传统而不同。
+印度排灯节常见点灯、打扫、走访亲友、送甜食和祈求繁荣。在部分地区，它也带有重新开始的意味，但故事与做法因地而异。
 ### customs ID eid-al-fitr
-印尼开斋节常见返乡、向长辈求宽恕、家庭聚餐和分享食物；返乡规模及公共安排每年都会变化。
+印尼开斋节常见返乡、向长辈求宽恕、家庭聚餐和分享食物。这里的重新开始首先是关系上的和解，而不是公历新年。
 ### customs BR reveillon
-巴西跨年夜常以海滩聚会、烟火、白色服装和祝愿迎接元旦；做法因城市和家庭而异。
+巴西 Réveillon 在跨年夜迎接元旦，海边聚会、烟火、白色衣物和祝愿都很常见。不同城市和家庭会挑选自己的做法。
 
 ## locale hi
 ### title
-नई शुरुआत और शुभकामनाएँ
+नया साल, दिवाली और ईद
 ### summary
-नए साल की परंपराएँ समय के नए चक्र, पुनर्मिलन और भविष्य की आशाओं को जोड़ती हैं। समान इच्छाओं का अर्थ यह नहीं कि सभी समाज एक ही कैलेंडर या रस्म अपनाते हैं।
+नया साल कैलेंडर बदलता है, दिवाली सफ़ाई और समृद्धि की कामना से जुड़ती है, और ईद-उल-फ़ित्र रमज़ान के बाद रिश्तों को फिर से जोड़ती है। तारीख़ें अलग हैं, लेकिन भोजन, दुआ, उपहार और माफ़ी के ज़रिए लोग नई शुरुआत का अर्थ बनाते हैं।
 ### keywords
-नया साल, नई शुरुआत, शुभकामना, पुनर्मिलन
+नया साल, दिवाली, ईद, नई शुरुआत, आशीर्वाद
 ### customs TW lunar-new-year
-ताइवान के चंद्र नववर्ष में घर लौटना, पारिवारिक भोजन, लाल लिफ़ाफ़े और बधाई देना आम है। नववर्ष की पूर्व संध्या से लालटेन मौसम तक के तौर-तरीके परिवार और स्थान के अनुसार बदलते हैं।
+ताइवान में चंद्र नववर्ष पर घर लौटना, नववर्ष की पारिवारिक दावत, लाल लिफ़ाफ़े और बधाई देना आम है। नववर्ष की पूर्वसंध्या से लालटेन उत्सव तक हर परिवार का अपना ढंग रहता है।
 ### customs JP oshogatsu
-जापानी नववर्ष में hatsumode, नए साल के कार्ड, osechi भोजन और kadomatsu सजावट शामिल हैं। यह केवल काउंटडाउन नहीं, नए वर्ष की शुरुआत का स्वागत है।
+जापान में नए साल पर hatsumode, nengajo, osechi और kadomatsu के ज़रिए नया वर्ष शुरू किया जाता है। यह केवल आधी रात की उलटी गिनती नहीं है।
 ### customs US new-year
-अमेरिका में New Year's Day संघीय अवकाश है। लोग काउंटडाउन, मिलन या नए साल के संकल्प से इसे मनाते हैं; परिवार और क्षेत्रों में अंतर होता है।
+अमेरिका में New Year's Day संघीय अवकाश है। कोई पार्टी करता है, कोई संकल्प लिखता है, और कोई बस आराम करता है—घर-घर की आदत अलग है।
 ### customs IN diwali
-भारत में दिवाली दीपों, सफ़ाई, परिवार से मिलने, उपहार और समृद्धि की शुभकामनाओं से जुड़ी है। तारीख और रीति क्षेत्रीय तथा धार्मिक परंपराओं के अनुसार बदलती है।
+भारत में दिवाली पर दीये, घर की सफ़ाई, रिश्तेदारों से मिलना, मिठाई और समृद्धि की प्रार्थना होती है। कुछ क्षेत्रों में इसे नए आरंभ से जोड़ा जाता है, पर कथाएँ और रीति अलग हैं।
 ### customs ID eid-al-fitr
-इंडोनेशिया में ईद उल-फ़ित्र घर लौटने, बड़ों से क्षमा माँगने, पारिवारिक भोजन और भोजन बाँटने से जुड़ी है। mudik का पैमाना और सार्वजनिक व्यवस्था हर साल बदलती है।
+इंडोनेशिया में ईद उल-फ़ित्र के समय mudik, बड़ों से मिलना, माफ़ी माँगना और साथ खाना होता है। यहाँ नई शुरुआत का मतलब रमज़ान के बाद रिश्तों को सँवारना है, कैलेंडर का नया साल नहीं।
 ### customs BR reveillon
-ब्राज़ील का Réveillon समुद्र-तट की सभाओं, आतिशबाज़ी, सफ़ेद कपड़ों और शुभकामनाओं के साथ नए साल का स्वागत करता है। रीति शहर और परिवार के अनुसार बदलती है।
+ब्राज़ील का Réveillon समुद्र-तट की भीड़, आतिशबाज़ी, सफ़ेद कपड़ों और नए साल की कामनाओं के साथ आता है। शहर और परिवार अलग-अलग रस्में चुनते हैं।
 
 ## locale id
 ### title
-Awal baru dan keberuntungan
+Tahun Baru, Diwali, dan Idulfitri
 ### summary
-Tradisi tahun baru menggabungkan pergantian waktu, berkumpul kembali, dan harapan untuk masa depan. Harapan yang mirip tidak berarti semua masyarakat memakai kalender atau ritual yang sama.
+Tahun Baru mengganti kalender, Diwali membawa bersih-bersih dan harapan akan kemakmuran, sedangkan Idulfitri memperbaiki hubungan setelah Ramadan. Kalendernya berbeda, tetapi makanan, doa, hadiah, dan saling memaafkan sama-sama memberi bentuk pada awal yang baru.
 ### keywords
-tahun baru, awal baru, keberuntungan, berkumpul
+Tahun Baru, Diwali, Idulfitri, awal baru, berkat
 ### customs TW lunar-new-year
-Tahun Baru Imlek di Taiwan sering diisi mudik, makan bersama, angpao, dan saling berkunjung. Praktik dari malam tahun baru sampai musim lampion berbeda menurut keluarga dan daerah.
+Tahun Baru Imlek di Taiwan diisi pulang kampung, makan malam keluarga, angpao, dan saling berkunjung. Dari malam tahun baru sampai Festival Lampion, setiap keluarga memiliki ritmenya sendiri.
 ### customs JP oshogatsu
-Tahun Baru Jepang mencakup hatsumode, kartu nengajo, hidangan osechi, dan hiasan kadomatsu. Fokusnya menyambut tahun baru, bukan hanya pesta hitung mundur.
+Tahun Baru Jepang menghadirkan hatsumode, nengajo, osechi, dan kadomatsu di depan rumah. Yang dirayakan adalah awal tahun, bukan hanya hitung mundur tengah malam.
 ### customs US new-year
-New Year's Day adalah hari libur federal di Amerika Serikat. Orang merayakannya dengan hitung mundur, pertemuan, atau resolusi, dengan variasi keluarga dan wilayah.
+New Year's Day adalah hari libur federal di Amerika Serikat. Ada yang berpesta, membuat resolusi, atau sekadar beristirahat; tidak ada satu cara yang berlaku untuk semua rumah.
 ### customs IN diwali
-Di India, Diwali terkait dengan lampu, membersihkan rumah, kunjungan keluarga, hadiah, dan harapan kemakmuran. Tanggal dan praktik berbeda menurut wilayah serta tradisi agama.
+Diwali di India sering diisi lampu, membersihkan rumah, berkunjung, berbagi manisan, dan berdoa untuk kemakmuran. Di beberapa wilayah, perayaan ini juga menandai awal yang baru, dengan cerita yang beragam.
 ### customs ID eid-al-fitr
-Idul Fitri di Indonesia terkait mudik, meminta maaf kepada orang yang lebih tua, makan bersama, dan berbagi makanan. Skala mudik dan pengaturan publik berubah setiap tahun.
+Idulfitri di Indonesia terkait mudik, mengunjungi orang yang lebih tua, meminta maaf, makan bersama, dan berbagi makanan. Awal baru di sini terutama berarti memperbaiki hubungan setelah berpuasa.
 ### customs BR reveillon
-Réveillon Brasil menyambut tahun baru dengan pertemuan di pantai, kembang api, pakaian putih, dan harapan. Kebiasaan berbeda menurut kota dan keluarga.
+Réveillon di Brasil menyambut 1 Januari dengan pesta di pantai, kembang api, pakaian putih, dan harapan untuk tahun depan. Kota, agama, dan keluarga memilih kebiasaan yang berbeda.
 
 ## locale pt-BR
 ### title
-Novos começos e bons presságios
+Ano-Novo, Diwali e Eid
 ### summary
-As tradições de ano novo reúnem recomeço do tempo, reencontro e esperança pelo futuro. Desejos parecidos não significam que as sociedades usem o mesmo calendário ou os mesmos rituais.
+O Ano-Novo vira a página do calendário, o Diwali associa limpeza e prosperidade, e o Eid al-Fitr recompõe relações depois do Ramadã. As datas não seguem o mesmo calendário, mas comida, bênçãos, presentes e perdão ajudam a marcar um recomeço.
 ### keywords
-ano novo, recomeço, bons presságios, reencontro
+Ano-Novo, Diwali, Eid, recomeço, bênçãos
 ### customs TW lunar-new-year
-O Ano-Novo Lunar em Taiwan costuma envolver retorno para casa, ceia de reunião, envelopes vermelhos e visitas. Os costumes da véspera ao período das lanternas variam por família e região.
+Em Taiwan, o Ano-Novo Lunar envolve voltar para casa, ceia de reunião, envelopes vermelhos e visitas. Do réveillon lunar ao Festival das Lanternas, cada família mantém seu próprio ritmo.
 ### customs JP oshogatsu
-O Ano-Novo japonês inclui visitas hatsumode, cartões nengajo, comida osechi e enfeites kadomatsu. A ênfase é receber o novo ano, não apenas fazer uma contagem regressiva.
+No Japão, hatsumode, nengajo, osechi e kadomatsu dão forma ao Ano-Novo. O foco é começar o novo ano, e não apenas fazer uma contagem regressiva.
 ### customs US new-year
-O New Year's Day é feriado federal nos Estados Unidos. Pessoas celebram com contagens regressivas, encontros ou resoluções, com diferenças entre famílias e regiões.
+Nos Estados Unidos, o dia 1º de janeiro é feriado federal. Há quem faça festa, quem escreva metas e quem apenas descanse; as casas não seguem um roteiro único.
 ### customs IN diwali
-Na Índia, o Diwali se relaciona a luzes, limpeza, visitas familiares, presentes e desejos de prosperidade. A data e os costumes variam conforme região e tradição religiosa.
+Na Índia, o Diwali costuma incluir diyas, limpeza da casa, visitas, doces e orações por prosperidade. Em algumas regiões, também marca um recomeço, enquanto as histórias e práticas variam.
 ### customs ID eid-al-fitr
-Na Indonésia, o Idul Fitri envolve mudik, pedir perdão aos mais velhos, refeições em família e partilha de alimentos. A escala da viagem e a organização pública mudam a cada ano.
+Na Indonésia, o Eid al-Fitr traz mudik, visitas aos mais velhos, pedidos de perdão, refeições em família e comida compartilhada. O recomeço diz respeito antes de tudo às relações depois do jejum, não ao calendário gregoriano.
 ### customs BR reveillon
-O Réveillon brasileiro recebe o ano novo com encontros na praia, fogos, roupas brancas e desejos. Os costumes variam conforme a cidade e a família.
+O Réveillon brasileiro recebe o novo ano com encontros na praia, fogos, roupas brancas e desejos. Cada cidade e família combina esses elementos à sua maneira.

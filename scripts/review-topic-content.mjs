@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-// 七個代表市場的 prompt 社會學家人格審查器。
-// 它不替代人的文化判斷，而是把共同的最低品質門檻固定成可重跑的驗收：
-// 共通性命名、跨國地方表現、日期規則、來源、七語 customs、主圖與 52 週覆蓋。
+// 七個代表市場的 Topic 內容守門器。
+// 這是可重跑的自動檢查，不冒充真人語言專家；它固定檢查內容結構、標題可辨識度、
+// 未翻譯／舊模板殘留、跨國地方表現、日期規則、來源、七語 customs、主圖與 52 週覆蓋。
 import { DatabaseSync } from 'node:sqlite';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
@@ -22,11 +22,54 @@ const personas = [
   ['巴西人格', '檢查 Dia dos Namorados 的 6 月 12 日、六月節與獨立日等在地時間。'],
   ['美國人格', '檢查 federal holiday、文化節日與家庭選擇不混為一談，避免使用無限上綱的全球化措辭。'],
 ];
+const titleHints = {
+  'affection-and-reciprocity': {
+    'zh-TW': /情人節|七夕|白色情人節/, en: /Valentine|Qixi|White Day/i, ja: /バレンタイン|七夕|ホワイトデー/,
+    'zh-CN': /情人节|七夕|白色情人节/, hi: /वैलेंटाइन|क़ीशी|व्हाइट डे/, id: /Valentine|Qixi|White Day/i, 'pt-BR': /Namorados|Valentine|White Day/i,
+  },
+  'ancestors-and-remembrance': {
+    'zh-TW': /祭祖|追思|掃墓/, en: /Graves|ancestors|remembrance/i, ja: /墓参り|追悼/,
+    'zh-CN': /祭祖|扫墓|追思/, hi: /पूर्वज|स्मरण|कब्र/, id: /Makam|Mengenang|leluhur/i, 'pt-BR': /cemitério|memória|mortos/i,
+  },
+  'harvest-and-shared-meals': {
+    'zh-TW': /收成|節慶餐桌/, en: /Harvest|festival table/i, ja: /収穫|食卓/,
+    'zh-CN': /收获|节庆餐桌/, hi: /फसल|साझा भोजन/, id: /Panen|Makan Bersama/i, 'pt-BR': /Colheita|mesas de festa/i,
+  },
+  'light-and-renewal': {
+    'zh-TW': /元宵|排燈節|聖誕/, en: /Lantern|Diwali|Christmas/i, ja: /元宵|ディワリ|クリスマス/,
+    'zh-CN': /元宵|排灯节|圣诞/, hi: /दीवाली|लालटेन|क्रिसमस/, id: /Lampion|Diwali|Natal/i, 'pt-BR': /Lanternas|Diwali|Natal/i,
+  },
+  'national-belonging': {
+    'zh-TW': /國慶|國家/, en: /National|public memory/i, ja: /国民|国家/,
+    'zh-CN': /国庆|国家/, hi: /राष्ट्रीय|देश/, id: /Nasional|Publik/i, 'pt-BR': /nacionais|memória pública/i,
+  },
+  'new-beginnings-and-fortune': {
+    'zh-TW': /新年|排燈節|開齋節/, en: /New Year|Diwali|Eid/i, ja: /正月|ディワリ|イード/,
+    'zh-CN': /新年|排灯节|开斋节/, hi: /नया साल|दिवाली|ईद/, id: /Tahun Baru|Diwali|Idulfitri/i, 'pt-BR': /Ano-Novo|Diwali|Eid/i,
+  },
+  'protection-and-play': {
+    'zh-TW': /鬼月|中元|節分/, en: /Ghost|Setsubun|Halloween/i, ja: /鬼月|中元|節分|ハロウィン/,
+    'zh-CN': /鬼节|鬼月|中元|节分|万圣节/, hi: /भूत|सेत्सुबुन|हैलोवीन/i, id: /Hantu|Setsubun|Halloween/i, 'pt-BR': /Fantasma|Setsubun|Halloween/i,
+  },
+  'reunion-and-homecoming': {
+    'zh-TW': /中秋|開齋節|返鄉/, en: /Mid-Autumn|Eid|homecoming/i, ja: /中秋|イド|帰省/,
+    'zh-CN': /中秋|开斋节|返乡/, hi: /मध्य-शरद|ईद|घर वापसी/, id: /Idulfitri|Pulang Kampung|Reuni/i, 'pt-BR': /família|casa/i,
+  },
+  'ask-the-world': {
+    'zh-TW': /跨國問答/, en: /Cross-border/i, ja: /世界に聞く/, 'zh-CN': /跨国问答/, hi: /दुनिया से पूछें/, id: /Lintas Negara/i, 'pt-BR': /Perguntas entre países/i,
+  },
+};
+const forbiddenProse = [
+  ['未翻譯的 Topic 字樣', /\bTopic\b/],
+  ['舊的抽象模板', /共同的情感語言|社會功能|公共敘事|製造共同時間|shared emotional language|social work of a common table|keep the dead present|This topic compares/i],
+];
 const errors = [];
 const fail = (message) => errors.push(message);
 
 const contentFiles = readdirSync(CONTENT_DIR).filter((file) => file.endsWith('.md')).sort();
 const contentMeta = new Map();
+const contentTitles = new Map();
+const contentTextBySlug = new Map();
 for (const file of contentFiles) {
   const text = readFileSync(join(CONTENT_DIR, file), 'utf8');
   const slug = /^- slug:\s*(\S+)$/m.exec(text)?.[1];
@@ -35,6 +78,22 @@ for (const file of contentFiles) {
   if (!commonality) fail(`${file}:缺 commonality(共通性分類依據)`);
   if (slug && file !== `${slug}.md`) fail(`${file}:檔名必須與 slug 相同`);
   contentMeta.set(slug, { file, commonality });
+  contentTextBySlug.set(slug, text);
+  const titles = new Map();
+  let locale = null;
+  let section = null;
+  for (const line of text.split(/\r?\n/)) {
+    const localeMatch = /^## locale (\S+)$/.exec(line);
+    if (localeMatch) { locale = localeMatch[1]; section = null; continue; }
+    const sectionMatch = /^### (title|summary|keywords|customs .+)$/.exec(line);
+    if (sectionMatch) { section = sectionMatch[1]; continue; }
+    if (locale && section === 'title' && line.trim()) {
+      titles.set(locale, line.trim());
+      section = null;
+    }
+  }
+  contentTitles.set(slug, titles);
+  for (const [label, pattern] of forbiddenProse) if (pattern.test(text)) fail(`${file}:包含${label}`);
 }
 
 const db = new DatabaseSync(DB_PATH, { readOnly: true });
@@ -75,6 +134,13 @@ for (const row of customsRows) {
 
 for (const topic of activeTopics) {
   if (!contentMeta.has(topic.slug)) fail(`active Topic ${topic.slug}:沒有對應 content markdown`);
+  const titles = contentTitles.get(topic.slug) || new Map();
+  const hints = titleHints[topic.slug] || {};
+  for (const locale of LOCALES) {
+    const title = titles.get(locale);
+    if (!title) fail(`${topic.slug}:locale ${locale} 缺可見標題`);
+    else if (hints[locale] && !hints[locale].test(title)) fail(`${topic.slug}:locale ${locale} 標題沒有可辨識的節日／生活詞：${title}`);
+  }
   const locales = i18nByTopic.get(topic.topic_id) || new Map();
   for (const locale of LOCALES) {
     const row = locales.get(locale);
@@ -90,6 +156,53 @@ for (const topic of activeTopics) {
     const bytes = readFileSync(cover);
     const png = bytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
     if (!png || bytes.readUInt32BE(16) !== 1200 || bytes.readUInt32BE(20) !== 675) fail(`${topic.slug}:cover 不是 1200×675 PNG`);
+  }
+}
+
+const personaFindings = new Map(personas.map(([name]) => [name, []]));
+const personaChecks = [
+  ['台灣人格', [
+    ['七夕保留農曆日期', () => /農曆七月初七/.test(contentTextBySlug.get('affection-and-reciprocity') || '')],
+    ['鬼月保留地方與家庭差異', () => /農曆七月/.test(contentTextBySlug.get('protection-and-play') || '') && /沒有同一張清單/.test(contentTextBySlug.get('protection-and-play') || '')],
+    ['農曆新年保留家庭與地方節奏', () => /農曆新年/.test(contentTextBySlug.get('new-beginnings-and-fortune') || '') && /自己的節奏/.test(contentTextBySlug.get('new-beginnings-and-fortune') || '')],
+  ]],
+  ['日本人格', [
+    ['本命／義理巧克力被分開', () => /本命巧克力.*義理巧克力/.test(contentTextBySlug.get('affection-and-reciprocity') || '')],
+    ['白色情人節被寫成回禮日', () => /白色情人節是 3 月 14 日的回禮日/.test(contentTextBySlug.get('affection-and-reciprocity') || '')],
+    ['節分保留撒豆驅邪', () => /節分會撒豆|節分、撒豆/.test(contentTextBySlug.get('protection-and-play') || '')],
+  ]],
+  ['中國人格', [
+    ['中秋與中元保留中文節名', () => /中秋节|中元節|中元节/.test(contentTextBySlug.get('reunion-and-homecoming') || '') && /中元相關|中元相关/.test(contentTextBySlug.get('protection-and-play') || '')],
+    ['農曆／地方差異仍可見', () => /農曆|农历/.test(contentTextBySlug.get('new-beginnings-and-fortune') || '') && /地方|地区/.test(contentTextBySlug.get('harvest-and-shared-meals') || '')],
+  ]],
+  ['印度人格', [
+    ['Diwali 不被寫成全印度單一做法', () => /排燈節|Diwali/.test(contentTextBySlug.get('new-beginnings-and-fortune') || '') && /地區|region|regional|地區與宗教/.test(contentTextBySlug.get('new-beginnings-and-fortune') || '')],
+    ['Pongal 保留南印度與農業脈絡', () => /Pongal|Pongal/.test(contentTextBySlug.get('harvest-and-shared-meals') || '') && /南印度|South India|India Sud/.test(contentTextBySlug.get('harvest-and-shared-meals') || '')],
+    ['Valentine Week 標示都市流行', () => /都市|urban|शहरी|perkotaan|urbana/.test(contentTextBySlug.get('affection-and-reciprocity') || '')],
+  ]],
+  ['印尼人格', [
+    ['mudik 與 Idul Fitri 同時出現', () => /mudik/.test(contentTextBySlug.get('reunion-and-homecoming') || '') && /Idul Fitri|開齋節|开斋节/.test(contentTextBySlug.get('reunion-and-homecoming') || '')],
+    ['不返鄉的選擇被保留', () => /不是每個人|Not everyone|Tidak semua|Nem todos/.test(contentTextBySlug.get('reunion-and-homecoming') || '')],
+    ['Idul Fitri 不被混寫成公曆新年', () => /不是公曆新年|not about the Gregorian calendar|bukan kalender|não ao calendário gregoriano/.test(contentTextBySlug.get('new-beginnings-and-fortune') || '')],
+  ]],
+  ['巴西人格', [
+    ['Dia dos Namorados 保留 6 月 12 日', () => /Dia dos Namorados/.test(contentTextBySlug.get('affection-and-reciprocity') || '') && /6 月 12|June 12|12 de junho/.test(contentTextBySlug.get('affection-and-reciprocity') || '')],
+    ['Festas Juninas 保留聖人與地方背景', () => /六月節|June festivals|festas juninas|Festa junina/.test(contentTextBySlug.get('harvest-and-shared-meals') || '') && /天主教|Catholic|católic|Católico/.test(contentTextBySlug.get('harvest-and-shared-meals') || '')],
+    ['獨立日被寫成公共歷史節日', () => /獨立日|Independence Day|Independência/.test(contentTextBySlug.get('national-belonging') || '')],
+  ]],
+  ['美國人格', [
+    ['Memorial Day 限定為軍人紀念', () => /服役中死亡的軍人|service members who died|軍務中に亡くなった兵士|militares que morreram em serviço/.test(contentTextBySlug.get('ancestors-and-remembrance') || '')],
+    ['Halloween 寫出裝扮與要糖', () => /萬聖節|Halloween/.test(contentTextBySlug.get('protection-and-play') || '') && /要糖|trick-or-treat|討糖/.test(contentTextBySlug.get('protection-and-play') || '')],
+    ['New Year 保留聯邦假日界線', () => /聯邦假日|federal holiday|feriado federal/.test(contentTextBySlug.get('new-beginnings-and-fortune') || '')],
+  ]],
+];
+for (const [name, checks] of personaChecks) {
+  const findings = personaFindings.get(name) || [];
+  for (const [label, test] of checks) {
+    if (!test()) {
+      findings.push(label);
+      fail(`${name}:${label}`);
+    }
   }
 }
 
@@ -109,12 +222,13 @@ for (const row of calendar.weeks || []) {
 
 db.close();
 for (const [name, focus] of personas) {
-  if (errors.length) console.log(`[${name}] 發現共通驗收問題：${focus}`);
-  else console.log(`[${name}] 無修正、無建議：${focus}`);
+  const findings = personaFindings.get(name) || [];
+  if (findings.length) console.log(`[${name}] 自動守門發現問題：${findings.join('、')}；${focus}`);
+  else console.log(`[${name}] 自動守門通過：${focus}`);
 }
 if (errors.length) {
-  console.error(`\n七人格審查未通過，共 ${errors.length} 項：`);
+  console.error(`\nTopic 內容自動守門未通過，共 ${errors.length} 項：`);
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
-console.log('\n七人格審查完成：0 修正事項、0 建議事項。');
+console.log('\nTopic 內容與結構自動守門通過；這不是真人語言專家簽核。');

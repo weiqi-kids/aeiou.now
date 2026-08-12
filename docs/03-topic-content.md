@@ -9,14 +9,14 @@
 ## 完整範例(可直接複製當模板)
 
 ```markdown
-# How do people express affection? ← H1 給人看的,解析時忽略
+# Valentine's Day, Qixi, and White Day ← H1 給人看的,解析時忽略
 
 ## meta
 - slug: expressing-affection       ← 小寫英數與連字號;URL 與檔名都用它
-- canonical: How People Express Affection ← 語言中立的正規名稱(英文為主)
+- canonical: Valentine's Day, Qixi, and White Day ← 語言中立的正規名稱(英文為主)
 - category: festival               ← 草案 §4.1 的分類
 - perennial: no                    ← yes = 長青(如 ask-the-world,永不退熱)
-- commonality: expressing affection through gifts, attention, and reciprocal gestures ← 先寫清楚跨國共通性,不要用單一日期命名
+- commonality: expressing affection through local gift, attention, and return-gift customs ← 先寫清楚跨國共通性,不要用單一日期命名
 
 ## observance TW valentines         ← ISO 國碼 + 該國在 Topic 內唯一 key;同一國可有多筆
 - local_name: 情人節               ← 該地方表現的在地名稱
@@ -44,23 +44,23 @@
 ### title
 人們如何表達愛意？
 ### summary
-不同社會用節日、禮物與回禮表達親密關係。這個 Topic 比較各地的共同情感與不同規則,不把任何一種節日當成全球唯一標準。
+情人節、七夕和白色情人節不在同一天,也不遵守同一套送禮規矩。有人送巧克力,有人交換卡片,有人把它當成商業檔期,這些差別就是比較的起點。
 ### keywords
 表達愛意, 親密關係, 禮物, 回禮  ← 逗號分隔
 ### customs TW valentines       ← 每個 observance 都要有七語 customs
-台灣的 2 月 14 日常被當作表達心意的節點,但參與方式會因年齡、關係與商業脈絡而異。
+台灣常把農曆七月初七稱為七夕情人節,商場和餐廳會推出約會活動,但它不是全台一致的法定節日。
 ### customs TW qixi
-台灣也有以農曆七月初七談論愛情與相會的語境,但「七夕情人節」不是所有人都以相同方式實踐。
+台灣的七夕情人節,常見約會、送禮和商業企劃,但不同家庭與年齡層不一定參與。
 ### customs JP tanabata
-日本的七夕以短冊祈願、竹飾與季節性公共活動為核心,其中也保留織姫與彦星相會的故事,不宜只翻成情人節。
+日本七夕以短冊祈願、竹飾和地方活動為主,不能直接當成情人節的另一個日期。
 ### customs JP white-day
-日本的白色情人節與 3 月 14 日回禮習慣相關,回禮內容與是否回禮會依人際關係和個人選擇而異。
+日本白色情人節在 3 月 14 日,送什麼或要不要回禮,要看人際關係和個人選擇。
 
 ## locale en
 ### title
 How do people express affection?
 ### summary
-...(其餘六語同構;可先寫好 zh-TW 後請 Claude 翻譯補齊,但檔案裡七語都要在)
+其餘六語必須由熟悉該語言與文化的編輯分別撰寫,不可直接機翻或套用同一個句型。
 ### customs TW valentines
 ...
 ### customs TW qixi
@@ -103,7 +103,8 @@ node scripts/import-topics.mjs          # 匯入(會逐檔報錯,失敗不影響
 node scripts/export-data.mjs            # 產 data/*.json
 cd site && LOCALE=zh-TW pnpm build      # 本地看結果(或等 cron + CI)
 
-# 只想先寫 zh-TW、讓 Claude 翻其餘六語
-#   把 zh-TW 段寫好後,把檔案丟給 claude 補完其餘六個 locale 段即可;
-#   匯入器會擋「缺語系」,所以不會有半成品進資料庫。
+# 語系撰寫順序
+#   可先完成 zh-TW 的事實底稿,再交給其餘六語的母語編輯各自重寫;
+#   不可直接機翻,也不可只把中文句子逐句搬過去。匯入器會擋「缺語系」,
+#   但語意、語氣與文化自然度仍須由語言專家審核。
 ```

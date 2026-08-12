@@ -64,7 +64,7 @@ if ! "$NODE_BIN" "$REPO/scripts/check-topic-calendar.mjs"; then
 fi
 log "review-topic-content.mjs ..."
 if ! "$NODE_BIN" "$REPO/scripts/review-topic-content.mjs"; then
-  log "FAILED: 七人格 Topic 審查未通過"
+  log "FAILED: Topic 內容與結構自動守門未通過"
   record_job failed 0 0 0 1 "review-topic-content.mjs failed"
   exit 1
 fi

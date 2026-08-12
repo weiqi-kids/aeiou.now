@@ -1,11 +1,11 @@
-# Reunion and homecoming
+# Mid-Autumn, Eid, and holiday homecomings
 
 ## meta
 - slug: reunion-and-homecoming
-- canonical: Reunion and Homecoming
+- canonical: Mid-Autumn, Eid, and Holiday Homecomings
 - category: community
 - perennial: no
-- commonality: returning home, sharing a meal, and renewing family or community ties
+- commonality: bringing relatives or communities together through return trips, shared meals, and seasonal visits
 
 ## observance TW mid-autumn
 - local_name: 中秋節
@@ -45,140 +45,140 @@
 
 ## locale zh-TW
 ### title
-團聚與返鄉
+中秋、開齋節與返鄉
 ### summary
-許多節日把「回家」與共同吃飯放在核心位置，但家、親屬與社群的邊界會因文化和個人生活而不同。
+中秋、盂蘭盆、感恩節、開齋節和聖誕節，常讓人重新安排「要回哪個家、和誰吃飯」。有人長途返鄉，有人在城市裡找朋友共餐，也有人因工作、距離或家庭關係選擇不回去。
 ### keywords
-團聚, 返鄉, 家庭, 共同用餐
+中秋, 盂蘭盆, 開齋節, 感恩節, 返鄉, 團聚
 ### customs TW mid-autumn
-台灣中秋節常見家人相聚、賞月、吃月餅；烤肉是近代普及的活動，不是所有家庭或地區都以此為主要傳統。
+台灣中秋節常見家人相聚、賞月、吃月餅和送禮。烤肉是近代流行做法，卻不是所有家庭的固定安排。
 ### customs CN mid-autumn
-中國的中秋節常與賞月、月餅和家庭團聚相連，也有人以旅行或自己的方式度過，不宜把單一習俗視為全民做法。
+中國中秋節常把賞月、月餅和家庭團聚放在一起。有人返鄉，有人旅行或工作，過節方式會跟著生活條件改變。
 ### customs JP obon
-日本盂蘭盆會常被視為迎接與送別祖先的返鄉時期，盆踊り等地方活動也很重要；日期依地區不同。
+日本盂蘭盆會常是迎接、送別祖先並返鄉的時期，盆踊り和地方行事也很重要。不同地區的日期與安排並不一致。
 ### customs US thanksgiving
-美國感恩節常促成跨城市返家與共享晚餐，火雞只是常見菜色之一，家庭菜單與是否參與都很多元。
+美國感恩節常帶來跨城市返家和共享晚餐。火雞很常見，但菜單、家庭形式與是否參與都可以不同。
 ### customs ID eid-homecoming
-印尼開齋節前後的 mudik 是大規模返鄉現象，家庭拜訪與求寬恕很重要；並非每個人都能或都會返鄉。
+印尼開齋節前後的 mudik 是大規模返鄉現象，家庭拜訪和互相求寬恕很重要。不是每個人都有能力或意願搭上返鄉路。
 ### customs BR christmas
-巴西聖誕節常以家庭晚餐、交換禮物和宗教或社區活動團聚；城市、家庭信仰與飲食習慣差異很大。
+巴西聖誕節常以家庭晚餐、交換禮物、彌撒或社區活動聚在一起。城市、信仰和飲食習慣會改變這張餐桌的樣子。
 
 ## locale en
 ### title
-Reunion and homecoming
+Mid-Autumn, Eid, and holiday homecomings
 ### summary
-Many celebrations place returning home and eating together at the centre, but the boundaries of home, kinship, and community differ across cultures and personal lives.
+Mid-Autumn Festival, Obon, Thanksgiving, Eid al-Fitr, and Christmas all make people ask where home is and who belongs at the table. Some travel long distances, some build a meal in the city, and some stay away because work, distance, or family history makes travel difficult.
 ### keywords
-reunion, homecoming, family, shared meals
+Mid-Autumn Festival, Obon, Eid, Thanksgiving, homecoming, reunion
 ### customs TW mid-autumn
-Taiwan's Mid-Autumn Festival often brings family gatherings, moon-viewing, and mooncakes. Barbecuing is a more recent popular practice, not the main tradition for every family or place.
+Taiwan's Mid-Autumn Festival brings family gatherings, moon-viewing, mooncakes, and gifts. Barbecuing is a newer popular habit, not a required family tradition.
 ### customs CN mid-autumn
-China's Mid-Autumn Festival is associated with the moon, mooncakes, and family reunion. Some people travel or observe it in their own way; no single custom represents everyone.
+China's Mid-Autumn Festival links the moon, mooncakes, and family reunion. Some people travel, work, or observe the day in a way that fits their own lives.
 ### customs JP obon
-Japan's Obon is often a homecoming period for welcoming and seeing off ancestors. Bon odori and local events matter too, and dates vary by region.
+Obon is often a time to return home, welcome ancestors, and see them off. Bon odori and local events matter too, while dates and travel patterns differ by region.
 ### customs US thanksgiving
-Thanksgiving often prompts travel home and a shared meal in the United States. Turkey is common, but menus and participation vary widely.
+Thanksgiving often sends people across cities or states for a shared meal. Turkey is common, but menus, family arrangements, and participation vary widely.
 ### customs ID eid-homecoming
-In Indonesia, mudik is a large-scale homecoming around Idul Fitri, alongside family visits and asking forgiveness. Not everyone can or chooses to travel home.
+Mudik around Idul Fitri is one of Indonesia's major homecoming movements, alongside family visits and asking forgiveness. Not everyone can afford the journey or wants to make it.
 ### customs BR christmas
-Brazilian Christmas often gathers families for dinner, gifts, and religious or community activities. Cities, beliefs, and food traditions differ widely.
+Brazilian Christmas often gathers relatives for dinner, gifts, Mass, or a community event. The table changes with the city, the family's faith, and its food traditions.
 
 ## locale ja
 ### title
-再会と帰省
+中秋節・イド・帰省の行事
 ### summary
-多くの行事で帰省と共食が中心になるが、家、親族、コミュニティの範囲は文化や個人の暮らしによって異なる。
+中秋節、お盆、感謝祭、イドゥル・フィトリ、クリスマスは、「どこへ帰り、誰と食卓を囲むか」を考える機会になる。遠くへ帰省する人もいれば、都市で友人と食事をする人、仕事や距離のために移動しない人もいる。
 ### keywords
-再会, 帰省, 家族, 共食
+中秋節, お盆, イド, 感謝祭, 帰省, 再会
 ### customs TW mid-autumn
-台湾の中秋節には家族の集まり、月見、月餅が見られる。バーベキューは比較的新しい人気の過ごし方で、全家庭の中心的伝統ではない。
+台湾の中秋節には、家族の集まり、月見、月餅、贈り物がある。バーベキューは近年広まった習慣で、すべての家庭の決まりではない。
 ### customs CN mid-autumn
-中国の中秋節は月見、月餅、家族の再会と結びつく。旅行や個人の方法で過ごす人もおり、単一の習慣で全員を代表することはできない。
+中国の中秋節は月見、月餅、家族の再会と結びつく。帰省する人も、旅行や仕事をする人もいて、暮らしに合わせた過ごし方がある。
 ### customs JP obon
-日本のお盆は先祖を迎え、送り出すための帰省の時期とされることが多い。盆踊りなど地域行事もあり、日程は地域で異なる。
+日本のお盆は、先祖を迎え、送り出し、帰省する時期とされることが多い。盆踊りなどの地域行事もあり、日程と移動の形は地域で違う。
 ### customs US thanksgiving
-米国の感謝祭は帰省と食卓を囲む機会になる。七面鳥はよく食べられるが、献立や参加の仕方は多様である。
+米国の感謝祭には、都市や州をまたいで帰る人もいる。七面鳥はよく食べられるが、献立、家族の形、参加の仕方はさまざまだ。
 ### customs ID eid-homecoming
-インドネシアではイドゥル・フィトリの時期に大規模なムディック帰省が起こり、家族訪問や謝罪が行われる。誰もが帰省できる、または帰省するわけではない。
+インドネシアではイドゥル・フィトリの前後に大規模なムディック帰省が起こる。家族訪問と謝罪が重視されるが、誰もが帰省できるわけではない。
 ### customs BR christmas
-ブラジルのクリスマスには家族の夕食、贈り物、宗教・地域活動がある。都市、信仰、食文化による差が大きい。
+ブラジルのクリスマスには、家族の夕食、贈り物、ミサ、地域活動がある。都市、信仰、食文化によって食卓の姿は変わる。
 
 ## locale zh-CN
 ### title
-团聚与返乡
+中秋、开斋节与返乡
 ### summary
-许多节日把回家和共同用餐放在核心位置，但家庭、亲属和社群的边界会因文化与个人生活而不同。
+中秋节、盂兰盆会、感恩节、开斋节和圣诞节，都会让人思考“回哪个家、和谁吃饭”。有人长途返乡，有人在城市里和朋友共餐，也有人因为工作、距离或家庭关系选择不出发。
 ### keywords
-团聚, 返乡, 家庭, 共同用餐
+中秋节, 盂兰盆会, 开斋节, 感恩节, 返乡, 团聚
 ### customs TW mid-autumn
-台湾中秋节常见家人相聚、赏月和月饼；烤肉是近代流行活动，不是所有家庭或地区的主要传统。
+台湾中秋节常见家人相聚、赏月、月饼和送礼。烤肉是近代流行的过法，但不是每个家庭的固定安排。
 ### customs CN mid-autumn
-中国中秋节常与赏月、月饼和家庭团聚相连，也有人旅行或按自己的方式度过，不能用单一习俗代表所有人。
+中国中秋节常把赏月、月饼和家庭团聚放在一起。有人返乡，有人旅行或工作，节日会随着生活条件改变。
 ### customs JP obon
-日本盂兰盆会常被视为迎接和送别祖先的返乡时节，盆踊等地方活动也很重要；日期因地区而异。
+日本盂兰盆会常被视为迎接和送别祖先、返乡的时节，盆踊等地方活动也很重要。日期和安排因地区而异。
 ### customs US thanksgiving
-美国感恩节常促成跨城返家和共享晚餐，火鸡只是常见菜色之一，家庭菜单与参与方式都很多样。
+美国感恩节常促成跨城返家和共享晚餐。火鸡很常见，但菜单、家庭形式和是否参加都可以不同。
 ### customs ID eid-homecoming
-印尼开斋节前后的 mudik 是大规模返乡现象，家庭拜访和求宽恕很重要；不是每个人都能或都会返乡。
+印尼开斋节前后的 mudik 是大规模返乡现象，家庭拜访和互相求宽恕很重要。不是每个人都有能力或愿意踏上返乡路。
 ### customs BR christmas
-巴西圣诞节常通过家庭晚餐、交换礼物和宗教或社区活动团聚；城市、信仰及饮食习惯差异很大。
+巴西圣诞节常通过家庭晚餐、交换礼物、弥撒或社区活动团聚。城市、信仰和饮食习惯会改变餐桌的样子。
 
 ## locale hi
 ### title
-पुनर्मिलन और घर वापसी
+मध्य-शरद, ईद और घर वापसी
 ### summary
-कई उत्सव घर लौटने और साथ भोजन करने को केंद्र में रखते हैं, लेकिन घर, रिश्तेदारी और समुदाय की सीमाएँ संस्कृति तथा व्यक्तिगत जीवन के अनुसार बदलती हैं।
+मध्य-शरद उत्सव, ओबोन, Thanksgiving, ईद-उल-फ़ित्र और क्रिसमस लोगों को सोचने पर मजबूर करते हैं कि घर कहाँ है और मेज़ पर कौन बैठेगा। कोई दूर तक लौटता है, कोई शहर में दोस्तों के साथ खाना बनाता है, और कोई काम या दूरी के कारण नहीं जा पाता।
 ### keywords
-पुनर्मिलन, घर वापसी, परिवार, सामूहिक भोजन
+मध्य-शरद उत्सव, ओबोन, ईद, Thanksgiving, घर वापसी, मिलन
 ### customs TW mid-autumn
-ताइवान के मध्य-शरद उत्सव में परिवार का मिलना, चाँद देखना और मूनकेक आम हैं। बारबेक्यू अपेक्षाकृत नया लोकप्रिय चलन है, हर परिवार की मुख्य परंपरा नहीं।
+ताइवान में मध्य-शरद उत्सव पर परिवार मिलते, चाँद देखते, मूनकेक खाते और उपहार देते हैं। बारबेक्यू नया लोकप्रिय चलन है, हर घर की अनिवार्य परंपरा नहीं।
 ### customs CN mid-autumn
-चीन का मध्य-शरद उत्सव चाँद, मूनकेक और पारिवारिक पुनर्मिलन से जुड़ा है। कुछ लोग यात्रा करते हैं या अपनी तरह मनाते हैं; एक रीति सभी का प्रतिनिधित्व नहीं करती।
+चीन का मध्य-शरद उत्सव चाँद, मूनकेक और परिवार के मिलन से जुड़ा है। कुछ लोग घर लौटते हैं, कुछ काम या यात्रा करते हैं।
 ### customs JP obon
-जापान का ओबोन पूर्वजों का स्वागत और विदाई करने का घर लौटने का समय माना जाता है। बोन ओडोरी और स्थानीय आयोजन भी महत्वपूर्ण हैं, तथा तारीख क्षेत्र के अनुसार बदलती है।
+जापान का ओबोन पूर्वजों का स्वागत और विदाई करने तथा घर लौटने का समय माना जाता है। Bon odori और स्थानीय कार्यक्रम भी होते हैं; तारीख़ क्षेत्र के अनुसार बदलती है।
 ### customs US thanksgiving
-अमेरिका में Thanksgiving घर लौटने और साथ भोजन करने का अवसर बनता है। टर्की आम है, लेकिन मेनू और भागीदारी बहुत विविध हैं।
+अमेरिका में Thanksgiving पर लोग शहर या राज्य पार करके घर लौट सकते हैं। टर्की आम है, लेकिन मेनू, परिवार और भागीदारी हर घर में अलग हो सकती है।
 ### customs ID eid-homecoming
-इंडोनेशिया में ईद उल-फ़ित्र के आसपास mudik बड़े पैमाने की घर वापसी है, साथ में पारिवारिक मुलाकात और क्षमा माँगना होता है। हर कोई यात्रा कर सके या करना चाहे, ऐसा नहीं।
+इंडोनेशिया में ईद उल-फ़ित्र के आसपास mudik की बड़ी आवाजाही होती है। परिवार से मिलना और माफ़ी माँगना महत्वपूर्ण है, पर हर कोई यात्रा कर सके या करना चाहे, ऐसा नहीं।
 ### customs BR christmas
-ब्राज़ील में क्रिसमस पारिवारिक भोजन, उपहार और धार्मिक या सामुदायिक गतिविधियों से जुड़ता है। शहर, विश्वास और भोजन की परंपराएँ अलग-अलग हैं।
+ब्राज़ील में क्रिसमस पारिवारिक भोजन, उपहार, मिस्सा या सामुदायिक कार्यक्रम के साथ आता है। शहर, विश्वास और भोजन की आदतें उस मेज़ का रूप बदल देती हैं।
 
 ## locale id
 ### title
-Pertemuan keluarga dan pulang kampung
+Idulfitri, Pulang Kampung, dan Reuni Keluarga
 ### summary
-Banyak perayaan menempatkan pulang dan makan bersama sebagai inti, tetapi batas rumah, kerabat, dan komunitas berbeda menurut budaya serta kehidupan pribadi.
+Festival Pertengahan Musim Gugur, Obon, Thanksgiving, Idulfitri, dan Natal sama-sama mengajukan pertanyaan tentang rumah dan siapa yang duduk di meja makan. Ada yang menempuh perjalanan jauh, ada yang berkumpul di kota, dan ada yang tidak pulang karena kerja, jarak, atau hubungan keluarga.
 ### keywords
-pertemuan keluarga, pulang kampung, keluarga, makan bersama
+Festival Pertengahan Musim Gugur, Obon, Idulfitri, Thanksgiving, pulang kampung, reuni
 ### customs TW mid-autumn
-Festival Pertengahan Musim Gugur di Taiwan sering diisi berkumpul bersama, melihat bulan, dan makan kue bulan. Barbeku adalah kebiasaan populer yang relatif baru, bukan tradisi utama semua keluarga.
+Festival Pertengahan Musim Gugur di Taiwan diisi berkumpul, melihat bulan, makan kue bulan, dan bertukar hadiah. Barbeku adalah kebiasaan populer yang lebih baru, bukan kewajiban setiap keluarga.
 ### customs CN mid-autumn
-Festival Pertengahan Musim Gugur di Tiongkok terkait bulan, kue bulan, dan berkumpul dengan keluarga. Sebagian orang bepergian atau merayakannya dengan cara sendiri.
+Festival Pertengahan Musim Gugur di Tiongkok menghubungkan bulan, kue bulan, dan reuni keluarga. Ada yang pulang, bepergian, atau bekerja sesuai keadaan hidupnya.
 ### customs JP obon
-Obon di Jepang sering menjadi masa pulang untuk menyambut dan melepas leluhur. Bon odori dan acara daerah juga penting, sementara tanggalnya berbeda menurut wilayah.
+Obon di Jepang sering menjadi waktu pulang untuk menyambut dan melepas leluhur. Bon odori dan acara daerah ikut membentuknya, dengan jadwal yang berbeda menurut wilayah.
 ### customs US thanksgiving
-Thanksgiving di Amerika Serikat sering mendorong orang pulang dan makan bersama. Kalkun umum, tetapi menu dan pilihan untuk ikut sangat beragam.
+Thanksgiving sering membuat orang bepergian lintas kota atau negara bagian untuk makan bersama. Kalkun umum, tetapi menu, bentuk keluarga, dan pilihan untuk ikut sangat beragam.
 ### customs ID eid-homecoming
-Mudik sekitar Idul Fitri adalah fenomena pulang kampung besar di Indonesia, disertai kunjungan keluarga dan saling meminta maaf. Tidak semua orang dapat atau memilih untuk pulang.
+Mudik sekitar Idulfitri merupakan arus pulang kampung besar di Indonesia, disertai kunjungan keluarga dan saling meminta maaf. Tidak semua orang mampu atau ingin melakukan perjalanan itu.
 ### customs BR christmas
-Natal di Brasil sering mempertemukan keluarga lewat makan malam, hadiah, dan kegiatan agama atau komunitas. Kota, keyakinan, dan kebiasaan makanan berbeda-beda.
+Natal di Brasil sering mempertemukan keluarga lewat makan malam, hadiah, misa, atau kegiatan komunitas. Kota, keyakinan, dan tradisi makanan mengubah suasana meja makan.
 
 ## locale pt-BR
 ### title
-Reencontro e volta para casa
+Festas de família e voltas para casa
 ### summary
-Muitas celebrações colocam voltar para casa e comer juntos no centro, mas os limites de lar, parentesco e comunidade variam conforme a cultura e a vida de cada pessoa.
+O Meio do Outono, o Obon, o Thanksgiving, o Eid al-Fitr e o Natal fazem as pessoas pensar em casa e em quem estará à mesa. Algumas viajam longas distâncias, outras reúnem amigos na cidade, e há quem não viaje por causa do trabalho, da distância ou da própria história familiar.
 ### keywords
-reencontro, volta para casa, família, refeições compartilhadas
+Meio do Outono, Obon, Eid, Thanksgiving, volta para casa, reunião familiar
 ### customs TW mid-autumn
-O Festival do Meio do Outono em Taiwan costuma reunir a família, observar a lua e comer bolos lunares. O churrasco é uma prática popular mais recente, não a tradição principal de todas as famílias.
+Em Taiwan, o Festival do Meio do Outono reúne família, lua, bolos lunares e presentes. O churrasco se tornou popular mais recentemente, mas não é obrigatório em todas as casas.
 ### customs CN mid-autumn
-O Festival do Meio do Outono na China se relaciona à lua, aos bolos lunares e ao reencontro familiar. Algumas pessoas viajam ou celebram de seu próprio modo.
+Na China, o Festival do Meio do Outono liga lua, bolos lunares e reencontro familiar. Há quem volte para casa, viaje ou trabalhe conforme a própria rotina.
 ### customs JP obon
-O Obon japonês é frequentemente um período de retorno para receber e despedir-se dos ancestrais. O Bon odori e eventos locais também importam, e as datas variam por região.
+No Japão, o Obon costuma ser um período de retorno para receber e despedir-se dos ancestrais. O Bon odori e as festas locais também contam, e as datas variam por região.
 ### customs US thanksgiving
-O Thanksgiving nos Estados Unidos costuma provocar viagens de volta e uma refeição compartilhada. O peru é comum, mas os cardápios e a participação são diversos.
+O Thanksgiving leva muitas pessoas a atravessar cidades ou estados para uma refeição em família. O peru é comum, mas cardápios, famílias e participação assumem formas diversas.
 ### customs ID eid-homecoming
-Na Indonésia, o mudik é uma grande volta para casa em torno do Idul Fitri, acompanhada de visitas familiares e pedidos de perdão. Nem todos podem ou escolhem viajar.
+Na Indonésia, o mudik em torno do Eid al-Fitr é um grande movimento de volta para casa, acompanhado de visitas e pedidos de perdão. Nem todos podem ou querem fazer a viagem.
 ### customs BR christmas
-O Natal brasileiro reúne famílias em jantares, presentes e atividades religiosas ou comunitárias. Cidades, crenças e hábitos alimentares variam bastante.
+O Natal brasileiro costuma reunir parentes em jantares, presentes, missas ou atividades comunitárias. A cidade, a fé e os costumes alimentares mudam a mesa de cada família.

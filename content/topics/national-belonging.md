@@ -1,11 +1,11 @@
-# National belonging and public memory
+# National days and public memory
 
 ## meta
 - slug: national-belonging
-- canonical: National Belonging and Public Memory
+- canonical: National Days and Public Memory
 - category: civic
 - perennial: no
-- commonality: making a public story of belonging through ceremonies, symbols, history, and civic time
+- commonality: using national holidays, public symbols, and historical stories to stage belonging
 
 ## observance TW national-day
 - local_name: 國慶日／雙十國慶
@@ -22,7 +22,6 @@
 ## observance CN national-day
 - local_name: 国庆节
 - date: 10-01
-- date_end: 10-07
 - rank: 1
 - source: https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/jiedu/tujie/202411/content_6986437.htm
 
@@ -52,154 +51,154 @@
 
 ## locale zh-TW
 ### title
-國家歸屬與公共記憶
+國慶日與國家記憶
 ### summary
-國家節日用典禮、旗幟、歷史敘事與公共假期製造共同時間，但人們對國家故事的感受不會只有一種。
+國慶日把旗幟、典禮、假期和歷史故事帶進日常生活。雙十、建國紀念日、國慶日與各國獨立日都在說「我們是誰」，但不同世代、族群與政治立場，可能對這句話有不同答案。
 ### keywords
-國家節日, 公共記憶, 歸屬, 典禮
+國慶日, 獨立日, 國家記憶, 旗幟, 公共典禮
 ### customs TW national-day
-台灣雙十國慶常見升旗、典禮、表演與公共假期；不同世代、族群與政治立場可能有不同的參與和理解。
+台灣雙十國慶常見升旗、典禮、表演與公共假期。有人參加現場活動，有人把它當作休假日，也有人對歷史和國家稱呼有不同看法。
 ### customs JP national-foundation-day
-日本建國紀念之日是國定假日，社會對其歷史意義與公共表達有多元看法，不宜只用單一民族敘事概括。
+日本建國紀念之日是國定假日，與建國神話和國家歷史的討論相連。社會對它的意義與公共表達並沒有單一共識。
 ### customs CN national-day
-中國國慶日從 10 月 1 日開始的假期常伴隨典禮、城市裝飾、旅遊與家庭安排；實際假期安排依年度公告。
+中國國慶日從 10 月 1 日開始，常伴隨城市裝飾、典禮、旅遊與家庭安排。實際假期長度和調休方式依年度公告。
 ### customs IN independence-day
-印度獨立日常見公共演說、旗幟與學校或社區活動；不同地區會以自己的歷史和文化語言參與。
+印度獨立日可見總理演說、升旗，以及學校和社區活動。各地會用自己的歷史人物、語言和地方記憶參與其中。
 ### customs ID independence-day
-印尼 8 月 17 日獨立日常見社區競賽、旗幟與鄰里活動，公共慶祝也會連結地方社群的合作。
+印尼 8 月 17 日獨立日常見升旗、鄰里競賽和社區聚會。比賽和遊戲不只是娛樂，也把地方合作做成公共節慶。
 ### customs BR independence-day
-巴西獨立日可見遊行、公共典禮與家庭休閒；不同城市和群體對國家歷史的敘述不完全相同。
+巴西獨立日可能有遊行、官方典禮和家庭休閒。不同城市與群體，對獨立歷史的說法和感受不會完全相同。
 ### customs US independence-day
-美國 7 月 4 日常見煙火、遊行、家庭聚會與公共演說；慶祝也可能伴隨對歷史與國家理想的討論。
+美國 7 月 4 日常見煙火、遊行、家庭聚會和演說。慶祝活動也可能讓人談到獨立宣言、歷史矛盾與國家理想。
 
 ## locale en
 ### title
-National belonging and public memory
+National days and public memory
 ### summary
-National days create shared time through ceremonies, flags, historical stories, and public holidays, but people do not experience a national story in only one way.
+National days put flags, ceremonies, time off, and historical stories into ordinary life. Taiwan's Double Ten, Japan's National Foundation Day, and the independence or national days of five other countries all stage an answer to “who are we,” but that answer is never heard in only one way.
 ### keywords
-national days, public memory, belonging, ceremonies
+national days, independence days, public memory, flags, civic ceremonies
 ### customs TW national-day
-Taiwan's Double Ten Day includes flag ceremonies, official events, performances, and a public holiday. Generations, communities, and political positions can shape participation and interpretation differently.
+Taiwan's Double Ten Day includes flag ceremonies, official events, performances, and a public holiday. Some people attend, some take the day off, and some read the history through a different political position.
 ### customs JP national-foundation-day
-Japan's National Foundation Day is a public holiday. Its historical meaning and public expression are understood in varied ways and should not be reduced to one ethnic story.
+Japan's National Foundation Day is a public holiday connected to stories about the nation's origins. Its meaning and the way it should be expressed remain subjects of varied public views.
 ### customs CN national-day
-China's holiday beginning October 1 may include ceremonies, city decorations, travel, and family plans. The exact public-holiday arrangement follows the annual announcement.
+China's holiday begins on October 1 and can bring decorations, ceremonies, travel, and family plans. The exact holiday and make-up workday arrangement follows the annual announcement.
 ### customs IN independence-day
-India's Independence Day often includes public speeches, flags, and school or community events. Regions participate through their own histories and cultural languages.
+India's Independence Day includes speeches, flag ceremonies, and school or community events. Regions bring their own historical figures, languages, and memories to the national story.
 ### customs ID independence-day
-Indonesia's August 17 Independence Day is known for neighbourhood competitions, flags, and community activities, linking public celebration with local cooperation.
+Indonesia's August 17 Independence Day is known for flag ceremonies, neighbourhood competitions, and local gatherings. Games turn cooperation between neighbours into part of the public celebration.
 ### customs BR independence-day
-Brazil's Independence Day may include parades, official ceremonies, and family leisure. Cities and groups do not tell the national history in exactly the same way.
+Brazil's Independence Day may include parades, official ceremonies, and a quiet day with family. Cities and groups do not tell the history of independence in exactly the same voice.
 ### customs US independence-day
-The United States marks July 4 with fireworks, parades, family gatherings, and public speeches. Celebration can also open discussion about history and national ideals.
+The United States marks July 4 with fireworks, parades, family gatherings, and speeches. Celebration can also open arguments about the Declaration, the country's history, and its ideals.
 
 ## locale ja
 ### title
-国家への帰属と公共の記憶
+国民の祝日と国家の記憶
 ### summary
-国の記念日は式典、国旗、歴史の物語、祝日によって共有の時間を作るが、国家の物語の感じ方は一つではない。
+国の記念日は、国旗、式典、休日、歴史の物語を暮らしの中に置く。台湾の双十節、日本の建国記念の日、各国の独立記念日は「私たちは誰か」を表すが、その答えは立場によって変わる。
 ### keywords
-国民の祝日, 公共の記憶, 帰属, 式典
+国民の祝日, 独立記念日, 国家の記憶, 国旗, 式典
 ### customs TW national-day
-台湾の双十節には国旗掲揚、式典、パフォーマンス、祝日がある。世代、集団、政治的立場で参加と解釈が異なりうる。
+台湾の双十節には、国旗掲揚、式典、催し、休日がある。会場へ行く人も、休暇として過ごす人もおり、歴史の受け止め方も一様ではない。
 ### customs JP national-foundation-day
-日本の建国記念の日は国民の祝日。その歴史的意味と公共での表現には多様な見方があり、単一の民族物語にまとめられない。
+日本の建国記念の日は、国の始まりに関する物語と結びつく祝日だ。その意味や公の場での表現について、さまざまな考え方がある。
 ### customs CN national-day
-中国の国慶節は10月1日からの休暇に式典、都市の装飾、旅行、家族の予定が伴うことがある。具体的な日程は年ごとの公告による。
+中国の国慶節は10月1日から始まり、街の装飾、式典、旅行、家族の予定が重なる。連休と振替出勤の日程は毎年の発表で決まる。
 ### customs IN independence-day
-インドの独立記念日には演説、国旗、学校や地域の行事がある。地域ごとに自らの歴史と文化の言葉で参加する。
+インドの独立記念日には、演説、国旗掲揚、学校や地域の催しがある。地域ごとに異なる人物、言語、歴史の記憶が参加の形を作る。
 ### customs ID independence-day
-インドネシアの8月17日の独立記念日には地域の競技、国旗、近隣の活動があり、公的な祝賀と協力を結びつける。
+インドネシアの8月17日は、国旗掲揚、近所の競技会、地域の集まりで祝われる。ゲームや競争が、近隣の協力を見せる場にもなる。
 ### customs BR independence-day
-ブラジルの独立記念日にはパレード、式典、家族の余暇が見られる。都市や集団によって歴史の語り方は異なる。
+ブラジルの独立記念日には、パレード、式典、家族との休暇などがある。独立の歴史をどう語るかは、都市や集団によって異なる。
 ### customs US independence-day
-米国の7月4日には花火、パレード、家族の集まり、演説がある。歴史や国家の理想について考える機会にもなりうる。
+米国の7月4日には、花火、パレード、家族の集まり、演説が見られる。独立宣言や歴史、国家の理想について考える機会にもなる。
 
 ## locale zh-CN
 ### title
-国家归属与公共记忆
+国庆日与国家记忆
 ### summary
-国家节日通过典礼、旗帜、历史叙事和公共假期制造共同时间，但人们对国家故事的感受不会只有一种。
+国庆日把旗帜、典礼、假期和历史故事放进日常生活。双十、建国纪念日以及各国的国庆和独立日，都在回答“我们是谁”，但不同世代和群体的回答可能不同。
 ### keywords
-国家节日, 公共记忆, 归属, 典礼
+国庆日, 独立日, 国家记忆, 旗帜, 公共典礼
 ### customs TW national-day
-台湾双十国庆常见升旗、典礼、表演和公共假期；不同世代、群体和政治立场可能有不同的参与与理解。
+台湾双十国庆常见升旗、典礼、表演和公共假期。有人参加活动，有人把它当作休假日，也有人从不同政治立场理解它的历史。
 ### customs JP national-foundation-day
-日本建国纪念日是国定假日，社会对其历史意义和公共表达有多种看法，不宜只用单一民族叙事概括。
+日本建国纪念之日是与国家起源故事相连的法定假日。社会对它的历史意义和公共表达有不同看法。
 ### customs CN national-day
-中国国庆节从 10 月 1 日开始的假期常伴随典礼、城市装饰、旅游和家庭安排；具体假期依据年度公告。
+中国国庆节从 10 月 1 日开始，常见城市装饰、典礼、旅游和家庭安排。具体假期与调休时间按年度公告执行。
 ### customs IN independence-day
-印度独立日常见公共演讲、旗帜和学校或社区活动；不同地区会以自己的历史与文化语言参与。
+印度独立日常见演说、升旗，以及学校和社区活动。不同地区会用自己的历史人物、语言和记忆参与国家叙事。
 ### customs ID independence-day
-印尼 8 月 17 日独立日常见社区竞赛、旗帜和邻里活动，公共庆祝也会连接地方社群的合作。
+印度尼西亚 8 月 17 日独立日常见升旗、邻里比赛和社区聚会。比赛和游戏也把邻里合作变成了公共庆祝的一部分。
 ### customs BR independence-day
-巴西独立日可见游行、公共典礼和家庭休闲；不同城市和群体对国家历史的叙述不完全相同。
+巴西独立日可以有游行、官方典礼，也可以只是和家人休息。不同城市和群体讲述独立历史的方式并不一样。
 ### customs US independence-day
-美国 7 月 4 日常见烟火、游行、家庭聚会和公共演讲；庆祝也可能引发对历史与国家理想的讨论。
+美国 7 月 4 日常见烟火、游行、家庭聚会和演说。庆祝也可能引出对《独立宣言》、历史和国家理想的讨论。
 
 ## locale hi
 ### title
-राष्ट्रीय जुड़ाव और सार्वजनिक स्मृति
+राष्ट्रीय दिवस और देश की स्मृति
 ### summary
-राष्ट्रीय दिवस समारोह, झंडे, ऐतिहासिक कथाओं और सार्वजनिक अवकाश से साझा समय बनाते हैं, लेकिन लोग राष्ट्र की कहानी को केवल एक तरह से अनुभव नहीं करते।
+राष्ट्रीय दिवस झंडों, समारोहों, छुट्टी और इतिहास को रोज़मर्रा की ज़िंदगी में ले आते हैं। ताइवान का Double Ten, जापान का National Foundation Day और सातों देशों के स्वतंत्रता दिवस “हम कौन हैं” का सार्वजनिक उत्तर देते हैं, पर उत्तर सबके लिए एक नहीं होता।
 ### keywords
-राष्ट्रीय दिवस, सार्वजनिक स्मृति, जुड़ाव, समारोह
+राष्ट्रीय दिवस, स्वतंत्रता दिवस, सार्वजनिक स्मृति, झंडे, समारोह
 ### customs TW national-day
-ताइवान के Double Ten Day में झंडा समारोह, सरकारी आयोजन, प्रस्तुतियाँ और सार्वजनिक अवकाश होते हैं। पीढ़ी, समुदाय और राजनीतिक दृष्टि भागीदारी और अर्थ को बदल सकते हैं।
+ताइवान के Double Ten Day पर झंडारोहण, सरकारी समारोह, कार्यक्रम और सार्वजनिक अवकाश होता है। कोई समारोह में जाता है, कोई छुट्टी मनाता है, और कोई इतिहास को अलग राजनीतिक नज़र से देखता है।
 ### customs JP national-foundation-day
-जापान का National Foundation Day सार्वजनिक अवकाश है। इसके इतिहास और सार्वजनिक अभिव्यक्ति को अलग-अलग तरह से समझा जाता है; इसे एक ही जातीय कथा में नहीं समेटना चाहिए।
+जापान का National Foundation Day देश की शुरुआत से जुड़ी कथाओं वाला सार्वजनिक अवकाश है। इसके ऐतिहासिक अर्थ और सार्वजनिक अभिव्यक्ति पर मत अलग-अलग हैं।
 ### customs CN national-day
-चीन में 1 अक्टूबर से शुरू होने वाली छुट्टी में समारोह, शहर की सजावट, यात्रा और पारिवारिक योजनाएँ हो सकती हैं। सटीक व्यवस्था वार्षिक घोषणा पर निर्भर है।
+चीन का राष्ट्रीय दिवस 1 अक्टूबर से शुरू होता है और शहर की सजावट, समारोह, यात्रा व पारिवारिक योजनाएँ साथ ला सकता है। छुट्टी और बदले हुए कामकाजी दिनों की घोषणा हर साल होती है।
 ### customs IN independence-day
-भारत के स्वतंत्रता दिवस पर भाषण, झंडे और स्कूल या सामुदायिक कार्यक्रम आम हैं। अलग क्षेत्र अपनी इतिहास और सांस्कृतिक भाषा के माध्यम से भाग लेते हैं।
+भारत के स्वतंत्रता दिवस पर भाषण, झंडारोहण और स्कूल या समुदाय के कार्यक्रम होते हैं। अलग-अलग प्रदेश अपने नायकों, भाषाओं और इतिहास के साथ राष्ट्रीय कहानी में भाग लेते हैं।
 ### customs ID independence-day
-इंडोनेशिया के 17 अगस्त के स्वतंत्रता दिवस में मोहल्ला प्रतियोगिताएँ, झंडे और पड़ोस के आयोजन होते हैं, जो सार्वजनिक उत्सव को स्थानीय सहयोग से जोड़ते हैं।
+इंडोनेशिया का 17 अगस्त स्वतंत्रता दिवस झंडों, मोहल्ले की प्रतियोगिताओं और स्थानीय मेल-मिलाप से मनाया जाता है। खेल पड़ोसियों के सहयोग को सार्वजनिक बनाते हैं।
 ### customs BR independence-day
-ब्राज़ील के स्वतंत्रता दिवस पर परेड, आधिकारिक समारोह और पारिवारिक अवकाश हो सकते हैं। शहर और समूह राष्ट्रीय इतिहास को एक ही तरह नहीं बताते।
+ब्राज़ील के स्वतंत्रता दिवस पर परेड, सरकारी समारोह या परिवार के साथ आराम—तीनों दिख सकते हैं। शहर और समुदाय स्वतंत्रता का इतिहास एक ही आवाज़ में नहीं बताते।
 ### customs US independence-day
-अमेरिका में 4 जुलाई को आतिशबाज़ी, परेड, पारिवारिक मिलन और भाषण होते हैं। यह इतिहास और राष्ट्रीय आदर्शों पर चर्चा का अवसर भी हो सकता है।
+अमेरिका में 4 जुलाई को आतिशबाज़ी, परेड, पारिवारिक मिलन और भाषण होते हैं। यह Declaration of Independence, इतिहास और राष्ट्रीय आदर्शों पर बहस का समय भी बन सकता है।
 
 ## locale id
 ### title
-Rasa memiliki bangsa dan ingatan publik
+Hari Nasional dan Ingatan Publik
 ### summary
-Hari nasional menciptakan waktu bersama melalui upacara, bendera, kisah sejarah, dan hari libur, tetapi orang mengalami cerita kebangsaan dengan cara yang beragam.
+Hari nasional membawa bendera, upacara, hari libur, dan cerita sejarah ke dalam kehidupan sehari-hari. Hari nasional Taiwan dan Jepang serta hari kemerdekaan lima negara lain sama-sama menampilkan pertanyaan “siapa kita”, tetapi jawabannya tidak pernah tunggal.
 ### keywords
-hari nasional, ingatan publik, rasa memiliki, upacara
+hari nasional, hari kemerdekaan, ingatan publik, bendera, upacara
 ### customs TW national-day
-Double Ten Day di Taiwan mencakup upacara bendera, acara resmi, pertunjukan, dan hari libur. Generasi, komunitas, dan posisi politik dapat memengaruhi partisipasi serta pemaknaan.
+Double Ten Day di Taiwan diisi pengibaran bendera, upacara, pertunjukan, dan hari libur. Sebagian orang datang ke acara, sebagian beristirahat, dan sebagian memandang sejarahnya dari posisi politik yang berbeda.
 ### customs JP national-foundation-day
-National Foundation Day di Jepang adalah hari libur nasional. Makna sejarah dan ekspresi publiknya dipahami secara beragam, bukan satu cerita etnis.
+National Foundation Day di Jepang adalah hari libur yang terkait dengan cerita tentang asal-usul bangsa. Makna dan cara menampilkannya di ruang publik dipahami secara beragam.
 ### customs CN national-day
-Libur Tiongkok mulai 1 Oktober dapat mencakup upacara, hiasan kota, perjalanan, dan rencana keluarga. Pengaturan tepat mengikuti pengumuman tahunan.
+Hari Nasional Tiongkok dimulai pada 1 Oktober dan dapat diisi hiasan kota, upacara, perjalanan, serta rencana keluarga. Jadwal libur dan hari kerja pengganti diumumkan setiap tahun.
 ### customs IN independence-day
-Hari Kemerdekaan India sering diisi pidato publik, bendera, dan kegiatan sekolah atau komunitas. Daerah-daerah berpartisipasi melalui sejarah dan bahasa budaya mereka.
+Hari Kemerdekaan India menghadirkan pidato, upacara bendera, dan kegiatan sekolah atau komunitas. Setiap daerah membawa tokoh, bahasa, dan ingatan sejarahnya sendiri.
 ### customs ID independence-day
-Hari Kemerdekaan Indonesia pada 17 Agustus dikenal dengan lomba lingkungan, bendera, dan kegiatan tetangga, yang menghubungkan perayaan publik dengan kerja sama lokal.
+Hari Kemerdekaan Indonesia pada 17 Agustus dikenal dengan upacara bendera, lomba lingkungan, dan pertemuan warga. Permainan membuat kerja sama tetangga terlihat sebagai bagian dari perayaan.
 ### customs BR independence-day
-Hari Kemerdekaan Brasil dapat diisi parade, upacara, dan waktu bersama keluarga. Kota dan kelompok berbeda dalam menceritakan sejarah nasional.
+Hari Kemerdekaan Brasil dapat diisi parade, upacara resmi, atau waktu santai bersama keluarga. Kota dan kelompok masyarakat tidak selalu menceritakan sejarah kemerdekaan dengan cara yang sama.
 ### customs US independence-day
-Amerika Serikat memperingati 4 Juli dengan kembang api, parade, pertemuan keluarga, dan pidato. Perayaan juga dapat membuka pembicaraan tentang sejarah dan cita-cita bangsa.
+Amerika Serikat merayakan 4 Juli dengan kembang api, parade, kumpul keluarga, dan pidato. Perayaan ini juga dapat membuka pembicaraan tentang Declaration of Independence, sejarah, dan cita-cita negara.
 
 ## locale pt-BR
 ### title
-Pertencimento nacional e memória pública
+Dias nacionais e memória pública
 ### summary
-As datas nacionais criam um tempo comum por meio de cerimônias, bandeiras, narrativas históricas e feriados, mas as pessoas vivenciam a história nacional de maneiras diferentes.
+Os dias nacionais levam bandeiras, cerimônias, feriados e histórias do passado para a vida cotidiana. O Double Ten taiwanês, o dia japonês da fundação nacional e as datas de independência mostram uma ideia de “nós”, mas essa ideia muda conforme a geração e o grupo.
 ### keywords
-datas nacionais, memória pública, pertencimento, cerimônias
+dias nacionais, independência, memória pública, bandeiras, cerimônias
 ### customs TW national-day
-O Double Ten Day de Taiwan inclui cerimônias com bandeiras, eventos oficiais, apresentações e feriado. Gerações, comunidades e posições políticas podem mudar a participação e a interpretação.
+O Double Ten Day de Taiwan inclui hasteamento da bandeira, cerimônias, apresentações e feriado. Há quem participe dos eventos, quem aproveite a folga e quem leia a história de outra posição política.
 ### customs JP national-foundation-day
-O National Foundation Day japonês é feriado nacional. Seu significado histórico e sua expressão pública são vistos de formas variadas, não como uma única narrativa étnica.
+O National Foundation Day japonês é um feriado ligado às narrativas sobre a origem do país. Seu significado histórico e sua expressão pública são vistos de maneiras diferentes.
 ### customs CN national-day
-O feriado chinês a partir de 1º de outubro pode incluir cerimônias, decoração urbana, viagens e planos familiares. A organização exata segue o anúncio anual.
+O feriado nacional da China começa em 1º de outubro e pode trazer decoração urbana, cerimônias, viagens e planos familiares. A duração e os dias de compensação são anunciados a cada ano.
 ### customs IN independence-day
-O Dia da Independência da Índia costuma ter discursos, bandeiras e eventos escolares ou comunitários. Cada região participa por meio de sua própria história e linguagem cultural.
+O Dia da Independência da Índia inclui discursos, hasteamento da bandeira e atividades em escolas e comunidades. Cada região acrescenta seus próprios personagens, línguas e memórias à narrativa nacional.
 ### customs ID independence-day
-O Dia da Independência da Indonésia, em 17 de agosto, é conhecido por competições de bairro, bandeiras e atividades entre vizinhos, ligando celebração pública à cooperação local.
+O Dia da Independência da Indonésia, em 17 de agosto, é marcado por bandeiras, competições de bairro e encontros locais. As brincadeiras transformam a cooperação entre vizinhos em celebração pública.
 ### customs BR independence-day
-O Dia da Independência do Brasil pode incluir desfiles, cerimônias oficiais e lazer familiar. Cidades e grupos não contam a história nacional exatamente do mesmo modo.
+O Dia da Independência do Brasil pode ter desfiles, cerimônias oficiais ou um dia tranquilo em família. Cidades e grupos não contam a história da independência exatamente da mesma forma.
 ### customs US independence-day
-Os Estados Unidos celebram 4 de julho com fogos, desfiles, encontros familiares e discursos. A data também pode abrir conversas sobre história e ideais nacionais.
+Nos Estados Unidos, 4 de julho reúne fogos de artifício, desfiles, famílias e discursos. A data também pode abrir conversas sobre a Declaração de Independência, a história e os ideais do país.
