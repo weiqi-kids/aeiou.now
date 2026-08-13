@@ -2,13 +2,11 @@
 // Final taxonomy release gate。
 // 驗證 active Topic、七語 index、年度排程、在地資料與 merge alias 使用同一版
 // taxonomy；舊 slug 只能留在明確的 migration/alias source，不可混進發布資料。
-import { DatabaseSync } from 'node:sqlite';
-import { existsSync, readFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const DB_PATH = join(ROOT, 'db', 'aeiou.sqlite');
 const LOCALES = ['zh-TW', 'en', 'ja', 'zh-CN', 'hi', 'id', 'pt-BR'];
 const FINAL_SLUGS = [
   'new-year', 'lantern-festival', 'diwali', 'ramadan-and-eid', 'eid-al-adha', 'affection-and-reciprocity',
@@ -25,9 +23,14 @@ const readJson = (rel) => JSON.parse(readFileSync(join(ROOT, rel), 'utf8'));
 const same = (a, b) => JSON.stringify([...a].sort()) === JSON.stringify([...b].sort());
 const fail = (message) => errors.push(message);
 
-const db = new DatabaseSync(DB_PATH, { readOnly: true });
-const active = db.prepare("SELECT slug FROM topics WHERE status NOT IN ('candidate', 'merged') ORDER BY slug").all().map((row) => row.slug);
-if (!same(active, FINAL_SLUGS)) fail(`SQLite active taxonomy 不符：${active.join(', ')}`);
+// CI checkout 不包含被 .gitignore 排除的本機 SQLite；發布資料的權威快照是
+// data/topics/index/*.json。用它做 gate，才能讓本地與 GitHub Actions 都能
+// 從同一份已提交資料重建並驗收，而不依賴開發機狀態。
+const primaryIndex = readJson('data/topics/index/zh-TW.json');
+const active = primaryIndex
+  .filter((topic) => topic.status === 'active')
+  .map((topic) => topic.slug);
+if (!same(active, FINAL_SLUGS)) fail(`data/topics/index/zh-TW.json active taxonomy 不符：${active.join(', ')}`);
 
 for (const locale of LOCALES) {
   const index = readJson(`data/topics/index/${locale}.json`);
@@ -53,7 +56,6 @@ for (const merge of merges) {
 const exportedMerges = readJson('data/topic-merges.json').merges || [];
 if (JSON.stringify(exportedMerges) !== JSON.stringify(merges)) fail('data/topic-merges.json 與 content/topic-merges.json 不一致');
 
-db.close();
 if (errors.length) {
   console.error(`Final Topic taxonomy 驗收失敗，共 ${errors.length} 項：\n${errors.map((error) => `- ${error}`).join('\n')}`);
   process.exit(1);
