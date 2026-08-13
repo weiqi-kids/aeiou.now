@@ -40,9 +40,10 @@ import { t } from '../../lib/i18n.mjs';
 import { LOCALE, MARKET_CITY, REACTION_SET } from '../../lib/config.mjs';
 import { calendarDate, dateTime, countryFlag } from '../../lib/format.mjs';
 import { withBase } from '../../lib/paths.mjs';
+import { seoCopy } from '../../lib/seo.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
-  observancesForFacts, customsText, coverPath,
+  observancesForFacts, customsText, coverPath, relatedTopics, readJson, getTopicsIndex,
 } from '../../lib/data.mjs';
 
 export function getStaticPaths() {
@@ -52,10 +53,20 @@ export function getStaticPaths() {
       const { facts } = getTopicBundle(topicId);
       return facts && facts.slug ? { params: { slug: facts.slug }, props: { topicId } } : null;
     })
-    .filter(Boolean);
+    .filter(Boolean)
+    .concat(
+      ((readJson('topic-merges.json', {})?.merges) || [])
+        .map((merge) => {
+          const target = getTopicsIndex().find((topic) => topic.slug === merge.to);
+          return target
+            ? { params: { slug: merge.from }, props: { topicId: target.topic_id, aliasFor: merge.to } }
+            : null;
+        })
+        .filter(Boolean),
+    );
 }
 
-const { topicId } = Astro.props;
+const { topicId, aliasFor = null } = Astro.props;
 const { facts, i18n } = getTopicBundle(topicId);
 const loc = (i18n && i18n.locales && i18n.locales[LOCALE]) || {};
 const title = loc.title || (facts && facts.canonical_name) || topicId;
@@ -88,6 +99,50 @@ const observanceAnchor = (observance) =>
 const marketCity = MARKET_CITY[LOCALE] || null;
 const places = placesForTopic(topicId, marketCity);
 const events = eventsForTopic(topicId, marketCity);
+const copy = seoCopy();
+const sourceUrls = [...new Set([
+  ...(facts?.source_urls || []),
+  ...observances.flatMap((observance) => observance.source_urls || []),
+  ...observances.flatMap((observance) => observance.next_occurrence?.source_urls || []),
+])].filter((url) => /^https?:\/\//.test(url));
+const dateAnswer = observances
+  .filter((observance) => observance.next_occurrence)
+  .slice(0, 4)
+  .map((observance) => {
+    const next = observance.next_occurrence;
+    const end = next.ends_on ? `–${calendarDate(next.ends_on)}` : '';
+    return `${countryName(observance.country_code)} · ${calendarDate(next.starts_on)}${end}`;
+  });
+const whereAnswer = countries.length > 0
+  ? countries.map((country) => countryName(country.country_code)).join('、')
+  : copy.noDate;
+const related = relatedTopics(topicId, 4);
+const eventSchema = events.map((event) => ({
+  '@type': 'Event',
+  name: event.name,
+  startDate: event.start_at ? new Date(event.start_at * 1000).toISOString() : undefined,
+  endDate: event.end_at ? new Date(event.end_at * 1000).toISOString() : undefined,
+  location: { '@type': 'Place', name: event.venue },
+  url: event.ticket_url || event.source_url || undefined,
+  description: event.descriptions?.[LOCALE] || undefined,
+})).map((event) => Object.fromEntries(Object.entries(event).filter(([, value]) => value != null)));
+const topicSchema = [
+  {
+    '@type': 'DefinedTerm',
+    name: title,
+    description: loc.summary || facts?.commonality || copy.noDate,
+    inDefinedTermSet: { '@type': 'DefinedTermSet', name: 'aeiou.now Topics' },
+  },
+  {
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: copy.what, acceptedAnswer: { '@type': 'Answer', text: loc.summary || facts?.commonality || copy.noDate } },
+      { '@type': 'Question', name: copy.when, acceptedAnswer: { '@type': 'Answer', text: dateAnswer.length ? dateAnswer.join('；') : copy.noDate } },
+      { '@type': 'Question', name: copy.where, acceptedAnswer: { '@type': 'Answer', text: whereAnswer } },
+    ],
+  },
+  ...eventSchema,
+];
 
 // 📍 店家與 🎉 活動的 emoji reaction(2026-08-11 用戶:「店家和活動本來就有規劃 emoji,要補上」)。
 // 行為沿用 src/lib/reactions.mjs——與貼文、留言同一份實作,同一顆 emoji 在站上任何地方
@@ -113,6 +168,13 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
   title={`${title} — aeiou.now`}
   description={loc.summary}
   image={coverSrc}
+  imageAlt={title}
+  pageType="CollectionPage"
+  modified={facts?.updated_at}
+  canonicalPath={aliasFor ? withBase(`topic/${aliasFor}/`) : null}
+  indexable={!aliasFor}
+  redirectTo={aliasFor ? withBase(`topic/${aliasFor}/`) : null}
+  structuredData={topicSchema}
 >
   <article class="topic">
     <!-- 頁首 = 第一屏的上半:cover 圖 + 七語系的 lede 並陳 + 「🌎 全世界怎麼過」的連結。
@@ -121,9 +183,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
       <div class="head-main">
         {coverSrc && (
           <figure class="topic-cover">
-            {/* alt="" :現在是純色塊佔位圖,沒有可描述的內容,硬編一句描述等於騙螢幕閱讀器。
-                換上真圖時才會有值得寫的 alt。width/height 給瀏覽器先留位,載入時不跳版。 */}
-            <img src={coverSrc} alt="" width="1200" height="675" decoding="async" />
+            <img src={coverSrc} alt={title} width="1200" height="675" loading="eager" fetchpriority="high" decoding="async" />
           </figure>
         )}
         <div class="head-primary">
@@ -143,6 +203,26 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
         </div>
       </div>
     </header>
+
+    <section class="topic-answers" id="answers">
+      <div class="section-head">
+        <h2>{copy.answers}</h2>
+      </div>
+      <dl class="answer-grid">
+        <div class="answer-card">
+          <dt>{copy.what}</dt>
+          <dd>{loc.summary || facts?.commonality || copy.noDate}</dd>
+        </div>
+        <div class="answer-card">
+          <dt>{copy.when}</dt>
+          <dd>{dateAnswer.length ? dateAnswer.join('；') : copy.noDate}</dd>
+        </div>
+        <div class="answer-card">
+          <dt>{copy.where}</dt>
+          <dd>{whereAnswer}</dd>
+        </div>
+      </dl>
+    </section>
 
     <!-- 三區塊:左上 📍 你附近、左下 🎉 相關活動、右 💬 大家正在聊(桌機佔滿整欄高)。
          DOM 順序就是窄螢幕的堆疊順序(你附近 → 相關活動 → 大家正在聊),不靠 order 調換,
@@ -280,10 +360,17 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
                 {customsText(i18n, c) && (
                   <p class="country-customs">{customsText(i18n, c)}</p>
                 )}
+                {(c.source_urls || []).length > 0 && (
+                  <p class="country-sources">
+                    {(c.source_urls || []).slice(0, 2).map((url) => (
+                      <a class="source-link" href={url} rel="noopener noreferrer" target="_blank">{copy.sourceLink} ↗</a>
+                    ))}
+                  </p>
+                )}
               </div>
             </li>
           ))}
-        </ul>
+      </ul>
       </details>
 
       <!-- 只做兩件事,都不是捲動動畫:
@@ -304,6 +391,36 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
         })();
       </script>
       </Fragment>
+    )}
+
+    {sourceUrls.length > 0 && (
+      <section class="topic-sources" id="sources">
+        <div class="section-head">
+          <h2>{copy.sources}</h2>
+        </div>
+        <p class="source-note">{copy.sourceNote}</p>
+        <ul class="source-list">
+          {sourceUrls.map((url) => (
+            <li><a href={url} rel="noopener noreferrer" target="_blank">{url}</a></li>
+          ))}
+        </ul>
+        {facts?.updated_at && (
+          <p class="updated-note">{copy.updated} <time datetime={facts.updated_at}>{calendarDate(facts.updated_at.slice(0, 10))}</time></p>
+        )}
+      </section>
+    )}
+
+    {related.length > 0 && (
+      <section class="topic-related" id="related">
+        <div class="section-head">
+          <h2>{copy.related}</h2>
+        </div>
+        <ul class="related-list">
+          {related.map((relatedTopic) => (
+            <li><a href={withBase(`topic/${relatedTopic.slug}/`)}>{relatedTopic.title}</a></li>
+          ))}
+        </ul>
+      </section>
     )}
   </article>
 </BaseLayout>
@@ -390,6 +507,63 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
   .empty {
     color: var(--color-ink-muted);
     font-size: var(--text-sm);
+  }
+  .topic-answers,
+  .topic-sources,
+  .topic-related {
+    margin-block-end: clamp(2.5rem, 6vw, 4rem);
+    scroll-margin-block-start: 1rem;
+  }
+  .answer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 0;
+  }
+  .answer-card {
+    margin: 0;
+    padding: 1rem 1.25rem;
+    border-inline-start: 0.25rem solid var(--color-primary);
+    background: var(--color-white);
+    box-shadow: var(--shadow-card);
+  }
+  .answer-card dt {
+    margin-block-end: 0.4rem;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  .answer-card dd {
+    margin: 0;
+    color: var(--color-ink-soft);
+    line-height: 1.55;
+  }
+  .source-note,
+  .updated-note {
+    color: var(--color-ink-muted);
+    font-size: var(--text-sm);
+  }
+  .source-list,
+  .related-list {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    padding-inline-start: 1.25rem;
+  }
+  .source-list a,
+  .related-list a,
+  .source-link {
+    color: var(--color-primary);
+    overflow-wrap: anywhere;
+  }
+  .country-sources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+  .source-link {
+    font-size: var(--text-xs);
   }
   .section-emoji {
     margin-inline-end: 0.4rem;
@@ -502,6 +676,12 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
   .world-summary h2 {
     flex: 0 0 auto;
     margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    .answer-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
   }
   .country-list {
     list-style: none;

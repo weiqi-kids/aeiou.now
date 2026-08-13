@@ -1,0 +1,46 @@
+[
+  {"from_topic":"new-beginnings-and-fortune","to_topic":"new-year","country_code":"BR","observance_key":"reveillon"},
+  {"from_topic":"new-beginnings-and-fortune","to_topic":"new-year","country_code":"JP","observance_key":"oshogatsu"},
+  {"from_topic":"new-beginnings-and-fortune","to_topic":"new-year","country_code":"TW","observance_key":"lunar-new-year"},
+  {"from_topic":"new-beginnings-and-fortune","to_topic":"new-year","country_code":"US","observance_key":"new-year"},
+  {"from_topic":"new-beginnings-and-fortune","to_topic":"diwali","country_code":"IN","observance_key":"diwali"},
+  {"from_topic":"new-beginnings-and-fortune","to_topic":"ramadan-and-eid","country_code":"ID","observance_key":"eid-al-fitr"},
+
+  {"from_topic":"protection-and-play","to_topic":"ghosts-ancestors-and-remembrance","country_code":"CN","observance_key":"zhongyuan"},
+  {"from_topic":"protection-and-play","to_topic":"ghosts-ancestors-and-remembrance","country_code":"JP","observance_key":"setsubun"},
+  {"from_topic":"protection-and-play","to_topic":"ghosts-ancestors-and-remembrance","country_code":"TW","observance_key":"ghost-month"},
+  {"from_topic":"protection-and-play","to_topic":"ghosts-ancestors-and-remembrance","country_code":"US","observance_key":"halloween"},
+  {"from_topic":"ancestors-and-remembrance","to_topic":"ghosts-ancestors-and-remembrance","country_code":"BR","observance_key":"finados"},
+  {"from_topic":"ancestors-and-remembrance","to_topic":"ghosts-ancestors-and-remembrance","country_code":"CN","observance_key":"qingming"},
+  {"from_topic":"ancestors-and-remembrance","to_topic":"ghosts-ancestors-and-remembrance","country_code":"JP","observance_key":"obon"},
+  {"from_topic":"ancestors-and-remembrance","to_topic":"ghosts-ancestors-and-remembrance","country_code":"TW","observance_key":"qingming"},
+  {"from_topic":"ancestors-and-remembrance","to_topic":"ghosts-ancestors-and-remembrance","country_code":"US","observance_key":"memorial-day"},
+
+  {"from_topic":"harvest-and-shared-meals","to_topic":"harvest-and-gratitude","country_code":"BR","observance_key":"festa-junina"},
+  {"from_topic":"harvest-and-shared-meals","to_topic":"harvest-and-gratitude","country_code":"IN","observance_key":"pongal"},
+  {"from_topic":"harvest-and-shared-meals","to_topic":"harvest-and-gratitude","country_code":"US","observance_key":"thanksgiving"},
+  {"from_topic":"harvest-and-shared-meals","to_topic":"mid-autumn-and-moon-viewing","country_code":"CN","observance_key":"mid-autumn"},
+  {"from_topic":"harvest-and-shared-meals","to_topic":"mid-autumn-and-moon-viewing","country_code":"JP","observance_key":"tsukimi"},
+  {"from_topic":"harvest-and-shared-meals","to_topic":"mid-autumn-and-moon-viewing","country_code":"TW","observance_key":"mid-autumn"},
+
+  {"from_topic":"light-and-renewal","to_topic":"christmas","country_code":"BR","observance_key":"christmas"},
+  {"from_topic":"light-and-renewal","to_topic":"christmas","country_code":"US","observance_key":"christmas"},
+  {"from_topic":"light-and-renewal","to_topic":"diwali","country_code":"IN","observance_key":"diwali"},
+  {"from_topic":"light-and-renewal","to_topic":"lantern-festival","country_code":"CN","observance_key":"lantern-festival"},
+  {"from_topic":"light-and-renewal","to_topic":"lantern-festival","country_code":"TW","observance_key":"lantern-festival"},
+
+  {"from_topic":"national-belonging","to_topic":"national-days","country_code":"BR","observance_key":"independence-day"},
+  {"from_topic":"national-belonging","to_topic":"national-days","country_code":"CN","observance_key":"national-day"},
+  {"from_topic":"national-belonging","to_topic":"national-days","country_code":"ID","observance_key":"independence-day"},
+  {"from_topic":"national-belonging","to_topic":"national-days","country_code":"IN","observance_key":"independence-day"},
+  {"from_topic":"national-belonging","to_topic":"national-days","country_code":"JP","observance_key":"national-foundation-day"},
+  {"from_topic":"national-belonging","to_topic":"national-days","country_code":"TW","observance_key":"national-day"},
+  {"from_topic":"national-belonging","to_topic":"national-days","country_code":"US","observance_key":"independence-day"},
+
+  {"from_topic":"reunion-and-homecoming","to_topic":"homecoming-and-reunion","country_code":"ID","observance_key":"eid-homecoming"},
+  {"from_topic":"reunion-and-homecoming","to_topic":"homecoming-and-reunion","country_code":"JP","observance_key":"obon"},
+  {"from_topic":"reunion-and-homecoming","to_topic":"mid-autumn-and-moon-viewing","country_code":"CN","observance_key":"mid-autumn"},
+  {"from_topic":"reunion-and-homecoming","to_topic":"mid-autumn-and-moon-viewing","country_code":"TW","observance_key":"mid-autumn"},
+  {"from_topic":"reunion-and-homecoming","to_topic":"christmas","country_code":"BR","observance_key":"christmas"},
+  {"from_topic":"reunion-and-homecoming","to_topic":"harvest-and-gratitude","country_code":"US","observance_key":"thanksgiving"}
+]

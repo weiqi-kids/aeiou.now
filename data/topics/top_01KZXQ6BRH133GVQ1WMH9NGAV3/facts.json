@@ -1,0 +1,244 @@
+{
+  "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+  "slug": "harvest-and-gratitude",
+  "canonical_name": "Harvest and Gratitude",
+  "commonality": "connecting harvest, gratitude, seasonal food, and shared tables across different religious and regional settings",
+  "category": "food",
+  "status": "active",
+  "is_perennial": 0,
+  "updated_at": "2026-08-13T15:06:30.000Z",
+  "access_level": 0,
+  "observances": [
+    {
+      "observance_id": "obs_top_01KZRR9MFKMBNPN8XV1X3BZV53_BR_festa-junina",
+      "observance_key": "festa-junina",
+      "country_code": "BR",
+      "local_name": "Festas Juninas",
+      "observed_date": "06-24",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_7095914FF1D5AE2E37F34335"
+      ],
+      "source_urls": [
+        "https://bndigital.bn.gov.br/festas-juninas/"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFKMBNPN8XV1X3BZV53_BR_festa-junina_2026_2026-06-24",
+          "occurrence_year": 2026,
+          "starts_on": "2026-06-24",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_7095914FF1D5AE2E37F34335"
+          ],
+          "source_urls": [
+            "https://bndigital.bn.gov.br/festas-juninas/"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFKMBNPN8XV1X3BZV53_BR_festa-junina_2027_2027-06-24",
+          "occurrence_year": 2027,
+          "starts_on": "2027-06-24",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_7095914FF1D5AE2E37F34335"
+          ],
+          "source_urls": [
+            "https://bndigital.bn.gov.br/festas-juninas/"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFKMBNPN8XV1X3BZV53_BR_festa-junina_2027_2027-06-24",
+        "occurrence_year": 2027,
+        "starts_on": "2027-06-24",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "America/Sao_Paulo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_7095914FF1D5AE2E37F34335"
+        ],
+        "source_urls": [
+          "https://bndigital.bn.gov.br/festas-juninas/"
+        ],
+        "distance_days": 315
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MFKMBNPN8XV1X3BZV53_IN_pongal",
+      "observance_key": "pongal",
+      "country_code": "IN",
+      "local_name": "Pongal",
+      "observed_date": null,
+      "date_rule": "太陽曆 01-14 至 01-17 前後，日期依年而略有差異",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_DF8DE78424784A70528F1F50"
+      ],
+      "source_urls": [
+        "https://www.incredibleindia.gov.in/en/colours-of-india"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFKMBNPN8XV1X3BZV53_IN_pongal_2026_2026-01-14",
+          "occurrence_year": 2026,
+          "starts_on": "2026-01-14",
+          "ends_on": "2026-01-17",
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Kolkata",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_BE0F64A0D2B42E20E4A5D1EC"
+          ],
+          "source_urls": [
+            "https://www.sci.gov.in/holiday/makar-sankranti-magh-bihu-pongal-2026/"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFKMBNPN8XV1X3BZV53_IN_pongal_2027_2027-01-15",
+          "occurrence_year": 2027,
+          "starts_on": "2027-01-15",
+          "ends_on": "2027-01-18",
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Kolkata",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_3430209784872A9336B841CA"
+          ],
+          "source_urls": [
+            "https://www.drikpanchang.com/festivals/pongal/thai-pongal-date-time.html?time-format=24plushour"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFKMBNPN8XV1X3BZV53_IN_pongal_2027_2027-01-15",
+        "occurrence_year": 2027,
+        "starts_on": "2027-01-15",
+        "ends_on": "2027-01-18",
+        "calendar_system": "solar-term",
+        "timezone": "Asia/Kolkata",
+        "date_status": "local-variant",
+        "source_ids": [
+          "src_3430209784872A9336B841CA"
+        ],
+        "source_urls": [
+          "https://www.drikpanchang.com/festivals/pongal/thai-pongal-date-time.html?time-format=24plushour"
+        ],
+        "distance_days": 155
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MFKMBNPN8XV1X3BZV53_US_thanksgiving",
+      "observance_key": "thanksgiving",
+      "country_code": "US",
+      "local_name": "Thanksgiving Day",
+      "observed_date": null,
+      "date_rule": "11 月第四個星期四",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_F936765E8EFFBF4BDCD32B47"
+      ],
+      "source_urls": [
+        "https://www.usa.gov/holidays"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFKMBNPN8XV1X3BZV53_US_thanksgiving_2026_2026-11-26",
+          "occurrence_year": 2026,
+          "starts_on": "2026-11-26",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_2B285153DC83CF193801904A"
+          ],
+          "source_urls": [
+            "https://piv.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFKMBNPN8XV1X3BZV53_US_thanksgiving_2027_2027-11-25",
+          "occurrence_year": 2027,
+          "starts_on": "2027-11-25",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_6B138B3CADB39768D25D5026"
+          ],
+          "source_urls": [
+            "https://www.ferc.gov/news-events/events/thanksgiving-day-11252027"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFKMBNPN8XV1X3BZV53_US_thanksgiving_2026_2026-11-26",
+        "occurrence_year": 2026,
+        "starts_on": "2026-11-26",
+        "ends_on": null,
+        "calendar_system": "local",
+        "timezone": "America/New_York",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_2B285153DC83CF193801904A"
+        ],
+        "source_urls": [
+          "https://piv.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+        ],
+        "distance_days": 105
+      }
+    }
+  ],
+  "countries": [
+    {
+      "country_code": "BR",
+      "observance_ids": [
+        "obs_top_01KZRR9MFKMBNPN8XV1X3BZV53_BR_festa-junina"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "observance_ids": [
+        "obs_top_01KZRR9MFKMBNPN8XV1X3BZV53_IN_pongal"
+      ]
+    },
+    {
+      "country_code": "US",
+      "observance_ids": [
+        "obs_top_01KZRR9MFKMBNPN8XV1X3BZV53_US_thanksgiving"
+      ]
+    }
+  ],
+  "relations": [],
+  "source_ids": [
+    "src_2B285153DC83CF193801904A",
+    "src_3430209784872A9336B841CA",
+    "src_6B138B3CADB39768D25D5026",
+    "src_7095914FF1D5AE2E37F34335",
+    "src_BE0F64A0D2B42E20E4A5D1EC",
+    "src_DF8DE78424784A70528F1F50",
+    "src_F936765E8EFFBF4BDCD32B47"
+  ],
+  "source_urls": [
+    "https://piv.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+    "https://www.drikpanchang.com/festivals/pongal/thai-pongal-date-time.html?time-format=24plushour",
+    "https://www.ferc.gov/news-events/events/thanksgiving-day-11252027",
+    "https://bndigital.bn.gov.br/festas-juninas/",
+    "https://www.sci.gov.in/holiday/makar-sankranti-magh-bihu-pongal-2026/",
+    "https://www.incredibleindia.gov.in/en/colours-of-india",
+    "https://www.usa.gov/holidays"
+  ]
+}

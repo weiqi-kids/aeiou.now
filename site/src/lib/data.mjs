@@ -330,9 +330,10 @@ export function hotTopics(limit = 2, win = '24h') {
 export function relatedTopics(topicId, limit = 2) {
   const facts = readJson(`topics/${topicId}/facts.json`, null);
   const rels = ((facts && facts.relations) || []).slice();
-  const byId = new Map(getTopicsIndex().map((topic) => [topic.topic_id, topic]));
+  const index = getTopicsIndex();
+  const byId = new Map(index.map((topic) => [topic.topic_id, topic]));
   const seen = new Set([topicId]);
-  return rels
+  const graphRelated = rels
     .sort((a, b) => (b.weight || 0) - (a.weight || 0))
     .map((rel) => rel && rel.to_topic_id)
     .filter((id) => {
@@ -342,6 +343,23 @@ export function relatedTopics(topicId, limit = 2) {
     })
     .map((id) => byId.get(id))
     .slice(0, limit);
+  if (graphRelated.length > 0) return graphRelated;
+
+  // 舊資料或新建 Topic 尚未有人工 Topic Graph 時，仍給讀者可理解的內部路徑：
+  // 先同分類，再以共同國家數排序；這是導航 fallback，不把相似度偽裝成演算法分數。
+  const current = index.find((topic) => topic.topic_id === topicId);
+  if (!current) return [];
+  const currentCountries = new Set(current.country_codes || []);
+  return index
+    .filter((topic) => topic.topic_id !== topicId)
+    .map((topic) => ({
+      topic,
+      overlap: (topic.country_codes || []).filter((code) => currentCountries.has(code)).length,
+      sameCategory: topic.category === current.category ? 1 : 0,
+    }))
+    .sort((a, b) => b.sameCategory - a.sameCategory || b.overlap - a.overlap || a.topic.slug.localeCompare(b.topic.slug))
+    .slice(0, limit)
+    .map(({ topic }) => topic);
 }
 
 /** Topic 的 cover 圖(1200×675 = 16:9,Google Discover 建議的大圖尺寸)。

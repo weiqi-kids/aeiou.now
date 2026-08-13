@@ -1,0 +1,164 @@
+{
+  "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+  "slug": "christmas",
+  "canonical_name": "Christmas",
+  "commonality": "looking at Christmas through worship, family gatherings, gifts, food, public lights, and local choices",
+  "category": "festival",
+  "status": "active",
+  "is_perennial": 0,
+  "updated_at": "2026-08-13T15:06:30.000Z",
+  "access_level": 0,
+  "observances": [
+    {
+      "observance_id": "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_BR_christmas",
+      "observance_key": "christmas",
+      "country_code": "BR",
+      "local_name": "Natal",
+      "observed_date": "12-25",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_242A0D06E8A421F48C6F258A"
+      ],
+      "source_urls": [
+        "https://www.comunicacao.pr.gov.br/noticias/aen/185ca999-f90c-4884-a739-b384ac5a12d6"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_BR_christmas_2026_2026-12-25",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_242A0D06E8A421F48C6F258A"
+          ],
+          "source_urls": [
+            "https://www.comunicacao.pr.gov.br/noticias/aen/185ca999-f90c-4884-a739-b384ac5a12d6"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_BR_christmas_2027_2027-12-25",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_242A0D06E8A421F48C6F258A"
+          ],
+          "source_urls": [
+            "https://www.comunicacao.pr.gov.br/noticias/aen/185ca999-f90c-4884-a739-b384ac5a12d6"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_BR_christmas_2026_2026-12-25",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-25",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "America/Sao_Paulo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_242A0D06E8A421F48C6F258A"
+        ],
+        "source_urls": [
+          "https://www.comunicacao.pr.gov.br/noticias/aen/185ca999-f90c-4884-a739-b384ac5a12d6"
+        ],
+        "distance_days": 134
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas",
+      "observance_key": "christmas",
+      "country_code": "US",
+      "local_name": "Christmas Day",
+      "observed_date": "12-25",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_F936765E8EFFBF4BDCD32B47"
+      ],
+      "source_urls": [
+        "https://www.usa.gov/holidays"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas_2026_2026-12-25",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_F936765E8EFFBF4BDCD32B47"
+          ],
+          "source_urls": [
+            "https://www.usa.gov/holidays"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas_2027_2027-12-25",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_F936765E8EFFBF4BDCD32B47"
+          ],
+          "source_urls": [
+            "https://www.usa.gov/holidays"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas_2026_2026-12-25",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-25",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "America/New_York",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_F936765E8EFFBF4BDCD32B47"
+        ],
+        "source_urls": [
+          "https://www.usa.gov/holidays"
+        ],
+        "distance_days": 134
+      }
+    }
+  ],
+  "countries": [
+    {
+      "country_code": "BR",
+      "observance_ids": [
+        "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_BR_christmas"
+      ]
+    },
+    {
+      "country_code": "US",
+      "observance_ids": [
+        "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas"
+      ]
+    }
+  ],
+  "relations": [],
+  "source_ids": [
+    "src_242A0D06E8A421F48C6F258A",
+    "src_F936765E8EFFBF4BDCD32B47"
+  ],
+  "source_urls": [
+    "https://www.comunicacao.pr.gov.br/noticias/aen/185ca999-f90c-4884-a739-b384ac5a12d6",
+    "https://www.usa.gov/holidays"
+  ]
+}

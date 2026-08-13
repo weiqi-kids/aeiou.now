@@ -23,11 +23,14 @@
 //   同一病灶的時窗切換列(首頁 .board-tabs、rankings .window-nav、Topic 頁 .trend-tabs)一併改折行。
 import '../styles/variables.css';
 import '../styles/global.css';
-import { LOCALE } from '../lib/config.mjs';
+import { LOCALE, LOCALES } from '../lib/config.mjs';
 import { t } from '../lib/i18n.mjs';
 import { navSorts } from '../lib/nav.mjs';
 import { hotTopics } from '../lib/data.mjs';
 import { withBase } from '../lib/paths.mjs';
+import {
+  OG_LOCALES, SITE_NAME, localeRoutePath, localeUrl, siteDescription,
+} from '../lib/seo.mjs';
 
 interface Props {
   title: string;
@@ -35,17 +38,37 @@ interface Props {
   activeSort?: string | null;
   /** cover 圖的**站內路徑**(呼叫端已過 withBase);這裡再組成絕對網址給 og:image。 */
   image?: string | null;
+  imageAlt?: string | null;
+  pageType?: string;
+  modified?: string | null;
+  canonicalPath?: string | null;
+  indexable?: boolean;
+  redirectTo?: string | null;
+  breadcrumbs?: Array<{ name: string; url?: string }>;
+  structuredData?: Record<string, any> | Array<Record<string, any>>;
 }
 const {
   title,
-  description,
+  description: suppliedDescription,
   activeSort = null,
   image = null,
+  imageAlt = null,
+  pageType = 'WebPage',
+  modified = null,
+  canonicalPath = null,
+  indexable = true,
+  redirectTo = null,
+  breadcrumbs = [],
+  structuredData = [],
 } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const site = Astro.site || new URL(Astro.url.origin);
+const canonical = new URL(canonicalPath || Astro.url.pathname, site);
+const description = suppliedDescription || siteDescription();
+const redirectUrl = redirectTo ? new URL(redirectTo, site).toString() : null;
 // og:image 必須是絕對網址(抓取端不解析相對路徑),所以拿 SITE_URL(Astro.site)當基底,
 // 路徑那半段已經含 base path。頁面沒有 cover 就整組 meta 不輸出——不指到不存在的檔。
-const ogImage = image ? new URL(image, Astro.site) : null;
+const ogImage = image ? new URL(image, site) : null;
+const ogImageAlt = imageAlt || `${title} — ${SITE_NAME}`;
 // cover 的版面契約:1200×675(16:9),符合 Google Discover 的大圖比例。
 const OG_IMAGE_W = 1200;
 const OG_IMAGE_H = 675;
@@ -53,6 +76,70 @@ const OG_IMAGE_H = 675;
 const base = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
+const routePath = localeRoutePath(canonical.pathname, base);
+const alternates = LOCALES.map((locale) => ({
+  locale,
+  href: localeUrl(site, locale, routePath).toString(),
+}));
+const sitemapUrl = new URL(`${base}sitemap.xml`, site).toString();
+const homeUrl = new URL(base, site).toString();
+const breadcrumbItems = breadcrumbs.length > 0
+  ? breadcrumbs
+  : [{ name: 'aeiou.now', url: homeUrl }, { name: title, url: canonical.toString() }];
+const absoluteUrl = (url) => {
+  if (!url) return canonical.toString();
+  try { return new URL(url, site).toString(); } catch { return canonical.toString(); }
+};
+const extraGraphs = Array.isArray(structuredData) ? structuredData : [structuredData];
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${site.origin}/#organization`,
+      name: SITE_NAME,
+      url: site.origin,
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${site.origin}/#website`,
+      name: SITE_NAME,
+      url: site.origin,
+      inLanguage: LOCALE,
+      publisher: { '@id': `${site.origin}/#organization` },
+    },
+    {
+      '@type': pageType,
+      '@id': `${canonical.toString()}#webpage`,
+      url: canonical.toString(),
+      name: title,
+      description,
+      inLanguage: LOCALE,
+      isPartOf: { '@id': `${site.origin}/#website` },
+      ...(modified ? { dateModified: modified } : {}),
+      ...(ogImage ? {
+        primaryImageOfPage: {
+          '@type': 'ImageObject',
+          url: ogImage.toString(),
+          width: OG_IMAGE_W,
+          height: OG_IMAGE_H,
+          caption: ogImageAlt,
+        },
+      } : {}),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: breadcrumbItems.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name,
+        item: absoluteUrl(item.url),
+      })),
+    },
+    ...extraGraphs.filter(Boolean),
+  ],
+};
+const jsonLd = JSON.stringify(graph).replace(/</g, '\\u003c');
 const GA4_ID = import.meta.env.PUBLIC_GA4_ID || '';
 
 const sorts = navSorts(activeSort);
@@ -66,16 +153,35 @@ const jumpTopics = hotTopics(2).filter((topic) => topic && topic.slug);
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="max-image-preview:large" />
+    <meta name="robots" content={indexable ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' : 'noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
+    <meta name="googlebot" content={indexable ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' : 'noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
+    {redirectUrl && <meta http-equiv="refresh" content={`0;url=${redirectUrl}`} />}
     <title>{title}</title>
-    {description && <meta name="description" content={description} />}
+    <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    <link rel="sitemap" type="application/xml" href={sitemapUrl} />
+    {alternates.map(({ locale, href }) => <link rel="alternate" hreflang={locale} href={href} />)}
+    <link rel="alternate" hreflang="x-default" href={localeUrl(site, 'en', routePath)} />
     <meta property="og:title" content={title} />
-    {description && <meta property="og:description" content={description} />}
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={pageType === 'Article' ? 'article' : 'website'} />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:locale" content={OG_LOCALES[LOCALE] || LOCALE} />
+    {alternates.filter(({ locale }) => locale !== LOCALE).map(({ locale }) => (
+      <meta property="og:locale:alternate" content={OG_LOCALES[locale] || locale} />
+    ))}
     <meta property="og:url" content={canonical} />
     {ogImage && <meta property="og:image" content={ogImage} />}
     {ogImage && <meta property="og:image:width" content={String(OG_IMAGE_W)} />}
     {ogImage && <meta property="og:image:height" content={String(OG_IMAGE_H)} />}
+    {ogImage && <meta property="og:image:alt" content={ogImageAlt} />}
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
+    {ogImage && <meta name="twitter:image:alt" content={ogImageAlt} />}
+    <meta name="author" content={SITE_NAME} />
+    <script type="application/ld+json" set:html={jsonLd} />
     {GA4_ID && (
       <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}></script>
     )}

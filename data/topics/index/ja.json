@@ -7,6 +7,7 @@
     "category": "community",
     "status": "active",
     "is_perennial": 1,
+    "updated_at": 1786633590,
     "scores": {
       "24h": 19.8,
       "72h": 19.5,
@@ -17,47 +18,14 @@
     }
   },
   {
-    "topic_id": "top_01KZRR82DTFW99JWX3MDHXYPDE",
-    "slug": "new-beginnings-and-fortune",
-    "title": "正月・ディワリ・イード",
-    "commonality": "marking a new year, religious renewal, or hopes for prosperity through shared rituals",
-    "category": "festival",
-    "status": "active",
-    "is_perennial": 0,
-    "scores": {
-      "24h": null,
-      "72h": null,
-      "7d": null,
-      "1m": null,
-      "3m": null,
-      "1y": null
-    }
-  },
-  {
-    "topic_id": "top_01KZRR82E8X3TBJF6ZZZE979NM",
-    "slug": "protection-and-play",
-    "title": "鬼月・中元・節分・ハロウィン",
-    "commonality": "giving stories about spirits, danger, and misfortune a place in seasonal rites and neighbourhood play",
-    "category": "community",
-    "status": "active",
-    "is_perennial": 0,
-    "scores": {
-      "24h": null,
-      "72h": null,
-      "7d": null,
-      "1m": null,
-      "3m": null,
-      "1y": null
-    }
-  },
-  {
     "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
     "slug": "affection-and-reciprocity",
-    "title": "バレンタイン、七夕、ホワイトデー",
+    "title": "バレンタイン",
     "commonality": "expressing affection through local gift, attention, and return-gift customs",
     "category": "relationship",
     "status": "active",
     "is_perennial": 0,
+    "updated_at": 1786633590,
     "scores": {
       "24h": null,
       "72h": null,
@@ -68,13 +36,68 @@
     }
   },
   {
-    "topic_id": "top_01KZRR9MFCDFDKNAAQRCSKS8AY",
-    "slug": "ancestors-and-remembrance",
-    "title": "墓参りと追悼の行事",
-    "commonality": "remembering the dead through family rites, cemetery visits, and civic memorials",
-    "category": "remembrance",
+    "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+    "slug": "back-to-school",
+    "title": "新学期",
+    "commonality": "preparing for a new school term through supplies, routines, transport, uniforms, and family transitions",
+    "category": "education",
+    "status": "active",
+    "is_perennial": 1,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+    "slug": "birthdays-and-blessings",
+    "title": "誕生日と長寿祝い",
+    "commonality": "marking birthdays and longevity with names, meals, candles, gifts, blessings, and family-specific rhythms",
+    "category": "family",
+    "status": "active",
+    "is_perennial": 1,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+    "slug": "caregiving-across-generations",
+    "title": "家族介護と世代",
+    "commonality": "talking about care between generations, practical support, boundaries, gratitude, and unequal family capacity",
+    "category": "family",
+    "status": "active",
+    "is_perennial": 1,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+    "slug": "childrens-day",
+    "title": "こどもの日",
+    "commonality": "looking at children’s days through play, care, rights, school life, and the different dates chosen by each society",
+    "category": "family",
     "status": "active",
     "is_perennial": 0,
+    "updated_at": 1786633590,
     "scores": {
       "24h": null,
       "72h": null,
@@ -85,30 +108,14 @@
     }
   },
   {
-    "topic_id": "top_01KZRR9MFKMBNPN8XV1X3BZV53",
-    "slug": "harvest-and-shared-meals",
-    "title": "収穫祭と祝いの食卓",
-    "commonality": "using seasonal foods and shared meals to mark harvest, gratitude, or belonging",
-    "category": "food",
-    "status": "active",
-    "is_perennial": 0,
-    "scores": {
-      "24h": null,
-      "72h": null,
-      "7d": null,
-      "1m": null,
-      "3m": null,
-      "1y": null
-    }
-  },
-  {
-    "topic_id": "top_01KZRR9MFRQ664J60A6TDVBPS8",
-    "slug": "light-and-renewal",
-    "title": "元宵・ディワリ・クリスマスの灯り",
-    "commonality": "making light a visible part of family, neighbourhood, or spiritual celebration",
+    "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+    "slug": "christmas",
+    "title": "クリスマス",
+    "commonality": "looking at Christmas through worship, family gatherings, gifts, food, public lights, and local choices",
     "category": "festival",
     "status": "active",
     "is_perennial": 0,
+    "updated_at": 1786633590,
     "scores": {
       "24h": null,
       "72h": null,
@@ -119,13 +126,302 @@
     }
   },
   {
-    "topic_id": "top_01KZRR9MFVDX5QSGEZAKM9ABSH",
-    "slug": "national-belonging",
-    "title": "国民の祝日と国家の記憶",
-    "commonality": "using national holidays, public symbols, and historical stories to stage belonging",
+    "topic_id": "top_01KZXQ6BR5H0VCT4WAPQM4SZXW",
+    "slug": "coming-of-age",
+    "title": "成人式と成年の節目",
+    "commonality": "comparing coming-of-age ceremonies, legal thresholds, family expectations, and young people’s own choices",
+    "category": "life-stage",
+    "status": "active",
+    "is_perennial": 1,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+    "slug": "diwali",
+    "title": "ディワリ",
+    "commonality": "welcoming light, renewal, and prosperity through regionally varied Diwali and Deepavali practices",
+    "category": "festival",
+    "status": "active",
+    "is_perennial": 0,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BR8KM720981PCZBPYFQ",
+    "slug": "dragon-boat-festival",
+    "title": "端午節",
+    "commonality": "linking dragon-boat races, rice dumplings, seasonal health, and regional memory",
+    "category": "festival",
+    "status": "active",
+    "is_perennial": 0,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+    "slug": "easter",
+    "title": "イースター",
+    "commonality": "marking Easter through worship, family meals, spring symbols, and different local calendars",
+    "category": "faith",
+    "status": "active",
+    "is_perennial": 0,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BRAREETBKDH28R9Y5EQ",
+    "slug": "eid-al-adha",
+    "title": "イード・アル＝アドハー",
+    "commonality": "understanding Eid al-Adha through prayer, sacrifice, sharing, pilgrimage, and local community practice",
+    "category": "faith",
+    "status": "active",
+    "is_perennial": 0,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BRCW71GA7PD20TQ1K12",
+    "slug": "farewells-and-funerals",
+    "title": "別れと葬送",
+    "commonality": "making space for grief, farewell, funeral arrangements, mourning, and the wishes of the person and family involved",
+    "category": "remembrance",
+    "status": "active",
+    "is_perennial": 1,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+    "slug": "fathers-day",
+    "title": "父の日",
+    "commonality": "showing appreciation for fathers and caregivers through gifts, time together, messages, and personal family practice",
+    "category": "family",
+    "status": "active",
+    "is_perennial": 0,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+    "slug": "ghosts-ancestors-and-remembrance",
+    "title": "鬼・先祖・追悼",
+    "commonality": "separating rites for ancestors, remembrance of the dead, protection customs, and Halloween play",
+    "category": "remembrance",
+    "status": "active",
+    "is_perennial": 0,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BRFP513XZ9B02BT8XCZ",
+    "slug": "graduation-season",
+    "title": "卒業シーズン",
+    "commonality": "marking graduation through ceremonies, photographs, gifts, uncertainty, and the next stage of study or work",
+    "category": "education",
+    "status": "active",
+    "is_perennial": 1,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+    "slug": "harvest-and-gratitude",
+    "title": "収穫と感謝",
+    "commonality": "connecting harvest, gratitude, seasonal food, and shared tables across different religious and regional settings",
+    "category": "food",
+    "status": "active",
+    "is_perennial": 0,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+    "slug": "homecoming-and-reunion",
+    "title": "帰省と再会",
+    "commonality": "bringing people together through returning home, shared meals, visits, and the choice not to travel",
+    "category": "community",
+    "status": "active",
+    "is_perennial": 1,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+    "slug": "labour-day",
+    "title": "労働の日",
+    "commonality": "understanding Labour Day through work, rest, organising, public history, and different national dates",
+    "category": "work",
+    "status": "active",
+    "is_perennial": 0,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+    "slug": "lantern-festival",
+    "title": "元宵節",
+    "commonality": "using lanterns, night walks, and shared foods to close or extend a new-year season",
+    "category": "festival",
+    "status": "active",
+    "is_perennial": 0,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+    "slug": "mid-autumn-and-moon-viewing",
+    "title": "中秋と月見",
+    "commonality": "comparing moon-viewing, seasonal food, reunion, and autumn harvest customs without flattening them into one festival",
+    "category": "festival",
+    "status": "active",
+    "is_perennial": 0,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+    "slug": "mothers-day",
+    "title": "母の日",
+    "commonality": "showing appreciation for mothers and caregivers through gifts, meals, messages, and family-defined boundaries",
+    "category": "family",
+    "status": "active",
+    "is_perennial": 0,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+    "slug": "moving-home",
+    "title": "引っ越しと新居祝い",
+    "commonality": "understanding moving and housewarming through packing, thresholds, neighbours, gifts, and new daily routines",
+    "category": "home",
+    "status": "active",
+    "is_perennial": 1,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+    "slug": "national-days",
+    "title": "国民の日",
+    "commonality": "reading national days through public ceremonies, historical memory, symbols, and disagreement as well as celebration",
     "category": "civic",
     "status": "active",
     "is_perennial": 0,
+    "updated_at": 1786633590,
     "scores": {
       "24h": null,
       "72h": null,
@@ -136,13 +432,104 @@
     }
   },
   {
-    "topic_id": "top_01KZRR9MG68WH0B6MFTXWXQ3JQ",
-    "slug": "reunion-and-homecoming",
-    "title": "中秋節・イド・帰省の行事",
-    "commonality": "bringing relatives or communities together through return trips, shared meals, and seasonal visits",
-    "category": "community",
+    "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+    "slug": "new-year",
+    "title": "新年",
+    "commonality": "marking a new calendar cycle through family rituals, visits, wishes, and rest",
+    "category": "festival",
     "status": "active",
     "is_perennial": 0,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BS8QZFDVGVBHB4PVM40",
+    "slug": "newborn-and-full-moon",
+    "title": "新生児とお宮参り",
+    "commonality": "welcoming a newborn and marking the first month through family visits, food, gifts, names, and care choices",
+    "category": "life-stage",
+    "status": "active",
+    "is_perennial": 1,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BSAMVV85AN3D1HXTEYY",
+    "slug": "proposals-and-engagements",
+    "title": "プロポーズと婚約",
+    "commonality": "looking at proposals and engagements through consent, family conversations, rings, gifts, and changing expectations",
+    "category": "relationship",
+    "status": "active",
+    "is_perennial": 1,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+    "slug": "ramadan-and-eid",
+    "title": "ラマダンとイード",
+    "commonality": "following Ramadan and marking Eid al-Fitr through fasting, prayer, visits, generosity, and reconciliation",
+    "category": "faith",
+    "status": "active",
+    "is_perennial": 0,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+    "slug": "teachers-day",
+    "title": "教師の日",
+    "commonality": "recognising teachers through classroom gratitude, public respect, gifts, and local education traditions",
+    "category": "education",
+    "status": "active",
+    "is_perennial": 0,
+    "updated_at": 1786633590,
+    "scores": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    }
+  },
+  {
+    "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+    "slug": "weddings-and-customs",
+    "title": "結婚式と婚礼習俗",
+    "commonality": "comparing wedding ceremonies, legal steps, kinship, clothing, food, and the boundaries of tradition",
+    "category": "relationship",
+    "status": "active",
+    "is_perennial": 1,
+    "updated_at": 1786633590,
     "scores": {
       "24h": null,
       "72h": null,

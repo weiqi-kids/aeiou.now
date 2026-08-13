@@ -14,6 +14,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DB_PATH = join(ROOT, 'db', 'aeiou.sqlite');
 const INPUT_PATH = join(ROOT, 'content', 'observance-occurrences.json');
+const MOVES_PATH = join(ROOT, 'content', 'topic-observance-moves.json');
 const CALENDARS = new Set([
   'gregorian',
   'chinese-lunisolar',
@@ -41,6 +42,12 @@ execFileSync(process.execPath, [join(ROOT, 'scripts', 'migrate-topic-observances
 
 const input = JSON.parse(readFileSync(INPUT_PATH, 'utf8'));
 const rows = Array.isArray(input.occurrences) ? input.occurrences : [];
+const observanceMoves = existsSync(MOVES_PATH) ? JSON.parse(readFileSync(MOVES_PATH, 'utf8')) : [];
+const moveKey = (row) => `${row.from_topic}\u0000${String(row.country_code || '').toUpperCase()}\u0000${row.observance_key || ''}`;
+const moveByKey = new Map(observanceMoves.map((move) => [
+  `${move.from_topic}\u0000${String(move.country_code || '').toUpperCase()}\u0000${move.observance_key || ''}`,
+  move.to_topic,
+]));
 const errors = [];
 const validDate = (value) => {
   if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
@@ -57,8 +64,10 @@ const validTimezone = (value) => {
 };
 const sourceIdOf = (url) =>
   `src_${createHash('sha256').update(url).digest('hex').slice(0, 24).toUpperCase()}`;
-const keyOf = (row) =>
+const rawKeyOf = (row) =>
   `${row.topic_slug}\u0000${String(row.country_code || '').toUpperCase()}\u0000${row.observance_key || ''}`;
+const keyOf = (row) =>
+  `${moveByKey.get(rawKeyOf(row)) || row.topic_slug}\u0000${String(row.country_code || '').toUpperCase()}\u0000${row.observance_key || ''}`;
 
 if (!Number.isInteger(input.version) || input.version < 1) errors.push('version 必須是正整數');
 if (!validDate(input.as_of)) errors.push('as_of 必須是 YYYY-MM-DD');
@@ -96,7 +105,15 @@ for (const [index, row] of rows.entries()) {
     const duplicate = normalized.find(
       (item) => item.key === key && item.row.occurrence_year === row.occurrence_year && item.row.starts_on === row.starts_on
     );
-    if (duplicate) errors.push(`${label} 與 occurrences[${duplicate.index}] 重複`);
+    if (duplicate) {
+      // 舊 taxonomy 可能在兩個 Topic 各保存過同一個日期；它們被 move 到
+      // 同一個 final Topic 後只留第一份即可。原本同一 observance 的重複仍然報錯。
+      if (rawKeyOf(row) === rawKeyOf(duplicate.row)) {
+        errors.push(`${label} 與 occurrences[${duplicate.index}] 重複`);
+      } else {
+        continue;
+      }
+    }
   }
   seenKeys.add(key);
 

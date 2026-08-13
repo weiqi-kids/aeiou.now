@@ -196,14 +196,34 @@ function importOne(db, doc, now) {
       upSrc.run(id, u, new URL(u).hostname, now + 365 * 86400, now);
       return id;
     });
-    db.prepare(
-      `INSERT INTO topic_observances (observance_id, topic_id, observance_key, country_code,
-                                      local_name, observed_date, date_rule, date_range_end,
-                                      popularity_rank, source_ids_json, updated_at)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
-    ).run(observanceId, topicId, c.observance_key, c.country_code, c.local_name,
-          c.date || null, c.date_rule || null,
-          c.date_end || null, c.rank ? Number(c.rank) : null, JSON.stringify(ids), now);
+    const existingObservance = db.prepare(
+      'SELECT topic_id FROM topic_observances WHERE observance_id = ?'
+    ).get(observanceId);
+    if (existingObservance && existingObservance.topic_id !== topicId) {
+      // Merged Topic 仍保留在 content/topics/ 作為 migration source。第一次匯入後，
+      // observance 會被 retire-merged-topics 搬到新 Topic；下一次重跑時，舊檔案
+      // 會再次讀到同一個穩定 observance_id。把它移回目前匯入的 source，讓後續
+      // migration 再搬一次，同時保留已匯入的 occurrence rows。
+      db.prepare('DELETE FROM topic_observance_i18n WHERE observance_id = ?').run(observanceId);
+      db.prepare(
+        `UPDATE topic_observances
+            SET topic_id = ?, observance_key = ?, country_code = ?, local_name = ?,
+                observed_date = ?, date_rule = ?, date_range_end = ?, popularity_rank = ?,
+                source_ids_json = ?, updated_at = ?
+          WHERE observance_id = ?`
+      ).run(topicId, c.observance_key, c.country_code, c.local_name,
+            c.date || null, c.date_rule || null,
+            c.date_end || null, c.rank ? Number(c.rank) : null, JSON.stringify(ids), now, observanceId);
+    } else {
+      db.prepare(
+        `INSERT INTO topic_observances (observance_id, topic_id, observance_key, country_code,
+                                        local_name, observed_date, date_rule, date_range_end,
+                                        popularity_rank, source_ids_json, updated_at)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+      ).run(observanceId, topicId, c.observance_key, c.country_code, c.local_name,
+            c.date || null, c.date_rule || null,
+            c.date_end || null, c.rank ? Number(c.rank) : null, JSON.stringify(ids), now);
+    }
   }
   for (const [code, l] of Object.entries(doc.locales)) {
     const kw = l.keywords ? l.keywords.split(/[,、]/).map((s) => s.trim()).filter(Boolean) : [];

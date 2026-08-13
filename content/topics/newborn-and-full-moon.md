@@ -1,0 +1,64 @@
+# Newborns and the First Month
+
+## meta
+- slug: newborn-and-full-moon
+- canonical: Newborns and the First Month
+- category: life-stage
+- perennial: yes
+- commonality: welcoming a newborn and marking the first month through family visits, food, gifts, names, and care choices
+
+## locale zh-TW
+### title
+新生兒與滿月
+### summary
+這一頁把「新生兒與滿月」放在日期、關係與地方差異中比較；我們不預設每個家庭或社群都會用同一種方式參與。
+### keywords
+新生兒與滿月
+
+## locale en
+### title
+Newborns and the First Month
+### summary
+This guide looks at Newborns and the First Month through dates, relationships, and local differences. It does not assume that every household or community follows the same practice.
+### keywords
+Newborns and the First Month
+
+## locale ja
+### title
+新生児とお宮参り
+### summary
+ここでは「新生児とお宮参り」を、日付や人間関係、地域差とともに見ていきます。すべての家庭や地域が同じ形で参加するわけではありません。
+### keywords
+新生児とお宮参り
+
+## locale zh-CN
+### title
+新生儿与满月
+### summary
+这一页把“新生儿与满月”放在时间、关系与地区差异中比较；我们不预设每个家庭或社群都会用同一种方式参与。
+### keywords
+新生儿与满月
+
+## locale hi
+### title
+नवजात शिशु और पहला महीना
+### summary
+यह पृष्ठ नवजात शिशु और पहला महीना को तारीख़, रिश्तों और स्थानीय भिन्नताओं के साथ देखता है। हर परिवार या समुदाय इसे एक ही तरह से नहीं मनाता या निभाता।
+### keywords
+नवजात शिशु और पहला महीना
+
+## locale id
+### title
+Bayi Baru Lahir dan Selapanan
+### summary
+Halaman ini melihat Bayi Baru Lahir dan Selapanan melalui tanggal, hubungan, dan perbedaan setempat. Tidak semua keluarga atau komunitas menjalaninya dengan cara yang sama.
+### keywords
+Bayi Baru Lahir dan Selapanan
+
+## locale pt-BR
+### title
+Recém-nascidos e o primeiro mês
+### summary
+Esta página observa Recém-nascidos e o primeiro mês a partir das datas, dos vínculos e das diferenças locais. Nenhuma família ou comunidade precisa vivê-lo do mesmo modo.
+### keywords
+Recém-nascidos e o primeiro mês

@@ -1,8 +1,8 @@
-# How Valentine's Day, Qixi, and White Day express affection
+# Valentine's Day
 
 ## meta
 - slug: affection-and-reciprocity
-- canonical: Valentine's Day, Qixi, and White Day
+- canonical: Valentine's Day
 - category: relationship
 - perennial: no
 - commonality: expressing affection through local gift, attention, and return-gift customs
@@ -46,7 +46,7 @@
 
 ## locale zh-TW
 ### title
-情人節、七夕與白色情人節
+情人節
 ### summary
 情人節不只是一個日期：有人送巧克力，有人交換卡片，也有人把它當成商業檔期。日本的白色情人節、台灣的七夕情人節與巴西的 Dia dos Namorados，分別把愛意放進不同的送禮、回禮與約會規矩裡。
 ### keywords
@@ -66,7 +66,7 @@
 
 ## locale en
 ### title
-Valentine's Day, Qixi, and White Day
+Valentine's Day
 ### summary
 There is no single calendar for showing romantic affection. Japan's White Day, Taiwan's Qixi Valentine's Day, Brazil's Dia dos Namorados, and India's Valentine Week attach different expectations to gifts, replies, and dates.
 ### keywords
@@ -86,7 +86,7 @@ In some Indian cities, young people turn February 7–14 into a run of themed da
 
 ## locale ja
 ### title
-バレンタイン、七夕、ホワイトデー
+バレンタイン
 ### summary
 恋人や大切な人に気持ちを伝える日は、どの社会でも同じ日になるわけではない。日本のホワイトデー、台湾の七夕情人節、ブラジルの恋人の日、インドのバレンタイン・ウィークには、それぞれの贈り物と過ごし方がある。
 ### keywords
@@ -106,7 +106,7 @@ In some Indian cities, young people turn February 7–14 into a run of themed da
 
 ## locale zh-CN
 ### title
-情人节、七夕与白色情人节
+情人节
 ### summary
 表达爱意的日期和规矩并不只有一套。日本的白色情人节、台湾的七夕情人节、巴西的 Dia dos Namorados 和印度的 Valentine Week，都把送礼、回礼与约会安排在不同的时间里。
 ### keywords
@@ -126,7 +126,7 @@ In some Indian cities, young people turn February 7–14 into a run of themed da
 
 ## locale hi
 ### title
-वैलेंटाइन डे, क़ीशी और व्हाइट डे
+वैलेंटाइन डे
 ### summary
 प्यार जताने का कैलेंडर हर जगह एक जैसा नहीं होता। जापान का व्हाइट डे, ताइवान का क़ीशी, ब्राज़ील का Dia dos Namorados और भारत का Valentine Week उपहार और जवाब देने की अपनी-अपनी उम्मीदें बनाते हैं।
 ### keywords
@@ -146,7 +146,7 @@ In some Indian cities, young people turn February 7–14 into a run of themed da
 
 ## locale id
 ### title
-Valentine, Qixi, dan White Day
+Hari Valentine
 ### summary
 Kalender untuk menyatakan kasih sayang tidak sama di setiap tempat. White Day di Jepang, Qixi di Taiwan, Dia dos Namorados di Brasil, dan Valentine Week di India memberi hadiah, balasan, dan kencan dengan aturan yang berbeda.
 ### keywords
@@ -166,7 +166,7 @@ Di beberapa kota di India, anak muda membagi 7–14 Februari menjadi hari untuk 
 
 ## locale pt-BR
 ### title
-Dia dos Namorados, Valentine e White Day
+Dia dos Namorados
 ### summary
 As datas para demonstrar carinho não seguem um único calendário. O White Day japonês, o Qixi taiwanês, o Dia dos Namorados brasileiro e a Valentine Week indiana criam expectativas diferentes para presentes, retribuições e encontros.
 ### keywords

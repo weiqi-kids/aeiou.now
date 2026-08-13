@@ -25,36 +25,32 @@ const personas = [
 ];
 const titleHints = {
   'affection-and-reciprocity': {
-    'zh-TW': /情人節|七夕|白色情人節/, en: /Valentine|Qixi|White Day/i, ja: /バレンタイン|七夕|ホワイトデー/,
-    'zh-CN': /情人节|七夕|白色情人节/, hi: /वैलेंटाइन|क़ीशी|व्हाइट डे/, id: /Valentine|Qixi|White Day/i, 'pt-BR': /Namorados|Valentine|White Day/i,
+    'zh-TW': /情人節/, en: /Valentine/i, ja: /バレンタイン/,
+    'zh-CN': /情人节/, hi: /वैलेंटाइन/i, id: /Valentine/i, 'pt-BR': /Namorados|Valentine/i,
   },
-  'ancestors-and-remembrance': {
+  'ghosts-ancestors-and-remembrance': {
     'zh-TW': /祭祖|追思|掃墓/, en: /Graves|ancestors|remembrance/i, ja: /墓参り|追悼/,
     'zh-CN': /祭祖|扫墓|追思/, hi: /पूर्वज|स्मरण|कब्र/, id: /Makam|Mengenang|leluhur/i, 'pt-BR': /cemitério|memória|mortos/i,
   },
-  'harvest-and-shared-meals': {
-    'zh-TW': /收成|節慶餐桌/, en: /Harvest|festival table/i, ja: /収穫|食卓/,
-    'zh-CN': /收获|节庆餐桌/, hi: /फसल|साझा भोजन/, id: /Panen|Makan Bersama/i, 'pt-BR': /Colheita|mesas de festa/i,
+  'harvest-and-gratitude': {
+    'zh-TW': /收成|感恩/, en: /Harvest|Gratitude/i, ja: /収穫|感謝/,
+    'zh-CN': /收获|感恩/, hi: /फसल|कृतज्ञता/, id: /Panen|Syukur/i, 'pt-BR': /Colheita|gratidão/i,
   },
-  'light-and-renewal': {
-    'zh-TW': /元宵|排燈節|聖誕/, en: /Lantern|Diwali|Christmas/i, ja: /元宵|ディワリ|クリスマス/,
-    'zh-CN': /元宵|排灯节|圣诞/, hi: /दीवाली|लालटेन|क्रिसमस/, id: /Lampion|Diwali|Natal/i, 'pt-BR': /Lanternas|Diwali|Natal/i,
+  'lantern-festival': {
+    'zh-TW': /元宵/, en: /Lantern/i, ja: /元宵/,
+    'zh-CN': /元宵/, hi: /लालटेन/i, id: /Lampion/i, 'pt-BR': /Lanternas/i,
   },
-  'national-belonging': {
-    'zh-TW': /國慶|國家/, en: /National|public memory/i, ja: /国民|国家/,
-    'zh-CN': /国庆|国家/, hi: /राष्ट्रीय|देश/, id: /Nasional|Publik/i, 'pt-BR': /nacionais|memória pública/i,
+  'national-days': {
+    'zh-TW': /國慶/, en: /National/i, ja: /国民|国家/,
+    'zh-CN': /国庆/, hi: /राष्ट्रीय|देश/, id: /Nasional/i, 'pt-BR': /Nacionais/i,
   },
-  'new-beginnings-and-fortune': {
-    'zh-TW': /新年|排燈節|開齋節/, en: /New Year|Diwali|Eid/i, ja: /正月|ディワリ|イード/,
-    'zh-CN': /新年|排灯节|开斋节/, hi: /नया साल|दिवाली|ईद/, id: /Tahun Baru|Diwali|Idulfitri/i, 'pt-BR': /Ano-Novo|Diwali|Eid/i,
+  'new-year': {
+    'zh-TW': /新年/, en: /New Year/i, ja: /新年/,
+    'zh-CN': /新年/, hi: /नया साल/i, id: /Tahun Baru/i, 'pt-BR': /Ano-Novo/i,
   },
-  'protection-and-play': {
-    'zh-TW': /鬼月|中元|節分/, en: /Ghost|Setsubun|Halloween/i, ja: /鬼月|中元|節分|ハロウィン/,
-    'zh-CN': /鬼节|鬼月|中元|节分|万圣节/, hi: /भूत|सेत्सुबुन|हैलोवीन/i, id: /Hantu|Setsubun|Halloween/i, 'pt-BR': /Fantasma|Setsubun|Halloween/i,
-  },
-  'reunion-and-homecoming': {
-    'zh-TW': /中秋|開齋節|返鄉/, en: /Mid-Autumn|Eid|homecoming/i, ja: /中秋|イド|帰省/,
-    'zh-CN': /中秋|开斋节|返乡/, hi: /मध्य-शरद|ईद|घर वापसी/, id: /Idulfitri|Pulang Kampung|Reuni/i, 'pt-BR': /família|casa/i,
+  'homecoming-and-reunion': {
+    'zh-TW': /返鄉|團聚/, en: /Homecoming|Reunion/i, ja: /帰省|再会/,
+    'zh-CN': /返乡|团聚/, hi: /घर वापसी|पुनर्मिलन/, id: /Mudik|Reuni/i, 'pt-BR': /Casa|Reencontros/i,
   },
   'ask-the-world': {
     'zh-TW': /跨國問答/, en: /Cross-border/i, ja: /世界に聞く/, 'zh-CN': /跨国问答/, hi: /दुनिया से पूछें/, id: /Lintas Negara/i, 'pt-BR': /Perguntas entre países/i,
@@ -158,6 +154,24 @@ for (const row of customsRows) {
   customsByObs.get(row.observance_id).add(row.locale);
 }
 
+// final taxonomy 的地方表現會在 import-topics → retire-merged-topics 後，
+// 以穩定 observance_id 發布到新的 Topic。守門器不能只讀 migration source
+// markdown，否則頁面已經呈現的鬼月、節分、Pongal、Halloween 等七語 customs
+// 會被誤判成不存在。把 active Topic 的已發布文字併入檢查語料，讓人格檢查
+// 與真正送到 Topic 頁的資料保持同一個權威來源。
+const publishedTopicText = db.prepare(
+  `SELECT t.slug, i.customs_text
+     FROM topic_observances o
+     JOIN topics t ON t.topic_id = o.topic_id
+     JOIN topic_observance_i18n i ON i.observance_id = o.observance_id
+    WHERE t.status NOT IN ('candidate', 'merged')
+    ORDER BY t.slug, o.country_code, o.observance_key, i.locale`
+).all();
+for (const row of publishedTopicText) {
+  const previous = contentTextBySlug.get(row.slug) || '';
+  contentTextBySlug.set(row.slug, `${previous}\n${row.customs_text || ''}`);
+}
+
 for (const topic of activeTopics) {
   if (!contentMeta.has(topic.slug)) fail(`active Topic ${topic.slug}:沒有對應 content markdown`);
   const titles = contentTitles.get(topic.slug) || new Map();
@@ -195,37 +209,37 @@ const personaFindings = new Map(personas.map(([name]) => [name, []]));
 const personaChecks = [
   ['台灣人格', [
     ['七夕保留農曆日期', () => /農曆七月初七/.test(contentTextBySlug.get('affection-and-reciprocity') || '')],
-    ['鬼月保留地方與家庭差異', () => /農曆七月/.test(contentTextBySlug.get('protection-and-play') || '') && /沒有同一張清單/.test(contentTextBySlug.get('protection-and-play') || '')],
-    ['農曆新年保留家庭與地方節奏', () => /農曆新年/.test(contentTextBySlug.get('new-beginnings-and-fortune') || '') && /自己的節奏/.test(contentTextBySlug.get('new-beginnings-and-fortune') || '')],
+    ['鬼月保留地方與家庭差異', () => /農曆七月/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '') && /沒有同一張清單/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '')],
+    ['農曆新年保留家庭與地方節奏', () => /農曆新年/.test(contentTextBySlug.get('new-year') || '') && /自己的節奏/.test(contentTextBySlug.get('new-year') || '')],
   ]],
   ['日本人格', [
     ['本命／義理巧克力被分開', () => /本命巧克力.*義理巧克力/.test(contentTextBySlug.get('affection-and-reciprocity') || '')],
     ['白色情人節被寫成回禮日', () => /白色情人節是 3 月 14 日的回禮日/.test(contentTextBySlug.get('affection-and-reciprocity') || '')],
-    ['節分保留撒豆驅邪', () => /節分會撒豆|節分、撒豆/.test(contentTextBySlug.get('protection-and-play') || '')],
+    ['節分保留撒豆驅邪', () => /節分會撒豆|節分、撒豆/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '')],
   ]],
   ['中國人格', [
-    ['中秋與中元保留中文節名', () => /中秋节|中元節|中元节/.test(contentTextBySlug.get('reunion-and-homecoming') || '') && /中元相關|中元相关/.test(contentTextBySlug.get('protection-and-play') || '')],
-    ['農曆／地方差異仍可見', () => /農曆|农历/.test(contentTextBySlug.get('new-beginnings-and-fortune') || '') && /地方|地区/.test(contentTextBySlug.get('harvest-and-shared-meals') || '')],
+    ['中秋與中元保留中文節名', () => /中秋节|中元節|中元节/.test(contentTextBySlug.get('mid-autumn-and-moon-viewing') || '') && /中元相關|中元相关/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '')],
+    ['農曆／地方差異仍可見', () => /農曆|农历/.test(contentTextBySlug.get('new-year') || '') && /地方|地区/.test(contentTextBySlug.get('harvest-and-gratitude') || '')],
   ]],
   ['印度人格', [
-    ['Diwali 不被寫成全印度單一做法', () => /排燈節|Diwali/.test(contentTextBySlug.get('new-beginnings-and-fortune') || '') && /地區|region|regional|地區與宗教/.test(contentTextBySlug.get('new-beginnings-and-fortune') || '')],
-    ['Pongal 保留南印度與農業脈絡', () => /Pongal|Pongal/.test(contentTextBySlug.get('harvest-and-shared-meals') || '') && /南印度|South India|India Sud/.test(contentTextBySlug.get('harvest-and-shared-meals') || '')],
+    ['Diwali 不被寫成全印度單一做法', () => /排燈節|Diwali/.test(contentTextBySlug.get('diwali') || '') && /地區|region|regional|地區與宗教/.test(contentTextBySlug.get('diwali') || '')],
+    ['Pongal 保留南印度與農業脈絡', () => /Pongal|Pongal/.test(contentTextBySlug.get('harvest-and-gratitude') || '') && /南印度|South India|India Sud/.test(contentTextBySlug.get('harvest-and-gratitude') || '')],
     ['Valentine Week 標示都市流行', () => /都市|urban|शहरी|perkotaan|urbana/.test(contentTextBySlug.get('affection-and-reciprocity') || '')],
   ]],
   ['印尼人格', [
-    ['mudik 與 Idul Fitri 同時出現', () => /mudik/.test(contentTextBySlug.get('reunion-and-homecoming') || '') && /Idul Fitri|開齋節|开斋节/.test(contentTextBySlug.get('reunion-and-homecoming') || '')],
-    ['不返鄉的選擇被保留', () => /不是每個人|Not everyone|Tidak semua|Nem todos/.test(contentTextBySlug.get('reunion-and-homecoming') || '')],
-    ['Idul Fitri 不被混寫成公曆新年', () => /不是公曆新年|not about the Gregorian calendar|bukan kalender|não ao calendário gregoriano/.test(contentTextBySlug.get('new-beginnings-and-fortune') || '')],
+    ['mudik 與 Idul Fitri 同時出現', () => /mudik/.test(contentTextBySlug.get('homecoming-and-reunion') || '') && /Idul Fitri|開齋節|开斋节/.test(contentTextBySlug.get('homecoming-and-reunion') || '')],
+    ['不返鄉的選擇被保留', () => /不是每個人|Not everyone|Tidak semua|Nem todos/.test(contentTextBySlug.get('homecoming-and-reunion') || '')],
+    ['Idul Fitri 不被混寫成公曆新年', () => /不是公曆新年|not about the Gregorian calendar|bukan kalender|não ao calendário gregoriano/.test(contentTextBySlug.get('ramadan-and-eid') || '')],
   ]],
   ['巴西人格', [
     ['Dia dos Namorados 保留 6 月 12 日', () => /Dia dos Namorados/.test(contentTextBySlug.get('affection-and-reciprocity') || '') && /6 月 12|June 12|12 de junho/.test(contentTextBySlug.get('affection-and-reciprocity') || '')],
-    ['Festas Juninas 保留聖人與地方背景', () => /六月節|June festivals|festas juninas|Festa junina/.test(contentTextBySlug.get('harvest-and-shared-meals') || '') && /天主教|Catholic|católic|Católico/.test(contentTextBySlug.get('harvest-and-shared-meals') || '')],
-    ['獨立日被寫成公共歷史節日', () => /獨立日|Independence Day|Independência/.test(contentTextBySlug.get('national-belonging') || '')],
+    ['Festas Juninas 保留聖人與地方背景', () => /六月節|June festivals|festas juninas|Festa junina/.test(contentTextBySlug.get('harvest-and-gratitude') || '') && /天主教|Catholic|católic|Católico/.test(contentTextBySlug.get('harvest-and-gratitude') || '')],
+    ['獨立日被寫成公共歷史節日', () => /獨立日|Independence Day|Independência/.test(contentTextBySlug.get('national-days') || '')],
   ]],
   ['美國人格', [
-    ['Memorial Day 限定為軍人紀念', () => /服役中死亡的軍人|service members who died|軍務中に亡くなった兵士|militares que morreram em serviço/.test(contentTextBySlug.get('ancestors-and-remembrance') || '')],
-    ['Halloween 寫出裝扮與要糖', () => /萬聖節|Halloween/.test(contentTextBySlug.get('protection-and-play') || '') && /要糖|trick-or-treat|討糖/.test(contentTextBySlug.get('protection-and-play') || '')],
-    ['New Year 保留聯邦假日界線', () => /聯邦假日|federal holiday|feriado federal/.test(contentTextBySlug.get('new-beginnings-and-fortune') || '')],
+    ['Memorial Day 限定為軍人紀念', () => /服役中死亡的軍人|service members who died|軍務中に亡くなった兵士|militares que morreram em serviço/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '')],
+    ['Halloween 寫出裝扮與要糖', () => /萬聖節|Halloween/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '') && /要糖|trick-or-treat|討糖/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '')],
+    ['New Year 保留聯邦假日界線', () => /聯邦假日|federal holiday|feriado federal/.test(contentTextBySlug.get('new-year') || '')],
   ]],
 ];
 for (const [name, checks] of personaChecks) {
