@@ -11,54 +11,54 @@
 ### title
 求婚與訂婚
 ### summary
-這一頁把「求婚與訂婚」放在日期、關係與地方差異中比較；我們不預設每個家庭或社群都會用同一種方式參與。
+台灣、日本、美國、印度、印尼與巴西對求婚、戒指、雙方家庭、訂婚宴與同意的重視方式不同；這一頁把浪漫想像與實際協商放在一起比較。
 ### keywords
-求婚與訂婚
+求婚,訂婚,訂婚戒指,雙方家庭,婚前協商,各國婚戀習俗
 
 ## locale en
 ### title
 Proposals and Engagements
 ### summary
-This guide looks at Proposals and Engagements through dates, relationships, and local differences. It does not assume that every household or community follows the same practice.
+Compare proposals and engagements in Taiwan, Japan, the United States, India, Indonesia, and Brazil, including rings, family conversations, engagement gatherings, consent, and changing expectations.
 ### keywords
-Proposals and Engagements
+Proposals and Engagements,engagement rings,proposal traditions,family conversations,consent and marriage,global relationship customs
 
 ## locale ja
 ### title
 プロポーズと婚約
 ### summary
-ここでは「プロポーズと婚約」を、日付や人間関係、地域差とともに見ていきます。すべての家庭や地域が同じ形で参加するわけではありません。
+台湾、日本、米国、インド、インドネシア、ブラジルのプロポーズと婚約を比べ、指輪、家族との相談、婚約の集まり、同意、変化する期待を紹介します。
 ### keywords
-プロポーズと婚約
+プロポーズ,婚約,婚約指輪,家族への挨拶,結婚の同意,世界の恋愛文化
 
 ## locale zh-CN
 ### title
 求婚与订婚
 ### summary
-这一页把“求婚与订婚”放在时间、关系与地区差异中比较；我们不预设每个家庭或社群都会用同一种方式参与。
+比较台湾、日本、美国、印度、印度尼西亚和巴西的求婚与订婚，了解戒指、双方家庭沟通、订婚聚会、同意和不断变化的期待。
 ### keywords
-求婚与订婚
+求婚,订婚,订婚戒指,双方家庭,婚前协商,各国婚恋习俗
 
 ## locale hi
 ### title
 प्रस्ताव और सगाई
 ### summary
-यह पृष्ठ प्रस्ताव और सगाई को तारीख़, रिश्तों और स्थानीय भिन्नताओं के साथ देखता है। हर परिवार या समुदाय इसे एक ही तरह से नहीं मनाता या निभाता।
+ताइवान, जापान, अमेरिका, भारत, इंडोनेशिया और ब्राज़ील में प्रस्ताव व सगाई की तुलना करें—अंगूठी, परिवार से बातचीत, समारोह, सहमति और अपेक्षाएँ अलग हो सकती हैं।
 ### keywords
-प्रस्ताव और सगाई
+प्रस्ताव,सगाई,सगाई की अंगूठी,परिवार की बातचीत,विवाह की सहमति,दुनिया की संबंध परंपराएँ
 
 ## locale id
 ### title
 Lamaran dan Pertunangan
 ### summary
-Halaman ini melihat Lamaran dan Pertunangan melalui tanggal, hubungan, dan perbedaan setempat. Tidak semua keluarga atau komunitas menjalaninya dengan cara yang sama.
+Bandingkan lamaran dan pertunangan di Taiwan, Jepang, Amerika Serikat, India, Indonesia, dan Brasil melalui cincin, percakapan keluarga, acara pertunangan, persetujuan, dan harapan yang berubah.
 ### keywords
-Lamaran dan Pertunangan
+Lamaran,pertunangan,cincin tunangan,keluarga dan pernikahan,persetujuan menikah,tradisi hubungan dunia
 
 ## locale pt-BR
 ### title
 Pedidos de Casamento e Noivados
 ### summary
-Esta página observa Pedidos de Casamento e Noivados a partir das datas, dos vínculos e das diferenças locais. Nenhuma família ou comunidade precisa vivê-lo do mesmo modo.
+Compare pedidos de casamento e noivados em Taiwan, Japão, Estados Unidos, Índia, Indonésia e Brasil, observando alianças, conversa com as famílias, festas, consentimento e expectativas em mudança.
 ### keywords
-Pedidos de Casamento e Noivados
+pedido de casamento,noivado,aliança de noivado,família e casamento,consentimento,relacionamentos pelo mundo

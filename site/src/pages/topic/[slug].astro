@@ -91,7 +91,12 @@ const observances = observancesForFacts(facts)
       || (a.popularity_rank || 99) - (b.popularity_rank || 99)
       || String(a.observance_id).localeCompare(String(b.observance_id));
   });
-const countries = [...new Map(observances.map((o) => [o.country_code, o])).values()];
+// 問答以「每個國家一筆」呈現，避免同一國有多個 observance 時只顯示前幾筆，
+// 也讓新增國家資料會自然進入 FAQ 與頁面可見內容。
+const countries = [...new Set(observances.map((o) => o.country_code).filter(Boolean))]
+  .map((countryCode) => observances.find((o) => o.country_code === countryCode && o.next_occurrence)
+    || observances.find((o) => o.country_code === countryCode))
+  .filter(Boolean);
 const observanceAnchor = (observance) =>
   `observance-${observance.observance_id || `${observance.country_code}-${observance.observance_key || 'default'}`}`;
 // 「你附近／相關活動」是本語系站代表城市的在地資料，不是七市場資料總覽。
@@ -105,9 +110,9 @@ const sourceUrls = [...new Set([
   ...observances.flatMap((observance) => observance.source_urls || []),
   ...observances.flatMap((observance) => observance.next_occurrence?.source_urls || []),
 ])].filter((url) => /^https?:\/\//.test(url));
-const dateAnswer = observances
+const whatAnswer = loc.summary || facts?.commonality || copy.noDate;
+const dateAnswer = countries
   .filter((observance) => observance.next_occurrence)
-  .slice(0, 4)
   .map((observance) => {
     const next = observance.next_occurrence;
     const end = next.ends_on ? `–${calendarDate(next.ends_on)}` : '';
@@ -116,6 +121,14 @@ const dateAnswer = observances
 const whereAnswer = countries.length > 0
   ? countries.map((country) => countryName(country.country_code)).join('、')
   : copy.noDate;
+const differenceAnswer = countries
+  .map((country) => {
+    const text = customsText(i18n, country);
+    return text ? `${countryName(country.country_code)}：${text}` : null;
+  })
+  .filter(Boolean)
+  .join(' ')
+  || (countries.length === 0 ? whatAnswer : copy.noDate);
 const related = relatedTopics(topicId, 4);
 const eventSchema = events.map((event) => ({
   '@type': 'Event',
@@ -136,9 +149,10 @@ const topicSchema = [
   {
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: copy.what, acceptedAnswer: { '@type': 'Answer', text: loc.summary || facts?.commonality || copy.noDate } },
+      { '@type': 'Question', name: copy.what, acceptedAnswer: { '@type': 'Answer', text: whatAnswer } },
       { '@type': 'Question', name: copy.when, acceptedAnswer: { '@type': 'Answer', text: dateAnswer.length ? dateAnswer.join('；') : copy.noDate } },
       { '@type': 'Question', name: copy.where, acceptedAnswer: { '@type': 'Answer', text: whereAnswer } },
+      { '@type': 'Question', name: copy.differences, acceptedAnswer: { '@type': 'Answer', text: differenceAnswer } },
     ],
   },
   ...eventSchema,
@@ -211,7 +225,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
       <dl class="answer-grid">
         <div class="answer-card">
           <dt>{copy.what}</dt>
-          <dd>{loc.summary || facts?.commonality || copy.noDate}</dd>
+          <dd>{whatAnswer}</dd>
         </div>
         <div class="answer-card">
           <dt>{copy.when}</dt>
@@ -220,6 +234,10 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
         <div class="answer-card">
           <dt>{copy.where}</dt>
           <dd>{whereAnswer}</dd>
+        </div>
+        <div class="answer-card">
+          <dt>{copy.differences}</dt>
+          <dd>{differenceAnswer}</dd>
         </div>
       </dl>
     </section>
@@ -680,7 +698,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
 
   @media (min-width: 768px) {
     .answer-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   .country-list {

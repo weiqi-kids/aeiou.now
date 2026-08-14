@@ -11,54 +11,54 @@
 ### title
 畢業季
 ### summary
-這一頁把「畢業季」放在日期、關係與地方差異中比較；我們不預設每個家庭或社群都會用同一種方式參與。
+日本常在春季迎來畢業，美國多在春末初夏，台灣、中國大陸、印度與巴西則受學制與地區影響；典禮、服裝、照片與送禮因此有不同風景。
 ### keywords
-畢業季
+畢業季,畢業典禮,畢業照,畢業禮物,各國學校,升學與就業
 
 ## locale en
 ### title
 Graduation Season
 ### summary
-This guide looks at Graduation Season through dates, relationships, and local differences. It does not assume that every household or community follows the same practice.
+Compare graduation season in Japan, the United States, Taiwan, mainland China, India, and Brazil, where school calendars, ceremonies, clothing, photographs, gifts, and the next step can differ.
 ### keywords
-Graduation Season
+Graduation Season,graduation ceremony,graduation photos,graduation gifts,school calendars around the world
 
 ## locale ja
 ### title
 卒業シーズン
 ### summary
-ここでは「卒業シーズン」を、日付や人間関係、地域差とともに見ていきます。すべての家庭や地域が同じ形で参加するわけではありません。
+日本、米国、台湾、中国大陸、インド、ブラジルの卒業シーズンを比べ、学校暦、式典、服装、写真、贈り物、次の進路の違いを紹介します。
 ### keywords
-卒業シーズン
+卒業シーズン,卒業式,卒業写真,卒業祝い,世界の学校暦,進路
 
 ## locale zh-CN
 ### title
 毕业季
 ### summary
-这一页把“毕业季”放在时间、关系与地区差异中比较；我们不预设每个家庭或社群都会用同一种方式参与。
+日本多在春季毕业，美国常在春末初夏，台湾、中国大陆、印度和巴西则受学制与地区影响；典礼、服装、合照和礼物呈现不同风景。
 ### keywords
-毕业季
+毕业季,毕业典礼,毕业照,毕业礼物,各国学校,升学与就业
 
 ## locale hi
 ### title
 स्नातक मौसम
 ### summary
-यह पृष्ठ स्नातक मौसम को तारीख़, रिश्तों और स्थानीय भिन्नताओं के साथ देखता है। हर परिवार या समुदाय इसे एक ही तरह से नहीं मनाता या निभाता।
+जापान, अमेरिका, ताइवान, चीन, भारत और ब्राज़ील में ग्रेजुएशन सीज़न की तुलना करें—स्कूल कैलेंडर, समारोह, कपड़े, तस्वीरें, उपहार और अगला कदम अलग हो सकते हैं।
 ### keywords
-स्नातक मौसम
+स्नातक मौसम,ग्रेजुएशन समारोह,ग्रेजुएशन फोटो,बधाई उपहार,दुनिया के स्कूल,आगे की पढ़ाई
 
 ## locale id
 ### title
 Musim Kelulusan
 ### summary
-Halaman ini melihat Musim Kelulusan melalui tanggal, hubungan, dan perbedaan setempat. Tidak semua keluarga atau komunitas menjalaninya dengan cara yang sama.
+Bandingkan musim kelulusan di Jepang, Amerika Serikat, Taiwan, Tiongkok, India, dan Brasil melalui kalender sekolah, upacara, pakaian, foto, hadiah, serta langkah berikutnya.
 ### keywords
-Musim Kelulusan
+Musim Kelulusan,upacara kelulusan,foto kelulusan,hadiah kelulusan,kalender sekolah dunia
 
 ## locale pt-BR
 ### title
 Temporada de Formaturas
 ### summary
-Esta página observa Temporada de Formaturas a partir das datas, dos vínculos e das diferenças locais. Nenhuma família ou comunidade precisa vivê-lo do mesmo modo.
+Compare a temporada de formaturas no Japão, Estados Unidos, Taiwan, China continental, Índia e Brasil, observando calendário escolar, cerimônias, roupas, fotos, presentes e próximos caminhos.
 ### keywords
-Temporada de Formaturas
+Temporada de Formaturas,cerimônia de formatura,fotos de formatura,presentes de formatura,escolas pelo mundo

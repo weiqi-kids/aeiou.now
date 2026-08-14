@@ -2,15 +2,445 @@
   "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
   "slug": "labour-day",
   "canonical_name": "Labour Day",
-  "commonality": "understanding Labour Day through work, rest, organising, public history, and different national dates",
-  "category": "work",
+  "commonality": "comparing workers' holidays, labour history, public gatherings, and the different calendars used to recognize work",
+  "category": "civic",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-13T15:06:30.000Z",
+  "updated_at": "2026-08-14T08:08:29.000Z",
   "access_level": 0,
-  "observances": [],
-  "countries": [],
+  "observances": [
+    {
+      "observance_id": "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_BR_dia-do-trabalho",
+      "observance_key": "dia-do-trabalho",
+      "country_code": "BR",
+      "local_name": "Dia do Trabalho",
+      "observed_date": "05-01",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 50,
+      "source_ids": [
+        "src_765E8EDBE7EB19F03AE6EEC0"
+      ],
+      "source_urls": [
+        "https://www.britannica.com/topic/International-Workers-Day"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_BR_dia-do-trabalho_2026_2026-05-01",
+          "occurrence_year": 2026,
+          "starts_on": "2026-05-01",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_765E8EDBE7EB19F03AE6EEC0"
+          ],
+          "source_urls": [
+            "https://www.britannica.com/topic/International-Workers-Day"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_BR_dia-do-trabalho_2027_2027-05-01",
+          "occurrence_year": 2027,
+          "starts_on": "2027-05-01",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_765E8EDBE7EB19F03AE6EEC0"
+          ],
+          "source_urls": [
+            "https://www.britannica.com/topic/International-Workers-Day"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_BR_dia-do-trabalho_2027_2027-05-01",
+        "occurrence_year": 2027,
+        "starts_on": "2027-05-01",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "America/Sao_Paulo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_765E8EDBE7EB19F03AE6EEC0"
+        ],
+        "source_urls": [
+          "https://www.britannica.com/topic/International-Workers-Day"
+        ],
+        "distance_days": 260
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_CN_labour-day",
+      "observance_key": "labour-day",
+      "country_code": "CN",
+      "local_name": "五一勞動節",
+      "observed_date": "05-01",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 20,
+      "source_ids": [
+        "src_765E8EDBE7EB19F03AE6EEC0"
+      ],
+      "source_urls": [
+        "https://www.britannica.com/topic/International-Workers-Day"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_CN_labour-day_2026_2026-05-01",
+          "occurrence_year": 2026,
+          "starts_on": "2026-05-01",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_765E8EDBE7EB19F03AE6EEC0"
+          ],
+          "source_urls": [
+            "https://www.britannica.com/topic/International-Workers-Day"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_CN_labour-day_2027_2027-05-01",
+          "occurrence_year": 2027,
+          "starts_on": "2027-05-01",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_765E8EDBE7EB19F03AE6EEC0"
+          ],
+          "source_urls": [
+            "https://www.britannica.com/topic/International-Workers-Day"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_CN_labour-day_2027_2027-05-01",
+        "occurrence_year": 2027,
+        "starts_on": "2027-05-01",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Shanghai",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_765E8EDBE7EB19F03AE6EEC0"
+        ],
+        "source_urls": [
+          "https://www.britannica.com/topic/International-Workers-Day"
+        ],
+        "distance_days": 260
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_ID_hari-buruh",
+      "observance_key": "hari-buruh",
+      "country_code": "ID",
+      "local_name": "Hari Buruh",
+      "observed_date": "05-01",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 40,
+      "source_ids": [
+        "src_765E8EDBE7EB19F03AE6EEC0"
+      ],
+      "source_urls": [
+        "https://www.britannica.com/topic/International-Workers-Day"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_ID_hari-buruh_2026_2026-05-01",
+          "occurrence_year": 2026,
+          "starts_on": "2026-05-01",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_765E8EDBE7EB19F03AE6EEC0"
+          ],
+          "source_urls": [
+            "https://www.britannica.com/topic/International-Workers-Day"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_ID_hari-buruh_2027_2027-05-01",
+          "occurrence_year": 2027,
+          "starts_on": "2027-05-01",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_765E8EDBE7EB19F03AE6EEC0"
+          ],
+          "source_urls": [
+            "https://www.britannica.com/topic/International-Workers-Day"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_ID_hari-buruh_2027_2027-05-01",
+        "occurrence_year": 2027,
+        "starts_on": "2027-05-01",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Jakarta",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_765E8EDBE7EB19F03AE6EEC0"
+        ],
+        "source_urls": [
+          "https://www.britannica.com/topic/International-Workers-Day"
+        ],
+        "distance_days": 260
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_IN_labour-day",
+      "observance_key": "labour-day",
+      "country_code": "IN",
+      "local_name": "Labour Day",
+      "observed_date": "05-01",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 30,
+      "source_ids": [
+        "src_765E8EDBE7EB19F03AE6EEC0"
+      ],
+      "source_urls": [
+        "https://www.britannica.com/topic/International-Workers-Day"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_IN_labour-day_2026_2026-05-01",
+          "occurrence_year": 2026,
+          "starts_on": "2026-05-01",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_765E8EDBE7EB19F03AE6EEC0"
+          ],
+          "source_urls": [
+            "https://www.britannica.com/topic/International-Workers-Day"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_IN_labour-day_2027_2027-05-01",
+          "occurrence_year": 2027,
+          "starts_on": "2027-05-01",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_765E8EDBE7EB19F03AE6EEC0"
+          ],
+          "source_urls": [
+            "https://www.britannica.com/topic/International-Workers-Day"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_IN_labour-day_2027_2027-05-01",
+        "occurrence_year": 2027,
+        "starts_on": "2027-05-01",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Kolkata",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_765E8EDBE7EB19F03AE6EEC0"
+        ],
+        "source_urls": [
+          "https://www.britannica.com/topic/International-Workers-Day"
+        ],
+        "distance_days": 260
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_TW_labour-day",
+      "observance_key": "labour-day",
+      "country_code": "TW",
+      "local_name": "勞動節",
+      "observed_date": "05-01",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 10,
+      "source_ids": [
+        "src_75CFC0B2BA442C9AE05D2030"
+      ],
+      "source_urls": [
+        "https://www.dgpa.gov.tw/information?pid=12580&uid=353"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_TW_labour-day_2026_2026-05-01",
+          "occurrence_year": 2026,
+          "starts_on": "2026-05-01",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_75CFC0B2BA442C9AE05D2030"
+          ],
+          "source_urls": [
+            "https://www.dgpa.gov.tw/information?pid=12580&uid=353"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_TW_labour-day_2027_2027-05-01",
+          "occurrence_year": 2027,
+          "starts_on": "2027-05-01",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_75CFC0B2BA442C9AE05D2030"
+          ],
+          "source_urls": [
+            "https://www.dgpa.gov.tw/information?pid=12580&uid=353"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_TW_labour-day_2027_2027-05-01",
+        "occurrence_year": 2027,
+        "starts_on": "2027-05-01",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Taipei",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_75CFC0B2BA442C9AE05D2030"
+        ],
+        "source_urls": [
+          "https://www.dgpa.gov.tw/information?pid=12580&uid=353"
+        ],
+        "distance_days": 260
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_US_labor-day",
+      "observance_key": "labor-day",
+      "country_code": "US",
+      "local_name": "Labor Day",
+      "observed_date": null,
+      "date_rule": "9 月第一個星期一",
+      "date_range_end": null,
+      "popularity_rank": 60,
+      "source_ids": [
+        "src_F936765E8EFFBF4BDCD32B47"
+      ],
+      "source_urls": [
+        "https://www.usa.gov/holidays"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_US_labor-day_2026_2026-09-07",
+          "occurrence_year": 2026,
+          "starts_on": "2026-09-07",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_F936765E8EFFBF4BDCD32B47"
+          ],
+          "source_urls": [
+            "https://www.usa.gov/holidays"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_US_labor-day_2027_2027-09-06",
+          "occurrence_year": 2027,
+          "starts_on": "2027-09-06",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_F936765E8EFFBF4BDCD32B47"
+          ],
+          "source_urls": [
+            "https://www.usa.gov/holidays"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_US_labor-day_2026_2026-09-07",
+        "occurrence_year": 2026,
+        "starts_on": "2026-09-07",
+        "ends_on": null,
+        "calendar_system": "local",
+        "timezone": "America/New_York",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_F936765E8EFFBF4BDCD32B47"
+        ],
+        "source_urls": [
+          "https://www.usa.gov/holidays"
+        ],
+        "distance_days": 24
+      }
+    }
+  ],
+  "countries": [
+    {
+      "country_code": "BR",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_BR_dia-do-trabalho"
+      ]
+    },
+    {
+      "country_code": "CN",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_CN_labour-day"
+      ]
+    },
+    {
+      "country_code": "ID",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_ID_hari-buruh"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_IN_labour-day"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_TW_labour-day"
+      ]
+    },
+    {
+      "country_code": "US",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_US_labor-day"
+      ]
+    }
+  ],
   "relations": [],
-  "source_ids": [],
-  "source_urls": []
+  "source_ids": [
+    "src_75CFC0B2BA442C9AE05D2030",
+    "src_765E8EDBE7EB19F03AE6EEC0",
+    "src_F936765E8EFFBF4BDCD32B47"
+  ],
+  "source_urls": [
+    "https://www.dgpa.gov.tw/information?pid=12580&uid=353",
+    "https://www.britannica.com/topic/International-Workers-Day",
+    "https://www.usa.gov/holidays"
+  ]
 }

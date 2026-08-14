@@ -3,53 +3,145 @@
   "locales": {
     "zh-TW": {
       "title": "勞動節",
-      "summary": "這一頁把「勞動節」放在日期、關係與地方差異中比較；我們不預設每個家庭或社群都會用同一種方式參與。",
+      "summary": "台灣、中國大陸、印度、印尼與巴西多在 5 月 1 日談勞動與休假，美國則在 9 月第一個星期一；遊行、工會記憶與家庭休閒各有地方脈絡。",
       "keywords": [
-        "勞動節"
+        "勞動節",
+        "五一勞動節",
+        "國際勞動節",
+        "Labor Day",
+        "Hari Buruh",
+        "Dia do Trabalho",
+        "勞工權益"
       ]
     },
     "en": {
-      "title": "Labour Day",
-      "summary": "This guide looks at Labour Day through dates, relationships, and local differences. It does not assume that every household or community follows the same practice.",
+      "title": "Labour Day and Labor Day",
+      "summary": "Taiwan, mainland China, India, Indonesia, and Brazil generally mark workers on May 1, while the United States observes Labor Day on the first Monday in September. Compare public life, labour history, and time off.",
       "keywords": [
-        "Labour Day"
+        "Labour Day",
+        "Labor Day",
+        "May Day",
+        "International Workers' Day",
+        "Hari Buruh",
+        "Dia do Trabalho",
+        "workers' rights"
       ]
     },
     "ja": {
-      "title": "労働の日",
-      "summary": "ここでは「労働の日」を、日付や人間関係、地域差とともに見ていきます。すべての家庭や地域が同じ形で参加するわけではありません。",
+      "title": "メーデーとレイバー・デー",
+      "summary": "台湾、中国大陸、インド、インドネシア、ブラジルは主に5月1日、米国は9月第1月曜日に労働を記念します。休日、集会、労働史の地域差を比べます。",
       "keywords": [
-        "労働の日"
+        "メーデー",
+        "労働節",
+        "レイバーデー",
+        "国際労働者の日",
+        "Hari Buruh",
+        "労働者の権利"
       ]
     },
     "zh-CN": {
       "title": "劳动节",
-      "summary": "这一页把“劳动节”放在时间、关系与地区差异中比较；我们不预设每个家庭或社群都会用同一种方式参与。",
+      "summary": "台湾、中国大陆、印度、印度尼西亚和巴西多在 5 月 1 日纪念劳动，美国则在 9 月第一个星期一；不同地区的游行、工会记忆和休闲方式各不相同。",
       "keywords": [
-        "劳动节"
+        "劳动节",
+        "五一劳动节",
+        "国际劳动节",
+        "Labor Day",
+        "Hari Buruh",
+        "劳动者权益"
       ]
     },
     "hi": {
-      "title": "मजदूर दिवस",
-      "summary": "यह पृष्ठ मजदूर दिवस को तारीख़, रिश्तों और स्थानीय भिन्नताओं के साथ देखता है। हर परिवार या समुदाय इसे एक ही तरह से नहीं मनाता या निभाता।",
+      "title": "मज़दूर दिवस",
+      "summary": "ताइवान, चीन, भारत, इंडोनेशिया और ब्राज़ील में मज़दूर दिवस आम तौर पर 1 मई को, जबकि अमेरिका में सितंबर के पहले सोमवार को मनाया जाता है।",
       "keywords": [
-        "मजदूर दिवस"
+        "मज़दूर दिवस",
+        "श्रम दिवस",
+        "May Day",
+        "Labor Day",
+        "Hari Buruh",
+        "श्रमिक अधिकार"
       ]
     },
     "id": {
       "title": "Hari Buruh",
-      "summary": "Halaman ini melihat Hari Buruh melalui tanggal, hubungan, dan perbedaan setempat. Tidak semua keluarga atau komunitas menjalaninya dengan cara yang sama.",
+      "summary": "Taiwan, Tiongkok, India, Indonesia, dan Brasil umumnya memperingati pekerja pada 1 Mei, sedangkan Amerika Serikat merayakan Labor Day pada Senin pertama September.",
       "keywords": [
-        "Hari Buruh"
+        "Hari Buruh",
+        "May Day",
+        "Labor Day",
+        "Hari Buruh Indonesia",
+        "Dia do Trabalho",
+        "hak pekerja"
       ]
     },
     "pt-BR": {
-      "title": "Dia do Trabalho",
-      "summary": "Esta página observa Dia do Trabalho a partir das datas, dos vínculos e das diferenças locais. Nenhuma família ou comunidade precisa vivê-lo do mesmo modo.",
+      "title": "Dia do Trabalho e Labor Day",
+      "summary": "Taiwan, China continental, Índia, Indonésia e Brasil costumam marcar o trabalho em 1º de maio; os Estados Unidos celebram o Labor Day na primeira segunda-feira de setembro.",
       "keywords": [
-        "Dia do Trabalho"
+        "Dia do Trabalho",
+        "Labor Day",
+        "1º de maio",
+        "Hari Buruh",
+        "direitos trabalhistas",
+        "Dia do Trabalho no Brasil"
       ]
     }
   },
-  "observances": {}
+  "observances": {
+    "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_BR_dia-do-trabalho": {
+      "zh-TW": "巴西 Dia do Trabalho 可能有工會活動、公共文化節目與家庭休閒，勞動歷史仍是重要背景。",
+      "en": "Brazil’s Dia do Trabalho can include union events, public cultural programs, and family leisure, grounded in a long labour history.",
+      "ja": "ブラジルのDia do Trabalhoには労組行事、文化プログラム、家族の余暇があり、労働史が背景にあります。",
+      "zh-CN": "巴西劳动节可能有工会活动、公共文化节目和家庭休闲，劳动历史是重要背景。",
+      "hi": "ब्राज़ील में Dia do Trabalho पर यूनियन कार्यक्रम, सांस्कृतिक आयोजन और पारिवारिक समय श्रम इतिहास से जुड़े रहते हैं।",
+      "id": "Di Brasil, Dia do Trabalho dapat menghadirkan kegiatan serikat, acara budaya, dan waktu bersama keluarga dengan latar sejarah buruh.",
+      "pt-BR": "No Brasil, o Dia do Trabalho pode incluir atos sindicais, programação cultural e descanso em família, ligado à história trabalhista."
+    },
+    "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_CN_labour-day": {
+      "zh-TW": "中國大陸的五一假期常帶動跨城市旅遊與家庭出行，也連結勞動者與工業發展的公共敘事。",
+      "en": "Mainland China’s May Day holiday often brings intercity travel and family outings alongside public stories about workers and industrial development.",
+      "ja": "中国大陸の五一休暇は旅行や家族の外出が増え、労働者と産業発展の物語とも結び付きます。",
+      "zh-CN": "中国大陆五一假期常带动跨城旅游和家庭出行，也连接劳动者与工业发展的公共叙事。",
+      "hi": "चीन में मई दिवस की छुट्टी यात्रा और पारिवारिक बाहर जाने के साथ श्रमिकों व औद्योगिक विकास की सार्वजनिक स्मृति से जुड़ती है।",
+      "id": "Di Tiongkok, libur May Day mendorong perjalanan antarkota dan kegiatan keluarga, sekaligus membawa narasi publik tentang pekerja dan industri.",
+      "pt-BR": "Na China continental, o feriado de maio estimula viagens entre cidades e passeios em família, junto à memória pública do trabalho e da indústria."
+    },
+    "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_ID_hari-buruh": {
+      "zh-TW": "印尼 Hari Buruh 常見工人集會、勞動權益倡議與公共討論，城市之間的活動規模不一。",
+      "en": "Indonesia’s Hari Buruh may include worker rallies, labour-rights advocacy, and public discussion, with different scales across cities.",
+      "ja": "インドネシアのHari Buruhでは、労働者の集会、権利の主張、公開討論などが都市ごとに行われます。",
+      "zh-CN": "印度尼西亚 Hari Buruh 常见工人集会、劳动权益倡议和公共讨论，城市规模并不一样。",
+      "hi": "इंडोनेशिया में Hari Buruh पर रैलियाँ, श्रम अधिकारों की माँग और सार्वजनिक चर्चा होती है, जिसका आकार शहर के अनुसार बदलता है।",
+      "id": "Hari Buruh di Indonesia sering diisi aksi pekerja, advokasi hak buruh, dan diskusi publik dengan skala yang berbeda antar kota.",
+      "pt-BR": "Na Indonésia, o Hari Buruh pode reunir manifestações, defesa de direitos e debates públicos, com escalas diferentes entre cidades."
+    },
+    "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_IN_labour-day": {
+      "zh-TW": "印度各州有不同的勞動節活動，工會、勞工團體與地方政府可能舉辦集會或宣導。",
+      "en": "India’s Labour Day activities vary by state; unions, worker groups, and local governments may hold meetings or awareness events.",
+      "ja": "インドでは州ごとに行事が異なり、労組や労働者団体、自治体が集会や啓発活動を行うことがあります。",
+      "zh-CN": "印度各邦的劳动节活动不同，工会、劳工团体和地方政府可能组织集会或宣传活动。",
+      "hi": "भारत में राज्यों के अनुसार कार्यक्रम बदलते हैं; यूनियन और श्रमिक संगठन सभाएँ या जागरूकता कार्यक्रम कर सकते हैं।",
+      "id": "Di India, kegiatan Hari Buruh berbeda menurut negara bagian; serikat pekerja dan pemerintah daerah dapat mengadakan pertemuan atau kampanye.",
+      "pt-BR": "Na Índia, as atividades variam por estado; sindicatos, grupos de trabalhadores e governos locais podem organizar atos e campanhas."
+    },
+    "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_TW_labour-day": {
+      "zh-TW": "台灣勞動節常被視為勞工休假與權益議題的節點，但不同職業、雇主與排班制度的休假並不相同。",
+      "en": "In Taiwan, May 1 can be a workers’ day off and a moment to discuss labour rights, but schedules differ by occupation and employer.",
+      "ja": "台湾の5月1日は労働者の休日や労働権を考える日ですが、職種や勤務先で休み方が異なります。",
+      "zh-CN": "台湾劳动节既是部分劳动者的休假节点，也常引发对劳动权益与排班差异的讨论。",
+      "hi": "ताइवान में 1 मई कामगारों की छुट्टी और श्रम अधिकारों पर बातचीत का अवसर हो सकता है, पर छुट्टी पेशे और नियोक्ता पर निर्भर है।",
+      "id": "Di Taiwan, 1 Mei dapat menjadi hari libur pekerja dan kesempatan membahas hak buruh, tetapi jadwal berbeda menurut pekerjaan dan pemberi kerja.",
+      "pt-BR": "Em Taiwan, 1º de maio pode ser folga para trabalhadores e momento de discutir direitos, mas a escala depende da profissão e do empregador."
+    },
+    "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_US_labor-day": {
+      "zh-TW": "美國 Labor Day 是 9 月第一個星期一，常被當作夏季尾聲的家庭休閒假日，也保留勞工運動記憶。",
+      "en": "The United States observes Labor Day on the first Monday in September; it is both a workers’ holiday and a late-summer leisure weekend.",
+      "ja": "米国のレイバー・デーは9月第1月曜日で、労働運動の記憶と夏の終わりの連休が重なります。",
+      "zh-CN": "美国劳动节在 9 月第一个星期一，既是劳动者节日，也常被视为夏季末的休闲周末。",
+      "hi": "अमेरिका में Labor Day सितंबर के पहले सोमवार को होता है और श्रमिक स्मृति के साथ गर्मियों के अंत की छुट्टी भी है।",
+      "id": "Amerika Serikat merayakan Labor Day pada Senin pertama September sebagai hari pekerja sekaligus akhir pekan rekreasi musim panas.",
+      "pt-BR": "Nos Estados Unidos, o Labor Day ocorre na primeira segunda-feira de setembro e combina homenagem aos trabalhadores com o fim do verão."
+    }
+  }
 }

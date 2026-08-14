@@ -2,15 +2,235 @@
   "topic_id": "top_01KZXQ6BR8KM720981PCZBPYFQ",
   "slug": "dragon-boat-festival",
   "canonical_name": "Dragon Boat Festival",
-  "commonality": "linking dragon-boat races, rice dumplings, seasonal health, and regional memory",
-  "category": "festival",
+  "commonality": "comparing dragon boat traditions, rice dumplings, water rituals, and the different meanings attached to the fifth lunar month",
+  "category": "seasonal",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-13T15:06:30.000Z",
+  "updated_at": "2026-08-14T08:08:29.000Z",
   "access_level": 0,
-  "observances": [],
-  "countries": [],
+  "observances": [
+    {
+      "observance_id": "obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_duanwu",
+      "observance_key": "duanwu",
+      "country_code": "CN",
+      "local_name": "端午節",
+      "observed_date": null,
+      "date_rule": "農曆五月初五，公曆日期每年不同",
+      "date_range_end": null,
+      "popularity_rank": 20,
+      "source_ids": [
+        "src_E405440D6A7FBA9FBC2398FD"
+      ],
+      "source_urls": [
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_duanwu_2026_2026-06-19",
+          "occurrence_year": 2026,
+          "starts_on": "2026-06-19",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E405440D6A7FBA9FBC2398FD"
+          ],
+          "source_urls": [
+            "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_duanwu_2027_2027-06-09",
+          "occurrence_year": 2027,
+          "starts_on": "2027-06-09",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_509D6FE3CDE66C39605277AB"
+          ],
+          "source_urls": [
+            "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_duanwu_2027_2027-06-09",
+        "occurrence_year": 2027,
+        "starts_on": "2027-06-09",
+        "ends_on": null,
+        "calendar_system": "chinese-lunisolar",
+        "timezone": "Asia/Shanghai",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_509D6FE3CDE66C39605277AB"
+        ],
+        "source_urls": [
+          "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf"
+        ],
+        "distance_days": 299
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BR8KM720981PCZBPYFQ_JP_tango-no-sekku",
+      "observance_key": "tango-no-sekku",
+      "country_code": "JP",
+      "local_name": "端午の節句／こどもの日",
+      "observed_date": "05-05",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 30,
+      "source_ids": [
+        "src_896FE82C2D1B93867E0BB2D7"
+      ],
+      "source_urls": [
+        "https://www.japan.travel/en/see-and-do/festivals-and-events/"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_JP_tango-no-sekku_2026_2026-05-05",
+          "occurrence_year": 2026,
+          "starts_on": "2026-05-05",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_896FE82C2D1B93867E0BB2D7"
+          ],
+          "source_urls": [
+            "https://www.japan.travel/en/see-and-do/festivals-and-events/"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_JP_tango-no-sekku_2027_2027-05-05",
+          "occurrence_year": 2027,
+          "starts_on": "2027-05-05",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_896FE82C2D1B93867E0BB2D7"
+          ],
+          "source_urls": [
+            "https://www.japan.travel/en/see-and-do/festivals-and-events/"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_JP_tango-no-sekku_2027_2027-05-05",
+        "occurrence_year": 2027,
+        "starts_on": "2027-05-05",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Tokyo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_896FE82C2D1B93867E0BB2D7"
+        ],
+        "source_urls": [
+          "https://www.japan.travel/en/see-and-do/festivals-and-events/"
+        ],
+        "distance_days": 264
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BR8KM720981PCZBPYFQ_TW_duanwu",
+      "observance_key": "duanwu",
+      "country_code": "TW",
+      "local_name": "端午節",
+      "observed_date": null,
+      "date_rule": "農曆五月初五，公曆日期每年不同",
+      "date_range_end": null,
+      "popularity_rank": 10,
+      "source_ids": [
+        "src_E405440D6A7FBA9FBC2398FD"
+      ],
+      "source_urls": [
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_TW_duanwu_2026_2026-06-19",
+          "occurrence_year": 2026,
+          "starts_on": "2026-06-19",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E405440D6A7FBA9FBC2398FD"
+          ],
+          "source_urls": [
+            "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_TW_duanwu_2027_2027-06-09",
+          "occurrence_year": 2027,
+          "starts_on": "2027-06-09",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_509D6FE3CDE66C39605277AB"
+          ],
+          "source_urls": [
+            "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_TW_duanwu_2027_2027-06-09",
+        "occurrence_year": 2027,
+        "starts_on": "2027-06-09",
+        "ends_on": null,
+        "calendar_system": "chinese-lunisolar",
+        "timezone": "Asia/Taipei",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_509D6FE3CDE66C39605277AB"
+        ],
+        "source_urls": [
+          "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf"
+        ],
+        "distance_days": 299
+      }
+    }
+  ],
+  "countries": [
+    {
+      "country_code": "CN",
+      "observance_ids": [
+        "obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_duanwu"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "observance_ids": [
+        "obs_top_01KZXQ6BR8KM720981PCZBPYFQ_JP_tango-no-sekku"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "observance_ids": [
+        "obs_top_01KZXQ6BR8KM720981PCZBPYFQ_TW_duanwu"
+      ]
+    }
+  ],
   "relations": [],
-  "source_ids": [],
-  "source_urls": []
+  "source_ids": [
+    "src_509D6FE3CDE66C39605277AB",
+    "src_896FE82C2D1B93867E0BB2D7",
+    "src_E405440D6A7FBA9FBC2398FD"
+  ],
+  "source_urls": [
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+    "https://www.japan.travel/en/see-and-do/festivals-and-events/",
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+  ]
 }

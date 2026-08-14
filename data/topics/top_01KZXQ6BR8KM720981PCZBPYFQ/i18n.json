@@ -3,53 +3,114 @@
   "locales": {
     "zh-TW": {
       "title": "端午節",
-      "summary": "這一頁把「端午節」放在日期、關係與地方差異中比較；我們不預設每個家庭或社群都會用同一種方式參與。",
+      "summary": "比較台灣、中國大陸與日本的端午風景：同樣可以看到粽子、菖蒲或水上活動，但農曆節期、祈福對象與家庭做法並不相同。",
       "keywords": [
-        "端午節"
+        "端午節",
+        "端午節日期",
+        "粽子",
+        "龍舟",
+        "端午節習俗",
+        "日本端午"
       ]
     },
     "en": {
       "title": "Dragon Boat Festival",
-      "summary": "This guide looks at Dragon Boat Festival through dates, relationships, and local differences. It does not assume that every household or community follows the same practice.",
+      "summary": "Explore Dragon Boat traditions in Taiwan, mainland China, and Japan, where rice dumplings, iris symbolism, and boat races connect to different calendars and ideas of protection.",
       "keywords": [
-        "Dragon Boat Festival"
+        "Dragon Boat Festival",
+        "Taiwan Dragon Boat Festival",
+        "Duanwu",
+        "Zongzi",
+        "Kodomo no Hi",
+        "dragon boat customs"
       ]
     },
     "ja": {
-      "title": "端午節",
-      "summary": "ここでは「端午節」を、日付や人間関係、地域差とともに見ていきます。すべての家庭や地域が同じ形で参加するわけではありません。",
+      "title": "端午節と端午の節句",
+      "summary": "台湾、中国大陸、日本の端午を比べ、粽、菖蒲、龍舟がそれぞれの暦や子どもの成長祈願とどう結び付くかを紹介します。",
       "keywords": [
-        "端午節"
+        "端午節",
+        "端午の節句",
+        "こどもの日",
+        "粽",
+        "鯉のぼり",
+        "龍舟"
       ]
     },
     "zh-CN": {
       "title": "端午节",
-      "summary": "这一页把“端午节”放在时间、关系与地区差异中比较；我们不预设每个家庭或社群都会用同一种方式参与。",
+      "summary": "比较台湾、中国大陆和日本的端午风景：粽子、菖蒲和水上活动背后，分别连接着农历节期、地方记忆与儿童成长祝愿。",
       "keywords": [
-        "端午节"
+        "端午节",
+        "端午节日期",
+        "粽子",
+        "赛龙舟",
+        "端午习俗",
+        "日本端午"
       ]
     },
     "hi": {
       "title": "ड्रैगन बोट उत्सव",
-      "summary": "यह पृष्ठ ड्रैगन बोट उत्सव को तारीख़, रिश्तों और स्थानीय भिन्नताओं के साथ देखता है। हर परिवार या समुदाय इसे एक ही तरह से नहीं मनाता या निभाता।",
+      "summary": "यह पृष्ठ ताइवान, चीन और जापान के ड्रैगन बोट परंपराओं की तुलना करता है—चंद्र कैलेंडर, चावल के पकवान, जल-खेल और बच्चों के लिए शुभकामनाओं के साथ।",
       "keywords": [
-        "ड्रैगन बोट उत्सव"
+        "ड्रैगन बोट उत्सव",
+        "डुआनवू",
+        "ताइवान त्योहार",
+        "जापान बाल दिवस",
+        "चावल के पकवान"
       ]
     },
     "id": {
-      "title": "Festival Duanwu",
-      "summary": "Halaman ini melihat Festival Duanwu melalui tanggal, hubungan, dan perbedaan setempat. Tidak semua keluarga atau komunitas menjalaninya dengan cara yang sama.",
+      "title": "Festival Perahu Naga",
+      "summary": "Bandingkan tradisi Duanwu di Taiwan, Tiongkok, dan Jepang: kalender lunar, bacang, simbol iris, lomba perahu, dan harapan untuk pertumbuhan anak hadir dalam bentuk yang berbeda.",
       "keywords": [
-        "Festival Duanwu"
+        "Festival Perahu Naga",
+        "Duanwu",
+        "Taiwan",
+        "bacang",
+        "festival Jepang",
+        "dragon boat"
       ]
     },
     "pt-BR": {
-      "title": "Festival do Barco-Dragão",
-      "summary": "Esta página observa Festival do Barco-Dragão a partir das datas, dos vínculos e das diferenças locais. Nenhuma família ou comunidade precisa vivê-lo do mesmo modo.",
+      "title": "Festival das Barcas-Dragão",
+      "summary": "Veja como Taiwan, China continental e Japão transformam tradições do quinto mês lunar em comidas, corridas na água, símbolos de proteção e celebrações da infância.",
       "keywords": [
-        "Festival do Barco-Dragão"
+        "Festival das Barcas-Dragão",
+        "Duanwu",
+        "festival de Taiwan",
+        "zongzi",
+        "Dia das Crianças no Japão"
       ]
     }
   },
-  "observances": {}
+  "observances": {
+    "obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_duanwu": {
+      "zh-TW": "中國大陸各地有粽子、龍舟競賽與紀念屈原的敘事，地方口味與活動規模差異很大。",
+      "en": "Across mainland China, zongzi, dragon boat races, and stories of Qu Yuan appear in many local forms and flavors.",
+      "ja": "中国大陸では粽、龍舟、屈原の物語が広く知られていますが、味や行事の規模は地域で異なります。",
+      "zh-CN": "中国大陆各地会吃粽子、赛龙舟，并讲述屈原故事；口味、仪式和活动规模并不一样。",
+      "hi": "चीन में ज़ोंग्ज़ी, ड्रैगन बोट और चू युआन की कथा लोकप्रिय हैं, लेकिन स्थानीय स्वाद और आयोजन अलग होते हैं।",
+      "id": "Di Tiongkok, zongzi, lomba perahu naga, dan kisah Qu Yuan dikenal luas, dengan rasa dan skala acara yang berbeda menurut daerah.",
+      "pt-BR": "Na China continental, zongzi, corridas e a memória de Qu Yuan aparecem com sabores e rituais que variam por região."
+    },
+    "obs_top_01KZXQ6BR8KM720981PCZBPYFQ_JP_tango-no-sekku": {
+      "zh-TW": "日本的 5 月 5 日已是兒童節，菖蒲浴、鯉魚旗與柏餅把端午意象轉成祝福孩子成長。",
+      "en": "Japan’s May 5 holiday is now Children’s Day; iris baths, carp streamers, and kashiwa mochi carry forward seasonal symbolism.",
+      "ja": "日本の5月5日はこどもの日として、菖蒲湯、鯉のぼり、柏餅で子どもの健やかな成長を願います。",
+      "zh-CN": "日本 5 月 5 日以儿童节为主，菖蒲浴、鲤鱼旗和柏饼保留了季节性的祝福意味。",
+      "hi": "जापान में 5 मई बाल दिवस है; आइरिस स्नान, कार्प झंडे और काशीवा मोची बच्चों के स्वस्थ विकास का संकेत देते हैं।",
+      "id": "Di Jepang, 5 Mei adalah Hari Anak; mandi iris, koinobori, dan kashiwa mochi membawa doa bagi pertumbuhan anak.",
+      "pt-BR": "No Japão, 5 de maio é o Dia das Crianças; banho de íris, carpas e kashiwa mochi desejam saúde aos pequenos."
+    },
+    "obs_top_01KZXQ6BR8KM720981PCZBPYFQ_TW_duanwu": {
+      "zh-TW": "台灣端午常見包粽子、划龍舟、掛艾草與立蛋，家庭也會關心當年的農曆日期。",
+      "en": "Taiwanese families may make zongzi, watch dragon boat races, hang herbs, and check the lunar date for the holiday.",
+      "ja": "台湾では粽を食べ、龍舟競漕を見たり、艾草を飾ったりしながら、旧暦の日付を意識して過ごします。",
+      "zh-CN": "台湾端午常见包粽子、赛龙舟、挂艾草和立蛋，家庭也会留意每年的农历日期。",
+      "hi": "ताइवान में ज़ोंग्ज़ी, ड्रैगन बोट दौड़, औषधीय पौधे और चंद्र तिथि इस त्योहार का हिस्सा हैं।",
+      "id": "Di Taiwan, keluarga membuat zongzi, menonton lomba perahu naga, menggantung tanaman herbal, dan mengikuti tanggal lunar.",
+      "pt-BR": "Em Taiwan, famílias fazem zongzi, acompanham corridas de barcos-dragão, penduram ervas e consultam o calendário lunar."
+    }
+  }
 }

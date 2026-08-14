@@ -3,53 +3,132 @@
   "locales": {
     "zh-TW": {
       "title": "兒童節",
-      "summary": "這一頁把「兒童節」放在日期、關係與地方差異中比較；我們不預設每個家庭或社群都會用同一種方式參與。",
+      "summary": "這一頁比較台灣 4 月 4 日、日本 5 月 5 日、中國大陸 6 月 1 日、印度 11 月 14 日與巴西 10 月 12 日的兒童節，從校園活動、親子出遊與兒童權利看各地差異。",
       "keywords": [
-        "兒童節"
+        "兒童節",
+        "六一兒童節",
+        "こどもの日",
+        "बाल दिवस",
+        "Dia das Crianças",
+        "兒童權利",
+        "親子活動"
       ]
     },
     "en": {
       "title": "Children's Day",
-      "summary": "This guide looks at Children's Day through dates, relationships, and local differences. It does not assume that every household or community follows the same practice.",
+      "summary": "Compare Children’s Day in Taiwan, Japan, mainland China, India, and Brazil: the dates, school traditions, family activities, and different ways communities put children at the center.",
       "keywords": [
-        "Children's Day"
+        "Children's Day",
+        "Children's Day Taiwan",
+        "Kodomo no Hi",
+        "India Children's Day",
+        "Brazil Children's Day"
       ]
     },
     "ja": {
       "title": "こどもの日",
-      "summary": "ここでは「こどもの日」を、日付や人間関係、地域差とともに見ていきます。すべての家庭や地域が同じ形で参加するわけではありません。",
+      "summary": "台湾、日本、中国大陸、インド、ブラジルの子どもの日を比べ、日付、学校行事、家族の過ごし方、子どもの権利をめぐる地域差を紹介します。",
       "keywords": [
-        "こどもの日"
+        "こどもの日",
+        "子どもの日",
+        "台湾 兒童節",
+        "インド 子どもの日",
+        "ブラジル 子どもの日"
       ]
     },
     "zh-CN": {
       "title": "儿童节",
-      "summary": "这一页把“儿童节”放在时间、关系与地区差异中比较；我们不预设每个家庭或社群都会用同一种方式参与。",
+      "summary": "比较台湾 4 月 4 日、日本 5 月 5 日、中国大陆 6 月 1 日、印度 11 月 14 日和巴西 10 月 12 日的儿童节，看学校、家庭与儿童权利如何形成不同风景。",
       "keywords": [
-        "儿童节"
+        "儿童节",
+        "六一儿童节",
+        "こどもの日",
+        "印度儿童节",
+        "巴西儿童节",
+        "儿童权利"
       ]
     },
     "hi": {
       "title": "बाल दिवस",
-      "summary": "यह पृष्ठ बाल दिवस को तारीख़, रिश्तों और स्थानीय भिन्नताओं के साथ देखता है। हर परिवार या समुदाय इसे एक ही तरह से नहीं मनाता या निभाता।",
+      "summary": "यह पृष्ठ ताइवान, जापान, चीन, भारत और ब्राज़ील के बाल दिवस की तारीख़ों, स्कूल कार्यक्रमों, पारिवारिक गतिविधियों और बच्चों के अधिकारों की स्थानीय भिन्नताओं को साथ रखता है।",
       "keywords": [
-        "बाल दिवस"
+        "बाल दिवस",
+        "भारत बाल दिवस",
+        "जापान बाल दिवस",
+        "चीन बाल दिवस",
+        "ब्राज़ील बाल दिवस",
+        "बाल अधिकार"
       ]
     },
     "id": {
       "title": "Hari Anak",
-      "summary": "Halaman ini melihat Hari Anak melalui tanggal, hubungan, dan perbedaan setempat. Tidak semua keluarga atau komunitas menjalaninya dengan cara yang sama.",
+      "summary": "Bandingkan Hari Anak di Taiwan, Jepang, Tiongkok, India, dan Brasil: tanggalnya, kegiatan sekolah, waktu bersama keluarga, serta cara setempat membicarakan hak anak.",
       "keywords": [
-        "Hari Anak"
+        "Hari Anak",
+        "Hari Anak Taiwan",
+        "Hari Anak Jepang",
+        "Hari Anak India",
+        "Hari Anak Brasil",
+        "hak anak"
       ]
     },
     "pt-BR": {
       "title": "Dia das Crianças",
-      "summary": "Esta página observa Dia das Crianças a partir das datas, dos vínculos e das diferenças locais. Nenhuma família ou comunidade precisa vivê-lo do mesmo modo.",
+      "summary": "Compare o Dia das Crianças em Taiwan, Japão, China continental, Índia e Brasil, observando datas, atividades escolares, passeios em família e diferentes conversas sobre direitos das crianças.",
       "keywords": [
-        "Dia das Crianças"
+        "Dia das Crianças",
+        "Dia das Crianças no Brasil",
+        "Children's Day Japan",
+        "Dia das Crianças na Índia",
+        "direitos da criança"
       ]
     }
   },
-  "observances": {}
+  "observances": {
+    "obs_top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV_BR_dia-das-criancas": {
+      "zh-TW": "巴西兒童節在 10 月 12 日，家庭常準備禮物、遊戲與戶外活動，商店也會推出兒童主題促銷。",
+      "en": "Brazil celebrates Children’s Day on October 12 with gifts, games, family outings, and child-focused promotions.",
+      "ja": "ブラジルでは10月12日にプレゼントや遊び、家族のお出かけを楽しみ、子ども向けの催しも増えます。",
+      "zh-CN": "巴西儿童节常以送礼、游戏、家庭出游和儿童主题活动庆祝，商业气氛也较明显。",
+      "hi": "ब्राज़ील में 12 अक्टूबर को बच्चों को उपहार, खेल और परिवार के साथ घूमने का आनंद दिया जाता है।",
+      "id": "Di Brasil, 12 Oktober dirayakan dengan hadiah, permainan, jalan-jalan keluarga, dan acara khusus anak.",
+      "pt-BR": "No Brasil, 12 de outubro reúne presentes, brincadeiras, passeios em família e programações voltadas às crianças."
+    },
+    "obs_top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV_CN_children": {
+      "zh-TW": "中國大陸的六一兒童節常見學校表演、遊戲與親子活動，學校是節日的重要場域。",
+      "en": "In mainland China, June 1 is often celebrated through school performances, games, and activities planned around children.",
+      "ja": "中国大陸では学校の発表会やゲーム、親子イベントを通じて子どもたちを祝います。",
+      "zh-CN": "中国大陆的六一儿童节以学校表演、游戏和亲子活动最常见，气氛热闹而集体化。",
+      "hi": "चीन में 1 जून का बाल दिवस स्कूल के कार्यक्रमों, खेलों और परिवार-केंद्रित गतिविधियों से मनाया जाता है।",
+      "id": "Di Tiongkok, Hari Anak 1 Juni banyak dirayakan melalui pentas sekolah, permainan, dan kegiatan keluarga.",
+      "pt-BR": "Na China continental, o Dia das Crianças em 1º de junho é marcado por apresentações escolares, jogos e atividades em família."
+    },
+    "obs_top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV_IN_childrens-day": {
+      "zh-TW": "印度兒童節在 11 月 14 日舉行，學校常安排表演、遊戲與師生互動，並談論兒童權利。",
+      "en": "India’s Children’s Day is held on November 14, with school programs, games, and conversations about children’s wellbeing and rights.",
+      "ja": "インドの11月14日の子どもの日は、学校の催しや遊びを通して子どもの福祉と権利を考える機会です。",
+      "zh-CN": "印度儿童节在 11 月 14 日，学校活动除了表演游戏，也常带到儿童福祉与权利议题。",
+      "hi": "भारत में 14 नवंबर को बाल दिवस पर स्कूलों में कार्यक्रम, खेल और बच्चों के कल्याण व अधिकारों पर चर्चा होती है।",
+      "id": "Di India, Hari Anak pada 14 November diisi acara sekolah, permainan, dan pembahasan tentang kesejahteraan serta hak anak.",
+      "pt-BR": "Na Índia, o Dia das Crianças em 14 de novembro combina atividades escolares com conversas sobre bem-estar e direitos infantis."
+    },
+    "obs_top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV_JP_kodomo-no-hi": {
+      "zh-TW": "日本的 5 月 5 日是兒童節，也是端午之節句，家中常展示鯉魚旗與五月人形。",
+      "en": "Japan’s Children’s Day features carp streamers, samurai-inspired displays, and foods associated with wishing children strength.",
+      "ja": "日本では鯉のぼりや五月人形を飾り、柏餅やちまきを食べて子どもの健やかな成長を願います。",
+      "zh-CN": "日本儿童节常见鲤鱼旗、五月人形与柏饼，家庭会祝福孩子健康长大。",
+      "hi": "जापान में कोइनोबोरी, समुराई गुड़िया और पारंपरिक मिठाइयों से बच्चों के स्वस्थ विकास की कामना की जाती है।",
+      "id": "Di Jepang, keluarga memasang koinobori dan hiasan samurai serta menyantap makanan tradisional untuk mendoakan pertumbuhan anak.",
+      "pt-BR": "No Japão, famílias exibem carpas coloridas e bonecos de samurai, desejando força e saúde às crianças."
+    },
+    "obs_top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV_TW_children": {
+      "zh-TW": "台灣兒童節多安排親子出遊、校園活動與家庭贈禮，重點是讓孩子休息並被看見。",
+      "en": "In Taiwan, Children’s Day is commonly marked with family outings, school activities, and small gifts for children.",
+      "ja": "台湾では家族で出かけたり、学校行事を楽しんだりして、子どもの成長を祝います。",
+      "zh-CN": "台湾常以亲子出游、校园活动和小礼物庆祝儿童节，让孩子拥有专属的一天。",
+      "hi": "ताइवान में परिवार के साथ घूमना, स्कूल की गतिविधियाँ और बच्चों को छोटे उपहार देना आम है।",
+      "id": "Di Taiwan, Hari Anak sering dirayakan lewat kegiatan keluarga, acara sekolah, dan hadiah kecil untuk anak.",
+      "pt-BR": "Em Taiwan, o Dia das Crianças costuma reunir passeios em família, atividades escolares e pequenos presentes."
+    }
+  }
 }

@@ -2,15 +2,441 @@
   "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
   "slug": "teachers-day",
   "canonical_name": "Teachers' Day",
-  "commonality": "recognising teachers through classroom gratitude, public respect, gifts, and local education traditions",
-  "category": "education",
+  "commonality": "comparing teachers' appreciation, education, public service, and the different dates chosen by schools and societies",
+  "category": "civic",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-13T15:06:30.000Z",
+  "updated_at": "2026-08-14T08:08:29.000Z",
   "access_level": 0,
-  "observances": [],
-  "countries": [],
+  "observances": [
+    {
+      "observance_id": "obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_BR_dia-dos-professores",
+      "observance_key": "dia-dos-professores",
+      "country_code": "BR",
+      "local_name": "Dia dos Professores",
+      "observed_date": "10-15",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 50,
+      "source_ids": [
+        "src_DF3F8681DFB3B654018AA81B"
+      ],
+      "source_urls": [
+        "https://www.unesco.org/en/days/teachers?hub=66705"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_BR_dia-dos-professores_2026_2026-10-15",
+          "occurrence_year": 2026,
+          "starts_on": "2026-10-15",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_DF3F8681DFB3B654018AA81B"
+          ],
+          "source_urls": [
+            "https://www.unesco.org/en/days/teachers?hub=66705"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_BR_dia-dos-professores_2027_2027-10-15",
+          "occurrence_year": 2027,
+          "starts_on": "2027-10-15",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_DF3F8681DFB3B654018AA81B"
+          ],
+          "source_urls": [
+            "https://www.unesco.org/en/days/teachers?hub=66705"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_BR_dia-dos-professores_2026_2026-10-15",
+        "occurrence_year": 2026,
+        "starts_on": "2026-10-15",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "America/Sao_Paulo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_DF3F8681DFB3B654018AA81B"
+        ],
+        "source_urls": [
+          "https://www.unesco.org/en/days/teachers?hub=66705"
+        ],
+        "distance_days": 62
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_CN_teachers-day",
+      "observance_key": "teachers-day",
+      "country_code": "CN",
+      "local_name": "教師節",
+      "observed_date": "09-10",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 20,
+      "source_ids": [
+        "src_DF3F8681DFB3B654018AA81B"
+      ],
+      "source_urls": [
+        "https://www.unesco.org/en/days/teachers?hub=66705"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_CN_teachers-day_2026_2026-09-10",
+          "occurrence_year": 2026,
+          "starts_on": "2026-09-10",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_DF3F8681DFB3B654018AA81B"
+          ],
+          "source_urls": [
+            "https://www.unesco.org/en/days/teachers?hub=66705"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_CN_teachers-day_2027_2027-09-10",
+          "occurrence_year": 2027,
+          "starts_on": "2027-09-10",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_DF3F8681DFB3B654018AA81B"
+          ],
+          "source_urls": [
+            "https://www.unesco.org/en/days/teachers?hub=66705"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_CN_teachers-day_2026_2026-09-10",
+        "occurrence_year": 2026,
+        "starts_on": "2026-09-10",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Shanghai",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_DF3F8681DFB3B654018AA81B"
+        ],
+        "source_urls": [
+          "https://www.unesco.org/en/days/teachers?hub=66705"
+        ],
+        "distance_days": 27
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_ID_hari-guru",
+      "observance_key": "hari-guru",
+      "country_code": "ID",
+      "local_name": "Hari Guru",
+      "observed_date": "11-25",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 40,
+      "source_ids": [
+        "src_DF3F8681DFB3B654018AA81B"
+      ],
+      "source_urls": [
+        "https://www.unesco.org/en/days/teachers?hub=66705"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_ID_hari-guru_2026_2026-11-25",
+          "occurrence_year": 2026,
+          "starts_on": "2026-11-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_DF3F8681DFB3B654018AA81B"
+          ],
+          "source_urls": [
+            "https://www.unesco.org/en/days/teachers?hub=66705"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_ID_hari-guru_2027_2027-11-25",
+          "occurrence_year": 2027,
+          "starts_on": "2027-11-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_DF3F8681DFB3B654018AA81B"
+          ],
+          "source_urls": [
+            "https://www.unesco.org/en/days/teachers?hub=66705"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_ID_hari-guru_2026_2026-11-25",
+        "occurrence_year": 2026,
+        "starts_on": "2026-11-25",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Jakarta",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_DF3F8681DFB3B654018AA81B"
+        ],
+        "source_urls": [
+          "https://www.unesco.org/en/days/teachers?hub=66705"
+        ],
+        "distance_days": 103
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_IN_teachers-day",
+      "observance_key": "teachers-day",
+      "country_code": "IN",
+      "local_name": "शिक्षक दिवस",
+      "observed_date": "09-05",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 30,
+      "source_ids": [
+        "src_DF3F8681DFB3B654018AA81B"
+      ],
+      "source_urls": [
+        "https://www.unesco.org/en/days/teachers?hub=66705"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_IN_teachers-day_2026_2026-09-05",
+          "occurrence_year": 2026,
+          "starts_on": "2026-09-05",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_DF3F8681DFB3B654018AA81B"
+          ],
+          "source_urls": [
+            "https://www.unesco.org/en/days/teachers?hub=66705"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_IN_teachers-day_2027_2027-09-05",
+          "occurrence_year": 2027,
+          "starts_on": "2027-09-05",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_DF3F8681DFB3B654018AA81B"
+          ],
+          "source_urls": [
+            "https://www.unesco.org/en/days/teachers?hub=66705"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_IN_teachers-day_2026_2026-09-05",
+        "occurrence_year": 2026,
+        "starts_on": "2026-09-05",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Kolkata",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_DF3F8681DFB3B654018AA81B"
+        ],
+        "source_urls": [
+          "https://www.unesco.org/en/days/teachers?hub=66705"
+        ],
+        "distance_days": 22
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_TW_teachers-day",
+      "observance_key": "teachers-day",
+      "country_code": "TW",
+      "local_name": "教師節",
+      "observed_date": "09-28",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 10,
+      "source_ids": [
+        "src_DF3F8681DFB3B654018AA81B"
+      ],
+      "source_urls": [
+        "https://www.unesco.org/en/days/teachers?hub=66705"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_TW_teachers-day_2026_2026-09-28",
+          "occurrence_year": 2026,
+          "starts_on": "2026-09-28",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_DF3F8681DFB3B654018AA81B"
+          ],
+          "source_urls": [
+            "https://www.unesco.org/en/days/teachers?hub=66705"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_TW_teachers-day_2027_2027-09-28",
+          "occurrence_year": 2027,
+          "starts_on": "2027-09-28",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_DF3F8681DFB3B654018AA81B"
+          ],
+          "source_urls": [
+            "https://www.unesco.org/en/days/teachers?hub=66705"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_TW_teachers-day_2026_2026-09-28",
+        "occurrence_year": 2026,
+        "starts_on": "2026-09-28",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Taipei",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_DF3F8681DFB3B654018AA81B"
+        ],
+        "source_urls": [
+          "https://www.unesco.org/en/days/teachers?hub=66705"
+        ],
+        "distance_days": 45
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_US_teacher-appreciation",
+      "observance_key": "teacher-appreciation",
+      "country_code": "US",
+      "local_name": "Teacher Appreciation Week",
+      "observed_date": null,
+      "date_rule": "5 月第一個完整星期，地方學區日期可能不同",
+      "date_range_end": null,
+      "popularity_rank": 60,
+      "source_ids": [
+        "src_DF3F8681DFB3B654018AA81B"
+      ],
+      "source_urls": [
+        "https://www.unesco.org/en/days/teachers?hub=66705"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_US_teacher-appreciation_2026_2026-05-04",
+          "occurrence_year": 2026,
+          "starts_on": "2026-05-04",
+          "ends_on": "2026-05-08",
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_DF3F8681DFB3B654018AA81B"
+          ],
+          "source_urls": [
+            "https://www.unesco.org/en/days/teachers?hub=66705"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_US_teacher-appreciation_2027_2027-05-03",
+          "occurrence_year": 2027,
+          "starts_on": "2027-05-03",
+          "ends_on": "2027-05-07",
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_DF3F8681DFB3B654018AA81B"
+          ],
+          "source_urls": [
+            "https://www.unesco.org/en/days/teachers?hub=66705"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_US_teacher-appreciation_2027_2027-05-03",
+        "occurrence_year": 2027,
+        "starts_on": "2027-05-03",
+        "ends_on": "2027-05-07",
+        "calendar_system": "local",
+        "timezone": "America/New_York",
+        "date_status": "local-variant",
+        "source_ids": [
+          "src_DF3F8681DFB3B654018AA81B"
+        ],
+        "source_urls": [
+          "https://www.unesco.org/en/days/teachers?hub=66705"
+        ],
+        "distance_days": 262
+      }
+    }
+  ],
+  "countries": [
+    {
+      "country_code": "BR",
+      "observance_ids": [
+        "obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_BR_dia-dos-professores"
+      ]
+    },
+    {
+      "country_code": "CN",
+      "observance_ids": [
+        "obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_CN_teachers-day"
+      ]
+    },
+    {
+      "country_code": "ID",
+      "observance_ids": [
+        "obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_ID_hari-guru"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "observance_ids": [
+        "obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_IN_teachers-day"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "observance_ids": [
+        "obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_TW_teachers-day"
+      ]
+    },
+    {
+      "country_code": "US",
+      "observance_ids": [
+        "obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_US_teacher-appreciation"
+      ]
+    }
+  ],
   "relations": [],
-  "source_ids": [],
-  "source_urls": []
+  "source_ids": [
+    "src_DF3F8681DFB3B654018AA81B"
+  ],
+  "source_urls": [
+    "https://www.unesco.org/en/days/teachers?hub=66705"
+  ]
 }

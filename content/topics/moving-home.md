@@ -11,54 +11,54 @@
 ### title
 搬家與入厝
 ### summary
-這一頁把「搬家與入厝」放在日期、關係與地方差異中比較；我們不預設每個家庭或社群都會用同一種方式參與。
+台灣與中國大陸常談入厝與送禮，日本重視新居祝賀，美國與巴西常以 housewarming 聚會迎客，印度則可能連結 गृहप्रवेश；搬家儀式會隨家庭與信仰調整。
 ### keywords
-搬家與入厝
+搬家,入厝,新居祝賀,housewarming,गृहप्रवेश,各國居家習俗
 
 ## locale en
 ### title
 Moving Home and Housewarming
 ### summary
-This guide looks at Moving Home and Housewarming through dates, relationships, and local differences. It does not assume that every household or community follows the same practice.
+Compare moving home and housewarming in Taiwan, mainland China, Japan, the United States, Brazil, and India, from gifts and neighbours to purification, prayer, and new daily routines.
 ### keywords
-Moving Home and Housewarming
+Moving Home and Housewarming,housewarming customs,new home rituals, गृहप्रवेश, moving traditions around the world
 
 ## locale ja
 ### title
 引っ越しと新居祝い
 ### summary
-ここでは「引っ越しと新居祝い」を、日付や人間関係、地域差とともに見ていきます。すべての家庭や地域が同じ形で参加するわけではありません。
+台湾、中国大陸、日本、米国、ブラジル、インドの引っ越しと新居祝いを比べ、贈り物、近所への挨拶、清め、祈り、日々の始まり方を紹介します。
 ### keywords
-引っ越しと新居祝い
+引っ越し,新居祝い,ハウスウォーミング,インドの गृहप्रवेश,住まいの習慣
 
 ## locale zh-CN
 ### title
 搬家与入宅
 ### summary
-这一页把“搬家与入宅”放在时间、关系与地区差异中比较；我们不预设每个家庭或社群都会用同一种方式参与。
+比较台湾、中国大陆、日本、美国、巴西和印度的搬家与入宅习俗，从礼物、邻里问候到净化、祈祷和新的日常安排看地方差异。
 ### keywords
-搬家与入宅
+搬家,入宅,新居祝贺,乔迁礼物, गृहप्रवेश,各国居家习俗
 
 ## locale hi
 ### title
 घर बदलना और गृहप्रवेश
 ### summary
-यह पृष्ठ घर बदलना और गृहप्रवेश को तारीख़, रिश्तों और स्थानीय भिन्नताओं के साथ देखता है। हर परिवार या समुदाय इसे एक ही तरह से नहीं मनाता या निभाता।
+ताइवान, चीन, जापान, अमेरिका, ब्राज़ील और भारत में घर बदलने व गृहप्रवेश की तुलना करें—उपहार, पड़ोसी, शुद्धिकरण, प्रार्थना और नई दिनचर्या अलग हो सकती है।
 ### keywords
-घर बदलना और गृहप्रवेश
+घर बदलना,गृहप्रवेश,नए घर की रस्में,हाउसवॉर्मिंग,पड़ोसी परंपराएँ
 
 ## locale id
 ### title
 Pindah Rumah dan Selamatan Rumah
 ### summary
-Halaman ini melihat Pindah Rumah dan Selamatan Rumah melalui tanggal, hubungan, dan perbedaan setempat. Tidak semua keluarga atau komunitas menjalaninya dengan cara yang sama.
+Bandingkan pindah rumah dan selamatan rumah di Taiwan, Tiongkok, Jepang, Amerika Serikat, Brasil, dan India melalui hadiah, sapaan tetangga, doa, penyucian, dan rutinitas baru.
 ### keywords
-Pindah Rumah dan Selamatan Rumah
+Pindah Rumah,selamatan rumah,housewarming,tradisi rumah baru,doa pindah rumah
 
 ## locale pt-BR
 ### title
 Mudança e inauguração da casa
 ### summary
-Esta página observa Mudança e inauguração da casa a partir das datas, dos vínculos e das diferenças locais. Nenhuma família ou comunidade precisa vivê-lo do mesmo modo.
+Compare mudança e inauguração da casa em Taiwan, China continental, Japão, Estados Unidos, Brasil e Índia, observando presentes, vizinhança, purificação, oração e novas rotinas.
 ### keywords
-Mudança e inauguração da casa
+mudança,inauguração da casa,housewarming,rituais de casa nova,saudação aos vizinhos
