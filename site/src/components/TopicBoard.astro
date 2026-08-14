@@ -131,6 +131,9 @@ const { rows, empty, win = '24h' } = Astro.props;
     justify-content: center;
     padding-block: 1rem;
   }
+  .board-load-more[hidden] {
+    display: none;
+  }
   .board-load-more button {
     border: 0.0625rem solid var(--color-line-strong);
     border-radius: var(--radius-pill);
