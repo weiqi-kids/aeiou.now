@@ -1,0 +1,1555 @@
+{
+  "as_of": "2026-08-14",
+  "version": 1,
+  "locales": [
+    "zh-TW",
+    "en",
+    "ja",
+    "zh-CN",
+    "hi",
+    "id",
+    "pt-BR"
+  ],
+  "country_codes": [
+    "TW",
+    "JP",
+    "CN",
+    "US",
+    "IN",
+    "ID",
+    "BR"
+  ],
+  "topics": {
+    "ask-the-world": {
+      "source_urls": [
+        "https://www.unesco.org/en/education",
+        "https://www.oecd.org/education/"
+      ],
+      "notes": {
+        "TW": {
+          "country_code": "TW",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www.gov.tw/"
+          ],
+          "text": {
+            "zh-TW": "台灣的日常問題常會落到學校行事曆、便利商店、交通與家庭分工；回答時要注明城市與家庭差異。",
+            "en": "In Taiwan, everyday questions often touch school calendars, convenience stores, transport, and family routines; city and household differences matter.",
+            "ja": "台湾では、学校の予定、コンビニ、交通、家族の分担などが日常の質問になります。都市と家庭による違いも添えて答えます。",
+            "zh-CN": "在台湾，日常问题常涉及学校日程、便利店、交通和家庭分工；回答时要说明城市和家庭差异。",
+            "hi": "ताइवान में रोज़मर्रा के सवाल स्कूल कैलेंडर, सुविधा स्टोर, परिवहन और परिवार की दिनचर्या से जुड़े हो सकते हैं; शहर और घर का फर्क बताना ज़रूरी है।",
+            "id": "Di Taiwan, pertanyaan sehari-hari sering menyangkut kalender sekolah, minimarket, transportasi, dan rutinitas keluarga; perbedaan kota dan rumah tangga perlu disebutkan.",
+            "pt-BR": "Em Taiwan, dúvidas do dia a dia podem envolver calendário escolar, lojas de conveniência, transporte e rotina familiar; a cidade e a família fazem diferença."
+          }
+        },
+        "JP": {
+          "country_code": "JP",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+          ],
+          "text": {
+            "zh-TW": "日本的回答常會補上禮貌、季節與社區規則；同一件事也可能因都道府縣、學校或公司而不同。",
+            "en": "Japanese answers often add etiquette, seasonal timing, and community rules; the same matter can differ by prefecture, school, or workplace.",
+            "ja": "日本の回答では、礼儀、季節、地域のルールが補足されます。同じことでも都道府県、学校、職場で変わります。",
+            "zh-CN": "日本的回答常会补充礼仪、季节和社区规则；同一件事也可能因都道府县、学校或公司而不同。",
+            "hi": "जापान में जवाबों में शिष्टाचार, मौसम और स्थानीय नियम भी आते हैं; एक ही बात प्रांत, स्कूल या कार्यस्थल के अनुसार बदल सकती है।",
+            "id": "Jawaban dari Jepang sering menyertakan etiket, musim, dan aturan komunitas; hal yang sama dapat berbeda menurut prefektur, sekolah, atau tempat kerja.",
+            "pt-BR": "No Japão, as respostas costumam incluir etiqueta, estação e regras da comunidade; a mesma situação pode mudar conforme a província, a escola ou o trabalho."
+          }
+        },
+        "CN": {
+          "country_code": "CN",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www.gov.cn/"
+          ],
+          "text": {
+            "zh-TW": "中國大陸的生活答案常要區分城市、地區與制度；上海的經驗不能直接代表所有地方。",
+            "en": "In mainland China, practical answers should distinguish cities, regions, and local systems; Shanghai cannot stand for every place.",
+            "ja": "中国大陸の生活情報は、都市、地域、制度を分けて考える必要があります。上海の経験を全国の標準にはしません。",
+            "zh-CN": "中国大陆的生活答案常要区分城市、地区和制度；上海的经验不能直接代表所有地方。",
+            "hi": "चीन में रोज़मर्रा के जवाब शहर, क्षेत्र और स्थानीय व्यवस्था के अनुसार बदलते हैं; शंघाई पूरे देश का प्रतिनिधि नहीं है।",
+            "id": "Di Tiongkok daratan, jawaban praktis perlu membedakan kota, wilayah, dan sistem setempat; pengalaman Shanghai tidak mewakili semua daerah.",
+            "pt-BR": "Na China continental, respostas práticas devem diferenciar cidade, região e regras locais; a experiência de Xangai não representa todo o país."
+          }
+        },
+        "US": {
+          "country_code": "US",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www.usa.gov/"
+          ],
+          "text": {
+            "zh-TW": "美國的生活資訊常由州、學區、城市或雇主決定；問答要先確認所在地，不把單一州的做法寫成全國規則。",
+            "en": "In the United States, practical arrangements often depend on the state, school district, city, or employer; location comes before a national claim.",
+            "ja": "米国では、州、学区、市、雇用主によって暮らしの仕組みが変わります。特定地域の方法を全国の規則とは扱いません。",
+            "zh-CN": "美国的生活信息常由州、学区、城市或雇主决定；问答应先确认所在地，不能把一个州的做法写成全国规则。",
+            "hi": "अमेरिका में रोज़मर्रा की व्यवस्था राज्य, स्कूल ज़िले, शहर या नियोक्ता पर निर्भर हो सकती है; एक राज्य को पूरे देश का नियम न मानें।",
+            "id": "Di Amerika Serikat, urusan praktis sering ditentukan negara bagian, distrik sekolah, kota, atau pemberi kerja; lokasi perlu disebutkan lebih dulu.",
+            "pt-BR": "Nos Estados Unidos, muitas rotinas dependem do estado, distrito escolar, cidade ou empregador; é preciso informar o local antes de generalizar."
+          }
+        },
+        "IN": {
+          "country_code": "IN",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www.india.gov.in/"
+          ],
+          "text": {
+            "zh-TW": "印度的答案常受邦、語言、宗教與城市規模影響；同一個家庭儀式在不同社群可能有不同名稱與步驟。",
+            "en": "In India, state, language, religion, and city size shape everyday answers; a family ritual may have different names and steps across communities.",
+            "ja": "インドでは、州、言語、宗教、都市規模が日常の答えを左右します。家族の儀礼も地域や共同体で名称と手順が異なります。",
+            "zh-CN": "印度的答案常受邦、语言、宗教和城市规模影响；同一家庭仪式在不同社群可能有不同名称和步骤。",
+            "hi": "भारत में राज्य, भाषा, धर्म और शहर का आकार रोज़मर्रा के अनुभव बदलते हैं; पारिवारिक रस्मों के नाम और चरण समुदाय के अनुसार अलग हो सकते हैं।",
+            "id": "Di India, negara bagian, bahasa, agama, dan ukuran kota membentuk jawaban sehari-hari; satu ritual keluarga dapat memiliki nama dan langkah berbeda.",
+            "pt-BR": "Na Índia, estado, língua, religião e tamanho da cidade influenciam a vida cotidiana; um ritual familiar pode ter nomes e etapas diferentes entre comunidades."
+          }
+        },
+        "ID": {
+          "country_code": "ID",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://indonesia.go.id/"
+          ],
+          "text": {
+            "zh-TW": "印尼的生活經驗常因島嶼、城市、族群與宗教不同；雅加達的答案不一定適用於其他省份。",
+            "en": "In Indonesia, islands, cities, ethnic communities, and religions shape daily life; an answer from Jakarta may not fit another province.",
+            "ja": "インドネシアでは、島、都市、民族共同体、宗教によって暮らしが変わります。ジャカルタの答えが他州に当てはまるとは限りません。",
+            "zh-CN": "印度尼西亚的生活经验常因岛屿、城市、族群和宗教不同；雅加达的答案不一定适用于其他省份。",
+            "hi": "इंडोनेशिया में द्वीप, शहर, जातीय समुदाय और धर्म रोज़मर्रा के जीवन को प्रभावित करते हैं; जकार्ता का अनुभव हर प्रांत पर लागू नहीं होता।",
+            "id": "Di Indonesia, pulau, kota, komunitas etnis, dan agama memengaruhi kehidupan sehari-hari; jawaban dari Jakarta belum tentu berlaku di provinsi lain.",
+            "pt-BR": "Na Indonésia, ilhas, cidades, comunidades étnicas e religiões moldam o cotidiano; uma resposta de Jacarta pode não valer para outra província."
+          }
+        },
+        "BR": {
+          "country_code": "BR",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www.gov.br/"
+          ],
+          "text": {
+            "zh-TW": "巴西的日常安排常因州、市鎮、家庭與宗教社群而變；聖保羅的生活節奏不代表全國。",
+            "en": "In Brazil, routines vary by state, municipality, family, and faith community; São Paulo’s pace does not represent the whole country.",
+            "ja": "ブラジルでは、州、市、家族、信仰共同体によって生活が変わります。サンパウロのリズムを全国の代表とはしません。",
+            "zh-CN": "巴西的日常安排常因州、市镇、家庭和宗教社群而变；圣保罗的生活节奏不代表全国。",
+            "hi": "ब्राज़ील में राज्य, नगर, परिवार और धार्मिक समुदाय के अनुसार दिनचर्या बदलती है; साओ पाउलो पूरे देश का नमूना नहीं है।",
+            "id": "Di Brasil, rutinitas berbeda menurut negara bagian, munisipalitas, keluarga, dan komunitas agama; ritme São Paulo tidak mewakili seluruh negeri.",
+            "pt-BR": "No Brasil, as rotinas variam conforme estado, município, família e comunidade religiosa; o ritmo de São Paulo não representa o país inteiro."
+          }
+        }
+      }
+    },
+    "back-to-school": {
+      "source_urls": [
+        "https://www.unesco.org/en/education",
+        "https://www.oecd.org/education/"
+      ],
+      "notes": {
+        "TW": {
+          "country_code": "TW",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www.gov.tw/"
+          ],
+          "text": {
+            "zh-TW": "台灣多以制服、文具、作息與接送準備新學期，實際開學日由學校與地方行事曆決定。",
+            "en": "Taiwanese families often prepare uniforms, supplies, routines, and transport; the exact first day follows school and local calendars.",
+            "ja": "台湾では制服、学用品、生活リズム、送迎を整えて新学期を迎えます。始業日は学校と地域の予定で決まります。",
+            "zh-CN": "台湾常以校服、文具、作息和接送准备新学期，实际开学日由学校和地方日程决定。",
+            "hi": "ताइवान में यूनिफ़ॉर्म, सामान, दिनचर्या और आने-जाने की तैयारी आम है; पहला दिन स्कूल और स्थानीय कैलेंडर तय करते हैं।",
+            "id": "Di Taiwan, keluarga menyiapkan seragam, perlengkapan, rutinitas, dan transportasi; hari pertama mengikuti kalender sekolah dan daerah.",
+            "pt-BR": "Em Taiwan, as famílias preparam uniformes, materiais, rotina e transporte; o primeiro dia segue o calendário escolar e local."
+          }
+        },
+        "JP": {
+          "country_code": "JP",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+          ],
+          "text": {
+            "zh-TW": "日本多在四月迎接新學年，制服、書包、掃除與班級生活是返校準備的一部分。",
+            "en": "Japan commonly begins a new school year in April; uniforms, school bags, cleaning, and class routines are part of the transition.",
+            "ja": "日本では4月に新年度が始まることが多く、制服、通学かばん、掃除、クラス活動が新学期の風景になります。",
+            "zh-CN": "日本多在四月迎接新学年，校服、书包、打扫和班级生活是返校准备的一部分。",
+            "hi": "जापान में नया स्कूल वर्ष अक्सर अप्रैल में शुरू होता है; यूनिफ़ॉर्म, स्कूल बैग, सफ़ाई और कक्षा की दिनचर्या इसका हिस्सा हैं।",
+            "id": "Di Jepang, tahun ajaran baru biasanya dimulai pada April; seragam, tas sekolah, kebersihan, dan rutinitas kelas ikut membentuk transisi.",
+            "pt-BR": "No Japão, o novo ano letivo geralmente começa em abril; uniforme, mochila, limpeza e rotina da turma fazem parte da mudança."
+          }
+        },
+        "CN": {
+          "country_code": "CN",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www.gov.cn/"
+          ],
+          "text": {
+            "zh-TW": "中國大陸常在秋季開學，校服、家長通知與校區規定會因城市和學校而不同。",
+            "en": "In mainland China, schools commonly reopen in the autumn; uniforms, notices, and campus rules vary by city and school.",
+            "ja": "中国大陸では秋に新学期を始める学校が多く、制服、保護者への案内、校内規則は都市と学校で異なります。",
+            "zh-CN": "中国大陆常在秋季开学，校服、家长通知和校区规定会因城市和学校而不同。",
+            "hi": "चीन में स्कूल अक्सर शरद ऋतु में फिर खुलते हैं; यूनिफ़ॉर्म, अभिभावक सूचना और नियम शहर व स्कूल के अनुसार बदलते हैं।",
+            "id": "Di Tiongkok daratan, sekolah sering dibuka kembali pada musim gugur; seragam, pemberitahuan, dan aturan kampus berbeda menurut kota dan sekolah.",
+            "pt-BR": "Na China continental, as escolas costumam reabrir no outono; uniformes, comunicados e regras variam por cidade e escola."
+          }
+        },
+        "US": {
+          "country_code": "US",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www.usa.gov/"
+          ],
+          "text": {
+            "zh-TW": "美國常在八、九月返校，用品清單、校車、學區與課外活動由地方制度決定。",
+            "en": "In the United States, back-to-school often comes in August or September; supply lists, buses, districts, and activities are local.",
+            "ja": "米国では8月または9月に新学期を迎えることが多く、用品、スクールバス、学区、課外活動は地域で決まります。",
+            "zh-CN": "美国常在八、九月返校，用品清单、校车、学区和课外活动由地方制度决定。",
+            "hi": "अमेरिका में स्कूल अक्सर अगस्त या सितंबर में शुरू होते हैं; सामान, बस, स्कूल ज़िला और गतिविधियाँ स्थानीय होती हैं।",
+            "id": "Di Amerika Serikat, sekolah sering dimulai pada Agustus atau September; daftar perlengkapan, bus, distrik, dan kegiatan ditentukan secara lokal.",
+            "pt-BR": "Nos Estados Unidos, as aulas costumam voltar em agosto ou setembro; materiais, ônibus, distrito e atividades são definidos localmente."
+          }
+        },
+        "IN": {
+          "country_code": "IN",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www.india.gov.in/"
+          ],
+          "text": {
+            "zh-TW": "印度的學年與返校時間會隨邦、學校類型與季風區域變動，制服和接送也有城市差異。",
+            "en": "In India, school years and reopening dates vary by state, school type, and monsoon region; uniforms and transport also differ by city.",
+            "ja": "インドでは、学年と始業時期が州、学校の種類、モンスーン地域で異なり、制服や通学も都市で変わります。",
+            "zh-CN": "印度的学年和返校时间会随邦、学校类型和季风区域变化，校服与接送也有城市差异。",
+            "hi": "भारत में शैक्षणिक वर्ष और स्कूल खुलने की तारीख राज्य, स्कूल और मानसून क्षेत्र के अनुसार बदलती है; यूनिफ़ॉर्म व यात्रा भी अलग होती है।",
+            "id": "Di India, tahun ajaran dan waktu sekolah dibuka kembali berbeda menurut negara bagian, jenis sekolah, dan wilayah monsun; seragam dan perjalanan juga berbeda.",
+            "pt-BR": "Na Índia, o ano letivo e a volta às aulas variam conforme estado, tipo de escola e região de monções; uniforme e transporte também mudam."
+          }
+        },
+        "ID": {
+          "country_code": "ID",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://indonesia.go.id/"
+          ],
+          "text": {
+            "zh-TW": "印尼多在七月左右進入新學年，制服、升級分班與學校迎新會隨省份和學校不同。",
+            "en": "Indonesia often starts a new school year around July; uniforms, class placement, and orientation vary by province and school.",
+            "ja": "インドネシアでは7月ごろに新学年が始まることが多く、制服、クラス分け、オリエンテーションは地域と学校で異なります。",
+            "zh-CN": "印度尼西亚多在七月左右进入新学年，校服、分班和迎新会随省份和学校不同。",
+            "hi": "इंडोनेशिया में नया स्कूल वर्ष अक्सर जुलाई के आसपास शुरू होता है; यूनिफ़ॉर्म, कक्षा और परिचय कार्यक्रम प्रांत व स्कूल के अनुसार बदलते हैं।",
+            "id": "Di Indonesia, tahun ajaran baru sering dimulai sekitar Juli; seragam, penempatan kelas, dan orientasi berbeda menurut provinsi dan sekolah.",
+            "pt-BR": "Na Indonésia, o novo ano letivo costuma começar por volta de julho; uniforme, turmas e orientação variam conforme província e escola."
+          }
+        },
+        "BR": {
+          "country_code": "BR",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www.gov.br/"
+          ],
+          "text": {
+            "zh-TW": "巴西多在年初開學，制服、學用品與家長接送安排會因州、市鎮和公私立學校而不同。",
+            "en": "Brazil often starts the school year early in the calendar year; uniforms, supplies, and transport vary by state, city, and school type.",
+            "ja": "ブラジルでは年初に新学年が始まることが多く、制服、学用品、送迎は州、市、学校の種類で異なります。",
+            "zh-CN": "巴西多在年初开学，校服、学习用品和家长接送会因州、市镇和公私立学校而不同。",
+            "hi": "ब्राज़ील में स्कूल वर्ष अक्सर साल की शुरुआत में शुरू होता है; यूनिफ़ॉर्म, सामान और आना-जाना राज्य, शहर और स्कूल के अनुसार बदलते हैं।",
+            "id": "Di Brasil, tahun ajaran sering dimulai pada awal tahun; seragam, perlengkapan, dan antar-jemput berbeda menurut negara bagian, kota, dan jenis sekolah.",
+            "pt-BR": "No Brasil, o ano letivo costuma começar no início do ano; uniforme, materiais e transporte variam conforme estado, cidade e tipo de escola."
+          }
+        }
+      }
+    },
+    "birthdays-and-blessings": {
+      "source_urls": [
+        "https://www.britannica.com/topic/birthday",
+        "https://ich.unesco.org/"
+      ],
+      "notes": {
+        "TW": {
+          "country_code": "TW",
+          "source_urls": [
+            "https://www.britannica.com/topic/birthday",
+            "https://ich.unesco.org/",
+            "https://www.gov.tw/"
+          ],
+          "text": {
+            "zh-TW": "台灣的生日可見蛋糕與聚餐，長輩祝壽也常出現長壽麵、紅蛋或象徵長久的祝福。",
+            "en": "In Taiwan, birthdays may include cake and a family meal, while elders may receive longevity noodles, red eggs, and wishes for a long life.",
+            "ja": "台湾ではケーキや家族の食事に加え、長寿祝いで長寿麺や赤い卵、長生きを願う言葉が見られます。",
+            "zh-CN": "在台湾，生日常有蛋糕和聚餐，长辈祝寿也可能出现长寿面、红蛋和长久祝福。",
+            "hi": "ताइवान में जन्मदिन पर केक और पारिवारिक भोजन हो सकते हैं; बुज़ुर्गों के लिए दीर्घायु नूडल्स, लाल अंडे और शुभकामनाएँ भी मिलती हैं।",
+            "id": "Di Taiwan, ulang tahun dapat dirayakan dengan kue dan makan keluarga; orang yang lebih tua mungkin mendapat mi panjang umur, telur merah, dan doa panjang usia.",
+            "pt-BR": "Em Taiwan, aniversários podem ter bolo e refeição em família; para os mais velhos aparecem macarrão da longevidade, ovos vermelhos e votos de vida longa."
+          }
+        },
+        "JP": {
+          "country_code": "JP",
+          "source_urls": [
+            "https://www.britannica.com/topic/birthday",
+            "https://ich.unesco.org/",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+          ],
+          "text": {
+            "zh-TW": "日本的生日形式很個人化，七五三、成人式與長壽祝賀則把年齡節點放進家庭或社區儀式。",
+            "en": "Japanese birthdays are personal, while Shichi-Go-San, Coming of Age, and longevity celebrations mark age milestones through family or community rituals.",
+            "ja": "日本の誕生日は個人差が大きく、七五三、成人の日、長寿祝いは家族や地域の儀礼として年齢の節目を示します。",
+            "zh-CN": "日本的生日形式很个人化，七五三、成人式和长寿祝贺则把年龄节点放进家庭或社区仪式。",
+            "hi": "जापान में जन्मदिन व्यक्तिगत हो सकते हैं; शिची-गो-सान, वयस्कता और दीर्घायु समारोह उम्र के पड़ावों को परिवार या समुदाय में चिह्नित करते हैं।",
+            "id": "Di Jepang, ulang tahun sangat personal; Shichi-Go-San, Coming of Age, dan perayaan panjang umur menandai tahap usia lewat keluarga atau komunitas.",
+            "pt-BR": "No Japão, aniversários são pessoais; Shichi-Go-San, a maioridade e celebrações de longevidade marcam fases da idade em rituais familiares ou comunitários."
+          }
+        },
+        "CN": {
+          "country_code": "CN",
+          "source_urls": [
+            "https://www.britannica.com/topic/birthday",
+            "https://ich.unesco.org/",
+            "https://www.gov.cn/"
+          ],
+          "text": {
+            "zh-TW": "中國大陸常見生日蛋糕、聚餐與長壽麵，但地區、家庭與世代會影響要不要遵循這些做法。",
+            "en": "In mainland China, cakes, family meals, and longevity noodles are common birthday references, but region, family, and generation shape participation.",
+            "ja": "中国大陸ではケーキ、家族の食事、長寿麺がよく知られていますが、地域、家庭、世代で行い方は変わります。",
+            "zh-CN": "中国大陆常见生日蛋糕、聚餐和长寿面，但地区、家庭和世代会影响是否遵循这些做法。",
+            "hi": "चीन में जन्मदिन केक, पारिवारिक भोजन और दीर्घायु नूडल्स से जुड़ सकते हैं; क्षेत्र, परिवार और पीढ़ी के अनुसार भागीदारी बदलती है।",
+            "id": "Di Tiongkok daratan, kue ulang tahun, makan keluarga, dan mi panjang umur umum dikenal; wilayah, keluarga, dan generasi memengaruhi praktiknya.",
+            "pt-BR": "Na China continental, bolo, refeição em família e macarrão da longevidade são referências comuns; região, família e geração mudam a prática."
+          }
+        },
+        "US": {
+          "country_code": "US",
+          "source_urls": [
+            "https://www.britannica.com/topic/birthday",
+            "https://ich.unesco.org/",
+            "https://www.usa.gov/"
+          ],
+          "text": {
+            "zh-TW": "美國生日常以蛋糕、蠟燭、卡片與聚會表達祝福，形式會隨年齡、家庭與社群而調整。",
+            "en": "In the United States, cakes, candles, cards, and parties are common birthday forms; age, family, and community shape the details.",
+            "ja": "米国ではケーキ、ろうそく、カード、パーティーがよく見られ、年齢、家族、コミュニティで細部が変わります。",
+            "zh-CN": "美国生日常以蛋糕、蜡烛、卡片和聚会表达祝福，形式会随年龄、家庭和社群调整。",
+            "hi": "अमेरिका में केक, मोमबत्तियाँ, कार्ड और पार्टी आम हैं; उम्र, परिवार और समुदाय के अनुसार रूप बदलता है।",
+            "id": "Di Amerika Serikat, kue, lilin, kartu, dan pesta umum digunakan; usia, keluarga, dan komunitas memengaruhi bentuknya.",
+            "pt-BR": "Nos Estados Unidos, bolo, velas, cartões e festas são comuns; idade, família e comunidade definem os detalhes."
+          }
+        },
+        "IN": {
+          "country_code": "IN",
+          "source_urls": [
+            "https://www.britannica.com/topic/birthday",
+            "https://ich.unesco.org/",
+            "https://www.india.gov.in/"
+          ],
+          "text": {
+            "zh-TW": "印度的生日可能結合家庭聚餐、祝福、宗教祈禱、甜食或學校慶祝，地區與信仰差異很大。",
+            "en": "In India, birthdays may combine family meals, blessings, prayer, sweets, or school celebrations; region and faith make a major difference.",
+            "ja": "インドの誕生日には家族の食事、祝福、祈り、甘い物、学校の祝いが組み合わさることがあり、地域と信仰の差が大きいです。",
+            "zh-CN": "印度的生日可能结合家庭聚餐、祝福、宗教祈祷、甜食或学校庆祝，地区和信仰差异很大。",
+            "hi": "भारत में जन्मदिन परिवार के भोजन, आशीर्वाद, प्रार्थना, मिठाई या स्कूल उत्सव से जुड़ सकते हैं; क्षेत्र और आस्था बहुत मायने रखते हैं।",
+            "id": "Di India, ulang tahun dapat mencakup makan keluarga, doa, berkat, makanan manis, atau perayaan sekolah; wilayah dan keyakinan sangat beragam.",
+            "pt-BR": "Na Índia, aniversários podem reunir refeição familiar, bênção, oração, doces ou festa escolar; região e fé fazem muita diferença."
+          }
+        },
+        "ID": {
+          "country_code": "ID",
+          "source_urls": [
+            "https://www.britannica.com/topic/birthday",
+            "https://ich.unesco.org/",
+            "https://indonesia.go.id/"
+          ],
+          "text": {
+            "zh-TW": "印尼的生日做法從簡單聚餐到家庭祝禱都有，爪哇、巴厘與其他社群的食物和儀式不相同。",
+            "en": "In Indonesia, birthdays range from a simple meal to family prayers; Javanese, Balinese, and other communities have different foods and rituals.",
+            "ja": "インドネシアの誕生日は簡単な食事から家族の祈りまで幅があり、ジャワ、バリなど共同体で食と儀礼が異なります。",
+            "zh-CN": "印度尼西亚的生日做法从简单聚餐到家庭祝祷都有，爪哇、巴厘和其他社群的食物与仪式不相同。",
+            "hi": "इंडोनेशिया में जन्मदिन साधारण भोजन से पारिवारिक प्रार्थना तक हो सकते हैं; जावानी, बालिनी और अन्य समुदायों की रस्में अलग हैं।",
+            "id": "Di Indonesia, ulang tahun bisa berupa makan sederhana atau doa keluarga; makanan dan ritual Jawa, Bali, dan komunitas lain berbeda.",
+            "pt-BR": "Na Indonésia, aniversários vão de uma refeição simples a orações familiares; comunidades javanesas, balinesas e outras têm comidas e ritos próprios."
+          }
+        },
+        "BR": {
+          "country_code": "BR",
+          "source_urls": [
+            "https://www.britannica.com/topic/birthday",
+            "https://ich.unesco.org/",
+            "https://www.gov.br/"
+          ],
+          "text": {
+            "zh-TW": "巴西生日聚會常見蛋糕、汽水、甜點與親友同樂，brigadeiro 等甜食也會因家庭與地區而變化。",
+            "en": "In Brazil, birthday gatherings often include cake, soft drinks, sweets, and friends; brigadeiro and other foods vary by family and region.",
+            "ja": "ブラジルの誕生日会ではケーキ、飲み物、甘い菓子、友人との集まりがよく見られ、ブリガデイロなどは家庭と地域で変わります。",
+            "zh-CN": "巴西生日聚会常见蛋糕、汽水、甜点和亲友同乐，brigadeiro 等甜食也会因家庭和地区而变化。",
+            "hi": "ब्राज़ील में जन्मदिन पर केक, पेय, मिठाइयाँ और दोस्तों की सभा आम हैं; ब्रिगादेइरो जैसे पकवान परिवार व क्षेत्र के अनुसार बदलते हैं।",
+            "id": "Di Brasil, pesta ulang tahun sering berisi kue, minuman, kudapan manis, dan teman; brigadeiro serta makanan lain berbeda menurut keluarga dan wilayah.",
+            "pt-BR": "No Brasil, festas de aniversário costumam ter bolo, bebidas, doces e amigos; brigadeiro e outras comidas variam conforme família e região."
+          }
+        }
+      }
+    },
+    "caregiving-across-generations": {
+      "source_urls": [
+        "https://www.who.int/teams/maternal-newborn-child-adolescent-health-and-ageing/ageing-and-health",
+        "https://www.oecd.org/health/"
+      ],
+      "notes": {
+        "TW": {
+          "country_code": "TW",
+          "source_urls": [
+            "https://www.who.int/teams/maternal-newborn-child-adolescent-health-and-ageing/ageing-and-health",
+            "https://www.oecd.org/health/",
+            "https://www.gov.tw/"
+          ],
+          "text": {
+            "zh-TW": "台灣的照護常在家庭、長照服務與醫療之間協調，誰同住、誰請假與誰做決定都可能不同。",
+            "en": "In Taiwan, care is coordinated among families, long-term-care services, and healthcare; living arrangements, leave, and decisions vary.",
+            "ja": "台湾では家族、介護サービス、医療の間でケアを調整し、同居、休暇、意思決定の形もさまざまです。",
+            "zh-CN": "在台湾，照护常在家庭、长期照护服务和医疗之间协调，同住、请假和决定方式都可能不同。",
+            "hi": "ताइवान में देखभाल परिवार, दीर्घकालिक सेवा और स्वास्थ्य व्यवस्था के बीच बाँटी जा सकती है; साथ रहना और निर्णय अलग-अलग होते हैं।",
+            "id": "Di Taiwan, perawatan sering dikoordinasikan antara keluarga, layanan jangka panjang, dan kesehatan; tinggal bersama, cuti, dan keputusan berbeda-beda.",
+            "pt-BR": "Em Taiwan, o cuidado é articulado entre família, serviços de longa duração e saúde; moradia, licença e decisões podem variar."
+          }
+        },
+        "JP": {
+          "country_code": "JP",
+          "source_urls": [
+            "https://www.who.int/teams/maternal-newborn-child-adolescent-health-and-ageing/ageing-and-health",
+            "https://www.oecd.org/health/",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+          ],
+          "text": {
+            "zh-TW": "日本常談社區型照護、居家服務與家庭責任的平衡，長輩是否同住並不是唯一答案。",
+            "en": "Japan often balances community-based care, home services, and family responsibility; living with an older relative is not the only model.",
+            "ja": "日本では地域包括ケア、在宅サービス、家族の役割のバランスが語られ、同居だけが答えではありません。",
+            "zh-CN": "日本常谈社区型照护、居家服务和家庭责任的平衡，长辈是否同住并不是唯一答案。",
+            "hi": "जापान में समुदाय-आधारित देखभाल, घर की सेवाओं और परिवार की जिम्मेदारी का संतुलन देखा जाता है; साथ रहना ही एकमात्र तरीका नहीं है।",
+            "id": "Di Jepang, perawatan berbasis komunitas, layanan rumah, dan tanggung jawab keluarga sering diseimbangkan; tinggal bersama bukan satu-satunya model.",
+            "pt-BR": "No Japão, busca-se equilibrar cuidado comunitário, serviços domiciliares e responsabilidade familiar; morar junto não é o único modelo."
+          }
+        },
+        "CN": {
+          "country_code": "CN",
+          "source_urls": [
+            "https://www.who.int/teams/maternal-newborn-child-adolescent-health-and-ageing/ageing-and-health",
+            "https://www.oecd.org/health/",
+            "https://www.gov.cn/"
+          ],
+          "text": {
+            "zh-TW": "中國大陸的代間照護受家庭結構、城市流動與社區服務影響，祖父母參與也有地區差異。",
+            "en": "In mainland China, intergenerational care is shaped by family structure, mobility, and community services; grandparents’ roles vary by region.",
+            "ja": "中国大陸では、家族構成、都市への移動、地域サービスが世代間ケアを左右し、祖父母の役割も地域で異なります。",
+            "zh-CN": "中国大陆的代间照护受家庭结构、城市流动和社区服务影响，祖父母参与也有地区差异。",
+            "hi": "चीन में पीढ़ियों की देखभाल परिवार की बनावट, लोगों के स्थानांतरण और सामुदायिक सेवाओं से प्रभावित होती है; दादा-दादी की भूमिका क्षेत्र के अनुसार बदलती है।",
+            "id": "Di Tiongkok daratan, perawatan lintas generasi dipengaruhi struktur keluarga, mobilitas kota, dan layanan komunitas; peran kakek-nenek berbeda menurut wilayah.",
+            "pt-BR": "Na China continental, o cuidado entre gerações depende da estrutura familiar, mobilidade urbana e serviços comunitários; o papel dos avós varia por região."
+          }
+        },
+        "US": {
+          "country_code": "US",
+          "source_urls": [
+            "https://www.who.int/teams/maternal-newborn-child-adolescent-health-and-ageing/ageing-and-health",
+            "https://www.oecd.org/health/",
+            "https://www.usa.gov/"
+          ],
+          "text": {
+            "zh-TW": "美國較常把家庭照護、居家照護、社區服務與專業機構混合使用，費用與保險會影響選擇。",
+            "en": "In the United States, families may combine relatives, home care, community services, and facilities; cost and insurance affect choices.",
+            "ja": "米国では家族、在宅ケア、地域サービス、施設を組み合わせることがあり、費用と保険が選択に影響します。",
+            "zh-CN": "美国较常把家庭照护、居家照护、社区服务和专业机构混合使用，费用与保险会影响选择。",
+            "hi": "अमेरिका में परिवार, घर की देखभाल, सामुदायिक सेवाएँ और संस्थान मिलकर काम कर सकते हैं; खर्च और बीमा निर्णय को प्रभावित करते हैं।",
+            "id": "Di Amerika Serikat, keluarga dapat menggabungkan kerabat, perawatan rumah, layanan komunitas, dan fasilitas; biaya serta asuransi memengaruhi pilihan.",
+            "pt-BR": "Nos Estados Unidos, família, cuidado domiciliar, serviços comunitários e instituições podem ser combinados; custo e seguro pesam na decisão."
+          }
+        },
+        "IN": {
+          "country_code": "IN",
+          "source_urls": [
+            "https://www.who.int/teams/maternal-newborn-child-adolescent-health-and-ageing/ageing-and-health",
+            "https://www.oecd.org/health/",
+            "https://www.india.gov.in/"
+          ],
+          "text": {
+            "zh-TW": "印度的照護常依靠家族網絡，但都市化、工作移動與專業照護資源也讓家庭分工持續調整。",
+            "en": "In India, care often relies on family networks, while urbanisation, work mobility, and professional services keep changing the division of labour.",
+            "ja": "インドでは家族ネットワークがケアを支えることが多い一方、都市化、仕事の移動、専門サービスで役割分担も変わります。",
+            "zh-CN": "印度的照护常依靠家族网络，但城市化、工作流动和专业照护资源也让家庭分工持续调整。",
+            "hi": "भारत में देखभाल अक्सर परिवार के नेटवर्क पर निर्भर होती है; शहरीकरण, काम के लिए स्थानांतरण और पेशेवर सेवाएँ भूमिकाएँ बदल रही हैं।",
+            "id": "Di India, perawatan sering mengandalkan jaringan keluarga, sementara urbanisasi, perpindahan kerja, dan layanan profesional mengubah pembagian tugas.",
+            "pt-BR": "Na Índia, o cuidado costuma contar com redes familiares, mas urbanização, mobilidade do trabalho e serviços profissionais mudam a divisão de tarefas."
+          }
+        },
+        "ID": {
+          "country_code": "ID",
+          "source_urls": [
+            "https://www.who.int/teams/maternal-newborn-child-adolescent-health-and-ageing/ageing-and-health",
+            "https://www.oecd.org/health/",
+            "https://indonesia.go.id/"
+          ],
+          "text": {
+            "zh-TW": "印尼的照護常由大家庭、鄰里與宗教社群共同支持，島嶼與都市差異會影響服務可得性。",
+            "en": "In Indonesia, extended family, neighbours, and faith communities often support care; islands and cities affect access to services.",
+            "ja": "インドネシアでは大家族、近隣、信仰共同体がケアを支えることが多く、島や都市でサービスへのアクセスが変わります。",
+            "zh-CN": "印度尼西亚的照护常由大家庭、邻里和宗教社群共同支持，岛屿与都市差异会影响服务可得性。",
+            "hi": "इंडोनेशिया में विस्तृत परिवार, पड़ोसी और धार्मिक समुदाय देखभाल में साथ दे सकते हैं; द्वीप और शहर सेवाओं की उपलब्धता बदलते हैं।",
+            "id": "Di Indonesia, keluarga besar, tetangga, dan komunitas agama sering mendukung perawatan; pulau dan kota memengaruhi akses layanan.",
+            "pt-BR": "Na Indonésia, família ampliada, vizinhos e comunidades religiosas podem apoiar o cuidado; ilhas e cidades mudam o acesso aos serviços."
+          }
+        },
+        "BR": {
+          "country_code": "BR",
+          "source_urls": [
+            "https://www.who.int/teams/maternal-newborn-child-adolescent-health-and-ageing/ageing-and-health",
+            "https://www.oecd.org/health/",
+            "https://www.gov.br/"
+          ],
+          "text": {
+            "zh-TW": "巴西的照護可能連結家庭、社區與公共衛生服務，距離、收入和地方資源會造成不同經驗。",
+            "en": "In Brazil, care may connect families, communities, and public health services; distance, income, and local resources shape experiences.",
+            "ja": "ブラジルでは家族、地域、公共医療サービスがケアにつながることがあり、距離、収入、地域資源で経験が変わります。",
+            "zh-CN": "巴西的照护可能连接家庭、社区和公共卫生服务，距离、收入和地方资源会造成不同经验。",
+            "hi": "ब्राज़ील में देखभाल परिवार, समुदाय और सार्वजनिक स्वास्थ्य सेवाओं से जुड़ सकती है; दूरी, आय और स्थानीय संसाधन अनुभव बदलते हैं।",
+            "id": "Di Brasil, perawatan dapat menghubungkan keluarga, komunitas, dan layanan kesehatan publik; jarak, pendapatan, dan sumber daya lokal berpengaruh.",
+            "pt-BR": "No Brasil, o cuidado pode ligar família, comunidade e saúde pública; distância, renda e recursos locais produzem experiências diferentes."
+          }
+        }
+      }
+    },
+    "coming-of-age": {
+      "source_urls": [
+        "https://www.britannica.com/topic/rite-of-passage",
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+      ],
+      "notes": {
+        "TW": {
+          "country_code": "TW",
+          "source_urls": [
+            "https://www.britannica.com/topic/rite-of-passage",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "https://www.gov.tw/"
+          ],
+          "text": {
+            "zh-TW": "台灣的成年感可能來自法律年齡、升學、就業或家庭期待，不一定有單一全國成年禮。",
+            "en": "In Taiwan, adulthood may be marked by legal age, education, work, or family expectations rather than one national rite.",
+            "ja": "台湾では成人は法的年齢、進学、就職、家族の期待などで感じられ、全国共通の成人儀礼が一つあるわけではありません。",
+            "zh-CN": "在台湾，成年感可能来自法定年龄、升学、就业或家庭期待，不一定有单一全国成年礼。",
+            "hi": "ताइवान में वयस्कता कानूनी उम्र, पढ़ाई, काम या परिवार की अपेक्षाओं से जुड़ सकती है; कोई एक राष्ट्रीय रस्म नहीं है।",
+            "id": "Di Taiwan, kedewasaan dapat ditandai usia hukum, pendidikan, pekerjaan, atau harapan keluarga, bukan satu ritus nasional.",
+            "pt-BR": "Em Taiwan, a vida adulta pode ser marcada por idade legal, estudo, trabalho ou expectativas familiares, sem um rito nacional único."
+          }
+        },
+        "JP": {
+          "country_code": "JP",
+          "source_urls": [
+            "https://www.britannica.com/topic/rite-of-passage",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+          ],
+          "text": {
+            "zh-TW": "日本有成人之日這個公共節點，地方典禮、和服與家族拍照常見，但參與方式仍可由個人選擇。",
+            "en": "Japan has Coming of Age Day as a public milestone; local ceremonies, formal clothing, and family photos are common, but participation remains personal.",
+            "ja": "日本には成人の日という公的な節目があり、地域の式典、晴れ着、家族写真が見られますが、参加の仕方は個人で選べます。",
+            "zh-CN": "日本有成人之日这个公共节点，地方典礼、正式服装和家庭拍照常见，但参与方式仍可由个人选择。",
+            "hi": "जापान में Coming of Age Day सार्वजनिक पड़ाव है; स्थानीय समारोह, औपचारिक पोशाक और पारिवारिक तस्वीरें आम हैं, पर भागीदारी व्यक्तिगत है।",
+            "id": "Di Jepang, Coming of Age Day menjadi tonggak publik; upacara daerah, pakaian resmi, dan foto keluarga umum, tetapi partisipasi tetap personal.",
+            "pt-BR": "No Japão, o Dia da Maioridade é um marco público; cerimônias locais, roupa formal e fotos de família são comuns, mas a participação é pessoal."
+          }
+        },
+        "CN": {
+          "country_code": "CN",
+          "source_urls": [
+            "https://www.britannica.com/topic/rite-of-passage",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "https://www.gov.cn/"
+          ],
+          "text": {
+            "zh-TW": "中國大陸沒有一個涵蓋所有人的單一成年禮，升學、工作、戶籍與家庭責任常成為轉折。",
+            "en": "Mainland China has no single coming-of-age rite for everyone; education, work, household registration, and family responsibility can mark the transition.",
+            "ja": "中国大陸には全員に共通する一つの成人儀礼はなく、進学、就職、戸籍、家族責任が転機になります。",
+            "zh-CN": "中国大陆没有一个覆盖所有人的单一成年礼，升学、工作、户籍和家庭责任常成为转折。",
+            "hi": "चीन में सबके लिए एक ही वयस्कता रस्म नहीं है; पढ़ाई, काम, परिवार और जिम्मेदारी बदलाव के संकेत हो सकते हैं।",
+            "id": "Di Tiongkok daratan, tidak ada satu ritus kedewasaan untuk semua; pendidikan, kerja, pencatatan rumah tangga, dan tanggung jawab keluarga dapat menjadi penanda.",
+            "pt-BR": "Na China continental, não há um rito de maioridade único; estudo, trabalho, registro familiar e responsabilidades podem marcar a passagem."
+          }
+        },
+        "US": {
+          "country_code": "US",
+          "source_urls": [
+            "https://www.britannica.com/topic/rite-of-passage",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "https://www.usa.gov/"
+          ],
+          "text": {
+            "zh-TW": "美國常把成年與州法定年齡、畢業、駕照、離家或投票權並談，沒有一個全國一致的成年儀式。",
+            "en": "In the United States, adulthood is discussed through state age laws, graduation, driving, moving out, or voting; there is no single national rite.",
+            "ja": "米国では成人を州の法定年齢、卒業、運転、独立、投票などで語り、全国共通の成人儀礼はありません。",
+            "zh-CN": "美国常把成年与州法定年龄、毕业、驾照、离家或投票权并谈，没有全国一致的成年仪式。",
+            "hi": "अमेरिका में वयस्कता राज्य के कानून, स्नातक, ड्राइविंग, घर से अलग रहने या मतदान से जुड़ सकती है; एक राष्ट्रीय रस्म नहीं है।",
+            "id": "Di Amerika Serikat, kedewasaan dibahas lewat usia hukum negara bagian, kelulusan, SIM, tinggal mandiri, atau hak pilih; tidak ada satu ritus nasional.",
+            "pt-BR": "Nos Estados Unidos, a maioridade passa por leis estaduais, formatura, carteira, sair de casa ou voto; não há um rito nacional único."
+          }
+        },
+        "IN": {
+          "country_code": "IN",
+          "source_urls": [
+            "https://www.britannica.com/topic/rite-of-passage",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "https://www.india.gov.in/"
+          ],
+          "text": {
+            "zh-TW": "印度的成年轉折可能連結宗教入門、教育、工作、婚姻或家族儀式，不同邦與社群差異很大。",
+            "en": "In India, coming-of-age may connect to religious initiation, education, work, marriage, or family rites; differences between states and communities are substantial.",
+            "ja": "インドの成人への移行は、宗教的な入門、教育、仕事、結婚、家族の儀礼と結びつくことがあり、州や共同体で大きく異なります。",
+            "zh-CN": "印度的成年转折可能连接宗教入门、教育、工作、婚姻或家族仪式，不同邦和社群差异很大。",
+            "hi": "भारत में वयस्कता धार्मिक दीक्षा, शिक्षा, काम, विवाह या पारिवारिक रस्म से जुड़ सकती है; राज्य और समुदाय के अनुसार बहुत फर्क है।",
+            "id": "Di India, kedewasaan dapat terkait inisiasi agama, pendidikan, kerja, pernikahan, atau ritus keluarga; perbedaan antarnegara bagian dan komunitas besar.",
+            "pt-BR": "Na Índia, a passagem à vida adulta pode se ligar à iniciação religiosa, estudo, trabalho, casamento ou ritos familiares; estados e comunidades variam muito."
+          }
+        },
+        "ID": {
+          "country_code": "ID",
+          "source_urls": [
+            "https://www.britannica.com/topic/rite-of-passage",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "https://indonesia.go.id/"
+          ],
+          "text": {
+            "zh-TW": "印尼的成年與責任常透過宗教、家庭、教育和地方族群儀式表達，並非每個島嶼都一樣。",
+            "en": "In Indonesia, adulthood and responsibility may be expressed through religion, family, education, and local ethnic rites; islands differ.",
+            "ja": "インドネシアでは成人と責任を宗教、家族、教育、地域民族の儀礼で表すことがあり、島によって異なります。",
+            "zh-CN": "印度尼西亚的成年与责任常通过宗教、家庭、教育和地方族群仪式表达，并非每个岛屿都一样。",
+            "hi": "इंडोनेशिया में वयस्कता और जिम्मेदारी धर्म, परिवार, शिक्षा और स्थानीय जातीय रस्मों से व्यक्त हो सकती है; द्वीपों में फर्क है।",
+            "id": "Di Indonesia, kedewasaan dan tanggung jawab dapat diekspresikan lewat agama, keluarga, pendidikan, dan ritus etnis lokal; tiap pulau berbeda.",
+            "pt-BR": "Na Indonésia, maturidade e responsabilidade podem aparecer em práticas religiosas, familiares, educacionais e étnicas locais; as ilhas não são iguais."
+          }
+        },
+        "BR": {
+          "country_code": "BR",
+          "source_urls": [
+            "https://www.britannica.com/topic/rite-of-passage",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "https://www.gov.br/"
+          ],
+          "text": {
+            "zh-TW": "巴西的成年轉折可能由法定年齡、學業、工作、宗教或家庭慶祝標記，沒有單一全國版本。",
+            "en": "In Brazil, adulthood may be marked by legal age, study, work, faith, or family celebrations; there is no single national version.",
+            "ja": "ブラジルでは、法定年齢、学業、仕事、信仰、家族の祝いが成人の節目になり得ますが、全国共通の形はありません。",
+            "zh-CN": "巴西的成年转折可能由法定年龄、学业、工作、宗教或家庭庆祝标记，没有单一全国版本。",
+            "hi": "ब्राज़ील में वयस्कता कानूनी उम्र, पढ़ाई, काम, आस्था या पारिवारिक उत्सव से जुड़ सकती है; एक राष्ट्रीय रूप नहीं है।",
+            "id": "Di Brasil, kedewasaan dapat ditandai usia hukum, studi, kerja, iman, atau perayaan keluarga; tidak ada satu versi nasional.",
+            "pt-BR": "No Brasil, a passagem à vida adulta pode ser marcada por idade legal, estudo, trabalho, fé ou celebrações familiares; não existe um modelo nacional único."
+          }
+        }
+      }
+    },
+    "homecoming-and-reunion": {
+      "source_urls": [
+        "https://www.ilo.org/",
+        "https://www.oecd.org/migration/"
+      ],
+      "notes": {
+        "TW": {
+          "country_code": "TW",
+          "source_urls": [
+            "https://www.ilo.org/",
+            "https://www.oecd.org/migration/",
+            "https://www.gov.tw/"
+          ],
+          "text": {
+            "zh-TW": "台灣的返鄉常和春節、清明或家庭聚會連在一起，車票與工作排班會影響安排；不是每個人都能或都想返鄉。",
+            "en": "In Taiwan, returning home is often tied to Lunar New Year, Qingming, or family gatherings; tickets and work schedules shape plans, and not everyone travels.",
+            "ja": "台湾では春節、清明節、家族の集まりなどで帰省することがありますが、切符、仕事、距離の事情で全員が帰るわけではありません。",
+            "zh-CN": "在台湾，返乡常和春节、清明或家庭聚会相连，车票与工作排班会影响安排；不是每个人都能或都想返乡。",
+            "hi": "ताइवान में घर लौटना चंद्र नववर्ष, छिंगमिंग या पारिवारिक मिलन से जुड़ सकता है; टिकट और काम की वजह से हर व्यक्ति यात्रा नहीं करता।",
+            "id": "Di Taiwan, pulang kampung sering terkait Tahun Baru Imlek, Qingming, atau kumpul keluarga; tiket dan jadwal kerja memengaruhi rencana, dan tidak semua orang bepergian.",
+            "pt-BR": "Em Taiwan, voltar para casa pode acompanhar o Ano-Novo Lunar, Qingming ou encontros familiares; passagens e trabalho pesam, e nem todos viajam."
+          }
+        },
+        "JP": {
+          "country_code": "JP",
+          "source_urls": [
+            "https://www.ilo.org/",
+            "https://www.oecd.org/migration/",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+          ],
+          "text": {
+            "zh-TW": "日本的帰省常見於盂蘭盆、年末年初或連假，鐵路與高速公路的尖峰很明顯；也有人留在城市或以視訊聯絡。",
+            "en": "In Japan, returning home is common around Obon, year-end, and long weekends; some people stay in the city or connect online.",
+            "ja": "日本の帰省はお盆、年末年始、連休に増えます。交通が混む一方、都市に残ったりオンラインで連絡したりする人もいます。",
+            "zh-CN": "在日本，返乡常见于盂兰盆、年末年初或长假，铁路与高速公路高峰明显；也有人留在城市或用视频联系。",
+            "hi": "जापान में घर लौटना ओबोन, साल के अंत और लंबी छुट्टियों में बढ़ता है; कुछ लोग शहर में रहते या ऑनलाइन संपर्क करते हैं।",
+            "id": "Di Jepang, pulang kampung banyak terjadi saat Obon, akhir tahun, dan libur panjang; sebagian orang tetap di kota atau terhubung daring.",
+            "pt-BR": "No Japão, voltar para casa aumenta no Obon, no fim do ano e em feriados longos; algumas pessoas ficam na cidade ou conversam online."
+          }
+        },
+        "CN": {
+          "country_code": "CN",
+          "source_urls": [
+            "https://www.ilo.org/",
+            "https://www.oecd.org/migration/",
+            "https://www.gov.cn/"
+          ],
+          "text": {
+            "zh-TW": "中國大陸的返鄉常與春節、清明和中秋等家庭節點連在一起，城市、工作與交通距離會改變選擇。",
+            "en": "In mainland China, returning home is often linked to Spring Festival, Qingming, and Mid-Autumn; city, work, and distance change the choice.",
+            "ja": "中国大陸では春節、清明、中秋などの家族の節目に帰省することがありますが、都市、仕事、距離、家庭事情で選択は変わります。",
+            "zh-CN": "在中国大陆，返乡常与春节、清明和中秋等家庭节点相连，城市、工作和交通距离会改变选择。",
+            "hi": "चीन में घर लौटना वसंत उत्सव, छिंगमिंग और मध्य-शरद जैसे अवसरों से जुड़ सकता है; शहर, काम और दूरी चुनाव बदलते हैं।",
+            "id": "Di Tiongkok daratan, pulang kampung sering terkait Festival Musim Semi, Qingming, dan Pertengahan Musim Gugur; kota, kerja, dan jarak memengaruhi pilihan.",
+            "pt-BR": "Na China continental, voltar para casa costuma se ligar ao Festival da Primavera, Qingming e Meio do Outono; cidade, trabalho e distância mudam a escolha."
+          }
+        },
+        "US": {
+          "country_code": "US",
+          "source_urls": [
+            "https://www.ilo.org/",
+            "https://www.oecd.org/migration/",
+            "https://www.usa.gov/"
+          ],
+          "text": {
+            "zh-TW": "美國的 homecoming 可能是感恩節、聖誕節、畢業或學校活動，也常因距離、費用與家庭安排改成短暫或線上團聚。",
+            "en": "In the United States, homecoming may mean Thanksgiving, Christmas, graduation, or a school tradition; distance and cost can make it brief or virtual.",
+            "ja": "米国のhomecomingは感謝祭、クリスマス、卒業、学校行事などを指すことがあります。距離や費用で短い再会やオンラインの集まりになることもあります。",
+            "zh-CN": "在美国，homecoming 可能指感恩节、圣诞节、毕业或学校传统；距离、费用与家庭安排可能让团聚变短或改在线上。",
+            "hi": "अमेरिका में homecoming Thanksgiving, Christmas, graduation या स्कूल परंपरा हो सकता है; दूरी, खर्च और परिवार की योजना मिलन का रूप बदलते हैं।",
+            "id": "Di Amerika Serikat, homecoming dapat berarti Thanksgiving, Natal, kelulusan, atau tradisi sekolah; jarak dan biaya bisa membuatnya singkat atau daring.",
+            "pt-BR": "Nos Estados Unidos, homecoming pode ser Thanksgiving, Natal, formatura ou tradição escolar; distância e custo podem tornar o encontro breve ou virtual."
+          }
+        },
+        "IN": {
+          "country_code": "IN",
+          "source_urls": [
+            "https://www.ilo.org/",
+            "https://www.oecd.org/migration/",
+            "https://www.india.gov.in/"
+          ],
+          "text": {
+            "zh-TW": "印度的返鄉常和 Diwali、婚禮或地方節慶相連，火車、公路與城市工作安排都會影響家庭團聚；不返鄉也可能是選擇。",
+            "en": "In India, returning home may coincide with Diwali, weddings, or regional festivals; trains, roads, and city work shape reunions, and staying is also a choice.",
+            "ja": "インドではディワーリー、結婚式、地域の祭りに合わせて帰省することがあります。交通と都市の仕事が再会を左右し、帰らない選択もあります。",
+            "zh-CN": "在印度，返乡常和排灯节、婚礼或地方节庆相连，火车、公路与城市工作安排会影响团聚；不返乡也可能是选择。",
+            "hi": "भारत में घर लौटना दिवाली, विवाह या क्षेत्रीय त्योहारों के साथ हो सकता है; ट्रेन, सड़क और शहर का काम पुनर्मिलन तय करते हैं, और न लौटना भी विकल्प है।",
+            "id": "Di India, pulang kampung dapat bertepatan dengan Diwali, pernikahan, atau festival daerah; kereta, jalan, dan pekerjaan kota membentuk reuni, sementara tidak pulang juga pilihan.",
+            "pt-BR": "Na Índia, voltar para casa pode coincidir com Diwali, casamentos ou festas regionais; transporte e trabalho urbano moldam o reencontro, e ficar também é uma escolha."
+          }
+        },
+        "ID": {
+          "country_code": "ID",
+          "source_urls": [
+            "https://www.ilo.org/",
+            "https://www.oecd.org/migration/",
+            "https://indonesia.go.id/"
+          ],
+          "text": {
+            "zh-TW": "印尼的 mudik 尤其常見於 Idul Fitri，返鄉路線、交通管制與家庭能力差異很大；不是每個人都返鄉，也有人留在城市。",
+            "en": "In Indonesia, mudik is especially associated with Idul Fitri; routes, transport controls, and family means vary, and not everyone returns home.",
+            "ja": "インドネシアではIdul Fitriのmudikがよく知られますが、経路、交通規制、家族の事情はさまざまで、帰省しない人もいます。",
+            "zh-CN": "在印度尼西亚，mudik 尤其常见于开斋节，返乡路线、交通管制和家庭能力差异很大；不是每个人都返乡。",
+            "hi": "इंडोनेशिया में mudik खासकर Idul Fitri से जुड़ा है; रास्ते, यातायात व्यवस्था और परिवार की क्षमता अलग होती है, और हर व्यक्ति घर नहीं लौटता।",
+            "id": "Di Indonesia, mudik sangat terkait dengan Idul Fitri; rute, pengaturan transportasi, dan kemampuan keluarga berbeda, dan tidak semua orang pulang.",
+            "pt-BR": "Na Indonésia, mudik é especialmente associado ao Idul Fitri; rotas, transporte e condições familiares variam, e nem todos voltam."
+          }
+        },
+        "BR": {
+          "country_code": "BR",
+          "source_urls": [
+            "https://www.ilo.org/",
+            "https://www.oecd.org/migration/",
+            "https://www.gov.br/"
+          ],
+          "text": {
+            "zh-TW": "巴西的返鄉可能出現在聖誕節、Réveillon、婚禮或長假，長途巴士與航班讓團聚取決於距離、費用與家庭安排。",
+            "en": "In Brazil, people may travel home for Christmas, Réveillon, weddings, or holidays; long journeys make distance and cost part of reunion.",
+            "ja": "ブラジルではクリスマス、Réveillon、結婚式、休暇に帰省することがあります。長距離の移動、費用、地理が再会の形を左右します。",
+            "zh-CN": "在巴西，返乡可能出现在圣诞节、Réveillon、婚礼或长假，长途巴士与航班让团聚取决于距离、费用和家庭安排。",
+            "hi": "ब्राज़ील में लोग क्रिसमस, Réveillon, विवाह या छुट्टियों में घर लौट सकते हैं; लंबी यात्रा में दूरी और खर्च मायने रखते हैं।",
+            "id": "Di Brasil, orang dapat pulang saat Natal, Réveillon, pernikahan, atau liburan; perjalanan jauh membuat jarak dan biaya penting.",
+            "pt-BR": "No Brasil, pode-se voltar para casa no Natal, Réveillon, casamentos ou férias; viagens longas fazem distância e custo pesarem no reencontro."
+          }
+        }
+      }
+    },
+    "farewells-and-funerals": {
+      "source_urls": [
+        "https://www.britannica.com/topic/funeral-ritual",
+        "https://www.who.int/health-topics/palliative-care"
+      ],
+      "notes": {
+        "TW": {
+          "country_code": "TW",
+          "source_urls": [
+            "https://www.britannica.com/topic/funeral-ritual",
+            "https://www.who.int/health-topics/palliative-care",
+            "https://www.gov.tw/"
+          ],
+          "text": {
+            "zh-TW": "台灣的告別儀式會受佛教、道教、基督宗教與家庭選擇影響，告別式、火化和追思形式並不單一。",
+            "en": "In Taiwan, Buddhist, Taoist, Christian, and family choices shape farewells; ceremonies, cremation, and memorials take different forms.",
+            "ja": "台湾では仏教、道教、キリスト教、家族の選択が見送り方を形づくり、葬儀、火葬、追悼の形は一つではありません。",
+            "zh-CN": "在台湾，佛教、道教、基督教和家庭选择都会影响告别仪式，告别式、火化和追思形式并不单一。",
+            "hi": "ताइवान में बौद्ध, ताओवादी, ईसाई और पारिवारिक चुनाव विदाई को आकार देते हैं; अंतिम संस्कार और स्मरण के रूप अलग हो सकते हैं।",
+            "id": "Di Taiwan, pilihan Buddha, Tao, Kristen, dan keluarga membentuk perpisahan; upacara, kremasi, dan mengenang memiliki banyak bentuk.",
+            "pt-BR": "Em Taiwan, escolhas budistas, taoistas, cristãs e familiares moldam as despedidas; cerimônia, cremação e memória assumem formas variadas."
+          }
+        },
+        "JP": {
+          "country_code": "JP",
+          "source_urls": [
+            "https://www.britannica.com/topic/funeral-ritual",
+            "https://www.who.int/health-topics/palliative-care",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+          ],
+          "text": {
+            "zh-TW": "日本多見通夜、告別式與火葬的連續安排，但宗教派別、地方與家屬意願會改變細節。",
+            "en": "Japan often links a wake, funeral service, and cremation, but sect, locality, and family wishes change the details.",
+            "ja": "日本では通夜、葬儀、火葬が続く流れがよく見られますが、宗派、地域、家族の希望で細部は変わります。",
+            "zh-CN": "日本常见守夜、告别式和火化的连续安排，但宗教派别、地方和家属意愿会改变细节。",
+            "hi": "जापान में जागरण, अंतिम संस्कार और दाह-संस्कार का क्रम आम है; संप्रदाय, क्षेत्र और परिवार के अनुसार रूप बदलता है।",
+            "id": "Di Jepang, rangkaian malam penghormatan, pemakaman, dan kremasi umum ditemui; sekte, daerah, dan keinginan keluarga memengaruhi detail.",
+            "pt-BR": "No Japão, velório, funeral e cremação costumam formar uma sequência; seita, região e desejo da família mudam os detalhes."
+          }
+        },
+        "CN": {
+          "country_code": "CN",
+          "source_urls": [
+            "https://www.britannica.com/topic/funeral-ritual",
+            "https://www.who.int/health-topics/palliative-care",
+            "https://www.gov.cn/"
+          ],
+          "text": {
+            "zh-TW": "中國大陸的喪葬與追思會因城市、族群、宗教與家庭而不同，清明祭掃也不是每個人都用同一方式。",
+            "en": "In mainland China, funerals and remembrance vary by city, community, faith, and family; Qingming observance is not identical for everyone.",
+            "ja": "中国大陸の葬送と追悼は都市、共同体、宗教、家族で異なり、清明の墓参りも全員が同じ方法で行うわけではありません。",
+            "zh-CN": "中国大陆的丧葬与追思会因城市、族群、宗教和家庭而不同，清明祭扫也不是每个人都用同一方式。",
+            "hi": "चीन में अंतिम संस्कार और स्मरण शहर, समुदाय, आस्था और परिवार के अनुसार बदलते हैं; छिंगमिंग भी सबके लिए एक जैसा नहीं है।",
+            "id": "Di Tiongkok daratan, pemakaman dan penghormatan berbeda menurut kota, komunitas, agama, dan keluarga; Qingming pun tidak dilakukan dengan satu cara.",
+            "pt-BR": "Na China continental, funerais e lembranças variam por cidade, comunidade, fé e família; o Qingming também não é igual para todos."
+          }
+        },
+        "US": {
+          "country_code": "US",
+          "source_urls": [
+            "https://www.britannica.com/topic/funeral-ritual",
+            "https://www.who.int/health-topics/palliative-care",
+            "https://www.usa.gov/"
+          ],
+          "text": {
+            "zh-TW": "美國常見教堂、殯儀館、墓園或自然葬等不同選擇，追思會是否公開、宗教化或非宗教化都可協商。",
+            "en": "In the United States, families may choose churches, funeral homes, cemeteries, or natural burial; memorials can be religious, secular, public, or private.",
+            "ja": "米国では教会、葬儀場、墓地、自然葬などを選べ、追悼を宗教的、非宗教的、公開、私的にするかも相談できます。",
+            "zh-CN": "美国常见教堂、殡仪馆、墓园或自然葬等不同选择，追思会可以公开、宗教化或非宗教化。",
+            "hi": "अमेरिका में चर्च, अंतिम संस्कार गृह, कब्रिस्तान या प्राकृतिक दफ़न जैसे विकल्प हो सकते हैं; स्मरण सभा धार्मिक या धर्मनिरपेक्ष हो सकती है।",
+            "id": "Di Amerika Serikat, keluarga dapat memilih gereja, rumah duka, pemakaman, atau pemakaman alami; acara mengenang bisa religius, sekuler, terbuka, atau privat.",
+            "pt-BR": "Nos Estados Unidos, há opções como igreja, funerária, cemitério ou sepultamento natural; a homenagem pode ser religiosa, secular, pública ou privada."
+          }
+        },
+        "IN": {
+          "country_code": "IN",
+          "source_urls": [
+            "https://www.britannica.com/topic/funeral-ritual",
+            "https://www.who.int/health-topics/palliative-care",
+            "https://www.india.gov.in/"
+          ],
+          "text": {
+            "zh-TW": "印度的告別方式與宗教、種姓社群、地區與家庭傳統密切相關，火化、土葬和祈禱的安排各有脈絡。",
+            "en": "In India, farewells are closely tied to faith, community, region, and family tradition; cremation, burial, and prayer follow different contexts.",
+            "ja": "インドの見送りは信仰、共同体、地域、家族の伝統と深く結びつき、火葬、土葬、祈りの形も異なります。",
+            "zh-CN": "印度的告别方式与宗教、社群、地区和家庭传统密切相关，火化、土葬和祈祷安排各有脉络。",
+            "hi": "भारत में विदाई धर्म, समुदाय, क्षेत्र और परिवार की परंपरा से जुड़ी होती है; दाह, दफ़न और प्रार्थना के रूप अलग हो सकते हैं।",
+            "id": "Di India, perpisahan berkaitan erat dengan agama, komunitas, wilayah, dan tradisi keluarga; kremasi, pemakaman, dan doa memiliki konteks berbeda.",
+            "pt-BR": "Na Índia, as despedidas estão ligadas à fé, comunidade, região e tradição familiar; cremação, sepultamento e oração seguem contextos variados."
+          }
+        },
+        "ID": {
+          "country_code": "ID",
+          "source_urls": [
+            "https://www.britannica.com/topic/funeral-ritual",
+            "https://www.who.int/health-topics/palliative-care",
+            "https://indonesia.go.id/"
+          ],
+          "text": {
+            "zh-TW": "印尼的追思方式可能呈現穆斯林、基督宗教、印度教與地方族群的不同傳統，不能只用一種葬禮概括。",
+            "en": "In Indonesia, remembrance reflects Muslim, Christian, Hindu, and local ethnic traditions; one funeral model cannot describe the country.",
+            "ja": "インドネシアの追悼にはイスラム、キリスト教、ヒンドゥー教、地域民族の伝統が表れ、一つの葬儀モデルでは説明できません。",
+            "zh-CN": "印度尼西亚的追思方式可能呈现穆斯林、基督教、印度教和地方族群的不同传统，不能只用一种葬礼概括。",
+            "hi": "इंडोनेशिया में स्मरण मुस्लिम, ईसाई, हिंदू और स्थानीय जातीय परंपराओं को दर्शा सकता है; एक ही अंतिम संस्कार पूरे देश को नहीं बताता।",
+            "id": "Di Indonesia, penghormatan mencerminkan tradisi Muslim, Kristen, Hindu, dan etnis lokal; satu model pemakaman tidak cukup untuk seluruh negeri.",
+            "pt-BR": "Na Indonésia, o luto reflete tradições muçulmanas, cristãs, hindus e étnicas locais; um único modelo não descreve o país."
+          }
+        },
+        "BR": {
+          "country_code": "BR",
+          "source_urls": [
+            "https://www.britannica.com/topic/funeral-ritual",
+            "https://www.who.int/health-topics/palliative-care",
+            "https://www.gov.br/"
+          ],
+          "text": {
+            "zh-TW": "巴西的告別可能在教堂、墓園或殯儀場所進行，天主教、福音派、非宗教與家庭做法並存。",
+            "en": "In Brazil, farewells may take place in churches, cemeteries, or funeral spaces, with Catholic, evangelical, secular, and family practices coexisting.",
+            "ja": "ブラジルでは教会、墓地、葬儀施設で見送りが行われ、カトリック、福音派、非宗教、家族の方法が共存します。",
+            "zh-CN": "巴西的告别可能在教堂、墓园或殡仪场所进行，天主教、福音派、非宗教和家庭做法并存。",
+            "hi": "ब्राज़ील में विदाई चर्च, कब्रिस्तान या अंतिम संस्कार स्थल पर हो सकती है; कैथोलिक, इवेंजेलिकल, धर्मनिरपेक्ष और पारिवारिक तरीके साथ रहते हैं।",
+            "id": "Di Brasil, perpisahan dapat berlangsung di gereja, pemakaman, atau rumah duka; praktik Katolik, evangelis, sekuler, dan keluarga berdampingan.",
+            "pt-BR": "No Brasil, a despedida pode ocorrer em igreja, cemitério ou funerária; práticas católicas, evangélicas, seculares e familiares convivem."
+          }
+        }
+      }
+    },
+    "graduation-season": {
+      "source_urls": [
+        "https://www.unesco.org/en/education",
+        "https://www.oecd.org/education/"
+      ],
+      "notes": {
+        "TW": {
+          "country_code": "TW",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www.gov.tw/"
+          ],
+          "text": {
+            "zh-TW": "台灣的畢業季常有制服、撥穗、畢業冊、合照與謝師，時間依學制與學校安排。",
+            "en": "Taiwanese graduations may include uniforms, degree hoods, yearbooks, photos, and teacher thanks; timing follows the school system.",
+            "ja": "台湾の卒業では制服、学位帽、卒業アルバム、写真、先生への感謝が見られ、時期は学制と学校で決まります。",
+            "zh-CN": "台湾的毕业季常有校服、拨穗、毕业册、合照和谢师，时间依学制与学校安排。",
+            "hi": "ताइवान में स्नातक समारोह में यूनिफ़ॉर्म, हुड, ईयरबुक, तस्वीरें और शिक्षक धन्यवाद शामिल हो सकते हैं; समय स्कूल व्यवस्था तय करती है।",
+            "id": "Di Taiwan, kelulusan dapat mencakup seragam, selempang atau toga, buku tahunan, foto, dan ucapan terima kasih kepada guru; waktunya mengikuti sistem sekolah.",
+            "pt-BR": "Em Taiwan, formaturas podem ter uniforme, capelo, anuário, fotos e agradecimento aos professores; o calendário segue o sistema escolar."
+          }
+        },
+        "JP": {
+          "country_code": "JP",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+          ],
+          "text": {
+            "zh-TW": "日本的畢業多集中在春季，畢業典禮、制服、校歌與對老師和同學的告別形成季節感。",
+            "en": "Japanese graduations are concentrated in spring; ceremonies, uniforms, school songs, and farewells create a strong seasonal rhythm.",
+            "ja": "日本の卒業は春に集中し、式典、制服、校歌、先生や友人への別れが季節の風景をつくります。",
+            "zh-CN": "日本的毕业多集中在春季，毕业典礼、校服、校歌以及和老师同学道别形成季节感。",
+            "hi": "जापान में स्नातक समारोह अक्सर वसंत में होते हैं; समारोह, यूनिफ़ॉर्म, स्कूल गीत और विदाई मौसम का हिस्सा हैं।",
+            "id": "Di Jepang, kelulusan banyak berlangsung pada musim semi; upacara, seragam, lagu sekolah, dan perpisahan memberi nuansa musim.",
+            "pt-BR": "No Japão, as formaturas se concentram na primavera; cerimônia, uniforme, hino escolar e despedidas criam um ritmo sazonal."
+          }
+        },
+        "CN": {
+          "country_code": "CN",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www.gov.cn/"
+          ],
+          "text": {
+            "zh-TW": "中國大陸的畢業安排會隨學段、城市與學校而異，照片、典禮、聚餐和升學或就業是常見轉折。",
+            "en": "In mainland China, graduation varies by school level, city, and institution; photos, ceremonies, meals, and the next study or work step are common transitions.",
+            "ja": "中国大陸の卒業は学段、都市、学校で異なり、写真、式典、食事、進学や就職が次の節目になります。",
+            "zh-CN": "中国大陆的毕业安排会随学段、城市和学校而异，照片、典礼、聚餐和升学或就业是常见转折。",
+            "hi": "चीन में स्नातक अनुभव शिक्षा स्तर, शहर और स्कूल के अनुसार बदलता है; तस्वीरें, समारोह, भोजन और आगे की पढ़ाई या काम आम पड़ाव हैं।",
+            "id": "Di Tiongkok daratan, kelulusan berbeda menurut jenjang, kota, dan sekolah; foto, upacara, makan bersama, serta lanjut studi atau kerja menjadi transisi umum.",
+            "pt-BR": "Na China continental, a formatura varia por nível, cidade e instituição; fotos, cerimônia, refeição e o próximo passo de estudo ou trabalho são comuns."
+          }
+        },
+        "US": {
+          "country_code": "US",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www.usa.gov/"
+          ],
+          "text": {
+            "zh-TW": "美國常見帽穗、學位服、畢業演講與校園合照，但高中、大學和不同州的典禮規模差異很大。",
+            "en": "In the United States, caps, gowns, speeches, and campus photos are common, but high-school, college, and state practices vary widely.",
+            "ja": "米国では帽子、ガウン、スピーチ、キャンパス写真がよく見られますが、高校、大学、州で規模や方法は大きく違います。",
+            "zh-CN": "美国常见学士帽、学位服、毕业演讲和校园合照，但高中、大学和不同州的典礼规模差异很大。",
+            "hi": "अमेरिका में कैप, गाउन, भाषण और कैंपस तस्वीरें आम हैं; हाई स्कूल, कॉलेज और राज्य के अनुसार समारोह बहुत बदलते हैं।",
+            "id": "Di Amerika Serikat, topi, toga, pidato, dan foto kampus umum; praktik sekolah menengah, perguruan tinggi, dan negara bagian sangat beragam.",
+            "pt-BR": "Nos Estados Unidos, capelo, beca, discursos e fotos no campus são comuns; ensino médio, faculdade e estado mudam bastante a cerimônia."
+          }
+        },
+        "IN": {
+          "country_code": "IN",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www.india.gov.in/"
+          ],
+          "text": {
+            "zh-TW": "印度的畢業季包含學校、學院與大學不同層級，畢業袍、證書、家族到場和地方慶祝都可能出現。",
+            "en": "In India, school, college, and university graduations differ; gowns, certificates, family attendance, and local celebrations may all appear.",
+            "ja": "インドでは学校、カレッジ、大学で卒業の形が異なり、ガウン、証書、家族の参加、地域の祝いが見られることがあります。",
+            "zh-CN": "印度的毕业季包含学校、学院和大学不同层级，毕业袍、证书、家族到场和地方庆祝都可能出现。",
+            "hi": "भारत में स्कूल, कॉलेज और विश्वविद्यालय की स्नातक परंपराएँ अलग हैं; गाउन, प्रमाणपत्र, परिवार और स्थानीय उत्सव शामिल हो सकते हैं।",
+            "id": "Di India, kelulusan sekolah, perguruan tinggi, dan universitas berbeda; toga, sertifikat, keluarga, dan perayaan lokal dapat hadir.",
+            "pt-BR": "Na Índia, formaturas escolares e universitárias têm formatos diferentes; beca, certificado, família e celebrações locais podem aparecer."
+          }
+        },
+        "ID": {
+          "country_code": "ID",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://indonesia.go.id/"
+          ],
+          "text": {
+            "zh-TW": "印尼的畢業典禮常重視家庭合照、學校服裝與集體儀式，地方與教育層級會影響形式。",
+            "en": "In Indonesia, graduation often emphasises family photos, school clothing, and collective ceremonies; locality and education level shape the form.",
+            "ja": "インドネシアの卒業では家族写真、学校の服装、集団の式典が重視されることがあり、地域と学段で形が変わります。",
+            "zh-CN": "印度尼西亚的毕业典礼常重视家庭合照、学校服装和集体仪式，地方与教育层级会影响形式。",
+            "hi": "इंडोनेशिया में स्नातक समारोह में पारिवारिक तस्वीर, स्कूल पोशाक और सामूहिक रस्में महत्वपूर्ण हो सकती हैं; क्षेत्र व स्तर के अनुसार रूप बदलता है।",
+            "id": "Di Indonesia, kelulusan sering menonjolkan foto keluarga, pakaian sekolah, dan upacara bersama; wilayah dan jenjang pendidikan memengaruhi bentuknya.",
+            "pt-BR": "Na Indonésia, a formatura costuma valorizar fotos de família, roupa escolar e cerimônias coletivas; região e nível de ensino mudam o formato."
+          }
+        },
+        "BR": {
+          "country_code": "BR",
+          "source_urls": [
+            "https://www.unesco.org/en/education",
+            "https://www.oecd.org/education/",
+            "https://www.gov.br/"
+          ],
+          "text": {
+            "zh-TW": "巴西的 formatura 可能從學校舞會到大學正式典禮，家族聚餐、舞台致詞和畢業袍各有不同。",
+            "en": "In Brazil, formatura ranges from school parties to formal university ceremonies; family meals, speeches, and gowns vary by level.",
+            "ja": "ブラジルのformaturaは学校のパーティーから大学の正式な式典まで幅があり、食事、スピーチ、ガウンも学段で異なります。",
+            "zh-CN": "巴西的 formatura 可能从学校舞会到大学正式典礼，家庭聚餐、舞台致词和毕业袍各有不同。",
+            "hi": "ब्राज़ील में formatura स्कूल पार्टी से विश्वविद्यालय के औपचारिक समारोह तक हो सकती है; भोजन, भाषण और गाउन स्तर के अनुसार बदलते हैं।",
+            "id": "Di Brasil, formatura bisa berupa pesta sekolah hingga upacara universitas formal; makan keluarga, pidato, dan toga berbeda menurut jenjang.",
+            "pt-BR": "No Brasil, a formatura vai de festa escolar a cerimônia universitária formal; refeição, discursos e beca variam conforme o nível."
+          }
+        }
+      }
+    },
+    "moving-home": {
+      "source_urls": [
+        "https://www.britannica.com/topic/housewarming",
+        "https://ich.unesco.org/"
+      ],
+      "notes": {
+        "TW": {
+          "country_code": "TW",
+          "source_urls": [
+            "https://www.britannica.com/topic/housewarming",
+            "https://ich.unesco.org/",
+            "https://www.gov.tw/"
+          ],
+          "text": {
+            "zh-TW": "台灣常把搬新家和入厝、安床、拜拜或邀親友聚餐連在一起，但是否舉行取決於家庭信仰。",
+            "en": "In Taiwan, moving home may connect to settling-in rituals, placing the bed, prayer, or inviting relatives to eat; families choose differently.",
+            "ja": "台湾では引っ越しが入居の儀礼、ベッドを置く日、参拝、親族の食事会と結びつくことがありますが、信仰で異なります。",
+            "zh-CN": "在台湾，搬新家常和入厝、安床、祭拜或邀亲友聚餐连在一起，但是否举行取决于家庭信仰。",
+            "hi": "ताइवान में नए घर में जाना घर बसाने की रस्म, बिस्तर रखने, प्रार्थना या रिश्तेदारों के भोजन से जुड़ सकता है; परिवार अलग चुनते हैं।",
+            "id": "Di Taiwan, pindah rumah dapat dikaitkan dengan ritual menetap, menata tempat tidur, doa, atau makan bersama keluarga; pilihan tergantung keyakinan.",
+            "pt-BR": "Em Taiwan, mudar de casa pode envolver ritos de instalação, arrumar a cama, oração ou refeição com parentes; cada família decide."
+          }
+        },
+        "JP": {
+          "country_code": "JP",
+          "source_urls": [
+            "https://www.britannica.com/topic/housewarming",
+            "https://ich.unesco.org/",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+          ],
+          "text": {
+            "zh-TW": "日本常見新居祝賀、鄰里問候與送禮，部分家庭也會在搬家後安排簡單的 housewarming 聚會。",
+            "en": "In Japan, new-home greetings and gifts are common, and some families hold a small housewarming gathering after moving.",
+            "ja": "日本では新居のあいさつや贈り物が見られ、引っ越し後に小さなホームパーティーを開く家庭もあります。",
+            "zh-CN": "日本常见新居祝贺、邻里问候和送礼，有些家庭也会在搬家后安排简单的 housewarming 聚会。",
+            "hi": "जापान में नए घर की बधाई, पड़ोसियों से अभिवादन और उपहार आम हो सकते हैं; कुछ परिवार छोटा गृह-स्वागत रखते हैं।",
+            "id": "Di Jepang, ucapan selamat rumah baru, salam kepada tetangga, dan hadiah umum; sebagian keluarga mengadakan pesta kecil setelah pindah.",
+            "pt-BR": "No Japão, cumprimentos e presentes para uma casa nova são comuns; algumas famílias fazem uma pequena recepção depois da mudança."
+          }
+        },
+        "CN": {
+          "country_code": "CN",
+          "source_urls": [
+            "https://www.britannica.com/topic/housewarming",
+            "https://ich.unesco.org/",
+            "https://www.gov.cn/"
+          ],
+          "text": {
+            "zh-TW": "中國大陸常用入伙、喬遷或暖房描述搬家，送禮、聚餐與整理新居會因城市和家庭而不同。",
+            "en": "In mainland China, moving home is often described through house-entry or housewarming customs; gifts, meals, and settling in vary by city and family.",
+            "ja": "中国大陸では入居、引っ越し祝い、家開きなどの言葉が使われ、贈り物、食事、片付けの仕方は都市と家庭で異なります。",
+            "zh-CN": "中国大陆常用入伙、乔迁或暖房描述搬家，送礼、聚餐和整理新居会因城市和家庭而不同。",
+            "hi": "चीन में नए घर में प्रवेश और गृह-स्वागत की परंपराएँ मिलती हैं; उपहार, भोजन और घर बसाना शहर व परिवार के अनुसार बदलता है।",
+            "id": "Di Tiongkok daratan, pindah rumah sering dibahas sebagai masuk rumah baru atau housewarming; hadiah, makan, dan penataan berbeda menurut kota dan keluarga.",
+            "pt-BR": "Na China continental, a mudança pode ser descrita por ritos de entrada e inauguração; presentes, refeições e organização variam por cidade e família."
+          }
+        },
+        "US": {
+          "country_code": "US",
+          "source_urls": [
+            "https://www.britannica.com/topic/housewarming",
+            "https://ich.unesco.org/",
+            "https://www.usa.gov/"
+          ],
+          "text": {
+            "zh-TW": "美國常見 housewarming 聚會、廚房用品或禮品卡，重點多在邀請親友認識新家，而非固定儀式。",
+            "en": "In the United States, housewarming parties, kitchen gifts, or gift cards are common; the emphasis is usually welcoming friends to the new home.",
+            "ja": "米国ではホームパーティー、キッチン用品、ギフトカードなどが見られ、決まった儀礼より友人を招くことが中心です。",
+            "zh-CN": "美国常见 housewarming 聚会、厨房用品或礼品卡，重点多在邀请亲友认识新家，而非固定仪式。",
+            "hi": "अमेरिका में housewarming पार्टी, रसोई सामान या गिफ्ट कार्ड आम हो सकते हैं; ज़ोर दोस्तों को नया घर दिखाने पर होता है।",
+            "id": "Di Amerika Serikat, pesta housewarming, perlengkapan dapur, atau kartu hadiah umum; fokusnya biasanya mengundang teman mengenal rumah baru.",
+            "pt-BR": "Nos Estados Unidos, festas de housewarming, itens de cozinha ou cartões-presente são comuns; o foco é receber amigos na casa nova."
+          }
+        },
+        "IN": {
+          "country_code": "IN",
+          "source_urls": [
+            "https://www.britannica.com/topic/housewarming",
+            "https://ich.unesco.org/",
+            "https://www.india.gov.in/"
+          ],
+          "text": {
+            "zh-TW": "印度部分家庭會以 griha pravesh 等入宅儀式迎接新居，日期、祭拜與參與者依宗教和地區而異。",
+            "en": "Some Indian families mark a new home with griha pravesh or related rites; dates, prayers, and participants vary by faith and region.",
+            "ja": "インドではgriha praveshなどの入居儀礼を行う家庭があり、日取り、祈り、参加者は宗教と地域で異なります。",
+            "zh-CN": "印度部分家庭会以 griha pravesh 等入宅仪式迎接新居，日期、祭拜和参与者依宗教与地区而异。",
+            "hi": "भारत के कुछ परिवार griha pravesh जैसी गृह-प्रवेश रस्म करते हैं; तारीख, पूजा और सहभागी धर्म व क्षेत्र के अनुसार बदलते हैं।",
+            "id": "Sebagian keluarga India menyambut rumah baru dengan griha pravesh atau ritus sejenis; tanggal, doa, dan peserta berbeda menurut agama dan wilayah.",
+            "pt-BR": "Algumas famílias indianas celebram a entrada na casa com griha pravesh; data, orações e participantes variam conforme fé e região."
+          }
+        },
+        "ID": {
+          "country_code": "ID",
+          "source_urls": [
+            "https://www.britannica.com/topic/housewarming",
+            "https://ich.unesco.org/",
+            "https://indonesia.go.id/"
+          ],
+          "text": {
+            "zh-TW": "印尼常見 syukuran 或簡單聚餐為新居祈福，爪哇、巴厘與其他地方社群的做法不盡相同。",
+            "en": "In Indonesia, a syukuran or simple meal may bless a new home; Javanese, Balinese, and other communities differ in practice.",
+            "ja": "インドネシアではsyukuranや簡単な食事で新居を祝うことがあり、ジャワ、バリなど共同体で方法が異なります。",
+            "zh-CN": "印度尼西亚常见 syukuran 或简单聚餐为新居祈福，爪哇、巴厘和其他地方社群的做法不尽相同。",
+            "hi": "इंडोनेशिया में syukuran या साधारण भोजन से नए घर के लिए आशीर्वाद माँगा जा सकता है; समुदाय के अनुसार रस्म बदलती है।",
+            "id": "Di Indonesia, syukuran atau makan sederhana dapat menjadi doa syukur untuk rumah baru; praktik Jawa, Bali, dan komunitas lain berbeda.",
+            "pt-BR": "Na Indonésia, um syukuran ou refeição simples pode agradecer pela casa nova; práticas javanesas, balinesas e outras variam."
+          }
+        },
+        "BR": {
+          "country_code": "BR",
+          "source_urls": [
+            "https://www.britannica.com/topic/housewarming",
+            "https://ich.unesco.org/",
+            "https://www.gov.br/"
+          ],
+          "text": {
+            "zh-TW": "巴西常用 chá de casa nova 或 housewarming 邀請親友，禮物與聚餐內容會按家庭能力和社群習慣調整。",
+            "en": "In Brazil, chá de casa nova or a housewarming gathering may welcome friends; gifts and food depend on the household and community.",
+            "ja": "ブラジルではchá de casa novaやホームパーティーで親しい人を招き、贈り物や食事は家庭と地域で変わります。",
+            "zh-CN": "巴西常用 chá de casa nova 或 housewarming 邀请亲友，礼物和聚餐内容会按家庭能力与社群习惯调整。",
+            "hi": "ब्राज़ील में chá de casa nova या housewarming से दोस्तों को बुलाया जा सकता है; उपहार और भोजन परिवार व समुदाय के अनुसार बदलते हैं।",
+            "id": "Di Brasil, chá de casa nova atau housewarming dapat mengundang teman; hadiah dan makanan menyesuaikan rumah tangga dan komunitas.",
+            "pt-BR": "No Brasil, chá de casa nova ou housewarming reúne amigos; presentes e comida variam conforme a família e a comunidade."
+          }
+        }
+      }
+    },
+    "newborn-and-full-moon": {
+      "source_urls": [
+        "https://www.who.int/health-topics/newborn-health",
+        "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+        "https://www.mhlw.go.jp/"
+      ],
+      "notes": {
+        "TW": {
+          "country_code": "TW",
+          "source_urls": [
+            "https://www.who.int/health-topics/newborn-health",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.mhlw.go.jp/",
+            "https://www.gov.tw/"
+          ],
+          "text": {
+            "zh-TW": "台灣常見滿月、彌月禮與親友探訪，產後休養與是否辦宴客會依家庭和醫療建議調整。",
+            "en": "In Taiwan, a baby’s first month may bring gifts, visits, or a family meal; recovery needs and family choice shape the celebration.",
+            "ja": "台湾では生後1か月の祝い、贈り物、親族の訪問が見られ、休養と家族の判断で宴席の有無が変わります。",
+            "zh-CN": "在台湾，常见满月、弥月礼和亲友探访，产后休养与是否办宴客会依家庭和医疗建议调整。",
+            "hi": "ताइवान में बच्चे के पहले महीने पर उपहार, मुलाक़ात या भोजन हो सकता है; प्रसवोत्तर आराम और परिवार की पसंद उत्सव तय करती है।",
+            "id": "Di Taiwan, bulan pertama bayi dapat dirayakan dengan hadiah, kunjungan, atau makan keluarga; pemulihan dan pilihan keluarga menentukan bentuknya.",
+            "pt-BR": "Em Taiwan, o primeiro mês do bebê pode trazer presentes, visitas ou uma refeição familiar; recuperação e escolha da família definem a celebração."
+          }
+        },
+        "JP": {
+          "country_code": "JP",
+          "source_urls": [
+            "https://www.who.int/health-topics/newborn-health",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.mhlw.go.jp/",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+          ],
+          "text": {
+            "zh-TW": "日本常見出生後參拜、命名與親友祝賀，お宮參り等安排會依神社、家庭與寶寶狀況調整。",
+            "en": "In Japan, families may mark a birth with a shrine visit, naming, and congratulations; arrangements depend on the shrine, family, and baby.",
+            "ja": "日本では命名、親族の祝い、お宮参りなどが見られますが、神社、家族、赤ちゃんの状態で時期は変わります。",
+            "zh-CN": "日本常见出生后参拜、命名和亲友祝贺，お宮参り等安排会依神社、家庭和宝宝状况调整。",
+            "hi": "जापान में जन्म के बाद मंदिर जाना, नामकरण और बधाई आम हो सकते हैं; समय परिवार, मंदिर और बच्चे की स्थिति पर निर्भर करता है।",
+            "id": "Di Jepang, kelahiran dapat ditandai kunjungan ke kuil, pemberian nama, dan ucapan selamat; waktunya menyesuaikan keluarga, kuil, dan bayi.",
+            "pt-BR": "No Japão, nascimento pode envolver visita a santuário, nome e felicitações; o momento depende da família, do santuário e do bebê."
+          }
+        },
+        "CN": {
+          "country_code": "CN",
+          "source_urls": [
+            "https://www.who.int/health-topics/newborn-health",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.mhlw.go.jp/",
+            "https://www.gov.cn/"
+          ],
+          "text": {
+            "zh-TW": "中國大陸常談滿月、百日、命名與報喜，是否宴客、送禮或拍照會因地區與家庭而不同。",
+            "en": "In mainland China, the first month, hundredth day, naming, and announcing the birth are common reference points; families celebrate differently.",
+            "ja": "中国大陸では満月、百日、命名、出産の知らせが節目になり、宴会、贈り物、写真の仕方は地域と家庭で異なります。",
+            "zh-CN": "中国大陆常谈满月、百日、命名和报喜，是否宴客、送礼或拍照会因地区和家庭而不同。",
+            "hi": "चीन में पहले महीने, सौवें दिन, नामकरण और जन्म की खबर जैसे पड़ाव महत्वपूर्ण हो सकते हैं; परिवार अलग तरह से मनाते हैं।",
+            "id": "Di Tiongkok daratan, bulan pertama, hari ke-100, penamaan, dan kabar kelahiran menjadi titik penting; perayaan berbeda menurut wilayah dan keluarga.",
+            "pt-BR": "Na China continental, o primeiro mês, o centésimo dia, o nome e o anúncio do nascimento são marcos; cada família celebra de um jeito."
+          }
+        },
+        "US": {
+          "country_code": "US",
+          "source_urls": [
+            "https://www.who.int/health-topics/newborn-health",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.mhlw.go.jp/",
+            "https://www.usa.gov/"
+          ],
+          "text": {
+            "zh-TW": "美國多把新生兒照護、出生登記、探訪規則與命名放在實用安排中，宗教祝福是否加入由家庭決定。",
+            "en": "In the United States, newborn care, birth registration, visiting rules, and naming are practical priorities; religious blessings are family choices.",
+            "ja": "米国では新生児ケア、出生登録、訪問のルール、命名が実務の中心となり、宗教的な祝福は家庭が選びます。",
+            "zh-CN": "美国多把新生儿照护、出生登记、探访规则和命名放在实用安排中，宗教祝福是否加入由家庭决定。",
+            "hi": "अमेरिका में नवजात देखभाल, जन्म पंजीकरण, मुलाक़ात के नियम और नामकरण व्यावहारिक प्राथमिकताएँ हैं; धार्मिक आशीर्वाद परिवार चुनता है।",
+            "id": "Di Amerika Serikat, perawatan bayi, pendaftaran kelahiran, aturan kunjungan, dan nama menjadi urusan praktis; doa agama adalah pilihan keluarga.",
+            "pt-BR": "Nos Estados Unidos, cuidado do recém-nascido, registro, regras de visita e nome são prioridades práticas; bênçãos religiosas dependem da família."
+          }
+        },
+        "IN": {
+          "country_code": "IN",
+          "source_urls": [
+            "https://www.who.int/health-topics/newborn-health",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.mhlw.go.jp/",
+            "https://www.india.gov.in/"
+          ],
+          "text": {
+            "zh-TW": "印度的新生兒安排可能包含命名、祝福、產後休養與親友探訪，宗教和社群會影響儀式名稱與時間。",
+            "en": "In India, newborn customs may include naming, blessings, postpartum rest, and visits; faith and community shape names and timing.",
+            "ja": "インドの新生児の習慣には命名、祝福、産後の休養、親族の訪問があり、宗教と共同体で名称や時期が変わります。",
+            "zh-CN": "印度的新生儿安排可能包含命名、祝福、产后休养和亲友探访，宗教与社群会影响仪式名称和时间。",
+            "hi": "भारत में नवजात पर नामकरण, आशीर्वाद, प्रसवोत्तर आराम और मुलाक़ात हो सकती है; धर्म व समुदाय रस्म का नाम और समय बदलते हैं।",
+            "id": "Di India, kebiasaan bayi baru lahir dapat mencakup penamaan, berkat, pemulihan pascamelahirkan, dan kunjungan; agama serta komunitas memengaruhi waktunya.",
+            "pt-BR": "Na Índia, o nascimento pode envolver nomeação, bênção, resguardo e visitas; religião e comunidade influenciam o nome e o momento."
+          }
+        },
+        "ID": {
+          "country_code": "ID",
+          "source_urls": [
+            "https://www.who.int/health-topics/newborn-health",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.mhlw.go.jp/",
+            "https://indonesia.go.id/"
+          ],
+          "text": {
+            "zh-TW": "印尼的 selapanan 等地方傳統可能在出生後特定日子祝福嬰兒，實際做法依族群、宗教與家庭而變。",
+            "en": "In Indonesia, traditions such as selapanan may bless a baby at a particular point after birth; ethnic, religious, and family practice varies.",
+            "ja": "インドネシアではselapananなど、出生後の節目に赤ちゃんを祝う伝統があり、民族、宗教、家庭で方法が異なります。",
+            "zh-CN": "印度尼西亚的 selapanan 等地方传统可能在出生后特定日子祝福婴儿，实际做法依族群、宗教和家庭而变。",
+            "hi": "इंडोनेशिया में selapanan जैसी परंपराएँ जन्म के बाद एक पड़ाव पर बच्चे को आशीर्वाद दे सकती हैं; जातीयता, धर्म और परिवार के अनुसार रूप बदलता है।",
+            "id": "Di Indonesia, tradisi seperti selapanan dapat memberkati bayi pada waktu tertentu setelah lahir; praktik etnis, agama, dan keluarga berbeda.",
+            "pt-BR": "Na Indonésia, tradições como selapanan podem celebrar o bebê em um momento após o nascimento; etnia, religião e família mudam a prática."
+          }
+        },
+        "BR": {
+          "country_code": "BR",
+          "source_urls": [
+            "https://www.who.int/health-topics/newborn-health",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.mhlw.go.jp/",
+            "https://www.gov.br/"
+          ],
+          "text": {
+            "zh-TW": "巴西的命名、洗禮、彌撒、家庭聚會或滿月照片可能並存，是否舉行宗教儀式要尊重父母選擇。",
+            "en": "In Brazil, naming, baptism, a mass, family gatherings, or monthly photos may coexist; religious rites should follow the parents’ choice.",
+            "ja": "ブラジルでは命名、洗礼、ミサ、家族の集まり、月齢の写真が共存することがあり、宗教儀礼は親の選択を尊重します。",
+            "zh-CN": "巴西的命名、洗礼、弥撒、家庭聚会或满月照片可能并存，是否举行宗教仪式要尊重父母选择。",
+            "hi": "ब्राज़ील में नामकरण, बपतिस्मा, प्रार्थना सभा, पारिवारिक मिलन या मासिक तस्वीरें साथ हो सकती हैं; धार्मिक रस्म माता-पिता चुनते हैं।",
+            "id": "Di Brasil, penamaan, baptis, misa, kumpul keluarga, atau foto bulanan dapat berjalan bersama; ritus agama mengikuti pilihan orang tua.",
+            "pt-BR": "No Brasil, nomeação, batizado, missa, encontro familiar e fotos mensais podem coexistir; o rito religioso deve respeitar a escolha dos pais."
+          }
+        }
+      }
+    },
+    "proposals-and-engagements": {
+      "source_urls": [
+        "https://www.britannica.com/topic/marriage",
+        "https://www.nic.gov.in/civil-registrations-servicing-digitally/"
+      ],
+      "notes": {
+        "TW": {
+          "country_code": "TW",
+          "source_urls": [
+            "https://www.britannica.com/topic/marriage",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.gov.tw/"
+          ],
+          "text": {
+            "zh-TW": "台灣的求婚與訂婚可能包含戒指、雙方家長見面、文定或訂婚宴，是否遵循傳統取決於新人協商。",
+            "en": "In Taiwan, proposals and engagements may include rings, meetings between families, traditional gifts, or a banquet; couples negotiate the mix.",
+            "ja": "台湾では指輪、両家の顔合わせ、伝統的な贈り物、婚約宴が見られることがありますが、組み合わせは二人で決めます。",
+            "zh-CN": "在台湾，求婚与订婚可能包含戒指、双方家长见面、传统礼物或订婚宴，是否遵循传统取决于新人协商。",
+            "hi": "ताइवान में प्रस्ताव और सगाई में अंगूठी, परिवारों की मुलाक़ात, पारंपरिक उपहार या भोज शामिल हो सकते हैं; जोड़ा मिलकर तय करता है।",
+            "id": "Di Taiwan, lamaran dan pertunangan dapat mencakup cincin, pertemuan keluarga, hadiah tradisional, atau jamuan; pasangan menegosiasikan bentuknya.",
+            "pt-BR": "Em Taiwan, pedidos e noivados podem incluir alianças, encontro das famílias, presentes tradicionais ou banquete; o casal negocia a combinação."
+          }
+        },
+        "JP": {
+          "country_code": "JP",
+          "source_urls": [
+            "https://www.britannica.com/topic/marriage",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+          ],
+          "text": {
+            "zh-TW": "日本的求婚常偏向兩人之間的安排，正式訂婚可能再加入家族問候、戒指或結納等做法。",
+            "en": "In Japan, a proposal is often arranged between two people, while a formal engagement may add family greetings, rings, or yuino gifts.",
+            "ja": "日本では二人の間でプロポーズを行い、正式な婚約で家族へのあいさつ、指輪、結納などを加えることがあります。",
+            "zh-CN": "日本的求婚常偏向两人之间的安排，正式订婚可能再加入家族问候、戒指或结纳等做法。",
+            "hi": "जापान में प्रस्ताव अक्सर दो लोगों के बीच होता है; औपचारिक सगाई में परिवार से मिलना, अंगूठी या yuino उपहार जुड़ सकते हैं।",
+            "id": "Di Jepang, lamaran sering menjadi urusan dua orang; pertunangan formal dapat menambahkan salam keluarga, cincin, atau hadiah yuino.",
+            "pt-BR": "No Japão, o pedido costuma ser entre duas pessoas; o noivado formal pode incluir apresentação às famílias, anel ou presentes yuino."
+          }
+        },
+        "CN": {
+          "country_code": "CN",
+          "source_urls": [
+            "https://www.britannica.com/topic/marriage",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.gov.cn/"
+          ],
+          "text": {
+            "zh-TW": "中國大陸的訂婚安排可能包含雙方家庭協商、戒指、彩禮或訂婚宴，城市和家庭的做法差異很大。",
+            "en": "In mainland China, engagements may involve family negotiations, rings, betrothal gifts, or a banquet; city and family practices vary widely.",
+            "ja": "中国大陸の婚約では両家の相談、指輪、結納にあたる贈り物、宴席が見られることがあり、都市と家庭で大きく異なります。",
+            "zh-CN": "中国大陆的订婚安排可能包含双方家庭协商、戒指、彩礼或订婚宴，城市和家庭的做法差异很大。",
+            "hi": "चीन में सगाई में परिवारों की बातचीत, अंगूठी, betrothal gift या भोज शामिल हो सकते हैं; शहर और परिवार के अनुसार बहुत फर्क है।",
+            "id": "Di Tiongkok daratan, pertunangan dapat mencakup perundingan keluarga, cincin, hadiah pertunangan, atau jamuan; praktik kota dan keluarga beragam.",
+            "pt-BR": "Na China continental, o noivado pode envolver negociação das famílias, anel, presentes de compromisso ou banquete; cidade e família variam muito."
+          }
+        },
+        "US": {
+          "country_code": "US",
+          "source_urls": [
+            "https://www.britannica.com/topic/marriage",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.usa.gov/"
+          ],
+          "text": {
+            "zh-TW": "美國的求婚常強調個人化與同意，戒指、驚喜、家人祝福或訂婚派對是否出現都由伴侶決定。",
+            "en": "In the United States, proposals often emphasise personal choice and consent; rings, surprises, family blessings, and parties are optional.",
+            "ja": "米国のプロポーズは個人らしさと同意を重視することが多く、指輪、サプライズ、家族の祝福、パーティーは自由です。",
+            "zh-CN": "美国的求婚常强调个性化与同意，戒指、惊喜、家人祝福或订婚派对是否出现都由伴侣决定。",
+            "hi": "अमेरिका में प्रस्ताव व्यक्तिगत पसंद और सहमति पर ज़ोर देता है; अंगूठी, सरप्राइज़, परिवार का आशीर्वाद और पार्टी वैकल्पिक हैं।",
+            "id": "Di Amerika Serikat, lamaran sering menekankan pilihan pribadi dan persetujuan; cincin, kejutan, restu keluarga, dan pesta bersifat pilihan.",
+            "pt-BR": "Nos Estados Unidos, o pedido costuma valorizar escolha pessoal e consentimento; anel, surpresa, bênção da família e festa são opcionais."
+          }
+        },
+        "IN": {
+          "country_code": "IN",
+          "source_urls": [
+            "https://www.britannica.com/topic/marriage",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.india.gov.in/"
+          ],
+          "text": {
+            "zh-TW": "印度的訂婚可能以 roka、sagai 或其他地方名稱出現，家族見面、祝福、戒指與宴席依宗教和社群而異。",
+            "en": "In India, engagements may be called roka, sagai, or other regional names; family meetings, blessings, rings, and feasts vary by community.",
+            "ja": "インドの婚約にはroka、sagaiなど地域の呼び名があり、家族の顔合わせ、祝福、指輪、宴席は宗教と共同体で異なります。",
+            "zh-CN": "印度的订婚可能以 roka、sagai 或其他地方名称出现，家族见面、祝福、戒指和宴席依宗教与社群而异。",
+            "hi": "भारत में सगाई को roka, sagai या स्थानीय नामों से जाना जा सकता है; परिवार, आशीर्वाद, अंगूठी और भोज समुदाय के अनुसार बदलते हैं।",
+            "id": "Di India, pertunangan dapat disebut roka, sagai, atau nama daerah lain; pertemuan keluarga, berkat, cincin, dan pesta berbeda menurut komunitas.",
+            "pt-BR": "Na Índia, o noivado pode ser chamado roka, sagai ou outro nome regional; famílias, bênçãos, anéis e festas variam por comunidade."
+          }
+        },
+        "ID": {
+          "country_code": "ID",
+          "source_urls": [
+            "https://www.britannica.com/topic/marriage",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://indonesia.go.id/"
+          ],
+          "text": {
+            "zh-TW": "印尼的 lamaran 常是雙方家庭正式見面的場合，戒指、禮品、祈禱和宴客會依宗教與族群變化。",
+            "en": "In Indonesia, lamaran often brings the two families together formally; rings, gifts, prayers, and meals vary by faith and ethnic community.",
+            "ja": "インドネシアのlamaranは両家が正式に会う場となることが多く、指輪、贈り物、祈り、食事は宗教と民族で異なります。",
+            "zh-CN": "印度尼西亚的 lamaran 常是双方家庭正式见面的场合，戒指、礼品、祈祷和宴客会依宗教与族群变化。",
+            "hi": "इंडोनेशिया में lamaran अक्सर दोनों परिवारों की औपचारिक मुलाक़ात होती है; अंगूठी, उपहार, प्रार्थना और भोजन धर्म व समुदाय के अनुसार बदलते हैं।",
+            "id": "Di Indonesia, lamaran sering menjadi pertemuan resmi dua keluarga; cincin, hadiah, doa, dan jamuan berbeda menurut agama dan etnis.",
+            "pt-BR": "Na Indonésia, lamaran costuma reunir formalmente as duas famílias; anéis, presentes, orações e refeições variam por religião e grupo étnico."
+          }
+        },
+        "BR": {
+          "country_code": "BR",
+          "source_urls": [
+            "https://www.britannica.com/topic/marriage",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.gov.br/"
+          ],
+          "text": {
+            "zh-TW": "巴西的 pedido de casamento 與 noivado 常以戒指、家人聚會或訂婚派對表達，但形式多由伴侶自己設計。",
+            "en": "In Brazil, a pedido de casamento and noivado may use rings, family gatherings, or a party, but couples often design the format themselves.",
+            "ja": "ブラジルの求婚と婚約では指輪、家族の集まり、パーティーが見られますが、形はカップルが自分たちで決めることが多いです。",
+            "zh-CN": "巴西的求婚与 noivado 常以戒指、家人聚会或订婚派对表达，但形式多由伴侣自己设计。",
+            "hi": "ब्राज़ील में शादी का प्रस्ताव और noivado में अंगूठी, परिवार और पार्टी हो सकती है; जोड़े अक्सर रूप खुद तय करते हैं।",
+            "id": "Di Brasil, pedido de casamento dan noivado dapat memakai cincin, kumpul keluarga, atau pesta; pasangan sering merancang bentuknya sendiri.",
+            "pt-BR": "No Brasil, pedido de casamento e noivado podem ter alianças, reunião familiar ou festa; o casal costuma criar o próprio formato."
+          }
+        }
+      }
+    },
+    "weddings-and-customs": {
+      "source_urls": [
+        "https://www.britannica.com/topic/wedding-ceremony",
+        "https://www.nic.gov.in/civil-registrations-servicing-digitally/"
+      ],
+      "notes": {
+        "TW": {
+          "country_code": "TW",
+          "source_urls": [
+            "https://www.britannica.com/topic/wedding-ceremony",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.gov.tw/"
+          ],
+          "text": {
+            "zh-TW": "台灣婚禮常把法律登記、儀式、奉茶、喜宴與雙方家庭協商放在一起，做法可傳統也可簡化。",
+            "en": "Taiwanese weddings may combine legal registration, ceremonies, tea service, banquets, and family negotiation; couples may simplify tradition.",
+            "ja": "台湾の結婚式では法的手続き、儀礼、お茶のもてなし、宴会、両家の相談を組み合わせ、伝統を簡略化することもあります。",
+            "zh-CN": "台湾婚礼常把法律登记、仪式、奉茶、喜宴和双方家庭协商放在一起，做法可传统也可简化。",
+            "hi": "ताइवान में शादी में कानूनी पंजीकरण, रस्म, चाय, भोज और परिवारों की बातचीत साथ हो सकती है; परंपरा सरल भी की जाती है।",
+            "id": "Di Taiwan, pernikahan dapat menggabungkan pendaftaran hukum, upacara, penyajian teh, jamuan, dan kesepakatan keluarga; tradisi bisa disederhanakan.",
+            "pt-BR": "Em Taiwan, o casamento pode reunir registro legal, cerimônia, chá, banquete e conversa entre famílias; a tradição pode ser simplificada."
+          }
+        },
+        "JP": {
+          "country_code": "JP",
+          "source_urls": [
+            "https://www.britannica.com/topic/wedding-ceremony",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+          ],
+          "text": {
+            "zh-TW": "日本的婚禮可能在神社、教堂、飯店或登記窗口完成，神前式、披露宴與小型聚會各有位置。",
+            "en": "Japanese couples may marry at a shrine, church, hotel, or through a civil process; Shinto rites, receptions, and small gatherings all exist.",
+            "ja": "日本では神社、教会、ホテル、役所などで結婚し、神前式、披露宴、小さな食事会などの形があります。",
+            "zh-CN": "日本的婚礼可能在神社、教堂、酒店或登记窗口完成，神前式、婚宴和小型聚会各有位置。",
+            "hi": "जापान में विवाह मंदिर, चर्च, होटल या नागरिक प्रक्रिया से हो सकता है; शिंतो रस्म, रिसेप्शन और छोटा मिलन सभी रूप हैं।",
+            "id": "Di Jepang, pasangan dapat menikah di kuil, gereja, hotel, atau melalui proses sipil; upacara Shinto, resepsi, dan acara kecil sama-sama ada.",
+            "pt-BR": "No Japão, o casal pode casar em santuário, igreja, hotel ou via processo civil; há ritos xintoístas, recepções e encontros pequenos."
+          }
+        },
+        "CN": {
+          "country_code": "CN",
+          "source_urls": [
+            "https://www.britannica.com/topic/wedding-ceremony",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.gov.cn/"
+          ],
+          "text": {
+            "zh-TW": "中國大陸的婚禮可能包含登記、接親、敬茶、婚宴和地方禮俗，彩禮、服裝與桌數差異很大。",
+            "en": "In mainland China, weddings may include registration, fetching the bride, tea, a banquet, and local customs; gifts, clothing, and scale vary widely.",
+            "ja": "中国大陸の結婚式では、登録、花嫁を迎える習慣、お茶、宴会、地域の風習が組み合わされ、贈り物や規模はさまざまです。",
+            "zh-CN": "中国大陆的婚礼可能包含登记、接亲、敬茶、婚宴和地方礼俗，彩礼、服装与桌数差异很大。",
+            "hi": "चीन में शादी में पंजीकरण, दुल्हन को लाना, चाय, भोज और स्थानीय रीति शामिल हो सकती है; उपहार और आकार बहुत बदलते हैं।",
+            "id": "Di Tiongkok daratan, pernikahan dapat mencakup pendaftaran, menjemput pengantin, teh, jamuan, dan adat daerah; hadiah dan skala sangat beragam.",
+            "pt-BR": "Na China continental, o casamento pode incluir registro, buscar a noiva, chá, banquete e costumes locais; presentes, roupas e escala variam muito."
+          }
+        },
+        "US": {
+          "country_code": "US",
+          "source_urls": [
+            "https://www.britannica.com/topic/wedding-ceremony",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.usa.gov/"
+          ],
+          "text": {
+            "zh-TW": "美國婚禮常在法院、教堂、戶外或宴會場地舉行，伴侶可把宗教、家族與個人風格自由組合。",
+            "en": "In the United States, weddings may happen at a courthouse, church, outdoors, or a venue; couples combine faith, family, and personal style.",
+            "ja": "米国では裁判所、教会、屋外、会場などで結婚式を行い、宗教、家族、個人のスタイルを自由に組み合わせます。",
+            "zh-CN": "美国婚礼常在法院、教堂、户外或宴会场地举行，伴侣可把宗教、家族和个人风格自由组合。",
+            "hi": "अमेरिका में शादी कोर्टहाउस, चर्च, बाहर या किसी स्थल पर हो सकती है; जोड़े धर्म, परिवार और अपनी शैली मिलाते हैं।",
+            "id": "Di Amerika Serikat, pernikahan dapat berlangsung di pengadilan, gereja, luar ruang, atau venue; pasangan menggabungkan agama, keluarga, dan gaya pribadi.",
+            "pt-BR": "Nos Estados Unidos, o casamento pode ser no cartório, igreja, ao ar livre ou em um espaço; o casal combina fé, família e estilo pessoal."
+          }
+        },
+        "IN": {
+          "country_code": "IN",
+          "source_urls": [
+            "https://www.britannica.com/topic/wedding-ceremony",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.india.gov.in/"
+          ],
+          "text": {
+            "zh-TW": "印度婚禮常有多日活動、宗教儀式、家族角色、服裝與宴席，社群、地區和信仰使形式非常多樣。",
+            "en": "Indian weddings often include several days, religious rites, family roles, clothing, and feasts; community, region, and faith create great diversity.",
+            "ja": "インドの結婚式は複数日にわたる行事、宗教儀礼、家族の役割、衣装、宴席を含むことが多く、共同体と地域で多様です。",
+            "zh-CN": "印度婚礼常有多日活动、宗教仪式、家族角色、服装和宴席，社群、地区和信仰使形式非常多样。",
+            "hi": "भारत में विवाह कई दिनों, धार्मिक रस्मों, परिवार की भूमिकाओं, कपड़ों और भोज से जुड़ सकते हैं; समुदाय व क्षेत्र बहुत विविध हैं।",
+            "id": "Pernikahan India sering mencakup beberapa hari, ritus agama, peran keluarga, pakaian, dan pesta; komunitas, wilayah, dan agama sangat beragam.",
+            "pt-BR": "Casamentos indianos podem durar vários dias, com ritos religiosos, papéis familiares, roupas e banquetes; comunidade, região e fé produzem muita diversidade."
+          }
+        },
+        "ID": {
+          "country_code": "ID",
+          "source_urls": [
+            "https://www.britannica.com/topic/wedding-ceremony",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://indonesia.go.id/"
+          ],
+          "text": {
+            "zh-TW": "印尼婚禮常把法律、宗教和 adat 地方傳統放在一起，爪哇、巴厘、蘇門答臘等地的儀式各有風景。",
+            "en": "Indonesian weddings may combine legal, religious, and adat traditions; Javanese, Balinese, Sumatran, and other ceremonies differ.",
+            "ja": "インドネシアの結婚式では法的手続き、宗教、adatの地域伝統を組み合わせ、ジャワ、バリ、スマトラなどで儀礼が異なります。",
+            "zh-CN": "印度尼西亚婚礼常把法律、宗教和 adat 地方传统放在一起，爪哇、巴厘、苏门答腊等地的仪式各有风景。",
+            "hi": "इंडोनेशिया में विवाह कानूनी, धार्मिक और adat स्थानीय परंपराओं को जोड़ सकता है; जावा, बाली, सुमात्रा और अन्य रस्में अलग हैं।",
+            "id": "Pernikahan Indonesia dapat menggabungkan hukum, agama, dan adat; upacara Jawa, Bali, Sumatra, dan daerah lain memiliki ciri berbeda.",
+            "pt-BR": "Os casamentos indonésios podem combinar lei, religião e tradições adat; cerimônias javanesas, balinesas, sumatranas e outras diferem."
+          }
+        },
+        "BR": {
+          "country_code": "BR",
+          "source_urls": [
+            "https://www.britannica.com/topic/wedding-ceremony",
+            "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
+            "https://www.gov.br/"
+          ],
+          "text": {
+            "zh-TW": "巴西婚禮可能在民政、教堂、戶外或宴會場地完成，音樂、食物和家族參與會隨地區與信仰變化。",
+            "en": "Brazilian weddings may be civil, church-based, outdoor, or held at a venue; music, food, and family roles vary by region and faith.",
+            "ja": "ブラジルの結婚式は民事、教会、屋外、会場などで行われ、音楽、食事、家族の関わりは地域と信仰で変わります。",
+            "zh-CN": "巴西婚礼可能在民政、教堂、户外或宴会场地完成，音乐、食物和家族参与会随地区与信仰变化。",
+            "hi": "ब्राज़ील में शादी नागरिक कार्यालय, चर्च, बाहर या आयोजन स्थल पर हो सकती है; संगीत, भोजन और परिवार की भूमिका क्षेत्र व आस्था से बदलती है।",
+            "id": "Pernikahan Brasil dapat berlangsung secara sipil, di gereja, luar ruang, atau venue; musik, makanan, dan peran keluarga berbeda menurut wilayah dan iman.",
+            "pt-BR": "No Brasil, casamentos podem ser civis, religiosos, ao ar livre ou em um espaço; música, comida e família variam conforme região e fé."
+          }
+        }
+      }
+    }
+  }
+}

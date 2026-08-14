@@ -53,7 +53,7 @@
 ### customs TW labour-day
 台灣勞動節常被視為勞工休假與權益議題的節點，但不同職業、雇主與排班制度的休假並不相同。
 ### customs CN labour-day
-中國大陸的五一假期常帶動跨城市旅遊與家庭出行，也連結勞動者與工業發展的公共敘事。
+中國大陸的五一假期常帶動跨城市旅遊與家庭出行，也連結勞動者與工業發展的公共討論。
 ### customs IN labour-day
 印度各州有不同的勞動節活動，工會、勞工團體與地方政府可能舉辦集會或宣導。
 ### customs ID hari-buruh
@@ -73,7 +73,7 @@ Labour Day,Labor Day,May Day,International Workers' Day,Hari Buruh,Dia do Trabal
 ### customs TW labour-day
 In Taiwan, May 1 can be a workers’ day off and a moment to discuss labour rights, but schedules differ by occupation and employer.
 ### customs CN labour-day
-Mainland China’s May Day holiday often brings intercity travel and family outings alongside public stories about workers and industrial development.
+Mainland China’s May Day holiday often brings intercity travel and family outings alongside public discussion of workers and industrial development.
 ### customs IN labour-day
 India’s Labour Day activities vary by state; unions, worker groups, and local governments may hold meetings or awareness events.
 ### customs ID hari-buruh
@@ -133,7 +133,7 @@ The United States observes Labor Day on the first Monday in September; it is bot
 ### customs TW labour-day
 ताइवान में 1 मई कामगारों की छुट्टी और श्रम अधिकारों पर बातचीत का अवसर हो सकता है, पर छुट्टी पेशे और नियोक्ता पर निर्भर है।
 ### customs CN labour-day
-चीन में मई दिवस की छुट्टी यात्रा और पारिवारिक बाहर जाने के साथ श्रमिकों व औद्योगिक विकास की सार्वजनिक स्मृति से जुड़ती है।
+चीन में मई दिवस की छुट्टी यात्रा और पारिवारिक बाहर जाने के साथ श्रमिकों व औद्योगिक विकास पर सार्वजनिक चर्चा से जुड़ती है।
 ### customs IN labour-day
 भारत में राज्यों के अनुसार कार्यक्रम बदलते हैं; यूनियन और श्रमिक संगठन सभाएँ या जागरूकता कार्यक्रम कर सकते हैं।
 ### customs ID hari-buruh
@@ -153,7 +153,7 @@ Hari Buruh,May Day,Labor Day,Hari Buruh Indonesia,Dia do Trabalho,hak pekerja
 ### customs TW labour-day
 Di Taiwan, 1 Mei dapat menjadi hari libur pekerja dan kesempatan membahas hak buruh, tetapi jadwal berbeda menurut pekerjaan dan pemberi kerja.
 ### customs CN labour-day
-Di Tiongkok, libur May Day mendorong perjalanan antarkota dan kegiatan keluarga, sekaligus membawa narasi publik tentang pekerja dan industri.
+Di Tiongkok, libur May Day mendorong perjalanan antarkota dan kegiatan keluarga, sekaligus membawa diskusi publik tentang pekerja dan industri.
 ### customs IN labour-day
 Di India, kegiatan Hari Buruh berbeda menurut negara bagian; serikat pekerja dan pemerintah daerah dapat mengadakan pertemuan atau kampanye.
 ### customs ID hari-buruh
@@ -173,7 +173,7 @@ Dia do Trabalho,Labor Day,1º de maio,Hari Buruh,direitos trabalhistas,Dia do Tr
 ### customs TW labour-day
 Em Taiwan, 1º de maio pode ser folga para trabalhadores e momento de discutir direitos, mas a escala depende da profissão e do empregador.
 ### customs CN labour-day
-Na China continental, o feriado de maio estimula viagens entre cidades e passeios em família, junto à memória pública do trabalho e da indústria.
+Na China continental, o feriado de maio estimula viagens entre cidades e passeios em família, junto ao debate público sobre trabalho e indústria.
 ### customs IN labour-day
 Na Índia, as atividades variam por estado; sindicatos, grupos de trabalhadores e governos locais podem organizar atos e campanhas.
 ### customs ID hari-buruh

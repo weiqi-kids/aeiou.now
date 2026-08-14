@@ -43,7 +43,8 @@ import { withBase } from '../../lib/paths.mjs';
 import { seoCopy } from '../../lib/seo.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
-  observancesForFacts, customsText, coverPath, relatedTopics, readJson, getTopicsIndex,
+  observancesForFacts, customsText, regionalNotesForFacts, regionalNoteText,
+  coverPath, relatedTopics, readJson, getTopicsIndex,
 } from '../../lib/data.mjs';
 
 export function getStaticPaths() {
@@ -97,8 +98,16 @@ const countries = [...new Set(observances.map((o) => o.country_code).filter(Bool
   .map((countryCode) => observances.find((o) => o.country_code === countryCode && o.next_occurrence)
     || observances.find((o) => o.country_code === countryCode))
   .filter(Boolean);
+const regionalNotes = regionalNotesForFacts(facts);
+const regionalOnlyNotes = regionalNotes
+  .filter((note) => !countries.some((country) => country.country_code === note.country_code));
+const worldCountries = [
+  ...countries.map((country) => ({ ...country, kind: 'observance' })),
+  ...regionalOnlyNotes.map((note) => ({ ...note, kind: 'regional' })),
+];
 const observanceAnchor = (observance) =>
   `observance-${observance.observance_id || `${observance.country_code}-${observance.observance_key || 'default'}`}`;
+const regionalAnchor = (note) => `regional-${note.country_code.toLowerCase()}`;
 // 「你附近／相關活動」是本語系站代表城市的在地資料，不是七市場資料總覽。
 // 📍 只收可被拜訪的常設地點；🎉 只收有日期與來源的活動。七市場文化比較在 🌎。
 const marketCity = MARKET_CITY[LOCALE] || null;
@@ -109,6 +118,7 @@ const sourceUrls = [...new Set([
   ...(facts?.source_urls || []),
   ...observances.flatMap((observance) => observance.source_urls || []),
   ...observances.flatMap((observance) => observance.next_occurrence?.source_urls || []),
+  ...regionalNotes.flatMap((note) => note.source_urls || []),
 ])].filter((url) => /^https?:\/\//.test(url));
 const whatAnswer = loc.summary || facts?.commonality || copy.noDate;
 const dateAnswer = countries
@@ -118,17 +128,23 @@ const dateAnswer = countries
     const end = next.ends_on ? `–${calendarDate(next.ends_on)}` : '';
     return `${countryName(observance.country_code)} · ${calendarDate(next.starts_on)}${end}`;
   });
-const whereAnswer = countries.length > 0
-  ? countries.map((country) => countryName(country.country_code)).join('、')
+const whereAnswer = worldCountries.length > 0
+  ? worldCountries.map((country) => countryName(country.country_code)).join('、')
   : copy.noDate;
-const differenceAnswer = countries
+const differenceAnswer = [
+  ...countries
   .map((country) => {
     const text = customsText(i18n, country);
     return text ? `${countryName(country.country_code)}：${text}` : null;
   })
-  .filter(Boolean)
-  .join(' ')
-  || (countries.length === 0 ? whatAnswer : copy.noDate);
+  .filter(Boolean),
+  ...regionalOnlyNotes
+    .map((note) => {
+      const text = regionalNoteText(i18n, note);
+      return text ? `${countryName(note.country_code)}：${text}` : null;
+    })
+    .filter(Boolean),
+].join(' ') || (worldCountries.length === 0 ? whatAnswer : copy.noDate);
 const related = relatedTopics(topicId, 4);
 const eventSchema = events.map((event) => ({
   '@type': 'Event',
@@ -204,7 +220,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
           {/* 標題與「🌎 全世界怎麼過 ↓」排同一行(2026-08-11 用戶指示) */}
           <div class="head-title-row">
             <h1>{title}</h1>
-            {countries.length > 0 && (
+            {worldCountries.length > 0 && (
               <a class="section-link" href="#world">
                 <span class="section-emoji" aria-hidden="true">🌎</span>
                 {t('topic.how_world_celebrates')} <span aria-hidden="true">↓</span>
@@ -330,7 +346,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
 
     <!-- 🌎 全世界怎麼過:整頁最後一段(第 11 輪用戶指示)。頁首那個「🌎 … ↓」連結照舊指過來,
          現在等於捲到頁尾。國家導覽是 #world summary 的一部分,緊貼在標題右側。 -->
-    {countries.length > 0 && (
+    {worldCountries.length > 0 && (
       <Fragment>
       <!-- 出廠就是 open:沒有 JS 的讀者要能讀到各國怎麼過。
            下面那支 is:inline 的小 script 才把它收起來(有 JS 才有「點了才展開」)。 -->
@@ -338,8 +354,8 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
         <summary class="world-summary">
           <h2><span class="section-emoji" aria-hidden="true">🌎</span>{t('topic.how_world_celebrates')}</h2>
           <nav class="world-countries" aria-label={t('topic.countries_label')}>
-            {countries.map((c) => (
-              <a class="flag-chip" href={`#${observanceAnchor(c)}`}>
+            {worldCountries.map((c) => (
+              <a class="flag-chip" href={`#${c.kind === 'regional' ? regionalAnchor(c) : observanceAnchor(c)}`}>
                 <span class="flag-glyph" aria-hidden="true">{countryFlag(c.country_code)}</span>
                 <span class="flag-name">{countryName(c.country_code)}</span>
               </a>
@@ -388,6 +404,31 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
               </div>
             </li>
           ))}
+          {regionalOnlyNotes.map((note) => (
+            <li class="country" id={regionalAnchor(note)}>
+              <div class="country-when">
+                <span class="country-date">{t('topic.date_unavailable')}</span>
+                <span class="country-when-label">{t('topic.local_date')}</span>
+                <span class="country-rule">{t('topic.perennial')}</span>
+              </div>
+              <div class="country-body">
+                <h3 class="country-name">
+                  <span class="country-flag" aria-hidden="true">{countryFlag(note.country_code)}</span>
+                  {countryName(note.country_code)}
+                </h3>
+                {regionalNoteText(i18n, note) && (
+                  <p class="country-customs">{regionalNoteText(i18n, note)}</p>
+                )}
+                {(note.source_urls || []).length > 0 && (
+                  <p class="country-sources">
+                    {(note.source_urls || []).slice(0, 2).map((url) => (
+                      <a class="source-link" href={url} rel="noopener noreferrer" target="_blank">{copy.sourceLink} ↗</a>
+                    ))}
+                  </p>
+                )}
+              </div>
+            </li>
+          ))}
       </ul>
       </details>
 
@@ -404,7 +445,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
           document.addEventListener('click', function (ev) {
             var node = ev.target;
             if (!node || typeof node.closest !== 'function') return;
-            if (node.closest('a[href="#world"], a[href^="#observance-"]')) world.open = true;
+            if (node.closest('a[href="#world"], a[href^="#observance-"], a[href^="#regional-"]')) world.open = true;
           });
         })();
       </script>

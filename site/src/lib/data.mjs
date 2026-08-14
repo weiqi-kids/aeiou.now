@@ -26,7 +26,7 @@ export function observancesForFacts(facts) {
 /** Topic 清單(本 locale):topics/index/<locale>.json = 裸陣列。
  * index 檔有 commonality / category / is_perennial / scores / slug / status / title / topic_id,
  * 沒有 summary,也沒有國家資訊——摘要在 topics/<id>/i18n.json 的 locales.<locale>.summary,
- * 地方表現在 topics/<id>/facts.json 的 observances。列表頁要用,所以在讀取層補齊,
+ * 地方表現在 topics/<id>/facts.json 的 observances / regional_notes。列表頁要用,所以在讀取層補齊,
  * 不動 scripts/export-data.mjs(那支是生產者的匯出腳本,不是靜態站的責任範圍)。
  * 缺檔一律回退為 null/空陣列——不能依賴任何檔存在。 */
 let topicsIndexCache = null;
@@ -46,13 +46,18 @@ function enrichTopicRow(row) {
   const loc = (i18n && i18n.locales && i18n.locales[LOCALE]) || {};
   const facts = readJson(`topics/${id}/facts.json`, null);
   const observances = observancesForFacts(facts);
+  const regionalNotes = regionalNotesForFacts(facts);
+  const countryCodes = [...new Set([
+    ...observances.map((o) => o.country_code),
+    ...regionalNotes.map((note) => note.country_code),
+  ].filter(Boolean))];
   return {
     ...row,
     title: row.title || loc.title || (facts && facts.canonical_name) || id,
     summary: row.summary || loc.summary || null,
     keywords: (loc.keywords || []).slice(),
-    country_codes: [...new Set(observances.map((o) => o.country_code).filter(Boolean))],
-    country_count: new Set(observances.map((o) => o.country_code).filter(Boolean)).size,
+    country_codes: countryCodes,
+    country_count: countryCodes.length,
   };
 }
 
@@ -91,6 +96,18 @@ export function customsText(i18n, observance) {
   const countryCode = typeof observance === 'string' ? observance : observance.country_code;
   const legacy = i18n.countries && i18n.countries[countryCode];
   return (legacy && legacy[LOCALE]) || null;
+}
+
+/** 長青 Topic 的國別生活筆記；沒有固定日期，不應被當成 observance 排序。 */
+export function regionalNotesForFacts(facts) {
+  return Array.isArray(facts?.regional_notes) ? facts.regional_notes : [];
+}
+
+/** 取得某國的 regional note 當前語系文字。 */
+export function regionalNoteText(i18n, note) {
+  if (!i18n || !note?.country_code) return null;
+  const row = i18n.regional_notes?.[note.country_code];
+  return row?.[LOCALE] || row?.en || null;
 }
 
 /** 六窗分數:topics index 是分數的來源(facts.json 不帶 scores) */

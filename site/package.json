@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/copy-data.mjs && node ../scripts/check-final-topic-taxonomy.mjs && node scripts/check-design.mjs && node scripts/check-content.mjs && astro build && node scripts/check-seo.mjs --dist && node scripts/check-local-scope.mjs --dist",
+    "build": "node scripts/copy-data.mjs && node ../scripts/check-final-topic-taxonomy.mjs && node ../scripts/check-data-completeness.mjs && node scripts/check-design.mjs && node scripts/check-content.mjs && astro build && node scripts/check-seo.mjs --dist && node scripts/check-local-scope.mjs --dist",
     "preview": "astro preview"
   },
   "dependencies": {

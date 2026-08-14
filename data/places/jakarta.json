@@ -2,6 +2,43 @@
   "city_code": "jakarta",
   "places": [
     {
+      "place_id": "plc_3301AA7063D5C234865B82BEFE",
+      "name": "Istiqlal Mosque",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "ID",
+      "address": "Jl. Taman Wijaya Kusuma, Pasar Baru, Sawah Besar, Jakarta Pusat, DKI Jakarta",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Istiqlal%20Mosque%20Jakarta",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Istiqlal%20Mosque%20Jakarta",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Istiqlal%20Mosque%20Jakarta",
+        "amap": "https://uri.amap.com/search?keyword=Istiqlal%20Mosque%20Jakarta"
+      },
+      "source_urls": [
+        "https://turis.istiqlal.or.id/"
+      ],
+      "mention_count": 0,
+      "descriptions": {
+        "zh-TW": "雅加達的 Istiqlal Mosque 是可參訪的國家清真寺，官方旅遊系統提供國內外訪客導覽資訊，能連結齋戒月、開齋節與宰牲節的公共宗教生活。",
+        "en": "Istiqlal Mosque in Jakarta is Indonesia’s national mosque and provides visitor guidance, making it a concrete place to understand Ramadan, Eid al-Fitr, and Eid al-Adha in public life.",
+        "ja": "ジャカルタのIstiqlal Mosqueはインドネシアの国立モスクで、公式の観光案内が国内外の訪問者を受け入れています。ラマダーンやイードの公共的な宗教生活を知る手がかりになります。",
+        "zh-CN": "雅加达的 Istiqlal Mosque 是可参访的国家清真寺，官方旅游系统为国内外访客提供导览信息，可联系斋戒月、开斋节与宰牲节的公共宗教生活。",
+        "hi": "जकार्ता की Istiqlal Mosque इंडोनेशिया की राष्ट्रीय मस्जिद है; आधिकारिक पर्यटक व्यवस्था रमज़ान और दोनों ईद के सार्वजनिक धार्मिक जीवन को समझने का ठोस स्थान देती है।",
+        "id": "Istiqlal Mosque di Jakarta adalah masjid nasional Indonesia dengan panduan bagi wisatawan, sehingga menjadi tempat nyata untuk memahami Ramadan, Idul Fitri, dan Idul Adha.",
+        "pt-BR": "A Istiqlal Mosque, em Jacarta, é a mesquita nacional da Indonésia e oferece orientação para visitantes, conectando a vida religiosa pública ao Ramadã e aos dois Eid."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BRAREETBKDH28R9Y5EQ",
+          "relevance": 0.9
+        },
+        {
+          "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
       "place_id": "plc_58E753771C98E65962EB9A9A97",
       "name": "Monumen Nasional (MONAS)",
       "place_type": "permanent",

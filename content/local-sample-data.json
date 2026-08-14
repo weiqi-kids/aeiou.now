@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-12",
+  "as_of": "2026-08-14",
   "collection_method": "manual-official-source",
   "managed_event_source_urls": [
     "https://tam.gov.taipei/News_Content.aspx?n=794B17A953424610&s=259D7CDEDEAEC283&sms=9D72E82EC16F3E64",
@@ -15,7 +15,9 @@
     "https://loveland.org/events-2/corn-roast-festival/",
     "https://www.anandampune.com/",
     "https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026",
-    "https://agenciasp.sp.gov.br/revelando-sp-2026-sao-paulo-capital/"
+    "https://agenciasp.sp.gov.br/revelando-sp-2026-sao-paulo-capital/",
+    "https://www.travel.taipei/en/event-calendar/details/66783",
+    "https://tokyofestival.jp/en/about"
   ],
   "managed_place_source_urls": [
     "https://www.chocoholic.com.tw/about_2.htm",
@@ -31,7 +33,13 @@
     "https://www.lovgov.org/services/parks-recreation/parks-facilities/parks-reservation-spaces/fairgrounds-park/-fsiteid-1",
     "https://www.dagdushethganpati.com/?p=11699",
     "https://www.jakarta.go.id/landmark-jakarta",
-    "https://museudofutebol.org.br/exposicoes/museu-do-futebol/"
+    "https://museudofutebol.org.br/exposicoes/museu-do-futebol/",
+    "https://www.npm.gov.tw/Articles.aspx?l=2&sno=02007001",
+    "https://www.tnm.jp/modules/r_free_page/index.php?id=113Impey&lang=en",
+    "https://english.shanghai.gov.cn/en-UniqueExperience-travelinshanghai/20250729/25cfb8bce97d4e798f99ac62986255ff.html",
+    "https://pune.gov.in/en/tourist-place/aagakhan-palace/",
+    "https://turis.istiqlal.or.id/",
+    "https://museudoipiranga.org.br/en/visit/"
   ],
   "retired_place_ids": [
     "plc_DC1354E38584ADE45E79C7859F",
@@ -43,13 +51,48 @@
     "plc_56A587977C8FF926C1640EAF93"
   ],
   "markets": [
-    {"locale":"zh-TW","country_code":"TW","city_code":"taipei","city_name":"Taipei"},
-    {"locale":"ja","country_code":"JP","city_code":"tokyo","city_name":"Tokyo"},
-    {"locale":"zh-CN","country_code":"CN","city_code":"shanghai","city_name":"Shanghai"},
-    {"locale":"en","country_code":"US","city_code":"loveland","city_name":"Loveland"},
-    {"locale":"hi","country_code":"IN","city_code":"pune","city_name":"Pune"},
-    {"locale":"id","country_code":"ID","city_code":"jakarta","city_name":"Jakarta"},
-    {"locale":"pt-BR","country_code":"BR","city_code":"sao-paulo","city_name":"São Paulo"}
+    {
+      "locale": "zh-TW",
+      "country_code": "TW",
+      "city_code": "taipei",
+      "city_name": "Taipei"
+    },
+    {
+      "locale": "ja",
+      "country_code": "JP",
+      "city_code": "tokyo",
+      "city_name": "Tokyo"
+    },
+    {
+      "locale": "zh-CN",
+      "country_code": "CN",
+      "city_code": "shanghai",
+      "city_name": "Shanghai"
+    },
+    {
+      "locale": "en",
+      "country_code": "US",
+      "city_code": "loveland",
+      "city_name": "Loveland"
+    },
+    {
+      "locale": "hi",
+      "country_code": "IN",
+      "city_code": "pune",
+      "city_name": "Pune"
+    },
+    {
+      "locale": "id",
+      "country_code": "ID",
+      "city_code": "jakarta",
+      "city_name": "Jakarta"
+    },
+    {
+      "locale": "pt-BR",
+      "country_code": "BR",
+      "city_code": "sao-paulo",
+      "city_name": "São Paulo"
+    }
   ],
   "places": [
     {
@@ -58,7 +101,9 @@
       "country_code": "TW",
       "place_type": "permanent",
       "topic_relevance": "direct",
-      "topic_slugs": ["affection-and-reciprocity"],
+      "topic_slugs": [
+        "affection-and-reciprocity"
+      ],
       "address": "台北市大安區永康街 7 巷 2 號",
       "map_query": "Chocoholic 巧克哈客 永康店 台北",
       "source_urls": [
@@ -80,7 +125,9 @@
       "country_code": "JP",
       "place_type": "permanent",
       "topic_relevance": "direct",
-      "topic_slugs": ["affection-and-reciprocity"],
+      "topic_slugs": [
+        "affection-and-reciprocity"
+      ],
       "address": "〒151-0063 東京都渋谷区富ヶ谷 2-1-9",
       "map_query": "Minimal 富ヶ谷本店 東京",
       "source_urls": [
@@ -102,7 +149,9 @@
       "country_code": "CN",
       "place_type": "permanent",
       "topic_relevance": "direct",
-      "topic_slugs": ["affection-and-reciprocity"],
+      "topic_slugs": [
+        "affection-and-reciprocity"
+      ],
       "address": "上海市黄浦区马当路 119 号 102 室",
       "map_query": "Godiva 巧克力体验旗舰店 新天地 上海",
       "source_urls": [
@@ -124,7 +173,9 @@
       "country_code": "US",
       "place_type": "permanent",
       "topic_relevance": "direct",
-      "topic_slugs": ["affection-and-reciprocity"],
+      "topic_slugs": [
+        "affection-and-reciprocity"
+      ],
       "address": "5400 Stone Creek Circle, Loveland, Colorado 80538",
       "map_query": "Loveland East Gateway Visitors Center Colorado",
       "source_urls": [
@@ -146,7 +197,9 @@
       "country_code": "IN",
       "place_type": "permanent",
       "topic_relevance": "direct",
-      "topic_slugs": ["affection-and-reciprocity"],
+      "topic_slugs": [
+        "affection-and-reciprocity"
+      ],
       "address": "Shop No 1, Kumar Pavilion, East St, Pune Cantonment, Pune, Maharashtra 411001",
       "map_query": "Choconuts Kumar Pavilion East Street Pune",
       "source_urls": [
@@ -168,7 +221,9 @@
       "country_code": "ID",
       "place_type": "permanent",
       "topic_relevance": "direct",
-      "topic_slugs": ["affection-and-reciprocity"],
+      "topic_slugs": [
+        "affection-and-reciprocity"
+      ],
       "address": "Level 1 Unit 114, Jalan M.H. Thamrin No. 28-30, Jakarta Pusat, DKI Jakarta 10350",
       "map_query": "GODIVA Plaza Indonesia Jakarta",
       "source_urls": [
@@ -190,7 +245,9 @@
       "country_code": "BR",
       "place_type": "permanent",
       "topic_relevance": "direct",
-      "topic_slugs": ["affection-and-reciprocity"],
+      "topic_slugs": [
+        "affection-and-reciprocity"
+      ],
       "address": "Avenida Brigadeiro Faria Lima, 196, Pinheiros, São Paulo - SP",
       "map_query": "Fábrica de Dengo São Paulo",
       "source_urls": [
@@ -212,7 +269,9 @@
       "country_code": "TW",
       "place_type": "permanent",
       "topic_relevance": "direct",
-      "topic_slugs": ["national-days"],
+      "topic_slugs": [
+        "national-days"
+      ],
       "address": "100007 臺北市中正區襄陽路 2 號（二二八和平公園內）",
       "map_query": "國立臺灣博物館本館 襄陽路2號 台北",
       "source_urls": [
@@ -234,7 +293,9 @@
       "country_code": "JP",
       "place_type": "permanent",
       "topic_relevance": "direct",
-      "topic_slugs": ["ghosts-ancestors-and-remembrance"],
+      "topic_slugs": [
+        "ghosts-ancestors-and-remembrance"
+      ],
       "address": "〒135-0047 東京都江東区富岡 1-20-3",
       "map_query": "富岡八幡宮 東京都江東区富岡1-20-3",
       "source_urls": [
@@ -256,7 +317,9 @@
       "country_code": "CN",
       "place_type": "permanent",
       "topic_relevance": "direct",
-      "topic_slugs": ["national-days"],
+      "topic_slugs": [
+        "national-days"
+      ],
       "address": "上海市黃浦區人民大道 201 號",
       "map_query": "上海博物館 人民大道201號",
       "source_urls": [
@@ -278,7 +341,9 @@
       "country_code": "US",
       "place_type": "permanent",
       "topic_relevance": "direct",
-      "topic_slugs": ["harvest-and-gratitude"],
+      "topic_slugs": [
+        "harvest-and-gratitude"
+      ],
       "address": "700 S. Railroad Avenue, Loveland, CO",
       "map_query": "Fairgrounds Park 700 S Railroad Avenue Loveland Colorado",
       "source_urls": [
@@ -300,7 +365,9 @@
       "country_code": "IN",
       "place_type": "permanent",
       "topic_relevance": "direct",
-      "topic_slugs": ["new-year"],
+      "topic_slugs": [
+        "new-year"
+      ],
       "address": "Ganpati Bhavan, 250 Budhvar Peth, Pune, Maharashtra 411002",
       "map_query": "Dagdusheth Halwai Ganpati Temple Ganpati Bhavan 250 Budhvar Peth Pune",
       "source_urls": [
@@ -322,7 +389,9 @@
       "country_code": "ID",
       "place_type": "permanent",
       "topic_relevance": "direct",
-      "topic_slugs": ["national-days"],
+      "topic_slugs": [
+        "national-days"
+      ],
       "address": "Jalan Tugu Monas, Gambir, Jakarta Pusat, Indonesia",
       "map_query": "Monumen Nasional MONAS Jalan Tugu Monas Gambir Jakarta",
       "source_urls": [
@@ -344,7 +413,9 @@
       "country_code": "BR",
       "place_type": "permanent",
       "topic_relevance": "direct",
-      "topic_slugs": ["national-days"],
+      "topic_slugs": [
+        "national-days"
+      ],
       "address": "Praça Charles Miller, s/n, Pacaembu, São Paulo - SP",
       "map_query": "Museu do Futebol Praça Charles Miller Pacaembu São Paulo",
       "source_urls": [
@@ -359,6 +430,151 @@
         "id": "Museu do Futebol di São Paulo berada di Praça Charles Miller, Pacaembu. Situs resminya menjelaskan pameran utama tentang sejarah olahraga dan Brasil.",
         "pt-BR": "O Museu do Futebol fica na Praça Charles Miller, no Pacaembu, em São Paulo. O site oficial apresenta a exposição principal sobre a história do esporte e do Brasil."
       }
+    },
+    {
+      "name": "國立故宮博物院",
+      "city_code": "taipei",
+      "country_code": "TW",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "topic_slugs": [
+        "national-days"
+      ],
+      "address": "臺北市士林區至善路二段 221 號",
+      "map_query": "國立故宮博物院 臺北市士林區至善路二段221號",
+      "source_urls": [
+        "https://www.npm.gov.tw/Articles.aspx?l=2&sno=02007001"
+      ],
+      "descriptions": {
+        "zh-TW": "臺北士林的國立故宮博物院保存大量東亞文物，適合從館藏與公共記憶認識臺灣所處的文化脈絡。",
+        "en": "Taipei’s National Palace Museum preserves major East Asian collections and offers a place to connect cultural heritage with public memory.",
+        "ja": "台北・士林の国立故宮博物院は東アジアの文化財を収蔵し、コレクションと公共の記憶から台湾の文化的背景を考えられる場所です。",
+        "zh-CN": "台北士林的故宫博物院收藏大量东亚文物，可以从馆藏和公共记忆认识台湾所处的文化脉络。",
+        "hi": "ताइपे का National Palace Museum पूर्वी एशिया की बड़ी संग्रहित विरासत को रखता है; यहाँ संग्रह और सार्वजनिक स्मृति के ज़रिए ताइवान के सांस्कृतिक संदर्भ को समझा जा सकता है।",
+        "id": "National Palace Museum di Shilin, Taipei, menyimpan koleksi besar Asia Timur dan menghubungkan warisan budaya dengan ingatan publik.",
+        "pt-BR": "O National Palace Museum, em Shilin, Taipei, preserva importantes coleções do Leste Asiático e relaciona patrimônio cultural e memória pública."
+      }
+    },
+    {
+      "name": "東京國立博物館",
+      "city_code": "tokyo",
+      "country_code": "JP",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "topic_slugs": [
+        "national-days"
+      ],
+      "address": "13-9 Ueno Park, Taito-ku, Tokyo 110-8712, Japan",
+      "map_query": "Tokyo National Museum 13-9 Ueno Park Taito-ku Tokyo",
+      "source_urls": [
+        "https://www.tnm.jp/modules/r_free_page/index.php?id=113Impey&lang=en"
+      ],
+      "descriptions": {
+        "zh-TW": "東京上野的東京國立博物館以日本與亞洲文化資產為核心，能把國家文化記憶放回具體的展覽與收藏中理解。",
+        "en": "Tokyo National Museum in Ueno presents Japanese and Asian cultural heritage through long-term collections, exhibitions, and public learning.",
+        "ja": "上野の東京国立博物館は日本とアジアの文化財を紹介し、国家や地域の記憶を展示と収蔵品から具体的に見られます。",
+        "zh-CN": "上野的东京国立博物馆以日本和亚洲文化遗产为核心，通过展览和收藏呈现公共文化记忆。",
+        "hi": "उएनो स्थित Tokyo National Museum जापान और एशिया की सांस्कृतिक विरासत को संग्रह और प्रदर्शनियों के माध्यम से दिखाता है।",
+        "id": "Tokyo National Museum di Ueno menampilkan warisan budaya Jepang dan Asia melalui koleksi serta pameran publik.",
+        "pt-BR": "O Tokyo National Museum, em Ueno, apresenta o patrimônio cultural do Japão e da Ásia por meio de coleções e exposições."
+      }
+    },
+    {
+      "name": "豫園",
+      "city_code": "shanghai",
+      "country_code": "CN",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "topic_slugs": [
+        "lantern-festival"
+      ],
+      "address": "上海市黃浦區豫園老街 279 號南門",
+      "map_query": "豫園 上海市黃浦區豫園老街279號",
+      "source_urls": [
+        "https://english.shanghai.gov.cn/en-UniqueExperience-travelinshanghai/20250729/25cfb8bce97d4e798f99ac62986255ff.html"
+      ],
+      "descriptions": {
+        "zh-TW": "上海豫園是保存古典園林與城市節慶景觀的常設地點；官方旅遊資訊也介紹夜遊、光影與茶文化體驗。",
+        "en": "Yuyuan Garden is a permanent Shanghai heritage site where classical gardens, night scenes, light, and tea culture meet.",
+        "ja": "上海の豫園は古典庭園と都市の季節行事を感じられる常設の文化空間で、公式案内には夜景、光、茶文化の体験も紹介されています。",
+        "zh-CN": "上海豫园是保存古典园林与城市节庆景观的常设地点，官方旅游信息也介绍夜游、光影和茶文化体验。",
+        "hi": "शंघाई का Yuyuan Garden स्थायी सांस्कृतिक स्थल है जहाँ शास्त्रीय उद्यान, रात्रि-दृश्य, रोशनी और चाय संस्कृति मिलते हैं।",
+        "id": "Yuyuan Garden di Shanghai adalah situs warisan permanen yang memadukan taman klasik, suasana malam, cahaya, dan budaya teh.",
+        "pt-BR": "O Yuyuan Garden é um espaço permanente de patrimônio em Xangai, unindo jardins clássicos, cenas noturnas, luz e cultura do chá."
+      }
+    },
+    {
+      "name": "Aga Khan Palace",
+      "city_code": "pune",
+      "country_code": "IN",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "topic_slugs": [
+        "national-days"
+      ],
+      "address": "Pune, Maharashtra, India",
+      "map_query": "Aga Khan Palace Pune Maharashtra India",
+      "source_urls": [
+        "https://pune.gov.in/en/tourist-place/aagakhan-palace/"
+      ],
+      "descriptions": {
+        "zh-TW": "Pune 的 Aga Khan Palace 是與印度獨立運動和甘地記憶相連的歷史場所，適合從建築與地方史理解公共紀念。",
+        "en": "Aga Khan Palace in Pune is a historic site connected with India’s independence movement and Gandhi memory, linking architecture with public remembrance.",
+        "ja": "プネーのAga Khan Palaceはインド独立運動とガンディーの記憶に結び付く歴史的な場所で、建築と公共の記憶を一緒に学べます。",
+        "zh-CN": "Pune 的 Aga Khan Palace 是与印度独立运动和甘地记忆相连的历史地点，可以从建筑和地方史理解公共纪念。",
+        "hi": "पुणे का Aga Khan Palace भारत के स्वतंत्रता आंदोलन और गांधी की स्मृति से जुड़ा ऐतिहासिक स्थल है।",
+        "id": "Aga Khan Palace di Pune adalah situs sejarah yang terkait dengan gerakan kemerdekaan India dan ingatan tentang Gandhi.",
+        "pt-BR": "O Aga Khan Palace, em Pune, é um local histórico ligado ao movimento de independência da Índia e à memória de Gandhi."
+      }
+    },
+    {
+      "name": "Istiqlal Mosque",
+      "city_code": "jakarta",
+      "country_code": "ID",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "topic_slugs": [
+        "ramadan-and-eid",
+        "eid-al-adha"
+      ],
+      "address": "Jl. Taman Wijaya Kusuma, Pasar Baru, Sawah Besar, Jakarta Pusat, DKI Jakarta",
+      "map_query": "Istiqlal Mosque Jakarta",
+      "source_urls": [
+        "https://turis.istiqlal.or.id/"
+      ],
+      "descriptions": {
+        "zh-TW": "雅加達的 Istiqlal Mosque 是可參訪的國家清真寺，官方旅遊系統提供國內外訪客導覽資訊，能連結齋戒月、開齋節與宰牲節的公共宗教生活。",
+        "en": "Istiqlal Mosque in Jakarta is Indonesia’s national mosque and provides visitor guidance, making it a concrete place to understand Ramadan, Eid al-Fitr, and Eid al-Adha in public life.",
+        "ja": "ジャカルタのIstiqlal Mosqueはインドネシアの国立モスクで、公式の観光案内が国内外の訪問者を受け入れています。ラマダーンやイードの公共的な宗教生活を知る手がかりになります。",
+        "zh-CN": "雅加达的 Istiqlal Mosque 是可参访的国家清真寺，官方旅游系统为国内外访客提供导览信息，可联系斋戒月、开斋节与宰牲节的公共宗教生活。",
+        "hi": "जकार्ता की Istiqlal Mosque इंडोनेशिया की राष्ट्रीय मस्जिद है; आधिकारिक पर्यटक व्यवस्था रमज़ान और दोनों ईद के सार्वजनिक धार्मिक जीवन को समझने का ठोस स्थान देती है।",
+        "id": "Istiqlal Mosque di Jakarta adalah masjid nasional Indonesia dengan panduan bagi wisatawan, sehingga menjadi tempat nyata untuk memahami Ramadan, Idul Fitri, dan Idul Adha.",
+        "pt-BR": "A Istiqlal Mosque, em Jacarta, é a mesquita nacional da Indonésia e oferece orientação para visitantes, conectando a vida religiosa pública ao Ramadã e aos dois Eid."
+      }
+    },
+    {
+      "name": "Museu do Ipiranga",
+      "city_code": "sao-paulo",
+      "country_code": "BR",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "topic_slugs": [
+        "national-days"
+      ],
+      "address": "Rua dos Patriotas, 100 – Ipiranga – São Paulo/SP – CEP 04207-030",
+      "map_query": "Museu do Ipiranga Rua dos Patriotas 100 São Paulo",
+      "source_urls": [
+        "https://museudoipiranga.org.br/en/visit/"
+      ],
+      "descriptions": {
+        "zh-TW": "São Paulo 的 Museu do Ipiranga 位在獨立公園旁，官方參觀頁列有地址與巴西獨立日免費開放資訊，是理解國家記憶的具體場所。",
+        "en": "Museu do Ipiranga in São Paulo stands beside Independence Park; its official visitor page lists the address and Brazil’s Independence Day programming.",
+        "ja": "サンパウロのMuseu do Ipirangaは独立公園にあり、公式の訪問案内には住所とブラジル独立日に関する開館情報が掲載されています。",
+        "zh-CN": "São Paulo 的 Museu do Ipiranga 位于独立公园旁，官方参观页面列出地址和巴西独立日开放信息，是理解国家记忆的具体地点。",
+        "hi": "साओ पाउलो का Museu do Ipiranga Independence Park के पास है; आधिकारिक आगंतुक पेज पर पता और ब्राज़ील के स्वतंत्रता दिवस की जानकारी है।",
+        "id": "Museu do Ipiranga di São Paulo berada di dekat Independence Park; halaman kunjungan resminya mencantumkan alamat dan informasi Hari Kemerdekaan Brasil.",
+        "pt-BR": "O Museu do Ipiranga, em São Paulo, fica junto ao Parque da Independência; a página oficial informa o endereço e a programação ligada ao Dia da Independência do Brasil."
+      }
     }
   ],
   "events": [
@@ -367,7 +583,9 @@
       "city_code": "taipei",
       "country_code": "TW",
       "venue": "臺北市立天文科學教育館 宇宙劇場",
-      "topic_slugs": ["affection-and-reciprocity"],
+      "topic_slugs": [
+        "affection-and-reciprocity"
+      ],
       "start_at": "2026-08-19T00:00:00Z",
       "end_at": null,
       "ticket_url": null,
@@ -387,7 +605,9 @@
       "city_code": "shanghai",
       "country_code": "CN",
       "venue": "龙盛活力小镇",
-      "topic_slugs": ["affection-and-reciprocity"],
+      "topic_slugs": [
+        "affection-and-reciprocity"
+      ],
       "start_at": "2026-08-19T00:00:00Z",
       "end_at": null,
       "ticket_url": null,
@@ -407,7 +627,9 @@
       "city_code": "loveland",
       "country_code": "US",
       "venue": "Downtown Loveland",
-      "topic_slugs": ["affection-and-reciprocity"],
+      "topic_slugs": [
+        "affection-and-reciprocity"
+      ],
       "start_at": "2027-02-12T00:00:00Z",
       "end_at": "2027-02-13T00:00:00Z",
       "ticket_url": null,
@@ -427,7 +649,9 @@
       "city_code": "taipei",
       "country_code": "TW",
       "venue": "Taipei Expo Park – Flower Sea Area",
-      "topic_slugs": ["harvest-and-gratitude"],
+      "topic_slugs": [
+        "harvest-and-gratitude"
+      ],
       "start_at": "2026-08-29T00:00:00Z",
       "end_at": "2026-08-30T00:00:00Z",
       "ticket_url": null,
@@ -447,7 +671,9 @@
       "city_code": "tokyo",
       "country_code": "JP",
       "venue": "富岡八幡宮與深川地區",
-      "topic_slugs": ["ghosts-ancestors-and-remembrance"],
+      "topic_slugs": [
+        "ghosts-ancestors-and-remembrance"
+      ],
       "start_at": "2026-08-12T00:00:00Z",
       "end_at": "2026-08-16T00:00:00Z",
       "ticket_url": null,
@@ -467,7 +693,9 @@
       "city_code": "shanghai",
       "country_code": "CN",
       "venue": "南京路、新天地與北外灘等 17 個地標場域",
-      "topic_slugs": ["lantern-festival"],
+      "topic_slugs": [
+        "lantern-festival"
+      ],
       "start_at": "2026-09-17T00:00:00Z",
       "end_at": "2026-10-16T00:00:00Z",
       "ticket_url": null,
@@ -487,7 +715,9 @@
       "city_code": "loveland",
       "country_code": "US",
       "venue": "Fairgrounds Park, 700 S. Railroad Avenue, Loveland",
-      "topic_slugs": ["harvest-and-gratitude"],
+      "topic_slugs": [
+        "harvest-and-gratitude"
+      ],
       "start_at": "2026-08-21T00:00:00Z",
       "end_at": "2026-08-22T00:00:00Z",
       "ticket_url": null,
@@ -507,7 +737,9 @@
       "city_code": "pune",
       "country_code": "IN",
       "venue": "Alankaran Hall, SRPF Group 2, Wanowrie, Pune",
-      "topic_slugs": ["homecoming-and-reunion"],
+      "topic_slugs": [
+        "homecoming-and-reunion"
+      ],
       "start_at": "2026-10-15T00:00:00Z",
       "end_at": "2026-10-21T00:00:00Z",
       "ticket_url": null,
@@ -527,7 +759,9 @@
       "city_code": "jakarta",
       "country_code": "ID",
       "venue": "Taman Ismail Marzuki 及雅加達省政府公共設施",
-      "topic_slugs": ["national-days"],
+      "topic_slugs": [
+        "national-days"
+      ],
       "start_at": "2026-10-29T00:00:00Z",
       "end_at": "2026-10-30T00:00:00Z",
       "ticket_url": null,
@@ -547,7 +781,9 @@
       "city_code": "sao-paulo",
       "country_code": "BR",
       "venue": "Parque do Trote, São Paulo",
-      "topic_slugs": ["harvest-and-gratitude"],
+      "topic_slugs": [
+        "harvest-and-gratitude"
+      ],
       "start_at": "2026-09-24T00:00:00Z",
       "end_at": "2026-09-27T00:00:00Z",
       "ticket_url": null,
@@ -560,6 +796,48 @@
         "hi": "São Paulo राज्य की समाचार एजेंसी के अनुसार Revelando SP 2026, 24–27 सितंबर को Parque do Trote में होगा और राज्य के खान-पान, हस्तशिल्प व सांस्कृतिक परंपराएँ प्रस्तुत करेगा।",
         "id": "Badan berita negara bagian São Paulo mencantumkan Revelando SP 2026 pada 24–27 September di Parque do Trote, dengan kuliner, kerajinan, dan tradisi budaya dari berbagai daerah.",
         "pt-BR": "A Agência SP lista o Revelando SP 2026 de 24 a 27 de setembro no Parque do Trote, com culinária, artesanato e tradições culturais de várias regiões do estado."
+      }
+    },
+    {
+      "name": "2026 Taipei Night Market Festival",
+      "city_code": "taipei",
+      "country_code": "TW",
+      "venue": "Taipei night markets",
+      "start_at": "2026-05-14T00:00:00+08:00",
+      "end_at": "2026-10-31T23:59:00+08:00",
+      "source_url": "https://www.travel.taipei/en/event-calendar/details/66783",
+      "topic_slugs": [
+        "harvest-and-gratitude"
+      ],
+      "descriptions": {
+        "zh-TW": "2026 臺北夜市節以城市夜市、地方小吃與夜間逛街為主題，適合把共享餐桌放回臺北的日常場景理解。",
+        "en": "The 2026 Taipei Night Market Festival connects local food, night markets, and shared city life across Taipei.",
+        "ja": "2026 Taipei Night Market Festivalは、台北の夜市、地域の食べ物、夜の街歩きを通して共有の食卓を感じる催しです。",
+        "zh-CN": "2026 台北夜市节以城市夜市、地方小吃和夜间逛街为主题，把共享餐桌放回台北的日常场景。",
+        "hi": "2026 Taipei Night Market Festival ताइपे के नाइट मार्केट, स्थानीय भोजन और साझा शहर-जीवन को जोड़ता है।",
+        "id": "2026 Taipei Night Market Festival menghubungkan pasar malam, makanan lokal, dan kehidupan kota bersama di Taipei.",
+        "pt-BR": "O 2026 Taipei Night Market Festival reúne mercados noturnos, comida local e a vida compartilhada da cidade de Taipei."
+      }
+    },
+    {
+      "name": "Tokyo Festival 2026",
+      "city_code": "tokyo",
+      "country_code": "JP",
+      "venue": "Tokyo metropolitan venues",
+      "start_at": "2026-09-01T00:00:00+09:00",
+      "end_at": "2026-11-03T23:59:00+09:00",
+      "source_url": "https://tokyofestival.jp/en/about",
+      "topic_slugs": [
+        "ask-the-world"
+      ],
+      "descriptions": {
+        "zh-TW": "Tokyo Festival 2026 在東京多個場地串起跨文化表演與交流，讓「向世界提問」落在真實的城市節目與觀眾互動裡。",
+        "en": "Tokyo Festival 2026 brings intercultural performance and exchange to venues across Tokyo, giving cross-border questions a real public setting.",
+        "ja": "Tokyo Festival 2026は東京各地で異文化の舞台と交流をつなぎ、世界に問いかける場を都市のプログラムと観客の出会いにします。",
+        "zh-CN": "Tokyo Festival 2026 在东京多个场地串联跨文化表演与交流，让“向世界提问”落在真实的城市节目和观众互动中。",
+        "hi": "Tokyo Festival 2026 टोक्यो के कई स्थलों पर अंतर-सांस्कृतिक प्रदर्शन और संवाद लाता है, जिससे दुनिया से सवाल करना सार्वजनिक अनुभव बनता है।",
+        "id": "Tokyo Festival 2026 menghubungkan pertunjukan dan pertukaran lintas budaya di berbagai tempat Tokyo, memberi ruang publik bagi pertanyaan lintas negara.",
+        "pt-BR": "O Tokyo Festival 2026 leva apresentações e intercâmbio intercultural a vários locais de Tóquio, criando um espaço público para perguntas entre países."
       }
     }
   ]

@@ -2,6 +2,32 @@
   "city_code": "taipei",
   "events": [
     {
+      "event_id": "evt_543DE2D06AC2DA1C1E9B536C8F",
+      "name": "2026 Taipei Night Market Festival",
+      "country_code": "TW",
+      "venue": "Taipei night markets",
+      "start_at": 1778688000,
+      "end_at": 1793462340,
+      "ticket_url": null,
+      "source_id": "src_DD5B201756F4E1C7C1CEE404",
+      "source_url": "https://www.travel.taipei/en/event-calendar/details/66783",
+      "descriptions": {
+        "zh-TW": "2026 臺北夜市節以城市夜市、地方小吃與夜間逛街為主題，適合把共享餐桌放回臺北的日常場景理解。",
+        "en": "The 2026 Taipei Night Market Festival connects local food, night markets, and shared city life across Taipei.",
+        "ja": "2026 Taipei Night Market Festivalは、台北の夜市、地域の食べ物、夜の街歩きを通して共有の食卓を感じる催しです。",
+        "zh-CN": "2026 台北夜市节以城市夜市、地方小吃和夜间逛街为主题，把共享餐桌放回台北的日常场景。",
+        "hi": "2026 Taipei Night Market Festival ताइपे के नाइट मार्केट, स्थानीय भोजन और साझा शहर-जीवन को जोड़ता है।",
+        "id": "2026 Taipei Night Market Festival menghubungkan pasar malam, makanan lokal, dan kehidupan kota bersama di Taipei.",
+        "pt-BR": "O 2026 Taipei Night Market Festival reúne mercados noturnos, comida local e a vida compartilhada da cidade de Taipei."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
       "event_id": "evt_EF10314081857A10BA4C3BBD5F",
       "name": "星空愛戀音樂會",
       "country_code": "TW",

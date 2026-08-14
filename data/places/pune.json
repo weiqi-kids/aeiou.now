@@ -2,6 +2,39 @@
   "city_code": "pune",
   "places": [
     {
+      "place_id": "plc_0D0B41A625D995A39B9C875064",
+      "name": "Aga Khan Palace",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "IN",
+      "address": "Pune, Maharashtra, India",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Aga%20Khan%20Palace%20Pune%20Maharashtra%20India",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Aga%20Khan%20Palace%20Pune%20Maharashtra%20India",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Aga%20Khan%20Palace%20Pune%20Maharashtra%20India",
+        "amap": "https://uri.amap.com/search?keyword=Aga%20Khan%20Palace%20Pune%20Maharashtra%20India"
+      },
+      "source_urls": [
+        "https://pune.gov.in/en/tourist-place/aagakhan-palace/"
+      ],
+      "mention_count": 0,
+      "descriptions": {
+        "zh-TW": "Pune 的 Aga Khan Palace 是與印度獨立運動和甘地記憶相連的歷史場所，適合從建築與地方史理解公共紀念。",
+        "en": "Aga Khan Palace in Pune is a historic site connected with India’s independence movement and Gandhi memory, linking architecture with public remembrance.",
+        "ja": "プネーのAga Khan Palaceはインド独立運動とガンディーの記憶に結び付く歴史的な場所で、建築と公共の記憶を一緒に学べます。",
+        "zh-CN": "Pune 的 Aga Khan Palace 是与印度独立运动和甘地记忆相连的历史地点，可以从建筑和地方史理解公共纪念。",
+        "hi": "पुणे का Aga Khan Palace भारत के स्वतंत्रता आंदोलन और गांधी की स्मृति से जुड़ा ऐतिहासिक स्थल है।",
+        "id": "Aga Khan Palace di Pune adalah situs sejarah yang terkait dengan gerakan kemerdekaan India dan ingatan tentang Gandhi.",
+        "pt-BR": "O Aga Khan Palace, em Pune, é um local histórico ligado ao movimento de independência da Índia e à memória de Gandhi."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
       "place_id": "plc_470FBCF0AC32AA82F8172524E6",
       "name": "Choconuts",
       "place_type": "permanent",

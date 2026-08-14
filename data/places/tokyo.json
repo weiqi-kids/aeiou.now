@@ -66,6 +66,39 @@
           "relevance": 0.9
         }
       ]
+    },
+    {
+      "place_id": "plc_CE5D78181A321AEC99BECB2067",
+      "name": "東京國立博物館",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "JP",
+      "address": "13-9 Ueno Park, Taito-ku, Tokyo 110-8712, Japan",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Tokyo%20National%20Museum%2013-9%20Ueno%20Park%20Taito-ku%20Tokyo",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Tokyo%20National%20Museum%2013-9%20Ueno%20Park%20Taito-ku%20Tokyo",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Tokyo%20National%20Museum%2013-9%20Ueno%20Park%20Taito-ku%20Tokyo",
+        "amap": "https://uri.amap.com/search?keyword=Tokyo%20National%20Museum%2013-9%20Ueno%20Park%20Taito-ku%20Tokyo"
+      },
+      "source_urls": [
+        "https://www.tnm.jp/modules/r_free_page/index.php?id=113Impey&lang=en"
+      ],
+      "mention_count": 0,
+      "descriptions": {
+        "zh-TW": "東京上野的東京國立博物館以日本與亞洲文化資產為核心，能把國家文化記憶放回具體的展覽與收藏中理解。",
+        "en": "Tokyo National Museum in Ueno presents Japanese and Asian cultural heritage through long-term collections, exhibitions, and public learning.",
+        "ja": "上野の東京国立博物館は日本とアジアの文化財を紹介し、国家や地域の記憶を展示と収蔵品から具体的に見られます。",
+        "zh-CN": "上野的东京国立博物馆以日本和亚洲文化遗产为核心，通过展览和收藏呈现公共文化记忆。",
+        "hi": "उएनो स्थित Tokyo National Museum जापान और एशिया की सांस्कृतिक विरासत को संग्रह और प्रदर्शनियों के माध्यम से दिखाता है।",
+        "id": "Tokyo National Museum di Ueno menampilkan warisan budaya Jepang dan Asia melalui koleksi serta pameran publik.",
+        "pt-BR": "O Tokyo National Museum, em Ueno, apresenta o patrimônio cultural do Japão e da Ásia por meio de coleções e exposições."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+          "relevance": 0.9
+        }
+      ]
     }
   ]
 }

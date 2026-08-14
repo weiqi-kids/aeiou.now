@@ -52,6 +52,12 @@ record_job() {
 # --- 1. 匯出 ---------------------------------------------------------------
 # 0.(2026-08-11 加)先把 content/topics/*.md 匯入 SQLite——Topic 內容的人工維護入口。
 #    冪等;md 解析失敗只擋該檔並回非零,此時**不中斷** export(舊資料照出,錯誤記 jobs)。
+log "generate-regional-notes.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/generate-regional-notes.mjs"; then
+  log "FAILED: generate-regional-notes.mjs"
+  record_job failed 0 0 0 1 "generate-regional-notes.mjs failed"
+  exit 1
+fi
 log "import-topics.mjs ..."
 IMPORT_OUT="$("$NODE_BIN" "$REPO/scripts/import-topics.mjs" 2>&1)" || \
   log "WARN: import-topics 有檔案失敗(不中斷 export):$(echo "$IMPORT_OUT" | grep '✗' | head -2 | tr '\n' ' ')"
@@ -91,10 +97,16 @@ if [ $EXPORT_RC -ne 0 ]; then
   record_job failed 0 0 0 1 "export-data.mjs exited $EXPORT_RC: $(echo "$EXPORT_OUT" | tail -3 | tr '\n' ' ')"
   exit 1
 fi
+log "check-data-completeness.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/check-data-completeness.mjs"; then
+  log "FAILED: 資料完整性守門未通過"
+  record_job failed 0 0 0 1 "check-data-completeness.mjs failed"
+  exit 1
+fi
 WROTE="$(echo "$EXPORT_OUT" | grep -c '^write ')"
 
 # --- 2. 只看受管理輸出有沒有變 -----------------------------------------------
-CHANGED="$(git status --porcelain -- data/ content/local-sample-data.json | wc -l)"
+CHANGED="$(git status --porcelain -- data/ content/local-sample-data.json content/topic-regional-notes.json | wc -l)"
 if [ "$CHANGED" -eq 0 ]; then
   log "managed output unchanged — skip commit & push (files written this run: $WROTE)"
   record_job skipped "$WROTE" 0 0 0
@@ -103,10 +115,10 @@ fi
 log "managed output has $CHANGED changed path(s) — committing"
 
 # --- 3. commit(只加受管理輸出,不用 git add -A) -------------------------------
-git add -- data/ content/local-sample-data.json || { log "FAILED: git add"; record_job failed "$WROTE" 0 0 1 "git add managed output failed"; exit 1; }
+git add -- data/ content/local-sample-data.json content/topic-regional-notes.json || { log "FAILED: git add"; record_job failed "$WROTE" 0 0 1 "git add managed output failed"; exit 1; }
 
 # 保險:即使 index 裡混進別的東西也只 commit 受管理輸出(限定路徑)
-if ! git commit -q -m "chore(data): hourly export $(date -u +%Y-%m-%dT%H:%MZ)" -- data/ content/local-sample-data.json; then
+if ! git commit -q -m "chore(data): hourly export $(date -u +%Y-%m-%dT%H:%MZ)" -- data/ content/local-sample-data.json content/topic-regional-notes.json; then
   log "FAILED: git commit"
   record_job failed "$WROTE" 0 0 1 "git commit failed"
   exit 1

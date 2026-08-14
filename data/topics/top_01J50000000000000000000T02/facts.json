@@ -6,9 +6,67 @@
   "category": "community",
   "status": "active",
   "is_perennial": 1,
-  "updated_at": "2026-08-14T08:08:29.000Z",
+  "updated_at": "2026-08-14T12:21:41.000Z",
   "access_level": 0,
   "observances": [],
+  "regional_notes": [
+    {
+      "country_code": "BR",
+      "source_urls": [
+        "https://www.unesco.org/en/education",
+        "https://www.oecd.org/education/",
+        "https://www.gov.br/"
+      ]
+    },
+    {
+      "country_code": "CN",
+      "source_urls": [
+        "https://www.unesco.org/en/education",
+        "https://www.oecd.org/education/",
+        "https://www.gov.cn/"
+      ]
+    },
+    {
+      "country_code": "ID",
+      "source_urls": [
+        "https://www.unesco.org/en/education",
+        "https://www.oecd.org/education/",
+        "https://indonesia.go.id/"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "source_urls": [
+        "https://www.unesco.org/en/education",
+        "https://www.oecd.org/education/",
+        "https://www.india.gov.in/"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "source_urls": [
+        "https://www.unesco.org/en/education",
+        "https://www.oecd.org/education/",
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "source_urls": [
+        "https://www.unesco.org/en/education",
+        "https://www.oecd.org/education/",
+        "https://www.gov.tw/"
+      ]
+    },
+    {
+      "country_code": "US",
+      "source_urls": [
+        "https://www.unesco.org/en/education",
+        "https://www.oecd.org/education/",
+        "https://www.usa.gov/"
+      ]
+    }
+  ],
   "countries": [],
   "relations": [
     {
@@ -19,5 +77,15 @@
     }
   ],
   "source_ids": [],
-  "source_urls": []
+  "source_urls": [
+    "https://www.unesco.org/en/education",
+    "https://www.oecd.org/education/",
+    "https://www.gov.br/",
+    "https://www.gov.cn/",
+    "https://indonesia.go.id/",
+    "https://www.india.gov.in/",
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+    "https://www.gov.tw/",
+    "https://www.usa.gov/"
+  ]
 }
