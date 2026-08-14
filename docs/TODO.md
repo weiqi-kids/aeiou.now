@@ -35,8 +35,11 @@
   金鑰 `~/.config/aeiou/ga4-sa.json`(600),已啟用 analyticsadmin/analyticsdata/searchconsole API。
   隔離已驗:金鑰見 0 個外站資源。**GSC/GA4 授權後要重跑全綠驗收**:
   `node /root/seo-ops/bin/identity-audit.mjs --sa ~/.config/aeiou/ga4-sa.json --expect-only aeiou.now` exit 0。
-- [ ] **GA4 property**:用戶端建(建議 1 property + 1 web stream,七站共用 G-ID、報表以 hostname 區分)
-  → SA 加檢視者 → `PUBLIC_GA4_ID` 接進 CI build(BaseLayout 已支援,未設不輸出)。
+- [x] **GA4 property**(2026-08-14 完成):property `549586494`、web stream `G-ZMTFG68ZJ5`(SA 可見,
+  即檢視者已加)、`PUBLIC_GA4_ID` 已接進 CI build(`build.yml` 頂層 env)。
+  查 stream:SA 打 `analyticsadmin.googleapis.com/v1beta/properties/549586494/dataStreams`;
+  查上線:`curl -s https://weiqi-kids.github.io/aeiou-pages-zh-tw/ | grep -c googletagmanager`。
+  ⚠ 手動單站 build/push 要自帶 `PUBLIC_GA4_ID`,否則該站 gtag 會消失到下次 CI 推。
 - [ ] **GSC**:`sc-domain:aeiou.now`(DNS TXT 驗證)→ SA 加「完整使用者」。卡網域註冊。
 - [ ] **Slack**:workspace=Weiqi.Kids、bot=`claude-helper`(有 `chat:write.public`,公開頻道免邀請)。
   token 已就位 `~/.config/aeiou/slack-bot-token`(600,2026-08-12 實測 auth.test ok)。

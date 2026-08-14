@@ -143,6 +143,7 @@ World
 | 同步 secret | Worker 側 `SYNC_SECRET`;主機側 `~/.config/aeiou/sync-secret`(chmod 600,**絕不進 git**) |
 | deploy key 私鑰 | `~/.config/aeiou/deploy-keys/aeiou-pages-<locale小寫>`(**絕不進 git**) |
 | 靜態站 API 位址 | 環境變數 `PUBLIC_API_URL` |
+| GA4 量測 ID(`PUBLIC_GA4_ID`) | `G-ZMTFG68ZJ5`(七站共用一個 web stream,報表以 hostname 區分;CI 已設,手動 build 要自帶,未設不輸出 gtag) |
 | `REACTION_SET` | `["❤️","😂","😮","😢","🤔","🎉","👏"]`(**不含 👍**,用戶明示排除) |
 | reaction 可掛的對象 | `post` / `comment` / `place` / `event` |
 | 主機 SQLite | `/root/aeiou.now/db/aeiou.sqlite` |

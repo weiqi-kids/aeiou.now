@@ -31,6 +31,8 @@ concurrency:
 env:
   PUBLIC_API_URL: https://aeiou-api.lightman-chang.workers.dev
   SITE_URL: https://weiqi-kids.github.io
+  # GA4 量測 ID:七站共用一個 web stream,報表以 hostname 區分(介面常數,見 CLAUDE.md)
+  PUBLIC_GA4_ID: G-ZMTFG68ZJ5
 
 jobs:
   build-deploy:
@@ -99,6 +101,7 @@ jobs:
           BASE_PATH: ${{ matrix.base_path }}
           SITE_URL: ${{ env.SITE_URL }}
           PUBLIC_API_URL: ${{ env.PUBLIC_API_URL }}
+          PUBLIC_GA4_ID: ${{ env.PUBLIC_GA4_ID }}
         run: pnpm build
 
       - name: Setup deploy key (SSH)
