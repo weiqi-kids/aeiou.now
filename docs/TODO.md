@@ -4,13 +4,8 @@
 
 ## 部署與基礎
 
-- [ ] **`id` 站(印尼)線上還是舊版**。publish repo 已收到最新內容(commit `deploy id @ …`),
-  但 GitHub Pages 的建置卡在 `building` 超過 30 分鐘(GitHub 端問題,已推 nudge commit 一次)。
-  查:`gh api repos/weiqi-kids/aeiou-pages-id/pages/builds/latest --jq .status` 與
-  `curl -s https://weiqi-kids.github.io/aeiou-pages-id/.build-id`(比對 `git rev-parse HEAD`)。
-  若持續卡住:再推一個空 commit 到該 repo,或到 repo Settings→Pages 關掉再開。
-- [ ] **M1 完成定義 #3 的七站全綠重驗**(定版後只驗了六站,`id` 卡住)。
-  查法在 `CLAUDE.md § 現況一律用指令查` 的「七站分別是哪一版」。
+- [x] **`id` 站(印尼)線上還是舊版**——2026-08-14 實測 `.build-id` 已與 HEAD 一致,GitHub 端建置恢復。
+- [x] **M1 完成定義 #3 的七站全綠重驗**——2026-08-14 依「七站分別是哪一版」查法實測,七站 `.build-id` 全部等於 HEAD。
 - [ ] **`weiqi-kids` 組織的 deploy key 開關**目前是開的(`deploy_keys_enabled_for_repositories=true`,
   2026-08-11 為了 aeiou 打開,影響整個組織)。用戶未表態要不要維持;要關回去前先確認
   CI 改用其他機制,否則七站部署會壞。查:`gh api /orgs/weiqi-kids --jq .deploy_keys_enabled_for_repositories`
