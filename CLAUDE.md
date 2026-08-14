@@ -249,6 +249,11 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
   `data-room-state="closed"`(沒有 JS 的讀者看到的就是它,curl 驗降級也靠它)。
 - **`topics.status='archived'` 仍可發文**(只是不熱);**`posts.status='archived'` 才是永久鎖定**。同名不同義。
 - **Post 翻譯六語譯文(不翻原文那語)、Comment 不翻譯**。翻譯用 `claude -p` 訂閱 CLI,**不是 API**。
+- **`claude -p` 一律在 `/tmp` 空目錄跑,絕不在 repo 目錄跑**——claude 會把 cwd 與各層父目錄的
+  `CLAUDE.md` 讀進 context,在 repo 跑等於每次呼叫白花約 12,200 tokens,且譯文行為會被手冊內容綁住。
+  改 `scripts/translate-posts.mjs` 的 `cwd` 前先讀該檔檔頭(2026-08-13 實測數據在那)。
+- **腳本裸執行(不帶任何參數)就必須是正確且完整的行為**;旗標只能是逃生口或縮減行為,
+  不得是「不帶就會壞掉」。cron 呼叫一律不帶參數,不能依賴有人記得讀本手冊。
 - **UGC 回流主機的唯一通道是 `translate-posts.mjs`**——沒有它,主機端拿不到貼文。
 - **跨站 cookie 三件套缺一不可**:`SameSite=None; Secure` + `Access-Control-Allow-Credentials: true`
   + 前端 `credentials:'include'`(此時 CORS origin **不得用 `*`**)。

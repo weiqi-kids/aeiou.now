@@ -25,8 +25,24 @@
 //   AEIOU_TRANSLATE_CHUNK   一次 claude 呼叫處理幾則(預設 4;4 則 × 六語 = 24 段)
 //   AEIOU_CLAUDE_BIN        claude CLI 路徑(預設 /root/.local/bin/claude)
 //   AEIOU_CLAUDE_TIMEOUT_MS 單次 claude 呼叫逾時(預設 600000)
+//   AEIOU_CLAUDE_CWD        claude 子行程的工作目錄(預設 /tmp 下的空目錄,見下)
+//
+// claude 子行程一律在**空目錄**跑(2026-08-13):
+//   claude CLI 會自動把 cwd 及其各層父目錄的 CLAUDE.md 讀進 context。
+//   cron 是 `cd /root/aeiou.now` 之後才呼叫本支,所以原本每次翻譯都會把
+//   /root/aeiou.now/CLAUDE.md(17KB)與 /root/CLAUDE.md(7.8KB)整份拖進去。
+//   實測(claude -p --output-format json,同一則 prompt):
+//     cwd=/root/aeiou.now → cache_creation 20854 tokens
+//     cwd=/tmp 空目錄     → cache_creation  8635 tokens   ── 每次呼叫白花約 12,200 tokens
+//   驗證方式:問「context 裡有沒有出現『守門七條』」,repo 目錄答 YES、空目錄答 NO。
+//   除了浪費,更要命的是**翻譯結果會被手冊內容影響** —— 手冊被誰改一行,
+//   譯文行為就可能跟著變。翻譯要的是這支腳本自己的 prompt,不是專案手冊。
+//   空目錄必須在 /root 之外(/root/CLAUDE.md 會被 /root 底下任何 cwd 往上撿到)。
 
 import { spawnSync } from "node:child_process";
+import { mkdirSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import {
   CONFIG,
   LOCALES,
@@ -45,6 +61,9 @@ const LIMIT = Math.min(50, Math.max(1, Number.parseInt(process.env.AEIOU_TRANSLA
 const CHUNK = Math.max(1, Number.parseInt(process.env.AEIOU_TRANSLATE_CHUNK || "4", 10) || 4);
 const CLAUDE_BIN = process.env.AEIOU_CLAUDE_BIN || "/root/.local/bin/claude";
 const CLAUDE_TIMEOUT_MS = Number.parseInt(process.env.AEIOU_CLAUDE_TIMEOUT_MS || "600000", 10);
+// 固定路徑(不是 mkdtemp):每輪重用同一個空目錄,不會在 /tmp 累積;
+// 被 /tmp 清理掉也沒關係,下面每次呼叫前都 mkdir -p。
+const CLAUDE_CWD = process.env.AEIOU_CLAUDE_CWD || join(tmpdir(), "aeiou-translate-cwd");
 
 const LOCALE_NAMES = {
   "zh-TW": "繁體中文(台灣)",
@@ -100,11 +119,15 @@ function extractJson(raw) {
 }
 
 function runClaude(prompt) {
+  // 空目錄要在這裡確保存在:/tmp 可能被清、cwd 不存在時 spawnSync 直接 ENOENT
+  mkdirSync(CLAUDE_CWD, { recursive: true });
   const r = spawnSync(CLAUDE_BIN, ["-p"], {
     input: prompt,
     encoding: "utf8",
     timeout: CLAUDE_TIMEOUT_MS,
     maxBuffer: 64 * 1024 * 1024,
+    // cwd 決定 claude 會撿到哪些 CLAUDE.md — 見檔頭說明,不要改成 repo 目錄
+    cwd: CLAUDE_CWD,
     env: { ...process.env, HOME: process.env.HOME || "/root" },
   });
   if (r.error) throw new Error(`claude spawn failed: ${r.error.message}`);
