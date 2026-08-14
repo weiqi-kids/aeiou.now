@@ -133,37 +133,56 @@ function validateShape() {
   return { catalogByUrl, requiredUrls, managedEventUrls, placeUrls, retiredPlaceIds };
 }
 
+const sleep = (ms) => new Promise((resolveSleep) => setTimeout(resolveSleep, ms));
+const FETCH_ATTEMPTS = 3;
+
+// 只重試「網路層」失敗(斷線、逾時、5xx)。內容層問題(4xx、marker 不符)不重試:
+// 那代表來源真的變了,重抓同一頁不會改變結果,照原設計整次失敗、擋下輸出。
+async function fetchSource(url) {
+  let lastMessage;
+  for (let attempt = 1; attempt <= FETCH_ATTEMPTS; attempt++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), DEFAULT_TIMEOUT_MS);
+    try {
+      const response = await fetch(url, {
+        redirect: "follow",
+        signal: controller.signal,
+        headers: {
+          "user-agent": "aeiou.now-local-data-updater/1.0 (+https://github.com/weiqi-kids/aeiou.now)",
+          accept: "text/html,application/xhtml+xml",
+        },
+      });
+      if (response.status >= 500) {
+        lastMessage = `HTTP ${response.status}`;
+      } else {
+        return { response, rawBody: await response.text() };
+      }
+    } catch (error) {
+      if (error.name === "AbortError") lastMessage = `逾時（${DEFAULT_TIMEOUT_MS}ms）`;
+      else if (error instanceof TypeError) lastMessage = error.message;
+      else throw error;
+    } finally {
+      clearTimeout(timer);
+    }
+    if (attempt < FETCH_ATTEMPTS) await sleep(2000 * attempt);
+  }
+  fail(`來源讀取失敗（已重試 ${FETCH_ATTEMPTS} 次）：${url}；${lastMessage}`);
+}
+
 async function verifySource(url, source, event) {
   if (offline) return { url, skipped: true, matched: [] };
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), DEFAULT_TIMEOUT_MS);
-  try {
-    const response = await fetch(url, {
-      redirect: "follow",
-      signal: controller.signal,
-      headers: {
-        "user-agent": "aeiou.now-local-data-updater/1.0 (+https://github.com/weiqi-kids/aeiou.now)",
-        accept: "text/html,application/xhtml+xml",
-      },
-    });
-    if (!response.ok) fail(`來源 HTTP ${response.status}：${url}`);
-    const body = normalizedBody(await response.text());
-    const matched = source.markers.filter((marker) => body.includes(marker));
-    if (matched.length === 0) {
-      fail(`來源未找到任何 marker：${url}；搜尋詞：${source.discovery_query}`);
-    }
-    const matchedDates = source.date_markers?.filter((marker) => body.includes(marker)) || [];
-    if (event && matchedDates.length === 0) {
-      fail(`活動來源未找到日期 marker：${url}；活動日期：${event.start_at.slice(0, 10)}；搜尋詞：${source.discovery_query}`);
-    }
-    return { url, status: response.status, finalUrl: response.url, matched, matchedDates };
-  } catch (error) {
-    if (error.name === "AbortError") fail(`來源逾時（${DEFAULT_TIMEOUT_MS}ms）：${url}`);
-    if (error instanceof TypeError) fail(`來源讀取失敗：${url}；${error.message}`);
-    throw error;
-  } finally {
-    clearTimeout(timer);
+  const { response, rawBody } = await fetchSource(url);
+  if (!response.ok) fail(`來源 HTTP ${response.status}：${url}`);
+  const body = normalizedBody(rawBody);
+  const matched = source.markers.filter((marker) => body.includes(marker));
+  if (matched.length === 0) {
+    fail(`來源未找到任何 marker：${url}；搜尋詞：${source.discovery_query}`);
   }
+  const matchedDates = source.date_markers?.filter((marker) => body.includes(marker)) || [];
+  if (event && matchedDates.length === 0) {
+    fail(`活動來源未找到日期 marker：${url}；活動日期：${event.start_at.slice(0, 10)}；搜尋詞：${source.discovery_query}`);
+  }
+  return { url, status: response.status, finalUrl: response.url, matched, matchedDates };
 }
 
 function activeEventsForDate(events) {
