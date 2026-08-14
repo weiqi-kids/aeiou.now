@@ -45,7 +45,9 @@ const { rows, empty, win = '24h' } = Astro.props;
 
 <script>
   // 靜態 HTML 先保留完整 Topic 清單,讓沒有 JS 的讀者、搜尋引擎與檢索工具都能取得全部內容。
-  // JS 啟動後才漸進顯示:前 10 筆,每次觸底再開 10 筆。IntersectionObserver 不支援時保留按鈕。
+  // JS 啟動後先只顯示 10 筆;使用者真的開始往下捲後,觸底才再開 10 筆。
+  // 初次載入不註冊 observer,避免短頁的 sentinel 一開始就在視窗內而連續展開全部內容。
+  // IntersectionObserver 不支援時仍保留按鈕。
   const PAGE_SIZE = 10;
 
   function setupBoard(board) {
@@ -57,6 +59,8 @@ const { rows, empty, win = '24h' } = Astro.props;
 
     let shown = PAGE_SIZE;
     let observer = null;
+    let observerArmed = false;
+    const initialScrollY = window.scrollY || document.documentElement.scrollTop || 0;
 
     function items() {
       return Array.prototype.filter.call(list.children, (node) => node.tagName === 'LI');
@@ -70,7 +74,7 @@ const { rows, empty, win = '24h' } = Astro.props;
       const hasMore = shown < current.length;
       loadMore.hidden = !hasMore;
       if (!hasMore && observer) observer.unobserve(sentinel);
-      if (hasMore && observer) observer.observe(sentinel);
+      if (hasMore && observer && observerArmed) observer.observe(sentinel);
     }
 
     function revealNext() {
@@ -87,11 +91,19 @@ const { rows, empty, win = '24h' } = Astro.props;
         (entries) => {
           if (entries.some((entry) => entry.isIntersecting)) revealNext();
         },
-        { rootMargin: '0px 0px 24rem 0px' }
+        { rootMargin: '0px' }
       );
     }
 
     sync();
+
+    const armObserver = () => {
+      const currentScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+      if (observerArmed || currentScrollY <= initialScrollY) return;
+      observerArmed = true;
+      sync();
+    };
+    window.addEventListener('scroll', armObserver, { passive: true });
 
     // nearby / events 的 reaction 排序在另一支 script 完成後才搬移 rows;
     // 重新依目前 DOM 順序套用 hidden,不會讓排序後的前 10 筆被誤藏。
