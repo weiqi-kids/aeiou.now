@@ -79,6 +79,7 @@ if (validDate(input.coverage_through) && input.coverage_through < `${currentYear
 if (!rows.length) errors.push('occurrences 不可為空');
 
 const db = new DatabaseSync(DB_PATH);
+db.exec('PRAGMA busy_timeout = 15000;'); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)
 db.exec('PRAGMA foreign_keys = ON;');
 const observances = db.prepare(
   `SELECT o.observance_id, t.slug AS topic_slug, t.status, o.country_code, o.observance_key

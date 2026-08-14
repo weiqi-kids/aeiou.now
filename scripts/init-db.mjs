@@ -30,6 +30,7 @@ const sqlFile = (name) => join(ROOT, "db", name);
 function initHost() {
   mkdirSync(dirname(DB_PATH), { recursive: true });
   const db = new DatabaseSync(DB_PATH);
+  db.exec("PRAGMA busy_timeout = 15000;"); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)
   db.exec("PRAGMA journal_mode = WAL;");
   db.exec("PRAGMA foreign_keys = ON;");
   for (const f of ["schema-common.sql", "schema-host.sql"]) {
@@ -42,6 +43,7 @@ function initHost() {
     stdio: "inherit",
   });
   const migratedDb = new DatabaseSync(DB_PATH);
+  migratedDb.exec("PRAGMA busy_timeout = 15000;"); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)
   migratedDb.exec("PRAGMA foreign_keys = ON;");
   if (withSeed) {
     const seedDir = join(ROOT, "db", "seed");
@@ -62,6 +64,7 @@ function initHost() {
     stdio: "inherit",
   });
   const finalDb = new DatabaseSync(DB_PATH);
+  finalDb.exec("PRAGMA busy_timeout = 15000;"); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)
   finalDb.exec("PRAGMA foreign_keys = ON;");
   const tables = finalDb
     .prepare("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name")

@@ -26,6 +26,7 @@ if (new Set(weekNumbers).size !== weekNumbers.length) errors.push('calendar.week
 if (weeks.some((row) => !Number.isInteger(row.week) || row.week < 1 || row.week > 52)) errors.push('calendar.week 必須是 1–52 的整數');
 
 const db = new DatabaseSync(DB_PATH, { readOnly: true });
+db.exec("PRAGMA busy_timeout = 15000;"); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)
 const activeRows = db.prepare("SELECT slug, status FROM topics WHERE status NOT IN ('candidate','merged') ORDER BY slug").all();
 const active = new Map(activeRows.map((row) => [row.slug, row.status]));
 for (const row of weeks) {

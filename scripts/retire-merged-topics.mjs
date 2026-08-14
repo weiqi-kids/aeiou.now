@@ -19,6 +19,7 @@ const movePath = Array.isArray(mergeConfig)
   : join(ROOT, mergeConfig.observance_moves || 'content/topic-observance-moves.json');
 const observanceMoves = existsSync(movePath) ? JSON.parse(readFileSync(movePath, 'utf8')) : [];
 const db = new DatabaseSync(DB_PATH);
+db.exec('PRAGMA busy_timeout = 15000;'); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)
 db.exec('PRAGMA foreign_keys = ON;');
 const now = Math.floor(Date.now() / 1000);
 let changed = 0;

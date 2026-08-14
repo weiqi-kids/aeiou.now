@@ -95,6 +95,7 @@ for (const file of contentFiles) {
 }
 
 const db = new DatabaseSync(DB_PATH, { readOnly: true });
+db.exec("PRAGMA busy_timeout = 15000;"); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)
 const activeTopics = db.prepare("SELECT * FROM topics WHERE status NOT IN ('candidate','merged') ORDER BY slug").all();
 const activeTopicIds = new Set(activeTopics.map((topic) => topic.topic_id));
 const allLocales = new Set(db.prepare('SELECT DISTINCT locale FROM topic_i18n').all().map((row) => row.locale));
