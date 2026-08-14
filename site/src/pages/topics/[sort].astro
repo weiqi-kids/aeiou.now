@@ -11,14 +11,14 @@
 //   · today  熱門話題 = 依熱度(topics index 的 scores['24h'])由高到低的 Topic
 //            (2026-08-11 用戶指示:「/topics/today/ 的 h1 才是『🔥熱門話題』」——
 //             首頁與這一頁的語意對調了,首頁是近期/當令,這一頁是熱門)
-//   · nearby 附近訊息 = 本語系代表城市有永久、直接相關地點的 Topic
-//   · events 活動資訊 = 本語系代表城市有日期、場地、來源完整活動的 Topic
+//   · nearby 附近訊息 = 本語系代表城市的全部 Topic;有地點的排前面,沒有的保留在後面
+//   · events 活動資訊 = 本語系代表城市的全部 Topic;有活動的排前面,沒有的保留在後面
 // 店家與活動本身不在這裡列——它們屬於各自的 Topic 頁(草案 §44 的 📍 Near You / 🎉 Events)。
 //
 // 頁首只有 <h1>(2026-08-11 用戶指示):眉標「議題排序」與所有說明段落整批刪除,
 // 「你多個『議題排序』要幹嘛?浪費空間!」不知道讀者在哪裡也不要寫成一句給讀者看的自白。
 //
-// nearby / events 的排序只在這個代表城市的 Topic 之間進行；
+// nearby / events 的排序只在這個代表城市的全部 Topic 之間進行；
 // 以 GET /v1/reactions/summary 取得 emoji 總數後在同一城市內重排。
 // 任何 fetch 失敗 → 維持靜態順序,不清空、不顯示錯誤(見頁尾 script)。
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -218,6 +218,7 @@ const sortConfigJson = sortConfig
           const row = rows.get(topic.id);
           if (row) list.appendChild(row);
         });
+        document.dispatchEvent(new CustomEvent('aeiou:topic-order-updated'));
       });
     });
   }

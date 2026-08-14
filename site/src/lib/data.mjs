@@ -231,10 +231,10 @@ function cityCountry(entries) {
   return null;
 }
 
-/** 「附近訊息」排序:**有在地資訊的 Topic**,按指定城市取資料。
+/** 「附近訊息」排序:全部 Topic 都列入,按指定城市的地點數排序。
  *
  * 這一支回的是 Topic 不是店家——導覽上的「附近」是 Topic 的篩選條件,店家本身屬於各自的
- * Topic 頁(草案 §44 的 📍 Near You)。
+ * Topic 頁(草案 §44 的 📍 Near You)。沒有地點的 Topic 仍保留在清單後段,不在靜態頁消失。
  *
  * 城市帶 country_code 與該 Topic 底下的 place_id 清單,供前端向
  * GET /v1/reactions/summary 問 emoji 數排序。單一語系站傳入代表城市,不把七市場混在同一頁。 */
@@ -253,24 +253,23 @@ export function topicsWithPlacesByCity(cityCode = null) {
         agg.set(id, prev);
       }
     }
-    const topics = [...agg.entries()]
-      .map(([id, v]) =>
-        byId.has(id) ? { ...byId.get(id), place_count: v.count, target_ids: v.ids } : null
-      )
-      .filter(Boolean)
-      .sort((a, b) => b.place_count - a.place_count);
-    if (topics.length) {
-      cities.push({
-        city_code: city.city_code,
-        country_code: cityCountry(city.places || []),
-        topics,
-      });
-    }
+    const topics = [...byId.values()]
+      .map((topic, index) => {
+        const value = agg.get(topic.topic_id) || { count: 0, ids: [] };
+        return { ...topic, place_count: value.count, target_ids: value.ids, _index: index };
+      })
+      .sort((a, b) => b.place_count - a.place_count || a._index - b._index)
+      .map(({ _index, ...topic }) => topic);
+    cities.push({
+      city_code: city.city_code,
+      country_code: cityCountry(city.places || []),
+      topics,
+    });
   }
   return cities.sort((a, b) => String(a.city_code).localeCompare(String(b.city_code)));
 }
 
-/** 「活動資訊」排序:**有活動的 Topic**,按指定城市取資料(理由同上一支)。
+/** 「活動資訊」排序:全部 Topic 都列入,按指定城市的活動數排序(理由同上一支)。
  * 每個 Topic 額外帶最近一場活動的開始時間,讓列表能排序也能給讀者一個時間感。 */
 export function topicsWithEventsByCity(cityCode = null) {
   const byId = new Map(getTopicsIndex().map((topic) => [topic.topic_id, topic]));
@@ -293,26 +292,29 @@ export function topicsWithEventsByCity(cityCode = null) {
         agg.set(id, { count: prev.count + 1, next_start_at: next, ids: prev.ids });
       }
     }
-    const topics = [...agg.entries()]
-      .map(([id, v]) =>
-        byId.has(id)
-          ? {
-              ...byId.get(id),
-              event_count: v.count,
-              next_start_at: v.next_start_at,
-              target_ids: v.ids,
-            }
-          : null
+    const topics = [...byId.values()]
+      .map((topic, index) => {
+        const value = agg.get(topic.topic_id) || { count: 0, next_start_at: null, ids: [] };
+        return {
+          ...topic,
+          event_count: value.count,
+          next_start_at: value.next_start_at,
+          target_ids: value.ids,
+          _index: index,
+        };
+      })
+      .sort(
+        (a, b) =>
+          (a.event_count === 0 ? 1 : 0) - (b.event_count === 0 ? 1 : 0)
+          || (a.next_start_at || Number.MAX_SAFE_INTEGER) - (b.next_start_at || Number.MAX_SAFE_INTEGER)
+          || a._index - b._index
       )
-      .filter(Boolean)
-      .sort((a, b) => (a.next_start_at || 0) - (b.next_start_at || 0));
-    if (topics.length) {
-      cities.push({
-        city_code: city.city_code,
-        country_code: cityCountry(city.events || []),
-        topics,
-      });
-    }
+      .map(({ _index, ...topic }) => topic);
+    cities.push({
+      city_code: city.city_code,
+      country_code: cityCountry(city.events || []),
+      topics,
+    });
   }
   return cities.sort((a, b) => String(a.city_code).localeCompare(String(b.city_code)));
 }

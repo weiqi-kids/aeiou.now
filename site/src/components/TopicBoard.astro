@@ -1,7 +1,8 @@
 ---
 // 一份 Topic 清單。四個排序頁(全球熱門 = 首頁 / 熱門話題 / 附近訊息 / 活動資訊)全部共用這一支,
-// 差別只在傳進來的 rows(排序與篩選)與 empty(空狀態文案)——因為那四項本來就是同一份清單的
-// 四種排序,不是四種不同的內容(2026-08-11 用戶指正)。
+// 差別只在傳進來的 rows(排序)與 empty(空狀態文案)——因為那四項本來就是同一份清單的
+// 四種排序,不是四種不同的內容(2026-08-11 用戶指正)。所有 rows 都先輸出進靜態 HTML;
+// 有 JS 時才把初始可見數量收斂為 10,觸底再逐批展開。
 //
 // 一律用 <ol>:四個頁面列出來的都是「排過序的」Topic,順序本身有意義(名次、當令、在地資訊多寡、
 // 最近的活動)。名次數字只有全球熱門那一組有,其他排序不硬掰名次。
@@ -10,6 +11,7 @@
 // #trending > ol 這樣以看板為主的清單」)。四個頁面的列長得一模一樣——左欄主題介紹、
 // 右欄該 Topic 最高的三篇——所以沒有「要不要掛貼文」這個開關,掛貼文是看板列的定義。
 import TopicRow from './TopicRow.astro';
+import { t } from '../lib/i18n.mjs';
 
 interface Props {
   rows: Array<Record<string, any>>;
@@ -21,7 +23,7 @@ const { rows, empty, win = '24h' } = Astro.props;
 
 {rows.length === 0 && <p class="board-empty">{empty}</p>}
 {rows.length > 0 && (
-  <ol class="board-list">
+  <ol class="board-list" data-topic-list>
     {rows.map((row) => (
       <TopicRow
         topic={row.topic}
@@ -34,6 +36,73 @@ const { rows, empty, win = '24h' } = Astro.props;
     ))}
   </ol>
 )}
+{rows.length > 10 && (
+  <div class="board-load-more" data-topic-load-more hidden>
+    <button type="button">{t('topic.load_more')}</button>
+  </div>
+)}
+{rows.length > 10 && <div class="board-load-sentinel" data-topic-load-sentinel aria-hidden="true"></div>}
+
+<script>
+  // 靜態 HTML 先保留完整 Topic 清單,讓沒有 JS 的讀者、搜尋引擎與檢索工具都能取得全部內容。
+  // JS 啟動後才漸進顯示:前 10 筆,每次觸底再開 10 筆。IntersectionObserver 不支援時保留按鈕。
+  const PAGE_SIZE = 10;
+
+  function setupBoard(board) {
+    const list = board.querySelector('[data-topic-list]');
+    const button = board.querySelector('[data-topic-load-more] button');
+    const loadMore = board.querySelector('[data-topic-load-more]');
+    const sentinel = board.querySelector('[data-topic-load-sentinel]');
+    if (!list || !loadMore || !button) return;
+
+    let shown = PAGE_SIZE;
+    let observer = null;
+
+    function items() {
+      return Array.prototype.filter.call(list.children, (node) => node.tagName === 'LI');
+    }
+
+    function sync() {
+      const current = items();
+      current.forEach((item, index) => {
+        item.hidden = index >= shown;
+      });
+      const hasMore = shown < current.length;
+      loadMore.hidden = !hasMore;
+      if (!hasMore && observer) observer.unobserve(sentinel);
+      if (hasMore && observer) observer.observe(sentinel);
+    }
+
+    function revealNext() {
+      const count = items().length;
+      if (shown >= count) return;
+      shown = Math.min(shown + PAGE_SIZE, count);
+      sync();
+    }
+
+    button.addEventListener('click', revealNext);
+
+    if ('IntersectionObserver' in window && sentinel) {
+      observer = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((entry) => entry.isIntersecting)) revealNext();
+        },
+        { rootMargin: '0px 0px 24rem 0px' }
+      );
+    }
+
+    sync();
+
+    // nearby / events 的 reaction 排序在另一支 script 完成後才搬移 rows;
+    // 重新依目前 DOM 順序套用 hidden,不會讓排序後的前 10 筆被誤藏。
+    document.addEventListener('aeiou:topic-order-updated', sync);
+  }
+
+  document.querySelectorAll('[data-topic-list]').forEach((list) => {
+    const board = list.closest('.board, .sort-group');
+    if (board) setupBoard(board);
+  });
+</script>
 
 <style>
   .board-list {
@@ -44,5 +113,26 @@ const { rows, empty, win = '24h' } = Astro.props;
   .board-empty {
     color: var(--color-ink-muted);
     max-width: 42rem;
+  }
+  .board-load-more {
+    display: flex;
+    justify-content: center;
+    padding-block: 1rem;
+  }
+  .board-load-more button {
+    border: 0.0625rem solid var(--color-line-strong);
+    border-radius: var(--radius-pill);
+    padding: 0.5rem 1rem;
+    background: var(--color-white);
+    color: var(--color-accent-dark);
+    font: inherit;
+    font-size: var(--text-sm);
+    cursor: pointer;
+  }
+  .board-load-more button:hover {
+    border-color: var(--color-accent);
+  }
+  .board-load-sentinel {
+    block-size: 0.0625rem;
   }
 </style>

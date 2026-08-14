@@ -28,18 +28,22 @@ import TopicBoard from '../components/TopicBoard.astro';
 import { t } from '../lib/i18n.mjs';
 import { withBase } from '../lib/paths.mjs';
 import { monthDay } from '../lib/format.mjs';
-import { recentTopics, countryName } from '../lib/data.mjs';
+import { recentTopics, topicsByHeat, countryName } from '../lib/data.mjs';
 import { siteDescription } from '../lib/seo.mjs';
 
 // 首頁 = 近期話題(2026-08-11 用戶指示):快要到的議題排前面——「像是最近要到的七夕、
 // 鬼門開、普渡……等等」。排序鍵見 lib/data.mjs 的 recentTopics():各國 observed_date /
 // date_range_end 離今天(UTC)還有幾天,由近到遠,長青主題全年當令算 0。
 // 「熱門」的語意搬到 /topics/today/ 那一頁去了,兩頁**對調**,首頁不再是熱度排序。
-const HOME_TOPIC_LIMIT = 10;
 const HOME_WINDOW = '24h';
-const rows = recentTopics(new Date(), HOME_WINDOW)
-  .slice(0, HOME_TOPIC_LIMIT)
-  .map((topic) => ({ topic, note: seasonNote(topic) }));
+const recent = recentTopics(new Date(), HOME_WINDOW);
+const recentIds = new Set(recent.map((topic) => topic.topic_id));
+// 近期日期不足以判斷的 Topic 仍必須留在首頁,排在日期可判斷的 Topic 後面;
+// 靜態 HTML 先輸出全量,TopicBoard 的 JS 才負責首屏 10 筆與觸底分批展開。
+const remaining = topicsByHeat(HOME_WINDOW).filter(
+  (topic) => topic.status === 'active' && !recentIds.has(topic.topic_id)
+);
+const rows = [...recent, ...remaining].map((topic) => ({ topic, note: seasonNote(topic) }));
 
 // 為什麼它是「近期」:哪一國、哪一天。這是列上的事實,不是頁首的說明文字。
 function seasonNote(topic) {
