@@ -128,7 +128,7 @@ const { rows, empty, win = '24h' } = Astro.props;
     margin: 0;
     padding: 0;
   }
-  .board-list > li[hidden] {
+  :global(.board-list > li[hidden]) {
     display: none;
   }
   .board-empty {
@@ -140,7 +140,7 @@ const { rows, empty, win = '24h' } = Astro.props;
     justify-content: center;
     padding-block: 1rem;
   }
-  .board-load-more[hidden] {
+  :global(.board-load-more[hidden]) {
     display: none;
   }
   .board-load-more button {
