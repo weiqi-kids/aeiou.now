@@ -77,12 +77,6 @@ const { rows, empty, win = '24h' } = Astro.props;
       if (hasMore && observer && observerArmed) observer.observe(sentinel);
     }
 
-    function isAtDocumentBottom() {
-      const root = document.documentElement;
-      const scrollY = window.scrollY || root.scrollTop || 0;
-      return scrollY + window.innerHeight >= root.scrollHeight - 2;
-    }
-
     function revealNext() {
       const count = items().length;
       if (shown >= count) return;
@@ -95,7 +89,7 @@ const { rows, empty, win = '24h' } = Astro.props;
     if ('IntersectionObserver' in window && sentinel) {
       observer = new IntersectionObserver(
         (entries) => {
-          if (entries.some((entry) => entry.isIntersecting) && isAtDocumentBottom()) revealNext();
+          if (entries.some((entry) => entry.isIntersecting)) revealNext();
         },
         { rootMargin: '0px' }
       );
