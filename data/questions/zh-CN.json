@@ -1,0 +1,684 @@
+{
+  "questions": [
+    {
+      "question_id": "q-20260815-bubble-tea",
+      "date": "2026-08-15",
+      "kind": "poll",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": "ja",
+      "target_locale": "zh-TW",
+      "text": "台湾人真的每天都喝奶茶(珍珠奶茶)吗?",
+      "options": [
+        {
+          "id": "daily",
+          "emoji": "🧋",
+          "label": "几乎每天"
+        },
+        {
+          "id": "weekly",
+          "emoji": "🥤",
+          "label": "每周几次"
+        },
+        {
+          "id": "sometimes",
+          "emoji": "😌",
+          "label": "偶尔"
+        },
+        {
+          "id": "rarely",
+          "emoji": "🙅",
+          "label": "几乎不喝"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260815-dinner-time",
+      "date": "2026-08-15",
+      "kind": "guess",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群的晚餐时间最晚?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "answer": "pt-BR",
+      "explain": "巴西的晚餐常在 20:00–23:00 之间,越晚越热闹。"
+    },
+    {
+      "question_id": "q-20260816-izakaya",
+      "date": "2026-08-16",
+      "kind": "poll",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": "zh-TW",
+      "target_locale": "ja",
+      "text": "日本人下班后真的很常去居酒屋吗?",
+      "options": [
+        {
+          "id": "often",
+          "emoji": "🏮",
+          "label": "每周好几次"
+        },
+        {
+          "id": "sometimes",
+          "emoji": "🍻",
+          "label": "偶尔聚一下"
+        },
+        {
+          "id": "rarely",
+          "emoji": "🏠",
+          "label": "几乎直接回家"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤝",
+          "label": "看同事和场合"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260816-birthday-noodles",
+      "date": "2026-08-16",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群过生日要吃「长寿面」祈求长命百岁?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "台湾寿星常吃猪脚面线或长寿面,面不能剪断,象征长长久久。"
+    },
+    {
+      "question_id": "q-20260817-school-alone",
+      "date": "2026-08-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": "hi",
+      "target_locale": "zh-TW",
+      "text": "台湾的小孩几岁开始自己上下学?",
+      "options": [
+        {
+          "id": "before7",
+          "emoji": "🎒",
+          "label": "7 岁前"
+        },
+        {
+          "id": "8to10",
+          "emoji": "🚸",
+          "label": "8–10 岁"
+        },
+        {
+          "id": "11to12",
+          "emoji": "🚲",
+          "label": "11–12 岁"
+        },
+        {
+          "id": "escorted",
+          "emoji": "🚗",
+          "label": "几乎都家长接送"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260817-bon-odori",
+      "date": "2026-08-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群在八月会围着高台为祖先跳「盆舞」?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "answer": "ja",
+      "explain": "日本的盂兰盆节在八月中,各地夏祭都有盆舞,迎接祖先的灵魂回家。"
+    },
+    {
+      "question_id": "q-20260818-birthday-cake",
+      "date": "2026-08-18",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": "pt-BR",
+      "target_locale": null,
+      "text": "你们那里过生日一定会吃蛋糕吗?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🎂",
+          "label": "一定有蛋糕"
+        },
+        {
+          "id": "meal",
+          "emoji": "🍽️",
+          "label": "聚餐但不一定蛋糕"
+        },
+        {
+          "id": "traditional",
+          "emoji": "🍜",
+          "label": "有自己的传统食物"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "通常不特别庆祝"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260818-panjat-pinang",
+      "date": "2026-08-18",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群在独立纪念日会比赛爬涂满油的槟榔树杆抢奖品?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "answer": "id",
+      "explain": "印尼 8 月 17 日独立纪念日的 panjat pinang:全村合力叠罗汉爬油杆,抢挂在顶端的奖品。"
+    },
+    {
+      "question_id": "q-20260819-japan-bath",
+      "date": "2026-08-19",
+      "kind": "poll",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": "en",
+      "target_locale": "ja",
+      "text": "日本人真的每天晚上泡澡吗?",
+      "options": [
+        {
+          "id": "nightly",
+          "emoji": "🛁",
+          "label": "几乎每晚都泡"
+        },
+        {
+          "id": "fewtimes",
+          "emoji": "🗓️",
+          "label": "一周泡几次"
+        },
+        {
+          "id": "shower",
+          "emoji": "🚿",
+          "label": "主要淋浴"
+        },
+        {
+          "id": "seasonal",
+          "emoji": "❄️",
+          "label": "夏天淋浴冬天泡"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260819-xmas-chicken",
+      "date": "2026-08-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:在哪个社群,圣诞节吃「炸鸡」是全民传统,还得提前预订?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "answer": "ja",
+      "explain": "1970 年代的营销让「圣诞节=肯德基」在日本深入人心,圣诞桶要提前好几周预订。"
+    },
+    {
+      "question_id": "q-20260820-housewarming",
+      "date": "2026-08-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": "id",
+      "target_locale": null,
+      "text": "你们那里搬新家会办入宅仪式或请客吗?",
+      "options": [
+        {
+          "id": "ritual",
+          "emoji": "🙏",
+          "label": "一定有仪式(祭拜/祷告)"
+        },
+        {
+          "id": "party",
+          "emoji": "🎉",
+          "label": "请亲友来吃饭"
+        },
+        {
+          "id": "simple",
+          "emoji": "🍰",
+          "label": "简单意思一下"
+        },
+        {
+          "id": "nothing",
+          "emoji": "📦",
+          "label": "搬完就开始生活"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260820-multiday-wedding",
+      "date": "2026-08-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+      "topic_slug": "weddings-and-customs",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群的婚礼动辄连办三天以上,仪式一场接一场?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "answer": "hi",
+      "explain": "印度婚礼常见 Haldi、Mehndi、Sangeet、正式婚礼到婚宴,连办数天、宾客数百人是常态。"
+    },
+    {
+      "question_id": "q-20260821-elder-redenvelope",
+      "date": "2026-08-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": "zh-CN",
+      "target_locale": null,
+      "text": "长辈生日时,你们会包红包或送现金吗?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🧧",
+          "label": "一定会"
+        },
+        {
+          "id": "occasion",
+          "emoji": "🎊",
+          "label": "大寿才会"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "送礼物不送现金"
+        },
+        {
+          "id": "none",
+          "emoji": "💐",
+          "label": "心意到就好"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260821-sweet-sixteen",
+      "date": "2026-08-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR5H0VCT4WAPQM4SZXW",
+      "topic_slug": "coming-of-age",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:「Sweet Sixteen」──把 16 岁生日办成盛大派对──是哪个社群的传统?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "answer": "en",
+      "explain": "美国的 Sweet Sixteen 是青春期的重要里程碑;巴西也有类似的 15 岁成年礼 Festa de Quinze Anos。"
+    },
+    {
+      "question_id": "q-20260822-moon-festival",
+      "date": "2026-08-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "ja",
+      "target_locale": null,
+      "text": "你们会赏月吗?中秋(或月见)通常怎么过?",
+      "options": [
+        {
+          "id": "family",
+          "emoji": "🥮",
+          "label": "全家团聚吃节庆食物"
+        },
+        {
+          "id": "moononly",
+          "emoji": "🌕",
+          "label": "会赏月但不特别聚"
+        },
+        {
+          "id": "ordinary",
+          "emoji": "📅",
+          "label": "只是普通的一天"
+        },
+        {
+          "id": "nofestival",
+          "emoji": "🤔",
+          "label": "我们没有这个节日"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260822-moon-bbq",
+      "date": "2026-08-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群把中秋节过成「全民烤肉节」,巷口骑楼都在烤?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "1980 年代酱料广告带起风潮,如今台湾中秋夜家家户户在门口烤肉,已成独有新传统。"
+    },
+    {
+      "question_id": "q-20260823-live-with-parents",
+      "date": "2026-08-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+      "topic_slug": "caregiving-across-generations",
+      "asker_locale": "hi",
+      "target_locale": null,
+      "text": "你们那里,子女通常跟父母同住到什么时候?",
+      "options": [
+        {
+          "id": "marriage",
+          "emoji": "💍",
+          "label": "结婚前都同住"
+        },
+        {
+          "id": "job",
+          "emoji": "💼",
+          "label": "开始工作就搬出"
+        },
+        {
+          "id": "college",
+          "emoji": "🎓",
+          "label": "上大学就搬出"
+        },
+        {
+          "id": "together",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": "多代同堂很常见"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260823-mudik",
+      "date": "2026-08-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群每年节庆前有数千万人同时返乡的「mudik」大迁徙?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "answer": "id",
+      "explain": "开斋节前的印尼 mudik 是全球最大规模的年度返乡潮之一,公路、渡轮、机场全面爆满。"
+    },
+    {
+      "question_id": "q-20260824-graduation",
+      "date": "2026-08-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRFP513XZ9B02BT8XCZ",
+      "topic_slug": "graduation-season",
+      "asker_locale": "en",
+      "target_locale": null,
+      "text": "你们的毕业典礼会把帽子抛向天空吗?",
+      "options": [
+        {
+          "id": "throw",
+          "emoji": "🎓",
+          "label": "一定要丢帽子"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "📜",
+          "label": "有典礼但不丢帽"
+        },
+        {
+          "id": "dinner",
+          "emoji": "🍽️",
+          "label": "重点是谢师宴/聚餐"
+        },
+        {
+          "id": "simple",
+          "emoji": "🤳",
+          "label": "拍照留念就好"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260824-baraat",
+      "date": "2026-08-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+      "topic_slug": "weddings-and-customs",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群的婚礼上,新郎会骑着白马、带着乐队游行进场?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "answer": "hi",
+      "explain": "北印度婚礼的 baraat:新郎骑白马(或白马车)在亲友歌舞与乐队簇拥下抵达婚礼现场。"
+    }
+  ]
+}

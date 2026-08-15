@@ -1,0 +1,684 @@
+{
+  "questions": [
+    {
+      "question_id": "q-20260815-bubble-tea",
+      "date": "2026-08-15",
+      "kind": "poll",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": "ja",
+      "target_locale": "zh-TW",
+      "text": "क्या ताइवान के लोग सच में हर दिन बबल टी पीते हैं?",
+      "options": [
+        {
+          "id": "daily",
+          "emoji": "🧋",
+          "label": "लगभग हर दिन"
+        },
+        {
+          "id": "weekly",
+          "emoji": "🥤",
+          "label": "हफ़्ते में कुछ बार"
+        },
+        {
+          "id": "sometimes",
+          "emoji": "😌",
+          "label": "कभी-कभार"
+        },
+        {
+          "id": "rarely",
+          "emoji": "🙅",
+          "label": "लगभग कभी नहीं"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260815-dinner-time",
+      "date": "2026-08-15",
+      "kind": "guess",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: कौन-सा समुदाय सबसे देर से रात का खाना खाता है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "answer": "pt-BR",
+      "explain": "ब्राज़ील में रात का खाना अक्सर रात 8 से 11 बजे के बीच होता है — जितनी देर, उतनी रौनक।"
+    },
+    {
+      "question_id": "q-20260816-izakaya",
+      "date": "2026-08-16",
+      "kind": "poll",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": "zh-TW",
+      "target_locale": "ja",
+      "text": "क्या जापान के लोग सच में काम के बाद अक्सर इज़ाकाया जाते हैं?",
+      "options": [
+        {
+          "id": "often",
+          "emoji": "🏮",
+          "label": "हफ़्ते में कई बार"
+        },
+        {
+          "id": "sometimes",
+          "emoji": "🍻",
+          "label": "कभी-कभी"
+        },
+        {
+          "id": "rarely",
+          "emoji": "🏠",
+          "label": "अक्सर सीधे घर"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤝",
+          "label": "सहकर्मियों पर निर्भर"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260816-birthday-noodles",
+      "date": "2026-08-16",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस समुदाय में जन्मदिन पर लंबी उम्र के लिए “लॉन्गेविटी नूडल्स” खाए जाते हैं?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "ताइवान में जन्मदिन पर बिना काटे लंबे नूडल्स खाए जाते हैं — लंबे नूडल्स, लंबी उम्र।"
+    },
+    {
+      "question_id": "q-20260817-school-alone",
+      "date": "2026-08-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": "hi",
+      "target_locale": "zh-TW",
+      "text": "ताइवान में बच्चे किस उम्र से अकेले स्कूल जाने लगते हैं?",
+      "options": [
+        {
+          "id": "before7",
+          "emoji": "🎒",
+          "label": "7 साल से पहले"
+        },
+        {
+          "id": "8to10",
+          "emoji": "🚸",
+          "label": "8–10 साल"
+        },
+        {
+          "id": "11to12",
+          "emoji": "🚲",
+          "label": "11–12 साल"
+        },
+        {
+          "id": "escorted",
+          "emoji": "🚗",
+          "label": "ज़्यादातर माता-पिता छोड़ते हैं"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260817-bon-odori",
+      "date": "2026-08-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: कौन-सा समुदाय हर अगस्त पूर्वजों के लिए “बोन ओदोरी” नृत्य करता है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "answer": "ja",
+      "explain": "जापान का ओबोन मध्य अगस्त में होता है; बोन ओदोरी नृत्य पूर्वजों की आत्माओं का स्वागत करता है।"
+    },
+    {
+      "question_id": "q-20260818-birthday-cake",
+      "date": "2026-08-18",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": "pt-BR",
+      "target_locale": null,
+      "text": "आपके यहाँ क्या जन्मदिन पर हमेशा केक काटा जाता है?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🎂",
+          "label": "हमेशा केक"
+        },
+        {
+          "id": "meal",
+          "emoji": "🍽️",
+          "label": "खाना होता है, केक ज़रूरी नहीं"
+        },
+        {
+          "id": "traditional",
+          "emoji": "🍜",
+          "label": "हमारा अपना पारंपरिक खाना"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "आमतौर पर नहीं मनाते"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260818-panjat-pinang",
+      "date": "2026-08-18",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: कौन-सा समुदाय स्वतंत्रता दिवस पर चिकने खंभे पर चढ़कर इनाम जीतने की होड़ करता है?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "answer": "id",
+      "explain": "इंडोनेशिया में 17 अगस्त को पंजात पिनांग होता है — टीमें चिकने खंभे पर चढ़कर ऊपर टँगे इनाम पाने की कोशिश करती हैं।"
+    },
+    {
+      "question_id": "q-20260819-japan-bath",
+      "date": "2026-08-19",
+      "kind": "poll",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": "en",
+      "target_locale": "ja",
+      "text": "क्या जापान के लोग सच में हर रात नहाने के टब में बैठते हैं?",
+      "options": [
+        {
+          "id": "nightly",
+          "emoji": "🛁",
+          "label": "लगभग हर रात"
+        },
+        {
+          "id": "fewtimes",
+          "emoji": "🗓️",
+          "label": "हफ़्ते में कुछ बार"
+        },
+        {
+          "id": "shower",
+          "emoji": "🚿",
+          "label": "ज़्यादातर शावर"
+        },
+        {
+          "id": "seasonal",
+          "emoji": "❄️",
+          "label": "गर्मी में शावर, सर्दी में टब"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260819-xmas-chicken",
+      "date": "2026-08-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस समुदाय में क्रिसमस पर फ़्राइड चिकन खाना परंपरा है, जिसे हफ़्तों पहले बुक करना पड़ता है?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "answer": "ja",
+      "explain": "1970 के दशक के एक विज्ञापन अभियान ने जापान में “क्रिसमस पर केएफ़सी” की परंपरा बना दी — बकेट हफ़्तों पहले बुक होती है।"
+    },
+    {
+      "question_id": "q-20260820-housewarming",
+      "date": "2026-08-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": "id",
+      "target_locale": null,
+      "text": "आपके यहाँ नए घर में जाने पर गृह-प्रवेश या दावत होती है?",
+      "options": [
+        {
+          "id": "ritual",
+          "emoji": "🙏",
+          "label": "हमेशा पूजा या प्रार्थना"
+        },
+        {
+          "id": "party",
+          "emoji": "🎉",
+          "label": "दोस्तों-रिश्तेदारों की दावत"
+        },
+        {
+          "id": "simple",
+          "emoji": "🍰",
+          "label": "कुछ छोटा-सा"
+        },
+        {
+          "id": "nothing",
+          "emoji": "📦",
+          "label": "बस सामान रखकर रहना शुरू"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260820-multiday-wedding",
+      "date": "2026-08-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+      "topic_slug": "weddings-and-customs",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस समुदाय में शादियाँ अक्सर तीन दिन या उससे ज़्यादा चलती हैं, रस्म-पर-रस्म?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "answer": "hi",
+      "explain": "भारतीय शादियाँ अक्सर कई दिन चलती हैं — हल्दी, मेहंदी, संगीत, फेरे और रिसेप्शन — सैकड़ों मेहमानों के साथ।"
+    },
+    {
+      "question_id": "q-20260821-elder-redenvelope",
+      "date": "2026-08-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": "zh-CN",
+      "target_locale": null,
+      "text": "बड़ों के जन्मदिन पर क्या आप नकद या लिफ़ाफ़े में पैसे देते हैं?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🧧",
+          "label": "हमेशा"
+        },
+        {
+          "id": "occasion",
+          "emoji": "🎊",
+          "label": "सिर्फ़ ख़ास जन्मदिन पर"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "तोहफ़ा देते हैं, नकद नहीं"
+        },
+        {
+          "id": "none",
+          "emoji": "💐",
+          "label": "शुभकामनाएँ ही काफ़ी"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260821-sweet-sixteen",
+      "date": "2026-08-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR5H0VCT4WAPQM4SZXW",
+      "topic_slug": "coming-of-age",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: 16वें जन्मदिन की धूमधाम वाली “स्वीट सिक्सटीन” पार्टी किस समुदाय की परंपरा है?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "answer": "en",
+      "explain": "स्वीट सिक्सटीन अमेरिका की मशहूर परंपरा है; ब्राज़ील में 15 साल पर ऐसी ही “फ़ेस्ता दे किंज़े आनोस” होती है।"
+    },
+    {
+      "question_id": "q-20260822-moon-festival",
+      "date": "2026-08-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "ja",
+      "target_locale": null,
+      "text": "क्या आप शरद पूर्णिमा/चाँद देखने का त्योहार मनाते हैं? कैसे?",
+      "options": [
+        {
+          "id": "family",
+          "emoji": "🥮",
+          "label": "परिवार के साथ पकवान"
+        },
+        {
+          "id": "moononly",
+          "emoji": "🌕",
+          "label": "चाँद देखते हैं, बस"
+        },
+        {
+          "id": "ordinary",
+          "emoji": "📅",
+          "label": "आम दिन जैसा"
+        },
+        {
+          "id": "nofestival",
+          "emoji": "🤔",
+          "label": "हमारे यहाँ यह त्योहार नहीं"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260822-moon-bbq",
+      "date": "2026-08-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस समुदाय ने मध्य-शरद उत्सव को देशव्यापी बारबेक्यू रात बना दिया है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "1980 के दशक के एक सॉस विज्ञापन से शुरू होकर, अब ताइवान में मध्य-शरद की रात घर-घर के बाहर बारबेक्यू होता है।"
+    },
+    {
+      "question_id": "q-20260823-live-with-parents",
+      "date": "2026-08-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+      "topic_slug": "caregiving-across-generations",
+      "asker_locale": "hi",
+      "target_locale": null,
+      "text": "आपके यहाँ बच्चे आमतौर पर कब तक माता-पिता के साथ रहते हैं?",
+      "options": [
+        {
+          "id": "marriage",
+          "emoji": "💍",
+          "label": "शादी तक"
+        },
+        {
+          "id": "job",
+          "emoji": "💼",
+          "label": "नौकरी लगते ही अलग"
+        },
+        {
+          "id": "college",
+          "emoji": "🎓",
+          "label": "कॉलेज जाते ही अलग"
+        },
+        {
+          "id": "together",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": "संयुक्त परिवार आम है"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260823-mudik",
+      "date": "2026-08-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस समुदाय में हर साल त्योहार से पहले करोड़ों लोग एक साथ घर लौटते हैं — “मुदिक”?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "answer": "id",
+      "explain": "ईद से पहले इंडोनेशिया का मुदिक दुनिया की सबसे बड़ी सालाना घर-वापसी में से एक है — सड़कें, फ़ेरी, हवाई अड्डे सब भरे।"
+    },
+    {
+      "question_id": "q-20260824-graduation",
+      "date": "2026-08-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRFP513XZ9B02BT8XCZ",
+      "topic_slug": "graduation-season",
+      "asker_locale": "en",
+      "target_locale": null,
+      "text": "आपके यहाँ दीक्षांत समारोह में टोपियाँ हवा में उछाली जाती हैं?",
+      "options": [
+        {
+          "id": "throw",
+          "emoji": "🎓",
+          "label": "टोपी उछालना ज़रूरी"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "📜",
+          "label": "समारोह होता है, टोपी नहीं उछालते"
+        },
+        {
+          "id": "dinner",
+          "emoji": "🍽️",
+          "label": "असली बात है दावत"
+        },
+        {
+          "id": "simple",
+          "emoji": "🤳",
+          "label": "बस फ़ोटो"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260824-baraat",
+      "date": "2026-08-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+      "topic_slug": "weddings-and-customs",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस समुदाय की शादी में दूल्हा सफ़ेद घोड़ी पर बैंड-बाजे के साथ आता है?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "answer": "hi",
+      "explain": "उत्तर भारतीय शादियों की बारात — दूल्हा सफ़ेद घोड़ी पर, नाचते रिश्तेदारों और बैंड के साथ पहुँचता है।"
+    }
+  ]
+}

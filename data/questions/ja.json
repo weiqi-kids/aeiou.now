@@ -1,0 +1,684 @@
+{
+  "questions": [
+    {
+      "question_id": "q-20260815-bubble-tea",
+      "date": "2026-08-15",
+      "kind": "poll",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": "ja",
+      "target_locale": "zh-TW",
+      "text": "台湾の人は本当に毎日タピオカミルクティーを飲むの?",
+      "options": [
+        {
+          "id": "daily",
+          "emoji": "🧋",
+          "label": "ほぼ毎日"
+        },
+        {
+          "id": "weekly",
+          "emoji": "🥤",
+          "label": "週に数回"
+        },
+        {
+          "id": "sometimes",
+          "emoji": "😌",
+          "label": "たまに"
+        },
+        {
+          "id": "rarely",
+          "emoji": "🙅",
+          "label": "ほとんど飲まない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260815-dinner-time",
+      "date": "2026-08-15",
+      "kind": "guess",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:夕食の時間がいちばん遅いのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "answer": "pt-BR",
+      "explain": "ブラジルの夕食は20時〜23時が普通。遅いほどにぎやかです。"
+    },
+    {
+      "question_id": "q-20260816-izakaya",
+      "date": "2026-08-16",
+      "kind": "poll",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": "zh-TW",
+      "target_locale": "ja",
+      "text": "日本の人は仕事帰りに本当によく居酒屋へ行くの?",
+      "options": [
+        {
+          "id": "often",
+          "emoji": "🏮",
+          "label": "週に何度も"
+        },
+        {
+          "id": "sometimes",
+          "emoji": "🍻",
+          "label": "たまに"
+        },
+        {
+          "id": "rarely",
+          "emoji": "🏠",
+          "label": "ほぼ直帰"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤝",
+          "label": "同僚と状況次第"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260816-birthday-noodles",
+      "date": "2026-08-16",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:誕生日に長寿を願って「長寿麺」を食べるのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "台湾では誕生日に切らない長寿麺を食べます。長い麺は長生きの象徴。"
+    },
+    {
+      "question_id": "q-20260817-school-alone",
+      "date": "2026-08-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": "hi",
+      "target_locale": "zh-TW",
+      "text": "台湾の子どもは何歳から一人で通学するの?",
+      "options": [
+        {
+          "id": "before7",
+          "emoji": "🎒",
+          "label": "7歳前"
+        },
+        {
+          "id": "8to10",
+          "emoji": "🚸",
+          "label": "8〜10歳"
+        },
+        {
+          "id": "11to12",
+          "emoji": "🚲",
+          "label": "11〜12歳"
+        },
+        {
+          "id": "escorted",
+          "emoji": "🚗",
+          "label": "ほぼ親の送り迎え"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260817-bon-odori",
+      "date": "2026-08-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:8月にご先祖のために「盆踊り」を踊るのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "answer": "ja",
+      "explain": "日本のお盆は8月中旬。盆踊りはご先祖の霊を迎える踊りです。"
+    },
+    {
+      "question_id": "q-20260818-birthday-cake",
+      "date": "2026-08-18",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": "pt-BR",
+      "target_locale": null,
+      "text": "あなたの地域では、誕生日には必ずケーキを食べる?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🎂",
+          "label": "必ずケーキ"
+        },
+        {
+          "id": "meal",
+          "emoji": "🍽️",
+          "label": "食事会がメイン"
+        },
+        {
+          "id": "traditional",
+          "emoji": "🍜",
+          "label": "伝統の食べ物がある"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "特に祝わない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260818-panjat-pinang",
+      "date": "2026-08-18",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:独立記念日に油を塗った木の柱に登って賞品を取る競争をするのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "answer": "id",
+      "explain": "インドネシアの8月17日独立記念日の名物「パンジャット・ピナン」。油の柱に協力して登り、頂上の賞品を狙います。"
+    },
+    {
+      "question_id": "q-20260819-japan-bath",
+      "date": "2026-08-19",
+      "kind": "poll",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": "en",
+      "target_locale": "ja",
+      "text": "日本の人は本当に毎晩お風呂に浸かるの?",
+      "options": [
+        {
+          "id": "nightly",
+          "emoji": "🛁",
+          "label": "ほぼ毎晩"
+        },
+        {
+          "id": "fewtimes",
+          "emoji": "🗓️",
+          "label": "週に数回"
+        },
+        {
+          "id": "shower",
+          "emoji": "🚿",
+          "label": "ほぼシャワー"
+        },
+        {
+          "id": "seasonal",
+          "emoji": "❄️",
+          "label": "夏はシャワー冬は湯船"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260819-xmas-chicken",
+      "date": "2026-08-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:クリスマスに「フライドチキン」を予約してまで食べるのが定番なのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "answer": "ja",
+      "explain": "1970年代のキャンペーン以来「クリスマスにケンタッキー」が定着。バーレルは数週間前から予約制です。"
+    },
+    {
+      "question_id": "q-20260820-housewarming",
+      "date": "2026-08-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": "id",
+      "target_locale": null,
+      "text": "あなたの地域では、引っ越したらお祝いの儀式やパーティーをする?",
+      "options": [
+        {
+          "id": "ritual",
+          "emoji": "🙏",
+          "label": "必ず儀式やお祈り"
+        },
+        {
+          "id": "party",
+          "emoji": "🎉",
+          "label": "親しい人を招いて食事会"
+        },
+        {
+          "id": "simple",
+          "emoji": "🍰",
+          "label": "ささやかに"
+        },
+        {
+          "id": "nothing",
+          "emoji": "📦",
+          "label": "特に何もしない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260820-multiday-wedding",
+      "date": "2026-08-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+      "topic_slug": "weddings-and-customs",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:結婚式が3日以上続き、儀式が次々あるのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "answer": "hi",
+      "explain": "インドの結婚式はハルディ、メヘンディ、サンギートから本式・披露宴まで数日がかり。数百人規模も普通です。"
+    },
+    {
+      "question_id": "q-20260821-elder-redenvelope",
+      "date": "2026-08-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": "zh-CN",
+      "target_locale": null,
+      "text": "年長者の誕生日に、現金(ご祝儀)を贈る習慣はある?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🧧",
+          "label": "必ず贈る"
+        },
+        {
+          "id": "occasion",
+          "emoji": "🎊",
+          "label": "節目の年だけ"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "現金ではなく品物"
+        },
+        {
+          "id": "none",
+          "emoji": "💐",
+          "label": "気持ちだけ"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260821-sweet-sixteen",
+      "date": "2026-08-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR5H0VCT4WAPQM4SZXW",
+      "topic_slug": "coming-of-age",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:16歳の誕生日を盛大に祝う「スイート・シックスティーン」はどのコミュニティの伝統?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "answer": "en",
+      "explain": "スイート・シックスティーンはアメリカの通過儀礼。ブラジルには15歳で祝う「フェスタ・デ・キンゼ・アノス」があります。"
+    },
+    {
+      "question_id": "q-20260822-moon-festival",
+      "date": "2026-08-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "ja",
+      "target_locale": null,
+      "text": "お月見はする?十五夜や中秋はどう過ごす?",
+      "options": [
+        {
+          "id": "family",
+          "emoji": "🥮",
+          "label": "家族で集まりご馳走"
+        },
+        {
+          "id": "moononly",
+          "emoji": "🌕",
+          "label": "月は眺めるが特別なことはしない"
+        },
+        {
+          "id": "ordinary",
+          "emoji": "📅",
+          "label": "普通の日"
+        },
+        {
+          "id": "nofestival",
+          "emoji": "🤔",
+          "label": "その行事はない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260822-moon-bbq",
+      "date": "2026-08-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:中秋節が「国民的バーベキュー大会」と化しているのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "1980年代のタレのCMがきっかけで、今や台湾の中秋の夜は家の前でバーベキューが新しい伝統に。"
+    },
+    {
+      "question_id": "q-20260823-live-with-parents",
+      "date": "2026-08-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+      "topic_slug": "caregiving-across-generations",
+      "asker_locale": "hi",
+      "target_locale": null,
+      "text": "あなたの地域では、子どもはいつまで親と同居するのが普通?",
+      "options": [
+        {
+          "id": "marriage",
+          "emoji": "💍",
+          "label": "結婚まで"
+        },
+        {
+          "id": "job",
+          "emoji": "💼",
+          "label": "就職したら独立"
+        },
+        {
+          "id": "college",
+          "emoji": "🎓",
+          "label": "大学から一人暮らし"
+        },
+        {
+          "id": "together",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": "多世代同居が普通"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260823-mudik",
+      "date": "2026-08-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:祝祭前に数千万人が一斉帰省する「ムディック」があるのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "answer": "id",
+      "explain": "断食明け大祭前のインドネシアの「ムディック」は世界最大級の帰省ラッシュ。道路も港も空港も大混雑です。"
+    },
+    {
+      "question_id": "q-20260824-graduation",
+      "date": "2026-08-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRFP513XZ9B02BT8XCZ",
+      "topic_slug": "graduation-season",
+      "asker_locale": "en",
+      "target_locale": null,
+      "text": "あなたの地域の卒業式では、帽子を空に投げる?",
+      "options": [
+        {
+          "id": "throw",
+          "emoji": "🎓",
+          "label": "帽子投げは定番"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "📜",
+          "label": "式はあるが投げない"
+        },
+        {
+          "id": "dinner",
+          "emoji": "🍽️",
+          "label": "食事会がメイン"
+        },
+        {
+          "id": "simple",
+          "emoji": "🤳",
+          "label": "写真だけ"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260824-baraat",
+      "date": "2026-08-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+      "topic_slug": "weddings-and-customs",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:花婿が白馬に乗り、楽隊を連れて入場するのはどのコミュニティの結婚式?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "answer": "hi",
+      "explain": "北インドの結婚式の「バラート」。花婿は白馬に乗り、踊る親族と楽隊に囲まれて式場に到着します。"
+    }
+  ]
+}

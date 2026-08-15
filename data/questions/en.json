@@ -1,0 +1,684 @@
+{
+  "questions": [
+    {
+      "question_id": "q-20260815-bubble-tea",
+      "date": "2026-08-15",
+      "kind": "poll",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": "ja",
+      "target_locale": "zh-TW",
+      "text": "Do people in Taiwan really drink bubble tea every day?",
+      "options": [
+        {
+          "id": "daily",
+          "emoji": "🧋",
+          "label": "Almost every day"
+        },
+        {
+          "id": "weekly",
+          "emoji": "🥤",
+          "label": "A few times a week"
+        },
+        {
+          "id": "sometimes",
+          "emoji": "😌",
+          "label": "Occasionally"
+        },
+        {
+          "id": "rarely",
+          "emoji": "🙅",
+          "label": "Hardly ever"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260815-dinner-time",
+      "date": "2026-08-15",
+      "kind": "guess",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community eats dinner the latest?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "answer": "pt-BR",
+      "explain": "In Brazil dinner is often between 8 and 11 pm — the later, the livelier."
+    },
+    {
+      "question_id": "q-20260816-izakaya",
+      "date": "2026-08-16",
+      "kind": "poll",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": "zh-TW",
+      "target_locale": "ja",
+      "text": "Do people in Japan really go to izakaya often after work?",
+      "options": [
+        {
+          "id": "often",
+          "emoji": "🏮",
+          "label": "Several times a week"
+        },
+        {
+          "id": "sometimes",
+          "emoji": "🍻",
+          "label": "Now and then"
+        },
+        {
+          "id": "rarely",
+          "emoji": "🏠",
+          "label": "Usually straight home"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤝",
+          "label": "Depends on coworkers"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260816-birthday-noodles",
+      "date": "2026-08-16",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: in which community do people eat “longevity noodles” on their birthday?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "In Taiwan the birthday person often eats uncut longevity noodles — long noodles, long life."
+    },
+    {
+      "question_id": "q-20260817-school-alone",
+      "date": "2026-08-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": "hi",
+      "target_locale": "zh-TW",
+      "text": "At what age do kids in Taiwan start going to school on their own?",
+      "options": [
+        {
+          "id": "before7",
+          "emoji": "🎒",
+          "label": "Before 7"
+        },
+        {
+          "id": "8to10",
+          "emoji": "🚸",
+          "label": "Age 8–10"
+        },
+        {
+          "id": "11to12",
+          "emoji": "🚲",
+          "label": "Age 11–12"
+        },
+        {
+          "id": "escorted",
+          "emoji": "🚗",
+          "label": "Mostly escorted by parents"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260817-bon-odori",
+      "date": "2026-08-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community dances the “Bon Odori” for ancestors every August?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "answer": "ja",
+      "explain": "Japan's Obon falls in mid-August; Bon Odori dances welcome ancestors' spirits home."
+    },
+    {
+      "question_id": "q-20260818-birthday-cake",
+      "date": "2026-08-18",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": "pt-BR",
+      "target_locale": null,
+      "text": "Where you live, is a birthday always celebrated with cake?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🎂",
+          "label": "Always cake"
+        },
+        {
+          "id": "meal",
+          "emoji": "🍽️",
+          "label": "A meal, not always cake"
+        },
+        {
+          "id": "traditional",
+          "emoji": "🍜",
+          "label": "Our own traditional food"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Usually no celebration"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260818-panjat-pinang",
+      "date": "2026-08-18",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community celebrates independence day by climbing greased palm trunks for prizes?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonesia's August 17th features panjat pinang — teams climb greased poles to grab prizes hung on top."
+    },
+    {
+      "question_id": "q-20260819-japan-bath",
+      "date": "2026-08-19",
+      "kind": "poll",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": "en",
+      "target_locale": "ja",
+      "text": "Do people in Japan really take a bath every night?",
+      "options": [
+        {
+          "id": "nightly",
+          "emoji": "🛁",
+          "label": "Almost every night"
+        },
+        {
+          "id": "fewtimes",
+          "emoji": "🗓️",
+          "label": "A few times a week"
+        },
+        {
+          "id": "shower",
+          "emoji": "🚿",
+          "label": "Mostly shower"
+        },
+        {
+          "id": "seasonal",
+          "emoji": "❄️",
+          "label": "Shower in summer, bath in winter"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260819-xmas-chicken",
+      "date": "2026-08-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: in which community is fried chicken THE Christmas meal, often pre-ordered weeks ahead?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "answer": "ja",
+      "explain": "A 1970s marketing campaign made “Kentucky for Christmas” a Japanese tradition — buckets are booked weeks ahead."
+    },
+    {
+      "question_id": "q-20260820-housewarming",
+      "date": "2026-08-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": "id",
+      "target_locale": null,
+      "text": "Where you live, do people hold a housewarming ritual or party when moving in?",
+      "options": [
+        {
+          "id": "ritual",
+          "emoji": "🙏",
+          "label": "Always a ritual or prayer"
+        },
+        {
+          "id": "party",
+          "emoji": "🎉",
+          "label": "A party with friends and family"
+        },
+        {
+          "id": "simple",
+          "emoji": "🍰",
+          "label": "Something small and simple"
+        },
+        {
+          "id": "nothing",
+          "emoji": "📦",
+          "label": "Just move in and live"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260820-multiday-wedding",
+      "date": "2026-08-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+      "topic_slug": "weddings-and-customs",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: in which community do weddings routinely run three days or more, ceremony after ceremony?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "answer": "hi",
+      "explain": "Indian weddings often span days — Haldi, Mehndi, Sangeet, the ceremony and reception — with hundreds of guests."
+    },
+    {
+      "question_id": "q-20260821-elder-redenvelope",
+      "date": "2026-08-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": "zh-CN",
+      "target_locale": null,
+      "text": "For an elder's birthday, do you give money (like a red envelope) as a gift?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🧧",
+          "label": "Always"
+        },
+        {
+          "id": "occasion",
+          "emoji": "🎊",
+          "label": "Only for milestone birthdays"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "Gifts, not cash"
+        },
+        {
+          "id": "none",
+          "emoji": "💐",
+          "label": "Just good wishes"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260821-sweet-sixteen",
+      "date": "2026-08-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR5H0VCT4WAPQM4SZXW",
+      "topic_slug": "coming-of-age",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: throwing a huge “Sweet Sixteen” party for a 16th birthday is whose tradition?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "answer": "en",
+      "explain": "The Sweet Sixteen is a classic American milestone; Brazil has a similar one at 15 — the Festa de Quinze Anos."
+    },
+    {
+      "question_id": "q-20260822-moon-festival",
+      "date": "2026-08-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "ja",
+      "target_locale": null,
+      "text": "Do you celebrate the harvest moon? How do you usually spend it?",
+      "options": [
+        {
+          "id": "family",
+          "emoji": "🥮",
+          "label": "Family gathering with festive food"
+        },
+        {
+          "id": "moononly",
+          "emoji": "🌕",
+          "label": "Watch the moon, nothing big"
+        },
+        {
+          "id": "ordinary",
+          "emoji": "📅",
+          "label": "Just an ordinary day"
+        },
+        {
+          "id": "nofestival",
+          "emoji": "🤔",
+          "label": "We don't have this festival"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260822-moon-bbq",
+      "date": "2026-08-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community turned the Mid-Autumn Festival into a nationwide barbecue night?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "A 1980s sauce ad sparked it — now Taiwanese families grill on their doorsteps every Mid-Autumn night."
+    },
+    {
+      "question_id": "q-20260823-live-with-parents",
+      "date": "2026-08-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+      "topic_slug": "caregiving-across-generations",
+      "asker_locale": "hi",
+      "target_locale": null,
+      "text": "Where you live, how long do adult children usually live with their parents?",
+      "options": [
+        {
+          "id": "marriage",
+          "emoji": "💍",
+          "label": "Until marriage"
+        },
+        {
+          "id": "job",
+          "emoji": "💼",
+          "label": "Move out when working"
+        },
+        {
+          "id": "college",
+          "emoji": "🎓",
+          "label": "Move out for college"
+        },
+        {
+          "id": "together",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": "Multi-generation homes are common"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260823-mudik",
+      "date": "2026-08-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community sees tens of millions travel home at once in the yearly “mudik” exodus?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        }
+      ],
+      "answer": "id",
+      "explain": "Before Eid, Indonesia's mudik is one of the world's largest annual homecomings — roads, ferries and airports all packed."
+    },
+    {
+      "question_id": "q-20260824-graduation",
+      "date": "2026-08-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRFP513XZ9B02BT8XCZ",
+      "topic_slug": "graduation-season",
+      "asker_locale": "en",
+      "target_locale": null,
+      "text": "At your graduations, do people throw their caps into the air?",
+      "options": [
+        {
+          "id": "throw",
+          "emoji": "🎓",
+          "label": "Cap toss is a must"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "📜",
+          "label": "Ceremony, no cap toss"
+        },
+        {
+          "id": "dinner",
+          "emoji": "🍽️",
+          "label": "The dinner matters most"
+        },
+        {
+          "id": "simple",
+          "emoji": "🤳",
+          "label": "Just photos"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260824-baraat",
+      "date": "2026-08-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+      "topic_slug": "weddings-and-customs",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: in which community does the groom arrive on a white horse with a marching band?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "answer": "hi",
+      "explain": "The baraat of North Indian weddings — the groom rides in on a white horse amid dancing relatives and a live band."
+    }
+  ]
+}

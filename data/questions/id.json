@@ -1,0 +1,684 @@
+{
+  "questions": [
+    {
+      "question_id": "q-20260815-bubble-tea",
+      "date": "2026-08-15",
+      "kind": "poll",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": "ja",
+      "target_locale": "zh-TW",
+      "text": "Apakah orang Taiwan benar-benar minum bubble tea setiap hari?",
+      "options": [
+        {
+          "id": "daily",
+          "emoji": "🧋",
+          "label": "Hampir setiap hari"
+        },
+        {
+          "id": "weekly",
+          "emoji": "🥤",
+          "label": "Beberapa kali seminggu"
+        },
+        {
+          "id": "sometimes",
+          "emoji": "😌",
+          "label": "Sesekali"
+        },
+        {
+          "id": "rarely",
+          "emoji": "🙅",
+          "label": "Hampir tidak pernah"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260815-dinner-time",
+      "date": "2026-08-15",
+      "kind": "guess",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: komunitas mana yang makan malam paling larut?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "answer": "pt-BR",
+      "explain": "Di Brasil makan malam biasanya pukul 20.00–23.00 — makin larut makin ramai."
+    },
+    {
+      "question_id": "q-20260816-izakaya",
+      "date": "2026-08-16",
+      "kind": "poll",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": "zh-TW",
+      "target_locale": "ja",
+      "text": "Apakah orang Jepang benar-benar sering ke izakaya sepulang kerja?",
+      "options": [
+        {
+          "id": "often",
+          "emoji": "🏮",
+          "label": "Beberapa kali seminggu"
+        },
+        {
+          "id": "sometimes",
+          "emoji": "🍻",
+          "label": "Kadang-kadang"
+        },
+        {
+          "id": "rarely",
+          "emoji": "🏠",
+          "label": "Biasanya langsung pulang"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤝",
+          "label": "Tergantung rekan kerja"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260816-birthday-noodles",
+      "date": "2026-08-16",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: di komunitas mana orang makan “mi panjang umur” saat ulang tahun?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Di Taiwan yang berulang tahun makan mi panjang tanpa dipotong — mi panjang, umur panjang."
+    },
+    {
+      "question_id": "q-20260817-school-alone",
+      "date": "2026-08-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": "hi",
+      "target_locale": "zh-TW",
+      "text": "Pada usia berapa anak-anak di Taiwan mulai berangkat sekolah sendiri?",
+      "options": [
+        {
+          "id": "before7",
+          "emoji": "🎒",
+          "label": "Sebelum 7 tahun"
+        },
+        {
+          "id": "8to10",
+          "emoji": "🚸",
+          "label": "8–10 tahun"
+        },
+        {
+          "id": "11to12",
+          "emoji": "🚲",
+          "label": "11–12 tahun"
+        },
+        {
+          "id": "escorted",
+          "emoji": "🚗",
+          "label": "Umumnya diantar orang tua"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260817-bon-odori",
+      "date": "2026-08-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: komunitas mana yang menari “Bon Odori” untuk leluhur setiap Agustus?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "answer": "ja",
+      "explain": "Obon di Jepang jatuh pertengahan Agustus; tarian Bon Odori menyambut arwah leluhur pulang."
+    },
+    {
+      "question_id": "q-20260818-birthday-cake",
+      "date": "2026-08-18",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": "pt-BR",
+      "target_locale": null,
+      "text": "Di tempatmu, apakah ulang tahun selalu dirayakan dengan kue?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🎂",
+          "label": "Selalu ada kue"
+        },
+        {
+          "id": "meal",
+          "emoji": "🍽️",
+          "label": "Makan bersama, kue tak wajib"
+        },
+        {
+          "id": "traditional",
+          "emoji": "🍜",
+          "label": "Ada makanan tradisional sendiri"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Biasanya tidak dirayakan"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260818-panjat-pinang",
+      "date": "2026-08-18",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: komunitas mana yang merayakan hari kemerdekaan dengan lomba panjat pinang?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "answer": "id",
+      "explain": "Setiap 17 Agustus ada panjat pinang — warga bahu-membahu memanjat batang licin demi hadiah di puncak."
+    },
+    {
+      "question_id": "q-20260819-japan-bath",
+      "date": "2026-08-19",
+      "kind": "poll",
+      "topic_id": "top_01J50000000000000000000T02",
+      "topic_slug": "ask-the-world",
+      "asker_locale": "en",
+      "target_locale": "ja",
+      "text": "Apakah orang Jepang benar-benar berendam setiap malam?",
+      "options": [
+        {
+          "id": "nightly",
+          "emoji": "🛁",
+          "label": "Hampir tiap malam"
+        },
+        {
+          "id": "fewtimes",
+          "emoji": "🗓️",
+          "label": "Beberapa kali seminggu"
+        },
+        {
+          "id": "shower",
+          "emoji": "🚿",
+          "label": "Umumnya mandi shower"
+        },
+        {
+          "id": "seasonal",
+          "emoji": "❄️",
+          "label": "Shower saat panas, berendam saat dingin"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260819-xmas-chicken",
+      "date": "2026-08-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: di komunitas mana ayam goreng jadi hidangan wajib Natal sampai harus dipesan jauh-jauh hari?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "answer": "ja",
+      "explain": "Kampanye iklan tahun 1970-an membuat “KFC saat Natal” jadi tradisi Jepang — pesanannya penuh berminggu-minggu sebelumnya."
+    },
+    {
+      "question_id": "q-20260820-housewarming",
+      "date": "2026-08-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": "id",
+      "target_locale": null,
+      "text": "Di tempatmu, apakah pindah rumah baru dirayakan dengan syukuran?",
+      "options": [
+        {
+          "id": "ritual",
+          "emoji": "🙏",
+          "label": "Selalu ada doa/syukuran"
+        },
+        {
+          "id": "party",
+          "emoji": "🎉",
+          "label": "Mengundang kerabat makan"
+        },
+        {
+          "id": "simple",
+          "emoji": "🍰",
+          "label": "Sekadarnya saja"
+        },
+        {
+          "id": "nothing",
+          "emoji": "📦",
+          "label": "Langsung tinggal saja"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260820-multiday-wedding",
+      "date": "2026-08-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+      "topic_slug": "weddings-and-customs",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: di komunitas mana pernikahan biasa berlangsung tiga hari lebih dengan rangkaian upacara?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "answer": "hi",
+      "explain": "Pernikahan India sering berhari-hari — Haldi, Mehndi, Sangeet, akad hingga resepsi — dengan ratusan tamu."
+    },
+    {
+      "question_id": "q-20260821-elder-redenvelope",
+      "date": "2026-08-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": "zh-CN",
+      "target_locale": null,
+      "text": "Saat ulang tahun orang yang dituakan, apakah kalian memberi uang (amplop)?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🧧",
+          "label": "Selalu"
+        },
+        {
+          "id": "occasion",
+          "emoji": "🎊",
+          "label": "Hanya ulang tahun besar"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "Kado, bukan uang"
+        },
+        {
+          "id": "none",
+          "emoji": "💐",
+          "label": "Cukup doa dan ucapan"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260821-sweet-sixteen",
+      "date": "2026-08-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR5H0VCT4WAPQM4SZXW",
+      "topic_slug": "coming-of-age",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: pesta besar “Sweet Sixteen” untuk ulang tahun ke-16 adalah tradisi komunitas mana?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "answer": "en",
+      "explain": "Sweet Sixteen adalah tonggak khas Amerika; Brasil punya yang mirip di usia 15 — Festa de Quinze Anos."
+    },
+    {
+      "question_id": "q-20260822-moon-festival",
+      "date": "2026-08-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "ja",
+      "target_locale": null,
+      "text": "Apakah kalian merayakan festival bulan purnama? Biasanya bagaimana?",
+      "options": [
+        {
+          "id": "family",
+          "emoji": "🥮",
+          "label": "Kumpul keluarga dengan hidangan khas"
+        },
+        {
+          "id": "moononly",
+          "emoji": "🌕",
+          "label": "Lihat bulan saja"
+        },
+        {
+          "id": "ordinary",
+          "emoji": "📅",
+          "label": "Hari biasa saja"
+        },
+        {
+          "id": "nofestival",
+          "emoji": "🤔",
+          "label": "Kami tidak punya festival ini"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260822-moon-bbq",
+      "date": "2026-08-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: komunitas mana yang mengubah Festival Pertengahan Musim Gugur jadi malam barbeku nasional?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Berawal dari iklan saus tahun 1980-an — kini keluarga Taiwan membakar sate di depan rumah tiap malam festival."
+    },
+    {
+      "question_id": "q-20260823-live-with-parents",
+      "date": "2026-08-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+      "topic_slug": "caregiving-across-generations",
+      "asker_locale": "hi",
+      "target_locale": null,
+      "text": "Di tempatmu, sampai kapan anak biasanya tinggal bersama orang tua?",
+      "options": [
+        {
+          "id": "marriage",
+          "emoji": "💍",
+          "label": "Sampai menikah"
+        },
+        {
+          "id": "job",
+          "emoji": "💼",
+          "label": "Pindah saat mulai kerja"
+        },
+        {
+          "id": "college",
+          "emoji": "🎓",
+          "label": "Pindah saat kuliah"
+        },
+        {
+          "id": "together",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": "Serumah lintas generasi itu biasa"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260823-mudik",
+      "date": "2026-08-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: komunitas mana yang tiap tahun mengalami arus “mudik” puluhan juta orang pulang kampung?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "answer": "id",
+      "explain": "Menjelang Lebaran, mudik di Indonesia adalah salah satu migrasi tahunan terbesar di dunia — jalan, feri, dan bandara penuh sesak."
+    },
+    {
+      "question_id": "q-20260824-graduation",
+      "date": "2026-08-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRFP513XZ9B02BT8XCZ",
+      "topic_slug": "graduation-season",
+      "asker_locale": "en",
+      "target_locale": null,
+      "text": "Di wisuda kalian, apakah topi dilempar ke udara?",
+      "options": [
+        {
+          "id": "throw",
+          "emoji": "🎓",
+          "label": "Wajib lempar topi"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "📜",
+          "label": "Ada upacara, tanpa lempar topi"
+        },
+        {
+          "id": "dinner",
+          "emoji": "🍽️",
+          "label": "Yang penting makan-makan"
+        },
+        {
+          "id": "simple",
+          "emoji": "🤳",
+          "label": "Cukup foto-foto"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260824-baraat",
+      "date": "2026-08-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+      "topic_slug": "weddings-and-customs",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: di komunitas mana pengantin pria datang menunggang kuda putih diiringi marching band?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "answer": "hi",
+      "explain": "Baraat dalam pernikahan India Utara — pengantin pria menunggang kuda putih diiringi kerabat yang menari dan band."
+    }
+  ]
+}
