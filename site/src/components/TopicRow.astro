@@ -37,7 +37,8 @@ interface Props {
   // 該排序特有的一行說明(當令的國家與日期、最近一場活動的時間…)
   note?: string | null;
 }
-const { topic, rank = null, win = '24h', marker = null, tags = [], note = null } = Astro.props;
+// eager:首屏前幾列的 cover 不做 lazy(lazy 的 LCP 元素會拖到 30 秒等級,2026-08-15 Lighthouse 實測)
+const { topic, rank = null, win = '24h', marker = null, tags = [], note = null, eager = false } = Astro.props;
 const codes = (topic.country_codes || []).slice(0, 8);
 const scores = topic.scores || {};
 const topicHref = withBase(`topic/${topic.slug}/`);
@@ -53,7 +54,7 @@ const withPosts = !!topic.topic_id;
     <span class="row-main">
       {coverSrc && (
         <span class="row-cover" aria-hidden="true">
-          <img src={coverSrc} alt="" width="1200" height="675" loading="lazy" decoding="async" />
+          <img src={coverSrc} alt="" width="1200" height="675" loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} decoding="async" />
         </span>
       )}
       <span class="row-copy">

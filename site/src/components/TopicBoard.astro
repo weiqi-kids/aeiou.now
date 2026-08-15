@@ -24,7 +24,7 @@ const { rows, empty, win = '24h' } = Astro.props;
 {rows.length === 0 && <p class="board-empty">{empty}</p>}
 {rows.length > 0 && (
   <ol class="board-list" data-topic-list>
-    {rows.map((row) => (
+    {rows.map((row, i) => (
       <TopicRow
         topic={row.topic}
         rank={row.rank ?? null}
@@ -32,6 +32,7 @@ const { rows, empty, win = '24h' } = Astro.props;
         marker={row.marker ?? null}
         tags={row.tags || []}
         note={row.note ?? null}
+        eager={i < 2}
       />
     ))}
   </ol>
