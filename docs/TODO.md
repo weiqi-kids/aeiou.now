@@ -45,13 +45,13 @@
   查 stream:SA 打 `analyticsadmin.googleapis.com/v1beta/properties/549586494/dataStreams`;
   查上線:`curl -s https://weiqi-kids.github.io/aeiou-pages-zh-tw/ | grep -c googletagmanager`。
   ⚠ 手動單站 build/push 要自帶 `PUBLIC_GA4_ID`,否則該站 gtag 會消失到下次 CI 推。
-- [ ] **GSC**:`sc-domain:aeiou.now` 用戶已建並 TXT 驗證(2026-08-15)。
-  **事故(2026-08-15)**:GSC UI 加 SA 使用者報「找不到電子郵件」(GA4 同信箱加成功,信箱存在無誤)。
-  繞法=Site Verification API 讓 SA 自驗為 delegated owner:①用戶開
-  `console.developers.google.com/apis/api/siteverification.googleapis.com/overview?project=aeiou-seo`
-  啟用 API ②主機以 SA 要 DNS_TXT token ③用戶把 token 加進 GoDaddy TXT ④主機 webResource.insert。
-  收尾驗收:`node /root/seo-ops/bin/identity-audit.mjs --sa ~/.config/aeiou/ga4-sa.json --expect-only aeiou.now` exit 0。
-  ⚠ SA 會成為 owner 而非「完整使用者」(API 驗證的本質),記錄在案。
+- [x] **GSC**(2026-08-15 完成,隔離驗收 exit 0):`sc-domain:aeiou.now` 用戶建+TXT 驗證;
+  SA 走 Site Verification API 繞過 UI(UI 加 SA 報「找不到電子郵件」的已知毛病)。
+  完整繞法(五步,缺一不可):①用戶啟用專案的 Site Verification API ②SA 要 DNS_TXT token
+  ③token 加進 DNS TXT ④SA `webResource.insert`(成為驗證擁有者)⑤**SA `sites.add`
+  (webmasters v3 PUT /sites/sc-domain%3A...)把資源掛進自己帳號——沒有這步 sites.list 永遠是空的**。
+  SA 為 siteOwner(API 驗證的本質),非原規劃的「完整使用者」,記錄在案。
+  查:`node /root/seo-ops/bin/identity-audit.mjs --sa ~/.config/aeiou/ga4-sa.json --expect-only aeiou.now`。
 - [ ] **Slack**:workspace=Weiqi.Kids、bot=`claude-helper`(有 `chat:write.public`,公開頻道免邀請)。
   token 已就位 `~/.config/aeiou/slack-bot-token`(600,2026-08-12 實測 auth.test ok)。
   剩:用戶建頻道(慣例 `#<描述>-aeiou`)→ 設 repo secrets `SLACK_BOT_TOKEN`/`SLACK_CHANNEL_ID`
