@@ -2,7 +2,8 @@
 
 > 本檔是**索引與紅線**,不是現況報告。
 > 詳細內容:`docs/01-architecture.md`(架構)、`docs/02-data-model.md`(**資料結構權威文件**)、
-> `docs/briefs/api-contract.md`(API 契約)、`docs/TODO.md`(**待辦**)。
+> `docs/briefs/api-contract.md`(API 契約)、`docs/briefs/daily-question.md`(**每日世界一問規格**)、
+> `docs/TODO.md`(**待辦**)。
 
 ## § 現況一律用指令查(本手冊第一鐵則)
 
@@ -30,6 +31,8 @@
 | 靜態 JSON 產出了什麼 | `find data -type f -name '*.json' \| sort` |
 | repo 有哪些站 | `gh repo list weiqi-kids --limit 100 \| grep aeiou` |
 | 有沒有殘留的背景 server | `pgrep -af '[a]stro (dev\|preview)'; pgrep -af '[h]ttp\.server'` |
+| 題庫有幾題、涵蓋到哪天 | `sqlite3 db/aeiou.sqlite "SELECT kind,COUNT(*),MIN(qdate),MAX(qdate) FROM questions GROUP BY kind"` |
+| 線上投票數(D1) | `cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT COUNT(*) n, COUNT(DISTINCT question_id) q FROM question_votes"` |
 
 ---
 
@@ -170,6 +173,8 @@ World
 ## Topic 內容維護:content/topics/*.md(要寫節日就是改這裡)
 
 **一個 Topic 一個檔:`content/topics/<slug>.md`。格式規格與完整模板見 `docs/03-topic-content.md`。**
+**每日一問題庫:`content/questions.json`(唯一入口,格式與紅線見 `docs/briefs/daily-question.md`);
+補題=往檔尾加題(七語齊、掛既有 topic),存檔後走同一條 hourly 管線上線。題庫用完不開天窗(前端退最近一題)。**
 
 ```
 content/topics/<slug>.md   ←── 人工編輯(唯一入口)
@@ -190,8 +195,8 @@ content/topics/<slug>.md   ←── 人工編輯(唯一入口)
 
 | 排程 | 入口 | 做什麼 |
 |---|---|---|
-| 主機 `*/15 * * * *` | `scripts/cron-15min.sh` | ① `translate-posts.mjs`:D1 撈 pending 貼文 → `claude -p` 翻六語 → 寫回 D1 + **回流主機**(UGC 進主機的唯一通道) ② `sync-topics-to-d1.mjs`:主機 Topic 副本 → D1 |
-| 主機 `0 * * * *` | `scripts/hourly-export.sh` | ① `import-topics.mjs`(content/ md → SQLite) ② `export-data.mjs` ③ **只 commit `data/`** ④ push source repo |
+| 主機 `*/15 * * * *` | `scripts/cron-15min.sh` | ① `translate-posts.mjs`:D1 撈 pending 貼文 → `claude -p` 翻六語 → 寫回 D1 + **回流主機**(UGC 進主機的唯一通道) ② `sync-topics-to-d1.mjs`:主機 Topic 副本 → D1 ③ `sync-questions-to-d1.mjs`:題庫精簡副本 → D1(2026-08-15 起) |
+| 主機 `0 * * * *` | `scripts/hourly-export.sh` | ① `import-topics.mjs`(content/ md → SQLite) ② `import-questions.mjs`(content/questions.json → SQLite,壞題庫即中止) ③ `export-data.mjs` ④ **只 commit `data/`** ⑤ push source repo |
 | GitHub Actions `17 * * * *` + push | `.github/workflows/build.yml` | 七語系 matrix build → SSH 推七個 publish repo(帶 `.nojekyll` 與 `.build-id`)→ 輪詢驗證**內容真的上線**(比 build-id,不是比 200) |
 
 - 排程本體:`cat /etc/cron.d/aeiou`(檔內註解有逐行說明與排錯指引)。**Actions 排 17 分是刻意錯開主機整點 push。**

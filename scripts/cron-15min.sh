@@ -7,8 +7,10 @@
 #      (UGC 回流主機的唯一通道;內建 job_locks 防重入,前一輪還在跑就自己 skip)
 #   2. sync-topics-to-d1.mjs —— 主機 topics/topic_i18n → D1 精簡副本(含 current_cycle_id)
 #      翻譯先跑:同步是秒級的,擺後面才不會被長跑的翻譯卡住整輪。
+#   3. sync-questions-to-d1.mjs(2026-08-15 加)—— 主機 questions/question_options →
+#      D1 每日世界一問精簡副本(供 Worker 驗票);同樣是秒級,排在 sync-topics 之後。
 #
-# 兩支各自寫 jobs 表,任一支失敗不影響另一支(所以不 set -e)。
+# 三支各自寫 jobs 表,任一支失敗不影響其他支(所以不 set -e)。
 # 失敗看:本檔 log(見 /etc/cron.d/aeiou 的重導)+ 主機 SQLite 的 jobs 表:
 #   sqlite3 /root/aeiou.now/db/aeiou.sqlite \
 #     "SELECT job_name,datetime(finished_at,'unixepoch'),status,attempt,error_message
@@ -45,5 +47,8 @@ rc_translate=$?
 "$NODE_BIN" "$REPO/scripts/sync-topics-to-d1.mjs"
 rc_sync=$?
 
-echo "$(date -Is) [cron-15min] === end (translate=$rc_translate sync=$rc_sync) ==="
-[ $rc_translate -eq 0 ] && [ $rc_sync -eq 0 ]
+"$NODE_BIN" "$REPO/scripts/sync-questions-to-d1.mjs"
+rc_sync_questions=$?
+
+echo "$(date -Is) [cron-15min] === end (translate=$rc_translate sync=$rc_sync sync_questions=$rc_sync_questions) ==="
+[ $rc_translate -eq 0 ] && [ $rc_sync -eq 0 ] && [ $rc_sync_questions -eq 0 ]

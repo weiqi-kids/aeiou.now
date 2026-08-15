@@ -43,10 +43,33 @@ CREATE TABLE IF NOT EXISTS topic_i18n (
 
 -- 入口限流事件(2026-08-15 Bot 防護第一層;D1 獨有,不回流主機)
 -- key = 'anon:<anon_id>' 或 'ip:<sha256(SYNC_SECRET+ip) hex>'(不存明文 IP)
--- kind = post|comment|reaction。舊事件由 Worker 寫入時機率性清除(>25h)。
+-- kind = post|comment|reaction|vote。舊事件由 Worker 寫入時機率性清除(>25h)。
 CREATE TABLE IF NOT EXISTS rate_events (
   kind TEXT NOT NULL,
   key  TEXT NOT NULL,
   ts   INTEGER NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_rate_events ON rate_events(kind, key, ts);
+
+-- 每日世界一問(2026-08-15;規格 docs/briefs/daily-question.md §3)
+-- questions 精簡副本(主機 → /internal/sync/questions 覆蓋;文案與答案不進 D1,D1 只驗票)
+CREATE TABLE IF NOT EXISTS questions (
+  question_id  TEXT PRIMARY KEY,
+  qdate        TEXT NOT NULL,
+  kind         TEXT NOT NULL,
+  topic_id     TEXT NOT NULL,
+  options_json TEXT NOT NULL,              -- JSON 陣列:合法 option_id 清單
+  status       TEXT NOT NULL DEFAULT 'active'
+);
+-- 一人一題一票;重投 = 覆蓋 option_id(created_at 保留首次投票時間,參與統計以它計日)
+CREATE TABLE IF NOT EXISTS question_votes (
+  question_id TEXT NOT NULL,
+  anon_id     TEXT NOT NULL,
+  option_id   TEXT NOT NULL,
+  locale      TEXT NOT NULL,               -- 投票者所在站的語系(=社群)
+  created_at  INTEGER NOT NULL,
+  updated_at  INTEGER NOT NULL,
+  PRIMARY KEY (question_id, anon_id)
+);
+CREATE INDEX IF NOT EXISTS idx_question_votes_q   ON question_votes (question_id, locale, option_id);
+CREATE INDEX IF NOT EXISTS idx_question_votes_day ON question_votes (created_at);

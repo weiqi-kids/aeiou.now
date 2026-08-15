@@ -1,0 +1,57 @@
+---
+// /questions/ 世界問題集(§6.3):pastQuestions() 依日期新到舊,每題一張 QuestionCard
+// (可投可看結果)。仿 about.astro 的靜態單頁寫法;導覽列不加新項(導覽是契約)。
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuestionCard from '../../components/QuestionCard.astro';
+import { t } from '../../lib/i18n.mjs';
+import { pastQuestions } from '../../lib/data.mjs';
+import { calendarDate } from '../../lib/format.mjs';
+
+const questions = pastQuestions(new Date());
+---
+
+<BaseLayout title={`${t('q.archive_title')} — aeiou.now`} description={t('q.archive_title')}>
+  <article class="archive">
+    <header class="archive-head">
+      <h1>{t('q.archive_title')}</h1>
+    </header>
+
+    {questions.length === 0 ? (
+      <p class="archive-empty">{t('common.empty')}</p>
+    ) : (
+      <div class="archive-list">
+        {questions.map((question) => (
+          <section class="archive-item">
+            <p class="archive-date">{calendarDate(question.date)}</p>
+            <QuestionCard question={question} />
+          </section>
+        ))}
+      </div>
+    )}
+  </article>
+</BaseLayout>
+
+<style>
+  .archive-head {
+    padding-block-end: 1.25rem;
+    margin-block-end: clamp(2rem, 5vw, 3rem);
+    border-block-end: 0.0625rem solid var(--color-line);
+  }
+  .archive-head h1 {
+    margin: 0;
+  }
+  .archive-empty {
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+  .archive-list {
+    display: grid;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  .archive-date {
+    margin: 0 0 0.5rem;
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--color-ink-muted);
+  }
+</style>

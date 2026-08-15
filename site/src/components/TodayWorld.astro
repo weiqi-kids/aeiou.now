@@ -1,0 +1,112 @@
+---
+// 「今天的世界」:純靜態、無 JS(§6.3)。資料來自 lib/data.mjs 的 todayWorld()——
+// topics index + facts.json observances[].occurrences,依國家分組、依距今天數排序,
+// 最多 8 國、每國最多 3 項。這裡的國家是內容裡的國家(節日辦在哪國),與投票的
+// 語言社群判定無關,允許出現。
+import { t } from '../lib/i18n.mjs';
+import { withBase } from '../lib/paths.mjs';
+import { countryName } from '../lib/data.mjs';
+import { countryFlag, calendarDate } from '../lib/format.mjs';
+
+interface Props {
+  countries: Array<{
+    country_code: string;
+    items: Array<{
+      topic_id: string;
+      slug: string;
+      title: string;
+      local_name: string | null;
+      starts_on: string;
+      ends_on: string | null;
+    }>;
+  }>;
+  heading: string;
+}
+
+const { countries, heading } = Astro.props;
+---
+
+<section class="tw">
+  <h2 class="tw-heading">{heading}</h2>
+  {countries.length === 0 ? (
+    <p class="tw-empty">{t('q.today_world_empty')}</p>
+  ) : (
+    <ul class="tw-countries">
+      {countries.map((country) => (
+        <li class="tw-country">
+          <p class="tw-country-name">
+            <span aria-hidden="true">{countryFlag(country.country_code)}</span> {countryName(country.country_code)}
+          </p>
+          <ul class="tw-items">
+            {country.items.map((item) => (
+              <li class="tw-item">
+                <a href={withBase(`topic/${item.slug}/`)}>{item.title}</a>
+                {item.local_name && <span class="tw-local-name"> · {item.local_name}</span>}
+                <span class="tw-date">
+                  {' · '}
+                  {item.ends_on ? `${calendarDate(item.starts_on)} – ${calendarDate(item.ends_on)}` : calendarDate(item.starts_on)}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ul>
+  )}
+</section>
+
+<style>
+  .tw {
+    border: 0.0625rem solid var(--color-line);
+    border-block-start: 0.25rem solid var(--color-accent);
+    border-radius: var(--radius-md);
+    padding: clamp(1.25rem, 4vw, 2rem);
+    background: var(--color-white);
+    box-shadow: var(--shadow-card);
+  }
+  .tw-heading {
+    margin: 0 0 1rem;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+  }
+  .tw-empty {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+  .tw-countries {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+  }
+  .tw-country-name {
+    margin: 0 0 0.35rem;
+    font-size: var(--text-base);
+    font-weight: 700;
+  }
+  .tw-items {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1.25rem;
+    display: grid;
+    gap: 0.3rem;
+  }
+  .tw-item {
+    font-size: var(--text-sm);
+    line-height: 1.4;
+  }
+  .tw-item a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .tw-item a:hover {
+    text-decoration: underline;
+  }
+  .tw-local-name,
+  .tw-date {
+    color: var(--color-ink-muted);
+  }
+</style>

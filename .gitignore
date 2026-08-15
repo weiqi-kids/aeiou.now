@@ -11,7 +11,7 @@ site/src/data/
 *.sqlite-shm
 
 # 同步指紋(sync-topics 判斷「內容沒變就不推」用;純本機狀態,刪掉只會多推一次)
-db/.sync-state.json
+db/.sync-state*.json
 
 .DS_Store
 .env

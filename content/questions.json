@@ -1,0 +1,585 @@
+{
+  "$comment": "每日世界一問題庫(人工編輯的唯一入口)。id 不可重複;date=UTC 當日;kind=poll(社群互問)|guess(世界差異猜謎);topic 必須是 content/topics/ 既有 slug;asker/target 是語言社群 locale(null=所有社群/本站發問);七語 text/label 缺一即 import 報錯;kind=guess 必填 answer(=options 之一的 id)與 explain。",
+  "questions": [
+    {
+      "id": "q-20260815-bubble-tea",
+      "date": "2026-08-15",
+      "kind": "poll",
+      "topic": "ask-the-world",
+      "asker": "ja",
+      "target": "zh-TW",
+      "text": {
+        "zh-TW": "台灣人真的每天都喝手搖飲(珍珠奶茶)嗎?",
+        "en": "Do people in Taiwan really drink bubble tea every day?",
+        "ja": "台湾の人は本当に毎日タピオカミルクティーを飲むの?",
+        "zh-CN": "台湾人真的每天都喝奶茶(珍珠奶茶)吗?",
+        "hi": "क्या ताइवान के लोग सच में हर दिन बबल टी पीते हैं?",
+        "id": "Apakah orang Taiwan benar-benar minum bubble tea setiap hari?",
+        "pt-BR": "As pessoas em Taiwan realmente tomam bubble tea todos os dias?"
+      },
+      "options": [
+        { "id": "daily", "emoji": "🧋", "label": { "zh-TW": "幾乎每天", "en": "Almost every day", "ja": "ほぼ毎日", "zh-CN": "几乎每天", "hi": "लगभग हर दिन", "id": "Hampir setiap hari", "pt-BR": "Quase todo dia" } },
+        { "id": "weekly", "emoji": "🥤", "label": { "zh-TW": "每週幾次", "en": "A few times a week", "ja": "週に数回", "zh-CN": "每周几次", "hi": "हफ़्ते में कुछ बार", "id": "Beberapa kali seminggu", "pt-BR": "Algumas vezes por semana" } },
+        { "id": "sometimes", "emoji": "😌", "label": { "zh-TW": "偶爾", "en": "Occasionally", "ja": "たまに", "zh-CN": "偶尔", "hi": "कभी-कभार", "id": "Sesekali", "pt-BR": "De vez em quando" } },
+        { "id": "rarely", "emoji": "🙅", "label": { "zh-TW": "幾乎不喝", "en": "Hardly ever", "ja": "ほとんど飲まない", "zh-CN": "几乎不喝", "hi": "लगभग कभी नहीं", "id": "Hampir tidak pernah", "pt-BR": "Quase nunca" } }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260815-dinner-time",
+      "date": "2026-08-15",
+      "kind": "guess",
+      "topic": "ask-the-world",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的晚餐時間最晚?",
+        "en": "Guess: which community eats dinner the latest?",
+        "ja": "クイズ:夕食の時間がいちばん遅いのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群的晚餐时间最晚?",
+        "hi": "अंदाज़ा लगाइए: कौन-सा समुदाय सबसे देर से रात का खाना खाता है?",
+        "id": "Tebak: komunitas mana yang makan malam paling larut?",
+        "pt-BR": "Adivinhe: qual comunidade janta mais tarde?"
+      },
+      "options": [
+        { "id": "zh-TW", "emoji": "🇹🇼", "label": { "zh-TW": "台灣", "en": "Taiwan", "ja": "台湾", "zh-CN": "台湾", "hi": "ताइवान", "id": "Taiwan", "pt-BR": "Taiwan" } },
+        { "id": "ja", "emoji": "🇯🇵", "label": { "zh-TW": "日本", "en": "Japan", "ja": "日本", "zh-CN": "日本", "hi": "जापान", "id": "Jepang", "pt-BR": "Japão" } },
+        { "id": "hi", "emoji": "🇮🇳", "label": { "zh-TW": "印度", "en": "India", "ja": "インド", "zh-CN": "印度", "hi": "भारत", "id": "India", "pt-BR": "Índia" } },
+        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } }
+      ],
+      "answer": "pt-BR",
+      "explain": {
+        "zh-TW": "巴西的晚餐常在 20:00–23:00 之間,越晚越熱鬧。",
+        "en": "In Brazil dinner is often between 8 and 11 pm — the later, the livelier.",
+        "ja": "ブラジルの夕食は20時〜23時が普通。遅いほどにぎやかです。",
+        "zh-CN": "巴西的晚餐常在 20:00–23:00 之间,越晚越热闹。",
+        "hi": "ब्राज़ील में रात का खाना अक्सर रात 8 से 11 बजे के बीच होता है — जितनी देर, उतनी रौनक।",
+        "id": "Di Brasil makan malam biasanya pukul 20.00–23.00 — makin larut makin ramai.",
+        "pt-BR": "No Brasil o jantar costuma ser entre 20h e 23h — quanto mais tarde, mais animado."
+      }
+    },
+    {
+      "id": "q-20260816-izakaya",
+      "date": "2026-08-16",
+      "kind": "poll",
+      "topic": "ask-the-world",
+      "asker": "zh-TW",
+      "target": "ja",
+      "text": {
+        "zh-TW": "日本人下班後真的很常去居酒屋嗎?",
+        "en": "Do people in Japan really go to izakaya often after work?",
+        "ja": "日本の人は仕事帰りに本当によく居酒屋へ行くの?",
+        "zh-CN": "日本人下班后真的很常去居酒屋吗?",
+        "hi": "क्या जापान के लोग सच में काम के बाद अक्सर इज़ाकाया जाते हैं?",
+        "id": "Apakah orang Jepang benar-benar sering ke izakaya sepulang kerja?",
+        "pt-BR": "As pessoas no Japão realmente vão muito a izakayas depois do trabalho?"
+      },
+      "options": [
+        { "id": "often", "emoji": "🏮", "label": { "zh-TW": "每週好幾次", "en": "Several times a week", "ja": "週に何度も", "zh-CN": "每周好几次", "hi": "हफ़्ते में कई बार", "id": "Beberapa kali seminggu", "pt-BR": "Várias vezes por semana" } },
+        { "id": "sometimes", "emoji": "🍻", "label": { "zh-TW": "偶爾聚一下", "en": "Now and then", "ja": "たまに", "zh-CN": "偶尔聚一下", "hi": "कभी-कभी", "id": "Kadang-kadang", "pt-BR": "De vez em quando" } },
+        { "id": "rarely", "emoji": "🏠", "label": { "zh-TW": "幾乎直接回家", "en": "Usually straight home", "ja": "ほぼ直帰", "zh-CN": "几乎直接回家", "hi": "अक्सर सीधे घर", "id": "Biasanya langsung pulang", "pt-BR": "Quase sempre direto para casa" } },
+        { "id": "depends", "emoji": "🤝", "label": { "zh-TW": "看同事和場合", "en": "Depends on coworkers", "ja": "同僚と状況次第", "zh-CN": "看同事和场合", "hi": "सहकर्मियों पर निर्भर", "id": "Tergantung rekan kerja", "pt-BR": "Depende dos colegas" } }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260816-birthday-noodles",
+      "date": "2026-08-16",
+      "kind": "guess",
+      "topic": "birthdays-and-blessings",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群過生日要吃「長壽麵」祈求長命百歲?",
+        "en": "Guess: in which community do people eat “longevity noodles” on their birthday?",
+        "ja": "クイズ:誕生日に長寿を願って「長寿麺」を食べるのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群过生日要吃「长寿面」祈求长命百岁?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में जन्मदिन पर लंबी उम्र के लिए “लॉन्गेविटी नूडल्स” खाए जाते हैं?",
+        "id": "Tebak: di komunitas mana orang makan “mi panjang umur” saat ulang tahun?",
+        "pt-BR": "Adivinhe: em qual comunidade se come “macarrão da longevidade” no aniversário?"
+      },
+      "options": [
+        { "id": "zh-TW", "emoji": "🇹🇼", "label": { "zh-TW": "台灣", "en": "Taiwan", "ja": "台湾", "zh-CN": "台湾", "hi": "ताइवान", "id": "Taiwan", "pt-BR": "Taiwan" } },
+        { "id": "en", "emoji": "🇺🇸", "label": { "zh-TW": "美國", "en": "United States", "ja": "アメリカ", "zh-CN": "美国", "hi": "अमेरिका", "id": "Amerika Serikat", "pt-BR": "Estados Unidos" } },
+        { "id": "id", "emoji": "🇮🇩", "label": { "zh-TW": "印尼", "en": "Indonesia", "ja": "インドネシア", "zh-CN": "印尼", "hi": "इंडोनेशिया", "id": "Indonesia", "pt-BR": "Indonésia" } },
+        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } }
+      ],
+      "answer": "zh-TW",
+      "explain": {
+        "zh-TW": "台灣壽星常吃豬腳麵線或長壽麵,麵不能剪斷,象徵長長久久。",
+        "en": "In Taiwan the birthday person often eats uncut longevity noodles — long noodles, long life.",
+        "ja": "台湾では誕生日に切らない長寿麺を食べます。長い麺は長生きの象徴。",
+        "zh-CN": "台湾寿星常吃猪脚面线或长寿面,面不能剪断,象征长长久久。",
+        "hi": "ताइवान में जन्मदिन पर बिना काटे लंबे नूडल्स खाए जाते हैं — लंबे नूडल्स, लंबी उम्र।",
+        "id": "Di Taiwan yang berulang tahun makan mi panjang tanpa dipotong — mi panjang, umur panjang.",
+        "pt-BR": "Em Taiwan o aniversariante come macarrão comprido sem cortar — macarrão longo, vida longa."
+      }
+    },
+    {
+      "id": "q-20260817-school-alone",
+      "date": "2026-08-17",
+      "kind": "poll",
+      "topic": "back-to-school",
+      "asker": "hi",
+      "target": "zh-TW",
+      "text": {
+        "zh-TW": "台灣的小孩幾歲開始自己上下學?",
+        "en": "At what age do kids in Taiwan start going to school on their own?",
+        "ja": "台湾の子どもは何歳から一人で通学するの?",
+        "zh-CN": "台湾的小孩几岁开始自己上下学?",
+        "hi": "ताइवान में बच्चे किस उम्र से अकेले स्कूल जाने लगते हैं?",
+        "id": "Pada usia berapa anak-anak di Taiwan mulai berangkat sekolah sendiri?",
+        "pt-BR": "Com que idade as crianças em Taiwan começam a ir à escola sozinhas?"
+      },
+      "options": [
+        { "id": "before7", "emoji": "🎒", "label": { "zh-TW": "7 歲前", "en": "Before 7", "ja": "7歳前", "zh-CN": "7 岁前", "hi": "7 साल से पहले", "id": "Sebelum 7 tahun", "pt-BR": "Antes dos 7" } },
+        { "id": "8to10", "emoji": "🚸", "label": { "zh-TW": "8–10 歲", "en": "Age 8–10", "ja": "8〜10歳", "zh-CN": "8–10 岁", "hi": "8–10 साल", "id": "8–10 tahun", "pt-BR": "8–10 anos" } },
+        { "id": "11to12", "emoji": "🚲", "label": { "zh-TW": "11–12 歲", "en": "Age 11–12", "ja": "11〜12歳", "zh-CN": "11–12 岁", "hi": "11–12 साल", "id": "11–12 tahun", "pt-BR": "11–12 anos" } },
+        { "id": "escorted", "emoji": "🚗", "label": { "zh-TW": "幾乎都家長接送", "en": "Mostly escorted by parents", "ja": "ほぼ親の送り迎え", "zh-CN": "几乎都家长接送", "hi": "ज़्यादातर माता-पिता छोड़ते हैं", "id": "Umumnya diantar orang tua", "pt-BR": "Quase sempre levadas pelos pais" } }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260817-bon-odori",
+      "date": "2026-08-17",
+      "kind": "guess",
+      "topic": "ghosts-ancestors-and-remembrance",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群在八月會圍著高台為祖先跳「盆踊」?",
+        "en": "Guess: which community dances the “Bon Odori” for ancestors every August?",
+        "ja": "クイズ:8月にご先祖のために「盆踊り」を踊るのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群在八月会围着高台为祖先跳「盆舞」?",
+        "hi": "अंदाज़ा लगाइए: कौन-सा समुदाय हर अगस्त पूर्वजों के लिए “बोन ओदोरी” नृत्य करता है?",
+        "id": "Tebak: komunitas mana yang menari “Bon Odori” untuk leluhur setiap Agustus?",
+        "pt-BR": "Adivinhe: qual comunidade dança o “Bon Odori” pelos ancestrais todo agosto?"
+      },
+      "options": [
+        { "id": "ja", "emoji": "🇯🇵", "label": { "zh-TW": "日本", "en": "Japan", "ja": "日本", "zh-CN": "日本", "hi": "जापान", "id": "Jepang", "pt-BR": "Japão" } },
+        { "id": "zh-CN", "emoji": "🇨🇳", "label": { "zh-TW": "中國", "en": "China", "ja": "中国", "zh-CN": "中国", "hi": "चीन", "id": "Tiongkok", "pt-BR": "China" } },
+        { "id": "id", "emoji": "🇮🇩", "label": { "zh-TW": "印尼", "en": "Indonesia", "ja": "インドネシア", "zh-CN": "印尼", "hi": "इंडोनेशिया", "id": "Indonesia", "pt-BR": "Indonésia" } },
+        { "id": "hi", "emoji": "🇮🇳", "label": { "zh-TW": "印度", "en": "India", "ja": "インド", "zh-CN": "印度", "hi": "भारत", "id": "India", "pt-BR": "Índia" } }
+      ],
+      "answer": "ja",
+      "explain": {
+        "zh-TW": "日本的盂蘭盆節在八月中,各地夏祭都有盆踊,迎接祖先的靈魂回家。",
+        "en": "Japan's Obon falls in mid-August; Bon Odori dances welcome ancestors' spirits home.",
+        "ja": "日本のお盆は8月中旬。盆踊りはご先祖の霊を迎える踊りです。",
+        "zh-CN": "日本的盂兰盆节在八月中,各地夏祭都有盆舞,迎接祖先的灵魂回家。",
+        "hi": "जापान का ओबोन मध्य अगस्त में होता है; बोन ओदोरी नृत्य पूर्वजों की आत्माओं का स्वागत करता है।",
+        "id": "Obon di Jepang jatuh pertengahan Agustus; tarian Bon Odori menyambut arwah leluhur pulang.",
+        "pt-BR": "O Obon no Japão é em meados de agosto; o Bon Odori dá boas-vindas aos espíritos dos ancestrais."
+      }
+    },
+    {
+      "id": "q-20260818-birthday-cake",
+      "date": "2026-08-18",
+      "kind": "poll",
+      "topic": "birthdays-and-blessings",
+      "asker": "pt-BR",
+      "target": null,
+      "text": {
+        "zh-TW": "你們那裡過生日一定會吃蛋糕嗎?",
+        "en": "Where you live, is a birthday always celebrated with cake?",
+        "ja": "あなたの地域では、誕生日には必ずケーキを食べる?",
+        "zh-CN": "你们那里过生日一定会吃蛋糕吗?",
+        "hi": "आपके यहाँ क्या जन्मदिन पर हमेशा केक काटा जाता है?",
+        "id": "Di tempatmu, apakah ulang tahun selalu dirayakan dengan kue?",
+        "pt-BR": "Na sua região, aniversário sempre tem bolo?"
+      },
+      "options": [
+        { "id": "always", "emoji": "🎂", "label": { "zh-TW": "一定有蛋糕", "en": "Always cake", "ja": "必ずケーキ", "zh-CN": "一定有蛋糕", "hi": "हमेशा केक", "id": "Selalu ada kue", "pt-BR": "Sempre tem bolo" } },
+        { "id": "meal", "emoji": "🍽️", "label": { "zh-TW": "聚餐但不一定蛋糕", "en": "A meal, not always cake", "ja": "食事会がメイン", "zh-CN": "聚餐但不一定蛋糕", "hi": "खाना होता है, केक ज़रूरी नहीं", "id": "Makan bersama, kue tak wajib", "pt-BR": "Refeição, nem sempre bolo" } },
+        { "id": "traditional", "emoji": "🍜", "label": { "zh-TW": "有自己的傳統食物", "en": "Our own traditional food", "ja": "伝統の食べ物がある", "zh-CN": "有自己的传统食物", "hi": "हमारा अपना पारंपरिक खाना", "id": "Ada makanan tradisional sendiri", "pt-BR": "Temos comida tradicional própria" } },
+        { "id": "none", "emoji": "🤷", "label": { "zh-TW": "通常不特別慶祝", "en": "Usually no celebration", "ja": "特に祝わない", "zh-CN": "通常不特别庆祝", "hi": "आमतौर पर नहीं मनाते", "id": "Biasanya tidak dirayakan", "pt-BR": "Geralmente não comemoramos" } }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260818-panjat-pinang",
+      "date": "2026-08-18",
+      "kind": "guess",
+      "topic": "national-days",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群在獨立紀念日會比賽爬塗滿油的檳榔樹桿搶獎品?",
+        "en": "Guess: which community celebrates independence day by climbing greased palm trunks for prizes?",
+        "ja": "クイズ:独立記念日に油を塗った木の柱に登って賞品を取る競争をするのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群在独立纪念日会比赛爬涂满油的槟榔树杆抢奖品?",
+        "hi": "अंदाज़ा लगाइए: कौन-सा समुदाय स्वतंत्रता दिवस पर चिकने खंभे पर चढ़कर इनाम जीतने की होड़ करता है?",
+        "id": "Tebak: komunitas mana yang merayakan hari kemerdekaan dengan lomba panjat pinang?",
+        "pt-BR": "Adivinhe: qual comunidade comemora a independência escalando troncos engordurados por prêmios?"
+      },
+      "options": [
+        { "id": "id", "emoji": "🇮🇩", "label": { "zh-TW": "印尼", "en": "Indonesia", "ja": "インドネシア", "zh-CN": "印尼", "hi": "इंडोनेशिया", "id": "Indonesia", "pt-BR": "Indonésia" } },
+        { "id": "hi", "emoji": "🇮🇳", "label": { "zh-TW": "印度", "en": "India", "ja": "インド", "zh-CN": "印度", "hi": "भारत", "id": "India", "pt-BR": "Índia" } },
+        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } },
+        { "id": "en", "emoji": "🇺🇸", "label": { "zh-TW": "美國", "en": "United States", "ja": "アメリカ", "zh-CN": "美国", "hi": "अमेरिका", "id": "Amerika Serikat", "pt-BR": "Estados Unidos" } }
+      ],
+      "answer": "id",
+      "explain": {
+        "zh-TW": "印尼 8 月 17 日獨立紀念日的 panjat pinang:全村合力疊羅漢爬油桿,搶掛在頂端的獎品。",
+        "en": "Indonesia's August 17th features panjat pinang — teams climb greased poles to grab prizes hung on top.",
+        "ja": "インドネシアの8月17日独立記念日の名物「パンジャット・ピナン」。油の柱に協力して登り、頂上の賞品を狙います。",
+        "zh-CN": "印尼 8 月 17 日独立纪念日的 panjat pinang:全村合力叠罗汉爬油杆,抢挂在顶端的奖品。",
+        "hi": "इंडोनेशिया में 17 अगस्त को पंजात पिनांग होता है — टीमें चिकने खंभे पर चढ़कर ऊपर टँगे इनाम पाने की कोशिश करती हैं।",
+        "id": "Setiap 17 Agustus ada panjat pinang — warga bahu-membahu memanjat batang licin demi hadiah di puncak.",
+        "pt-BR": "No 17 de agosto da Indonésia há o panjat pinang — equipes escalam mastros engordurados para pegar os prêmios no topo."
+      }
+    },
+    {
+      "id": "q-20260819-japan-bath",
+      "date": "2026-08-19",
+      "kind": "poll",
+      "topic": "ask-the-world",
+      "asker": "en",
+      "target": "ja",
+      "text": {
+        "zh-TW": "日本人真的每天晚上泡澡嗎?",
+        "en": "Do people in Japan really take a bath every night?",
+        "ja": "日本の人は本当に毎晩お風呂に浸かるの?",
+        "zh-CN": "日本人真的每天晚上泡澡吗?",
+        "hi": "क्या जापान के लोग सच में हर रात नहाने के टब में बैठते हैं?",
+        "id": "Apakah orang Jepang benar-benar berendam setiap malam?",
+        "pt-BR": "As pessoas no Japão realmente tomam banho de banheira toda noite?"
+      },
+      "options": [
+        { "id": "nightly", "emoji": "🛁", "label": { "zh-TW": "幾乎每晚都泡", "en": "Almost every night", "ja": "ほぼ毎晩", "zh-CN": "几乎每晚都泡", "hi": "लगभग हर रात", "id": "Hampir tiap malam", "pt-BR": "Quase toda noite" } },
+        { "id": "fewtimes", "emoji": "🗓️", "label": { "zh-TW": "一週泡幾次", "en": "A few times a week", "ja": "週に数回", "zh-CN": "一周泡几次", "hi": "हफ़्ते में कुछ बार", "id": "Beberapa kali seminggu", "pt-BR": "Algumas vezes por semana" } },
+        { "id": "shower", "emoji": "🚿", "label": { "zh-TW": "主要淋浴", "en": "Mostly shower", "ja": "ほぼシャワー", "zh-CN": "主要淋浴", "hi": "ज़्यादातर शावर", "id": "Umumnya mandi shower", "pt-BR": "Mais chuveiro" } },
+        { "id": "seasonal", "emoji": "❄️", "label": { "zh-TW": "夏天淋浴冬天泡", "en": "Shower in summer, bath in winter", "ja": "夏はシャワー冬は湯船", "zh-CN": "夏天淋浴冬天泡", "hi": "गर्मी में शावर, सर्दी में टब", "id": "Shower saat panas, berendam saat dingin", "pt-BR": "Chuveiro no verão, banheira no inverno" } }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260819-xmas-chicken",
+      "date": "2026-08-19",
+      "kind": "guess",
+      "topic": "christmas",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:在哪個社群,聖誕節吃「炸雞」是全民傳統,還得提前預訂?",
+        "en": "Guess: in which community is fried chicken THE Christmas meal, often pre-ordered weeks ahead?",
+        "ja": "クイズ:クリスマスに「フライドチキン」を予約してまで食べるのが定番なのはどのコミュニティ?",
+        "zh-CN": "你猜:在哪个社群,圣诞节吃「炸鸡」是全民传统,还得提前预订?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में क्रिसमस पर फ़्राइड चिकन खाना परंपरा है, जिसे हफ़्तों पहले बुक करना पड़ता है?",
+        "id": "Tebak: di komunitas mana ayam goreng jadi hidangan wajib Natal sampai harus dipesan jauh-jauh hari?",
+        "pt-BR": "Adivinhe: em qual comunidade frango frito é A ceia de Natal, encomendado com semanas de antecedência?"
+      },
+      "options": [
+        { "id": "en", "emoji": "🇺🇸", "label": { "zh-TW": "美國", "en": "United States", "ja": "アメリカ", "zh-CN": "美国", "hi": "अमेरिका", "id": "Amerika Serikat", "pt-BR": "Estados Unidos" } },
+        { "id": "ja", "emoji": "🇯🇵", "label": { "zh-TW": "日本", "en": "Japan", "ja": "日本", "zh-CN": "日本", "hi": "जापान", "id": "Jepang", "pt-BR": "Japão" } },
+        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } },
+        { "id": "zh-TW", "emoji": "🇹🇼", "label": { "zh-TW": "台灣", "en": "Taiwan", "ja": "台湾", "zh-CN": "台湾", "hi": "ताइवान", "id": "Taiwan", "pt-BR": "Taiwan" } }
+      ],
+      "answer": "ja",
+      "explain": {
+        "zh-TW": "1970 年代的行銷讓「聖誕節=肯德基」在日本深入人心,聖誕桶要提前好幾週預訂。",
+        "en": "A 1970s marketing campaign made “Kentucky for Christmas” a Japanese tradition — buckets are booked weeks ahead.",
+        "ja": "1970年代のキャンペーン以来「クリスマスにケンタッキー」が定着。バーレルは数週間前から予約制です。",
+        "zh-CN": "1970 年代的营销让「圣诞节=肯德基」在日本深入人心,圣诞桶要提前好几周预订。",
+        "hi": "1970 के दशक के एक विज्ञापन अभियान ने जापान में “क्रिसमस पर केएफ़सी” की परंपरा बना दी — बकेट हफ़्तों पहले बुक होती है।",
+        "id": "Kampanye iklan tahun 1970-an membuat “KFC saat Natal” jadi tradisi Jepang — pesanannya penuh berminggu-minggu sebelumnya.",
+        "pt-BR": "Uma campanha dos anos 1970 tornou “KFC no Natal” tradição no Japão — os baldes são reservados com semanas de antecedência."
+      }
+    },
+    {
+      "id": "q-20260820-housewarming",
+      "date": "2026-08-20",
+      "kind": "poll",
+      "topic": "moving-home",
+      "asker": "id",
+      "target": null,
+      "text": {
+        "zh-TW": "你們那裡搬新家會辦入厝儀式或請客嗎?",
+        "en": "Where you live, do people hold a housewarming ritual or party when moving in?",
+        "ja": "あなたの地域では、引っ越したらお祝いの儀式やパーティーをする?",
+        "zh-CN": "你们那里搬新家会办入宅仪式或请客吗?",
+        "hi": "आपके यहाँ नए घर में जाने पर गृह-प्रवेश या दावत होती है?",
+        "id": "Di tempatmu, apakah pindah rumah baru dirayakan dengan syukuran?",
+        "pt-BR": "Na sua região, mudar de casa é comemorado com ritual ou festa de inauguração?"
+      },
+      "options": [
+        { "id": "ritual", "emoji": "🙏", "label": { "zh-TW": "一定有儀式(拜拜/禱告)", "en": "Always a ritual or prayer", "ja": "必ず儀式やお祈り", "zh-CN": "一定有仪式(祭拜/祷告)", "hi": "हमेशा पूजा या प्रार्थना", "id": "Selalu ada doa/syukuran", "pt-BR": "Sempre com ritual ou oração" } },
+        { "id": "party", "emoji": "🎉", "label": { "zh-TW": "請親友來吃飯", "en": "A party with friends and family", "ja": "親しい人を招いて食事会", "zh-CN": "请亲友来吃饭", "hi": "दोस्तों-रिश्तेदारों की दावत", "id": "Mengundang kerabat makan", "pt-BR": "Festa com amigos e família" } },
+        { "id": "simple", "emoji": "🍰", "label": { "zh-TW": "簡單意思一下", "en": "Something small and simple", "ja": "ささやかに", "zh-CN": "简单意思一下", "hi": "कुछ छोटा-सा", "id": "Sekadarnya saja", "pt-BR": "Algo simples" } },
+        { "id": "nothing", "emoji": "📦", "label": { "zh-TW": "搬完就開始生活", "en": "Just move in and live", "ja": "特に何もしない", "zh-CN": "搬完就开始生活", "hi": "बस सामान रखकर रहना शुरू", "id": "Langsung tinggal saja", "pt-BR": "Só mudar e pronto" } }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260820-multiday-wedding",
+      "date": "2026-08-20",
+      "kind": "guess",
+      "topic": "weddings-and-customs",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的婚禮動輒連辦三天以上,儀式一場接一場?",
+        "en": "Guess: in which community do weddings routinely run three days or more, ceremony after ceremony?",
+        "ja": "クイズ:結婚式が3日以上続き、儀式が次々あるのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群的婚礼动辄连办三天以上,仪式一场接一场?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में शादियाँ अक्सर तीन दिन या उससे ज़्यादा चलती हैं, रस्म-पर-रस्म?",
+        "id": "Tebak: di komunitas mana pernikahan biasa berlangsung tiga hari lebih dengan rangkaian upacara?",
+        "pt-BR": "Adivinhe: em qual comunidade os casamentos costumam durar três dias ou mais, uma cerimônia após a outra?"
+      },
+      "options": [
+        { "id": "hi", "emoji": "🇮🇳", "label": { "zh-TW": "印度", "en": "India", "ja": "インド", "zh-CN": "印度", "hi": "भारत", "id": "India", "pt-BR": "Índia" } },
+        { "id": "ja", "emoji": "🇯🇵", "label": { "zh-TW": "日本", "en": "Japan", "ja": "日本", "zh-CN": "日本", "hi": "जापान", "id": "Jepang", "pt-BR": "Japão" } },
+        { "id": "en", "emoji": "🇺🇸", "label": { "zh-TW": "美國", "en": "United States", "ja": "アメリカ", "zh-CN": "美国", "hi": "अमेरिका", "id": "Amerika Serikat", "pt-BR": "Estados Unidos" } },
+        { "id": "zh-TW", "emoji": "🇹🇼", "label": { "zh-TW": "台灣", "en": "Taiwan", "ja": "台湾", "zh-CN": "台湾", "hi": "ताइवान", "id": "Taiwan", "pt-BR": "Taiwan" } }
+      ],
+      "answer": "hi",
+      "explain": {
+        "zh-TW": "印度婚禮常見 Haldi、Mehndi、Sangeet、正式婚禮到婚宴,連辦數天、賓客數百人是常態。",
+        "en": "Indian weddings often span days — Haldi, Mehndi, Sangeet, the ceremony and reception — with hundreds of guests.",
+        "ja": "インドの結婚式はハルディ、メヘンディ、サンギートから本式・披露宴まで数日がかり。数百人規模も普通です。",
+        "zh-CN": "印度婚礼常见 Haldi、Mehndi、Sangeet、正式婚礼到婚宴,连办数天、宾客数百人是常态。",
+        "hi": "भारतीय शादियाँ अक्सर कई दिन चलती हैं — हल्दी, मेहंदी, संगीत, फेरे और रिसेप्शन — सैकड़ों मेहमानों के साथ।",
+        "id": "Pernikahan India sering berhari-hari — Haldi, Mehndi, Sangeet, akad hingga resepsi — dengan ratusan tamu.",
+        "pt-BR": "Casamentos indianos duram dias — Haldi, Mehndi, Sangeet, cerimônia e recepção — com centenas de convidados."
+      }
+    },
+    {
+      "id": "q-20260821-elder-redenvelope",
+      "date": "2026-08-21",
+      "kind": "poll",
+      "topic": "birthdays-and-blessings",
+      "asker": "zh-CN",
+      "target": null,
+      "text": {
+        "zh-TW": "長輩生日時,你們會包紅包或送現金嗎?",
+        "en": "For an elder's birthday, do you give money (like a red envelope) as a gift?",
+        "ja": "年長者の誕生日に、現金(ご祝儀)を贈る習慣はある?",
+        "zh-CN": "长辈生日时,你们会包红包或送现金吗?",
+        "hi": "बड़ों के जन्मदिन पर क्या आप नकद या लिफ़ाफ़े में पैसे देते हैं?",
+        "id": "Saat ulang tahun orang yang dituakan, apakah kalian memberi uang (amplop)?",
+        "pt-BR": "No aniversário de um mais velho, vocês dão dinheiro (tipo envelope) de presente?"
+      },
+      "options": [
+        { "id": "always", "emoji": "🧧", "label": { "zh-TW": "一定會", "en": "Always", "ja": "必ず贈る", "zh-CN": "一定会", "hi": "हमेशा", "id": "Selalu", "pt-BR": "Sempre" } },
+        { "id": "occasion", "emoji": "🎊", "label": { "zh-TW": "大壽才會", "en": "Only for milestone birthdays", "ja": "節目の年だけ", "zh-CN": "大寿才会", "hi": "सिर्फ़ ख़ास जन्मदिन पर", "id": "Hanya ulang tahun besar", "pt-BR": "Só em aniversários marcantes" } },
+        { "id": "gift", "emoji": "🎁", "label": { "zh-TW": "送禮物不送現金", "en": "Gifts, not cash", "ja": "現金ではなく品物", "zh-CN": "送礼物不送现金", "hi": "तोहफ़ा देते हैं, नकद नहीं", "id": "Kado, bukan uang", "pt-BR": "Presente, não dinheiro" } },
+        { "id": "none", "emoji": "💐", "label": { "zh-TW": "心意到就好", "en": "Just good wishes", "ja": "気持ちだけ", "zh-CN": "心意到就好", "hi": "शुभकामनाएँ ही काफ़ी", "id": "Cukup doa dan ucapan", "pt-BR": "Só os parabéns" } }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260821-sweet-sixteen",
+      "date": "2026-08-21",
+      "kind": "guess",
+      "topic": "coming-of-age",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:「Sweet Sixteen」──把 16 歲生日辦成盛大派對──是哪個社群的傳統?",
+        "en": "Guess: throwing a huge “Sweet Sixteen” party for a 16th birthday is whose tradition?",
+        "ja": "クイズ:16歳の誕生日を盛大に祝う「スイート・シックスティーン」はどのコミュニティの伝統?",
+        "zh-CN": "你猜:「Sweet Sixteen」──把 16 岁生日办成盛大派对──是哪个社群的传统?",
+        "hi": "अंदाज़ा लगाइए: 16वें जन्मदिन की धूमधाम वाली “स्वीट सिक्सटीन” पार्टी किस समुदाय की परंपरा है?",
+        "id": "Tebak: pesta besar “Sweet Sixteen” untuk ulang tahun ke-16 adalah tradisi komunitas mana?",
+        "pt-BR": "Adivinhe: a grande festa de “Sweet Sixteen” aos 16 anos é tradição de qual comunidade?"
+      },
+      "options": [
+        { "id": "en", "emoji": "🇺🇸", "label": { "zh-TW": "美國", "en": "United States", "ja": "アメリカ", "zh-CN": "美国", "hi": "अमेरिका", "id": "Amerika Serikat", "pt-BR": "Estados Unidos" } },
+        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } },
+        { "id": "ja", "emoji": "🇯🇵", "label": { "zh-TW": "日本", "en": "Japan", "ja": "日本", "zh-CN": "日本", "hi": "जापान", "id": "Jepang", "pt-BR": "Japão" } },
+        { "id": "id", "emoji": "🇮🇩", "label": { "zh-TW": "印尼", "en": "Indonesia", "ja": "インドネシア", "zh-CN": "印尼", "hi": "इंडोनेशिया", "id": "Indonesia", "pt-BR": "Indonésia" } }
+      ],
+      "answer": "en",
+      "explain": {
+        "zh-TW": "美國的 Sweet Sixteen 是青春期的重要里程碑;巴西也有類似的 15 歲成年禮 Festa de Quinze Anos。",
+        "en": "The Sweet Sixteen is a classic American milestone; Brazil has a similar one at 15 — the Festa de Quinze Anos.",
+        "ja": "スイート・シックスティーンはアメリカの通過儀礼。ブラジルには15歳で祝う「フェスタ・デ・キンゼ・アノス」があります。",
+        "zh-CN": "美国的 Sweet Sixteen 是青春期的重要里程碑;巴西也有类似的 15 岁成年礼 Festa de Quinze Anos。",
+        "hi": "स्वीट सिक्सटीन अमेरिका की मशहूर परंपरा है; ब्राज़ील में 15 साल पर ऐसी ही “फ़ेस्ता दे किंज़े आनोस” होती है।",
+        "id": "Sweet Sixteen adalah tonggak khas Amerika; Brasil punya yang mirip di usia 15 — Festa de Quinze Anos.",
+        "pt-BR": "O Sweet Sixteen é um marco clássico americano; no Brasil temos a Festa de Quinze Anos."
+      }
+    },
+    {
+      "id": "q-20260822-moon-festival",
+      "date": "2026-08-22",
+      "kind": "poll",
+      "topic": "mid-autumn-and-moon-viewing",
+      "asker": "ja",
+      "target": null,
+      "text": {
+        "zh-TW": "你們會賞月嗎?中秋(或月見)通常怎麼過?",
+        "en": "Do you celebrate the harvest moon? How do you usually spend it?",
+        "ja": "お月見はする?十五夜や中秋はどう過ごす?",
+        "zh-CN": "你们会赏月吗?中秋(或月见)通常怎么过?",
+        "hi": "क्या आप शरद पूर्णिमा/चाँद देखने का त्योहार मनाते हैं? कैसे?",
+        "id": "Apakah kalian merayakan festival bulan purnama? Biasanya bagaimana?",
+        "pt-BR": "Vocês celebram a lua cheia do outono? Como costumam passar?"
+      },
+      "options": [
+        { "id": "family", "emoji": "🥮", "label": { "zh-TW": "全家團聚吃節慶食物", "en": "Family gathering with festive food", "ja": "家族で集まりご馳走", "zh-CN": "全家团聚吃节庆食物", "hi": "परिवार के साथ पकवान", "id": "Kumpul keluarga dengan hidangan khas", "pt-BR": "Reunião de família com comida típica" } },
+        { "id": "moononly", "emoji": "🌕", "label": { "zh-TW": "會賞月但不特別聚", "en": "Watch the moon, nothing big", "ja": "月は眺めるが特別なことはしない", "zh-CN": "会赏月但不特别聚", "hi": "चाँद देखते हैं, बस", "id": "Lihat bulan saja", "pt-BR": "Só observar a lua" } },
+        { "id": "ordinary", "emoji": "📅", "label": { "zh-TW": "只是普通的一天", "en": "Just an ordinary day", "ja": "普通の日", "zh-CN": "只是普通的一天", "hi": "आम दिन जैसा", "id": "Hari biasa saja", "pt-BR": "Um dia comum" } },
+        { "id": "nofestival", "emoji": "🤔", "label": { "zh-TW": "我們沒有這個節日", "en": "We don't have this festival", "ja": "その行事はない", "zh-CN": "我们没有这个节日", "hi": "हमारे यहाँ यह त्योहार नहीं", "id": "Kami tidak punya festival ini", "pt-BR": "Não temos esse festival" } }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260822-moon-bbq",
+      "date": "2026-08-22",
+      "kind": "guess",
+      "topic": "mid-autumn-and-moon-viewing",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群把中秋節過成「全民烤肉節」,巷口騎樓都在烤?",
+        "en": "Guess: which community turned the Mid-Autumn Festival into a nationwide barbecue night?",
+        "ja": "クイズ:中秋節が「国民的バーベキュー大会」と化しているのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群把中秋节过成「全民烤肉节」,巷口骑楼都在烤?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय ने मध्य-शरद उत्सव को देशव्यापी बारबेक्यू रात बना दिया है?",
+        "id": "Tebak: komunitas mana yang mengubah Festival Pertengahan Musim Gugur jadi malam barbeku nasional?",
+        "pt-BR": "Adivinhe: qual comunidade transformou o Festival do Meio do Outono em noite nacional de churrasco?"
+      },
+      "options": [
+        { "id": "zh-TW", "emoji": "🇹🇼", "label": { "zh-TW": "台灣", "en": "Taiwan", "ja": "台湾", "zh-CN": "台湾", "hi": "ताइवान", "id": "Taiwan", "pt-BR": "Taiwan" } },
+        { "id": "zh-CN", "emoji": "🇨🇳", "label": { "zh-TW": "中國", "en": "China", "ja": "中国", "zh-CN": "中国", "hi": "चीन", "id": "Tiongkok", "pt-BR": "China" } },
+        { "id": "ja", "emoji": "🇯🇵", "label": { "zh-TW": "日本", "en": "Japan", "ja": "日本", "zh-CN": "日本", "hi": "जापान", "id": "Jepang", "pt-BR": "Japão" } },
+        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } }
+      ],
+      "answer": "zh-TW",
+      "explain": {
+        "zh-TW": "1980 年代醬料廣告帶起風潮,如今台灣中秋夜家家戶戶在門口烤肉,已成獨有新傳統。",
+        "en": "A 1980s sauce ad sparked it — now Taiwanese families grill on their doorsteps every Mid-Autumn night.",
+        "ja": "1980年代のタレのCMがきっかけで、今や台湾の中秋の夜は家の前でバーベキューが新しい伝統に。",
+        "zh-CN": "1980 年代酱料广告带起风潮,如今台湾中秋夜家家户户在门口烤肉,已成独有新传统。",
+        "hi": "1980 के दशक के एक सॉस विज्ञापन से शुरू होकर, अब ताइवान में मध्य-शरद की रात घर-घर के बाहर बारबेक्यू होता है।",
+        "id": "Berawal dari iklan saus tahun 1980-an — kini keluarga Taiwan membakar sate di depan rumah tiap malam festival.",
+        "pt-BR": "Começou com um comercial de molho nos anos 1980 — hoje as famílias taiwanesas fazem churrasco na porta de casa nessa noite."
+      }
+    },
+    {
+      "id": "q-20260823-live-with-parents",
+      "date": "2026-08-23",
+      "kind": "poll",
+      "topic": "caregiving-across-generations",
+      "asker": "hi",
+      "target": null,
+      "text": {
+        "zh-TW": "你們那裡,子女通常跟父母同住到什麼時候?",
+        "en": "Where you live, how long do adult children usually live with their parents?",
+        "ja": "あなたの地域では、子どもはいつまで親と同居するのが普通?",
+        "zh-CN": "你们那里,子女通常跟父母同住到什么时候?",
+        "hi": "आपके यहाँ बच्चे आमतौर पर कब तक माता-पिता के साथ रहते हैं?",
+        "id": "Di tempatmu, sampai kapan anak biasanya tinggal bersama orang tua?",
+        "pt-BR": "Na sua região, até quando os filhos costumam morar com os pais?"
+      },
+      "options": [
+        { "id": "marriage", "emoji": "💍", "label": { "zh-TW": "結婚前都同住", "en": "Until marriage", "ja": "結婚まで", "zh-CN": "结婚前都同住", "hi": "शादी तक", "id": "Sampai menikah", "pt-BR": "Até casar" } },
+        { "id": "job", "emoji": "💼", "label": { "zh-TW": "開始工作就搬出", "en": "Move out when working", "ja": "就職したら独立", "zh-CN": "开始工作就搬出", "hi": "नौकरी लगते ही अलग", "id": "Pindah saat mulai kerja", "pt-BR": "Saem quando começam a trabalhar" } },
+        { "id": "college", "emoji": "🎓", "label": { "zh-TW": "上大學就搬出", "en": "Move out for college", "ja": "大学から一人暮らし", "zh-CN": "上大学就搬出", "hi": "कॉलेज जाते ही अलग", "id": "Pindah saat kuliah", "pt-BR": "Saem na faculdade" } },
+        { "id": "together", "emoji": "👨‍👩‍👧‍👦", "label": { "zh-TW": "多代同堂很常見", "en": "Multi-generation homes are common", "ja": "多世代同居が普通", "zh-CN": "多代同堂很常见", "hi": "संयुक्त परिवार आम है", "id": "Serumah lintas generasi itu biasa", "pt-BR": "Casas multigeração são comuns" } }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260823-mudik",
+      "date": "2026-08-23",
+      "kind": "guess",
+      "topic": "homecoming-and-reunion",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群每年節慶前有數千萬人同時返鄉的「mudik」大遷徙?",
+        "en": "Guess: which community sees tens of millions travel home at once in the yearly “mudik” exodus?",
+        "ja": "クイズ:祝祭前に数千万人が一斉帰省する「ムディック」があるのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群每年节庆前有数千万人同时返乡的「mudik」大迁徙?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में हर साल त्योहार से पहले करोड़ों लोग एक साथ घर लौटते हैं — “मुदिक”?",
+        "id": "Tebak: komunitas mana yang tiap tahun mengalami arus “mudik” puluhan juta orang pulang kampung?",
+        "pt-BR": "Adivinhe: qual comunidade vê dezenas de milhões viajando para casa de uma vez no êxodo anual do “mudik”?"
+      },
+      "options": [
+        { "id": "id", "emoji": "🇮🇩", "label": { "zh-TW": "印尼", "en": "Indonesia", "ja": "インドネシア", "zh-CN": "印尼", "hi": "इंडोनेशिया", "id": "Indonesia", "pt-BR": "Indonésia" } },
+        { "id": "en", "emoji": "🇺🇸", "label": { "zh-TW": "美國", "en": "United States", "ja": "アメリカ", "zh-CN": "美国", "hi": "अमेरिका", "id": "Amerika Serikat", "pt-BR": "Estados Unidos" } },
+        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } },
+        { "id": "ja", "emoji": "🇯🇵", "label": { "zh-TW": "日本", "en": "Japan", "ja": "日本", "zh-CN": "日本", "hi": "जापान", "id": "Jepang", "pt-BR": "Japão" } }
+      ],
+      "answer": "id",
+      "explain": {
+        "zh-TW": "開齋節前的印尼 mudik 是全球最大規模的年度返鄉潮之一,公路、渡輪、機場全面爆滿。",
+        "en": "Before Eid, Indonesia's mudik is one of the world's largest annual homecomings — roads, ferries and airports all packed.",
+        "ja": "断食明け大祭前のインドネシアの「ムディック」は世界最大級の帰省ラッシュ。道路も港も空港も大混雑です。",
+        "zh-CN": "开斋节前的印尼 mudik 是全球最大规模的年度返乡潮之一,公路、渡轮、机场全面爆满。",
+        "hi": "ईद से पहले इंडोनेशिया का मुदिक दुनिया की सबसे बड़ी सालाना घर-वापसी में से एक है — सड़कें, फ़ेरी, हवाई अड्डे सब भरे।",
+        "id": "Menjelang Lebaran, mudik di Indonesia adalah salah satu migrasi tahunan terbesar di dunia — jalan, feri, dan bandara penuh sesak.",
+        "pt-BR": "Antes do Eid, o mudik da Indonésia é um dos maiores retornos anuais do mundo — estradas, balsas e aeroportos lotados."
+      }
+    },
+    {
+      "id": "q-20260824-graduation",
+      "date": "2026-08-24",
+      "kind": "poll",
+      "topic": "graduation-season",
+      "asker": "en",
+      "target": null,
+      "text": {
+        "zh-TW": "你們的畢業典禮會把帽子拋向天空嗎?",
+        "en": "At your graduations, do people throw their caps into the air?",
+        "ja": "あなたの地域の卒業式では、帽子を空に投げる?",
+        "zh-CN": "你们的毕业典礼会把帽子抛向天空吗?",
+        "hi": "आपके यहाँ दीक्षांत समारोह में टोपियाँ हवा में उछाली जाती हैं?",
+        "id": "Di wisuda kalian, apakah topi dilempar ke udara?",
+        "pt-BR": "Nas formaturas de vocês, jogam o capelo para o alto?"
+      },
+      "options": [
+        { "id": "throw", "emoji": "🎓", "label": { "zh-TW": "一定要丟帽子", "en": "Cap toss is a must", "ja": "帽子投げは定番", "zh-CN": "一定要丢帽子", "hi": "टोपी उछालना ज़रूरी", "id": "Wajib lempar topi", "pt-BR": "Jogar o capelo é obrigatório" } },
+        { "id": "ceremony", "emoji": "📜", "label": { "zh-TW": "有典禮但不丟帽", "en": "Ceremony, no cap toss", "ja": "式はあるが投げない", "zh-CN": "有典礼但不丢帽", "hi": "समारोह होता है, टोपी नहीं उछालते", "id": "Ada upacara, tanpa lempar topi", "pt-BR": "Cerimônia sim, capelo não" } },
+        { "id": "dinner", "emoji": "🍽️", "label": { "zh-TW": "重點是謝師宴/聚餐", "en": "The dinner matters most", "ja": "食事会がメイン", "zh-CN": "重点是谢师宴/聚餐", "hi": "असली बात है दावत", "id": "Yang penting makan-makan", "pt-BR": "O jantar é o principal" } },
+        { "id": "simple", "emoji": "🤳", "label": { "zh-TW": "拍照留念就好", "en": "Just photos", "ja": "写真だけ", "zh-CN": "拍照留念就好", "hi": "बस फ़ोटो", "id": "Cukup foto-foto", "pt-BR": "Só as fotos" } }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260824-baraat",
+      "date": "2026-08-24",
+      "kind": "guess",
+      "topic": "weddings-and-customs",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的婚禮上,新郎會騎著白馬、帶著樂隊遊行進場?",
+        "en": "Guess: in which community does the groom arrive on a white horse with a marching band?",
+        "ja": "クイズ:花婿が白馬に乗り、楽隊を連れて入場するのはどのコミュニティの結婚式?",
+        "zh-CN": "你猜:哪个社群的婚礼上,新郎会骑着白马、带着乐队游行进场?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय की शादी में दूल्हा सफ़ेद घोड़ी पर बैंड-बाजे के साथ आता है?",
+        "id": "Tebak: di komunitas mana pengantin pria datang menunggang kuda putih diiringi marching band?",
+        "pt-BR": "Adivinhe: em qual comunidade o noivo chega a cavalo branco com uma banda?"
+      },
+      "options": [
+        { "id": "hi", "emoji": "🇮🇳", "label": { "zh-TW": "印度", "en": "India", "ja": "インド", "zh-CN": "印度", "hi": "भारत", "id": "India", "pt-BR": "Índia" } },
+        { "id": "zh-TW", "emoji": "🇹🇼", "label": { "zh-TW": "台灣", "en": "Taiwan", "ja": "台湾", "zh-CN": "台湾", "hi": "ताइवान", "id": "Taiwan", "pt-BR": "Taiwan" } },
+        { "id": "id", "emoji": "🇮🇩", "label": { "zh-TW": "印尼", "en": "Indonesia", "ja": "インドネシア", "zh-CN": "印尼", "hi": "इंडोनेशिया", "id": "Indonesia", "pt-BR": "Indonésia" } },
+        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } }
+      ],
+      "answer": "hi",
+      "explain": {
+        "zh-TW": "北印度婚禮的 baraat:新郎騎白馬(或白馬車)在親友歌舞與樂隊簇擁下抵達婚禮現場。",
+        "en": "The baraat of North Indian weddings — the groom rides in on a white horse amid dancing relatives and a live band.",
+        "ja": "北インドの結婚式の「バラート」。花婿は白馬に乗り、踊る親族と楽隊に囲まれて式場に到着します。",
+        "zh-CN": "北印度婚礼的 baraat:新郎骑白马(或白马车)在亲友歌舞与乐队簇拥下抵达婚礼现场。",
+        "hi": "उत्तर भारतीय शादियों की बारात — दूल्हा सफ़ेद घोड़ी पर, नाचते रिश्तेदारों और बैंड के साथ पहुँचता है।",
+        "id": "Baraat dalam pernikahan India Utara — pengantin pria menunggang kuda putih diiringi kerabat yang menari dan band.",
+        "pt-BR": "O baraat dos casamentos do norte da Índia — o noivo chega num cavalo branco entre parentes dançando e uma banda."
+      }
+    }
+  ]
+}

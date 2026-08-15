@@ -24,6 +24,19 @@
 - [ ] **新 Topic 沒有熱度分數**(import 不碰 `topic_scores`),級距顯示最低階。
   排名 job 屬 M2 的 19 job 管線;過渡期可決定要不要手動塞 demo 分數(要問用戶,不要自作主張)。
 
+## 每日世界一問(2026-08-15 上線;規格=docs/briefs/daily-question.md)
+
+- [ ] **題庫要持續補**:涵蓋日期用指令查(`SELECT MAX(qdate) FROM questions`),用完前端會停在最近一題
+  (不開天窗但會失去「每日」感)。補題=編輯 `content/questions.json`。之後可排每週 claude 批次產題
+  (額度回復後再議,動工前問用戶)。
+- [ ] **「個人」世界公民排行榜**被 OAuth(M2)擋住(anon_id 無顯示名且 Safari 下不穩,拿來排名會做出隨機掉名次的榜);
+  本次交付**社群層級**參與榜(participation 端點)。OAuth 上線後升級。
+- [ ] **guess 題的答案在靜態 JSON 裡**(view-source 可先看到)——遊戲性取捨,記錄在案;要藏就得把揭曉搬進 Worker(契約變更)。
+- [ ] **/questions/ 頁每卡各發一次 results 請求**:題庫累積後單次載入的並發會線性成長
+  (GET results 目前無限流、無 Cache-Control)。題數過 30 前加 lazy-load(進 viewport 才 fetch)或批次端點。
+- [ ] **`scripts/export-data.mjs` 含 3 個 NUL 位元組**(複合鍵分隔符,2026-08-15 驗收時發現、HEAD 既有),
+  git 視其為二進位 → 這支腳本的任何改動在 diff/PR 上看不見。建議改用可見分隔字元,另案處理。
+
 ## M2 前置:GSC/GA4/DNS/Slack 設定(2026-08-11 用戶指示動工)
 
 - [x] **網域註冊**(2026-08-15):GoDaddy。查:`curl -sL https://rdap.org/domain/aeiou.now`。

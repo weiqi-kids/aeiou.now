@@ -1,0 +1,214 @@
+---
+// 「今日世界公民」:各語言社群當日投票參與數(§6.3、契約 §7.3)。
+// 降級同 QuestionCard 四態,屬性名 data-q-state。date 參數用**客戶端** UTC 今日
+// (不是 build 時的日期——讀者打開頁面當下才是「今天」)。
+import { t } from '../lib/i18n.mjs';
+import { LOCALE } from '../lib/config.mjs';
+import { COMMUNITIES } from '../lib/communities.mjs';
+
+interface Props {
+  heading: string;
+}
+const { heading } = Astro.props;
+const apiUrl = import.meta.env.PUBLIC_API_URL || '';
+
+const participationConfig = {
+  locale: LOCALE,
+  communities: COMMUNITIES,
+  i18n: {
+    noVotes: t('q.no_votes'),
+    yourCommunity: t('q.your_community'),
+  },
+};
+const participationConfigJson = JSON.stringify(participationConfig).replace(/</g, '\\u003c');
+---
+
+<div class="q-p" data-q-p data-q-state="closed" data-api-url={apiUrl}>
+  <script type="application/json" data-q-p-config set:html={participationConfigJson} />
+  <h2 class="q-p-heading">{heading}</h2>
+
+  <div class="q-p-fallback">
+    <p class="q-p-closed-note">{t('q.closed')}</p>
+  </div>
+
+  <div class="q-p-loading" hidden>
+    <p class="q-p-loading-note" role="status">{t('q.loading')}</p>
+  </div>
+
+  <div class="q-p-live" hidden></div>
+</div>
+
+<script>
+  function setState(root, state) {
+    const fallback = root.querySelector('.q-p-fallback');
+    const loading = root.querySelector('.q-p-loading');
+    const live = root.querySelector('.q-p-live');
+    if (fallback) fallback.hidden = state !== 'closed';
+    if (loading) loading.hidden = state !== 'loading';
+    if (live) live.hidden = state !== 'open';
+    root.dataset.qState = state;
+  }
+
+  function el(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = text;
+    return node;
+  }
+
+  function communityLabel(cfg, locale) {
+    const hit = cfg.communities && cfg.communities[locale];
+    return hit ? hit.flag + ' ' + hit.name : String(locale);
+  }
+
+  function todayUtc() {
+    const now = new Date();
+    return new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()))
+      .toISOString()
+      .slice(0, 10);
+  }
+
+  function renderRows(cfg, data) {
+    const wrap = el('div', 'q-p-rows');
+    const byLocale = data.by_locale || {};
+    const rows = Object.keys(byLocale)
+      .map((loc) => ({ loc, count: byLocale[loc] || 0 }))
+      .sort((a, b) => b.count - a.count);
+    const max = rows.reduce((m, row) => Math.max(m, row.count), 0);
+
+    rows.forEach((row) => {
+      const item = el('div', 'q-p-row');
+      if (row.loc === cfg.locale) item.classList.add('is-mine');
+
+      const label = el('span', 'q-p-label');
+      label.appendChild(document.createTextNode(communityLabel(cfg, row.loc)));
+      if (row.loc === cfg.locale) label.appendChild(el('span', 'q-p-badge', cfg.i18n.yourCommunity));
+      item.appendChild(label);
+
+      const track = el('div', 'q-p-track');
+      const barFill = el('div', 'q-p-fill');
+      barFill.style.width = (max > 0 ? Math.round((row.count / max) * 100) : 0) + '%';
+      track.appendChild(barFill);
+      item.appendChild(track);
+
+      item.appendChild(el('span', 'q-p-count', String(row.count)));
+      wrap.appendChild(item);
+    });
+
+    return wrap;
+  }
+
+  function initParticipation(root) {
+    const api = root.dataset.apiUrl;
+    if (!api) return; // PUBLIC_API_URL 未設:完全不發 fetch,永遠 closed
+
+    let cfg;
+    try {
+      cfg = JSON.parse(root.querySelector('[data-q-p-config]').textContent);
+    } catch {
+      return;
+    }
+
+    setState(root, 'loading');
+
+    fetch(api + '/v1/questions/participation?date=' + todayUtc(), { credentials: 'include' })
+      .then((res) => {
+        if (!res.ok) throw new Error('http ' + res.status);
+        return res.json();
+      })
+      .then((data) => {
+        if (!data || typeof data.total !== 'number' || !data.by_locale) throw new Error('bad shape');
+        const live = root.querySelector('.q-p-live');
+        live.textContent = '';
+        if (data.total > 0) {
+          live.appendChild(renderRows(cfg, data));
+        } else {
+          live.appendChild(el('p', 'q-p-empty', cfg.i18n.noVotes));
+        }
+        setState(root, 'open');
+      })
+      .catch(() => {
+        setState(root, 'closed');
+      });
+  }
+
+  document.querySelectorAll('[data-q-p]').forEach(initParticipation);
+</script>
+
+<style>
+  .q-p {
+    border: 0.0625rem solid var(--color-line);
+    border-block-start: 0.25rem solid var(--color-primary);
+    border-radius: var(--radius-md);
+    padding: clamp(1.25rem, 4vw, 2rem);
+    background: var(--color-white);
+    box-shadow: var(--shadow-card);
+  }
+  .q-p[data-q-state='closed'] {
+    border-block-start-color: var(--color-line-strong);
+  }
+  .q-p-heading {
+    margin: 0 0 1rem;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+  }
+  .q-p-closed-note,
+  .q-p-loading-note {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+  .q-p :global(.q-p-empty) {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+  .q-p :global(.q-p-rows) {
+    display: grid;
+    gap: 0.6rem;
+  }
+  .q-p :global(.q-p-row) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.3rem 0.75rem;
+  }
+  .q-p :global(.q-p-label) {
+    grid-column: 1 / -1;
+    font-size: var(--text-sm);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .q-p :global(.q-p-row.is-mine .q-p-label) {
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  .q-p :global(.q-p-badge) {
+    font-size: var(--text-xs);
+    padding: 0.1rem 0.5rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-primary-soft);
+    color: var(--color-primary);
+  }
+  .q-p :global(.q-p-track) {
+    block-size: 0.6rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-heat-track);
+    overflow: hidden;
+  }
+  .q-p :global(.q-p-fill) {
+    block-size: 100%;
+    background: var(--color-primary);
+    border-radius: var(--radius-pill);
+  }
+  .q-p :global(.q-p-row.is-mine .q-p-fill) {
+    background: var(--color-accent);
+  }
+  .q-p :global(.q-p-count) {
+    font-size: var(--text-sm);
+    font-variant-numeric: tabular-nums;
+    color: var(--color-ink-soft);
+  }
+</style>

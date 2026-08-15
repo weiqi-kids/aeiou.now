@@ -1,0 +1,575 @@
+---
+// 每日世界一問:poll(投票)與 guess(猜謎)共用卡片。規格見
+// docs/briefs/daily-question.md §6.3、契約見 docs/briefs/api-contract.md §7.1-7.2。
+//
+// 降級模型(與 DiscussionRoom.astro 同款四態,屬性名改用 data-q-state 避免撞既有 CSS):
+//   closed  ← 靜態預設值。沒有 JS、fetch 失敗、非 2xx、JSON 壞掉、PUBLIC_API_URL 未設
+//   loading ← JS 一啟動(發 fetch 之前)就切,還沒拿到回應
+//   open(投票中) ← fetch 成功、data.mine 為 null:顯示可點的選項 + 已答人數/q.no_votes
+//   open(結果)   ← fetch 成功且 data.mine 非 null,或投票送出成功:顯示分佈 + 各社群最多人選
+//
+// 伺服器為準,不做樂觀 UI:點下選項後禁用按鈕、送出、用回應重繪,不先猜結果。
+// 429/失敗一律顯示 q.error_retry 並恢復按鈕(可再試),不切回 closed(那是「沒开始/壞掉」的語意)。
+//
+// JS 動態節點一律 createElement + textContent,絕不 innerHTML。
+import { t } from '../lib/i18n.mjs';
+import { LOCALE } from '../lib/config.mjs';
+import { withBase } from '../lib/paths.mjs';
+import { COMMUNITIES, communityLabel } from '../lib/communities.mjs';
+
+interface QuestionOption {
+  id: string;
+  emoji?: string;
+  label: string;
+}
+
+interface Question {
+  question_id: string;
+  date: string;
+  kind: 'poll' | 'guess';
+  topic_id: string;
+  topic_slug: string;
+  asker_locale: string | null;
+  target_locale: string | null;
+  text: string;
+  options: QuestionOption[];
+  answer: string | null;
+  explain: string | null;
+}
+
+interface Props {
+  question: Question;
+  heading?: string;
+  anchorId?: string;
+  nextHref?: string;
+  nextLabel?: string;
+}
+
+const { question, heading, anchorId, nextHref, nextLabel } = Astro.props;
+const apiUrl = import.meta.env.PUBLIC_API_URL || '';
+
+const askedByText = question.asker_locale
+  ? t('q.asked_by').replace('{community}', communityLabel(question.asker_locale))
+  : null;
+const askedToText = question.target_locale
+  ? t('q.asked_to').replace('{community}', communityLabel(question.target_locale))
+  : null;
+
+const cardConfig = {
+  locale: LOCALE,
+  kind: question.kind,
+  answer: question.answer || null,
+  options: question.options,
+  explain: question.explain || null,
+  communities: COMMUNITIES,
+  i18n: {
+    voteHint: t('q.vote_hint'),
+    answeredCount: t('q.answered_count'),
+    yourVote: t('q.your_vote'),
+    communityTop: t('q.community_top'),
+    correct: t('q.correct'),
+    incorrect: t('q.incorrect'),
+    correctRate: t('q.correct_rate'),
+    answerLabel: t('q.answer_label'),
+    noVotes: t('q.no_votes'),
+    errorRetry: t('q.error_retry'),
+  },
+};
+// </script> 防拆(比照 DiscussionRoom.astro 慣例)
+const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
+---
+
+<div
+  class="q-card"
+  id={anchorId}
+  data-q-card
+  data-q-state="closed"
+  data-api-url={apiUrl}
+  data-question-id={question.question_id}
+>
+  <script type="application/json" data-q-config set:html={cardConfigJson} />
+
+  {heading && <h2 class="q-heading">{heading}</h2>}
+  {askedByText && <p class="q-asked">{askedByText}</p>}
+  {askedToText && <p class="q-asked">{askedToText}</p>}
+  <p class="q-text">{question.text}</p>
+
+  <div class="q-fallback">
+    <div class="q-options" aria-hidden="true">
+      {question.options.map((opt) => (
+        <button type="button" class="q-option" disabled>
+          <span class="q-option-emoji">{opt.emoji}</span>
+          <span class="q-option-label">{opt.label}</span>
+        </button>
+      ))}
+    </div>
+    <p class="q-closed-note">{t('q.closed')}</p>
+  </div>
+
+  <div class="q-loading" hidden>
+    <p class="q-loading-note" role="status">{t('q.loading')}</p>
+  </div>
+
+  <div class="q-live" hidden></div>
+
+  <div class="q-foot">
+    <a class="q-tell-us" href={withBase(`/topic/${question.topic_slug}/`)}>{t('q.tell_us')}</a>
+    {nextHref && (
+      <a class="q-next" href={nextHref}>{nextLabel}</a>
+    )}
+  </div>
+</div>
+
+<script>
+  // 四態切換集中一支,理由同 DiscussionRoom.setRoomState:避免「還沒開始載入」誤用 closed 畫面。
+  function setState(root, state) {
+    const fallback = root.querySelector('.q-fallback');
+    const loading = root.querySelector('.q-loading');
+    const live = root.querySelector('.q-live');
+    if (fallback) fallback.hidden = state !== 'closed';
+    if (loading) loading.hidden = state !== 'loading';
+    if (live) live.hidden = state !== 'open';
+    root.dataset.qState = state;
+  }
+
+  function fill(template, values) {
+    return String(template).replace(/\{(\w+)\}/g, (whole, key) =>
+      Object.prototype.hasOwnProperty.call(values, key) ? String(values[key]) : whole
+    );
+  }
+
+  function el(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = text;
+    return node;
+  }
+
+  function communityLabel(cfg, locale) {
+    const hit = cfg.communities && cfg.communities[locale];
+    return hit ? hit.flag + ' ' + hit.name : String(locale);
+  }
+
+  // 百分比一律四捨五入整數,分母 0 不除。
+  function pct(count, total) {
+    return total > 0 ? Math.round((count / total) * 100) : 0;
+  }
+
+  // by_locale 只含有票的 locale、每個 locale 的 options 只含計數 > 0 的 option(契約 §7.1)——
+  // 整體選項合計由前端自行加總。
+  function overallCounts(data) {
+    const out = {};
+    const byLocale = (data && data.by_locale) || {};
+    Object.keys(byLocale).forEach((loc) => {
+      const opts = (byLocale[loc] && byLocale[loc].options) || {};
+      Object.keys(opts).forEach((optId) => {
+        out[optId] = (out[optId] || 0) + opts[optId];
+      });
+    });
+    return out;
+  }
+
+  function renderResults(cfg, data) {
+    const wrap = el('div', 'q-results');
+    const counts = overallCounts(data);
+    const total = typeof data.total === 'number' ? data.total : 0;
+
+    const bars = el('div', 'q-result-bars');
+    cfg.options.forEach((opt) => {
+      const count = counts[opt.id] || 0;
+      const p = pct(count, total);
+      const row = el('div', 'q-result-row');
+      if (data.mine === opt.id) row.classList.add('is-mine');
+
+      const label = el('span', 'q-result-label');
+      label.appendChild(el('span', 'q-result-emoji', opt.emoji || ''));
+      label.appendChild(document.createTextNode(' ' + opt.label));
+      if (data.mine === opt.id) label.appendChild(el('span', 'q-result-badge', cfg.i18n.yourVote));
+      row.appendChild(label);
+
+      const track = el('div', 'q-result-track');
+      const barFill = el('div', 'q-result-fill');
+      barFill.style.width = p + '%';
+      track.appendChild(barFill);
+      row.appendChild(track);
+
+      row.appendChild(el('span', 'q-result-pct', p + '%'));
+      bars.appendChild(row);
+    });
+    wrap.appendChild(bars);
+
+    wrap.appendChild(
+      el('p', 'q-count-note', total > 0 ? fill(cfg.i18n.answeredCount, { n: total }) : cfg.i18n.noVotes)
+    );
+
+    // 各社群最多人選:by_locale 只有有票的社群,逐一找出各自票數最高的選項。
+    const localeEntries = Object.keys(data.by_locale || {})
+      .map((loc) => {
+        const row = data.by_locale[loc] || {};
+        const opts = row.options || {};
+        let topId = null;
+        let topCount = -1;
+        Object.keys(opts).forEach((optId) => {
+          if (opts[optId] > topCount) {
+            topCount = opts[optId];
+            topId = optId;
+          }
+        });
+        return { loc, topId, topCount, total: row.total || 0 };
+      })
+      .filter((entry) => entry.topId !== null)
+      .sort((a, b) => b.topCount - a.topCount);
+
+    if (localeEntries.length > 0) {
+      const topWrap = el('div', 'q-community-top');
+      topWrap.appendChild(el('p', 'q-community-top-title', cfg.i18n.communityTop));
+      const list = el('ul', 'q-community-list');
+      localeEntries.forEach((entry) => {
+        const optCfg = cfg.options.find((o) => o.id === entry.topId);
+        const li = el('li', 'q-community-item');
+        li.appendChild(el('span', 'q-community-name', communityLabel(cfg, entry.loc)));
+        const optLabel = optCfg ? ((optCfg.emoji ? optCfg.emoji + ' ' : '') + optCfg.label) : entry.topId;
+        li.appendChild(document.createTextNode(' — ' + optLabel + ' (' + pct(entry.topCount, entry.total) + '%)'));
+        list.appendChild(li);
+      });
+      topWrap.appendChild(list);
+      wrap.appendChild(topWrap);
+    }
+
+    // guess:再加正解、自己對錯、答對率、解說(答案/解說是靜態資料,不經 API)。
+    if (cfg.kind === 'guess' && cfg.answer) {
+      const answerCfg = cfg.options.find((o) => o.id === cfg.answer);
+      const answerWrap = el('div', 'q-answer');
+      const answerLine = el('p', 'q-answer-line');
+      answerLine.appendChild(el('span', 'q-answer-label', cfg.i18n.answerLabel + '：'));
+      answerLine.appendChild(
+        document.createTextNode(answerCfg ? (answerCfg.emoji ? answerCfg.emoji + ' ' : '') + answerCfg.label : cfg.answer)
+      );
+      answerWrap.appendChild(answerLine);
+      if (data.mine) {
+        const correct = data.mine === cfg.answer;
+        answerWrap.appendChild(el('p', correct ? 'q-correct' : 'q-incorrect', correct ? cfg.i18n.correct : cfg.i18n.incorrect));
+      }
+      const correctCount = counts[cfg.answer] || 0;
+      answerWrap.appendChild(el('p', 'q-correct-rate', fill(cfg.i18n.correctRate, { pct: pct(correctCount, total) })));
+      if (cfg.explain) answerWrap.appendChild(el('p', 'q-explain', cfg.explain));
+      wrap.appendChild(answerWrap);
+    }
+
+    return wrap;
+  }
+
+  function submitVote(root, cfg, api, optionId, optionsEl, errEl) {
+    errEl.hidden = true;
+    Array.prototype.forEach.call(optionsEl.querySelectorAll('button'), (b) => {
+      b.disabled = true;
+    });
+    fetch(api + '/v1/votes', {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ question_id: root.dataset.questionId, option_id: optionId, locale: cfg.locale }),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error('http ' + res.status);
+        return res.json();
+      })
+      .then((data) => {
+        if (!data || typeof data.total !== 'number' || !data.by_locale) throw new Error('bad shape');
+        const live = root.querySelector('.q-live');
+        live.textContent = '';
+        live.appendChild(renderResults(cfg, data));
+      })
+      .catch(() => {
+        // 失敗(含 429):顯示 q.error_retry、恢復按鈕可再試——不是「壞掉」也不是「還沒開始」。
+        errEl.textContent = cfg.i18n.errorRetry;
+        errEl.hidden = false;
+        Array.prototype.forEach.call(optionsEl.querySelectorAll('button'), (b) => {
+          b.disabled = false;
+        });
+      });
+  }
+
+  function renderVote(root, cfg, api, data) {
+    const wrap = el('div', 'q-vote');
+    wrap.appendChild(el('p', 'q-hint', cfg.i18n.voteHint));
+
+    const options = el('div', 'q-options');
+    const err = el('p', 'q-error');
+    err.hidden = true;
+    cfg.options.forEach((opt) => {
+      const btn = el('button', 'q-option');
+      btn.type = 'button';
+      btn.dataset.optionId = opt.id;
+      btn.appendChild(el('span', 'q-option-emoji', opt.emoji || ''));
+      btn.appendChild(el('span', 'q-option-label', opt.label));
+      btn.addEventListener('click', () => submitVote(root, cfg, api, opt.id, options, err));
+      options.appendChild(btn);
+    });
+    wrap.appendChild(options);
+    wrap.appendChild(err);
+
+    const total = typeof data.total === 'number' ? data.total : 0;
+    wrap.appendChild(
+      el('p', 'q-count-note', total > 0 ? fill(cfg.i18n.answeredCount, { n: total }) : cfg.i18n.noVotes)
+    );
+    return wrap;
+  }
+
+  function initQuestion(root) {
+    const api = root.dataset.apiUrl;
+    const qid = root.dataset.questionId;
+    if (!api || !qid) return; // PUBLIC_API_URL 未設:完全不發 fetch,永遠 closed
+
+    let cfg;
+    try {
+      cfg = JSON.parse(root.querySelector('[data-q-config]').textContent);
+    } catch {
+      return; // 設定壞掉一律保持 closed
+    }
+
+    // 發 fetch 之前就切 loading,理由同 DiscussionRoom:避免每次正常載入都先閃一下關閉文案。
+    setState(root, 'loading');
+
+    fetch(api + '/v1/questions/' + qid + '/results', { credentials: 'include' })
+      .then((res) => {
+        if (!res.ok) throw new Error('http ' + res.status);
+        return res.json();
+      })
+      .then((data) => {
+        if (!data || typeof data.total !== 'number' || !data.by_locale) throw new Error('bad shape');
+        const live = root.querySelector('.q-live');
+        live.textContent = '';
+        if (data.mine) {
+          live.appendChild(renderResults(cfg, data));
+        } else {
+          live.appendChild(renderVote(root, cfg, api, data));
+        }
+        setState(root, 'open');
+      })
+      .catch(() => {
+        // 任何失敗退回 closed,不顯示過期票數、不做 fallback 快照。
+        setState(root, 'closed');
+      });
+  }
+
+  document.querySelectorAll('[data-q-card]').forEach(initQuestion);
+</script>
+
+<style>
+  .q-card {
+    border: 0.0625rem solid var(--color-line);
+    border-block-start: 0.25rem solid var(--color-primary);
+    border-radius: var(--radius-md);
+    padding: clamp(1.25rem, 4vw, 2rem);
+    background: var(--color-white);
+    box-shadow: var(--shadow-card);
+    scroll-margin-block-start: 1rem;
+  }
+  .q-card[data-q-state='closed'] {
+    border-block-start-color: var(--color-line-strong);
+  }
+  .q-heading {
+    margin: 0 0 0.75rem;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+  }
+  .q-asked {
+    margin: 0 0 0.25rem;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+  .q-text {
+    margin: 0 0 1rem;
+    font-size: var(--text-base);
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .q-closed-note {
+    margin: 0.5rem 0 0;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+  .q-loading-note {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+  .q-foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-block-start: 1.25rem;
+    padding-block-start: 0.75rem;
+    border-block-start: 0.0625rem solid var(--color-line);
+  }
+  .q-tell-us,
+  .q-next {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-accent-dark);
+  }
+  .q-tell-us:hover,
+  .q-next:hover {
+    text-decoration: underline;
+  }
+
+  /* 選項按鈕:靜態 fallback 與 JS 產生的投票畫面共用同一批 class,一律 :global()
+     (Astro 的 scoped 屬性不會套到 runtime createElement 出來的節點)。 */
+  .q-card :global(.q-options) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+  }
+  .q-card :global(.q-option) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    padding: 0.5rem 1rem;
+    border: 0.0625rem solid var(--color-line-strong);
+    border-radius: var(--radius-pill);
+    background: var(--color-white);
+    cursor: pointer;
+  }
+  .q-card :global(.q-option:hover:not(:disabled)) {
+    border-color: var(--color-primary-line);
+    background: var(--color-primary-soft);
+  }
+  .q-card :global(.q-option:disabled) {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  .q-card :global(.q-option-emoji) {
+    font-size: var(--text-base);
+  }
+  .q-card :global(.q-hint) {
+    margin: 0 0 0.75rem;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+  .q-card :global(.q-error) {
+    margin: 0.5rem 0 0;
+    font-size: var(--text-sm);
+    color: var(--color-accent-dark);
+  }
+  .q-card :global(.q-count-note) {
+    margin: 0.75rem 0 0;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+
+  /* 結果視圖 */
+  .q-card :global(.q-result-bars) {
+    display: grid;
+    gap: 0.6rem;
+  }
+  .q-card :global(.q-result-row) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+  }
+  .q-card :global(.q-result-label) {
+    grid-column: 1 / -1;
+    font-size: var(--text-sm);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .q-card :global(.q-result-row.is-mine .q-result-label) {
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  .q-card :global(.q-result-badge) {
+    font-size: var(--text-xs);
+    padding: 0.1rem 0.5rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-accent-soft);
+    color: var(--color-accent-dark);
+  }
+  .q-card :global(.q-result-track) {
+    block-size: 0.6rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-heat-track);
+    overflow: hidden;
+  }
+  .q-card :global(.q-result-fill) {
+    block-size: 100%;
+    background: var(--color-primary);
+    border-radius: var(--radius-pill);
+  }
+  .q-card :global(.q-result-row.is-mine .q-result-fill) {
+    background: var(--color-accent);
+  }
+  .q-card :global(.q-result-pct) {
+    font-size: var(--text-sm);
+    font-variant-numeric: tabular-nums;
+    color: var(--color-ink-soft);
+  }
+  .q-card :global(.q-community-top) {
+    margin-block-start: 1rem;
+    padding-block-start: 0.75rem;
+    border-block-start: 0.0625rem solid var(--color-line);
+  }
+  .q-card :global(.q-community-top-title) {
+    margin: 0 0 0.5rem;
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--color-ink-soft);
+  }
+  .q-card :global(.q-community-list) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.35rem;
+  }
+  .q-card :global(.q-community-item) {
+    font-size: var(--text-sm);
+  }
+  .q-card :global(.q-community-name) {
+    font-weight: 600;
+  }
+  .q-card :global(.q-answer) {
+    margin-block-start: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    background: var(--color-bg-light);
+  }
+  .q-card :global(.q-answer-line) {
+    margin: 0 0 0.4rem;
+    font-size: var(--text-sm);
+  }
+  .q-card :global(.q-answer-label) {
+    font-weight: 700;
+  }
+  .q-card :global(.q-correct) {
+    margin: 0 0 0.4rem;
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+  .q-card :global(.q-incorrect) {
+    margin: 0 0 0.4rem;
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--color-accent-dark);
+  }
+  .q-card :global(.q-correct-rate) {
+    margin: 0 0 0.4rem;
+    font-size: var(--text-sm);
+    color: var(--color-ink-soft);
+  }
+  .q-card :global(.q-explain) {
+    margin: 0;
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    color: var(--color-ink-soft);
+  }
+</style>

@@ -25,11 +25,20 @@
 // 用同一支 TopicBoard、同一種列(2026-08-11 用戶指正)。
 import BaseLayout from '../layouts/BaseLayout.astro';
 import TopicBoard from '../components/TopicBoard.astro';
+import QuestionCard from '../components/QuestionCard.astro';
+import TodayWorld from '../components/TodayWorld.astro';
+import Participation from '../components/Participation.astro';
 import { t } from '../lib/i18n.mjs';
 import { withBase } from '../lib/paths.mjs';
 import { monthDay } from '../lib/format.mjs';
-import { recentTopics, topicsByHeat, countryName } from '../lib/data.mjs';
+import { recentTopics, topicsByHeat, countryName, questionsForDate, todayWorld } from '../lib/data.mjs';
 import { siteDescription } from '../lib/seo.mjs';
+
+// 每日世界一問(docs/briefs/daily-question.md §6.3):四個新區塊插在 #trending 之前。
+// poll/guess 各自可能為 null(題庫空、或該 kind 沒有 date<=今日的題目)——為 null 時
+// 整塊不渲染;guess 為 null 時 poll 也不生「#guess」錨點連結(沒有目標可跳)。
+const { poll, guess } = questionsForDate(new Date());
+const todayWorldCountries = todayWorld(new Date());
 
 // 首頁 = 近期話題(2026-08-11 用戶指示):快要到的議題排前面——「像是最近要到的七夕、
 // 鬼門開、普渡……等等」。排序鍵見 lib/data.mjs 的 recentTopics():各國 observed_date /
@@ -66,6 +75,37 @@ function seasonNote(topic) {
   pageType="CollectionPage"
   activeSort="global"
 >
+  {poll && (
+    <section class="q-section">
+      <QuestionCard
+        question={poll}
+        heading={t('q.daily_title')}
+        nextHref={guess ? '#guess' : undefined}
+        nextLabel={guess ? t('q.next') : undefined}
+      />
+    </section>
+  )}
+
+  {guess && (
+    <section class="q-section">
+      <QuestionCard
+        question={guess}
+        anchorId="guess"
+        heading={t('q.guess_title')}
+        nextHref={withBase('questions/')}
+        nextLabel={t('q.all_questions')}
+      />
+    </section>
+  )}
+
+  <section class="q-section">
+    <TodayWorld countries={todayWorldCountries} heading={t('q.today_world_title')} />
+  </section>
+
+  <section class="q-section">
+    <Participation heading={t('q.participation_title')} />
+  </section>
+
   <section class="board" id="trending">
     <div class="section-head">
       <h2>{t('home.recent_topics')}</h2>
@@ -79,6 +119,9 @@ function seasonNote(topic) {
 </BaseLayout>
 
 <style>
+  .q-section {
+    margin-block-end: clamp(2rem, 5vw, 3rem);
+  }
   .board {
     margin-block-end: clamp(2.5rem, 6vw, 4rem);
     scroll-margin-block-start: 1rem;

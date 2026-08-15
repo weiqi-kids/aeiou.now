@@ -133,6 +133,35 @@ CREATE TABLE IF NOT EXISTS topic_cycles (
   UNIQUE (topic_id, started_at)
 );
 
+-- ============ 每日世界一問域(2026-08-15 新增;規格見 docs/briefs/daily-question.md §2) ============
+-- 權威來源 = content/questions.json;import-questions.mjs 整組 DELETE 重建,不放時間戳(維持 export 決定論)。
+
+CREATE TABLE IF NOT EXISTS questions (
+  question_id   TEXT PRIMARY KEY,          -- content id(非 ULID,人工可讀)
+  qdate         TEXT NOT NULL,             -- YYYY-MM-DD(UTC)
+  kind          TEXT NOT NULL CHECK (kind IN ('poll','guess')),
+  topic_id      TEXT NOT NULL,             -- import 時由 slug 解析
+  asker_locale  TEXT,
+  target_locale TEXT,
+  answer_option TEXT,                      -- kind=guess 才有
+  status        TEXT NOT NULL DEFAULT 'active'
+);
+CREATE TABLE IF NOT EXISTS question_i18n (
+  question_id TEXT NOT NULL, locale TEXT NOT NULL,
+  text TEXT NOT NULL, explain TEXT,
+  PRIMARY KEY (question_id, locale)
+);
+CREATE TABLE IF NOT EXISTS question_options (
+  question_id TEXT NOT NULL, option_id TEXT NOT NULL,
+  ord INTEGER NOT NULL, emoji TEXT,
+  PRIMARY KEY (question_id, option_id)
+);
+CREATE TABLE IF NOT EXISTS question_option_i18n (
+  question_id TEXT NOT NULL, option_id TEXT NOT NULL, locale TEXT NOT NULL,
+  label TEXT NOT NULL,
+  PRIMARY KEY (question_id, option_id, locale)
+);
+
 -- ============ §3 在地域 ============
 
 CREATE TABLE IF NOT EXISTS places (

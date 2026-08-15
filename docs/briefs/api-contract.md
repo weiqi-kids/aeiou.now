@@ -44,7 +44,7 @@ Set-Cookie: anon_id=<ULID>; Path=/; Max-Age=31536000; HttpOnly; Secure; SameSite
 | 404 | `not_found` | topic_id / post_id 不存在 |
 | 401 | `unauthorized` | 內部端點 Bearer token 不符 |
 | 405 | `method_not_allowed` | — |
-| 429 | `rate_limited` | 入口限流(2026-08-15):寫入端點依 anon_id 與 IP(sha256 雜湊)雙鍵計數,任一超限即擋。上限見 Worker `RATE_LIMITS`(post 3/5min、20/24h;comment 10/5min、200/24h;reaction 60/5min) |
+| 429 | `rate_limited` | 入口限流(2026-08-15):寫入端點依 anon_id 與 IP(sha256 雜湊)雙鍵計數,任一超限即擋。上限見 Worker `RATE_LIMITS`(post 3/5min、20/24h;comment 10/5min、200/24h;reaction 60/5min;vote 30/5min、300/24h) |
 
 > `access_level` **只 gate 討論室,不 gate 靜態頁**。M1 的兩個示範 Topic 都是 level 0。
 
@@ -274,3 +274,52 @@ Response 200:`{ "i18n_upserted": 6, "posts_done": 1, "posts_rejected": 0 }`
    `comments=8`(2026-08-11 定版時由 3 調高):討論室的留言預設只露 2 則、其餘收合,拿 3 則的話收合永遠只收得起 1 則,那個展開鈕形同虛設。上限是契約允許的 10。
 3. **只有 fetch 成功且解析出 `posts` 陣列**才把容器改成 `data-room-state="open"` 並替換內容;任何失敗(網路錯誤、非 2xx、JSON 壞掉)一律保持 `closed`,**不顯示過期資料、不做 fallback 快照**。
 4. `PUBLIC_API_URL` 未設時,**完全不發 fetch**,永遠 `closed`。
+
+---
+
+## 7. 每日世界一問(2026-08-15 新增;完整功能規格見 `docs/briefs/daily-question.md`,兩處同步)
+
+**社群 = 語言 = 站台**:投票者的社群由前端送的 `locale`(該站 build 時的 LOCALE)決定,**不做國家判定**、不讀 `request.cf.country`。猜謎的答案與解說不經 API(前端用靜態資料揭曉)。
+
+### 7.1 `GET /v1/questions/:id/results` —— 聚合結果(公開,CORS;**不發 cookie**)
+
+`:id` = question_id(題庫字串 id,非 ULID)。不存在回 404 `not_found`。
+
+```json
+{ "question_id": "q-20260815-bubble-tea", "server_time": 1770000000,
+  "total": 57,
+  "by_locale": { "zh-TW": { "total": 30, "options": { "daily": 12, "weekly": 10, "sometimes": 8 } } },
+  "mine": "daily" }
+```
+
+- `by_locale` 只含**有票的** locale;每個 locale 的 `options` 只含**計數 > 0** 的 option(比照 feed 的 reactions 慣例)。整體選項合計由前端自行加總。
+- `mine` = 當前 anon_id 對此題投過的 option_id;沒 cookie 或沒投過 = `null`。
+
+### 7.2 `POST /v1/votes` —— 投票(公開,CORS;限流 kind=`vote`)
+
+```json
+{ "question_id": "q-20260815-bubble-tea", "option_id": "daily", "locale": "zh-TW" }
+```
+
+- 驗證:`locale` ∈ LOCALES;question 存在且 `status='active'`(否則 404 `not_found` / 403 `topic_locked` 語意沿用:非 active 回 403);`option_id` ∈ 該題 `options_json`(否則 400 `invalid_body`)。
+- anon_id 三段式(cookie 或新發,回應帶 `Set-Cookie`)。
+- **一人一題一票**:`INSERT ... ON CONFLICT (question_id, anon_id) DO UPDATE SET option_id=excluded.option_id, locale=excluded.locale, updated_at=…`(重投=改票;`created_at` 保留首次值,參與統計以它計日)。
+- Response 200 = 與 7.1 同構(投完票後的最新聚合,`mine` 為剛投的 option)。
+
+### 7.3 `GET /v1/questions/participation?date=YYYY-MM-DD` —— 當日各社群參與數(公開,CORS;不發 cookie)
+
+`date` 格式不合回 400 `invalid_body`。計 `created_at` 落在該 UTC 日 [00:00, 24:00) 的票,依 locale 分組:
+
+```json
+{ "date": "2026-08-15", "server_time": 1770000000, "total": 123,
+  "by_locale": { "zh-TW": 41, "ja": 30 } }
+```
+
+### 7.4 `POST /internal/sync/questions` —— 主機 → D1 題目精簡副本(Bearer,比照 §5.1)
+
+```json
+{ "questions": [ { "question_id": "q-20260815-bubble-tea", "qdate": "2026-08-15", "kind": "poll",
+    "topic_id": "top_01J...", "options": ["daily","weekly","sometimes","rarely"], "status": "active" } ] }
+```
+
+語意 = upsert 覆蓋(以 question_id 為準);Worker 端把 `options` 存成 `options_json`。Response 200:`{ "questions_upserted": N }`。

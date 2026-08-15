@@ -682,6 +682,7 @@ data/
 │       ├── facts.json               語言中立:topic_observances、relations、source ids
 │       ├── i18n.json                七語一檔(title/summary/keywords + 各地方表現 customs_text)
 │       └── highlights.json          歷史精華(凍結貼文的原文 + 七語譯文)
+├── questions/<locale>.json          每日一問題庫(每檔只含該 locale 的 text/label/explain;§11)
 ├── places/<city_code>.json          語言中立事實 + 各語系描述
 ├── events/<city_code>.json
 ├── rankings/
@@ -709,7 +710,36 @@ data/
 | 4 | 每日 UGC 量級 | 假設 1,000 貼文 + 1 萬留言/日 → D1 免費額度約撐 1.5 年 | 決定何時要啟用 R2 分層 |
 | 5 | `posts.target_country` | 保留為 nullable | Ask the World 若不需要指定國家,此欄留空即可 |
 
-## 11. 尚未涵蓋、需另立文件的
+## 11. 每日一問域(2026-08-15 新增;功能規格=`docs/briefs/daily-question.md`,API=契約 §7)
+
+**社群 = 語言 = 站台,不做國家判定**(用戶拍板)。題目是內容(權威:`content/questions.json` → 主機 SQLite;
+`data/questions/<locale>.json` 是產物);**票是 UGC,權威在 D1**。猜謎答案不進 D1(前端用靜態資料揭曉)。
+
+主機四表(`db/schema-host.sql`;import 時整組刪除重建,不放時間戳以維持 export 決定論):
+
+```sql
+questions             (question_id PK, qdate, kind poll|guess, topic_id, asker_locale,
+                       target_locale, answer_option, status)
+question_i18n         (question_id, locale, text, explain)          PK(question_id, locale)
+question_options      (question_id, option_id, ord, emoji)          PK(question_id, option_id)
+question_option_i18n  (question_id, option_id, locale, label)       PK(question_id, option_id, locale)
+```
+
+D1 兩表(`db/schema-d1.sql`;questions 為精簡副本,故意與主機不同構,比照 topics 慣例):
+
+```sql
+questions       (question_id PK, qdate, kind, topic_id, options_json, status)
+question_votes  (question_id, anon_id, option_id, locale, created_at, updated_at)
+                PK(question_id, anon_id)   -- 一人一題一票;重投=覆蓋 option_id,created_at 保留首次
+```
+
+管線:`import-questions.mjs`(hourly-export.sh 內,失敗即中止)→ `export-data.mjs` 產 `data/questions/` →
+`sync-questions-to-d1.mjs`(cron-15min.sh 內)推精簡副本。題數/日期範圍一律用指令查:
+`sqlite3 db/aeiou.sqlite "SELECT kind,COUNT(*),MIN(qdate),MAX(qdate) FROM questions GROUP BY kind"`。
+
+---
+
+## 12. 尚未涵蓋、需另立文件的
 
 - **API 契約**:Worker 端點的 request/response schema、錯誤碼、CORS、快取策略
 - **排程規格**:19 個 job 各自的輸入/輸出/冪等性/失敗語意

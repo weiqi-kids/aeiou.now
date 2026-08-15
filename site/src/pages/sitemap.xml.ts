@@ -21,6 +21,7 @@ export function GET({ site }) {
 
   add('', { changefreq: 'daily', priority: '1.0' });
   add('about/', { changefreq: 'monthly', priority: '0.3' });
+  add('questions/', { changefreq: 'daily', priority: '0.5' });
   for (const sort of ['today', 'nearby', 'events']) add(`topics/${sort}/`, { changefreq: 'daily', priority: '0.8' });
   for (const window of WINDOWS) add(`rankings/${window}/`, { changefreq: 'daily', priority: '0.6' });
 

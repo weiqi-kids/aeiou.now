@@ -62,6 +62,15 @@ log "import-topics.mjs ..."
 IMPORT_OUT="$("$NODE_BIN" "$REPO/scripts/import-topics.mjs" 2>&1)" || \
   log "WARN: import-topics 有檔案失敗(不中斷 export):$(echo "$IMPORT_OUT" | grep '✗' | head -2 | tr '\n' ' ')"
 
+# 0.5(2026-08-15 加)每日世界一問題庫:content/questions.json 匯入 SQLite——**失敗即中止**
+#    (比照下面 import-topic-occurrences:壞題庫不准上線,不像 import-topics 那樣容忍單檔失敗)。
+log "import-questions.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/import-questions.mjs"; then
+  log "FAILED: import-questions.mjs(題庫驗證未過)"
+  record_job failed 0 0 0 1 "import-questions.mjs failed"
+  exit 1
+fi
+
 log "check-topic-calendar.mjs ..."
 if ! "$NODE_BIN" "$REPO/scripts/check-topic-calendar.mjs"; then
   log "FAILED: 52 週覆蓋或 Topic cover 驗收未通過"
