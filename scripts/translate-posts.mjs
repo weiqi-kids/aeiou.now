@@ -146,7 +146,10 @@ function runClaude(prompt) {
   });
   if (r.error) throw new Error(`claude spawn failed: ${r.error.message}`);
   if (r.status !== 0)
-    throw new Error(`claude exited ${r.status}${r.signal ? ` (signal ${r.signal})` : ""}: ${String(r.stderr || "").slice(0, 300)}`);
+    // claude CLI 的錯誤常印在 stdout(不是 stderr),兩者都要留(2026-08-15 排錯教訓)
+    throw new Error(
+      `claude exited ${r.status}${r.signal ? ` (signal ${r.signal})` : ""}: stderr=${String(r.stderr || "").slice(0, 200)} stdout=${String(r.stdout || "").slice(0, 300)}`
+    );
   return r.stdout;
 }
 
