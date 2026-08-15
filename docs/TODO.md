@@ -59,7 +59,11 @@
 
 ## M2 才做(用戶已同意延後;動工前先問)
 
-- [ ] Bot 防護(Turnstile / rate limit)——**上自訂網域前必須補**(現在是有意識的裸奔)
+- [x] Bot 防護第一、二層(2026-08-15 完成):①入口限流(Worker `RATE_LIMITS`,anon_id+IP 雙鍵,
+  429;事件表 `rate_events` 只存 IP 雜湊)②價值閘門(翻譯管線內判定,沒價值→`moderation`+`skipped`
+  下架不翻,判定從寬)。**切自訂網域的前置條件已滿足。**
+- [ ] Turnstile(Bot 防護第三層,擋純腳本):判斷可後補——限流+價值閘門就位後,等實際被打再上
+  (用戶未明示反對此排序;要提前做先問)
 - [ ] 網域註冊 + Linode DNS + 七站自訂網域(hreflang、語系切換器、sitemap/IndexNow/GSC 都卡在這之後)
   ——**設定類前置已拆到上節**;七站切換自訂網域(CNAME/BASE_PATH/hreflang)仍在此
 - [ ] OAuth(Google/GitHub/LINE;cn 市場皆不通為已知缺口)

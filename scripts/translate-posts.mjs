@@ -7,7 +7,10 @@
 //
 // 流程:
 //   1. GET  /internal/ugc/pending-translation?limit=50   撈 D1 待翻 post(Worker 同時標 translating)
-//   2. 每則翻**六語**(七語系扣掉 original_locale;原文即該語,不重複翻),
+//   2. 同一次 `claude -p` 呼叫先做**價值判定**再翻譯(2026-08-15 Bot 防護第二層):
+//      判定沒價值(廣告/亂碼/灌水/詐騙)→ D1+主機都標 status='moderation' +
+//      translation_status='skipped',不翻譯、feed 自動排除(不露出)。判定從寬,不確定就留。
+//      有價值的每則翻**六語**(七語系扣掉 original_locale;原文即該語,不重複翻),
 //      用 `claude -p`(訂閱 CLI,/root/.local/bin/claude,**不是 Anthropic API**),
 //      一次呼叫處理多則 × 六語,嚴格解析 JSON,解析失敗算「該批」失敗(其他批照跑)。
 //   3. **先** upsert 進主機 SQLite posts / post_i18n(回流),**再** POST /internal/translations 回寫 D1。
@@ -88,7 +91,15 @@ const POST_COLS = [
 // ---------- claude -p ----------
 
 function buildPrompt(items) {
-  return `你是專業的社群內容翻譯者。以下每一則是全球議題平台上的**使用者貼文原文**,請把每一則翻成它指定的每一個目標語言。
+  return `你是全球議題平台的內容把關者兼專業社群翻譯者。以下每一則是**使用者貼文原文**。
+
+第一步:價值判定(每一則都要判)。
+只有以下情況判 "valuable": false —— 純廣告/推銷/導流連結、鍵盤亂打或隨機字元的無意義字串、
+與表達無關的純灌水複製貼上、詐騙或色情內容。
+判斷**從寬**:只要看得出是真人想表達的內容——再短、再口語、錯字連篇、單純一句感想或表情——一律 true。
+不確定就 true。這不是品質評分,是垃圾過濾。
+
+第二步:只把 "valuable": true 的則翻成它指定的每一個目標語言;false 的**完全不要翻**。
 
 翻譯規則(逐條遵守):
 - 保持原文的語氣、口語感、標點風格與**換行位置**(原文的換行要原樣保留)。
@@ -99,8 +110,11 @@ function buildPrompt(items) {
 
 輸出規則(違反即整批作廢):
 - **只輸出一個 JSON 物件**,不要 markdown code fence,不要任何 JSON 以外的字元。
-- 格式:{"translations":[{"id":"<原樣抄回輸入的 id>","locale":"<目標語言代碼>","content":"<譯文>"}]}
-- 必須為輸入中**每一組 (id, locale) 組合**都輸出一筆,一筆都不能少、不能多。
+- 格式:{"judgments":[{"id":"<原樣抄回輸入的 id>","valuable":true}],
+        "translations":[{"id":"<id>","locale":"<目標語言代碼>","content":"<譯文>"}]}
+- judgments 必須涵蓋輸入中**每一個 id**,一個都不能少。
+- translations 必須為每一個 valuable=true 的 id 的**每一個目標語言**各輸出一筆,
+  一筆都不能少、不能多;valuable=false 的 id 不得出現在 translations。
 - content 內的換行用 \\n 轉義(合法 JSON 字串)。
 
 輸入(JSON):
@@ -136,7 +150,7 @@ function runClaude(prompt) {
   return r.stdout;
 }
 
-/** 翻一批(多則 × 六語)。回傳 Map<post_id, {locale: content}>;任何一組缺漏 → 整批 throw。 */
+/** 判定+翻一批。回傳 { ok: Map<post_id,{locale:content}>, rejected: post_id[] };缺漏 → 整批 throw。 */
 function translateChunk(posts) {
   const idOf = new Map(); // 短代號 ↔ post_id(不讓模型抄 26 字元 ULID,降低抄錯風險)
   const items = posts.map((p, i) => {
@@ -155,6 +169,21 @@ function translateChunk(posts) {
   const parsed = extractJson(runClaude(buildPrompt(items)));
   if (!parsed || !Array.isArray(parsed.translations))
     throw new Error("claude output has no translations array");
+  if (!Array.isArray(parsed.judgments))
+    throw new Error("claude output has no judgments array");
+
+  // 價值判定:每個 id 都要有一筆;缺漏 → 整批作廢
+  const valuable = new Map(); // post_id → boolean
+  for (const j of parsed.judgments) {
+    if (!j || typeof j.id !== "string" || typeof j.valuable !== "boolean")
+      throw new Error("malformed judgment entry in claude output");
+    const postId = idOf.get(j.id);
+    if (!postId) throw new Error(`claude judgment returned unknown id ${j.id}`);
+    valuable.set(postId, j.valuable);
+  }
+  for (const p of posts)
+    if (!valuable.has(p.post_id)) throw new Error(`missing judgment for ${p.post_id}`);
+  const rejected = posts.filter((p) => valuable.get(p.post_id) === false).map((p) => p.post_id);
 
   const out = new Map();
   for (const t of parsed.translations) {
@@ -162,13 +191,16 @@ function translateChunk(posts) {
       throw new Error("malformed translation entry in claude output");
     const postId = idOf.get(t.id);
     if (!postId) throw new Error(`claude returned unknown id ${t.id}`);
+    if (valuable.get(postId) === false)
+      throw new Error(`claude translated rejected post ${postId}`);
     if (!LOCALES.includes(t.locale)) throw new Error(`claude returned unknown locale ${t.locale}`);
     if (!out.has(postId)) out.set(postId, {});
     out.get(postId)[t.locale] = t.content;
   }
 
-  // 嚴格驗收:每則都要六語齊全且非空
+  // 嚴格驗收:valuable 的每則都要六語齊全且非空
   for (const p of posts) {
+    if (valuable.get(p.post_id) === false) continue;
     const got = out.get(p.post_id) || {};
     for (const l of LOCALES) {
       if (l === p.original_locale) {
@@ -179,15 +211,21 @@ function translateChunk(posts) {
         throw new Error(`missing/empty translation for ${p.post_id} locale ${l}`);
     }
   }
-  return out;
+  return { ok: out, rejected };
 }
 
 // ---------- 主機回流 ----------
 
-function upsertPost(db, post, translationStatus) {
+function upsertPost(db, post, translationStatus, statusOverride = null) {
   const existed = db.prepare("SELECT 1 FROM posts WHERE post_id = ?").get(post.post_id) !== undefined;
   const values = POST_COLS.map((c) =>
-    c === "translation_status" ? translationStatus : post[c] === undefined ? null : post[c]
+    c === "translation_status"
+      ? translationStatus
+      : c === "status" && statusOverride
+        ? statusOverride
+        : post[c] === undefined
+          ? null
+          : post[c]
   );
   const setClause = POST_COLS.filter((c) => c !== "post_id")
     .map((c) => `${c} = excluded.${c}`)
@@ -266,15 +304,17 @@ try {
   if (cached.length > 0) log(`[${JOB_NAME}] ${cached.length} post(s) already fully translated on host — skipping claude`);
 
   const okPairs = cached.slice(); // [[post, {locale: content}], ...]
+  const rejectedIds = []; // 價值閘門判定沒價值 → moderation + skipped,不翻不露出
 
   for (let i = 0; i < todo.length; i += CHUNK) {
     const chunk = todo.slice(i, i + CHUNK);
     const label = `${i / CHUNK + 1}/${Math.ceil(todo.length / CHUNK)}`;
     log(`[${JOB_NAME}] claude batch ${label}: ${chunk.length} post(s) × 6 locales`);
     try {
-      const map = translateChunk(chunk);
-      for (const p of chunk) okPairs.push([p, map.get(p.post_id)]);
-      log(`[${JOB_NAME}] claude batch ${label}: ok`);
+      const { ok: map, rejected } = translateChunk(chunk);
+      for (const p of chunk) if (map.has(p.post_id)) okPairs.push([p, map.get(p.post_id)]);
+      rejectedIds.push(...rejected);
+      log(`[${JOB_NAME}] claude batch ${label}: ok (${rejected.length} rejected)`);
     } catch (e) {
       failed += chunk.length;
       const msg = `batch ${label} failed (${chunk.map((p) => p.post_id).join(",")}): ${e.message || e}`;
@@ -284,14 +324,22 @@ try {
   }
 
   const okIds = new Set(okPairs.map(([p]) => p.post_id));
+  const rejectedSet = new Set(rejectedIds);
   const at = nowSec();
 
   // ---- 步驟 A:回流主機(先寫主機,再回寫 D1) ----
+  // 被拒的也鏡射(status='moderation'):留紀錄且冪等,不會殘留舊的 translating 狀態
   db.exec("BEGIN");
   try {
     for (const p of fetched) {
       const done = okIds.has(p.post_id);
-      const existed = upsertPost(db, p, done ? "done" : "translating");
+      const rej = rejectedSet.has(p.post_id);
+      const existed = upsertPost(
+        db,
+        p,
+        done ? "done" : rej ? "skipped" : "translating",
+        rej ? "moderation" : null
+      );
       existed ? updated++ : created++;
     }
     for (const [p, map] of okPairs) {
@@ -313,10 +361,10 @@ try {
     for (const [locale, content] of Object.entries(map))
       translations.push({ post_id: p.post_id, locale, content, translated_at: at, translator: "claude" });
 
-  if (translations.length > 0) {
+  if (translations.length > 0 || rejectedIds.length > 0) {
     const res = await api("/internal/translations", {
       method: "POST",
-      body: { translations, done_post_ids: [...okIds] },
+      body: { translations, done_post_ids: [...okIds], rejected_post_ids: rejectedIds },
     });
     log(`[${JOB_NAME}] worker: ${JSON.stringify(res)}`);
   }
@@ -330,7 +378,7 @@ try {
     failed,
     error: errors.length > 0 ? errors.join(" | ") : null,
   });
-  log(`[${JOB_NAME}] ${status}: read=${read} created=${created} updated=${updated} failed=${failed}`);
+  log(`[${JOB_NAME}] ${status}: read=${read} created=${created} updated=${updated} failed=${failed} rejected=${rejectedIds.length}`);
   db.close();
   if (status === "failed") process.exit(1);
 } catch (e) {

@@ -249,7 +249,12 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
 - **降級不做 fallback 快照**:動態異常時顯示關閉狀態,**不顯示過期資料**。靜態 HTML 預設
   `data-room-state="closed"`(沒有 JS 的讀者看到的就是它,curl 驗降級也靠它)。
 - **`topics.status='archived'` 仍可發文**(只是不熱);**`posts.status='archived'` 才是永久鎖定**。同名不同義。
-- **Post 翻譯六語譯文(不翻原文那語)、Comment 不翻譯**。翻譯用 `claude -p` 訂閱 CLI,**不是 API**。
+- **Post 翻譯前先過價值閘門**(2026-08-15,用戶拍板):同一次 claude 呼叫先判有沒有價值,
+  沒價值(廣告/亂碼/灌水/詐騙)→ `status='moderation'`+`translation_status='skipped'`,
+  不翻譯、feed 自動下架;判定**從寬**,不確定就留。有價值才翻**六語譯文(不翻原文那語)**、
+  **Comment 不翻譯**。翻譯用 `claude -p` 訂閱 CLI,**不是 API**。
+- **寫入端點有入口限流**(Worker `RATE_LIMITS`,anon_id+IP 雙鍵,超限 429):上限值是介面常數,
+  改動屬契約變更要問用戶。IP 只存 sha256(SYNC_SECRET+ip),**絕不存明文 IP**。
 - **`claude -p` 一律在 `/tmp` 空目錄跑,絕不在 repo 目錄跑**——claude 會把 cwd 與各層父目錄的
   `CLAUDE.md` 讀進 context,在 repo 跑等於每次呼叫白花約 12,200 tokens,且譯文行為會被手冊內容綁住。
   改 `scripts/translate-posts.mjs` 的 `cwd` 前先讀該檔檔頭(2026-08-13 實測數據在那)。

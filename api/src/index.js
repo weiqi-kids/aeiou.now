@@ -1,6 +1,7 @@
 // aeiou-api — 動態互動層:討論室發文/留言/reaction + 8H 即時 feed
 // 唯一契約:docs/briefs/api-contract.md(欄位名不得自行加減)
-// M1 刻意不做:Turnstile / rate limit(有意識的裸奔)、OAuth、圖片、Markdown 渲染。
+// M1 刻意不做:Turnstile(被實際攻擊再補)、OAuth、圖片、Markdown 渲染。
+// 入口限流(2026-08-15):寫入端點依 anon_id 與 IP 雙鍵計數,超限回 429 rate_limited。
 
 const REACTION_SET = ["❤️", "😂", "😮", "😢", "🤔", "🎉", "👏"]; // 不含 👍(用戶明示排除)
 const LOCALES = ["zh-TW", "en", "ja", "zh-CN", "hi", "id", "pt-BR"];
@@ -8,6 +9,19 @@ const ALLOWED_ORIGINS = ["https://weiqi-kids.github.io"];
 const WINDOW_HOURS = 8;
 const POST_MAX_CHARS = 5000;
 const COMMENT_MAX_CHARS = 2000;
+
+// 限流上限(對真人寬鬆、對腳本致命;anon_id 與 IP 分開計,任一超限即擋)
+const RATE_LIMITS = {
+  post: [
+    { window: 300, max: 3 }, // 5 分鐘 3 篇
+    { window: 86400, max: 20 }, // 24 小時 20 篇
+  ],
+  comment: [
+    { window: 300, max: 10 },
+    { window: 86400, max: 200 },
+  ],
+  reaction: [{ window: 300, max: 60 }],
+};
 
 // ---------- 基礎工具 ----------
 
@@ -100,6 +114,52 @@ async function readJson(request) {
   } catch {
     return undefined;
   }
+}
+
+// ---------- 入口限流 ----------
+// 事件寫進 rate_events(D1 獨有表);IP 只存 sha256(SYNC_SECRET+ip),不存明文。
+// anonId 可能是這一刻新發的(計數必為 0),所以 IP 鍵才是主要防線。
+
+async function ipKey(request, env) {
+  const ip = request.headers.get("CF-Connecting-IP") || "";
+  const digest = await crypto.subtle.digest(
+    "SHA-256",
+    new TextEncoder().encode((env.SYNC_SECRET || "") + ip)
+  );
+  return "ip:" + [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+/** 超限回 429 Response;未超限記錄事件並回 null。 */
+async function rateLimit(request, env, ctx, kind, anonId, cors) {
+  const limits = RATE_LIMITS[kind];
+  const now = Math.floor(Date.now() / 1000);
+  const keys = [await ipKey(request, env)];
+  if (anonId) keys.push("anon:" + anonId);
+
+  const maxWindow = Math.max(...limits.map((l) => l.window));
+  const counts = await env.DB.batch(
+    keys.map((k) =>
+      env.DB.prepare(
+        "SELECT ts FROM rate_events WHERE kind = ? AND key = ? AND ts > ?"
+      ).bind(kind, k, now - maxWindow)
+    )
+  );
+  for (let i = 0; i < keys.length; i++) {
+    const tss = counts[i].results.map((r) => r.ts);
+    for (const l of limits) {
+      if (tss.filter((t) => t > now - l.window).length >= l.max)
+        return err(429, "rate_limited", "Too many requests, slow down", cors);
+    }
+  }
+
+  const stmts = keys.map((k) =>
+    env.DB.prepare("INSERT INTO rate_events (kind, key, ts) VALUES (?, ?, ?)").bind(kind, k, now)
+  );
+  // 機率性清舊事件(>25h),不佔請求延遲
+  if (Math.random() < 0.02)
+    stmts.push(env.DB.prepare("DELETE FROM rate_events WHERE ts < ?").bind(now - 90000));
+  ctx.waitUntil(env.DB.batch(stmts));
+  return null;
 }
 
 // 內部端點:Bearer <SYNC_SECRET>;SHA-256 後 timingSafeEqual,避免時序側信道
@@ -259,7 +319,9 @@ async function handleFeed(request, env, topicId, url, cors) {
   );
 }
 
-async function handleCreatePost(request, env, cors) {
+async function handleCreatePost(request, env, ctx, cors) {
+  const limited = await rateLimit(request, env, ctx, "post", getAnonId(request), cors);
+  if (limited) return limited;
   const body = await readJson(request);
   if (!body) return err(400, "invalid_body", "Malformed JSON body", cors);
   const { topic_id, content, locale } = body;
@@ -346,7 +408,9 @@ async function handleCreatePost(request, env, cors) {
   );
 }
 
-async function handleCreateComment(request, env, cors) {
+async function handleCreateComment(request, env, ctx, cors) {
+  const limited = await rateLimit(request, env, ctx, "comment", getAnonId(request), cors);
+  if (limited) return limited;
   const body = await readJson(request);
   if (!body) return err(400, "invalid_body", "Malformed JSON body", cors);
   const { post_id, content, locale } = body;
@@ -416,7 +480,9 @@ async function handleCreateComment(request, env, cors) {
   );
 }
 
-async function handleReaction(request, env, cors) {
+async function handleReaction(request, env, ctx, cors) {
+  const limited = await rateLimit(request, env, ctx, "reaction", getAnonId(request), cors);
+  if (limited) return limited;
   const body = await readJson(request);
   if (!body) return err(400, "invalid_body", "Malformed JSON body", cors);
   const { target_type, target_id, kind } = body;
@@ -618,6 +684,9 @@ async function handleTranslations(request, env) {
   if (!body) return err(400, "invalid_body", "Malformed JSON body");
   const translations = Array.isArray(body.translations) ? body.translations : [];
   const doneIds = Array.isArray(body.done_post_ids) ? body.done_post_ids : [];
+  // 價值閘門(2026-08-15):判定沒價值的貼文 → status='moderation'(feed 自動排除)
+  // + translation_status='skipped'(退出 pending 佇列,不再翻譯)
+  const rejectedIds = Array.isArray(body.rejected_post_ids) ? body.rejected_post_ids : [];
 
   const stmts = [];
   for (const t of translations) {
@@ -652,8 +721,23 @@ async function handleTranslations(request, env) {
       ).bind(...doneIds)
     );
   }
+  if (rejectedIds.length > 0) {
+    const ph = rejectedIds.map(() => "?").join(",");
+    stmts.push(
+      env.DB.prepare(
+        `UPDATE posts SET status = 'moderation', translation_status = 'skipped' WHERE post_id IN (${ph})`
+      ).bind(...rejectedIds)
+    );
+  }
   if (stmts.length > 0) await env.DB.batch(stmts);
-  return json({ i18n_upserted: translations.length, posts_done: doneIds.length }, 200);
+  return json(
+    {
+      i18n_upserted: translations.length,
+      posts_done: doneIds.length,
+      posts_rejected: rejectedIds.length,
+    },
+    200
+  );
 }
 
 // GET /v1/me —— 讀者是誰、在哪裡。
@@ -763,9 +847,9 @@ export default {
       if (path === "/v1/posts" || path === "/v1/comments" || path === "/v1/reactions") {
         if (request.method !== "POST")
           return err(405, "method_not_allowed", "Use POST", cors);
-        if (path === "/v1/posts") return await handleCreatePost(request, env, cors);
-        if (path === "/v1/comments") return await handleCreateComment(request, env, cors);
-        return await handleReaction(request, env, cors);
+        if (path === "/v1/posts") return await handleCreatePost(request, env, ctx, cors);
+        if (path === "/v1/comments") return await handleCreateComment(request, env, ctx, cors);
+        return await handleReaction(request, env, ctx, cors);
       }
 
       // 內部端點(主機 cron 呼叫,無 CORS 需求)

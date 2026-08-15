@@ -44,6 +44,7 @@ Set-Cookie: anon_id=<ULID>; Path=/; Max-Age=31536000; HttpOnly; Secure; SameSite
 | 404 | `not_found` | topic_id / post_id 不存在 |
 | 401 | `unauthorized` | 內部端點 Bearer token 不符 |
 | 405 | `method_not_allowed` | — |
+| 429 | `rate_limited` | 入口限流(2026-08-15):寫入端點依 anon_id 與 IP(sha256 雜湊)雙鍵計數,任一超限即擋。上限見 Worker `RATE_LIMITS`(post 3/5min、20/24h;comment 10/5min、200/24h;reaction 60/5min) |
 
 > `access_level` **只 gate 討論室,不 gate 靜態頁**。M1 的兩個示範 Topic 都是 level 0。
 
@@ -250,15 +251,19 @@ Query:`limit`(預設 50,上限 50)。
     { "post_id": "pst_01J...", "locale": "en", "content": "譯文",
       "translated_at": 1770000000, "translator": "claude" }
   ],
-  "done_post_ids": ["pst_01J..."]
+  "done_post_ids": ["pst_01J..."],
+  "rejected_post_ids": ["pst_01K..."]
 }
 ```
 
 - `translations` upsert 進 `post_i18n`(PK = post_id + locale)。
 - `done_post_ids` 內的 post 設 `translation_status='done'`。
+- `rejected_post_ids`(2026-08-15 價值閘門):設 `status='moderation'` + `translation_status='skipped'`
+  ——feed 的 `status IN ('active','cooling')` 過濾使其自動下架,且退出待翻佇列。判定在翻譯管線
+  (`scripts/translate-posts.mjs`)的同一次 claude 呼叫內完成,判斷從寬(只擋廣告/亂碼/灌水/詐騙)。
 - **六語不是七語**:不翻 `original_locale` 那一語(原文即該語),所以一則 post 正常產出 6 筆 `post_i18n`。
 
-Response 200:`{ "i18n_upserted": 6, "posts_done": 1 }`
+Response 200:`{ "i18n_upserted": 6, "posts_done": 1, "posts_rejected": 0 }`
 
 ---
 

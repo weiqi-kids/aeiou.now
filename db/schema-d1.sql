@@ -40,3 +40,13 @@ CREATE TABLE IF NOT EXISTS topic_i18n (
   title    TEXT NOT NULL,
   PRIMARY KEY (topic_id, locale)
 );
+
+-- 入口限流事件(2026-08-15 Bot 防護第一層;D1 獨有,不回流主機)
+-- key = 'anon:<anon_id>' 或 'ip:<sha256(SYNC_SECRET+ip) hex>'(不存明文 IP)
+-- kind = post|comment|reaction。舊事件由 Worker 寫入時機率性清除(>25h)。
+CREATE TABLE IF NOT EXISTS rate_events (
+  kind TEXT NOT NULL,
+  key  TEXT NOT NULL,
+  ts   INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_rate_events ON rate_events(kind, key, ts);
