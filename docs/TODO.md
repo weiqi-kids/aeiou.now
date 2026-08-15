@@ -77,6 +77,11 @@
 
 ## 已知缺口(記錄在案,暫不解)
 
+- **列表頁 cover 沒有縮圖變體**:列表每格顯示很小卻載 1200×675 全圖(已壓縮,每張約 350KB)。
+  行動版 Lighthouse LCP 卡在 ~6s(2026-08-15,壓縮前 31.5s)。下一步效能槓桿=產列表用小圖
+  (如 480×270)或 webp/srcset;**1200×675 PNG 契約只約束 Topic 頁 hero 與 og:image,別動**。
+  查:`npx lighthouse https://aeiou.now/ --form-factor=mobile`(CHROME_PATH 用 playwright 的 chromium)。
+
 - **claude -p 是全主機共用的訂閱額度**(2026-08-15 撞上週上限實證,seo-ops 各站 brain/reflect
   同時陣亡):額度耗盡時翻譯與價值閘門**雙雙停擺**,閘門 fail-open——垃圾貼文照常露出,
   只剩入口限流兜底。查:`echo 測試 | claude -p`(回 weekly limit 即耗盡)或看 `jobs` 表 error_message。
