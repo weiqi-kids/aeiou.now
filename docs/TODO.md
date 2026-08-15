@@ -74,6 +74,13 @@
 
 ## 已知缺口(記錄在案,暫不解)
 
+- **claude -p 是全主機共用的訂閱額度**(2026-08-15 撞上週上限實證,seo-ops 各站 brain/reflect
+  同時陣亡):額度耗盡時翻譯與價值閘門**雙雙停擺**,閘門 fail-open——垃圾貼文照常露出,
+  只剩入口限流兜底。查:`echo 測試 | claude -p`(回 weekly limit 即耗盡)或看 `jobs` 表 error_message。
+- [ ] **額度重置(2026-08-18 02:00 UTC)後驗證價值閘門 cron 路徑**:測試貼文 `pst_…JYH7G2` 應自動
+  變 `translation_status='done'` 且 post_i18n 六語齊。查:
+  `sqlite3 db/aeiou.sqlite "SELECT translation_status FROM posts WHERE post_id LIKE '%JYH7G2'"`
+
 - Safari ITP 擋第三方 cookie → anon_id 不穩定(驗證一律用 Chromium)
 - cn 市場:GA4 被牆(瀏覽數低估)、OAuth 三家皆不通
 - 熱度級距門檻是暫定值(`site/src/lib/heat.mjs` 檔頭),真實 HotScore 上線後要重新校準
