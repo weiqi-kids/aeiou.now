@@ -26,11 +26,16 @@
 
 ## M2 前置:GSC/GA4/DNS/Slack 設定(2026-08-11 用戶指示動工)
 
-- [ ] **網域註冊**:aeiou.now 尚未註冊(2026-08-11 查 RDAP 404)。
-  查:`curl -s https://rdap.org/domain/aeiou.now`(404=未註冊)。**用戶端動作**。
-- [ ] **DNS**:主機慣例走 Linode DNS,但目前無使用中的 Linode token(見主機 secrets.md § Linode);
-  要 API 管 DNS 需用戶建 token(權限 Domains R/W)。記錄規劃:apex A `185.199.108–111.153`、
-  六子網域 CNAME → `weiqi-kids.github.io`、GSC 驗證 TXT。⚠ **切自訂網域上線前必須先補 Bot 防護**(下節紅線)。
+- [x] **網域註冊**(2026-08-15):GoDaddy。查:`curl -sL https://rdap.org/domain/aeiou.now`。
+- [x] **DNS**(2026-08-15):**採 GoDaddy 自家 DNS(非 Linode 慣例)**,用戶面板手動管理,主機無 API 權限。
+  記錄=apex A×4+AAAA×4(GitHub Pages 固定 IP)、六子網域 en/jp/cn/hi/id/br CNAME →
+  `weiqi-kids.github.io`、GSC TXT。查:`dig @1.1.1.1 +short A aeiou.now`(換 AAAA/TXT/CNAME 各查)。
+  ⚠ **切自訂網域上線前必須先補 Bot 防護**(下節紅線)。
+- [ ] **GitHub org 網域驗證(防 subdomain takeover;DNS 已指向、repo 未綁,窗口開著)**:
+  無 REST API(2026-08-15 實測 /orgs/*/pages* 皆 404),只能 UI:
+  `github.com/organizations/weiqi-kids/settings/pages` → Add a domain → 取 TXT code →
+  GoDaddy 加 `_github-pages-challenge-weiqi-kids` TXT → Verify。**用戶端動作**。
+  查:`dig @1.1.1.1 +short TXT _github-pages-challenge-weiqi-kids.aeiou.now`(有值=TXT 已加)。
 - [x] **GCP 專案+SA**(2026-08-12 完成):專案 `aeiou-seo`、SA `seo-ops@aeiou-seo.iam.gserviceaccount.com`、
   金鑰 `~/.config/aeiou/ga4-sa.json`(600),已啟用 analyticsadmin/analyticsdata/searchconsole API。
   隔離已驗:金鑰見 0 個外站資源。**GSC/GA4 授權後要重跑全綠驗收**:
@@ -40,7 +45,13 @@
   查 stream:SA 打 `analyticsadmin.googleapis.com/v1beta/properties/549586494/dataStreams`;
   查上線:`curl -s https://weiqi-kids.github.io/aeiou-pages-zh-tw/ | grep -c googletagmanager`。
   ⚠ 手動單站 build/push 要自帶 `PUBLIC_GA4_ID`,否則該站 gtag 會消失到下次 CI 推。
-- [ ] **GSC**:`sc-domain:aeiou.now`(DNS TXT 驗證)→ SA 加「完整使用者」。卡網域註冊。
+- [ ] **GSC**:`sc-domain:aeiou.now` 用戶已建並 TXT 驗證(2026-08-15)。
+  **事故(2026-08-15)**:GSC UI 加 SA 使用者報「找不到電子郵件」(GA4 同信箱加成功,信箱存在無誤)。
+  繞法=Site Verification API 讓 SA 自驗為 delegated owner:①用戶開
+  `console.developers.google.com/apis/api/siteverification.googleapis.com/overview?project=aeiou-seo`
+  啟用 API ②主機以 SA 要 DNS_TXT token ③用戶把 token 加進 GoDaddy TXT ④主機 webResource.insert。
+  收尾驗收:`node /root/seo-ops/bin/identity-audit.mjs --sa ~/.config/aeiou/ga4-sa.json --expect-only aeiou.now` exit 0。
+  ⚠ SA 會成為 owner 而非「完整使用者」(API 驗證的本質),記錄在案。
 - [ ] **Slack**:workspace=Weiqi.Kids、bot=`claude-helper`(有 `chat:write.public`,公開頻道免邀請)。
   token 已就位 `~/.config/aeiou/slack-bot-token`(600,2026-08-12 實測 auth.test ok)。
   剩:用戶建頻道(慣例 `#<描述>-aeiou`)→ 設 repo secrets `SLACK_BOT_TOKEN`/`SLACK_CHANNEL_ID`
