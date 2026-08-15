@@ -9,7 +9,10 @@
 #     且不得用 `gh api repos/<publish>/pages/builds` 輪詢(CI 的 GITHUB_TOKEN
 #     對他 repo 無權限,必 403),只能打站台 URL 本身。
 #
-# 明確不做:IndexNow / GSC / sitemap 提交 job —— 網域未註冊,全部延後。
+# 明確不做:IndexNow / GSC / sitemap 提交 job —— M2(網域已於 2026-08-15 就位,不再是卡點)。
+#
+# 2026-08-15 起七站掛自訂網域:每站 BASE_PATH=/、SITE_URL=自己的網域,dist 必帶 CNAME
+# (deploy-from-branch 推送若少了 CNAME,GitHub 會直接解除網域綁定)。
 
 name: build
 
@@ -30,7 +33,6 @@ concurrency:
 
 env:
   PUBLIC_API_URL: https://aeiou-api.lightman-chang.workers.dev
-  SITE_URL: https://weiqi-kids.github.io
   # GA4 量測 ID:七站共用一個 web stream,報表以 hostname 區分(介面常數,見 CLAUDE.md)
   PUBLIC_GA4_ID: G-ZMTFG68ZJ5
 
@@ -41,35 +43,36 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        # cname/site_url 映射=CLAUDE.md 介面常數(ja→jp、zh-CN→cn、pt-BR→br 不同名)
         include:
           - locale: zh-TW
             repo: weiqi-kids/aeiou-pages-zh-tw
             secret_suffix: ZH_TW
-            base_path: /aeiou-pages-zh-tw
+            cname: aeiou.now
           - locale: en
             repo: weiqi-kids/aeiou-pages-en
             secret_suffix: EN
-            base_path: /aeiou-pages-en
+            cname: en.aeiou.now
           - locale: ja
             repo: weiqi-kids/aeiou-pages-ja
             secret_suffix: JA
-            base_path: /aeiou-pages-ja
+            cname: jp.aeiou.now
           - locale: zh-CN
             repo: weiqi-kids/aeiou-pages-zh-cn
             secret_suffix: ZH_CN
-            base_path: /aeiou-pages-zh-cn
+            cname: cn.aeiou.now
           - locale: hi
             repo: weiqi-kids/aeiou-pages-hi
             secret_suffix: HI
-            base_path: /aeiou-pages-hi
+            cname: hi.aeiou.now
           - locale: id
             repo: weiqi-kids/aeiou-pages-id
             secret_suffix: ID
-            base_path: /aeiou-pages-id
+            cname: id.aeiou.now
           - locale: pt-BR
             repo: weiqi-kids/aeiou-pages-pt-br
             secret_suffix: PT_BR
-            base_path: /aeiou-pages-pt-br
+            cname: br.aeiou.now
 
     steps:
       - name: Checkout source
@@ -98,8 +101,8 @@ jobs:
         working-directory: site
         env:
           LOCALE: ${{ matrix.locale }}
-          BASE_PATH: ${{ matrix.base_path }}
-          SITE_URL: ${{ env.SITE_URL }}
+          BASE_PATH: /
+          SITE_URL: https://${{ matrix.cname }}
           PUBLIC_API_URL: ${{ env.PUBLIC_API_URL }}
           PUBLIC_GA4_ID: ${{ env.PUBLIC_GA4_ID }}
         run: pnpm build
@@ -141,6 +144,9 @@ jobs:
           # Jekyll 會丟掉 _astro/,.nojekyll 不是選配
           touch "$PUB_DIR/.nojekyll"
 
+          # 自訂網域綁定靠這個檔:deploy-from-branch 推送少了 CNAME = 解除綁定
+          printf '%s\n' "${{ matrix.cname }}" > "$PUB_DIR/CNAME"
+
           # 先判斷 dist 有沒有實質變更。指紋檔 .build-id 每次 commit 都不同,
           # 若在此之前就寫下去,「無變更則 skip」會永遠失效、每輪都推。
           git -C "$PUB_DIR" add -A
@@ -172,7 +178,7 @@ jobs:
         id: verify
         run: |
           set -uo pipefail
-          BASE="${SITE_URL}${{ matrix.base_path }}"
+          BASE="https://${{ matrix.cname }}"
           HOME_URL="$BASE/"
 
           # 從本次 build 的 dist/ 取一個實際 _astro 資產(hash 檔名 = 新版真的上線的證據)
@@ -185,10 +191,22 @@ jobs:
           echo "homepage: $HOME_URL"
           echo "asset:    $ASSET_URL"
 
+          # -k + http fallback:自訂網域首次綁定後 GitHub 簽憑證要幾分鐘,
+          # 過渡期 HTTPS 會憑證不符或握手失敗;內容真偽由 .build-id 比對把關,
+          # 這裡的 TLS 寬容只影響「拿不拿得到內容」。
+          fetch_code() {
+            local url="$1" code
+            code="$(curl -ks -o /dev/null -w '%{http_code}' -L --max-time 20 "$url" || echo 000)"
+            if [ "$code" = "000" ]; then
+              code="$(curl -s -o /dev/null -w '%{http_code}' -L --max-time 20 "${url/https:/http:}" || echo 000)"
+            fi
+            echo "$code"
+          }
+
           poll() {
             local url="$1" label="$2" code=""
             for i in $(seq 1 20); do   # 20 × 15s = 5 分鐘上限
-              code="$(curl -s -o /dev/null -w '%{http_code}' -L --max-time 20 "$url" || echo 000)"
+              code="$(fetch_code "$url")"
               echo "  [$label] attempt $i/20 -> HTTP $code"
               if [ "$code" = "200" ]; then
                 return 0
@@ -205,7 +223,10 @@ jobs:
           poll_build_id() {
             local url="$BASE/.build-id" got=""
             for i in $(seq 1 20); do   # 20 × 15s = 5 分鐘上限
-              got="$(curl -s -L --max-time 20 "$url" | tr -d '[:space:]' || true)"
+              got="$(curl -ks -L --max-time 20 "$url" | tr -d '[:space:]' || true)"
+              if [ -z "$got" ]; then
+                got="$(curl -s -L --max-time 20 "${url/https:/http:}" | tr -d '[:space:]' || true)"
+              fi
               if [ "$got" = "$GITHUB_SHA" ]; then
                 echo "  [build-id] attempt $i/20 -> 命中 ${GITHUB_SHA::7}"
                 return 0

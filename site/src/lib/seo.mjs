@@ -2,16 +2,16 @@ import { LOCALE } from './config.mjs';
 
 export const SITE_NAME = 'aeiou.now';
 
-// 七個獨立 GitHub Pages 站的 canonical base。若之後改成自訂網域，只需在這裡
-// 或 Astro 設定集中替換，不要讓每個頁面自行拼 hreflang。
-export const LOCALE_BASE_PATHS = {
-  'zh-TW': '/aeiou-pages-zh-tw',
-  en: '/aeiou-pages-en',
-  ja: '/aeiou-pages-ja',
-  'zh-CN': '/aeiou-pages-zh-cn',
-  hi: '/aeiou-pages-hi',
-  id: '/aeiou-pages-id',
-  'pt-BR': '/aeiou-pages-pt-br',
+// 七站正式網域(2026-08-15 切換;映射表=CLAUDE.md 介面常數,ja→jp、zh-CN→cn、pt-BR→br 不同名)。
+// hreflang/canonical 的跨站網址一律從這裡拼,不要讓每個頁面自行組。
+export const LOCALE_ORIGINS = {
+  'zh-TW': 'https://aeiou.now',
+  en: 'https://en.aeiou.now',
+  ja: 'https://jp.aeiou.now',
+  'zh-CN': 'https://cn.aeiou.now',
+  hi: 'https://hi.aeiou.now',
+  id: 'https://id.aeiou.now',
+  'pt-BR': 'https://br.aeiou.now',
 };
 
 export const OG_LOCALES = {
@@ -95,8 +95,9 @@ export function localeRoutePath(pathname, currentBase) {
   return route.startsWith('/') ? route : `/${route}`;
 }
 
+// site 參數保留簽名相容,但跨站網址以 LOCALE_ORIGINS 為準(各站各自的網域,無共用 base)
 export function localeUrl(site, locale, routePath) {
-  const base = LOCALE_BASE_PATHS[locale] || LOCALE_BASE_PATHS.en;
+  const origin = LOCALE_ORIGINS[locale] || LOCALE_ORIGINS.en;
   const route = String(routePath || '/').replace(/^\/+/, '');
-  return new URL(`${base}/${route}`, site);
+  return new URL(`/${route}`, origin);
 }

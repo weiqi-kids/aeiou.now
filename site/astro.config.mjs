@@ -7,8 +7,20 @@ const LOCALE = process.env.LOCALE || 'zh-TW';
 if (!LOCALES.includes(LOCALE)) {
   throw new Error(`LOCALE 必須是 ${LOCALES.join(' / ')} 之一,收到:${LOCALE}`);
 }
-const SITE_URL = process.env.SITE_URL || 'https://weiqi-kids.github.io';
-const BASE_PATH = process.env.BASE_PATH || `/aeiou-pages-${LOCALE.toLowerCase()}`;
+// 2026-08-15 切自訂網域:預設值=正式網域+根路徑(裸執行即正確);
+// SITE_URL/BASE_PATH 環境變數只是逃生口(例如要重現舊 github.io 版面時)。
+// 映射表=CLAUDE.md 介面常數(ja→jp、zh-CN→cn、pt-BR→br 不同名)。
+const LOCALE_ORIGINS = {
+  'zh-TW': 'https://aeiou.now',
+  en: 'https://en.aeiou.now',
+  ja: 'https://jp.aeiou.now',
+  'zh-CN': 'https://cn.aeiou.now',
+  hi: 'https://hi.aeiou.now',
+  id: 'https://id.aeiou.now',
+  'pt-BR': 'https://br.aeiou.now',
+};
+const SITE_URL = process.env.SITE_URL || LOCALE_ORIGINS[LOCALE];
+const BASE_PATH = process.env.BASE_PATH || '/';
 
 export default defineConfig({
   output: 'static',

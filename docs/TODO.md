@@ -64,8 +64,11 @@
   下架不翻,判定從寬)。**切自訂網域的前置條件已滿足。**
 - [ ] Turnstile(Bot 防護第三層,擋純腳本):判斷可後補——限流+價值閘門就位後,等實際被打再上
   (用戶未明示反對此排序;要提前做先問)
-- [ ] 網域註冊 + Linode DNS + 七站自訂網域(hreflang、語系切換器、sitemap/IndexNow/GSC 都卡在這之後)
-  ——**設定類前置已拆到上節**;七站切換自訂網域(CNAME/BASE_PATH/hreflang)仍在此
+- [x] 七站切換自訂網域(2026-08-15 完成):CI dist 帶 `CNAME`、`BASE_PATH=/`、每站專屬
+  `SITE_URL`、hreflang+x-default(=en)指向七個正式網域、Worker CORS 加七網域。
+  查:`gh api repos/weiqi-kids/aeiou-pages-<x>/pages --jq '{cname,https_enforced}'` 或打各網域 `.build-id`。
+- [ ] 語系切換器(是否要做、放哪:**版面事項,動工前讀產品草案並問用戶**)
+- [ ] sitemap/IndexNow/GSC 提交 job(網域就位後已解鎖,M2 排程)
 - [ ] OAuth(Google/GitHub/LINE;cn 市場皆不通為已知缺口)
 - [ ] GA4 每日拉取 job(property 與 SA 見上節)
 - [ ] Markdown 渲染(M1 純文字轉義)、圖片上傳(R2+審核)

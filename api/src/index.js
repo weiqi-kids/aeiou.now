@@ -5,7 +5,17 @@
 
 const REACTION_SET = ["❤️", "😂", "😮", "😢", "🤔", "🎉", "👏"]; // 不含 👍(用戶明示排除)
 const LOCALES = ["zh-TW", "en", "ja", "zh-CN", "hi", "id", "pt-BR"];
-const ALLOWED_ORIGINS = ["https://weiqi-kids.github.io"];
+// 2026-08-15 起七站掛自訂網域;github.io 保留供轉址過渡與手動重現
+const ALLOWED_ORIGINS = [
+  "https://aeiou.now",
+  "https://en.aeiou.now",
+  "https://jp.aeiou.now",
+  "https://cn.aeiou.now",
+  "https://hi.aeiou.now",
+  "https://id.aeiou.now",
+  "https://br.aeiou.now",
+  "https://weiqi-kids.github.io",
+];
 const WINDOW_HOURS = 8;
 const POST_MAX_CHARS = 5000;
 const COMMENT_MAX_CHARS = 2000;

@@ -16,8 +16,9 @@
 | D1 有哪些表 | `cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name"` |
 | Worker 網址與版本 | `cd api && npx wrangler deployments list \| head -20` |
 | Worker 現在活著嗎 | `curl -s -o /dev/null -w '%{http_code}\n' "$(cat docs/.api-url 2>/dev/null || echo https://aeiou-api.lightman-chang.workers.dev)/v1/me"` |
-| 某站線上是不是最新版 | `curl -s https://weiqi-kids.github.io/aeiou-pages-<locale小寫>/.build-id` 與 `git rev-parse HEAD` 比對(**不是比 HTTP 200**,舊版也回 200) |
-| 七站分別是哪一版 | `SHA=$(git rev-parse HEAD); for l in zh-tw en ja zh-cn hi id pt-br; do printf '%-6s %s\n' "$l" "$(curl -s https://weiqi-kids.github.io/aeiou-pages-$l/.build-id \| tr -d '[:space:]' \| cut -c1-7)"; done; echo "期望 ${SHA:0:7}"` |
+| 某站線上是不是最新版 | `curl -s https://<站網域>/.build-id`(網域見下方映射表)與 `git rev-parse HEAD` 比對(**不是比 HTTP 200**,舊版也回 200) |
+| 七站分別是哪一版 | `SHA=$(git rev-parse HEAD); for d in aeiou.now en.aeiou.now jp.aeiou.now cn.aeiou.now hi.aeiou.now id.aeiou.now br.aeiou.now; do printf '%-14s %s\n' "$d" "$(curl -s https://$d/.build-id \| tr -d '[:space:]' \| cut -c1-7)"; done; echo "期望 ${SHA:0:7}"` |
+| 某站網域綁定/HTTPS 狀態 | `gh api repos/weiqi-kids/aeiou-pages-<x>/pages --jq '{cname,https_enforced,status}'` |
 | 某站的 Pages 是否還在建 | `gh api repos/weiqi-kids/aeiou-pages-<x>/pages/builds/latest --jq .status` |
 | CI 最近跑得如何 | `gh run list -R weiqi-kids/aeiou.now --limit 5` |
 | cron 排程現況 | `cat /etc/cron.d/aeiou` |
@@ -150,9 +151,9 @@ World
 | API 路徑參數 | `/v1/topics/:id/...` 的 `:id` = **topic_id(ULID)**,不是 slug |
 | wrangler | 主機無全域指令,一律 `npx wrangler` |
 
-### Locale ↔ Repo ↔ 子網域(唯一映射表)
+### Locale ↔ Repo ↔ 子網域(唯一映射表;2026-08-15 起自訂網域上線)
 
-| locale | publish repo | 正式子網域(日後) |
+| locale | publish repo | 正式網域 |
 |---|---|---|
 | `zh-TW` | `weiqi-kids/aeiou-pages-zh-tw` | `aeiou.now`(主站) |
 | `en` | `weiqi-kids/aeiou-pages-en` | `en.aeiou.now` |
@@ -209,7 +210,7 @@ content/topics/<slug>.md   ←── 人工編輯(唯一入口)
 | **UI 字串** | `site/src/i18n/<locale>.json` 七檔,key 集合必須一致(查法見上表)。zh-TW 為準源;新增 key 時其餘六語先填 `[TODO] ` 佔位,定版後一次補譯(`grep -l '\[TODO\]' site/src/i18n/*.json` 找得到) |
 | **Topic 內容** | `content/topics/*.md` 內含七個 `## locale` 段(見上節);build 時每站只取自己語系那段 |
 | **UGC 貼文** | 使用者用任何語言發文 → 15 分 cron 用 `claude -p` 翻**六語**(不翻原文那語)→ 前端優先顯示本站語系譯文,缺譯顯示原文+「翻譯中」。**留言不翻譯** |
-| **build** | `LOCALE=<code> pnpm build`(cwd=`site/`);`BASE_PATH=/aeiou-pages-<locale小寫>`;CI matrix 七語各跑一次 |
+| **build** | `LOCALE=<code> pnpm build`(cwd=`site/`);預設 `BASE_PATH=/`+`SITE_URL=`該站正式網域(裸執行即正確,環境變數是逃生口);CI matrix 七語各跑一次 |
 | **部署** | 每語系一個 publish repo(映射表見下),deploy key 各自獨立;只推單站的手法見 `docs/TODO.md` |
 
 **改版節奏**:版面調整期只做 zh-TW 並手動推 zh-TW 一站(用戶看線上網址確認);定版後補譯 + CI 推七站。
@@ -264,7 +265,8 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
 - **跨站 cookie 三件套缺一不可**:`SameSite=None; Secure` + `Access-Control-Allow-Credentials: true`
   + 前端 `credentials:'include'`(此時 CORS origin **不得用 `*`**)。
 - **CI 推 publish repo 一律 SSH**(deploy key 是 SSH 機制);主機端 cron 才是 gh HTTPS helper,**別混**。
-- **推 dist 必寫 `.nojekyll`**:Pages deploy-from-branch 會走 Jekyll,`_astro/` 會被丟棄。
+- **推 dist 必寫 `.nojekyll` 與 `CNAME`**:少了 `.nojekyll`,Jekyll 丟棄 `_astro/`;
+  少了 `CNAME`(內容=該站網域),GitHub 直接**解除自訂網域綁定**,整站從網域上消失。
 - **驗「上線了沒」要比 `.build-id`,不是比 HTTP 200**——舊版同樣回 200(2026-08-11 實測假綠兩次)。
 - **絕不動 `git config --global`**;要定身分用 repo 層或單次 `-c`。
 - **絕不呼叫 Google Places API**、不儲存其回傳資料。導航一律純字串組裝。
