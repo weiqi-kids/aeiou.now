@@ -88,6 +88,7 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
 
 <script>
   import { createReactions } from '../lib/reactions.mjs';
+  import { track } from '../lib/analytics.mjs';
 
   const COMMENT_PREVIEW = 2; // 每則貼文預設露出的留言數,其餘收在展開控制項底下
 
@@ -136,6 +137,11 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
       .then((data) => {
         if (!data || !Array.isArray(data.posts)) throw new Error('bad shape');
         openRoom(root, cfg, topicId, api, data.posts);
+        track('discussion_view', {
+          topic_id: topicId,
+          post_count: data.posts.length,
+          locale: cfg.locale,
+        });
         document.dispatchEvent(
           new CustomEvent('aeiou:room-open', { detail: { topicId: topicId, posts: data.posts } })
         );
@@ -252,7 +258,7 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
   }
 
   // 每則貼文自己的回覆框(契約 §3 POST /v1/comments;沒有新端點)
-  function renderCommentForm(post, cfg, api, comments, counter) {
+  function renderCommentForm(post, cfg, api, comments, counter, topicId) {
     const form = el('form', 'room-comment-form');
     const box = el('input', 'room-comment-input');
     box.type = 'text';
@@ -283,6 +289,11 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
           if (counter && typeof comment.comment_count === 'number') {
             counter.textContent = String(comment.comment_count);
           }
+          track('discussion_comment', {
+            topic_id: topicId,
+            post_id: post.post_id,
+            locale: cfg.locale,
+          });
           box.value = '';
         })
         .catch(() => {})
@@ -293,7 +304,7 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     return form;
   }
 
-  function renderPost(post, cfg, api) {
+  function renderPost(post, cfg, api, topicId) {
     const item = el('article', 'room-post');
     const meta = el('p', 'room-post-meta');
     const origin = [post.country_code, post.city_code].filter(Boolean).join(' · ');
@@ -342,7 +353,7 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
       );
     }
 
-    thread.appendChild(renderCommentForm(post, cfg, api, comments, counter));
+    thread.appendChild(renderCommentForm(post, cfg, api, comments, counter, topicId));
     item.appendChild(thread);
 
     return item;
@@ -379,7 +390,12 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
           if (!post || !post.post_id) throw new Error('bad shape');
           const emptyNote = feedList.querySelector('.room-empty');
           if (emptyNote) emptyNote.remove();
-          feedList.prepend(renderPost(post, cfg, api));
+          feedList.prepend(renderPost(post, cfg, api, topicId));
+          track('discussion_post', {
+            topic_id: topicId,
+            post_id: post.post_id,
+            locale: cfg.locale,
+          });
           box.value = '';
         })
         .catch(() => {
@@ -403,7 +419,7 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     if (posts.length === 0) {
       feedList.appendChild(el('p', 'room-empty', cfg.i18n.empty));
     } else {
-      posts.forEach((p) => feedList.appendChild(renderPost(p, cfg, api)));
+      posts.forEach((p) => feedList.appendChild(renderPost(p, cfg, api, topicId)));
     }
     live.appendChild(renderComposer(cfg, topicId, api, feedList));
     live.appendChild(feedList);

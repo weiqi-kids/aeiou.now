@@ -22,7 +22,7 @@
 import { t, tOr } from '../lib/i18n.mjs';
 import { withBase } from '../lib/paths.mjs';
 import { countryFlag } from '../lib/format.mjs';
-import { coverPath } from '../lib/data.mjs';
+import { coverPath, coverThumbPath } from '../lib/data.mjs';
 import HeatMeter from './HeatMeter.astro';
 import TopicPosts from './TopicPosts.astro';
 
@@ -44,17 +44,22 @@ const scores = topic.scores || {};
 const topicHref = withBase(`topic/${topic.slug}/`);
 const coverRel = coverPath(topic.slug);
 const coverSrc = coverRel ? withBase(coverRel) : null;
+const coverThumbRel = coverThumbPath(topic.slug);
+const coverThumbSrc = coverThumbRel ? withBase(coverThumbRel) : null;
 // 沒有 topic_id 就打不到 /v1/topics/:id/feed(:id 是 ULID 不是 slug),那一列只出左欄。
 const withPosts = !!topic.topic_id;
 ---
 
 <li class:list={['row', { 'row--flush': rank === null }]} data-topic-id={topic.topic_id || undefined}>
-  <a class="row-link" href={topicHref}>
+  <a class="row-link" data-topic-slug={topic.slug} href={topicHref}>
     {rank !== null && <span class="row-rank" aria-hidden="true">{rank}</span>}
     <span class="row-main">
       {coverSrc && (
         <span class="row-cover" aria-hidden="true">
-          <img src={coverSrc} alt="" width="1200" height="675" loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} decoding="async" />
+          <picture>
+            {coverThumbSrc && <source srcset={coverThumbSrc} type="image/webp" />}
+            <img src={coverSrc} alt="" width="480" height="270" sizes="(max-width: 767px) 112px, (max-width: 1023px) 144px, 192px" loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} decoding="async" />
+          </picture>
         </span>
       )}
       <span class="row-copy">
@@ -141,6 +146,11 @@ const withPosts = !!topic.topic_id;
     overflow: hidden;
     border-radius: var(--radius-sm);
     background: var(--color-primary-soft);
+  }
+  .row-cover picture {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   .row-cover img {
     display: block;

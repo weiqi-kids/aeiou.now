@@ -58,6 +58,8 @@
   查 stream:SA 打 `analyticsadmin.googleapis.com/v1beta/properties/549586494/dataStreams`;
   查上線:`curl -s https://weiqi-kids.github.io/aeiou-pages-zh-tw/ | grep -c googletagmanager`。
   ⚠ 手動單站 build/push 要自帶 `PUBLIC_GA4_ID`,否則該站 gtag 會消失到下次 CI 推。
+  互動事件已接入：`topic_open`、`question_vote`、`discussion_view`、`discussion_post`、
+  `discussion_comment`、`reaction_click`、`source_click`、`local_action_click`。
 - [x] **GSC**(2026-08-15 完成,隔離驗收 exit 0):`sc-domain:aeiou.now` 用戶建+TXT 驗證;
   SA 走 Site Verification API 繞過 UI(UI 加 SA 報「找不到電子郵件」的已知毛病)。
   完整繞法(五步,缺一不可):①用戶啟用專案的 Site Verification API ②SA 要 DNS_TXT token
@@ -90,10 +92,9 @@
 
 ## 已知缺口(記錄在案,暫不解)
 
-- **列表頁 cover 沒有縮圖變體**:列表每格顯示很小卻載 1200×675 全圖(已壓縮,每張約 350KB)。
-  行動版 Lighthouse LCP 卡在 ~6s(2026-08-15,壓縮前 31.5s)。下一步效能槓桿=產列表用小圖
-  (如 480×270)或 webp/srcset;**1200×675 PNG 契約只約束 Topic 頁 hero 與 og:image,別動**。
-  查:`npx lighthouse https://aeiou.now/ --form-factor=mobile`(CHROME_PATH 用 playwright 的 chromium)。
+- [x] **列表頁 cover 縮圖**(2026-08-16):新增 `site/public/covers/thumbs/*.webp`
+  (480×270, 約 636KB 全集),TopicRow 以 `<picture>` 優先載入縮圖；1200×675 PNG 仍保留給
+  Topic 頁 hero 與 `og:image`。查:`find site/public/covers/thumbs -name '*.webp'`。
 
 - **claude -p 是全主機共用的訂閱額度**(2026-08-15 撞上週上限實證,seo-ops 各站 brain/reflect
   同時陣亡):額度耗盡時翻譯與價值閘門**雙雙停擺**,閘門 fail-open——垃圾貼文照常露出,

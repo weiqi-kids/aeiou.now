@@ -51,6 +51,7 @@ for (const path of htmlFiles) {
   if (!/name=["']twitter:card["']/i.test(html)) errors.push(`${rel}:缺 twitter:card`);
   if (count(html, /rel=["']alternate["'][^>]*hreflang=/gi) < LOCALES.length + 1) errors.push(`${rel}:hreflang 少於七語加 x-default`);
   const noindex = /name=["'](?:robots|googlebot)["'][^>]*content=["'][^"']*noindex/i.test(html);
+  if (!noindex && count(html, /<h1\b/gi) !== 1) errors.push(`${rel}:indexable page 必須恰好一個 h1`);
   if (noindex && !aliasPaths.has(rel)) errors.push(`${rel}:只有 merged Topic alias 可以輸出 noindex`);
   if (aliasPaths.has(rel)) {
     if (!noindex) errors.push(`${rel}:merged Topic alias 必須 noindex`);

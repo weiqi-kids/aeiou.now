@@ -113,7 +113,7 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
   <div class="q-live" hidden></div>
 
   <div class="q-foot">
-    <a class="q-tell-us" href={withBase(`/topic/${question.topic_slug}/`)}>{t('q.tell_us')}</a>
+    <a class="q-tell-us" data-topic-slug={question.topic_slug} href={withBase(`/topic/${question.topic_slug}/`)}>{t('q.tell_us')}</a>
     {nextHref && (
       <a class="q-next" href={nextHref}>{nextLabel}</a>
     )}
@@ -121,6 +121,8 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
 </div>
 
 <script>
+  import { track } from '../lib/analytics.mjs';
+
   // 四態切換集中一支,理由同 DiscussionRoom.setRoomState:避免「還沒開始載入」誤用 closed 畫面。
   function setState(root, state) {
     const fallback = root.querySelector('.q-fallback');
@@ -279,6 +281,12 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
         const live = root.querySelector('.q-live');
         live.textContent = '';
         live.appendChild(renderResults(cfg, data));
+        track('question_vote', {
+          question_id: root.dataset.questionId,
+          question_kind: cfg.kind,
+          option_id: optionId,
+          locale: cfg.locale,
+        });
       })
       .catch(() => {
         // 失敗(含 429):顯示 q.error_retry、恢復按鈕可再試——不是「壞掉」也不是「還沒開始」。
@@ -345,6 +353,12 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
         } else {
           live.appendChild(renderVote(root, cfg, api, data));
         }
+        track('question_results_view', {
+          question_id: qid,
+          question_kind: cfg.kind,
+          answered: data.mine ? 'yes' : 'no',
+          locale: cfg.locale,
+        });
         setState(root, 'open');
       })
       .catch(() => {
