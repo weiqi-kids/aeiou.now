@@ -32,7 +32,6 @@ import { t } from '../lib/i18n.mjs';
 import { withBase } from '../lib/paths.mjs';
 import { monthDay } from '../lib/format.mjs';
 import { recentTopics, topicsByHeat, countryName, questionsForDate, todayWorld } from '../lib/data.mjs';
-import { siteDescription } from '../lib/seo.mjs';
 
 // 每日世界一問(docs/briefs/daily-question.md §6.3):四個新區塊插在 #trending 之前。
 // poll/guess 各自可能為 null(題庫空、或該 kind 沒有 date<=今日的題目)——為 null 時
@@ -70,11 +69,16 @@ function seasonNote(topic) {
 ---
 
 <BaseLayout
-  title={`aeiou.now — ${t('home.recent_topics')}`}
-  description={`${t('home.recent_topics')} · ${siteDescription()}`}
+  title={`aeiou.now｜${t('home.h1')}`}
+  description={t('home.intro')}
   pageType="CollectionPage"
   activeSort="global"
 >
+  <header class="home-intro">
+    <h1>{t('home.h1')}</h1>
+    <p>{t('home.intro')}</p>
+  </header>
+
   {poll && (
     <section class="q-section">
       <QuestionCard
@@ -121,6 +125,20 @@ function seasonNote(topic) {
 <style>
   .q-section {
     margin-block-end: clamp(2rem, 5vw, 3rem);
+  }
+  .home-intro {
+    max-width: 48rem;
+    margin-block: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 5vw, 3rem);
+    padding-inline-start: clamp(0.75rem, 2vw, 1.25rem);
+    border-inline-start: 0.25rem solid var(--color-accent);
+  }
+  .home-intro h1 {
+    margin: 0 0 0.65rem;
+  }
+  .home-intro p {
+    margin: 0;
+    color: var(--color-ink-soft);
+    line-height: 1.6;
   }
   .board {
     margin-block-end: clamp(2.5rem, 6vw, 4rem);

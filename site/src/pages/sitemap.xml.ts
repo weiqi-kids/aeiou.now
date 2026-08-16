@@ -32,7 +32,6 @@ export function GET({ site }) {
     add(`topic/${facts.slug}/`, {
       changefreq: facts.is_perennial ? 'monthly' : 'weekly',
       priority: '0.8',
-      lastmod: facts.updated_at || undefined,
       image: cover ? new URL(withBase(cover), origin).toString() : undefined,
       imageTitle: facts.canonical_name,
     });

@@ -22,6 +22,8 @@
 //   拿到 POST /v1/reactions 回應的 mine 之後,已按狀態才會正確。
 //   M1 刻意不為此新增或修改任何 Worker / API 端點——要補得先改契約 §1。
 
+import { track } from './analytics.mjs';
+
 const FAILURE_MS = 4000;
 
 // aria-label 的字串樣板來自七語系 i18n,模板不寫死任何語言的字。
@@ -161,6 +163,12 @@ export function createReactions(opts) {
           throw new Error('bad shape');
         }
         applyServer(data);
+        track('reaction_click', {
+          target_type: targetType,
+          target_id: targetId,
+          reaction: emoji,
+          action: op,
+        });
       })
       .catch(() => {
         restore(before); // 還原成按之前的狀態,不本地加一、不假裝成功

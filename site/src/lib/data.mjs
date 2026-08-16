@@ -402,6 +402,13 @@ export function coverPath(slug) {
   return null;
 }
 
+/** 列表用縮圖(480×270 WebP);不存在時回退到 coverPath() 的原圖。 */
+export function coverThumbPath(slug) {
+  if (!slug) return null;
+  const rel = `covers/thumbs/${slug}.webp`;
+  return existsSync(join(process.cwd(), 'public', rel)) ? rel : null;
+}
+
 function listCityJson(dir) {
   const p = join(DATA_ROOT, dir);
   if (!existsSync(p)) return [];

@@ -40,7 +40,7 @@ import { t } from '../../lib/i18n.mjs';
 import { LOCALE, MARKET_CITY, REACTION_SET } from '../../lib/config.mjs';
 import { calendarDate, dateTime, countryFlag } from '../../lib/format.mjs';
 import { withBase } from '../../lib/paths.mjs';
-import { seoCopy } from '../../lib/seo.mjs';
+import { compactDescription, seoCopy, sourceLabel } from '../../lib/seo.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
   observancesForFacts, customsText, regionalNotesForFacts, regionalNoteText,
@@ -121,6 +121,19 @@ const sourceUrls = [...new Set([
   ...regionalNotes.flatMap((note) => note.source_urls || []),
 ])].filter((url) => /^https?:\/\//.test(url));
 const whatAnswer = loc.summary || facts?.commonality || copy.noDate;
+const metaCoverage = worldCountries
+  .map((country) => {
+    const parts = [countryName(country.country_code)];
+    if (country.kind === 'observance' && country.local_name) parts.push(country.local_name);
+    return parts.join(' · ');
+  })
+  .join(', ');
+const metaDescription = compactDescription([
+  whatAnswer,
+  metaCoverage ? `${copy.coveragePrefix} ${metaCoverage}.` : null,
+  sourceUrls.length > 0 ? copy.sourceMeta : null,
+].filter(Boolean).join(' '));
+const pageTitle = `${title}｜aeiou.now`;
 const dateAnswer = countries
   .filter((observance) => observance.next_occurrence)
   .map((observance) => {
@@ -129,7 +142,14 @@ const dateAnswer = countries
     return `${countryName(observance.country_code)} · ${calendarDate(next.starts_on)}${end}`;
   });
 const whereAnswer = worldCountries.length > 0
-  ? worldCountries.map((country) => countryName(country.country_code)).join('、')
+  ? worldCountries.map((country) => {
+    const parts = [countryName(country.country_code)];
+    if (country.kind === 'observance') {
+      if (country.local_name) parts.push(country.local_name);
+      if (country.date_rule) parts.push(country.date_rule);
+    }
+    return parts.join(' · ');
+  }).join('；')
   : copy.noDate;
 const differenceAnswer = [
   ...countries
@@ -159,7 +179,10 @@ const topicSchema = [
   {
     '@type': 'DefinedTerm',
     name: title,
-    description: loc.summary || facts?.commonality || copy.noDate,
+    description: whatAnswer,
+    ...(Array.isArray(loc.keywords) && loc.keywords.length > 1
+      ? { alternateName: loc.keywords.filter((keyword) => keyword && keyword !== title).slice(0, 8) }
+      : {}),
     inDefinedTermSet: { '@type': 'DefinedTermSet', name: 'aeiou.now Topics' },
   },
   {
@@ -195,18 +218,17 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
 ---
 
 <BaseLayout
-  title={`${title} — aeiou.now`}
-  description={loc.summary}
+  title={pageTitle}
+  description={metaDescription}
   image={coverSrc}
   imageAlt={title}
-  pageType="CollectionPage"
-  modified={facts?.updated_at}
+  pageType="WebPage"
   canonicalPath={aliasFor ? withBase(`topic/${aliasFor}/`) : null}
   indexable={!aliasFor}
   redirectTo={aliasFor ? withBase(`topic/${aliasFor}/`) : null}
   structuredData={topicSchema}
 >
-  <article class="topic">
+  <article class="topic" data-topic-slug={facts?.slug}>
     <!-- 頁首 = 第一屏的上半:cover 圖 + 七語系的 lede 並陳 + 「🌎 全世界怎麼過」的連結。
          header 內沒有 <ul>,也沒有另開的語系方格區塊——七段 lede 就疊在 .head-primary 裡。 -->
     <header class="topic-head">
@@ -280,7 +302,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
                 {pl.descriptions && pl.descriptions[LOCALE] && <p>{pl.descriptions[LOCALE]}</p>}
                 {pl.address && <p class="card-meta">{pl.address}</p>}
                 {pl.map_url && (
-                  <a class="card-link" href={pl.map_url} rel="noopener" target="_blank">
+                  <a class="card-link" data-local-action="map" data-local-type="place" data-local-id={pl.place_id} href={pl.map_url} rel="noopener" target="_blank">
                     {t('topic.navigate')} <span aria-hidden="true">↗</span>
                   </a>
                 )}
@@ -314,7 +336,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
                   {ev.end_at && ` – ${dateTime(ev.end_at)}`}
                 </p>
                 {ev.ticket_url && (
-                  <a class="card-link" href={ev.ticket_url} rel="noopener" target="_blank">
+                  <a class="card-link" data-local-action="ticket" data-local-type="event" data-local-id={ev.event_id} href={ev.ticket_url} rel="noopener" target="_blank">
                     {t('topic.tickets')} <span aria-hidden="true">↗</span>
                   </a>
                 )}
@@ -397,7 +419,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
                 {(c.source_urls || []).length > 0 && (
                   <p class="country-sources">
                     {(c.source_urls || []).slice(0, 2).map((url) => (
-                      <a class="source-link" href={url} rel="noopener noreferrer" target="_blank">{copy.sourceLink} ↗</a>
+                      <a class="source-link" data-source-link data-source-url={url} href={url} rel="noopener noreferrer" target="_blank" aria-label={`${copy.sourceLink}: ${sourceLabel(url)}`} title={url}>{sourceLabel(url)} ↗</a>
                     ))}
                   </p>
                 )}
@@ -422,7 +444,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
                 {(note.source_urls || []).length > 0 && (
                   <p class="country-sources">
                     {(note.source_urls || []).slice(0, 2).map((url) => (
-                      <a class="source-link" href={url} rel="noopener noreferrer" target="_blank">{copy.sourceLink} ↗</a>
+                      <a class="source-link" data-source-link data-source-url={url} href={url} rel="noopener noreferrer" target="_blank" aria-label={`${copy.sourceLink}: ${sourceLabel(url)}`} title={url}>{sourceLabel(url)} ↗</a>
                     ))}
                   </p>
                 )}
@@ -460,12 +482,9 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
         <p class="source-note">{copy.sourceNote}</p>
         <ul class="source-list">
           {sourceUrls.map((url) => (
-            <li><a href={url} rel="noopener noreferrer" target="_blank">{url}</a></li>
+            <li><a data-source-link data-source-url={url} href={url} rel="noopener noreferrer" target="_blank" title={url}>{sourceLabel(url)} ↗</a></li>
           ))}
         </ul>
-        {facts?.updated_at && (
-          <p class="updated-note">{copy.updated} <time datetime={facts.updated_at}>{calendarDate(facts.updated_at.slice(0, 10))}</time></p>
-        )}
       </section>
     )}
 
@@ -476,7 +495,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
         </div>
         <ul class="related-list">
           {related.map((relatedTopic) => (
-            <li><a href={withBase(`topic/${relatedTopic.slug}/`)}>{relatedTopic.title}</a></li>
+            <li><a data-topic-slug={relatedTopic.slug} href={withBase(`topic/${relatedTopic.slug}/`)}>{relatedTopic.title}</a></li>
           ))}
         </ul>
       </section>
@@ -488,6 +507,31 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
   // 店家/活動的 emoji 列:沿用 src/lib/reactions.mjs(與貼文、留言同一份實作)。
   // 這裡只負責把每個 [data-card-reactions] 容器接上去,行為一律由 reactions.mjs 決定。
   import { createReactions } from '../../lib/reactions.mjs';
+  import { track } from '../../lib/analytics.mjs';
+
+  const topicArticle = document.querySelector('article[data-topic-slug]');
+  document.querySelectorAll('[data-source-link]').forEach((link) => {
+    link.addEventListener('click', () => {
+      let domain = '';
+      try { domain = new URL(link.dataset.sourceUrl || link.href).hostname.replace(/^www\./, ''); } catch {}
+      track('source_click', {
+        topic_slug: topicArticle?.dataset.topicSlug,
+        source_domain: domain,
+        locale: document.documentElement.lang,
+      });
+    });
+  });
+  document.querySelectorAll('[data-local-action]').forEach((link) => {
+    link.addEventListener('click', () => {
+      track('local_action_click', {
+        topic_slug: topicArticle?.dataset.topicSlug,
+        action: link.dataset.localAction,
+        target_type: link.dataset.localType,
+        target_id: link.dataset.localId,
+        locale: document.documentElement.lang,
+      });
+    });
+  });
 
   const cfgNode = document.querySelector('[data-card-reactions-config]');
   if (cfgNode) {

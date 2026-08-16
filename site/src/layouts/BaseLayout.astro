@@ -99,6 +99,10 @@ const graph = {
       '@id': `${site.origin}/#organization`,
       name: SITE_NAME,
       url: site.origin,
+      logo: {
+        '@type': 'ImageObject',
+        url: new URL(withBase('/favicon.svg'), site).toString(),
+      },
     },
     {
       '@type': 'WebSite',
@@ -112,10 +116,11 @@ const graph = {
       '@type': pageType,
       '@id': `${canonical.toString()}#webpage`,
       url: canonical.toString(),
-      name: title,
-      description,
-      inLanguage: LOCALE,
-      isPartOf: { '@id': `${site.origin}/#website` },
+        name: title,
+        description,
+        inLanguage: LOCALE,
+        isPartOf: { '@id': `${site.origin}/#website` },
+        publisher: { '@id': `${site.origin}/#organization` },
       ...(modified ? { dateModified: modified } : {}),
       ...(ogImage ? {
         primaryImageOfPage: {
@@ -191,7 +196,8 @@ const jumpTopics = hotTopics(2).filter((topic) => topic && topic.slug);
     {GA4_ID && (
       <script is:inline define:vars={{ GA4_ID }}>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag() { window.dataLayer.push(arguments); }
+        window.gtag = gtag;
         gtag('js', new Date());
         gtag('config', GA4_ID);
       </script>
@@ -218,7 +224,7 @@ const jumpTopics = hotTopics(2).filter((topic) => topic && topic.slug);
               <span class="nav-divider" aria-hidden="true"></span>
             )}
             {jumpTopics.map((topic) => (
-              <a class="nav-link nav-link--topic" href={withBase(`topic/${topic.slug}/`)}>
+              <a class="nav-link nav-link--topic" data-topic-slug={topic.slug} href={withBase(`topic/${topic.slug}/`)}>
                 {topic.title}
               </a>
             ))}
@@ -239,6 +245,21 @@ const jumpTopics = hotTopics(2).filter((topic) => topic && topic.slug);
     </footer>
   </body>
 </html>
+
+<script>
+  import { track } from '../lib/analytics.mjs';
+
+  document.addEventListener('click', (event) => {
+    const node = event.target && typeof event.target.closest === 'function'
+      ? event.target.closest('a[data-topic-slug]')
+      : null;
+    if (!node) return;
+    track('topic_open', {
+      topic_slug: node.dataset.topicSlug,
+      locale: document.documentElement.lang,
+    });
+  }, { capture: true });
+</script>
 
 <style>
   .masthead {
