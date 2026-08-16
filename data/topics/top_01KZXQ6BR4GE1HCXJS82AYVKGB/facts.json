@@ -6,11 +6,11 @@
   "category": "festival",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-16T11:00:02.000Z",
+  "updated_at": "2026-08-16T12:00:01.000Z",
   "access_level": 0,
   "observances": [
     {
-      "observance_id": "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_BR_christmas",
+      "observance_id": "obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_BR_christmas",
       "observance_key": "christmas",
       "country_code": "BR",
       "local_name": "Natal",
@@ -26,7 +26,7 @@
       ],
       "occurrences": [
         {
-          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_BR_christmas_2026_2026-12-25",
+          "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_BR_christmas_2026_2026-12-25",
           "occurrence_year": 2026,
           "starts_on": "2026-12-25",
           "ends_on": null,
@@ -41,7 +41,7 @@
           ]
         },
         {
-          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_BR_christmas_2027_2027-12-25",
+          "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_BR_christmas_2027_2027-12-25",
           "occurrence_year": 2027,
           "starts_on": "2027-12-25",
           "ends_on": null,
@@ -57,7 +57,7 @@
         }
       ],
       "next_occurrence": {
-        "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_BR_christmas_2026_2026-12-25",
+        "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_BR_christmas_2026_2026-12-25",
         "occurrence_year": 2026,
         "starts_on": "2026-12-25",
         "ends_on": null,
@@ -74,7 +74,7 @@
       }
     },
     {
-      "observance_id": "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas",
+      "observance_id": "obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_US_christmas",
       "observance_key": "christmas",
       "country_code": "US",
       "local_name": "Christmas Day",
@@ -90,7 +90,7 @@
       ],
       "occurrences": [
         {
-          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas_2026_2026-12-25",
+          "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_US_christmas_2026_2026-12-25",
           "occurrence_year": 2026,
           "starts_on": "2026-12-25",
           "ends_on": null,
@@ -105,7 +105,7 @@
           ]
         },
         {
-          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas_2027_2027-12-25",
+          "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_US_christmas_2027_2027-12-25",
           "occurrence_year": 2027,
           "starts_on": "2027-12-25",
           "ends_on": null,
@@ -121,7 +121,7 @@
         }
       ],
       "next_occurrence": {
-        "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas_2026_2026-12-25",
+        "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_US_christmas_2026_2026-12-25",
         "occurrence_year": 2026,
         "starts_on": "2026-12-25",
         "ends_on": null,
@@ -143,13 +143,13 @@
     {
       "country_code": "BR",
       "observance_ids": [
-        "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_BR_christmas"
+        "obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_BR_christmas"
       ]
     },
     {
       "country_code": "US",
       "observance_ids": [
-        "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_US_christmas"
+        "obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_US_christmas"
       ]
     }
   ],

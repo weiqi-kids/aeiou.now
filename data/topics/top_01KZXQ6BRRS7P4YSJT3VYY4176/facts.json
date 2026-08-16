@@ -6,11 +6,11 @@
   "category": "festival",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-16T11:00:02.000Z",
+  "updated_at": "2026-08-16T12:00:01.000Z",
   "access_level": 0,
   "observances": [
     {
-      "observance_id": "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_CN_lantern-festival",
+      "observance_id": "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_CN_lantern-festival",
       "observance_key": "lantern-festival",
       "country_code": "CN",
       "local_name": "元宵节",
@@ -26,7 +26,7 @@
       ],
       "occurrences": [
         {
-          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_CN_lantern-festival_2026_2026-03-03",
+          "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_CN_lantern-festival_2026_2026-03-03",
           "occurrence_year": 2026,
           "starts_on": "2026-03-03",
           "ends_on": null,
@@ -41,7 +41,7 @@
           ]
         },
         {
-          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_CN_lantern-festival_2027_2027-02-20",
+          "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_CN_lantern-festival_2027_2027-02-20",
           "occurrence_year": 2027,
           "starts_on": "2027-02-20",
           "ends_on": null,
@@ -57,7 +57,7 @@
         }
       ],
       "next_occurrence": {
-        "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_CN_lantern-festival_2027_2027-02-20",
+        "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_CN_lantern-festival_2027_2027-02-20",
         "occurrence_year": 2027,
         "starts_on": "2027-02-20",
         "ends_on": null,
@@ -74,7 +74,7 @@
       }
     },
     {
-      "observance_id": "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_TW_lantern-festival",
+      "observance_id": "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_lantern-festival",
       "observance_key": "lantern-festival",
       "country_code": "TW",
       "local_name": "元宵節",
@@ -90,7 +90,7 @@
       ],
       "occurrences": [
         {
-          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_TW_lantern-festival_2026_2026-03-03",
+          "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_lantern-festival_2026_2026-03-03",
           "occurrence_year": 2026,
           "starts_on": "2026-03-03",
           "ends_on": null,
@@ -105,7 +105,7 @@
           ]
         },
         {
-          "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_TW_lantern-festival_2027_2027-02-20",
+          "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_lantern-festival_2027_2027-02-20",
           "occurrence_year": 2027,
           "starts_on": "2027-02-20",
           "ends_on": null,
@@ -121,7 +121,7 @@
         }
       ],
       "next_occurrence": {
-        "occurrence_id": "occ_obs_top_01KZRR9MFRQ664J60A6TDVBPS8_TW_lantern-festival_2027_2027-02-20",
+        "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_lantern-festival_2027_2027-02-20",
         "occurrence_year": 2027,
         "starts_on": "2027-02-20",
         "ends_on": null,
@@ -143,13 +143,13 @@
     {
       "country_code": "CN",
       "observance_ids": [
-        "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_CN_lantern-festival"
+        "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_CN_lantern-festival"
       ]
     },
     {
       "country_code": "TW",
       "observance_ids": [
-        "obs_top_01KZRR9MFRQ664J60A6TDVBPS8_TW_lantern-festival"
+        "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_lantern-festival"
       ]
     }
   ],
