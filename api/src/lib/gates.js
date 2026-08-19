@@ -71,6 +71,7 @@ export async function checkSyncAuth(request, env) {
 // 要哪個意思就叫哪個名字,不要在呼叫點散裝列舉字串值 —— 2026-08-19 就是這樣改壞過
 // 一次:topicGate 被改成「只放行 active/cooling」,而 cooling 這個 topic status
 // 從未存在於資料中,效果等於把所有 archived Topic 鎖死不能發文。
+// (那一版沒有上線,是在 commit 前被讀出來的;現在由 tests/api 自動擋。)
 
 /** Topic 不公開的兩種狀態。 */
 export const TOPIC_HIDDEN = new Set(["candidate", "merged"]);
