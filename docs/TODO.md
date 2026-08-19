@@ -81,8 +81,13 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
   記錄=apex A×4+AAAA×4(GitHub Pages 固定 IP)、六子網域 en/jp/cn/hi/id/br CNAME →
   `weiqi-kids.github.io`、GSC TXT。查:`dig @1.1.1.1 +short A aeiou.now`(換 AAAA/TXT/CNAME 各查)。
   ⚠ **切自訂網域上線前必須先補 Bot 防護**(下節紅線)。
-- [ ] **GitHub org 網域驗證:TXT 已就位,剩 UI 按 Verify**(2026-08-19 實測 TXT 查得到)。
-  原始說明(防 subdomain takeover;DNS 已指向、repo 未綁):
+- [x] **GitHub org 的 Pages 網域驗證已完成**(用戶 2026-08-19 確認已在 UI 按過 Verify;
+  同日實測 TXT `_github-pages-challenge-weiqi-kids.aeiou.now` 查得到值)。
+  **這一項沒有 API 可查**(實測 `/orgs/*/settings/pages`、`/orgs/*/pages`、`/orgs/*/domains` 皆 404),
+  唯一的機器可查訊號就是上面那筆 TXT;要看驗證狀態只能開 UI。
+  ⚠ **不要拿 `gh api /orgs/weiqi-kids --jq .is_verified` 當證據** —— 那是另一個功能
+  (組織資料驗證/profile 徽章,用 `_github-challenge-<org>-org` TXT),與 Pages 網域驗證無關,
+  它是 false 不代表這一項沒做。原始說明(防 subdomain takeover):
   無 REST API(2026-08-15 實測 /orgs/*/pages* 皆 404),只能 UI:
   `github.com/organizations/weiqi-kids/settings/pages` → Add a domain → 取 TXT code →
   GoDaddy 加 `_github-pages-challenge-weiqi-kids` TXT → Verify。**用戶端動作**。
