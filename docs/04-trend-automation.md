@@ -60,6 +60,16 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l   # 靜態層目前輸出幾個�
 - 同一 `topic_id + content_hash` 不重複建立 publication。
 - `AEIOU_TREND_AUTO_PUBLISH=0` 停止新發布；既有資料不會被隱性刪除。
 - 趨勢 TTL 預設 48 小時；過期 Topic 轉 archived，靜態 export 不再輸出。
+  **TTL 是從 `last_seen_at` 起算,不是從建立時間起算** —— 一個持續出現在趨勢裡的 Topic
+  每輪都會把 `expires_at` 往後推 48 小時。所以「建立於三天前」不等於「已經過期」;
+  停止產製之後才會開始真正倒數。查退場時程(唯讀,不改資料):
+
+```bash
+sqlite3 db/aeiou.sqlite "
+SELECT datetime(expires_at,'unixepoch') 到期, COUNT(*) 筆數
+FROM trend_topic_state WHERE state IN ('active','cooling')
+GROUP BY date(expires_at,'unixepoch') ORDER BY 1"
+```
 
 ## 設定
 
