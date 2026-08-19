@@ -271,7 +271,7 @@ sqlite3 db/aeiou.sqlite "SELECT DISTINCT status FROM <表名>"
 | 0.1 / 0.2 語彙 | ✅ | `68521b2` | `grep -crE 'post_status !== .active.\|topic_status === .candidate.' api/src/**/*.js` 應無命中 |
 | 1.1 Worker 拆模組 | ✅ | `d65e6ae` | `wc -l api/src/index.js api/src/lib/*.js api/src/routes/*.js`;`cd api && npx wrangler deploy --dry-run` |
 | 2.2 scripts 分層 | ✅ | `39581e4` `acfde00` | `ls scripts/oneoff/`;`grep -ohE 'scripts/[a-z0-9-]+\.mjs' scripts/cron-15min.sh scripts/hourly-export.sh \| sort -u` |
-| 2.3 sources upsert | ✅ | `f45b7b4` | `grep -A1 'ON CONFLICT(url)' scripts/import-topics.mjs` 應為 `DO NOTHING` |
+| 2.3 sources upsert | ✅ | `f45b7b4` | `grep -c "ON CONFLICT(url) DO NOTHING" scripts/import-topics.mjs` 應為 1 |
 | 3.1 data.mjs 拆分 | ✅ | `19396ac` | `wc -l site/src/lib/*.mjs`;七語 `pnpm build` 後比對 dist 指紋 |
 | 4.1 schema 註解 | ✅ | `31d523e` | 逐表比對(見 §4.1 的查法) |
 
