@@ -300,3 +300,24 @@ M2 上線自訂網域前必須補)**、IndexNow/GSC/sitemap、GA4 property 與�
 「加入行事曆」按鈕、19 job 完整管線、Vectorize/Topic Detection、R2 歸檔。
 
 **未完成事項見 `docs/TODO.md`。**
+
+---
+
+## Agent skills
+
+> 本段供 mattpocock-skills 系列 skill 讀取設定,不是給人看的現況報告。
+> 要換 issue tracker 或重來,重跑 `/mattpocock-skills:setup-matt-pocock-skills`;
+> 只是微調則直接改 `docs/agents/*.md`。
+
+### Issue tracker
+
+Issue 與 spec 走 GitHub Issues(`weiqi-kids/aeiou.now`),一律用 `gh` CLI。見 `docs/agents/issue-tracker.md`。
+
+### Triage labels
+
+沿用五個標準角色,標籤字串與角色同名。見 `docs/agents/triage-labels.md`。
+
+### Domain docs
+
+單一 context:根層 `CONTEXT.md` + `docs/adr/`(skill 會在真正需要時才建,不存在是預期狀態)。
+見 `docs/agents/domain.md`。
