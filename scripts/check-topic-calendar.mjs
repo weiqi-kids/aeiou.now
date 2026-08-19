@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { SQL_PUBLICLY_VISIBLE, isTrendTopic } from "./lib/topics.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DB_PATH = join(ROOT, 'db', 'aeiou.sqlite');
@@ -27,9 +28,10 @@ if (weeks.some((row) => !Number.isInteger(row.week) || row.week < 1 || row.week 
 
 const db = new DatabaseSync(DB_PATH, { readOnly: true });
 db.exec("PRAGMA busy_timeout = 15000;"); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)
-// machine-owned trend Topic 沒有人工 cover 檔；它們由 Topic 頁的無 cover 降級顯示，
-// 不應被年度文化 Topic 的 cover gate 擋住。manual/既有 Topic 仍維持原驗收。
-const activeRows = db.prepare("SELECT slug, status, category FROM topics WHERE status IN ('active','cooling') ORDER BY slug").all();
+// 趨勢 Topic 沒有人工 cover 檔；它們由 Topic 頁的無 cover 降級顯示，
+// 不應被年度文化 Topic 的 cover gate 擋住。人工 Topic 仍維持原驗收。
+// 可見性軸,不是熱度軸:archived Topic 仍公開可見,一樣要被日曆守門涵蓋。見 CONTEXT.md。
+const activeRows = db.prepare(`SELECT slug, status, category, access_source FROM topics WHERE ${SQL_PUBLICLY_VISIBLE} ORDER BY slug`).all();
 const active = new Map(activeRows.map((row) => [row.slug, row.status]));
 for (const row of weeks) {
   for (const slug of row.topics || []) {
@@ -44,7 +46,7 @@ const contentSlugs = readdirSync(join(ROOT, 'content', 'topics'))
 const coverHashes = new Map();
 for (const row of activeRows) {
   const slug = row.slug;
-  if (row.category === 'trend') continue;
+  if (isTrendTopic(row)) continue;   // 來源軸只看 access_source(ADR-0001)
   const cover = join(COVER_DIR, `${slug}.png`);
   if (!existsSync(cover)) {
     errors.push(`Topic ${slug} 缺少 PNG cover:${cover}`);

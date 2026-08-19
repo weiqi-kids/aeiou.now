@@ -5,6 +5,7 @@
 import { readFileSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { isTrendTopic } from "./lib/topics.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const LOCALES = ['zh-TW', 'en', 'ja', 'zh-CN', 'hi', 'id', 'pt-BR'];
@@ -25,16 +26,7 @@ const fail = (message) => errors.push(message);
 
 // 與 export-data.mjs 同一個相容層契約：只有明確 machine/trend marker
 // 才會被視為 trend Topic；沒有 marker 的資料維持既有 manual taxonomy。
-const TREND_TOPIC_KINDS = new Set(['trend', 'trend_topic', 'machine_owned_trend']);
-const MACHINE_OWNERS = new Set(['machine', 'machine_owned', 'automated', 'system']);
-const normalizeMarker = (value) => String(value ?? '').trim().toLowerCase().replace(/[\s-]+/g, '_');
-const firstMarker = (...values) => values.find((value) => value != null && String(value).trim() !== '');
-const isMachineTrendTopic = (row) => {
-  const kind = normalizeMarker(firstMarker(row?.topic_kind, row?.topic_type, row?.kind));
-  const owner = normalizeMarker(firstMarker(row?.owner, row?.ownership, row?.topic_owner));
-  const origin = normalizeMarker(firstMarker(row?.origin, row?.provenance, row?.access_source, row?.category));
-  return TREND_TOPIC_KINDS.has(kind) || MACHINE_OWNERS.has(owner) || origin === 'trend';
-};
+const isMachineTrendTopic = isTrendTopic;
 const isHiddenStatus = (row) => row?.status === 'candidate' || row?.status === 'merged';
 const trendKey = (row) => `${row?.topic_id || ''}|${row?.slug || ''}`;
 

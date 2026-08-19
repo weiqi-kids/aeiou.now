@@ -27,6 +27,7 @@ import { execFileSync } from "node:child_process";
 import { join, resolve, dirname, basename } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
+import { isCanonicalCategory } from "./lib/topics.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const DB_PATH = join(ROOT, "db", "aeiou.sqlite");
@@ -132,6 +133,10 @@ function parseTopicMd(text, file) {
   // 驗證(缺什麼講清楚,不要默默吞)
   const errs = [];
   for (const k of ["slug", "canonical", "category", "commonality"]) if (!doc.meta[k]) errs.push(`meta 缺 ${k}`);
+  // category 必須是正典取值。原本只驗非空,任何字串都收 —— 分類軸就是這樣漂走的。
+  if (doc.meta.category && !isCanonicalCategory(doc.meta.category)) {
+    errs.push(`meta.category 不是正典取值:${doc.meta.category}(正典清單見 scripts/lib/topics.mjs)`);
+  }
   if (!/^[a-z0-9-]+$/.test(doc.meta.slug || "")) errs.push(`slug 只准小寫英數與連字號:「${doc.meta.slug}」`);
   for (const [id, c] of Object.entries(doc.observances)) {
     if (!c.local_name) errs.push(`observance ${id} 缺 local_name`);

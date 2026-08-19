@@ -406,6 +406,8 @@ function recalculateGlobalRanks(db) {
     const rows = db.prepare(
       `SELECT s.topic_id, s.score
          FROM topic_scores s JOIN topics t ON t.topic_id = s.topic_id
+        -- 熱度軸(刻意):archived 依定義就是「目前不熱、不在即時榜上」,排名榜不收。
+        -- 這裡與可見性軸不同,別跟著其他守門腳本改成 NOT IN ('candidate','merged')。見 CONTEXT.md。
         WHERE s.scope = 'global' AND s.window = ? AND t.status IN ('active','cooling')
         ORDER BY s.score DESC, s.topic_id`
     ).all(window);

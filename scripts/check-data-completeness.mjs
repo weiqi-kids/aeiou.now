@@ -4,6 +4,8 @@
 // 不把「目前沒有真實 UGC 精華」偽造成內容。
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { isTrendTopic } from "./lib/topics.mjs";
+import { CANONICAL_CATEGORIES, isCanonicalCategory } from "./lib/topics.mjs";
 
 const ROOT = process.cwd().endsWith('/site') ? join(process.cwd(), '..') : process.cwd();
 const DATA = join(ROOT, 'data');
@@ -26,16 +28,7 @@ const unique = (values) => new Set(values).size === values.length;
 
 // 與 export-data.mjs / check-final-topic-taxonomy.mjs 共用的輸出契約：
 // 明確標記才是 machine-owned trend；其餘資料仍按既有 manual Topic 驗收。
-const TREND_TOPIC_KINDS = new Set(['trend', 'trend_topic', 'machine_owned_trend']);
-const MACHINE_OWNERS = new Set(['machine', 'machine_owned', 'automated', 'system']);
-const normalizeMarker = (value) => String(value ?? '').trim().toLowerCase().replace(/[\s-]+/g, '_');
-const firstMarker = (...values) => values.find((value) => value != null && String(value).trim() !== '');
-const isMachineTrendTopic = (row) => {
-  const kind = normalizeMarker(firstMarker(row?.topic_kind, row?.topic_type, row?.kind));
-  const owner = normalizeMarker(firstMarker(row?.owner, row?.ownership, row?.topic_owner));
-  const origin = normalizeMarker(firstMarker(row?.origin, row?.provenance, row?.access_source, row?.category));
-  return TREND_TOPIC_KINDS.has(kind) || MACHINE_OWNERS.has(owner) || origin === 'trend';
-};
+const isMachineTrendTopic = isTrendTopic;
 const isHiddenStatus = (row) => row?.status === 'candidate' || row?.status === 'merged';
 const topicKey = (row) => `${row?.topic_id || ''}|${row?.slug || ''}`;
 const same = (a, b) => JSON.stringify([...a].sort()) === JSON.stringify([...b].sort());
@@ -172,6 +165,27 @@ for (const [label, urls, kind] of [
   ['managed event', sample?.managed_event_source_urls || [], 'event'],
 ]) {
   for (const url of urls) if (sourceByUrl.get(url)?.kind !== kind) fail(`${label} URL kind 不符：${url}`);
+}
+
+// ---- category 正典與七語標籤覆蓋 ----------------------------------------
+// 缺標籤時前端 tOr() 會退回顯示英文原始 slug。2026-08-19 線上七站首頁實際發生過:
+// 12 類裡只有 3 類有標籤,中文站與日文站首頁直接露出 family / civic / seasonal…
+{
+  const usedCategories = [...new Set(activeTopics.map((t) => t.category).filter(Boolean))];
+  for (const c of usedCategories) {
+    if (!isCanonicalCategory(c)) errors.push(`Topic category 不是正典取值:${c}`);
+  }
+  const i18nDir = join(ROOT, "site", "src", "i18n");
+  for (const locale of LOCALES) {
+    const file = join(i18nDir, `${locale}.json`);
+    if (!existsSync(file)) { errors.push(`i18n 缺檔:${locale}.json`); continue; }
+    const dict = JSON.parse(readFileSync(file, "utf8"));
+    for (const c of CANONICAL_CATEGORIES) {
+      const key = `category.${c}`;
+      if (!dict[key]) errors.push(`${locale}.json 缺 ${key}(前端會露出英文原始 slug)`);
+      else if (String(dict[key]).startsWith("[TODO]")) errors.push(`${locale}.json 的 ${key} 仍是未翻佔位`);
+    }
+  }
 }
 
 if (errors.length) {

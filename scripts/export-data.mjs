@@ -15,6 +15,7 @@
 import { DatabaseSync } from "node:sqlite";
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { isTrendTopic } from "./lib/topics.mjs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -65,22 +66,10 @@ const parseJson = (s, fallback) => {
   try { return JSON.parse(s); } catch { return fallback; }
 };
 
-// 靜態輸出相容層：machine-owned trend Topic 不改既有 topics schema，
-// 而是由生產端在 row 上提供明確 marker。現有 trend pipeline 使用
-// access_source/category='trend'；沒有 marker 的 row 一律維持既有 manual 行為，
-// 絕不從 slug 猜 ownership。
-const TREND_TOPIC_KINDS = new Set(['trend', 'trend_topic', 'machine_owned_trend']);
-const MACHINE_OWNERS = new Set(['machine', 'machine_owned', 'automated', 'system']);
-
-const normalizeMarker = (value) => String(value ?? '').trim().toLowerCase().replace(/[\s-]+/g, '_');
-const firstMarker = (...values) => values.find((value) => value != null && String(value).trim() !== '');
-
-function isMachineTrendTopic(row) {
-  const kind = normalizeMarker(firstMarker(row?.topic_kind, row?.topic_type, row?.kind));
-  const owner = normalizeMarker(firstMarker(row?.owner, row?.ownership, row?.topic_owner));
-  const origin = normalizeMarker(firstMarker(row?.origin, row?.provenance, row?.access_source, row?.category));
-  return TREND_TOPIC_KINDS.has(kind) || MACHINE_OWNERS.has(owner) || origin === 'trend';
-}
+// 趨勢 Topic 的判準見 scripts/lib/topics.mjs(唯一來源,判準=access_source)。
+// 這裡只保留「輸出端契約」:靜態 JSON 額外補 topic_kind/owner 兩個欄位,供前端辨識。
+// 那是輸出層的契約,與主機 row 的 access_source 是不同層,不要互相套用。
+const isMachineTrendTopic = isTrendTopic;
 
 function trendOutputMetadata(row) {
   return isMachineTrendTopic(row)

@@ -7,6 +7,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { SQL_PUBLICLY_VISIBLE, isManualTopic } from "./lib/topics.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DB_PATH = join(ROOT, 'db', 'aeiou.sqlite');
@@ -96,10 +97,12 @@ for (const file of contentFiles) {
 
 const db = new DatabaseSync(DB_PATH, { readOnly: true });
 db.exec("PRAGMA busy_timeout = 15000;"); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)
-const activeTopics = db.prepare("SELECT * FROM topics WHERE status IN ('active','cooling') ORDER BY slug").all();
+// 可見性軸,不是熱度軸:archived Topic 仍公開可見、仍可發文,所以也該有對應內容。
+// 曾誤寫成 IN ('active','cooling') 而把 archived 漏出守門範圍(2026-08-19 修正)。見 CONTEXT.md。
+const activeTopics = db.prepare(`SELECT * FROM topics WHERE ${SQL_PUBLICLY_VISIBLE} ORDER BY slug`).all();
 // machine-owned trend Topic 的內容權威在 SQLite trend pipeline，不會有
 // content/topics/<slug>.md 或人工 cover；文化/manual Topic 仍照原 gate 全驗。
-const contentManagedTopics = activeTopics.filter((topic) => topic.access_source !== 'trend' && topic.category !== 'trend');
+const contentManagedTopics = activeTopics.filter(isManualTopic);   // 來源軸只看 access_source(ADR-0001)
 const activeTopicIds = new Set(activeTopics.map((topic) => topic.topic_id));
 const allLocales = new Set(db.prepare('SELECT DISTINCT locale FROM topic_i18n').all().map((row) => row.locale));
 for (const locale of LOCALES) if (!allLocales.has(locale)) fail(`資料庫缺全域 locale:${locale}`);

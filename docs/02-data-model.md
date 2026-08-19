@@ -52,13 +52,15 @@ CREATE TABLE topics (
   slug            TEXT NOT NULL UNIQUE,      -- 'affection-and-reciprocity',URL 用
   canonical_name  TEXT NOT NULL,             -- 語言中立的正規名稱(英文為主)
   commonality     TEXT NOT NULL DEFAULT '',  -- 跨國共通性分類依據,不是日期名稱
-  category        TEXT NOT NULL,             -- 草案 §4.1 的 15 類
+  category        TEXT NOT NULL,             -- 主題分類軸(不承載來源)。正典清單見 CONTEXT.md
+                                              -- civic|community|education|faith|family|festival|food|home|life-stage|relationship|remembrance|seasonal
   status          TEXT NOT NULL,             -- candidate|active|cooling|archived|merged
   merged_into     TEXT,                      -- status='merged' 時指向合併目標
   is_perennial    INTEGER NOT NULL DEFAULT 0,-- 1 = 長青(如 ask-the-world),永不 cooling
 
   access_level    INTEGER NOT NULL DEFAULT 0,-- 0=匿名可 1=需登入 2=需登入且滿18
-  access_source   TEXT NOT NULL DEFAULT 'category', -- category|manual|moderation
+  access_source   TEXT NOT NULL DEFAULT 'category', -- 來源軸的唯一正典標記(ADR-0001)
+                                              -- manual|category|trend
                                              -- 誰設定的,供稽核與覆寫判斷
 
   global_score    REAL NOT NULL DEFAULT 0,
