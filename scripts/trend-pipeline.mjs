@@ -44,8 +44,14 @@ const MARKETS = (process.env.AEIOU_TREND_MARKETS || "TW,US,JP,IN,ID,BR")
   .split(",").map((s) => s.trim().toUpperCase()).filter(Boolean);
 const LIMIT = Math.min(10, Math.max(1, Number.parseInt(process.env.AEIOU_TREND_LIMIT || "3", 10) || 3));
 const TTL_SEC = Math.max(3600, Number.parseInt(process.env.AEIOU_TREND_TTL_SEC || String(48 * 3600), 10) || 48 * 3600);
-const AUTO_PUBLISH = !["0", "false", "off", "no"].includes(
-  String(process.env.AEIOU_TREND_AUTO_PUBLISH ?? "1").toLowerCase()
+// **預設不發布**(2026-08-19 用戶拍板:管線保留、趨勢 Topic 暫不上線)。
+// 預設值放在這裡而不是只放在 cron 包裝腳本裡,是因為專案紅線要求
+// 「腳本裸執行(不帶任何參數)就必須是正確且完整的行為」——
+// 只把 kill switch 寫在 cron-15min.sh 的話,任何人直接跑 `node scripts/trend-pipeline.mjs`
+// 都會發布出去(2026-08-19 我自己就這樣誤發了 3 個 Topic,事後手動刪除)。
+// 要放行就明確帶 AEIOU_TREND_AUTO_PUBLISH=1。
+const AUTO_PUBLISH = ["1", "true", "on", "yes"].includes(
+  String(process.env.AEIOU_TREND_AUTO_PUBLISH ?? "0").toLowerCase()
 );
 const DRY_RUN = process.argv.includes("--dry-run");
 const FORCE = process.argv.includes("--force") || ["1", "true", "yes"].includes(String(process.env.AEIOU_TREND_FORCE || "").toLowerCase());
@@ -512,14 +518,29 @@ async function main() {
   log(`[${JOB_NAME}] job_id=${job.job_id} provider=${PROVIDER} markets=${MARKETS.join(",")} limit=${LIMIT} auto=${AUTO_PUBLISH && !DRY_RUN}`);
 
   try {
+    // TTL 過期**先跑,且不受 kill switch 影響**。
+    // kill switch 的語意是「不要產新的」,不是「把既有狀態凍結」—— 過期是清理不是發布。
+    // 2026-08-19 這兩行原本在 kill switch 的 early-return 之後:關掉開關的同時也凍結了
+    // TTL,已累積的趨勢 Topic 會永遠停在 active,主機與 D1 兩邊都不會自然退場,
+    // 而文件卻寫著「TTL 到期會轉 archived」。
+    // 收掉早已死掉卻卡在 running 的 run 列。行程被硬殺(OOM、逾時、機器重開)時
+    // 那一列不會有人去改狀態,於是永遠停在 running。用兩倍 slot 間隔當判準:
+    // 超過就不可能還活著。2026-08-17～18 那段連續失敗留下 400 多列,就是這樣來的。
+    const staleRuns = db.prepare(
+      "UPDATE trend_runs SET status = 'failed', finished_at = COALESCE(finished_at, started_at), error_message = COALESCE(error_message, 'stale: 行程未正常結束,由後續執行收斂') " +
+      "WHERE status = 'running' AND started_at < ?"
+    ).run(now - 2 * 15 * 60);
+    if (staleRuns.changes) log(`[${JOB_NAME}] 收斂 ${staleRuns.changes} 筆卡住的 running run`);
+
+    const expired = expireOldTopics(db, now);
+    if (expired) log(`[${JOB_NAME}] expired ${expired} trend topic(s)`);
+
     if (!AUTO_PUBLISH && !DRY_RUN) {
       finishJob(db, job, { status: "skipped", error: "AEIOU_TREND_AUTO_PUBLISH=0" });
-      log(`[${JOB_NAME}] disabled by kill switch`);
+      log(`[${JOB_NAME}] disabled by kill switch(TTL 過期仍已執行)`);
       db.close();
       return;
     }
-    const expired = expireOldTopics(db, now);
-    if (expired) log(`[${JOB_NAME}] expired ${expired} trend topic(s)`);
     const fetched = await readTrendItems();
     const items = fetched.items;
     const fetchErrors = fetched.errors;

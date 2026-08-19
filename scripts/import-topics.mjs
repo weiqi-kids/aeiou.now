@@ -191,7 +191,10 @@ function importOne(db, doc, now) {
   const upSrc = db.prepare(
     `INSERT INTO sources (source_id, url, domain, source_type, next_crawl_at, crawl_freq_s, status, updated_at)
      VALUES (?, ?, ?, 'manual', ?, 86400, 'processed', ?)
-     ON CONFLICT(url) DO UPDATE SET updated_at = excluded.updated_at`
+     -- DO NOTHING 而不是推新 updated_at:整個 DO UPDATE 只做時間戳這件事,
+     -- 而沒有任何地方讀 sources.updated_at(2026-08-19 實查)。與 topics 曾經的
+     -- 空推是同一個反模式,只是這裡沒有可觀測後果,所以拖到今天才一併清掉。
+     ON CONFLICT(url) DO NOTHING`
   );
 
   // 三張內容表整組替換(md 是權威)

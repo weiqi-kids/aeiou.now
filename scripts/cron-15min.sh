@@ -51,8 +51,9 @@ rc_translate=$?
 #   一旦匯出,七站 index 會有九成是機器生成的關鍵字 Topic,且前端無法與人工 Topic 區分。
 # 關掉的是「產新的」;既有資料留在 SQLite 不刪不改,靜態層另由 export-data.mjs 過濾
 # (AEIOU_TREND_EXPORT=1 才匯出)。兩道各自獨立,要復活兩邊都要開。
-# 開回來:改成 :-1,或在 /etc/cron.d/aeiou 設 AEIOU_TREND_AUTO_PUBLISH=1。
-export AEIOU_TREND_AUTO_PUBLISH="${AEIOU_TREND_AUTO_PUBLISH:-0}"
+# **預設值的正本在 scripts/trend-pipeline.mjs 裡**(裸執行就不發布);這裡不再重複設定,
+# 免得兩處各有一份預設、改了一邊以為就生效。要放行:AEIOU_TREND_AUTO_PUBLISH=1 跑一次,
+# 或改腳本裡的預設。
 "$NODE_BIN" "$REPO/scripts/trend-pipeline.mjs"
 rc_trend=$?
 

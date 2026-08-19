@@ -17,12 +17,14 @@
 | D1 有哪些表 | `cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name"` |
 | Worker 網址與版本 | `cd api && npx wrangler deployments list \| head -20` |
 | Worker 現在活著嗎 | `curl -s -o /dev/null -w '%{http_code}\n' "$(cat docs/.api-url 2>/dev/null || echo https://aeiou-api.lightman-chang.workers.dev)/v1/me"` |
+| **線上資料有多新**(與「是不是最新版」不同,見下) | `git log -1 --format=%cr -- data/`(最後一次 data 匯出距今多久);異常判準:超過約 2 小時就該查 `jobs` 表 |
 | 某站線上是不是最新版 | `curl -s https://<站網域>/.build-id`(網域見下方映射表)與 `git rev-parse HEAD` 比對(**不是比 HTTP 200**,舊版也回 200) |
 | 七站分別是哪一版 | `SHA=$(git rev-parse HEAD); for d in aeiou.now en.aeiou.now jp.aeiou.now cn.aeiou.now hi.aeiou.now id.aeiou.now br.aeiou.now; do printf '%-14s %s\n' "$d" "$(curl -s https://$d/.build-id \| tr -d '[:space:]' \| cut -c1-7)"; done; echo "期望 ${SHA:0:7}"` |
 | 某站網域綁定/HTTPS 狀態 | `gh api repos/weiqi-kids/aeiou-pages-<x>/pages --jq '{cname,https_enforced,status}'` |
 | 某站的 Pages 是否還在建 | `gh api repos/weiqi-kids/aeiou-pages-<x>/pages/builds/latest --jq .status` |
 | CI 最近跑得如何 | `gh run list -R weiqi-kids/aeiou.now --limit 5` |
 | cron 排程現況 | `cat /etc/cron.d/aeiou` |
+| **hourly-export 連續失敗了嗎** | `sqlite3 db/aeiou.sqlite "SELECT status,datetime(scheduled_at,'unixepoch') FROM jobs WHERE job_name='hourly-export' ORDER BY scheduled_at DESC LIMIT 5"` |
 | 最近的 job 成敗 | `sqlite3 db/aeiou.sqlite "SELECT job_name,status,datetime(scheduled_at,'unixepoch'),error_message FROM jobs ORDER BY scheduled_at DESC LIMIT 20"` |
 | 哪些 job 進了 DLQ | `sqlite3 db/aeiou.sqlite "SELECT * FROM jobs WHERE status='dlq'"` |
 | 有沒有待翻譯的貼文 | `curl -s -H "Authorization: Bearer $(cat ~/.config/aeiou/sync-secret)" "$API/internal/ugc/pending-translation?limit=50" \| head -c 300` |
