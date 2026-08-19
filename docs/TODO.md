@@ -98,18 +98,15 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
   (webmasters v3 PUT /sites/sc-domain%3A...)把資源掛進自己帳號——沒有這步 sites.list 永遠是空的**。
   SA 為 siteOwner(API 驗證的本質),非原規劃的「完整使用者」,記錄在案。
   查:`node /root/seo-ops/bin/identity-audit.mjs --sa ~/.config/aeiou/ga4-sa.json --expect-only aeiou.now`。
-- [ ] **Slack**:workspace=Weiqi.Kids、bot=`claude-helper`(有 `chat:write.public`,公開頻道免邀請;
+- [x] **Slack**:workspace=Weiqi.Kids、bot=`claude-helper`(有 `chat:write.public`,公開頻道免邀請;
   **沒有 `channels:read`,所以 `conversations.info` 會回 `missing_scope`,那是正常的,別當故障**)。
   token 在 `~/.config/aeiou/slack-bot-token`(600)。
   2026-08-19 實測:`auth.test` ok、對頻道 `chat.postMessage` ok(CI 實際走的就是這條)。
   頻道已建:`#天天開心-aeiou-now` / `C0BPMFZ50KG`。
-  **剩最後一步(需用戶執行,主機端權限被擋)**:設 repo secrets —
-  ```bash
-  gh secret set SLACK_BOT_TOKEN  -R weiqi-kids/aeiou.now < ~/.config/aeiou/slack-bot-token
-  printf 'C0BPMFZ50KG' | gh secret set SLACK_CHANNEL_ID -R weiqi-kids/aeiou.now
-  ```
-  未設之前 CI 的失敗告警一直在 gracefully skip(所以頻道從建立至今零訊息,不是壞掉)。
+  repo secrets `SLACK_BOT_TOKEN`/`SLACK_CHANNEL_ID` 已於 2026-08-19 設定,告警路徑接通。
+  (在此之前 CI 的失敗告警一直 gracefully skip,所以頻道從建立到當天零訊息,不是壞掉。)
   查:`gh secret list -R weiqi-kids/aeiou.now | grep -i slack`。
+  **尚未驗證**:真實 build 失敗時的告警(至今沒有失敗的 build 可觀察);下次 CI 紅的時候看頻道有沒有收到。
 
 ## M2 才做(用戶已同意延後;動工前先問)
 
