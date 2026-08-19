@@ -6,6 +6,7 @@
 #  2. deploy key 是 SSH 機制,HTTPS remote 一律失敗 → remote 用
 #     git@github.com:weiqi-kids/aeiou-pages-<x>.git,配 GIT_SSH_COMMAND + known_hosts。
 #  3. Pages 部署在 publish repo 非同步發生,push 完立刻 curl 必 404 → 必須輪詢。
+#  4. test job 是七站部署的前置關卡(needs: test)。測試紅了就不該有任何一站上線。
 #     且不得用 `gh api repos/<publish>/pages/builds` 輪詢(CI 的 GITHUB_TOKEN
 #     對他 repo 無權限,必 403),只能打站台 URL 本身。
 #
@@ -37,8 +38,29 @@ env:
   PUBLIC_GA4_ID: G-ZMTFG68ZJ5
 
 jobs:
+  # 測試先跑一次,綠了才准部署 —— 七個語系的 deploy 全部 needs: test。
+  # 為什麼要擋在部署前:Worker 是唯一直接面對外部寫入的碼(限流、發文閘門、
+  # 內部端點認證),2026-08-19 發文閘門被改壞、把所有 archived Topic 鎖死不能發文,
+  # 上線後沒有任何自動化擋下來。tests/api/ 就是為了讓那件事不能再發生。
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # 零 npm 依賴:測試只用 node 內建(node:test / node:sqlite),不必 install。
+      - name: Run tests
+        run: node --test 'tests/**/*.test.mjs'
+
   build-deploy:
     name: ${{ matrix.locale }}
+    needs: test
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
