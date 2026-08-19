@@ -4,6 +4,7 @@
 import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { LOCALE } from './config.mjs';
+import { isTrendTopic } from './topic-status.mjs';
 
 const DATA_ROOT = join(process.cwd(), 'src', 'data');
 
@@ -205,9 +206,8 @@ export function recentTopics(now = new Date(), win = '24h') {
       if (topic.is_perennial) return { ...topic, season_countries: [], season_distance: 0 };
       // 外部搜尋趨勢沒有文化日期；在趨勢有效期內視為「近期」入口，
       // 讓趨勢 Topic 不只存在於排行頁，也能被首頁發現。
-      // 判準是輸出層契約 topic_kind(export-data.mjs 為趨勢 Topic 補上)，
-      // 不是 category —— category 是主題分類軸，不承載來源(ADR-0001)。
-      if (topic.topic_kind === 'trend') {
+      // 判準見 topic-status.mjs(輸出層契約 topic_kind,不是 category)。
+      if (isTrendTopic(topic)) {
         return { ...topic, season_countries: [], season_distance: 0 };
       }
       const facts = readJson(`topics/${topic.topic_id}/facts.json`, null);

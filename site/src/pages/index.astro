@@ -32,6 +32,7 @@ import { t } from '../lib/i18n.mjs';
 import { withBase } from '../lib/paths.mjs';
 import { monthDay } from '../lib/format.mjs';
 import { recentTopics, topicsByHeat, countryName, questionsForDate, todayWorld } from '../lib/data.mjs';
+import { isPubliclyVisible } from '../lib/topic-status.mjs';
 
 // 每日世界一問(docs/briefs/daily-question.md §6.3):四個新區塊插在 #trending 之前。
 // poll/guess 各自可能為 null(題庫空、或該 kind 沒有 date<=今日的題目)——為 null 時
@@ -49,7 +50,7 @@ const recentIds = new Set(recent.map((topic) => topic.topic_id));
 // 近期日期不足以判斷的 Topic 仍必須留在首頁,排在日期可判斷的 Topic 後面;
 // 靜態 HTML 先輸出全量,TopicBoard 的 JS 才負責首屏 10 筆與觸底分批展開。
 const remaining = topicsByHeat(HOME_WINDOW).filter(
-  (topic) => topic.status === 'active' && !recentIds.has(topic.topic_id)
+  (topic) => isPubliclyVisible(topic) && !recentIds.has(topic.topic_id)
 );
 const rows = [...recent, ...remaining].map((topic) => ({ topic, note: seasonNote(topic) }));
 

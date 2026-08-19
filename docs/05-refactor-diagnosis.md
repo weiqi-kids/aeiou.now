@@ -26,21 +26,38 @@
 grep -rn "'active'" site/src api/src --include=*.astro --include=*.mjs --include=*.js | grep -v node_modules
 ```
 
-### 🔴 0.1 首頁會漏掉 archived Topic(潛在,尚未發作)
+### 🟡 0.1 首頁的過濾判準寫錯(目前那條路走不到)
 
-`site/src/pages/index.astro` 用 `topic.status === 'active'` 過濾首頁次要清單。
-依資料模型,`archived` 是**公開可見且可發文**的,只是不熱——它不該從首頁消失。
+> **2026-08-19 更正**:本項原評為 🔴 並寫成「等排名 job 上線就會靜默發作」。
+> 實際查證後降級 —— 判準確實寫錯、也已修,但**當時與現在的實際影響都是零**,
+> 因為那段程式碼走不到。原評級是我沒有實測就下的結論。
 
-現在看不出問題,是因為人工 Topic 目前全都是 `active`。等 M2 的排名 job 上線、
-開始把 Topic 推進 `cooling`/`archived`,這些 Topic 會**靜默地**從首頁消失。
+`site/src/pages/index.astro` 曾用 `topic.status === 'active'` 過濾首頁的次要清單。
+依資料模型,`archived` 是**公開可見且可發文**的,只是不熱——用熱度軸的一個值去
+表達可見性,是本專案反覆出錯的那個混淆。已改用 `isPubliclyVisible()`。
 
-查法:
+但這條路目前走不到:該 filter 只作用於「不在 `recentTopics()` 結果裡」的 Topic,
+而 `recentTopics()` 會收下常青、趨勢、以及任何有日期 observance 的 Topic ——
+實測目前**沒有任何 Topic** 落在它之外。而且 `export-data.mjs` 本來就只輸出
+`NOT IN ('candidate','merged')`,所以新判準對 index 內的資料恆為真。
+
+查法(算出真正會走到那條路的 Topic 數;為 0 就代表這段仍是死路):
 
 ```bash
-sqlite3 db/aeiou.sqlite "SELECT status,COUNT(*) FROM topics WHERE access_source!='trend' GROUP BY 1"
+python3 - <<'EOF'
+import json, os
+idx = json.load(open('data/topics/index/zh-TW.json'))
+items = idx if isinstance(idx, list) else idx.get('topics', [])
+n = 0
+for t in items:
+    if t.get('is_perennial') or str(t.get('topic_id','')).startswith('top_tr_'): continue
+    f = f"data/topics/{t['topic_id']}/facts.json"
+    if not os.path.exists(f): continue
+    obs = json.load(open(f)).get('observances') or []
+    if not [o for o in obs if o.get('next_occurrence') or o.get('observed_date')]: n += 1
+print(n)
+EOF
 ```
-
-只要 `archived` 那列出現非零,這個 bug 就開始發作。
 
 ### 🟡 0.2 `api/src/index.js` 多處散裝列舉 post 狀態
 

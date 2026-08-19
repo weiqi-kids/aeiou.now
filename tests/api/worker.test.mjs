@@ -90,6 +90,35 @@ describe("發文閘門:status 的兩個軸不可混用", () => {
   });
 });
 
+describe("feed 只收還開著的 Post", () => {
+  // posts.status='archived' 是永久鎖定,與 topics.status='archived' 同名不同義。
+  // 這組同時驗證 feed SQL 的 ${SQL_POST_OPEN} 樣板有正確展開 —— 沒展開的話
+  // SQL 會語法錯誤或過濾失效,而那不會有任何外顯徵兆。
+  const insertPost = (post_id, status) => raw.prepare(
+    `INSERT INTO posts (post_id, topic_id, cycle_id, user_id, anon_id, original_locale,
+       content, media_json, target_country, country_code, city_code,
+       views, unique_views, comments, likes, shares, cross_country_engagements, hot_score,
+       status, translation_status, created_at, last_activity_at, archived_at)
+     VALUES (?,?,?,NULL,?,?,?,NULL,NULL,'TW','taipei',0,0,0,0,0,0,0,?,'done',?,?,NULL)`
+  ).run(post_id, "top_TEST", "cyc_1", ANON, "zh-TW", `content-${status}`,
+        status, Math.floor(Date.now() / 1000), Math.floor(Date.now() / 1000));
+
+  test("active 出現、archived 與 moderation 不出現", async () => {
+    seedTopic();
+    insertPost("pst_OPEN", "active");
+    insertPost("pst_LOCKED", "archived");
+    insertPost("pst_MOD", "moderation");
+
+    const res = await call("/v1/topics/top_TEST/feed");
+    const payload = await res.json();   // body 只能讀一次
+    assert.equal(res.status, 200, JSON.stringify(payload));
+    const ids = (payload.posts || []).map((p) => p.post_id);
+    assert.ok(ids.includes("pst_OPEN"), `active 的貼文應該在 feed,實際:${JSON.stringify(ids)}`);
+    assert.ok(!ids.includes("pst_LOCKED"), "archived 的貼文不該在 feed");
+    assert.ok(!ids.includes("pst_MOD"), "moderation 的貼文不該在 feed");
+  });
+});
+
 describe("發文的輸入驗證", () => {
   beforeEach(() => seedTopic());
 

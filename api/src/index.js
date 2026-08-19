@@ -193,6 +193,22 @@ async function checkSyncAuth(request, env) {
 }
 
 // ---------- 共用 gate ----------
+// status 承載兩個彼此獨立的軸,而且 Topic 與 Post 同名不同義(見 /CONTEXT.md):
+//   topics.status = 'archived' → 只是不熱,**仍公開、仍可發文**
+//   posts.status  = 'archived' → **永久鎖定,不能再回覆**
+// 要哪個意思就叫哪個名字,不要在呼叫點散裝列舉字串值 —— 2026-08-19 就是這樣改壞過
+// 一次:topicGate 被改成「只放行 active/cooling」,而 cooling 這個 topic status
+// 從未存在於資料中,效果等於把所有 archived Topic 鎖死不能發文。
+
+/** Topic 不公開的兩種狀態。 */
+const TOPIC_HIDDEN = new Set(["candidate", "merged"]);
+/** Post 還能不能被回覆/互動。archived 與 moderation/deleted 都不行。 */
+const POST_OPEN = new Set(["active", "cooling"]);
+/** SQL 片段:feed 只收還開著的 Post。語意與 isPostOpen 等價,改一邊要改兩邊。 */
+const SQL_POST_OPEN = "('active','cooling')";
+
+const isPostOpen = (row) => POST_OPEN.has(row?.post_status);
+
 // access gate 只 gate 討論室(讀+寫都經此 Worker,一律檢查);M1 不做 OAuth,1/2 一律 401
 function topicGate(row, cors) {
   if ((row.access_level | 0) >= 1) {
@@ -202,7 +218,7 @@ function topicGate(row, cors) {
   // 只有 posts.status='archived' 才是永久鎖定 —— 同名不同義,見 CLAUDE.md 紅線。
   // 曾一度改成「只放行 active/cooling」,但 cooling 這個 status 從未存在於資料中,
   // 效果等於把 archived Topic 全部鎖死;2026-08-19 改回。
-  if (row.topic_status === "candidate" || row.topic_status === "merged") {
+  if (TOPIC_HIDDEN.has(row.topic_status)) {
     return err(403, "topic_locked", "Topic is not open for discussion", cors);
   }
   return null;
@@ -246,7 +262,7 @@ async function handleFeed(request, env, topicId, url, cors) {
               ((SELECT COUNT(DISTINCT r.actor_id) FROM reactions r
                  WHERE r.target_type = 'post' AND r.target_id = p.post_id) + p.comments) AS heat
        FROM posts p
-       WHERE p.topic_id = ? AND p.created_at >= ? AND p.status IN ('active','cooling')
+       WHERE p.topic_id = ? AND p.created_at >= ? AND p.status IN ${SQL_POST_OPEN}
        ORDER BY ${orderBy}
        LIMIT ?`
     )
@@ -454,7 +470,7 @@ async function handleCreateComment(request, env, ctx, cors) {
   if (!row) return err(404, "not_found", "post not found", cors);
   const gate = topicGate(row, cors);
   if (gate) return gate;
-  if (row.post_status !== "active" && row.post_status !== "cooling")
+  if (!isPostOpen(row))
     return err(403, "post_locked", "post is locked", cors);
 
   let anonId = getAnonId(request);
@@ -547,7 +563,7 @@ async function handleReaction(request, env, ctx, cors) {
     if (!row) return err(404, "not_found", `${target_type} not found`, cors);
     const gate = topicGate(row, cors);
     if (gate) return gate;
-    if (row.post_status !== "active" && row.post_status !== "cooling")
+    if (!isPostOpen(row))
       return err(403, "post_locked", "post is locked", cors);
   }
 
