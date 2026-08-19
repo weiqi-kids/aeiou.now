@@ -13,6 +13,9 @@ site/src/data/
 # 同步指紋(sync-topics 判斷「內容沒變就不推」用;純本機狀態,刪掉只會多推一次)
 db/.sync-state*.json
 
+# 在地資料來源的傳輸層健康計數(update-local-data 用;純本機狀態,刪掉只會讓計數歸零)
+db/.local-source-health.json
+
 .DS_Store
 .env
 .env.*

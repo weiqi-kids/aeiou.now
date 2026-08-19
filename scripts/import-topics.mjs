@@ -172,7 +172,16 @@ function importOne(db, doc, now) {
      VALUES (?, ?, ?, ?, ?, ?, ?, 0, 'manual', COALESCE((SELECT global_score FROM topics WHERE topic_id = ?), 0), ?, ?, ?, ?)
      ON CONFLICT(topic_id) DO UPDATE SET
        canonical_name = excluded.canonical_name, commonality = excluded.commonality, category = excluded.category,
-       is_perennial = excluded.is_perennial, updated_at = excluded.updated_at`
+       is_perennial = excluded.is_perennial, updated_at = excluded.updated_at
+     -- 只在內容真的不同時才寫,否則整列不動、updated_at 不推新。
+     -- 少了這個 WHERE,每小時 cron 重跑都會把每個 Topic 的時間戳推新,
+     -- 於是 export 的「hash 沒變不寫檔」失效 → data/ 每小時數百行純時間戳 diff
+     -- → commit → CI → 七站全部重建重新部署,而整個 site/ 沒有一處讀 updated_at。
+     -- IS NOT 是 SQLite 的 null-safe 比較,不能寫成 !=。
+     WHERE topics.canonical_name IS NOT excluded.canonical_name
+        OR topics.commonality    IS NOT excluded.commonality
+        OR topics.category       IS NOT excluded.category
+        OR topics.is_perennial   IS NOT excluded.is_perennial`
   ).run(topicId, meta.slug, meta.canonical, meta.commonality, meta.category,
         existing ? existing.status : "active", isPerennial, topicId,
         existing ? existing.first_seen_at : now, now, existing ? existing.created_at : now, now);

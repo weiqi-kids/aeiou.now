@@ -4,6 +4,15 @@
 // 這支不是通用搜尋引擎爬蟲：搜尋經驗固定在 content/local-data-sources.json，
 // 每筆候選來源都要有官方 URL、搜尋脈絡與頁面 marker。頁面不可核對時整次失敗，
 // 不以推測內容替換現有資料；找到新來源後先更新來源目錄，再重跑本支腳本。
+//
+// 失敗分兩類，處理方式不同（2026-08-19 用戶拍板）：
+//   內容層（4xx、marker 對不上、日期 marker 對不上）
+//     → 來源真的變了，立即整次失敗、擋下輸出。重抓同一頁不會有不同結果。
+//   傳輸層（連線失敗、逾時、5xx）
+//     → 對方伺服器暫時掛了，不是我們的資料錯。記進健康檔並放行本輪；
+//       同一個 URL 連續 TRANSIENT_TOLERANCE 輪都是傳輸層失敗才擋下。
+//   會這樣分是因為整條 hourly-export 都掛在這支後面：任何一個來源打個嗝，
+//   Topic 與題庫的匯出也會一起停擺（2026-08-19 實際被一個 HTTP 520 擋過一次）。
 import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join, resolve, dirname } from "node:path";
@@ -15,6 +24,9 @@ const SOURCES_PATH = join(ROOT, "content", "local-data-sources.json");
 const IMPORTER_PATH = join(ROOT, "scripts", "import-local-sample-data.mjs");
 const LOCALES = ["zh-TW", "en", "ja", "zh-CN", "hi", "id", "pt-BR"];
 const DEFAULT_TIMEOUT_MS = 20_000;
+// 純本機狀態（同 db/.sync-state*.json 的慣例，不進 git）。刪掉只會讓計數從零開始。
+const HEALTH_PATH = join(ROOT, "db", ".local-source-health.json");
+const TRANSIENT_TOLERANCE = Number(process.env.AEIOU_LOCAL_SOURCE_TOLERANCE || 3);
 
 const argv = process.argv.slice(2);
 const checkOnly = argv.includes("--check-only");
@@ -166,12 +178,20 @@ async function fetchSource(url) {
     }
     if (attempt < FETCH_ATTEMPTS) await sleep(2000 * attempt);
   }
-  fail(`來源讀取失敗（已重試 ${FETCH_ATTEMPTS} 次）：${url}；${lastMessage}`);
+  const transient = new Error(`來源讀取失敗（已重試 ${FETCH_ATTEMPTS} 次）：${url}；${lastMessage}`);
+  transient.transient = true;   // 傳輸層，不是內容層 —— 由呼叫端決定要不要擋
+  throw transient;
 }
 
 async function verifySource(url, source, event) {
   if (offline) return { url, skipped: true, matched: [] };
-  const { response, rawBody } = await fetchSource(url);
+  let response, rawBody;
+  try {
+    ({ response, rawBody } = await fetchSource(url));
+  } catch (error) {
+    if (!error.transient) throw error;
+    return { url, transient: true, message: error.message, matched: [] };
+  }
   if (!response.ok) fail(`來源 HTTP ${response.status}：${url}`);
   const body = normalizedBody(rawBody);
   const matched = source.markers.filter((marker) => body.includes(marker));
@@ -201,13 +221,27 @@ async function main() {
   const urlsToVerify = unique([...placeUrls, ...activeEventUrls]);
 
   console.log(`來源驗證：${urlsToVerify.length} 個目前仍使用的 URL（${offline ? "offline" : "online"}）`);
+  const health = existsSync(HEALTH_PATH) ? readJson(HEALTH_PATH) : {};
+  const blocking = [];
   const checks = [];
   for (const url of urlsToVerify) {
     const event = activeEvents.find((candidate) => candidate.source_url === url);
     const result = await verifySource(url, catalogByUrl.get(url), event);
     checks.push(result);
     if (result.skipped) console.log(`  skip ${url}`);
-    else console.log(`  ok   ${url} [${result.matched.join(", ")}${result.matchedDates.length ? `; date: ${result.matchedDates.join(", ")}` : ""}]`);
+    else if (result.transient) {
+      const n = (health[url]?.consecutive_failures || 0) + 1;
+      health[url] = { consecutive_failures: n, first_failed_at: health[url]?.first_failed_at || asOf, last_message: result.message };
+      if (n >= TRANSIENT_TOLERANCE) blocking.push(`${url} 連續 ${n} 輪傳輸層失敗（容忍上限 ${TRANSIENT_TOLERANCE}）：${result.message}`);
+      else console.log(`  WARN ${url} 傳輸層失敗第 ${n}/${TRANSIENT_TOLERANCE} 輪，本輪放行：${result.message}`);
+    } else {
+      delete health[url];   // 一次成功就歸零,不累積歷史
+      console.log(`  ok   ${url} [${result.matched.join(", ")}${result.matchedDates.length ? `; date: ${result.matchedDates.join(", ")}` : ""}]`);
+    }
+  }
+  writeFileSync(HEALTH_PATH, `${JSON.stringify(health, null, 2)}\n`);
+  if (blocking.length) {
+    fail(`來源持續無法連線，停止輸出：\n${blocking.map((b) => `- ${b}`).join("\n")}`);
   }
 
   const removedEvents = (sample.events || []).filter((event) => !activeEvents.includes(event));
