@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ht="https://trends.google.com/trending/rss">
+  <channel>
+    <title>Daily Search Trends</title>
+    <item>
+      <title>  Taiwan &amp; Japan travel  </title>
+      <ht:approx_traffic>200K+</ht:approx_traffic>
+      <pubDate>Mon, 17 Aug 2026 10:00:00 GMT</pubDate>
+      <link>https://trends.google.com/trending/rss?geo=TW</link>
+      <guid isPermaLink="true">https://trends.google.com/trending/rss?geo=TW</guid>
+      <ht:news_item>
+        <ht:news_item_url>https://example.com/story?id=1&amp;utm_source=trends#top</ht:news_item_url>
+      </ht:news_item>
+    </item>
+    <item>
+      <title><![CDATA[New product <review>]]></title>
+      <ht:approx_traffic>1.5M+</ht:approx_traffic>
+      <pubDate>2026-08-17T11:00:00Z</pubDate>
+      <link>https://trends.google.com/trending/rss?geo=TW</link>
+      <ht:news_item>
+        <ht:news_item_url>https://example.com/reviews/new-product/</ht:news_item_url>
+      </ht:news_item>
+    </item>
+    <item>
+      <title>Taiwan &amp; Japan travel</title>
+      <ht:approx_traffic>300K+</ht:approx_traffic>
+      <pubDate>Mon, 17 Aug 2026 10:00:00 GMT</pubDate>
+      <link>https://trends.google.com/trending/rss?geo=TW</link>
+    </item>
+    <item>
+      <title>Trend without a link</title>
+      <ht:approx_traffic>12,000+</ht:approx_traffic>
+      <pubDate>Mon, 17 Aug 2026 13:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>

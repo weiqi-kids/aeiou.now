@@ -203,6 +203,11 @@ export function recentTopics(now = new Date(), win = '24h') {
   return getTopicsIndex()
     .map((topic) => {
       if (topic.is_perennial) return { ...topic, season_countries: [], season_distance: 0 };
+      // 外部搜尋趨勢沒有文化日期；在趨勢有效期內視為「近期」入口，
+      // 讓 machine-owned Topic 不只存在於排行頁，也能被首頁發現。
+      if (topic.topic_kind === 'trend' || topic.category === 'trend') {
+        return { ...topic, season_countries: [], season_distance: 0 };
+      }
       const facts = readJson(`topics/${topic.topic_id}/facts.json`, null);
       const dated = observancesForFacts(facts)
         .map((c) => ({ ...c, season_distance: seasonDistance(c, today) }))

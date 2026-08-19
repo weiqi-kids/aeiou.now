@@ -96,7 +96,10 @@ for (const file of contentFiles) {
 
 const db = new DatabaseSync(DB_PATH, { readOnly: true });
 db.exec("PRAGMA busy_timeout = 15000;"); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)
-const activeTopics = db.prepare("SELECT * FROM topics WHERE status NOT IN ('candidate','merged') ORDER BY slug").all();
+const activeTopics = db.prepare("SELECT * FROM topics WHERE status IN ('active','cooling') ORDER BY slug").all();
+// machine-owned trend Topic 的內容權威在 SQLite trend pipeline，不會有
+// content/topics/<slug>.md 或人工 cover；文化/manual Topic 仍照原 gate 全驗。
+const contentManagedTopics = activeTopics.filter((topic) => topic.access_source !== 'trend' && topic.category !== 'trend');
 const activeTopicIds = new Set(activeTopics.map((topic) => topic.topic_id));
 const allLocales = new Set(db.prepare('SELECT DISTINCT locale FROM topic_i18n').all().map((row) => row.locale));
 for (const locale of LOCALES) if (!allLocales.has(locale)) fail(`資料庫缺全域 locale:${locale}`);
@@ -173,7 +176,7 @@ for (const row of publishedTopicText) {
   contentTextBySlug.set(row.slug, `${previous}\n${row.customs_text || ''}`);
 }
 
-for (const topic of activeTopics) {
+for (const topic of contentManagedTopics) {
   if (!contentMeta.has(topic.slug)) fail(`active Topic ${topic.slug}:沒有對應 content markdown`);
   const titles = contentTitles.get(topic.slug) || new Map();
   const hints = titleHints[topic.slug] || {};

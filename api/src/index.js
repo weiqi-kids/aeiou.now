@@ -198,6 +198,10 @@ function topicGate(row, cors) {
   if ((row.access_level | 0) >= 1) {
     return err(401, "login_required", "This topic requires login (not available in M1)", cors);
   }
+  // 擋名單,不是放行名單:**topics.status='archived' 仍可發文**(只是不熱),
+  // 只有 posts.status='archived' 才是永久鎖定 —— 同名不同義,見 CLAUDE.md 紅線。
+  // 曾一度改成「只放行 active/cooling」,但 cooling 這個 status 從未存在於資料中,
+  // 效果等於把 archived Topic 全部鎖死;2026-08-19 改回。
   if (row.topic_status === "candidate" || row.topic_status === "merged") {
     return err(403, "topic_locked", "Topic is not open for discussion", cors);
   }

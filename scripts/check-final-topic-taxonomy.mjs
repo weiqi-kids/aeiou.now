@@ -23,19 +23,59 @@ const readJson = (rel) => JSON.parse(readFileSync(join(ROOT, rel), 'utf8'));
 const same = (a, b) => JSON.stringify([...a].sort()) === JSON.stringify([...b].sort());
 const fail = (message) => errors.push(message);
 
+// 與 export-data.mjs 同一個相容層契約：只有明確 machine/trend marker
+// 才會被視為 trend Topic；沒有 marker 的資料維持既有 manual taxonomy。
+const TREND_TOPIC_KINDS = new Set(['trend', 'trend_topic', 'machine_owned_trend']);
+const MACHINE_OWNERS = new Set(['machine', 'machine_owned', 'automated', 'system']);
+const normalizeMarker = (value) => String(value ?? '').trim().toLowerCase().replace(/[\s-]+/g, '_');
+const firstMarker = (...values) => values.find((value) => value != null && String(value).trim() !== '');
+const isMachineTrendTopic = (row) => {
+  const kind = normalizeMarker(firstMarker(row?.topic_kind, row?.topic_type, row?.kind));
+  const owner = normalizeMarker(firstMarker(row?.owner, row?.ownership, row?.topic_owner));
+  const origin = normalizeMarker(firstMarker(row?.origin, row?.provenance, row?.access_source, row?.category));
+  return TREND_TOPIC_KINDS.has(kind) || MACHINE_OWNERS.has(owner) || origin === 'trend';
+};
+const isHiddenStatus = (row) => row?.status === 'candidate' || row?.status === 'merged';
+const trendKey = (row) => `${row?.topic_id || ''}|${row?.slug || ''}`;
+
 // CI checkout 不包含被 .gitignore 排除的本機 SQLite；發布資料的權威快照是
 // data/topics/index/*.json。用它做 gate，才能讓本地與 GitHub Actions 都能
 // 從同一份已提交資料重建並驗收，而不依賴開發機狀態。
 const primaryIndex = readJson('data/topics/index/zh-TW.json');
-const active = primaryIndex
-  .filter((topic) => topic.status === 'active')
+if (!Array.isArray(primaryIndex)) fail('data/topics/index/zh-TW.json 必須是陣列');
+const primaryRows = Array.isArray(primaryIndex) ? primaryIndex : [];
+for (const row of primaryRows) {
+  if (isHiddenStatus(row)) fail(`不可輸出 ${row.status} Topic：${row.slug || row.topic_id || '(unknown)'}`);
+}
+const active = primaryRows
+  .filter((topic) => topic.status === 'active' && !isMachineTrendTopic(topic))
   .map((topic) => topic.slug);
 if (!same(active, FINAL_SLUGS)) fail(`data/topics/index/zh-TW.json active taxonomy 不符：${active.join(', ')}`);
 
+const primaryManualSlugs = primaryRows.filter((topic) => !isMachineTrendTopic(topic)).map((topic) => topic.slug);
+if (!same(primaryManualSlugs, FINAL_SLUGS)) {
+  fail(`data/topics/index/zh-TW.json manual taxonomy 不符：${primaryManualSlugs.join(', ')}`);
+}
+const primaryTrendRows = primaryRows.filter(isMachineTrendTopic);
+const primaryTrendKeys = primaryTrendRows.map(trendKey);
+if (new Set(primaryTrendKeys).size !== primaryTrendKeys.length) fail('data/topics/index/zh-TW.json trend Topic 重複');
+for (const topic of primaryTrendRows) {
+  if (FINAL.has(topic.slug)) fail(`trend Topic 不可佔用 final manual slug：${topic.slug}`);
+}
+
 for (const locale of LOCALES) {
   const index = readJson(`data/topics/index/${locale}.json`);
-  const slugs = Array.isArray(index) ? index.map((row) => row.slug) : [];
-  if (!same(slugs, FINAL_SLUGS)) fail(`data/topics/index/${locale}.json 不符 final taxonomy`);
+  const rows = Array.isArray(index) ? index : [];
+  if (!Array.isArray(index)) fail(`data/topics/index/${locale}.json 必須是陣列`);
+  for (const row of rows) {
+    if (isHiddenStatus(row)) fail(`data/topics/index/${locale}.json 不可輸出 ${row.status} Topic：${row.slug || row.topic_id || '(unknown)'}`);
+  }
+  const manualSlugs = rows.filter((topic) => !isMachineTrendTopic(topic)).map((topic) => topic.slug);
+  if (!same(manualSlugs, FINAL_SLUGS)) fail(`data/topics/index/${locale}.json 不符 final manual taxonomy`);
+  const trendRows = rows.filter(isMachineTrendTopic);
+  const trendKeys = trendRows.map(trendKey);
+  if (new Set(trendKeys).size !== trendKeys.length) fail(`data/topics/index/${locale}.json trend Topic 重複`);
+  if (!same(trendKeys, primaryTrendKeys)) fail(`data/topics/index/${locale}.json trend Topic 集合與 zh-TW 不一致`);
 }
 
 const calendar = readJson('content/topic-calendar.json');
@@ -51,6 +91,9 @@ const merges = readJson('content/topic-merges.json').merges || [];
 for (const merge of merges) {
   if (FINAL.has(merge.from)) fail(`merge from 不可仍是 active：${merge.from}`);
   if (!FINAL.has(merge.to)) fail(`merge target 不在 final taxonomy：${merge.to}`);
+  if (primaryTrendRows.some((topic) => topic.slug === merge.from || topic.slug === merge.to)) {
+    fail(`trend Topic 不可進入 manual merge：${merge.from} -> ${merge.to}`);
+  }
 }
 
 const exportedMerges = readJson('data/topic-merges.json').merges || [];
@@ -60,4 +103,4 @@ if (errors.length) {
   console.error(`Final Topic taxonomy 驗收失敗，共 ${errors.length} 項：\n${errors.map((error) => `- ${error}`).join('\n')}`);
   process.exit(1);
 }
-console.log(`Final Topic taxonomy 驗收通過：${FINAL_SLUGS.length} active Topic、${LOCALES.length} 語系 index、52 週排程與在地關聯均使用 final slug。`);
+console.log(`Final Topic taxonomy 驗收通過：${FINAL_SLUGS.length} active manual Topic、${primaryTrendRows.length} trend Topic、${LOCALES.length} 語系 index、52 週排程與在地關聯均使用 final slug。`);

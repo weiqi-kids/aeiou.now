@@ -102,8 +102,12 @@ if (existsSync(topicIndexPath)) {
     const html = readFileSync(page, 'utf8');
     if (!html.includes('id="answers"')) errors.push(`${topic.slug}:缺 AEO answers 區塊`);
     if (!html.includes('FAQPage')) errors.push(`${topic.slug}:缺可見答案對應的 FAQPage JSON-LD`);
-    if (!html.includes('/covers/')) errors.push(`${topic.slug}:缺 Discover cover`);
-    if (!/fetchpriority=["']high["']/i.test(html)) errors.push(`${topic.slug}:首圖缺 fetchpriority=high`);
+    // machine-owned trend Topic 先以無 cover 的輕量頁發布；manual/文化 Topic 維持
+    // Discover cover 與 LCP 首圖硬要求，避免趨勢資料反過來阻塞整站發布。
+    if (topic.category !== 'trend') {
+      if (!html.includes('/covers/')) errors.push(`${topic.slug}:缺 Discover cover`);
+      if (!/fetchpriority=["']high["']/i.test(html)) errors.push(`${topic.slug}:首圖缺 fetchpriority=high`);
+    }
   }
 }
 
