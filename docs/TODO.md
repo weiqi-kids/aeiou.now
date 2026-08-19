@@ -4,6 +4,14 @@
 
 ## 部署與基礎
 
+- [x] **主機 checkout 一定要停在 main**(2026-08-19 事故):`hourly-export.sh` 刻意
+  「推目前所在分支」,所以 checkout 留在哪條分支,每小時的 data 匯出就推到哪。2026-08-16
+  PR #5 squash-merge 後功能分支沒收掉、checkout 也沒切回來,27 次匯出全堆在分支上,
+  線上資料靜默停更三天 —— 而 CI 全綠、七站 `.build-id` 也與 main 相符,**既有查法完全看不出來**。
+  查:`git -C /root/aeiou.now rev-parse --abbrev-ref HEAD` 應為 `main`。
+- [ ] **缺一個「資料新鮮度」的查法**:目前所有查法都只驗「站台是不是 main 的最新版」,
+  驗不到「main 的資料是不是最近匯出的」。建議加一條比對 `data/` 最後 commit 時間與現在的差距。
+
 - [x] **`id` 站(印尼)線上還是舊版**——2026-08-14 實測 `.build-id` 已與 HEAD 一致,GitHub 端建置恢復。
 - [x] **M1 完成定義 #3 的七站全綠重驗**——2026-08-14 依「七站分別是哪一版」查法實測,七站 `.build-id` 全部等於 HEAD。
 - [ ] **`weiqi-kids` 組織的 deploy key 開關**目前是開的(`deploy_keys_enabled_for_repositories=true`,
@@ -36,6 +44,29 @@
   (GET results 目前無限流、無 Cache-Control)。題數過 30 前加 lazy-load(進 viewport 才 fetch)或批次端點。
 - [ ] **`scripts/export-data.mjs` 含 3 個 NUL 位元組**(複合鍵分隔符,2026-08-15 驗收時發現、HEAD 既有),
   git 視其為二進位 → 這支腳本的任何改動在 diff/PR 上看不見。建議改用可見分隔字元,另案處理。
+
+## 外部搜尋趨勢(2026-08-19 進版控;管線開著、上線閘關著)
+
+規格與復活條件見 `docs/04-trend-automation.md`。現況查法:
+
+```bash
+sqlite3 db/aeiou.sqlite "SELECT access_source,status,COUNT(*) FROM topics GROUP BY 1,2"
+ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 Topic
+```
+
+- [ ] **復活前必須先做:前端要能區分機器 Topic 與人工 Topic**。`export-data.mjs` 已在輸出掛
+  `topic_kind:'trend'`/`owner:'machine'`,但 `site/` 只有 `src/lib/data.mjs` 用它把趨勢
+  Topic 當「近期話題」推上首頁(`season_distance: 0`),版面上沒有任何標示。
+  拍板當下的實測:313 個 active trend Topic vs 29 個人工 Topic。
+  ⚠ 版面怎麼標示屬產品決定,動工前先問用戶,並先讀產品草案本體。
+- [ ] **趨勢 Topic 的熱度與排序策略未定**:趨勢沒有文化日期,目前是直接給最高「近期」優先序,
+  等同蓋過人工策展的節奏。復活時要一併決定。
+- [ ] **D1 留著 317 筆趨勢 Topic 副本**(sync-topics-to-d1 照同步)。Worker 沒有列出 Topic 的
+  端點,靜態層也不產生連結,所以讀者路徑上到不了;TTL 到期會轉 archived。要不要順手清,
+  等復活與否定案再說。查:`cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT COUNT(*) FROM topics WHERE topic_id LIKE 'top_tr_%'"`
+- [ ] **`trend_runs` 有一批 status='running' 的殘列**(2026-08-17～08-18 那段連續失敗期留下的,
+  之後沒再增加)。`run_key` 唯一且 `INSERT OR IGNORE`,不會擋住後續執行,純屬統計雜訊。
+  查:`sqlite3 db/aeiou.sqlite "SELECT status,COUNT(*) FROM trend_runs GROUP BY 1"`
 
 ## M2 前置:GSC/GA4/DNS/Slack 設定(2026-08-11 用戶指示動工)
 
