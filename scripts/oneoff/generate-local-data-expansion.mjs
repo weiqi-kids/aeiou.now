@@ -6,7 +6,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..', '..');   // scripts/oneoff/ → repo 根
 const SAMPLE_PATH = join(ROOT, 'content', 'local-sample-data.json');
 const SOURCES_PATH = join(ROOT, 'content', 'local-data-sources.json');
 
