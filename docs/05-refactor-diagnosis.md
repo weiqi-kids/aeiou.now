@@ -236,7 +236,22 @@ sqlite3 db/aeiou.sqlite "SELECT DISTINCT status FROM <表名>"
 
 ---
 
-## 建議順序
+## 執行結果(2026-08-19 當日全部完成)
+
+| 項 | 狀態 | 證據 |
+|---|---|---|
+| 2.1 NUL 位元組 | ✅ | 複合鍵改巢狀 Map;`data/` 輸出 byte-identical;git diff 由 `Bin` 變可讀;`grep` 不加 `-a` 也找得到 |
+| 1.2 Worker 測試 | ✅ | 31 個測試 + CI `test` job 擋在七站部署前;**突變測試**驗過攔截力 |
+| 0.1 / 0.2 語彙 | ✅ | `site/src/lib/topic-status.mjs` 新增、api 抽出具名判準;散裝列舉歸零。**0.1 已降級為 🟡,見該節更正** |
+| 1.1 Worker 拆模組 | ✅ | 1,128 行 → 七個模組(最大 471 行);31/31 全綠;`wrangler --dry-run` 成功 |
+| 2.2 scripts 分層 | ✅ | 零引用的兩支產生器移入 `scripts/oneoff/`;`scripts/README.md` 只寫查法 |
+| 3.1 data.mjs 拆分 | ✅ | 591 行 → 六支 + 61 行 barrel;**dist 輸出 byte-identical**;七語 build 全過 |
+
+**未解、已記錄在案**:`migrate-topic-observances` 與 `retire-merged-topics` 是一次性遷移
+卻被常態腳本呼叫(等於每小時重跑遷移邏輯),沒搬是因為搬了會破壞呼叫;
+`sources` 表的 upsert 仍是純時間戳寫入(無可觀測後果)。兩者查法見 `scripts/README.md` 與 §2.3。
+
+## 原建議順序
 
 排序理由是**依賴關係**,不是嚴重性:
 
