@@ -40,7 +40,7 @@ import { t } from '../../lib/i18n.mjs';
 import { LOCALE, MARKET_CITY, REACTION_SET } from '../../lib/config.mjs';
 import { calendarDate, dateTime, countryFlag } from '../../lib/format.mjs';
 import { withBase } from '../../lib/paths.mjs';
-import { compactDescription, seoCopy, sourceLabel } from '../../lib/seo.mjs';
+import { compactDescription, seoCopy, sourceLabel, SITE_NAME } from '../../lib/seo.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
   observancesForFacts, customsText, regionalNotesForFacts, regionalNoteText,
@@ -128,12 +128,6 @@ const metaCoverage = worldCountries
     return parts.join(' · ');
   })
   .join(', ');
-const metaDescription = compactDescription([
-  whatAnswer,
-  metaCoverage ? `${copy.coveragePrefix} ${metaCoverage}.` : null,
-  sourceUrls.length > 0 ? copy.sourceMeta : null,
-].filter(Boolean).join(' '));
-const pageTitle = `${title}｜aeiou.now`;
 const dateAnswer = countries
   .filter((observance) => observance.next_occurrence)
   .map((observance) => {
@@ -141,6 +135,27 @@ const dateAnswer = countries
     const end = next.ends_on ? `–${calendarDate(next.ends_on)}` : '';
     return `${countryName(observance.country_code)} · ${calendarDate(next.starts_on)}${end}`;
   });
+
+// 標題與 meta 先回答「什麼時候」,再談框架 —— 這不是猜的:
+// GSC 實測(2026-08-19)排進前 10 的查詢幾乎都在問日期,例如「2027印尼齋戒月時間」
+// 排名 5.6 卻 32 次曝光 0 點擊。頁面本來就有答案(快速回答區塊),
+// 只是標題沒有年份、摘要開頭是抽象敘述、結尾只說「附日期與來源」而不給日期。
+// 這裡不新增任何文案 —— 年份取自資料,其餘字串全部來自 SEO_COPY。
+const nextStart = countries
+  .map((observance) => observance.next_occurrence?.starts_on)
+  .filter(Boolean)
+  .sort()[0] || null;
+const titleYear = nextStart ? nextStart.slice(0, 4) : null;
+const pageTitle = titleYear
+  ? `${title} ${titleYear}｜${copy.metaSuffix}｜${SITE_NAME}`
+  : `${title}｜${copy.metaSuffix}｜${SITE_NAME}`;
+
+const metaDescription = compactDescription([
+  dateAnswer.length > 0 ? `${dateAnswer.slice(0, 2).join('、')}。` : null,
+  whatAnswer,
+  metaCoverage ? `${copy.coveragePrefix} ${metaCoverage}.` : null,
+  sourceUrls.length > 0 ? copy.sourceMeta : null,
+].filter(Boolean).join(' '));
 const whereAnswer = worldCountries.length > 0
   ? worldCountries.map((country) => {
     const parts = [countryName(country.country_code)];
