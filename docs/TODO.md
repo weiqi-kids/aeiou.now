@@ -42,7 +42,8 @@
 - [ ] **guess 題的答案在靜態 JSON 裡**(view-source 可先看到)——遊戲性取捨,記錄在案;要藏就得把揭曉搬進 Worker(契約變更)。
 - [ ] **/questions/ 頁每卡各發一次 results 請求**:題庫累積後單次載入的並發會線性成長
   (GET results 目前無限流、無 Cache-Control)。題數過 30 前加 lazy-load(進 viewport 才 fetch)或批次端點。
-- [ ] **`scripts/export-data.mjs` 含 3 個 NUL 位元組**(複合鍵分隔符,2026-08-15 驗收時發現、HEAD 既有),
+- [x] **`scripts/export-data.mjs` 的 NUL 位元組已移除**(2026-08-19):複合鍵改巢狀 Map,
+  git 與 grep 恢復正常。原問題:(複合鍵分隔符,2026-08-15 驗收時發現、HEAD 既有),
   git 視其為二進位 → 這支腳本的任何改動在 diff/PR 上看不見。建議改用可見分隔字元,另案處理。
 
 ## 外部搜尋趨勢(2026-08-19 進版控;管線開著、上線閘關著)

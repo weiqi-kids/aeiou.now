@@ -172,11 +172,17 @@ if (trendLocaleErrorsFound.length) {
 }
 
 const scoreRows = db.prepare("SELECT * FROM topic_scores ORDER BY topic_id, scope, window").all();
-const scoresByTopicScope = new Map(); // `${topic_id} ${scope}` -> Map(window -> row)
+// topic_id -> Map(scope -> Map(window -> row))。巢狀,與同檔的 i18nByTopic 同一種寫法。
+// 曾經是把 `${topic_id}\0${scope}` 串成單一鍵的扁平 Map —— 那三個 NUL 位元組讓 git 與 grep
+// 都把整支檔案當二進位:diff 看不見、搜尋靜默回空不報錯(2026-08-19 診斷時實際被騙過)。
+// 複合鍵不要用分隔符串字串,巢狀 Map 從結構上就不可能撞鍵。
+const scoresByTopic = new Map();
 for (const r of scoreRows) {
-  const k = `${r.topic_id} ${r.scope}`;
-  if (!scoresByTopicScope.has(k)) scoresByTopicScope.set(k, new Map());
-  scoresByTopicScope.get(k).set(r.window, r);
+  let byScope = scoresByTopic.get(r.topic_id);
+  if (!byScope) { byScope = new Map(); scoresByTopic.set(r.topic_id, byScope); }
+  let byWindow = byScope.get(r.scope);
+  if (!byWindow) { byWindow = new Map(); byScope.set(r.scope, byWindow); }
+  byWindow.set(r.window, r);
 }
 
 const observancesByTopic = new Map();
@@ -247,7 +253,7 @@ if (existsSync(mergePath)) emit("topic-merges.json", JSON.parse(readFileSync(mer
 for (const locale of LOCALES) {
   const list = topics.map((t) => {
     const i18n = i18nByTopic.get(t.topic_id)?.get(locale);
-    const global = scoresByTopicScope.get(`${t.topic_id} global`);
+    const global = scoresByTopic.get(t.topic_id)?.get('global');
     const scores = {};
     for (const w of STATIC_WINDOWS) scores[w] = global?.get(w)?.score ?? null;
     return {
