@@ -312,6 +312,69 @@ CREATE TABLE IF NOT EXISTS quality_checks (
   checked_at  INTEGER NOT NULL
 );
 
+-- ============ §7.5 外部搜尋趨勢自動 Topic 域 ============
+-- 這組表是 machine-owned；不得用 content/topics/*.md 回寫或覆蓋。
+-- run/observation/publication 分開，讓同一個時間槽重跑時可安全重播，
+-- 也讓單一趨勢項目失敗時不會拖垮同一輪其他項目。
+CREATE TABLE IF NOT EXISTS trend_runs (
+  run_key       TEXT PRIMARY KEY,             -- provider:market:slot_start
+  provider      TEXT NOT NULL,
+  market        TEXT NOT NULL,
+  slot_start    INTEGER NOT NULL,
+  started_at    INTEGER NOT NULL,
+  finished_at   INTEGER,
+  status        TEXT NOT NULL,                -- running|success|partial_success|failed
+  records_read  INTEGER NOT NULL DEFAULT 0,
+  records_created INTEGER NOT NULL DEFAULT 0,
+  records_failed INTEGER NOT NULL DEFAULT 0,
+  error_message TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_trend_runs_status ON trend_runs(provider, market, slot_start, status);
+
+CREATE TABLE IF NOT EXISTS trend_observations (
+  observation_id    TEXT PRIMARY KEY,
+  run_key           TEXT NOT NULL,
+  provider          TEXT NOT NULL,
+  market            TEXT NOT NULL,
+  provider_item_key TEXT NOT NULL,
+  event_key         TEXT NOT NULL,             -- normalized cross-market event key
+  title             TEXT NOT NULL,
+  url               TEXT NOT NULL,
+  traffic           TEXT,
+  rank              INTEGER,
+  published_at      INTEGER,
+  observed_at       INTEGER NOT NULL,
+  raw_json          TEXT NOT NULL,
+  UNIQUE (run_key, provider_item_key)
+);
+CREATE INDEX IF NOT EXISTS idx_trend_observations_event ON trend_observations(provider, event_key, observed_at);
+
+CREATE TABLE IF NOT EXISTS trend_topic_state (
+  provider       TEXT NOT NULL,
+  event_key      TEXT NOT NULL,
+  topic_id       TEXT NOT NULL UNIQUE,
+  state          TEXT NOT NULL,                -- active|cooling|expired|blocked
+  first_seen_at  INTEGER NOT NULL,
+  last_seen_at   INTEGER NOT NULL,
+  expires_at     INTEGER NOT NULL,
+  published_at   INTEGER,
+  content_hash   TEXT,
+  PRIMARY KEY (provider, event_key)
+);
+CREATE INDEX IF NOT EXISTS idx_trend_topic_expiry ON trend_topic_state(state, expires_at);
+
+CREATE TABLE IF NOT EXISTS trend_publications (
+  publication_key TEXT PRIMARY KEY,            -- topic_id:content_hash
+  topic_id        TEXT NOT NULL,
+  provider        TEXT NOT NULL,
+  event_key       TEXT NOT NULL,
+  content_hash    TEXT NOT NULL,
+  published_at    INTEGER NOT NULL,
+  status          TEXT NOT NULL,               -- published|failed|rolled_back
+  error_message   TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_trend_publications_topic ON trend_publications(topic_id, published_at);
+
 -- ============ §8 分析域 ============
 
 CREATE TABLE IF NOT EXISTS analytics_aggregates (

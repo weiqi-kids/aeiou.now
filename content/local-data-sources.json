@@ -3,7 +3,7 @@
   "purpose": "可重跑的在地資料來源目錄；搜尋候選詞保留找來源時的判斷脈絡，markers 用來防止頁面改版後誤匯入。",
   "sources": [
     {
-      "url": "https://tam.gov.taipei/News_Content.aspx?n=794B17A953424610&s=259D7CDEDEAEC283&sms=9D72E82EC16F3E64",
+      "url": "https://tam.gov.taipei/News_Content.aspx?n=49854D6439EC40C0&sms=72544237BBE4C5F6&s=133D3D29CFCDAD86",
       "market": "zh-TW",
       "kind": "event",
       "discovery_query": "site:tam.gov.taipei 七夕 星空愛戀音樂會 天文館",
@@ -325,16 +325,16 @@
       ]
     },
     {
-      "url": "https://amigosdaarte.org.br/revelando-sp-2026/",
+      "url": "https://amigosdaarte.org.br/atencao-sp-o-revelando-sp-sao-paulo-mudou-de-data/",
       "market": "pt-BR",
       "kind": "event",
-      "discovery_query": "APAA Revelando SP 2026 capital Parque do Trote setembro",
+      "discovery_query": "APAA Revelando SP 2026 Sao Paulo mudou de data Parque do Trote novembro",
       "markers": [
         "Revelando SP",
         "Parque do Trote"
       ],
       "date_markers": [
-        "24 a 27 de setembro"
+        "12 a 15 de novembro"
       ]
     },
     {

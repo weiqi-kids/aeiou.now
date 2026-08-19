@@ -24,6 +24,22 @@ const isHttp = (value) => typeof value === 'string' && /^https?:\/\//i.test(valu
 const nonEmpty = (value) => typeof value === 'string' && value.trim().length > 0;
 const unique = (values) => new Set(values).size === values.length;
 
+// 與 export-data.mjs / check-final-topic-taxonomy.mjs 共用的輸出契約：
+// 明確標記才是 machine-owned trend；其餘資料仍按既有 manual Topic 驗收。
+const TREND_TOPIC_KINDS = new Set(['trend', 'trend_topic', 'machine_owned_trend']);
+const MACHINE_OWNERS = new Set(['machine', 'machine_owned', 'automated', 'system']);
+const normalizeMarker = (value) => String(value ?? '').trim().toLowerCase().replace(/[\s-]+/g, '_');
+const firstMarker = (...values) => values.find((value) => value != null && String(value).trim() !== '');
+const isMachineTrendTopic = (row) => {
+  const kind = normalizeMarker(firstMarker(row?.topic_kind, row?.topic_type, row?.kind));
+  const owner = normalizeMarker(firstMarker(row?.owner, row?.ownership, row?.topic_owner));
+  const origin = normalizeMarker(firstMarker(row?.origin, row?.provenance, row?.access_source, row?.category));
+  return TREND_TOPIC_KINDS.has(kind) || MACHINE_OWNERS.has(owner) || origin === 'trend';
+};
+const isHiddenStatus = (row) => row?.status === 'candidate' || row?.status === 'merged';
+const topicKey = (row) => `${row?.topic_id || ''}|${row?.slug || ''}`;
+const same = (a, b) => JSON.stringify([...a].sort()) === JSON.stringify([...b].sort());
+
 const indexes = new Map();
 for (const locale of LOCALES) {
   const rows = requireFile(join(DATA, 'topics', 'index', `${locale}.json`), `Topic index ${locale}`);
@@ -31,14 +47,22 @@ for (const locale of LOCALES) {
   indexes.set(locale, rows);
 }
 const baseIndex = indexes.get('zh-TW') || [];
-const activeTopics = baseIndex.filter((row) => row?.status !== 'merged' && row?.status !== 'candidate');
+for (const [locale, rows] of indexes) {
+  for (const row of rows) {
+    if (isHiddenStatus(row)) fail(`${locale}: 不可輸出 ${row.status} Topic：${row.slug || row.topic_id || '(unknown)'}`);
+  }
+}
+const activeTopics = baseIndex.filter((row) => !isHiddenStatus(row));
 const activeSlugs = new Set(activeTopics.map((row) => row.slug));
 if (activeTopics.length === 0) fail('沒有 active Topic');
+const baseTrendKeys = activeTopics.filter(isMachineTrendTopic).map(topicKey);
 for (const [locale, rows] of indexes) {
-  const activeRows = rows.filter((row) => row?.status !== 'merged' && row?.status !== 'candidate');
+  const activeRows = rows.filter((row) => !isHiddenStatus(row));
   if (activeRows.length !== activeTopics.length) fail(`${locale} active Topic 數量 ${activeRows.length} ≠ zh-TW ${activeTopics.length}`);
   if (new Set(activeRows.map((row) => row.slug)).size !== activeRows.length) fail(`${locale} Topic slug 重複`);
   for (const slug of activeSlugs) if (!activeRows.some((row) => row.slug === slug)) fail(`${locale} 缺 Topic：${slug}`);
+  const trendKeys = activeRows.filter(isMachineTrendTopic).map(topicKey);
+  if (!same(trendKeys, baseTrendKeys)) fail(`${locale} trend Topic 集合與 zh-TW 不一致`);
 }
 
 const currentYear = new Date().getUTCFullYear();
@@ -48,6 +72,12 @@ for (const topic of activeTopics) {
   const facts = requireFile(join(DATA, 'topics', topic.topic_id, 'facts.json'), `${topic.slug} facts`);
   const i18n = requireFile(join(DATA, 'topics', topic.topic_id, 'i18n.json'), `${topic.slug} i18n`);
   if (!facts || !i18n) continue;
+  if (isMachineTrendTopic(topic)) {
+    if (facts.topic_kind !== 'trend') fail(`${topic.slug}: trend facts 缺 topic_kind=trend`);
+    if (i18n.topic_kind !== 'trend') fail(`${topic.slug}: trend i18n 缺 topic_kind=trend`);
+    const highlights = requireFile(join(DATA, 'topics', topic.topic_id, 'highlights.json'), `${topic.slug} highlights`);
+    if (highlights && highlights.topic_kind !== 'trend') fail(`${topic.slug}: trend highlights 缺 topic_kind=trend`);
+  }
   if (facts.slug !== topic.slug) fail(`${topic.slug}: facts.slug 不一致`);
   if (!isHttp(facts.source_urls?.[0])) fail(`${topic.slug}: facts 缺 source URL`);
   for (const locale of LOCALES) {

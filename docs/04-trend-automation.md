@@ -1,0 +1,97 @@
+# 外部搜尋趨勢自動發布
+
+## 目前流程
+
+```text
+Google Trends Trending Now RSS
+        ↓
+scripts/trend-pipeline.mjs
+        ↓
+host SQLite（trend_*、topics、topic_i18n、source_topics）
+        ├─ scripts/sync-topics-to-d1.mjs  → D1 互動層
+        └─ scripts/export-data.mjs       → static Topic 頁
+```
+
+`scripts/cron-15min.sh` 已把 trend pipeline 放在 Topic D1 sync 之前。趨勢 Topic 使用
+`access_source='trend'` / `category='trend'`，內容權威在 SQLite；不得寫入或覆蓋
+`content/topics/*.md` 的 manual Topic。
+
+## 目前上線狀態:管線開著、靜態層關著(2026-08-19 用戶拍板)
+
+趨勢管線本身保留,但**趨勢 Topic 暫不上線七站**。當時的實測數字:主機 SQLite 已累積
+313 個 active trend Topic,人工策展 Topic 只有 29 個;照原設計匯出,七站 index 會是
+345 筆、其中九成是機器生成的關鍵字 Topic,而前端沒有任何地方用到 `topic_kind`/`owner`,
+讀者無從分辨機器 Topic 與人工 Topic。
+
+因此設了兩道**互相獨立**的閘,要復活必須兩邊都開:
+
+| 閘 | 位置 | 預設 | 效果 |
+|---|---|---|---|
+| 產製 | `scripts/cron-15min.sh` 設 `AEIOU_TREND_AUTO_PUBLISH=0` | 關 | 不再產新的趨勢 Topic(也不再燒 claude 訂閱額度) |
+| 靜態輸出 | `scripts/export-data.mjs` 讀 `AEIOU_TREND_EXPORT` | 關 | 已存在的趨勢 Topic 不進 `data/`,stale 目錄會被既有清除邏輯移除 |
+
+既有資料**留在主機 SQLite,不刪不改**(`topics`/`topic_i18n`/`trend_*` 都在);關的只是
+「產新的」與「送上線」。要放行:
+
+```bash
+# 單次驗證(不動 cron)
+AEIOU_TREND_EXPORT=1 node scripts/export-data.mjs
+# 正式復活:cron-15min.sh 改 :-1,export 端設 AEIOU_TREND_EXPORT=1
+```
+
+查現況(不要相信本節數字,用指令):
+
+```bash
+sqlite3 db/aeiou.sqlite "SELECT access_source,status,COUNT(*) FROM topics GROUP BY 1,2"
+ls -d data/topics/top_tr_* 2>/dev/null | wc -l   # 靜態層目前輸出幾個趨勢 Topic
+```
+
+**復活前要先解決的**:前端無法區分機器 Topic 與人工 Topic。`export-data.mjs` 已在輸出
+掛上 `topic_kind:'trend'` / `owner:'machine'`,但 `site/` 只有 `src/lib/data.mjs` 用它
+把趨勢 Topic 當「近期話題」推上首頁,沒有任何標示。
+
+## 發布閘門
+
+- source URL 必須是 HTTPS。
+- 七個 locale 的 title、summary、keywords 必須完整。
+- 內容生成回傳 `publish=true` 且 `safe=true` 才能發布。
+- 同一 `(provider, event_key)` 沿用同一個 Topic ID。
+- 同一 `topic_id + content_hash` 不重複建立 publication。
+- `AEIOU_TREND_AUTO_PUBLISH=0` 停止新發布；既有資料不會被隱性刪除。
+- 趨勢 TTL 預設 48 小時；過期 Topic 轉 archived，靜態 export 不再輸出。
+
+## 設定
+
+```text
+AEIOU_TREND_MARKETS=TW,US,JP,IN,ID,BR
+AEIOU_TREND_LIMIT=3
+AEIOU_TREND_TTL_SEC=172800
+AEIOU_TREND_AUTO_PUBLISH=1
+AEIOU_TREND_CLAUDE_TIMEOUT_MS=600000
+```
+
+`AEIOU_TREND_CONTENT_FIXTURE` 僅供隔離測試或一次性 bootstrap 使用，不應放入 cron。
+正式內容生成若失敗，pipeline fail closed，不發布半套語言內容。
+
+## 驗證命令
+
+```bash
+node scripts/trends/cli.mjs --smoke --market US
+node scripts/trend-pipeline.mjs --dry-run
+node scripts/export-data.mjs
+node scripts/check-final-topic-taxonomy.mjs
+node scripts/check-data-completeness.mjs
+cd site && pnpm build
+```
+
+## 回滾
+
+停止新發布(已是目前預設,見上面「目前上線狀態」):
+
+```bash
+AEIOU_TREND_AUTO_PUBLISH=0 node scripts/trend-pipeline.mjs
+```
+
+要撤回已發布 Topic，應同步將 host Topic 與 D1 Topic 設為不可互動狀態，並清除
+static export；不可只刪 `data/` 檔案，否則下一次 export 會重新產生。
+

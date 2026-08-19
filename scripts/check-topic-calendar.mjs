@@ -27,7 +27,9 @@ if (weeks.some((row) => !Number.isInteger(row.week) || row.week < 1 || row.week 
 
 const db = new DatabaseSync(DB_PATH, { readOnly: true });
 db.exec("PRAGMA busy_timeout = 15000;"); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)
-const activeRows = db.prepare("SELECT slug, status FROM topics WHERE status NOT IN ('candidate','merged') ORDER BY slug").all();
+// machine-owned trend Topic 沒有人工 cover 檔；它們由 Topic 頁的無 cover 降級顯示，
+// 不應被年度文化 Topic 的 cover gate 擋住。manual/既有 Topic 仍維持原驗收。
+const activeRows = db.prepare("SELECT slug, status, category FROM topics WHERE status IN ('active','cooling') ORDER BY slug").all();
 const active = new Map(activeRows.map((row) => [row.slug, row.status]));
 for (const row of weeks) {
   for (const slug of row.topics || []) {
@@ -40,7 +42,9 @@ const contentSlugs = readdirSync(join(ROOT, 'content', 'topics'))
   .filter((file) => file.endsWith('.md'))
   .map((file) => file.slice(0, -3));
 const coverHashes = new Map();
-for (const slug of active.keys()) {
+for (const row of activeRows) {
+  const slug = row.slug;
+  if (row.category === 'trend') continue;
   const cover = join(COVER_DIR, `${slug}.png`);
   if (!existsSync(cover)) {
     errors.push(`Topic ${slug} 缺少 PNG cover:${cover}`);

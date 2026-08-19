@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "id": "t1",
+      "publish": true,
+      "safe": true,
+      "canonical_name": "Fixture cross-language trend",
+      "commonality": "People in several markets are searching for the same current topic and can compare what it means locally.",
+      "locales": {
+        "zh-TW": {"title": "測試跨語言熱門話題", "summary": "這是一個用來驗證跨語言互動的外部搜尋熱門話題。", "keywords": ["測試", "熱門話題"]},
+        "en": {"title": "Fixture cross-language trend", "summary": "An external search trend prepared for cross-language discussion.", "keywords": ["fixture", "trend"]},
+        "ja": {"title": "テスト用の多言語トレンド", "summary": "多言語での交流を確認するための検索トレンドです。", "keywords": ["テスト", "トレンド"]},
+        "zh-CN": {"title": "测试跨语言热门话题", "summary": "这是一个用于验证跨语言互动的外部搜索热门话题。", "keywords": ["测试", "热门话题"]},
+        "hi": {"title": "परीक्षण बहुभाषी ट्रेंड", "summary": "यह बहुभाषी बातचीत की जाँच के लिए एक खोज ट्रेंड है।", "keywords": ["परीक्षण", "ट्रेंड"]},
+        "id": {"title": "Tren lintas bahasa untuk uji coba", "summary": "Tren pencarian ini disiapkan untuk menguji percakapan lintas bahasa.", "keywords": ["uji coba", "tren"]},
+        "pt-BR": {"title": "Tendência multilíngue de teste", "summary": "Uma tendência de busca preparada para testar conversas entre idiomas.", "keywords": ["teste", "tendência"]}
+      }
+    }
+  ]
+}
