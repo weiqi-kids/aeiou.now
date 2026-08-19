@@ -295,9 +295,13 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
 ## 明確延後(M2+;不得自行提前)
 
 來源清冊、Moderation 啟用範圍、OAuth、**Bot 防護(Turnstile / rate limit —— 有意識的裸奔,
-M2 上線自訂網域前必須補)**、IndexNow/GSC/sitemap、GA4 property 與專屬 GCP 專案+SA
+M2 上線自訂網域前必須補)**、GA4 property 與專屬 GCP 專案+SA
 (紅線:**不共用其他站金鑰**)、Markdown 渲染、圖片上傳(R2+審核)、「回報錯誤/補充」按鈕、
 「加入行事曆」按鈕、19 job 完整管線、Vectorize/Topic Detection、R2 歸檔。
+
+> **已提前實作(用戶指示,不再屬延後範圍)**:sitemap(隨 build 產出,已在 GSC 提交)、
+> IndexNow(2026-08-19,`scripts/indexnow.mjs` + CI 的 indexnow job,七站各送一次)。
+> 查:`curl -s https://aeiou.now/<key>.txt`(key 見腳本)、`node scripts/indexnow.mjs --dry-run`。
 
 **未完成事項見 `docs/TODO.md`。**
 

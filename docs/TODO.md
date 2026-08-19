@@ -122,7 +122,13 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
   `SITE_URL`、hreflang+x-default(=en)指向七個正式網域、Worker CORS 加七網域。
   查:`gh api repos/weiqi-kids/aeiou-pages-<x>/pages --jq '{cname,https_enforced}'` 或打各網域 `.build-id`。
 - [ ] 語系切換器(是否要做、放哪:**版面事項,動工前讀產品草案並問用戶**)
-- [ ] sitemap/IndexNow/GSC 提交 job(網域就位後已解鎖,M2 排程)
+- [x] **IndexNow**(2026-08-19,用戶指示提前):`scripts/indexnow.mjs`,CI 的 indexnow job 在
+  七站全部部署完之後跑(best-effort,不擋部署)。只送近 48h 內 `facts.json` 的 `updated_at`
+  有變的 Topic —— 該欄位在同日修好無條件推新之前不能拿來當判準。七個網域各送一次
+  (payload 的 host 必須與 urlList 相符,混送會整批被拒)。
+  查:`node scripts/indexnow.mjs --dry-run`;金鑰檔 `curl -s https://aeiou.now/<key>.txt`。
+- [x] **sitemap**:隨 build 產出,七站皆已在 GSC 提交(0 錯誤 0 警告),Topic 頁已帶 lastmod。
+- [ ] GSC 提交 job:不需要 —— sitemap 提交是一次性動作,已完成。
 - [ ] OAuth(Google/GitHub/LINE;cn 市場皆不通為已知缺口)
 - [ ] GA4 每日拉取 job(property 與 SA 見上節)
 - [ ] Markdown 渲染(M1 純文字轉義)、圖片上傳(R2+審核)

@@ -10,7 +10,10 @@
 #     且不得用 `gh api repos/<publish>/pages/builds` 輪詢(CI 的 GITHUB_TOKEN
 #     對他 repo 無權限,必 403),只能打站台 URL 本身。
 #
-# 明確不做:IndexNow / GSC / sitemap 提交 job —— M2(網域已於 2026-08-15 就位,不再是卡點)。
+# IndexNow:2026-08-19 用戶指示提前實作,由本檔最後的 indexnow job 在七站全部部署完之後
+#   呼叫 scripts/indexnow.mjs(best-effort,continue-on-error,不擋任何東西)。
+#   Google 不吃 IndexNow,它走 sitemap 的 lastmod —— 兩條路互補。
+# 仍未做:GSC 提交 job(sitemap 已在 GSC 手動提交過,不需要 job)。
 #
 # 2026-08-15 起七站掛自訂網域:每站 BASE_PATH=/、SITE_URL=自己的網域,dist 必帶 CNAME
 # (deploy-from-branch 推送若少了 CNAME,GitHub 會直接解除網域綁定)。
@@ -293,3 +296,22 @@ jobs:
             -H 'Content-Type: application/json; charset=utf-8' \
             --data "$(printf '{"channel":"%s","text":"%s"}' "$SLACK_CHANNEL_ID" "$TEXT")" \
             || echo "Slack 送出失敗(忽略,不影響 job 結果)"
+
+  # 七站全部部署完才送 —— IndexNow 會去抓你送的 URL,提早送等於送 404。
+  # best-effort:continue-on-error,失敗不影響任何已完成的部署。
+  indexnow:
+    name: indexnow
+    needs: build-deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Submit changed URLs to IndexNow
+        run: node scripts/indexnow.mjs
+        continue-on-error: true
