@@ -28,7 +28,7 @@ host SQLite（trend_*、topics、topic_i18n、source_topics）
 
 | 閘 | 位置 | 裸執行時 | 效果 |
 |---|---|---|---|
-| 產製 | `scripts/cron-15min.sh` 設 `AEIOU_TREND_AUTO_PUBLISH=0` | 關 | 不再產新的趨勢 Topic(也不再燒 claude 訂閱額度) |
+| 產製 | `scripts/trend-pipeline.mjs` 的 `AEIOU_TREND_AUTO_PUBLISH` 預設 | 關 | 不再產新的趨勢 Topic(也不再燒 claude 訂閱額度)。**TTL 過期與 stale run 收斂不受此開關影響** —— 它管的是「產新的」,不是凍結既有狀態 |
 | 靜態輸出 | `scripts/export-data.mjs` 讀 `AEIOU_TREND_EXPORT` | 關 | 已存在的趨勢 Topic 不進 `data/`,stale 目錄會被既有清除邏輯移除 |
 
 既有資料**留在主機 SQLite,不刪不改**(`topics`/`topic_i18n`/`trend_*` 都在);關的只是
@@ -37,7 +37,7 @@ host SQLite（trend_*、topics、topic_i18n、source_topics）
 ```bash
 # 單次驗證(不動 cron)
 AEIOU_TREND_EXPORT=1 node scripts/export-data.mjs
-# 正式復活:cron-15min.sh 改 :-1,export 端設 AEIOU_TREND_EXPORT=1
+# 正式復活:改 trend-pipeline.mjs 的預設,export 端設 AEIOU_TREND_EXPORT=1
 ```
 
 查現況(唯一可信的答案來源):

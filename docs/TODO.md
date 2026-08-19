@@ -64,6 +64,9 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
 - [ ] **趨勢 Topic 的熱度與排序策略未定**:趨勢沒有文化日期,目前是直接給最高「近期」優先序,
   等同蓋過人工策展的節奏。復活時要一併決定。
 - [ ] **D1 仍留著趨勢 Topic 副本要不要清**(`sync-topics-to-d1.mjs` 照同步,不看靜態閘)。
+  2026-08-19 修好 TTL 之後**會自然退場**(過期轉 archived 再隨同步下架);在那之前
+  TTL 被 kill switch 一起凍結,所以不會自己消失。查退場進度:
+  `sqlite3 db/aeiou.sqlite "SELECT status,COUNT(*) FROM topics WHERE access_source='trend' GROUP BY 1"`
   Worker 沒有列出 Topic 的端點、靜態層也不產生連結,所以讀者路徑上到不了;TTL 到期會轉 archived。
   等趨勢復活與否定案再決定。查數量:
   `cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT COUNT(*) FROM topics WHERE topic_id LIKE 'top_tr_%'"`
