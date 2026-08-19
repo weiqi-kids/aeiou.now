@@ -86,7 +86,7 @@ grep -n 'post_status' api/src/index.js
 
 ### 🟡 1.1 整個 Worker 是單一檔案
 
-> **✅ 已修(`d65e6ae`):拆成七個模組,最大檔 471 行;行為由 tests/api 保護,輸出無變化。**
+> **✅ 已修(`d65e6ae`):拆成多個模組,行為由 tests/api 保護。**
 > 以下內文描述的是 2026-08-19 診斷當下的狀態,**不是現況** —— 保留是為了記錄問題長什麼樣。
 
 單檔內依序是:基礎工具 → 入口限流 → 同步認證 → 共用 gate → 公開端點 →
@@ -98,7 +98,7 @@ grep -n 'post_status' api/src/index.js
 
 ### 🔴 1.2 Worker 沒有任何測試
 
-> **✅ 已修(`e581297`):31 個測試 + CI `test` job 擋在七站部署前,並以突變測試驗過攔截力。**
+> **✅ 已修(`e581297`):補上 Worker 行為測試,CI `test` job 擋在七站部署前,並以突變測試驗過攔截力。**
 > 以下內文描述的是 2026-08-19 診斷當下的狀態,**不是現況** —— 保留是為了記錄問題長什麼樣。
 
 整個專案只有一支測試檔,測的是趨勢 RSS 解析。限流、認證、發文閘門、
@@ -119,13 +119,13 @@ grep -n 'post_status' api/src/index.js
 > **✅ 已修(`1b37d3e`):複合鍵改巢狀 Map,NUL 歸零,`data/` 輸出 byte-identical。**
 > 以下內文描述的是 2026-08-19 診斷當下的狀態,**不是現況** —— 保留是為了記錄問題長什麼樣。
 
-檔案裡有 3 個 NUL 位元組(當複合鍵分隔符用)。後果:
+檔案裡混進了 NUL 位元組(當複合鍵分隔符用)。後果:
 
 - `git` 視為二進位 → **這支檔案的任何改動,diff 與 PR 上都看不見**
 - `grep` 視為二進位 → **搜尋直接回空,不報錯**
 
 第二點在 2026-08-19 診斷過程中實際踩到:`grep -n "trendOutputMetadata" scripts/export-data.mjs`
-回空,但該符號就在第 255 行。若不是剛好用 `sed` 覆核,會得出完全錯誤的結論。
+回空,但該符號確實在檔內。若不是剛好用 `sed` 覆核,會得出完全錯誤的結論。
 
 查法:
 
@@ -160,8 +160,8 @@ grep -ohE 'scripts/[a-z0-9-]+\.mjs' scripts/cron-15min.sh scripts/hourly-export.
 grep -rl '<basename>' scripts .github docs | grep -v "scripts/<basename>.mjs"
 ```
 
-`migrate-topic-observances` 被 5 支腳本呼叫、`retire-merged-topics` 被 3 支呼叫——
-遷移邏輯已經長進常態管線,分不出來哪些跑完可以退場。
+遷移腳本已經被常態腳本呼叫,長進了每小時的管線,從檔名分不出來哪些跑完可以退場。
+數量用上面的查法數,不寫在這裡。
 
 ### 🟢 2.3 `sources` 表的 upsert 是純時間戳寫入
 
@@ -185,11 +185,11 @@ grep -rl '<basename>' scripts .github docs | grep -v "scripts/<basename>.mjs"
 
 ### 🟡 3.1 `data.mjs` 是前端的資料層 god module
 
-> **✅ 已修(`19396ac`):拆成六支 + 61 行 barrel,dist 輸出 byte-identical。**
+> **✅ 已修(`19396ac`):依內聚拆成多支,原檔留成 re-export barrel,dist 輸出 byte-identical。**
 > 以下內文描述的是 2026-08-19 診斷當下的狀態,**不是現況** —— 保留是為了記錄問題長什麼樣。
 
 前端所有取數邏輯都在這一支:讀 JSON、排序、季節判斷、熱度、趨勢判定。
-`site/src/lib/` 其餘 8 支加起來才約 600 行。
+它的行數與 `site/src/lib/` 其餘所有檔案加起來相當。
 
 查法:`wc -l site/src/lib/*.mjs | sort -rn`
 
@@ -197,8 +197,9 @@ grep -rl '<basename>' scripts .github docs | grep -v "scripts/<basename>.mjs"
 
 正典清單一處 + 每個語系各一處標籤。少改任何一處,前端 `tOr()` 會**退回顯示英文原始 slug**。
 
-> 這不是假設:2026-08-19 之前,12 個分類裡只有 3 個有標籤,七站首頁(含中文站、日文站)
-> 直接露出 `family`、`civic`、`seasonal`、`life-stage` 等英文 slug。已補齊並加守門。
+> 這不是假設:**2026-08-19 事故** —— 分類長出來的速度超過 i18n 標籤補上的速度,
+> 七站首頁(含中文站、日文站)直接露出 `family`、`civic`、`seasonal` 等英文原始 slug。
+> 已補齊並加守門;缺標籤現在會被 `check-data-completeness.mjs` 擋下。
 
 查法:
 
@@ -233,7 +234,7 @@ wc -l site/src/components/*.astro | sort -rn | head -3
 
 已知並已修:
 
-- `category` 註解原寫「草案 §4.1 的 15 類」,與實際完全不符——草案那組
+- `category` 註解原寫「草案 §4.1 的 N 類」,與實際完全不符——草案那組
   (`holiday/culture/travel/shopping/technology/weather/business/…`)與實作那組
   只有 `festival`/`food`/`education` 三個重疊。2026-08-19 更正為實際正典清單。
 - `access_source` 註解原寫 `category|manual|moderation`,實際是
@@ -263,18 +264,22 @@ sqlite3 db/aeiou.sqlite "SELECT DISTINCT status FROM <表名>"
 
 ## 執行結果(2026-08-19 當日全部完成)
 
-| 項 | 狀態 | 證據 |
-|---|---|---|
-| 2.1 NUL 位元組 | ✅ | 複合鍵改巢狀 Map;`data/` 輸出 byte-identical;git diff 由 `Bin` 變可讀;`grep` 不加 `-a` 也找得到 |
-| 1.2 Worker 測試 | ✅ | 31 個測試 + CI `test` job 擋在七站部署前;**突變測試**驗過攔截力 |
-| 0.1 / 0.2 語彙 | ✅ | `site/src/lib/topic-status.mjs` 新增、api 抽出具名判準;散裝列舉歸零。**0.1 已降級為 🟡,見該節更正** |
-| 1.1 Worker 拆模組 | ✅ | 1,128 行 → 七個模組(最大 471 行);31/31 全綠;`wrangler --dry-run` 成功 |
-| 2.2 scripts 分層 | ✅ | 零引用的兩支產生器移入 `scripts/oneoff/`;`scripts/README.md` 只寫查法 |
-| 3.1 data.mjs 拆分 | ✅ | 591 行 → 六支 + 61 行 barrel;**dist 輸出 byte-identical**;七語 build 全過 |
+| 項 | 狀態 | commit | 怎麼確認 |
+|---|---|---|---|
+| 2.1 NUL 位元組 | ✅ | `1b37d3e` | `python3 -c "print(open('scripts/export-data.mjs','rb').read().count(b'\x00'))"` 應為 0;`grep -c` 不加 `-a` 也要有命中 |
+| 1.2 Worker 測試 | ✅ | `e581297` | `node --test 'tests/**/*.test.mjs'`;CI 關卡 `yq '.jobs["build-deploy"].needs' .github/workflows/build.yml` |
+| 0.1 / 0.2 語彙 | ✅ | `68521b2` | `grep -crE 'post_status !== .active.\|topic_status === .candidate.' api/src/**/*.js` 應無命中 |
+| 1.1 Worker 拆模組 | ✅ | `d65e6ae` | `wc -l api/src/index.js api/src/lib/*.js api/src/routes/*.js`;`cd api && npx wrangler deploy --dry-run` |
+| 2.2 scripts 分層 | ✅ | `39581e4` `acfde00` | `ls scripts/oneoff/`;`grep -ohE 'scripts/[a-z0-9-]+\.mjs' scripts/cron-15min.sh scripts/hourly-export.sh \| sort -u` |
+| 2.3 sources upsert | ✅ | `f45b7b4` | `grep -A1 'ON CONFLICT(url)' scripts/import-topics.mjs` 應為 `DO NOTHING` |
+| 3.1 data.mjs 拆分 | ✅ | `19396ac` | `wc -l site/src/lib/*.mjs`;七語 `pnpm build` 後比對 dist 指紋 |
+| 4.1 schema 註解 | ✅ | `31d523e` | 逐表比對(見 §4.1 的查法) |
 
-**未解、已記錄在案**:`migrate-topic-observances` 與 `retire-merged-topics` 是一次性遷移
-卻被常態腳本呼叫(等於每小時重跑遷移邏輯),沒搬是因為搬了會破壞呼叫;
-`sources` 表的 upsert 仍是純時間戳寫入(無可觀測後果)。兩者查法見 `scripts/README.md` 與 §2.3。
+**仍然成立、沒有 ✅ 橫幅的三項**:3.2(新增分類要手動改多處)、3.3(前端相對健康)、
+4.2(candidate/cooling 設計好但未實作)。
+
+**未解、已記錄在案**:`retire-merged-topics` 留在管線裡是**對的**(它是內容匯入步驟,
+不是遷移,原 §2.2 把它與 migrate-* 並列是誤判)。
 
 ## 原建議順序
 

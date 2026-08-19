@@ -19,9 +19,10 @@ Topic 有兩個彼此獨立的軸：**從哪來**（人工編輯／分類推導�
 
 ## Consequences
 
-- `scripts/export-data.mjs` 的 `isMachineTrendTopic()` 目前嗅探 10 個欄位名，其中 8 個
-  （`topic_kind`/`topic_type`/`kind`/`owner`/`ownership`/`topic_owner`/`origin`/`provenance`）
-  在 `topics` 表根本不存在。這種防禦性嗅探正是「沒有共同語彙」的病徵，應簡化為單一欄位判斷。
+- **(2026-08-19 已處理)** 本 ADR 寫成時，`scripts/export-data.mjs` 的 `isMachineTrendTopic()`
+  嗅探了一整排欄位名（`topic_kind`/`topic_type`/`kind`/`owner`/`ownership`/`topic_owner`/
+  `origin`/`provenance`…），其中多數在 `topics` 表根本不存在。那種防禦性嗅探正是
+  「沒有共同語彙」的病徵。已簡化為 `scripts/lib/topics.mjs` 的單一判準。
 - 趨勢管線必須為它產生的每個 Topic 指派真實的主題分類。**如何指派尚未決定**——這是本 ADR
   留下的待解問題，不是已完成的事。
 - `db/schema-host.sql` 與 `docs/02-data-model.md` 的 `access_source` 註解都還寫著
