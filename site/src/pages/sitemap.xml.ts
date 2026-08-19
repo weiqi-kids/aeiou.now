@@ -30,6 +30,14 @@ export function GET({ site }) {
     if (!facts?.slug) continue;
     const cover = coverPath(facts.slug);
     add(`topic/${facts.slug}/`, {
+      // lastmod 只給 Topic 頁,因為只有這裡的時間戳可以證明是準的:
+      // facts.updated_at 來自主機 topics.updated_at,而該欄位自 2026-08-19 起
+      // 只在內容真的改變時才推新(import-topics 的 upsert 補了 WHERE 子句)。
+      // 在那之前它每小時空推一次,若當時就送 lastmod,等於每小時告訴 Google
+      // 「所有頁面都變了」—— 狼來了,Google 會直接忽略整站的 lastmod。
+      // 排行頁刻意不給:它的內容由 topic_scores 驅動,不反映在 facts.updated_at,
+      // 給了就是假的。
+      lastmod: facts.updated_at || undefined,
       changefreq: facts.is_perennial ? 'monthly' : 'weekly',
       priority: '0.8',
       image: cover ? new URL(withBase(cover), origin).toString() : undefined,
