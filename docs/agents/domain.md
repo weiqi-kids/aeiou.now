@@ -11,7 +11,8 @@ How the engineering skills should consume this repo's domain documentation when 
 
 If any of these files don't exist, **proceed silently**. Don't flag their absence; don't suggest creating them upfront. The `/domain-modeling` skill (reached via `/grill-with-docs` and `/improve-codebase-architecture`) creates them lazily when terms or decisions actually get resolved.
 
-> As of this file being written, neither `CONTEXT.md` nor `docs/adr/` exists yet. That is the expected starting state — do not treat it as a gap to fix.
+> Whether they exist yet is a question to answer with a command, never from this file:
+> `ls CONTEXT.md docs/adr/ 2>/dev/null`. Empty output is an expected starting state, not a gap to fix.
 
 ## File structure
 

@@ -16,16 +16,17 @@ host SQLite（trend_*、topics、topic_i18n、source_topics）
 `access_source='trend'` / `category='trend'`，內容權威在 SQLite；不得寫入或覆蓋
 `content/topics/*.md` 的 manual Topic。
 
-## 目前上線狀態:管線開著、靜態層關著(2026-08-19 用戶拍板)
+## 兩道上線閘(設定,不是現況)
 
-趨勢管線本身保留,但**趨勢 Topic 暫不上線七站**。當時的實測數字:主機 SQLite 已累積
-313 個 active trend Topic,人工策展 Topic 只有 29 個;照原設計匯出,七站 index 會是
-345 筆、其中九成是機器生成的關鍵字 Topic,而前端沒有任何地方用到 `topic_kind`/`owner`,
-讀者無從分辨機器 Topic 與人工 Topic。
+趨勢管線保留,但**趨勢 Topic 不進靜態層**。閘的開關狀態一律用下面的查法查,別讀本節數字。
+
+> **拍板紀錄(2026-08-19)**:決策當下實測 313 個 active trend Topic、29 個人工策展 Topic,
+> 照原設計匯出七站 index 約九成會是機器生成的關鍵字 Topic;且前端沒有任何地方用到
+> `topic_kind`/`owner`,讀者無從分辨機器 Topic 與人工 Topic。以上是當日事實,不是現況。
 
 因此設了兩道**互相獨立**的閘,要復活必須兩邊都開:
 
-| 閘 | 位置 | 預設 | 效果 |
+| 閘 | 位置 | 裸執行時 | 效果 |
 |---|---|---|---|
 | 產製 | `scripts/cron-15min.sh` 設 `AEIOU_TREND_AUTO_PUBLISH=0` | 關 | 不再產新的趨勢 Topic(也不再燒 claude 訂閱額度) |
 | 靜態輸出 | `scripts/export-data.mjs` 讀 `AEIOU_TREND_EXPORT` | 關 | 已存在的趨勢 Topic 不進 `data/`,stale 目錄會被既有清除邏輯移除 |
@@ -39,7 +40,7 @@ AEIOU_TREND_EXPORT=1 node scripts/export-data.mjs
 # 正式復活:cron-15min.sh 改 :-1,export 端設 AEIOU_TREND_EXPORT=1
 ```
 
-查現況(不要相信本節數字,用指令):
+查現況(唯一可信的答案來源):
 
 ```bash
 sqlite3 db/aeiou.sqlite "SELECT access_source,status,COUNT(*) FROM topics GROUP BY 1,2"

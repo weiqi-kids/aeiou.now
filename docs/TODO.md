@@ -57,13 +57,14 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
 - [ ] **復活前必須先做:前端要能區分機器 Topic 與人工 Topic**。`export-data.mjs` 已在輸出掛
   `topic_kind:'trend'`/`owner:'machine'`,但 `site/` 只有 `src/lib/data.mjs` 用它把趨勢
   Topic 當「近期話題」推上首頁(`season_distance: 0`),版面上沒有任何標示。
-  拍板當下的實測:313 個 active trend Topic vs 29 個人工 Topic。
+  拍板當日(2026-08-19)實測 313 個 active trend Topic 對 29 個人工 Topic —— 當日事實,現況請用上面的查法。
   ⚠ 版面怎麼標示屬產品決定,動工前先問用戶,並先讀產品草案本體。
 - [ ] **趨勢 Topic 的熱度與排序策略未定**:趨勢沒有文化日期,目前是直接給最高「近期」優先序,
   等同蓋過人工策展的節奏。復活時要一併決定。
-- [ ] **D1 留著 317 筆趨勢 Topic 副本**(sync-topics-to-d1 照同步)。Worker 沒有列出 Topic 的
-  端點,靜態層也不產生連結,所以讀者路徑上到不了;TTL 到期會轉 archived。要不要順手清,
-  等復活與否定案再說。查:`cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT COUNT(*) FROM topics WHERE topic_id LIKE 'top_tr_%'"`
+- [ ] **D1 仍留著趨勢 Topic 副本要不要清**(`sync-topics-to-d1.mjs` 照同步,不看靜態閘)。
+  Worker 沒有列出 Topic 的端點、靜態層也不產生連結,所以讀者路徑上到不了;TTL 到期會轉 archived。
+  等趨勢復活與否定案再決定。查數量:
+  `cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT COUNT(*) FROM topics WHERE topic_id LIKE 'top_tr_%'"`
 - [ ] **`trend_runs` 有一批 status='running' 的殘列**(2026-08-17～08-18 那段連續失敗期留下的,
   之後沒再增加)。`run_key` 唯一且 `INSERT OR IGNORE`,不會擋住後續執行,純屬統計雜訊。
   查:`sqlite3 db/aeiou.sqlite "SELECT status,COUNT(*) FROM trend_runs GROUP BY 1"`
