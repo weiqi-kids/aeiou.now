@@ -271,12 +271,6 @@ if (!existsSync(CONTENT_DIR)) {
 const files = readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".md")).sort();
 if (files.length === 0) { console.log("content/topics/ 沒有 .md,無事可做。"); process.exit(0); }
 
-// 讓直接執行 import-topics 也不會繞過舊資料遷移。
-execFileSync(process.execPath, [join(ROOT, "scripts", "migrate-topic-observances.mjs")], {
-  cwd: ROOT,
-  stdio: "inherit",
-});
-
 const db = new DatabaseSync(DB_PATH);
 db.exec("PRAGMA busy_timeout = 15000;"); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)
 db.exec("PRAGMA foreign_keys = ON;");

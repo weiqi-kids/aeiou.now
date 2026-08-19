@@ -205,27 +205,47 @@ async function verifySource(url, source, event) {
   return { url, status: response.status, finalUrl: response.url, matched, matchedDates };
 }
 
+const lastDayOf = (event) => (event.end_at || event.start_at).slice(0, 10);
+
+/** 仍要發布的活動:結束日還沒過。今天正在辦的當然要留著顯示。 */
 function activeEventsForDate(events) {
-  return events.filter((event) => {
-    const lastDay = (event.end_at || event.start_at).slice(0, 10);
-    return lastDay >= asOf;
-  });
+  return events.filter((event) => lastDayOf(event) >= asOf);
+}
+
+/**
+ * 仍需**重新核對**的活動:結束日在未來(嚴格大於今天)。
+ *
+ * 重新核對的目的是「在人跑去現場之前抓到日期或地點變更」——對今天就結束的活動,
+ * 那個目的已經不存在了。而主辦單位很常在活動當天或隔天就把公告下架:
+ * 2026-08-19 臺北天文館把**當日**活動的公告撤掉,404 讓 hourly-export 連續兩輪
+ * 進 DLQ,而那個活動當晚就結束、隔天本來就會自動退場。
+ *
+ * 所以「今天結束」的活動照常發布、但不再核對 —— 這不是放寬驗證,是把驗證用在
+ * 它真正有用的地方。未來的活動一律照舊嚴格核對(Revelando SP 改期就是那樣抓到的)。
+ */
+function verifiableEventsForDate(events) {
+  return events.filter((event) => lastDayOf(event) > asOf);
 }
 
 async function main() {
   const { catalogByUrl, placeUrls, managedEventUrls } = validateShape();
   const activeEvents = activeEventsForDate(sample.events || []);
-  const activeEventUrls = new Set(activeEvents.map((event) => event.source_url));
-  // 只重新核對目前仍要發布的常設地點與活動；退役來源僅用於清除舊列，
-  // 不會被當成目前地點或活動再次抓取。
-  const urlsToVerify = unique([...placeUrls, ...activeEventUrls]);
+  const verifiableEvents = verifiableEventsForDate(sample.events || []);
+  const verifiableEventUrls = new Set(verifiableEvents.map((event) => event.source_url));
+  // 只重新核對常設地點與**尚未結束**的活動;退役來源僅用於清除舊列。
+  // 今天結束的活動仍照常發布,但不再抓取(見 verifiableEventsForDate 的說明)。
+  const urlsToVerify = unique([...placeUrls, ...verifiableEventUrls]);
+  const notReverified = activeEvents.length - verifiableEvents.length;
+  if (notReverified > 0) {
+    console.log(`${notReverified} 個今天結束的活動照常發布,但不再重新核對來源。`);
+  }
 
   console.log(`來源驗證：${urlsToVerify.length} 個目前仍使用的 URL（${offline ? "offline" : "online"}）`);
   const health = existsSync(HEALTH_PATH) ? readJson(HEALTH_PATH) : {};
   const blocking = [];
   const checks = [];
   for (const url of urlsToVerify) {
-    const event = activeEvents.find((candidate) => candidate.source_url === url);
+    const event = verifiableEvents.find((candidate) => candidate.source_url === url);
     const result = await verifySource(url, catalogByUrl.get(url), event);
     checks.push(result);
     if (result.skipped) console.log(`  skip ${url}`);

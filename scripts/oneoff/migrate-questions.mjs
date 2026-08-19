@@ -8,7 +8,7 @@ import { existsSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..', '..');   // scripts/oneoff/ → repo 根
 const DB_PATH = join(ROOT, 'db', 'aeiou.sqlite');
 
 if (!existsSync(DB_PATH)) {

@@ -38,7 +38,7 @@ function initHost() {
     console.log(`已套用 ${f}`);
   }
   db.close();
-  execFileSync(process.execPath, [join(ROOT, "scripts", "migrate-topic-observances.mjs")], {
+  execFileSync(process.execPath, [join(ROOT, "scripts", "oneoff", "migrate-topic-observances.mjs")], {
     cwd: ROOT,
     stdio: "inherit",
   });

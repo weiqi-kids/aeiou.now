@@ -17,7 +17,6 @@
 //   QUESTIONS_FILE  題庫檔路徑(預設 content/questions.json;測試逃生口,裸執行請勿設)
 import { DatabaseSync } from "node:sqlite";
 import { readFileSync, existsSync } from "node:fs";
-import { execFileSync } from "node:child_process";
 import { join, resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -44,13 +43,6 @@ if (!questions) {
   console.error(`${QUESTIONS_FILE}:頂層缺 "questions" 陣列`);
   process.exit(2);
 }
-
-// 讓直接執行 import-questions 也不會繞過 schema 補表(比照 import-topics 對
-// migrate-topic-observances 的做法)。
-execFileSync(process.execPath, [join(ROOT, "scripts", "migrate-questions.mjs")], {
-  cwd: ROOT,
-  stdio: "inherit",
-});
 
 const db = new DatabaseSync(DB_PATH);
 db.exec("PRAGMA busy_timeout = 15000;"); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)

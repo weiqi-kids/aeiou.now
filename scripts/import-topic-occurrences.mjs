@@ -6,7 +6,6 @@
 // 匯入是冪等的；每個 observance 在 JSON 中的整組 occurrence 會被替換。
 import { DatabaseSync } from 'node:sqlite';
 import { existsSync, readFileSync } from 'node:fs';
-import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -33,12 +32,6 @@ if (!existsSync(INPUT_PATH)) {
   console.error(`找不到 ${INPUT_PATH}`);
   process.exit(2);
 }
-
-// 讓直接執行本支也一定先套用 occurrence schema；不依賴呼叫端剛好先跑 migrate。
-execFileSync(process.execPath, [join(ROOT, 'scripts', 'migrate-topic-observances.mjs')], {
-  cwd: ROOT,
-  stdio: 'inherit',
-});
 
 const input = JSON.parse(readFileSync(INPUT_PATH, 'utf8'));
 const rows = Array.isArray(input.occurrences) ? input.occurrences : [];
