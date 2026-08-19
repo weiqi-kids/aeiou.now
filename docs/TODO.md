@@ -78,7 +78,8 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
   記錄=apex A×4+AAAA×4(GitHub Pages 固定 IP)、六子網域 en/jp/cn/hi/id/br CNAME →
   `weiqi-kids.github.io`、GSC TXT。查:`dig @1.1.1.1 +short A aeiou.now`(換 AAAA/TXT/CNAME 各查)。
   ⚠ **切自訂網域上線前必須先補 Bot 防護**(下節紅線)。
-- [ ] **GitHub org 網域驗證(防 subdomain takeover;DNS 已指向、repo 未綁,窗口開著)**:
+- [ ] **GitHub org 網域驗證:TXT 已就位,剩 UI 按 Verify**(2026-08-19 實測 TXT 查得到)。
+  原始說明(防 subdomain takeover;DNS 已指向、repo 未綁):
   無 REST API(2026-08-15 實測 /orgs/*/pages* 皆 404),只能 UI:
   `github.com/organizations/weiqi-kids/settings/pages` → Add a domain → 取 TXT code →
   GoDaddy 加 `_github-pages-challenge-weiqi-kids` TXT → Verify。**用戶端動作**。
@@ -128,7 +129,7 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
   (payload 的 host 必須與 urlList 相符,混送會整批被拒)。
   查:`node scripts/indexnow.mjs --dry-run`;金鑰檔 `curl -s https://aeiou.now/<key>.txt`。
 - [x] **sitemap**:隨 build 產出,七站皆已在 GSC 提交(0 錯誤 0 警告),Topic 頁已帶 lastmod。
-- [ ] GSC 提交 job:不需要 —— sitemap 提交是一次性動作,已完成。
+- [x] GSC 提交 job:**不需要** —— sitemap 提交是一次性動作,七站皆已完成。
 - [ ] OAuth(Google/GitHub/LINE;cn 市場皆不通為已知缺口)
 - [ ] GA4 每日拉取 job(property 與 SA 見上節)
 - [ ] Markdown 渲染(M1 純文字轉義)、圖片上傳(R2+審核)
@@ -144,7 +145,7 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
 - **claude -p 是全主機共用的訂閱額度**(2026-08-15 撞上週上限實證,seo-ops 各站 brain/reflect
   同時陣亡):額度耗盡時翻譯與價值閘門**雙雙停擺**,閘門 fail-open——垃圾貼文照常露出,
   只剩入口限流兜底。查:`echo 測試 | claude -p`(回 weekly limit 即耗盡)或看 `jobs` 表 error_message。
-- [ ] **額度重置(2026-08-18 02:00 UTC)後驗證價值閘門 cron 路徑**:測試貼文 `pst_…JYH7G2` 應自動
+- [x] **價值閘門 cron 路徑已驗證**(2026-08-19):原為額度重置後待驗:測試貼文 `pst_…JYH7G2` 應自動
   變 `translation_status='done'` 且 post_i18n 六語齊。查:
   `sqlite3 db/aeiou.sqlite "SELECT translation_status FROM posts WHERE post_id LIKE '%JYH7G2'"`
 
