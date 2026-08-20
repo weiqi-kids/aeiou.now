@@ -15,10 +15,6 @@
     "easter/ID/paskah",
     "easter/IN/easter",
     "easter/US/easter-sunday",
-    "eid-al-adha/BR/eid-al-adha",
-    "eid-al-adha/ID/iduladha",
-    "eid-al-adha/IN/bakrid",
-    "eid-al-adha/US/eid-al-adha",
     "fathers-day/BR/dia-dos-pais",
     "fathers-day/JP/chichi-no-hi",
     "fathers-day/TW/fathers-day",
@@ -35,7 +31,6 @@
     "mothers-day/JP/haha-no-hi",
     "mothers-day/TW/mothers-day",
     "mothers-day/US/mothers-day",
-    "new-year/JP/oshogatsu",
     "teachers-day/BR/dia-dos-professores",
     "teachers-day/CN/teachers-day",
     "teachers-day/ID/hari-guru",
@@ -102,7 +97,7 @@
     "eid-al-adha": {
       "units": 4,
       "countries": 4,
-      "min_chars": 301
+      "min_chars": 948
     },
     "farewells-and-funerals": {
       "units": 7,
@@ -165,9 +160,9 @@
       "min_chars": 486
     },
     "new-year": {
-      "units": 4,
-      "countries": 4,
-      "min_chars": 304
+      "units": 7,
+      "countries": 7,
+      "min_chars": 1216
     },
     "newborn-and-full-moon": {
       "units": 7,

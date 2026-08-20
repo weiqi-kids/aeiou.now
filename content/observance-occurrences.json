@@ -875,7 +875,7 @@
       "timezone": "America/Sao_Paulo",
       "date_status": "local-variant",
       "source_urls": [
-        "https://www.timeanddate.com/holidays/common/eid-al-adha"
+        "https://www12.senado.leg.br/noticias/materias/2024/02/20/comissao-inclui-festas-judaicas-e-islamicas-nas-datas-comemorativas-do-brasil"
       ]
     },
     {
@@ -888,7 +888,7 @@
       "timezone": "America/Sao_Paulo",
       "date_status": "local-variant",
       "source_urls": [
-        "https://www.timeanddate.com/holidays/common/eid-al-adha"
+        "https://www12.senado.leg.br/noticias/materias/2024/02/20/comissao-inclui-festas-judaicas-e-islamicas-nas-datas-comemorativas-do-brasil"
       ]
     },
     {
@@ -899,9 +899,9 @@
       "starts_on": "2026-05-27",
       "calendar_system": "islamic",
       "timezone": "Asia/Jakarta",
-      "date_status": "estimated",
+      "date_status": "confirmed",
       "source_urls": [
-        "https://www.timeanddate.com/holidays/common/eid-al-adha"
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
       ]
     },
     {
@@ -914,7 +914,7 @@
       "timezone": "Asia/Jakarta",
       "date_status": "estimated",
       "source_urls": [
-        "https://www.timeanddate.com/holidays/common/eid-al-adha"
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
       ]
     },
     {
@@ -925,9 +925,9 @@
       "starts_on": "2026-05-27",
       "calendar_system": "islamic",
       "timezone": "Asia/Kolkata",
-      "date_status": "estimated",
+      "date_status": "confirmed",
       "source_urls": [
-        "https://www.timeanddate.com/holidays/common/eid-al-adha"
+        "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
       ]
     },
     {
@@ -940,7 +940,7 @@
       "timezone": "Asia/Kolkata",
       "date_status": "estimated",
       "source_urls": [
-        "https://www.timeanddate.com/holidays/common/eid-al-adha"
+        "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
       ]
     },
     {
@@ -953,7 +953,7 @@
       "timezone": "America/New_York",
       "date_status": "local-variant",
       "source_urls": [
-        "https://www.timeanddate.com/holidays/common/eid-al-adha"
+        "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
       ]
     },
     {
@@ -964,9 +964,9 @@
       "starts_on": "2027-05-17",
       "calendar_system": "islamic",
       "timezone": "America/New_York",
-      "date_status": "local-variant",
+      "date_status": "confirmed",
       "source_urls": [
-        "https://www.timeanddate.com/holidays/common/eid-al-adha"
+        "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
       ]
     },
     {
@@ -2123,6 +2123,90 @@
       "date_status": "confirmed",
       "source_urls": [
         "https://www.usa.gov/holidays"
+      ]
+    },
+    {
+      "topic_slug": "new-year",
+      "country_code": "CN",
+      "observance_key": "chunjie",
+      "occurrence_year": 2026,
+      "starts_on": "2026-02-16",
+      "calendar_system": "chinese-lunisolar",
+      "timezone": "Asia/Shanghai",
+      "date_status": "confirmed",
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+      ],
+      "ends_on": "2026-02-19"
+    },
+    {
+      "topic_slug": "new-year",
+      "country_code": "CN",
+      "observance_key": "chunjie",
+      "occurrence_year": 2027,
+      "starts_on": "2027-02-05",
+      "calendar_system": "chinese-lunisolar",
+      "timezone": "Asia/Shanghai",
+      "date_status": "confirmed",
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+      ],
+      "ends_on": "2027-02-08"
+    },
+    {
+      "topic_slug": "new-year",
+      "country_code": "ID",
+      "observance_key": "tahun-baru",
+      "occurrence_year": 2026,
+      "starts_on": "2026-01-01",
+      "calendar_system": "gregorian",
+      "timezone": "Asia/Jakarta",
+      "date_status": "confirmed",
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+      ]
+    },
+    {
+      "topic_slug": "new-year",
+      "country_code": "ID",
+      "observance_key": "tahun-baru",
+      "occurrence_year": 2027,
+      "starts_on": "2027-01-01",
+      "calendar_system": "gregorian",
+      "timezone": "Asia/Jakarta",
+      "date_status": "confirmed",
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+      ]
+    },
+    {
+      "topic_slug": "new-year",
+      "country_code": "IN",
+      "observance_key": "ugadi",
+      "occurrence_year": 2026,
+      "starts_on": "2026-03-19",
+      "calendar_system": "hindu-lunisolar",
+      "timezone": "Asia/Kolkata",
+      "date_status": "estimated",
+      "source_urls": [
+        "https://www.utsav.gov.in/view-event/ugadi-1",
+        "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+      ]
+    },
+    {
+      "topic_slug": "new-year",
+      "country_code": "IN",
+      "observance_key": "ugadi",
+      "occurrence_year": 2027,
+      "starts_on": "2027-04-07",
+      "calendar_system": "hindu-lunisolar",
+      "timezone": "Asia/Kolkata",
+      "date_status": "estimated",
+      "source_urls": [
+        "https://www.utsav.gov.in/view-event/ugadi-1",
+        "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
       ]
     },
     {

@@ -2,27 +2,27 @@
   "topic_id": "top_01KZXQ6BRAREETBKDH28R9Y5EQ",
   "slug": "eid-al-adha",
   "canonical_name": "Eid al-Adha",
-  "commonality": "comparing Eid al-Adha through prayer, sacrifice, charity, family meals, and the local moon-sighting decisions that shape its date",
-  "category": "seasonal",
+  "commonality": "comparing the level at which the same Islamic date is recognised — national holiday with joint leave, gazetted holiday, school-district closure, or not yet written into the national calendar",
+  "category": "faith",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-19T14:52:10.000Z",
+  "updated_at": "2026-08-20T03:20:55.000Z",
   "access_level": 0,
   "observances": [
     {
       "observance_id": "obs_top_01KZXQ6BRAREETBKDH28R9Y5EQ_BR_eid-al-adha",
       "observance_key": "eid-al-adha",
       "country_code": "BR",
-      "local_name": "Eid al-Adha",
+      "local_name": "Eid al-Adha（Festa do Sacrifício）",
       "observed_date": null,
-      "date_rule": "伊斯蘭曆十二月初十，日期依月相與地方清真寺公告",
+      "date_rule": "伊斯蘭曆 Dhul Hijjah 月初十；非法定假日，依各清真寺公告",
       "date_range_end": null,
-      "popularity_rank": 40,
+      "popularity_rank": 4,
       "source_ids": [
-        "src_D6D58712DE4087CA114AA31F"
+        "src_5FF712A8C9D9A003E30D5DBB"
       ],
       "source_urls": [
-        "https://www.timeanddate.com/holidays/common/eid-al-adha"
+        "https://www12.senado.leg.br/noticias/materias/2024/02/20/comissao-inclui-festas-judaicas-e-islamicas-nas-datas-comemorativas-do-brasil"
       ],
       "occurrences": [
         {
@@ -34,10 +34,10 @@
           "timezone": "America/Sao_Paulo",
           "date_status": "local-variant",
           "source_ids": [
-            "src_D6D58712DE4087CA114AA31F"
+            "src_5FF712A8C9D9A003E30D5DBB"
           ],
           "source_urls": [
-            "https://www.timeanddate.com/holidays/common/eid-al-adha"
+            "https://www12.senado.leg.br/noticias/materias/2024/02/20/comissao-inclui-festas-judaicas-e-islamicas-nas-datas-comemorativas-do-brasil"
           ]
         },
         {
@@ -49,10 +49,10 @@
           "timezone": "America/Sao_Paulo",
           "date_status": "local-variant",
           "source_ids": [
-            "src_D6D58712DE4087CA114AA31F"
+            "src_5FF712A8C9D9A003E30D5DBB"
           ],
           "source_urls": [
-            "https://www.timeanddate.com/holidays/common/eid-al-adha"
+            "https://www12.senado.leg.br/noticias/materias/2024/02/20/comissao-inclui-festas-judaicas-e-islamicas-nas-datas-comemorativas-do-brasil"
           ]
         }
       ],
@@ -65,10 +65,10 @@
         "timezone": "America/Sao_Paulo",
         "date_status": "local-variant",
         "source_ids": [
-          "src_D6D58712DE4087CA114AA31F"
+          "src_5FF712A8C9D9A003E30D5DBB"
         ],
         "source_urls": [
-          "https://www.timeanddate.com/holidays/common/eid-al-adha"
+          "https://www12.senado.leg.br/noticias/materias/2024/02/20/comissao-inclui-festas-judaicas-e-islamicas-nas-datas-comemorativas-do-brasil"
         ],
         "distance_days": 270
       }
@@ -79,14 +79,14 @@
       "country_code": "ID",
       "local_name": "Iduladha",
       "observed_date": null,
-      "date_rule": "伊斯蘭曆十二月初十，日期依月相與地方公告",
+      "date_rule": "伊斯蘭曆 Dzulhijah 月初十；政府公告日期，通常另安排共同休假",
       "date_range_end": null,
-      "popularity_rank": 10,
+      "popularity_rank": 1,
       "source_ids": [
-        "src_D6D58712DE4087CA114AA31F"
+        "src_FF4B224E905CC2C8CF8EAF05"
       ],
       "source_urls": [
-        "https://www.timeanddate.com/holidays/common/eid-al-adha"
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
       ],
       "occurrences": [
         {
@@ -96,12 +96,12 @@
           "ends_on": null,
           "calendar_system": "islamic",
           "timezone": "Asia/Jakarta",
-          "date_status": "estimated",
+          "date_status": "confirmed",
           "source_ids": [
-            "src_D6D58712DE4087CA114AA31F"
+            "src_FF4B224E905CC2C8CF8EAF05"
           ],
           "source_urls": [
-            "https://www.timeanddate.com/holidays/common/eid-al-adha"
+            "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
           ]
         },
         {
@@ -113,10 +113,10 @@
           "timezone": "Asia/Jakarta",
           "date_status": "estimated",
           "source_ids": [
-            "src_D6D58712DE4087CA114AA31F"
+            "src_FF4B224E905CC2C8CF8EAF05"
           ],
           "source_urls": [
-            "https://www.timeanddate.com/holidays/common/eid-al-adha"
+            "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
           ]
         }
       ],
@@ -129,10 +129,10 @@
         "timezone": "Asia/Jakarta",
         "date_status": "estimated",
         "source_ids": [
-          "src_D6D58712DE4087CA114AA31F"
+          "src_FF4B224E905CC2C8CF8EAF05"
         ],
         "source_urls": [
-          "https://www.timeanddate.com/holidays/common/eid-al-adha"
+          "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
         ],
         "distance_days": 270
       }
@@ -141,16 +141,16 @@
       "observance_id": "obs_top_01KZXQ6BRAREETBKDH28R9Y5EQ_IN_bakrid",
       "observance_key": "bakrid",
       "country_code": "IN",
-      "local_name": "Bakrid",
+      "local_name": "Id-ul-Zuha（Bakrid）",
       "observed_date": null,
-      "date_rule": "伊斯蘭曆十二月初十，日期依月相與地方公告",
+      "date_rule": "伊斯蘭曆 Dhul Hijjah 月初十；列在全國假日清單",
       "date_range_end": null,
-      "popularity_rank": 20,
+      "popularity_rank": 2,
       "source_ids": [
-        "src_D6D58712DE4087CA114AA31F"
+        "src_8881C7B43193D1F50ED0E47C"
       ],
       "source_urls": [
-        "https://www.timeanddate.com/holidays/common/eid-al-adha"
+        "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
       ],
       "occurrences": [
         {
@@ -160,12 +160,12 @@
           "ends_on": null,
           "calendar_system": "islamic",
           "timezone": "Asia/Kolkata",
-          "date_status": "estimated",
+          "date_status": "confirmed",
           "source_ids": [
-            "src_D6D58712DE4087CA114AA31F"
+            "src_8881C7B43193D1F50ED0E47C"
           ],
           "source_urls": [
-            "https://www.timeanddate.com/holidays/common/eid-al-adha"
+            "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
           ]
         },
         {
@@ -177,10 +177,10 @@
           "timezone": "Asia/Kolkata",
           "date_status": "estimated",
           "source_ids": [
-            "src_D6D58712DE4087CA114AA31F"
+            "src_8881C7B43193D1F50ED0E47C"
           ],
           "source_urls": [
-            "https://www.timeanddate.com/holidays/common/eid-al-adha"
+            "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
           ]
         }
       ],
@@ -193,10 +193,10 @@
         "timezone": "Asia/Kolkata",
         "date_status": "estimated",
         "source_ids": [
-          "src_D6D58712DE4087CA114AA31F"
+          "src_8881C7B43193D1F50ED0E47C"
         ],
         "source_urls": [
-          "https://www.timeanddate.com/holidays/common/eid-al-adha"
+          "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
         ],
         "distance_days": 270
       }
@@ -205,16 +205,16 @@
       "observance_id": "obs_top_01KZXQ6BRAREETBKDH28R9Y5EQ_US_eid-al-adha",
       "observance_key": "eid-al-adha",
       "country_code": "US",
-      "local_name": "Eid al-Adha",
+      "local_name": "Eid al-Adha（紐約市公立學校假日）",
       "observed_date": null,
-      "date_rule": "伊斯蘭曆十二月初十，日期依月相與地方清真寺公告",
+      "date_rule": "伊斯蘭曆 Dhul Hijjah 月初十；紐約市公立學校行事曆列為停課日",
       "date_range_end": null,
-      "popularity_rank": 30,
+      "popularity_rank": 3,
       "source_ids": [
-        "src_D6D58712DE4087CA114AA31F"
+        "src_71D52CDB9B833DE2EDE16987"
       ],
       "source_urls": [
-        "https://www.timeanddate.com/holidays/common/eid-al-adha"
+        "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
       ],
       "occurrences": [
         {
@@ -226,10 +226,10 @@
           "timezone": "America/New_York",
           "date_status": "local-variant",
           "source_ids": [
-            "src_D6D58712DE4087CA114AA31F"
+            "src_71D52CDB9B833DE2EDE16987"
           ],
           "source_urls": [
-            "https://www.timeanddate.com/holidays/common/eid-al-adha"
+            "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
           ]
         },
         {
@@ -239,12 +239,12 @@
           "ends_on": null,
           "calendar_system": "islamic",
           "timezone": "America/New_York",
-          "date_status": "local-variant",
+          "date_status": "confirmed",
           "source_ids": [
-            "src_D6D58712DE4087CA114AA31F"
+            "src_71D52CDB9B833DE2EDE16987"
           ],
           "source_urls": [
-            "https://www.timeanddate.com/holidays/common/eid-al-adha"
+            "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
           ]
         }
       ],
@@ -255,12 +255,12 @@
         "ends_on": null,
         "calendar_system": "islamic",
         "timezone": "America/New_York",
-        "date_status": "local-variant",
+        "date_status": "confirmed",
         "source_ids": [
-          "src_D6D58712DE4087CA114AA31F"
+          "src_71D52CDB9B833DE2EDE16987"
         ],
         "source_urls": [
-          "https://www.timeanddate.com/holidays/common/eid-al-adha"
+          "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
         ],
         "distance_days": 271
       }
@@ -295,9 +295,15 @@
   ],
   "relations": [],
   "source_ids": [
-    "src_D6D58712DE4087CA114AA31F"
+    "src_5FF712A8C9D9A003E30D5DBB",
+    "src_71D52CDB9B833DE2EDE16987",
+    "src_8881C7B43193D1F50ED0E47C",
+    "src_FF4B224E905CC2C8CF8EAF05"
   ],
   "source_urls": [
-    "https://www.timeanddate.com/holidays/common/eid-al-adha"
+    "https://www12.senado.leg.br/noticias/materias/2024/02/20/comissao-inclui-festas-judaicas-e-islamicas-nas-datas-comemorativas-do-brasil",
+    "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf",
+    "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays",
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
   ]
 }
