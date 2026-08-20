@@ -41,7 +41,7 @@
 - local_name: Dia da Independência do Brasil
 - date: 09-07
 - rank: 1
-- source: https://www.comunicacao.pr.gov.br/noticias/aen/185ca999-f90c-4884-a739-b384ac5a12d6
+- source: https://www.planalto.gov.br/ccivil_03/leis/l0662.htm
 
 ## observance US independence-day
 - local_name: Independence Day

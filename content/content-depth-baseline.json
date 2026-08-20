@@ -1,0 +1,201 @@
+{
+  "as_of": "2026-08-20",
+  "note": "存量內容厚度水位。只能升不能降；補完資料後重跑 --update-baseline 鎖住新水位。 目標值見 scripts/lib/content-depth.mjs 的 THRESHOLDS。",
+  "thresholds_target": {
+    "units": 5,
+    "min_chars": 1200
+  },
+  "r6_exempt": [
+    "affection-and-reciprocity/IN/valentine-week",
+    "affection-and-reciprocity/JP/valentine",
+    "affection-and-reciprocity/JP/white-day",
+    "affection-and-reciprocity/US/valentine",
+    "childrens-day/JP/kodomo-no-hi",
+    "dragon-boat-festival/CN/duanwu",
+    "dragon-boat-festival/JP/tango-no-sekku",
+    "dragon-boat-festival/TW/duanwu",
+    "easter/BR/pascoa",
+    "easter/ID/paskah",
+    "easter/IN/easter",
+    "easter/US/easter-sunday",
+    "eid-al-adha/BR/eid-al-adha",
+    "eid-al-adha/ID/iduladha",
+    "eid-al-adha/IN/bakrid",
+    "eid-al-adha/US/eid-al-adha",
+    "fathers-day/BR/dia-dos-pais",
+    "fathers-day/JP/chichi-no-hi",
+    "fathers-day/TW/fathers-day",
+    "fathers-day/US/fathers-day",
+    "ghosts-ancestors-and-remembrance/JP/obon",
+    "ghosts-ancestors-and-remembrance/JP/setsubun",
+    "homecoming-and-reunion/JP/obon",
+    "labour-day/BR/dia-do-trabalho",
+    "labour-day/CN/labour-day",
+    "labour-day/ID/hari-buruh",
+    "labour-day/IN/labour-day",
+    "mothers-day/BR/dia-das-maes",
+    "mothers-day/ID/hari-ibu",
+    "mothers-day/JP/haha-no-hi",
+    "mothers-day/TW/mothers-day",
+    "mothers-day/US/mothers-day",
+    "new-year/JP/oshogatsu",
+    "teachers-day/BR/dia-dos-professores",
+    "teachers-day/CN/teachers-day",
+    "teachers-day/ID/hari-guru",
+    "teachers-day/IN/teachers-day",
+    "teachers-day/TW/teachers-day",
+    "teachers-day/US/teacher-appreciation"
+  ],
+  "topics": {
+    "affection-and-reciprocity": {
+      "units": 6,
+      "countries": 5,
+      "min_chars": 477
+    },
+    "ask-the-world": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 369
+    },
+    "back-to-school": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 307
+    },
+    "birthdays-and-blessings": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 336
+    },
+    "caregiving-across-generations": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 342
+    },
+    "childrens-day": {
+      "units": 5,
+      "countries": 5,
+      "min_chars": 279
+    },
+    "christmas": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 907
+    },
+    "coming-of-age": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 342
+    },
+    "diwali": {
+      "units": 4,
+      "countries": 2,
+      "min_chars": 818
+    },
+    "dragon-boat-festival": {
+      "units": 3,
+      "countries": 3,
+      "min_chars": 193
+    },
+    "easter": {
+      "units": 4,
+      "countries": 4,
+      "min_chars": 302
+    },
+    "eid-al-adha": {
+      "units": 4,
+      "countries": 4,
+      "min_chars": 301
+    },
+    "farewells-and-funerals": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 353
+    },
+    "fathers-day": {
+      "units": 4,
+      "countries": 4,
+      "min_chars": 242
+    },
+    "ghosts-ancestors-and-remembrance": {
+      "units": 9,
+      "countries": 5,
+      "min_chars": 701
+    },
+    "graduation-season": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 347
+    },
+    "harvest-and-gratitude": {
+      "units": 3,
+      "countries": 3,
+      "min_chars": 287
+    },
+    "homecoming-and-reunion": {
+      "units": 9,
+      "countries": 7,
+      "min_chars": 559
+    },
+    "labour-day": {
+      "units": 6,
+      "countries": 6,
+      "min_chars": 348
+    },
+    "lantern-festival": {
+      "units": 4,
+      "countries": 2,
+      "min_chars": 691
+    },
+    "mid-autumn-and-moon-viewing": {
+      "units": 3,
+      "countries": 3,
+      "min_chars": 233
+    },
+    "mothers-day": {
+      "units": 5,
+      "countries": 5,
+      "min_chars": 282
+    },
+    "moving-home": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 388
+    },
+    "national-days": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 486
+    },
+    "new-year": {
+      "units": 4,
+      "countries": 4,
+      "min_chars": 304
+    },
+    "newborn-and-full-moon": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 367
+    },
+    "proposals-and-engagements": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 371
+    },
+    "ramadan-and-eid": {
+      "units": 4,
+      "countries": 4,
+      "min_chars": 784
+    },
+    "teachers-day": {
+      "units": 6,
+      "countries": 6,
+      "min_chars": 372
+    },
+    "weddings-and-customs": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 365
+    }
+  }
+}

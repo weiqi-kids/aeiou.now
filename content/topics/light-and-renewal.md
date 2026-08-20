@@ -35,7 +35,7 @@
 - local_name: Natal
 - date: 12-25
 - rank: 1
-- source: https://www.comunicacao.pr.gov.br/noticias/aen/185ca999-f90c-4884-a739-b384ac5a12d6
+- source: https://www.planalto.gov.br/ccivil_03/leis/l0662.htm
 
 ## locale zh-TW
 ### title

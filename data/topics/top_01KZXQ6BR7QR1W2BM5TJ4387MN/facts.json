@@ -2,27 +2,159 @@
   "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
   "slug": "diwali",
   "canonical_name": "Diwali",
-  "commonality": "welcoming light, renewal, and prosperity through regionally varied Diwali and Deepavali practices",
+  "commonality": "comparing the five-day Diwali sequence and the very different civic status the festival holds where it is a national holiday and where it is a city school closure",
   "category": "festival",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-19T14:52:10.000Z",
+  "updated_at": "2026-08-20T00:23:33.000Z",
   "access_level": 0,
   "observances": [
+    {
+      "observance_id": "obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_bhai-dooj",
+      "observance_key": "bhai-dooj",
+      "country_code": "IN",
+      "local_name": "Bhai Dooj（節期第五天）",
+      "observed_date": null,
+      "date_rule": "主日後兩天；印度陰陽曆日次可能壓縮，實際日期依各地曆書",
+      "date_range_end": null,
+      "popularity_rank": 3,
+      "source_ids": [
+        "src_189E0D7BD566BB17326A281B"
+      ],
+      "source_urls": [
+        "https://utsav.gov.in/major-festival/diwali"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_bhai-dooj_2026_2026-11-10",
+          "occurrence_year": 2026,
+          "starts_on": "2026-11-10",
+          "ends_on": null,
+          "calendar_system": "hindu-lunisolar",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_189E0D7BD566BB17326A281B"
+          ],
+          "source_urls": [
+            "https://utsav.gov.in/major-festival/diwali"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_bhai-dooj_2027_2027-10-31",
+          "occurrence_year": 2027,
+          "starts_on": "2027-10-31",
+          "ends_on": null,
+          "calendar_system": "hindu-lunisolar",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_189E0D7BD566BB17326A281B"
+          ],
+          "source_urls": [
+            "https://utsav.gov.in/major-festival/diwali"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_bhai-dooj_2026_2026-11-10",
+        "occurrence_year": 2026,
+        "starts_on": "2026-11-10",
+        "ends_on": null,
+        "calendar_system": "hindu-lunisolar",
+        "timezone": "Asia/Kolkata",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_189E0D7BD566BB17326A281B"
+        ],
+        "source_urls": [
+          "https://utsav.gov.in/major-festival/diwali"
+        ],
+        "distance_days": 82
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_dhanteras",
+      "observance_key": "dhanteras",
+      "country_code": "IN",
+      "local_name": "Dhanteras（節期第一天）",
+      "observed_date": null,
+      "date_rule": "主日前兩天；印度陰陽曆日次可能壓縮，實際日期依各地曆書",
+      "date_range_end": null,
+      "popularity_rank": 2,
+      "source_ids": [
+        "src_189E0D7BD566BB17326A281B"
+      ],
+      "source_urls": [
+        "https://utsav.gov.in/major-festival/diwali"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_dhanteras_2026_2026-11-06",
+          "occurrence_year": 2026,
+          "starts_on": "2026-11-06",
+          "ends_on": null,
+          "calendar_system": "hindu-lunisolar",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_189E0D7BD566BB17326A281B"
+          ],
+          "source_urls": [
+            "https://utsav.gov.in/major-festival/diwali"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_dhanteras_2027_2027-10-27",
+          "occurrence_year": 2027,
+          "starts_on": "2027-10-27",
+          "ends_on": null,
+          "calendar_system": "hindu-lunisolar",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_189E0D7BD566BB17326A281B"
+          ],
+          "source_urls": [
+            "https://utsav.gov.in/major-festival/diwali"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_dhanteras_2026_2026-11-06",
+        "occurrence_year": 2026,
+        "starts_on": "2026-11-06",
+        "ends_on": null,
+        "calendar_system": "hindu-lunisolar",
+        "timezone": "Asia/Kolkata",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_189E0D7BD566BB17326A281B"
+        ],
+        "source_urls": [
+          "https://utsav.gov.in/major-festival/diwali"
+        ],
+        "distance_days": 78
+      }
+    },
     {
       "observance_id": "obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_diwali",
       "observance_key": "diwali",
       "country_code": "IN",
-      "local_name": "Diwali",
+      "local_name": "Diwali / Deepavali（Lakshmi–Ganesha Puja 主日）",
       "observed_date": null,
-      "date_rule": "印度陰陽曆 Kartika 月新月前後",
+      "date_rule": "印度陰陽曆 Kartika 月新月當日；五天節期的第三天",
       "date_range_end": null,
       "popularity_rank": 1,
       "source_ids": [
-        "src_CF4E2673DF39A2EF184903B2"
+        "src_189E0D7BD566BB17326A281B",
+        "src_CF4E2673DF39A2EF184903B2",
+        "src_B49A2BF2F862ED963124F2F2"
       ],
       "source_urls": [
-        "https://www.incredibleindia.gov.in/en/festivals-and-events/diwali"
+        "https://utsav.gov.in/major-festival/diwali",
+        "https://www.incredibleindia.gov.in/en/festivals-and-events/diwali",
+        "https://www.pib.gov.in/FeaturesDeatils.aspx?NoteId=156406&ModuleId=2&reg=3&lang=2"
       ],
       "occurrences": [
         {
@@ -34,10 +166,10 @@
           "timezone": "Asia/Kolkata",
           "date_status": "confirmed",
           "source_ids": [
-            "src_CF4E2673DF39A2EF184903B2"
+            "src_189E0D7BD566BB17326A281B"
           ],
           "source_urls": [
-            "https://www.incredibleindia.gov.in/en/festivals-and-events/diwali"
+            "https://utsav.gov.in/major-festival/diwali"
           ]
         },
         {
@@ -49,10 +181,10 @@
           "timezone": "Asia/Kolkata",
           "date_status": "estimated",
           "source_ids": [
-            "src_74F3E296414F83CD9774DF30"
+            "src_189E0D7BD566BB17326A281B"
           ],
           "source_urls": [
-            "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027"
+            "https://utsav.gov.in/major-festival/diwali"
           ]
         }
       ],
@@ -65,12 +197,76 @@
         "timezone": "Asia/Kolkata",
         "date_status": "confirmed",
         "source_ids": [
-          "src_CF4E2673DF39A2EF184903B2"
+          "src_189E0D7BD566BB17326A281B"
         ],
         "source_urls": [
-          "https://www.incredibleindia.gov.in/en/festivals-and-events/diwali"
+          "https://utsav.gov.in/major-festival/diwali"
         ],
         "distance_days": 80
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_US_diwali-school-holiday",
+      "observance_key": "diwali-school-holiday",
+      "country_code": "US",
+      "local_name": "Diwali（紐約市公立學校假日）",
+      "observed_date": null,
+      "date_rule": "依紐約州法，紐約市公立學校在排燈節當天停課",
+      "date_range_end": null,
+      "popularity_rank": 4,
+      "source_ids": [
+        "src_5C4EF665447A4CE3799E6C79"
+      ],
+      "source_urls": [
+        "https://council.nyc.gov/press/2023/11/15/2502/"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_US_diwali-school-holiday_2026_2026-11-08",
+          "occurrence_year": 2026,
+          "starts_on": "2026-11-08",
+          "ends_on": null,
+          "calendar_system": "hindu-lunisolar",
+          "timezone": "America/New_York",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_5C4EF665447A4CE3799E6C79"
+          ],
+          "source_urls": [
+            "https://council.nyc.gov/press/2023/11/15/2502/"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_US_diwali-school-holiday_2027_2027-10-29",
+          "occurrence_year": 2027,
+          "starts_on": "2027-10-29",
+          "ends_on": null,
+          "calendar_system": "hindu-lunisolar",
+          "timezone": "America/New_York",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_5C4EF665447A4CE3799E6C79"
+          ],
+          "source_urls": [
+            "https://council.nyc.gov/press/2023/11/15/2502/"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_US_diwali-school-holiday_2026_2026-11-08",
+        "occurrence_year": 2026,
+        "starts_on": "2026-11-08",
+        "ends_on": null,
+        "calendar_system": "hindu-lunisolar",
+        "timezone": "America/New_York",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_5C4EF665447A4CE3799E6C79"
+        ],
+        "source_urls": [
+          "https://council.nyc.gov/press/2023/11/15/2502/"
+        ],
+        "distance_days": 81
       }
     }
   ],
@@ -79,17 +275,29 @@
     {
       "country_code": "IN",
       "observance_ids": [
+        "obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_bhai-dooj",
+        "obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_dhanteras",
         "obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_diwali"
+      ]
+    },
+    {
+      "country_code": "US",
+      "observance_ids": [
+        "obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_US_diwali-school-holiday"
       ]
     }
   ],
   "relations": [],
   "source_ids": [
-    "src_74F3E296414F83CD9774DF30",
+    "src_189E0D7BD566BB17326A281B",
+    "src_5C4EF665447A4CE3799E6C79",
+    "src_B49A2BF2F862ED963124F2F2",
     "src_CF4E2673DF39A2EF184903B2"
   ],
   "source_urls": [
-    "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
+    "https://utsav.gov.in/major-festival/diwali",
+    "https://council.nyc.gov/press/2023/11/15/2502/",
+    "https://www.pib.gov.in/FeaturesDeatils.aspx?NoteId=156406&ModuleId=2&reg=3&lang=2",
     "https://www.incredibleindia.gov.in/en/festivals-and-events/diwali"
   ]
 }

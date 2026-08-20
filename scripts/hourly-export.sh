@@ -112,6 +112,15 @@ if ! "$NODE_BIN" "$REPO/scripts/check-data-completeness.mjs"; then
   record_job failed 0 0 0 1 "check-data-completeness.mjs failed"
   exit 1
 fi
+# 內容厚度守門(2026-08-19 加)。既有的 completeness 只驗「欄位齊不齊」,驗不到
+# 「厚不厚、國別夠不夠、逐國來源掛不掛得住、排行榜是不是空頁」——那次 GA/GSC 診斷
+# 查出的六項缺陷,前面每一支 gate 都是綠燈放行的。存量以 baseline 凍住只能升不能降。
+log "check-content-depth.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/check-content-depth.mjs"; then
+  log "FAILED: 內容厚度守門未通過(看缺口:node scripts/check-content-depth.mjs --report)"
+  record_job failed 0 0 0 1 "check-content-depth.mjs failed"
+  exit 1
+fi
 WROTE="$(echo "$EXPORT_OUT" | grep -c '^write ')"
 
 # --- 2. 只看受管理輸出有沒有變 -----------------------------------------------

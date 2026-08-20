@@ -16,7 +16,12 @@ export function getStaticPaths() {
 }
 
 const { window: win } = Astro.params;
-const ranking = getGlobalRanking(win) || { items: [] };
+const ranking = getGlobalRanking(win) || { items: [], thin: true };
+// thin = 這個時窗的排名筆數低於門檻(見 scripts/lib/content-depth.mjs)。
+// 2026-08-19:六個時窗各只有一筆,內容幾乎相同,Google 已把其中兩頁判為
+// Crawled/Discovered - currently not indexed。與其送空頁,不如自己標 noindex
+// 並退出 sitemap;等分數管線上線、筆數夠了會自動恢復索引,不需要改碼。
+const indexable = !ranking.thin;
 const byId = new Map(getTopicsIndex().map((topic) => [topic.topic_id, topic]));
 const items = (ranking.items || [])
   .slice()
@@ -28,6 +33,7 @@ const items = (ranking.items || [])
   title={`${t('rankings.title')} — ${t(`rankings.window.${win}`)}`}
   description={`${t('rankings.title')} · ${t(`rankings.window.${win}`)} · ${siteDescription()}`}
   pageType="CollectionPage"
+  indexable={indexable}
 >
   <header class="rank-head">
     <h1>{t('rankings.title')}</h1>

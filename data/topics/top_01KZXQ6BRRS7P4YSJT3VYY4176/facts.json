@@ -2,11 +2,11 @@
   "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
   "slug": "lantern-festival",
   "canonical_name": "Lantern Festival",
-  "commonality": "using lanterns, night walks, and shared foods to close or extend a new-year season",
+  "commonality": "comparing what the fifteenth day of the first lunar month becomes in each place — a quiet family bowl, a hillside of sky lanterns, a street of exploding rockets, or an ordinary working day",
   "category": "festival",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-19T14:52:10.000Z",
+  "updated_at": "2026-08-20T00:30:35.000Z",
   "access_level": 0,
   "observances": [
     {
@@ -15,14 +15,16 @@
       "country_code": "CN",
       "local_name": "元宵节",
       "observed_date": null,
-      "date_rule": "农历正月十五",
+      "date_rule": "农历正月十五；不在全体公民放假的节日之列",
       "date_range_end": null,
-      "popularity_rank": 1,
+      "popularity_rank": 4,
       "source_ids": [
-        "src_BC89514E4D7BF213AE54D2E0"
+        "src_6DFD76B82DF608B35353178A",
+        "src_E405440D6A7FBA9FBC2398FD"
       ],
       "source_urls": [
-        "https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/jiedu/tujie/202411/content_6986437.htm"
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
       ],
       "occurrences": [
         {
@@ -77,16 +79,18 @@
       "observance_id": "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_lantern-festival",
       "observance_key": "lantern-festival",
       "country_code": "TW",
-      "local_name": "元宵節",
+      "local_name": "元宵節（上元節）",
       "observed_date": null,
       "date_rule": "農曆正月十五",
       "date_range_end": null,
       "popularity_rank": 1,
       "source_ids": [
-        "src_F12F15DB053D422FA98E2E78"
+        "src_F12F15DB053D422FA98E2E78",
+        "src_E405440D6A7FBA9FBC2398FD"
       ],
       "source_urls": [
-        "https://www.tad.gov.tw/m1.aspx?sNo=0001020"
+        "https://www.tad.gov.tw/m1.aspx?sNo=0001020",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
       ],
       "occurrences": [
         {
@@ -136,6 +140,134 @@
         ],
         "distance_days": 184
       }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_pingxi-sky-lantern",
+      "observance_key": "pingxi-sky-lantern",
+      "country_code": "TW",
+      "local_name": "平溪天燈節",
+      "observed_date": null,
+      "date_rule": "元宵節前後一、二日，新北市平溪十分、菁桐一帶",
+      "date_range_end": null,
+      "popularity_rank": 2,
+      "source_ids": [
+        "src_A57891D9FCD3DA50246D04E0"
+      ],
+      "source_urls": [
+        "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=6"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_pingxi-sky-lantern_2026_2026-03-03",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-03",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Taipei",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_A57891D9FCD3DA50246D04E0"
+          ],
+          "source_urls": [
+            "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=6"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_pingxi-sky-lantern_2027_2027-02-20",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-20",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Taipei",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_A57891D9FCD3DA50246D04E0"
+          ],
+          "source_urls": [
+            "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=6"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_pingxi-sky-lantern_2027_2027-02-20",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-20",
+        "ends_on": null,
+        "calendar_system": "chinese-lunisolar",
+        "timezone": "Asia/Taipei",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_A57891D9FCD3DA50246D04E0"
+        ],
+        "source_urls": [
+          "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=6"
+        ],
+        "distance_days": 184
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_yanshui-fireworks",
+      "observance_key": "yanshui-fireworks",
+      "country_code": "TW",
+      "local_name": "鹽水蜂炮",
+      "observed_date": null,
+      "date_rule": "農曆正月十四至十五，臺南市鹽水區武廟遶境",
+      "date_range_end": null,
+      "popularity_rank": 3,
+      "source_ids": [
+        "src_2E486EC2027E7454DC09BB16"
+      ],
+      "source_urls": [
+        "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=86"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_yanshui-fireworks_2026_2026-03-02",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-02",
+          "ends_on": "2026-03-03",
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Taipei",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_2E486EC2027E7454DC09BB16"
+          ],
+          "source_urls": [
+            "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=86"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_yanshui-fireworks_2027_2027-02-19",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-19",
+          "ends_on": "2027-02-20",
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Taipei",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_2E486EC2027E7454DC09BB16"
+          ],
+          "source_urls": [
+            "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=86"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_yanshui-fireworks_2027_2027-02-19",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-19",
+        "ends_on": "2027-02-20",
+        "calendar_system": "chinese-lunisolar",
+        "timezone": "Asia/Taipei",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_2E486EC2027E7454DC09BB16"
+        ],
+        "source_urls": [
+          "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=86"
+        ],
+        "distance_days": 183
+      }
     }
   ],
   "regional_notes": [],
@@ -149,20 +281,26 @@
     {
       "country_code": "TW",
       "observance_ids": [
-        "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_lantern-festival"
+        "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_lantern-festival",
+        "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_pingxi-sky-lantern",
+        "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_yanshui-fireworks"
       ]
     }
   ],
   "relations": [],
   "source_ids": [
+    "src_2E486EC2027E7454DC09BB16",
     "src_509D6FE3CDE66C39605277AB",
-    "src_BC89514E4D7BF213AE54D2E0",
+    "src_6DFD76B82DF608B35353178A",
+    "src_A57891D9FCD3DA50246D04E0",
     "src_E405440D6A7FBA9FBC2398FD",
     "src_F12F15DB053D422FA98E2E78"
   ],
   "source_urls": [
+    "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=86",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
-    "https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/jiedu/tujie/202411/content_6986437.htm",
+    "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+    "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=6",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
     "https://www.tad.gov.tw/m1.aspx?sNo=0001020"
   ]

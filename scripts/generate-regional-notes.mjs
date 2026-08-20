@@ -24,6 +24,19 @@ const countrySources = {
   BR: 'https://www.gov.br/',
 };
 
+// 判斷一個來源網域「屬於」哪一國。與 scripts/lib/content-depth.mjs 的 COUNTRY_DOMAINS
+// 同義，這裡另寫一份是因為本檔是純產生器、刻意不依賴 gate；兩邊改動要一起改
+// （check-content-depth.mjs R3 會抓出不一致，所以不會默默漂移）。
+const COUNTRY_HOST_PATTERNS = {
+  TW: [/\.gov\.tw$/, /\.tw$/],
+  JP: [/\.go\.jp$/, /\.jp$/],
+  CN: [/\.gov\.cn$/, /\.cn$/],
+  US: [/\.gov$/, /\.us$/, /^usa\.gov$/],
+  IN: [/\.gov\.in$/, /\.nic\.in$/, /\.in$/],
+  ID: [/\.go\.id$/, /\.id$/],
+  BR: [/\.gov\.br$/, /\.br$/],
+};
+
 const text = (zhTW, en, ja, zhCN, hi, id, ptBR) => ({
   'zh-TW': zhTW, en, ja, 'zh-CN': zhCN, hi, id, 'pt-BR': ptBR,
 });
@@ -215,13 +228,27 @@ const output = {
   topics: {},
 };
 
+// 逐國來源只掛「掛得住那個國家」的來源。
+// 2026-08-19 修：原本是 [...topic.sources, countrySources[country]]，把 topic 級的通用來源
+// 無條件下放到每一國，於是 nic.gov.in（印度戶政數位化服務）被印在巴西、日本、美國、台灣、
+// 中國的婚俗筆記下，www8.cao.go.jp（日本內閣府）被印在其他六國的成年禮筆記下。
+// 那是頁面上看得見的事實錯誤，也是 E-E-A-T 上最不該犯的一種（湊數引用）。
+// 通用來源（britannica／unesco／who…）留在 topic 層的「來源與日期」，不進逐國區塊。
+// 機械層防線＝scripts/check-content-depth.mjs 的 R3。
 for (const [slug, topic] of Object.entries(notes)) {
   output.topics[slug] = {
     source_urls: [...new Set(topic.sources || [])],
     notes: {},
   };
   for (const country of COUNTRIES) {
-    const sourceUrls = [...new Set([...(topic.sources || []), countrySources[country]])];
+    const belongsToThisCountry = (url) => {
+      const host = (() => { try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; } })();
+      return COUNTRY_HOST_PATTERNS[country].some((re) => re.test(host));
+    };
+    const sourceUrls = [...new Set([
+      ...(topic.sources || []).filter(belongsToThisCountry),
+      countrySources[country],
+    ])];
     output.topics[slug].notes[country] = {
       country_code: country,
       source_urls: sourceUrls,

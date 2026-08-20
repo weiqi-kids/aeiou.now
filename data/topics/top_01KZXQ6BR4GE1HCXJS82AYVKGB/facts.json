@@ -2,11 +2,11 @@
   "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
   "slug": "christmas",
   "canonical_name": "Christmas",
-  "commonality": "looking at Christmas through worship, family gatherings, gifts, food, public lights, and local choices",
+  "commonality": "comparing the legal standing of 25 December and the ways worship, family meals, gifts, public lights, and commerce take part in each place",
   "category": "festival",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-19T14:52:10.000Z",
+  "updated_at": "2026-08-20T00:17:27.000Z",
   "access_level": 0,
   "observances": [
     {
@@ -19,10 +19,10 @@
       "date_range_end": null,
       "popularity_rank": 1,
       "source_ids": [
-        "src_242A0D06E8A421F48C6F258A"
+        "src_8ADF07F096907DFC86796ED4"
       ],
       "source_urls": [
-        "https://www.comunicacao.pr.gov.br/noticias/aen/185ca999-f90c-4884-a739-b384ac5a12d6"
+        "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm"
       ],
       "occurrences": [
         {
@@ -34,10 +34,10 @@
           "timezone": "America/Sao_Paulo",
           "date_status": "confirmed",
           "source_ids": [
-            "src_242A0D06E8A421F48C6F258A"
+            "src_8ADF07F096907DFC86796ED4"
           ],
           "source_urls": [
-            "https://www.comunicacao.pr.gov.br/noticias/aen/185ca999-f90c-4884-a739-b384ac5a12d6"
+            "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm"
           ]
         },
         {
@@ -49,10 +49,10 @@
           "timezone": "America/Sao_Paulo",
           "date_status": "confirmed",
           "source_ids": [
-            "src_242A0D06E8A421F48C6F258A"
+            "src_8ADF07F096907DFC86796ED4"
           ],
           "source_urls": [
-            "https://www.comunicacao.pr.gov.br/noticias/aen/185ca999-f90c-4884-a739-b384ac5a12d6"
+            "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm"
           ]
         }
       ],
@@ -65,12 +65,334 @@
         "timezone": "America/Sao_Paulo",
         "date_status": "confirmed",
         "source_ids": [
-          "src_242A0D06E8A421F48C6F258A"
+          "src_8ADF07F096907DFC86796ED4"
         ],
         "source_urls": [
-          "https://www.comunicacao.pr.gov.br/noticias/aen/185ca999-f90c-4884-a739-b384ac5a12d6"
+          "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm"
         ],
         "distance_days": 128
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_CN_christmas",
+      "observance_key": "christmas",
+      "country_code": "CN",
+      "local_name": "圣诞节",
+      "observed_date": "12-25",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_6DFD76B82DF608B35353178A"
+      ],
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_CN_christmas_2026_2026-12-25",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_6DFD76B82DF608B35353178A"
+          ],
+          "source_urls": [
+            "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_CN_christmas_2027_2027-12-25",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_6DFD76B82DF608B35353178A"
+          ],
+          "source_urls": [
+            "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_CN_christmas_2026_2026-12-25",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-25",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Shanghai",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_6DFD76B82DF608B35353178A"
+        ],
+        "source_urls": [
+          "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+        ],
+        "distance_days": 127
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_ID_natal",
+      "observance_key": "natal",
+      "country_code": "ID",
+      "local_name": "Hari Raya Natal",
+      "observed_date": "12-25",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_FF4B224E905CC2C8CF8EAF05"
+      ],
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_ID_natal_2026_2026-12-25",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_FF4B224E905CC2C8CF8EAF05"
+          ],
+          "source_urls": [
+            "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_ID_natal_2027_2027-12-25",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_FF4B224E905CC2C8CF8EAF05"
+          ],
+          "source_urls": [
+            "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_ID_natal_2026_2026-12-25",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-25",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Jakarta",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_FF4B224E905CC2C8CF8EAF05"
+        ],
+        "source_urls": [
+          "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+        ],
+        "distance_days": 127
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_IN_christmas",
+      "observance_key": "christmas",
+      "country_code": "IN",
+      "local_name": "Christmas Day",
+      "observed_date": "12-25",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_8881C7B43193D1F50ED0E47C"
+      ],
+      "source_urls": [
+        "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_IN_christmas_2026_2026-12-25",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_8881C7B43193D1F50ED0E47C"
+          ],
+          "source_urls": [
+            "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_IN_christmas_2027_2027-12-25",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_8881C7B43193D1F50ED0E47C"
+          ],
+          "source_urls": [
+            "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_IN_christmas_2026_2026-12-25",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-25",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Kolkata",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_8881C7B43193D1F50ED0E47C"
+        ],
+        "source_urls": [
+          "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
+        ],
+        "distance_days": 127
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_JP_christmas",
+      "observance_key": "christmas",
+      "country_code": "JP",
+      "local_name": "クリスマス",
+      "observed_date": "12-25",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_F346DBF2650F7578DC397ADB",
+        "src_3C0F94B931551A8696A071CD"
+      ],
+      "source_urls": [
+        "https://www.stat.go.jp/data/kakei/tsushin/pdf/24_12.pdf",
+        "https://www.japan.travel/en/guide/december/"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_JP_christmas_2026_2026-12-25",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_3C0F94B931551A8696A071CD"
+          ],
+          "source_urls": [
+            "https://www.japan.travel/en/guide/december/"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_JP_christmas_2027_2027-12-25",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_3C0F94B931551A8696A071CD"
+          ],
+          "source_urls": [
+            "https://www.japan.travel/en/guide/december/"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_JP_christmas_2026_2026-12-25",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-25",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Tokyo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_3C0F94B931551A8696A071CD"
+        ],
+        "source_urls": [
+          "https://www.japan.travel/en/guide/december/"
+        ],
+        "distance_days": 127
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_TW_constitution-day",
+      "observance_key": "constitution-day",
+      "country_code": "TW",
+      "local_name": "行憲紀念日（同日為聖誕節）",
+      "observed_date": "12-25",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_F045C3336BEF6186024CF028"
+      ],
+      "source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_TW_constitution-day_2026_2026-12-25",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_F045C3336BEF6186024CF028"
+          ],
+          "source_urls": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_TW_constitution-day_2027_2027-12-25",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_F045C3336BEF6186024CF028"
+          ],
+          "source_urls": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_TW_constitution-day_2026_2026-12-25",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-25",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Taipei",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_F045C3336BEF6186024CF028"
+        ],
+        "source_urls": [
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+        ],
+        "distance_days": 127
       }
     },
     {
@@ -147,6 +469,36 @@
       ]
     },
     {
+      "country_code": "CN",
+      "observance_ids": [
+        "obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_CN_christmas"
+      ]
+    },
+    {
+      "country_code": "ID",
+      "observance_ids": [
+        "obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_ID_natal"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "observance_ids": [
+        "obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_IN_christmas"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "observance_ids": [
+        "obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_JP_christmas"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "observance_ids": [
+        "obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_TW_constitution-day"
+      ]
+    },
+    {
       "country_code": "US",
       "observance_ids": [
         "obs_top_01KZXQ6BR4GE1HCXJS82AYVKGB_US_christmas"
@@ -155,11 +507,23 @@
   ],
   "relations": [],
   "source_ids": [
-    "src_242A0D06E8A421F48C6F258A",
-    "src_F936765E8EFFBF4BDCD32B47"
+    "src_3C0F94B931551A8696A071CD",
+    "src_6DFD76B82DF608B35353178A",
+    "src_8881C7B43193D1F50ED0E47C",
+    "src_8ADF07F096907DFC86796ED4",
+    "src_F045C3336BEF6186024CF028",
+    "src_F346DBF2650F7578DC397ADB",
+    "src_F936765E8EFFBF4BDCD32B47",
+    "src_FF4B224E905CC2C8CF8EAF05"
   ],
   "source_urls": [
-    "https://www.comunicacao.pr.gov.br/noticias/aen/185ca999-f90c-4884-a739-b384ac5a12d6",
-    "https://www.usa.gov/holidays"
+    "https://www.japan.travel/en/guide/december/",
+    "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+    "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays",
+    "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://www.stat.go.jp/data/kakei/tsushin/pdf/24_12.pdf",
+    "https://www.usa.gov/holidays",
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
   ]
 }

@@ -61,6 +61,18 @@ jobs:
       - name: Run tests
         run: node --test 'tests/**/*.test.mjs'
 
+      # 內容厚度守門(2026-08-19 加):國別變體、唯一內容量、逐國來源歸屬、排行榜空頁。
+      # 主機端 hourly-export 也會跑同一支;放在 CI 是為了擋「直接改 data/ 推上來」的路徑。
+      - name: 內容厚度守門
+        run: node scripts/check-content-depth.mjs
+
+      # 來源存活檢查(2026-08-19 加):頁面上印出來的 source 連結有沒有 404。
+      # 🔴 刻意不進主機每小時管線——那會把別人的網站狀態綁進本站的資料匯出。
+      #    這裡也只擋 404/410;403/412/5xx 是對方擋機器人或暫時故障,只警告。
+      #    continue-on-error:false 是刻意的——真的 404 就該擋下部署,那是印在頁面上的死連結。
+      - name: 來源連結存活檢查
+        run: node scripts/check-source-urls.mjs
+
   build-deploy:
     name: ${{ matrix.locale }}
     needs: test

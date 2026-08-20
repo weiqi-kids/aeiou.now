@@ -589,6 +589,9 @@ for (const [city, rows] of [...eventsByCity.entries()].sort((a, b) => a[0].local
 }
 
 // ---------- rankings/(以 topic_scores 為源;只出六窗,8h 不出) ----------
+// 厚度門檻與 gate 共用同一個常數,避免兩邊各自定義「太少」。
+const { THRESHOLDS: DEPTH_THRESHOLDS } = await import("./lib/content-depth.mjs");
+const RANKING_ITEMS_MIN = DEPTH_THRESHOLDS.rankingItemsMin;
 
 const scopes = db.prepare(
   "SELECT DISTINCT scope FROM topic_scores WHERE scope = 'global' OR scope LIKE 'country:%' ORDER BY scope"
@@ -601,9 +604,18 @@ for (const scope of scopes) {
       "SELECT topic_id, score, rank FROM topic_scores WHERE scope = ? AND window = ? AND rank IS NOT NULL ORDER BY rank, topic_id"
     ).all(scope, window)
       .filter((r) => slugByTopic.has(r.topic_id)) // candidate/merged 不進靜態
-      .map((r) => ({ rank: r.rank, topic_id: r.topic_id, slug: slugByTopic.get(r.topic_id), score: r.score }));
+      // 名次必須在**過濾之後**重編為 1..n。
+      // 2026-08-19 事故:topic_scores 含大量未發佈的 trend Topic,過濾後只剩一筆,
+      // 但沿用了全域 rank,於是六個排行榜頁面在畫面上印出「319」——對讀者無意義,
+      // 對 Google 則是六個內容幾乎相同的空頁(當時實測已被判 Crawled - currently not indexed)。
+      // 機械層防線=scripts/check-content-depth.mjs 的 R5。
+      .map((r, i) => ({ rank: i + 1, topic_id: r.topic_id, slug: slugByTopic.get(r.topic_id), score: r.score }));
     if (items.length === 0) continue; // 沒資料的窗不產檔
-    emit(join("rankings", dir, `${window}.json`), { scope, window, items });
+    // thin=true 的視窗仍然產檔(頁面照樣可看),但 sitemap 與 robots 會排除它,
+    // 不把「只有一兩筆」的清單頁送去給 Google 當索引候選。門檻見 lib/content-depth.mjs。
+    emit(join("rankings", dir, `${window}.json`), {
+      scope, window, thin: items.length < RANKING_ITEMS_MIN, items,
+    });
   }
 }
 

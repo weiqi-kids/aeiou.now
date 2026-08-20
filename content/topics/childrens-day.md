@@ -35,7 +35,7 @@
 - local_name: Dia das Crianças
 - date: 10-12
 - rank: 50
-- source: https://prefeitura.sp.gov.br/web/direitos_humanos/w/smdhc-celebra-o-dia-das-criancas-e-reitera-seu-compromisso-com-a-defesa-da-infancia
+- source: https://www.gov.br/arquivonacional/pt-br/canais_atendimento/imprensa/copy_of_noticias/dia-da-crianca
 
 ## locale zh-TW
 ### title

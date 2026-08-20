@@ -13,6 +13,20 @@ const aliasPaths = existsSync(mergeConfigPath)
   ? new Set(((JSON.parse(readFileSync(mergeConfigPath, 'utf8'))?.merges) || []).map((merge) => `topic/${merge.from}/index.html`))
   : new Set();
 
+// 允許 noindex 的第二類：筆數不足的排行榜時窗（2026-08-19 加）。
+// 排行資料由 export-data.mjs 標 thin（門檻見 scripts/lib/content-depth.mjs）；
+// 那種頁面內容幾乎相同、當時實測已被 Google 判 Crawled - currently not indexed，
+// 與其送空頁不如自己標 noindex。筆數回升後 thin 消失、索引自動恢復，不需要改碼。
+// ⚠️ 這份清單是**資料驅動**的，不是寫死路徑——寫死就會在資料變厚之後繼續 noindex。
+const rankingDir = join('src', 'data', 'rankings', 'global');
+const thinRankingPaths = new Set(
+  (existsSync(rankingDir) ? readdirSync(rankingDir) : [])
+    .filter((name) => name.endsWith('.json'))
+    .filter((name) => JSON.parse(readFileSync(join(rankingDir, name), 'utf8'))?.thin === true)
+    .map((name) => `rankings/${name.replace(/\.json$/, '')}/index.html`),
+);
+const noindexAllowed = (rel) => aliasPaths.has(rel) || thinRankingPaths.has(rel);
+
 function files(dir) {
   if (!existsSync(dir)) return [];
   return readdirSync(dir).flatMap((name) => {
@@ -52,7 +66,8 @@ for (const path of htmlFiles) {
   if (count(html, /rel=["']alternate["'][^>]*hreflang=/gi) < LOCALES.length + 1) errors.push(`${rel}:hreflang 少於七語加 x-default`);
   const noindex = /name=["'](?:robots|googlebot)["'][^>]*content=["'][^"']*noindex/i.test(html);
   if (!noindex && count(html, /<h1\b/gi) !== 1) errors.push(`${rel}:indexable page 必須恰好一個 h1`);
-  if (noindex && !aliasPaths.has(rel)) errors.push(`${rel}:只有 merged Topic alias 可以輸出 noindex`);
+  if (noindex && !noindexAllowed(rel)) errors.push(`${rel}:只有 merged Topic alias 與 thin 排行榜時窗可以輸出 noindex`);
+  if (thinRankingPaths.has(rel) && !noindex) errors.push(`${rel}:筆數不足的排行榜時窗必須 noindex（見 export-data.mjs 的 thin 旗標）`);
   if (aliasPaths.has(rel)) {
     if (!noindex) errors.push(`${rel}:merged Topic alias 必須 noindex`);
     if (!/<meta\b[^>]*http-equiv=["']refresh["'][^>]*content=["'][^"']*url=https?:\/\//i.test(html)) {

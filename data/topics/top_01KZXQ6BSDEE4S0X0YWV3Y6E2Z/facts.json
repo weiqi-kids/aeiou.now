@@ -2,27 +2,27 @@
   "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
   "slug": "ramadan-and-eid",
   "canonical_name": "Ramadan and Eid al-Fitr",
-  "commonality": "following Ramadan and marking Eid al-Fitr through fasting, prayer, visits, generosity, and reconciliation",
+  "commonality": "comparing how far the same Eid al-Fitr is recognised by each system — national holiday, gazetted holiday, employer discretion, or school-district closure",
   "category": "faith",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-19T14:52:10.000Z",
+  "updated_at": "2026-08-20T00:27:19.000Z",
   "access_level": 0,
   "observances": [
     {
       "observance_id": "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_ID_eid-al-fitr",
       "observance_key": "eid-al-fitr",
       "country_code": "ID",
-      "local_name": "Idul Fitri",
+      "local_name": "Idulfitri",
       "observed_date": null,
-      "date_rule": "伊斯蘭曆 Shawwal 月初一，日期每年依月相與公告而變",
+      "date_rule": "伊斯蘭曆 Shawwal 月初一，日期每年依月相與政府公告而變",
       "date_range_end": null,
       "popularity_rank": 1,
       "source_ids": [
-        "src_E476A01FDCE6FA9BC6F13853"
+        "src_FF4B224E905CC2C8CF8EAF05"
       ],
       "source_urls": [
-        "https://www.kemlu.go.id/ankara/berita/idul-fitri-1447-h?type=publication"
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
       ],
       "occurrences": [
         {
@@ -72,6 +72,198 @@
         ],
         "distance_days": 201
       }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_IN_eid-al-fitr",
+      "observance_key": "eid-al-fitr",
+      "country_code": "IN",
+      "local_name": "Id-ul-Fitr",
+      "observed_date": null,
+      "date_rule": "伊斯蘭曆 Shawwal 月初一；印度的公告日期常比部分國家晚一天",
+      "date_range_end": null,
+      "popularity_rank": 2,
+      "source_ids": [
+        "src_8881C7B43193D1F50ED0E47C"
+      ],
+      "source_urls": [
+        "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_IN_eid-al-fitr_2026_2026-03-21",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-21",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_8881C7B43193D1F50ED0E47C"
+          ],
+          "source_urls": [
+            "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_IN_eid-al-fitr_2027_2027-03-10",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-10",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_8881C7B43193D1F50ED0E47C"
+          ],
+          "source_urls": [
+            "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_IN_eid-al-fitr_2027_2027-03-10",
+        "occurrence_year": 2027,
+        "starts_on": "2027-03-10",
+        "ends_on": null,
+        "calendar_system": "islamic",
+        "timezone": "Asia/Kolkata",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_8881C7B43193D1F50ED0E47C"
+        ],
+        "source_urls": [
+          "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
+        ],
+        "distance_days": 202
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_TW_eid-al-fitr",
+      "observance_key": "eid-al-fitr",
+      "country_code": "TW",
+      "local_name": "開齋節（非法定假日）",
+      "observed_date": null,
+      "date_rule": "伊斯蘭曆 Shawwal 月初一；台灣不放假，集體禮拜多依雇主同意安排",
+      "date_range_end": null,
+      "popularity_rank": 3,
+      "source_ids": [
+        "src_9157B47CDBE6F3ACE4ED9D72"
+      ],
+      "source_urls": [
+        "https://www.wda.gov.tw/News_Content.aspx?n=31&s=3599"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_TW_eid-al-fitr_2026_2026-03-21",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-21",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Taipei",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_9157B47CDBE6F3ACE4ED9D72"
+          ],
+          "source_urls": [
+            "https://www.wda.gov.tw/News_Content.aspx?n=31&s=3599"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_TW_eid-al-fitr_2027_2027-03-09",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-09",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Taipei",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_9157B47CDBE6F3ACE4ED9D72"
+          ],
+          "source_urls": [
+            "https://www.wda.gov.tw/News_Content.aspx?n=31&s=3599"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_TW_eid-al-fitr_2027_2027-03-09",
+        "occurrence_year": 2027,
+        "starts_on": "2027-03-09",
+        "ends_on": null,
+        "calendar_system": "islamic",
+        "timezone": "Asia/Taipei",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_9157B47CDBE6F3ACE4ED9D72"
+        ],
+        "source_urls": [
+          "https://www.wda.gov.tw/News_Content.aspx?n=31&s=3599"
+        ],
+        "distance_days": 201
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_US_eid-al-fitr-school-holiday",
+      "observance_key": "eid-al-fitr-school-holiday",
+      "country_code": "US",
+      "local_name": "Eid al-Fitr（紐約市公立學校假日）",
+      "observed_date": null,
+      "date_rule": "伊斯蘭曆 Shawwal 月初一；紐約市公立學校行事曆列為停課日",
+      "date_range_end": null,
+      "popularity_rank": 4,
+      "source_ids": [
+        "src_71D52CDB9B833DE2EDE16987"
+      ],
+      "source_urls": [
+        "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_US_eid-al-fitr-school-holiday_2026_2026-03-20",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-20",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_71D52CDB9B833DE2EDE16987"
+          ],
+          "source_urls": [
+            "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_US_eid-al-fitr-school-holiday_2027_2027-03-09",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-09",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_71D52CDB9B833DE2EDE16987"
+          ],
+          "source_urls": [
+            "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_US_eid-al-fitr-school-holiday_2027_2027-03-09",
+        "occurrence_year": 2027,
+        "starts_on": "2027-03-09",
+        "ends_on": null,
+        "calendar_system": "islamic",
+        "timezone": "America/New_York",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_71D52CDB9B833DE2EDE16987"
+        ],
+        "source_urls": [
+          "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
+        ],
+        "distance_days": 202
+      }
     }
   ],
   "regional_notes": [],
@@ -81,17 +273,39 @@
       "observance_ids": [
         "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_ID_eid-al-fitr"
       ]
+    },
+    {
+      "country_code": "IN",
+      "observance_ids": [
+        "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_IN_eid-al-fitr"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "observance_ids": [
+        "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_TW_eid-al-fitr"
+      ]
+    },
+    {
+      "country_code": "US",
+      "observance_ids": [
+        "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_US_eid-al-fitr-school-holiday"
+      ]
     }
   ],
   "relations": [],
   "source_ids": [
     "src_628FED1D54D9CDDE3CBA692D",
-    "src_E476A01FDCE6FA9BC6F13853",
+    "src_71D52CDB9B833DE2EDE16987",
+    "src_8881C7B43193D1F50ED0E47C",
+    "src_9157B47CDBE6F3ACE4ED9D72",
     "src_FF4B224E905CC2C8CF8EAF05"
   ],
   "source_urls": [
     "https://hari.co.id/en/public-holidays/2027/",
-    "https://www.kemlu.go.id/ankara/berita/idul-fitri-1447-h?type=publication",
+    "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf",
+    "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays",
+    "https://www.wda.gov.tw/News_Content.aspx?n=31&s=3599",
     "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
   ]
 }

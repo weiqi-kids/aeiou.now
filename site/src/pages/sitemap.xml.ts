@@ -1,5 +1,5 @@
 import { WINDOWS } from '../lib/config.mjs';
-import { coverPath, getTopicBundle, listTopicIds } from '../lib/data.mjs';
+import { coverPath, getGlobalRanking, getTopicBundle, listTopicIds } from '../lib/data.mjs';
 import { withBase } from '../lib/paths.mjs';
 
 export const prerender = true;
@@ -23,7 +23,15 @@ export function GET({ site }) {
   add('about/', { changefreq: 'monthly', priority: '0.3' });
   add('questions/', { changefreq: 'daily', priority: '0.5' });
   for (const sort of ['today', 'nearby', 'events']) add(`topics/${sort}/`, { changefreq: 'daily', priority: '0.8' });
-  for (const window of WINDOWS) add(`rankings/${window}/`, { changefreq: 'daily', priority: '0.6' });
+  // 排行頁只在「筆數夠」時才進 sitemap。thin 旗標由 export-data.mjs 依
+  // scripts/lib/content-depth.mjs 的門檻標記。2026-08-19:六個時窗各只有一筆,
+  // 送進 sitemap 等於主動要求 Google 索引六個內容相同的空頁(實測已被拒兩頁)。
+  // 頁面本身照樣存在、照樣可點,只是不當索引候選。
+  for (const window of WINDOWS) {
+    const ranking = getGlobalRanking(window);
+    if (!ranking || ranking.thin) continue;
+    add(`rankings/${window}/`, { changefreq: 'daily', priority: '0.6' });
+  }
 
   for (const topicId of listTopicIds()) {
     const { facts } = getTopicBundle(topicId);
