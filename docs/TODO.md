@@ -180,9 +180,16 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
   Worker 沒有列出 Topic 的端點、靜態層也不產生連結,所以讀者路徑上到不了;TTL 到期會轉 archived。
   等趨勢復活與否定案再決定。查數量:
   `cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT COUNT(*) FROM topics WHERE topic_id LIKE 'top_tr_%'"`
-- [ ] **`trend_runs` 有一批 status='running' 的殘列**(2026-08-17～08-18 那段連續失敗期留下的,
-  之後沒再增加)。`run_key` 唯一且 `INSERT OR IGNORE`,不會擋住後續執行,純屬統計雜訊。
+- [x] **`trend_runs` 的 status='running' 殘列已不存在**(2026-08-20 實查為 0;
+  當初是 2026-08-17～08-18 連續失敗期留下的)。`run_key` 唯一且 `INSERT OR IGNORE`,
+  本來就不會擋住後續執行。
   查:`sqlite3 db/aeiou.sqlite "SELECT status,COUNT(*) FROM trend_runs GROUP BY 1"`
+- [x] **`jobs` 的 DLQ 與孤兒 running 列已清**(2026-08-20 用戶指示)。清之前先封存到
+  `logs/jobs-*-archive-*.jsonl`(該目錄不進 git)。
+  查:`sqlite3 db/aeiou.sqlite "SELECT status,COUNT(*) FROM jobs GROUP BY 1"`——
+  正常狀態下不應該有 `dlq`,也不應該有跑完很久還停在 `running` 的列。
+  孤兒 `running` 會連帶留下同一輪的 `job_locks`;那個鎖以 (scope, job_name, scheduled_at)
+  為主鍵,只鎖住那個已經過去的時段,不會擋住後續執行,但清的時候要一起帶走。
 
 ## M2 前置:GSC/GA4/DNS/Slack 設定(2026-08-11 用戶指示動工)
 
