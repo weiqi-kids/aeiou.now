@@ -11,7 +11,7 @@
 - local_name: 農曆新年
 - date_rule: 農曆正月初一至十五
 - rank: 1
-- source: https://www.tad.gov.tw/m1.aspx?sNo=0001020
+- source: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095
 
 ## observance JP oshogatsu
 - local_name: 正月・お正月

@@ -52,7 +52,7 @@
 ### customs BR eid-al-adha
 巴西的宰牲節既不是全國假日，也還不是法定紀念日。二○二四年二月，聯邦參議院的委員會才通過把猶太教與伊斯蘭教節日納入國家紀念日清單的提案。依二○一○年人口普查，穆斯林約佔全國人口的百分之零點零二、約三萬五千人，所以節日的實際運作靠各地清真寺與社群自己公告與安排。同一個節日在這裡的問題不是「怎麼過」，而是「有沒有被寫進國家的日曆」。
 ### customs CN eid-al-adha
-中國大陸的宰牲節（當地稱古爾邦節）不是全國假日，但在寧夏回族自治區是地方假日，且放假兩天——二○二六年是五月二十七日到二十八日。這比開齋節多一天，因為開齋節那年剛好落在週六。放假天數由自治區人民政府辦公廳的年度節假日安排通知逐年公布，所以同一個節日在中國境內的假期長度，是省區層級每年重新決定的。
+中國大陸的宰牲節（當地稱古爾邦節）不是全國假日，但在寧夏回族自治區是地方假日，且放假兩天——二○二六年是五月二十七日到二十八日。這比開齋節多一天，因為開齋節那年剛好落在週六。放假天數由自治區人民政府辦公廳的年度節假日安排通知逐年公布，所以同一個節日在中國境內的假期長度，是省區層級每年重新決定的。在中國，古爾邦節不是全國性的假日，而是地方性的：新疆等信仰人口集中的自治區域自行規定當地放假，其餘地區照常上班。同一個節日在同一個國家內有兩種行事曆狀態，這說明了為什麼「這一天放不放假」這個問題，答案取決於問的是哪一級的規定。
 
 ## locale en
 ### title
@@ -70,7 +70,7 @@ The United States has no federal holiday for Eid al-Adha. New York City's offici
 ### customs BR eid-al-adha
 In Brazil, Eid al-Adha is neither a national holiday nor, yet, a statutory commemorative date. In February 2024 a Senate committee approved a proposal to add Jewish and Islamic festivals to the national list of commemorative dates. According to the 2010 census, Muslims were about 0.02 per cent of the population, some 35,000 people, so the day runs on announcements and arrangements made by individual mosques and communities. Here the question about the festival is not how it is kept, but whether it has been written into the country's calendar at all.
 ### customs CN eid-al-adha
-Eid al-Adha — known locally as Gurbang — is not a national holiday in mainland China, but it is a local one in the Ningxia Hui Autonomous Region, with two days off: 27 and 28 May in 2026. That is a day more than Eid al-Fitr received, because Eid al-Fitr fell on a Saturday that year. The number of days is published each year in the regional government's annual holiday notice, so the length of the break for the same festival inside China is re-decided at regional level every year.
+Eid al-Adha — known locally as Gurbang — is not a national holiday in mainland China, but it is a local one in the Ningxia Hui Autonomous Region, with two days off: 27 and 28 May in 2026. That is a day more than Eid al-Fitr received, because Eid al-Fitr fell on a Saturday that year. The number of days is published each year in the regional government's annual holiday notice, so the length of the break for the same festival inside China is re-decided at regional level every year. In China, Eid al-Adha is not a nationwide holiday but a local one: autonomous regions such as Xinjiang, where the believing population is concentrated, set the day off themselves, while the rest of the country works as usual. The same festival holding two calendar states inside one country shows why the question of whether the day is off depends on which level of rule is being asked.
 
 ## locale ja
 ### title
@@ -88,7 +88,7 @@ Eid al-Adha — known locally as Gurbang — is not a national holiday in mainla
 ### customs BR eid-al-adha
 ブラジルでは犠牲祭は国の祝日でもなく、法定の記念日ですらまだない。2024年2月、連邦上院の委員会がユダヤ教とイスラム教の祭日を国の記念日一覧に加える案を可決した。2010年の国勢調査によればムスリムは人口の約0.02％、およそ3万5千人であり、実際の運営は各地のモスクと共同体自身の告知と手配に委ねられている。ここでのこの祭日をめぐる問いは「どう過ごすか」ではなく、「国の暦に書き込まれているか」である。
 ### customs CN eid-al-adha
-中国大陸の犠牲祭（現地では古爾邦節と呼ばれる）は全国の祝日ではないが、寧夏回族自治区では地方の休日であり、2日間の休みとなる。2026年は5月27日から28日である。開斎節より1日多いのは、その年の開斎節が土曜に当たったためだ。休みの日数は自治区人民政府弁公庁の年度ごとの休日配置通知で公表されるため、同じ祭日でも中国国内の休暇の長さは、毎年、省・自治区の水準で決め直されている。
+中国大陸の犠牲祭（現地では古爾邦節と呼ばれる）は全国の祝日ではないが、寧夏回族自治区では地方の休日であり、2日間の休みとなる。2026年は5月27日から28日である。開斎節より1日多いのは、その年の開斎節が土曜に当たったためだ。休みの日数は自治区人民政府弁公庁の年度ごとの休日配置通知で公表されるため、同じ祭日でも中国国内の休暇の長さは、毎年、省・自治区の水準で決め直されている。中国において犠牲祭は全国の祝日ではなく、地方の祝日である。新疆をはじめ信徒人口の集まる自治区域が自ら当地の休みを定め、それ以外の地域は通常どおり働く。同じ祭りが一つの国の中で二つの暦の状態をもつという事実は、「この日は休みか」という問いの答えが、どの階層の規定を尋ねているかに依ることを示している。
 
 ## locale zh-CN
 ### title
@@ -106,7 +106,7 @@ Eid al-Adha — known locally as Gurbang — is not a national holiday in mainla
 ### customs BR eid-al-adha
 巴西的宰牲节既不是全国假日，也还不是法定纪念日。2024年2月，联邦参议院的委员会才通过把犹太教与伊斯兰教节日纳入国家纪念日清单的提案。依2010年人口普查，穆斯林约占全国人口的0.02%、约三万五千人，所以节日的实际运作靠各地清真寺与社群自己公告与安排。同一个节日在这里的问题不是“怎么过”，而是“有没有被写进国家的日历”。
 ### customs CN eid-al-adha
-中国大陆的宰牲节（当地称古尔邦节）不是全国假日，但在宁夏回族自治区是地方假日，且放假两天——2026年是5月27日到28日。这比开斋节多一天，因为开斋节那年刚好落在周六。放假天数由自治区人民政府办公厅的年度节假日安排通知逐年公布，所以同一个节日在中国境内的假期长度，是省区层级每年重新决定的。
+中国大陆的宰牲节（当地称古尔邦节）不是全国假日，但在宁夏回族自治区是地方假日，且放假两天——2026年是5月27日到28日。这比开斋节多一天，因为开斋节那年刚好落在周六。放假天数由自治区人民政府办公厅的年度节假日安排通知逐年公布，所以同一个节日在中国境内的假期长度，是省区层级每年重新决定的。在中国，古尔邦节不是全国性的假日，而是地方性的：新疆等信仰人口集中的自治区域自行规定当地放假，其余地区照常上班。同一个节日在同一个国家内有两种行事历状态，这说明了为什么“这一天放不放假”这个问题，答案取决于问的是哪一级的规定。
 
 ## locale hi
 ### title
@@ -124,7 +124,7 @@ Eid al-Adha — known locally as Gurbang — is not a national holiday in mainla
 ### customs BR eid-al-adha
 ब्राज़ील में ईद-उल-अज़हा न राष्ट्रीय अवकाश है, न अभी तक क़ानूनी स्मृति-तिथि। फ़रवरी 2024 में संघीय सीनेट की एक समिति ने यहूदी और इस्लामी पर्वों को राष्ट्रीय स्मृति-तिथियों की सूची में जोड़ने का प्रस्ताव पारित किया। 2010 की जनगणना के अनुसार मुसलमान आबादी का लगभग 0.02 प्रतिशत, क़रीब 35 हज़ार लोग थे, इसलिए यह दिन स्थानीय मस्जिदों और समुदायों की अपनी घोषणाओं व व्यवस्थाओं पर चलता है। यहाँ सवाल यह नहीं कि पर्व कैसे मनाया जाए, बल्कि यह कि वह देश के कैलेंडर में लिखा गया है या नहीं।
 ### customs CN eid-al-adha
-मुख्यभूमि चीन में ईद-उल-अज़हा — जिसे स्थानीय रूप से गुरबांग कहा जाता है — राष्ट्रीय अवकाश नहीं है, पर निंगश्या हुई स्वायत्त क्षेत्र में स्थानीय अवकाश है, और दो दिन की छुट्टी मिलती है: 2026 में 27 और 28 मई। यह ईद-उल-फ़ित्र से एक दिन अधिक है, क्योंकि उस वर्ष ईद-उल-फ़ित्र शनिवार को पड़ी। दिनों की संख्या हर वर्ष क्षेत्रीय सरकार की वार्षिक अवकाश-अधिसूचना में प्रकाशित होती है, यानी चीन के भीतर उसी पर्व की छुट्टी की लंबाई हर साल क्षेत्रीय स्तर पर फिर से तय होती है।
+मुख्यभूमि चीन में ईद-उल-अज़हा — जिसे स्थानीय रूप से गुरबांग कहा जाता है — राष्ट्रीय अवकाश नहीं है, पर निंगश्या हुई स्वायत्त क्षेत्र में स्थानीय अवकाश है, और दो दिन की छुट्टी मिलती है: 2026 में 27 और 28 मई। यह ईद-उल-फ़ित्र से एक दिन अधिक है, क्योंकि उस वर्ष ईद-उल-फ़ित्र शनिवार को पड़ी। दिनों की संख्या हर वर्ष क्षेत्रीय सरकार की वार्षिक अवकाश-अधिसूचना में प्रकाशित होती है, यानी चीन के भीतर उसी पर्व की छुट्टी की लंबाई हर साल क्षेत्रीय स्तर पर फिर से तय होती है। चीन में ईद-उल-अज़हा राष्ट्रव्यापी अवकाश नहीं बल्कि स्थानीय है: शिनजियांग जैसे स्वायत्त क्षेत्र, जहाँ मानने वाली आबादी केंद्रित है, स्वयं वहाँ की छुट्टी तय करते हैं, जबकि शेष देश सामान्य रूप से काम करता है। एक ही पर्व का एक ही देश के भीतर दो कैलेंडर-स्थितियाँ रखना दिखाता है कि 'उस दिन छुट्टी है या नहीं' का उत्तर इस पर निर्भर है कि किस स्तर के नियम के बारे में पूछा जा रहा है।
 
 ## locale id
 ### title
@@ -142,7 +142,7 @@ Amerika Serikat tidak memiliki hari libur federal untuk Iduladha. Namun kalender
 ### customs BR eid-al-adha
 Di Brasil, Iduladha bukan hari libur nasional dan bahkan belum menjadi tanggal peringatan resmi. Pada Februari 2024 sebuah komite Senat menyetujui usul untuk menambahkan hari raya Yahudi dan Islam ke daftar tanggal peringatan nasional. Menurut sensus 2010, Muslim berjumlah sekitar 0,02 persen penduduk, kira-kira 35 ribu orang, sehingga hari itu berjalan berdasarkan pengumuman dan pengaturan masing-masing masjid dan komunitas. Di sini pertanyaannya bukan bagaimana hari raya itu dijalani, melainkan apakah ia sudah tertulis dalam kalender negara.
 ### customs CN eid-al-adha
-Idul Adha — yang secara lokal disebut Gurbang — bukan hari libur nasional di Tiongkok daratan, tetapi menjadi hari libur setempat di Daerah Otonom Hui Ningxia, dengan libur dua hari: 27 dan 28 Mei pada 2026. Itu sehari lebih banyak daripada Idulfitri, karena Idulfitri tahun itu jatuh pada Sabtu. Jumlah harinya diterbitkan tiap tahun dalam pemberitahuan hari libur pemerintah daerah, sehingga panjang libur untuk hari raya yang sama di dalam Tiongkok diputuskan ulang di tingkat daerah setiap tahun.
+Idul Adha — yang secara lokal disebut Gurbang — bukan hari libur nasional di Tiongkok daratan, tetapi menjadi hari libur setempat di Daerah Otonom Hui Ningxia, dengan libur dua hari: 27 dan 28 Mei pada 2026. Itu sehari lebih banyak daripada Idulfitri, karena Idulfitri tahun itu jatuh pada Sabtu. Jumlah harinya diterbitkan tiap tahun dalam pemberitahuan hari libur pemerintah daerah, sehingga panjang libur untuk hari raya yang sama di dalam Tiongkok diputuskan ulang di tingkat daerah setiap tahun. Di Tiongkok, Iduladha bukan hari libur nasional melainkan lokal: daerah otonom seperti Xinjiang, tempat penduduk yang meyakininya terpusat, menetapkan sendiri liburnya, sementara wilayah lain bekerja seperti biasa. Perayaan yang sama memikul dua keadaan kalender di dalam satu negara menunjukkan mengapa jawaban atas pertanyaan apakah hari itu libur bergantung pada tingkat aturan mana yang ditanyakan.
 
 ## locale pt-BR
 ### title
@@ -160,4 +160,4 @@ Os Estados Unidos não têm feriado federal para o Eid al-Adha. O calendário of
 ### customs BR eid-al-adha
 No Brasil, o Eid al-Adha não é feriado nacional nem, ainda, data comemorativa oficial. Em fevereiro de 2024 uma comissão do Senado aprovou proposta para incluir festas judaicas e islâmicas na lista de datas comemorativas nacionais. Segundo o censo de 2010, os muçulmanos eram cerca de 0,02% da população, aproximadamente 35 mil pessoas, de modo que o dia funciona a partir de anúncios e arranjos feitos por cada mesquita e comunidade. Aqui a pergunta sobre a festa não é como ela é vivida, e sim se ela chegou a ser escrita no calendário do país.
 ### customs CN eid-al-adha
-O Eid al-Adha — localmente chamado de Gurbang — não é feriado nacional na China continental, mas é feriado local na Região Autônoma Hui de Ningxia, com dois dias de folga: 27 e 28 de maio em 2026. É um dia a mais do que o Eid al-Fitr recebeu, porque naquele ano o Eid al-Fitr caiu num sábado. O número de dias é publicado a cada ano no aviso anual de feriados do governo regional, de modo que a duração do descanso para a mesma festa dentro da China é redecidida em nível regional todos os anos.
+O Eid al-Adha — localmente chamado de Gurbang — não é feriado nacional na China continental, mas é feriado local na Região Autônoma Hui de Ningxia, com dois dias de folga: 27 e 28 de maio em 2026. É um dia a mais do que o Eid al-Fitr recebeu, porque naquele ano o Eid al-Fitr caiu num sábado. O número de dias é publicado a cada ano no aviso anual de feriados do governo regional, de modo que a duração do descanso para a mesma festa dentro da China é redecidida em nível regional todos os anos. Na China, o Eid al-Adha não é feriado nacional, e sim local: regiões autônomas como Xinjiang, onde a população crente se concentra, fixam elas próprias a folga, enquanto o resto do país trabalha normalmente. A mesma festa sustentando dois estados de calendário dentro de um só país mostra por que a resposta à pergunta se o dia é de folga depende de qual nível de norma se está consultando.

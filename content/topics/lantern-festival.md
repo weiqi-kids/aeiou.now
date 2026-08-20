@@ -10,7 +10,7 @@
 - local_name: 元宵節（上元節）
 - date_rule: 農曆正月十五
 - rank: 1
-- source: https://www.tad.gov.tw/m1.aspx?sNo=0001020
+- source: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095
 - source: https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf
 
 ## observance TW pingxi-sky-lantern
@@ -52,7 +52,7 @@
 ### keywords
 元宵節、上元節、湯圓、平溪天燈、鹽水蜂炮、燈會
 ### customs TW lantern-festival
-台灣的元宵節在農曆正月十五，是農曆年節期的收尾。常見的是吃湯圓、提燈籠、猜燈謎與看各縣市的燈會。它不是國定假日，多數人照常上班上學，過節發生在下班後與週末。做到什麼程度差很多：有人只煮一鍋湯圓，有人專程跨縣市看燈。
+台灣的元宵節在農曆正月十五，是農曆年節期的收尾。常見的是吃湯圓、提燈籠、猜燈謎與看各縣市的燈會。它不是國定假日，多數人照常上班上學，過節發生在下班後與週末。做到什麼程度差很多：有人只煮一鍋湯圓，有人專程跨縣市看燈。元宵是農曆年這一整段的收尾：正月十五一過，年才算真的過完，該開工的開工、該開學的開學。它不是放假日，卻是全台當晚同時亮起來的一天——提燈籠、猜燈謎、吃元宵之外，台灣燈會由不同縣市輪流主辦，因此「今年在哪裡辦」每年都要重新問一次。
 ### customs TW pingxi-sky-lantern
 新北市平溪的天燈在元宵節前後一、二日施放，範圍集中在菁桐、平溪、十分三地。天燈用竹架與紙糊成，靠燒金紙的熱空氣升空；施放前多會用墨筆或朱筆把心願寫在燈面上。它原本的用途是報平安的信號，後來才變成祈願的儀式。平溪天燈節在二○○八年登錄為新北市的無形文化資產。
 ### customs TW yanshui-fireworks
@@ -72,7 +72,7 @@ The same lunar date is three different scenes in Taiwan alone — eating tangyua
 ### keywords
 Lantern Festival, Yuanxiao, tangyuan, Pingxi sky lanterns, Yanshui beehive fireworks
 ### customs TW lantern-festival
-In Taiwan the Lantern Festival falls on the 15th day of the first lunar month and closes the lunar new-year season. The common parts are eating tangyuan, carrying lanterns, guessing lantern riddles, and visiting a city or county lantern display. It is not a public holiday, so most people work or attend school as usual and the festival happens after hours and at weekends. How far people take it varies: one pot of tangyuan for some, a cross-county trip for others.
+In Taiwan the Lantern Festival falls on the 15th day of the first lunar month and closes the lunar new-year season. The common parts are eating tangyuan, carrying lanterns, guessing lantern riddles, and visiting a city or county lantern display. It is not a public holiday, so most people work or attend school as usual and the festival happens after hours and at weekends. How far people take it varies: one pot of tangyuan for some, a cross-county trip for others. The lantern night closes the whole stretch of the lunar new year: once the fifteenth of the first month has passed, the year is properly over, work resumes and school starts. It is not a day off, yet it is the evening on which the whole island lights up at once — beyond carrying lanterns, guessing lantern riddles and eating the round dumplings, the national lantern festival is hosted by a different county or city each year, so where it is this year is a question that has to be asked afresh every time.
 ### customs TW pingxi-sky-lantern
 Sky lanterns are released in Pingxi, New Taipei, within a day or two of the Lantern Festival, concentrated in the Jingtong, Pingxi, and Shifen areas. Each lantern is a bamboo frame covered in paper, lifted by hot air from burning joss paper, and people usually brush a wish onto the paper before letting go. The lanterns began as safety signals and only later became a wish-making rite. The Pingxi Sky Lantern Festival was registered as intangible cultural heritage of New Taipei City in 2008.
 ### customs TW yanshui-fireworks
@@ -92,7 +92,7 @@ Taitung's bombardment of Master Handan is fixed to the fifteenth and sixteenth d
 ### keywords
 元宵節, 上元節, 湯圓, 平溪天灯, 塩水蜂炮, ランタン
 ### customs TW lantern-festival
-台湾の元宵節は旧暦一月十五日で、旧正月の期間を締めくくる日である。共通するのは湯圓を食べ、灯籠を提げ、灯謎を解き、各県市のランタン展を見に行くこと。祝日ではないため多くの人は通常どおり働き学び、行事は退勤後と週末に起きる。どこまでやるかは幅が広く、湯圓を一鍋煮るだけの家庭もあれば、県をまたいで見に行く人もいる。
+台湾の元宵節は旧暦一月十五日で、旧正月の期間を締めくくる日である。共通するのは湯圓を食べ、灯籠を提げ、灯謎を解き、各県市のランタン展を見に行くこと。祝日ではないため多くの人は通常どおり働き学び、行事は退勤後と週末に起きる。どこまでやるかは幅が広く、湯圓を一鍋煮るだけの家庭もあれば、県をまたいで見に行く人もいる。元宵は旧正月という一続きの期間の締めくくりである。正月十五日を過ぎてはじめて年は本当に明け、仕事は再開し、学校は始まる。休日ではないが、その晩、台湾じゅうが一斉に灯る日ではある。提灯を持ち、灯謎を解き、元宵を食べることに加え、台湾ランタンフェスティバルは県市の持ち回りで開かれるため、「今年はどこでやるのか」を毎年あらためて尋ねねばならない。
 ### customs TW pingxi-sky-lantern
 新北市平溪の天灯は元宵節の前後一、二日に上げられ、菁桐・平溪・十分の三地区に集中する。竹の骨組みに紙を張り、金紙を燃やした熱気で浮かせる。上げる前に墨や朱の筆で願い事を書き入れるのが通例である。もとは無事を知らせる合図で、のちに祈願の儀礼になった。平溪天灯節は2008年に新北市の無形文化財として登録された。
 ### customs TW yanshui-fireworks
@@ -112,7 +112,7 @@ Taitung's bombardment of Master Handan is fixed to the fifteenth and sixteenth d
 ### keywords
 元宵节、上元节、汤圆、平溪天灯、盐水蜂炮、灯会
 ### customs TW lantern-festival
-台湾的元宵节在农历正月十五，是农历年节期的收尾。常见的是吃汤圆、提灯笼、猜灯谜与看各县市的灯会。它不是法定假日，多数人照常上班上学，过节发生在下班后与周末。做到什么程度差很多：有人只煮一锅汤圆，有人专程跨县市看灯。
+台湾的元宵节在农历正月十五，是农历年节期的收尾。常见的是吃汤圆、提灯笼、猜灯谜与看各县市的灯会。它不是法定假日，多数人照常上班上学，过节发生在下班后与周末。做到什么程度差很多：有人只煮一锅汤圆，有人专程跨县市看灯。元宵是农历年这一整段的收尾：正月十五一过，年才算真的过完，该开工的开工、该开学的开学。它不是放假日，却是全台当晚同时亮起来的一天——提灯笼、猜灯谜、吃元宵之外，台湾灯会由不同县市轮流主办，因此“今年在哪里办”每年都要重新问一次。
 ### customs TW pingxi-sky-lantern
 新北市平溪的天灯在元宵节前后一、二日施放，范围集中在菁桐、平溪、十分三地。天灯用竹架与纸糊成，靠烧金纸的热空气升空；施放前多会用墨笔或朱笔把心愿写在灯面上。它原本的用途是报平安的信号，后来才变成祈愿的仪式。平溪天灯节在2008年登录为新北市的无形文化资产。
 ### customs TW yanshui-fireworks
@@ -132,7 +132,7 @@ Taitung's bombardment of Master Handan is fixed to the fifteenth and sixteenth d
 ### keywords
 लालटेन उत्सव, युआनशियाओ, तांगयुआन, पिंगशी आकाश-दीप, यानशुई पटाखे
 ### customs TW lantern-festival
-ताइवान में यह उत्सव चंद्र वर्ष के पहले महीने की पंद्रहवीं तिथि को पड़ता है और चंद्र नववर्ष की अवधि का समापन करता है। साझा हिस्से हैं तांगयुआन खाना, लालटेन लेकर चलना, लालटेन पहेलियाँ बूझना और नगर या काउंटी की लालटेन प्रदर्शनी देखना। यह सार्वजनिक अवकाश नहीं है, इसलिए अधिकांश लोग सामान्य रूप से काम या पढ़ाई करते हैं और आयोजन शाम व सप्ताहांत में होते हैं। कोई एक बर्तन तांगयुआन बनाकर संतुष्ट है, कोई दूसरे ज़िले तक जाता है।
+ताइवान में यह उत्सव चंद्र वर्ष के पहले महीने की पंद्रहवीं तिथि को पड़ता है और चंद्र नववर्ष की अवधि का समापन करता है। साझा हिस्से हैं तांगयुआन खाना, लालटेन लेकर चलना, लालटेन पहेलियाँ बूझना और नगर या काउंटी की लालटेन प्रदर्शनी देखना। यह सार्वजनिक अवकाश नहीं है, इसलिए अधिकांश लोग सामान्य रूप से काम या पढ़ाई करते हैं और आयोजन शाम व सप्ताहांत में होते हैं। कोई एक बर्तन तांगयुआन बनाकर संतुष्ट है, कोई दूसरे ज़िले तक जाता है। लालटेन की रात चंद्र नववर्ष के पूरे खंड को समेट देती है: पहले महीने की पंद्रहवीं बीत जाने पर ही वर्ष सचमुच पूरा होता है, काम फिर शुरू होता है और विद्यालय खुलते हैं। यह छुट्टी का दिन नहीं, फिर भी वही शाम है जब पूरा द्वीप एक साथ जगमगा उठता है — लालटेन उठाने, लालटेन पर लिखी पहेलियाँ बूझने और गोल पिंड खाने के अलावा, राष्ट्रीय लालटेन उत्सव हर वर्ष किसी दूसरे ज़िले या शहर में होता है, इसलिए 'इस बार कहाँ' हर बार नए सिरे से पूछना पड़ता है।
 ### customs TW pingxi-sky-lantern
 न्यू ताइपे के पिंगशी में आकाश-दीप उत्सव के आगे-पीछे एक-दो दिन छोड़े जाते हैं, मुख्यतः जिंगटोंग, पिंगशी और शिफ़ेन में। हर दीप बाँस के ढाँचे पर काग़ज़ चढ़ाकर बनता है और जलते काग़ज़ की गर्म हवा से ऊपर उठता है; छोड़ने से पहले लोग काग़ज़ पर अपनी मनोकामना लिखते हैं। शुरुआत में ये सुरक्षा का संकेत थे, बाद में मनोकामना का कर्मकांड बने। पिंगशी आकाश-दीप उत्सव 2008 में न्यू ताइपे शहर की अमूर्त सांस्कृतिक धरोहर के रूप में दर्ज हुआ।
 ### customs TW yanshui-fireworks
@@ -152,7 +152,7 @@ Tanggal bulan yang sama menghadirkan pemandangan berbeda. Di Taiwan saja ada tig
 ### keywords
 Festival Lampion, Yuanxiao, tangyuan, lampion langit Pingxi, kembang api Yanshui
 ### customs TW lantern-festival
-Di Taiwan festival ini jatuh pada hari ke-15 bulan pertama kalender lunar dan menutup rangkaian Tahun Baru Imlek. Bagian yang umum adalah makan tangyuan, membawa lampion, menebak teka-teki lampion, dan mengunjungi pameran lampion kota atau kabupaten. Hari itu bukan hari libur resmi, jadi kebanyakan orang tetap bekerja atau bersekolah dan perayaan terjadi setelah jam kerja dan di akhir pekan. Seberapa jauh orang menjalaninya sangat beragam: ada yang cukup memasak sepanci tangyuan, ada yang menyeberang kabupaten untuk menonton.
+Di Taiwan festival ini jatuh pada hari ke-15 bulan pertama kalender lunar dan menutup rangkaian Tahun Baru Imlek. Bagian yang umum adalah makan tangyuan, membawa lampion, menebak teka-teki lampion, dan mengunjungi pameran lampion kota atau kabupaten. Hari itu bukan hari libur resmi, jadi kebanyakan orang tetap bekerja atau bersekolah dan perayaan terjadi setelah jam kerja dan di akhir pekan. Seberapa jauh orang menjalaninya sangat beragam: ada yang cukup memasak sepanci tangyuan, ada yang menyeberang kabupaten untuk menonton. Malam lampion menutup seluruh rentang Tahun Baru Imlek: begitu tanggal lima belas bulan pertama lewat, tahunnya benar-benar usai, pekerjaan dimulai lagi dan sekolah masuk. Ia bukan hari libur, namun itulah malam ketika seluruh pulau menyala serentak — selain menenteng lampion, menebak teka-teki lampion, dan menyantap bola tepung, festival lampion nasional diselenggarakan bergiliran oleh kabupaten atau kota yang berbeda tiap tahun, sehingga 'tahun ini di mana' adalah pertanyaan yang harus ditanyakan ulang setiap kali.
 ### customs TW pingxi-sky-lantern
 Lampion langit diterbangkan di Pingxi, New Taipei, dalam satu atau dua hari sekitar festival, terpusat di kawasan Jingtong, Pingxi, dan Shifen. Setiap lampion adalah rangka bambu berlapis kertas yang naik oleh udara panas dari pembakaran kertas sembahyang, dan orang biasanya menuliskan harapan di kertasnya sebelum melepaskannya. Awalnya lampion ini adalah isyarat keselamatan, baru kemudian menjadi ritual permohonan. Festival Lampion Langit Pingxi terdaftar sebagai warisan budaya takbenda Kota New Taipei pada 2008.
 ### customs TW yanshui-fireworks
@@ -172,7 +172,7 @@ A mesma data lunar produz cenas diferentes. Só em Taiwan há três: comer tangy
 ### keywords
 Festival das Lanternas, Yuanxiao, tangyuan, lanternas de Pingxi, fogos de Yanshui
 ### customs TW lantern-festival
-Em Taiwan o festival cai no 15º dia do primeiro mês lunar e encerra o período do ano-novo lunar. As partes comuns são comer tangyuan, carregar lanternas, decifrar enigmas de lanterna e visitar a mostra de lanternas da cidade ou do condado. Não é feriado, então a maioria trabalha ou estuda normalmente e a festa acontece depois do expediente e nos fins de semana. O quanto se faz varia bastante: para uns, uma panela de tangyuan; para outros, uma viagem entre condados.
+Em Taiwan o festival cai no 15º dia do primeiro mês lunar e encerra o período do ano-novo lunar. As partes comuns são comer tangyuan, carregar lanternas, decifrar enigmas de lanterna e visitar a mostra de lanternas da cidade ou do condado. Não é feriado, então a maioria trabalha ou estuda normalmente e a festa acontece depois do expediente e nos fins de semana. O quanto se faz varia bastante: para uns, uma panela de tangyuan; para outros, uma viagem entre condados. A noite das lanternas encerra todo o trecho do Ano-Novo Lunar: passado o dia quinze do primeiro mês, o ano acabou de fato, o trabalho recomeça e as aulas começam. Não é dia de folga, mas é a noite em que a ilha inteira se acende de uma vez — além de levar lanternas, decifrar os enigmas escritos nelas e comer os bolinhos redondos, o festival nacional de lanternas é sediado a cada ano por um condado ou cidade diferente, de modo que onde ele será este ano é pergunta a refazer todas as vezes.
 ### customs TW pingxi-sky-lantern
 As lanternas de céu sobem em Pingxi, Nova Taipei, um ou dois dias em torno do festival, concentradas nas áreas de Jingtong, Pingxi e Shifen. Cada lanterna é uma armação de bambu coberta de papel, erguida pelo ar quente do papel-moeda queimado, e as pessoas costumam pincelar um desejo no papel antes de soltar. As lanternas começaram como sinal de segurança e só depois viraram rito de pedido. O Festival das Lanternas de Pingxi foi registrado como patrimônio cultural imaterial de Nova Taipei em 2008.
 ### customs TW yanshui-fireworks

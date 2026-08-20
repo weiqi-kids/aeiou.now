@@ -11,7 +11,7 @@
 - local_name: 中秋節
 - date_rule: 農曆八月十五
 - rank: 1
-- source: https://www.tad.gov.tw/m1.aspx?sNo=0001020
+- source: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095
 
 ## observance JP tsukimi
 - local_name: 月見

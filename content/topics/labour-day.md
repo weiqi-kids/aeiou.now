@@ -56,7 +56,7 @@
 ### keywords
 勞動節、五一、May Day、Labor Day、Hari Buruh、黃金週
 ### customs TW labour-day
-台灣的勞動節在五月一日。《紀念日及節日實施條例》第五條把它列為節日，第六條則規定「兒童節、清明節、勞動節、端午節、教師節及中秋節：均放假一日」，條文沒有區分放假對象——也就是全體適用。這是一項改變：在此之前，五一放假的依據是勞動法規，實務上只有適用勞基法的勞工放假，公教人員照常上班。
+台灣的勞動節在五月一日。《紀念日及節日實施條例》第五條把它列為節日，第六條則規定「兒童節、清明節、勞動節、端午節、教師節及中秋節：均放假一日」，條文沒有區分放假對象——也就是全體適用。這是一項改變：在此之前，五一放假的依據是勞動法規，實務上只有適用勞基法的勞工放假，公教人員照常上班。台灣的勞動節有一個別處少見的性質：它是「只有部分人放假」的假日。放假對象限於適用勞動基準法的勞工，公務人員與部分行業照常上班，因此同一個家庭裡可能一個人休、一個人不休。一個以勞工為名的假日，恰好把「誰算勞工」這件事攤在行事曆上，每年重演一次。
 ### customs CN labour-day
 中國大陸的勞動節在《全國年節及紀念日放假辦法》裡放假兩天：五月一日與五月二日。五月二日是二○二四年修訂時**新加**的——同一次修訂也把農曆除夕納入春節假期。實務上會再用調休把它拼成連假，所以「五一假期」的實際長度每年由國務院辦公廳的通知決定，不是固定值。
 ### customs BR dia-do-trabalho
@@ -78,7 +78,7 @@ Labour Day
 ### keywords
 Labour Day, May Day, Labor Day, Hari Buruh, Golden Week
 ### customs TW labour-day
-Taiwan's Labour Day is 1 May. Article 5 of the Act on Commemorative Days and Holidays lists it as a festival, and Article 6 provides that Children's Day, Tomb-Sweeping Day, Labour Day, the Dragon Boat Festival, Teachers' Day and the Mid-Autumn Festival are each a one-day holiday, with no distinction drawn as to who gets it — so it applies to everyone. That is a change: before this, the basis for the 1 May holiday was labour legislation, and in practice only employees covered by the Labor Standards Act were off while public servants worked.
+Taiwan's Labour Day is 1 May. Article 5 of the Act on Commemorative Days and Holidays lists it as a festival, and Article 6 provides that Children's Day, Tomb-Sweeping Day, Labour Day, the Dragon Boat Festival, Teachers' Day and the Mid-Autumn Festival are each a one-day holiday, with no distinction drawn as to who gets it — so it applies to everyone. That is a change: before this, the basis for the 1 May holiday was labour legislation, and in practice only employees covered by the Labor Standards Act were off while public servants worked. Taiwan's Labour Day has a property rarely seen elsewhere: it is a holiday on which only some people are off. The day off is limited to workers covered by the Labour Standards Act, while civil servants and parts of some industries work as usual, so within one household one person may rest and another may not. A holiday named for labour thus lays the question of who counts as a worker out on the calendar, replayed once a year.
 ### customs CN labour-day
 In mainland China, Labour Day gets two days off under the national holiday regulation: 1 and 2 May. The second of May was **added in the 2024 revision** — the same revision that brought Lunar New Year's Eve into the Spring Festival break. In practice shifted workdays are then used to build a longer run, so the actual length of the 'May Day holiday' is decided each year by a State Council notice rather than being fixed.
 ### customs BR dia-do-trabalho
@@ -100,7 +100,7 @@ The United States does not hold Labor Day on 1 May but on the first Monday of Se
 ### keywords
 メーデー, 労働節, Labor Day, Hari Buruh, ゴールデンウィーク
 ### customs TW labour-day
-台湾の労働節は5月1日である。紀念日及節日実施条例第5条がこれを節日として挙げ、第6条は「児童節、清明節、労働節、端午節、教師節および中秋節はいずれも一日を休日とする」と定め、対象を区別していない。つまり全体に適用される。これは変化である。以前は5月1日の休みの根拠が労働法規にあり、実際には労働基準法の適用を受ける労働者だけが休み、公務員や教職員は通常どおり勤務していた。
+台湾の労働節は5月1日である。紀念日及節日実施条例第5条がこれを節日として挙げ、第6条は「児童節、清明節、労働節、端午節、教師節および中秋節はいずれも一日を休日とする」と定め、対象を区別していない。つまり全体に適用される。これは変化である。以前は5月1日の休みの根拠が労働法規にあり、実際には労働基準法の適用を受ける労働者だけが休み、公務員や教職員は通常どおり勤務していた。台湾の労働節には、他所ではあまり見られない性質がある。「一部の人だけが休む」祝日だという点である。休みの対象は労働基準法の適用を受ける労働者に限られ、公務員や一部の業種は通常どおり働く。そのため同じ家の中で、一方は休み、他方は休まないということが起こる。労働の名を冠した休日が、「誰が労働者に当たるのか」という問いを暦の上に広げ、毎年一度それを繰り返す。
 ### customs CN labour-day
 中国大陸の労働節は、全国年節及紀念日放假辦法により5月1日と2日の2日間が休みとなる。5月2日は**2024年の改正で加えられた**。同じ改正は旧暦の大晦日を春節の休みに組み入れてもいる。実際には振替出勤を組み合わせて連休に仕立てるため、「メーデー連休」の実際の長さは毎年、国務院弁公庁の通知が決めるものであって固定ではない。
 ### customs BR dia-do-trabalho
@@ -122,7 +122,7 @@ The United States does not hold Labor Day on 1 May but on the first Monday of Se
 ### keywords
 劳动节、五一、May Day、Labor Day、Hari Buruh、黄金周
 ### customs TW labour-day
-台湾的劳动节在5月1日。《纪念日及节日实施条例》第五条把它列为节日，第六条则规定“儿童节、清明节、劳动节、端午节、教师节及中秋节：均放假一日”，条文没有区分放假对象——也就是全体适用。这是一项改变：在此之前，五一放假的依据是劳动法规，实务上只有适用劳基法的劳工放假，公教人员照常上班。
+台湾的劳动节在5月1日。《纪念日及节日实施条例》第五条把它列为节日，第六条则规定“儿童节、清明节、劳动节、端午节、教师节及中秋节：均放假一日”，条文没有区分放假对象——也就是全体适用。这是一项改变：在此之前，五一放假的依据是劳动法规，实务上只有适用劳基法的劳工放假，公教人员照常上班。台湾的劳动节有一个别处少见的性质：它是“只有部分人放假”的假日。放假对象限于适用劳动基准法的劳工，公务人员与部分行业照常上班，因此同一个家庭里可能一个人休、一个人不休。一个以劳工为名的假日，恰好把“谁算劳工”这件事摊在行事历上，每年重演一次。
 ### customs CN labour-day
 中国大陆的劳动节在《全国年节及纪念日放假办法》里放假两天：5月1日与5月2日。5月2日是2024年修订时**新加**的——同一次修订也把农历除夕纳入春节假期。实务上会再用调休把它拼成连假，所以“五一假期”的实际长度每年由国务院办公厅的通知决定，不是固定值。
 ### customs BR dia-do-trabalho
@@ -144,7 +144,7 @@ The United States does not hold Labor Day on 1 May but on the first Monday of Se
 ### keywords
 श्रमिक दिवस, मई दिवस, Labor Day, Hari Buruh, गोल्डन वीक
 ### customs TW labour-day
-ताइवान का श्रमिक दिवस 1 मई है। स्मृति-दिवस व त्योहार अधिनियम का अनुच्छेद 5 इसे त्योहार के रूप में सूचीबद्ध करता है, और अनुच्छेद 6 कहता है कि बाल दिवस, क़ब्र-सफ़ाई दिवस, श्रमिक दिवस, ड्रैगन बोट उत्सव, शिक्षक दिवस और मध्य-शरद उत्सव — प्रत्येक एक दिन का अवकाश है, और यह नहीं बताया गया कि किसे मिलेगा — यानी सब पर लागू। यह एक बदलाव है: इससे पहले 1 मई की छुट्टी का आधार श्रम क़ानून था और व्यवहार में केवल श्रम मानक अधिनियम के दायरे वाले कर्मचारी छुट्टी पाते थे, जबकि सरकारी कर्मचारी काम करते थे।
+ताइवान का श्रमिक दिवस 1 मई है। स्मृति-दिवस व त्योहार अधिनियम का अनुच्छेद 5 इसे त्योहार के रूप में सूचीबद्ध करता है, और अनुच्छेद 6 कहता है कि बाल दिवस, क़ब्र-सफ़ाई दिवस, श्रमिक दिवस, ड्रैगन बोट उत्सव, शिक्षक दिवस और मध्य-शरद उत्सव — प्रत्येक एक दिन का अवकाश है, और यह नहीं बताया गया कि किसे मिलेगा — यानी सब पर लागू। यह एक बदलाव है: इससे पहले 1 मई की छुट्टी का आधार श्रम क़ानून था और व्यवहार में केवल श्रम मानक अधिनियम के दायरे वाले कर्मचारी छुट्टी पाते थे, जबकि सरकारी कर्मचारी काम करते थे। ताइवान के श्रम दिवस में एक ऐसा गुण है जो अन्यत्र विरल है: यह ऐसी छुट्टी है जिस पर केवल कुछ लोग ही मुक्त होते हैं। अवकाश उन्हीं कामगारों तक सीमित है जिन पर श्रम मानक अधिनियम लागू होता है, जबकि सरकारी कर्मचारी और कुछ उद्योगों के हिस्से सामान्य रूप से काम करते हैं, इसलिए एक ही घर में कोई विश्राम कर सकता है और कोई नहीं। श्रम के नाम पर रखी छुट्टी यों 'कामगार कौन गिना जाए' के प्रश्न को कैलेंडर पर फैला देती है, और वर्ष में एक बार उसे दोहराती है।
 ### customs CN labour-day
 मुख्यभूमि चीन में श्रमिक दिवस पर राष्ट्रीय अवकाश नियम के तहत दो दिन की छुट्टी है: 1 और 2 मई। 2 मई **2024 के संशोधन में जोड़ा गया** — वही संशोधन जिसने चंद्र नववर्ष की पूर्वसंध्या को वसंत पर्व की छुट्टी में शामिल किया। व्यवहार में कार्यदिवसों की अदला-बदली कर लंबा सिलसिला बनाया जाता है, इसलिए 'मई दिवस अवकाश' की असल लंबाई हर वर्ष राज्य परिषद कार्यालय की अधिसूचना तय करती है, वह निश्चित नहीं।
 ### customs BR dia-do-trabalho
@@ -166,7 +166,7 @@ Hari Buruh
 ### keywords
 Hari Buruh, May Day, Labor Day, Golden Week, libur nasional
 ### customs TW labour-day
-Hari Buruh Taiwan jatuh 1 Mei. Pasal 5 Undang-Undang Hari Peringatan dan Hari Raya mencantumkannya sebagai hari raya, dan Pasal 6 menyatakan bahwa Hari Anak, Hari Ziarah Makam, Hari Buruh, Festival Perahu Naga, Hari Guru, dan Festival Pertengahan Musim Gugur masing-masing merupakan libur satu hari, tanpa membedakan siapa yang mendapatkannya — jadi berlaku untuk semua. Itu sebuah perubahan: sebelumnya dasar libur 1 Mei ada pada peraturan ketenagakerjaan, dan praktiknya hanya pekerja yang tercakup Undang-Undang Standar Ketenagakerjaan yang libur, sementara pegawai negeri tetap bekerja.
+Hari Buruh Taiwan jatuh 1 Mei. Pasal 5 Undang-Undang Hari Peringatan dan Hari Raya mencantumkannya sebagai hari raya, dan Pasal 6 menyatakan bahwa Hari Anak, Hari Ziarah Makam, Hari Buruh, Festival Perahu Naga, Hari Guru, dan Festival Pertengahan Musim Gugur masing-masing merupakan libur satu hari, tanpa membedakan siapa yang mendapatkannya — jadi berlaku untuk semua. Itu sebuah perubahan: sebelumnya dasar libur 1 Mei ada pada peraturan ketenagakerjaan, dan praktiknya hanya pekerja yang tercakup Undang-Undang Standar Ketenagakerjaan yang libur, sementara pegawai negeri tetap bekerja. Hari Buruh di Taiwan punya sifat yang jarang terlihat di tempat lain: ia hari libur yang hanya membebaskan sebagian orang. Liburnya terbatas pada pekerja yang tercakup Undang-Undang Standar Ketenagakerjaan, sementara pegawai negeri dan sebagian sektor tetap bekerja seperti biasa, sehingga dalam satu rumah tangga seseorang bisa beristirahat dan yang lain tidak. Hari libur yang dinamai dari kerja itu justru menghamparkan pertanyaan siapa yang terhitung buruh di atas kalender, dan mengulangnya setahun sekali.
 ### customs CN labour-day
 Di Tiongkok daratan, Hari Buruh mendapat dua hari libur menurut aturan hari libur nasional: 1 dan 2 Mei. Tanggal 2 Mei **ditambahkan pada revisi 2024** — revisi yang sama yang memasukkan malam Tahun Baru Imlek ke libur Festival Musim Semi. Praktiknya, tukar hari kerja lalu dipakai untuk merangkai libur lebih panjang, sehingga panjang sebenarnya 'libur May Day' ditentukan tiap tahun oleh pemberitahuan Kantor Dewan Negara, bukan angka tetap.
 ### customs BR dia-do-trabalho
@@ -188,7 +188,7 @@ Dia do Trabalho
 ### keywords
 Dia do Trabalho, 1º de maio, Labor Day, Hari Buruh, Golden Week
 ### customs TW labour-day
-O Dia do Trabalho em Taiwan é 1º de maio. O artigo 5º da Lei dos Dias Comemorativos e Feriados o lista como festa, e o artigo 6º determina que Dia das Crianças, Dia de Limpeza dos Túmulos, Dia do Trabalho, Festival do Barco-Dragão, Dia dos Professores e Festival do Meio do Outono são cada um um dia de folga, sem distinguir quem a recebe — ou seja, vale para todos. Isso é uma mudança: antes, a base do feriado de 1º de maio estava na legislação trabalhista e, na prática, apenas empregados cobertos pela Lei de Padrões Trabalhistas folgavam, enquanto servidores públicos trabalhavam.
+O Dia do Trabalho em Taiwan é 1º de maio. O artigo 5º da Lei dos Dias Comemorativos e Feriados o lista como festa, e o artigo 6º determina que Dia das Crianças, Dia de Limpeza dos Túmulos, Dia do Trabalho, Festival do Barco-Dragão, Dia dos Professores e Festival do Meio do Outono são cada um um dia de folga, sem distinguir quem a recebe — ou seja, vale para todos. Isso é uma mudança: antes, a base do feriado de 1º de maio estava na legislação trabalhista e, na prática, apenas empregados cobertos pela Lei de Padrões Trabalhistas folgavam, enquanto servidores públicos trabalhavam. O Dia do Trabalho em Taiwan tem uma propriedade raramente vista alhures: é um feriado em que apenas parte das pessoas folga. A folga limita-se aos trabalhadores abrangidos pela Lei de Padrões do Trabalho, enquanto servidores públicos e partes de alguns setores trabalham normalmente, de modo que dentro de uma mesma casa um pode descansar e outro não. Um feriado batizado com o nome do trabalho estende assim sobre o calendário a pergunta de quem conta como trabalhador, e a repete uma vez por ano.
 ### customs CN labour-day
 Na China continental, o Dia do Trabalho tem dois dias de folga pela norma nacional de feriados: 1º e 2 de maio. O dia 2 **foi acrescentado na revisão de 2024** — a mesma que trouxe a véspera do Ano-Novo Lunar para o feriado do Festival da Primavera. Na prática, trocas de dias úteis são usadas para montar um período mais longo, então a duração real do 'feriadão de 1º de maio' é decidida a cada ano por um aviso do Conselho de Estado, e não é fixa.
 ### customs BR dia-do-trabalho

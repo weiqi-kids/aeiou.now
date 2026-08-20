@@ -11,7 +11,6 @@
 - date_rule: 農曆正月初一前後；除夕起放假
 - rank: 1
 - source: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095
-- source: https://www.tad.gov.tw/m1.aspx?sNo=0001020
 - source: https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf
 
 ## observance CN chunjie

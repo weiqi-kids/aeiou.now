@@ -11,7 +11,7 @@
 - local_name: 農曆七月／中元普渡
 - date_rule: 農曆七月，地方普渡日期依社區而異
 - rank: 1
-- source: https://www.tad.gov.tw/m1.aspx?sNo=0020552
+- source: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095
 
 ## observance JP setsubun
 - local_name: 節分

@@ -17,7 +17,11 @@
 //                         defense.gov、justica.pr.gov.br、nhc.gov.cn。
 //                         把這些判成錯誤，等於因為別人的 WAF 而擋自己的部署。
 //   5xx / 連線失敗       → WARN。對方暫時掛掉或網路抖動，不該變成我們的紅燈。
-//   2xx / 3xx           → OK。
+//   2xx / 3xx           → OK……除非**跟完 redirect 落在錯誤頁**（見下）。
+//   2xx 但最終網址是錯誤頁 → ERROR。2026-08-20 抓到:www.tad.gov.tw（觀光局舊網域）
+//                         的十個來源全部 302 到 eng.taiwan.net.tw/ErrorPage.html，
+//                         HTTP 狀態是 200。只看狀態碼會判成「活著」,實際上讀者點過去
+//                         看到的是錯誤頁 —— 比 404 更難發現,因為它連紅燈都不亮。
 //
 // ── 為什麼不掛進 hourly-export ─────────────────────────────────────────────
 // 🔴 刻意不進每小時管線：那會把「別人的網站有沒有掛」綁進本站的發佈路徑，
@@ -74,13 +78,24 @@ async function probe(url) {
       const res = await fetch(url, { method, redirect: 'follow', signal: ac.signal, headers: { 'User-Agent': UA } });
       clearTimeout(timer);
       if (method === 'HEAD' && (res.status === 405 || res.status === 501)) continue;
-      return { status: res.status };
+      return { status: res.status, finalUrl: res.url || url };
     } catch (e) {
       clearTimeout(timer);
       if (method === 'GET') return { status: 0, error: e.name === 'AbortError' ? 'timeout' : e.message };
     }
   }
   return { status: 0, error: 'unreachable' };
+}
+
+// 跟完 redirect 之後落在錯誤頁 —— 狀態碼是 200,但讀者點過去看到的是「找不到」。
+// 只認路徑上的明確標記,不做語意猜測(不抓網頁內文,那會誤判正常的錯誤處理說明頁)。
+const ERROR_PATH = /(^|\/)(errorpage|error|404|notfound|not-found|nopage)(\.\w+)?(\/|$)/i;
+function landsOnErrorPage(url, finalUrl) {
+  if (!finalUrl || finalUrl === url) return false;
+  let a, b;
+  try { a = new URL(url); b = new URL(finalUrl); } catch { return false; }
+  if (!ERROR_PATH.test(b.pathname)) return false;
+  return ERROR_PATH.test(b.pathname) && !ERROR_PATH.test(a.pathname);
 }
 
 const dead = [];
@@ -90,9 +105,12 @@ let cursor = 0;
 await Promise.all(Array.from({ length: CONCURRENCY }, async () => {
   while (cursor < urls.length) {
     const url = urls[cursor++];
-    const { status, error } = await probe(url);
+    const { status, error, finalUrl } = await probe(url);
     const where = [...usedBy.get(url)].join(', ');
     if (status === 404 || status === 410) dead.push({ url, status, where });
+    else if (status >= 200 && status < 400 && landsOnErrorPage(url, finalUrl)) {
+      dead.push({ url, status: `${status}→錯誤頁`, where, finalUrl });
+    }
     else if (status >= 200 && status < 400) ok.push(url);
     else blocked.push({ url, status: status || error, where });
   }
@@ -106,8 +124,12 @@ if (blocked.length) {
   }
 }
 if (dead.length) {
-  console.error('\n✗ 失效來源（404/410）——這些網址正印在線上頁面的「來源與日期」區塊：');
-  for (const d of dead) console.error(`   ${d.status} ${d.url}\n       用於 ${d.where}`);
+  console.error('\n✗ 失效來源（404/410 或跟完 redirect 落在錯誤頁）——這些網址正印在線上頁面的「來源與日期」區塊：');
+  for (const d of dead) {
+    console.error(`   ${d.status} ${d.url}`);
+    if (d.finalUrl) console.error(`       → ${d.finalUrl}`);
+    console.error(`       用於 ${d.where}`);
+  }
   console.error('\n修法：改 content/topics/<slug>.md 或 scripts/generate-regional-notes.mjs 的 source，'
     + '再跑 import-topics.mjs + export-data.mjs。');
   if (!warnOnly) process.exit(1);
