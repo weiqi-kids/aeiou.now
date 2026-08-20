@@ -418,7 +418,16 @@
       }
     }
   ],
-  "regional_notes": [],
+  "regional_notes": [
+    {
+      "country_code": "ID",
+      "kind": "absence",
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://referensi.data.kemendikdasmen.go.id/budayakita/wbtb/objek/AA001982"
+      ]
+    }
+  ],
   "countries": [
     {
       "country_code": "BR",
@@ -490,6 +499,8 @@
     "https://www.incredibleindia.gov.in/en/colours-of-india",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
-    "https://www.usa.gov/holidays"
+    "https://www.usa.gov/holidays",
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+    "https://referensi.data.kemendikdasmen.go.id/budayakita/wbtb/objek/AA001982"
   ]
 }

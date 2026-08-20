@@ -462,7 +462,37 @@
       }
     }
   ],
-  "regional_notes": [],
+  "regional_notes": [
+    {
+      "country_code": "BR",
+      "kind": "absence",
+      "source_urls": [
+        "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-norma-pl.html",
+        "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1518158"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "kind": "absence",
+      "source_urls": [
+        "https://www.india.gov.in/calendar"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "kind": "absence",
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+      ]
+    },
+    {
+      "country_code": "US",
+      "kind": "absence",
+      "source_urls": [
+        "https://www.usa.gov/holidays"
+      ]
+    }
+  ],
   "countries": [
     {
       "country_code": "CN",
@@ -508,6 +538,11 @@
     "https://www.ihchina.cn/project_details/15014.html",
     "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=83",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-norma-pl.html",
+    "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1518158",
+    "https://www.india.gov.in/calendar",
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+    "https://www.usa.gov/holidays"
   ]
 }

@@ -334,7 +334,44 @@
       }
     }
   ],
-  "regional_notes": [],
+  "regional_notes": [
+    {
+      "country_code": "BR",
+      "kind": "absence",
+      "source_urls": [
+        "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-norma-pl.html",
+        "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1518158"
+      ]
+    },
+    {
+      "country_code": "CN",
+      "kind": "absence",
+      "source_urls": [
+        "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      ]
+    },
+    {
+      "country_code": "ID",
+      "kind": "absence",
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "kind": "absence",
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "kind": "absence",
+      "source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+      ]
+    }
+  ],
   "countries": [
     {
       "country_code": "IN",
@@ -363,6 +400,12 @@
     "https://utsav.gov.in/major-festival/diwali",
     "https://council.nyc.gov/press/2023/11/15/2502/",
     "https://www.pib.gov.in/FeaturesDeatils.aspx?NoteId=156406&ModuleId=2&reg=3&lang=2",
-    "https://www.incredibleindia.gov.in/en/festivals-and-events/diwali"
+    "https://www.incredibleindia.gov.in/en/festivals-and-events/diwali",
+    "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-norma-pl.html",
+    "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1518158",
+    "https://www.gov.cn/zhengce/content/202411/content_6986380.htm",
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
   ]
 }

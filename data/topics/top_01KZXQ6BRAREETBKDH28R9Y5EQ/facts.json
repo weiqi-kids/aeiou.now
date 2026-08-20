@@ -402,7 +402,15 @@
       }
     }
   ],
-  "regional_notes": [],
+  "regional_notes": [
+    {
+      "country_code": "JP",
+      "kind": "absence",
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+      ]
+    }
+  ],
   "countries": [
     {
       "country_code": "BR",
@@ -458,6 +466,7 @@
     "https://www.wda.gov.tw/News_Content.aspx?n=31&s=3599",
     "https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
-    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
   ]
 }

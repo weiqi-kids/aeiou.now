@@ -410,7 +410,32 @@
       }
     }
   ],
-  "regional_notes": [],
+  "regional_notes": [
+    {
+      "country_code": "BR",
+      "kind": "absence",
+      "source_urls": [
+        "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-norma-pl.html",
+        "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1518158"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "kind": "absence",
+      "source_urls": [
+        "https://www.india.gov.in/calendar",
+        "https://alappuzha.nic.in/en/nehru-trophy-boat-race/",
+        "https://www.utsav.gov.in/view-event/nehru-trophy-boat-race"
+      ]
+    },
+    {
+      "country_code": "US",
+      "kind": "absence",
+      "source_urls": [
+        "https://www.usa.gov/holidays"
+      ]
+    }
+  ],
   "countries": [
     {
       "country_code": "CN",
@@ -466,6 +491,12 @@
     "https://www.mhlw.go.jp/file/04-Houdouhappyou-11906000-Koyoukintoujidoukateikyoku-Ikuseikankyouka/0000082035.pdf",
     "https://www.tangerangkota.go.id/berita/detail/66084/semarak-festival-budaya-petjoen-kota-tangerang-tradisi-khas-cina-benteng-mandikan-perahu-leluhur",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-norma-pl.html",
+    "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1518158",
+    "https://www.india.gov.in/calendar",
+    "https://alappuzha.nic.in/en/nehru-trophy-boat-race/",
+    "https://www.utsav.gov.in/view-event/nehru-trophy-boat-race",
+    "https://www.usa.gov/holidays"
   ]
 }

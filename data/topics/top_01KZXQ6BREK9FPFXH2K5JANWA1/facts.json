@@ -590,7 +590,26 @@
       }
     }
   ],
-  "regional_notes": [],
+  "regional_notes": [
+    {
+      "country_code": "ID",
+      "kind": "absence",
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://sonobudoyo.jogjaprov.go.id/id/tulisan/read/mengenal-tradisi-nyadran--warisan-budaya-masyarakat-jawa",
+        "https://www.djkn.kemenkeu.go.id/kpknl-purwokerto/baca-artikel/16021/Mengenal-Nyadran-Tradisi-Menyambut-Bulan-Ramadan.html"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "kind": "absence",
+      "source_urls": [
+        "https://www.india.gov.in/calendar",
+        "https://tourism.bihar.gov.in/en/experiences/festivals-and-fairs/festivals/pitrapaksha",
+        "https://utsav.gov.in/view-event/pitra-paksha-1"
+      ]
+    }
+  ],
   "countries": [
     {
       "country_code": "BR",
@@ -652,6 +671,12 @@
     "https://www.nihongo-ews.mext.go.jp/contents_files/download/?cfid=406&content_id=864",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
-    "https://www.usa.gov/holidays"
+    "https://www.usa.gov/holidays",
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+    "https://sonobudoyo.jogjaprov.go.id/id/tulisan/read/mengenal-tradisi-nyadran--warisan-budaya-masyarakat-jawa",
+    "https://www.djkn.kemenkeu.go.id/kpknl-purwokerto/baca-artikel/16021/Mengenal-Nyadran-Tradisi-Menyambut-Bulan-Ramadan.html",
+    "https://www.india.gov.in/calendar",
+    "https://tourism.bihar.gov.in/en/experiences/festivals-and-fairs/festivals/pitrapaksha",
+    "https://utsav.gov.in/view-event/pitra-paksha-1"
   ]
 }

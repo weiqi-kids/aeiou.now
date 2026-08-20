@@ -330,7 +330,29 @@
       }
     }
   ],
-  "regional_notes": [],
+  "regional_notes": [
+    {
+      "country_code": "CN",
+      "kind": "absence",
+      "source_urls": [
+        "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "kind": "absence",
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "kind": "absence",
+      "source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+      ]
+    }
+  ],
   "countries": [
     {
       "country_code": "BR",
@@ -369,6 +391,9 @@
     "https://www.planalto.gov.br/ccivil_03/leis/l9093.htm",
     "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays",
     "https://www.usa.gov/holidays",
-    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+    "https://www.gov.cn/zhengce/content/202411/content_6986380.htm",
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
   ]
 }
