@@ -17,6 +17,15 @@
 // 保底:hash 一樣但距上次真正同步已超過 FORCE_INTERVAL_SEC,仍強制推一次。
 // 沒有這道保底的話,D1 那側若掉資料或被手動改過,主機這邊會因為「我沒變」而永遠不再補。
 //
+// 只推真的變了的列(2026-08-20):上面那道「內容沒變就不推」擋的是「完全沒變」,
+// 擋不掉「只改了一個 Topic」——只要有一個字不一樣,原本就整包 355 topics + 2,485 topic_i18n
+// 全部重寫一次。那天實測 D1 rows_written_24h 到 124,464,而 rows_read_24h 只有 100,369,
+// read_queries 才 382:寫入量與真人流量完全不成比例,壓垮它的是自己的同步。
+// 改法:state 檔多記一份逐列 hash,只送 hash 變了的列。
+// **安全性來自 Worker 端是純 upsert、不做 delete**(api/src/routes/internal.js):
+// 沒送到的列原樣留著,不會被清掉。全量推的路徑照樣保留(--force 與保底重推),
+// 所以 D1 那側若掉資料,最多 FORCE_INTERVAL_SEC 之後就會補回來。
+//
 // 環境變數:
 //   AEIOU_API_URL          Worker base URL(預設 workers.dev;切自訂網域只改這裡)
 //   AEIOU_DB_PATH          主機 SQLite(預設 /root/aeiou.now/db/aeiou.sqlite)
@@ -95,6 +104,11 @@ try {
 
   // payload 兩個陣列都已在 SQL 層 ORDER BY,物件鍵序也是字面常數 → 同內容必得同 hash
   const hash = sha256(JSON.stringify(payload));
+  // 逐列 hash:key 要能唯一指到 D1 的一列(topics 以 topic_id、topic_i18n 以 topic_id+locale 為 PK)
+  const rowHashes = {};
+  for (const t of payload.topics) rowHashes[`t|${t.topic_id}`] = sha256(JSON.stringify(t));
+  for (const i of payload.topic_i18n) rowHashes[`i|${i.topic_id}|${i.locale}`] = sha256(JSON.stringify(i));
+
   const state = readState();
   const prev = state[JOB_NAME];
   const age = prev?.synced_at ? nowSec() - prev.synced_at : Infinity;
@@ -109,14 +123,42 @@ try {
   }
 
   const reason = FORCE ? "強制" : prev?.hash === hash ? `保底重推(距上次 ${age}s ≥ ${FORCE_INTERVAL_SEC}s)` : "內容有變";
-  log(`[${JOB_NAME}] ${reason},全量 upsert(hash=${hash.slice(0, 12)})`);
-  for (const t of payload.topics) log(`  - ${t.topic_id} ${t.slug} cycle=${t.current_cycle_id ?? "NULL"}`);
 
-  const res = await api("/internal/sync/topics", { method: "POST", body: payload });
+  // 全量推的時機:強制、保底重推、或 state 沒有逐列 hash(第一次跑到新版、或狀態檔壞掉)。
+  // 其餘情況只推 hash 變了的列 —— 沒送到的列在 D1 原樣留著(Worker 是純 upsert)。
+  const prevRows = prev && prev.rows && typeof prev.rows === "object" ? prev.rows : null;
+  const full = FORCE || stale || !prevRows;
+  const outgoing = full
+    ? payload
+    : {
+        topics: payload.topics.filter((t) => prevRows[`t|${t.topic_id}`] !== rowHashes[`t|${t.topic_id}`]),
+        topic_i18n: payload.topic_i18n.filter(
+          (i) => prevRows[`i|${i.topic_id}|${i.locale}`] !== rowHashes[`i|${i.topic_id}|${i.locale}`]
+        ),
+      };
+  const outCount = outgoing.topics.length + outgoing.topic_i18n.length;
+
+  log(`[${JOB_NAME}] ${reason},${full ? "全量" : "差異"} upsert(hash=${hash.slice(0, 12)};`
+    + `送 ${outgoing.topics.length} topics / ${outgoing.topic_i18n.length} topic_i18n,`
+    + `全量會是 ${payload.topics.length} / ${payload.topic_i18n.length})`);
+  // 逐列印出來只在差異模式有意義;全量模式印 355 行只是把 log 洗掉。
+  if (!full) for (const t of outgoing.topics) log(`  - ${t.topic_id} ${t.slug} cycle=${t.current_cycle_id ?? "NULL"}`);
+
+  if (outCount === 0) {
+    // hash 變了但沒有任何一列變 → payload 的鍵序或非 PK 欄位動過,不必寫 D1,但要更新指紋
+    writeState(state, { hash, synced_at: prev?.synced_at ?? nowSec(), rows: rowHashes });
+    finishJob(db, job, { status: "success", read, updated: 0 });
+    log(`[${JOB_NAME}] 沒有任何一列變 — 不發請求,只更新指紋`);
+    log(`[${JOB_NAME}] success (nothing to do)`);
+    db.close();
+    process.exit(0);
+  }
+
+  const res = await api("/internal/sync/topics", { method: "POST", body: outgoing });
   log(`[${JOB_NAME}] worker: ${JSON.stringify(res)}`);
 
   // Worker 回應成功之後才記指紋;上面 api() 若 throw 就走 catch,這行不會執行 → 下輪重推
-  writeState(state, { hash, synced_at: nowSec() });
+  writeState(state, { hash, synced_at: nowSec(), rows: rowHashes });
 
   finishJob(db, job, {
     status: "success",
