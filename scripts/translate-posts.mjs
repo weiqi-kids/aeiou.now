@@ -28,6 +28,7 @@
 //   AEIOU_TRANSLATE_CHUNK   一次 claude 呼叫處理幾則(預設 4;4 則 × 六語 = 24 段)
 //   AEIOU_CLAUDE_BIN        claude CLI 路徑(預設 /root/.local/bin/claude)
 //   AEIOU_CLAUDE_TIMEOUT_MS 單次 claude 呼叫逾時(預設 600000)
+//   AEIOU_CLAUDE_MODEL      模型(預設 claude-sonnet-5;見下方「為什麼一定要 pin 模型」)
 //   AEIOU_CLAUDE_CWD        claude 子行程的工作目錄(預設 /tmp 下的空目錄,見下)
 //
 // claude 子行程一律在**空目錄**跑(2026-08-13):
@@ -63,6 +64,12 @@ const JOB_NAME = "translate-posts";
 const LIMIT = Math.min(50, Math.max(1, Number.parseInt(process.env.AEIOU_TRANSLATE_LIMIT || "50", 10) || 50));
 const CHUNK = Math.max(1, Number.parseInt(process.env.AEIOU_TRANSLATE_CHUNK || "4", 10) || 4);
 const CLAUDE_BIN = process.env.AEIOU_CLAUDE_BIN || "/root/.local/bin/claude";
+// 模型必須 pin(2026-08-20):不帶 --model 時 CLI 會落在「當下的預設模型」,實測落點是
+// claude-opus-5[1m] —— 1M context 檔次,連「回兩個字 OK」都因為 ~26k tokens 的系統基線
+// (cache_creation 9,842 + cache_read 15,900)算出 $0.106。翻譯是機械任務,吃不到 Opus 的
+// 推理力,卻要付最貴的檔次;而且「預設模型」會隨 CLI 版本漂移,等於管線成本不受本檔控制。
+// seo-ops 全機隊的 reflect/brain 早就統一 sonnet(見 /root/seo-ops/sites/*.json),這裡對齊。
+const CLAUDE_MODEL = process.env.AEIOU_CLAUDE_MODEL || "claude-sonnet-5";
 const CLAUDE_TIMEOUT_MS = Number.parseInt(process.env.AEIOU_CLAUDE_TIMEOUT_MS || "600000", 10);
 // 固定路徑(不是 mkdtemp):每輪重用同一個空目錄,不會在 /tmp 累積;
 // 被 /tmp 清理掉也沒關係,下面每次呼叫前都 mkdir -p。
@@ -135,7 +142,7 @@ function extractJson(raw) {
 function runClaude(prompt) {
   // 空目錄要在這裡確保存在:/tmp 可能被清、cwd 不存在時 spawnSync 直接 ENOENT
   mkdirSync(CLAUDE_CWD, { recursive: true });
-  const r = spawnSync(CLAUDE_BIN, ["-p"], {
+  const r = spawnSync(CLAUDE_BIN, ["-p", "--model", CLAUDE_MODEL], {
     input: prompt,
     encoding: "utf8",
     timeout: CLAUDE_TIMEOUT_MS,

@@ -6,11 +6,16 @@ import QuestionCard from '../../components/QuestionCard.astro';
 import { t } from '../../lib/i18n.mjs';
 import { pastQuestions } from '../../lib/data.mjs';
 import { calendarDate } from '../../lib/format.mjs';
+import { siteDescription } from '../../lib/seo.mjs';
 
 const questions = pastQuestions(new Date());
 ---
 
-<BaseLayout title={`${t('q.archive_title')} — aeiou.now`} description={t('q.archive_title')}>
+{/* description 不可等於 title(2026-08-20):原本 description={t('q.archive_title')} 讓七站的
+    /questions/ 都輸出「標題的複製」當摘要,GSC URL Inspection 對這頁的判定是
+    Discovered - currently not indexed —— 全站 36 頁抽驗中唯一沒進索引的一頁。
+    寫法對齊 topics/[sort].astro 的 `${label} · ${siteDescription()}`,不另造文案。 */}
+<BaseLayout title={`${t('q.archive_title')} — aeiou.now`} description={`${t('q.archive_title')} · ${siteDescription()}`} pageType="CollectionPage">
   <article class="archive">
     <header class="archive-head">
       <h1>{t('q.archive_title')}</h1>

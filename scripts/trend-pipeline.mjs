@@ -58,6 +58,8 @@ const FORCE = process.argv.includes("--force") || ["1", "true", "yes"].includes(
 const FIXTURE = process.env.AEIOU_TREND_FIXTURE || null;
 const CONTENT_FIXTURE = process.env.AEIOU_TREND_CONTENT_FIXTURE || null;
 const CLAUDE_BIN = process.env.AEIOU_CLAUDE_BIN || "/root/.local/bin/claude";
+// 模型必須 pin,理由與成本實測見 scripts/translate-posts.mjs 的 CLAUDE_MODEL 註解。
+const CLAUDE_MODEL = process.env.AEIOU_TREND_CLAUDE_MODEL || "claude-sonnet-5";
 const CLAUDE_TIMEOUT_MS = Number.parseInt(process.env.AEIOU_TREND_CLAUDE_TIMEOUT_MS || "600000", 10);
 const CLAUDE_CWD = process.env.AEIOU_TREND_CLAUDE_CWD || join(tmpdir(), "aeiou-trend-cwd");
 const STATIC_WINDOWS = ["24h", "72h", "7d", "1m", "3m", "1y"];
@@ -294,7 +296,7 @@ function extractJson(raw) {
 
 function runClaude(prompt) {
   mkdirSync(CLAUDE_CWD, { recursive: true });
-  const result = spawnSync(CLAUDE_BIN, ["-p"], {
+  const result = spawnSync(CLAUDE_BIN, ["-p", "--model", CLAUDE_MODEL], {
     input: prompt,
     encoding: "utf8",
     timeout: CLAUDE_TIMEOUT_MS,
