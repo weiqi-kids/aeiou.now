@@ -2102,6 +2102,278 @@
       ],
       "answer": "zh-TW",
       "explain": "Taiwan. The lantern night closes the whole stretch of the lunar new year: once the fifteenth of the first month has passed, the year is properly over, work resumes and school starts. It is not a day off, yet it is the evening on which the whole island lights up at once — beyond carrying lanterns, guessing lantern riddles and eating the round dumplings, the national lantern festival is hosted by a different county or city each year, so where it is this year is a question to ask afresh every time. The Act on Commemorative Days and Holidays lists it too: \"Lantern Festival: the fifteenth of the first lunar month.\""
+    },
+    {
+      "question_id": "q-20260915-eid-leave",
+      "date": "2026-09-15",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRAREETBKDH28R9Y5EQ",
+      "topic_slug": "eid-al-adha",
+      "asker_locale": "pt-BR",
+      "target_locale": "id",
+      "text": "On a religious festival, do you have to take leave in order to attend the service?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🏖️",
+          "label": "It's a public holiday anyway"
+        },
+        {
+          "id": "leave",
+          "emoji": "📝",
+          "label": "I use my own leave"
+        },
+        {
+          "id": "employer",
+          "emoji": "🤝",
+          "label": "It depends on the employer"
+        },
+        {
+          "id": "na",
+          "emoji": "🤷",
+          "label": "Doesn't apply to me"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260915-no-islamic-days",
+      "date": "2026-09-15",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRAREETBKDH28R9Y5EQ",
+      "topic_slug": "eid-al-adha",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: whose holiday statute enumerates a Daoist day and the Buddha's birthday one by one, yet contains not a single Islamic festival?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. The Act on Commemorative Days and Holidays enumerates the Daoist day (first of the first lunar month) and the Buddha's birthday (eighth of the fourth lunar month), yet neither Eid al-Fitr nor Eid al-Adha appears; the Islamic calendar is simply absent from that list. In practice Taiwan hosts hundreds of thousands of migrant workers from Indonesia, and whether leave can be had for the congregational prayer rests with the employer. The Ministry of Labor's approach is a press release urging flexibility, not an amendment. So the day looks like this: the mosques fill as usual, but the attendance was paid for out of personal leave."
+    },
+    {
+      "question_id": "q-20260916-diwali-days",
+      "date": "2026-09-16",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": "zh-TW",
+      "target_locale": "hi",
+      "text": "How many days does Diwali last for you?",
+      "options": [
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "One day"
+        },
+        {
+          "id": "three",
+          "emoji": "3️⃣",
+          "label": "About three"
+        },
+        {
+          "id": "five",
+          "emoji": "5️⃣",
+          "label": "Five days"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "We don't have Diwali"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260916-ayurveda-day",
+      "date": "2026-09-16",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community also made the first of Diwali's five days a national day of medicine?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "the United States"
+        }
+      ],
+      "answer": "hi",
+      "explain": "India. The first day is Dhanteras; since 2016 the Indian government has also designated it National Ayurveda Day, on the ground that it is the birth anniversary of Dhanvantari, the physician of the gods. Two things therefore sit on the same date: the household buying of metal and the lighting of lamps that continue as before, and a nationwide campaign run by the health authorities. A traditional festival used as a public-health calendar slot happens on none of the other four days. The last of the five is Bhai Dooj, which follows the line between sisters and brothers — each of the five days addresses a different party, which is why treating Diwali as a single evening goes wrong."
+    },
+    {
+      "question_id": "q-20260917-homecoming-transport",
+      "date": "2026-09-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": "en",
+      "target_locale": "zh-CN",
+      "text": "To get home for the big holiday, what do you usually travel by?",
+      "options": [
+        {
+          "id": "train",
+          "emoji": "🚄",
+          "label": "Train"
+        },
+        {
+          "id": "car",
+          "emoji": "🚗",
+          "label": "By car"
+        },
+        {
+          "id": "bus",
+          "emoji": "🚌",
+          "label": "Coach or bus"
+        },
+        {
+          "id": "none",
+          "emoji": "🏠",
+          "label": "I don't travel"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260917-obon-not-holiday",
+      "date": "2026-09-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: in which community is the year's most visible nationwide pause not actually a statutory holiday at all?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "answer": "ja",
+      "explain": "Japan. Obon is not a statutory holiday, yet it is the year's most visible national pause: most firms set their own closure in mid-August, so the homeward traffic and the fares have a fixed peak. It can happen all at once precisely because everyone places the break in the same week — not by law, but by aligning with each other. The welcome fire and the send-off fire at the door frame the whole thing as a round trip: a fire to bring them back, another a few days later to see them off, with the Bon dance filling the days between."
+    },
+    {
+      "question_id": "q-20260918-birthday-elders",
+      "date": "2026-09-18",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": "ja",
+      "target_locale": "hi",
+      "text": "On your birthday, what comes first?",
+      "options": [
+        {
+          "id": "elders",
+          "emoji": "🙏",
+          "label": "Greet the elders"
+        },
+        {
+          "id": "temple",
+          "emoji": "🛕",
+          "label": "Go to the temple or church"
+        },
+        {
+          "id": "cake",
+          "emoji": "🎂",
+          "label": "Cut the cake"
+        },
+        {
+          "id": "nothing",
+          "emoji": "😌",
+          "label": "Nothing in particular"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260918-kanreki",
+      "date": "2026-09-18",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community gives sixty, seventy and seventy-seven each its own name, and each its own colour?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "answer": "ja",
+      "explain": "Japan. Milestone ages carry their own names: sixty is kanreki, seventy koki, seventy-seven kiju, each with its own colour and its own way of being marked. That differs from treating a birthday as a number that simply goes up each year — here age is cut into named stages, and arriving at one is itself the thing to celebrate. For contrast: in China both the Gregorian and the lunar birthday are usually remembered for the same person, and which one is kept tends to be decided by the elders; in India, touching the feet of elders and a visit to the temple are more often treated as the necessary step than cutting a cake is."
     }
   ]
 }

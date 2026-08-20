@@ -4761,6 +4761,622 @@
         "id": "Taiwan. Malam lampion menutup seluruh rentang Tahun Baru Imlek: begitu tanggal lima belas bulan pertama lewat, tahunnya benar-benar usai, pekerjaan dimulai lagi dan sekolah masuk. Ia bukan hari libur, namun itulah malam ketika seluruh pulau menyala serentak — selain menenteng lampion, menebak teka-teki, dan menyantap bola tepung, festival lampion nasional diselenggarakan bergiliran oleh kabupaten atau kota yang berbeda tiap tahun, sehingga \"tahun ini di mana\" harus ditanyakan ulang setiap kali. Undang-Undang Hari Peringatan dan Hari Libur pun mencantumkannya: \"Perayaan Lampion: tanggal lima belas bulan pertama Imlek.\"",
         "pt-BR": "Taiwan. A noite das lanternas encerra todo o trecho do Ano-Novo Lunar: passado o dia quinze do primeiro mês, o ano acabou de fato, o trabalho recomeça e as aulas começam. Não é dia de folga, mas é a noite em que a ilha inteira se acende de uma vez — além de levar lanternas, decifrar enigmas e comer os bolinhos redondos, o festival nacional de lanternas é sediado a cada ano por um condado ou cidade diferente, de modo que onde ele será este ano é pergunta a refazer todas as vezes. A Lei das Datas Comemorativas e Feriados também o lista: \"Festa das Lanternas: o décimo quinto dia do primeiro mês lunar.\""
       }
+    },
+    {
+      "id": "q-20260915-eid-leave",
+      "date": "2026-09-15",
+      "kind": "poll",
+      "topic": "eid-al-adha",
+      "asker": "pt-BR",
+      "target": "id",
+      "text": {
+        "zh-TW": "宗教節日當天,你要請假才能去禮拜或做禮嗎?",
+        "en": "On a religious festival, do you have to take leave in order to attend the service?",
+        "ja": "宗教の祭日に礼拝へ行くには、休みを取る必要がありますか?",
+        "zh-CN": "宗教节日当天，你要请假才能去礼拜或做礼吗?",
+        "hi": "किसी धार्मिक पर्व पर उपासना में जाने के लिए क्या आपको छुट्टी लेनी पड़ती है?",
+        "id": "Pada hari raya keagamaan, apakah kalian harus mengambil cuti untuk beribadah?",
+        "pt-BR": "Num feriado religioso, vocês precisam tirar folga para ir ao culto?"
+      },
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🏖️",
+          "label": {
+            "zh-TW": "本來就放假",
+            "en": "It's a public holiday anyway",
+            "ja": "もともと休みである",
+            "zh-CN": "本来就放假",
+            "hi": "वह वैसे भी अवकाश है",
+            "id": "Memang sudah libur",
+            "pt-BR": "Já é feriado"
+          }
+        },
+        {
+          "id": "leave",
+          "emoji": "📝",
+          "label": {
+            "zh-TW": "要請自己的假",
+            "en": "I use my own leave",
+            "ja": "自分の休暇を使う",
+            "zh-CN": "要请自己的假",
+            "hi": "अपनी छुट्टी लगानी पड़ती है",
+            "id": "Pakai cuti sendiri",
+            "pt-BR": "Uso minha própria folga"
+          }
+        },
+        {
+          "id": "employer",
+          "emoji": "🤝",
+          "label": {
+            "zh-TW": "看雇主願不願意",
+            "en": "It depends on the employer",
+            "ja": "雇用主の裁量による",
+            "zh-CN": "看雇主愿不愿意",
+            "hi": "नियोक्ता पर निर्भर",
+            "id": "Tergantung majikan",
+            "pt-BR": "Depende do empregador"
+          }
+        },
+        {
+          "id": "na",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "不適用",
+            "en": "Doesn't apply to me",
+            "ja": "自分には関係ない",
+            "zh-CN": "不适用",
+            "hi": "मुझ पर लागू नहीं",
+            "id": "Tak berlaku bagi saya",
+            "pt-BR": "Não se aplica"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260915-no-islamic-days",
+      "date": "2026-09-15",
+      "kind": "guess",
+      "topic": "eid-al-adha",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的節日法規逐條列出了道教節與佛陀誕辰日,卻沒有任何一個伊斯蘭節期?",
+        "en": "Guess: whose holiday statute enumerates a Daoist day and the Buddha's birthday one by one, yet contains not a single Islamic festival?",
+        "ja": "クイズ:祝日の法令が道教節と仏陀誕辰日を一つずつ挙げながら、イスラムの節期を一つも載せていないのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群的节日法规逐条列出了道教节与佛陀诞辰日，却没有任何一个伊斯兰节期?",
+        "hi": "अंदाज़ा लगाइए: किसका अवकाश-क़ानून दाओवादी दिवस और बुद्ध जयंती को एक-एक कर गिनाता है, फिर भी उसमें एक भी इस्लामी पर्व नहीं?",
+        "id": "Tebak: undang-undang hari libur komunitas mana yang menyebut hari Taoisme dan hari lahir Buddha satu per satu, namun tak memuat satu pun perayaan Islam?",
+        "pt-BR": "Adivinhe: de quem é a lei de feriados que enumera um dia taoista e o nascimento do Buda, um a um, e ainda assim não traz nenhuma festa islâmica?"
+      },
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": {
+        "zh-TW": "台灣。《紀念日及節日實施條例》逐條列出道教節(農曆一月一日)與佛陀誕辰日(農曆四月八日),卻沒有開齋節,也沒有宰牲節——伊斯蘭的節期在這份清單上完全不存在。實際上台灣有數十萬名來自印尼的移工,集體禮拜要不要請得到假取決於雇主;勞動部的做法是發新聞稿呼籲雇主給予彈性,而不是修法。於是這一天在台灣的樣子是:清真寺照常滿座,但那是用特休換來的。",
+        "en": "Taiwan. The Act on Commemorative Days and Holidays enumerates the Daoist day (first of the first lunar month) and the Buddha's birthday (eighth of the fourth lunar month), yet neither Eid al-Fitr nor Eid al-Adha appears; the Islamic calendar is simply absent from that list. In practice Taiwan hosts hundreds of thousands of migrant workers from Indonesia, and whether leave can be had for the congregational prayer rests with the employer. The Ministry of Labor's approach is a press release urging flexibility, not an amendment. So the day looks like this: the mosques fill as usual, but the attendance was paid for out of personal leave.",
+        "ja": "台湾。「記念日及び節日実施条例」は道教節(旧暦一月一日)と仏陀誕辰日(旧暦四月八日)を一つずつ挙げているが、断食明けの祭りも犠牲祭もそこにない。イスラムの節期はこの一覧に存在しない。実際には台湾に数十万人のインドネシア出身の移住労働者がおり、集団礼拝のための休みが取れるかどうかは雇用主次第である。労働部のやり方は法改正ではなく、雇用主に柔軟な対応を促す報道発表を出すことだ。ゆえにこの日の姿はこうなる。モスクはいつもどおり満員だが、その出席は有給休暇で買われている。",
+        "zh-CN": "台湾。《纪念日及节日实施条例》逐条列出道教节（农历一月一日）与佛陀诞辰日（农历四月八日），却没有开斋节，也没有宰牲节——伊斯兰的节期在这份清单上完全不存在。实际上台湾有数十万名来自印尼的移工，集体礼拜要不要请得到假取决于雇主；劳动部的做法是发新闻稿呼吁雇主给予弹性，而不是修法。于是这一天在台湾的样子是：清真寺照常满座，但那是用年假换来的。",
+        "hi": "ताइवान। स्मृति-दिवस एवं अवकाश अधिनियम दाओवादी दिवस (पहले चंद्र मास की पहली तिथि) और बुद्ध जयंती (चौथे चंद्र मास की आठवीं तिथि) को एक-एक कर गिनाता है, फिर भी उसमें न ईद-उल-फ़ित्र है न ईद-उल-अज़हा; इस्लामी पंचांग उस सूची से पूरी तरह ग़ायब है। व्यवहार में ताइवान में इंडोनेशिया से आए लाखों प्रवासी कामगार हैं, और सामूहिक नमाज़ के लिए छुट्टी मिलेगी या नहीं यह नियोक्ता पर निर्भर है। श्रम मंत्रालय का तरीक़ा क़ानून में संशोधन नहीं, बल्कि लचीलेपन का आग्रह करता प्रेस विज्ञप्ति है। इसलिए यह दिन ऐसा दिखता है: मस्जिदें हमेशा की तरह भर जाती हैं, पर वह उपस्थिति निजी छुट्टी से चुकाई गई है।",
+        "id": "Taiwan. Undang-Undang Hari Peringatan dan Hari Libur menyebut hari Taoisme (tanggal satu bulan pertama Imlek) dan hari lahir Buddha (tanggal delapan bulan keempat Imlek) satu per satu, namun Idulfitri maupun Iduladha tak ada di sana; kalender Islam sama sekali absen dari daftar itu. Kenyataannya Taiwan menampung ratusan ribu pekerja migran asal Indonesia, dan apakah izin untuk salat berjamaah bisa didapat bergantung pada majikan. Cara Kementerian Ketenagakerjaan adalah siaran pers yang mengimbau keluwesan, bukan mengubah undang-undang. Maka beginilah rupa hari itu: masjid tetap penuh, tetapi kehadiran itu dibayar dengan cuti pribadi.",
+        "pt-BR": "Taiwan. A Lei das Datas Comemorativas e Feriados enumera o dia taoista (primeiro do primeiro mês lunar) e o nascimento do Buda (oitavo do quarto mês lunar), e ainda assim não traz nem o Eid al-Fitr nem o Eid al-Adha; o calendário islâmico simplesmente não está nessa lista. Na prática, Taiwan abriga centenas de milhares de trabalhadores migrantes vindos da Indonésia, e conseguir folga para a oração comunitária depende do empregador. A via do Ministério do Trabalho é um comunicado pedindo flexibilidade, não uma emenda. Então o dia se parece com isto: as mesquitas enchem como sempre, mas essa presença foi paga com férias pessoais."
+      }
+    },
+    {
+      "id": "q-20260916-diwali-days",
+      "date": "2026-09-16",
+      "kind": "poll",
+      "topic": "diwali",
+      "asker": "zh-TW",
+      "target": "hi",
+      "text": {
+        "zh-TW": "排燈節你們過幾天?",
+        "en": "How many days does Diwali last for you?",
+        "ja": "ディワリは何日間過ごしますか?",
+        "zh-CN": "排灯节你们过几天?",
+        "hi": "आपके यहाँ दीवाली कितने दिन चलती है?",
+        "id": "Berapa hari Diwali berlangsung bagi kalian?",
+        "pt-BR": "Quantos dias dura o Diwali para vocês?"
+      },
+      "options": [
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": {
+            "zh-TW": "一天",
+            "en": "One day",
+            "ja": "一日",
+            "zh-CN": "一天",
+            "hi": "एक दिन",
+            "id": "Satu hari",
+            "pt-BR": "Um dia"
+          }
+        },
+        {
+          "id": "three",
+          "emoji": "3️⃣",
+          "label": {
+            "zh-TW": "三天左右",
+            "en": "About three",
+            "ja": "三日ほど",
+            "zh-CN": "三天左右",
+            "hi": "लगभग तीन",
+            "id": "Sekitar tiga hari",
+            "pt-BR": "Cerca de três"
+          }
+        },
+        {
+          "id": "five",
+          "emoji": "5️⃣",
+          "label": {
+            "zh-TW": "五天",
+            "en": "Five days",
+            "ja": "五日間",
+            "zh-CN": "五天",
+            "hi": "पाँच दिन",
+            "id": "Lima hari",
+            "pt-BR": "Cinco dias"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": {
+            "zh-TW": "我們沒有排燈節",
+            "en": "We don't have Diwali",
+            "ja": "ディワリはない",
+            "zh-CN": "我们没有排灯节",
+            "hi": "हमारे यहाँ दीवाली नहीं",
+            "id": "Kami tak punya Diwali",
+            "pt-BR": "Não temos Diwali"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260916-ayurveda-day",
+      "date": "2026-09-16",
+      "kind": "guess",
+      "topic": "diwali",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群把排燈節五天裡的第一天,同時訂成全國的醫學日?",
+        "en": "Guess: which community also made the first of Diwali's five days a national day of medicine?",
+        "ja": "クイズ:ディワリ五日間の初日を、同時に全国の医学の日にも定めたのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群把排灯节五天里的第一天，同时订成全国的医学日?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय ने दीवाली के पाँच दिनों में से पहले दिन को एक राष्ट्रीय चिकित्सा दिवस भी बना दिया?",
+        "id": "Tebak: komunitas mana yang juga menjadikan hari pertama dari lima hari Diwali sebagai hari kedokteran nasional?",
+        "pt-BR": "Adivinhe: qual comunidade também transformou o primeiro dos cinco dias do Diwali num dia nacional da medicina?"
+      },
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        }
+      ],
+      "answer": "hi",
+      "explain": {
+        "zh-TW": "印度。第一天是 Dhanteras;二○一六年之後,印度政府把它同時訂為全國阿育吠陀日,理由是這天也是醫神曇梵陀利的誕辰。於是同一個日期上疊著兩件事:民間持續進行的購入金屬器物與點燈,以及一場由衛生部門主導的全國性推廣。傳統節日被拿來當公共衛生的日程,這種疊用在其餘四天上都沒有。五天的最後一天是 Bhai Dooj,走的是姊妹與兄弟之間的關係線——五天各自對應不同的對象,所以把排燈節理解成「一個晚上」會失準。",
+        "en": "India. The first day is Dhanteras; since 2016 the Indian government has also designated it National Ayurveda Day, on the ground that it is the birth anniversary of Dhanvantari, the physician of the gods. Two things therefore sit on the same date: the household buying of metal and the lighting of lamps that continue as before, and a nationwide campaign run by the health authorities. A traditional festival used as a public-health calendar slot happens on none of the other four days. The last of the five is Bhai Dooj, which follows the line between sisters and brothers — each of the five days addresses a different party, which is why treating Diwali as a single evening goes wrong.",
+        "ja": "インド。初日はダンテーラスである。二〇一六年以降、インド政府はこの日を全国アーユルヴェーダの日にも定めた。根拠は同日が医神ダンヴァンタリの生誕にあたることである。以来、同じ日付の上に二つの事柄が重なっている。従来どおり続く金属器の購入と灯明、そして保健当局が主導する全国的な啓発である。伝統の祭りを公衆衛生の日程として用いる例は、残る四日には見られない。五日目はバイ・ドゥージで、姉妹と兄弟の関係の線をたどる。五日はそれぞれ異なる相手に向いており、だからディワリを「一晩の行事」と捉えると外れる。",
+        "zh-CN": "印度。第一天是 Dhanteras；二〇一六年之后，印度政府把它同时订为全国阿育吠陀日，理由是这天也是医神昙梵陀利的诞辰。于是同一个日期上叠着两件事：民间持续进行的购入金属器物与点灯，以及一场由卫生部门主导的全国性推广。传统节日被拿来当公共卫生的日程，这种叠用在其余四天上都没有。五天的最后一天是 Bhai Dooj，走的是姊妹与兄弟之间的关系线——五天各自对应不同的对象，所以把排灯节理解成「一个晚上」会失准。",
+        "hi": "भारत। पहला दिन धनतेरस है; 2016 के बाद से भारत सरकार ने इसे राष्ट्रीय आयुर्वेद दिवस भी घोषित किया, इस आधार पर कि यही देवताओं के वैद्य धन्वंतरि का जन्म-दिवस है। इसलिए एक ही तारीख़ पर दो बातें बैठी हैं: पहले की तरह चलती धातु की ख़रीद और दीपों का जलना, और स्वास्थ्य विभाग द्वारा चलाया जाने वाला राष्ट्रव्यापी अभियान। किसी पारंपरिक पर्व का सार्वजनिक स्वास्थ्य के दिनक्रम के रूप में उपयोग बाक़ी चार दिनों में कहीं नहीं मिलता। पाँचवाँ दिन भाई दूज है, जो बहनों और भाइयों के बीच की रेखा पर चलता है — पाँचों दिन अलग-अलग पक्ष को संबोधित करते हैं, इसीलिए दीवाली को एक शाम मान लेना चूक है।",
+        "id": "India. Hari pertamanya Dhanteras; sejak 2016 pemerintah India juga menetapkannya sebagai Hari Ayurveda Nasional, dengan alasan hari itu merupakan hari kelahiran Dhanwantari, tabib para dewa. Karena itu dua hal duduk pada tanggal yang sama: pembelian logam di rumah tangga dan penyalaan pelita yang berjalan seperti sebelumnya, serta kampanye nasional yang dijalankan otoritas kesehatan. Perayaan tradisional dipakai sebagai slot kalender kesehatan masyarakat tidak terjadi pada empat hari lainnya. Hari kelima adalah Bhai Dooj, yang menyusuri garis antara saudara perempuan dan saudara laki-laki — kelima harinya menyapa pihak yang berbeda, itulah sebabnya memperlakukan Diwali sebagai satu malam menjadi keliru.",
+        "pt-BR": "Índia. O primeiro dia é o Dhanteras; desde 2016 o governo indiano também o designou Dia Nacional do Ayurveda, sob o argumento de ser o aniversário de Dhanvantari, o médico dos deuses. Duas coisas passam então a ocupar a mesma data: a compra doméstica de metal e o acender das lâmpadas, que seguem como antes, e uma campanha nacional conduzida pelas autoridades de saúde. Uma festa tradicional usada como espaço de calendário para saúde pública não ocorre em nenhum dos outros quatro dias. O último dos cinco é o Bhai Dooj, que segue a linha entre irmãs e irmãos — cada um dos cinco dias se dirige a uma parte diferente, e é por isso que tratar o Diwali como uma única noite dá errado."
+      }
+    },
+    {
+      "id": "q-20260917-homecoming-transport",
+      "date": "2026-09-17",
+      "kind": "poll",
+      "topic": "homecoming-and-reunion",
+      "asker": "en",
+      "target": "zh-CN",
+      "text": {
+        "zh-TW": "過年或大節返鄉,你們最常用什麼交通工具?",
+        "en": "To get home for the big holiday, what do you usually travel by?",
+        "ja": "大きな祝日に帰省するとき、たいてい何で移動しますか?",
+        "zh-CN": "过年或大节返乡，你们最常用什么交通工具?",
+        "hi": "बड़े त्योहार पर घर जाने के लिए आप आमतौर पर किससे यात्रा करते हैं?",
+        "id": "Untuk pulang kampung saat hari raya besar, kalian biasanya naik apa?",
+        "pt-BR": "Para voltar para casa no grande feriado, vocês costumam viajar de quê?"
+      },
+      "options": [
+        {
+          "id": "train",
+          "emoji": "🚄",
+          "label": {
+            "zh-TW": "火車或高鐵",
+            "en": "Train",
+            "ja": "鉄道",
+            "zh-CN": "火车或高铁",
+            "hi": "रेल",
+            "id": "Kereta",
+            "pt-BR": "Trem"
+          }
+        },
+        {
+          "id": "car",
+          "emoji": "🚗",
+          "label": {
+            "zh-TW": "自己開車",
+            "en": "By car",
+            "ja": "自家用車",
+            "zh-CN": "自己开车",
+            "hi": "अपनी गाड़ी",
+            "id": "Mobil sendiri",
+            "pt-BR": "De carro"
+          }
+        },
+        {
+          "id": "bus",
+          "emoji": "🚌",
+          "label": {
+            "zh-TW": "客運或巴士",
+            "en": "Coach or bus",
+            "ja": "高速バス",
+            "zh-CN": "客运或巴士",
+            "hi": "बस",
+            "id": "Bus",
+            "pt-BR": "Ônibus"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🏠",
+          "label": {
+            "zh-TW": "不用返鄉",
+            "en": "I don't travel",
+            "ja": "帰省しない",
+            "zh-CN": "不用返乡",
+            "hi": "मुझे जाना नहीं पड़ता",
+            "id": "Tak perlu mudik",
+            "pt-BR": "Não preciso viajar"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260917-obon-not-holiday",
+      "date": "2026-09-17",
+      "kind": "guess",
+      "topic": "homecoming-and-reunion",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群一年中最明顯的全國停擺,其實根本不是法定假日?",
+        "en": "Guess: in which community is the year's most visible nationwide pause not actually a statutory holiday at all?",
+        "ja": "クイズ:一年でもっとも目に見える全国的な停止が、実は法定の休日ですらないのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群一年中最明显的全国停摆，其实根本不是法定假日?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में वर्ष का सबसे स्पष्ट राष्ट्रीय ठहराव असल में वैधानिक अवकाश है ही नहीं?",
+        "id": "Tebak: di komunitas mana jeda nasional paling kentara sepanjang tahun sebenarnya sama sekali bukan hari libur menurut undang-undang?",
+        "pt-BR": "Adivinhe: em qual comunidade a pausa nacional mais visível do ano não é, na verdade, feriado legal algum?"
+      },
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "ja",
+      "explain": {
+        "zh-TW": "日本。お盆不是法定假日,卻是全年最明顯的一次全國性停擺:多數企業在八月中自行安排連休,返鄉的車潮與票價因此有固定的高峰。它之所以能一齊發生,正是因為大家把休假排在同一週——不是法律規定的,是彼此對齊的。門口的迎え火與送り火把整件事框成一趟往返:先點火接回來,幾天後再點火送走,中間的盆踊り是留在人間的那幾天。",
+        "en": "Japan. Obon is not a statutory holiday, yet it is the year's most visible national pause: most firms set their own closure in mid-August, so the homeward traffic and the fares have a fixed peak. It can happen all at once precisely because everyone places the break in the same week — not by law, but by aligning with each other. The welcome fire and the send-off fire at the door frame the whole thing as a round trip: a fire to bring them back, another a few days later to see them off, with the Bon dance filling the days between.",
+        "ja": "日本。お盆は法定の休日ではないが、一年でもっとも目に見える全国的な停止である。多くの企業が八月半ばに自ら連休を設けるため、帰省の車列も運賃も決まった山をつくる。一斉に起こりうるのは、まさに皆が休みを同じ週に置くからであって、法が定めたからではない。互いに合わせているのである。門口の迎え火と送り火は、この一連を往復として枠づける。火を焚いて迎え、数日後にまた火を焚いて送る。その間の日々を盆踊りが埋める。",
+        "zh-CN": "日本。お盆不是法定假日，却是全年最明显的一次全国性停摆：多数企业在八月中自行安排连休，返乡的车潮与票价因此有固定的高峰。它之所以能一齐发生，正是因为大家把休假排在同一周——不是法律规定的，是彼此对齐的。门口的迎え火与送り火把整件事框成一趟往返：先点火接回来，几天后再点火送走，中间的盆踊り是留在人间的那几天。",
+        "hi": "जापान। ओबोन वैधानिक अवकाश नहीं है, फिर भी यह वर्ष का सबसे स्पष्ट राष्ट्रीय ठहराव है: अधिकांश कंपनियाँ अगस्त के मध्य में अपनी बंदी स्वयं तय करती हैं, इसलिए घर लौटने का यातायात और किराए दोनों का एक निश्चित शिखर बनता है। यह एक साथ इसलिए हो पाता है क्योंकि सब अपनी छुट्टी उसी सप्ताह रखते हैं — क़ानून से नहीं, आपस में मिलान से। द्वार पर की स्वागत-अग्नि और विदाई-अग्नि पूरे प्रसंग को एक आवागमन के रूप में बाँधती हैं: एक आग उन्हें लौटा लाने को, कुछ दिन बाद दूसरी उन्हें विदा करने को, और बीच के दिनों को बोन नृत्य भरता है।",
+        "id": "Jepang. Obon bukan hari libur menurut undang-undang, namun ia jeda nasional yang paling kentara sepanjang tahun: kebanyakan perusahaan menetapkan sendiri liburnya pada pertengahan Agustus, sehingga arus pulang dan harga tiket punya puncak yang tetap. Ia bisa terjadi serentak justru karena semua menaruh liburnya pada pekan yang sama — bukan karena undang-undang, melainkan karena saling menyesuaikan. Api penyambut dan api pengantar di depan pintu membingkai seluruhnya sebagai perjalanan pulang-pergi: satu api untuk membawa mereka kembali, satu lagi beberapa hari kemudian untuk melepas, dan tarian Bon mengisi hari-hari di antaranya.",
+        "pt-BR": "Japão. O Obon não é feriado legal, e ainda assim é a pausa nacional mais visível do ano: a maioria das empresas marca o próprio fechamento em meados de agosto, de modo que o trânsito de volta e as tarifas têm um pico fixo. Ele acontece todo de uma vez justamente porque todos colocam a folga na mesma semana — não por lei, mas por se alinharem uns aos outros. O fogo de acolhida e o fogo de despedida à porta enquadram tudo como uma ida e volta: um fogo para trazê-los de volta, outro dias depois para despedi-los, e a dança Bon preenche os dias no meio."
+      }
+    },
+    {
+      "id": "q-20260918-birthday-elders",
+      "date": "2026-09-18",
+      "kind": "poll",
+      "topic": "birthdays-and-blessings",
+      "asker": "ja",
+      "target": "hi",
+      "text": {
+        "zh-TW": "生日那天,你們會先做什麼?",
+        "en": "On your birthday, what comes first?",
+        "ja": "誕生日の日、まず何をしますか?",
+        "zh-CN": "生日那天，你们会先做什么?",
+        "hi": "जन्मदिन पर सबसे पहले क्या होता है?",
+        "id": "Pada hari ulang tahun, apa yang dilakukan lebih dulu?",
+        "pt-BR": "No seu aniversário, o que vem primeiro?"
+      },
+      "options": [
+        {
+          "id": "elders",
+          "emoji": "🙏",
+          "label": {
+            "zh-TW": "向長輩行禮",
+            "en": "Greet the elders",
+            "ja": "年長者に挨拶する",
+            "zh-CN": "向长辈行礼",
+            "hi": "बड़ों का आशीर्वाद",
+            "id": "Sungkem kepada yang dituakan",
+            "pt-BR": "Cumprimentar os mais velhos"
+          }
+        },
+        {
+          "id": "temple",
+          "emoji": "🛕",
+          "label": {
+            "zh-TW": "去廟裡或教堂",
+            "en": "Go to the temple or church",
+            "ja": "寺社や教会へ行く",
+            "zh-CN": "去庙里或教堂",
+            "hi": "मंदिर या गिरजाघर जाना",
+            "id": "Ke tempat ibadah",
+            "pt-BR": "Ir ao templo ou à igreja"
+          }
+        },
+        {
+          "id": "cake",
+          "emoji": "🎂",
+          "label": {
+            "zh-TW": "切蛋糕",
+            "en": "Cut the cake",
+            "ja": "ケーキを切る",
+            "zh-CN": "切蛋糕",
+            "hi": "केक काटना",
+            "id": "Memotong kue",
+            "pt-BR": "Cortar o bolo"
+          }
+        },
+        {
+          "id": "nothing",
+          "emoji": "😌",
+          "label": {
+            "zh-TW": "什麼都不做",
+            "en": "Nothing in particular",
+            "ja": "特に何もしない",
+            "zh-CN": "什么都不做",
+            "hi": "ख़ास कुछ नहीं",
+            "id": "Tidak ada yang khusus",
+            "pt-BR": "Nada em especial"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260918-kanreki",
+      "date": "2026-09-18",
+      "kind": "guess",
+      "topic": "birthdays-and-blessings",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群給六十歲、七十歲、七十七歲各取了名字,而且各配一種顏色?",
+        "en": "Guess: which community gives sixty, seventy and seventy-seven each its own name, and each its own colour?",
+        "ja": "クイズ:六十歳、七十歳、七十七歳にそれぞれ名を与え、しかも各々に色を配しているのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群给六十岁、七十岁、七十七岁各取了名字，而且各配一种颜色?",
+        "hi": "अंदाज़ा लगाइए: कौन-सा समुदाय साठ, सत्तर और सतहत्तर — हर आयु को उसका अपना नाम और अपना रंग देता है?",
+        "id": "Tebak: komunitas mana yang memberi usia enam puluh, tujuh puluh, dan tujuh puluh tujuh masing-masing namanya sendiri, dan warnanya sendiri?",
+        "pt-BR": "Adivinhe: qual comunidade dá aos sessenta, setenta e setenta e sete anos, a cada um, um nome próprio e uma cor própria?"
+      },
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "ja",
+      "explain": {
+        "zh-TW": "日本。節目の年齡另有一套名字:六十歲還曆、七十歲古稀、七十七歲喜壽,各有對應的顏色與賀法。這與其他地方把生日當成一個逐年遞增的數字不同——這裡的年齡被切成有名字的段落,每一段的抵達本身就是一件要慶祝的事。對照:中國同一個人的公曆生日與農曆生日常常都被記著,過哪一個往往由家中長輩決定;印度則是當天到長輩面前行禮、到廟裡祈福,比切蛋糕更常被視為必要的一步。",
+        "en": "Japan. Milestone ages carry their own names: sixty is kanreki, seventy koki, seventy-seven kiju, each with its own colour and its own way of being marked. That differs from treating a birthday as a number that simply goes up each year — here age is cut into named stages, and arriving at one is itself the thing to celebrate. For contrast: in China both the Gregorian and the lunar birthday are usually remembered for the same person, and which one is kept tends to be decided by the elders; in India, touching the feet of elders and a visit to the temple are more often treated as the necessary step than cutting a cake is.",
+        "ja": "日本。節目の年齢にはそれぞれ名がある。六十歳の還暦、七十歳の古稀、七十七歳の喜寿。いずれも対応する色と祝い方をもつ。これは誕生日を毎年一つずつ増える数として扱うのとは異なる。ここでは年齢が名をもつ区切りに切り分けられ、その区切りに到達すること自体が祝うべき事柄となる。対照として、中国では同じ人について新暦の誕生日と旧暦の誕生日の両方が覚えられていることが多く、どちらで祝うかは家の年長者が決めることが多い。インドでは当日に年長者へ礼をし、寺院で祈ることが、ケーキを切ることよりも必要な手順とみなされることが多い。",
+        "zh-CN": "日本。节点的年龄另有一套名字：六十岁还历、七十岁古稀、七十七岁喜寿，各有对应的颜色与贺法。这与其他地方把生日当成一个逐年递增的数字不同——这里的年龄被切成有名字的段落，每一段的抵达本身就是一件要庆祝的事。对照：中国同一个人的公历生日与农历生日常常都被记着，过哪一个往往由家中长辈决定；印度则是当天到长辈面前行礼、到庙里祈福，比切蛋糕更常被视为必要的一步。",
+        "hi": "जापान। पड़ाव की आयुओं के अपने नाम हैं: साठ कानरेकि, सत्तर कोकि, सतहत्तर किजु — हर एक का अपना रंग और मनाने का अपना ढंग। यह जन्मदिन को हर वर्ष एक बढ़ती संख्या मानने से अलग है — यहाँ आयु नाम वाले चरणों में कटी है, और किसी चरण तक पहुँचना ही मनाने की बात है। तुलना: चीन में एक ही व्यक्ति के ग्रेगोरियन और चंद्र दोनों जन्मदिन प्रायः याद रखे जाते हैं, और कौन-सा मनाया जाए यह अक्सर घर के बुज़ुर्ग तय करते हैं; भारत में उस दिन बड़ों के चरण छूना और मंदिर जाना, केक काटने से कहीं अधिक बार आवश्यक क़दम माना जाता है।",
+        "id": "Jepang. Usia-usia penting punya namanya sendiri: enam puluh disebut kanreki, tujuh puluh koki, tujuh puluh tujuh kiju, masing-masing dengan warnanya dan cara merayakannya sendiri. Itu berbeda dari memperlakukan ulang tahun sebagai angka yang sekadar bertambah tiap tahun — di sini usia dipotong menjadi tahap-tahap bernama, dan sampai pada satu tahap itulah yang dirayakan. Pembanding: di Tiongkok ulang tahun Gregorius dan lunar biasanya sama-sama diingat untuk orang yang sama, dan mana yang dirayakan cenderung ditentukan yang dituakan; di India, menyentuh kaki orang tua dan berkunjung ke kuil lebih sering dianggap langkah wajib ketimbang memotong kue.",
+        "pt-BR": "Japão. As idades marcantes têm nomes próprios: sessenta é kanreki, setenta koki, setenta e sete kiju, cada uma com sua cor e seu modo de ser celebrada. Isso difere de tratar o aniversário como um número que só aumenta a cada ano — aqui a idade é cortada em etapas nomeadas, e chegar a uma delas é já o motivo da festa. Para contraste: na China costuma-se lembrar tanto o aniversário gregoriano quanto o lunar da mesma pessoa, e qual deles se comemora tende a ser decidido pelos mais velhos; na Índia, tocar os pés dos mais velhos e ir ao templo são mais frequentemente o passo necessário do que cortar um bolo."
+      }
     }
   ]
 }

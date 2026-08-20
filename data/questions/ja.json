@@ -2102,6 +2102,278 @@
       ],
       "answer": "zh-TW",
       "explain": "台湾。元宵は旧正月という一続きの期間の締めくくりである。正月十五日を過ぎてはじめて年は本当に明け、仕事は再開し、学校は始まる。休日ではないが、その晩、台湾じゅうが一斉に灯る日ではある。提灯を持ち、灯謎を解き、元宵を食べることに加え、台湾ランタンフェスティバルは県市の持ち回りで開かれるため、「今年はどこでやるのか」を毎年あらためて尋ねねばならない。「記念日及び節日実施条例」にもこう載る――「元宵節:旧暦一月十五日」。"
+    },
+    {
+      "question_id": "q-20260915-eid-leave",
+      "date": "2026-09-15",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRAREETBKDH28R9Y5EQ",
+      "topic_slug": "eid-al-adha",
+      "asker_locale": "pt-BR",
+      "target_locale": "id",
+      "text": "宗教の祭日に礼拝へ行くには、休みを取る必要がありますか?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🏖️",
+          "label": "もともと休みである"
+        },
+        {
+          "id": "leave",
+          "emoji": "📝",
+          "label": "自分の休暇を使う"
+        },
+        {
+          "id": "employer",
+          "emoji": "🤝",
+          "label": "雇用主の裁量による"
+        },
+        {
+          "id": "na",
+          "emoji": "🤷",
+          "label": "自分には関係ない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260915-no-islamic-days",
+      "date": "2026-09-15",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRAREETBKDH28R9Y5EQ",
+      "topic_slug": "eid-al-adha",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:祝日の法令が道教節と仏陀誕辰日を一つずつ挙げながら、イスラムの節期を一つも載せていないのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "台湾。「記念日及び節日実施条例」は道教節(旧暦一月一日)と仏陀誕辰日(旧暦四月八日)を一つずつ挙げているが、断食明けの祭りも犠牲祭もそこにない。イスラムの節期はこの一覧に存在しない。実際には台湾に数十万人のインドネシア出身の移住労働者がおり、集団礼拝のための休みが取れるかどうかは雇用主次第である。労働部のやり方は法改正ではなく、雇用主に柔軟な対応を促す報道発表を出すことだ。ゆえにこの日の姿はこうなる。モスクはいつもどおり満員だが、その出席は有給休暇で買われている。"
+    },
+    {
+      "question_id": "q-20260916-diwali-days",
+      "date": "2026-09-16",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": "zh-TW",
+      "target_locale": "hi",
+      "text": "ディワリは何日間過ごしますか?",
+      "options": [
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "一日"
+        },
+        {
+          "id": "three",
+          "emoji": "3️⃣",
+          "label": "三日ほど"
+        },
+        {
+          "id": "five",
+          "emoji": "5️⃣",
+          "label": "五日間"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "ディワリはない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260916-ayurveda-day",
+      "date": "2026-09-16",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:ディワリ五日間の初日を、同時に全国の医学の日にも定めたのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "answer": "hi",
+      "explain": "インド。初日はダンテーラスである。二〇一六年以降、インド政府はこの日を全国アーユルヴェーダの日にも定めた。根拠は同日が医神ダンヴァンタリの生誕にあたることである。以来、同じ日付の上に二つの事柄が重なっている。従来どおり続く金属器の購入と灯明、そして保健当局が主導する全国的な啓発である。伝統の祭りを公衆衛生の日程として用いる例は、残る四日には見られない。五日目はバイ・ドゥージで、姉妹と兄弟の関係の線をたどる。五日はそれぞれ異なる相手に向いており、だからディワリを「一晩の行事」と捉えると外れる。"
+    },
+    {
+      "question_id": "q-20260917-homecoming-transport",
+      "date": "2026-09-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": "en",
+      "target_locale": "zh-CN",
+      "text": "大きな祝日に帰省するとき、たいてい何で移動しますか?",
+      "options": [
+        {
+          "id": "train",
+          "emoji": "🚄",
+          "label": "鉄道"
+        },
+        {
+          "id": "car",
+          "emoji": "🚗",
+          "label": "自家用車"
+        },
+        {
+          "id": "bus",
+          "emoji": "🚌",
+          "label": "高速バス"
+        },
+        {
+          "id": "none",
+          "emoji": "🏠",
+          "label": "帰省しない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260917-obon-not-holiday",
+      "date": "2026-09-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:一年でもっとも目に見える全国的な停止が、実は法定の休日ですらないのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "answer": "ja",
+      "explain": "日本。お盆は法定の休日ではないが、一年でもっとも目に見える全国的な停止である。多くの企業が八月半ばに自ら連休を設けるため、帰省の車列も運賃も決まった山をつくる。一斉に起こりうるのは、まさに皆が休みを同じ週に置くからであって、法が定めたからではない。互いに合わせているのである。門口の迎え火と送り火は、この一連を往復として枠づける。火を焚いて迎え、数日後にまた火を焚いて送る。その間の日々を盆踊りが埋める。"
+    },
+    {
+      "question_id": "q-20260918-birthday-elders",
+      "date": "2026-09-18",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": "ja",
+      "target_locale": "hi",
+      "text": "誕生日の日、まず何をしますか?",
+      "options": [
+        {
+          "id": "elders",
+          "emoji": "🙏",
+          "label": "年長者に挨拶する"
+        },
+        {
+          "id": "temple",
+          "emoji": "🛕",
+          "label": "寺社や教会へ行く"
+        },
+        {
+          "id": "cake",
+          "emoji": "🎂",
+          "label": "ケーキを切る"
+        },
+        {
+          "id": "nothing",
+          "emoji": "😌",
+          "label": "特に何もしない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260918-kanreki",
+      "date": "2026-09-18",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:六十歳、七十歳、七十七歳にそれぞれ名を与え、しかも各々に色を配しているのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "answer": "ja",
+      "explain": "日本。節目の年齢にはそれぞれ名がある。六十歳の還暦、七十歳の古稀、七十七歳の喜寿。いずれも対応する色と祝い方をもつ。これは誕生日を毎年一つずつ増える数として扱うのとは異なる。ここでは年齢が名をもつ区切りに切り分けられ、その区切りに到達すること自体が祝うべき事柄となる。対照として、中国では同じ人について新暦の誕生日と旧暦の誕生日の両方が覚えられていることが多く、どちらで祝うかは家の年長者が決めることが多い。インドでは当日に年長者へ礼をし、寺院で祈ることが、ケーキを切ることよりも必要な手順とみなされることが多い。"
     }
   ]
 }

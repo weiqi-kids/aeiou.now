@@ -2102,6 +2102,278 @@
       ],
       "answer": "zh-TW",
       "explain": "台灣。元宵是農曆年這一整段的收尾:正月十五一過,年才算真的過完,該開工的開工、該開學的開學。它不是放假日,卻是全台當晚同時亮起來的一天——提燈籠、猜燈謎、吃元宵之外,台灣燈會由不同縣市輪流主辦,所以「今年在哪裡辦」每年都要重新問一次。《紀念日及節日實施條例》裡也列著它:「元宵節:農曆一月十五日」。"
+    },
+    {
+      "question_id": "q-20260915-eid-leave",
+      "date": "2026-09-15",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRAREETBKDH28R9Y5EQ",
+      "topic_slug": "eid-al-adha",
+      "asker_locale": "pt-BR",
+      "target_locale": "id",
+      "text": "宗教節日當天,你要請假才能去禮拜或做禮嗎?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🏖️",
+          "label": "本來就放假"
+        },
+        {
+          "id": "leave",
+          "emoji": "📝",
+          "label": "要請自己的假"
+        },
+        {
+          "id": "employer",
+          "emoji": "🤝",
+          "label": "看雇主願不願意"
+        },
+        {
+          "id": "na",
+          "emoji": "🤷",
+          "label": "不適用"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260915-no-islamic-days",
+      "date": "2026-09-15",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRAREETBKDH28R9Y5EQ",
+      "topic_slug": "eid-al-adha",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的節日法規逐條列出了道教節與佛陀誕辰日,卻沒有任何一個伊斯蘭節期?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "台灣。《紀念日及節日實施條例》逐條列出道教節(農曆一月一日)與佛陀誕辰日(農曆四月八日),卻沒有開齋節,也沒有宰牲節——伊斯蘭的節期在這份清單上完全不存在。實際上台灣有數十萬名來自印尼的移工,集體禮拜要不要請得到假取決於雇主;勞動部的做法是發新聞稿呼籲雇主給予彈性,而不是修法。於是這一天在台灣的樣子是:清真寺照常滿座,但那是用特休換來的。"
+    },
+    {
+      "question_id": "q-20260916-diwali-days",
+      "date": "2026-09-16",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": "zh-TW",
+      "target_locale": "hi",
+      "text": "排燈節你們過幾天?",
+      "options": [
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "一天"
+        },
+        {
+          "id": "three",
+          "emoji": "3️⃣",
+          "label": "三天左右"
+        },
+        {
+          "id": "five",
+          "emoji": "5️⃣",
+          "label": "五天"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "我們沒有排燈節"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260916-ayurveda-day",
+      "date": "2026-09-16",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群把排燈節五天裡的第一天,同時訂成全國的醫學日?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "answer": "hi",
+      "explain": "印度。第一天是 Dhanteras;二○一六年之後,印度政府把它同時訂為全國阿育吠陀日,理由是這天也是醫神曇梵陀利的誕辰。於是同一個日期上疊著兩件事:民間持續進行的購入金屬器物與點燈,以及一場由衛生部門主導的全國性推廣。傳統節日被拿來當公共衛生的日程,這種疊用在其餘四天上都沒有。五天的最後一天是 Bhai Dooj,走的是姊妹與兄弟之間的關係線——五天各自對應不同的對象,所以把排燈節理解成「一個晚上」會失準。"
+    },
+    {
+      "question_id": "q-20260917-homecoming-transport",
+      "date": "2026-09-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": "en",
+      "target_locale": "zh-CN",
+      "text": "過年或大節返鄉,你們最常用什麼交通工具?",
+      "options": [
+        {
+          "id": "train",
+          "emoji": "🚄",
+          "label": "火車或高鐵"
+        },
+        {
+          "id": "car",
+          "emoji": "🚗",
+          "label": "自己開車"
+        },
+        {
+          "id": "bus",
+          "emoji": "🚌",
+          "label": "客運或巴士"
+        },
+        {
+          "id": "none",
+          "emoji": "🏠",
+          "label": "不用返鄉"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260917-obon-not-holiday",
+      "date": "2026-09-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群一年中最明顯的全國停擺,其實根本不是法定假日?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "answer": "ja",
+      "explain": "日本。お盆不是法定假日,卻是全年最明顯的一次全國性停擺:多數企業在八月中自行安排連休,返鄉的車潮與票價因此有固定的高峰。它之所以能一齊發生,正是因為大家把休假排在同一週——不是法律規定的,是彼此對齊的。門口的迎え火與送り火把整件事框成一趟往返:先點火接回來,幾天後再點火送走,中間的盆踊り是留在人間的那幾天。"
+    },
+    {
+      "question_id": "q-20260918-birthday-elders",
+      "date": "2026-09-18",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": "ja",
+      "target_locale": "hi",
+      "text": "生日那天,你們會先做什麼?",
+      "options": [
+        {
+          "id": "elders",
+          "emoji": "🙏",
+          "label": "向長輩行禮"
+        },
+        {
+          "id": "temple",
+          "emoji": "🛕",
+          "label": "去廟裡或教堂"
+        },
+        {
+          "id": "cake",
+          "emoji": "🎂",
+          "label": "切蛋糕"
+        },
+        {
+          "id": "nothing",
+          "emoji": "😌",
+          "label": "什麼都不做"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260918-kanreki",
+      "date": "2026-09-18",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
+      "topic_slug": "birthdays-and-blessings",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群給六十歲、七十歲、七十七歲各取了名字,而且各配一種顏色?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "answer": "ja",
+      "explain": "日本。節目の年齡另有一套名字:六十歲還曆、七十歲古稀、七十七歲喜壽,各有對應的顏色與賀法。這與其他地方把生日當成一個逐年遞增的數字不同——這裡的年齡被切成有名字的段落,每一段的抵達本身就是一件要慶祝的事。對照:中國同一個人的公曆生日與農曆生日常常都被記著,過哪一個往往由家中長輩決定;印度則是當天到長輩面前行禮、到廟裡祈福,比切蛋糕更常被視為必要的一步。"
     }
   ]
 }
