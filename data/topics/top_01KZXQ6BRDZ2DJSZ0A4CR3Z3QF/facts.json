@@ -74,6 +74,70 @@
       }
     },
     {
+      "observance_id": "obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_CN_fathers-day",
+      "observance_key": "fathers-day",
+      "country_code": "CN",
+      "local_name": "父亲节（无官方地位）",
+      "observed_date": null,
+      "date_rule": "民间多跟随六月第三个星期日；《全国年节及纪念日放假办法》未列入",
+      "date_range_end": null,
+      "popularity_rank": 6,
+      "source_ids": [
+        "src_E30CC8DD2B2DC06E134ADC42"
+      ],
+      "source_urls": [
+        "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_CN_fathers-day_2026_2026-06-21",
+          "occurrence_year": 2026,
+          "starts_on": "2026-06-21",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_E30CC8DD2B2DC06E134ADC42"
+          ],
+          "source_urls": [
+            "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_CN_fathers-day_2027_2027-06-20",
+          "occurrence_year": 2027,
+          "starts_on": "2027-06-20",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_E30CC8DD2B2DC06E134ADC42"
+          ],
+          "source_urls": [
+            "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_CN_fathers-day_2027_2027-06-20",
+        "occurrence_year": 2027,
+        "starts_on": "2027-06-20",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Shanghai",
+        "date_status": "local-variant",
+        "source_ids": [
+          "src_E30CC8DD2B2DC06E134ADC42"
+        ],
+        "source_urls": [
+          "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+        ],
+        "distance_days": 304
+      }
+    },
+    {
       "observance_id": "obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_ID_hari-ayah",
       "observance_key": "hari-ayah",
       "country_code": "ID",
@@ -135,6 +199,70 @@
           "https://www.pa-tulungagung.go.id/en/peraturan-dan-kebijakan/ucapan-selamat-dan-duka/1156-hari-ayah-nasional-sabtu-12-november-2022"
         ],
         "distance_days": 84
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_IN_fathers-day",
+      "observance_key": "fathers-day",
+      "country_code": "IN",
+      "local_name": "Father's Day（非公定假日）",
+      "observed_date": null,
+      "date_rule": "民間跟隨六月第三個星期日；未列入中央或邦的假日表",
+      "date_range_end": null,
+      "popularity_rank": 7,
+      "source_ids": [
+        "src_2DC197BDC32AB8A3D7278D4D"
+      ],
+      "source_urls": [
+        "https://www.india.gov.in/calendar"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_IN_fathers-day_2026_2026-06-21",
+          "occurrence_year": 2026,
+          "starts_on": "2026-06-21",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_2DC197BDC32AB8A3D7278D4D"
+          ],
+          "source_urls": [
+            "https://www.india.gov.in/calendar"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_IN_fathers-day_2027_2027-06-20",
+          "occurrence_year": 2027,
+          "starts_on": "2027-06-20",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_2DC197BDC32AB8A3D7278D4D"
+          ],
+          "source_urls": [
+            "https://www.india.gov.in/calendar"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_IN_fathers-day_2027_2027-06-20",
+        "occurrence_year": 2027,
+        "starts_on": "2027-06-20",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Kolkata",
+        "date_status": "local-variant",
+        "source_ids": [
+          "src_2DC197BDC32AB8A3D7278D4D"
+        ],
+        "source_urls": [
+          "https://www.india.gov.in/calendar"
+        ],
+        "distance_days": 304
       }
     },
     {
@@ -347,9 +475,21 @@
       ]
     },
     {
+      "country_code": "CN",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_CN_fathers-day"
+      ]
+    },
+    {
       "country_code": "ID",
       "observance_ids": [
         "obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_ID_hari-ayah"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_IN_fathers-day"
       ]
     },
     {
@@ -374,18 +514,22 @@
   "relations": [],
   "source_ids": [
     "src_1E152C895EC6C50083B45FD7",
+    "src_2DC197BDC32AB8A3D7278D4D",
     "src_5DE298026ADE5CAAE46B69C5",
     "src_917F7125FBE98C97DA840082",
     "src_C654C37ACD3A53ABB5A2F5D2",
     "src_D1106DA30B86209191F39C0D",
+    "src_E30CC8DD2B2DC06E134ADC42",
     "src_F045C3336BEF6186024CF028"
   ],
   "source_urls": [
     "https://history.house.gov/Historical-Highlights/1951-2000/Father-s-Day-becomes-a-national-holiday/",
+    "https://www.india.gov.in/calendar",
     "https://www2.census.gov/programs-surveys/sis/resources/fathers-day-ff.pdf",
     "https://www2.portoalegre.rs.gov.br/pwdtcomemorativas/default.php?reg=22&p_secao=13",
     "https://www.maff.go.jp/j/seisan/kaki/flower/attach/pdf/index-113.pdf",
     "https://www.pa-tulungagung.go.id/en/peraturan-dan-kebijakan/ucapan-selamat-dan-duka/1156-hari-ayah-nasional-sabtu-12-november-2022",
+    "https://www.gov.cn/zhengce/content/202411/content_6986380.htm",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
   ]
 }

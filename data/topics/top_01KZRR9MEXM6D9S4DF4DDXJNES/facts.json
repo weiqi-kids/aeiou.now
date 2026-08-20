@@ -74,6 +74,78 @@
       }
     },
     {
+      "observance_id": "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_ID_valentine",
+      "observance_key": "valentine",
+      "country_code": "ID",
+      "local_name": "Hari Valentine",
+      "observed_date": "02-14",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_3C6F2BD13BBE8890809B25D2",
+        "src_617A8FE68E97279B823DB82F"
+      ],
+      "source_urls": [
+        "https://berita.depok.go.id/disdik-depok-keluarkan-se-larangan-rayakan-hari-valentine",
+        "https://kepriprov.go.id/berita/pemprov-kepri/disdik-kepri-imbau-pelajar-tidak-rayakan-valentine-day"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_ID_valentine_2026_2026-02-14",
+          "occurrence_year": 2026,
+          "starts_on": "2026-02-14",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_3C6F2BD13BBE8890809B25D2",
+            "src_617A8FE68E97279B823DB82F"
+          ],
+          "source_urls": [
+            "https://berita.depok.go.id/disdik-depok-keluarkan-se-larangan-rayakan-hari-valentine",
+            "https://kepriprov.go.id/berita/pemprov-kepri/disdik-kepri-imbau-pelajar-tidak-rayakan-valentine-day"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_ID_valentine_2027_2027-02-14",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-14",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_3C6F2BD13BBE8890809B25D2",
+            "src_617A8FE68E97279B823DB82F"
+          ],
+          "source_urls": [
+            "https://berita.depok.go.id/disdik-depok-keluarkan-se-larangan-rayakan-hari-valentine",
+            "https://kepriprov.go.id/berita/pemprov-kepri/disdik-kepri-imbau-pelajar-tidak-rayakan-valentine-day"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_ID_valentine_2027_2027-02-14",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-14",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Jakarta",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_3C6F2BD13BBE8890809B25D2",
+          "src_617A8FE68E97279B823DB82F"
+        ],
+        "source_urls": [
+          "https://berita.depok.go.id/disdik-depok-keluarkan-se-larangan-rayakan-hari-valentine",
+          "https://kepriprov.go.id/berita/pemprov-kepri/disdik-kepri-imbau-pelajar-tidak-rayakan-valentine-day"
+        ],
+        "distance_days": 178
+      }
+    },
+    {
       "observance_id": "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_IN_valentine-week",
       "observance_key": "valentine-week",
       "country_code": "IN",
@@ -407,6 +479,12 @@
       ]
     },
     {
+      "country_code": "ID",
+      "observance_ids": [
+        "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_ID_valentine"
+      ]
+    },
+    {
       "country_code": "IN",
       "observance_ids": [
         "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_IN_valentine-week"
@@ -436,7 +514,9 @@
   "source_ids": [
     "src_22199C1201C93256B927C8CD",
     "src_349AAEF81832D0D01AC5B7D3",
+    "src_3C6F2BD13BBE8890809B25D2",
     "src_509D6FE3CDE66C39605277AB",
+    "src_617A8FE68E97279B823DB82F",
     "src_6615FC37B36E4CC8B9C9F802",
     "src_8881C7B43193D1F50ED0E47C",
     "src_8CDDEB64F7778CE62869A3EF",
@@ -447,7 +527,9 @@
   "source_urls": [
     "https://www.justica.pr.gov.br/Noticia/Dia-dos-Namorados-Procon-PR-orienta-consumidores-sobre-compras-e-trocas-de-presentes",
     "https://www.census.gov/newsroom/stories/valentines-day.html",
+    "https://berita.depok.go.id/disdik-depok-keluarkan-se-larangan-rayakan-hari-valentine",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+    "https://kepriprov.go.id/berita/pemprov-kepri/disdik-kepri-imbau-pelajar-tidak-rayakan-valentine-day",
     "https://nit.immigration.gov.tw/Multicultural/Detail/1000013",
     "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays",
     "https://www.stat.go.jp/data/kakei/tsushin/pdf/29_2.pdf",
