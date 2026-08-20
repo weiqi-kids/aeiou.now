@@ -280,6 +280,80 @@
       }
     },
     {
+      "observance_id": "obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_TW_farmers-day",
+      "observance_key": "farmers-day",
+      "country_code": "TW",
+      "local_name": "農民節",
+      "observed_date": null,
+      "date_rule": "定於立春日（《紀念日及節日實施條例》；立春日期依中央氣象署日曆資料表）",
+      "date_range_end": null,
+      "popularity_rank": 6,
+      "source_ids": [
+        "src_F045C3336BEF6186024CF028",
+        "src_D0BB51F7A5E737A80C3188C8",
+        "src_D04C9CFB17E17EB08C514FEA"
+      ],
+      "source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+        "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf",
+        "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_TW_farmers-day_2026_2026-02-04",
+          "occurrence_year": 2026,
+          "starts_on": "2026-02-04",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_F045C3336BEF6186024CF028",
+            "src_D0BB51F7A5E737A80C3188C8"
+          ],
+          "source_urls": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+            "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_TW_farmers-day_2027_2027-02-04",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-04",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_F045C3336BEF6186024CF028",
+            "src_D04C9CFB17E17EB08C514FEA"
+          ],
+          "source_urls": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+            "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_TW_farmers-day_2027_2027-02-04",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-04",
+        "ends_on": null,
+        "calendar_system": "solar-term",
+        "timezone": "Asia/Taipei",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_F045C3336BEF6186024CF028",
+          "src_D04C9CFB17E17EB08C514FEA"
+        ],
+        "source_urls": [
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+          "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf"
+        ],
+        "distance_days": 168
+      }
+    },
+    {
       "observance_id": "obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_US_thanksgiving",
       "observance_key": "thanksgiving",
       "country_code": "US",
@@ -371,6 +445,12 @@
       ]
     },
     {
+      "country_code": "TW",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_TW_farmers-day"
+      ]
+    },
+    {
       "country_code": "US",
       "observance_ids": [
         "obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_US_thanksgiving"
@@ -387,9 +467,12 @@
     "src_A188F3A2F09C0A4FCCE4F9FF",
     "src_BE0F64A0D2B42E20E4A5D1EC",
     "src_BF1D1C56F02953717935FCC1",
+    "src_D04C9CFB17E17EB08C514FEA",
+    "src_D0BB51F7A5E737A80C3188C8",
     "src_D0FD9DC03437F523B16F8FEA",
     "src_DF8DE78424784A70528F1F50",
     "src_E405440D6A7FBA9FBC2398FD",
+    "src_F045C3336BEF6186024CF028",
     "src_F936765E8EFFBF4BDCD32B47"
   ],
   "source_urls": [
@@ -401,9 +484,12 @@
     "https://www.gov.br/turismo/pt-br/assuntos/noticias/festejos-juninos-comecam-no-nordeste-cidades-projetam-mais-publico-e-faturamento-maior-em-2026",
     "https://www.sci.gov.in/holiday/makar-sankranti-magh-bihu-pongal-2026/",
     "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku/keii.html",
+    "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf",
+    "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf",
     "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5444575.htm",
     "https://www.incredibleindia.gov.in/en/colours-of-india",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
     "https://www.usa.gov/holidays"
   ]
 }

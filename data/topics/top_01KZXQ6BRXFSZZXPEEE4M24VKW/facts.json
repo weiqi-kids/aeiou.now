@@ -74,6 +74,70 @@
       }
     },
     {
+      "observance_id": "obs_top_01KZXQ6BRXFSZZXPEEE4M24VKW_CN_mothers-day",
+      "observance_key": "mothers-day",
+      "country_code": "CN",
+      "local_name": "母亲节（无官方地位）",
+      "observed_date": null,
+      "date_rule": "民间多跟随五月第二个星期日；《全国年节及纪念日放假办法》未列入",
+      "date_range_end": null,
+      "popularity_rank": 6,
+      "source_ids": [
+        "src_E30CC8DD2B2DC06E134ADC42"
+      ],
+      "source_urls": [
+        "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRXFSZZXPEEE4M24VKW_CN_mothers-day_2026_2026-05-10",
+          "occurrence_year": 2026,
+          "starts_on": "2026-05-10",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_E30CC8DD2B2DC06E134ADC42"
+          ],
+          "source_urls": [
+            "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRXFSZZXPEEE4M24VKW_CN_mothers-day_2027_2027-05-09",
+          "occurrence_year": 2027,
+          "starts_on": "2027-05-09",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_E30CC8DD2B2DC06E134ADC42"
+          ],
+          "source_urls": [
+            "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRXFSZZXPEEE4M24VKW_CN_mothers-day_2027_2027-05-09",
+        "occurrence_year": 2027,
+        "starts_on": "2027-05-09",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Shanghai",
+        "date_status": "local-variant",
+        "source_ids": [
+          "src_E30CC8DD2B2DC06E134ADC42"
+        ],
+        "source_urls": [
+          "https://www.gov.cn/zhengce/content/202411/content_6986380.htm"
+        ],
+        "distance_days": 262
+      }
+    },
+    {
       "observance_id": "obs_top_01KZXQ6BRXFSZZXPEEE4M24VKW_ID_hari-ibu",
       "observance_key": "hari-ibu",
       "country_code": "ID",
@@ -135,6 +199,70 @@
           "https://www.djkn.kemenkeu.go.id/kpknl-singaraja/baca-artikel/16715/Memahami-Lebih-Jauh-Tentang-Sejarah-Peringatan-Hari-Ibu-di-Indonesia.html"
         ],
         "distance_days": 124
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BRXFSZZXPEEE4M24VKW_IN_mothers-day",
+      "observance_key": "mothers-day",
+      "country_code": "IN",
+      "local_name": "Mother's Day（非公定假日）",
+      "observed_date": null,
+      "date_rule": "民間跟隨五月第二個星期日；未列入中央或邦的假日表",
+      "date_range_end": null,
+      "popularity_rank": 7,
+      "source_ids": [
+        "src_2DC197BDC32AB8A3D7278D4D"
+      ],
+      "source_urls": [
+        "https://www.india.gov.in/calendar"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRXFSZZXPEEE4M24VKW_IN_mothers-day_2026_2026-05-10",
+          "occurrence_year": 2026,
+          "starts_on": "2026-05-10",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_2DC197BDC32AB8A3D7278D4D"
+          ],
+          "source_urls": [
+            "https://www.india.gov.in/calendar"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRXFSZZXPEEE4M24VKW_IN_mothers-day_2027_2027-05-09",
+          "occurrence_year": 2027,
+          "starts_on": "2027-05-09",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_2DC197BDC32AB8A3D7278D4D"
+          ],
+          "source_urls": [
+            "https://www.india.gov.in/calendar"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRXFSZZXPEEE4M24VKW_IN_mothers-day_2027_2027-05-09",
+        "occurrence_year": 2027,
+        "starts_on": "2027-05-09",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Kolkata",
+        "date_status": "local-variant",
+        "source_ids": [
+          "src_2DC197BDC32AB8A3D7278D4D"
+        ],
+        "source_urls": [
+          "https://www.india.gov.in/calendar"
+        ],
+        "distance_days": 262
       }
     },
     {
@@ -339,9 +467,21 @@
       ]
     },
     {
+      "country_code": "CN",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRXFSZZXPEEE4M24VKW_CN_mothers-day"
+      ]
+    },
+    {
       "country_code": "ID",
       "observance_ids": [
         "obs_top_01KZXQ6BRXFSZZXPEEE4M24VKW_ID_hari-ibu"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRXFSZZXPEEE4M24VKW_IN_mothers-day"
       ]
     },
     {
@@ -365,17 +505,21 @@
   ],
   "relations": [],
   "source_ids": [
+    "src_2DC197BDC32AB8A3D7278D4D",
     "src_7FA6E53CD2C353F7F113EE5F",
     "src_825D02F8371E22CF117FA5D1",
     "src_C44A88C2267690A3EC2364A9",
     "src_C654C37ACD3A53ABB5A2F5D2",
+    "src_E30CC8DD2B2DC06E134ADC42",
     "src_F045C3336BEF6186024CF028"
   ],
   "source_urls": [
+    "https://www.india.gov.in/calendar",
     "https://history.house.gov/HistoricalHighlight/Detail/35444",
     "https://www.djkn.kemenkeu.go.id/kpknl-singaraja/baca-artikel/16715/Memahami-Lebih-Jauh-Tentang-Sejarah-Peringatan-Hari-Ibu-di-Indonesia.html",
     "https://www.camara.leg.br/noticias/1061356-congresso-se-ilumina-de-rosa-neste-domingo-12-pelo-dia-das-maes/",
     "https://www.maff.go.jp/j/seisan/kaki/flower/attach/pdf/index-113.pdf",
+    "https://www.gov.cn/zhengce/content/202411/content_6986380.htm",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
   ]
 }

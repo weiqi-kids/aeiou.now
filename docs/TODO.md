@@ -50,6 +50,37 @@ node scripts/check-source-urls.mjs              # 來源連結存活(404/410、�
 - [ ] **持續工作:新增 Topic 一律要一次補到水位**。閘門會擋,但擋下來的是部署不是內容——
   別靠閘門提醒才想到要寫。
 
+### 補資料:讀者在自己國家那一格看到空白(2026-08-20 開工)
+
+**缺口清單一律用指令查,不要讀這段的數字**:
+
+```bash
+node -e "const fs=require('fs');const CC=['TW','US','JP','CN','IN','ID','BR'];let n=0;
+for(const e of fs.readdirSync('data/topics')){if(!e.startsWith('top_'))continue;
+const fp='data/topics/'+e+'/facts.json';if(!fs.existsSync(fp))continue;
+const f=JSON.parse(fs.readFileSync(fp,'utf8'));
+if(f.status!=='active'||String(f.slug).startsWith('trend-'))continue;
+const have=new Set([...(f.observances||[]).map(o=>o.country_code),...(f.regional_notes||[]).map(x=>x.country_code)]);
+const miss=CC.filter(c=>!have.has(c));if(miss.length){n+=miss.length;console.log(String(miss.length).padStart(2),f.slug.padEnd(34),miss.join(','));}}
+console.log('缺口',n,'格');"
+```
+
+七個站台各對應一個國家(zh-TW→TW、en→US、ja→JP、zh-CN→CN、hi→IN、id→ID、pt-BR→BR)。
+某個 Topic 缺某國,就代表**那個站的讀者在那一頁上看不到自己的國家**。
+發現的路徑是 `node scripts/seo-health.mjs` ③ 的「查詢×頁面」對照表:
+排名第 9 的 `kapan hari valentine 2027` 落在 id 站的 affection-and-reciprocity,
+而那個 Topic 當時沒有任何 ID 條目。
+
+**填的判準(重要,寧缺勿造)**:
+- ✅ **有一手來源可查的事實**才寫,包含「這裡沒有這個節日」這種**缺席事實**——
+  缺席要能從該國官方名單證明(例:中國父親節/母親節不在《全國年節及紀念日放假辦法》兩類名單;
+  台灣《紀念日及節日實施條例》逐條列了道教節、佛陀誕辰日卻沒有開齋節與宰牲節)。
+- ⛔ **查不到就不要填**。剩下的缺口多半是真的沒有(日本沒有排燈節、美國沒有元宵),
+  硬寫一段等於捏造,比空白更糟。
+- ⛔ observance 需要日期;純粹「這裡沒有」而**沒有日期**的情況,現行資料模型沒有地方放
+  (regional_notes 由 `generate-regional-notes.mjs` 產生,而它要求七國齊全)。
+  要處理這類缺席,得先決定資料模型怎麼表達「有立場但沒有日期」——**屬設計決定,動工前先問用戶**。
+
 ### 事故:兩種「狀態碼騙人」的來源(2026-08-20)
 
 兩個坑都長成同一個樣子——**HTTP 狀態碼說活著,實際上不是**。下面是當時的事實紀錄;

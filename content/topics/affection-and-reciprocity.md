@@ -46,6 +46,20 @@
 - rank: 1
 - source: https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays
 
+## observance ID valentine
+- local_name: Hari Valentine
+- date: 02-14
+- rank: 1
+- source: https://berita.depok.go.id/disdik-depok-keluarkan-se-larangan-rayakan-hari-valentine
+- source: https://kepriprov.go.id/berita/pemprov-kepri/disdik-kepri-imbau-pelajar-tidak-rayakan-valentine-day
+
+## observance CN valentine
+- local_name: 情人节（2月14日）
+- date: 02-14
+- rank: 1
+- source: https://www.gov.cn/zhengce/content/202411/content_6986380.htm
+- source: https://www.gov.cn/gongbao/content/2006/content_334718.htm
+
 ## locale zh-TW
 ### title
 情人節
@@ -65,6 +79,10 @@
 巴西的情人節在六月十二日，不是二月十四日。日期選在聖安東尼日（六月十三日）前一天——聖安東尼在巴西被視為主管姻緣的聖人。所以巴西的情人節是接在宗教曆後面的，而不是跟著北半球的二月。它也剛好落在六月節那個月，整個六月都是熱鬧的。
 ### customs IN valentine-week
 印度把情人節拉成一整週：二月七日到十四日，每天各有名目（玫瑰日、巧克力日等），最後一天才是情人節本身。這個「情人週」是近幾十年由商業與媒體形成的，並非傳統節日；它在都市與年輕族群裡明顯，在其他地方與世代裡則不一定被採用。對照印度的全國假日清單就更清楚了：那份清單裡有共和日、獨立日、甘地誕辰、排燈節、開齋節、聖誕節等十七項，沒有情人節，也沒有二月的任何一天屬於它。情人週的存在完全在國家行事曆之外。
+### customs ID valentine
+印尼的二月十四日不是假日,而且它在制度上留下的痕跡是**反方向**的:每年這個日子前後, 不少地方政府的教育局會發出通函(surat edaran),要求轄內學校勸阻學生慶祝。 西爪哇的德波市二○二三年發過一份、東爪哇的巴蘇魯安縣二○一七年發過一份、廖內群島省教育局 也對高中與職校發過勸導。這些文件的理由寫得很直白:與宗教、社會與文化規範不合。 於是在這一頁的七個地方裡,印尼是唯一一個「官方文件提到這個節日,是為了叫人不要過」的地方。
+### customs CN valentine
+中國的二月十四日沒有任何官方地位——《全國年節及紀念日放假辦法》兩類名單都沒有它。 真正被國家認可的是另一個:七夕。二○○六年國務院公布第一批國家級非物質文化遺產名錄(國發〔2006〕18 號, 共 518 項),七夕節列在第 Ⅸ—4 項。於是同一個社會裡,商業聲量最大的那一天沒有制度身分, 制度承認的那一天則被登記為「需要保護的遺產」——被保護意味著它被判斷為正在流失。
 
 ## locale en
 ### title
@@ -85,6 +103,10 @@ Valentine's Day in the United States is 14 February, a single day, not a holiday
 Brazil's day for couples is 12 June, not 14 February. The date sits the day before the feast of Saint Anthony on 13 June — in Brazil, the saint associated with matchmaking. So the Brazilian Valentine's follows the religious calendar rather than the northern-hemisphere February. It also falls inside the June festival month, so the whole of June is busy.
 ### customs IN valentine-week
 India stretches Valentine's into a full week, from 7 to 14 February, with each day given its own name — rose day, chocolate day and so on — and Valentine's Day itself at the end. This 'Valentine Week' was formed over recent decades by commerce and media rather than being a traditional festival; it is prominent in cities and among younger people, and not necessarily taken up elsewhere or across generations.Setting it against India's national holiday list makes the position clearer: that list runs to seventeen entries including Republic Day, Independence Day, Gandhi's birthday, Diwali, Id-ul-Fitr and Christmas, and Valentine's is not on it, nor is any day in February assigned to it. Valentine Week exists entirely outside the national calendar.
+### customs ID valentine
+The fourteenth of February is not a holiday in Indonesia, and the institutional trace it leaves runs the other way: around the date each year, education offices in a number of local governments issue circulars — surat edaran — asking schools in their area to discourage students from marking it. Depok in West Java issued one in 2023, Pasuruan Regency in East Java in 2017, and the Riau Islands provincial education office advised its senior and vocational secondary schools likewise. The stated reason is plain: it does not fit religious, social and cultural norms. Among the seven places on this page, Indonesia is the only one where the official paperwork mentions the day in order to tell people not to observe it.
+### customs CN valentine
+The fourteenth of February carries no official standing in China — neither list in the Measures on National Holidays and Commemorative Days contains it. What the state does recognise is the other one: Qixi. In 2006 the State Council published the first national list of intangible cultural heritage (State Council Document No. 18 of 2006, 518 items), and the Qixi festival appears as item IX-4. So in one society the day with the loudest commercial voice has no institutional identity, while the day the institutions do acknowledge is registered as heritage in need of protection — and being protected means it was judged to be slipping away.
 
 ## locale ja
 ### title
@@ -105,6 +127,10 @@ India stretches Valentine's into a full week, from 7 to 14 February, with each d
 ブラジルの恋人の日は6月12日で、2月14日ではない。この日付は6月13日の聖アントニオの祝日の前日にあたる。ブラジルで聖アントニオは縁結びの聖人とされているからだ。つまりブラジルのバレンタインは、北半球の2月ではなく宗教暦に続いている。しかも六月祭の月に入るため、6月はまるごと賑やかである。
 ### customs IN valentine-week
 インドはバレンタインを一週間に引き延ばす。2月7日から14日まで、ローズデー、チョコレートデーなど日ごとに名前があり、最終日がバレンタインデー本体になる。この「バレンタイン・ウィーク」は伝統的な祭りではなく、ここ数十年に商業とメディアが形づくったものだ。都市部と若い世代では目立つが、それ以外の場所や世代では必ずしも受け入れられていない。インドの全国祝日一覧と並べると位置がはっきりする。その一覧は共和国記念日、独立記念日、ガンディー生誕、ディワリ、イド・ウル・フィトル、クリスマスなど17項目からなるが、バレンタインは入っておらず、2月のどの日もそれに充てられていない。バレンタイン・ウィークは国の暦の完全に外側にある。
+### customs ID valentine
+インドネシアにおいて二月十四日は休日ではなく、制度上に残る痕跡はむしろ**逆向き**である。 毎年この日の前後になると、いくつもの地方政府の教育局が通達(スラット・エダラン)を出し、 管内の学校に対して生徒が祝わないよう指導することを求める。西ジャワのデポック市は二〇二三年に、 東ジャワのパスルアン県は二〇一七年に出しており、リアウ諸島州の教育局も高校・職業高校に同様の勧告を行った。 理由は明快で、宗教的・社会的・文化的な規範に合わないというものである。 このページの七つの地域のうち、公文書がこの日に言及するのが「祝うな」と告げるためである地域は、 インドネシアだけである。
+### customs CN valentine
+中国において二月十四日は公的な位置づけを一切もたない。「全国年節及び記念日休暇弁法」の二つの名簿の いずれにもこの日はない。国家が認めているのはもう一方、七夕である。二〇〇六年、国務院は第一次国家級 無形文化遺産名録(国発〔2006〕18号、計518項)を公布し、七夕節は第Ⅸ—4項として掲げられた。 同じ社会の中で、商業的にもっとも声の大きい日には制度上の身分がなく、制度が認める日のほうは 「保護を要する遺産」として登録されている。保護されるとは、失われつつあると判断されたということである。
 
 ## locale zh-CN
 ### title
@@ -125,6 +151,10 @@ India stretches Valentine's into a full week, from 7 to 14 February, with each d
 巴西的情人节在6月12日，不是2月14日。日期选在圣安东尼日（6月13日）前一天——圣安东尼在巴西被视为主管姻缘的圣人。所以巴西的情人节是接在宗教历后面的，而不是跟着北半球的2月。它也刚好落在六月节那个月，整个6月都是热闹的。
 ### customs IN valentine-week
 印度把情人节拉成一整周：2月7日到14日，每天各有名目（玫瑰日、巧克力日等），最后一天才是情人节本身。这个“情人周”是近几十年由商业与媒体形成的，并非传统节日；它在都市与年轻族群里明显，在其他地方与世代里则不一定被采用。对照印度的全国假日清单就更清楚了：那份清单里有共和日、独立日、甘地诞辰、排灯节、开斋节、圣诞节等17项，没有情人节，也没有2月的任何一天属于它。情人周的存在完全在国家行事历之外。
+### customs ID valentine
+印尼的二月十四日不是假日，而且它在制度上留下的痕迹是**反方向**的：每年这个日子前后， 不少地方政府的教育局会发出通函（surat edaran），要求辖内学校劝阻学生庆祝。 西爪哇的德波市二〇二三年发过一份、东爪哇的巴苏鲁安县二〇一七年发过一份、廖内群岛省教育局 也对高中与职校发过劝导。这些文件的理由写得很直白：与宗教、社会与文化规范不合。 于是在这一页的七个地方里，印尼是唯一一个「官方文件提到这个节日，是为了叫人不要过」的地方。
+### customs CN valentine
+中国的二月十四日没有任何官方地位——《全国年节及纪念日放假办法》两类名单都没有它。 真正被国家认可的是另一个：七夕。二〇〇六年国务院公布第一批国家级非物质文化遗产名录（国发〔2006〕18 号， 共 518 项），七夕节列在第 Ⅸ—4 项。于是同一个社会里，商业声量最大的那一天没有制度身分， 制度承认的那一天则被登记为「需要保护的遗产」——被保护意味着它被判断为正在流失。
 
 ## locale hi
 ### title
@@ -145,6 +175,10 @@ India stretches Valentine's into a full week, from 7 to 14 February, with each d
 ब्राज़ील का प्रेमी दिवस 12 जून है, 14 फ़रवरी नहीं। यह तारीख़ 13 जून के संत एंटोनी पर्व से ठीक एक दिन पहले पड़ती है — ब्राज़ील में वही संत विवाह-संयोग से जोड़े जाते हैं। यानी ब्राज़ीली वैलेंटाइन उत्तरी गोलार्ध की फ़रवरी नहीं, धार्मिक पंचांग का अनुसरण करता है। और चूँकि यह जून उत्सवों के महीने में पड़ता है, पूरा जून व्यस्त रहता है।
 ### customs IN valentine-week
 भारत वैलेंटाइन को पूरे सप्ताह में फैला देता है, 7 से 14 फ़रवरी तक, जिसमें हर दिन का अपना नाम है — रोज़ डे, चॉकलेट डे इत्यादि — और अंतिम दिन वैलेंटाइन डे। यह 'वैलेंटाइन वीक' पारंपरिक पर्व नहीं, बल्कि पिछले कुछ दशकों में व्यापार और मीडिया ने गढ़ा है; यह शहरों और युवाओं में प्रमुख है, अन्यत्र और अन्य पीढ़ियों में ज़रूरी नहीं कि अपनाया गया हो।भारत की राष्ट्रीय अवकाश सूची से मिलाकर देखने पर स्थिति और साफ़ होती है: उस सूची में गणतंत्र दिवस, स्वतंत्रता दिवस, गांधी जयंती, दीवाली, ईद-उल-फ़ित्र और क्रिसमस सहित सत्रह प्रविष्टियाँ हैं, पर वैलेंटाइन उसमें नहीं है, और न फ़रवरी का कोई दिन उसके नाम है। वैलेंटाइन वीक का अस्तित्व पूरी तरह राष्ट्रीय कैलेंडर के बाहर है।
+### customs ID valentine
+इंडोनेशिया में 14 फ़रवरी अवकाश नहीं है, और यह संस्थाओं पर जो निशान छोड़ता है वह **उल्टी दिशा** में है: हर वर्ष इस तिथि के आसपास कई स्थानीय सरकारों के शिक्षा कार्यालय परिपत्र — surat edaran — जारी करते हैं, जिनमें अपने क्षेत्र के विद्यालयों से कहा जाता है कि वे विद्यार्थियों को इसे मनाने से रोकें। पश्चिम जावा के देपोक ने 2023 में एक जारी किया, पूर्वी जावा के पासुरुआन ज़िले ने 2017 में, और रियाउ द्वीप प्रांत के शिक्षा कार्यालय ने अपने उच्चतर तथा व्यावसायिक माध्यमिक विद्यालयों को वैसी ही सलाह दी। कारण साफ़ लिखा होता है: यह धार्मिक, सामाजिक और सांस्कृतिक मानदंडों से मेल नहीं खाता। इस पृष्ठ की सात जगहों में इंडोनेशिया अकेला है जहाँ सरकारी काग़ज़ इस दिन का ज़िक्र इसलिए करते हैं कि लोगों को न मनाने को कहा जा सके।
+### customs CN valentine
+चीन में 14 फ़रवरी की कोई सरकारी हैसियत नहीं — राष्ट्रीय अवकाश एवं स्मृति-दिवस उपायों की दोनों सूचियों में वह नहीं है। राज्य जिसे मान्यता देता है वह दूसरा है: क़िशी। 2006 में राज्य परिषद ने अमूर्त सांस्कृतिक विरासत की पहली राष्ट्रीय सूची प्रकाशित की (2006 का राज्य परिषद दस्तावेज़ संख्या 18, 518 मदें), और क़िशी पर्व उसमें मद IX-4 के रूप में दर्ज है। इस प्रकार एक ही समाज में, जिस दिन की व्यापारिक आवाज़ सबसे ऊँची है उसकी कोई संस्थागत पहचान नहीं, और जिस दिन को संस्थाएँ मानती हैं वह 'संरक्षण की ज़रूरत वाली विरासत' के रूप में पंजीकृत है — और संरक्षित होने का अर्थ है कि उसे लुप्त होता हुआ आँका गया।
 
 ## locale id
 ### title
@@ -165,6 +199,10 @@ Hari Valentine di Amerika Serikat jatuh 14 Februari, satu hari saja, bukan hari 
 Hari kasih sayang di Brasil jatuh 12 Juni, bukan 14 Februari. Tanggalnya berada tepat sehari sebelum perayaan Santo Antonius pada 13 Juni — di Brasil, santo yang dikaitkan dengan jodoh. Jadi Valentine Brasil mengikuti kalender keagamaan, bukan Februari belahan bumi utara. Ia juga jatuh di dalam bulan festival Juni, sehingga sepanjang Juni suasananya ramai.
 ### customs IN valentine-week
 India merentangkan Valentine menjadi sepekan penuh, 7 sampai 14 Februari, dengan tiap hari punya namanya sendiri — hari mawar, hari cokelat, dan seterusnya — dan Hari Valentine sendiri di penghujungnya. 'Valentine Week' ini terbentuk beberapa dasawarsa terakhir oleh perdagangan dan media, bukan perayaan tradisional; ia menonjol di kota dan di kalangan anak muda, dan belum tentu diikuti di tempat lain atau lintas generasi.Menyandingkannya dengan daftar hari libur nasional India membuat kedudukannya lebih jelas: daftar itu berisi tujuh belas entri termasuk Hari Republik, Hari Kemerdekaan, hari lahir Gandhi, Diwali, Id-ul-Fitr, dan Natal, dan Valentine tidak ada di sana, begitu pula tidak ada satu hari pun di bulan Februari yang diberikan untuknya. Valentine Week hidup sepenuhnya di luar kalender nasional.
+### customs ID valentine
+Empat belas Februari bukan hari libur di Indonesia, dan jejak kelembagaan yang ditinggalkannya justru berjalan ke arah sebaliknya: menjelang tanggal itu tiap tahun, dinas pendidikan di sejumlah pemerintah daerah menerbitkan surat edaran yang meminta sekolah di wilayahnya melarang atau mengimbau siswa agar tidak merayakannya. Depok di Jawa Barat menerbitkannya pada 2023, Kabupaten Pasuruan di Jawa Timur pada 2017, dan Dinas Pendidikan Provinsi Kepulauan Riau mengimbau hal serupa kepada SMA dan SMK. Alasannya ditulis terang: tidak sesuai dengan norma agama, sosial, dan budaya. Di antara tujuh tempat pada halaman ini, Indonesia satu- satunya yang dokumen resminya menyebut hari ini justru untuk meminta orang tidak merayakannya.
+### customs CN valentine
+Empat belas Februari tidak memiliki kedudukan resmi apa pun di Tiongkok — kedua daftar dalam Ketentuan tentang Hari Libur dan Hari Peringatan Nasional tak memuatnya. Yang justru diakui negara adalah yang satunya: Qixi. Pada 2006 Dewan Negara menerbitkan daftar nasional pertama warisan budaya takbenda (Dokumen Dewan Negara Nomor 18 Tahun 2006, 518 butir), dan perayaan Qixi tercantum sebagai butir IX-4. Jadi dalam satu masyarakat, hari dengan suara niaga paling nyaring tak berpelat kelembagaan, sedangkan hari yang diakui kelembagaan terdaftar sebagai warisan yang perlu dilindungi — dan dilindungi berarti ia dinilai sedang menghilang.
 
 ## locale pt-BR
 ### title
@@ -185,3 +223,7 @@ O Valentine's Day nos Estados Unidos é 14 de fevereiro, um único dia, sem feri
 O Dia dos Namorados no Brasil é 12 de junho, e não 14 de fevereiro. A data fica na véspera do dia de Santo Antônio, 13 de junho — no Brasil, o santo casamenteiro. Ou seja, o Valentine brasileiro segue o calendário religioso, e não o fevereiro do hemisfério norte. E como cai dentro do mês das festas juninas, junho inteiro fica movimentado.
 ### customs IN valentine-week
 A Índia estica o Valentine por uma semana inteira, de 7 a 14 de fevereiro, com cada dia recebendo um nome próprio — dia da rosa, dia do chocolate e assim por diante — e o Dia dos Namorados no fim. Essa 'Valentine Week' foi formada nas últimas décadas pelo comércio e pela mídia, e não é festa tradicional; é proeminente nas cidades e entre os mais jovens, e não necessariamente adotada em outros lugares ou por outras gerações.Confrontá-lo com a lista de feriados nacionais da Índia deixa a posição mais clara: essa lista tem dezessete entradas, incluindo Dia da República, Dia da Independência, aniversário de Gandhi, Diwali, Id-ul-Fitr e Natal, e o Valentine's não está nela, nem qualquer dia de fevereiro lhe é atribuído. A Valentine Week existe inteiramente fora do calendário nacional.
+### customs ID valentine
+Catorze de fevereiro não é feriado na Indonésia, e o rastro institucional que deixa corre no sentido inverso: em torno da data, todo ano, secretarias de educação de vários governos locais emitem circulares — surat edaran — pedindo às escolas de sua área que desestimulem os alunos de marcá-la. Depok, em Java Ocidental, emitiu uma em 2023; o município de Pasuruan, em Java Oriental, em 2017; e a secretaria estadual de educação das Ilhas Riau orientou no mesmo sentido suas escolas de ensino médio e técnico. A razão declarada é direta: não se ajusta às normas religiosas, sociais e culturais. Entre os sete lugares desta página, a Indonésia é o único em que o papel oficial menciona o dia justamente para pedir que não seja celebrado.
+### customs CN valentine
+O dia catorze de fevereiro não tem estatuto oficial algum na China — nenhuma das duas listas das Medidas sobre Feriados e Datas Comemorativas Nacionais o contém. O que o Estado reconhece é o outro: o Qixi. Em 2006 o Conselho de Estado publicou a primeira lista nacional de patrimônio cultural imaterial (Documento n.º 18 de 2006 do Conselho de Estado, 518 itens), e a festa do Qixi aparece como item IX-4. Assim, numa mesma sociedade, o dia de voz comercial mais alta não tem identidade institucional, enquanto o dia que as instituições reconhecem está registrado como patrimônio que precisa de proteção — e ser protegido significa que foi julgado em vias de desaparecer.

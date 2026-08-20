@@ -74,6 +74,78 @@
       }
     },
     {
+      "observance_id": "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_CN_valentine",
+      "observance_key": "valentine",
+      "country_code": "CN",
+      "local_name": "情人节（2月14日）",
+      "observed_date": "02-14",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_E30CC8DD2B2DC06E134ADC42",
+        "src_140F35709530AB2BEE135010"
+      ],
+      "source_urls": [
+        "https://www.gov.cn/zhengce/content/202411/content_6986380.htm",
+        "https://www.gov.cn/gongbao/content/2006/content_334718.htm"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_CN_valentine_2026_2026-02-14",
+          "occurrence_year": 2026,
+          "starts_on": "2026-02-14",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E30CC8DD2B2DC06E134ADC42",
+            "src_140F35709530AB2BEE135010"
+          ],
+          "source_urls": [
+            "https://www.gov.cn/zhengce/content/202411/content_6986380.htm",
+            "https://www.gov.cn/gongbao/content/2006/content_334718.htm"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_CN_valentine_2027_2027-02-14",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-14",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E30CC8DD2B2DC06E134ADC42",
+            "src_140F35709530AB2BEE135010"
+          ],
+          "source_urls": [
+            "https://www.gov.cn/zhengce/content/202411/content_6986380.htm",
+            "https://www.gov.cn/gongbao/content/2006/content_334718.htm"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_CN_valentine_2027_2027-02-14",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-14",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Shanghai",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_E30CC8DD2B2DC06E134ADC42",
+          "src_140F35709530AB2BEE135010"
+        ],
+        "source_urls": [
+          "https://www.gov.cn/zhengce/content/202411/content_6986380.htm",
+          "https://www.gov.cn/gongbao/content/2006/content_334718.htm"
+        ],
+        "distance_days": 178
+      }
+    },
+    {
       "observance_id": "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_ID_valentine",
       "observance_key": "valentine",
       "country_code": "ID",
@@ -479,6 +551,12 @@
       ]
     },
     {
+      "country_code": "CN",
+      "observance_ids": [
+        "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_CN_valentine"
+      ]
+    },
+    {
       "country_code": "ID",
       "observance_ids": [
         "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_ID_valentine"
@@ -512,6 +590,7 @@
   ],
   "relations": [],
   "source_ids": [
+    "src_140F35709530AB2BEE135010",
     "src_22199C1201C93256B927C8CD",
     "src_349AAEF81832D0D01AC5B7D3",
     "src_3C6F2BD13BBE8890809B25D2",
@@ -522,9 +601,11 @@
     "src_8CDDEB64F7778CE62869A3EF",
     "src_C4BAA52048297F2FA1A9F791",
     "src_C4BCAFCEF395471F742E6784",
+    "src_E30CC8DD2B2DC06E134ADC42",
     "src_E405440D6A7FBA9FBC2398FD"
   ],
   "source_urls": [
+    "https://www.gov.cn/gongbao/content/2006/content_334718.htm",
     "https://www.justica.pr.gov.br/Noticia/Dia-dos-Namorados-Procon-PR-orienta-consumidores-sobre-compras-e-trocas-de-presentes",
     "https://www.census.gov/newsroom/stories/valentines-day.html",
     "https://berita.depok.go.id/disdik-depok-keluarkan-se-larangan-rayakan-hari-valentine",
@@ -535,6 +616,7 @@
     "https://www.stat.go.jp/data/kakei/tsushin/pdf/29_2.pdf",
     "https://www.japan.travel/en/us/blog/valentines-day-white-day-in-japan/",
     "https://www.britannica.com/topic/Valentines-Day",
+    "https://www.gov.cn/zhengce/content/202411/content_6986380.htm",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
   ]
 }

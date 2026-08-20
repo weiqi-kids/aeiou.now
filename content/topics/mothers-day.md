@@ -36,6 +36,18 @@
 - rank: 5
 - source: https://www.djkn.kemenkeu.go.id/kpknl-singaraja/baca-artikel/16715/Memahami-Lebih-Jauh-Tentang-Sejarah-Peringatan-Hari-Ibu-di-Indonesia.html
 
+## observance CN mothers-day
+- local_name: 母亲节（无官方地位）
+- date_rule: 民间多跟随五月第二个星期日；《全国年节及纪念日放假办法》未列入
+- rank: 6
+- source: https://www.gov.cn/zhengce/content/202411/content_6986380.htm
+
+## observance IN mothers-day
+- local_name: Mother's Day（非公定假日）
+- date_rule: 民間跟隨五月第二個星期日；未列入中央或邦的假日表
+- rank: 7
+- source: https://www.india.gov.in/calendar
+
 ## locale zh-TW
 ### title
 母親節
@@ -53,6 +65,10 @@
 巴西的母親節在五月第二個星期日，一九三二年由熱圖利奧·瓦爾加斯總統官方化。它現在是巴西上半年最大的零售檔期之一，聯邦眾議院甚至會在當天把國會大廈打成粉紅色。宗教、家庭與商業在同一天疊著：對很多家庭是彌撒加午餐，對零售業是全年第二重要的日子。
 ### customs ID hari-ibu
 印尼的 Hari Ibu 在十二月二十二日，一九五九年由蘇卡諾總統以第三一六號總統令列為「非假日的國家紀念日」。日期取自一九二八年十二月二十二日於日惹召開的第一屆印尼婦女大會——約三十個婦女團體與會，會後成立了印尼婦女聯合會。所以它的根不是母職，而是婦女運動：它紀念的是女性作為政治主體的起點，跟五月那個節日不是同一件事。那份總統令的標題本身就說明了它的性質：《關於非假日之國家紀念日》。也就是說，印尼在設立它的同一份文件裡，就已經明確它不是假日——紀念的重量與放不放假是兩件被分開處理的事。
+### customs CN mothers-day
+中國的母親節與父親節一樣沒有官方地位:國務院《全國年節及紀念日放假辦法》把節日分成 全體公民放假與部分公民放假兩類,後者列的是婦女節、青年節、兒童節與建軍節——母親節不在任何一類。 與之對照的是三月八日的婦女節:那一天婦女放假半天,是寫進辦法裡的。 同一個國家對「女性」與「母親」給了不同的制度待遇:一個有半天假,一個只有花店的檔期。
+### customs IN mothers-day
+印度的母親節同樣不在中央或各邦的假日表上,實際跟隨的是五月第二個星期日,主要在城市與學校裡進行。 與它並存的是另一條更老的線:秋季的 Navratri 九夜節向女神致敬,西孟加拉的 Durga Puja 則整城為女神 停下來——那不是「母親節」,但那是這個社會把母性放進公共日曆的方式。 一個是輸入的日期,一個是本地的節期,兩者互不取代。
 
 ## locale en
 ### title
@@ -71,6 +87,10 @@ Japan's Haha no Hi is also the second Sunday in May, and its most concrete trace
 Brazil's Dia das Mães is the second Sunday in May, made official by President Getúlio Vargas in 1932. It is now one of the largest retail windows of the first half of the year, and the federal Chamber of Deputies even lights the congressional building pink for it. Religion, family and commerce stack on the same day: for many households it is Mass and lunch; for retail it is the second most important date of the year.
 ### customs ID hari-ibu
 Indonesia's Hari Ibu is 22 December, established in 1959 by President Sukarno through Presidential Decree No. 316 as a national day that is not a public holiday. The date comes from the first Indonesian Women's Congress, opened on 22 December 1928 in Yogyakarta, attended by around thirty women's organisations and followed by the founding of a national women's federation. Its root is therefore not motherhood but the women's movement: it commemorates the beginning of women as political actors, which is not the same thing as the May holiday at all.The title of that presidential decree states its nature outright: on national days that are not public holidays. In other words, the same document that established it already made clear that it is not a day off — the weight of the commemoration and whether anyone gets leave are handled as two separate questions.
+### customs CN mothers-day
+Mother's Day has no official standing in China, just as Father's Day has none: the State Council's Measures sort days into those for all citizens and those for some, and the latter list carries Women's Day, Youth Day, Children's Day and Army Day — Mother's Day is in neither. Set against it is 8 March: on Women's Day women get half a day off, and that is written into the Measures. The same state gives "women" and "mothers" different institutional treatment — one has half a holiday, the other has a florists' season.
+### customs IN mothers-day
+Mother's Day is likewise absent from India's central and state holiday lists; what is followed is the second Sunday in May, mostly in cities and schools. Running alongside it is an older line: the nine nights of Navratri honour the goddess in autumn, and in West Bengal Durga Puja stops whole cities for her. That is not "Mother's Day", but it is how this society puts motherhood on the public calendar. One is an imported date, the other a local season, and neither replaces the other.
 
 ## locale ja
 ### title
@@ -89,6 +109,10 @@ Indonesia's Hari Ibu is 22 December, established in 1959 by President Sukarno th
 ブラジルの母の日は5月第二日曜で、1932年にジェトゥリオ・ヴァルガス大統領が公式化した。今日では上半期最大級の商戦の一つであり、連邦下院は当日、議事堂をピンクにライトアップする。宗教と家族と商業が同じ日に重なっている——多くの家庭にとってはミサと昼食であり、小売にとっては年で二番目に重要な日である。
 ### customs ID hari-ibu
 インドネシアの Hari Ibu は12月22日で、1959年にスカルノ大統領が大統領令第316号により「休日ではない国民の日」として定めた。日付は1928年12月22日にジョグジャカルタで開かれた第一回インドネシア女性会議に由来する。約30の女性団体が参加し、会議後には全国的な女性連合が生まれた。したがってその根は母性ではなく女性運動にある。記念しているのは政治的主体としての女性の出発点であり、5月のそれとは別物である。その大統領令の題名そのものが性質を語っている——「休日ではない国民の日について」。つまりインドネシアは、それを設けたまさにその文書の中で、これが休日ではないことを明示している。記念の重さと休みを与えるかどうかは、別々に扱われているのだ。
+### customs CN mothers-day
+中国において母の日は父の日と同様、公的な位置づけを持たない。国務院の弁法は祝日を全国民が休む日と 一部の公民が休む日に分け、後者に並ぶのは婦人節・青年節・児童節・建軍節である。母の日はそのどちらにもない。 対照的なのが三月八日の婦人節で、この日は女性が半日休むと弁法に明記されている。 同じ国家が「女性」と「母」に異なる制度上の扱いを与えている。一方には半日の休みがあり、 他方にあるのは花屋の書き入れ時だけである。
+### customs IN mothers-day
+インドの母の日も中央・各州の休日一覧には載っておらず、実際に倣われるのは五月第二日曜で、 主に都市部と学校で行われる。それと並走するより古い流れがある。秋の九夜祭ナヴラートリーは女神を讃え、 西ベンガルのドゥルガー・プージャは町ごと女神のために止まる。それは「母の日」ではないが、 この社会が母性を公共の暦に置く仕方ではある。一方は輸入された日付、他方は土地の節期であり、 どちらも他方を置き換えない。
 
 ## locale zh-CN
 ### title
@@ -107,6 +131,10 @@ Indonesia's Hari Ibu is 22 December, established in 1959 by President Sukarno th
 巴西的母亲节在五月第二个星期日，1932年由热图利奥·瓦尔加斯总统官方化。它现在是巴西上半年最大的零售档期之一，联邦众议院甚至会在当天把国会大厦打成粉红色。宗教、家庭与商业在同一天叠着：对很多家庭是弥撒加午餐，对零售业是全年第二重要的日子。
 ### customs ID hari-ibu
 印度尼西亚的 Hari Ibu 在12月22日，1959年由苏加诺总统以第316号总统令列为“非假日的国家纪念日”。日期取自1928年12月22日于日惹召开的第一届印尼妇女大会——约三十个妇女团体与会，会后成立了印尼妇女联合会。所以它的根不是母职，而是妇女运动：它纪念的是女性作为政治主体的起点，跟五月那个节日不是同一件事。那份总统令的标题本身就说明了它的性质：《关于非假日之国家纪念日》。也就是说，印尼在设立它的同一份文件里，就已经明确它不是假日——纪念的重量与放不放假是两件被分开处理的事。
+### customs CN mothers-day
+中国的母亲节与父亲节一样没有官方地位：国务院《全国年节及纪念日放假办法》把节日分成 全体公民放假与部分公民放假两类，后者列的是妇女节、青年节、儿童节与建军节——母亲节不在任何一类。 与之对照的是三月八日的妇女节：那一天妇女放假半天，是写进办法里的。 同一个国家对「女性」与「母亲」给了不同的制度待遇：一个有半天假，一个只有花店的档期。
+### customs IN mothers-day
+印度的母亲节同样不在中央或各邦的假日表上，实际跟随的是五月第二个星期日，主要在城市与学校里进行。 与它并存的是另一条更老的线：秋季的 Navratri 九夜节向女神致敬，西孟加拉的 Durga Puja 则整城为女神 停下来——那不是「母亲节」，但那是这个社会把母性放进公共日历的方式。 一个是输入的日期，一个是本地的节期，两者互不取代。
 
 ## locale hi
 ### title
@@ -125,6 +153,10 @@ Indonesia's Hari Ibu is 22 December, established in 1959 by President Sukarno th
 ब्राज़ील का Dia das Mães मई का दूसरा रविवार है, जिसे 1932 में राष्ट्रपति जेतूलियो वर्गास ने आधिकारिक बनाया। आज यह वर्ष की पहली छमाही की सबसे बड़ी खुदरा अवधियों में है, और संघीय प्रतिनिधि सभा उस दिन संसद भवन को गुलाबी रोशनी में नहलाती है। धर्म, परिवार और व्यापार एक ही दिन पर आ जमते हैं: बहुत से घरों के लिए यह मिस्सा और दोपहर का भोज है; खुदरा के लिए साल की दूसरी सबसे बड़ी तारीख़।
 ### customs ID hari-ibu
 इंडोनेशिया का Hari Ibu 22 दिसंबर है, जिसे 1959 में राष्ट्रपति सुकर्णो ने राष्ट्रपति आदेश संख्या 316 के ज़रिये 'ऐसा राष्ट्रीय दिवस जो अवकाश नहीं है' के रूप में स्थापित किया। तारीख़ 22 दिसंबर 1928 को योग्यकार्ता में शुरू हुई पहली इंडोनेशियाई महिला कांग्रेस से आई है, जिसमें लगभग तीस महिला संगठन शामिल हुए और जिसके बाद एक राष्ट्रीय महिला महासंघ बना। इसलिए इसकी जड़ मातृत्व नहीं, महिला आंदोलन है: यह राजनीतिक कर्ता के रूप में महिलाओं की शुरुआत का स्मरण है, जो मई वाले दिन से बिलकुल अलग बात है।उस राष्ट्रपति आदेश का शीर्षक ही उसकी प्रकृति बता देता है: 'ऐसे राष्ट्रीय दिवसों के बारे में जो सार्वजनिक अवकाश नहीं हैं।' यानी जिस दस्तावेज़ ने इसे स्थापित किया, उसी ने साफ़ कर दिया कि यह छुट्टी नहीं है — स्मरण का भार और किसी को अवकाश मिलना, दो अलग प्रश्नों की तरह निपटाए गए हैं।
+### customs CN mothers-day
+चीन में मातृ दिवस की भी वैसी ही कोई सरकारी हैसियत नहीं जैसी पितृ दिवस की नहीं है: राज्य परिषद के उपाय छुट्टियों को सभी नागरिकों के लिए और कुछ के लिए में बाँटते हैं, और दूसरी सूची में महिला दिवस, युवा दिवस, बाल दिवस और सेना दिवस हैं — मातृ दिवस किसी में नहीं। इसके सामने 8 मार्च है: महिला दिवस पर महिलाओं को आधे दिन की छुट्टी मिलती है, और यह उपायों में लिखा हुआ है। वही राज्य 'महिलाओं' और 'माताओं' को अलग-अलग संस्थागत बरताव देता है — एक के पास आधी छुट्टी है, दूसरी के पास फूलवालों का मौसम।
+### customs IN mothers-day
+मातृ दिवस भी भारत की केंद्रीय और राज्य अवकाश सूचियों से अनुपस्थित है; व्यवहार में मई का दूसरा रविवार अपनाया जाता है, अधिकतर शहरों और विद्यालयों में। इसके समानांतर एक पुरानी धारा चलती है: शरद की नवरात्रि की नौ रातें देवी को समर्पित हैं, और पश्चिम बंगाल में दुर्गा पूजा पूरे शहरों को उनके लिए ठहरा देती है। वह 'मातृ दिवस' नहीं है, पर यही वह तरीक़ा है जिससे यह समाज मातृत्व को सार्वजनिक पंचांग पर रखता है। एक आयातित तिथि है, दूसरी स्थानीय ऋतु, और कोई दूसरे की जगह नहीं लेती।
 
 ## locale id
 ### title
@@ -143,6 +175,10 @@ Haha no Hi di Jepang juga Minggu kedua bulan Mei, dan jejaknya yang paling konkr
 Dia das Mães di Brasil jatuh pada Minggu kedua bulan Mei, diresmikan Presiden Getúlio Vargas pada 1932. Kini ia menjadi salah satu jendela ritel terbesar pada paruh pertama tahun, dan Dewan Perwakilan federal bahkan menyinari gedung kongres dengan warna merah muda pada hari itu. Agama, keluarga, dan perdagangan bertumpuk pada hari yang sama: bagi banyak rumah tangga ia berarti misa dan makan siang; bagi ritel, tanggal terpenting kedua sepanjang tahun.
 ### customs ID hari-ibu
 Hari Ibu Indonesia jatuh 22 Desember, ditetapkan pada 1959 oleh Presiden Sukarno melalui Keputusan Presiden Nomor 316 sebagai hari nasional yang bukan hari libur. Tanggalnya berasal dari Kongres Perempuan Indonesia pertama yang dibuka 22 Desember 1928 di Yogyakarta, dihadiri sekitar tiga puluh organisasi perempuan dan disusul berdirinya federasi perempuan nasional. Akarnya karena itu bukan keibuan, melainkan gerakan perempuan: yang diperingati adalah titik awal perempuan sebagai pelaku politik — hal yang sama sekali berbeda dari perayaan bulan Mei.Judul Keputusan Presiden itu sendiri menyatakan sifatnya secara terang: tentang hari-hari nasional yang bukan hari libur. Dengan kata lain, dokumen yang menetapkannya sudah menegaskan bahwa ia bukan hari libur — bobot peringatan dan ada tidaknya libur ditangani sebagai dua pertanyaan terpisah.
+### customs CN mothers-day
+Hari Ibu tak punya kedudukan resmi di Tiongkok, sebagaimana Hari Ayah juga tidak: Ketentuan Dewan Negara memilah hari libur menjadi untuk seluruh warga dan untuk sebagian warga, dan daftar kedua memuat Hari Perempuan, Hari Pemuda, Hari Anak, dan Hari Tentara — Hari Ibu tidak ada di keduanya. Bandingkan dengan 8 Maret: pada Hari Perempuan, perempuan memperoleh libur setengah hari, dan itu tertulis dalam ketentuannya. Negara yang sama memberi perlakuan kelembagaan berbeda kepada "perempuan" dan "ibu" — yang satu punya setengah hari libur, yang lain punya musim ramai toko bunga.
+### customs IN mothers-day
+Hari Ibu juga tak ada dalam daftar libur pusat maupun negara bagian di India; yang diikuti adalah Minggu kedua bulan Mei, terutama di kota dan sekolah. Berjalan seiring dengannya ada garis yang lebih tua: sembilan malam Navratri memuliakan sang dewi pada musim gugur, dan di Benggala Barat, Durga Puja menghentikan kota-kota demi beliau. Itu bukan "Hari Ibu", tetapi begitulah masyarakat ini menaruh keibuan pada kalender publik. Yang satu tanggal impor, yang lain musim setempat, dan tak satu pun menggantikan yang lain.
 
 ## locale pt-BR
 ### title
@@ -161,3 +197,7 @@ O Haha no Hi japonês também é o segundo domingo de maio, e seu traço mais co
 O Dia das Mães brasileiro é o segundo domingo de maio, oficializado pelo presidente Getúlio Vargas em 1932. Hoje é uma das maiores janelas de varejo do primeiro semestre, e a Câmara dos Deputados chega a iluminar de rosa o prédio do Congresso na data. Religião, família e comércio se empilham no mesmo dia: para muitas casas é missa e almoço; para o varejo, a segunda data mais importante do ano.
 ### customs ID hari-ibu
 O Hari Ibu da Indonésia é 22 de dezembro, instituído em 1959 pelo presidente Sukarno por meio do Decreto Presidencial nº 316 como um dia nacional que não é feriado. A data vem do primeiro Congresso das Mulheres Indonésias, aberto em 22 de dezembro de 1928 em Yogyakarta, com cerca de trinta organizações de mulheres e seguido pela criação de uma federação nacional feminina. Sua raiz, portanto, não é a maternidade, e sim o movimento de mulheres: o que se lembra é o começo das mulheres como sujeitos políticos — coisa bem diferente da data de maio.O título desse decreto presidencial já declara a natureza da data: sobre dias nacionais que não são feriados. Ou seja, o mesmo documento que a instituiu já deixou claro que não há folga — o peso da comemoração e a concessão de licença são tratados como duas questões separadas.
+### customs CN mothers-day
+O Dia das Mães não tem estatuto oficial na China, assim como o Dia dos Pais não tem: as Medidas do Conselho de Estado separam as datas entre as de todos os cidadãos e as de parte deles, e a segunda lista traz Dia da Mulher, Dia da Juventude, Dia das Crianças e Dia do Exército — o Dia das Mães não está em nenhuma. Em contraste está o 8 de março: no Dia da Mulher as mulheres têm meio dia de folga, e isso está escrito nas Medidas. O mesmo Estado dá tratamento institucional diferente a "mulheres" e a "mães" — uma tem meia folga, a outra tem uma temporada de floricultura.
+### customs IN mothers-day
+O Dia das Mães também não consta das listas de feriados central e estaduais da Índia; o que se segue é o segundo domingo de maio, sobretudo em cidades e escolas. Ao lado dele corre uma linha mais antiga: as nove noites de Navratri honram a deusa no outono, e em Bengala Ocidental a Durga Puja para cidades inteiras por ela. Isso não é "Dia das Mães", mas é como esta sociedade coloca a maternidade no calendário público. Uma é data importada, a outra é estação local, e nenhuma substitui a outra.

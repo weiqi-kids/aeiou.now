@@ -37,6 +37,18 @@
 - rank: 5
 - source: https://www.pa-tulungagung.go.id/en/peraturan-dan-kebijakan/ucapan-selamat-dan-duka/1156-hari-ayah-nasional-sabtu-12-november-2022
 
+## observance CN fathers-day
+- local_name: 父亲节（无官方地位）
+- date_rule: 民间多跟随六月第三个星期日；《全国年节及纪念日放假办法》未列入
+- rank: 6
+- source: https://www.gov.cn/zhengce/content/202411/content_6986380.htm
+
+## observance IN fathers-day
+- local_name: Father's Day（非公定假日）
+- date_rule: 民間跟隨六月第三個星期日；未列入中央或邦的假日表
+- rank: 7
+- source: https://www.india.gov.in/calendar
+
 ## locale zh-TW
 ### title
 父親節
@@ -54,6 +66,10 @@
 巴西的父親節在八月第二個星期日，來歷最直白：一九五三年由廣告人兼記者 Sylvio Bhering 提議，目的是吸引商家到《O Globo》登廣告——母親節帶動上半年、聖誕節帶動年底，八月正好是空檔。日期後來固定在八月第二個星期日，好讓它永遠落在週末。一個節日被明白地當成商業檔期設計出來，這在四個地方裡是唯一的。
 ### customs ID hari-ayah
 印尼的全國父親節在十一月十二日，但它不是國家訂的：二○○六年這一天由民間團體「大地之母之子協會」在中爪哇梭羅市政廳前廣場宣告成立，同時公布一場「寫信給爸爸」徵文的得獎名單，並由各地孩子寄出一千封信。選十一月十二日是為了與早已由總統令訂下的母親節（十二月二十二日）取得平衡；首次紀念在梭羅與東部的茂夢貝雷同步舉行，象徵印尼東西兩端。母親節由國家訂、父親節由民間訂，這個不對稱本身就是資料。
+### customs CN fathers-day
+中國的父親節沒有官方地位。國務院《全國年節及紀念日放假辦法》把放假的節日分成兩類—— 全體公民放假的(元旦、春節、清明、勞動節、端午、中秋、國慶),以及部分公民放假的 (婦女節、青年節、兒童節、建軍節)——父親節兩類都不在。民間多跟隨六月第三個星期日, 也有人記著八月八日的諧音,兩種說法並存而沒有一個是被規定的。 這一頁的其他地方至少有一個文件寫著日期,中國這一格的內容是「沒有那份文件」。
+### customs IN fathers-day
+印度的父親節同樣沒有進入假日體系:中央與各邦的假日表列的是宗教節日與國定紀念日, 父親節不在其中。實際上跟隨的是六月第三個星期日,主要在城市與學校裡以卡片、蛋糕的形式進行, 與台灣那種由諧音決定日期、或美國那種由法律決定日期的路徑都不同——它是**由別處的日曆傳過來的**。
 
 ## locale en
 ### title
@@ -72,6 +88,10 @@ Japan's Chichi no Hi is the third Sunday in June, following the American date. I
 Brazil's Dia dos Pais is the second Sunday in August, and its origin is the most candid of the four: in 1953 the advertising man and journalist Sylvio Bhering proposed it, aiming to attract merchants to advertise in the newspaper O Globo. Mother's Day drove the first half of the year and Christmas the end of it; August was the gap. The date was later fixed to the second Sunday of August so it would always land on a weekend. A holiday openly designed as a retail window is unique among these four.
 ### customs ID hari-ayah
 Indonesia's National Father's Day is 12 November, but it was not established by the state: on that date in 2006 a civil-society group, the Association of Sons of the Motherland, declared it in the square before the Solo city hall in Central Java, alongside the results of a letter-writing contest addressed to fathers, with a thousand letters sent by children from around the country. The date was chosen to balance Mother's Day, which had long been fixed by presidential decree on 22 December; the first observance was held simultaneously in Solo and in Maumere in the east, as a symbol of the two ends of Indonesia. Mother's Day set by the state and Father's Day set by citizens — that asymmetry is itself the data.
+### customs CN fathers-day
+Father's Day has no official standing in China. The State Council's Measures on National Holidays and Commemorative Days sorts days off into two classes — those for all citizens (New Year, Spring Festival, Qingming, Labour Day, Dragon Boat, Mid-Autumn, National Day) and those for some (Women's Day, Youth Day, Children's Day, Army Day) — and Father's Day appears in neither. Popular practice mostly follows the third Sunday in June, while some keep the eighth of August for the sound of the numbers; the two coexist and neither is prescribed. Every other place on this page has at least one document stating a date; what fills China's cell is the absence of that document.
+### customs IN fathers-day
+Father's Day has likewise not entered India's holiday system: the central and state holiday lists carry religious festivals and national commemorations, and this is not among them. What is followed in practice is the third Sunday in June, mostly in cities and schools, in the form of cards and cake. That is a different route from Taiwan's, where the date comes from a pun, or the United States', where it comes from a statute — here the date arrived from someone else's calendar.
 
 ## locale ja
 ### title
@@ -90,6 +110,10 @@ Indonesia's National Father's Day is 12 November, but it was not established by 
 ブラジルの父の日は8月第二日曜で、由来は四つの中で最も率直である。1953年、広告人であり記者でもあったシルヴィオ・ベーリングが提案した。狙いは商店に新聞『オ・グローボ』へ広告を出させることだった。母の日が上半期を、クリスマスが年末を動かし、8月が空白だったのである。日付は後に8月第二日曜に固定され、常に週末に来るようにされた。商戦の枠として公然と設計された祝日は、この四つの中でここだけだ。
 ### customs ID hari-ayah
 インドネシアの全国父の日は11月12日だが、これは国が定めたものではない。2006年のこの日、民間団体「祖国の子ら協会」が中部ジャワ・ソロの市庁舎前広場で宣言したもので、父へ宛てた手紙のコンクールの受賞発表を兼ね、各地の子どもから千通の手紙が送られた。11月12日が選ばれたのは、すでに大統領令で12月22日と定まっていた母の日との釣り合いを取るためである。初回の記念は、ソロと東部のマウメレで同時に行われ、インドネシアの東西を象徴した。母の日は国が定め、父の日は市民が定めた。この非対称そのものが資料である。
+### customs CN fathers-day
+中国において父の日に公的な位置づけはない。国務院の「全国年節及び記念日休暇弁法」は休みの日を 二つに分ける。全国民が休む日(元旦・春節・清明・労働節・端午・中秋・国慶)と、一部の公民が休む日 (婦人節・青年節・児童節・建軍節)である。父の日はそのいずれにも現れない。 民間では六月第三日曜に倣うことが多く、八月八日の語呂を覚えている人もいる。二つの言い方が併存し、 どちらも定められてはいない。このページの他の地域には日付を記した文書が少なくとも一つあるが、 中国の欄を満たしているのは、その文書が存在しないという事実である。
+### customs IN fathers-day
+インドの父の日もまた休日の体系には入っていない。中央および各州の休日一覧に並ぶのは宗教の祭日と 国の記念日であり、父の日はそこにない。実際に倣われているのは六月第三日曜で、主に都市部と学校で カードやケーキという形をとる。語呂が日付を決めた台湾とも、法律が決めた米国とも異なる経路である。 ここでは日付はよそのカレンダーから伝わってきた。
 
 ## locale zh-CN
 ### title
@@ -108,6 +132,10 @@ Indonesia's National Father's Day is 12 November, but it was not established by 
 巴西的父亲节在8月第二个星期日，来历最直白：1953年由广告人兼记者 Sylvio Bhering 提议，目的是吸引商家到《O Globo》登广告——母亲节带动上半年、圣诞节带动年底，8月正好是空档。日期后来固定在8月第二个星期日，好让它永远落在周末。一个节日被明白地当成商业档期设计出来，这在四个地方里是唯一的。
 ### customs ID hari-ayah
 印度尼西亚的全国父亲节在11月12日，但它不是国家订的：2006年这一天由民间团体“大地之母之子协会”在中爪哇梭罗市政厅前广场宣告成立，同时公布一场“写信给爸爸”征文的得奖名单，并由各地孩子寄出一千封信。选11月12日是为了与早已由总统令订下的母亲节（12月22日）取得平衡；首次纪念在梭罗与东部的茂梦贝雷同步举行，象征印尼东西两端。母亲节由国家订、父亲节由民间订，这个不对称本身就是资料。
+### customs CN fathers-day
+中国的父亲节没有官方地位。国务院《全国年节及纪念日放假办法》把放假的日子分成两类—— 全体公民放假的（元旦、春节、清明节、劳动节、端午节、中秋节、国庆节），以及部分公民放假的 （妇女节、青年节、儿童节、建军节）——父亲节两类都不在。民间多跟随六月第三个星期日， 也有人记着八月八日的谐音，两种说法并存而没有一个是被规定的。 这一页的其他地方至少有一份文件写着日期，中国这一格的内容是「没有那份文件」。
+### customs IN fathers-day
+印度的父亲节同样没有进入假日体系：中央与各邦的假日表列的是宗教节日与国定纪念日， 父亲节不在其中。实际上跟随的是六月第三个星期日，主要在城市与学校里以卡片、蛋糕的形式进行， 与台湾那种由谐音决定日期、或美国那种由法律决定日期的路径都不同——它是**从别处的日历传过来的**。
 
 ## locale hi
 ### title
@@ -126,6 +154,10 @@ Indonesia's National Father's Day is 12 November, but it was not established by 
 ब्राज़ील का Dia dos Pais अगस्त का दूसरा रविवार है, और इन चारों में इसकी उत्पत्ति सबसे स्पष्टवादी है: 1953 में विज्ञापन-व्यक्ति और पत्रकार सिल्वियो बेरिंग ने इसे प्रस्तावित किया, ताकि व्यापारी अख़बार O Globo में विज्ञापन दें। मातृ दिवस साल की पहली छमाही चलाता था और क्रिसमस अंत — अगस्त ख़ाली था। बाद में तारीख़ अगस्त के दूसरे रविवार पर तय कर दी गई ताकि वह हमेशा सप्ताहांत पर पड़े। खुले तौर पर खुदरा अवधि के रूप में गढ़ा गया त्योहार इन चारों में केवल यही है।
 ### customs ID hari-ayah
 इंडोनेशिया का राष्ट्रीय पितृ दिवस 12 नवंबर है, पर इसे राज्य ने स्थापित नहीं किया: 2006 में इसी तिथि को एक नागरिक संगठन, 'मातृभूमि के पुत्रों का संघ', ने मध्य जावा के सोलो नगर भवन के सामने के चौक में इसकी घोषणा की, साथ ही पिताओं के नाम लिखे पत्रों की प्रतियोगिता के परिणाम भी घोषित हुए और देशभर के बच्चों ने एक हज़ार पत्र भेजे। 12 नवंबर इसलिए चुना गया कि वह मातृ दिवस से संतुलन बना सके, जो बहुत पहले राष्ट्रपति आदेश से 22 दिसंबर को नियत था; पहला आयोजन सोलो और पूर्व में माउमेरे में एक साथ हुआ, जो इंडोनेशिया के दोनों छोरों का प्रतीक था। मातृ दिवस राज्य ने तय किया और पितृ दिवस नागरिकों ने — यह असंतुलन स्वयं एक आँकड़ा है।
+### customs CN fathers-day
+चीन में पितृ दिवस की कोई सरकारी हैसियत नहीं है। राज्य परिषद के राष्ट्रीय अवकाश एवं स्मृति-दिवस उपायों में छुट्टियाँ दो वर्गों में बँटी हैं — सभी नागरिकों के लिए (नववर्ष, वसंत पर्व, चिंगमिंग, श्रम दिवस, ड्रैगन बोट, मध्य-शरद, राष्ट्रीय दिवस) और कुछ के लिए (महिला दिवस, युवा दिवस, बाल दिवस, सेना दिवस) — और पितृ दिवस दोनों में कहीं नहीं है। लोक-व्यवहार अधिकतर जून के तीसरे रविवार का अनुसरण करता है, कुछ लोग अंकों की ध्वनि के कारण आठ अगस्त याद रखते हैं; दोनों साथ चलते हैं और कोई निर्धारित नहीं। इस पृष्ठ की हर दूसरी जगह पर तिथि बताने वाला कम से कम एक दस्तावेज़ है; चीन के ख़ाने को भरता है उसी दस्तावेज़ का न होना।
+### customs IN fathers-day
+पितृ दिवस भी भारत की अवकाश-व्यवस्था में प्रवेश नहीं कर पाया है: केंद्र और राज्यों की अवकाश सूचियों में धार्मिक पर्व और राष्ट्रीय स्मृति-दिवस रहते हैं, और यह उनमें नहीं है। व्यवहार में जून के तीसरे रविवार का अनुसरण होता है, अधिकतर शहरों और विद्यालयों में, कार्ड और केक की शक्ल में। यह ताइवान के रास्ते से अलग है, जहाँ तिथि ध्वनि-साम्य से आई, और अमेरिका के रास्ते से भी, जहाँ वह क़ानून से आई — यहाँ तिथि किसी और के कैलेंडर से चलकर आई है।
 
 ## locale id
 ### title
@@ -144,6 +176,10 @@ Chichi no Hi Jepang jatuh pada Minggu ketiga bulan Juni, mengikuti tanggal Ameri
 Dia dos Pais Brasil jatuh pada Minggu kedua bulan Agustus, dan asal-usulnya paling terus terang di antara keempatnya: pada 1953 orang periklanan sekaligus jurnalis Sylvio Bhering mengusulkannya, dengan tujuan menarik pedagang memasang iklan di koran O Globo. Hari Ibu menggerakkan paruh pertama tahun dan Natal menutup akhir tahun; Agustus adalah celahnya. Tanggalnya kemudian dipatok pada Minggu kedua Agustus agar selalu jatuh pada akhir pekan. Hari raya yang secara terbuka dirancang sebagai jendela ritel hanya ada di sini di antara keempatnya.
 ### customs ID hari-ayah
 Hari Ayah Nasional Indonesia jatuh 12 November, tetapi ia tidak ditetapkan oleh negara: pada tanggal itu tahun 2006 sebuah kelompok masyarakat sipil, Perkumpulan Putra Ibu Pertiwi, mendeklarasikannya di pelataran Balai Kota Solo, Jawa Tengah, bersamaan dengan pengumuman pemenang sayembara menulis surat untuk ayah, disertai seribu surat yang dikirim anak-anak dari berbagai daerah. Tanggal 12 November dipilih untuk menyeimbangkan Hari Ibu yang sejak lama ditetapkan lewat Keputusan Presiden pada 22 Desember; peringatan pertamanya digelar serentak di Solo dan di Maumere, menandai dua ujung Indonesia. Hari Ibu ditetapkan negara, Hari Ayah ditetapkan warga — ketaksimetrisan itu sendiri adalah datanya.
+### customs CN fathers-day
+Hari Ayah tidak punya kedudukan resmi di Tiongkok. Ketentuan Dewan Negara tentang Hari Libur dan Hari Peringatan Nasional memilah libur menjadi dua golongan — untuk seluruh warga (Tahun Baru, Festival Musim Semi, Qingming, Hari Buruh, Peh Cun, Pertengahan Musim Gugur, Hari Nasional) dan untuk sebagian warga (Hari Perempuan, Hari Pemuda, Hari Anak, Hari Tentara) — dan Hari Ayah tidak muncul di keduanya. Kebiasaan umum mengikuti Minggu ketiga bulan Juni, sebagian orang mengingat 8 Agustus karena bunyi angkanya; keduanya hidup berdampingan dan tak satu pun ditetapkan. Setiap tempat lain di halaman ini punya sekurangnya satu dokumen yang menyebut tanggal; yang mengisi kolom Tiongkok justru ketiadaan dokumen itu.
+### customs IN fathers-day
+Hari Ayah juga belum masuk ke sistem hari libur India: daftar libur pusat dan negara bagian memuat perayaan keagamaan dan peringatan nasional, dan hari ini tidak ada di dalamnya. Yang diikuti dalam praktik adalah Minggu ketiga bulan Juni, terutama di kota dan sekolah, dalam bentuk kartu dan kue. Itu jalur yang berbeda dari Taiwan, yang tanggalnya lahir dari kemiripan bunyi, dan dari Amerika, yang lahir dari undang- undang — di sini tanggalnya datang dari kalender orang lain.
 
 ## locale pt-BR
 ### title
@@ -162,3 +198,7 @@ O Chichi no Hi japonês é o terceiro domingo de junho, seguindo a data norte-am
 O Dia dos Pais brasileiro é o segundo domingo de agosto, e sua origem é a mais franca dos quatro: em 1953 o publicitário e jornalista Sylvio Bhering o propôs, com o objetivo de atrair comerciantes a anunciar no jornal O Globo. O Dia das Mães movimentava o primeiro semestre e o Natal fechava o ano; agosto era a lacuna. A data depois foi fixada no segundo domingo de agosto para cair sempre num fim de semana. Um feriado assumidamente desenhado como janela de varejo é o único caso entre esses quatro.
 ### customs ID hari-ayah
 O Dia Nacional dos Pais da Indonésia é 12 de novembro, mas não foi instituído pelo Estado: nessa data, em 2006, um grupo da sociedade civil, a Associação dos Filhos da Mãe Pátria, o declarou na praça diante da prefeitura de Solo, em Java Central, junto com o resultado de um concurso de cartas dirigidas aos pais e o envio de mil cartas por crianças de várias regiões. A data foi escolhida para equilibrar o Dia das Mães, havia muito fixado por decreto presidencial em 22 de dezembro; a primeira comemoração ocorreu ao mesmo tempo em Solo e em Maumere, no leste, como símbolo das duas pontas da Indonésia. Dia das Mães definido pelo Estado, Dia dos Pais definido pelos cidadãos — essa assimetria é, ela mesma, o dado.
+### customs CN fathers-day
+O Dia dos Pais não tem estatuto oficial na China. As Medidas do Conselho de Estado sobre Feriados e Datas Comemorativas Nacionais separam as folgas em duas classes — as de todos os cidadãos (Ano-Novo, Festa da Primavera, Qingming, Dia do Trabalho, Barco-Dragão, Meio-Outono, Dia Nacional) e as de parte deles (Dia da Mulher, Dia da Juventude, Dia das Crianças, Dia do Exército) — e o Dia dos Pais não aparece em nenhuma. A prática popular segue sobretudo o terceiro domingo de junho, e há quem guarde o dia oito de agosto pelo som dos números; as duas convivem e nenhuma é prescrita. Todos os outros lugares desta página têm ao menos um documento que declara uma data; o que preenche a célula da China é a ausência desse documento.
+### customs IN fathers-day
+O Dia dos Pais tampouco entrou no sistema de feriados da Índia: as listas central e estaduais trazem festas religiosas e comemorações nacionais, e este não está entre elas. O que se segue na prática é o terceiro domingo de junho, sobretudo em cidades e escolas, em forma de cartões e bolo. É um caminho distinto do de Taiwan, onde a data nasceu de um trocadilho, e do dos Estados Unidos, onde nasceu de uma lei — aqui a data chegou pelo calendário de outra pessoa.
