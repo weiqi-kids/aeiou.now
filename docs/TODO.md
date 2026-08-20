@@ -27,15 +27,14 @@
     [ "$n" != "0" ] && [ "$n" != "?" ] && echo "$r : $n"; done
   ```
   發現 aeiou-pages-* 以外的 repo 掛了 deploy key,那才是要查的事。
-- [ ] **組織未強制兩階段驗證** —— 2026-08-20 已把事實查齊,只差你決定:
-      - 成員只有 1 位(`LightChang`),**已啟用 2FA**,不受影響。
-      - 但**外部協作者有 2 位且都沒啟用 2FA**:`a23222229-dev`、`vegeta1260-ai`。
-        開啟強制後這兩個帳號會**失去存取權**,直到他們自己開 2FA。
-      - 所以這不是「安全起見順手開」,是會切掉別人存取的動作,我不自行執行。
-      - 要開之前的順序:請這兩位先開 2FA → 複查 → 再開組織開關。
-      查法:`gh api '/orgs/weiqi-kids/outside_collaborators?filter=2fa_disabled' --jq '.[].login'`
-        (空 = 可以安全開啟);開關本身 `gh api /orgs/weiqi-kids --jq .two_factor_requirement_enabled`。
-      順帶查過 deploy key 審計:掛 key 的只有 7 個 `aeiou-pages-*`,各 1 把,沒有意外的 repo。
+- [x] **組織不強制兩階段驗證**(2026-08-20 用戶拍板:不開)。**這是決定,不是待辦,別再提案。**
+      當時查齊的事實:成員只有 `LightChang` 1 位且已啟用 2FA;外部協作者 2 位
+      (`a23222229-dev`、`vegeta1260-ai`)**都未啟用**,開啟強制會直接切掉他們的存取權。
+      現況查法(要看的是「誰真的沒開」,不是那個布林值):
+      `gh api '/orgs/weiqi-kids/outside_collaborators?filter=2fa_disabled' --jq '.[].login'`;
+      開關本身 `gh api /orgs/weiqi-kids --jq .two_factor_requirement_enabled`。
+      順帶完成的 deploy key 審計:掛 key 的只有 7 個 `aeiou-pages-*`、各 1 把,沒有意外的 repo
+      (判準見本檔上方那條:`aeiou-pages-*` 以外的 repo 掛了 key 才是要查的事)。
 
 ## 新增 Topic(2026-08-20 起 cover 已自動化)
 
