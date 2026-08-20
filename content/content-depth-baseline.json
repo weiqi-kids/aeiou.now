@@ -7,24 +7,16 @@
   },
   "r6_exempt": [
     "affection-and-reciprocity/IN/valentine-week",
-    "affection-and-reciprocity/JP/valentine",
-    "affection-and-reciprocity/JP/white-day",
     "affection-and-reciprocity/US/valentine",
     "ghosts-ancestors-and-remembrance/JP/obon",
     "ghosts-ancestors-and-remembrance/JP/setsubun",
-    "homecoming-and-reunion/JP/obon",
-    "teachers-day/BR/dia-dos-professores",
-    "teachers-day/CN/teachers-day",
-    "teachers-day/ID/hari-guru",
-    "teachers-day/IN/teachers-day",
-    "teachers-day/TW/teachers-day",
-    "teachers-day/US/teacher-appreciation"
+    "homecoming-and-reunion/JP/obon"
   ],
   "topics": {
     "affection-and-reciprocity": {
       "units": 6,
       "countries": 5,
-      "min_chars": 477
+      "min_chars": 926
     },
     "ask-the-world": {
       "units": 7,
@@ -139,7 +131,7 @@
     "national-days": {
       "units": 7,
       "countries": 7,
-      "min_chars": 486
+      "min_chars": 1141
     },
     "new-year": {
       "units": 7,
@@ -164,7 +156,7 @@
     "teachers-day": {
       "units": 6,
       "countries": 6,
-      "min_chars": 372
+      "min_chars": 1038
     },
     "weddings-and-customs": {
       "units": 7,
