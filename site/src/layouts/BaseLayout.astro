@@ -241,6 +241,14 @@ const jumpTopics = hotTopics(2).filter((topic) => topic && topic.slug);
       <div class="container footer-inner">
         <p class="footer-name">aeiou.now</p>
         <a class="footer-link" href={withBase('about/')}>{t('nav.about')}</a>
+        {/* /questions/ 的內部連結原本只有首頁那一個(53 頁中的 1 頁),而且埋在
+            每日一問區塊的「看所有世界問題 →」裡。2026-08-20 用 GSC URL Inspection 查,
+            該頁判定是 Discovered - currently not indexed,而 referringUrls **只列出
+            其他語系站的同一頁**(en./hi. 的 /questions/,來自 hreflang),
+            也就是 Google 在本站上找不到通往它的路。
+            這裡放的是頁尾連結,**不動右上角導覽**——導覽是四項契約(見 CLAUDE.md),
+            questions/index.astro 的作者也刻意寫明不加導覽項。用既有的 i18n 字串,不另造文案。 */}
+        <a class="footer-link" href={withBase('questions/')}>{t('q.archive_title')}</a>
       </div>
     </footer>
   </body>
