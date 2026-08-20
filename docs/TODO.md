@@ -31,6 +31,18 @@
   但爆炸半徑比它大得多。查:`gh api /orgs/weiqi-kids --jq .two_factor_requirement_enabled`。
   要開之前得先確認組織成員(含機器帳號)都已設定 2FA,否則會被踢出組織——**動工前先問用戶**。
 
+## 要用戶做:womens-day 的封面圖(唯一卡點)
+
+Topic 內容已寫完並驗過,放在 `content/topics-pending/`。缺的只有一張圖:
+
+    site/public/covers/womens-day.png    1200×675 PNG
+
+現有 38 張封面都是寫實風格的 AI 生成照片,風格屬產品決定,我不自己生成。
+圖放好之後,照 `content/topics-pending/README.md` 的四步搬檔＋驗收即可上線。
+
+⚠️ 不要只搬 md 不搬 occurrence,也不要在沒有 cover 時就搬 md ——
+兩者都會讓 `hourly-export.sh` 中止,線上所有資料停更(不只這個 Topic 不上線)。
+
 ## 搜尋數據(2026-08-20 開工)
 
 ### 已完成(2026-08-20)

@@ -73,6 +73,27 @@ How do people express affection?
 (ja / zh-CN / hi / id / pt-BR 同上)
 ```
 
+## 新增一個 Topic 需要三樣東西(缺一不可;2026-08-20 補)
+
+| 要件 | 路徑 | 缺了會怎樣 |
+|---|---|---|
+| Topic 內容 | `content/topics/<slug>.md` | 匯入器擋下該檔 |
+| 年度日期 | `content/observance-occurrences.json` | `import-topic-occurrences.mjs` **exit 1** |
+| **封面圖 1200×675 PNG** | `site/public/covers/<slug>.png` | `check-topic-calendar.mjs` **exit 1** |
+| taxonomy 白名單 | `scripts/check-final-topic-taxonomy.mjs` 的 `FINAL_SLUGS`(硬編碼) | 該閘門擋下 |
+
+⚠️ **後三項的失敗都是整條管線停擺,不是「這個 Topic 不上線」**——
+`hourly-export.sh` 是 fail-closed 的,任一步非 0 就中止,線上**所有**資料跟著停更。
+所以四樣東西要嘛一起進,要嘛一起不進;寫好但還缺 cover 的 Topic 放
+`content/topics-pending/`(該目錄不在任何管線的掃描路徑上),別放 `content/topics/`。
+
+⚠️ **`import-topics.mjs` 無視 `AEIOU_DB_PATH`**——它沒走 `lib/aeiou-lib.mjs` 的
+`CONFIG.dbPath`,而是自己 `const DB_PATH = join(ROOT,"db","aeiou.sqlite")` 寫死。
+想拿測試庫試跑會直接寫進正式庫(2026-08-20 踩過,清乾淨要手動 DELETE 六張表:
+`topic_observance_i18n`、`topic_observance_occurrences`、`topic_observances`、
+`topic_cycles`、`topic_i18n`、`topics`)。驗「清乾淨了沒」的方法是跑 `export-data.mjs`
+再看 `git status --porcelain data/` 是不是空的。
+
 ## 硬規則(匯入器會擋,錯誤訊息會講清楚缺什麼)
 
 1. **七語都要有**(`zh-TW` `en` `ja` `zh-CN` `hi` `id` `pt-BR`),每語至少要 `### title`。
