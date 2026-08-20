@@ -26,26 +26,38 @@ GA/GSC 診斷的結論是「頁面撐不起排名」。閘門已上線,補資料
 node scripts/check-content-depth.mjs --report   # 缺口清單(排序=最該先補的在最上面)
 node scripts/check-content-depth.mjs            # 閘門;存量以 baseline 凍住只能升不能降
 node scripts/seo-health.mjs                     # 量測/索引/排名/內容四層分開診斷
-node scripts/check-source-urls.mjs              # 來源連結存活(404 才擋)
+node scripts/check-source-urls.mjs              # 來源連結存活(404/410、或 redirect 落在錯誤頁才擋)
 ```
 
-- [x] christmas / diwali / ramadan-and-eid / lantern-festival 已補(2026-08-20)。
-- [ ] **其餘 Topic 依 `--report` 由上往下補**。目標=每語系 1,200 唯一字元、5 個地方變體
+- [x] **全部 Topic 補到目標水位(2026-08-20)**。目標=每語系 1,200 唯一字元、5 個地方變體
   (對照基準:2026-08-19 實測 folk.tw 主力內容頁渲染後去重 1,600–2,930 字元)。
-  補完一批跑 `--update-baseline` 把新水位鎖住。
-- [ ] **R6 待補:來源不在該國網域的 observance**。清單在
-  `content/content-depth-baseline.json` 的 `r6_exempt`(只能縮不能長)。
+  現況查法:`node scripts/check-content-depth.mjs --report`(看最後一行「未達目標」)。
+  補完一批一定要跑 `--update-baseline` 把新水位鎖住,否則下次改動可以無聲退回去。
+- [x] **R6:來源不在該國網域的 observance 已清空**(`r6_exempt` 現況查
+  `python3 -c "import json;print(json.load(open('content/content-depth-baseline.json'))['r6_exempt'])"`;
+  這份清單只能縮不能長)。
   成因是先前查資料只用英文,拿回 japan.travel 的 `/en/` 觀光頁而非該國官方網域。
-  **修法:先用當地語言查該國官方網域**(日本→`*.go.jp`、印尼→`*.go.id`、
-  巴西→`planalto.gov.br`、中國→`gov.cn`、台灣→`*.gov.tw`),英文頁只當補充。
-  ⚠️ `japan.travel` 是 `.travel` 頂級網域,不是日本政府網域。
-- [ ] **每個 Topic 頁把同一段 lede 與國別敘述各印兩次**(header 一次、「快速回答」再一次)。
-  要降到一次得動版面 —— **版面權威來源是產品草案,屬用戶決定,動工前先問**。
-  現況查法:`cd site && node scripts/check-rendered-depth.mjs --report`(看「最多重複」欄)。
-- [ ] **首頁與清單頁每張 Topic 卡都印一行「討論室暫時關閉」**(四態契約的靜態預設值)。
-  爬蟲看到的因此是一個關著的論壇。要不要在清單頁隱藏該狀態同樣屬版面決定,先問用戶。
-- [ ] **排行榜 thin 視窗已 noindex 並退出 sitemap**(2026-08-20),等 `topic_scores`
+  **往後一律先用當地語言查該國官方網域**(日本→`*.go.jp`、印尼→`*.go.id`、
+  巴西→`planalto.gov.br`/`*.gov.br`、中國→`gov.cn`、台灣→`*.gov.tw`、印度→`*.gov.in`),
+  英文頁只當補充。⚠️ `japan.travel` 是 `.travel` 頂級網域,不是日本政府網域。
+- [x] **同一段 lede 與國別敘述印兩次已修掉**(2026-08-20 移除 Topic 頁重複的兩張回答卡;
+  FAQPage JSON-LD 仍保留四題)。查:`cd site && node scripts/check-rendered-depth.mjs --report`
+  (看最後一行「有長段落重複兩次的頁面」)。
+- [x] **清單頁的「討論室暫時關閉」已改掉**(2026-08-20;靜態預設值改為 `loading`,
+  失敗態另名 `unavailable`)。查:`curl -s https://aeiou.now/ | grep -o 'data-room-state="[a-z]*"' | sort | uniq -c`。
+- [x] **排行榜 thin 視窗已 noindex 並退出 sitemap**(2026-08-20),等 `topic_scores`
   排名 job 上線、筆數超過門檻會自動恢復索引,不需要改碼。查:`node scripts/check-content-depth.mjs`。
+- [ ] **持續工作:新增 Topic 一律要一次補到水位**。閘門會擋,但擋下來的是部署不是內容——
+  別靠閘門提醒才想到要寫。
+
+### 事故:來源回 200 卻是錯誤頁(2026-08-20)
+
+`www.tad.gov.tw`(觀光局舊網域)的十個來源全部 302 到 `eng.taiwan.net.tw/ErrorPage.html`,
+HTTP 狀態是 **200**。當時的 `check-source-urls.mjs` 只看狀態碼,判成「可達」放行,
+其中一個剛好回 404 才被抓到——**一整批死連結靠一個巧合才曝光**。
+已把「跟完 redirect 落在錯誤頁」納入失效判定;來源全數換成《紀念日及節日實施條例》
+(`law.moj.gov.tw` pcode=D0020095,實測涵蓋除夕/春節/元宵/清明/端午/中元/中秋)。
+**教訓:驗連結不能只看狀態碼,要看跟完 redirect 之後落在哪裡。**
 
 ## 產品功能(版面已定版,這些是資料/行為層)
 

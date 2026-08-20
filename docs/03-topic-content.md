@@ -22,7 +22,7 @@
 - local_name: 情人節               ← 該地方表現的在地名稱
 - date: 02-14                      ← 固定日期,MM-DD
 - rank: 1                          ← 該地方表現在該國的排序(可省略)
-- source: https://www.japan.travel/en/us/blog/valentines-day-white-day-in-japan/     ← 佐證來源,**至少一個,可重複多行**
+- source: https://www.maff.go.jp/j/seisan/kaki/flower/attach/pdf/index-113.pdf     ← 佐證來源,**至少一個,可重複多行**
 - source: https://www.britannica.com/topic/Valentines-Day
 
 ## observance TW qixi
@@ -33,12 +33,12 @@
 ## observance JP tanabata
 - local_name: 七夕(たなばた)
 - date: 07-07
-- source: https://www.japan.travel/en/see-and-do/festivals-and-events/
+- source: https://www.ndl.go.jp/koyomi/chapter3/
 
 ## observance JP white-day
 - local_name: ホワイトデー
 - date: 03-14
-- source: https://www.japan.travel/en/us/blog/valentines-day-white-day-in-japan/
+- source: https://www.maff.go.jp/j/seisan/kaki/flower/attach/pdf/index-113.pdf
 
 ## locale zh-TW                    ← 七語各一段,**缺一個匯入就報錯**
 ### title
@@ -82,6 +82,28 @@ How do people express affection?
 4. `date` 格式 `MM-DD`;非固定日期(農曆、第 N 個星期日…)寫 `date_rule`,跨日區間用 `date_end`。
 5. Topic slug 與 observance key 只准 `a-z0-9-`。
 6. **每個 Topic 都要填 `commonality`**——它是分類依據；日期是 observance 的觸發資料，不是 Topic 的主鍵。
+
+### 來源怎麼找(2026-08-19 用戶指示;每次都要這樣做)
+
+**一律先用當地語言查該國官方網域,英文頁只當補充。** 只用英文搜尋會系統性地把來源拉向
+觀光推廣站與英文百科,那些頁面在該國不具權威、也常年久失修。
+
+| 國家 | 先搜的語言 | 官方網域 |
+|---|---|---|
+| 台灣 | 繁體中文 | `*.gov.tw`(法規查 `law.moj.gov.tw`) |
+| 日本 | 日本語 | `*.go.jp`(法令查 `laws.e-gov.go.jp`) |
+| 中國 | 简体中文 | `*.gov.cn` |
+| 印度 | हिन्दी／English | `*.gov.in`、`*.nic.in` |
+| 印尼 | Bahasa Indonesia | `*.go.id` |
+| 巴西 | Português | `planalto.gov.br`、`*.gov.br` |
+| 美國 | English | `*.gov`(國會查 `congress.gov`、`history.house.gov`) |
+
+⚠️ `japan.travel` 是 `.travel` 頂級網域,**不是**日本政府網域;`*.travel`、`*.org` 的觀光
+或推廣站一律不算該國官方來源。閘門 R6 會擋:`node scripts/check-content-depth.mjs --report`。
+
+⚠️ **驗連結不能只看狀態碼**。2026-08-20 抓到一整批 `www.tad.gov.tw` 來源 302 到
+`eng.taiwan.net.tw/ErrorPage.html`,HTTP 回 **200**。改完來源一定要跑
+`node scripts/check-source-urls.mjs`(已納入「跟完 redirect 落在錯誤頁」的判定)。
 
 ### 年度日期(上線排序的權威資料)
 
