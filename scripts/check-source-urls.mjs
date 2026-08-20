@@ -11,7 +11,9 @@
 // 它讓讀者與 Google 都以為有佐證。
 //
 // ── 狀態碼怎麼判（這段是重點，別簡化成「非 200 就紅」）──────────────────
-//   404 / 410           → ERROR。頁面真的不在了。
+//   404 / 410           → ERROR。頁面真的不在了。**判死前一定複驗一次**:同一個網址
+//                         從不同網路可能拿到不同狀態碼(2026-08-20 實測 bndigital.bn.gov.br
+//                         本機 403、GitHub Actions 404),單次判死會讓 CI 間歇性紅燈。
 //   403 / 412 / 429     → WARN。是**對方擋機器人**，不是連結死掉。
 //                         實測會落在這裡的：britannica.com、oecd.org、timeanddate.com、
 //                         defense.gov、justica.pr.gov.br、nhc.gov.cn。
@@ -105,8 +107,15 @@ let cursor = 0;
 await Promise.all(Array.from({ length: CONCURRENCY }, async () => {
   while (cursor < urls.length) {
     const url = urls[cursor++];
-    const { status, error, finalUrl } = await probe(url);
+    let { status, error, finalUrl } = await probe(url);
     const where = [...usedBy.get(url)].join(', ');
+    // 判死之前一定複驗一次 —— 2026-08-20:bndigital.bn.gov.br 從本主機回 403(WAF),
+    // 從 GitHub Actions 的網路回 404,同一個網址依來源網路給不同狀態碼。
+    // 只驗一次會讓 CI 因為對方 WAF 的地域差異而間歇性紅燈。
+    if (status === 404 || status === 410 || (status >= 200 && status < 400 && landsOnErrorPage(url, finalUrl))) {
+      await new Promise((r) => setTimeout(r, 1500));
+      ({ status, error, finalUrl } = await probe(url));
+    }
     if (status === 404 || status === 410) dead.push({ url, status, where });
     else if (status >= 200 && status < 400 && landsOnErrorPage(url, finalUrl)) {
       dead.push({ url, status: `${status}→錯誤頁`, where, finalUrl });
