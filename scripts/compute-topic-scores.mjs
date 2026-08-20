@@ -48,6 +48,12 @@ const EXPLAIN = argv[argv.indexOf("--explain") + 1] && argv.includes("--explain"
 const WINDOWS = { "24h": 1, "72h": 3, "7d": 7, "1m": 30, "3m": 90, "1y": 365 };
 const day = 86400;
 const now = nowSec();
+// 分數的時間基準一律對齊「當日 UTC 午夜」,不是此刻。
+// 2026-08-20 事故:Proximity 直接吃 now(秒),於是每跑一次分數就微幅變動,
+// hourly-export 每小時都判定 data/ 有變 → 每小時 commit 124 檔、822 增 822 刪,
+// 每小時觸發一次七站重建,只為了一個 0.01 的分數漂移。而且真正的內容改動
+// 會被埋在這種雜訊裡看不出來。「距離某天還有幾天」本來就不該每小時變。
+const midnight = Math.floor(now / day) * day;
 const today = new Date(now * 1000).toISOString().slice(0, 10);
 const dayStr = (n) => new Date((now - n * day) * 1000).toISOString().slice(0, 10);
 
@@ -114,11 +120,11 @@ try {
   ).all()) {
     const prev = nextOcc.get(r.topic_id);
     // 取「距今絕對值最小」的那一筆:節日剛過與即將到來都算當令。
-    const d = Math.abs((Date.parse(`${r.starts_on}T00:00:00Z`) / 1000 - now) / day);
+    const d = Math.abs((Date.parse(`${r.starts_on}T00:00:00Z`) / 1000 - midnight) / day);
     if (!prev || d < prev) nextOcc.set(r.topic_id, d);
   }
 
-  const inWindow = (ts, days) => ts != null && ts >= now - days * day;
+  const inWindow = (ts, days) => ts != null && ts >= midnight - days * day;
   const sum = (arr) => arr.reduce((a, b) => a + b, 0);
 
   /** 各國 scope 用得到:把某個集合按國別切開 */
@@ -200,7 +206,7 @@ try {
     const total = ViewScore + CommentScore + EngagementScore + VelocityScore
       + CrossCountryScore + SourceScore + Proximity - AgeDecay;
     return {
-      total: Math.max(0, Number(total.toFixed(3))),
+      total: Math.max(0, Number(total.toFixed(2))),
       parts: { ViewScore, CommentScore, EngagementScore, VelocityScore, CrossCountryScore, SourceScore, Proximity, AgeDecay },
       impressions, clicks,
     };
