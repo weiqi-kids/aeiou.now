@@ -26,6 +26,15 @@
 // 沒送到的列原樣留著,不會被清掉。全量推的路徑照樣保留(--force 與保底重推),
 // 所以 D1 那側若掉資料,最多 FORCE_INTERVAL_SEC 之後就會補回來。
 //
+// 不同步趨勢 Topic(2026-08-20,用戶指示):主機的 355 個 Topic 裡有 317 個是趨勢 Topic,
+// 而趨勢 Topic **還沒上線**(前端要先能區分機器/人工 Topic 才會復活,見 docs/TODO.md)。
+// 沒有任何頁面連到它們,所以 D1 上也沒有任何貼文/留言/反應/排行指到它們
+// (刪除前實查:posts_on_trend=0、comments=0、reactions=0、ranking_items=0)。
+// 把它們推進 D1 只是讓每次全量推從 38 + 266 列漲成 355 + 2,485 列。
+//
+// 🔴 **趨勢 Topic 復活時,要改的就是下面那個 WHERE**。改回來之後跑一次 --force
+//    才會把它們補進 D1;差異同步不會自己想起沒送過的列。
+//
 // 環境變數:
 //   AEIOU_API_URL          Worker base URL(預設 workers.dev;切自訂網域只改這裡)
 //   AEIOU_DB_PATH          主機 SQLite(預設 /root/aeiou.now/db/aeiou.sqlite)
@@ -40,6 +49,7 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 import { CONFIG, ROOT, api, openDb, beginJob, finishJob, slotStart, nowSec, log } from "./lib/aeiou-lib.mjs";
+import { TREND_ACCESS_SOURCE } from "./lib/topics.mjs";
 
 const JOB_NAME = "sync-topics";
 
@@ -78,13 +88,22 @@ try {
                 WHERE c.topic_id = t.topic_id AND c.ended_at IS NULL
                 ORDER BY c.started_at DESC LIMIT 1) AS current_cycle_id
          FROM topics t
+        WHERE t.access_source IS NOT ?
         ORDER BY t.topic_id`
     )
-    .all();
+    .all(TREND_ACCESS_SOURCE);
 
+  // i18n 也要用同一個條件過濾 —— 否則會把「D1 上沒有那個 topic」的 i18n 列 upsert 進去,
+  // 留下一堆指不到 topic 的孤兒。
   const i18n = db
-    .prepare("SELECT topic_id, locale, title FROM topic_i18n ORDER BY topic_id, locale")
-    .all();
+    .prepare(
+      `SELECT i.topic_id, i.locale, i.title
+         FROM topic_i18n i
+         JOIN topics t ON t.topic_id = i.topic_id
+        WHERE t.access_source IS NOT ?
+        ORDER BY i.topic_id, i.locale`
+    )
+    .all(TREND_ACCESS_SOURCE);
 
   const payload = {
     topics: rows.map((r) => ({

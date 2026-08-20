@@ -179,84 +179,19 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
   ⚠ 版面怎麼標示屬產品決定,動工前先問用戶,並先讀產品草案本體。
 - [ ] **趨勢 Topic 的熱度與排序策略未定**:趨勢沒有文化日期,目前是直接給最高「近期」優先序,
   等同蓋過人工策展的節奏。復活時要一併決定。
-- [ ] **差異同步的實地確認**(2026-08-20 改的)。`sync-topics-to-d1.mjs` 已改成只推
-  hash 變了的列,對本機 stub 實測過(改一個 title:2,840 列 → 1 列),
-  **但 production 目前只跑過「全量」那條路徑**(state 檔第一次補逐列 hash 時本來就該全量)。
-  下次有人改 `content/topics/*.md` 之後,查一次確認差異路徑真的有走到:
-  `grep -oE '(全量|差異) upsert.*' logs/cron-15min.log | tail -3`
-  ——應該看到「差異 upsert(送 N 列,全量會是 355 / 2485)」。
-- [ ] **D1 仍留著趨勢 Topic 副本要不要清**(`sync-topics-to-d1.mjs` 照同步,不看靜態閘)。
-  **相關**:同步的 355 個 Topic 裡有 317 個是趨勢 Topic;差異同步之後日常成本接近零,
-  但每次全量推(--force 或六小時保底)仍是 2,840 列。要不要在 SQL 層就濾掉未上線的趨勢 Topic,
-  取決於 D1 上已有的貼文會不會指到它們——**動手前先查,別直接加 WHERE**。
-  2026-08-19 修好 TTL 之後**會自然退場**(過期轉 archived 再隨同步下架);在那之前
-  TTL 被 kill switch 一起凍結,所以不會自己消失。查退場進度:
-  `sqlite3 db/aeiou.sqlite "SELECT status,COUNT(*) FROM topics WHERE access_source='trend' GROUP BY 1"`
-  Worker 沒有列出 Topic 的端點、靜態層也不產生連結,所以讀者路徑上到不了;TTL 到期會轉 archived。
-  等趨勢復活與否定案再決定。查數量:
-  `cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT COUNT(*) FROM topics WHERE topic_id LIKE 'top_tr_%'"`
-- [x] **`trend_runs` 的 status='running' 殘列已不存在**(2026-08-20 實查為 0;
-  當初是 2026-08-17～08-18 連續失敗期留下的)。`run_key` 唯一且 `INSERT OR IGNORE`,
-  本來就不會擋住後續執行。
-  查:`sqlite3 db/aeiou.sqlite "SELECT status,COUNT(*) FROM trend_runs GROUP BY 1"`
-- [x] **`jobs` 的 DLQ 與孤兒 running 列已清**(2026-08-20 用戶指示)。清之前先封存到
-  `logs/jobs-*-archive-*.jsonl`(該目錄不進 git)。
-  查:`sqlite3 db/aeiou.sqlite "SELECT status,COUNT(*) FROM jobs GROUP BY 1"`——
-  正常狀態下不應該有 `dlq`,也不應該有跑完很久還停在 `running` 的列。
-  孤兒 `running` 會連帶留下同一輪的 `job_locks`;那個鎖以 (scope, job_name, scheduled_at)
-  為主鍵,只鎖住那個已經過去的時段,不會擋住後續執行,但清的時候要一起帶走。
-
-## M2 前置:GSC/GA4/DNS/Slack 設定(2026-08-11 用戶指示動工)
-
-- [x] **網域註冊**(2026-08-15):GoDaddy。查:`curl -sL https://rdap.org/domain/aeiou.now`。
-- [x] **DNS**(2026-08-15):**採 GoDaddy 自家 DNS(非 Linode 慣例)**,用戶面板手動管理,主機無 API 權限。
-  記錄=apex A×4+AAAA×4(GitHub Pages 固定 IP)、六子網域 en/jp/cn/hi/id/br CNAME →
-  `weiqi-kids.github.io`、GSC TXT。查:`dig @1.1.1.1 +short A aeiou.now`(換 AAAA/TXT/CNAME 各查)。
-  ⚠ **切自訂網域上線前必須先補 Bot 防護**(下節紅線)。
-- [x] **GitHub org 的 Pages 網域驗證已完成**(用戶 2026-08-19 確認已在 UI 按過 Verify;
-  同日實測 TXT `_github-pages-challenge-weiqi-kids.aeiou.now` 查得到值)。
-  **這一項沒有 API 可查**(實測 `/orgs/*/settings/pages`、`/orgs/*/pages`、`/orgs/*/domains` 皆 404),
-  唯一的機器可查訊號就是上面那筆 TXT;要看驗證狀態只能開 UI。
-  ⚠ **不要拿 `gh api /orgs/weiqi-kids --jq .is_verified` 當證據** —— 那是另一個功能
-  (組織資料驗證/profile 徽章,用 `_github-challenge-<org>-org` TXT),與 Pages 網域驗證無關,
-  它是 false 不代表這一項沒做。原始說明(防 subdomain takeover):
-  無 REST API(2026-08-15 實測 /orgs/*/pages* 皆 404),只能 UI:
-  `github.com/organizations/weiqi-kids/settings/pages` → Add a domain → 取 TXT code →
-  GoDaddy 加 `_github-pages-challenge-weiqi-kids` TXT → Verify。**用戶端動作**。
-  查:`dig @1.1.1.1 +short TXT _github-pages-challenge-weiqi-kids.aeiou.now`(有值=TXT 已加)。
-- [x] **GCP 專案+SA**(2026-08-12 完成):專案 `aeiou-seo`、SA `seo-ops@aeiou-seo.iam.gserviceaccount.com`、
-  金鑰 `~/.config/aeiou/ga4-sa.json`(600),已啟用 analyticsadmin/analyticsdata/searchconsole API。
-  隔離已驗:金鑰見 0 個外站資源。**GSC/GA4 授權後要重跑全綠驗收**:
-  `node /root/seo-ops/bin/identity-audit.mjs --sa ~/.config/aeiou/ga4-sa.json --expect-only aeiou.now` exit 0。
-- [x] **GA4 property**(2026-08-14 完成):property `549586494`、web stream `G-ZMTFG68ZJ5`(SA 可見,
-  即檢視者已加)、`PUBLIC_GA4_ID` 已接進 CI build(`build.yml` 頂層 env)。
-  查 stream:SA 打 `analyticsadmin.googleapis.com/v1beta/properties/549586494/dataStreams`;
-  查上線:`curl -s https://weiqi-kids.github.io/aeiou-pages-zh-tw/ | grep -c googletagmanager`。
-  ⚠ 手動單站 build/push 要自帶 `PUBLIC_GA4_ID`,否則該站 gtag 會消失到下次 CI 推。
-  互動事件已接入：`topic_open`、`question_vote`、`discussion_view`、`discussion_post`、
-  `discussion_comment`、`reaction_click`、`source_click`、`local_action_click`。
-- [x] **GSC**(2026-08-15 完成,隔離驗收 exit 0):`sc-domain:aeiou.now` 用戶建+TXT 驗證;
-  SA 走 Site Verification API 繞過 UI(UI 加 SA 報「找不到電子郵件」的已知毛病)。
-  完整繞法(五步,缺一不可):①用戶啟用專案的 Site Verification API ②SA 要 DNS_TXT token
-  ③token 加進 DNS TXT ④SA `webResource.insert`(成為驗證擁有者)⑤**SA `sites.add`
-  (webmasters v3 PUT /sites/sc-domain%3A...)把資源掛進自己帳號——沒有這步 sites.list 永遠是空的**。
-  SA 為 siteOwner(API 驗證的本質),非原規劃的「完整使用者」,記錄在案。
-  查:`node /root/seo-ops/bin/identity-audit.mjs --sa ~/.config/aeiou/ga4-sa.json --expect-only aeiou.now`。
-- [x] **Slack**:workspace=Weiqi.Kids、bot=`claude-helper`(有 `chat:write.public`,公開頻道免邀請;
-  **沒有 `channels:read`,所以 `conversations.info` 會回 `missing_scope`,那是正常的,別當故障**)。
-  token 在 `~/.config/aeiou/slack-bot-token`(600)。
-  2026-08-19 實測:`auth.test` ok、對頻道 `chat.postMessage` ok(CI 實際走的就是這條)。
-  頻道已建:`#天天開心-aeiou-now` / `C0BPMFZ50KG`。
-  repo secrets `SLACK_BOT_TOKEN`/`SLACK_CHANNEL_ID` 已於 2026-08-19 設定,告警路徑接通。
-  (在此之前 CI 的失敗告警一直 gracefully skip,所以頻道從建立到當天零訊息,不是壞掉。)
-  查:`gh secret list -R weiqi-kids/aeiou.now | grep -i slack`。
-  **尚未驗證**:真實 build 失敗時的告警(至今沒有失敗的 build 可觀察);下次 CI 紅的時候看頻道有沒有收到。
-
-## M2 才做(用戶已同意延後;動工前先問)
-
-- [x] Bot 防護第一、二層(2026-08-15 完成):①入口限流(Worker `RATE_LIMITS`,anon_id+IP 雙鍵,
-  429;事件表 `rate_events` 只存 IP 雜湊)②價值閘門(翻譯管線內判定,沒價值→`moderation`+`skipped`
-  下架不翻,判定從寬)。**切自訂網域的前置條件已滿足。**
+- [x] **差異同步已在 production 走到差異路徑**(2026-08-20)。清完趨勢副本後那一輪:
+  「內容有變,差異 upsert(送 0 topics / 0 topic_i18n,全量會是 38 / 266)」
+  ——payload 少了 317 個 Topic 所以整體 hash 變了,但留下的每一列都沒變,於是一列都沒送。
+  查法:`grep -oE '(全量|差異) upsert.*' logs/cron-15min.log | tail -3`
+- [x] **D1 的趨勢 Topic 副本已清**(2026-08-20 用戶指示)。刪之前實查 D1:
+  指到趨勢 Topic 的 posts / comments / reactions / ranking_items 全部為 0,所以刪除是安全的;
+  刪除前先把 topics 與 topic_i18n 兩份匯出到 `logs/d1-trend-topics-backup-*.json` 並驗過筆數。
+  同時把 `sync-topics-to-d1.mjs` 的查詢加上 `access_source IS NOT 'trend'`(topics 與 topic_i18n
+  兩邊都要,否則會留下指不到 topic 的孤兒 i18n 列)。
+  🔴 **趨勢 Topic 復活時要改的就是那個 WHERE**,而且改回來之後要跑一次 `--force`
+  ——差異同步不會自己想起沒送過的列。
+  現況查法:
+  `cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT COUNT(*) FROM topics"`
 - [ ] Turnstile(Bot 防護第三層,擋純腳本):判斷可後補——限流+價值閘門就位後,等實際被打再上
   (用戶未明示反對此排序;要提前做先問)
 - [x] 七站切換自訂網域(2026-08-15 完成):CI dist 帶 `CNAME`、`BASE_PATH=/`、每站專屬
