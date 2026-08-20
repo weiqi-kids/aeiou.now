@@ -127,7 +127,7 @@ const metaCoverage = worldCountries
     if (country.kind === 'observance' && country.local_name) parts.push(country.local_name);
     return parts.join(' · ');
   })
-  .join(', ');
+  .join(copy.listSep);
 const dateAnswer = countries
   .filter((observance) => observance.next_occurrence)
   .map((observance) => {
@@ -147,13 +147,13 @@ const nextStart = countries
   .sort()[0] || null;
 const titleYear = nextStart ? nextStart.slice(0, 4) : null;
 const pageTitle = titleYear
-  ? `${title} ${titleYear}｜${copy.metaSuffix}｜${SITE_NAME}`
-  : `${title}｜${copy.metaSuffix}｜${SITE_NAME}`;
+  ? `${title} ${titleYear}${copy.titleSep}${copy.metaSuffix}${copy.titleSep}${SITE_NAME}`
+  : `${title}${copy.titleSep}${copy.metaSuffix}${copy.titleSep}${SITE_NAME}`;
 
 const metaDescription = compactDescription([
-  dateAnswer.length > 0 ? `${dateAnswer.slice(0, 2).join('、')}。` : null,
+  dateAnswer.length > 0 ? `${dateAnswer.slice(0, 2).join(copy.listSep)}${copy.endMark}` : null,
   whatAnswer,
-  metaCoverage ? `${copy.coveragePrefix} ${metaCoverage}.` : null,
+  metaCoverage ? `${copy.coveragePrefix} ${metaCoverage}${copy.endMark}` : null,
   sourceUrls.length > 0 ? copy.sourceMeta : null,
 ].filter(Boolean).join(' '));
 const whereAnswer = worldCountries.length > 0
@@ -164,7 +164,7 @@ const whereAnswer = worldCountries.length > 0
       if (country.date_rule) parts.push(country.date_rule);
     }
     return parts.join(' · ');
-  }).join('；')
+  }).join(copy.itemSep)
   : copy.noDate;
 const differenceAnswer = [
   ...countries
@@ -204,7 +204,7 @@ const topicSchema = [
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: copy.what, acceptedAnswer: { '@type': 'Answer', text: whatAnswer } },
-      { '@type': 'Question', name: copy.when, acceptedAnswer: { '@type': 'Answer', text: dateAnswer.length ? dateAnswer.join('；') : copy.noDate } },
+      { '@type': 'Question', name: copy.when, acceptedAnswer: { '@type': 'Answer', text: dateAnswer.length ? dateAnswer.join(copy.itemSep) : copy.noDate } },
       { '@type': 'Question', name: copy.where, acceptedAnswer: { '@type': 'Answer', text: whereAnswer } },
       { '@type': 'Question', name: copy.differences, acceptedAnswer: { '@type': 'Answer', text: differenceAnswer } },
     ],
@@ -287,7 +287,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
       <dl class="answer-grid">
         <div class="answer-card">
           <dt>{copy.when}</dt>
-          <dd>{dateAnswer.length ? dateAnswer.join('；') : copy.noDate}</dd>
+          <dd>{dateAnswer.length ? dateAnswer.join(copy.itemSep) : copy.noDate}</dd>
         </div>
         <div class="answer-card">
           <dt>{copy.where}</dt>

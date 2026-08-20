@@ -33,6 +33,7 @@ import { withBase } from '../lib/paths.mjs';
 import { monthDay } from '../lib/format.mjs';
 import { recentTopics, topicsByHeat, countryName, questionsForDate, todayWorld } from '../lib/data.mjs';
 import { isPubliclyVisible } from '../lib/topic-status.mjs';
+import { seoCopy } from '../lib/seo.mjs';
 
 // 每日世界一問(docs/briefs/daily-question.md §6.3):四個新區塊插在 #trending 之前。
 // poll/guess 各自可能為 null(題庫空、或該 kind 沒有 date<=今日的題目)——為 null 時
@@ -70,7 +71,7 @@ function seasonNote(topic) {
 ---
 
 <BaseLayout
-  title={`aeiou.now｜${t('home.h1')}`}
+  title={`aeiou.now${seoCopy().titleSep}${t('home.h1')}`}
   description={t('home.intro')}
   pageType="CollectionPage"
   activeSort="global"

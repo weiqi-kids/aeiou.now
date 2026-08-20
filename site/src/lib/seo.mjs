@@ -41,6 +41,8 @@ export const SEO_COPY = {
     related: '相關主題', updated: '更新於', noDate: '目前沒有可驗證的固定日期；時間會依地區、家庭或個人選擇而不同。',
     sourceLink: '查看來源', home: '首頁', topic: '主題',
     metaSuffix: '日期、習俗與各地差異', coveragePrefix: '涵蓋', sourceMeta: '附日期與來源。',
+    // 標點是語系的一部分:英文站不該印出「、」「。」「｜」。
+    listSep: '、', itemSep: '；', endMark: '。', titleSep: '｜',
   },
   en: {
     answers: 'Quick answers', what: 'What is this topic?', when: 'When is it?', where: 'How do places mark it?', differences: 'What differs by place?',
@@ -48,6 +50,7 @@ export const SEO_COPY = {
     related: 'Related topics', updated: 'Updated', noDate: 'There is no single verified fixed date here; timing varies by place, household, or personal choice.',
     sourceLink: 'View source', home: 'Home', topic: 'Topic',
     metaSuffix: 'Dates, customs, and local differences', coveragePrefix: 'Covers', sourceMeta: 'Includes dates and sources.',
+    listSep: ', ', itemSep: '; ', endMark: '.', titleSep: ' | ',
   },
   ja: {
     answers: '要点', what: 'このテーマは何？', when: 'いつ？', where: '各地ではどう過ごす？', differences: '地域ごとに何が違う？',
@@ -55,6 +58,7 @@ export const SEO_COPY = {
     related: '関連テーマ', updated: '更新', noDate: '確認できる一つの固定日はありません。時期は地域、家庭、個人の選択で変わります。',
     sourceLink: '出典を見る', home: 'ホーム', topic: 'テーマ',
     metaSuffix: '日付・習慣・地域差', coveragePrefix: '対象地域', sourceMeta: '日付と出典を掲載。',
+    listSep: '、', itemSep: '／', endMark: '。', titleSep: '｜',
   },
   'zh-CN': {
     answers: '快速回答', what: '这个主题是什么？', when: '什么时候？', where: '各地怎么过？', differences: '各地有什么不同？',
@@ -62,6 +66,7 @@ export const SEO_COPY = {
     related: '相关主题', updated: '更新于', noDate: '目前没有一个可以验证的固定日期；时间会因地区、家庭或个人选择而不同。',
     sourceLink: '查看来源', home: '首页', topic: '主题',
     metaSuffix: '日期、习俗与地区差异', coveragePrefix: '涵盖', sourceMeta: '附有日期和来源。',
+    listSep: '、', itemSep: '；', endMark: '。', titleSep: '｜',
   },
   hi: {
     answers: 'त्वरित उत्तर', what: 'यह विषय क्या है?', when: 'यह कब होता है?', where: 'अलग जगहों पर इसे कैसे मनाते हैं?', differences: 'अलग जगहों पर क्या अलग है?',
@@ -69,6 +74,7 @@ export const SEO_COPY = {
     related: 'संबंधित विषय', updated: 'अपडेट', noDate: 'यहाँ कोई एक सत्यापित निश्चित तारीख़ नहीं है; समय स्थान, परिवार या व्यक्तिगत चुनाव से बदलता है।',
     sourceLink: 'स्रोत देखें', home: 'होम', topic: 'विषय',
     metaSuffix: 'तारीख़, रीति और स्थानीय अंतर', coveragePrefix: 'क्षेत्र', sourceMeta: 'तारीख़ों और स्रोतों सहित।',
+    listSep: ', ', itemSep: '; ', endMark: '।', titleSep: ' | ',
   },
   id: {
     answers: 'Jawaban singkat', what: 'Apa tema ini?', when: 'Kapan?', where: 'Bagaimana tempat berbeda menjalaninya?', differences: 'Apa yang berbeda di tiap tempat?',
@@ -76,6 +82,7 @@ export const SEO_COPY = {
     related: 'Tema terkait', updated: 'Diperbarui', noDate: 'Belum ada satu tanggal tetap yang dapat diverifikasi; waktunya bergantung pada tempat, keluarga, atau pilihan pribadi.',
     sourceLink: 'Lihat sumber', home: 'Beranda', topic: 'topik',
     metaSuffix: 'Tanggal, kebiasaan, dan perbedaan setempat', coveragePrefix: 'Mencakup', sourceMeta: 'Dilengkapi tanggal dan sumber.',
+    listSep: ', ', itemSep: '; ', endMark: '.', titleSep: ' | ',
   },
   'pt-BR': {
     answers: 'Respostas rápidas', what: 'O que é este tema?', when: 'Quando acontece?', where: 'Como lugares diferentes o vivenciam?', differences: 'O que muda de um lugar para outro?',
@@ -83,6 +90,7 @@ export const SEO_COPY = {
     related: 'Temas relacionados', updated: 'Atualizado em', noDate: 'Não há uma única data fixa verificável aqui; o momento varia conforme o lugar, a família ou a escolha pessoal.',
     sourceLink: 'Ver fonte', home: 'Início', topic: 'tema',
     metaSuffix: 'Datas, costumes e diferenças locais', coveragePrefix: 'Abrange', sourceMeta: 'Com datas e fontes.',
+    listSep: ', ', itemSep: '; ', endMark: '.', titleSep: ' | ',
   },
 };
 

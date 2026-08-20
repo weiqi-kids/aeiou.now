@@ -14,6 +14,7 @@
 //   D2 可索引頁面的渲染後唯一內容字元下限
 //   D3 同一頁裡同一個「長段落」不得出現三次以上
 //   D4 一頁上的空狀態區塊數上限（「目前沒有資料」「暫時關閉」）
+//   D5 非 CJK 語系站的 title / meta description 不得出現 CJK 標點
 //
 // ⚠️ D3 的門檻刻意訂在 3 次而不是 2 次：把重複段落從 2 次降到 1 次要動版面，
 //    而版面的權威來源是產品草案、範圍屬用戶（CLAUDE.md 紅線）。這支的職責是
@@ -210,6 +211,32 @@ const emptyReport = indexable.filter((p) => p.empties >= MAX_EMPTY_BLOCKS);
 if (emptyReport.length) {
   console.log(`ℹ️ 空狀態／載入中標籤較多的頁面（觀察值，不擋；真正的空內容由資料層 R4 擋）：`
     + `${emptyReport.length} 頁，最多 ${Math.max(...emptyReport.map((p) => p.empties))} 條`);
+}
+
+// ── D5：非 CJK 語系站不得印出 CJK 標點 ───────────────────────────────────
+// 立法緣由（2026-08-20）：英文站的 title 與 meta description 長這樣——
+//   「Labour Day 2026｜Dates, customs...」「United States · September 7, 2026、Taiwan...。」
+// 分隔號、頓號、句號全是模板寫死的中文標點，七個站共用同一組字面值。
+// 這是**搜尋結果上第一眼看到的東西**，讀者看到的是一個排版壞掉的頁面。
+// 修法是把標點併入 SEO_COPY（listSep / itemSep / endMark / titleSep），
+// 這條 gate 保證它不會再被寫死回去。
+//
+// 只驗 title 與 meta description —— 那兩者完全由模板組出來。
+// 內文不驗：英文頁本來就會出現「端午」這類當地名稱，那是內容不是標點。
+const CJK_PUNCT = /[、。；｜！？（）]/;
+const CJK_LOCALES = new Set(['zh-TW', 'zh-CN', 'ja']);
+const buildLocale = process.env.LOCALE || 'zh-TW';
+if (!CJK_LOCALES.has(buildLocale)) {
+  for (const p of indexable) {
+    for (const [label, value] of [['title', p.title], ['meta description', p.desc]]) {
+      const hit = value.match(CJK_PUNCT);
+      if (hit) {
+        fail('D5', `${p.rel}：${buildLocale} 站的 ${label} 出現 CJK 標點「${hit[0]}」\n`
+          + `        「${value.slice(0, 80)}…」\n`
+          + '        標點屬語系,加進 src/lib/seo.mjs 的 SEO_COPY(listSep/itemSep/endMark/titleSep),不要寫死。');
+      }
+    }
+  }
 }
 
 if (REPORT) {
