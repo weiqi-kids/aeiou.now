@@ -108,9 +108,10 @@ source repo:`weiqi-kids/aeiou.now`(唯一有人 commit)。語系用**目錄**分
 實作規定(讓降級可驗證):
 
 - 討論室區塊的靜態 HTML **預設就渲染 fallback 文案**(該 locale 的 i18n 字串)。
-- 容器帶固定屬性 `data-room-state="closed"`。
-- JS fetch 成功後改為 `data-room-state="open"` 並替換內容。
-- 驗證:curl 初始 HTML grep `data-room-state="closed"`(語言無關);JS 路徑另以無頭瀏覽器(Chromium)驗。
+- 容器帶固定屬性 `data-room-state="loading"`(2026-08-20 起;舊值 `closed` 已廢)。
+- JS fetch 成功後改為 `data-room-state="open"` 並替換內容;失敗改為 `unavailable`。
+- 沒有 JS 的讀者由 `<noscript>` 蓋掉載入中並顯示 `room.noscript`,不會停在永遠不結束的載入中。
+- 驗證:curl 初始 HTML grep `data-room-state="loading"`(語言無關);JS 路徑另以無頭瀏覽器(Chromium)驗。
 
 ---
 

@@ -106,16 +106,24 @@ World
 硬性:頁首高度由文字決定(cover 跟著對齊,不自己撐高);三區塊**不限高、不內捲**,內容全部顯示;
 **沒有 `#ask`、沒有 `#highlights`、header 內沒有 `<ul>`**。
 
-### 討論串的四態(不可混用)
+### 討論串的四態(不可混用;2026-08-20 用戶指正後改定)
 
 | 狀態 | 何時 | 呈現 |
 |---|---|---|
-| `closed`(靜態預設值) | **沒有 JS**、或 fetch 失敗 | 討論室暫時關閉 |
-| `loading` | JS 一啟動就切,還沒拿到回應 | 討論室載入中 |
+| `loading`(**靜態預設值**) | 靜態 HTML 出廠值,也是 JS 發 fetch 之前 | 討論室載入中 |
 | `open` + 空 | fetch 成功但 `posts` 為 0 筆 | 還沒有人發言 + 參與入口 |
 | `open` + 有內容 | fetch 成功且有貼文 | 列出 |
+| `unavailable` | fetch 失敗/非 2xx/JSON 壞/未設 API 位址 | 討論室暫時無法載入 |
+| (沒有 JS) | `<noscript>` 蓋掉 loading | 討論需要 JavaScript |
 
 > 「動態掛掉」與「還沒人發言」是兩件事;「還沒載入」也不是「掛掉」。
+> **而且「還沒載入」更不是「已關閉」——討論室從來沒有被關閉過。**
+>
+> **事故(2026-08-20)**:靜態預設值原本是 `closed`,畫面直接印「討論室暫時關閉」。
+> 於是首頁與三個清單頁上,每一張 Topic 卡都對讀者宣告一個不存在的故障(一頁 30 次),
+> 不執行 JS 的爬蟲看到的是一整頁關著的論壇;`/questions/` 每張卡則印「投票暫時關閉」。
+> **教訓:狀態名稱要說事實。「還沒拿到資料」的事實是 loading,不是 closed。**
+> 同一組修正套用在 `DiscussionRoom` / `TopicPosts` / `QuestionCard` / `Participation` 四個元件。
 
 ### 七語系是七個獨立的站
 
@@ -254,8 +262,10 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
 ## 絕不可破壞的紅線
 
 - **兩個權威來源**:主機 SQLite(爬搜/Topic 生產)、D1(UGC)。靜態 JSON 全是衍生品。
-- **降級不做 fallback 快照**:動態異常時顯示關閉狀態,**不顯示過期資料**。靜態 HTML 預設
-  `data-room-state="closed"`(沒有 JS 的讀者看到的就是它,curl 驗降級也靠它)。
+- **降級不做 fallback 快照**:動態異常時顯示 `unavailable`,**不顯示過期資料**。靜態 HTML 預設
+  `data-room-state="loading"`(2026-08-20 起;**舊值 `closed` 已廢**,見上方四態表的事故)。
+  curl 驗降級改查 `curl -s https://aeiou.now/topic/<slug>/ | grep -o 'data-room-state="[a-z]*"'`
+  → 應為 `loading`;沒有 JS 的讀者由 `<noscript>` 收尾,不會停在永遠不結束的載入中。
 - **`topics.status='archived'` 仍可發文**(只是不熱);**`posts.status='archived'` 才是永久鎖定**。同名不同義。
 - **Post 翻譯前先過價值閘門**(2026-08-15,用戶拍板):同一次 claude 呼叫先判有沒有價值,
   沒價值(廣告/亂碼/灌水/詐騙)→ `status='moderation'`+`translation_status='skipped'`,

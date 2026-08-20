@@ -87,6 +87,8 @@ Worker 首次寫入時發 httpOnly cookie(隨機 ULID,一年效期)。同一匿�
 
 動態異常時,動態區塊顯示「討論室暫時關閉」之類狀態,**不做 fallback 快照、不顯示過期資料**。
 
+> ⚠️ **契約已於 2026-08-20 變更**:靜態預設值由 `closed` 改為 `loading`,失敗態改名 `unavailable`,無 JS 由 `<noscript>` 收尾。原因與四態表見 CLAUDE.md「討論串的四態」。以下敘述保留當時原文,**不要照它實作**。
+
 **實作規定(為了讓降級可驗證)**:討論室區塊的**靜態 HTML 預設就渲染 fallback 文案**(該 locale 的 i18n 字串),且容器帶固定屬性 **`data-room-state="closed"`**;JS fetch 成功後改為 `data-room-state="open"` 並替換內容。curl 驗證統一 grep `data-room-state="closed"`(與語言無關),JS 路徑另以無頭瀏覽器(Chromium)驗。
 
 - **靜態(build 時算好)**:Topic 文化比較、24H/72H/7D/1M/3M/1Y 排行、歷史精華、店家/導航連結、活動。

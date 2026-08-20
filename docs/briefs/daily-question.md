@@ -13,7 +13,7 @@
    另由 `sync-questions-to-d1.mjs` 推精簡副本進 D1 供 Worker 驗票。
 3. 票(votes)是 UGC,權威在 D1;一個 anon_id 對一題**一票**,重投=改票(覆蓋)。
 4. 猜謎答案(`answer`/`explain`)**不進 D1**、不經 API;揭曉在前端用靜態資料做。
-5. 降級紅線:投票區塊靜態預設 `data-q-state="closed"`;fetch 失敗回 closed;
+5. 降級紅線:投票區塊靜態預設 `data-q-state="loading"`(2026-08-20 起;舊值 `closed` 已廢);fetch 失敗切 `unavailable`;
    不顯示過期票數、不做 fallback 快照。`PUBLIC_API_URL` 未設→完全不 fetch。
 6. 熱度紅線不適用於票數:**投票的百分比與人數可以上畫面**(它不是 hot_score)。
 7. 顯示社群一律「旗幟 emoji + 語言自稱(endonym)」,七語站都一樣,不翻譯(見 §5 communities.mjs)。
@@ -140,8 +140,9 @@ export const COMMUNITIES = {
 
 - **`QuestionCard.astro`**(poll 與 guess 共用,props: `question`, `heading`, `nextHref`, `nextLabel`):
   - 靜態 HTML:區塊標題、`q.asked_by`/`q.asked_to` 行(有 asker/target 才顯示,社群用 COMMUNITIES)、
-    題目文字、選項按鈕列(`disabled`)、`q.closed` 文案、`q.tell_us` 連結(`withBase('/topic/<topic_slug>/')`,
-    純靜態永遠可用)。容器 `data-q-state="closed"`。
+    題目文字、選項按鈕列(`disabled`,靜態內容要留著給爬蟲與無 JS 讀者)、`q.loading` 文案
+    (失敗才換成 `q.closed`)、`q.tell_us` 連結(`withBase('/topic/<topic_slug>/')`,
+    純靜態永遠可用)。容器 `data-q-state="loading"`。
   - JS 啟動:切 `loading` → `GET {api}/v1/questions/{id}/results`(credentials include)→ 成功切 `open`:
     啟用按鈕、顯示 `q.answered_count`(`{n}` 置換 `total`)、`mine` 非 null 時直接進結果視圖。
   - 點選項 → 按鈕全 disable → `POST {api}/v1/votes` `{question_id, option_id, locale: LOCALE}` →
@@ -155,7 +156,7 @@ export const COMMUNITIES = {
   - 0 票時 open 狀態顯示 `q.no_votes`。百分比一律四捨五入整數,分母 0 不除。
 - **`TodayWorld.astro`**:純靜態,無 JS。`todayWorld()` 分組列表:旗+國名,底下每項
   「<a Topic 標題> · local_name · 日期(format.mjs 既有函式,timeZone UTC 慣例)」。空陣列顯示 `q.today_world_empty`。
-- **`Participation.astro`**:容器 `data-q-state="closed"`(closed 文案 `q.closed`)。JS:
+- **`Participation.astro`**:容器 `data-q-state="loading"`(失敗態文案 `q.closed`)。JS:
   `GET {api}/v1/questions/participation?date=<客戶端 UTC 今日>` → open:依票數 DESC 列社群
   (旗+endonym+數字+長條,條長=count/max),`LOCALE` 那列標 `q.your_community`;total 0 顯示 `q.no_votes`。
 - **首頁 `index.astro`**:在既有 `#trending` 區塊**之前**插入四區塊,順序:
@@ -175,7 +176,7 @@ export const COMMUNITIES = {
 | q.guess_title | 🆚 世界差異猜一猜 | 🆚 Guess the World Difference | 🆚 世界のちがいクイズ | 🆚 世界差异猜一猜 | 🆚 दुनिया का अंतर बूझो | 🆚 Tebak Beda Dunia | 🆚 Adivinhe a Diferença no Mundo |
 | q.today_world_title | 🌍 今天的世界 | 🌍 Today in the World | 🌍 きょうの世界 | 🌍 今天的世界 | 🌍 आज की दुनिया | 🌍 Dunia Hari Ini | 🌍 O Mundo Hoje |
 | q.participation_title | 🏆 今日世界公民 | 🏆 Today's World Citizens | 🏆 きょうの世界市民 | 🏆 今日世界公民 | 🏆 आज के विश्व नागरिक | 🏆 Warga Dunia Hari Ini | 🏆 Cidadãos do Mundo de Hoje |
-| q.closed | 投票暫時關閉 | Voting is temporarily closed | 投票は現在休止中です | 投票暂时关闭 | वोटिंग अभी बंद है | Pemungutan suara sedang ditutup | A votação está temporariamente fechada |
+| q.closed(失敗態,2026-08-20 起不再當靜態預設) | 投票暫時關閉 | Voting is temporarily closed | 投票は現在休止中です | 投票暂时关闭 | वोटिंग अभी बंद है | Pemungutan suara sedang ditutup | A votação está temporariamente fechada |
 | q.loading | 載入中…… | Loading… | 読み込み中…… | 加载中…… | लोड हो रहा है… | Memuat… | Carregando… |
 | q.vote_hint | 選一個答案,看看世界怎麼說 | Pick an answer and see what the world says | 答えを選んで、世界の声を見てみよう | 选一个答案,看看世界怎么说 | एक जवाब चुनें और देखें दुनिया क्या कहती है | Pilih jawaban dan lihat kata dunia | Escolha uma resposta e veja o que o mundo diz |
 | q.answered_count | 已有 {n} 人回答 | {n} people have answered | これまでに{n}人が回答 | 已有 {n} 人回答 | {n} लोगों ने जवाब दिया है | {n} orang sudah menjawab | {n} pessoas já responderam |

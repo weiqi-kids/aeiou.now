@@ -269,10 +269,11 @@ Response 200:`{ "i18n_upserted": 6, "posts_done": 1, "posts_rejected": 0 }`
 
 ## 6. 前端對本契約的最小使用(W2 必讀)
 
-1. 討論室容器初始 HTML **一定**帶 `data-room-state="closed"` 與該 locale 的 fallback 文案(靜態渲染,不靠 JS)。
+1. 討論室容器初始 HTML **一定**帶 `data-room-state="loading"` 與該 locale 的 `room.loading` 文案(靜態渲染,不靠 JS)。
+   (2026-08-20 變更:舊值是 `closed` 並印「討論室暫時關閉」——討論室從未關閉,那是錯的狀態名。沒有 JS 的讀者由 `<noscript>` 顯示 `room.noscript`。)
 2. JS 以 `fetch(`${PUBLIC_API_URL}/v1/topics/${topicId}/feed?sort=hot&limit=20&comments=8`, { credentials: 'include' })`。
    `comments=8`(2026-08-11 定版時由 3 調高):討論室的留言預設只露 2 則、其餘收合,拿 3 則的話收合永遠只收得起 1 則,那個展開鈕形同虛設。上限是契約允許的 10。
-3. **只有 fetch 成功且解析出 `posts` 陣列**才把容器改成 `data-room-state="open"` 並替換內容;任何失敗(網路錯誤、非 2xx、JSON 壞掉)一律保持 `closed`,**不顯示過期資料、不做 fallback 快照**。
+3. **只有 fetch 成功且解析出 `posts` 陣列**才把容器改成 `data-room-state="open"` 並替換內容;任何失敗(網路錯誤、非 2xx、JSON 壞掉、未設 API 位址)一律切 `data-room-state="unavailable"`,**不顯示過期資料、不做 fallback 快照**。
 4. `PUBLIC_API_URL` 未設時,**完全不發 fetch**,永遠 `closed`。
 
 ---

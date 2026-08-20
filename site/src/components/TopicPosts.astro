@@ -16,20 +16,21 @@
 // 沒有新增任何端點、沒有動 Worker。
 //
 // 降級模型(與 DiscussionRoom 一致,不可動):
-//   · 靜態 HTML 預設就渲染該 locale 的 fallback 文案,容器帶 data-room-state="closed"
-//   · fetch 成功且解析出 posts 陣列才切 "open";任何失敗一律維持 closed,
+//   · fetch 成功且解析出 posts 陣列才切 "open";任何失敗切 "unavailable",
 //     不顯示過期資料、不做 fallback 快照
-//   · PUBLIC_API_URL 未設 → 完全不發 fetch,永遠 closed
 //   · 一律 credentials: 'include'(anon_id 是跨站 cookie)
 //   · 使用者內容一律 textContent / createTextNode,絕不 innerHTML
 //
-// 「關閉」「載入中」「空」是三件事,不可混用(用戶 2026-08-11 兩次指正):
-//   · 關閉   data-room-state="closed"  = 動態層不可用(fetch 失敗/非 2xx/JSON 壞/未設 API 位址),
-//                                        也是沒有 JS 時看到的靜態預設值
-//   · 載入中 data-room-state="loading" = JS 已啟動、fetch 還沒回來。**發 fetch 之前就切**,
-//                                        等回應才切的話每次正常載入都會先閃一下關閉文案
-//   · 空                                = fetch **成功**但 posts 為 0 筆 → 容器照樣是 "open",
-//                                        改印「還沒有人在這個議題發言」+ 進 Topic 頁的入口
+// 「載入中」「拿不到」「空」是三件事,不可混用(用戶 2026-08-11、2026-08-20 三次指正):
+//   · 載入中     data-room-state="loading"     = **靜態預設值**,也是 fetch 還沒回來的狀態
+//   · 拿不到     data-room-state="unavailable" = fetch 失敗/非 2xx/JSON 壞/未設 API 位址
+//   · 空                                        = fetch **成功**但 posts 為 0 筆 → 容器照樣 "open",
+//                                                 改印「還沒有人在這個議題發言」+ 進 Topic 頁的入口
+//
+// ⚠ 2026-08-20 修正(用戶:「實際上沒有關閉啊」):靜態預設值原本是 closed,
+//   於是首頁與三個清單頁上,**每一張 Topic 卡都印一行「討論室暫時關閉」**——
+//   一頁 30 次,對一個從未關閉過的討論室。不執行 JS 的爬蟲看到的因此是一整頁關著的論壇。
+//   現在靜態預設值是 loading(資料還沒到,是事實),沒有 JS 的讀者由 <noscript> 收尾。
 //
 // 譯文規則照 api-contract §1:original_locale === LOCALE 直接顯示 content;
 // 有 translations[LOCALE] 顯示譯文;缺席顯示原文 + 「翻譯中」。
@@ -70,22 +71,28 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
 <div
   class="posts"
   data-posts
-  data-room-state="closed"
+  data-room-state="loading"
   data-topic-id={topicId}
   data-api-url={apiUrl}
 >
   <script type="application/json" data-posts-config set:html={postsConfigJson} />
-  <div class="posts-fallback">
-    <p class="posts-closed-title">{t('room.closed')}</p>
-    <p class="posts-closed-hint">{t('room.closed_hint')}</p>
-  </div>
-  <!-- 載入中:靜態渲染但預設 hidden,JS 一啟動就換上來(骨架條純裝飾) -->
-  <div class="posts-loading" hidden>
+  <!-- 載入中 = 靜態預設值(2026-08-20,見檔頭)。骨架條純裝飾 -->
+  <div class="posts-loading">
     <p class="posts-loading-text" role="status">{t('room.loading')}</p>
     <div class="posts-skeleton" aria-hidden="true">
       <span class="posts-skeleton-bar"></span>
       <span class="posts-skeleton-bar"></span>
     </div>
+  </div>
+  <!-- 沒有 JS 的讀者:載入中不會結束,藏掉並講實話。清單頁一張卡只給一行,不重複提示句。 -->
+  <noscript>
+    <style>.posts-loading { display: none; }</style>
+    <p class="posts-noscript">{t('room.noscript')}</p>
+  </noscript>
+  <!-- 這一次拿不到資料。**不是**靜態預設值。 -->
+  <div class="posts-fallback" hidden>
+    <p class="posts-closed-title">{t('room.closed')}</p>
+    <p class="posts-closed-hint">{t('room.closed_hint')}</p>
   </div>
   <div class="posts-live" hidden></div>
 </div>
@@ -93,12 +100,12 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
 <script>
   import { createReactions } from '../lib/reactions.mjs';
 
-  // 四態切換集中在這一支(closed / loading / open),免得各處各自 hidden 一半。
+  // 狀態切換集中在這一支(loading / open / unavailable),免得各處各自 hidden 一半。
   function setPostsState(root, state) {
     const fallback = root.querySelector('.posts-fallback');
     const loading = root.querySelector('.posts-loading');
     const live = root.querySelector('.posts-live');
-    if (fallback) fallback.hidden = state !== 'closed';
+    if (fallback) fallback.hidden = state !== 'unavailable';
     if (loading) loading.hidden = state !== 'loading';
     if (live) live.hidden = state !== 'open';
     root.dataset.roomState = state;
@@ -187,17 +194,18 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
   function initPosts(root) {
     const api = root.dataset.apiUrl;
     const topicId = root.dataset.topicId;
-    if (!api || !topicId) return; // PUBLIC_API_URL 未設:完全不發 fetch,不切 loading,永遠 closed
+    // PUBLIC_API_URL 未設:完全不發 fetch。**要明確切到 unavailable**——
+    // 靜態預設值已經是 loading,直接 return 會讓卡片永遠停在「載入中」。
+    if (!api || !topicId) { setPostsState(root, 'unavailable'); return; }
 
     let cfg;
     try {
       cfg = JSON.parse(root.querySelector('[data-posts-config]').textContent);
     } catch {
-      return; // 設定壞掉一律保持 closed
+      setPostsState(root, 'unavailable'); // 設定壞掉:同理,不能停在 loading
+      return;
     }
 
-    // 發 fetch **之前**就切 loading:等回應才切的話,這段空窗期畫面上是關閉文案,
-    // 每一次正常載入都會先閃一下「討論室暫時關閉」。
     setPostsState(root, 'loading');
 
     const url = api + '/v1/topics/' + topicId + '/feed?sort=hot&limit=3&comments=0';
@@ -221,7 +229,7 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
       })
       .catch(() => {
         // 任何失敗退回 closed(不是停在 loading),不顯示過期資料、不做 fallback 快照
-        setPostsState(root, 'closed');
+        setPostsState(root, 'unavailable');
       });
   }
 
@@ -230,13 +238,13 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
 
 <style>
   /* 靠一條主色直線表示「這些貼文屬於旁邊(窄螢幕是上面)那個看板」。
-     兩欄並排時它同時當左右欄的分界;直線變灰 = 討論室關閉。 */
+     兩欄並排時它同時當左右欄的分界;直線變灰 = 這一次拿不到資料。 */
   .posts {
     border-inline-start: 0.1875rem solid var(--color-accent);
     padding: 0.25rem 0 0.75rem 0.875rem;
     margin-block-end: 1rem;
   }
-  .posts[data-room-state='closed'] {
+  .posts[data-room-state='unavailable'] {
     border-inline-start-color: var(--color-line-strong);
   }
   .posts-closed-title {
@@ -244,6 +252,11 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
     font-size: var(--text-sm);
     font-weight: 700;
     color: var(--color-ink-soft);
+  }
+  .posts-noscript {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
   }
   .posts-closed-hint {
     margin: 0;

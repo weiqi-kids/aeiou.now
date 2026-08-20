@@ -4,22 +4,31 @@
 // 發文框 → 貼文列表 → 每則貼文的七顆 emoji 列 → 留言 → 回覆框。
 //
 // 降級模型(不可動的行為):
-// - 靜態 HTML 預設渲染 fallback(room.closed),容器帶 data-room-state="closed"
 // - JS fetch 成功且解析出 posts 陣列 → data-room-state="open",才替換為即時內容
-// - 任何失敗(網路、非 2xx、JSON 壞掉)一律保持/退回 closed;PUBLIC_API_URL 未設時完全不發 fetch
+// - 任何失敗(網路、非 2xx、JSON 壞掉、PUBLIC_API_URL 未設)→ unavailable
 // - 不做 fallback 快照、不顯示過期資料
 // - 貼文與留言 M1 一律純文字轉義顯示(textContent),絕不 innerHTML 塞使用者內容
 //
-// 四態(2026-08-11 用戶指正:正常載入時會先閃一下「討論室暫時關閉」,
-// 那是把「還沒開始載入」與「載入失敗」混用同一個狀態):
+// 四態(2026-08-20 用戶指正後的定義。**靜態預設值從 closed 改成 loading**):
 //
-//   closed  ← 靜態預設值。沒有 JS、fetch 失敗、非 2xx、JSON 壞掉、PUBLIC_API_URL 未設
-//   loading ← JS 一啟動(發 fetch 之前)就切,還沒拿到回應
+//   loading ← **靜態預設值**,也是 JS 發 fetch 之前的狀態
 //   open + 空     ← fetch 成功但 posts 為 0 筆
 //   open + 有內容 ← fetch 成功且有貼文
+//   unavailable ← fetch 失敗、非 2xx、JSON 壞掉、PUBLIC_API_URL 未設
 //
-// 靜態 HTML 仍然預設 closed 且直接渲染關閉文案(沒有 JS 的讀者要看到「暫時關閉」而不是空白框,
-// curl 驗降級也是靠 grep data-room-state="closed"),loading 只由 JS 切,所以兩者不衝突。
+// 為什麼靜態預設值不能是 closed(用戶 2026-08-20 當面指出,前一版的設計是錯的):
+//   **討論室從來沒有被關閉過。** 舊版靜態 HTML 直接印「討論室暫時關閉」,於是
+//   ① 每個 Topic 頁在 JS 接手之前都對讀者宣告一個不存在的故障;
+//   ② 不執行 JS 的爬蟲看到的是一個「關著的論壇」——那是 2026-08-19 GA/GSC 診斷
+//      實際觀察到的畫面,也是內容品質上的自傷;
+//   ③ 「還沒載入」與「載入失敗」被混用成同一個字面,兩件事講同一句話。
+//   現在靜態預設值是 loading(事實:資料還沒到),失敗才切 unavailable(事實:這次拿不到)。
+//
+// 沒有 JS 的讀者怎麼辦:<noscript> 內的 <style> 把 loading 區塊藏起來,換成
+// room.noscript 的實話(「討論需要 JavaScript」),不讓他們卡在一個永遠不會結束的載入中。
+//
+// ⚠ curl 驗降級的方式跟著改:靜態 HTML 現在 grep 的是 data-room-state="loading"
+//   (舊查法 grep closed 會永遠失敗)。CLAUDE.md 的四態表與紅線已同步。
 //
 // 成功開室後會發 aeiou:room-open 事件(detail: {topicId, posts}),讓同頁的 8H 時窗共用
 // 這一次 fetch 的結果——同一份資料不打第二次 API。
@@ -42,6 +51,7 @@ const roomConfig = {
   reactions: REACTION_SET,
   i18n: {
     empty: t('room.empty'),
+    unavailable: t('room.closed'),
     composePlaceholder: t('room.compose_placeholder'),
     submit: t('room.submit'),
     commentPlaceholder: t('room.comment_placeholder'),
@@ -64,24 +74,31 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
 <div
   class="room"
   data-room
-  data-room-state="closed"
+  data-room-state="loading"
   data-topic-id={topicId}
   data-api-url={apiUrl}
 >
   <script type="application/json" data-room-config set:html={roomConfigJson} />
-  <div class="room-fallback">
-    <p class="room-closed-title">{t('room.closed')}</p>
-    <p class="room-closed-hint">{t('room.closed_hint')}</p>
-  </div>
-  <!-- 載入中:靜態渲染但預設 hidden,JS 一啟動就換上來。骨架條純裝飾(aria-hidden),
-       要唸的字在上面那一行 role="status"。 -->
-  <div class="room-loading" hidden>
+  <!-- 載入中 = 靜態預設值(2026-08-20)。資料還沒到是事實;「已關閉」不是。
+       骨架條純裝飾(aria-hidden),要唸的字在上面那一行 role="status"。 -->
+  <div class="room-loading">
     <p class="room-loading-text" role="status">{t('room.loading')}</p>
     <div class="room-skeleton" aria-hidden="true">
       <span class="room-skeleton-bar"></span>
       <span class="room-skeleton-bar"></span>
       <span class="room-skeleton-bar"></span>
     </div>
+  </div>
+  <!-- 沒有 JS 的讀者:載入中永遠不會結束,所以把它藏掉並講實話。
+       <noscript> 內的 <style> 只在 JS 停用時生效,是達成這件事最省的做法(不需要 JS 才能修正 JS 缺席)。 -->
+  <noscript>
+    <style>.room-loading { display: none; }</style>
+    <p class="room-noscript">{t('room.noscript')}</p>
+  </noscript>
+  <!-- 這一次拿不到資料(fetch 失敗/非 2xx/JSON 壞掉/未設 API)。**不是**靜態預設值。 -->
+  <div class="room-fallback" hidden>
+    <p class="room-closed-title">{t('room.closed')}</p>
+    <p class="room-closed-hint">{t('room.closed_hint')}</p>
   </div>
   <div class="room-live" hidden></div>
 </div>
@@ -98,7 +115,7 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     const fallback = root.querySelector('.room-fallback');
     const loading = root.querySelector('.room-loading');
     const live = root.querySelector('.room-live');
-    if (fallback) fallback.hidden = state !== 'closed';
+    if (fallback) fallback.hidden = state !== 'unavailable';
     if (loading) loading.hidden = state !== 'loading';
     if (live) live.hidden = state !== 'open';
     root.dataset.roomState = state;
@@ -115,17 +132,20 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
   function initRoom(root) {
     const api = root.dataset.apiUrl;
     const topicId = root.dataset.topicId;
-    if (!api || !topicId) return; // PUBLIC_API_URL 未設:完全不發 fetch,不切 loading,永遠 closed
+    // PUBLIC_API_URL 未設:完全不發 fetch。**要明確切到 unavailable**——
+    // 靜態預設值已經是 loading,直接 return 會讓畫面永遠停在「載入中」(2026-08-20 改預設值時的新坑)。
+    if (!api || !topicId) { setRoomState(root, 'unavailable'); return; }
 
     let cfg;
     try {
       cfg = JSON.parse(root.querySelector('[data-room-config]').textContent);
     } catch {
-      return; // 設定壞掉一律保持 closed
+      setRoomState(root, 'unavailable'); // 設定壞掉:同理,不能停在 loading
+      return;
     }
 
-    // 發 fetch **之前**就切 loading:等回應才切的話,這段空窗期畫面上是關閉文案,
-    // 每一次正常載入都會先閃一下「討論室暫時關閉」。
+    // 靜態預設值已經是 loading,這裡再設一次是為了「JS 接手後也仍然是 loading」這件事顯式化
+    // (以及讓狀態機只有一個入口)。
     setRoomState(root, 'loading');
 
     const feedUrl = api + '/v1/topics/' + topicId + '/feed?sort=hot&limit=20&comments=8';
@@ -147,8 +167,8 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
         );
       })
       .catch(() => {
-        // 任何失敗退回 closed(不是停在 loading),不顯示過期資料、不做 fallback 快照
-        setRoomState(root, 'closed');
+        // 任何失敗切 unavailable(不是停在 loading),不顯示過期資料、不做 fallback 快照
+        setRoomState(root, 'unavailable');
       });
   }
 
@@ -440,9 +460,9 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     background: var(--color-white);
     box-shadow: var(--shadow-card);
   }
-  /* 關閉狀態刻意做成「安靜的告示」而不是錯誤警告:降級不是故障。
-     但版位要留著——討論串是這一頁的主體,關閉時也不該縮成一條細線。 */
-  .room[data-room-state='closed'] {
+  /* 拿不到資料時刻意做成「安靜的告示」而不是錯誤警告:降級不是故障。
+     但版位要留著——討論串是這一頁的主體,這一態也不該縮成一條細線。 */
+  .room[data-room-state='unavailable'] {
     border-block-start-color: var(--color-line-strong);
     background: var(--color-bg-light);
     box-shadow: none;
@@ -459,6 +479,12 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     color: var(--color-ink-soft);
   }
   .room-closed-hint {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+  /* 沒有 JS 的讀者看到的那一行。與載入中同樣的安靜語氣,不是錯誤警告。 */
+  .room-noscript {
     margin: 0;
     font-size: var(--text-sm);
     color: var(--color-ink-muted);

@@ -83,7 +83,7 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
   class="q-card"
   id={anchorId}
   data-q-card
-  data-q-state="closed"
+  data-q-state="loading"
   data-api-url={apiUrl}
   data-question-id={question.question_id}
 >
@@ -94,6 +94,10 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
   {askedToText && <p class="q-asked">{askedToText}</p>}
   <p class="q-text">{question.text}</p>
 
+  {/* 靜態層:選項本身是內容(爬蟲與無 JS 讀者都該看到),所以這一塊在 loading 與
+      unavailable 兩態都留著,只換底下那一行說明。
+      2026-08-20 用戶指正:靜態預設值原本是 closed,於是 /questions/ 每一張卡都印
+      「投票暫時關閉」——投票並沒有被關閉,只是資料還沒到。 */}
   <div class="q-fallback">
     <div class="q-options" aria-hidden="true">
       {question.options.map((opt) => (
@@ -103,12 +107,13 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
         </button>
       ))}
     </div>
-    <p class="q-closed-note">{t('q.closed')}</p>
-  </div>
-
-  <div class="q-loading" hidden>
     <p class="q-loading-note" role="status">{t('q.loading')}</p>
+    <p class="q-closed-note" hidden>{t('q.closed')}</p>
   </div>
+  <noscript>
+    <style>.q-loading-note { display: none; }</style>
+    <p class="q-closed-note">{t('room.noscript')}</p>
+  </noscript>
 
   <div class="q-live" hidden></div>
 
@@ -123,13 +128,15 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
 <script>
   import { track } from '../lib/analytics.mjs';
 
-  // 四態切換集中一支,理由同 DiscussionRoom.setRoomState:避免「還沒開始載入」誤用 closed 畫面。
+  // 狀態切換集中一支(loading / open / unavailable),理由同 DiscussionRoom.setRoomState。
   function setState(root, state) {
-    const fallback = root.querySelector('.q-fallback');
-    const loading = root.querySelector('.q-loading');
+    const fallback = root.querySelector('.q-fallback');   // 選項:loading 與 unavailable 都留著
+    const loadingNote = root.querySelector('.q-loading-note');
+    const closedNote = root.querySelector('.q-closed-note');
     const live = root.querySelector('.q-live');
-    if (fallback) fallback.hidden = state !== 'closed';
-    if (loading) loading.hidden = state !== 'loading';
+    if (fallback) fallback.hidden = state === 'open';
+    if (loadingNote) loadingNote.hidden = state !== 'loading';
+    if (closedNote) closedNote.hidden = state !== 'unavailable';
     if (live) live.hidden = state !== 'open';
     root.dataset.qState = state;
   }
@@ -327,13 +334,15 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
   function initQuestion(root) {
     const api = root.dataset.apiUrl;
     const qid = root.dataset.questionId;
-    if (!api || !qid) return; // PUBLIC_API_URL 未設:完全不發 fetch,永遠 closed
+    // 未設 API / 設定壞掉:要明確切 unavailable,不能停在 loading(靜態預設值已是 loading)
+    if (!api || !qid) { setState(root, 'unavailable'); return; }
 
     let cfg;
     try {
       cfg = JSON.parse(root.querySelector('[data-q-config]').textContent);
     } catch {
-      return; // 設定壞掉一律保持 closed
+      setState(root, 'unavailable');
+      return;
     }
 
     // 發 fetch 之前就切 loading,理由同 DiscussionRoom:避免每次正常載入都先閃一下關閉文案。
@@ -363,7 +372,7 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
       })
       .catch(() => {
         // 任何失敗退回 closed,不顯示過期票數、不做 fallback 快照。
-        setState(root, 'closed');
+        setState(root, 'unavailable');
       });
   }
 
@@ -380,7 +389,7 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
     box-shadow: var(--shadow-card);
     scroll-margin-block-start: 1rem;
   }
-  .q-card[data-q-state='closed'] {
+  .q-card[data-q-state='unavailable'] {
     border-block-start-color: var(--color-line-strong);
   }
   .q-heading {

@@ -42,7 +42,12 @@ const MIN_UNIQUE_CHARS = 320;
 // 這裡只保證它不再更薄；要寫厚必須拿用戶的文字。
 const UTILITY_PAGES = new Set(['about/index.html']);
 const UTILITY_MIN_UNIQUE_CHARS = 200;
-const MAX_LONG_PARAGRAPH_REPEATS = 2;   // 超過就是 ERROR
+// 1 = 同一段長文字在一頁只准出現一次。
+// 2026-08-20 用戶核准動版面後收緊(原本是 2,只擋「印三次以上」):
+// Topic 頁的「快速回答」原本把頁首 lede 與各國 customs 整段再印一次,
+// 每頁約三分之一的可見文字是重複的。重複的卡片已移除,這裡把門檻鎖到 1,
+// 讓它不能再長回來。
+const MAX_LONG_PARAGRAPH_REPEATS = 1;   // 超過就是 ERROR
 const LONG_PARAGRAPH_CHARS = 40;
 const MAX_EMPTY_BLOCKS = 3;
 // 「空狀態／載入中／已關閉」的字串**從 i18n 檔產生**，不手寫。
@@ -66,12 +71,55 @@ function walk(dir) {
   });
 }
 
-/** 抽出 body 的可見文字，逐行切開（script/style/註解不算內容） */
+/**
+ * 移除帶 `hidden` 屬性的元素（含其內容），以及 <noscript> 區塊。
+ *
+ * 為什麼一定要做（2026-08-20 發現）：本檔原本把 hidden 區塊也算進「可見內容」，
+ * 於是討論室的三種狀態（loading / unavailable / live）雖然同時只有一種會顯示，
+ * 卻三份都被計入厚度 —— 一個**厚度**守門把頁面算得比實際厚，方向剛好相反。
+ * <noscript> 同理：它是 JS 缺席時的替代路徑，不是額外內容。
+ *
+ * 用堆疊掃描配對結束標籤（不是貪婪 regex），才處理得了同名巢狀。
+ */
+function stripHidden(html) {
+  const openTag = /<([a-zA-Z][\w-]*)((?:"[^"]*"|'[^']*'|[^>"'])*)>/g;
+  let out = '';
+  let cursor = 0;
+  let m;
+  while ((m = openTag.exec(html))) {
+    const [whole, name, attrs] = m;
+    const isNoscript = name.toLowerCase() === 'noscript';
+    const isHidden = /(^|\s)hidden(\s|=|$)/i.test(attrs);
+    if (!isHidden && !isNoscript) continue;
+    if (whole.endsWith('/>')) { // 自閉合：只丟掉標籤本身
+      out += html.slice(cursor, m.index);
+      cursor = m.index + whole.length;
+      continue;
+    }
+    // 往後找配對的結束標籤（同名開合計數）
+    const tagRe = new RegExp(`<${name}\\b[^>]*>|</${name}\\s*>`, 'gi');
+    tagRe.lastIndex = m.index + whole.length;
+    let depth = 1;
+    let t;
+    let end = html.length;
+    while ((t = tagRe.exec(html))) {
+      if (t[0].startsWith('</')) { depth -= 1; if (depth === 0) { end = t.index + t[0].length; break; } }
+      else depth += 1;
+    }
+    out += html.slice(cursor, m.index);
+    cursor = end;
+    openTag.lastIndex = end;
+  }
+  return out + html.slice(cursor);
+}
+
+/** 抽出 body 的可見文字，逐行切開（script/style/註解/hidden/noscript 都不算內容） */
 function visibleLines(html) {
   let body = html.includes('<body') ? html.slice(html.indexOf('<body')) : html;
   body = body.replace(/<script[\s\S]*?<\/script>/gi, '')
              .replace(/<style[\s\S]*?<\/style>/gi, '')
              .replace(/<!--[\s\S]*?-->/g, '');
+  body = stripHidden(body);
   return body.replace(/<[^>]+>/g, '\n').split('\n')
     .map((line) => line.replace(/\s+/g, ' ').trim())
     .filter((line) => line.length >= 8);

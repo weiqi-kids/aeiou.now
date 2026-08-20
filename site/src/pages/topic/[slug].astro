@@ -275,11 +275,16 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
       <div class="section-head">
         <h2>{copy.answers}</h2>
       </div>
+      {/* 只留**沒有在別處印過**的兩張卡(2026-08-20 用戶核准動版面)。
+          原本四張卡裡有兩張是整段複印:
+            ・「這個主題是什麼?」= loc.summary,與頁首的 .topic-lede 一字不差
+            ・「各地有什麼不同?」= 各國 customsText 串接,而 🌎 #world 底下逐國又印一次
+          那讓每個 Topic 頁的可見文字約有三分之一是重複的——頁面看起來有量,唯一內容只有三分之一
+          (2026-08-19 GA/GSC 診斷的實測結果)。
+          四個問答仍**完整保留在下方的 FAQPage JSON-LD**:它們的答案文字都在這一頁上看得到
+          (什麼→頁首 lede;不同→🌎 各國段落),符合結構化資料必須對應可見內容的要求。
+          機械層防線=site/scripts/check-rendered-depth.mjs 的 D3(同頁長段落重複上限 1)。 */}
       <dl class="answer-grid">
-        <div class="answer-card">
-          <dt>{copy.what}</dt>
-          <dd>{whatAnswer}</dd>
-        </div>
         <div class="answer-card">
           <dt>{copy.when}</dt>
           <dd>{dateAnswer.length ? dateAnswer.join('；') : copy.noDate}</dd>
@@ -287,10 +292,6 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
         <div class="answer-card">
           <dt>{copy.where}</dt>
           <dd>{whereAnswer}</dd>
-        </div>
-        <div class="answer-card">
-          <dt>{copy.differences}</dt>
-          <dd>{differenceAnswer}</dd>
         </div>
       </dl>
     </section>

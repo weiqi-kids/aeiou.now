@@ -68,7 +68,7 @@
   "rankings.window.1m": "1 month",
   "rankings.window.3m": "3 months",
   "rankings.window.1y": "1 year",
-  "room.closed": "The discussion room is temporarily closed",
+  "room.closed": "The discussion room could not load right now",
   "room.closed_hint": "Please try again later. Static content is not affected.",
   "room.compose_placeholder": "Share your thoughts…",
   "room.submit": "Post",
@@ -113,7 +113,7 @@
   "q.guess_title": "🆚 Guess the World Difference",
   "q.today_world_title": "🌍 Today in the World",
   "q.participation_title": "🏆 Today's World Citizens",
-  "q.closed": "Voting is temporarily closed",
+  "q.closed": "Voting could not load right now",
   "q.loading": "Loading…",
   "q.vote_hint": "Pick an answer and see what the world says",
   "q.answered_count": "{n} people have answered",
@@ -132,5 +132,6 @@
   "q.no_votes": "No votes yet — be the first!",
   "q.error_retry": "Something went wrong, try again",
   "q.today_world_empty": "The world is quiet today",
-  "q.your_community": "Your community"
+  "q.your_community": "Your community",
+  "room.noscript": "The discussion needs JavaScript to load. The rest of this page is unaffected."
 }

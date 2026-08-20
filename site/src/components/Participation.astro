@@ -23,16 +23,21 @@ const participationConfig = {
 const participationConfigJson = JSON.stringify(participationConfig).replace(/</g, '\\u003c');
 ---
 
-<div class="q-p" data-q-p data-q-state="closed" data-api-url={apiUrl}>
+<div class="q-p" data-q-p data-q-state="loading" data-api-url={apiUrl}>
   <script type="application/json" data-q-p-config set:html={participationConfigJson} />
   <h2 class="q-p-heading">{heading}</h2>
 
-  <div class="q-p-fallback">
-    <p class="q-p-closed-note">{t('q.closed')}</p>
-  </div>
-
-  <div class="q-p-loading" hidden>
+  {/* 2026-08-20:靜態預設值改成 loading。參與榜沒有被關閉過,只是資料還沒到。 */}
+  <div class="q-p-loading">
     <p class="q-p-loading-note" role="status">{t('q.loading')}</p>
+  </div>
+  <noscript>
+    <style>.q-p-loading { display: none; }</style>
+    <p class="q-p-closed-note">{t('room.noscript')}</p>
+  </noscript>
+
+  <div class="q-p-fallback" hidden>
+    <p class="q-p-closed-note">{t('q.closed')}</p>
   </div>
 
   <div class="q-p-live" hidden></div>
@@ -43,7 +48,7 @@ const participationConfigJson = JSON.stringify(participationConfig).replace(/</g
     const fallback = root.querySelector('.q-p-fallback');
     const loading = root.querySelector('.q-p-loading');
     const live = root.querySelector('.q-p-live');
-    if (fallback) fallback.hidden = state !== 'closed';
+    if (fallback) fallback.hidden = state !== 'unavailable';
     if (loading) loading.hidden = state !== 'loading';
     if (live) live.hidden = state !== 'open';
     root.dataset.qState = state;
@@ -100,12 +105,14 @@ const participationConfigJson = JSON.stringify(participationConfig).replace(/</g
 
   function initParticipation(root) {
     const api = root.dataset.apiUrl;
-    if (!api) return; // PUBLIC_API_URL 未設:完全不發 fetch,永遠 closed
+    // 未設 API / 設定壞掉:明確切 unavailable,不能停在 loading(靜態預設值已是 loading)
+    if (!api) { setState(root, 'unavailable'); return; }
 
     let cfg;
     try {
       cfg = JSON.parse(root.querySelector('[data-q-p-config]').textContent);
     } catch {
+      setState(root, 'unavailable');
       return;
     }
 
@@ -128,7 +135,7 @@ const participationConfigJson = JSON.stringify(participationConfig).replace(/</g
         setState(root, 'open');
       })
       .catch(() => {
-        setState(root, 'closed');
+        setState(root, 'unavailable');
       });
   }
 
@@ -144,7 +151,7 @@ const participationConfigJson = JSON.stringify(participationConfig).replace(/</g
     background: var(--color-white);
     box-shadow: var(--shadow-card);
   }
-  .q-p[data-q-state='closed'] {
+  .q-p[data-q-state='unavailable'] {
     border-block-start-color: var(--color-line-strong);
   }
   .q-p-heading {

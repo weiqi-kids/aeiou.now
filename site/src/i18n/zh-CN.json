@@ -68,7 +68,7 @@
   "rankings.window.1m": "1 个月",
   "rankings.window.3m": "3 个月",
   "rankings.window.1y": "1 年",
-  "room.closed": "讨论室暂时关闭",
+  "room.closed": "讨论室暂时无法加载",
   "room.closed_hint": "请稍后再试,静态内容不受影响。",
   "room.compose_placeholder": "分享你的看法……",
   "room.submit": "发布",
@@ -113,7 +113,7 @@
   "q.guess_title": "🆚 世界差异猜一猜",
   "q.today_world_title": "🌍 今天的世界",
   "q.participation_title": "🏆 今日世界公民",
-  "q.closed": "投票暂时关闭",
+  "q.closed": "投票暂时无法加载",
   "q.loading": "加载中……",
   "q.vote_hint": "选一个答案,看看世界怎么说",
   "q.answered_count": "已有 {n} 人回答",
@@ -132,5 +132,6 @@
   "q.no_votes": "还没有人投票,当第一个!",
   "q.error_retry": "出了点问题,请再试一次",
   "q.today_world_empty": "今天世界很安静",
-  "q.your_community": "你的社群"
+  "q.your_community": "你的社群",
+  "room.noscript": "讨论需要 JavaScript 才能加载;本页其他内容不受影响。"
 }

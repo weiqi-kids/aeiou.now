@@ -68,7 +68,7 @@
   "rankings.window.1m": "1か月",
   "rankings.window.3m": "3か月",
   "rankings.window.1y": "1年",
-  "room.closed": "トークルームは一時的に閉鎖中です",
+  "room.closed": "トークルームを読み込めませんでした",
   "room.closed_hint": "時間をおいて再度お試しください。静的コンテンツは通常どおりご覧いただけます。",
   "room.compose_placeholder": "あなたの考えをシェアしよう…",
   "room.submit": "投稿する",
@@ -113,7 +113,7 @@
   "q.guess_title": "🆚 世界のちがいクイズ",
   "q.today_world_title": "🌍 きょうの世界",
   "q.participation_title": "🏆 きょうの世界市民",
-  "q.closed": "投票は現在休止中です",
+  "q.closed": "投票を読み込めませんでした",
   "q.loading": "読み込み中……",
   "q.vote_hint": "答えを選んで、世界の声を見てみよう",
   "q.answered_count": "これまでに{n}人が回答",
@@ -132,5 +132,6 @@
   "q.no_votes": "まだ投票なし。一番乗りしよう!",
   "q.error_retry": "エラーが発生しました。もう一度お試しください",
   "q.today_world_empty": "きょうの世界は静かです",
-  "q.your_community": "あなたのコミュニティ"
+  "q.your_community": "あなたのコミュニティ",
+  "room.noscript": "トークの読み込みには JavaScript が必要です。ページの他の内容には影響しません。"
 }
