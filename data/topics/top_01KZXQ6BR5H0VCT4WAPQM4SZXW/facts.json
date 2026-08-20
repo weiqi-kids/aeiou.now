@@ -13,43 +13,47 @@
     {
       "country_code": "BR",
       "source_urls": [
-        "https://www.gov.br/"
+        "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
       ]
     },
     {
       "country_code": "CN",
       "source_urls": [
-        "https://www.gov.cn/"
+        "https://www.court.gov.cn/zixun/xiangqing/233181.html"
       ]
     },
     {
       "country_code": "ID",
       "source_urls": [
-        "https://indonesia.go.id/"
+        "https://www.kemenpppa.go.id/page/view/MTQ1NA=="
       ]
     },
     {
       "country_code": "IN",
       "source_urls": [
-        "https://www.india.gov.in/"
+        "https://www.indiacode.nic.in/"
       ]
     },
     {
       "country_code": "JP",
       "source_urls": [
+        "https://www.moj.go.jp/MINJI/minji07_00218.html",
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html",
         "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
       ]
     },
     {
       "country_code": "TW",
       "source_urls": [
-        "https://www.gov.tw/"
+        "https://www.moi.gov.tw/cp.aspx?n=14385",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001"
       ]
     },
     {
       "country_code": "US",
       "source_urls": [
-        "https://www.usa.gov/"
+        "https://www.archives.gov/publications/milestone-docs.html",
+        "https://constitution.congress.gov/constitution/amendment-26/"
       ]
     }
   ],
@@ -59,11 +63,15 @@
   "source_urls": [
     "https://www.britannica.com/topic/rite-of-passage",
     "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
-    "https://www.gov.br/",
-    "https://www.gov.cn/",
-    "https://indonesia.go.id/",
-    "https://www.india.gov.in/",
-    "https://www.gov.tw/",
-    "https://www.usa.gov/"
+    "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+    "https://www.court.gov.cn/zixun/xiangqing/233181.html",
+    "https://www.kemenpppa.go.id/page/view/MTQ1NA==",
+    "https://www.indiacode.nic.in/",
+    "https://www.moj.go.jp/MINJI/minji07_00218.html",
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html",
+    "https://www.moi.gov.tw/cp.aspx?n=14385",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+    "https://www.archives.gov/publications/milestone-docs.html",
+    "https://constitution.congress.gov/constitution/amendment-26/"
   ]
 }
