@@ -157,15 +157,42 @@ try {
   console.log(`近 ${days} 天：查詢 ${queryRows.length} 個、曝光 ${imp}、點擊 ${clicks}`
     + `（CTR ${pct(clicks, imp)}）`);
   console.log('排名分布：', Object.entries(buckets).map(([k, v]) => `${k} ${v}`).join('　'));
+
+  // 樣本量必須跟結論一起出現（2026-08-20）。「近 28 天」是**查詢區間**，不是資料量：
+  // 這個 property 2026-08-20 實測只有 5 天真的有資料（08-14 起），28 天的窗裡有 23 天是空的。
+  // 當天就是因為只看「近 28 天 70% 排 51+」這個佔比，把一個 5 天大的樣本當成結構性判決，
+  // 推導出「那 7 個 Topic 太薄」的錯誤結論——實際上它們七國全覆蓋、厚度全達標。
+  // 所以佔比照印（它是事實），但一定要把 n 印在旁邊，並且在 n 太小時明說不能下結構性結論。
+  // ⚠️ 這不是「再等等看」的後門：下面不會叫任何人等，只會說這個數字還撐不起什麼結論。
+  let dataDays = null;
+  try {
+    const dr = await gscQuery(SA, GSC_SITE, {
+      startDate: dayStr(days), endDate: dayStr(0), dimensions: ['date'], rowLimit: 500,
+    });
+    dataDays = (dr.rows || []).filter((x) => x.impressions > 0).length;
+    console.log(`樣本量：查詢區間 ${days} 天，其中真的有曝光的只有 ${dataDays} 天`);
+  } catch { /* 樣本量拿不到就不印，不影響其餘判讀 */ }
+
+  const MIN_DAYS = 14;      // 低於此天數，排名分布的佔比不足以支撐結構性結論
+  const MIN_IMPRESSIONS = 500;
+  const thin = (dataDays !== null && dataDays < MIN_DAYS) || imp < MIN_IMPRESSIONS;
   const deep = buckets['51+'] / Math.max(queryRows.length, 1);
-  if (deep > 0.5) {
+  if (deep > 0.5 && !thin) {
     bottlenecks.push(`排名層：${pct(buckets['51+'], queryRows.length)} 的查詢排在 51 名以後`);
     console.log('⚠️ 過半查詢排在第五頁之後 —— 這不是「還沒到時間」，是頁面在該查詢上競爭力不足。');
+  } else if (deep > 0.5) {
+    console.log(`ℹ️ ${pct(buckets['51+'], queryRows.length)} 的查詢排在 51 名以後，但樣本只有 `
+      + `${dataDays ?? '?'} 天／${imp} 曝光（判準：≥${MIN_DAYS} 天且 ≥${MIN_IMPRESSIONS} 曝光）。`);
+    console.log('   這個佔比目前不足以判定是結構問題，也不足以判定不是 —— 不要拿它當任何一邊的證據。');
+    console.log('   要縮短這段空白，靠的是 scripts/gsc-topic-metrics.mjs 每天累積，不是等。');
   }
   const top = queryRows.filter((x) => x.position <= 10);
   const topImp = top.reduce((a, x) => a + x.impressions, 0);
   const topClicks = top.reduce((a, x) => a + x.clicks, 0);
-  if (topImp >= 20 && topClicks === 0) {
+  // 門檻從 20 提高到 200（2026-08-20）。理由：位置 5–10 的期望 CTR 約 5–8%，
+  // 20 次曝光的期望點擊只有 1–2 次，拿到 0 次完全在雜訊範圍內，稱不上「天花板證據」。
+  // 200 次曝光的期望點擊約 10–16 次，此時 0 點擊才真的說明了什麼。
+  if (topImp >= 200 && topClicks === 0) {
     bottlenecks.push(`天花板證據：已排進前十的查詢累積 ${topImp} 曝光仍 0 點擊`);
     console.log(`⚠️ 已排進前十的查詢累積 ${topImp} 曝光、${topClicks} 點擊 —— `
       + '這就是「就算等下去，天花板在哪」的證據，不要用時間解釋它。');
@@ -208,7 +235,10 @@ try {
 // ── 結論 ──────────────────────────────────────────────────────────────────
 h('結論');
 if (bottlenecks.length === 0) {
-  console.log('四層都沒有查到瓶頸。這種情況下才輪得到談時間，且要說清楚在等什麼、多久算異常。');
+  console.log('四層都沒有查到瓶頸 —— 量測、索引、排名、內容都沒有可修的缺口。');
+  console.log('這種情況下唯一誠實的下一步是**擴大可被搜尋的面**（更多 Topic × 更多國家），');
+  console.log('不是等，也不是再調同一批頁面。若樣本量那行顯示資料天數還很少，');
+  console.log('那代表這份報告本身還沒有判別力，而不是代表站台沒問題。');
 } else {
   console.log('瓶頸（依序處理）：');
   bottlenecks.forEach((b, i) => console.log(`  ${i + 1}. ${b}`));

@@ -94,6 +94,11 @@ const measured = publicTopics.map(({ facts, i18n }) => {
     countries, countryCount: countries.length, units: coverageUnits(facts, i18n),
     observances: (facts.observances || []).length,
     regionalNotes: Object.keys(i18n.regional_notes || {}).length,
+    // 真正該回報的是「讀者在自己國家那一格看到空白」的市場數,不是 regional_notes 的筆數。
+    // regional_notes 只在該國**沒有** observance 時才會渲染(見 topic/[slug].astro 的
+    // regionalOnlyNotes 過濾),所以七國都有 observance 的 Topic,regional_notes=0
+    // 是正確狀態,不是缺陷。2026-08-20 就是把這兩件事混為一談,才誤判七個 Topic 太薄。
+    blankMarkets: COUNTRIES.filter((cc) => !countries.includes(cc)),
   };
 }).sort((a, b) => a.minChars - b.minChars);
 
@@ -263,7 +268,13 @@ if (reportMode) {
   console.log(`\n未達目標：${need.length} / ${ranked.length} 個 Topic`);
   console.log(`少於 ${THRESHOLDS.unitsError} 個變體：${ranked.filter((t) => t.units < THRESHOLDS.unitsError).length}`
     + `　少於 ${THRESHOLDS.unitsTarget} 個變體：${ranked.filter((t) => t.units < THRESHOLDS.unitsTarget).length}`
-    + `　沒有任何國別敘述（regional_notes=0）：${ranked.filter((t) => t.regionalNotes === 0).length}`);
+    + `　有市場看到空白格：${ranked.filter((t) => t.blankMarkets.length > 0).length}`);
+  // 空白格 = 那個站的讀者打開這一頁,自己國家那一欄什麼都沒有。這是唯一該追的國別缺口。
+  const blank = ranked.filter((t) => t.blankMarkets.length > 0);
+  if (blank.length > 0) {
+    console.log('\n讀者看到空白格的 Topic（站台市場 → 缺的國家）：');
+    for (const t of blank) console.log(`  ${t.slug.padEnd(34)} ${t.blankMarkets.join(', ')}`);
+  }
   process.exit(0);
 }
 
