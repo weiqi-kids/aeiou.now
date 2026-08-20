@@ -31,6 +31,12 @@
 - rank: 4
 - source: https://www2.portoalegre.rs.gov.br/pwdtcomemorativas/default.php?reg=22&p_secao=13
 
+## observance ID hari-ayah
+- local_name: Hari Ayah Nasional
+- date: 11-12
+- rank: 5
+- source: https://www.pa-tulungagung.go.id/en/peraturan-dan-kebijakan/ucapan-selamat-dan-duka/1156-hari-ayah-nasional-sabtu-12-november-2022
+
 ## locale zh-TW
 ### title
 父親節
@@ -46,6 +52,8 @@
 日本的父の日在六月第三個星期日，跟著美國的日期走。它在制度上沒有任何位置：不是國民の祝日，也沒有法律或政令指定。與母の日相比，它在花卉需求上的痕跡也淺得多——農林水產省的花卉現況資料點名的是母の日與彼岸這類需求集中的節日，父の日並不在其中。同一個家庭關係，兩個節日留下的可量測痕跡差距很大。
 ### customs BR dia-dos-pais
 巴西的父親節在八月第二個星期日，來歷最直白：一九五三年由廣告人兼記者 Sylvio Bhering 提議，目的是吸引商家到《O Globo》登廣告——母親節帶動上半年、聖誕節帶動年底，八月正好是空檔。日期後來固定在八月第二個星期日，好讓它永遠落在週末。一個節日被明白地當成商業檔期設計出來，這在四個地方裡是唯一的。
+### customs ID hari-ayah
+印尼的全國父親節在十一月十二日，但它不是國家訂的：二○○六年這一天由民間團體「大地之母之子協會」在中爪哇梭羅市政廳前廣場宣告成立，同時公布一場「寫信給爸爸」徵文的得獎名單，並由各地孩子寄出一千封信。選十一月十二日是為了與早已由總統令訂下的母親節（十二月二十二日）取得平衡；首次紀念在梭羅與東部的茂夢貝雷同步舉行，象徵印尼東西兩端。母親節由國家訂、父親節由民間訂，這個不對稱本身就是資料。
 
 ## locale en
 ### title
@@ -62,6 +70,8 @@ Father's Day took a long time to settle in the United States. On 24 April 1972 H
 Japan's Chichi no Hi is the third Sunday in June, following the American date. It holds no institutional position at all: it is not a national holiday, and no law or ordinance designates it. Its trace in flower demand is also much fainter than Mother's Day's — the agriculture ministry's briefing on the flower sector names Mother's Day and the equinoctial weeks as the occasions where demand concentrates, and Father's Day is not among them. Same family relationship, very different measurable footprints.
 ### customs BR dia-dos-pais
 Brazil's Dia dos Pais is the second Sunday in August, and its origin is the most candid of the four: in 1953 the advertising man and journalist Sylvio Bhering proposed it, aiming to attract merchants to advertise in the newspaper O Globo. Mother's Day drove the first half of the year and Christmas the end of it; August was the gap. The date was later fixed to the second Sunday of August so it would always land on a weekend. A holiday openly designed as a retail window is unique among these four.
+### customs ID hari-ayah
+Indonesia's National Father's Day is 12 November, but it was not established by the state: on that date in 2006 a civil-society group, the Association of Sons of the Motherland, declared it in the square before the Solo city hall in Central Java, alongside the results of a letter-writing contest addressed to fathers, with a thousand letters sent by children from around the country. The date was chosen to balance Mother's Day, which had long been fixed by presidential decree on 22 December; the first observance was held simultaneously in Solo and in Maumere in the east, as a symbol of the two ends of Indonesia. Mother's Day set by the state and Father's Day set by citizens — that asymmetry is itself the data.
 
 ## locale ja
 ### title
@@ -78,6 +88,8 @@ Brazil's Dia dos Pais is the second Sunday in August, and its origin is the most
 日本の父の日は6月第三日曜で、米国の日付に従っている。制度上の位置づけはまったくない。国民の祝日ではなく、法律や政令による指定もない。花きの需要に残す痕跡も母の日よりずっと薄い——農林水産省の花きの現状に関する資料が需要の集中する行事として挙げるのは母の日やお彼岸であり、父の日はそこに入っていない。同じ家族関係でありながら、測れる痕跡の大きさが大きく違う。
 ### customs BR dia-dos-pais
 ブラジルの父の日は8月第二日曜で、由来は四つの中で最も率直である。1953年、広告人であり記者でもあったシルヴィオ・ベーリングが提案した。狙いは商店に新聞『オ・グローボ』へ広告を出させることだった。母の日が上半期を、クリスマスが年末を動かし、8月が空白だったのである。日付は後に8月第二日曜に固定され、常に週末に来るようにされた。商戦の枠として公然と設計された祝日は、この四つの中でここだけだ。
+### customs ID hari-ayah
+インドネシアの全国父の日は11月12日だが、これは国が定めたものではない。2006年のこの日、民間団体「祖国の子ら協会」が中部ジャワ・ソロの市庁舎前広場で宣言したもので、父へ宛てた手紙のコンクールの受賞発表を兼ね、各地の子どもから千通の手紙が送られた。11月12日が選ばれたのは、すでに大統領令で12月22日と定まっていた母の日との釣り合いを取るためである。初回の記念は、ソロと東部のマウメレで同時に行われ、インドネシアの東西を象徴した。母の日は国が定め、父の日は市民が定めた。この非対称そのものが資料である。
 
 ## locale zh-CN
 ### title
@@ -94,6 +106,8 @@ Brazil's Dia dos Pais is the second Sunday in August, and its origin is the most
 日本的父の日在6月第三个星期日，跟着美国的日期走。它在制度上没有任何位置：不是国民の祝日，也没有法律或政令指定。与母の日相比，它在花卉需求上的痕迹也浅得多——农林水产省的花卉现况资料点名的是母の日与彼岸这类需求集中的节日，父の日并不在其中。同一个家庭关系，两个节日留下的可量测痕迹差距很大。
 ### customs BR dia-dos-pais
 巴西的父亲节在8月第二个星期日，来历最直白：1953年由广告人兼记者 Sylvio Bhering 提议，目的是吸引商家到《O Globo》登广告——母亲节带动上半年、圣诞节带动年底，8月正好是空档。日期后来固定在8月第二个星期日，好让它永远落在周末。一个节日被明白地当成商业档期设计出来，这在四个地方里是唯一的。
+### customs ID hari-ayah
+印度尼西亚的全国父亲节在11月12日，但它不是国家订的：2006年这一天由民间团体“大地之母之子协会”在中爪哇梭罗市政厅前广场宣告成立，同时公布一场“写信给爸爸”征文的得奖名单，并由各地孩子寄出一千封信。选11月12日是为了与早已由总统令订下的母亲节（12月22日）取得平衡；首次纪念在梭罗与东部的茂梦贝雷同步举行，象征印尼东西两端。母亲节由国家订、父亲节由民间订，这个不对称本身就是资料。
 
 ## locale hi
 ### title
@@ -110,6 +124,8 @@ Brazil's Dia dos Pais is the second Sunday in August, and its origin is the most
 जापान का चिचि नो ही जून का तीसरा रविवार है, जो अमेरिकी तारीख़ का अनुसरण करता है। संस्थागत रूप से उसकी कोई जगह नहीं: न वह राष्ट्रीय अवकाश है, न किसी क़ानून या अध्यादेश से नामित। फूलों की माँग पर उसका निशान भी मातृ दिवस से कहीं धुँधला है — कृषि मंत्रालय की पुष्प-क्षेत्र रिपोर्ट जिन अवसरों पर माँग केंद्रित बताती है वे मातृ दिवस और विषुव-सप्ताह हैं, पितृ दिवस उनमें नहीं। एक ही पारिवारिक रिश्ता, पर मापने योग्य निशान बहुत अलग।
 ### customs BR dia-dos-pais
 ब्राज़ील का Dia dos Pais अगस्त का दूसरा रविवार है, और इन चारों में इसकी उत्पत्ति सबसे स्पष्टवादी है: 1953 में विज्ञापन-व्यक्ति और पत्रकार सिल्वियो बेरिंग ने इसे प्रस्तावित किया, ताकि व्यापारी अख़बार O Globo में विज्ञापन दें। मातृ दिवस साल की पहली छमाही चलाता था और क्रिसमस अंत — अगस्त ख़ाली था। बाद में तारीख़ अगस्त के दूसरे रविवार पर तय कर दी गई ताकि वह हमेशा सप्ताहांत पर पड़े। खुले तौर पर खुदरा अवधि के रूप में गढ़ा गया त्योहार इन चारों में केवल यही है।
+### customs ID hari-ayah
+इंडोनेशिया का राष्ट्रीय पितृ दिवस 12 नवंबर है, पर इसे राज्य ने स्थापित नहीं किया: 2006 में इसी तिथि को एक नागरिक संगठन, 'मातृभूमि के पुत्रों का संघ', ने मध्य जावा के सोलो नगर भवन के सामने के चौक में इसकी घोषणा की, साथ ही पिताओं के नाम लिखे पत्रों की प्रतियोगिता के परिणाम भी घोषित हुए और देशभर के बच्चों ने एक हज़ार पत्र भेजे। 12 नवंबर इसलिए चुना गया कि वह मातृ दिवस से संतुलन बना सके, जो बहुत पहले राष्ट्रपति आदेश से 22 दिसंबर को नियत था; पहला आयोजन सोलो और पूर्व में माउमेरे में एक साथ हुआ, जो इंडोनेशिया के दोनों छोरों का प्रतीक था। मातृ दिवस राज्य ने तय किया और पितृ दिवस नागरिकों ने — यह असंतुलन स्वयं एक आँकड़ा है।
 
 ## locale id
 ### title
@@ -126,6 +142,8 @@ Hari Ayah butuh waktu lama untuk mapan di Amerika Serikat. Pada 24 April 1972 Re
 Chichi no Hi Jepang jatuh pada Minggu ketiga bulan Juni, mengikuti tanggal Amerika. Secara kelembagaan ia tidak punya posisi sama sekali: bukan hari libur nasional, dan tidak ada undang-undang atau peraturan yang menetapkannya. Jejaknya pada permintaan bunga pun jauh lebih tipis daripada Hari Ibu — laporan kementerian pertanian tentang sektor bunga menyebut Hari Ibu dan pekan ekuinoks sebagai momen ketika permintaan menumpuk, dan Hari Ayah tidak termasuk. Hubungan keluarga yang sama, jejak terukur yang sangat berbeda.
 ### customs BR dia-dos-pais
 Dia dos Pais Brasil jatuh pada Minggu kedua bulan Agustus, dan asal-usulnya paling terus terang di antara keempatnya: pada 1953 orang periklanan sekaligus jurnalis Sylvio Bhering mengusulkannya, dengan tujuan menarik pedagang memasang iklan di koran O Globo. Hari Ibu menggerakkan paruh pertama tahun dan Natal menutup akhir tahun; Agustus adalah celahnya. Tanggalnya kemudian dipatok pada Minggu kedua Agustus agar selalu jatuh pada akhir pekan. Hari raya yang secara terbuka dirancang sebagai jendela ritel hanya ada di sini di antara keempatnya.
+### customs ID hari-ayah
+Hari Ayah Nasional Indonesia jatuh 12 November, tetapi ia tidak ditetapkan oleh negara: pada tanggal itu tahun 2006 sebuah kelompok masyarakat sipil, Perkumpulan Putra Ibu Pertiwi, mendeklarasikannya di pelataran Balai Kota Solo, Jawa Tengah, bersamaan dengan pengumuman pemenang sayembara menulis surat untuk ayah, disertai seribu surat yang dikirim anak-anak dari berbagai daerah. Tanggal 12 November dipilih untuk menyeimbangkan Hari Ibu yang sejak lama ditetapkan lewat Keputusan Presiden pada 22 Desember; peringatan pertamanya digelar serentak di Solo dan di Maumere, menandai dua ujung Indonesia. Hari Ibu ditetapkan negara, Hari Ayah ditetapkan warga — ketaksimetrisan itu sendiri adalah datanya.
 
 ## locale pt-BR
 ### title
@@ -142,3 +160,5 @@ O Dia dos Pais demorou a se firmar nos Estados Unidos. Em 24 de abril de 1972 a 
 O Chichi no Hi japonês é o terceiro domingo de junho, seguindo a data norte-americana. Não tem posição institucional alguma: não é feriado nacional e nenhuma lei ou decreto o designa. Seu traço na demanda por flores também é bem mais fraco que o do Dia das Mães — o informe do ministério da agricultura sobre o setor de flores aponta o Dia das Mães e as semanas do equinócio como as ocasiões em que a demanda se concentra, e o Dia dos Pais não está entre elas. Mesma relação familiar, pegadas mensuráveis muito diferentes.
 ### customs BR dia-dos-pais
 O Dia dos Pais brasileiro é o segundo domingo de agosto, e sua origem é a mais franca dos quatro: em 1953 o publicitário e jornalista Sylvio Bhering o propôs, com o objetivo de atrair comerciantes a anunciar no jornal O Globo. O Dia das Mães movimentava o primeiro semestre e o Natal fechava o ano; agosto era a lacuna. A data depois foi fixada no segundo domingo de agosto para cair sempre num fim de semana. Um feriado assumidamente desenhado como janela de varejo é o único caso entre esses quatro.
+### customs ID hari-ayah
+O Dia Nacional dos Pais da Indonésia é 12 de novembro, mas não foi instituído pelo Estado: nessa data, em 2006, um grupo da sociedade civil, a Associação dos Filhos da Mãe Pátria, o declarou na praça diante da prefeitura de Solo, em Java Central, junto com o resultado de um concurso de cartas dirigidas aos pais e o envio de mil cartas por crianças de várias regiões. A data foi escolhida para equilibrar o Dia das Mães, havia muito fixado por decreto presidencial em 22 de dezembro; a primeira comemoração ocorreu ao mesmo tempo em Solo e em Maumere, no leste, como símbolo das duas pontas da Indonésia. Dia das Mães definido pelo Estado, Dia dos Pais definido pelos cidadãos — essa assimetria é, ela mesma, o dado.

@@ -74,6 +74,70 @@
       }
     },
     {
+      "observance_id": "obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_ID_hari-ayah",
+      "observance_key": "hari-ayah",
+      "country_code": "ID",
+      "local_name": "Hari Ayah Nasional",
+      "observed_date": "11-12",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 5,
+      "source_ids": [
+        "src_D1106DA30B86209191F39C0D"
+      ],
+      "source_urls": [
+        "https://www.pa-tulungagung.go.id/en/peraturan-dan-kebijakan/ucapan-selamat-dan-duka/1156-hari-ayah-nasional-sabtu-12-november-2022"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_ID_hari-ayah_2026_2026-11-12",
+          "occurrence_year": 2026,
+          "starts_on": "2026-11-12",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_D1106DA30B86209191F39C0D"
+          ],
+          "source_urls": [
+            "https://www.pa-tulungagung.go.id/en/peraturan-dan-kebijakan/ucapan-selamat-dan-duka/1156-hari-ayah-nasional-sabtu-12-november-2022"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_ID_hari-ayah_2027_2027-11-12",
+          "occurrence_year": 2027,
+          "starts_on": "2027-11-12",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_D1106DA30B86209191F39C0D"
+          ],
+          "source_urls": [
+            "https://www.pa-tulungagung.go.id/en/peraturan-dan-kebijakan/ucapan-selamat-dan-duka/1156-hari-ayah-nasional-sabtu-12-november-2022"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_ID_hari-ayah_2026_2026-11-12",
+        "occurrence_year": 2026,
+        "starts_on": "2026-11-12",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Jakarta",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_D1106DA30B86209191F39C0D"
+        ],
+        "source_urls": [
+          "https://www.pa-tulungagung.go.id/en/peraturan-dan-kebijakan/ucapan-selamat-dan-duka/1156-hari-ayah-nasional-sabtu-12-november-2022"
+        ],
+        "distance_days": 84
+      }
+    },
+    {
       "observance_id": "obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_JP_chichi-no-hi",
       "observance_key": "chichi-no-hi",
       "country_code": "JP",
@@ -283,6 +347,12 @@
       ]
     },
     {
+      "country_code": "ID",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_ID_hari-ayah"
+      ]
+    },
+    {
       "country_code": "JP",
       "observance_ids": [
         "obs_top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF_JP_chichi-no-hi"
@@ -307,6 +377,7 @@
     "src_5DE298026ADE5CAAE46B69C5",
     "src_917F7125FBE98C97DA840082",
     "src_C654C37ACD3A53ABB5A2F5D2",
+    "src_D1106DA30B86209191F39C0D",
     "src_F045C3336BEF6186024CF028"
   ],
   "source_urls": [
@@ -314,6 +385,7 @@
     "https://www2.census.gov/programs-surveys/sis/resources/fathers-day-ff.pdf",
     "https://www2.portoalegre.rs.gov.br/pwdtcomemorativas/default.php?reg=22&p_secao=13",
     "https://www.maff.go.jp/j/seisan/kaki/flower/attach/pdf/index-113.pdf",
+    "https://www.pa-tulungagung.go.id/en/peraturan-dan-kebijakan/ucapan-selamat-dan-duka/1156-hari-ayah-nasional-sabtu-12-november-2022",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
   ]
 }
