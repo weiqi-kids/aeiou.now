@@ -35,6 +35,7 @@
 | 有沒有殘留的背景 server | `pgrep -af '[a]stro (dev\|preview)'; pgrep -af '[h]ttp\.server'` |
 | 題庫有幾題、涵蓋到哪天 | `sqlite3 db/aeiou.sqlite "SELECT kind,COUNT(*),MIN(qdate),MAX(qdate) FROM questions GROUP BY kind"` |
 | 線上投票數(D1) | `cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT COUNT(*) n, COUNT(DISTINCT question_id) q FROM question_votes"` |
+| **D1 用量(讀寫列數、查詢次數)** | `cd api && npx wrangler d1 info aeiou-ugc`——看 `rows_written_24h` 與 `rows_read_24h`。判準:**寫入量應該與真人流量同一個量級**;寫遠大於讀就是自己的同步在灌(2026-08-20 事故) |
 
 ---
 
@@ -278,6 +279,10 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
   改 `scripts/translate-posts.mjs` 的 `cwd` 前先讀該檔檔頭(2026-08-13 實測數據在那)。
 - **腳本裸執行(不帶任何參數)就必須是正確且完整的行為**;旗標只能是逃生口或縮減行為,
   不得是「不帶就會壞掉」。cron 呼叫一律不帶參數,不能依賴有人記得讀本手冊。
+- **推 D1 只推真的變了的列**——Worker 的 `/internal/sync/*` 是純 upsert、不做 delete,
+  所以主機端可以只送差異;`sync-topics-to-d1.mjs` 以 state 檔的逐列 hash 判斷。
+  全量推只在 `--force` 與保底重推時發生(D1 掉資料時靠它補回來)。
+  改這裡之前先看 `npx wrangler d1 info aeiou-ugc` 的 `rows_written_24h`。
 - **UGC 回流主機的唯一通道是 `translate-posts.mjs`**——沒有它,主機端拿不到貼文。
 - **跨站 cookie 三件套缺一不可**:`SameSite=None; Secure` + `Access-Control-Allow-Credentials: true`
   + 前端 `credentials:'include'`(此時 CORS origin **不得用 `*`**)。
