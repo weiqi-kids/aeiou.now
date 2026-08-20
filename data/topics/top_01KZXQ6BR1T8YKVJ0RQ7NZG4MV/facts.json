@@ -2,11 +2,11 @@
   "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
   "slug": "childrens-day",
   "canonical_name": "Children's Day",
-  "commonality": "comparing children's days through play, care, rights, school life, and the different dates chosen by each society",
-  "category": "family",
+  "commonality": "comparing six different dates for the same idea and, more revealingly, who the law actually gives the day off to",
+  "category": "festival",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-19T14:52:10.000Z",
+  "updated_at": "2026-08-20T03:30:13.000Z",
   "access_level": 0,
   "observances": [
     {
@@ -17,7 +17,7 @@
       "observed_date": "10-12",
       "date_rule": null,
       "date_range_end": null,
-      "popularity_rank": 50,
+      "popularity_rank": 5,
       "source_ids": [
         "src_65509B76019599C21D275EF5"
       ],
@@ -77,16 +77,16 @@
       "observance_id": "obs_top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV_CN_children",
       "observance_key": "children",
       "country_code": "CN",
-      "local_name": "六一兒童節",
+      "local_name": "六一儿童节",
       "observed_date": "06-01",
       "date_rule": null,
       "date_range_end": null,
-      "popularity_rank": 30,
+      "popularity_rank": 3,
       "source_ids": [
-        "src_9CABF8153773806D640BB5A8"
+        "src_6DFD76B82DF608B35353178A"
       ],
       "source_urls": [
-        "https://www.nhc.gov.cn/jnr/etjjrjj/etj_lmtt.shtml"
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
       ],
       "occurrences": [
         {
@@ -98,10 +98,10 @@
           "timezone": "Asia/Shanghai",
           "date_status": "confirmed",
           "source_ids": [
-            "src_9CABF8153773806D640BB5A8"
+            "src_6DFD76B82DF608B35353178A"
           ],
           "source_urls": [
-            "https://www.nhc.gov.cn/jnr/etjjrjj/etj_lmtt.shtml"
+            "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
           ]
         },
         {
@@ -113,10 +113,10 @@
           "timezone": "Asia/Shanghai",
           "date_status": "confirmed",
           "source_ids": [
-            "src_9CABF8153773806D640BB5A8"
+            "src_6DFD76B82DF608B35353178A"
           ],
           "source_urls": [
-            "https://www.nhc.gov.cn/jnr/etjjrjj/etj_lmtt.shtml"
+            "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
           ]
         }
       ],
@@ -129,23 +129,95 @@
         "timezone": "Asia/Shanghai",
         "date_status": "confirmed",
         "source_ids": [
-          "src_9CABF8153773806D640BB5A8"
+          "src_6DFD76B82DF608B35353178A"
         ],
         "source_urls": [
-          "https://www.nhc.gov.cn/jnr/etjjrjj/etj_lmtt.shtml"
+          "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
         ],
         "distance_days": 285
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV_ID_hari-anak",
+      "observance_key": "hari-anak",
+      "country_code": "ID",
+      "local_name": "Hari Anak Nasional",
+      "observed_date": "07-23",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 4,
+      "source_ids": [
+        "src_174DD34E145AE52DADF35C0F",
+        "src_C4B02A54B48D214242E9F914"
+      ],
+      "source_urls": [
+        "https://www.kemenpppa.go.id/page/view/MTQ1NA==",
+        "https://www.kemendikdasmen.go.id/siaran-pers/15794-hari-anak-nasional-2026-kemendikdasmen-ajak-anak-kembali-bermain-dan-kurangi-pemakaian-gawai"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV_ID_hari-anak_2026_2026-07-23",
+          "occurrence_year": 2026,
+          "starts_on": "2026-07-23",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_174DD34E145AE52DADF35C0F",
+            "src_C4B02A54B48D214242E9F914"
+          ],
+          "source_urls": [
+            "https://www.kemenpppa.go.id/page/view/MTQ1NA==",
+            "https://www.kemendikdasmen.go.id/siaran-pers/15794-hari-anak-nasional-2026-kemendikdasmen-ajak-anak-kembali-bermain-dan-kurangi-pemakaian-gawai"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV_ID_hari-anak_2027_2027-07-23",
+          "occurrence_year": 2027,
+          "starts_on": "2027-07-23",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_174DD34E145AE52DADF35C0F",
+            "src_C4B02A54B48D214242E9F914"
+          ],
+          "source_urls": [
+            "https://www.kemenpppa.go.id/page/view/MTQ1NA==",
+            "https://www.kemendikdasmen.go.id/siaran-pers/15794-hari-anak-nasional-2026-kemendikdasmen-ajak-anak-kembali-bermain-dan-kurangi-pemakaian-gawai"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV_ID_hari-anak_2027_2027-07-23",
+        "occurrence_year": 2027,
+        "starts_on": "2027-07-23",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Jakarta",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_174DD34E145AE52DADF35C0F",
+          "src_C4B02A54B48D214242E9F914"
+        ],
+        "source_urls": [
+          "https://www.kemenpppa.go.id/page/view/MTQ1NA==",
+          "https://www.kemendikdasmen.go.id/siaran-pers/15794-hari-anak-nasional-2026-kemendikdasmen-ajak-anak-kembali-bermain-dan-kurangi-pemakaian-gawai"
+        ],
+        "distance_days": 337
       }
     },
     {
       "observance_id": "obs_top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV_IN_childrens-day",
       "observance_key": "childrens-day",
       "country_code": "IN",
-      "local_name": "बाल दिवस",
+      "local_name": "बाल दिवस（Children's Day）",
       "observed_date": "11-14",
       "date_rule": null,
       "date_range_end": null,
-      "popularity_rank": 40,
+      "popularity_rank": 6,
       "source_ids": [
         "src_B6EF1B619CA389963473D560"
       ],
@@ -209,12 +281,12 @@
       "observed_date": "05-05",
       "date_rule": null,
       "date_range_end": null,
-      "popularity_rank": 20,
+      "popularity_rank": 2,
       "source_ids": [
-        "src_1BB557F7BE73159B83F3AD86"
+        "src_1A80A58B5E867818100E7776"
       ],
       "source_urls": [
-        "https://www.japan.travel/en/guide/may/"
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html"
       ],
       "occurrences": [
         {
@@ -226,10 +298,10 @@
           "timezone": "Asia/Tokyo",
           "date_status": "confirmed",
           "source_ids": [
-            "src_1BB557F7BE73159B83F3AD86"
+            "src_1A80A58B5E867818100E7776"
           ],
           "source_urls": [
-            "https://www.japan.travel/en/guide/may/"
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html"
           ]
         },
         {
@@ -241,10 +313,10 @@
           "timezone": "Asia/Tokyo",
           "date_status": "confirmed",
           "source_ids": [
-            "src_1BB557F7BE73159B83F3AD86"
+            "src_1A80A58B5E867818100E7776"
           ],
           "source_urls": [
-            "https://www.japan.travel/en/guide/may/"
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html"
           ]
         }
       ],
@@ -257,10 +329,10 @@
         "timezone": "Asia/Tokyo",
         "date_status": "confirmed",
         "source_ids": [
-          "src_1BB557F7BE73159B83F3AD86"
+          "src_1A80A58B5E867818100E7776"
         ],
         "source_urls": [
-          "https://www.japan.travel/en/guide/may/"
+          "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html"
         ],
         "distance_days": 258
       }
@@ -273,12 +345,12 @@
       "observed_date": "04-04",
       "date_rule": null,
       "date_range_end": null,
-      "popularity_rank": 10,
+      "popularity_rank": 1,
       "source_ids": [
-        "src_A2605AA09D0CA652F0011F65"
+        "src_F045C3336BEF6186024CF028"
       ],
       "source_urls": [
-        "https://kids.ey.gov.tw/Page/C86A10EB58C65C86"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
       ],
       "occurrences": [
         {
@@ -290,10 +362,10 @@
           "timezone": "Asia/Taipei",
           "date_status": "confirmed",
           "source_ids": [
-            "src_A2605AA09D0CA652F0011F65"
+            "src_F045C3336BEF6186024CF028"
           ],
           "source_urls": [
-            "https://kids.ey.gov.tw/Page/C86A10EB58C65C86"
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
           ]
         },
         {
@@ -305,10 +377,10 @@
           "timezone": "Asia/Taipei",
           "date_status": "confirmed",
           "source_ids": [
-            "src_A2605AA09D0CA652F0011F65"
+            "src_F045C3336BEF6186024CF028"
           ],
           "source_urls": [
-            "https://kids.ey.gov.tw/Page/C86A10EB58C65C86"
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
           ]
         }
       ],
@@ -321,10 +393,10 @@
         "timezone": "Asia/Taipei",
         "date_status": "confirmed",
         "source_ids": [
-          "src_A2605AA09D0CA652F0011F65"
+          "src_F045C3336BEF6186024CF028"
         ],
         "source_urls": [
-          "https://kids.ey.gov.tw/Page/C86A10EB58C65C86"
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
         ],
         "distance_days": 227
       }
@@ -342,6 +414,12 @@
       "country_code": "CN",
       "observance_ids": [
         "obs_top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV_CN_children"
+      ]
+    },
+    {
+      "country_code": "ID",
+      "observance_ids": [
+        "obs_top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV_ID_hari-anak"
       ]
     },
     {
@@ -365,17 +443,21 @@
   ],
   "relations": [],
   "source_ids": [
-    "src_1BB557F7BE73159B83F3AD86",
+    "src_174DD34E145AE52DADF35C0F",
+    "src_1A80A58B5E867818100E7776",
     "src_65509B76019599C21D275EF5",
-    "src_9CABF8153773806D640BB5A8",
-    "src_A2605AA09D0CA652F0011F65",
-    "src_B6EF1B619CA389963473D560"
+    "src_6DFD76B82DF608B35353178A",
+    "src_B6EF1B619CA389963473D560",
+    "src_C4B02A54B48D214242E9F914",
+    "src_F045C3336BEF6186024CF028"
   ],
   "source_urls": [
-    "https://www.japan.travel/en/guide/may/",
+    "https://www.kemenpppa.go.id/page/view/MTQ1NA==",
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html",
     "https://www.gov.br/arquivonacional/pt-br/canais_atendimento/imprensa/copy_of_noticias/dia-da-crianca",
-    "https://www.nhc.gov.cn/jnr/etjjrjj/etj_lmtt.shtml",
-    "https://kids.ey.gov.tw/Page/C86A10EB58C65C86",
-    "https://www.presidentofindia.gov.in/president-childrens-day"
+    "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+    "https://www.presidentofindia.gov.in/president-childrens-day",
+    "https://www.kemendikdasmen.go.id/siaran-pers/15794-hari-anak-nasional-2026-kemendikdasmen-ajak-anak-kembali-bermain-dan-kurangi-pemakaian-gawai",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
   ]
 }
