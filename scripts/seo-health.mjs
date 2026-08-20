@@ -13,7 +13,7 @@
 // 四層（順序固定，前一層沒問題才看下一層）：
 //   ① 量測層 GA4 的 session 數是不是機器流量撐出來的（direct + 極短停留 + 落在首頁）
 //   ② 索引層 頁面進得去 Google 嗎（URL Inspection 抽樣 + sitemap 提交狀態）
-//   ③ 排名層 進得去但排在哪（查詢排名分布；51+ 佔比）
+//   ③ 排名層 進得去但排在哪（查詢排名分布；51+ 佔比；前 20 名的查詢×頁面對照）
 //   ④ 內容層 頁面撐得起排名嗎（呼叫 check-content-depth.mjs 的缺口統計）
 //
 // 用法（裸執行＝完整診斷）：
@@ -170,6 +170,27 @@ try {
     console.log(`⚠️ 已排進前十的查詢累積 ${topImp} 曝光、${topClicks} 點擊 —— `
       + '這就是「就算等下去，天花板在哪」的證據，不要用時間解釋它。');
   }
+  // 排進前十卻沒人點,光看「幾個查詢、幾次曝光」看不出原因;要看**查詢問的是什麼、
+  // 落在哪一頁**。2026-08-20 就是這張表讓問題現形:排名第 5 的查詢是
+  // 「2027印尼齋戒月時間」,落在 /topic/ramadan-and-eid/ —— 而那個 Topic 底下五個
+  // observance 全是開齋節,一筆齋戒月都沒有。標題寫著齋戒月,答案給的是開齋節日期。
+  // 這類「頁面答非所問」不適合做成閘門(判準太模糊,noisy gate 只會被無視),
+  // 但**列出來就看得見**,所以固定印在報告裡。
+  try {
+    const r2 = await gscQuery(SA, GSC_SITE, {
+      startDate: dayStr(days), endDate: dayStr(0), dimensions: ['query', 'page'], rowLimit: 500,
+    });
+    const pairs = (r2.rows || []).filter((x) => x.position <= 20)
+      .sort((a, b) => a.position - b.position).slice(0, 20);
+    if (pairs.length) {
+      console.log('\n排進前 20 的查詢落在哪一頁（看「問的東西」與「頁面答的東西」對不對得上）：');
+      console.log('  名次  曝光  點擊  查詢 → 頁面');
+      for (const x of pairs) {
+        console.log(`  ${x.position.toFixed(1).padStart(4)} ${String(x.impressions).padStart(5)} `
+          + `${String(x.clicks).padStart(5)}  ${x.keys[0]} → ${x.keys[1].replace(/^https?:\/\//, '')}`);
+      }
+    }
+  } catch (e) { console.log(`（查詢×頁面讀取失敗：${e.message}）`); }
 } catch (e) { console.log(`（GSC 讀取失敗：${e.message}）`); }
 
 // ── ④ 內容層 ──────────────────────────────────────────────────────────────
