@@ -12,24 +12,28 @@
   "regional_notes": [
     {
       "country_code": "BR",
+      "kind": "perennial",
       "source_urls": [
         "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
       ]
     },
     {
       "country_code": "CN",
+      "kind": "perennial",
       "source_urls": [
         "http://www.gd.gov.cn/zwgk/wjk/zcfgk/content/post_2531969.html"
       ]
     },
     {
       "country_code": "ID",
+      "kind": "perennial",
       "source_urls": [
         "https://peraturan.bpk.go.id/Details/40009/uu-no-23-tahun-2006"
       ]
     },
     {
       "country_code": "IN",
+      "kind": "perennial",
       "source_urls": [
         "https://crsorgi.gov.in/",
         "https://www.nic.gov.in/civil-registrations-servicing-digitally/"
@@ -37,6 +41,7 @@
     },
     {
       "country_code": "JP",
+      "kind": "perennial",
       "source_urls": [
         "https://laws.e-gov.go.jp/law/322AC0000000224",
         "https://www.moj.go.jp/ONLINE/FAMILYREGISTER/5-1.html",
@@ -45,12 +50,14 @@
     },
     {
       "country_code": "TW",
+      "kind": "perennial",
       "source_urls": [
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030006"
       ]
     },
     {
       "country_code": "US",
+      "kind": "perennial",
       "source_urls": [
         "https://www.usa.gov/birth-certificate"
       ]

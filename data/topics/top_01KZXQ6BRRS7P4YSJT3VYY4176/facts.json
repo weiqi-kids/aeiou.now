@@ -140,6 +140,70 @@
       }
     },
     {
+      "observance_id": "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_ID_cap-go-meh",
+      "observance_key": "cap-go-meh",
+      "country_code": "ID",
+      "local_name": "Cap Go Meh（山口洋）",
+      "observed_date": null,
+      "date_rule": "農曆一月十五日（Imlek 起算的第十五夜）",
+      "date_range_end": null,
+      "popularity_rank": 7,
+      "source_ids": [
+        "src_68BF3B7EAABC76E3229B693C"
+      ],
+      "source_urls": [
+        "https://referensi.data.kemendikdasmen.go.id/budayakita/wbtb/objek/AA001528"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_ID_cap-go-meh_2026_2026-03-03",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-03",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Jakarta",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_68BF3B7EAABC76E3229B693C"
+          ],
+          "source_urls": [
+            "https://referensi.data.kemendikdasmen.go.id/budayakita/wbtb/objek/AA001528"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_ID_cap-go-meh_2027_2027-02-20",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-20",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Jakarta",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_68BF3B7EAABC76E3229B693C"
+          ],
+          "source_urls": [
+            "https://referensi.data.kemendikdasmen.go.id/budayakita/wbtb/objek/AA001528"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_ID_cap-go-meh_2027_2027-02-20",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-20",
+        "ends_on": null,
+        "calendar_system": "chinese-lunisolar",
+        "timezone": "Asia/Jakarta",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_68BF3B7EAABC76E3229B693C"
+        ],
+        "source_urls": [
+          "https://referensi.data.kemendikdasmen.go.id/budayakita/wbtb/objek/AA001528"
+        ],
+        "distance_days": 184
+      }
+    },
+    {
       "observance_id": "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_handan",
       "observance_key": "handan",
       "country_code": "TW",
@@ -408,6 +472,12 @@
       ]
     },
     {
+      "country_code": "ID",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_ID_cap-go-meh"
+      ]
+    },
+    {
       "country_code": "TW",
       "observance_ids": [
         "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_handan",
@@ -421,6 +491,7 @@
   "source_ids": [
     "src_2E486EC2027E7454DC09BB16",
     "src_509D6FE3CDE66C39605277AB",
+    "src_68BF3B7EAABC76E3229B693C",
     "src_6DFD76B82DF608B35353178A",
     "src_A57891D9FCD3DA50246D04E0",
     "src_CCAC02CCD3279558722EBE1B",
@@ -431,6 +502,7 @@
   "source_urls": [
     "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=86",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+    "https://referensi.data.kemendikdasmen.go.id/budayakita/wbtb/objek/AA001528",
     "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
     "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=6",
     "https://www.ihchina.cn/project_details/15014.html",

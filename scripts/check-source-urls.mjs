@@ -79,7 +79,10 @@ async function probe(url) {
     try {
       const res = await fetch(url, { method, redirect: 'follow', signal: ac.signal, headers: { 'User-Agent': UA } });
       clearTimeout(timer);
-      if (method === 'HEAD' && (res.status === 405 || res.status === 501)) continue;
+      // HEAD 回 404/410 也要用 GET 複核 —— 不少站(實測:tangerangkota.go.id、
+      // referensi.data.kemendikdasmen.go.id)對 HEAD 回 404、對 GET 回 200。
+      // 只信 HEAD 會把活著的頁面判死。405/501 是明講「不支援 HEAD」,同樣往下走。
+      if (method === 'HEAD' && [404, 405, 410, 501].includes(res.status)) continue;
       return { status: res.status, finalUrl: res.url || url };
     } catch (e) {
       clearTimeout(timer);

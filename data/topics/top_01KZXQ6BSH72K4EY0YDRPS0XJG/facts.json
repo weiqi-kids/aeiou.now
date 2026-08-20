@@ -410,7 +410,15 @@
       }
     }
   ],
-  "regional_notes": [],
+  "regional_notes": [
+    {
+      "country_code": "JP",
+      "kind": "absence",
+      "source_urls": [
+        "https://www.mext.go.jp/a_menu/shougai/kyoiku-bunka/detail/1297836.htm"
+      ]
+    }
+  ],
   "countries": [
     {
       "country_code": "BR",
@@ -468,6 +476,7 @@
     "http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s3580/moe_2390/moe_2391/tnull_38105.html",
     "https://www.unesco.org/en/days/teachers?hub=66705",
     "https://www.presidentofindia.gov.in/",
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://www.mext.go.jp/a_menu/shougai/kyoiku-bunka/detail/1297836.htm"
   ]
 }

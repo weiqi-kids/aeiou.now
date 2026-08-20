@@ -352,6 +352,9 @@ for (const t of topics) {
     // 長青 Topic 沒有固定日期，改用明確標記的 regional_notes；這些資料不進日期排序。
     regional_notes: regionalRows.map((row) => ({
       country_code: row.country_code,
+      // 'absence' = 這個國家沒有這個節日(節日 Topic 的逐國補洞);
+      // 未標示者是長青 Topic 的國別敘述。前端據此決定標籤,不可混用。
+      kind: row.kind === 'absence' ? 'absence' : 'perennial',
       source_urls: [...new Set(row.source_urls || [])].filter((url) => /^https?:\/\//.test(url)),
     })),
     // countries 只保留去重後的索引,不再承載名稱或日期;日期一律在 observances。

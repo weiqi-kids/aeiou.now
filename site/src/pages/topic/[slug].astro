@@ -454,9 +454,12 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
           {regionalOnlyNotes.map((note) => (
             <li class="country" id={regionalAnchor(note)}>
               <div class="country-when">
-                <span class="country-date">{t('topic.date_unavailable')}</span>
+                {/* 「這裡沒有這個節日」與「日期待確認」是兩件事。前者是查證過的事實,
+                    後者是還沒查到 —— 用同一個標籤等於把確定的事講成待辦
+                    (同 2026-08-20 closed/loading 的教訓:狀態名稱要說事實)。 */}
+                <span class="country-date">{note.kind === 'absence' ? t('topic.no_local_observance') : t('topic.date_unavailable')}</span>
                 <span class="country-when-label">{t('topic.local_date')}</span>
-                <span class="country-rule">{t('topic.perennial')}</span>
+                <span class="country-rule">{note.kind === 'absence' ? t('topic.no_local_observance_rule') : t('topic.perennial')}</span>
               </div>
               <div class="country-body">
                 <h3 class="country-name">

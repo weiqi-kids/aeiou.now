@@ -317,6 +317,59 @@ for (const [slug, topic] of Object.entries(notes)) {
   }
 }
 
+// ── 節日 Topic 的「本地沒有這個節日」說明 ────────────────────────────────────
+// 上面的 notes 是長青 Topic 的敘述:七國齊全,因為那些 Topic 本來就沒有日期。
+// 這裡不同:節日 Topic 有日期,但**不是每個國家都有這個節日**。
+// 少了那一國,該語系站的讀者在那一頁上就看不到自己的國家——什麼都沒有,連「這裡沒有」都沒說。
+// 用戶 2026-08-20 拍板:「沒有就沒有,但是可以讓那個語系的人知道沒有那個節日啊。」
+//
+// 所以這張表逐國補洞,只寫需要的那幾國(不要求七國齊全),但每一國仍要七語齊全。
+// 內容判準與 observance 相同:**必須有一手來源**。缺席要能從該國官方名單證明,
+// 而且要說出「那這裡發生什麼」——只寫「這裡沒有」是把空白換成一句空話。
+// 若某國其實有對應的在地節期(例:印尼丹格朗的 Peh Cun),那要進 observance 而不是這裡。
+const absences = {
+  'teachers-day': {
+    country_sources: {
+      JP: ['https://www.mext.go.jp/a_menu/shougai/kyoiku-bunka/detail/1297836.htm'],
+    },
+    JP: text('日本沒有教師節。國家層級最接近的是「教育・文化週間」——每年十一月一日到七日,依昭和三十四年的閣議了解集中辦教育與文化的活動;它紀念的是教育,不是教師。真正掛上「教育の日」名字的是都道府縣:德島、新潟、埼玉、滋賀、東京、島根、北海道等地各自以條例把十一月一日定為自己的教育之日。於是這裡的單位是縣而不是國,對象是教育而不是老師——這一頁其他地方在比日期,日本這一格要比的是「被紀念的到底是誰」。', 'Japan has no Teachers\' Day. The closest thing at national level is Education and Culture Week — 1 to 7 November each year, concentrating education and culture events under a 1959 cabinet understanding; what it commemorates is education, not teachers. The name Education Day belongs instead to the prefectures: Tokushima, Niigata, Saitama, Shiga, Tokyo, Shimane, Hokkaido and others have each fixed 1 November as their own by ordinance. So the unit here is the prefecture rather than the country, and the subject is education rather than the teacher — elsewhere on this page the comparison is of dates; in Japan\'s cell the comparison is of who is being honoured.', '日本に教師の日はない。国のレベルでもっとも近いのは「教育・文化週間」である。毎年十一月一日から七日まで、昭和三十四年の閣議了解に基づいて教育と文化の行事を集中して行う。そこで記念されるのは教育であって、教師ではない。「教育の日」の名を掲げているのはむしろ都道府県で、徳島・新潟・埼玉・滋賀・東京・島根・北海道などが条例でそれぞれ十一月一日を自らの教育の日と定めている。つまりここでの単位は国ではなく県であり、対象は教師ではなく教育である。このページの他の地域が日付を比べているとすれば、日本のこの欄が比べているのは「誰が記念されているのか」である。', '日本没有教师节。国家层级最接近的是「教育・文化周间」——每年十一月一日到七日，依昭和三十四年的阁议了解集中办教育与文化的活动；它纪念的是教育，不是教师。真正挂上「教育の日」名字的是都道府县：德岛、新潟、埼玉、滋贺、东京、岛根、北海道等地各自以条例把十一月一日定为自己的教育之日。于是这里的单位是县而不是国，对象是教育而不是老师——这一页其他地方在比日期，日本这一格要比的是「被纪念的到底是谁」。', 'जापान में शिक्षक दिवस नहीं है। राष्ट्रीय स्तर पर निकटतम चीज़ है शिक्षा एवं संस्कृति सप्ताह — हर वर्ष 1 से 7 नवंबर, 1959 की मंत्रिमंडलीय सहमति के तहत शिक्षा और संस्कृति के कार्यक्रम केंद्रित रूप से आयोजित करते हुए; वह शिक्षा को स्मरण करता है, शिक्षकों को नहीं। \'शिक्षा दिवस\' का नाम बल्कि प्रान्तों के पास है: तोकुशिमा, निइगाता, सैतामा, शिगा, तोक्यो, शिमाने, होक्काइदो और अन्य ने अध्यादेश से 1 नवंबर को अपना दिवस नियत किया है। इसलिए यहाँ इकाई देश नहीं प्रान्त है, और विषय शिक्षक नहीं शिक्षा — इस पृष्ठ पर अन्यत्र तिथियों की तुलना है; जापान के ख़ाने में तुलना इस बात की है कि सम्मान किसका हो रहा है।', 'Jepang tidak punya Hari Guru. Yang paling mendekati di tingkat nasional adalah Pekan Pendidikan dan Kebudayaan — 1 sampai 7 November tiap tahun, memusatkan kegiatan pendidikan dan kebudayaan berdasarkan kesepahaman kabinet tahun 1959; yang diperingati adalah pendidikan, bukan guru. Nama Hari Pendidikan justru dipegang prefektur: Tokushima, Niigata, Saitama, Shiga, Tokyo, Shimane, Hokkaido, dan lainnya masing-masing menetapkan 1 November lewat peraturan daerah. Jadi satuannya di sini prefektur, bukan negara, dan pokoknya pendidikan, bukan guru — di bagian lain halaman ini yang dibandingkan adalah tanggal; di kolom Jepang yang dibandingkan adalah siapa yang sedang dihormati.', 'O Japão não tem Dia dos Professores. O mais próximo em nível nacional é a Semana da Educação e da Cultura — de 1 a 7 de novembro todo ano, concentrando eventos de educação e cultura sob um entendimento de gabinete de 1959; o que ela comemora é a educação, não os professores. O nome Dia da Educação pertence, isso sim, às prefeituras: Tokushima, Niigata, Saitama, Shiga, Tóquio, Shimane, Hokkaido e outras fixaram cada qual o 1.º de novembro por decreto próprio. A unidade aqui é a prefeitura e não o país, e o assunto é a educação e não o professor — no resto desta página compara-se datas; na célula japonesa compara-se quem está sendo homenageado.'),
+  },
+  'childrens-day': {
+    country_sources: {
+      US: ['https://www.federalregister.gov/documents/2024/11/27/2024-28062/national-childs-day-2024', 'https://www.usa.gov/holidays'],
+    },
+    US: text('美國沒有法定的兒童節,而且連日期都不固定。它的存在形式是**每年重新發布的總統公告**:雷根一九八二年訂在八月八日、柯林頓一九九八年訂在十月十一日、小布希二○○二年訂在六月九日、歐巴馬二○一三年起改到十一月二十日,拜登二○二四年也是十一月二十日。公告不是法律,不放假,而且下一任可以換日子。這一頁其他地方的日期由法律、總統決定書或部會決議固定下來,美國這一格的特徵是:同一個節日,四十年裡搬過至少四次家。', 'The United States has no statutory Children\'s Day, and not even a fixed date. It exists as a presidential proclamation reissued each year: Reagan put it on 8 August in 1982, Clinton on 11 October in 1998, George W. Bush on 9 June in 2002, Obama moved it to 20 November from 2013, and Biden kept 20 November in 2024. A proclamation is not a law, brings no day off, and the next occupant can move it. Elsewhere on this page dates are pinned by statute, presidential decision or ministerial decree; what marks the American cell is that the same day has changed address at least four times in forty years.', '米国には法定の子どもの日がなく、日付すら固定されていない。存在の仕方は、毎年出し直される大統領布告である。レーガンは一九八二年に八月八日、クリントンは一九九八年に十月十一日、ブッシュ(子)は二〇〇二年に六月九日、オバマは二〇一三年から十一月二十日へ移し、バイデンも二〇二四年に十一月二十日とした。布告は法律ではなく、休みにもならず、次の大統領が日を変えうる。このページの他の地域では日付が法律・大統領決定・省庁の決議で固定されているが、米国のこの欄の特徴は、同じ祝いが四十年のあいだに少なくとも四度も引っ越したことである。', '美国没有法定的儿童节，而且连日期都不固定。它的存在形式是**每年重新发布的总统公告**：里根一九八二年订在八月八日、克林顿一九九八年订在十月十一日、小布什二〇〇二年订在六月九日、奥巴马二〇一三年起改到十一月二十日，拜登二〇二四年也是十一月二十日。公告不是法律，不放假，而且下一任可以换日子。这一页其他地方的日期由法律、总统决定书或部会决议固定下来，美国这一格的特征是：同一个节日，四十年里搬过至少四次家。', 'संयुक्त राज्य में क़ानूनी बाल दिवस नहीं है, और तिथि तक तय नहीं। उसका अस्तित्व हर वर्ष फिर से जारी होने वाली राष्ट्रपति उद्घोषणा के रूप में है: रीगन ने 1982 में 8 अगस्त रखा, क्लिंटन ने 1998 में 11 अक्टूबर, जॉर्ज डब्ल्यू बुश ने 2002 में 9 जून, ओबामा ने 2013 से 20 नवंबर किया, और बाइडन ने 2024 में भी 20 नवंबर रखा। उद्घोषणा क़ानून नहीं है, उससे छुट्टी नहीं मिलती, और अगला पदधारी उसे हटा सकता है। इस पृष्ठ पर अन्यत्र तिथियाँ क़ानून, राष्ट्रपति निर्णय या मंत्रालयी आदेश से टँगी हैं; अमेरिकी ख़ाने की पहचान यह है कि वही दिन चालीस वर्षों में कम से कम चार बार अपना पता बदल चुका है।', 'Amerika Serikat tidak punya Hari Anak menurut undang-undang, bahkan tanggalnya pun tidak tetap. Ia hadir sebagai proklamasi presiden yang diterbitkan ulang tiap tahun: Reagan menaruhnya pada 8 Agustus tahun 1982, Clinton pada 11 Oktober tahun 1998, George W. Bush pada 9 Juni tahun 2002, Obama memindahkannya ke 20 November sejak 2013, dan Biden tetap 20 November pada 2024. Proklamasi bukan undang-undang, tidak membawa libur, dan penghuni berikutnya bisa memindahkannya. Di tempat lain pada halaman ini tanggal dipatok undang-undang, keputusan presiden, atau keputusan menteri; ciri kolom Amerika adalah bahwa hari yang sama telah berpindah alamat sedikitnya empat kali dalam empat puluh tahun.', 'Os Estados Unidos não têm um Dia das Crianças por lei, e sequer uma data fixa. Ele existe como proclamação presidencial reeditada a cada ano: Reagan pôs em 8 de agosto em 1982, Clinton em 11 de outubro em 1998, George W. Bush em 9 de junho em 2002, Obama mudou para 20 de novembro a partir de 2013, e Biden manteve 20 de novembro em 2024. Uma proclamação não é lei, não gera folga, e o ocupante seguinte pode movê-la. No resto desta página as datas são presas por lei, decisão presidencial ou decreto ministerial; o que marca a célula americana é que o mesmo dia mudou de endereço ao menos quatro vezes em quarenta anos.'),
+  },
+};
+
+for (const [slug, topic] of Object.entries(absences)) {
+  const entry = output.topics[slug] || (output.topics[slug] = {
+    source_urls: [...new Set(topic.sources || [])],
+    notes: {},
+  });
+  for (const country of COUNTRIES) {
+    if (!topic[country]) continue;                 // 只補宣告了的國家
+    if (entry.notes[country]) {
+      throw new Error(`${slug}/${country} 同時出現在 notes 與 absences,擇一`);
+    }
+    for (const locale of LOCALES) {
+      if (!topic[country][locale]) throw new Error(`absences ${slug}/${country} 缺 ${locale}`);
+    }
+    entry.notes[country] = {
+      country_code: country,
+      // 前端要據此改標籤:長青 Topic 是「日期待確認/長青主題」,缺席筆是「這裡沒有這個節日」。
+      // 兩者說的是不同的事,共用同一個標籤就是把「沒有」講成「還沒查到」
+      // ——與 2026-08-20 那次 closed/loading 同型的錯。
+      kind: 'absence',
+      source_urls: [...new Set((topic.country_sources && topic.country_sources[country]) || [])],
+      text: topic[country],
+    };
+  }
+}
+
 mkdirSync(join(ROOT, 'content'), { recursive: true });
 writeFileSync(OUT, `${JSON.stringify(output, null, 2)}\n`);
-console.log(`regional notes: ${Object.keys(output.topics).length} topics × ${COUNTRIES.length} countries × ${LOCALES.length} locales`);
+const absenceCells = Object.values(absences)
+  .reduce((n, t) => n + COUNTRIES.filter((c) => t[c]).length, 0);
+console.log(`regional notes: ${Object.keys(output.topics).length} topics(長青七國齊全)`
+  + ` + 節日缺席說明 ${absenceCells} 格 × ${LOCALES.length} locales`);

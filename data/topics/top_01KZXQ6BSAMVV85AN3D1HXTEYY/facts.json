@@ -12,24 +12,28 @@
   "regional_notes": [
     {
       "country_code": "BR",
+      "kind": "perennial",
       "source_urls": [
         "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
       ]
     },
     {
       "country_code": "CN",
+      "kind": "perennial",
       "source_urls": [
         "https://www.court.gov.cn/zixun/xiangqing/233181.html"
       ]
     },
     {
       "country_code": "ID",
+      "kind": "perennial",
       "source_urls": [
         "https://peraturan.bpk.go.id/details/122740/uu-no-16-tahun-2019"
       ]
     },
     {
       "country_code": "IN",
+      "kind": "perennial",
       "source_urls": [
         "https://wcd.gov.in/",
         "https://www.indiacode.nic.in/",
@@ -38,12 +42,14 @@
     },
     {
       "country_code": "JP",
+      "kind": "perennial",
       "source_urls": [
         "https://www.moj.go.jp/MINJI/minji07_00218.html"
       ]
     },
     {
       "country_code": "TW",
+      "kind": "perennial",
       "source_urls": [
         "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
         "https://www.moi.gov.tw/cp.aspx?n=14385"
@@ -51,6 +57,7 @@
     },
     {
       "country_code": "US",
+      "kind": "perennial",
       "source_urls": [
         "https://www.usa.gov/marriage-certificate"
       ]
