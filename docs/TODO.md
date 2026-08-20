@@ -33,21 +33,12 @@
 
 ## 搜尋數據(2026-08-20 開工)
 
-### 要用戶點頭:gsc-topic-metrics 的每日 cron(C 級,改 /etc/cron.d/aeiou 一律先問)
-
-`scripts/gsc-topic-metrics.mjs` 已寫好、已回補 GSC 全部保留期,但**還沒排程**。
-沒有排程就等於沒有累積——而 GSC 沒有「當時的快照」,今天沒存的以後補不回來。
-建議加這一行(時刻挑在整點 export 與 */15 之外,避開 job_locks 競爭):
-
-```cron
-# GSC 每日 Topic 曝光累積(HotScore 的瀏覽面來源;不接 GA4,理由見 CLAUDE.md 紅線)
-40 4 * * *  root  /usr/bin/node scripts/gsc-topic-metrics.mjs >> logs/gsc-topic-metrics.log 2>&1
-```
-
-查是否已排:`grep gsc-topic-metrics /etc/cron.d/aeiou`(沒有輸出＝還沒排,累積是停的)。
-
 ### 已完成(2026-08-20)
 
+- [x] **`gsc-topic-metrics` 每日 cron 已排**(用戶 2026-08-20 同意)。`40 4 * * *`,
+      時刻避開整點 hourly-export、*/15 cron-15min 與 Actions 的 17 分。
+      已用 cron 的實際環境(空 env、cwd=/root、cron 的 PATH)實跑驗過。
+      查:`grep gsc-topic-metrics /etc/cron.d/aeiou`;累積狀況查 CLAUDE.md 那一列。
 - [x] **HotScore 瀏覽面改接 GSC,不接 GA4**。GA4 汙染比例查法:`node scripts/seo-health.mjs` ①。
 - [x] **`topic_search_metrics` 表 + 累積腳本**,已回補 GSC 全部保留期。
       現況查法見 CLAUDE.md「搜尋曝光累積了幾天」那一列。

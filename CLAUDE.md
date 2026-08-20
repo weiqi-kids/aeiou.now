@@ -210,6 +210,7 @@ content/topics/<slug>.md   ←── 人工編輯(唯一入口)
 |---|---|---|
 | 主機 `*/15 * * * *` | `scripts/cron-15min.sh` | ① `translate-posts.mjs`:D1 撈 pending 貼文 → `claude -p` 翻六語 → 寫回 D1 + **回流主機**(UGC 進主機的唯一通道) ② `sync-topics-to-d1.mjs`:主機 Topic 副本 → D1 ③ `sync-questions-to-d1.mjs`:題庫精簡副本 → D1(2026-08-15 起) |
 | 主機 `0 * * * *` | `scripts/hourly-export.sh` | ① `import-topics.mjs`(content/ md → SQLite) ② `import-questions.mjs`(content/questions.json → SQLite,壞題庫即中止) ③ `export-data.mjs` ④ **只 commit `data/`** ⑤ push source repo |
+| 主機 `40 4 * * *` | `gsc-topic-metrics.mjs` | GSC「date × page × country」→ 主機 `topic_search_metrics`。HotScore 瀏覽面的**唯一**來源(不接 GA4,理由見紅線)。只累積不算分數;GSC 沒有當時快照,停掉就永久失去那段曲線 |
 | GitHub Actions `17 * * * *` + push | `.github/workflows/build.yml` | 七語系 matrix build → SSH 推七個 publish repo(帶 `.nojekyll` 與 `.build-id`)→ 輪詢驗證**內容真的上線**(比 build-id,不是比 200) |
 
 - 排程本體:`cat /etc/cron.d/aeiou`(檔內註解有逐行說明與排錯指引)。**Actions 排 17 分是刻意錯開主機整點 push。**
