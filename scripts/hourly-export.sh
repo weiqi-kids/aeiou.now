@@ -83,6 +83,16 @@ if ! "$NODE_BIN" "$REPO/scripts/import-topic-occurrences.mjs"; then
   record_job failed 0 0 0 1 "import-topic-occurrences.mjs failed"
   exit 1
 fi
+# 分數要在 export 之前算,否則匯出的是上一輪的名次。
+# 刻意放在 import-topic-occurrences 之後:Proximity 那一項吃的就是 occurrence 日期。
+# **不 fail-closed**:算不出分數只會讓熱度停在上一輪(舊分數仍可讀),
+# 比整條管線停擺、線上資料全部停更要好。與上面那些「資料不完整就不准輸出」的
+# 步驟性質不同,那些錯了會讓讀者看到假資料,這支錯了只是熱度不新鮮。
+log "compute-topic-scores.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/compute-topic-scores.mjs"; then
+  log "WARN: compute-topic-scores 失敗,沿用上一輪分數(不中斷 export)"
+fi
+
 log "update-local-data.mjs ..."
 if ! "$NODE_BIN" "$REPO/scripts/update-local-data.mjs"; then
   log "FAILED: 在地資料來源驗證／更新未通過；停止輸出，避免線上顯示未核對資料"
