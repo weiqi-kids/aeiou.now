@@ -35,6 +35,8 @@
 | 有沒有殘留的背景 server | `pgrep -af '[a]stro (dev\|preview)'; pgrep -af '[h]ttp\.server'` |
 | 題庫有幾題、涵蓋到哪天 | `sqlite3 db/aeiou.sqlite "SELECT kind,COUNT(*),MIN(qdate),MAX(qdate) FROM questions GROUP BY kind"` |
 | 線上投票數(D1) | `cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT COUNT(*) n, COUNT(DISTINCT question_id) q FROM question_votes"` |
+| **搜尋曝光累積了幾天**(判「診斷有沒有判別力」的前提) | `sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT metric_date) days, MIN(metric_date), MAX(metric_date), SUM(impressions) FROM topic_search_metrics WHERE scope='global'"`——天數太少時 `seo-health.mjs` ③ 的佔比不進瓶頸清單(判準寫在該檔) |
+| 某個 Topic 的搜尋表現 | `sqlite3 -header -column db/aeiou.sqlite "SELECT t.slug,m.locale,SUM(m.impressions) imp,SUM(m.clicks) clk,ROUND(SUM(m.position_sum)/SUM(m.impressions),1) pos FROM topic_search_metrics m JOIN topics t ON t.topic_id=m.topic_id WHERE m.scope='global' GROUP BY t.slug,m.locale ORDER BY imp DESC LIMIT 15"` |
 | **D1 用量(讀寫列數、查詢次數)** | `cd api && npx wrangler d1 info aeiou-ugc`——看 `rows_written_24h` 與 `rows_read_24h`。判準:**寫入量應該與真人流量同一個量級**;寫遠大於讀就是自己的同步在灌(2026-08-20 事故) |
 
 ---
@@ -250,6 +252,11 @@ bash scripts/hourly-export.sh                   # export + 只 commit data/ + pu
 cd site && LOCALE=zh-TW pnpm build
 cd site && for L in zh-TW en ja zh-CN hi id pt-BR; do LOCALE=$L pnpm build || break; done
 
+# ── 搜尋數據 ──
+node scripts/seo-health.mjs                     # 量測/索引/排名/內容四層診斷(含樣本量)
+node scripts/gsc-topic-metrics.mjs              # GSC 每日 Topic 曝光累積(冪等,重跑安全)
+node scripts/gsc-topic-metrics.mjs --days 480   # 回補 GSC 全部保留期
+
 # ── Worker ──
 cd api && npx wrangler deploy
 cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
@@ -319,6 +326,12 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
 
 ## 顯示層規則
 
+- **HotScore 的瀏覽面不接 GA4**(2026-08-20 拍板)——GA4 近 28 天 146 sessions 裡 140 個(96%)
+  是機器(direct + 停留 0–4 秒 + 落在七站根目錄,來源集中在資料中心)。七站在 GitHub Pages 上、
+  前面沒有 CDN,擋不掉;`engagedSessions` 只是換門檻不是換來源。改用 GSC:
+  `scripts/gsc-topic-metrics.mjs` 每日累積到 `topic_search_metrics`。
+  **但現在還不准拿它算分數**——可以驅動的兩條判準寫在該腳本檔頭,每次執行都會印「就緒度」。
+  查 GA4 汙染比例:`node scripts/seo-health.mjs`(① 量測層)。
 - **熱度一律級距呈現,原始分數不得上畫面**(排行榜的名次可以)。級距定義在 `site/src/lib/heat.mjs`,
   **門檻是暫定值**,真實 HotScore(含 GA4 瀏覽面)上線後必須重新校準。
 - **級距不得只靠顏色區分**,需同時有文字與長度/形狀差異。

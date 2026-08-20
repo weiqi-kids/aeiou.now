@@ -31,6 +31,41 @@
   但爆炸半徑比它大得多。查:`gh api /orgs/weiqi-kids --jq .two_factor_requirement_enabled`。
   要開之前得先確認組織成員(含機器帳號)都已設定 2FA,否則會被踢出組織——**動工前先問用戶**。
 
+## 搜尋數據(2026-08-20 開工)
+
+### 要用戶點頭:gsc-topic-metrics 的每日 cron(C 級,改 /etc/cron.d/aeiou 一律先問)
+
+`scripts/gsc-topic-metrics.mjs` 已寫好、已回補 GSC 全部保留期,但**還沒排程**。
+沒有排程就等於沒有累積——而 GSC 沒有「當時的快照」,今天沒存的以後補不回來。
+建議加這一行(時刻挑在整點 export 與 */15 之外,避開 job_locks 競爭):
+
+```cron
+# GSC 每日 Topic 曝光累積(HotScore 的瀏覽面來源;不接 GA4,理由見 CLAUDE.md 紅線)
+40 4 * * *  root  /usr/bin/node scripts/gsc-topic-metrics.mjs >> logs/gsc-topic-metrics.log 2>&1
+```
+
+查是否已排:`grep gsc-topic-metrics /etc/cron.d/aeiou`(沒有輸出＝還沒排,累積是停的)。
+
+### 已完成(2026-08-20)
+
+- [x] **HotScore 瀏覽面改接 GSC,不接 GA4**。GA4 汙染比例查法:`node scripts/seo-health.mjs` ①。
+- [x] **`topic_search_metrics` 表 + 累積腳本**,已回補 GSC 全部保留期。
+      現況查法見 CLAUDE.md「搜尋曝光累積了幾天」那一列。
+- [x] **`/questions/` 的 description 不再等於 title**——七站唯一沒進索引的一頁。
+      進索引與否要過幾天才看得出來,查法:seo-health ② 層的 URL Inspection。
+- [x] **`claude -p` 一律 pin `--model`**(原本吃 CLI 預設 = Opus 5 1M)。
+- [x] **Topic 頁國別錨點改可讀**(`#observance-id-ramadan`)。
+- [x] **CI build-id 輪詢 5 → 10 分鐘**(假紅:發布較慢被判失敗,但七站其實都上線了)。
+- [x] **兩個會說謊的指標修掉**:`regional_notes=0` 不再誤報成國別缺口;
+      seo-health ③ 的排名佔比一定要跟樣本量一起印。緣由見該次 commit。
+
+### 不要再做的事(2026-08-20 查證後撤銷)
+
+- ~~補那 7 個 `regional_notes=0` 的 Topic~~ —— **不是缺口**。它們七國都有 observance,
+  而 regional_notes 只在該國沒有 observance 時才渲染,補了也不會上畫面。
+- ~~把 Topic 名稱加進每個國別小標~~ —— 年份與日期**本來就在同一個 `<li>` 裡**
+  (`.country-when` 印的是「2027年2月8日」,含年份)。再把 Topic 名稱重複七次是關鍵字堆砌。
+
 ## 內容厚度補資料(2026-08-20 開工;缺口用指令查,不要信本節數字)
 
 GA/GSC 診斷的結論是「頁面撐不起排名」。閘門已上線,補資料是持續工作。
