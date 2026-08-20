@@ -34,6 +34,12 @@
 - source: https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html
 - source: https://www.mhlw.go.jp/file/04-Houdouhappyou-11906000-Koyoukintoujidoukateikyoku-Ikuseikankyouka/0000082035.pdf
 
+## observance CN jiangcun-dragon-boat
+- local_name: 端午节（蒋村龙舟胜会）
+- date_rule: 农历五月初五当日，浙江省杭州市西湖区蒋村
+- rank: 5
+- source: https://www.ihchina.cn/project_details/20209.html
+
 ## locale zh-TW
 ### title
 端午節
@@ -47,6 +53,8 @@
 中國大陸把端午節列入《全國年節及紀念日放假辦法》全體公民放假的節日。它在二○○六年第一批就被公布為國家級非物質文化遺產（編號 Ⅹ-3），主管單位是文化和旅遊部。名錄列的核心活動是紀念歷史人物、划龍舟、吃粽子，以及一整套「防五毒」的做法：貼端午符剪紙、掛艾草菖蒲、佩香包、蘭湯沐浴。同一個節日在名錄裡是複數的習俗集合，不是單一畫面。
 ### customs CN luodian-dragon-boat
 同一個端午之下，上海羅店的划龍船習俗被**單獨**列入國家級非物質文化遺產名錄。這說明一件事：龍舟不是一種全國統一的比賽，而是各地各有規制、各有船式與儀節的地方傳統，其中一部分被認定為值得單獨保護的項目。看「端午怎麼過」如果只看全國性的畫面，會漏掉這一層。
+### customs CN jiangcun-dragon-boat
+同一個編號 Ⅹ-3 底下還有第二個被單獨列入的龍舟習俗：浙江杭州西湖區的「蔣村龍舟勝會」，二○一一年以第三批公布。它由居民在端午當天自發組織，據傳乾隆下江南時見蔣村划龍舟熱鬧如趕集，御賜「龍舟勝會」之名。當天有一兩百條龍舟匯聚在西溪濕地的深潭口「勝漾」，按規定路線表演，最後在中心做三百六十度旋轉；家家裹粽、掛艾葉菖蒲、吃「五黃」，結束後以村為單位聚餐。
 ### customs JP tango-no-sekku
 日本把五月五日定為國民の祝日「こどもの日」，用的是公曆日期，不隨農曆移動。內閣府載明的法定趣旨是「重視孩子的人格、謀求孩子的幸福，同時感謝母親」——法律上並非只針對男孩。日期會落在五月五日，是因為原本考慮把三月三日的雛祭與五月五日的端午の節句合併訂在五月三日，但五月三日已是憲法記念日，才改採季節較好的五月五日。厚生勞動省從戰前就在端午這天辦鯉魚旗升旗式。
 
@@ -63,6 +71,8 @@ In Taiwan the Dragon Boat Festival is a paid public holiday under the Act on Com
 Mainland China lists Duanwu among the days off for all citizens in the national holiday regulation. It was published in the very first batch of national intangible cultural heritage in 2006 under the code X-3, and is now administered by the Ministry of Culture and Tourism. The listing names commemorating historical figures, dragon boat racing, eating zongzi, and a whole set of practices for warding off the 'five poisons': paper-cut charms, hanging mugwort and calamus, scented pouches, and herbal baths. In the register the festival is a plural set of customs, not a single image.
 ### customs CN luodian-dragon-boat
 Within the same festival, the dragon boat custom of Luodian in Shanghai is listed as a national intangible heritage item in its own right. That tells you something: dragon boating is not one nationally uniform race but a set of local traditions with their own rules, hull shapes, and ceremonies, some of which are judged worth protecting separately. Looking only at the nationwide picture of 'how Duanwu is kept' misses this layer entirely.
+### customs CN jiangcun-dragon-boat
+A second dragon boat custom is listed separately under the same code X-3: the Jiangcun Dragon Boat Gathering in the Xihu district of Hangzhou, Zhejiang, published in the third batch in 2011. Residents organise it themselves on the day of Duanwu, and the story told is that the Qianlong Emperor, travelling south, found the racing at Jiangcun as lively as a market fair and bestowed the name 'Dragon Boat Gathering'. One to two hundred boats converge at Shentankou in the Xixi wetland, perform along a set route, and finish with a full turn in the centre; households wrap zongzi, hang mugwort and calamus, and eat the 'five yellows', with each village then dining together afterwards.
 ### customs JP tango-no-sekku
 Japan fixes 5 May as the national holiday Kodomo no Hi, on the Gregorian calendar, so it does not move with the lunar year. The statutory purpose recorded by the Cabinet Office is to respect a child's character, work for a child's happiness, and thank the mother — legally it is not aimed only at boys. The date landed on 5 May because an earlier proposal to merge the 3 March doll festival with the 5 May Tango no Sekku onto 3 May was dropped once 3 May became Constitution Day. The Ministry of Health, Labour and Welfare has held a carp-streamer raising ceremony on this day since before the war.
 
@@ -79,6 +89,8 @@ Japan fixes 5 May as the national holiday Kodomo no Hi, on the Gregorian calenda
 中国大陸は端午節を全国年節及紀念日放假辦法の全国民の休日に含めている。2006年の第一次公布で国家級無形文化遺産（番号 Ⅹ-3）となり、現在は文化観光部が保護を担う。名録が挙げる中心的な活動は歴史上の人物の記念、龍舟競漕、ちまき、そして「五毒除け」の一連の作法——端午符の切り紙、ヨモギとショウブ、香り袋、蘭湯の沐浴である。名録の中でこの節句は複数の習俗の集合であり、単一の画像ではない。
 ### customs CN luodian-dragon-boat
 同じ端午の中で、上海・羅店の龍船習俗は**単独で**国家級無形文化遺産に登録されている。これが示すのは、龍舟が全国一律の競技ではなく、規定も船形も儀礼も土地ごとに異なる地域の伝統であり、その一部が個別に保護対象と判断されているということだ。全国的な画だけを見ると、この層がまるごと抜け落ちる。
+### customs CN jiangcun-dragon-boat
+同じ番号Ⅹ-3の下に、単独で登録されたもう一つの龍舟習俗がある。浙江省杭州市西湖区の「蒋村龍舟勝会」で、2011年に第三次で公布された。端午の当日に住民が自ら組織するもので、乾隆帝が江南を巡ったとき、蒋村の龍舟が市の賑わいのようだとして「龍舟勝会」の名を賜ったと伝えられる。当日は百から二百艘の龍舟が西渓湿地の深潭口に集まり、定められた経路で演技し、最後に中心で三百六十度回転する。各家はちまきを包み、ヨモギとショウブを掛け、「五黄」を食べ、終了後は村ごとに会食する。
 ### customs JP tango-no-sekku
 日本は五月五日を国民の祝日「こどもの日」と定めており、新暦の日付なので旧暦に合わせて動くことはない。内閣府が示す法定の趣旨は「こどもの人格を重んじ、こどもの幸福をはかるとともに、母に感謝する」であり、法律上は男の子だけを対象としたものではない。五月五日になったのは、三月三日のひな祭りと五月五日の端午の節句を合わせて五月三日とする案があったものの、五月三日が憲法記念日となったため、季節のよい五月五日が採られたからである。厚生労働省は戦前からこの日に鯉のぼり掲揚式を行っている。
 
@@ -95,6 +107,8 @@ Japan fixes 5 May as the national holiday Kodomo no Hi, on the Gregorian calenda
 中国大陆把端午节列入《全国年节及纪念日放假办法》全体公民放假的节日。它在2006年第一批就被公布为国家级非物质文化遗产（编号 Ⅹ-3），主管单位是文化和旅游部。名录列的核心活动是纪念历史人物、划龙舟、吃粽子，以及一整套“防五毒”的做法：贴端午符剪纸、挂艾草菖蒲、佩香包、兰汤沐浴。同一个节日在名录里是复数的习俗集合，不是单一画面。
 ### customs CN luodian-dragon-boat
 同一个端午之下，上海罗店的划龙船习俗被**单独**列入国家级非物质文化遗产名录。这说明一件事：龙舟不是一种全国统一的比赛，而是各地各有规制、各有船式与仪节的地方传统，其中一部分被认定为值得单独保护的项目。看“端午怎么过”如果只看全国性的画面，会漏掉这一层。
+### customs CN jiangcun-dragon-boat
+同一个编号 Ⅹ-3 底下还有第二个被单独列入的龙舟习俗：浙江杭州西湖区的“蒋村龙舟胜会”，2011年以第三批公布。它由居民在端午当天自发组织，据传乾隆下江南时见蒋村划龙舟热闹如赶集，御赐“龙舟胜会”之名。当天有一两百条龙舟汇聚在西溪湿地的深潭口“胜漾”，按规定路线表演，最后在中心做360度旋转；家家裹粽、挂艾叶菖蒲、吃“五黄”，结束后以村为单位聚餐。
 ### customs JP tango-no-sekku
 日本把五月五日定为国民の祝日“こどもの日”，用的是公历日期，不随农历移动。内阁府载明的法定趣旨是“重视孩子的人格、谋求孩子的幸福，同时感谢母亲”——法律上并非只针对男孩。日期会落在五月五日，是因为原本考虑把三月三日的雏祭与五月五日的端午の節句合并订在五月三日，但五月三日已是宪法记念日，才改采季节较好的五月五日。厚生劳动省从战前就在端午这天办鲤鱼旗升旗式。
 
@@ -111,6 +125,8 @@ Japan fixes 5 May as the national holiday Kodomo no Hi, on the Gregorian calenda
 मुख्यभूमि चीन दुआनवू को राष्ट्रीय अवकाश नियम में सभी नागरिकों की छुट्टी में रखता है। 2006 में पहली ही सूची में इसे राष्ट्रीय अमूर्त सांस्कृतिक धरोहर (कोड X-3) घोषित किया गया और अब संस्कृति व पर्यटन मंत्रालय इसका संरक्षक है। सूची में मुख्य गतिविधियाँ हैं ऐतिहासिक व्यक्तियों का स्मरण, नौका दौड़, ज़ोंगज़ी, और 'पाँच विषों' से बचाव की पूरी विधि: कागज़ के ताबीज़, मुगवर्ट और बच, सुगंधित थैली, जड़ी-बूटी स्नान। रजिस्टर में यह त्योहार रीति-रिवाजों का बहुवचन समुच्चय है, कोई एक तस्वीर नहीं।
 ### customs CN luodian-dragon-boat
 उसी त्योहार के भीतर, शंघाई के लुओदियान की नौका परंपरा **अलग से** राष्ट्रीय अमूर्त धरोहर के रूप में दर्ज है। इससे एक बात पता चलती है: नौका दौड़ देशभर में एक जैसी प्रतियोगिता नहीं, बल्कि अपने-अपने नियम, नाव के आकार और रस्मों वाली स्थानीय परंपराओं का समूह है, जिनमें से कुछ को अलग से संरक्षण योग्य माना गया। केवल राष्ट्रीय तस्वीर देखने पर यह परत पूरी छूट जाती है।
+### customs CN jiangcun-dragon-boat
+उसी कोड X-3 के नीचे एक दूसरी नौका-परंपरा भी अलग से दर्ज है: चेच्यांग के हांगचोऊ के शीहू ज़िले का 'च्यांगत्सुन नौका सम्मेलन', जो 2011 में तीसरी सूची में प्रकाशित हुआ। निवासी इसे दुआनवू के दिन स्वयं आयोजित करते हैं, और कथा है कि छियानलोंग सम्राट ने दक्षिण यात्रा में च्यांगत्सुन की दौड़ को मेले जितना जीवंत पाकर 'नौका सम्मेलन' नाम प्रदान किया। सौ से दो सौ नावें शीशी आर्द्रभूमि के शेनतानकोऊ पर जुटती हैं, तय मार्ग पर प्रदर्शन करती हैं और अंत में केंद्र पर पूरा घूमती हैं; घरों में ज़ोंगज़ी बाँधे जाते हैं, मुगवर्ट और बच टाँगे जाते हैं, 'पाँच पीले' खाए जाते हैं, और बाद में हर गाँव साथ भोजन करता है।
 ### customs JP tango-no-sekku
 जापान 5 मई को राष्ट्रीय अवकाश 'कोदोमो नो ही' मानता है, ग्रेगोरियन तिथि पर, इसलिए यह चंद्र वर्ष के साथ नहीं खिसकता। कैबिनेट कार्यालय में दर्ज क़ानूनी उद्देश्य है बच्चे के व्यक्तित्व का आदर करना, उसकी ख़ुशी के लिए प्रयास करना, और माँ के प्रति आभार जताना — क़ानूनन यह केवल लड़कों के लिए नहीं है। तारीख़ 5 मई इसलिए बनी कि 3 मार्च के गुड़िया उत्सव और 5 मई के तांगो नो सेक्कु को मिलाकर 3 मई करने का प्रस्ताव था, पर 3 मई संविधान दिवस बन गया। स्वास्थ्य, श्रम व कल्याण मंत्रालय युद्ध-पूर्व काल से इस दिन कोइनोबोरी ध्वजारोहण करता आया है।
 
@@ -127,6 +143,8 @@ Di Taiwan festival ini adalah hari libur berbayar menurut Undang-Undang Hari Per
 Tiongkok daratan memasukkan Duanwu sebagai hari libur bagi seluruh warga dalam aturan hari libur nasional. Pada 2006 ia diumumkan dalam angkatan pertama warisan budaya takbenda nasional dengan kode X-3, dan kini dikelola Kementerian Kebudayaan dan Pariwisata. Daftar itu menyebut peringatan tokoh sejarah, lomba perahu naga, zongzi, serta serangkaian praktik penangkal 'lima racun': jimat kertas, mugwort dan jerangau, kantong wangi, dan mandi ramuan. Dalam daftar itu festival ini adalah kumpulan adat yang jamak, bukan satu gambar tunggal.
 ### customs CN luodian-dragon-boat
 Di dalam festival yang sama, tradisi perahu naga Luodian di Shanghai terdaftar **tersendiri** sebagai warisan budaya takbenda nasional. Itu menunjukkan satu hal: perahu naga bukan satu lomba seragam se-negara, melainkan sekumpulan tradisi setempat dengan aturan, bentuk lambung, dan upacaranya masing-masing, sebagian di antaranya dinilai layak dilindungi secara terpisah. Melihat hanya gambaran nasional membuat lapisan ini hilang seluruhnya.
+### customs CN jiangcun-dragon-boat
+Satu tradisi perahu naga lain terdaftar tersendiri di bawah kode yang sama, X-3: Perhelatan Perahu Naga Jiangcun di Distrik Xihu, Hangzhou, Zhejiang, diumumkan pada angkatan ketiga tahun 2011. Warga menyelenggarakannya sendiri pada hari Duanwu, dan ceritanya Kaisar Qianlong, dalam perjalanan ke selatan, mendapati lomba di Jiangcun seramai pasar dan menganugerahkan nama 'Perhelatan Perahu Naga'. Seratus sampai dua ratus perahu berkumpul di Shentankou di lahan basah Xixi, tampil menurut rute yang ditetapkan, dan menutup dengan putaran penuh di tengah; rumah tangga membungkus zongzi, menggantung mugwort dan jerangau, menyantap 'lima kuning', lalu tiap desa makan bersama sesudahnya.
 ### customs JP tango-no-sekku
 Jepang menetapkan 5 Mei sebagai hari libur nasional Kodomo no Hi, pada kalender Gregorius, sehingga tidak bergeser mengikuti tahun lunar. Tujuan hukum yang dicatat Kantor Kabinet adalah menghormati kepribadian anak, mengupayakan kebahagiaannya, dan berterima kasih kepada ibu — secara hukum tidak ditujukan hanya untuk anak laki-laki. Tanggal 5 Mei terpilih karena usulan menggabungkan festival boneka 3 Maret dengan Tango no Sekku 5 Mei menjadi 3 Mei gugur setelah 3 Mei ditetapkan sebagai Hari Konstitusi. Kementerian Kesehatan, Ketenagakerjaan dan Kesejahteraan mengadakan upacara pengibaran koinobori pada hari ini sejak sebelum perang.
 
@@ -143,5 +161,7 @@ Em Taiwan o festival é feriado remunerado pela Lei dos Dias Comemorativos e Fer
 A China continental inclui o Duanwu entre os dias de folga para todos os cidadãos na norma nacional de feriados. Em 2006 ele foi publicado já na primeira leva do patrimônio cultural imaterial nacional, sob o código X-3, e hoje é administrado pelo Ministério da Cultura e Turismo. A lista nomeia a homenagem a figuras históricas, a corrida de barcos-dragão, os zongzi e todo um conjunto de práticas contra os 'cinco venenos': amuletos recortados, artemísia e cálamo, sachês perfumados e banhos de ervas. No registro, a festa é um conjunto plural de costumes, não uma imagem única.
 ### customs CN luodian-dragon-boat
 Dentro da mesma festa, a tradição de barcos de Luodian, em Xangai, está tombada **separadamente** como patrimônio imaterial nacional. Isso diz algo: barco-dragão não é uma corrida uniforme em todo o país, e sim um conjunto de tradições locais com regras, formatos de casco e cerimônias próprias, parte das quais julgada digna de proteção em separado. Olhar apenas o quadro nacional faz essa camada desaparecer.
+### customs CN jiangcun-dragon-boat
+Um segundo costume de barco-dragão está tombado à parte sob o mesmo código X-3: o Encontro de Barcos-Dragão de Jiangcun, no distrito de Xihu, em Hangzhou, Zhejiang, publicado na terceira leva em 2011. Os moradores o organizam por conta própria no dia do Duanwu, e conta-se que o imperador Qianlong, em viagem ao sul, achou a corrida de Jiangcun tão animada quanto uma feira e concedeu o nome de 'Encontro de Barcos-Dragão'. De cem a duzentos barcos convergem em Shentankou, na várzea de Xixi, apresentam-se por um percurso definido e terminam com um giro completo no centro; as casas embrulham zongzi, penduram artemísia e cálamo e comem os 'cinco amarelos', e depois cada aldeia janta junta.
 ### customs JP tango-no-sekku
 O Japão fixa 5 de maio como o feriado nacional Kodomo no Hi, no calendário gregoriano, então ele não se move com o ano lunar. A finalidade legal registrada pelo Gabinete é respeitar a personalidade da criança, trabalhar pela sua felicidade e agradecer à mãe — juridicamente não é voltado só para meninos. A data caiu em 5 de maio porque a proposta de juntar o festival das bonecas de 3 de março com o Tango no Sekku de 5 de maio em 3 de maio foi abandonada quando 3 de maio virou o Dia da Constituição. O Ministério da Saúde, Trabalho e Bem-Estar realiza a cerimônia de içar as carpas nesse dia desde antes da guerra.

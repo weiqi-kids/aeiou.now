@@ -206,6 +206,70 @@
       }
     },
     {
+      "observance_id": "obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_govardhan-puja",
+      "observance_key": "govardhan-puja",
+      "country_code": "IN",
+      "local_name": "Govardhan Puja（節期第四天）",
+      "observed_date": null,
+      "date_rule": "主日次日；印度陰陽曆日次可能壓縮，實際日期依各地曆書",
+      "date_range_end": null,
+      "popularity_rank": 5,
+      "source_ids": [
+        "src_189E0D7BD566BB17326A281B"
+      ],
+      "source_urls": [
+        "https://utsav.gov.in/major-festival/diwali"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_govardhan-puja_2026_2026-11-09",
+          "occurrence_year": 2026,
+          "starts_on": "2026-11-09",
+          "ends_on": null,
+          "calendar_system": "hindu-lunisolar",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_189E0D7BD566BB17326A281B"
+          ],
+          "source_urls": [
+            "https://utsav.gov.in/major-festival/diwali"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_govardhan-puja_2027_2027-10-30",
+          "occurrence_year": 2027,
+          "starts_on": "2027-10-30",
+          "ends_on": null,
+          "calendar_system": "hindu-lunisolar",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_189E0D7BD566BB17326A281B"
+          ],
+          "source_urls": [
+            "https://utsav.gov.in/major-festival/diwali"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_govardhan-puja_2026_2026-11-09",
+        "occurrence_year": 2026,
+        "starts_on": "2026-11-09",
+        "ends_on": null,
+        "calendar_system": "hindu-lunisolar",
+        "timezone": "Asia/Kolkata",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_189E0D7BD566BB17326A281B"
+        ],
+        "source_urls": [
+          "https://utsav.gov.in/major-festival/diwali"
+        ],
+        "distance_days": 81
+      }
+    },
+    {
       "observance_id": "obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_US_diwali-school-holiday",
       "observance_key": "diwali-school-holiday",
       "country_code": "US",
@@ -277,7 +341,8 @@
       "observance_ids": [
         "obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_bhai-dooj",
         "obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_dhanteras",
-        "obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_diwali"
+        "obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_diwali",
+        "obs_top_01KZXQ6BR7QR1W2BM5TJ4387MN_IN_govardhan-puja"
       ]
     },
     {

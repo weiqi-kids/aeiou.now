@@ -32,6 +32,12 @@
 - rank: 4
 - source: https://council.nyc.gov/press/2023/11/15/2502/
 
+## observance IN govardhan-puja
+- local_name: Govardhan Puja（節期第四天）
+- date_rule: 主日次日；印度陰陽曆日次可能壓縮，實際日期依各地曆書
+- rank: 5
+- source: https://utsav.gov.in/major-festival/diwali
+
 ## locale zh-TW
 ### title
 排燈節
@@ -45,6 +51,8 @@
 節期從 Dhanteras 開場。這一天的習慣是採買金飾或新的金屬器皿，並在家中祭拜，把「添置」當作迎接豐足的動作。它的日期通常落在主日前兩天，但印度陰陽曆的日次會壓縮，實際哪一天要看各地曆書。買什麼、買多少，跟收入與地區關係很大。
 ### customs IN bhai-dooj
 節期以 Bhai Dooj 收尾，重點從神明轉回手足關係：姊妹為兄弟點 Tika 祈願長壽，兄弟回贈禮物。這一天讓排燈節不只是「求財」的節日，也是一次親屬義務的確認。沒有兄弟姊妹的家庭，或不採行這套儀式的社群，也不會因此覺得節期不完整。
+### customs IN govardhan-puja
+主日之後的第四天是 Govardhan Puja。它紀念的是黑天（Krishna）舉起牛增山（Govardhan）為村民擋雨的故事，做法上常見用食物堆成小山的供養（annakut），把「山」與「豐足」疊在同一個畫面裡。這一天讓五天節期的重心從家戶的財富轉向社群與牲畜——排燈節不只是點燈，中間還藏著一套農牧生活的敘事。
 ### customs US diwali-school-holiday
 美國沒有把排燈節列為聯邦假日，但紐約州在二○二三年十一月通過立法，讓紐約市公立學校在排燈節當天停課。它的意義因此和印度不同：不是全國性的宗教節期，而是一個城市承認其居民組成後做出的行政安排。停課日跟著印度曆走，所以每年落在不同的公曆日期。
 
@@ -61,6 +69,8 @@ The main day is the third of the five. Households light lamps and offer prayers 
 The season opens with Dhanteras. The customary act is buying gold or new metal utensils and offering prayers at home, treating acquisition itself as a way of welcoming abundance. It usually falls two days before the main day, but days in the Hindu lunisolar calendar can compress, so the actual date follows local almanacs. What is bought, and how much, depends heavily on income and region.
 ### customs IN bhai-dooj
 The season closes with Bhai Dooj, where the focus shifts from deities back to siblings: sisters perform the Tika ceremony and pray for their brothers' long life, and brothers give gifts in return. This keeps Diwali from being only about prosperity; it is also a renewal of kin obligation. Households without siblings, or communities that do not keep this rite, do not treat the season as incomplete.
+### customs IN govardhan-puja
+The fourth day of the season is Govardhan Puja. It commemorates Krishna lifting Mount Govardhan to shelter villagers from the rain, and is commonly kept with an annakut, an offering of food heaped into a hill, stacking the mountain and the idea of abundance into one image. The day shifts the weight of the five-day season from household wealth towards community and livestock — Diwali is not only lamps; a whole narrative of farming life sits in the middle of it.
 ### customs US diwali-school-holiday
 Diwali is not a federal holiday in the United States, but New York State passed legislation in November 2023 closing New York City public schools on the day. Its meaning is therefore different from India's: not a national religious season, but one city's administrative recognition of who lives there. The closure follows the Indian calendar, so it lands on a different Gregorian date each year.
 
@@ -77,6 +87,8 @@ Diwali is not a federal holiday in the United States, but New York State passed 
 期間はダンテラスで始まる。金の装飾品や新しい金属の器を買い、家で供養するのが慣わしで、「買い足す」という行為そのものが豊かさを迎える形になる。中心日の二日前になることが多いが、ヒンドゥー太陰太陽暦の日は詰まることがあり、実際の日付は各地の暦に従う。何をどれだけ買うかは収入と地域で大きく変わる。
 ### customs IN bhai-dooj
 期間はバーイー・ドゥージで終わる。関心は神から兄弟姉妹に戻り、姉妹が兄弟にティカを施して長寿を祈り、兄弟は贈り物を返す。これによりディワリは豊かさを願うだけの祭りではなく、親族の務めを確かめる日にもなる。兄弟姉妹がいない家庭や、この儀礼を行わない共同体が、期間を不完全と感じるわけではない。
+### customs IN govardhan-puja
+期間の四日目はゴーヴァルダン・プージャである。クリシュナがゴーヴァルダン山を持ち上げて村人を雨から守ったという物語を記念し、食べ物を山の形に積み上げて供えるアンナクートがよく行われる。山と豊かさが一つの像に重ねられているわけだ。この日は五日間の重心を家庭の富から共同体と家畜へと移す。ディワリは灯りだけではなく、その中ほどに農牧の暮らしの物語が置かれている。
 ### customs US diwali-school-holiday
 米国ではディワリは連邦の祝日ではないが、ニューヨーク州は2023年11月に法を成立させ、ニューヨーク市の公立学校を当日休校とした。意味はインドとは異なり、全国的な宗教行事ではなく、その都市が住民構成を認めた行政上の判断である。休校日はインドの暦に従うため、西暦の日付は毎年変わる。
 
@@ -93,6 +105,8 @@ Diwali is not a federal holiday in the United States, but New York State passed 
 节期从 Dhanteras 开场。这一天的习惯是采买金饰或新的金属器皿，并在家中祭拜，把“添置”本身当作迎接丰足的动作。它通常落在主日前两天，但印度阴阳历的日次会压缩，实际哪一天要看各地历书。买什么、买多少，与收入和地区关系很大。
 ### customs IN bhai-dooj
 节期以 Bhai Dooj 收尾，重点从神明转回手足关系：姐妹为兄弟点 Tika 祈愿长寿，兄弟回赠礼物。这一天让排灯节不只是“求财”的节日，也是一次亲属义务的确认。没有兄弟姐妹的家庭，或不采行这套仪式的社群，并不会因此觉得节期不完整。
+### customs IN govardhan-puja
+主日之后的第四天是 Govardhan Puja。它纪念的是黑天（Krishna）举起牛增山（Govardhan）为村民挡雨的故事，做法上常见用食物堆成小山的供养（annakut），把“山”与“丰足”叠在同一个画面里。这一天让五天节期的重心从家户的财富转向社群与牲畜——排灯节不只是点灯，中间还藏着一套农牧生活的叙事。
 ### customs US diwali-school-holiday
 美国没有把排灯节列为联邦假日，但纽约州在2023年11月通过立法，让纽约市公立学校在排灯节当天停课。它的意义因此与印度不同：不是全国性的宗教节期，而是一个城市承认其居民组成后做出的行政安排。停课日跟着印度历走，所以每年落在不同的公历日期。
 
@@ -109,6 +123,8 @@ Diwali is not a federal holiday in the United States, but New York State passed 
 पर्व की शुरुआत धनतेरस से होती है। रिवाज़ है सोना या नए धातु के बर्तन ख़रीदना और घर में पूजा करना — यानी ख़रीदना ही समृद्धि के स्वागत का रूप बन जाता है। यह अक्सर मुख्य दिन से दो दिन पहले पड़ता है, लेकिन हिंदू चांद्र-सौर पंचांग में तिथियाँ सिकुड़ सकती हैं, इसलिए असल तारीख़ स्थानीय पंचांग से तय होती है। क्या और कितना ख़रीदा जाए, यह आय और क्षेत्र पर निर्भर है।
 ### customs IN bhai-dooj
 पर्व का अंत भाई दूज से होता है, जहाँ ध्यान देवताओं से हटकर भाई-बहनों पर आता है: बहनें टीका कर भाइयों की लंबी उम्र की कामना करती हैं और भाई उपहार देते हैं। इससे दीवाली केवल समृद्धि का पर्व नहीं रहती, रिश्तों की ज़िम्मेदारी की पुष्टि भी बनती है। जिन घरों में भाई-बहन नहीं हैं, या जो समुदाय यह रीति नहीं निभाते, वे पर्व को अधूरा नहीं मानते।
+### customs IN govardhan-puja
+पर्व का चौथा दिन गोवर्धन पूजा है। यह कृष्ण द्वारा गोवर्धन पर्वत उठाकर ग्रामवासियों को वर्षा से बचाने की कथा का स्मरण है, और प्रायः अन्नकूट के साथ मनाया जाता है — भोजन को पर्वत की तरह ढेर कर अर्पित करना, जिसमें पर्वत और समृद्धि एक ही छवि में आ जुड़ते हैं। यह दिन पाँच दिनों के पर्व का भार घर की संपत्ति से हटाकर समुदाय और पशुधन की ओर ले जाता है — दीवाली केवल दीयों की नहीं; उसके बीचोंबीच कृषि-पशुपालन के जीवन की पूरी कथा बैठी है।
 ### customs US diwali-school-holiday
 अमेरिका में दीवाली संघीय अवकाश नहीं है, पर न्यूयॉर्क राज्य ने नवंबर 2023 में कानून पारित कर न्यूयॉर्क शहर के सरकारी स्कूल उस दिन बंद रखने का प्रावधान किया। इसका अर्थ भारत से अलग है: यह देशव्यापी धार्मिक पर्व नहीं, बल्कि एक शहर द्वारा अपनी आबादी की बनावट को दी गई प्रशासनिक मान्यता है। अवकाश भारतीय पंचांग के अनुसार चलता है, इसलिए ग्रेगोरियन तारीख़ हर साल बदलती है।
 
@@ -125,6 +141,8 @@ Hari utama adalah hari ketiga dari lima. Keluarga menyalakan pelita dan berdoa k
 Rangkaian dibuka oleh Dhanteras. Kebiasaannya adalah membeli emas atau perkakas logam baru lalu berdoa di rumah, sehingga tindakan membeli itu sendiri menjadi cara menyambut kelimpahan. Hari ini biasanya jatuh dua hari sebelum hari utama, tetapi hari dalam kalender lunisolar Hindu bisa memadat, jadi tanggal sebenarnya mengikuti almanak setempat. Apa dan seberapa banyak yang dibeli sangat bergantung pada penghasilan dan wilayah.
 ### customs IN bhai-dooj
 Rangkaian ditutup oleh Bhai Dooj; perhatian bergeser dari dewa kembali ke saudara kandung: saudari melakukan upacara Tika dan mendoakan umur panjang saudaranya, dan saudara memberi hadiah sebagai balasan. Dengan begitu Diwali bukan hanya soal kemakmuran, tetapi juga penegasan kewajiban kekerabatan. Rumah tangga tanpa saudara kandung, atau komunitas yang tidak menjalankan ritus ini, tidak menganggap rangkaiannya kurang lengkap.
+### customs IN govardhan-puja
+Hari keempat rangkaian ini adalah Govardhan Puja. Ia memperingati Krishna yang mengangkat Bukit Govardhan untuk melindungi warga desa dari hujan, dan lazim dijalani dengan annakut, persembahan makanan yang ditumpuk menyerupai bukit, menyatukan gunung dan gagasan kelimpahan dalam satu citra. Hari ini menggeser bobot rangkaian lima hari dari kekayaan rumah tangga ke arah komunitas dan ternak — Diwali bukan sekadar pelita; di tengahnya tersimpan seluruh narasi kehidupan bertani dan beternak.
 ### customs US diwali-school-holiday
 Diwali bukan hari libur federal di Amerika Serikat, tetapi Negara Bagian New York mengesahkan undang-undang pada November 2023 yang meliburkan sekolah negeri Kota New York pada hari itu. Maknanya berbeda dari India: bukan rangkaian keagamaan nasional, melainkan pengakuan administratif satu kota atas komposisi warganya. Hari libur itu mengikuti kalender India, sehingga tanggal Gregoriusnya berubah setiap tahun.
 
@@ -141,5 +159,7 @@ O dia principal é o terceiro dos cinco. As casas acendem lamparinas e fazem ora
 O período abre com o Dhanteras. O costume é comprar ouro ou utensílios de metal novos e rezar em casa, tratando a própria aquisição como forma de receber a abundância. Costuma cair dois dias antes do dia principal, mas os dias do calendário lunissolar hindu podem se comprimir, então a data real segue os almanaques locais. O que se compra, e quanto, depende muito da renda e da região.
 ### customs IN bhai-dooj
 O período encerra com o Bhai Dooj, quando o foco sai das divindades e volta para os irmãos: as irmãs fazem a cerimônia do Tika e pedem vida longa aos irmãos, que retribuem com presentes. Isso impede que o Diwali seja apenas sobre prosperidade; é também uma renovação de obrigação familiar. Casas sem irmãos, ou comunidades que não seguem esse rito, não tratam o período como incompleto.
+### customs IN govardhan-puja
+O quarto dia do período é o Govardhan Puja. Ele lembra Krishna erguendo o monte Govardhan para abrigar os aldeões da chuva, e costuma ser mantido com um annakut, uma oferenda de comida empilhada em forma de morro, juntando a montanha e a ideia de fartura numa só imagem. O dia desloca o peso dos cinco dias da riqueza doméstica para a comunidade e o rebanho — o Diwali não é só lamparinas; no meio dele mora toda uma narrativa da vida agropastoril.
 ### customs US diwali-school-holiday
 Diwali não é feriado federal nos Estados Unidos, mas o estado de Nova York aprovou lei em novembro de 2023 fechando as escolas públicas da cidade de Nova York nesse dia. O sentido, portanto, é diferente do indiano: não é um período religioso nacional, e sim o reconhecimento administrativo de uma cidade sobre quem mora nela. O fechamento segue o calendário indiano, então cai em uma data gregoriana diferente a cada ano.

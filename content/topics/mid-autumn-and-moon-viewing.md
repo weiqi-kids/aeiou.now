@@ -34,6 +34,12 @@
 - source: https://www.nao.ac.jp/astro/sky/2026/09-topics03.html
 - source: https://eco.mtk.nao.ac.jp/koyomi/wiki/C3E6BDA9A4CECCBEB7EEA4C8A4CF2FCCBEB7EEC9ACA4BAA4B7A4E2CBFEB7EEA4CAA4E9A4BA.html
 
+## observance JP jusanya
+- local_name: 十三夜（後の月）
+- date_rule: 旧暦九月十三日の夜。中秋の名月（旧暦八月十五日）と対になる観月
+- rank: 5
+- source: https://eco.mtk.nao.ac.jp/koyomi/wiki/C3E6BDA9A4CECCBEB7EEA4C8A4CF2FBDBDBBB0CCEB.html
+
 ## locale zh-TW
 ### title
 中秋與月見
@@ -49,6 +55,8 @@
 同一天在中國境內不只有一種過法。吉林省延邊朝鮮族自治州的「中秋節（秋夕）」在二○一一年以第三批單獨列入國家級名錄（編號 Ⅹ-5）。朝鮮族的秋夕**以祭祖掃墓為先**，先清掃墓地、進行祭祀，再宰牛備酒，用剛收穫的新穀做打糕與松餅，並辦鞦韆、跳板、摔跤等民俗活動，節期可以持續數日。同一個滿月，這裡的入口是墓地而不是月餅。
 ### customs JP tsukimi
 日本的中秋不放假。它叫十五夜或中秋の名月，是舊曆八月十五那一晚，會擺芒草與月見糰子賞月。國立天文台特別說明一件容易被誤解的事：**名月不一定是滿月**。因為朔到望的間隔在十三點九天到十五點六天之間變動（月球軌道是橢圓，離地球近時公轉較快）。以二○二六年為例，中秋の名月是九月二十五日，滿月卻在兩天後的二十七日；下一次兩者落在同一天要等到二○三○年。
+### customs JP jusanya
+日本的賞月不只一次：中秋的十五夜之後，還有舊曆九月十三日的「十三夜」，又稱後の月，與十五夜配成一對。國立天文台的曆Wiki把它與中秋の名月放在同一組條目下說明。傳統上認為只看其中一邊叫「片見月」，被視為不完整——所以在日本，「賞月」是一件要看兩次才算數的事。
 
 ## locale en
 ### title
@@ -65,6 +73,8 @@ Mainland China lists Mid-Autumn among the days off for all citizens, and the Sta
 There is more than one way to keep the day inside China. 'Mid-Autumn Festival (Chuseok)' of the Yanbian Korean Autonomous Prefecture in Jilin was listed separately in the third national batch in 2011, under the code X-5. For the Korean-ethnic community Chuseok **begins with the graves**: cleaning the tomb site and making offerings comes first, then an ox is slaughtered and wine prepared, freshly harvested grain is made into rice cake and pine-needle cake, and swings, seesaw and wrestling follow, over a season that can run several days. Same full moon, but the entrance is the cemetery rather than the mooncake.
 ### customs JP tsukimi
 Japan does not close for Mid-Autumn. It is called Jugoya or Chushu no Meigetsu, the night of the fifteenth day of the eighth month in the old calendar, marked with pampas grass and rice dumplings set out for the moon. The National Astronomical Observatory is explicit about something widely misunderstood: **the harvest moon is not necessarily the full moon**. The interval from new moon to full moon varies between about 13.9 and 15.6 days, because the Moon's orbit is elliptical and it travels faster when nearer the Earth. In 2026 the harvest moon falls on 25 September while the full moon comes two days later on the 27th; the next time the two land on the same date is 2030.
+### customs JP jusanya
+Moon viewing in Japan does not happen only once: after the fifteenth night of mid-autumn comes Jusanya, the thirteenth night of the ninth lunar month, also called the later moon, forming a pair with the first. The National Astronomical Observatory's calendar wiki treats it in the same set of entries as the harvest moon. Traditionally, seeing only one of the two was called katami-zuki, a 'half viewing', and regarded as incomplete — so in Japan moon viewing is something that only counts when done twice.
 
 ## locale ja
 ### title
@@ -81,6 +91,8 @@ Japan does not close for Mid-Autumn. It is called Jugoya or Chushu no Meigetsu, 
 同じ日でも中国国内の過ごし方は一つではない。吉林省延辺朝鮮族自治州の「中秋節（秋夕）」は2011年に第三次で単独登録された（番号 Ⅹ-5）。朝鮮族の秋夕は**まず墓参りから**始まる。墓地を清め、祭祀を行い、その後に牛を屠り酒を用意し、収穫したばかりの新穀で打糕（トック）と松餅（ソンピョン）を作り、ブランコ、シーソー、相撲などの民俗行事が数日にわたって続く。同じ満月でも、入口が月餅ではなく墓地である。
 ### customs JP tsukimi
 日本の中秋は休日ではない。十五夜、中秋の名月と呼ばれ、旧暦八月十五日にあたる夜にススキと月見団子を供えて月を眺める。国立天文台は誤解されやすい点をはっきり述べている——**名月は必ずしも満月ではない**。朔から望までの日数は13.9日から15.6日まで変動するためで、月の軌道が楕円で、地球に近いときほど公転が速いことによる。2026年は中秋の名月が9月25日、満月は二日後の27日。次に両者が同じ日付になるのは2030年である。
+### customs JP jusanya
+日本の月見は一度では終わらない。中秋の十五夜のあとに、旧暦九月十三日の十三夜、すなわち後の月があり、十五夜と対をなす。国立天文台の暦Wikiは、これを中秋の名月と同じ項目群の中で説明している。伝統的には、どちらか一方しか見ないことを片見月と呼び、欠けた月見とみなした。つまり日本において月見は、二度見て初めて揃うものである。
 
 ## locale zh-CN
 ### title
@@ -97,6 +109,8 @@ Japan does not close for Mid-Autumn. It is called Jugoya or Chushu no Meigetsu, 
 同一天在中国境内不只有一种过法。吉林省延边朝鲜族自治州的“中秋节（秋夕）”在2011年以第三批单独列入国家级名录（编号 Ⅹ-5）。朝鲜族的秋夕**以祭祖扫墓为先**，先清扫墓地、进行祭祀，再宰牛备酒，用刚收获的新谷做打糕与松饼，并办秋千、跳板、摔跤等民俗活动，节期可以持续数日。同一个满月，这里的入口是墓地而不是月饼。
 ### customs JP tsukimi
 日本的中秋不放假。它叫十五夜或中秋の名月，是旧历八月十五那一晚，会摆芒草与月见团子赏月。国立天文台特别说明一件容易被误解的事：**名月不一定是满月**。因为朔到望的间隔在13.9天到15.6天之间变动（月球轨道是椭圆，离地球近时公转较快）。以2026年为例，中秋の名月是9月25日，满月却在两天后的27日；下一次两者落在同一天要等到2030年。
+### customs JP jusanya
+日本的赏月不只一次：中秋的十五夜之后，还有旧历九月十三日的“十三夜”，又称后の月，与十五夜配成一对。国立天文台的历Wiki把它与中秋の名月放在同一组条目下说明。传统上认为只看其中一边叫“片见月”，被视为不完整——所以在日本，“赏月”是一件要看两次才算数的事。
 
 ## locale hi
 ### title
@@ -113,6 +127,8 @@ Japan does not close for Mid-Autumn. It is called Jugoya or Chushu no Meigetsu, 
 चीन के भीतर भी इस दिन को मनाने का एक ही तरीक़ा नहीं। जिलिन के यानबियान कोरियाई स्वायत्त प्रीफ़ेक्चर का 'मध्य-शरद उत्सव (चुसोक)' 2011 में तीसरी राष्ट्रीय सूची में अलग से दर्ज हुआ, कोड X-5। कोरियाई समुदाय के लिए चुसोक **क़ब्रों से शुरू होता है**: पहले क़ब्रगाह की सफ़ाई और अर्पण, फिर बैल काटा जाता है और मदिरा तैयार होती है, नई फ़सल के अनाज से चावल-केक और चीड़-पत्ती केक बनते हैं, और झूला, सी-सॉ तथा कुश्ती कई दिनों तक चलते हैं। पूर्णिमा वही है, पर प्रवेश-द्वार मूनकेक नहीं, क़ब्रिस्तान है।
 ### customs JP tsukimi
 जापान मध्य-शरद पर बंद नहीं होता। इसे जुगोया या चूशू नो मेइगेत्सु कहते हैं — पुराने पंचांग के आठवें महीने की पंद्रहवीं रात, जब पम्पास घास और चावल के गोले चाँद के लिए रखे जाते हैं। राष्ट्रीय खगोल वेधशाला एक आम ग़लतफ़हमी पर स्पष्ट है: **शरद का चाँद ज़रूरी नहीं कि पूर्ण चंद्र हो**। अमावस्या से पूर्णिमा तक का अंतराल लगभग 13.9 से 15.6 दिन के बीच बदलता है, क्योंकि चंद्रमा की कक्षा दीर्घवृत्ताकार है और पृथ्वी के पास होने पर वह तेज़ चलता है। 2026 में शरद-चाँद 25 सितंबर को है जबकि पूर्णिमा दो दिन बाद 27 को; दोनों अगली बार एक ही तारीख़ पर 2030 में आएँगे।
+### customs JP jusanya
+जापान में चंद्र-दर्शन एक ही बार नहीं होता: मध्य-शरद की पंद्रहवीं रात के बाद जुसान्या आती है, यानी नौवें चंद्र माह की तेरहवीं रात, जिसे 'बाद वाला चाँद' भी कहते हैं और जो पहली रात के साथ जोड़ा बनाती है। राष्ट्रीय खगोल वेधशाला की पंचांग-विकी इसे शरद-चाँद वाली प्रविष्टियों के साथ ही रखती है। परंपरा में दोनों में से केवल एक देखना 'कातामी-ज़ुकी' यानी अधूरा दर्शन कहलाता था — यानी जापान में चंद्र-दर्शन तभी पूरा माना जाता है जब वह दो बार हो।
 
 ## locale id
 ### title
@@ -129,6 +145,8 @@ Tiongkok daratan memasukkan Pertengahan Musim Gugur sebagai hari libur bagi selu
 Cara menjalaninya di dalam Tiongkok pun tidak tunggal. 'Festival Pertengahan Musim Gugur (Chuseok)' dari Prefektur Otonom Korea Yanbian di Jilin terdaftar tersendiri pada angkatan ketiga tahun 2011, dengan kode X-5. Bagi komunitas etnis Korea, Chuseok **dimulai dari makam**: membersihkan pusara dan memberi persembahan lebih dahulu, lalu menyembelih sapi dan menyiapkan arak, membuat kue beras dan kue daun pinus dari gabah yang baru dipanen, disusul ayunan, jungkat-jungkit dan gulat selama beberapa hari. Purnamanya sama, tetapi pintu masuknya makam, bukan kue bulan.
 ### customs JP tsukimi
 Jepang tidak libur untuk Pertengahan Musim Gugur. Malam itu disebut Jugoya atau Chushu no Meigetsu, hari kelima belas bulan kedelapan kalender lama, ditandai rumput pampas dan bola beras yang disajikan untuk bulan. Observatorium Astronomi Nasional tegas soal hal yang kerap disalahpahami: **bulan panen belum tentu purnama**. Selang dari bulan baru ke purnama berubah antara sekitar 13,9 dan 15,6 hari, karena orbit Bulan berbentuk elips dan ia bergerak lebih cepat saat dekat Bumi. Pada 2026 bulan panen jatuh 25 September sedangkan purnama datang dua hari kemudian, 27 September; keduanya baru akan jatuh pada tanggal sama lagi pada 2030.
+### customs JP jusanya
+Menikmati bulan di Jepang tidak hanya sekali: setelah malam kelima belas pertengahan musim gugur datang Jusanya, malam ketiga belas bulan kesembilan lunar, disebut juga bulan yang kemudian, membentuk pasangan dengan yang pertama. Wiki kalender Observatorium Astronomi Nasional membahasnya dalam kelompok entri yang sama dengan bulan panen. Secara tradisional, melihat hanya salah satu dari keduanya disebut katami-zuki, 'menikmati setengah', dan dianggap tidak lengkap — jadi di Jepang menikmati bulan baru terhitung bila dilakukan dua kali.
 
 ## locale pt-BR
 ### title
@@ -145,3 +163,5 @@ A China continental inclui o Meio do Outono entre os dias de folga para todos os
 Dentro da própria China há mais de um jeito de viver a data. O 'Festival do Meio do Outono (Chuseok)' da Prefeitura Autônoma Coreana de Yanbian, em Jilin, foi tombado separadamente na terceira leva nacional em 2011, sob o código X-5. Para a comunidade de etnia coreana, o Chuseok **começa pelos túmulos**: primeiro a limpeza da sepultura e as oferendas, depois abate-se um boi e prepara-se a bebida, faz-se bolo de arroz e bolo de folha de pinheiro com o grão recém-colhido, e seguem balanço, gangue-seesaw e luta ao longo de vários dias. A lua cheia é a mesma, mas a porta de entrada é o cemitério, não o bolinho.
 ### customs JP tsukimi
 O Japão não fecha no Meio do Outono. A noite se chama Jugoya ou Chushu no Meigetsu, o décimo quinto dia do oitavo mês do calendário antigo, marcada com capim-dos-pampas e bolinhos de arroz oferecidos à lua. O Observatório Astronômico Nacional é explícito sobre algo bastante mal compreendido: **a lua da colheita não é necessariamente a lua cheia**. O intervalo da lua nova à cheia varia entre cerca de 13,9 e 15,6 dias, porque a órbita da Lua é elíptica e ela se move mais rápido quando está mais perto da Terra. Em 2026 a lua da colheita cai em 25 de setembro, enquanto a lua cheia vem dois dias depois, em 27; as duas só voltam a coincidir em 2030.
+### customs JP jusanya
+A observação da lua no Japão não acontece uma vez só: depois da décima quinta noite do meio do outono vem o Jusanya, a décima terceira noite do nono mês lunar, também chamada de lua posterior, formando par com a primeira. O wiki de calendário do Observatório Astronômico Nacional a trata no mesmo conjunto de verbetes da lua da colheita. Tradicionalmente, ver apenas uma das duas era chamado katami-zuki, uma 'observação pela metade', e considerado incompleto — de modo que, no Japão, contemplar a lua só conta quando é feito duas vezes.

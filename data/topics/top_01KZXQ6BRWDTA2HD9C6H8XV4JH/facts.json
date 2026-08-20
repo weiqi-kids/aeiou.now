@@ -142,6 +142,70 @@
       }
     },
     {
+      "observance_id": "obs_top_01KZXQ6BRWDTA2HD9C6H8XV4JH_JP_jusanya",
+      "observance_key": "jusanya",
+      "country_code": "JP",
+      "local_name": "十三夜（後の月）",
+      "observed_date": null,
+      "date_rule": "旧暦九月十三日の夜。中秋の名月（旧暦八月十五日）と対になる観月",
+      "date_range_end": null,
+      "popularity_rank": 5,
+      "source_ids": [
+        "src_F7466C8B3E0AA6B7AB1877A1"
+      ],
+      "source_urls": [
+        "https://eco.mtk.nao.ac.jp/koyomi/wiki/C3E6BDA9A4CECCBEB7EEA4C8A4CF2FBDBDBBB0CCEB.html"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRWDTA2HD9C6H8XV4JH_JP_jusanya_2026_2026-10-23",
+          "occurrence_year": 2026,
+          "starts_on": "2026-10-23",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Tokyo",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_F7466C8B3E0AA6B7AB1877A1"
+          ],
+          "source_urls": [
+            "https://eco.mtk.nao.ac.jp/koyomi/wiki/C3E6BDA9A4CECCBEB7EEA4C8A4CF2FBDBDBBB0CCEB.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRWDTA2HD9C6H8XV4JH_JP_jusanya_2027_2027-10-12",
+          "occurrence_year": 2027,
+          "starts_on": "2027-10-12",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Tokyo",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_F7466C8B3E0AA6B7AB1877A1"
+          ],
+          "source_urls": [
+            "https://eco.mtk.nao.ac.jp/koyomi/wiki/C3E6BDA9A4CECCBEB7EEA4C8A4CF2FBDBDBBB0CCEB.html"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRWDTA2HD9C6H8XV4JH_JP_jusanya_2026_2026-10-23",
+        "occurrence_year": 2026,
+        "starts_on": "2026-10-23",
+        "ends_on": null,
+        "calendar_system": "chinese-lunisolar",
+        "timezone": "Asia/Tokyo",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_F7466C8B3E0AA6B7AB1877A1"
+        ],
+        "source_urls": [
+          "https://eco.mtk.nao.ac.jp/koyomi/wiki/C3E6BDA9A4CECCBEB7EEA4C8A4CF2FBDBDBBB0CCEB.html"
+        ],
+        "distance_days": 64
+      }
+    },
+    {
       "observance_id": "obs_top_01KZXQ6BRWDTA2HD9C6H8XV4JH_JP_tsukimi",
       "observance_key": "tsukimi",
       "country_code": "JP",
@@ -286,6 +350,7 @@
     {
       "country_code": "JP",
       "observance_ids": [
+        "obs_top_01KZXQ6BRWDTA2HD9C6H8XV4JH_JP_jusanya",
         "obs_top_01KZXQ6BRWDTA2HD9C6H8XV4JH_JP_tsukimi"
       ]
     },
@@ -306,7 +371,8 @@
     "src_AD691C046EF0DE79D7DD0A95",
     "src_DC79A8996E6D7ACCC16B4839",
     "src_E405440D6A7FBA9FBC2398FD",
-    "src_F045C3336BEF6186024CF028"
+    "src_F045C3336BEF6186024CF028",
+    "src_F7466C8B3E0AA6B7AB1877A1"
   ],
   "source_urls": [
     "https://www.gov.cn/gongbao/content/2006/content_334718.htm",
@@ -317,6 +383,7 @@
     "https://www.ihchina.cn/project_details/14935.html",
     "https://www.nao.ac.jp/astro/sky/2026/09-topics03.html",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://eco.mtk.nao.ac.jp/koyomi/wiki/C3E6BDA9A4CECCBEB7EEA4C8A4CF2FBDBDBBB0CCEB.html"
   ]
 }
