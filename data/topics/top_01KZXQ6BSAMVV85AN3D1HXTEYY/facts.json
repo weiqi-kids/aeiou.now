@@ -13,44 +13,46 @@
     {
       "country_code": "BR",
       "source_urls": [
-        "https://www.gov.br/"
+        "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
       ]
     },
     {
       "country_code": "CN",
       "source_urls": [
-        "https://www.gov.cn/"
+        "https://www.court.gov.cn/zixun/xiangqing/233181.html"
       ]
     },
     {
       "country_code": "ID",
       "source_urls": [
-        "https://indonesia.go.id/"
+        "https://peraturan.bpk.go.id/details/122740/uu-no-16-tahun-2019"
       ]
     },
     {
       "country_code": "IN",
       "source_urls": [
-        "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
-        "https://www.india.gov.in/"
+        "https://wcd.gov.in/",
+        "https://www.indiacode.nic.in/",
+        "https://www.nic.gov.in/civil-registrations-servicing-digitally/"
       ]
     },
     {
       "country_code": "JP",
       "source_urls": [
-        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+        "https://www.moj.go.jp/MINJI/minji07_00218.html"
       ]
     },
     {
       "country_code": "TW",
       "source_urls": [
-        "https://www.gov.tw/"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+        "https://www.moi.gov.tw/cp.aspx?n=14385"
       ]
     },
     {
       "country_code": "US",
       "source_urls": [
-        "https://www.usa.gov/"
+        "https://www.usa.gov/marriage-certificate"
       ]
     }
   ],
@@ -60,12 +62,14 @@
   "source_urls": [
     "https://www.britannica.com/topic/marriage",
     "https://www.nic.gov.in/civil-registrations-servicing-digitally/",
-    "https://www.gov.br/",
-    "https://www.gov.cn/",
-    "https://indonesia.go.id/",
-    "https://www.india.gov.in/",
-    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
-    "https://www.gov.tw/",
-    "https://www.usa.gov/"
+    "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+    "https://www.court.gov.cn/zixun/xiangqing/233181.html",
+    "https://peraturan.bpk.go.id/details/122740/uu-no-16-tahun-2019",
+    "https://wcd.gov.in/",
+    "https://www.indiacode.nic.in/",
+    "https://www.moj.go.jp/MINJI/minji07_00218.html",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001",
+    "https://www.moi.gov.tw/cp.aspx?n=14385",
+    "https://www.usa.gov/marriage-certificate"
   ]
 }

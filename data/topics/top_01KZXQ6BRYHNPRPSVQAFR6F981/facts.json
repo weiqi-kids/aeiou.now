@@ -13,43 +13,44 @@
     {
       "country_code": "BR",
       "source_urls": [
-        "https://www.gov.br/"
+        "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
       ]
     },
     {
       "country_code": "CN",
       "source_urls": [
-        "https://www.gov.cn/"
+        "http://www.gd.gov.cn/zwgk/wjk/zcfgk/content/post_2531969.html"
       ]
     },
     {
       "country_code": "ID",
       "source_urls": [
-        "https://indonesia.go.id/"
+        "https://peraturan.bpk.go.id/Details/40009/uu-no-23-tahun-2006"
       ]
     },
     {
       "country_code": "IN",
       "source_urls": [
-        "https://www.india.gov.in/"
+        "https://www.indiacode.nic.in/"
       ]
     },
     {
       "country_code": "JP",
       "source_urls": [
-        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+        "https://laws.e-gov.go.jp/law/342AC0000000081",
+        "https://www.soumu.go.jp/menu_kyotsuu/important/topics081127.html"
       ]
     },
     {
       "country_code": "TW",
       "source_urls": [
-        "https://www.gov.tw/"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030006"
       ]
     },
     {
       "country_code": "US",
       "source_urls": [
-        "https://www.usa.gov/"
+        "https://www.usa.gov/change-address"
       ]
     }
   ],
@@ -59,12 +60,13 @@
   "source_urls": [
     "https://www.britannica.com/topic/housewarming",
     "https://ich.unesco.org/",
-    "https://www.gov.br/",
-    "https://www.gov.cn/",
-    "https://indonesia.go.id/",
-    "https://www.india.gov.in/",
-    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
-    "https://www.gov.tw/",
-    "https://www.usa.gov/"
+    "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm",
+    "http://www.gd.gov.cn/zwgk/wjk/zcfgk/content/post_2531969.html",
+    "https://peraturan.bpk.go.id/Details/40009/uu-no-23-tahun-2006",
+    "https://www.indiacode.nic.in/",
+    "https://laws.e-gov.go.jp/law/342AC0000000081",
+    "https://www.soumu.go.jp/menu_kyotsuu/important/topics081127.html",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030006",
+    "https://www.usa.gov/change-address"
   ]
 }
