@@ -1402,6 +1402,28 @@
         }
       }
     },
+    "exam-season": {
+      "source_urls": [],
+      "notes": {
+        "US": {
+          "country_code": "US",
+          "kind": "absence",
+          "source_urls": [
+            "https://nces.ed.gov/nationsreportcard/",
+            "https://www.ed.gov/"
+          ],
+          "text": {
+            "zh-TW": "美國沒有全國性的大學入學考試。SAT 與 ACT 由民間機構(College Board、ACT Inc.)辦理,不是政府考試,也沒有統一的應考義務;錄取與否由各校自行決定,審查的是成績單、課外表現、推薦信與申請文章,二〇二〇年之後更有大量學校改為 test-optional,連要不要看標準化測驗分數都由學校自己選。聯邦層級最接近的是 NAEP(全國教育進展評測,又稱 the Nation's Report Card),但它是抽樣調查、用來看全國與各州的學力趨勢,**不產生個人分數**,考生拿不到也用不到。高中畢業門檻與是否設會考則屬各州權責。所以美國沒有「大考季」這個共同的日子——十八歲那年的衡量被拆散到三年的在校表現與每一所學校各自的判斷裡。",
+            "en": "The United States has no national university entrance examination. The SAT and ACT are run by private organisations — the College Board and ACT Inc. — not by government, and sitting them is not universally required; admission is decided institution by institution, weighing transcripts, activities, recommendations and essays, and since 2020 a large number of universities have gone test-optional, so even whether a standardised score is looked at is the university's own choice. The closest thing at federal level is NAEP, the National Assessment of Educational Progress, known as the Nation's Report Card; but it is a sample survey used to track achievement trends nationally and by state, and it produces no individual scores at all — a student cannot receive one or use one. High-school graduation requirements, and whether any exit examination exists, are matters for each state. So there is no shared exam season in the United States: the measuring of an eighteen-year-old is dispersed across three years of school record and the separate judgement of each institution.",
+            "ja": "アメリカに全国的な大学入学試験はない。SATとACTは民間機関であるカレッジボードとACT社が実施するものであって政府の試験ではなく、受験が一律に義務づけられてもいない。合否は大学ごとに決まり、成績証明、課外活動、推薦状、エッセイが見られる。二〇二〇年以降は多くの大学がtest-optionalに移行し、標準化試験の点数を見るかどうかさえ各大学の判断となった。連邦段階で最も近いのはNAEP(全米学力調査、通称the Nation's Report Card)だが、これは全国および州の学力の傾向を見るための標本調査であり、**個人の点数を出さない**。受験生が受け取ることも使うこともできない。高校卒業の要件や卒業試験の有無は各州の所管である。したがってアメリカには共通の受験シーズンという日がない。十八歳の測定は三年間の在学記録と、大学ごとの個別の判断へと分散している。",
+            "zh-CN": "美国没有全国性的大学入学考试。SAT 与 ACT 由民间机构(College Board、ACT Inc.)办理,不是政府考试,也没有统一的应考义务;录取与否由各校自行决定,审查的是成绩单、课外表现、推荐信与申请文书,二〇二〇年之后更有大量学校改为 test-optional,连要不要看标准化测验分数都由学校自己选。联邦层级最接近的是 NAEP(全国教育进展评测,又称 the Nation's Report Card),但它是抽样调查、用来看全国与各州的学力趋势,**不产生个人分数**,考生拿不到也用不到。高中毕业门槛与是否设会考则属各州权责。所以美国没有「大考季」这个共同的日子——十八岁那年的衡量被拆散到三年的在校表现与每一所学校各自的判断里。",
+            "hi": "अमेरिका में कोई राष्ट्रीय विश्वविद्यालय प्रवेश परीक्षा नहीं है। SAT और ACT निजी संस्थाएँ — कॉलेज बोर्ड और ACT Inc. — कराती हैं, सरकार नहीं, और इन्हें देना सर्वत्र अनिवार्य भी नहीं; प्रवेश हर संस्थान अलग-अलग तय करता है और अंकपत्र, पाठ्येतर गतिविधियाँ, संस्तुति पत्र तथा निबंध देखे जाते हैं। 2020 के बाद बहुत से विश्वविद्यालय test-optional हो गए, इसलिए मानकीकृत अंक देखे जाएँ या नहीं, यह भी विश्वविद्यालय का अपना निर्णय है। संघीय स्तर पर निकटतम वस्तु NAEP है, राष्ट्रीय शैक्षिक प्रगति आकलन, जिसे the Nation's Report Card कहा जाता है; पर वह एक प्रतिदर्श सर्वेक्षण है जो देश और राज्यों की उपलब्धि की प्रवृत्ति देखने के लिए है और **व्यक्तिगत अंक देता ही नहीं** — विद्यार्थी न उसे पा सकता है न उपयोग कर सकता है। हाई स्कूल उत्तीर्णता की शर्तें और कोई निकास परीक्षा हो या न हो, यह हर राज्य का विषय है। इसलिए अमेरिका में साझा परीक्षा-मौसम जैसा कोई दिन नहीं है।",
+            "id": "Amerika Serikat tidak memiliki ujian masuk perguruan tinggi nasional. SAT dan ACT diselenggarakan lembaga swasta — College Board dan ACT Inc. — bukan pemerintah, dan mengikutinya pun tidak diwajibkan secara menyeluruh; penerimaan diputuskan per institusi, dengan menimbang transkrip, kegiatan, surat rekomendasi, dan esai. Sejak 2020 banyak universitas beralih ke test-optional, sehingga apakah nilai ujian terstandar akan dilihat pun menjadi pilihan universitas itu sendiri. Yang paling mendekati di tingkat federal adalah NAEP, Penilaian Nasional Kemajuan Pendidikan, yang dikenal sebagai the Nation's Report Card; tetapi ia survei sampel untuk melacak tren capaian secara nasional dan per negara bagian, dan sama sekali **tidak menghasilkan nilai perorangan** — siswa tidak bisa menerimanya apalagi memakainya. Syarat kelulusan SMA, dan ada tidaknya ujian kelulusan, adalah urusan tiap negara bagian. Jadi tidak ada musim ujian bersama di Amerika Serikat.",
+            "pt-BR": "Os Estados Unidos não têm exame nacional de ingresso na universidade. O SAT e o ACT são aplicados por organizações privadas — o College Board e a ACT Inc. — e não pelo governo, e prestá-los não é universalmente exigido; a admissão é decidida instituição por instituição, ponderando histórico escolar, atividades, cartas de recomendação e redações. Desde 2020 um grande número de universidades passou a ser test-optional, de modo que até mesmo olhar ou não uma nota padronizada virou escolha de cada instituição. O que mais se aproxima disso no plano federal é o NAEP, a Avaliação Nacional do Progresso Educacional, conhecida como the Nation's Report Card; mas é uma pesquisa amostral para acompanhar tendências de desempenho no país e nos estados, e **não produz nota individual alguma** — o estudante não pode recebê-la nem usá-la. Os requisitos de conclusão do ensino médio, e a existência ou não de um exame de saída, cabem a cada estado. Não há, portanto, uma temporada de provas compartilhada nos Estados Unidos."
+          }
+        }
+      }
+    },
     "ghosts-ancestors-and-remembrance": {
       "source_urls": [],
       "notes": {
