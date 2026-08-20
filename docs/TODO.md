@@ -42,6 +42,24 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       而且每一國都能找到該國官方網域的來源(R6)。
       反例:購物節(雙十一/Black Friday/Harbolnas)搜尋量高但沒有政府公告,R6 過不了,不要做。
 
+## 這一輪留下的兩個尾巴(2026-08-20)
+
+- [ ] **HotScore 只做了「收資料」那一半,還沒有算分數的 job**。
+      `scripts/gsc-topic-metrics.mjs` 每天累積 `topic_search_metrics`(cron 已排、已跑成功),
+      但**沒有任何東西把它變成 `topic_scores`**——所以全站(含三個新 Topic)的熱度級距
+      仍是最低階,排行榜六個時窗也還是 thin。
+      不要急著寫那支:可以驅動的判準寫在 `gsc-topic-metrics.mjs` 檔頭
+      (單 Topic 中位曝光 ≥30 + `site/src/lib/heat.mjs` 的 `HEAT_TIERS` 依真實分佈重算)。
+      現況查法就是跑那支腳本,它每次都會印「就緒度」那一行。
+- [ ] **印尼 SNPMB 官網的 TLS 憑證過期**:`snpmb.bppp.kemdikbud.go.id` 回
+      `certificate has expired`(2026-08-20 實測,不是本機網路問題),
+      所以 `exam-season` 的 ID 來源退而用 `portalbpsdm.jambiprov.go.id`
+      (`.go.id` 省級政府、明載「Berdasarkan jadwal resmi dari SNPMB」)。
+      憑證修好後可換回官方站。查:`curl -sI https://snpmb.bppp.kemdikbud.go.id/`。
+- [ ] **`/questions/` 進索引了沒,要過幾天才看得出來**。2026-08-20 修掉
+      「description 等於 title」,那是全站 36 頁抽驗中唯一沒進索引的一頁。
+      複驗:`node scripts/seo-health.mjs` 的 ② 索引層(URL Inspection 那段)。
+
 ## 搜尋數據(2026-08-20 開工)
 
 ### 已完成(2026-08-20)
