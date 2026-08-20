@@ -289,9 +289,11 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
 - **查各國資料一律先用當地語言、查該國官方網域**(對照表見 `docs/03-topic-content.md`
   §「來源怎麼找」)。只用英文搜尋會把來源系統性地拉向觀光站與英文百科;`japan.travel` 是
   `.travel` 頂級網域,不是日本政府網域。閘門:`node scripts/check-content-depth.mjs`(R6)。
-- **驗來源連結不能只看狀態碼**——要看跟完 redirect 之後落在哪裡。
-  (2026-08-20:十個 `www.tad.gov.tw` 來源全部 302 到 `ErrorPage.html`,HTTP 回 200。)
-  閘門:`node scripts/check-source-urls.mjs`。
+- **驗來源連結不能只看狀態碼**——要看跟完 redirect 之後落在哪裡,而且**判死前要複驗**。
+  (2026-08-20 兩個坑:`www.tad.gov.tw` 整批 302 到 `ErrorPage.html` 卻回 200;
+  `bndigital.bn.gov.br` 從主機回 403、從 GitHub Actions 回 404。緣由見 `docs/TODO.md`
+  §「事故:兩種『狀態碼騙人』的來源」。)
+  現況查法:`node scripts/check-source-urls.mjs`(exit 1 代表有死連結)。
 - **絕不呼叫 Google Places API**、不儲存其回傳資料。導航一律純字串組裝。
 - **自己起的背景 server 一定要收**。`pkill -f` 的 pattern 會比對到**自己那條指令**,
   用 `[h]ttp.server` 這種寫法迴避(2026-08-11 踩過,把自己的 shell 殺掉)。

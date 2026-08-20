@@ -101,9 +101,13 @@ How do people express affection?
 ⚠️ `japan.travel` 是 `.travel` 頂級網域,**不是**日本政府網域;`*.travel`、`*.org` 的觀光
 或推廣站一律不算該國官方來源。閘門 R6 會擋:`node scripts/check-content-depth.mjs --report`。
 
-⚠️ **驗連結不能只看狀態碼**。2026-08-20 抓到一整批 `www.tad.gov.tw` 來源 302 到
-`eng.taiwan.net.tw/ErrorPage.html`,HTTP 回 **200**。改完來源一定要跑
-`node scripts/check-source-urls.mjs`(已納入「跟完 redirect 落在錯誤頁」的判定)。
+⚠️ **驗連結不能只看狀態碼**,要看跟完 redirect 之後落在哪裡;而且同一個網址從不同網路
+可能拿到不同狀態碼,判死前要複驗。兩個坑的緣由見 `docs/TODO.md` §「事故:兩種
+『狀態碼騙人』的來源」(2026-08-20)。改完來源一定要跑:
+
+```bash
+node scripts/check-source-urls.mjs
+```
 
 ### 年度日期(上線排序的權威資料)
 

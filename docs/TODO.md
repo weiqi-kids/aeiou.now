@@ -33,7 +33,7 @@ node scripts/check-source-urls.mjs              # 來源連結存活(404/410、�
   (對照基準:2026-08-19 實測 folk.tw 主力內容頁渲染後去重 1,600–2,930 字元)。
   現況查法:`node scripts/check-content-depth.mjs --report`(看最後一行「未達目標」)。
   補完一批一定要跑 `--update-baseline` 把新水位鎖住,否則下次改動可以無聲退回去。
-- [x] **R6:來源不在該國網域的 observance 已清空**(`r6_exempt` 現況查
+- [x] **R6:來源不在該國網域的 observance**(2026-08-20 當時已清空;`r6_exempt` 現況查
   `python3 -c "import json;print(json.load(open('content/content-depth-baseline.json'))['r6_exempt'])"`;
   這份清單只能縮不能長)。
   成因是先前查資料只用英文,拿回 japan.travel 的 `/en/` 觀光頁而非該國官方網域。
@@ -50,14 +50,30 @@ node scripts/check-source-urls.mjs              # 來源連結存活(404/410、�
 - [ ] **持續工作:新增 Topic 一律要一次補到水位**。閘門會擋,但擋下來的是部署不是內容——
   別靠閘門提醒才想到要寫。
 
-### 事故:來源回 200 卻是錯誤頁(2026-08-20)
+### 事故:兩種「狀態碼騙人」的來源(2026-08-20)
 
-`www.tad.gov.tw`(觀光局舊網域)的十個來源全部 302 到 `eng.taiwan.net.tw/ErrorPage.html`,
-HTTP 狀態是 **200**。當時的 `check-source-urls.mjs` 只看狀態碼,判成「可達」放行,
-其中一個剛好回 404 才被抓到——**一整批死連結靠一個巧合才曝光**。
-已把「跟完 redirect 落在錯誤頁」納入失效判定;來源全數換成《紀念日及節日實施條例》
-(`law.moj.gov.tw` pcode=D0020095,實測涵蓋除夕/春節/元宵/清明/端午/中元/中秋)。
-**教訓:驗連結不能只看狀態碼,要看跟完 redirect 之後落在哪裡。**
+兩個坑都長成同一個樣子——**HTTP 狀態碼說活著,實際上不是**。下面是當時的事實紀錄;
+**要知道現在有沒有失效來源,跑指令,不要讀這一段的數字**:
+
+```bash
+node scripts/check-source-urls.mjs            # 失效數與清單;exit 1 代表有死連結
+node scripts/check-source-urls.mjs --warn-only # 只看報表不擋
+```
+
+**坑一:302 到錯誤頁,狀態碼回 200。**
+`www.tad.gov.tw`(觀光局舊網域)的來源整批 302 到 `eng.taiwan.net.tw/ErrorPage.html`,
+最終狀態是 **200**。當時的 `check-source-urls.mjs` 只看狀態碼,判成「可達」放行;
+那一批裡剛好有一個回 404,才把整批拖出來——**死連結是靠巧合曝光的,不是靠 gate**。
+修法:把「跟完 redirect 落在錯誤頁」納入失效判定(判準寫在腳本檔頭的 `ERROR_PATH`)。
+
+**坑二:同一個網址,不同網路給不同狀態碼。**
+`bndigital.bn.gov.br` 從本主機回 403(WAF),從 GitHub Actions 的網路回 404,
+排程 build 因此紅了一次。修法:404/410 或錯誤頁判定成立前,間隔複驗一次才判死,
+避免對方 WAF 的地域差異變成本站 CI 的間歇性紅燈。
+
+**教訓:驗連結不能只看狀態碼,要看跟完 redirect 之後落在哪裡;而且判死前要複驗。**
+同一條線上的親戚:`japan.travel` 是 `.travel` 頂級網域不是日本政府網域(見
+`docs/03-topic-content.md` §「來源怎麼找」),兩者都是**看起來對、其實不是**的來源。
 
 ## 產品功能(版面已定版,這些是資料/行為層)
 
