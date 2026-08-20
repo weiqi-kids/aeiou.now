@@ -1,0 +1,598 @@
+{
+  "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+  "slug": "womens-day",
+  "canonical_name": "International Women's Day and National Women's Days",
+  "commonality": "marking women's rights and contributions on a shared March date whose legal status ranges from a paid half-day to a commemorative note",
+  "category": "community",
+  "status": "active",
+  "is_perennial": 0,
+  "updated_at": "2026-08-20T16:41:18.000Z",
+  "access_level": 0,
+  "observances": [
+    {
+      "observance_id": "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_BR_dia-nacional-da-mulher",
+      "observance_key": "dia-nacional-da-mulher",
+      "country_code": "BR",
+      "local_name": "Dia Nacional da Mulher / Dia Internacional da Mulher",
+      "observed_date": "03-08",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_C5C911032036F015F92677B1",
+        "src_C7820D0F0484A95034B84BC3"
+      ],
+      "source_urls": [
+        "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l6791.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15261.htm"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_BR_dia-nacional-da-mulher_2026_2026-03-08",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-08",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_C7820D0F0484A95034B84BC3"
+          ],
+          "source_urls": [
+            "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15261.htm"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_BR_dia-nacional-da-mulher_2027_2027-03-08",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-08",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_C7820D0F0484A95034B84BC3"
+          ],
+          "source_urls": [
+            "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15261.htm"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_BR_dia-nacional-da-mulher_2027_2027-03-08",
+        "occurrence_year": 2027,
+        "starts_on": "2027-03-08",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "America/Sao_Paulo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_C7820D0F0484A95034B84BC3"
+        ],
+        "source_urls": [
+          "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15261.htm"
+        ],
+        "distance_days": 200
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_CN_womens-day",
+      "observance_key": "womens-day",
+      "country_code": "CN",
+      "local_name": "妇女节（国际劳动妇女节）",
+      "observed_date": "03-08",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_C6A46B40AE3C060EAB6289E1"
+      ],
+      "source_urls": [
+        "https://www.gov.cn/zhengce/zhengceku/202411/content_6986381.htm"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_CN_womens-day_2026_2026-03-08",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-08",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_C6A46B40AE3C060EAB6289E1"
+          ],
+          "source_urls": [
+            "https://www.gov.cn/zhengce/zhengceku/202411/content_6986381.htm"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_CN_womens-day_2027_2027-03-08",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-08",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_C6A46B40AE3C060EAB6289E1"
+          ],
+          "source_urls": [
+            "https://www.gov.cn/zhengce/zhengceku/202411/content_6986381.htm"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_CN_womens-day_2027_2027-03-08",
+        "occurrence_year": 2027,
+        "starts_on": "2027-03-08",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Shanghai",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_C6A46B40AE3C060EAB6289E1"
+        ],
+        "source_urls": [
+          "https://www.gov.cn/zhengce/zhengceku/202411/content_6986381.htm"
+        ],
+        "distance_days": 199
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_ID_hari-perempuan-internasional",
+      "observance_key": "hari-perempuan-internasional",
+      "country_code": "ID",
+      "local_name": "Hari Perempuan Internasional",
+      "observed_date": "03-08",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_83FF83349D68B0E633D347C5"
+      ],
+      "source_urls": [
+        "https://www.kemenpppa.go.id/page/view/NTc1OA=="
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_ID_hari-perempuan-internasional_2026_2026-03-08",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-08",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_83FF83349D68B0E633D347C5"
+          ],
+          "source_urls": [
+            "https://www.kemenpppa.go.id/page/view/NTc1OA=="
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_ID_hari-perempuan-internasional_2027_2027-03-08",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-08",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_83FF83349D68B0E633D347C5"
+          ],
+          "source_urls": [
+            "https://www.kemenpppa.go.id/page/view/NTc1OA=="
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_ID_hari-perempuan-internasional_2027_2027-03-08",
+        "occurrence_year": 2027,
+        "starts_on": "2027-03-08",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Jakarta",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_83FF83349D68B0E633D347C5"
+        ],
+        "source_urls": [
+          "https://www.kemenpppa.go.id/page/view/NTc1OA=="
+        ],
+        "distance_days": 200
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_IN_national-womens-day",
+      "observance_key": "national-womens-day",
+      "country_code": "IN",
+      "local_name": "राष्ट्रीय महिला दिवस",
+      "observed_date": "02-13",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 2,
+      "source_ids": [
+        "src_7B6B4D5426D25C8B59A732F1"
+      ],
+      "source_urls": [
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2227395&reg=3&lang=2"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_IN_national-womens-day_2026_2026-02-13",
+          "occurrence_year": 2026,
+          "starts_on": "2026-02-13",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_7B6B4D5426D25C8B59A732F1"
+          ],
+          "source_urls": [
+            "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2227395&reg=3&lang=2"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_IN_national-womens-day_2027_2027-02-13",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-13",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_7B6B4D5426D25C8B59A732F1"
+          ],
+          "source_urls": [
+            "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2227395&reg=3&lang=2"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_IN_national-womens-day_2027_2027-02-13",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-13",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Kolkata",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_7B6B4D5426D25C8B59A732F1"
+        ],
+        "source_urls": [
+          "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2227395&reg=3&lang=2"
+        ],
+        "distance_days": 177
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_IN_international-womens-day",
+      "observance_key": "international-womens-day",
+      "country_code": "IN",
+      "local_name": "अंतर्राष्ट्रीय महिला दिवस",
+      "observed_date": "03-08",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_1F3763AC114E42F4F6CFF426"
+      ],
+      "source_urls": [
+        "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/mar/doc202637813901.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_IN_international-womens-day_2026_2026-03-08",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-08",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_1F3763AC114E42F4F6CFF426"
+          ],
+          "source_urls": [
+            "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/mar/doc202637813901.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_IN_international-womens-day_2027_2027-03-08",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-08",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_1F3763AC114E42F4F6CFF426"
+          ],
+          "source_urls": [
+            "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/mar/doc202637813901.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_IN_international-womens-day_2027_2027-03-08",
+        "occurrence_year": 2027,
+        "starts_on": "2027-03-08",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Kolkata",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_1F3763AC114E42F4F6CFF426"
+        ],
+        "source_urls": [
+          "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/mar/doc202637813901.pdf"
+        ],
+        "distance_days": 200
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_JP_international-womens-day",
+      "observance_key": "international-womens-day",
+      "country_code": "JP",
+      "local_name": "国際女性の日",
+      "observed_date": "03-08",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_B1322038979233981A8A8F74"
+      ],
+      "source_urls": [
+        "https://www.gender.go.jp/international/int_un_kaigi/int_iwd/index.html"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_JP_international-womens-day_2026_2026-03-08",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-08",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_B1322038979233981A8A8F74"
+          ],
+          "source_urls": [
+            "https://www.gender.go.jp/international/int_un_kaigi/int_iwd/index.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_JP_international-womens-day_2027_2027-03-08",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-08",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_B1322038979233981A8A8F74"
+          ],
+          "source_urls": [
+            "https://www.gender.go.jp/international/int_un_kaigi/int_iwd/index.html"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_JP_international-womens-day_2027_2027-03-08",
+        "occurrence_year": 2027,
+        "starts_on": "2027-03-08",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Tokyo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_B1322038979233981A8A8F74"
+        ],
+        "source_urls": [
+          "https://www.gender.go.jp/international/int_un_kaigi/int_iwd/index.html"
+        ],
+        "distance_days": 199
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_TW_womens-day",
+      "observance_key": "womens-day",
+      "country_code": "TW",
+      "local_name": "婦女節",
+      "observed_date": "03-08",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_F045C3336BEF6186024CF028"
+      ],
+      "source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_TW_womens-day_2026_2026-03-08",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-08",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_F045C3336BEF6186024CF028"
+          ],
+          "source_urls": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_TW_womens-day_2027_2027-03-08",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-08",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_F045C3336BEF6186024CF028"
+          ],
+          "source_urls": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_TW_womens-day_2027_2027-03-08",
+        "occurrence_year": 2027,
+        "starts_on": "2027-03-08",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Taipei",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_F045C3336BEF6186024CF028"
+        ],
+        "source_urls": [
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+        ],
+        "distance_days": 199
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_US_womens-history-month",
+      "observance_key": "womens-history-month",
+      "country_code": "US",
+      "local_name": "Women's History Month",
+      "observed_date": "03-01",
+      "date_rule": null,
+      "date_range_end": "03-31",
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_1F22124FCAB411E349B4A8C1"
+      ],
+      "source_urls": [
+        "https://www.govinfo.gov/content/pkg/STATUTE-101/pdf/STATUTE-101-Pg99.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_US_womens-history-month_2026_2026-03-01",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-01",
+          "ends_on": "2026-03-31",
+          "calendar_system": "gregorian",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_1F22124FCAB411E349B4A8C1"
+          ],
+          "source_urls": [
+            "https://www.govinfo.gov/content/pkg/STATUTE-101/pdf/STATUTE-101-Pg99.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_US_womens-history-month_2027_2027-03-01",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-01",
+          "ends_on": "2027-03-31",
+          "calendar_system": "gregorian",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_1F22124FCAB411E349B4A8C1"
+          ],
+          "source_urls": [
+            "https://www.govinfo.gov/content/pkg/STATUTE-101/pdf/STATUTE-101-Pg99.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0G0RS8N8C52YFBDP723VYTQ_US_womens-history-month_2027_2027-03-01",
+        "occurrence_year": 2027,
+        "starts_on": "2027-03-01",
+        "ends_on": "2027-03-31",
+        "calendar_system": "gregorian",
+        "timezone": "America/New_York",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_1F22124FCAB411E349B4A8C1"
+        ],
+        "source_urls": [
+          "https://www.govinfo.gov/content/pkg/STATUTE-101/pdf/STATUTE-101-Pg99.pdf"
+        ],
+        "distance_days": 193
+      }
+    }
+  ],
+  "regional_notes": [],
+  "countries": [
+    {
+      "country_code": "BR",
+      "observance_ids": [
+        "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_BR_dia-nacional-da-mulher"
+      ]
+    },
+    {
+      "country_code": "CN",
+      "observance_ids": [
+        "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_CN_womens-day"
+      ]
+    },
+    {
+      "country_code": "ID",
+      "observance_ids": [
+        "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_ID_hari-perempuan-internasional"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "observance_ids": [
+        "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_IN_national-womens-day",
+        "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_IN_international-womens-day"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "observance_ids": [
+        "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_JP_international-womens-day"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "observance_ids": [
+        "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_TW_womens-day"
+      ]
+    },
+    {
+      "country_code": "US",
+      "observance_ids": [
+        "obs_top_01M0G0RS8N8C52YFBDP723VYTQ_US_womens-history-month"
+      ]
+    }
+  ],
+  "relations": [],
+  "source_ids": [
+    "src_1F22124FCAB411E349B4A8C1",
+    "src_1F3763AC114E42F4F6CFF426",
+    "src_7B6B4D5426D25C8B59A732F1",
+    "src_83FF83349D68B0E633D347C5",
+    "src_B1322038979233981A8A8F74",
+    "src_C5C911032036F015F92677B1",
+    "src_C6A46B40AE3C060EAB6289E1",
+    "src_C7820D0F0484A95034B84BC3",
+    "src_F045C3336BEF6186024CF028"
+  ],
+  "source_urls": [
+    "https://www.govinfo.gov/content/pkg/STATUTE-101/pdf/STATUTE-101-Pg99.pdf",
+    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/mar/doc202637813901.pdf",
+    "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2227395&reg=3&lang=2",
+    "https://www.kemenpppa.go.id/page/view/NTc1OA==",
+    "https://www.gender.go.jp/international/int_un_kaigi/int_iwd/index.html",
+    "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l6791.htm",
+    "https://www.gov.cn/zhengce/zhengceku/202411/content_6986381.htm",
+    "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15261.htm",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+  ],
+  "content_updated_at": "2026-08-20T16:41:19.221Z",
+  "content_hash": "6ab3ccdf9d1dda4c384690db13650df7fa0e44b864d837d29d08a6959ed452b9"
+}

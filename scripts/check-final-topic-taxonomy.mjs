@@ -16,7 +16,7 @@ const FINAL_SLUGS = [
   'childrens-day', 'teachers-day', 'newborn-and-full-moon', 'back-to-school', 'graduation-season',
   'coming-of-age', 'birthdays-and-blessings', 'proposals-and-engagements', 'weddings-and-customs',
   'farewells-and-funerals', 'moving-home', 'homecoming-and-reunion', 'caregiving-across-generations',
-  'ask-the-world',
+  'ask-the-world', 'womens-day', 'exam-season', 'islamic-calendar-days',
 ].sort();
 const FINAL = new Set(FINAL_SLUGS);
 const errors = [];

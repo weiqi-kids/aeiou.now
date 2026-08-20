@@ -1,0 +1,409 @@
+{
+  "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+  "slug": "islamic-calendar-days",
+  "canonical_name": "Islamic New Year, Ashura, Mawlid, and Isra Mi'raj",
+  "commonality": "the Islamic-calendar days beyond Ramadan and the two Eids, and how rarely a state puts them on its official calendar at all",
+  "category": "festival",
+  "status": "active",
+  "is_perennial": 0,
+  "updated_at": "2026-08-20T16:41:18.000Z",
+  "access_level": 0,
+  "observances": [
+    {
+      "observance_id": "obs_top_01M0G0RS6A55F631EY2SMSREB2_ID_isra-mikraj",
+      "observance_key": "isra-mikraj",
+      "country_code": "ID",
+      "local_name": "Isra Mikraj Nabi Muhammad saw.",
+      "observed_date": null,
+      "date_rule": "伊斯蘭曆 Rajab 月二十七日；公曆日期由三部長聯合決定書逐年公告",
+      "date_range_end": null,
+      "popularity_rank": 3,
+      "source_ids": [
+        "src_FF4B224E905CC2C8CF8EAF05"
+      ],
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS6A55F631EY2SMSREB2_ID_isra-mikraj_2026_2026-01-16",
+          "occurrence_year": 2026,
+          "starts_on": "2026-01-16",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_FF4B224E905CC2C8CF8EAF05"
+          ],
+          "source_urls": [
+            "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS6A55F631EY2SMSREB2_ID_isra-mikraj_2027_2027-01-05",
+          "occurrence_year": 2027,
+          "starts_on": "2027-01-05",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Jakarta",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_FF4B224E905CC2C8CF8EAF05"
+          ],
+          "source_urls": [
+            "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0G0RS6A55F631EY2SMSREB2_ID_isra-mikraj_2027_2027-01-05",
+        "occurrence_year": 2027,
+        "starts_on": "2027-01-05",
+        "ends_on": null,
+        "calendar_system": "islamic",
+        "timezone": "Asia/Jakarta",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_FF4B224E905CC2C8CF8EAF05"
+        ],
+        "source_urls": [
+          "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+        ],
+        "distance_days": 138
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0G0RS6A55F631EY2SMSREB2_ID_maulid-nabi",
+      "observance_key": "maulid-nabi",
+      "country_code": "ID",
+      "local_name": "Maulid Nabi Muhammad saw.",
+      "observed_date": null,
+      "date_rule": "伊斯蘭曆 Rabiul Awal 月十二日；公曆日期由三部長聯合決定書逐年公告",
+      "date_range_end": null,
+      "popularity_rank": 2,
+      "source_ids": [
+        "src_FF4B224E905CC2C8CF8EAF05"
+      ],
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS6A55F631EY2SMSREB2_ID_maulid-nabi_2026_2026-08-25",
+          "occurrence_year": 2026,
+          "starts_on": "2026-08-25",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_FF4B224E905CC2C8CF8EAF05"
+          ],
+          "source_urls": [
+            "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS6A55F631EY2SMSREB2_ID_maulid-nabi_2027_2027-08-15",
+          "occurrence_year": 2027,
+          "starts_on": "2027-08-15",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Jakarta",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_FF4B224E905CC2C8CF8EAF05"
+          ],
+          "source_urls": [
+            "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0G0RS6A55F631EY2SMSREB2_ID_maulid-nabi_2026_2026-08-25",
+        "occurrence_year": 2026,
+        "starts_on": "2026-08-25",
+        "ends_on": null,
+        "calendar_system": "islamic",
+        "timezone": "Asia/Jakarta",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_FF4B224E905CC2C8CF8EAF05"
+        ],
+        "source_urls": [
+          "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+        ],
+        "distance_days": 5
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0G0RS6A55F631EY2SMSREB2_ID_tahun-baru-islam",
+      "observance_key": "tahun-baru-islam",
+      "country_code": "ID",
+      "local_name": "1 Muharam Tahun Baru Islam",
+      "observed_date": null,
+      "date_rule": "伊斯蘭曆 Muharram 月一日；公曆日期由三部長聯合決定書逐年公告",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_FF4B224E905CC2C8CF8EAF05",
+        "src_DE767F0CFE51C03DD50CEB0D"
+      ],
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://kemenag.go.id/en/nasional/pemerintah-tetapkan-17-hari-libur-nasional-dan-8-cuti-bersama-2026-cAwAy"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS6A55F631EY2SMSREB2_ID_tahun-baru-islam_2026_2026-06-16",
+          "occurrence_year": 2026,
+          "starts_on": "2026-06-16",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_FF4B224E905CC2C8CF8EAF05"
+          ],
+          "source_urls": [
+            "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS6A55F631EY2SMSREB2_ID_tahun-baru-islam_2027_2027-06-06",
+          "occurrence_year": 2027,
+          "starts_on": "2027-06-06",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Jakarta",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_FF4B224E905CC2C8CF8EAF05"
+          ],
+          "source_urls": [
+            "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0G0RS6A55F631EY2SMSREB2_ID_tahun-baru-islam_2027_2027-06-06",
+        "occurrence_year": 2027,
+        "starts_on": "2027-06-06",
+        "ends_on": null,
+        "calendar_system": "islamic",
+        "timezone": "Asia/Jakarta",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_FF4B224E905CC2C8CF8EAF05"
+        ],
+        "source_urls": [
+          "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+        ],
+        "distance_days": 290
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0G0RS6A55F631EY2SMSREB2_IN_milad-un-nabi",
+      "observance_key": "milad-un-nabi",
+      "country_code": "IN",
+      "local_name": "मिलाद-उन-नबी (Milad-un-Nabi / Id-e-Milad)",
+      "observed_date": null,
+      "date_rule": "伊斯蘭曆 Rabiul Awal 月十二日；日期列入中央政府年度 gazetted holidays",
+      "date_range_end": null,
+      "popularity_rank": 2,
+      "source_ids": [
+        "src_72FB66CB2FB7549E8C50AE31"
+      ],
+      "source_urls": [
+        "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS6A55F631EY2SMSREB2_IN_milad-un-nabi_2026_2026-08-26",
+          "occurrence_year": 2026,
+          "starts_on": "2026-08-26",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_72FB66CB2FB7549E8C50AE31"
+          ],
+          "source_urls": [
+            "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS6A55F631EY2SMSREB2_IN_milad-un-nabi_2027_2027-08-16",
+          "occurrence_year": 2027,
+          "starts_on": "2027-08-16",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_72FB66CB2FB7549E8C50AE31"
+          ],
+          "source_urls": [
+            "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0G0RS6A55F631EY2SMSREB2_IN_milad-un-nabi_2026_2026-08-26",
+        "occurrence_year": 2026,
+        "starts_on": "2026-08-26",
+        "ends_on": null,
+        "calendar_system": "islamic",
+        "timezone": "Asia/Kolkata",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_72FB66CB2FB7549E8C50AE31"
+        ],
+        "source_urls": [
+          "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+        ],
+        "distance_days": 6
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0G0RS6A55F631EY2SMSREB2_IN_muharram",
+      "observance_key": "muharram",
+      "country_code": "IN",
+      "local_name": "मुहर्रम (Muharram / Ashura)",
+      "observed_date": null,
+      "date_rule": "伊斯蘭曆 Muharram 月十日（阿舒拉），非該月一日；日期列入中央政府年度 gazetted holidays",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_72FB66CB2FB7549E8C50AE31"
+      ],
+      "source_urls": [
+        "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS6A55F631EY2SMSREB2_IN_muharram_2026_2026-06-26",
+          "occurrence_year": 2026,
+          "starts_on": "2026-06-26",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_72FB66CB2FB7549E8C50AE31"
+          ],
+          "source_urls": [
+            "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS6A55F631EY2SMSREB2_IN_muharram_2027_2027-06-15",
+          "occurrence_year": 2027,
+          "starts_on": "2027-06-15",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_72FB66CB2FB7549E8C50AE31"
+          ],
+          "source_urls": [
+            "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0G0RS6A55F631EY2SMSREB2_IN_muharram_2027_2027-06-15",
+        "occurrence_year": 2027,
+        "starts_on": "2027-06-15",
+        "ends_on": null,
+        "calendar_system": "islamic",
+        "timezone": "Asia/Kolkata",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_72FB66CB2FB7549E8C50AE31"
+        ],
+        "source_urls": [
+          "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+        ],
+        "distance_days": 299
+      }
+    }
+  ],
+  "regional_notes": [
+    {
+      "country_code": "BR",
+      "kind": "absence",
+      "source_urls": [
+        "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-norma-pl.html"
+      ]
+    },
+    {
+      "country_code": "CN",
+      "kind": "absence",
+      "source_urls": [
+        "https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "kind": "absence",
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "kind": "absence",
+      "source_urls": [
+        "https://www.wda.gov.tw/News_Content.aspx?n=31&s=3599",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+      ]
+    },
+    {
+      "country_code": "US",
+      "kind": "absence",
+      "source_urls": [
+        "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "country_code": "ID",
+      "observance_ids": [
+        "obs_top_01M0G0RS6A55F631EY2SMSREB2_ID_isra-mikraj",
+        "obs_top_01M0G0RS6A55F631EY2SMSREB2_ID_maulid-nabi",
+        "obs_top_01M0G0RS6A55F631EY2SMSREB2_ID_tahun-baru-islam"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "observance_ids": [
+        "obs_top_01M0G0RS6A55F631EY2SMSREB2_IN_milad-un-nabi",
+        "obs_top_01M0G0RS6A55F631EY2SMSREB2_IN_muharram"
+      ]
+    }
+  ],
+  "relations": [],
+  "source_ids": [
+    "src_72FB66CB2FB7549E8C50AE31",
+    "src_DE767F0CFE51C03DD50CEB0D",
+    "src_FF4B224E905CC2C8CF8EAF05"
+  ],
+  "source_urls": [
+    "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf",
+    "https://kemenag.go.id/en/nasional/pemerintah-tetapkan-17-hari-libur-nasional-dan-8-cuti-bersama-2026-cAwAy",
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+    "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-norma-pl.html",
+    "https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html",
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+    "https://www.wda.gov.tw/News_Content.aspx?n=31&s=3599",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
+  ],
+  "content_updated_at": "2026-08-20T16:41:19.217Z",
+  "content_hash": "eb516b0606850ffe84191fb914478a081a29ac3a0c5e2a4475177c26c852c081"
+}
