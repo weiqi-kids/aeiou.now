@@ -74,6 +74,70 @@
       }
     },
     {
+      "observance_id": "obs_top_01KZXQ6BR92AZA5DJBBW90DPHH_ID_kenaikan",
+      "observance_key": "kenaikan",
+      "country_code": "ID",
+      "local_name": "Kenaikan Yesus Kristus（耶穌升天）",
+      "observed_date": null,
+      "date_rule": "復活節後第四十日；2026 年為 5 月 14 日，列為國定假日",
+      "date_range_end": null,
+      "popularity_rank": 5,
+      "source_ids": [
+        "src_FF4B224E905CC2C8CF8EAF05"
+      ],
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR92AZA5DJBBW90DPHH_ID_kenaikan_2026_2026-05-14",
+          "occurrence_year": 2026,
+          "starts_on": "2026-05-14",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_FF4B224E905CC2C8CF8EAF05"
+          ],
+          "source_urls": [
+            "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR92AZA5DJBBW90DPHH_ID_kenaikan_2027_2027-05-06",
+          "occurrence_year": 2027,
+          "starts_on": "2027-05-06",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_FF4B224E905CC2C8CF8EAF05"
+          ],
+          "source_urls": [
+            "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BR92AZA5DJBBW90DPHH_ID_kenaikan_2027_2027-05-06",
+        "occurrence_year": 2027,
+        "starts_on": "2027-05-06",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Jakarta",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_FF4B224E905CC2C8CF8EAF05"
+        ],
+        "source_urls": [
+          "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+        ],
+        "distance_days": 259
+      }
+    },
+    {
       "observance_id": "obs_top_01KZXQ6BR92AZA5DJBBW90DPHH_ID_paskah",
       "observance_key": "paskah",
       "country_code": "ID",
@@ -277,6 +341,7 @@
     {
       "country_code": "ID",
       "observance_ids": [
+        "obs_top_01KZXQ6BR92AZA5DJBBW90DPHH_ID_kenaikan",
         "obs_top_01KZXQ6BR92AZA5DJBBW90DPHH_ID_paskah"
       ]
     },

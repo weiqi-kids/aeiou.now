@@ -30,6 +30,12 @@
 - rank: 4
 - source: https://www.usa.gov/holidays
 
+## observance ID kenaikan
+- local_name: Kenaikan Yesus Kristus（耶穌升天）
+- date_rule: 復活節後第四十日；2026 年為 5 月 14 日，列為國定假日
+- rank: 5
+- source: https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026
+
 ## locale zh-TW
 ### title
 復活節
@@ -45,6 +51,8 @@
 印度的全國假日清單裡有 Good Friday，卻沒有復活節主日。原因很實際：復活節必然落在星期日，而受難日落在星期五，只有後者需要用假日把上班日空出來。這個安排說明國定假日清單解決的是「哪一天要停止工作」，不是「哪一天在宗教上最重要」——兩件事在制度上經常不一致。
 ### customs US easter-sunday
 美國沒有把復活節列為聯邦假日，受難日也不是。聯邦假日清單裡沒有任何一個以基督教節期命名的日子，除了聖誕節。復活節之所以「不需要」放假，部分理由與印度相同：它本來就在星期日。實際的節日內容——教會禮拜、彩蛋、家庭午餐、白宮草坪的滾彩蛋活動——全部發生在既有的週末裡，不佔用行事曆。
+### customs ID kenaikan
+印尼把復活節之後第四十日的「耶穌升天」也列為國定假日，二○二六年是五月十四日（星期四）。這一天在其他六個地方都不是假日——連巴西與美國都沒有。把升天節放進全國行事曆，意味著印尼承認的不是單一節點，而是從受難日、復活節到升天的一整段教會曆；一個穆斯林人口占多數的國家，在假日表上給了基督教曆最完整的空間。
 
 ## locale en
 ### title
@@ -61,6 +69,8 @@ Brazil's religious holidays are not decided federally. Article 2 of Law 9,093/19
 India's national holiday list contains Good Friday but not Easter Sunday. The reason is practical: Easter always falls on a Sunday, while Good Friday falls on a Friday, and only the latter needs a holiday to clear a working day. The arrangement shows that a national holiday list answers the question of which day work stops, not which day matters most religiously — the two frequently fail to line up in institutional terms.
 ### customs US easter-sunday
 The United States does not list Easter as a federal holiday, and Good Friday is not one either. No day named after a Christian observance appears on the federal holiday list except Christmas. Part of why Easter does not 'need' a holiday is the same reason as in India: it already falls on a Sunday. The actual content of the day — church services, eggs, a family lunch, the egg roll on the White House lawn — all happens inside a weekend that already existed, taking nothing from the calendar.
+### customs ID kenaikan
+Indonesia also lists the Ascension of Jesus Christ, the fortieth day after Easter, as a national holiday — 14 May in 2026, a Thursday. That day is not a holiday in any of the other six places here, not even Brazil or the United States. Putting Ascension into the national calendar means what Indonesia recognises is not a single point but the whole stretch of the church calendar from Good Friday through Easter to the Ascension: a country with a Muslim majority gives the Christian calendar the most complete space of any on this page.
 
 ## locale ja
 ### title
@@ -77,6 +87,8 @@ The United States does not list Easter as a federal holiday, and Good Friday is 
 インドの全国祝日一覧には聖金曜日があるが、復活祭当日はない。理由は実務的である。復活祭は必ず日曜に当たり、聖金曜日は金曜に当たる。休日にして平日を空ける必要があるのは後者だけだ。この扱いは、国の祝日一覧が答えているのは「どの日に仕事を止めるか」であって「宗教的にどの日が最も重いか」ではないことを示している。制度上、この二つはしばしば一致しない。
 ### customs US easter-sunday
 米国は復活祭を連邦の祝日にしておらず、聖金曜日もそうではない。連邦祝日の一覧に、クリスマスを除いてキリスト教の行事に由来する日は一つもない。復活祭が休日を「必要としない」理由の一つはインドと同じで、もともと日曜だからである。実際の中身——礼拝、卵、家族の昼食、ホワイトハウスの芝生でのエッグロール——はすべて既にある週末の中で起き、暦を消費しない。
+### customs ID kenaikan
+インドネシアは復活祭から四十日目の「イエス・キリストの昇天」も国の祝日としている。2026年は5月14日、木曜にあたる。この日はここに並ぶ他の六つの地域では祝日ではない。ブラジルにも米国にもない。昇天日を国の暦に入れているということは、インドネシアが認めているのが単一の日ではなく、聖金曜日から復活祭を経て昇天までの教会暦のひと続きだということだ。ムスリムが多数を占める国が、このページの中で最も完全な形でキリスト教の暦に場所を与えている。
 
 ## locale zh-CN
 ### title
@@ -93,6 +105,8 @@ The United States does not list Easter as a federal holiday, and Good Friday is 
 印度的全国假日清单里有 Good Friday，却没有复活节主日。原因很实际：复活节必然落在星期日，而受难日落在星期五，只有后者需要用假日把上班日空出来。这个安排说明国定假日清单解决的是“哪一天要停止工作”，不是“哪一天在宗教上最重要”——两件事在制度上经常不一致。
 ### customs US easter-sunday
 美国没有把复活节列为联邦假日，受难日也不是。联邦假日清单里没有任何一个以基督教节期命名的日子，除了圣诞节。复活节之所以“不需要”放假，部分理由与印度相同：它本来就在星期日。实际的节日内容——教会礼拜、彩蛋、家庭午餐、白宫草坪的滚彩蛋活动——全部发生在既有的周末里，不占用行事历。
+### customs ID kenaikan
+印度尼西亚把复活节之后第四十日的“耶稣升天”也列为国定假日，2026年是5月14日（星期四）。这一天在其他六个地方都不是假日——连巴西与美国都没有。把升天节放进全国行事历，意味着印尼承认的不是单一节点，而是从受难日、复活节到升天的一整段教会历；一个穆斯林人口占多数的国家，在假日表上给了基督教历最完整的空间。
 
 ## locale hi
 ### title
@@ -109,6 +123,8 @@ The United States does not list Easter as a federal holiday, and Good Friday is 
 भारत की राष्ट्रीय अवकाश सूची में गुड फ़्राइडे है, ईस्टर रविवार नहीं। कारण व्यावहारिक है: ईस्टर हमेशा रविवार को पड़ता है जबकि गुड फ़्राइडे शुक्रवार को, और कार्यदिवस खाली करने के लिए अवकाश केवल बाद वाले को चाहिए। यह व्यवस्था बताती है कि राष्ट्रीय अवकाश सूची इस प्रश्न का उत्तर देती है कि काम किस दिन रुकेगा, न कि यह कि धार्मिक रूप से कौन-सा दिन सबसे भारी है — संस्थागत रूप से ये दोनों अक्सर मेल नहीं खाते।
 ### customs US easter-sunday
 अमेरिका ईस्टर को संघीय अवकाश नहीं मानता, और गुड फ़्राइडे भी नहीं। संघीय अवकाशों की सूची में क्रिसमस के अलावा किसी ईसाई तिथि के नाम पर कोई दिन नहीं है। ईस्टर को अवकाश की 'ज़रूरत' न होने का एक कारण वही है जो भारत में है: वह पहले से रविवार को पड़ता है। दिन की असल सामग्री — गिरजाघर की प्रार्थना, अंडे, पारिवारिक भोज, व्हाइट हाउस के लॉन पर अंडा-लुढ़काने का आयोजन — सब पहले से मौजूद सप्ताहांत के भीतर होती है और कैलेंडर से कुछ नहीं लेती।
+### customs ID kenaikan
+इंडोनेशिया ईस्टर के चालीसवें दिन पड़ने वाले 'ईसा मसीह के स्वर्गारोहण' को भी राष्ट्रीय अवकाश मानता है — 2026 में 14 मई, गुरुवार। यह दिन यहाँ के बाक़ी छह में से किसी में भी अवकाश नहीं है, ब्राज़ील और अमेरिका में भी नहीं। स्वर्गारोहण को राष्ट्रीय कैलेंडर में रखने का अर्थ है कि इंडोनेशिया किसी एक बिंदु को नहीं, बल्कि गुड फ़्राइडे से ईस्टर होते हुए स्वर्गारोहण तक फैले पूरे चर्च कैलेंडर को मान्यता देता है: मुस्लिम-बहुल देश इस पृष्ठ पर ईसाई पंचांग को सबसे पूरा स्थान देता है।
 
 ## locale id
 ### title
@@ -125,6 +141,8 @@ Hari libur keagamaan di Brasil tidak ditentukan di tingkat federal. Pasal 2 Unda
 Daftar hari libur nasional India memuat Jumat Agung, tetapi tidak Minggu Paskah. Alasannya praktis: Paskah selalu jatuh pada hari Minggu, sedangkan Jumat Agung jatuh pada hari Jumat, dan hanya yang terakhir memerlukan hari libur untuk mengosongkan hari kerja. Pengaturan ini memperlihatkan bahwa daftar hari libur nasional menjawab pertanyaan hari apa pekerjaan berhenti, bukan hari apa yang paling berat secara keagamaan — dua hal yang kerap tidak berimpit secara kelembagaan.
 ### customs US easter-sunday
 Amerika Serikat tidak menjadikan Paskah hari libur federal, dan Jumat Agung pun tidak. Tidak ada satu pun hari bernama peringatan Kristen dalam daftar hari libur federal selain Natal. Sebagian alasan Paskah tidak 'memerlukan' hari libur sama dengan di India: ia memang sudah jatuh pada hari Minggu. Isi hari itu — ibadah gereja, telur, makan siang keluarga, dan menggelindingkan telur di halaman Gedung Putih — semuanya berlangsung di dalam akhir pekan yang sudah ada, tanpa mengambil apa pun dari kalender.
+### customs ID kenaikan
+Indonesia juga mencantumkan Kenaikan Yesus Kristus, hari keempat puluh setelah Paskah, sebagai hari libur nasional — 14 Mei pada 2026, hari Kamis. Hari itu bukan hari libur di enam tempat lain pada halaman ini, bahkan tidak di Brasil maupun Amerika Serikat. Menempatkan Kenaikan dalam kalender nasional berarti yang diakui Indonesia bukan satu titik, melainkan seluruh rentang kalender gereja dari Jumat Agung melalui Paskah sampai Kenaikan: negara berpenduduk mayoritas Muslim justru memberi kalender Kristen ruang paling utuh di antara semuanya di sini.
 
 ## locale pt-BR
 ### title
@@ -141,3 +159,5 @@ No Brasil os feriados religiosos não são decididos pela União. O artigo 2º d
 A lista de feriados nacionais da Índia traz a Sexta-feira Santa, mas não o Domingo de Páscoa. O motivo é prático: a Páscoa cai sempre num domingo, enquanto a Sexta-feira Santa cai numa sexta, e só esta precisa de feriado para liberar um dia útil. O arranjo mostra que uma lista de feriados responde a qual dia o trabalho para, não a qual dia pesa mais religiosamente — no plano institucional, as duas coisas frequentemente não coincidem.
 ### customs US easter-sunday
 Os Estados Unidos não listam a Páscoa como feriado federal, e a Sexta-feira Santa também não. Nenhum dia batizado com uma data cristã aparece na lista de feriados federais além do Natal. Parte da razão de a Páscoa não 'precisar' de feriado é a mesma da Índia: ela já cai num domingo. O conteúdo real do dia — culto, ovos, almoço em família, a rolagem de ovos no gramado da Casa Branca — acontece todo dentro de um fim de semana que já existia, sem tirar nada do calendário.
+### customs ID kenaikan
+A Indonésia também lista a Ascensão de Jesus Cristo, o quadragésimo dia depois da Páscoa, como feriado nacional — 14 de maio em 2026, uma quinta-feira. Esse dia não é feriado em nenhum dos outros seis lugares desta página, nem no Brasil nem nos Estados Unidos. Colocar a Ascensão no calendário nacional significa que o que a Indonésia reconhece não é um ponto isolado, e sim todo o trecho do calendário da igreja da Sexta-feira Santa, passando pela Páscoa, até a Ascensão: um país de maioria muçulmana dá ao calendário cristão o espaço mais completo entre todos os daqui.
