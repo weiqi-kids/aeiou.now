@@ -7,6 +7,7 @@ import { LOCALE, MARKET_CITY, MARKET_COUNTRY } from '../src/lib/config.mjs';
 import {
   listTopicIds,
   getTopicBundle,
+  countryName,
   placesForTopic,
   eventsForTopic,
   topicsWithPlacesByCity,
@@ -158,12 +159,47 @@ function assertSortPageScope(sort) {
   }
 }
 
+
+// 本站市場那一國要排在「什麼時候」答案的最前面。
+// 立法緣由（2026-08-20）：id 站 affection-and-reciprocity 的 meta description 開頭是
+// 「印度、中國」，印尼自己沒進前兩筆 —— 而 GSC 顯示落在那一頁的查詢正是
+// `kapan hari valentine 2027`。讀者問自己的國家，搜尋結果先給他別人的日期。
+// 這條只在「該 Topic 確實有本市場的 observance」時才要求，沒有就沒有，不逼人補資料。
+function assertHomeCountryFirst(topicId) {
+  const { facts } = getTopicBundle(topicId);
+  const slug = facts?.slug;
+  if (!slug) return;
+  const dated = (facts.observances || []).filter((o) => o.next_occurrence);
+  if (!dated.some((o) => o.country_code === marketCountry)) return;   // 本市場沒有日期就不管
+  const path = join(DIST, 'topic', slug, 'index.html');
+  if (!existsSync(path)) fail(`dist 找不到 Topic 頁：${path}`);
+  const page = readFileSync(path, 'utf8');
+  const desc = page.match(/<meta\s+name=["']description["']\s+content=["']([\s\S]*?)["']/i)?.[1] || '';
+  const home = htmlEscape(countryName(marketCountry));
+  const others = [...new Set(dated.map((o) => o.country_code))]
+    .filter((code) => code !== marketCountry)
+    .map((code) => htmlEscape(countryName(code)));
+  const homeAt = desc.indexOf(home);
+  if (homeAt < 0) {
+    fail(`${LOCALE}/${slug} meta description 沒有提到本市場 ${marketCountry}（${home}）`);
+  }
+  for (const other of others) {
+    const at = desc.indexOf(other);
+    if (at >= 0 && at < homeAt) {
+      fail(`${LOCALE}/${slug} meta description 把 ${other} 排在本市場 ${home} 前面`
+        + `\n        「${desc.slice(0, 90)}…」`
+        + '\n        本站服務單一市場,讀者問的是自己的國家;排序見 src/pages/topic/[slug].astro 的 homeFirst()。');
+    }
+  }
+}
+
 const topicIds = listTopicIds();
 for (const topicId of topicIds) {
   assertSourceScope(topicId);
   if (process.argv.includes('--dist')) {
     assertRenderedScope(topicId);
     assertWorldNavPlacement(topicId);
+    assertHomeCountryFirst(topicId);
   }
 }
 if (process.argv.includes('--dist')) {
