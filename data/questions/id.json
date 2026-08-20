@@ -679,6 +679,749 @@
       ],
       "answer": "hi",
       "explain": "Baraat dalam pernikahan India Utara — pengantin pria menunggang kuda putih diiringi kerabat yang menari dan band."
+    },
+    {
+      "question_id": "q-20260825-school-lunch",
+      "date": "2026-08-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": "ja",
+      "target_locale": "en",
+      "text": "Di Amerika, anak-anak membawa bekal sendiri atau makan dari kantin sekolah?",
+      "options": [
+        {
+          "id": "packed",
+          "emoji": "🍱",
+          "label": "Bawa bekal"
+        },
+        {
+          "id": "school",
+          "emoji": "🍽️",
+          "label": "Dari sekolah"
+        },
+        {
+          "id": "both",
+          "emoji": "🔀",
+          "label": "Dua-duanya"
+        },
+        {
+          "id": "buy",
+          "emoji": "🛒",
+          "label": "Beli di luar"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260825-egg-standing",
+      "date": "2026-08-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR8KM720981PCZBPYFQ",
+      "topic_slug": "dragon-boat-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: komunitas mana yang mendirikan telur pada tengah hari tanggal lima bulan lima dan menyebutnya pembawa untung?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. Mendirikan telur pada tengah hari Duanwu dan menimba \"air tengah hari\" sama sekali tak memerlukan sungai, sehingga keduanya tetap berjalan di kota tanpa lomba perahu. Duanwu juga salah satu dari tiga perayaan tahunan Taiwan — titik pelunasan utang dagang dan pengiriman parsel."
+    },
+    {
+      "question_id": "q-20260826-shoes-indoors",
+      "date": "2026-08-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": "zh-TW",
+      "target_locale": "pt-BR",
+      "text": "Apakah kalian melepas sepatu saat masuk rumah?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "✅",
+          "label": "Selalu"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤔",
+          "label": "Tergantung"
+        },
+        {
+          "id": "no",
+          "emoji": "🙅",
+          "label": "Tidak"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260826-silence-day",
+      "date": "2026-08-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: komunitas mana yang punya satu hari penuh ketika seluruh pulau sunyi — tanpa lampu, tanpa keluar rumah, bandara pun tutup?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonesia. Hari itu adalah Nyepi, tahun baru Saka Bali. Indonesia menghitung Hindu di antara agama yang diakui resmi dan memberinya satu hari libur nasional — tetapi hari itu Nyepi Bali, bukan Diwali India Utara. Penduduk Hindu Indonesia terpusat di Bali, sehingga penanggalan dan perayaannya mengikuti Bali."
+    },
+    {
+      "question_id": "q-20260827-teacher-gift",
+      "date": "2026-08-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "id",
+      "target_locale": "hi",
+      "text": "Pada Hari Guru, apakah kalian memberi hadiah kepada guru?",
+      "options": [
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "Ya, hadiah"
+        },
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "Hanya kartu"
+        },
+        {
+          "id": "school",
+          "emoji": "🏫",
+          "label": "Sekolah yang mengadakan"
+        },
+        {
+          "id": "nothing",
+          "emoji": "🤷",
+          "label": "Tak ada kebiasaan itu"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260827-no-teachers-day",
+      "date": "2026-08-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: komunitas mana yang sama sekali tak punya Hari Guru, dan yang diperingati negara adalah pendidikan, bukan guru?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        }
+      ],
+      "answer": "ja",
+      "explain": "Jepang. Yang paling mendekati di tingkat nasional adalah Pekan Pendidikan dan Kebudayaan dari Kementerian Pendidikan, 1 sampai 7 November tiap tahun berdasarkan kesepahaman kabinet 1959 — yang diperingati adalah pendidikan, bukan guru. Nama Hari Pendidikan justru dipegang prefektur: Tokushima, Niigata, Saitama, Shiga, dan lainnya masing-masing menetapkan 1 November lewat peraturan daerah sendiri. Satuannya prefektur, bukan negara."
+    },
+    {
+      "question_id": "q-20260828-moon-cake",
+      "date": "2026-08-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "pt-BR",
+      "target_locale": "zh-CN",
+      "text": "Saat Pertengahan Musim Gugur, apakah kalian memberi kue bulan? Kepada siapa?",
+      "options": [
+        {
+          "id": "family",
+          "emoji": "👨‍👩‍👧",
+          "label": "Untuk keluarga"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "Untuk klien dan rekan kerja"
+        },
+        {
+          "id": "both",
+          "emoji": "🎁",
+          "label": "Dua-duanya"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "Tidak memberi"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260828-sharad-purnima",
+      "date": "2026-08-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: komunitas mana yang berjaga semalaman di bawah purnama yang sama, menaruh bubur susu di bawah sinar bulan, lalu membaginya keesokan hari?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "answer": "hi",
+      "explain": "India. Malam itu adalah Sharad Purnima, di Maharashtra disebut Kojagiri Purnima — purnama bulan Ashwin, biasanya pada Oktober. Kojagiri berarti \"siapa yang terjaga\": malamnya dihabiskan dengan berdoa kepada Lakshmi, kheer ditaruh di bawah sinar bulan dan dibagikan esoknya sebagai prasad, dan bulan malam itu dikatakan menampakkan keenam belas bagiannya. Purnama yang sama: di satu sisi reuni dan kue bulan, di sisi lain berjaga dan penganan di bawah cahaya bulan."
+    },
+    {
+      "question_id": "q-20260829-fasting-start",
+      "date": "2026-08-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": "zh-TW",
+      "target_locale": "id",
+      "text": "Bagaimana kalian mengetahui tanggal mulainya Ramadan?",
+      "options": [
+        {
+          "id": "official",
+          "emoji": "📢",
+          "label": "Menunggu pengumuman resmi malam sebelumnya"
+        },
+        {
+          "id": "calc",
+          "emoji": "🧮",
+          "label": "Melihat tabel hisab"
+        },
+        {
+          "id": "mosque",
+          "emoji": "🕌",
+          "label": "Bertanya ke masjid atau komunitas"
+        },
+        {
+          "id": "na",
+          "emoji": "🤷",
+          "label": "Tidak berlaku bagi saya"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260829-sidang-isbat",
+      "date": "2026-08-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: di komunitas mana hari pertama Ramadan baru diumumkan setelah pemerintah bersidang malam sebelumnya, menimbang rukyat dan hisab?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonesia. Kementerian Agama menggelar sidang isbat pada malam sebelumnya, menimbang laporan rukyat dari puluhan titik di seluruh negeri bersama hasil hisab, dan baru kemudian menyatakan apakah keesokan harinya adalah hari pertama. Untuk 1447 H (2026) sidang digelar 17 Februari; di seluruh titik hilal berada di bawah ufuk, dan sidang menetapkan 19 Februari berdasarkan hisab. Jadi jawaban pasti atas \"tanggal berapa mulai puasa\" memang tak tersedia berbulan-bulan sebelumnya — sementara libur Lebaran dijadwalkan tiga kementerian setahun di muka lewat keputusan bersama."
+    },
+    {
+      "question_id": "q-20260830-grave-visit",
+      "date": "2026-08-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": "en",
+      "target_locale": "id",
+      "text": "Berapa kali setahun kalian berziarah ke makam keluarga?",
+      "options": [
+        {
+          "id": "many",
+          "emoji": "🗓️",
+          "label": "Lebih dari tiga kali"
+        },
+        {
+          "id": "once",
+          "emoji": "🕯️",
+          "label": "Setahun sekali"
+        },
+        {
+          "id": "rare",
+          "emoji": "🌾",
+          "label": "Hanya sesekali"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "Tak ada kebiasaan itu"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260830-nyadran",
+      "date": "2026-08-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: komunitas mana yang berziarah ke makam leluhur menjelang Ramadan — membersihkannya, berdoa bersama, dan ditutup dengan seluruh kampung menyantap satu hidangan bersama?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonesia, di Jawa. Itu Nyadran, dilakukan pada bulan Ruwah menjelang Ramadan dimulai. Katanya berasal dari bahasa Sanskerta sraddha, keyakinan. Urutannya tetap — membersihkan makam, lalu berdoa bersama, ditutup dengan kembul bujono, semua makan bersama dalam satu hidangan. Ia bermula dari kepercayaan pra-Islam dan kemudian berakulturasi dengan praktik Islam Jawa. Seperti Qingming, ia merawat makam, tetapi selaras bukan dengan suatu tanggal melainkan dengan kenyataan bahwa puasa dimulai bulan depan."
+    },
+    {
+      "question_id": "q-20260831-labour-day-off",
+      "date": "2026-08-31",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": "hi",
+      "target_locale": "zh-TW",
+      "text": "Pada 1 Mei, apakah tempat kerja kalian libur?",
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🛌",
+          "label": "Ya, libur"
+        },
+        {
+          "id": "partial",
+          "emoji": "🧩",
+          "label": "Sebagian libur, sebagian tidak"
+        },
+        {
+          "id": "no",
+          "emoji": "🏢",
+          "label": "Tidak, tetap bekerja"
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": "Tidak yakin"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260831-partial-labour-day",
+      "date": "2026-08-31",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: di komunitas mana Hari Buruh bisa berarti satu orang di rumah libur sementara yang lain tetap bekerja seperti biasa?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. Ia hari libur yang hanya membebaskan sebagian orang: liburnya terbatas pada pekerja yang tercakup Undang-Undang Standar Ketenagakerjaan, sementara pegawai negeri dan sebagian sektor tetap bekerja seperti biasa. Hari libur yang dinamai dari kerja itu justru menghamparkan pertanyaan siapa yang terhitung buruh di atas kalender, dan mengulangnya setahun sekali."
+    },
+    {
+      "question_id": "q-20260901-childrens-day-off",
+      "date": "2026-09-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": "pt-BR",
+      "target_locale": "en",
+      "text": "Pada Hari Anak, apakah anak-anak kalian libur?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎈",
+          "label": "Ya, libur"
+        },
+        {
+          "id": "school",
+          "emoji": "🏫",
+          "label": "Tetap sekolah, tapi ada acara"
+        },
+        {
+          "id": "nothing",
+          "emoji": "📅",
+          "label": "Hari biasa saja"
+        },
+        {
+          "id": "nokids",
+          "emoji": "🙋",
+          "label": "Tak ada anak di rumah"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260901-moving-childrens-day",
+      "date": "2026-09-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: di komunitas mana Hari Anak bahkan tak punya tanggal tetap — diproklamasikan ulang tiap tahun oleh kepala negara, dan berpindah sedikitnya empat kali dalam empat puluh tahun?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        }
+      ],
+      "answer": "en",
+      "explain": "Amerika Serikat. Ia bukan hari libur menurut undang-undang; ia hadir sebagai proklamasi presiden yang diterbitkan ulang tiap tahun: Reagan pada 8 Agustus 1982, Clinton pada 11 Oktober 1998, George W. Bush pada 9 Juni 2002, Obama memindahkannya ke 20 November sejak 2013, dan Biden tetap 20 November pada 2024. Proklamasi bukan undang-undang, tak membawa libur, dan penghuni berikutnya bisa memindahkannya. Sebaliknya, Hari Anak Nasional Indonesia dipancangkan pada 23 Juli lewat Keputusan Presiden Nomor 44 Tahun 1984; dan 12 Oktober Brasil berimpit dengan Bunda Aparecida, yang memang sudah hari libur nasional."
+    },
+    {
+      "question_id": "q-20260902-harvest-thanks",
+      "date": "2026-09-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "zh-CN",
+      "target_locale": "pt-BR",
+      "text": "Apakah kalian punya hari untuk mensyukuri panen? Pada musim apa?",
+      "options": [
+        {
+          "id": "autumn",
+          "emoji": "🍂",
+          "label": "Ya, pada musim gugur"
+        },
+        {
+          "id": "other",
+          "emoji": "🌱",
+          "label": "Ya, tapi bukan musim gugur"
+        },
+        {
+          "id": "local",
+          "emoji": "🏘️",
+          "label": "Hanya di sebagian daerah"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "Tidak ada"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260902-before-harvest",
+      "date": "2026-09-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: di komunitas mana \"Hari Tani\" jatuh bukan setelah panen melainkan pada hari pertama musim semi — yakni sebelum pekerjaannya dimulai?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. Undang-Undang Hari Peringatan dan Hari Libur menyatakannya terang: \"Hari Tani: ditetapkan pada hari Lichun.\" Itu kebalikan dari hari panen di tempat lain — Thanksgiving, festival panen petani Tiongkok, dan Hari Syukur Buruh Jepang semuanya duduk setelah panen masuk, sedangkan yang ini duduk sebelum pekerjaannya dimulai: yang ditandainya bukan apa yang sudah terkumpul, melainkan kenyataan bahwa orang akan kembali ke sawah. Tanggalnya ditetapkan astronomi, sehingga jatuh pada 3, 4, atau 5 Februari harus dicari tiap tahun pada tabel penanggalan Badan Cuaca Pusat. Hari itu bukan hari libur."
+    },
+    {
+      "question_id": "q-20260903-lantern-night",
+      "date": "2026-09-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": "en",
+      "target_locale": "zh-TW",
+      "text": "Pada malam kelima belas setelah Imlek, adakah acara lampion di tempat kalian?",
+      "options": [
+        {
+          "id": "city",
+          "emoji": "🏮",
+          "label": "Ya, acara besar sekota"
+        },
+        {
+          "id": "temple",
+          "emoji": "🛕",
+          "label": "Ya, di kelenteng atau lingkungan"
+        },
+        {
+          "id": "home",
+          "emoji": "🕯️",
+          "label": "Hanya makan onde di rumah"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "Tak ada perayaan itu"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260903-tatung",
+      "date": "2026-09-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: di komunitas mana bintang \"malam kelima belas\" bukan lampion melainkan orang-orang yang diyakini dirasuki arwah leluhur, diarak di jalan dan ditembus benda tajam tanpa berdarah?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonesia. Itulah Cap Go Meh — dari bahasa Hokkien untuk \"malam kelima belas\", yakni malam kelima belas setelah Imlek. Yang terbesar ada di Singkawang, Kalimantan Barat, dan pusatnya adalah Tatung; bersama Tatung, ia tercatat dalam daftar nasional warisan budaya takbenda. Bacalah kolom ini berdampingan dengan kolom Taiwan dan Tiongkok, maka intinya jelas: malam kelima belas yang sama — di satu sisi lampion dan teka-teki, di sisi lain arak-arakan dan kerasukan."
+    },
+    {
+      "question_id": "q-20260904-valentine-school",
+      "date": "2026-09-04",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": "ja",
+      "target_locale": "id",
+      "text": "Di sekolah atau tempat kerja kalian, Hari Valentine didorong, diabaikan, atau justru dilarang?",
+      "options": [
+        {
+          "id": "encouraged",
+          "emoji": "💝",
+          "label": "Didorong"
+        },
+        {
+          "id": "ignored",
+          "emoji": "😐",
+          "label": "Tak ada yang peduli"
+        },
+        {
+          "id": "discouraged",
+          "emoji": "🚫",
+          "label": "Diimbau atau dilarang"
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": "Tidak yakin"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260904-valentine-circulars",
+      "date": "2026-09-04",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: di komunitas mana dokumen resmi menyebut Hari Valentine justru untuk meminta siswa tidak merayakannya?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonesia. Empat belas Februari bukan hari libur, dan jejak kelembagaan yang ditinggalkannya justru berjalan ke arah sebaliknya: menjelang tanggal itu tiap tahun, dinas pendidikan di sejumlah pemerintah daerah menerbitkan surat edaran yang meminta sekolah di wilayahnya mengimbau siswa agar tidak merayakannya. Depok di Jawa Barat menerbitkannya pada 2023, Kabupaten Pasuruan di Jawa Timur pada 2017, dan Dinas Pendidikan Provinsi Kepulauan Riau mengimbau hal serupa kepada SMA dan SMK. Alasannya ditulis terang: tidak sesuai dengan norma agama, sosial, dan budaya. Sebaliknya, yang diakui negara bisa jadi yang lain: Tiongkok memasukkan perayaan Qixi ke daftar nasional pertama warisan budaya takbenda pada 2006, sementara 14 Februari pun di sana tak berpelat kelembagaan."
     }
   ]
 }

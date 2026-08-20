@@ -679,6 +679,749 @@
       ],
       "answer": "hi",
       "explain": "O baraat dos casamentos do norte da Índia — o noivo chega num cavalo branco entre parentes dançando e uma banda."
+    },
+    {
+      "question_id": "q-20260825-school-lunch",
+      "date": "2026-08-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": "ja",
+      "target_locale": "en",
+      "text": "Nos Estados Unidos, as crianças levam marmita ou comem o que a escola serve?",
+      "options": [
+        {
+          "id": "packed",
+          "emoji": "🍱",
+          "label": "Levo de casa"
+        },
+        {
+          "id": "school",
+          "emoji": "🍽️",
+          "label": "Da escola"
+        },
+        {
+          "id": "both",
+          "emoji": "🔀",
+          "label": "As duas coisas"
+        },
+        {
+          "id": "buy",
+          "emoji": "🛒",
+          "label": "Compro por perto"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260825-egg-standing",
+      "date": "2026-08-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR8KM720981PCZBPYFQ",
+      "topic_slug": "dragon-boat-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: qual comunidade equilibra um ovo em pé ao meio-dia do quinto dia do quinto mês, dizendo que dá sorte?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. Equilibrar um ovo ao meio-dia do Duanwu e tirar a \"água do meio-dia\" não exigem rio algum, então ambos seguem em cidades sem corrida de barcos. O Duanwu é também uma das três festas anuais de Taiwan — ponto em que se acertam contas e se enviam presentes."
+    },
+    {
+      "question_id": "q-20260826-shoes-indoors",
+      "date": "2026-08-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": "zh-TW",
+      "target_locale": "pt-BR",
+      "text": "Vocês tiram os sapatos ao entrar em casa?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "✅",
+          "label": "Sempre"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤔",
+          "label": "Depende"
+        },
+        {
+          "id": "no",
+          "emoji": "🙅",
+          "label": "Não"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260826-silence-day",
+      "date": "2026-08-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: qual comunidade tem um dia inteiro em que uma ilha inteira silencia — sem luzes, sem sair, com o aeroporto fechado?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonésia. O dia é o Nyepi, o ano-novo Saka balinês. A Indonésia conta o hinduísmo entre suas religiões oficialmente reconhecidas e lhe dá um feriado nacional — mas esse dia é o Nyepi de Bali, não o Diwali do norte da Índia. A população hindu da Indonésia concentra-se em Bali, então o calendário e as festas seguem Bali."
+    },
+    {
+      "question_id": "q-20260827-teacher-gift",
+      "date": "2026-08-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "id",
+      "target_locale": "hi",
+      "text": "No Dia dos Professores, vocês dão presente ao professor?",
+      "options": [
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "Sim, um presente"
+        },
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "Só um cartão"
+        },
+        {
+          "id": "school",
+          "emoji": "🏫",
+          "label": "A escola organiza"
+        },
+        {
+          "id": "nothing",
+          "emoji": "🤷",
+          "label": "Não existe esse costume"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260827-no-teachers-day",
+      "date": "2026-08-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: qual comunidade não tem Dia dos Professores algum, e o que o Estado marca é a educação, não os professores?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        }
+      ],
+      "answer": "ja",
+      "explain": "Japão. O mais próximo em nível nacional é a Semana da Educação e da Cultura do Ministério da Educação, de 1 a 7 de novembro todo ano, sob um entendimento de gabinete de 1959 — o que ela comemora é a educação, não os professores. O nome Dia da Educação pertence às prefeituras: Tokushima, Niigata, Saitama, Shiga e outras fixaram cada qual o 1.º de novembro por decreto próprio. A unidade é a prefeitura, não o país."
+    },
+    {
+      "question_id": "q-20260828-moon-cake",
+      "date": "2026-08-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "pt-BR",
+      "target_locale": "zh-CN",
+      "text": "No Meio-Outono, vocês dão bolos lunares? E para quem?",
+      "options": [
+        {
+          "id": "family",
+          "emoji": "👨‍👩‍👧",
+          "label": "Para a família"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "Para clientes e colegas"
+        },
+        {
+          "id": "both",
+          "emoji": "🎁",
+          "label": "Para ambos"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "Não damos"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260828-sharad-purnima",
+      "date": "2026-08-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: qual comunidade passa a noite acordada sob a mesma lua cheia, deixando um doce de arroz ao luar para partilhar no dia seguinte?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        }
+      ],
+      "answer": "hi",
+      "explain": "Índia. A noite é a Sharad Purnima, chamada Kojagiri Purnima em Maharashtra — a lua cheia do mês de Ashwin, normalmente em outubro. Kojagiri quer dizer \"quem está acordado\": passa-se a noite em oração a Lakshmi, com kheer posto ao luar e partilhado no dia seguinte como prasad, e diz-se que a lua desta noite mostra as suas dezesseis partes. A mesma lua cheia: reunião e bolos lunares de um lado, vigília e um doce ao luar do outro."
+    },
+    {
+      "question_id": "q-20260829-fasting-start",
+      "date": "2026-08-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": "zh-TW",
+      "target_locale": "id",
+      "text": "Como vocês ficam sabendo a data em que o Ramadã começa?",
+      "options": [
+        {
+          "id": "official",
+          "emoji": "📢",
+          "label": "Espero o anúncio oficial na véspera"
+        },
+        {
+          "id": "calc",
+          "emoji": "🧮",
+          "label": "Consulto a tabela calculada"
+        },
+        {
+          "id": "mosque",
+          "emoji": "🕌",
+          "label": "Pergunto na mesquita ou à comunidade"
+        },
+        {
+          "id": "na",
+          "emoji": "🤷",
+          "label": "Não se aplica a mim"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260829-sidang-isbat",
+      "date": "2026-08-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: em qual comunidade o primeiro dia do Ramadã só é anunciado depois de o governo se reunir na véspera, pesando as observações da lua contra o cálculo?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonésia. O Ministério dos Assuntos Religiosos convoca uma sidang isbat na véspera, pesando os relatos de observação vindos de dezenas de pontos do país contra o cálculo, e só então declara se o dia seguinte é o primeiro. Para 1447 AH (2026) a sessão reuniu-se em 17 de fevereiro; em todos os pontos a lua estava abaixo do horizonte, e a sessão fixou 19 de fevereiro pelo cálculo. Assim, a resposta confirmada para \"em que data começa o jejum\" é, por desenho, indisponível com meses de antecedência — enquanto a folga do Eid é agendada com um ano de antecedência por decreto conjunto de três ministérios."
+    },
+    {
+      "question_id": "q-20260830-grave-visit",
+      "date": "2026-08-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": "en",
+      "target_locale": "id",
+      "text": "Quantas vezes por ano vocês visitam os túmulos da família?",
+      "options": [
+        {
+          "id": "many",
+          "emoji": "🗓️",
+          "label": "Mais de três"
+        },
+        {
+          "id": "once",
+          "emoji": "🕯️",
+          "label": "Uma vez por ano"
+        },
+        {
+          "id": "rare",
+          "emoji": "🌾",
+          "label": "Só de vez em quando"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "Não existe esse costume"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260830-nyadran",
+      "date": "2026-08-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: qual comunidade cuida dos túmulos dos antepassados pouco antes de o Ramadã começar — limpando-os, rezando em conjunto e encerrando com a aldeia inteira sentando-se a uma mesma refeição?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonésia, em Java. É o Nyadran, feito no mês de Ruwah antes de o Ramadã começar. A palavra vem do sânscrito sraddha, fé. A sequência é fixa — limpar os túmulos, depois rezar em conjunto, e encerrar com o kembul bujono, todos comendo uma refeição lado a lado. Começou na crença pré-islâmica e depois se fundiu com a prática islâmica javanesa. Como o Qingming, é cuidado com os túmulos, mas alinha-se não a uma data e sim ao fato de que o jejum começa no mês seguinte."
+    },
+    {
+      "question_id": "q-20260831-labour-day-off",
+      "date": "2026-08-31",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": "hi",
+      "target_locale": "zh-TW",
+      "text": "No dia 1.º de maio, seu trabalho dá folga?",
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🛌",
+          "label": "Sim, folga"
+        },
+        {
+          "id": "partial",
+          "emoji": "🧩",
+          "label": "Uns folgam, outros não"
+        },
+        {
+          "id": "no",
+          "emoji": "🏢",
+          "label": "Não, trabalhamos"
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": "Não sei"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260831-partial-labour-day",
+      "date": "2026-08-31",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: em qual comunidade o Dia do Trabalho pode significar que uma pessoa da casa folga enquanto outra vai trabalhar normalmente?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. É um feriado em que apenas parte das pessoas folga: a folga limita-se aos trabalhadores abrangidos pela Lei de Padrões do Trabalho, enquanto servidores públicos e partes de alguns setores trabalham normalmente. Um feriado batizado com o nome do trabalho estende assim sobre o calendário a pergunta de quem conta como trabalhador, e a repete uma vez por ano."
+    },
+    {
+      "question_id": "q-20260901-childrens-day-off",
+      "date": "2026-09-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": "pt-BR",
+      "target_locale": "en",
+      "text": "No Dia das Crianças, as crianças de vocês folgam?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎈",
+          "label": "Sim, folga"
+        },
+        {
+          "id": "school",
+          "emoji": "🏫",
+          "label": "Aula normal, mas com eventos"
+        },
+        {
+          "id": "nothing",
+          "emoji": "📅",
+          "label": "Um dia comum"
+        },
+        {
+          "id": "nokids",
+          "emoji": "🙋",
+          "label": "Não há crianças em casa"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260901-moving-childrens-day",
+      "date": "2026-09-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: em qual comunidade o Dia das Crianças nem sequer tem data fixa — reproclamado a cada ano pelo chefe de Estado e mudado ao menos quatro vezes em quarenta anos?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        }
+      ],
+      "answer": "en",
+      "explain": "Estados Unidos. Não é feriado legal; existe como proclamação presidencial reeditada a cada ano: Reagan pôs em 8 de agosto em 1982, Clinton em 11 de outubro em 1998, George W. Bush em 9 de junho em 2002, Obama mudou para 20 de novembro a partir de 2013, e Biden manteve 20 de novembro em 2024. Uma proclamação não é lei, não gera folga, e o ocupante seguinte pode movê-la. Em contraste, o Dia Nacional da Criança da Indonésia foi firmado em 23 de julho pela Decisão Presidencial n.º 44 de 1984; e o 12 de outubro brasileiro coincide com Nossa Senhora Aparecida, já feriado nacional."
+    },
+    {
+      "question_id": "q-20260902-harvest-thanks",
+      "date": "2026-09-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "zh-CN",
+      "target_locale": "pt-BR",
+      "text": "Vocês têm um dia para agradecer pela colheita? Em que estação?",
+      "options": [
+        {
+          "id": "autumn",
+          "emoji": "🍂",
+          "label": "Sim, no outono"
+        },
+        {
+          "id": "other",
+          "emoji": "🌱",
+          "label": "Sim, mas não no outono"
+        },
+        {
+          "id": "local",
+          "emoji": "🏘️",
+          "label": "Só em alguns lugares"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "Não"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260902-before-harvest",
+      "date": "2026-09-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: em qual comunidade o Dia do Agricultor cai não depois da colheita, mas no primeiro dia da primavera — isto é, antes de o trabalho sequer começar?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. A Lei das Datas Comemorativas e Feriados diz claramente: \"Dia do Agricultor: fixado no dia de Lichun.\" É o inverso dos dias de colheita alhures — o Thanksgiving, a festa da colheita dos agricultores da China e o Dia de Ação de Graças ao Trabalho do Japão ficam depois de a safra entrar, enquanto este fica antes de o trabalho começar: o que ele marca não é o que se recolheu, e sim o fato de voltar à lavoura. A data é dada pela astronomia, então cair em 3, 4 ou 5 de fevereiro é coisa para consultar a cada ano nas tabelas da Administração Meteorológica Central. Não é dia de folga."
+    },
+    {
+      "question_id": "q-20260903-lantern-night",
+      "date": "2026-09-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": "en",
+      "target_locale": "zh-TW",
+      "text": "Na décima quinta noite após o Ano-Novo Lunar, há alguma festa de lanternas onde vocês vivem?",
+      "options": [
+        {
+          "id": "city",
+          "emoji": "🏮",
+          "label": "Sim, uma grande festa da cidade"
+        },
+        {
+          "id": "temple",
+          "emoji": "🛕",
+          "label": "Sim, num templo ou no bairro"
+        },
+        {
+          "id": "home",
+          "emoji": "🕯️",
+          "label": "Só bolinhos em casa"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "Não existe essa festa"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260903-tatung",
+      "date": "2026-09-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: em qual comunidade a estrela da \"décima quinta noite\" não é a lanterna, mas pessoas tidas como possuídas por espíritos ancestrais, carregadas pelas ruas e atravessadas por lâminas sem sangrar?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonésia. É o Cap Go Meh — do hokkien para \"décima quinta noite\", a décima quinta noite depois do Ano-Novo Lunar. A maior acontece em Singkawang, no Kalimantan Ocidental, e seu centro é o Tatung; está inscrito, junto com o Tatung, no registro nacional de patrimônio cultural imaterial. Leia esta célula ao lado das de Taiwan e da China e o ponto fica claro: a mesma décima quinta noite, lanternas e enigmas de um lado, procissão e possessão do outro."
+    },
+    {
+      "question_id": "q-20260904-valentine-school",
+      "date": "2026-09-04",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": "ja",
+      "target_locale": "id",
+      "text": "Na sua escola ou trabalho, o Dia dos Namorados é incentivado, ignorado ou desencorajado?",
+      "options": [
+        {
+          "id": "encouraged",
+          "emoji": "💝",
+          "label": "Incentivado"
+        },
+        {
+          "id": "ignored",
+          "emoji": "😐",
+          "label": "Ninguém liga"
+        },
+        {
+          "id": "discouraged",
+          "emoji": "🚫",
+          "label": "Desencorajado ou proibido"
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": "Não sei"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260904-valentine-circulars",
+      "date": "2026-09-04",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: em qual comunidade o papel oficial menciona o Dia dos Namorados justamente para pedir aos alunos que não o celebrem?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonésia. Catorze de fevereiro não é feriado, e o rastro institucional que deixa corre no sentido inverso: em torno da data, todo ano, secretarias de educação de vários governos locais emitem circulares — surat edaran — pedindo às escolas de sua área que desestimulem os alunos de marcá-la. Depok, em Java Ocidental, emitiu uma em 2023; o município de Pasuruan, em Java Oriental, em 2017; e a secretaria estadual de educação das Ilhas Riau orientou no mesmo sentido suas escolas de ensino médio e técnico. A razão declarada é direta: não se ajusta às normas religiosas, sociais e culturais. Em contraste, o que um Estado pode reconhecer é a outra: a China inscreveu a festa do Qixi na primeira lista nacional de patrimônio imaterial em 2006, enquanto o 14 de fevereiro também não tem ali estatuto institucional algum."
     }
   ]
 }

@@ -18,10 +18,58 @@
         "pt-BR": "As pessoas em Taiwan realmente tomam bubble tea todos os dias?"
       },
       "options": [
-        { "id": "daily", "emoji": "🧋", "label": { "zh-TW": "幾乎每天", "en": "Almost every day", "ja": "ほぼ毎日", "zh-CN": "几乎每天", "hi": "लगभग हर दिन", "id": "Hampir setiap hari", "pt-BR": "Quase todo dia" } },
-        { "id": "weekly", "emoji": "🥤", "label": { "zh-TW": "每週幾次", "en": "A few times a week", "ja": "週に数回", "zh-CN": "每周几次", "hi": "हफ़्ते में कुछ बार", "id": "Beberapa kali seminggu", "pt-BR": "Algumas vezes por semana" } },
-        { "id": "sometimes", "emoji": "😌", "label": { "zh-TW": "偶爾", "en": "Occasionally", "ja": "たまに", "zh-CN": "偶尔", "hi": "कभी-कभार", "id": "Sesekali", "pt-BR": "De vez em quando" } },
-        { "id": "rarely", "emoji": "🙅", "label": { "zh-TW": "幾乎不喝", "en": "Hardly ever", "ja": "ほとんど飲まない", "zh-CN": "几乎不喝", "hi": "लगभग कभी नहीं", "id": "Hampir tidak pernah", "pt-BR": "Quase nunca" } }
+        {
+          "id": "daily",
+          "emoji": "🧋",
+          "label": {
+            "zh-TW": "幾乎每天",
+            "en": "Almost every day",
+            "ja": "ほぼ毎日",
+            "zh-CN": "几乎每天",
+            "hi": "लगभग हर दिन",
+            "id": "Hampir setiap hari",
+            "pt-BR": "Quase todo dia"
+          }
+        },
+        {
+          "id": "weekly",
+          "emoji": "🥤",
+          "label": {
+            "zh-TW": "每週幾次",
+            "en": "A few times a week",
+            "ja": "週に数回",
+            "zh-CN": "每周几次",
+            "hi": "हफ़्ते में कुछ बार",
+            "id": "Beberapa kali seminggu",
+            "pt-BR": "Algumas vezes por semana"
+          }
+        },
+        {
+          "id": "sometimes",
+          "emoji": "😌",
+          "label": {
+            "zh-TW": "偶爾",
+            "en": "Occasionally",
+            "ja": "たまに",
+            "zh-CN": "偶尔",
+            "hi": "कभी-कभार",
+            "id": "Sesekali",
+            "pt-BR": "De vez em quando"
+          }
+        },
+        {
+          "id": "rarely",
+          "emoji": "🙅",
+          "label": {
+            "zh-TW": "幾乎不喝",
+            "en": "Hardly ever",
+            "ja": "ほとんど飲まない",
+            "zh-CN": "几乎不喝",
+            "hi": "लगभग कभी नहीं",
+            "id": "Hampir tidak pernah",
+            "pt-BR": "Quase nunca"
+          }
+        }
       ],
       "answer": null,
       "explain": null
@@ -43,10 +91,58 @@
         "pt-BR": "Adivinhe: qual comunidade janta mais tarde?"
       },
       "options": [
-        { "id": "zh-TW", "emoji": "🇹🇼", "label": { "zh-TW": "台灣", "en": "Taiwan", "ja": "台湾", "zh-CN": "台湾", "hi": "ताइवान", "id": "Taiwan", "pt-BR": "Taiwan" } },
-        { "id": "ja", "emoji": "🇯🇵", "label": { "zh-TW": "日本", "en": "Japan", "ja": "日本", "zh-CN": "日本", "hi": "जापान", "id": "Jepang", "pt-BR": "Japão" } },
-        { "id": "hi", "emoji": "🇮🇳", "label": { "zh-TW": "印度", "en": "India", "ja": "インド", "zh-CN": "印度", "hi": "भारत", "id": "India", "pt-BR": "Índia" } },
-        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } }
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
       ],
       "answer": "pt-BR",
       "explain": {
@@ -76,10 +172,58 @@
         "pt-BR": "As pessoas no Japão realmente vão muito a izakayas depois do trabalho?"
       },
       "options": [
-        { "id": "often", "emoji": "🏮", "label": { "zh-TW": "每週好幾次", "en": "Several times a week", "ja": "週に何度も", "zh-CN": "每周好几次", "hi": "हफ़्ते में कई बार", "id": "Beberapa kali seminggu", "pt-BR": "Várias vezes por semana" } },
-        { "id": "sometimes", "emoji": "🍻", "label": { "zh-TW": "偶爾聚一下", "en": "Now and then", "ja": "たまに", "zh-CN": "偶尔聚一下", "hi": "कभी-कभी", "id": "Kadang-kadang", "pt-BR": "De vez em quando" } },
-        { "id": "rarely", "emoji": "🏠", "label": { "zh-TW": "幾乎直接回家", "en": "Usually straight home", "ja": "ほぼ直帰", "zh-CN": "几乎直接回家", "hi": "अक्सर सीधे घर", "id": "Biasanya langsung pulang", "pt-BR": "Quase sempre direto para casa" } },
-        { "id": "depends", "emoji": "🤝", "label": { "zh-TW": "看同事和場合", "en": "Depends on coworkers", "ja": "同僚と状況次第", "zh-CN": "看同事和场合", "hi": "सहकर्मियों पर निर्भर", "id": "Tergantung rekan kerja", "pt-BR": "Depende dos colegas" } }
+        {
+          "id": "often",
+          "emoji": "🏮",
+          "label": {
+            "zh-TW": "每週好幾次",
+            "en": "Several times a week",
+            "ja": "週に何度も",
+            "zh-CN": "每周好几次",
+            "hi": "हफ़्ते में कई बार",
+            "id": "Beberapa kali seminggu",
+            "pt-BR": "Várias vezes por semana"
+          }
+        },
+        {
+          "id": "sometimes",
+          "emoji": "🍻",
+          "label": {
+            "zh-TW": "偶爾聚一下",
+            "en": "Now and then",
+            "ja": "たまに",
+            "zh-CN": "偶尔聚一下",
+            "hi": "कभी-कभी",
+            "id": "Kadang-kadang",
+            "pt-BR": "De vez em quando"
+          }
+        },
+        {
+          "id": "rarely",
+          "emoji": "🏠",
+          "label": {
+            "zh-TW": "幾乎直接回家",
+            "en": "Usually straight home",
+            "ja": "ほぼ直帰",
+            "zh-CN": "几乎直接回家",
+            "hi": "अक्सर सीधे घर",
+            "id": "Biasanya langsung pulang",
+            "pt-BR": "Quase sempre direto para casa"
+          }
+        },
+        {
+          "id": "depends",
+          "emoji": "🤝",
+          "label": {
+            "zh-TW": "看同事和場合",
+            "en": "Depends on coworkers",
+            "ja": "同僚と状況次第",
+            "zh-CN": "看同事和场合",
+            "hi": "सहकर्मियों पर निर्भर",
+            "id": "Tergantung rekan kerja",
+            "pt-BR": "Depende dos colegas"
+          }
+        }
       ],
       "answer": null,
       "explain": null
@@ -101,10 +245,58 @@
         "pt-BR": "Adivinhe: em qual comunidade se come “macarrão da longevidade” no aniversário?"
       },
       "options": [
-        { "id": "zh-TW", "emoji": "🇹🇼", "label": { "zh-TW": "台灣", "en": "Taiwan", "ja": "台湾", "zh-CN": "台湾", "hi": "ताइवान", "id": "Taiwan", "pt-BR": "Taiwan" } },
-        { "id": "en", "emoji": "🇺🇸", "label": { "zh-TW": "美國", "en": "United States", "ja": "アメリカ", "zh-CN": "美国", "hi": "अमेरिका", "id": "Amerika Serikat", "pt-BR": "Estados Unidos" } },
-        { "id": "id", "emoji": "🇮🇩", "label": { "zh-TW": "印尼", "en": "Indonesia", "ja": "インドネシア", "zh-CN": "印尼", "hi": "इंडोनेशिया", "id": "Indonesia", "pt-BR": "Indonésia" } },
-        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } }
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
       ],
       "answer": "zh-TW",
       "explain": {
@@ -134,10 +326,58 @@
         "pt-BR": "Com que idade as crianças em Taiwan começam a ir à escola sozinhas?"
       },
       "options": [
-        { "id": "before7", "emoji": "🎒", "label": { "zh-TW": "7 歲前", "en": "Before 7", "ja": "7歳前", "zh-CN": "7 岁前", "hi": "7 साल से पहले", "id": "Sebelum 7 tahun", "pt-BR": "Antes dos 7" } },
-        { "id": "8to10", "emoji": "🚸", "label": { "zh-TW": "8–10 歲", "en": "Age 8–10", "ja": "8〜10歳", "zh-CN": "8–10 岁", "hi": "8–10 साल", "id": "8–10 tahun", "pt-BR": "8–10 anos" } },
-        { "id": "11to12", "emoji": "🚲", "label": { "zh-TW": "11–12 歲", "en": "Age 11–12", "ja": "11〜12歳", "zh-CN": "11–12 岁", "hi": "11–12 साल", "id": "11–12 tahun", "pt-BR": "11–12 anos" } },
-        { "id": "escorted", "emoji": "🚗", "label": { "zh-TW": "幾乎都家長接送", "en": "Mostly escorted by parents", "ja": "ほぼ親の送り迎え", "zh-CN": "几乎都家长接送", "hi": "ज़्यादातर माता-पिता छोड़ते हैं", "id": "Umumnya diantar orang tua", "pt-BR": "Quase sempre levadas pelos pais" } }
+        {
+          "id": "before7",
+          "emoji": "🎒",
+          "label": {
+            "zh-TW": "7 歲前",
+            "en": "Before 7",
+            "ja": "7歳前",
+            "zh-CN": "7 岁前",
+            "hi": "7 साल से पहले",
+            "id": "Sebelum 7 tahun",
+            "pt-BR": "Antes dos 7"
+          }
+        },
+        {
+          "id": "8to10",
+          "emoji": "🚸",
+          "label": {
+            "zh-TW": "8–10 歲",
+            "en": "Age 8–10",
+            "ja": "8〜10歳",
+            "zh-CN": "8–10 岁",
+            "hi": "8–10 साल",
+            "id": "8–10 tahun",
+            "pt-BR": "8–10 anos"
+          }
+        },
+        {
+          "id": "11to12",
+          "emoji": "🚲",
+          "label": {
+            "zh-TW": "11–12 歲",
+            "en": "Age 11–12",
+            "ja": "11〜12歳",
+            "zh-CN": "11–12 岁",
+            "hi": "11–12 साल",
+            "id": "11–12 tahun",
+            "pt-BR": "11–12 anos"
+          }
+        },
+        {
+          "id": "escorted",
+          "emoji": "🚗",
+          "label": {
+            "zh-TW": "幾乎都家長接送",
+            "en": "Mostly escorted by parents",
+            "ja": "ほぼ親の送り迎え",
+            "zh-CN": "几乎都家长接送",
+            "hi": "ज़्यादातर माता-पिता छोड़ते हैं",
+            "id": "Umumnya diantar orang tua",
+            "pt-BR": "Quase sempre levadas pelos pais"
+          }
+        }
       ],
       "answer": null,
       "explain": null
@@ -159,10 +399,58 @@
         "pt-BR": "Adivinhe: qual comunidade dança o “Bon Odori” pelos ancestrais todo agosto?"
       },
       "options": [
-        { "id": "ja", "emoji": "🇯🇵", "label": { "zh-TW": "日本", "en": "Japan", "ja": "日本", "zh-CN": "日本", "hi": "जापान", "id": "Jepang", "pt-BR": "Japão" } },
-        { "id": "zh-CN", "emoji": "🇨🇳", "label": { "zh-TW": "中國", "en": "China", "ja": "中国", "zh-CN": "中国", "hi": "चीन", "id": "Tiongkok", "pt-BR": "China" } },
-        { "id": "id", "emoji": "🇮🇩", "label": { "zh-TW": "印尼", "en": "Indonesia", "ja": "インドネシア", "zh-CN": "印尼", "hi": "इंडोनेशिया", "id": "Indonesia", "pt-BR": "Indonésia" } },
-        { "id": "hi", "emoji": "🇮🇳", "label": { "zh-TW": "印度", "en": "India", "ja": "インド", "zh-CN": "印度", "hi": "भारत", "id": "India", "pt-BR": "Índia" } }
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        }
       ],
       "answer": "ja",
       "explain": {
@@ -192,10 +480,58 @@
         "pt-BR": "Na sua região, aniversário sempre tem bolo?"
       },
       "options": [
-        { "id": "always", "emoji": "🎂", "label": { "zh-TW": "一定有蛋糕", "en": "Always cake", "ja": "必ずケーキ", "zh-CN": "一定有蛋糕", "hi": "हमेशा केक", "id": "Selalu ada kue", "pt-BR": "Sempre tem bolo" } },
-        { "id": "meal", "emoji": "🍽️", "label": { "zh-TW": "聚餐但不一定蛋糕", "en": "A meal, not always cake", "ja": "食事会がメイン", "zh-CN": "聚餐但不一定蛋糕", "hi": "खाना होता है, केक ज़रूरी नहीं", "id": "Makan bersama, kue tak wajib", "pt-BR": "Refeição, nem sempre bolo" } },
-        { "id": "traditional", "emoji": "🍜", "label": { "zh-TW": "有自己的傳統食物", "en": "Our own traditional food", "ja": "伝統の食べ物がある", "zh-CN": "有自己的传统食物", "hi": "हमारा अपना पारंपरिक खाना", "id": "Ada makanan tradisional sendiri", "pt-BR": "Temos comida tradicional própria" } },
-        { "id": "none", "emoji": "🤷", "label": { "zh-TW": "通常不特別慶祝", "en": "Usually no celebration", "ja": "特に祝わない", "zh-CN": "通常不特别庆祝", "hi": "आमतौर पर नहीं मनाते", "id": "Biasanya tidak dirayakan", "pt-BR": "Geralmente não comemoramos" } }
+        {
+          "id": "always",
+          "emoji": "🎂",
+          "label": {
+            "zh-TW": "一定有蛋糕",
+            "en": "Always cake",
+            "ja": "必ずケーキ",
+            "zh-CN": "一定有蛋糕",
+            "hi": "हमेशा केक",
+            "id": "Selalu ada kue",
+            "pt-BR": "Sempre tem bolo"
+          }
+        },
+        {
+          "id": "meal",
+          "emoji": "🍽️",
+          "label": {
+            "zh-TW": "聚餐但不一定蛋糕",
+            "en": "A meal, not always cake",
+            "ja": "食事会がメイン",
+            "zh-CN": "聚餐但不一定蛋糕",
+            "hi": "खाना होता है, केक ज़रूरी नहीं",
+            "id": "Makan bersama, kue tak wajib",
+            "pt-BR": "Refeição, nem sempre bolo"
+          }
+        },
+        {
+          "id": "traditional",
+          "emoji": "🍜",
+          "label": {
+            "zh-TW": "有自己的傳統食物",
+            "en": "Our own traditional food",
+            "ja": "伝統の食べ物がある",
+            "zh-CN": "有自己的传统食物",
+            "hi": "हमारा अपना पारंपरिक खाना",
+            "id": "Ada makanan tradisional sendiri",
+            "pt-BR": "Temos comida tradicional própria"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "通常不特別慶祝",
+            "en": "Usually no celebration",
+            "ja": "特に祝わない",
+            "zh-CN": "通常不特别庆祝",
+            "hi": "आमतौर पर नहीं मनाते",
+            "id": "Biasanya tidak dirayakan",
+            "pt-BR": "Geralmente não comemoramos"
+          }
+        }
       ],
       "answer": null,
       "explain": null
@@ -217,10 +553,58 @@
         "pt-BR": "Adivinhe: qual comunidade comemora a independência escalando troncos engordurados por prêmios?"
       },
       "options": [
-        { "id": "id", "emoji": "🇮🇩", "label": { "zh-TW": "印尼", "en": "Indonesia", "ja": "インドネシア", "zh-CN": "印尼", "hi": "इंडोनेशिया", "id": "Indonesia", "pt-BR": "Indonésia" } },
-        { "id": "hi", "emoji": "🇮🇳", "label": { "zh-TW": "印度", "en": "India", "ja": "インド", "zh-CN": "印度", "hi": "भारत", "id": "India", "pt-BR": "Índia" } },
-        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } },
-        { "id": "en", "emoji": "🇺🇸", "label": { "zh-TW": "美國", "en": "United States", "ja": "アメリカ", "zh-CN": "美国", "hi": "अमेरिका", "id": "Amerika Serikat", "pt-BR": "Estados Unidos" } }
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        }
       ],
       "answer": "id",
       "explain": {
@@ -250,10 +634,58 @@
         "pt-BR": "As pessoas no Japão realmente tomam banho de banheira toda noite?"
       },
       "options": [
-        { "id": "nightly", "emoji": "🛁", "label": { "zh-TW": "幾乎每晚都泡", "en": "Almost every night", "ja": "ほぼ毎晩", "zh-CN": "几乎每晚都泡", "hi": "लगभग हर रात", "id": "Hampir tiap malam", "pt-BR": "Quase toda noite" } },
-        { "id": "fewtimes", "emoji": "🗓️", "label": { "zh-TW": "一週泡幾次", "en": "A few times a week", "ja": "週に数回", "zh-CN": "一周泡几次", "hi": "हफ़्ते में कुछ बार", "id": "Beberapa kali seminggu", "pt-BR": "Algumas vezes por semana" } },
-        { "id": "shower", "emoji": "🚿", "label": { "zh-TW": "主要淋浴", "en": "Mostly shower", "ja": "ほぼシャワー", "zh-CN": "主要淋浴", "hi": "ज़्यादातर शावर", "id": "Umumnya mandi shower", "pt-BR": "Mais chuveiro" } },
-        { "id": "seasonal", "emoji": "❄️", "label": { "zh-TW": "夏天淋浴冬天泡", "en": "Shower in summer, bath in winter", "ja": "夏はシャワー冬は湯船", "zh-CN": "夏天淋浴冬天泡", "hi": "गर्मी में शावर, सर्दी में टब", "id": "Shower saat panas, berendam saat dingin", "pt-BR": "Chuveiro no verão, banheira no inverno" } }
+        {
+          "id": "nightly",
+          "emoji": "🛁",
+          "label": {
+            "zh-TW": "幾乎每晚都泡",
+            "en": "Almost every night",
+            "ja": "ほぼ毎晩",
+            "zh-CN": "几乎每晚都泡",
+            "hi": "लगभग हर रात",
+            "id": "Hampir tiap malam",
+            "pt-BR": "Quase toda noite"
+          }
+        },
+        {
+          "id": "fewtimes",
+          "emoji": "🗓️",
+          "label": {
+            "zh-TW": "一週泡幾次",
+            "en": "A few times a week",
+            "ja": "週に数回",
+            "zh-CN": "一周泡几次",
+            "hi": "हफ़्ते में कुछ बार",
+            "id": "Beberapa kali seminggu",
+            "pt-BR": "Algumas vezes por semana"
+          }
+        },
+        {
+          "id": "shower",
+          "emoji": "🚿",
+          "label": {
+            "zh-TW": "主要淋浴",
+            "en": "Mostly shower",
+            "ja": "ほぼシャワー",
+            "zh-CN": "主要淋浴",
+            "hi": "ज़्यादातर शावर",
+            "id": "Umumnya mandi shower",
+            "pt-BR": "Mais chuveiro"
+          }
+        },
+        {
+          "id": "seasonal",
+          "emoji": "❄️",
+          "label": {
+            "zh-TW": "夏天淋浴冬天泡",
+            "en": "Shower in summer, bath in winter",
+            "ja": "夏はシャワー冬は湯船",
+            "zh-CN": "夏天淋浴冬天泡",
+            "hi": "गर्मी में शावर, सर्दी में टब",
+            "id": "Shower saat panas, berendam saat dingin",
+            "pt-BR": "Chuveiro no verão, banheira no inverno"
+          }
+        }
       ],
       "answer": null,
       "explain": null
@@ -275,10 +707,58 @@
         "pt-BR": "Adivinhe: em qual comunidade frango frito é A ceia de Natal, encomendado com semanas de antecedência?"
       },
       "options": [
-        { "id": "en", "emoji": "🇺🇸", "label": { "zh-TW": "美國", "en": "United States", "ja": "アメリカ", "zh-CN": "美国", "hi": "अमेरिका", "id": "Amerika Serikat", "pt-BR": "Estados Unidos" } },
-        { "id": "ja", "emoji": "🇯🇵", "label": { "zh-TW": "日本", "en": "Japan", "ja": "日本", "zh-CN": "日本", "hi": "जापान", "id": "Jepang", "pt-BR": "Japão" } },
-        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } },
-        { "id": "zh-TW", "emoji": "🇹🇼", "label": { "zh-TW": "台灣", "en": "Taiwan", "ja": "台湾", "zh-CN": "台湾", "hi": "ताइवान", "id": "Taiwan", "pt-BR": "Taiwan" } }
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        }
       ],
       "answer": "ja",
       "explain": {
@@ -308,10 +788,58 @@
         "pt-BR": "Na sua região, mudar de casa é comemorado com ritual ou festa de inauguração?"
       },
       "options": [
-        { "id": "ritual", "emoji": "🙏", "label": { "zh-TW": "一定有儀式(拜拜/禱告)", "en": "Always a ritual or prayer", "ja": "必ず儀式やお祈り", "zh-CN": "一定有仪式(祭拜/祷告)", "hi": "हमेशा पूजा या प्रार्थना", "id": "Selalu ada doa/syukuran", "pt-BR": "Sempre com ritual ou oração" } },
-        { "id": "party", "emoji": "🎉", "label": { "zh-TW": "請親友來吃飯", "en": "A party with friends and family", "ja": "親しい人を招いて食事会", "zh-CN": "请亲友来吃饭", "hi": "दोस्तों-रिश्तेदारों की दावत", "id": "Mengundang kerabat makan", "pt-BR": "Festa com amigos e família" } },
-        { "id": "simple", "emoji": "🍰", "label": { "zh-TW": "簡單意思一下", "en": "Something small and simple", "ja": "ささやかに", "zh-CN": "简单意思一下", "hi": "कुछ छोटा-सा", "id": "Sekadarnya saja", "pt-BR": "Algo simples" } },
-        { "id": "nothing", "emoji": "📦", "label": { "zh-TW": "搬完就開始生活", "en": "Just move in and live", "ja": "特に何もしない", "zh-CN": "搬完就开始生活", "hi": "बस सामान रखकर रहना शुरू", "id": "Langsung tinggal saja", "pt-BR": "Só mudar e pronto" } }
+        {
+          "id": "ritual",
+          "emoji": "🙏",
+          "label": {
+            "zh-TW": "一定有儀式(拜拜/禱告)",
+            "en": "Always a ritual or prayer",
+            "ja": "必ず儀式やお祈り",
+            "zh-CN": "一定有仪式(祭拜/祷告)",
+            "hi": "हमेशा पूजा या प्रार्थना",
+            "id": "Selalu ada doa/syukuran",
+            "pt-BR": "Sempre com ritual ou oração"
+          }
+        },
+        {
+          "id": "party",
+          "emoji": "🎉",
+          "label": {
+            "zh-TW": "請親友來吃飯",
+            "en": "A party with friends and family",
+            "ja": "親しい人を招いて食事会",
+            "zh-CN": "请亲友来吃饭",
+            "hi": "दोस्तों-रिश्तेदारों की दावत",
+            "id": "Mengundang kerabat makan",
+            "pt-BR": "Festa com amigos e família"
+          }
+        },
+        {
+          "id": "simple",
+          "emoji": "🍰",
+          "label": {
+            "zh-TW": "簡單意思一下",
+            "en": "Something small and simple",
+            "ja": "ささやかに",
+            "zh-CN": "简单意思一下",
+            "hi": "कुछ छोटा-सा",
+            "id": "Sekadarnya saja",
+            "pt-BR": "Algo simples"
+          }
+        },
+        {
+          "id": "nothing",
+          "emoji": "📦",
+          "label": {
+            "zh-TW": "搬完就開始生活",
+            "en": "Just move in and live",
+            "ja": "特に何もしない",
+            "zh-CN": "搬完就开始生活",
+            "hi": "बस सामान रखकर रहना शुरू",
+            "id": "Langsung tinggal saja",
+            "pt-BR": "Só mudar e pronto"
+          }
+        }
       ],
       "answer": null,
       "explain": null
@@ -333,10 +861,58 @@
         "pt-BR": "Adivinhe: em qual comunidade os casamentos costumam durar três dias ou mais, uma cerimônia após a outra?"
       },
       "options": [
-        { "id": "hi", "emoji": "🇮🇳", "label": { "zh-TW": "印度", "en": "India", "ja": "インド", "zh-CN": "印度", "hi": "भारत", "id": "India", "pt-BR": "Índia" } },
-        { "id": "ja", "emoji": "🇯🇵", "label": { "zh-TW": "日本", "en": "Japan", "ja": "日本", "zh-CN": "日本", "hi": "जापान", "id": "Jepang", "pt-BR": "Japão" } },
-        { "id": "en", "emoji": "🇺🇸", "label": { "zh-TW": "美國", "en": "United States", "ja": "アメリカ", "zh-CN": "美国", "hi": "अमेरिका", "id": "Amerika Serikat", "pt-BR": "Estados Unidos" } },
-        { "id": "zh-TW", "emoji": "🇹🇼", "label": { "zh-TW": "台灣", "en": "Taiwan", "ja": "台湾", "zh-CN": "台湾", "hi": "ताइवान", "id": "Taiwan", "pt-BR": "Taiwan" } }
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        }
       ],
       "answer": "hi",
       "explain": {
@@ -366,10 +942,58 @@
         "pt-BR": "No aniversário de um mais velho, vocês dão dinheiro (tipo envelope) de presente?"
       },
       "options": [
-        { "id": "always", "emoji": "🧧", "label": { "zh-TW": "一定會", "en": "Always", "ja": "必ず贈る", "zh-CN": "一定会", "hi": "हमेशा", "id": "Selalu", "pt-BR": "Sempre" } },
-        { "id": "occasion", "emoji": "🎊", "label": { "zh-TW": "大壽才會", "en": "Only for milestone birthdays", "ja": "節目の年だけ", "zh-CN": "大寿才会", "hi": "सिर्फ़ ख़ास जन्मदिन पर", "id": "Hanya ulang tahun besar", "pt-BR": "Só em aniversários marcantes" } },
-        { "id": "gift", "emoji": "🎁", "label": { "zh-TW": "送禮物不送現金", "en": "Gifts, not cash", "ja": "現金ではなく品物", "zh-CN": "送礼物不送现金", "hi": "तोहफ़ा देते हैं, नकद नहीं", "id": "Kado, bukan uang", "pt-BR": "Presente, não dinheiro" } },
-        { "id": "none", "emoji": "💐", "label": { "zh-TW": "心意到就好", "en": "Just good wishes", "ja": "気持ちだけ", "zh-CN": "心意到就好", "hi": "शुभकामनाएँ ही काफ़ी", "id": "Cukup doa dan ucapan", "pt-BR": "Só os parabéns" } }
+        {
+          "id": "always",
+          "emoji": "🧧",
+          "label": {
+            "zh-TW": "一定會",
+            "en": "Always",
+            "ja": "必ず贈る",
+            "zh-CN": "一定会",
+            "hi": "हमेशा",
+            "id": "Selalu",
+            "pt-BR": "Sempre"
+          }
+        },
+        {
+          "id": "occasion",
+          "emoji": "🎊",
+          "label": {
+            "zh-TW": "大壽才會",
+            "en": "Only for milestone birthdays",
+            "ja": "節目の年だけ",
+            "zh-CN": "大寿才会",
+            "hi": "सिर्फ़ ख़ास जन्मदिन पर",
+            "id": "Hanya ulang tahun besar",
+            "pt-BR": "Só em aniversários marcantes"
+          }
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": {
+            "zh-TW": "送禮物不送現金",
+            "en": "Gifts, not cash",
+            "ja": "現金ではなく品物",
+            "zh-CN": "送礼物不送现金",
+            "hi": "तोहफ़ा देते हैं, नकद नहीं",
+            "id": "Kado, bukan uang",
+            "pt-BR": "Presente, não dinheiro"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "💐",
+          "label": {
+            "zh-TW": "心意到就好",
+            "en": "Just good wishes",
+            "ja": "気持ちだけ",
+            "zh-CN": "心意到就好",
+            "hi": "शुभकामनाएँ ही काफ़ी",
+            "id": "Cukup doa dan ucapan",
+            "pt-BR": "Só os parabéns"
+          }
+        }
       ],
       "answer": null,
       "explain": null
@@ -391,10 +1015,58 @@
         "pt-BR": "Adivinhe: a grande festa de “Sweet Sixteen” aos 16 anos é tradição de qual comunidade?"
       },
       "options": [
-        { "id": "en", "emoji": "🇺🇸", "label": { "zh-TW": "美國", "en": "United States", "ja": "アメリカ", "zh-CN": "美国", "hi": "अमेरिका", "id": "Amerika Serikat", "pt-BR": "Estados Unidos" } },
-        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } },
-        { "id": "ja", "emoji": "🇯🇵", "label": { "zh-TW": "日本", "en": "Japan", "ja": "日本", "zh-CN": "日本", "hi": "जापान", "id": "Jepang", "pt-BR": "Japão" } },
-        { "id": "id", "emoji": "🇮🇩", "label": { "zh-TW": "印尼", "en": "Indonesia", "ja": "インドネシア", "zh-CN": "印尼", "hi": "इंडोनेशिया", "id": "Indonesia", "pt-BR": "Indonésia" } }
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
       ],
       "answer": "en",
       "explain": {
@@ -424,10 +1096,58 @@
         "pt-BR": "Vocês celebram a lua cheia do outono? Como costumam passar?"
       },
       "options": [
-        { "id": "family", "emoji": "🥮", "label": { "zh-TW": "全家團聚吃節慶食物", "en": "Family gathering with festive food", "ja": "家族で集まりご馳走", "zh-CN": "全家团聚吃节庆食物", "hi": "परिवार के साथ पकवान", "id": "Kumpul keluarga dengan hidangan khas", "pt-BR": "Reunião de família com comida típica" } },
-        { "id": "moononly", "emoji": "🌕", "label": { "zh-TW": "會賞月但不特別聚", "en": "Watch the moon, nothing big", "ja": "月は眺めるが特別なことはしない", "zh-CN": "会赏月但不特别聚", "hi": "चाँद देखते हैं, बस", "id": "Lihat bulan saja", "pt-BR": "Só observar a lua" } },
-        { "id": "ordinary", "emoji": "📅", "label": { "zh-TW": "只是普通的一天", "en": "Just an ordinary day", "ja": "普通の日", "zh-CN": "只是普通的一天", "hi": "आम दिन जैसा", "id": "Hari biasa saja", "pt-BR": "Um dia comum" } },
-        { "id": "nofestival", "emoji": "🤔", "label": { "zh-TW": "我們沒有這個節日", "en": "We don't have this festival", "ja": "その行事はない", "zh-CN": "我们没有这个节日", "hi": "हमारे यहाँ यह त्योहार नहीं", "id": "Kami tidak punya festival ini", "pt-BR": "Não temos esse festival" } }
+        {
+          "id": "family",
+          "emoji": "🥮",
+          "label": {
+            "zh-TW": "全家團聚吃節慶食物",
+            "en": "Family gathering with festive food",
+            "ja": "家族で集まりご馳走",
+            "zh-CN": "全家团聚吃节庆食物",
+            "hi": "परिवार के साथ पकवान",
+            "id": "Kumpul keluarga dengan hidangan khas",
+            "pt-BR": "Reunião de família com comida típica"
+          }
+        },
+        {
+          "id": "moononly",
+          "emoji": "🌕",
+          "label": {
+            "zh-TW": "會賞月但不特別聚",
+            "en": "Watch the moon, nothing big",
+            "ja": "月は眺めるが特別なことはしない",
+            "zh-CN": "会赏月但不特别聚",
+            "hi": "चाँद देखते हैं, बस",
+            "id": "Lihat bulan saja",
+            "pt-BR": "Só observar a lua"
+          }
+        },
+        {
+          "id": "ordinary",
+          "emoji": "📅",
+          "label": {
+            "zh-TW": "只是普通的一天",
+            "en": "Just an ordinary day",
+            "ja": "普通の日",
+            "zh-CN": "只是普通的一天",
+            "hi": "आम दिन जैसा",
+            "id": "Hari biasa saja",
+            "pt-BR": "Um dia comum"
+          }
+        },
+        {
+          "id": "nofestival",
+          "emoji": "🤔",
+          "label": {
+            "zh-TW": "我們沒有這個節日",
+            "en": "We don't have this festival",
+            "ja": "その行事はない",
+            "zh-CN": "我们没有这个节日",
+            "hi": "हमारे यहाँ यह त्योहार नहीं",
+            "id": "Kami tidak punya festival ini",
+            "pt-BR": "Não temos esse festival"
+          }
+        }
       ],
       "answer": null,
       "explain": null
@@ -449,10 +1169,58 @@
         "pt-BR": "Adivinhe: qual comunidade transformou o Festival do Meio do Outono em noite nacional de churrasco?"
       },
       "options": [
-        { "id": "zh-TW", "emoji": "🇹🇼", "label": { "zh-TW": "台灣", "en": "Taiwan", "ja": "台湾", "zh-CN": "台湾", "hi": "ताइवान", "id": "Taiwan", "pt-BR": "Taiwan" } },
-        { "id": "zh-CN", "emoji": "🇨🇳", "label": { "zh-TW": "中國", "en": "China", "ja": "中国", "zh-CN": "中国", "hi": "चीन", "id": "Tiongkok", "pt-BR": "China" } },
-        { "id": "ja", "emoji": "🇯🇵", "label": { "zh-TW": "日本", "en": "Japan", "ja": "日本", "zh-CN": "日本", "hi": "जापान", "id": "Jepang", "pt-BR": "Japão" } },
-        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } }
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
       ],
       "answer": "zh-TW",
       "explain": {
@@ -482,10 +1250,58 @@
         "pt-BR": "Na sua região, até quando os filhos costumam morar com os pais?"
       },
       "options": [
-        { "id": "marriage", "emoji": "💍", "label": { "zh-TW": "結婚前都同住", "en": "Until marriage", "ja": "結婚まで", "zh-CN": "结婚前都同住", "hi": "शादी तक", "id": "Sampai menikah", "pt-BR": "Até casar" } },
-        { "id": "job", "emoji": "💼", "label": { "zh-TW": "開始工作就搬出", "en": "Move out when working", "ja": "就職したら独立", "zh-CN": "开始工作就搬出", "hi": "नौकरी लगते ही अलग", "id": "Pindah saat mulai kerja", "pt-BR": "Saem quando começam a trabalhar" } },
-        { "id": "college", "emoji": "🎓", "label": { "zh-TW": "上大學就搬出", "en": "Move out for college", "ja": "大学から一人暮らし", "zh-CN": "上大学就搬出", "hi": "कॉलेज जाते ही अलग", "id": "Pindah saat kuliah", "pt-BR": "Saem na faculdade" } },
-        { "id": "together", "emoji": "👨‍👩‍👧‍👦", "label": { "zh-TW": "多代同堂很常見", "en": "Multi-generation homes are common", "ja": "多世代同居が普通", "zh-CN": "多代同堂很常见", "hi": "संयुक्त परिवार आम है", "id": "Serumah lintas generasi itu biasa", "pt-BR": "Casas multigeração são comuns" } }
+        {
+          "id": "marriage",
+          "emoji": "💍",
+          "label": {
+            "zh-TW": "結婚前都同住",
+            "en": "Until marriage",
+            "ja": "結婚まで",
+            "zh-CN": "结婚前都同住",
+            "hi": "शादी तक",
+            "id": "Sampai menikah",
+            "pt-BR": "Até casar"
+          }
+        },
+        {
+          "id": "job",
+          "emoji": "💼",
+          "label": {
+            "zh-TW": "開始工作就搬出",
+            "en": "Move out when working",
+            "ja": "就職したら独立",
+            "zh-CN": "开始工作就搬出",
+            "hi": "नौकरी लगते ही अलग",
+            "id": "Pindah saat mulai kerja",
+            "pt-BR": "Saem quando começam a trabalhar"
+          }
+        },
+        {
+          "id": "college",
+          "emoji": "🎓",
+          "label": {
+            "zh-TW": "上大學就搬出",
+            "en": "Move out for college",
+            "ja": "大学から一人暮らし",
+            "zh-CN": "上大学就搬出",
+            "hi": "कॉलेज जाते ही अलग",
+            "id": "Pindah saat kuliah",
+            "pt-BR": "Saem na faculdade"
+          }
+        },
+        {
+          "id": "together",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": {
+            "zh-TW": "多代同堂很常見",
+            "en": "Multi-generation homes are common",
+            "ja": "多世代同居が普通",
+            "zh-CN": "多代同堂很常见",
+            "hi": "संयुक्त परिवार आम है",
+            "id": "Serumah lintas generasi itu biasa",
+            "pt-BR": "Casas multigeração são comuns"
+          }
+        }
       ],
       "answer": null,
       "explain": null
@@ -507,10 +1323,58 @@
         "pt-BR": "Adivinhe: qual comunidade vê dezenas de milhões viajando para casa de uma vez no êxodo anual do “mudik”?"
       },
       "options": [
-        { "id": "id", "emoji": "🇮🇩", "label": { "zh-TW": "印尼", "en": "Indonesia", "ja": "インドネシア", "zh-CN": "印尼", "hi": "इंडोनेशिया", "id": "Indonesia", "pt-BR": "Indonésia" } },
-        { "id": "en", "emoji": "🇺🇸", "label": { "zh-TW": "美國", "en": "United States", "ja": "アメリカ", "zh-CN": "美国", "hi": "अमेरिका", "id": "Amerika Serikat", "pt-BR": "Estados Unidos" } },
-        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } },
-        { "id": "ja", "emoji": "🇯🇵", "label": { "zh-TW": "日本", "en": "Japan", "ja": "日本", "zh-CN": "日本", "hi": "जापान", "id": "Jepang", "pt-BR": "Japão" } }
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        }
       ],
       "answer": "id",
       "explain": {
@@ -540,10 +1404,58 @@
         "pt-BR": "Nas formaturas de vocês, jogam o capelo para o alto?"
       },
       "options": [
-        { "id": "throw", "emoji": "🎓", "label": { "zh-TW": "一定要丟帽子", "en": "Cap toss is a must", "ja": "帽子投げは定番", "zh-CN": "一定要丢帽子", "hi": "टोपी उछालना ज़रूरी", "id": "Wajib lempar topi", "pt-BR": "Jogar o capelo é obrigatório" } },
-        { "id": "ceremony", "emoji": "📜", "label": { "zh-TW": "有典禮但不丟帽", "en": "Ceremony, no cap toss", "ja": "式はあるが投げない", "zh-CN": "有典礼但不丢帽", "hi": "समारोह होता है, टोपी नहीं उछालते", "id": "Ada upacara, tanpa lempar topi", "pt-BR": "Cerimônia sim, capelo não" } },
-        { "id": "dinner", "emoji": "🍽️", "label": { "zh-TW": "重點是謝師宴/聚餐", "en": "The dinner matters most", "ja": "食事会がメイン", "zh-CN": "重点是谢师宴/聚餐", "hi": "असली बात है दावत", "id": "Yang penting makan-makan", "pt-BR": "O jantar é o principal" } },
-        { "id": "simple", "emoji": "🤳", "label": { "zh-TW": "拍照留念就好", "en": "Just photos", "ja": "写真だけ", "zh-CN": "拍照留念就好", "hi": "बस फ़ोटो", "id": "Cukup foto-foto", "pt-BR": "Só as fotos" } }
+        {
+          "id": "throw",
+          "emoji": "🎓",
+          "label": {
+            "zh-TW": "一定要丟帽子",
+            "en": "Cap toss is a must",
+            "ja": "帽子投げは定番",
+            "zh-CN": "一定要丢帽子",
+            "hi": "टोपी उछालना ज़रूरी",
+            "id": "Wajib lempar topi",
+            "pt-BR": "Jogar o capelo é obrigatório"
+          }
+        },
+        {
+          "id": "ceremony",
+          "emoji": "📜",
+          "label": {
+            "zh-TW": "有典禮但不丟帽",
+            "en": "Ceremony, no cap toss",
+            "ja": "式はあるが投げない",
+            "zh-CN": "有典礼但不丢帽",
+            "hi": "समारोह होता है, टोपी नहीं उछालते",
+            "id": "Ada upacara, tanpa lempar topi",
+            "pt-BR": "Cerimônia sim, capelo não"
+          }
+        },
+        {
+          "id": "dinner",
+          "emoji": "🍽️",
+          "label": {
+            "zh-TW": "重點是謝師宴/聚餐",
+            "en": "The dinner matters most",
+            "ja": "食事会がメイン",
+            "zh-CN": "重点是谢师宴/聚餐",
+            "hi": "असली बात है दावत",
+            "id": "Yang penting makan-makan",
+            "pt-BR": "O jantar é o principal"
+          }
+        },
+        {
+          "id": "simple",
+          "emoji": "🤳",
+          "label": {
+            "zh-TW": "拍照留念就好",
+            "en": "Just photos",
+            "ja": "写真だけ",
+            "zh-CN": "拍照留念就好",
+            "hi": "बस फ़ोटो",
+            "id": "Cukup foto-foto",
+            "pt-BR": "Só as fotos"
+          }
+        }
       ],
       "answer": null,
       "explain": null
@@ -565,10 +1477,58 @@
         "pt-BR": "Adivinhe: em qual comunidade o noivo chega a cavalo branco com uma banda?"
       },
       "options": [
-        { "id": "hi", "emoji": "🇮🇳", "label": { "zh-TW": "印度", "en": "India", "ja": "インド", "zh-CN": "印度", "hi": "भारत", "id": "India", "pt-BR": "Índia" } },
-        { "id": "zh-TW", "emoji": "🇹🇼", "label": { "zh-TW": "台灣", "en": "Taiwan", "ja": "台湾", "zh-CN": "台湾", "hi": "ताइवान", "id": "Taiwan", "pt-BR": "Taiwan" } },
-        { "id": "id", "emoji": "🇮🇩", "label": { "zh-TW": "印尼", "en": "Indonesia", "ja": "インドネシア", "zh-CN": "印尼", "hi": "इंडोनेशिया", "id": "Indonesia", "pt-BR": "Indonésia" } },
-        { "id": "pt-BR", "emoji": "🇧🇷", "label": { "zh-TW": "巴西", "en": "Brazil", "ja": "ブラジル", "zh-CN": "巴西", "hi": "ब्राज़ील", "id": "Brasil", "pt-BR": "Brasil" } }
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
       ],
       "answer": "hi",
       "explain": {
@@ -579,6 +1539,1687 @@
         "hi": "उत्तर भारतीय शादियों की बारात — दूल्हा सफ़ेद घोड़ी पर, नाचते रिश्तेदारों और बैंड के साथ पहुँचता है।",
         "id": "Baraat dalam pernikahan India Utara — pengantin pria menunggang kuda putih diiringi kerabat yang menari dan band.",
         "pt-BR": "O baraat dos casamentos do norte da Índia — o noivo chega num cavalo branco entre parentes dançando e uma banda."
+      }
+    },
+    {
+      "id": "q-20260825-school-lunch",
+      "date": "2026-08-25",
+      "kind": "poll",
+      "topic": "back-to-school",
+      "asker": "ja",
+      "target": "en",
+      "text": {
+        "zh-TW": "美國的學校午餐是自己帶便當,還是學校統一供餐?",
+        "en": "In the United States, do children bring a packed lunch or eat what the school serves?",
+        "ja": "アメリカの学校の昼食は、弁当を持参するの?それとも学校が出すの?",
+        "zh-CN": "美国的学校午餐是自己带便当，还是学校统一供餐?",
+        "hi": "अमेरिका में बच्चे टिफ़िन ले जाते हैं या स्कूल का खाना खाते हैं?",
+        "id": "Di Amerika, anak-anak membawa bekal sendiri atau makan dari kantin sekolah?",
+        "pt-BR": "Nos Estados Unidos, as crianças levam marmita ou comem o que a escola serve?"
+      },
+      "options": [
+        {
+          "id": "packed",
+          "emoji": "🍱",
+          "label": {
+            "zh-TW": "自己帶",
+            "en": "Packed from home",
+            "ja": "持参する",
+            "zh-CN": "自己带",
+            "hi": "घर से टिफ़िन",
+            "id": "Bawa bekal",
+            "pt-BR": "Levo de casa"
+          }
+        },
+        {
+          "id": "school",
+          "emoji": "🍽️",
+          "label": {
+            "zh-TW": "學校供餐",
+            "en": "School lunch",
+            "ja": "学校が出す",
+            "zh-CN": "学校供餐",
+            "hi": "स्कूल का खाना",
+            "id": "Dari sekolah",
+            "pt-BR": "Da escola"
+          }
+        },
+        {
+          "id": "both",
+          "emoji": "🔀",
+          "label": {
+            "zh-TW": "兩種都有",
+            "en": "Both happen",
+            "ja": "どちらもある",
+            "zh-CN": "两种都有",
+            "hi": "दोनों",
+            "id": "Dua-duanya",
+            "pt-BR": "As duas coisas"
+          }
+        },
+        {
+          "id": "buy",
+          "emoji": "🛒",
+          "label": {
+            "zh-TW": "在外面買",
+            "en": "Bought nearby",
+            "ja": "外で買う",
+            "zh-CN": "在外面买",
+            "hi": "बाहर से ख़रीदते हैं",
+            "id": "Beli di luar",
+            "pt-BR": "Compro por perto"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260825-egg-standing",
+      "date": "2026-08-25",
+      "kind": "guess",
+      "topic": "dragon-boat-festival",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群在端午節正午會把雞蛋立起來,說立得起來就會好運?",
+        "en": "Guess: which community stands an egg on its end at noon on the fifth of the fifth month, saying it brings luck?",
+        "ja": "クイズ:五月五日の正午に卵を立て、立てば縁起がよいとするのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群在端午节正午会把鸡蛋立起来，说立得起来就会好运?",
+        "hi": "अंदाज़ा लगाइए: कौन-सा समुदाय पाँचवें महीने की पाँचवीं तिथि को दोपहर में अंडा खड़ा करता है और कहता है कि इससे भाग्य आता है?",
+        "id": "Tebak: komunitas mana yang mendirikan telur pada tengah hari tanggal lima bulan lima dan menyebutnya pembawa untung?",
+        "pt-BR": "Adivinhe: qual comunidade equilibra um ovo em pé ao meio-dia do quinto dia do quinto mês, dizendo que dá sorte?"
+      },
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": {
+        "zh-TW": "台灣。端午當天中午「立蛋」與取「午時水」都不需要河,所以連沒有龍舟賽的城市也照做。端午在台灣還是一年三節之一,是傳統上結清帳款、致送禮盒的節點。",
+        "en": "Taiwan. Standing an egg at noon on Duanwu, and drawing \"noon water\", need no river at all, so both continue in cities with no boat race. Duanwu is also one of Taiwan's three annual festivals — a point at which accounts are settled and gift boxes sent.",
+        "ja": "台湾。端午の正午に卵を立てること、午の刻の水を汲むことはいずれも川を必要としないため、競漕のない都市でも変わらず行われる。台湾では端午は一年三節の一つでもあり、掛けを清算し贈答を送る節目でもある。",
+        "zh-CN": "台湾。端午当天中午“立蛋”与取“午时水”都不需要河，所以连没有龙舟赛的城市也照做。端午在台湾还是一年三节之一，是传统上结清帐款、致送礼盒的节点。",
+        "hi": "ताइवान। तुआनवू के दिन दोपहर में अंडा खड़ा करने और \"दोपहर का जल\" भरने के लिए नदी की ज़रूरत नहीं, इसलिए वे उन शहरों में भी चलते हैं जहाँ नौका-दौड़ नहीं होती। ताइवान में तुआनवू वर्ष के तीन पर्वों में से एक भी है — हिसाब चुकाने और उपहार भेजने का बिंदु।",
+        "id": "Taiwan. Mendirikan telur pada tengah hari Duanwu dan menimba \"air tengah hari\" sama sekali tak memerlukan sungai, sehingga keduanya tetap berjalan di kota tanpa lomba perahu. Duanwu juga salah satu dari tiga perayaan tahunan Taiwan — titik pelunasan utang dagang dan pengiriman parsel.",
+        "pt-BR": "Taiwan. Equilibrar um ovo ao meio-dia do Duanwu e tirar a \"água do meio-dia\" não exigem rio algum, então ambos seguem em cidades sem corrida de barcos. O Duanwu é também uma das três festas anuais de Taiwan — ponto em que se acertam contas e se enviam presentes."
+      }
+    },
+    {
+      "id": "q-20260826-shoes-indoors",
+      "date": "2026-08-26",
+      "kind": "poll",
+      "topic": "moving-home",
+      "asker": "zh-TW",
+      "target": "pt-BR",
+      "text": {
+        "zh-TW": "你們進家門會脫鞋嗎?",
+        "en": "Do you take your shoes off when you come into the house?",
+        "ja": "家に入るとき、靴は脱ぎますか?",
+        "zh-CN": "你们进家门会脱鞋吗?",
+        "hi": "क्या आप घर में घुसते समय जूते उतारते हैं?",
+        "id": "Apakah kalian melepas sepatu saat masuk rumah?",
+        "pt-BR": "Vocês tiram os sapatos ao entrar em casa?"
+      },
+      "options": [
+        {
+          "id": "always",
+          "emoji": "✅",
+          "label": {
+            "zh-TW": "一定會",
+            "en": "Always",
+            "ja": "必ずする",
+            "zh-CN": "一定会",
+            "hi": "हमेशा",
+            "id": "Selalu",
+            "pt-BR": "Sempre"
+          }
+        },
+        {
+          "id": "depends",
+          "emoji": "🤔",
+          "label": {
+            "zh-TW": "看情況",
+            "en": "It depends",
+            "ja": "場合による",
+            "zh-CN": "看情况",
+            "hi": "निर्भर करता है",
+            "id": "Tergantung",
+            "pt-BR": "Depende"
+          }
+        },
+        {
+          "id": "no",
+          "emoji": "🙅",
+          "label": {
+            "zh-TW": "不會",
+            "en": "No",
+            "ja": "しない",
+            "zh-CN": "不会",
+            "hi": "नहीं",
+            "id": "Tidak",
+            "pt-BR": "Não"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260826-silence-day",
+      "date": "2026-08-26",
+      "kind": "guess",
+      "topic": "diwali",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群有一整天全島安靜——不開燈、不出門、機場關閉?",
+        "en": "Guess: which community has a whole day when an entire island goes quiet — no lights, no going out, the airport closed?",
+        "ja": "クイズ:島全体が丸一日静まりかえり、灯りをつけず、外出せず、空港まで閉まるのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群有一整天全岛安静——不开灯、不出门、机场关闭?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में पूरा एक दिन ऐसा होता है जब पूरा द्वीप ख़ामोश रहता है — न बत्ती, न बाहर निकलना, हवाई अड्डा तक बंद?",
+        "id": "Tebak: komunitas mana yang punya satu hari penuh ketika seluruh pulau sunyi — tanpa lampu, tanpa keluar rumah, bandara pun tutup?",
+        "pt-BR": "Adivinhe: qual comunidade tem um dia inteiro em que uma ilha inteira silencia — sem luzes, sem sair, com o aeroporto fechado?"
+      },
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        }
+      ],
+      "answer": "id",
+      "explain": {
+        "zh-TW": "印尼。那一天是 Nyepi,峇里薩卡曆的新年。印尼把印度教列為官方承認的宗教之一,而且給了它一天全國假日——但那一天是峇里的 Nyepi,不是北印度的排燈節。印尼的印度教人口集中在峇里,曆法與節期就跟著峇里走。",
+        "en": "Indonesia. The day is Nyepi, the Balinese Saka new year. Indonesia counts Hinduism among its officially recognised religions and gives it a national holiday — but that day is Bali's Nyepi, not North India's Diwali. Indonesia's Hindu population is concentrated in Bali, so the calendar and the festivals follow Bali.",
+        "ja": "インドネシア。その日はニュピ、バリのサカ暦の新年である。インドネシアはヒンドゥー教を公認宗教の一つに数え、全国の祝日を一日与えているが、その日はバリのニュピであって、北インドのディワリではない。インドネシアのヒンドゥー教徒はバリに集中しており、暦も節期もバリに従う。",
+        "zh-CN": "印尼。那一天是 Nyepi，巴厘萨卡历的新年。印尼把印度教列为官方承认的宗教之一，而且给了它一天全国假日——但那一天是巴厘的 Nyepi，不是北印度的排灯节。印尼的印度教人口集中在巴厘，历法与节期就跟着巴厘走。",
+        "hi": "इंडोनेशिया। वह दिन न्येपी है, बाली का शक नववर्ष। इंडोनेशिया हिंदू धर्म को अपने आधिकारिक मान्य धर्मों में गिनता है और उसे एक राष्ट्रीय अवकाश देता है — पर वह दिन बाली का न्येपी है, उत्तर भारत की दीवाली नहीं। इंडोनेशिया की हिंदू आबादी बाली में केंद्रित है, इसलिए पंचांग और पर्व बाली के पीछे चलते हैं।",
+        "id": "Indonesia. Hari itu adalah Nyepi, tahun baru Saka Bali. Indonesia menghitung Hindu di antara agama yang diakui resmi dan memberinya satu hari libur nasional — tetapi hari itu Nyepi Bali, bukan Diwali India Utara. Penduduk Hindu Indonesia terpusat di Bali, sehingga penanggalan dan perayaannya mengikuti Bali.",
+        "pt-BR": "Indonésia. O dia é o Nyepi, o ano-novo Saka balinês. A Indonésia conta o hinduísmo entre suas religiões oficialmente reconhecidas e lhe dá um feriado nacional — mas esse dia é o Nyepi de Bali, não o Diwali do norte da Índia. A população hindu da Indonésia concentra-se em Bali, então o calendário e as festas seguem Bali."
+      }
+    },
+    {
+      "id": "q-20260827-teacher-gift",
+      "date": "2026-08-27",
+      "kind": "poll",
+      "topic": "teachers-day",
+      "asker": "id",
+      "target": "hi",
+      "text": {
+        "zh-TW": "教師節你們會送老師禮物嗎?",
+        "en": "On Teachers' Day, do you give the teacher a gift?",
+        "ja": "教師の日に、先生へ贈り物をしますか?",
+        "zh-CN": "教师节你们会送老师礼物吗?",
+        "hi": "शिक्षक दिवस पर क्या आप शिक्षक को उपहार देते हैं?",
+        "id": "Pada Hari Guru, apakah kalian memberi hadiah kepada guru?",
+        "pt-BR": "No Dia dos Professores, vocês dão presente ao professor?"
+      },
+      "options": [
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": {
+            "zh-TW": "會送禮物",
+            "en": "Yes, a gift",
+            "ja": "贈り物をする",
+            "zh-CN": "会送礼物",
+            "hi": "हाँ, उपहार",
+            "id": "Ya, hadiah",
+            "pt-BR": "Sim, um presente"
+          }
+        },
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": {
+            "zh-TW": "只寫卡片",
+            "en": "Just a card",
+            "ja": "カードだけ",
+            "zh-CN": "只写卡片",
+            "hi": "सिर्फ़ कार्ड",
+            "id": "Hanya kartu",
+            "pt-BR": "Só um cartão"
+          }
+        },
+        {
+          "id": "school",
+          "emoji": "🏫",
+          "label": {
+            "zh-TW": "學校統一辦",
+            "en": "The school does it",
+            "ja": "学校がまとめてやる",
+            "zh-CN": "学校统一办",
+            "hi": "स्कूल आयोजित करता है",
+            "id": "Sekolah yang mengadakan",
+            "pt-BR": "A escola organiza"
+          }
+        },
+        {
+          "id": "nothing",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "沒有這個習慣",
+            "en": "No such custom",
+            "ja": "その習慣はない",
+            "zh-CN": "没有这个习惯",
+            "hi": "ऐसा रिवाज़ नहीं",
+            "id": "Tak ada kebiasaan itu",
+            "pt-BR": "Não existe esse costume"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260827-no-teachers-day",
+      "date": "2026-08-27",
+      "kind": "guess",
+      "topic": "teachers-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群根本沒有教師節,國家紀念的是「教育」而不是老師?",
+        "en": "Guess: which community has no Teachers' Day at all, and what the state marks is education rather than teachers?",
+        "ja": "クイズ:そもそも教師の日がなく、国が記念しているのは教師ではなく「教育」なのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群根本没有教师节，国家纪念的是「教育」而不是老师?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में शिक्षक दिवस है ही नहीं, और राज्य शिक्षकों के बजाय \"शिक्षा\" को स्मरण करता है?",
+        "id": "Tebak: komunitas mana yang sama sekali tak punya Hari Guru, dan yang diperingati negara adalah pendidikan, bukan guru?",
+        "pt-BR": "Adivinhe: qual comunidade não tem Dia dos Professores algum, e o que o Estado marca é a educação, não os professores?"
+      },
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        }
+      ],
+      "answer": "ja",
+      "explain": {
+        "zh-TW": "日本。國家層級最接近的是文部科學省的「教育・文化週間」,每年十一月一日到七日,依昭和三十四年的閣議了解舉辦——紀念的是教育,不是教師。真正掛上「教育の日」名字的是都道府縣:德島、新潟、埼玉、滋賀等地各自以條例把十一月一日定為自己的教育之日。單位是縣,不是國。",
+        "en": "Japan. The closest thing at national level is the Ministry of Education's Education and Culture Week, 1 to 7 November each year under a 1959 cabinet understanding — what it commemorates is education, not teachers. The name Education Day belongs to the prefectures instead: Tokushima, Niigata, Saitama, Shiga and others have each fixed 1 November by their own ordinance. The unit is the prefecture, not the country.",
+        "ja": "日本。国のレベルでもっとも近いのは文部科学省の「教育・文化週間」で、毎年十一月一日から七日まで、昭和三十四年の閣議了解に基づいて行われる。記念されるのは教育であって教師ではない。「教育の日」の名を掲げているのはむしろ都道府県で、徳島・新潟・埼玉・滋賀などが条例でそれぞれ十一月一日を定めている。単位は国ではなく県である。",
+        "zh-CN": "日本。国家层级最接近的是文部科学省的「教育・文化周间」，每年十一月一日到七日，依昭和三十四年的阁议了解举办——纪念的是教育，不是教师。真正挂上「教育の日」名字的是都道府县：德岛、新潟、埼玉、滋贺等地各自以条例把十一月一日定为自己的教育之日。单位是县，不是国。",
+        "hi": "जापान। राष्ट्रीय स्तर पर निकटतम चीज़ है शिक्षा मंत्रालय का शिक्षा एवं संस्कृति सप्ताह, हर वर्ष 1 से 7 नवंबर, 1959 की मंत्रिमंडलीय सहमति के तहत — वह शिक्षा को स्मरण करता है, शिक्षकों को नहीं। \"शिक्षा दिवस\" का नाम बल्कि प्रान्तों के पास है: तोकुशिमा, निइगाता, सैतामा, शिगा और अन्य ने अपने-अपने अध्यादेश से 1 नवंबर नियत किया है। इकाई देश नहीं, प्रान्त है।",
+        "id": "Jepang. Yang paling mendekati di tingkat nasional adalah Pekan Pendidikan dan Kebudayaan dari Kementerian Pendidikan, 1 sampai 7 November tiap tahun berdasarkan kesepahaman kabinet 1959 — yang diperingati adalah pendidikan, bukan guru. Nama Hari Pendidikan justru dipegang prefektur: Tokushima, Niigata, Saitama, Shiga, dan lainnya masing-masing menetapkan 1 November lewat peraturan daerah sendiri. Satuannya prefektur, bukan negara.",
+        "pt-BR": "Japão. O mais próximo em nível nacional é a Semana da Educação e da Cultura do Ministério da Educação, de 1 a 7 de novembro todo ano, sob um entendimento de gabinete de 1959 — o que ela comemora é a educação, não os professores. O nome Dia da Educação pertence às prefeituras: Tokushima, Niigata, Saitama, Shiga e outras fixaram cada qual o 1.º de novembro por decreto próprio. A unidade é a prefeitura, não o país."
+      }
+    },
+    {
+      "id": "q-20260828-moon-cake",
+      "date": "2026-08-28",
+      "kind": "poll",
+      "topic": "mid-autumn-and-moon-viewing",
+      "asker": "pt-BR",
+      "target": "zh-CN",
+      "text": {
+        "zh-TW": "中秋節你們會送月餅嗎?送給誰?",
+        "en": "At Mid-Autumn, do you give mooncakes? And to whom?",
+        "ja": "中秋節に月餅を贈りますか?誰に?",
+        "zh-CN": "中秋节你们会送月饼吗?送给谁?",
+        "hi": "मध्य-शरद पर क्या आप मूनकेक देते हैं? और किसे?",
+        "id": "Saat Pertengahan Musim Gugur, apakah kalian memberi kue bulan? Kepada siapa?",
+        "pt-BR": "No Meio-Outono, vocês dão bolos lunares? E para quem?"
+      },
+      "options": [
+        {
+          "id": "family",
+          "emoji": "👨‍👩‍👧",
+          "label": {
+            "zh-TW": "送家人",
+            "en": "To family",
+            "ja": "家族に",
+            "zh-CN": "送家人",
+            "hi": "परिवार को",
+            "id": "Untuk keluarga",
+            "pt-BR": "Para a família"
+          }
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": {
+            "zh-TW": "送客戶同事",
+            "en": "To clients and colleagues",
+            "ja": "取引先や同僚に",
+            "zh-CN": "送客户同事",
+            "hi": "ग्राहकों और सहकर्मियों को",
+            "id": "Untuk klien dan rekan kerja",
+            "pt-BR": "Para clientes e colegas"
+          }
+        },
+        {
+          "id": "both",
+          "emoji": "🎁",
+          "label": {
+            "zh-TW": "都送",
+            "en": "Both",
+            "ja": "どちらにも",
+            "zh-CN": "都送",
+            "hi": "दोनों को",
+            "id": "Dua-duanya",
+            "pt-BR": "Para ambos"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": {
+            "zh-TW": "不送",
+            "en": "We don't",
+            "ja": "贈らない",
+            "zh-CN": "不送",
+            "hi": "नहीं देते",
+            "id": "Tidak memberi",
+            "pt-BR": "Não damos"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260828-sharad-purnima",
+      "date": "2026-08-28",
+      "kind": "guess",
+      "topic": "mid-autumn-and-moon-viewing",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群在同一輪滿月下整夜不睡,把米布丁放在月光裡,隔天才分著吃?",
+        "en": "Guess: which community stays awake all night under that same full moon, leaving rice pudding out in the moonlight to share the next day?",
+        "ja": "クイズ:同じ満月の下で夜通し起きて、ミルク粥を月光に置き、翌日に分け合うのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群在同一轮满月下整夜不睡，把米布丁放在月光里，隔天才分着吃?",
+        "hi": "अंदाज़ा लगाइए: कौन-सा समुदाय उसी पूर्णिमा के नीचे रात भर जागता है, खीर को चाँदनी में रखता है और अगले दिन बाँटकर खाता है?",
+        "id": "Tebak: komunitas mana yang berjaga semalaman di bawah purnama yang sama, menaruh bubur susu di bawah sinar bulan, lalu membaginya keesokan hari?",
+        "pt-BR": "Adivinhe: qual comunidade passa a noite acordada sob a mesma lua cheia, deixando um doce de arroz ao luar para partilhar no dia seguinte?"
+      },
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "answer": "hi",
+      "explain": {
+        "zh-TW": "印度。這一夜叫 Sharad Purnima,馬哈拉施特拉稱 Kojagiri Purnima——阿希溫月的滿月夜,通常在十月。Kojagiri 的意思就是「誰醒著」:整夜守著向拉克希米祈禱,把 kheer 放在月光下,隔天當 prasad 分食。傳說這一夜的月亮圓滿到十六分。同一輪滿月,一邊是團圓與月餅,一邊是守夜與月光下的甜點。",
+        "en": "India. The night is Sharad Purnima, called Kojagiri Purnima in Maharashtra — the full moon of the month of Ashwin, usually in October. Kojagiri means \"who is awake\": the night is spent in prayer to Lakshmi, with kheer set out under the moonlight and shared the next day as prasad, and the moon of this night is said to show all sixteen of its parts. The same full moon: reunion and mooncakes on one side, a vigil and a sweet in the moonlight on the other.",
+        "ja": "インド。この夜はシャラド・プールニマー、マハーラーシュトラではコージャーギリー・プールニマーと呼ばれる。アーシュヴィナ月の満月の夜で、たいてい十月に当たる。コージャーギリーとは「誰が起きているか」の意で、夜通しラクシュミーに祈り、キールを月光の下に置いて翌日プラサードとして分け合う。この夜の月は十六の相をすべて備えると言われる。同じ満月に、一方には団欒と月餅、他方には夜通しの祈りと月光の甘味がある。",
+        "zh-CN": "印度。这一夜叫 Sharad Purnima，马哈拉施特拉称 Kojagiri Purnima——阿希温月的满月夜，通常在十月。Kojagiri 的意思就是「谁醒着」：整夜守着向拉克希米祈祷，把 kheer 放在月光下，隔天当 prasad 分食。传说这一夜的月亮圆满到十六分。同一轮满月，一边是团圆与月饼，一边是守夜与月光下的甜点。",
+        "hi": "भारत। यह रात शरद पूर्णिमा है, महाराष्ट्र में कोजागिरी पूर्णिमा — आश्विन मास की पूर्णिमा, प्रायः अक्टूबर में। \"कोजागिरी\" का अर्थ ही है \"कौन जाग रहा है\": रात भर लक्ष्मी की आराधना होती है, खीर चाँदनी में रखी जाती है और अगले दिन प्रसाद के रूप में बाँटी जाती है, और कहा जाता है कि इस रात का चाँद सोलहों कलाओं सहित दिखता है। वही पूर्णिमा: एक ओर मिलन और मूनकेक, दूसरी ओर रतजगा और चाँदनी में रखा मीठा।",
+        "id": "India. Malam itu adalah Sharad Purnima, di Maharashtra disebut Kojagiri Purnima — purnama bulan Ashwin, biasanya pada Oktober. Kojagiri berarti \"siapa yang terjaga\": malamnya dihabiskan dengan berdoa kepada Lakshmi, kheer ditaruh di bawah sinar bulan dan dibagikan esoknya sebagai prasad, dan bulan malam itu dikatakan menampakkan keenam belas bagiannya. Purnama yang sama: di satu sisi reuni dan kue bulan, di sisi lain berjaga dan penganan di bawah cahaya bulan.",
+        "pt-BR": "Índia. A noite é a Sharad Purnima, chamada Kojagiri Purnima em Maharashtra — a lua cheia do mês de Ashwin, normalmente em outubro. Kojagiri quer dizer \"quem está acordado\": passa-se a noite em oração a Lakshmi, com kheer posto ao luar e partilhado no dia seguinte como prasad, e diz-se que a lua desta noite mostra as suas dezesseis partes. A mesma lua cheia: reunião e bolos lunares de um lado, vigília e um doce ao luar do outro."
+      }
+    },
+    {
+      "id": "q-20260829-fasting-start",
+      "date": "2026-08-29",
+      "kind": "poll",
+      "topic": "ramadan-and-eid",
+      "asker": "zh-TW",
+      "target": "id",
+      "text": {
+        "zh-TW": "齋戒月開始的日期,你們是怎麼知道的?",
+        "en": "How do you find out the date Ramadan starts?",
+        "ja": "断食月が始まる日付は、どうやって知りますか?",
+        "zh-CN": "斋戒月开始的日期，你们是怎么知道的?",
+        "hi": "रमज़ान शुरू होने की तारीख़ आपको कैसे पता चलती है?",
+        "id": "Bagaimana kalian mengetahui tanggal mulainya Ramadan?",
+        "pt-BR": "Como vocês ficam sabendo a data em que o Ramadã começa?"
+      },
+      "options": [
+        {
+          "id": "official",
+          "emoji": "📢",
+          "label": {
+            "zh-TW": "等官方前一晚公告",
+            "en": "Wait for the official announcement the night before",
+            "ja": "前夜の公式発表を待つ",
+            "zh-CN": "等官方前一晚公告",
+            "hi": "एक रात पहले की सरकारी घोषणा का इंतज़ार",
+            "id": "Menunggu pengumuman resmi malam sebelumnya",
+            "pt-BR": "Espero o anúncio oficial na véspera"
+          }
+        },
+        {
+          "id": "calc",
+          "emoji": "🧮",
+          "label": {
+            "zh-TW": "看曆算表",
+            "en": "Look at the calculated calendar",
+            "ja": "暦算の表を見る",
+            "zh-CN": "看历算表",
+            "hi": "गणना वाला पंचांग देखता हूँ",
+            "id": "Melihat tabel hisab",
+            "pt-BR": "Consulto a tabela calculada"
+          }
+        },
+        {
+          "id": "mosque",
+          "emoji": "🕌",
+          "label": {
+            "zh-TW": "問清真寺或社群",
+            "en": "Ask the mosque or community",
+            "ja": "モスクや地域に聞く",
+            "zh-CN": "问清真寺或社群",
+            "hi": "मस्जिद या समुदाय से पूछता हूँ",
+            "id": "Bertanya ke masjid atau komunitas",
+            "pt-BR": "Pergunto na mesquita ou à comunidade"
+          }
+        },
+        {
+          "id": "na",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "沒有這個問題",
+            "en": "Doesn't apply to me",
+            "ja": "自分には関係ない",
+            "zh-CN": "没有这个问题",
+            "hi": "मुझ पर लागू नहीं",
+            "id": "Tidak berlaku bagi saya",
+            "pt-BR": "Não se aplica a mim"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260829-sidang-isbat",
+      "date": "2026-08-29",
+      "kind": "guess",
+      "topic": "ramadan-and-eid",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的齋戒月起始日,是政府在前一晚開會、綜合月相觀測與曆算之後才宣布的?",
+        "en": "Guess: in which community is the first day of Ramadan announced only after the government meets the evening before, weighing crescent sightings against the calculation?",
+        "ja": "クイズ:断食月の初日を、政府が前夜に会議を開き、月の観測と暦算を突き合わせてはじめて発表するのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群的斋戒月起始日，是政府在前一晚开会、综合月相观测与历算之后才宣布的?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में रमज़ान का पहला दिन तभी घोषित होता है जब सरकार एक रात पहले बैठक कर चाँद के दीदार और गणना को तौलती है?",
+        "id": "Tebak: di komunitas mana hari pertama Ramadan baru diumumkan setelah pemerintah bersidang malam sebelumnya, menimbang rukyat dan hisab?",
+        "pt-BR": "Adivinhe: em qual comunidade o primeiro dia do Ramadã só é anunciado depois de o governo se reunir na véspera, pesando as observações da lua contra o cálculo?"
+      },
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        }
+      ],
+      "answer": "id",
+      "explain": {
+        "zh-TW": "印尼。宗教部在前一晚召開 sidang isbat,把全國數十個觀測點回報的月相與曆算結果放在一起,當晚才宣布隔天是不是初一。一四四七年(西曆二○二六)那一次在二月十七日開會,各觀測點的新月都在地平線以下,會議依曆算認定二月十九日為初一。所以「幾號開始齋戒」的確定答案,制度上就是拿不到幾個月前的——但開齋節的連假,三個部會提前一年就用聯合決議排好了。",
+        "en": "Indonesia. The Ministry of Religious Affairs convenes a sidang isbat the evening before, weighing crescent reports from dozens of stations across the country against the calculation, and only then declares whether the next day is the first. For 1447 AH (2026) the session met on 17 February; the crescent stood below the horizon at every station, and the session settled on 19 February by calculation. So a confirmed answer to \"what date does fasting start\" is, by design, unavailable months ahead — while the Eid break is scheduled a year in advance by joint decree of three ministries.",
+        "ja": "インドネシア。宗教省が前夜にシダン・イスバットを開き、全国数十か所の観測点から寄せられた月の報告と暦算の結果を突き合わせ、そこではじめて翌日が初日かどうかを宣言する。ヒジュラ暦一四四七年(西暦二〇二六年)は二月十七日に開かれ、全観測点で新月は地平線下にあり、会議は暦算に基づいて二月十九日を初日と定めた。つまり「何日から断食か」の確定答は、制度上、数か月前には得られない。一方、断食明けの連休は三省が一年前に合同決定で組んである。",
+        "zh-CN": "印尼。宗教部在前一晚召开 sidang isbat，把全国数十个观测点报回的月相与历算结果放在一起，当晚才宣布次日是不是初一。一四四七年（公历二〇二六）那一次在二月十七日开会，各观测点的新月都在地平线以下，会议依历算认定二月十九日为初一。所以「几号开始斋戒」的确定答案，制度上就是拿不到几个月前的——但开斋节的连假，三个部会提前一年就用联合决议排好了。",
+        "hi": "इंडोनेशिया। धार्मिक कार्य मंत्रालय एक रात पहले सिदांग इसबात बुलाता है, देश भर के दर्जनों केंद्रों से आई चाँद की रिपोर्टों को गणना के साथ तौलता है, और तभी बताता है कि अगला दिन पहला है या नहीं। 1447 हिजरी (2026) की बैठक 17 फ़रवरी को हुई; हर केंद्र पर चाँद क्षितिज से नीचे था, और बैठक ने गणना के आधार पर 19 फ़रवरी तय किया। यानी \"रोज़े किस तारीख़ से\" का पुष्ट उत्तर महीनों पहले मिलता ही नहीं — जबकि ईद की छुट्टी तीन मंत्रालय साल भर पहले संयुक्त आदेश से तय कर देते हैं।",
+        "id": "Indonesia. Kementerian Agama menggelar sidang isbat pada malam sebelumnya, menimbang laporan rukyat dari puluhan titik di seluruh negeri bersama hasil hisab, dan baru kemudian menyatakan apakah keesokan harinya adalah hari pertama. Untuk 1447 H (2026) sidang digelar 17 Februari; di seluruh titik hilal berada di bawah ufuk, dan sidang menetapkan 19 Februari berdasarkan hisab. Jadi jawaban pasti atas \"tanggal berapa mulai puasa\" memang tak tersedia berbulan-bulan sebelumnya — sementara libur Lebaran dijadwalkan tiga kementerian setahun di muka lewat keputusan bersama.",
+        "pt-BR": "Indonésia. O Ministério dos Assuntos Religiosos convoca uma sidang isbat na véspera, pesando os relatos de observação vindos de dezenas de pontos do país contra o cálculo, e só então declara se o dia seguinte é o primeiro. Para 1447 AH (2026) a sessão reuniu-se em 17 de fevereiro; em todos os pontos a lua estava abaixo do horizonte, e a sessão fixou 19 de fevereiro pelo cálculo. Assim, a resposta confirmada para \"em que data começa o jejum\" é, por desenho, indisponível com meses de antecedência — enquanto a folga do Eid é agendada com um ano de antecedência por decreto conjunto de três ministérios."
+      }
+    },
+    {
+      "id": "q-20260830-grave-visit",
+      "date": "2026-08-30",
+      "kind": "poll",
+      "topic": "ghosts-ancestors-and-remembrance",
+      "asker": "en",
+      "target": "id",
+      "text": {
+        "zh-TW": "你們一年會去掃墓幾次?",
+        "en": "How many times a year do you visit the family graves?",
+        "ja": "お墓参りは年に何回しますか?",
+        "zh-CN": "你们一年会去扫墓几次?",
+        "hi": "आप साल में कितनी बार पुरखों की क़ब्र/समाधि पर जाते हैं?",
+        "id": "Berapa kali setahun kalian berziarah ke makam keluarga?",
+        "pt-BR": "Quantas vezes por ano vocês visitam os túmulos da família?"
+      },
+      "options": [
+        {
+          "id": "many",
+          "emoji": "🗓️",
+          "label": {
+            "zh-TW": "三次以上",
+            "en": "More than three",
+            "ja": "三回以上",
+            "zh-CN": "三次以上",
+            "hi": "तीन से अधिक",
+            "id": "Lebih dari tiga kali",
+            "pt-BR": "Mais de três"
+          }
+        },
+        {
+          "id": "once",
+          "emoji": "🕯️",
+          "label": {
+            "zh-TW": "一年一次",
+            "en": "Once a year",
+            "ja": "年に一度",
+            "zh-CN": "一年一次",
+            "hi": "साल में एक बार",
+            "id": "Setahun sekali",
+            "pt-BR": "Uma vez por ano"
+          }
+        },
+        {
+          "id": "rare",
+          "emoji": "🌾",
+          "label": {
+            "zh-TW": "偶爾才去",
+            "en": "Only occasionally",
+            "ja": "たまにしか行かない",
+            "zh-CN": "偶尔才去",
+            "hi": "कभी-कभार",
+            "id": "Hanya sesekali",
+            "pt-BR": "Só de vez em quando"
+          }
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": {
+            "zh-TW": "沒有這個習慣",
+            "en": "No such custom",
+            "ja": "その習慣はない",
+            "zh-CN": "没有这个习惯",
+            "hi": "ऐसा रिवाज़ नहीं",
+            "id": "Tak ada kebiasaan itu",
+            "pt-BR": "Não existe esse costume"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260830-nyadran",
+      "date": "2026-08-30",
+      "kind": "guess",
+      "topic": "ghosts-ancestors-and-remembrance",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群在齋戒月開始之前去掃墓,先清墓、再一起祈禱,最後全村坐下來吃同一頓飯?",
+        "en": "Guess: which community tends the ancestral graves just before Ramadan begins — cleaning them, praying together, and closing with the whole village sitting down to one shared meal?",
+        "ja": "クイズ:断食月が始まる前に墓へ参り、墓を清め、皆で祈り、最後に村じゅうで一つの食事をともにするのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群在斋戒月开始之前去扫墓，先清墓、再一起祈祷，最后全村坐下来吃同一顿饭?",
+        "hi": "अंदाज़ा लगाइए: कौन-सा समुदाय रमज़ान शुरू होने से ठीक पहले पुरखों की क़ब्रों पर जाता है — उन्हें साफ़ करता है, साथ प्रार्थना करता है, और अंत में पूरा गाँव एक ही भोजन पर बैठता है?",
+        "id": "Tebak: komunitas mana yang berziarah ke makam leluhur menjelang Ramadan — membersihkannya, berdoa bersama, dan ditutup dengan seluruh kampung menyantap satu hidangan bersama?",
+        "pt-BR": "Adivinhe: qual comunidade cuida dos túmulos dos antepassados pouco antes de o Ramadã começar — limpando-os, rezando em conjunto e encerrando com a aldeia inteira sentando-se a uma mesma refeição?"
+      },
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        }
+      ],
+      "answer": "id",
+      "explain": {
+        "zh-TW": "印尼(爪哇)。那是 Nyadran,在 Ruwah 月、齋戒月開始之前進行。「nyadran」一詞來自梵語 sraddha(信)。流程固定:先清理墓地,再共同祈禱,最後以 kembul bujono——大家一起吃一頓——收尾。它原本屬於伊斯蘭傳入前的信仰,後來與爪哇的伊斯蘭實踐融合。與清明同樣是掃墓,但它不對齊某一天,而是對齊「下個月要開始齋戒」這件事。",
+        "en": "Indonesia, in Java. It is Nyadran, done in the month of Ruwah before Ramadan begins. The word comes from the Sanskrit sraddha, faith. The sequence is fixed — clean the graves, then pray together, then close with kembul bujono, everyone eating one meal side by side. It began in pre-Islamic belief and later merged with Javanese Islamic practice. Like Qingming it is grave-tending, but it aligns not with a particular date so much as with the fact that fasting starts next month.",
+        "ja": "インドネシア(ジャワ)。それはニャドランで、ルワの月、断食月が始まる前に行われる。「ニャドラン」という語はサンスクリットのシュラッダー(信)に由来する。次第は定まっている。まず墓を清め、次に皆で祈り、最後にクンブル・ブジョノ——皆で一つの食事をともにすること——で結ぶ。もとはイスラム伝来以前の信仰に属し、のちにジャワのイスラム実践と融合した。清明と同じく墓を手入れする営みだが、ある一日ではなく「来月から断食が始まる」という事実に合わせている。",
+        "zh-CN": "印尼（爪哇）。那是 Nyadran，在 Ruwah 月、斋戒月开始之前进行。「nyadran」一词来自梵语 sraddha（信）。流程固定：先清理墓地，再共同祈祷，最后以 kembul bujono——大家一起吃一顿——收尾。它原本属于伊斯兰传入前的信仰，后来与爪哇的伊斯兰实践融合。与清明同样是扫墓，但它不对齐某一天，而是对齐「下个月要开始斋戒」这件事。",
+        "hi": "इंडोनेशिया (जावा)। वह न्यादरान है, जो रुवाह मास में, रमज़ान शुरू होने से पहले होता है। यह शब्द संस्कृत के \"श्रद्धा\" से आया है। क्रम तय है — पहले क़ब्रें साफ़ करना, फिर साथ प्रार्थना, और अंत में केम्बुल बुजोनो, यानी सबका साथ बैठकर एक भोजन। इसका आरंभ इस्लाम-पूर्व आस्था में हुआ और बाद में यह जावा की इस्लामी रीति से घुल-मिल गया। चिंगमिंग की तरह यह भी क़ब्रों की देखभाल है, पर यह किसी एक तिथि से नहीं, बल्कि इस तथ्य से संरेखित है कि अगले महीने से रोज़े शुरू हो रहे हैं।",
+        "id": "Indonesia, di Jawa. Itu Nyadran, dilakukan pada bulan Ruwah menjelang Ramadan dimulai. Katanya berasal dari bahasa Sanskerta sraddha, keyakinan. Urutannya tetap — membersihkan makam, lalu berdoa bersama, ditutup dengan kembul bujono, semua makan bersama dalam satu hidangan. Ia bermula dari kepercayaan pra-Islam dan kemudian berakulturasi dengan praktik Islam Jawa. Seperti Qingming, ia merawat makam, tetapi selaras bukan dengan suatu tanggal melainkan dengan kenyataan bahwa puasa dimulai bulan depan.",
+        "pt-BR": "Indonésia, em Java. É o Nyadran, feito no mês de Ruwah antes de o Ramadã começar. A palavra vem do sânscrito sraddha, fé. A sequência é fixa — limpar os túmulos, depois rezar em conjunto, e encerrar com o kembul bujono, todos comendo uma refeição lado a lado. Começou na crença pré-islâmica e depois se fundiu com a prática islâmica javanesa. Como o Qingming, é cuidado com os túmulos, mas alinha-se não a uma data e sim ao fato de que o jejum começa no mês seguinte."
+      }
+    },
+    {
+      "id": "q-20260831-labour-day-off",
+      "date": "2026-08-31",
+      "kind": "poll",
+      "topic": "labour-day",
+      "asker": "hi",
+      "target": "zh-TW",
+      "text": {
+        "zh-TW": "五月一日勞動節,你們公司放假嗎?",
+        "en": "On 1 May, does your workplace give you the day off?",
+        "ja": "五月一日のメーデー、あなたの職場は休みになりますか?",
+        "zh-CN": "五月一日劳动节，你们公司放假吗?",
+        "hi": "1 मई को क्या आपके कार्यस्थल पर छुट्टी होती है?",
+        "id": "Pada 1 Mei, apakah tempat kerja kalian libur?",
+        "pt-BR": "No dia 1.º de maio, seu trabalho dá folga?"
+      },
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🛌",
+          "label": {
+            "zh-TW": "放假",
+            "en": "Yes, a day off",
+            "ja": "休みになる",
+            "zh-CN": "放假",
+            "hi": "हाँ, छुट्टी",
+            "id": "Ya, libur",
+            "pt-BR": "Sim, folga"
+          }
+        },
+        {
+          "id": "partial",
+          "emoji": "🧩",
+          "label": {
+            "zh-TW": "有些人放、有些人不放",
+            "en": "Some people yes, some no",
+            "ja": "休む人と休まない人がいる",
+            "zh-CN": "有些人放、有些人不放",
+            "hi": "कुछ को मिलती है, कुछ को नहीं",
+            "id": "Sebagian libur, sebagian tidak",
+            "pt-BR": "Uns folgam, outros não"
+          }
+        },
+        {
+          "id": "no",
+          "emoji": "🏢",
+          "label": {
+            "zh-TW": "照常上班",
+            "en": "No, we work",
+            "ja": "通常どおり働く",
+            "zh-CN": "照常上班",
+            "hi": "नहीं, काम चलता है",
+            "id": "Tidak, tetap bekerja",
+            "pt-BR": "Não, trabalhamos"
+          }
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": {
+            "zh-TW": "不確定",
+            "en": "Not sure",
+            "ja": "わからない",
+            "zh-CN": "不确定",
+            "hi": "पता नहीं",
+            "id": "Tidak yakin",
+            "pt-BR": "Não sei"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260831-partial-labour-day",
+      "date": "2026-08-31",
+      "kind": "guess",
+      "topic": "labour-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的勞動節,同一個家裡可能一個人放假、另一個人照常上班?",
+        "en": "Guess: in which community can Labour Day mean that one person in a household is off while another goes to work as usual?",
+        "ja": "クイズ:同じ家の中で、一方は休み、他方は通常どおり出勤――そんなメーデーになりうるのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群的劳动节，同一个家里可能一个人放假、另一个人照常上班?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में श्रम दिवस का अर्थ यह हो सकता है कि एक ही घर में कोई छुट्टी पर हो और कोई हमेशा की तरह काम पर?",
+        "id": "Tebak: di komunitas mana Hari Buruh bisa berarti satu orang di rumah libur sementara yang lain tetap bekerja seperti biasa?",
+        "pt-BR": "Adivinhe: em qual comunidade o Dia do Trabalho pode significar que uma pessoa da casa folga enquanto outra vai trabalhar normalmente?"
+      },
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": {
+        "zh-TW": "台灣。它是「只有部分人放假」的假日:放假對象限於適用勞動基準法的勞工,公務人員與部分行業照常上班。一個以勞工為名的假日,恰好把「誰算勞工」這件事攤在行事曆上,每年重演一次。",
+        "en": "Taiwan. It is a holiday on which only some people are off: the day off is limited to workers covered by the Labour Standards Act, while civil servants and parts of some industries work as usual. A holiday named for labour thus lays the question of who counts as a worker out on the calendar, replayed once a year.",
+        "ja": "台湾。「一部の人だけが休む」祝日である。休みの対象は労働基準法の適用を受ける労働者に限られ、公務員や一部の業種は通常どおり働く。労働の名を冠した休日が、「誰が労働者に当たるのか」という問いを暦の上に広げ、毎年一度それを繰り返す。",
+        "zh-CN": "台湾。它是「只有部分人放假」的假日：放假对象限于适用劳动基准法的劳工，公务人员与部分行业照常上班。一个以劳工为名的假日，恰好把「谁算劳工」这件事摊在行事历上，每年重演一次。",
+        "hi": "ताइवान। यह ऐसी छुट्टी है जिस पर केवल कुछ लोग ही मुक्त होते हैं: अवकाश उन्हीं कामगारों तक सीमित है जिन पर श्रम मानक अधिनियम लागू होता है, जबकि सरकारी कर्मचारी और कुछ उद्योगों के हिस्से सामान्य रूप से काम करते हैं। श्रम के नाम पर रखी छुट्टी यों \"कामगार कौन गिना जाए\" के प्रश्न को कैलेंडर पर फैला देती है, और वर्ष में एक बार उसे दोहराती है।",
+        "id": "Taiwan. Ia hari libur yang hanya membebaskan sebagian orang: liburnya terbatas pada pekerja yang tercakup Undang-Undang Standar Ketenagakerjaan, sementara pegawai negeri dan sebagian sektor tetap bekerja seperti biasa. Hari libur yang dinamai dari kerja itu justru menghamparkan pertanyaan siapa yang terhitung buruh di atas kalender, dan mengulangnya setahun sekali.",
+        "pt-BR": "Taiwan. É um feriado em que apenas parte das pessoas folga: a folga limita-se aos trabalhadores abrangidos pela Lei de Padrões do Trabalho, enquanto servidores públicos e partes de alguns setores trabalham normalmente. Um feriado batizado com o nome do trabalho estende assim sobre o calendário a pergunta de quem conta como trabalhador, e a repete uma vez por ano."
+      }
+    },
+    {
+      "id": "q-20260901-childrens-day-off",
+      "date": "2026-09-01",
+      "kind": "poll",
+      "topic": "childrens-day",
+      "asker": "pt-BR",
+      "target": "en",
+      "text": {
+        "zh-TW": "兒童節那天,你們的小孩放假嗎?",
+        "en": "On Children's Day, do your children get the day off?",
+        "ja": "こどもの日、子どもたちは休みになりますか?",
+        "zh-CN": "儿童节那天，你们的小孩放假吗?",
+        "hi": "बाल दिवस पर क्या आपके बच्चों की छुट्टी होती है?",
+        "id": "Pada Hari Anak, apakah anak-anak kalian libur?",
+        "pt-BR": "No Dia das Crianças, as crianças de vocês folgam?"
+      },
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎈",
+          "label": {
+            "zh-TW": "放假",
+            "en": "Yes, a day off",
+            "ja": "休みになる",
+            "zh-CN": "放假",
+            "hi": "हाँ, छुट्टी",
+            "id": "Ya, libur",
+            "pt-BR": "Sim, folga"
+          }
+        },
+        {
+          "id": "school",
+          "emoji": "🏫",
+          "label": {
+            "zh-TW": "照常上學但學校有活動",
+            "en": "School as usual, but with events",
+            "ja": "登校するが行事がある",
+            "zh-CN": "照常上学但学校有活动",
+            "hi": "स्कूल तो चलता है, पर आयोजन होते हैं",
+            "id": "Tetap sekolah, tapi ada acara",
+            "pt-BR": "Aula normal, mas com eventos"
+          }
+        },
+        {
+          "id": "nothing",
+          "emoji": "📅",
+          "label": {
+            "zh-TW": "就是普通一天",
+            "en": "Just an ordinary day",
+            "ja": "ふつうの日",
+            "zh-CN": "就是普通一天",
+            "hi": "बस एक साधारण दिन",
+            "id": "Hari biasa saja",
+            "pt-BR": "Um dia comum"
+          }
+        },
+        {
+          "id": "nokids",
+          "emoji": "🙋",
+          "label": {
+            "zh-TW": "家裡沒有小孩",
+            "en": "No children at home",
+            "ja": "家に子どもがいない",
+            "zh-CN": "家里没有小孩",
+            "hi": "घर में बच्चे नहीं",
+            "id": "Tak ada anak di rumah",
+            "pt-BR": "Não há crianças em casa"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260901-moving-childrens-day",
+      "date": "2026-09-01",
+      "kind": "guess",
+      "topic": "childrens-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的兒童節連日期都不固定,每年由元首重新公告,四十年裡搬過至少四次家?",
+        "en": "Guess: in which community does Children's Day not even have a fixed date — re-proclaimed each year by the head of state, and moved at least four times in forty years?",
+        "ja": "クイズ:こどもの日が日付すら定まらず、毎年元首が改めて布告し、四十年で少なくとも四度も引っ越したのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群的儿童节连日期都不固定，每年由元首重新公告，四十年里搬过至少四次家?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में बाल दिवस की तिथि तक तय नहीं — हर वर्ष राष्ट्राध्यक्ष द्वारा फिर से घोषित, और चालीस वर्षों में कम से कम चार बार बदली?",
+        "id": "Tebak: di komunitas mana Hari Anak bahkan tak punya tanggal tetap — diproklamasikan ulang tiap tahun oleh kepala negara, dan berpindah sedikitnya empat kali dalam empat puluh tahun?",
+        "pt-BR": "Adivinhe: em qual comunidade o Dia das Crianças nem sequer tem data fixa — reproclamado a cada ano pelo chefe de Estado e mudado ao menos quatro vezes em quarenta anos?"
+      },
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        }
+      ],
+      "answer": "en",
+      "explain": {
+        "zh-TW": "美國。它不是法定假日,存在形式是每年重新發布的總統公告:雷根一九八二年訂在八月八日、柯林頓一九九八年訂在十月十一日、小布希二○○二年訂在六月九日、歐巴馬二○一三年起改到十一月二十日,拜登二○二四年也是十一月二十日。公告不是法律、不放假,下一任可以換日子。相比之下,印尼的全國兒童節由一九八四年第四十四號總統決定書固定在七月二十三日;巴西的十月十二日則撞上阿帕雷西達聖母日,本來就是全國假日。",
+        "en": "The United States. It is not a statutory holiday; it exists as a presidential proclamation reissued each year: Reagan put it on 8 August in 1982, Clinton on 11 October in 1998, George W. Bush on 9 June in 2002, Obama moved it to 20 November from 2013, and Biden kept 20 November in 2024. A proclamation is not a law, brings no day off, and the next occupant can move it. By contrast Indonesia's National Children's Day was fixed on 23 July by Presidential Decision No. 44 of 1984, and Brazil's 12 October coincides with Our Lady of Aparecida, already a national holiday.",
+        "ja": "米国。法定の祝日ではなく、毎年出し直される大統領布告として存在する。レーガンは一九八二年に八月八日、クリントンは一九九八年に十月十一日、ブッシュ(子)は二〇〇二年に六月九日、オバマは二〇一三年から十一月二十日へ移し、バイデンも二〇二四年に十一月二十日とした。布告は法律ではなく休みにもならず、次の大統領が日を変えうる。対してインドネシアの全国こどもの日は一九八四年大統領決定第四十四号で七月二十三日に固定され、ブラジルの十月十二日はアパレシーダの聖母の日と重なり、もとより国の祝日である。",
+        "zh-CN": "美国。它不是法定假日，存在形式是每年重新发布的总统公告：里根一九八二年订在八月八日、克林顿一九九八年订在十月十一日、小布什二〇〇二年订在六月九日、奥巴马二〇一三年起改到十一月二十日，拜登二〇二四年也是十一月二十日。公告不是法律、不放假，下一任可以换日子。相比之下，印尼的全国儿童节由一九八四年第四十四号总统决定书固定在七月二十三日；巴西的十月十二日则撞上阿帕雷西达圣母日，本来就是全国假日。",
+        "hi": "संयुक्त राज्य। यह क़ानूनी अवकाश नहीं; यह हर वर्ष फिर से जारी होने वाली राष्ट्रपति उद्घोषणा के रूप में है: रीगन ने 1982 में 8 अगस्त, क्लिंटन ने 1998 में 11 अक्टूबर, जॉर्ज डब्ल्यू बुश ने 2002 में 9 जून, ओबामा ने 2013 से 20 नवंबर, और बाइडन ने 2024 में भी 20 नवंबर। उद्घोषणा क़ानून नहीं, उससे छुट्टी नहीं मिलती, और अगला पदधारी उसे हटा सकता है। इसके उलट इंडोनेशिया का राष्ट्रीय बाल दिवस 1984 के राष्ट्रपति निर्णय संख्या 44 से 23 जुलाई पर नियत है; और ब्राज़ील का 12 अक्टूबर अपारेसीदा की देवी माता के दिन से मिलता है, जो पहले ही राष्ट्रीय अवकाश है।",
+        "id": "Amerika Serikat. Ia bukan hari libur menurut undang-undang; ia hadir sebagai proklamasi presiden yang diterbitkan ulang tiap tahun: Reagan pada 8 Agustus 1982, Clinton pada 11 Oktober 1998, George W. Bush pada 9 Juni 2002, Obama memindahkannya ke 20 November sejak 2013, dan Biden tetap 20 November pada 2024. Proklamasi bukan undang-undang, tak membawa libur, dan penghuni berikutnya bisa memindahkannya. Sebaliknya, Hari Anak Nasional Indonesia dipancangkan pada 23 Juli lewat Keputusan Presiden Nomor 44 Tahun 1984; dan 12 Oktober Brasil berimpit dengan Bunda Aparecida, yang memang sudah hari libur nasional.",
+        "pt-BR": "Estados Unidos. Não é feriado legal; existe como proclamação presidencial reeditada a cada ano: Reagan pôs em 8 de agosto em 1982, Clinton em 11 de outubro em 1998, George W. Bush em 9 de junho em 2002, Obama mudou para 20 de novembro a partir de 2013, e Biden manteve 20 de novembro em 2024. Uma proclamação não é lei, não gera folga, e o ocupante seguinte pode movê-la. Em contraste, o Dia Nacional da Criança da Indonésia foi firmado em 23 de julho pela Decisão Presidencial n.º 44 de 1984; e o 12 de outubro brasileiro coincide com Nossa Senhora Aparecida, já feriado nacional."
+      }
+    },
+    {
+      "id": "q-20260902-harvest-thanks",
+      "date": "2026-09-02",
+      "kind": "poll",
+      "topic": "harvest-and-gratitude",
+      "asker": "zh-CN",
+      "target": "pt-BR",
+      "text": {
+        "zh-TW": "你們有沒有一個「謝收成」的日子?在什麼季節?",
+        "en": "Do you have a day for giving thanks for the harvest? In which season?",
+        "ja": "収穫に感謝する日はありますか?あるとしたら、どの季節?",
+        "zh-CN": "你们有没有一个「谢收成」的日子?在什么季节?",
+        "hi": "क्या आपके यहाँ फ़सल के लिए धन्यवाद देने का कोई दिन है? किस ऋतु में?",
+        "id": "Apakah kalian punya hari untuk mensyukuri panen? Pada musim apa?",
+        "pt-BR": "Vocês têm um dia para agradecer pela colheita? Em que estação?"
+      },
+      "options": [
+        {
+          "id": "autumn",
+          "emoji": "🍂",
+          "label": {
+            "zh-TW": "有,在秋天",
+            "en": "Yes, in autumn",
+            "ja": "ある、秋に",
+            "zh-CN": "有，在秋天",
+            "hi": "हाँ, शरद में",
+            "id": "Ya, pada musim gugur",
+            "pt-BR": "Sim, no outono"
+          }
+        },
+        {
+          "id": "other",
+          "emoji": "🌱",
+          "label": {
+            "zh-TW": "有,但不在秋天",
+            "en": "Yes, but not in autumn",
+            "ja": "あるが秋ではない",
+            "zh-CN": "有，但不在秋天",
+            "hi": "हाँ, पर शरद में नहीं",
+            "id": "Ya, tapi bukan musim gugur",
+            "pt-BR": "Sim, mas não no outono"
+          }
+        },
+        {
+          "id": "local",
+          "emoji": "🏘️",
+          "label": {
+            "zh-TW": "只有某些地方有",
+            "en": "Only in some places",
+            "ja": "一部の地域だけにある",
+            "zh-CN": "只有某些地方有",
+            "hi": "सिर्फ़ कुछ जगहों पर",
+            "id": "Hanya di sebagian daerah",
+            "pt-BR": "Só em alguns lugares"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": {
+            "zh-TW": "沒有",
+            "en": "No",
+            "ja": "ない",
+            "zh-CN": "没有",
+            "hi": "नहीं",
+            "id": "Tidak ada",
+            "pt-BR": "Não"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260902-before-harvest",
+      "date": "2026-09-02",
+      "kind": "guess",
+      "topic": "harvest-and-gratitude",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的「農民節」不在收成之後,而是定在立春——也就是還沒下田之前?",
+        "en": "Guess: in which community does Farmers' Day fall not after the harvest but on the first day of spring — that is, before the work has even begun?",
+        "ja": "クイズ:「農民節」が収穫のあとではなく立春に、つまりまだ田に出る前に置かれているのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群的「农民节」不在收成之后，而是定在立春——也就是还没下田之前?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में \"किसान दिवस\" फ़सल के बाद नहीं बल्कि वसंत के पहले दिन पड़ता है — यानी काम शुरू होने से भी पहले?",
+        "id": "Tebak: di komunitas mana \"Hari Tani\" jatuh bukan setelah panen melainkan pada hari pertama musim semi — yakni sebelum pekerjaannya dimulai?",
+        "pt-BR": "Adivinhe: em qual comunidade o Dia do Agricultor cai não depois da colheita, mas no primeiro dia da primavera — isto é, antes de o trabalho sequer começar?"
+      },
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": {
+        "zh-TW": "台灣。《紀念日及節日實施條例》寫的是「農民節:定於立春日」。這與其他地方的收成節剛好相反——感恩節、中國的農民豐收節、日本的勤勞感謝日都排在收完之後,台灣這一天排在開始之前:慶祝的不是已經到手的東西,而是即將下田這件事。立春的日期由天文決定,每年查中央氣象署的日曆資料表才知道落在二月三日、四日還是五日。這一天不放假。",
+        "en": "Taiwan. The Act on Commemorative Days and Holidays says plainly: \"Farmers' Day: fixed on the day of Lichun.\" That is the reverse of harvest days elsewhere — Thanksgiving, China's farmers' harvest festival and Japan's Labour Thanksgiving all sit after the crop is in, while this one sits before the work starts: what it marks is not what has been gathered but the fact of going back to the field. The date is set by astronomy, so whether it lands on 3, 4 or 5 February must be looked up each year in the Central Weather Administration's calendar tables. It is not a day off.",
+        "ja": "台湾。「記念日及び節日実施条例」は端的にこう記す――「農民節:立春の日に定める」。これは他所の収穫の日とは逆である。感謝祭も中国の農民豊収節も日本の勤労感謝の日も収穫が済んだあとに置かれるが、この日は仕事が始まる前に置かれる。祝われているのは手に入れたものではなく、これから田に出るという事実である。日付は天文が決めるため、二月三日か四日か五日かは毎年、中央気象署の日暦資料表を引いて確かめる。この日は休みではない。",
+        "zh-CN": "台湾。《纪念日及节日实施条例》写的是「农民节：定于立春日」。这与其他地方的收成节刚好相反——感恩节、中国的农民丰收节、日本的勤劳感谢日都排在收完之后，台湾这一天排在开始之前：庆祝的不是已经到手的东西，而是即将下田这件事。立春的日期由天文决定，每年查中央气象署的日历资料表才知道落在二月三日、四日还是五日。这一天不放假。",
+        "hi": "ताइवान। स्मृति-दिवस एवं अवकाश अधिनियम साफ़ कहता है: \"किसान दिवस: लिचुन के दिन नियत।\" यह अन्यत्र के फ़सल-दिवसों से उलटा है — थैंक्सगिविंग, चीन का किसान फ़सल पर्व और जापान का श्रम कृतज्ञता दिवस सब फ़सल आ जाने के बाद बैठते हैं, जबकि यह काम शुरू होने से पहले बैठता है: यह जो चिह्नित करता है वह बटोरा हुआ नहीं, बल्कि खेत पर लौटने का तथ्य है। तिथि खगोल से तय होती है, इसलिए वह 3, 4 या 5 फ़रवरी को पड़ेगी — यह हर वर्ष केंद्रीय मौसम प्रशासन की पंचांग तालिकाओं में देखना पड़ता है। इस दिन छुट्टी नहीं होती।",
+        "id": "Taiwan. Undang-Undang Hari Peringatan dan Hari Libur menyatakannya terang: \"Hari Tani: ditetapkan pada hari Lichun.\" Itu kebalikan dari hari panen di tempat lain — Thanksgiving, festival panen petani Tiongkok, dan Hari Syukur Buruh Jepang semuanya duduk setelah panen masuk, sedangkan yang ini duduk sebelum pekerjaannya dimulai: yang ditandainya bukan apa yang sudah terkumpul, melainkan kenyataan bahwa orang akan kembali ke sawah. Tanggalnya ditetapkan astronomi, sehingga jatuh pada 3, 4, atau 5 Februari harus dicari tiap tahun pada tabel penanggalan Badan Cuaca Pusat. Hari itu bukan hari libur.",
+        "pt-BR": "Taiwan. A Lei das Datas Comemorativas e Feriados diz claramente: \"Dia do Agricultor: fixado no dia de Lichun.\" É o inverso dos dias de colheita alhures — o Thanksgiving, a festa da colheita dos agricultores da China e o Dia de Ação de Graças ao Trabalho do Japão ficam depois de a safra entrar, enquanto este fica antes de o trabalho começar: o que ele marca não é o que se recolheu, e sim o fato de voltar à lavoura. A data é dada pela astronomia, então cair em 3, 4 ou 5 de fevereiro é coisa para consultar a cada ano nas tabelas da Administração Meteorológica Central. Não é dia de folga."
+      }
+    },
+    {
+      "id": "q-20260903-lantern-night",
+      "date": "2026-09-03",
+      "kind": "poll",
+      "topic": "lantern-festival",
+      "asker": "en",
+      "target": "zh-TW",
+      "text": {
+        "zh-TW": "農曆年的第十五夜,你們那裡有燈會嗎?",
+        "en": "On the fifteenth night after Lunar New Year, is there a lantern event where you are?",
+        "ja": "旧正月から十五番目の夜、あなたのところに灯りの催しはありますか?",
+        "zh-CN": "农历年的第十五夜，你们那里有灯会吗?",
+        "hi": "चंद्र नववर्ष के बाद की पंद्रहवीं रात, क्या आपके यहाँ लालटेन का आयोजन होता है?",
+        "id": "Pada malam kelima belas setelah Imlek, adakah acara lampion di tempat kalian?",
+        "pt-BR": "Na décima quinta noite após o Ano-Novo Lunar, há alguma festa de lanternas onde vocês vivem?"
+      },
+      "options": [
+        {
+          "id": "city",
+          "emoji": "🏮",
+          "label": {
+            "zh-TW": "有,城市級的大型燈會",
+            "en": "Yes, a big city-wide one",
+            "ja": "ある、市を挙げての大きな催し",
+            "zh-CN": "有，城市级的大型灯会",
+            "hi": "हाँ, शहर भर का बड़ा आयोजन",
+            "id": "Ya, acara besar sekota",
+            "pt-BR": "Sim, uma grande festa da cidade"
+          }
+        },
+        {
+          "id": "temple",
+          "emoji": "🛕",
+          "label": {
+            "zh-TW": "有,廟宇或社區辦的",
+            "en": "Yes, at a temple or in the neighbourhood",
+            "ja": "ある、寺社や地域のもの",
+            "zh-CN": "有，庙宇或社区办的",
+            "hi": "हाँ, मंदिर या मोहल्ले में",
+            "id": "Ya, di kelenteng atau lingkungan",
+            "pt-BR": "Sim, num templo ou no bairro"
+          }
+        },
+        {
+          "id": "home",
+          "emoji": "🕯️",
+          "label": {
+            "zh-TW": "只在家裡吃湯圓",
+            "en": "Only dumplings at home",
+            "ja": "家で団子を食べるだけ",
+            "zh-CN": "只在家里吃汤圆",
+            "hi": "सिर्फ़ घर पर मीठे पिंड",
+            "id": "Hanya makan onde di rumah",
+            "pt-BR": "Só bolinhos em casa"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": {
+            "zh-TW": "沒有這個節日",
+            "en": "No such festival here",
+            "ja": "その祭りはない",
+            "zh-CN": "没有这个节日",
+            "hi": "यहाँ ऐसा पर्व नहीं",
+            "id": "Tak ada perayaan itu",
+            "pt-BR": "Não existe essa festa"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260903-tatung",
+      "date": "2026-09-03",
+      "kind": "guess",
+      "topic": "lantern-festival",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的「第十五夜」主角不是燈籠,而是被視為受祖靈附身、被抬過街道並以利器貫穿而不見血的人?",
+        "en": "Guess: in which community is the star of the fifteenth night not the lantern but people held to be possessed by ancestral spirits, carried through the streets and pierced with blades without bleeding?",
+        "ja": "クイズ:「十五番目の夜」の主役が提灯ではなく、祖霊が憑いたとされ、街路を担ぎ運ばれ、刃物に貫かれても血を流さない人々であるのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群的「第十五夜」主角不是灯笼，而是被视为受祖灵附身、被抬过街道并以利器贯穿而不见血的人?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में \"पंद्रहवीं रात\" के केंद्र में लालटेन नहीं बल्कि वे लोग होते हैं जिन पर पूर्वजों की आत्मा उतरी मानी जाती है, जिन्हें गलियों में उठाकर ले जाया जाता है और धारदार हथियारों से बिंधने पर भी जिनसे ख़ून नहीं बहता?",
+        "id": "Tebak: di komunitas mana bintang \"malam kelima belas\" bukan lampion melainkan orang-orang yang diyakini dirasuki arwah leluhur, diarak di jalan dan ditembus benda tajam tanpa berdarah?",
+        "pt-BR": "Adivinhe: em qual comunidade a estrela da \"décima quinta noite\" não é a lanterna, mas pessoas tidas como possuídas por espíritos ancestrais, carregadas pelas ruas e atravessadas por lâminas sem sangrar?"
+      },
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        }
+      ],
+      "answer": "id",
+      "explain": {
+        "zh-TW": "印尼。那是 Cap Go Meh——閩南語「十五暝」的音,指農曆年後的第十五夜。規模最大的在西加里曼丹的山口洋(Singkawang),核心是「Tatung」,與 Tatung 一起被登錄為國家級非物質文化遺產。把這一格與台灣、中國那兩格放在一起看很清楚:同一個第十五夜,一邊是燈與謎,一邊是遊行與附身。",
+        "en": "Indonesia. It is Cap Go Meh — the Hokkien for \"fifteenth evening\", the fifteenth night after Lunar New Year. The largest is in Singkawang, West Kalimantan, and its centre is the Tatung; it is entered, together with the Tatung, on the national register of intangible cultural heritage. Read this cell beside Taiwan's and China's and the point is clear: the same fifteenth night, lanterns and riddles on one side, procession and possession on the other.",
+        "ja": "インドネシア。それはCap Go Meh――閩南語の「十五暝」の音で、旧正月から数えて十五番目の夜を指す。最大の規模は西カリマンタンのシンカワンで、中心にあるのは「タトゥン」であり、タトゥンとともに国家級の無形文化遺産に登録されている。この欄を台湾と中国の欄と並べれば要点は明快だ。同じ十五番目の夜に、一方には灯と謎があり、他方には行列と憑依がある。",
+        "zh-CN": "印尼。那是 Cap Go Meh——闽南语「十五暝」的音，指农历年后的第十五夜。规模最大的在西加里曼丹的山口洋（Singkawang），核心是「Tatung」，与 Tatung 一起被登录为国家级非物质文化遗产。把这一格与台湾、中国那两格放在一起看很清楚：同一个第十五夜，一边是灯与谜，一边是游行与附身。",
+        "hi": "इंडोनेशिया। वह Cap Go Meh है — होक्कियन में \"पंद्रहवीं संध्या\", यानी चंद्र नववर्ष के बाद की पंद्रहवीं रात। सबसे बड़ा आयोजन पश्चिमी कालिमंतान के सिंगकावांग में होता है और उसका केंद्र Tatung है; Tatung के साथ यह अमूर्त सांस्कृतिक विरासत की राष्ट्रीय सूची में दर्ज है। इस ख़ाने को ताइवान और चीन के ख़ानों के साथ पढ़िए तो बात साफ़ है: वही पंद्रहवीं रात — एक ओर लालटेन और पहेलियाँ, दूसरी ओर जुलूस और आवेश।",
+        "id": "Indonesia. Itulah Cap Go Meh — dari bahasa Hokkien untuk \"malam kelima belas\", yakni malam kelima belas setelah Imlek. Yang terbesar ada di Singkawang, Kalimantan Barat, dan pusatnya adalah Tatung; bersama Tatung, ia tercatat dalam daftar nasional warisan budaya takbenda. Bacalah kolom ini berdampingan dengan kolom Taiwan dan Tiongkok, maka intinya jelas: malam kelima belas yang sama — di satu sisi lampion dan teka-teki, di sisi lain arak-arakan dan kerasukan.",
+        "pt-BR": "Indonésia. É o Cap Go Meh — do hokkien para \"décima quinta noite\", a décima quinta noite depois do Ano-Novo Lunar. A maior acontece em Singkawang, no Kalimantan Ocidental, e seu centro é o Tatung; está inscrito, junto com o Tatung, no registro nacional de patrimônio cultural imaterial. Leia esta célula ao lado das de Taiwan e da China e o ponto fica claro: a mesma décima quinta noite, lanternas e enigmas de um lado, procissão e possessão do outro."
+      }
+    },
+    {
+      "id": "q-20260904-valentine-school",
+      "date": "2026-09-04",
+      "kind": "poll",
+      "topic": "affection-and-reciprocity",
+      "asker": "ja",
+      "target": "id",
+      "text": {
+        "zh-TW": "情人節在你們的學校或公司,是被鼓勵、被無視,還是被勸阻?",
+        "en": "At your school or workplace, is Valentine's Day encouraged, ignored, or discouraged?",
+        "ja": "バレンタインデーは、あなたの学校や職場では推奨されますか、無視されますか、それとも控えるよう言われますか?",
+        "zh-CN": "情人节在你们的学校或公司，是被鼓励、被无视，还是被劝阻?",
+        "hi": "आपके स्कूल या कार्यस्थल पर वैलेंटाइन डे को प्रोत्साहित किया जाता है, अनदेखा किया जाता है, या रोका जाता है?",
+        "id": "Di sekolah atau tempat kerja kalian, Hari Valentine didorong, diabaikan, atau justru dilarang?",
+        "pt-BR": "Na sua escola ou trabalho, o Dia dos Namorados é incentivado, ignorado ou desencorajado?"
+      },
+      "options": [
+        {
+          "id": "encouraged",
+          "emoji": "💝",
+          "label": {
+            "zh-TW": "被鼓勵",
+            "en": "Encouraged",
+            "ja": "推奨される",
+            "zh-CN": "被鼓励",
+            "hi": "प्रोत्साहित",
+            "id": "Didorong",
+            "pt-BR": "Incentivado"
+          }
+        },
+        {
+          "id": "ignored",
+          "emoji": "😐",
+          "label": {
+            "zh-TW": "沒人管",
+            "en": "Nobody minds",
+            "ja": "誰も気にしない",
+            "zh-CN": "没人管",
+            "hi": "कोई ध्यान नहीं देता",
+            "id": "Tak ada yang peduli",
+            "pt-BR": "Ninguém liga"
+          }
+        },
+        {
+          "id": "discouraged",
+          "emoji": "🚫",
+          "label": {
+            "zh-TW": "被勸阻或禁止",
+            "en": "Discouraged or banned",
+            "ja": "控えるよう言われる、禁止される",
+            "zh-CN": "被劝阻或禁止",
+            "hi": "रोका या वर्जित",
+            "id": "Diimbau atau dilarang",
+            "pt-BR": "Desencorajado ou proibido"
+          }
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": {
+            "zh-TW": "不知道",
+            "en": "Not sure",
+            "ja": "わからない",
+            "zh-CN": "不知道",
+            "hi": "पता नहीं",
+            "id": "Tidak yakin",
+            "pt-BR": "Não sei"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260904-valentine-circulars",
+      "date": "2026-09-04",
+      "kind": "guess",
+      "topic": "affection-and-reciprocity",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的官方文件提到情人節,是為了叫學生不要過?",
+        "en": "Guess: in which community does the official paperwork mention Valentine's Day in order to tell students not to mark it?",
+        "ja": "クイズ:公文書がバレンタインデーに言及するのが、生徒に「祝うな」と告げるためであるのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群的官方文件提到情人节，是为了叫学生不要过?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय के सरकारी काग़ज़ वैलेंटाइन डे का ज़िक्र इसलिए करते हैं कि विद्यार्थियों को न मनाने को कहा जा सके?",
+        "id": "Tebak: di komunitas mana dokumen resmi menyebut Hari Valentine justru untuk meminta siswa tidak merayakannya?",
+        "pt-BR": "Adivinhe: em qual comunidade o papel oficial menciona o Dia dos Namorados justamente para pedir aos alunos que não o celebrem?"
+      },
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "id",
+      "explain": {
+        "zh-TW": "印尼。二月十四日不是假日,而且它在制度上留下的痕跡是反方向的:每年這個日子前後,不少地方政府的教育局會發出通函(surat edaran),要求轄內學校勸阻學生慶祝——西爪哇的德波市二○二三年、東爪哇的巴蘇魯安縣二○一七年、廖內群島省教育局對高中與職校都發過。理由寫得很直白:與宗教、社會與文化規範不合。相對的,國家承認的是另一種:中國把七夕列進二○○六年第一批國家級非物質文化遺產名錄,而二月十四日在中國一樣沒有任何制度身分。",
+        "en": "Indonesia. The fourteenth of February is not a holiday, and the institutional trace it leaves runs the other way: around the date each year, education offices in a number of local governments issue circulars — surat edaran — asking schools in their area to discourage students from marking it. Depok in West Java issued one in 2023, Pasuruan Regency in East Java in 2017, and the Riau Islands provincial education office advised its senior and vocational secondary schools likewise. The stated reason is plain: it does not fit religious, social and cultural norms. By contrast, what a state may recognise is the other one: China entered the Qixi festival on the first national list of intangible cultural heritage in 2006, while 14 February has no institutional standing there either.",
+        "ja": "インドネシア。二月十四日は休日ではなく、制度上に残る痕跡はむしろ逆向きである。毎年この日の前後になると、いくつもの地方政府の教育局が通達(スラット・エダラン)を出し、管内の学校に生徒が祝わないよう指導することを求める。西ジャワのデポック市は二〇二三年、東ジャワのパスルアン県は二〇一七年、リアウ諸島州の教育局も高校・職業高校に同様の勧告を行った。理由は明快で、宗教的・社会的・文化的な規範に合わないというものである。対照的に、国家が認めるのはもう一方でありうる。中国は七夕節を二〇〇六年の第一次国家級無形文化遺産名録に載せたが、二月十四日には同様に制度上の身分がない。",
+        "zh-CN": "印尼。二月十四日不是假日，而且它在制度上留下的痕迹是反方向的：每年这个日子前后，不少地方政府的教育局会发出通函（surat edaran），要求辖内学校劝阻学生庆祝——西爪哇的德波市二〇二三年、东爪哇的巴苏鲁安县二〇一七年、廖内群岛省教育局对高中与职校都发过。理由写得很直白：与宗教、社会与文化规范不合。相对的，国家承认的是另一种：中国把七夕列进二〇〇六年第一批国家级非物质文化遗产名录，而二月十四日在中国一样没有任何制度身分。",
+        "hi": "इंडोनेशिया। 14 फ़रवरी अवकाश नहीं है, और यह संस्थाओं पर जो निशान छोड़ता है वह उल्टी दिशा में है: हर वर्ष इस तिथि के आसपास कई स्थानीय सरकारों के शिक्षा कार्यालय परिपत्र — surat edaran — जारी करते हैं, जिनमें अपने क्षेत्र के विद्यालयों से कहा जाता है कि वे विद्यार्थियों को इसे मनाने से रोकें। पश्चिम जावा के देपोक ने 2023 में, पूर्वी जावा के पासुरुआन ज़िले ने 2017 में, और रियाउ द्वीप प्रांत के शिक्षा कार्यालय ने अपने उच्चतर तथा व्यावसायिक विद्यालयों को वैसी ही सलाह दी। कारण साफ़ लिखा होता है: यह धार्मिक, सामाजिक और सांस्कृतिक मानदंडों से मेल नहीं खाता। इसके उलट, राज्य जिसे मान्यता देता है वह दूसरा हो सकता है: चीन ने क़िशी पर्व को 2006 की पहली राष्ट्रीय अमूर्त सांस्कृतिक विरासत सूची में दर्ज किया, जबकि 14 फ़रवरी की वहाँ भी कोई संस्थागत हैसियत नहीं।",
+        "id": "Indonesia. Empat belas Februari bukan hari libur, dan jejak kelembagaan yang ditinggalkannya justru berjalan ke arah sebaliknya: menjelang tanggal itu tiap tahun, dinas pendidikan di sejumlah pemerintah daerah menerbitkan surat edaran yang meminta sekolah di wilayahnya mengimbau siswa agar tidak merayakannya. Depok di Jawa Barat menerbitkannya pada 2023, Kabupaten Pasuruan di Jawa Timur pada 2017, dan Dinas Pendidikan Provinsi Kepulauan Riau mengimbau hal serupa kepada SMA dan SMK. Alasannya ditulis terang: tidak sesuai dengan norma agama, sosial, dan budaya. Sebaliknya, yang diakui negara bisa jadi yang lain: Tiongkok memasukkan perayaan Qixi ke daftar nasional pertama warisan budaya takbenda pada 2006, sementara 14 Februari pun di sana tak berpelat kelembagaan.",
+        "pt-BR": "Indonésia. Catorze de fevereiro não é feriado, e o rastro institucional que deixa corre no sentido inverso: em torno da data, todo ano, secretarias de educação de vários governos locais emitem circulares — surat edaran — pedindo às escolas de sua área que desestimulem os alunos de marcá-la. Depok, em Java Ocidental, emitiu uma em 2023; o município de Pasuruan, em Java Oriental, em 2017; e a secretaria estadual de educação das Ilhas Riau orientou no mesmo sentido suas escolas de ensino médio e técnico. A razão declarada é direta: não se ajusta às normas religiosas, sociais e culturais. Em contraste, o que um Estado pode reconhecer é a outra: a China inscreveu a festa do Qixi na primeira lista nacional de patrimônio imaterial em 2006, enquanto o 14 de fevereiro também não tem ali estatuto institucional algum."
       }
     }
   ]

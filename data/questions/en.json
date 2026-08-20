@@ -679,6 +679,749 @@
       ],
       "answer": "hi",
       "explain": "The baraat of North Indian weddings — the groom rides in on a white horse amid dancing relatives and a live band."
+    },
+    {
+      "question_id": "q-20260825-school-lunch",
+      "date": "2026-08-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": "ja",
+      "target_locale": "en",
+      "text": "In the United States, do children bring a packed lunch or eat what the school serves?",
+      "options": [
+        {
+          "id": "packed",
+          "emoji": "🍱",
+          "label": "Packed from home"
+        },
+        {
+          "id": "school",
+          "emoji": "🍽️",
+          "label": "School lunch"
+        },
+        {
+          "id": "both",
+          "emoji": "🔀",
+          "label": "Both happen"
+        },
+        {
+          "id": "buy",
+          "emoji": "🛒",
+          "label": "Bought nearby"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260825-egg-standing",
+      "date": "2026-08-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR8KM720981PCZBPYFQ",
+      "topic_slug": "dragon-boat-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community stands an egg on its end at noon on the fifth of the fifth month, saying it brings luck?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. Standing an egg at noon on Duanwu, and drawing \"noon water\", need no river at all, so both continue in cities with no boat race. Duanwu is also one of Taiwan's three annual festivals — a point at which accounts are settled and gift boxes sent."
+    },
+    {
+      "question_id": "q-20260826-shoes-indoors",
+      "date": "2026-08-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": "zh-TW",
+      "target_locale": "pt-BR",
+      "text": "Do you take your shoes off when you come into the house?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "✅",
+          "label": "Always"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤔",
+          "label": "It depends"
+        },
+        {
+          "id": "no",
+          "emoji": "🙅",
+          "label": "No"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260826-silence-day",
+      "date": "2026-08-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community has a whole day when an entire island goes quiet — no lights, no going out, the airport closed?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonesia. The day is Nyepi, the Balinese Saka new year. Indonesia counts Hinduism among its officially recognised religions and gives it a national holiday — but that day is Bali's Nyepi, not North India's Diwali. Indonesia's Hindu population is concentrated in Bali, so the calendar and the festivals follow Bali."
+    },
+    {
+      "question_id": "q-20260827-teacher-gift",
+      "date": "2026-08-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "id",
+      "target_locale": "hi",
+      "text": "On Teachers' Day, do you give the teacher a gift?",
+      "options": [
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "Yes, a gift"
+        },
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "Just a card"
+        },
+        {
+          "id": "school",
+          "emoji": "🏫",
+          "label": "The school does it"
+        },
+        {
+          "id": "nothing",
+          "emoji": "🤷",
+          "label": "No such custom"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260827-no-teachers-day",
+      "date": "2026-08-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community has no Teachers' Day at all, and what the state marks is education rather than teachers?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "the United States"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        }
+      ],
+      "answer": "ja",
+      "explain": "Japan. The closest thing at national level is the Ministry of Education's Education and Culture Week, 1 to 7 November each year under a 1959 cabinet understanding — what it commemorates is education, not teachers. The name Education Day belongs to the prefectures instead: Tokushima, Niigata, Saitama, Shiga and others have each fixed 1 November by their own ordinance. The unit is the prefecture, not the country."
+    },
+    {
+      "question_id": "q-20260828-moon-cake",
+      "date": "2026-08-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "pt-BR",
+      "target_locale": "zh-CN",
+      "text": "At Mid-Autumn, do you give mooncakes? And to whom?",
+      "options": [
+        {
+          "id": "family",
+          "emoji": "👨‍👩‍👧",
+          "label": "To family"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "To clients and colleagues"
+        },
+        {
+          "id": "both",
+          "emoji": "🎁",
+          "label": "Both"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "We don't"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260828-sharad-purnima",
+      "date": "2026-08-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community stays awake all night under that same full moon, leaving rice pudding out in the moonlight to share the next day?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "answer": "hi",
+      "explain": "India. The night is Sharad Purnima, called Kojagiri Purnima in Maharashtra — the full moon of the month of Ashwin, usually in October. Kojagiri means \"who is awake\": the night is spent in prayer to Lakshmi, with kheer set out under the moonlight and shared the next day as prasad, and the moon of this night is said to show all sixteen of its parts. The same full moon: reunion and mooncakes on one side, a vigil and a sweet in the moonlight on the other."
+    },
+    {
+      "question_id": "q-20260829-fasting-start",
+      "date": "2026-08-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": "zh-TW",
+      "target_locale": "id",
+      "text": "How do you find out the date Ramadan starts?",
+      "options": [
+        {
+          "id": "official",
+          "emoji": "📢",
+          "label": "Wait for the official announcement the night before"
+        },
+        {
+          "id": "calc",
+          "emoji": "🧮",
+          "label": "Look at the calculated calendar"
+        },
+        {
+          "id": "mosque",
+          "emoji": "🕌",
+          "label": "Ask the mosque or community"
+        },
+        {
+          "id": "na",
+          "emoji": "🤷",
+          "label": "Doesn't apply to me"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260829-sidang-isbat",
+      "date": "2026-08-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: in which community is the first day of Ramadan announced only after the government meets the evening before, weighing crescent sightings against the calculation?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "the United States"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonesia. The Ministry of Religious Affairs convenes a sidang isbat the evening before, weighing crescent reports from dozens of stations across the country against the calculation, and only then declares whether the next day is the first. For 1447 AH (2026) the session met on 17 February; the crescent stood below the horizon at every station, and the session settled on 19 February by calculation. So a confirmed answer to \"what date does fasting start\" is, by design, unavailable months ahead — while the Eid break is scheduled a year in advance by joint decree of three ministries."
+    },
+    {
+      "question_id": "q-20260830-grave-visit",
+      "date": "2026-08-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": "en",
+      "target_locale": "id",
+      "text": "How many times a year do you visit the family graves?",
+      "options": [
+        {
+          "id": "many",
+          "emoji": "🗓️",
+          "label": "More than three"
+        },
+        {
+          "id": "once",
+          "emoji": "🕯️",
+          "label": "Once a year"
+        },
+        {
+          "id": "rare",
+          "emoji": "🌾",
+          "label": "Only occasionally"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "No such custom"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260830-nyadran",
+      "date": "2026-08-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community tends the ancestral graves just before Ramadan begins — cleaning them, praying together, and closing with the whole village sitting down to one shared meal?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonesia, in Java. It is Nyadran, done in the month of Ruwah before Ramadan begins. The word comes from the Sanskrit sraddha, faith. The sequence is fixed — clean the graves, then pray together, then close with kembul bujono, everyone eating one meal side by side. It began in pre-Islamic belief and later merged with Javanese Islamic practice. Like Qingming it is grave-tending, but it aligns not with a particular date so much as with the fact that fasting starts next month."
+    },
+    {
+      "question_id": "q-20260831-labour-day-off",
+      "date": "2026-08-31",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": "hi",
+      "target_locale": "zh-TW",
+      "text": "On 1 May, does your workplace give you the day off?",
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🛌",
+          "label": "Yes, a day off"
+        },
+        {
+          "id": "partial",
+          "emoji": "🧩",
+          "label": "Some people yes, some no"
+        },
+        {
+          "id": "no",
+          "emoji": "🏢",
+          "label": "No, we work"
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": "Not sure"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260831-partial-labour-day",
+      "date": "2026-08-31",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: in which community can Labour Day mean that one person in a household is off while another goes to work as usual?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. It is a holiday on which only some people are off: the day off is limited to workers covered by the Labour Standards Act, while civil servants and parts of some industries work as usual. A holiday named for labour thus lays the question of who counts as a worker out on the calendar, replayed once a year."
+    },
+    {
+      "question_id": "q-20260901-childrens-day-off",
+      "date": "2026-09-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": "pt-BR",
+      "target_locale": "en",
+      "text": "On Children's Day, do your children get the day off?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎈",
+          "label": "Yes, a day off"
+        },
+        {
+          "id": "school",
+          "emoji": "🏫",
+          "label": "School as usual, but with events"
+        },
+        {
+          "id": "nothing",
+          "emoji": "📅",
+          "label": "Just an ordinary day"
+        },
+        {
+          "id": "nokids",
+          "emoji": "🙋",
+          "label": "No children at home"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260901-moving-childrens-day",
+      "date": "2026-09-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: in which community does Children's Day not even have a fixed date — re-proclaimed each year by the head of state, and moved at least four times in forty years?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "the United States"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        }
+      ],
+      "answer": "en",
+      "explain": "The United States. It is not a statutory holiday; it exists as a presidential proclamation reissued each year: Reagan put it on 8 August in 1982, Clinton on 11 October in 1998, George W. Bush on 9 June in 2002, Obama moved it to 20 November from 2013, and Biden kept 20 November in 2024. A proclamation is not a law, brings no day off, and the next occupant can move it. By contrast Indonesia's National Children's Day was fixed on 23 July by Presidential Decision No. 44 of 1984, and Brazil's 12 October coincides with Our Lady of Aparecida, already a national holiday."
+    },
+    {
+      "question_id": "q-20260902-harvest-thanks",
+      "date": "2026-09-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "zh-CN",
+      "target_locale": "pt-BR",
+      "text": "Do you have a day for giving thanks for the harvest? In which season?",
+      "options": [
+        {
+          "id": "autumn",
+          "emoji": "🍂",
+          "label": "Yes, in autumn"
+        },
+        {
+          "id": "other",
+          "emoji": "🌱",
+          "label": "Yes, but not in autumn"
+        },
+        {
+          "id": "local",
+          "emoji": "🏘️",
+          "label": "Only in some places"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "No"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260902-before-harvest",
+      "date": "2026-09-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: in which community does Farmers' Day fall not after the harvest but on the first day of spring — that is, before the work has even begun?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. The Act on Commemorative Days and Holidays says plainly: \"Farmers' Day: fixed on the day of Lichun.\" That is the reverse of harvest days elsewhere — Thanksgiving, China's farmers' harvest festival and Japan's Labour Thanksgiving all sit after the crop is in, while this one sits before the work starts: what it marks is not what has been gathered but the fact of going back to the field. The date is set by astronomy, so whether it lands on 3, 4 or 5 February must be looked up each year in the Central Weather Administration's calendar tables. It is not a day off."
+    },
+    {
+      "question_id": "q-20260903-lantern-night",
+      "date": "2026-09-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": "en",
+      "target_locale": "zh-TW",
+      "text": "On the fifteenth night after Lunar New Year, is there a lantern event where you are?",
+      "options": [
+        {
+          "id": "city",
+          "emoji": "🏮",
+          "label": "Yes, a big city-wide one"
+        },
+        {
+          "id": "temple",
+          "emoji": "🛕",
+          "label": "Yes, at a temple or in the neighbourhood"
+        },
+        {
+          "id": "home",
+          "emoji": "🕯️",
+          "label": "Only dumplings at home"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "No such festival here"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260903-tatung",
+      "date": "2026-09-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: in which community is the star of the fifteenth night not the lantern but people held to be possessed by ancestral spirits, carried through the streets and pierced with blades without bleeding?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonesia. It is Cap Go Meh — the Hokkien for \"fifteenth evening\", the fifteenth night after Lunar New Year. The largest is in Singkawang, West Kalimantan, and its centre is the Tatung; it is entered, together with the Tatung, on the national register of intangible cultural heritage. Read this cell beside Taiwan's and China's and the point is clear: the same fifteenth night, lanterns and riddles on one side, procession and possession on the other."
+    },
+    {
+      "question_id": "q-20260904-valentine-school",
+      "date": "2026-09-04",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": "ja",
+      "target_locale": "id",
+      "text": "At your school or workplace, is Valentine's Day encouraged, ignored, or discouraged?",
+      "options": [
+        {
+          "id": "encouraged",
+          "emoji": "💝",
+          "label": "Encouraged"
+        },
+        {
+          "id": "ignored",
+          "emoji": "😐",
+          "label": "Nobody minds"
+        },
+        {
+          "id": "discouraged",
+          "emoji": "🚫",
+          "label": "Discouraged or banned"
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": "Not sure"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260904-valentine-circulars",
+      "date": "2026-09-04",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: in which community does the official paperwork mention Valentine's Day in order to tell students not to mark it?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonesia. The fourteenth of February is not a holiday, and the institutional trace it leaves runs the other way: around the date each year, education offices in a number of local governments issue circulars — surat edaran — asking schools in their area to discourage students from marking it. Depok in West Java issued one in 2023, Pasuruan Regency in East Java in 2017, and the Riau Islands provincial education office advised its senior and vocational secondary schools likewise. The stated reason is plain: it does not fit religious, social and cultural norms. By contrast, what a state may recognise is the other one: China entered the Qixi festival on the first national list of intangible cultural heritage in 2006, while 14 February has no institutional standing there either."
     }
   ]
 }

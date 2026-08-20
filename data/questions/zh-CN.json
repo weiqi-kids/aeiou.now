@@ -679,6 +679,749 @@
       ],
       "answer": "hi",
       "explain": "北印度婚礼的 baraat:新郎骑白马(或白马车)在亲友歌舞与乐队簇拥下抵达婚礼现场。"
+    },
+    {
+      "question_id": "q-20260825-school-lunch",
+      "date": "2026-08-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": "ja",
+      "target_locale": "en",
+      "text": "美国的学校午餐是自己带便当，还是学校统一供餐?",
+      "options": [
+        {
+          "id": "packed",
+          "emoji": "🍱",
+          "label": "自己带"
+        },
+        {
+          "id": "school",
+          "emoji": "🍽️",
+          "label": "学校供餐"
+        },
+        {
+          "id": "both",
+          "emoji": "🔀",
+          "label": "两种都有"
+        },
+        {
+          "id": "buy",
+          "emoji": "🛒",
+          "label": "在外面买"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260825-egg-standing",
+      "date": "2026-08-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR8KM720981PCZBPYFQ",
+      "topic_slug": "dragon-boat-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群在端午节正午会把鸡蛋立起来，说立得起来就会好运?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "台湾。端午当天中午“立蛋”与取“午时水”都不需要河，所以连没有龙舟赛的城市也照做。端午在台湾还是一年三节之一，是传统上结清帐款、致送礼盒的节点。"
+    },
+    {
+      "question_id": "q-20260826-shoes-indoors",
+      "date": "2026-08-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": "zh-TW",
+      "target_locale": "pt-BR",
+      "text": "你们进家门会脱鞋吗?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "✅",
+          "label": "一定会"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤔",
+          "label": "看情况"
+        },
+        {
+          "id": "no",
+          "emoji": "🙅",
+          "label": "不会"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260826-silence-day",
+      "date": "2026-08-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群有一整天全岛安静——不开灯、不出门、机场关闭?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "answer": "id",
+      "explain": "印尼。那一天是 Nyepi，巴厘萨卡历的新年。印尼把印度教列为官方承认的宗教之一，而且给了它一天全国假日——但那一天是巴厘的 Nyepi，不是北印度的排灯节。印尼的印度教人口集中在巴厘，历法与节期就跟着巴厘走。"
+    },
+    {
+      "question_id": "q-20260827-teacher-gift",
+      "date": "2026-08-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "id",
+      "target_locale": "hi",
+      "text": "教师节你们会送老师礼物吗?",
+      "options": [
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "会送礼物"
+        },
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "只写卡片"
+        },
+        {
+          "id": "school",
+          "emoji": "🏫",
+          "label": "学校统一办"
+        },
+        {
+          "id": "nothing",
+          "emoji": "🤷",
+          "label": "没有这个习惯"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260827-no-teachers-day",
+      "date": "2026-08-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群根本没有教师节，国家纪念的是「教育」而不是老师?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "answer": "ja",
+      "explain": "日本。国家层级最接近的是文部科学省的「教育・文化周间」，每年十一月一日到七日，依昭和三十四年的阁议了解举办——纪念的是教育，不是教师。真正挂上「教育の日」名字的是都道府县：德岛、新潟、埼玉、滋贺等地各自以条例把十一月一日定为自己的教育之日。单位是县，不是国。"
+    },
+    {
+      "question_id": "q-20260828-moon-cake",
+      "date": "2026-08-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "pt-BR",
+      "target_locale": "zh-CN",
+      "text": "中秋节你们会送月饼吗?送给谁?",
+      "options": [
+        {
+          "id": "family",
+          "emoji": "👨‍👩‍👧",
+          "label": "送家人"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "送客户同事"
+        },
+        {
+          "id": "both",
+          "emoji": "🎁",
+          "label": "都送"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "不送"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260828-sharad-purnima",
+      "date": "2026-08-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群在同一轮满月下整夜不睡，把米布丁放在月光里，隔天才分着吃?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "answer": "hi",
+      "explain": "印度。这一夜叫 Sharad Purnima，马哈拉施特拉称 Kojagiri Purnima——阿希温月的满月夜，通常在十月。Kojagiri 的意思就是「谁醒着」：整夜守着向拉克希米祈祷，把 kheer 放在月光下，隔天当 prasad 分食。传说这一夜的月亮圆满到十六分。同一轮满月，一边是团圆与月饼，一边是守夜与月光下的甜点。"
+    },
+    {
+      "question_id": "q-20260829-fasting-start",
+      "date": "2026-08-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": "zh-TW",
+      "target_locale": "id",
+      "text": "斋戒月开始的日期，你们是怎么知道的?",
+      "options": [
+        {
+          "id": "official",
+          "emoji": "📢",
+          "label": "等官方前一晚公告"
+        },
+        {
+          "id": "calc",
+          "emoji": "🧮",
+          "label": "看历算表"
+        },
+        {
+          "id": "mosque",
+          "emoji": "🕌",
+          "label": "问清真寺或社群"
+        },
+        {
+          "id": "na",
+          "emoji": "🤷",
+          "label": "没有这个问题"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260829-sidang-isbat",
+      "date": "2026-08-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群的斋戒月起始日，是政府在前一晚开会、综合月相观测与历算之后才宣布的?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "answer": "id",
+      "explain": "印尼。宗教部在前一晚召开 sidang isbat，把全国数十个观测点报回的月相与历算结果放在一起，当晚才宣布次日是不是初一。一四四七年（公历二〇二六）那一次在二月十七日开会，各观测点的新月都在地平线以下，会议依历算认定二月十九日为初一。所以「几号开始斋戒」的确定答案，制度上就是拿不到几个月前的——但开斋节的连假，三个部会提前一年就用联合决议排好了。"
+    },
+    {
+      "question_id": "q-20260830-grave-visit",
+      "date": "2026-08-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": "en",
+      "target_locale": "id",
+      "text": "你们一年会去扫墓几次?",
+      "options": [
+        {
+          "id": "many",
+          "emoji": "🗓️",
+          "label": "三次以上"
+        },
+        {
+          "id": "once",
+          "emoji": "🕯️",
+          "label": "一年一次"
+        },
+        {
+          "id": "rare",
+          "emoji": "🌾",
+          "label": "偶尔才去"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "没有这个习惯"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260830-nyadran",
+      "date": "2026-08-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群在斋戒月开始之前去扫墓，先清墓、再一起祈祷，最后全村坐下来吃同一顿饭?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "answer": "id",
+      "explain": "印尼（爪哇）。那是 Nyadran，在 Ruwah 月、斋戒月开始之前进行。「nyadran」一词来自梵语 sraddha（信）。流程固定：先清理墓地，再共同祈祷，最后以 kembul bujono——大家一起吃一顿——收尾。它原本属于伊斯兰传入前的信仰，后来与爪哇的伊斯兰实践融合。与清明同样是扫墓，但它不对齐某一天，而是对齐「下个月要开始斋戒」这件事。"
+    },
+    {
+      "question_id": "q-20260831-labour-day-off",
+      "date": "2026-08-31",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": "hi",
+      "target_locale": "zh-TW",
+      "text": "五月一日劳动节，你们公司放假吗?",
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🛌",
+          "label": "放假"
+        },
+        {
+          "id": "partial",
+          "emoji": "🧩",
+          "label": "有些人放、有些人不放"
+        },
+        {
+          "id": "no",
+          "emoji": "🏢",
+          "label": "照常上班"
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": "不确定"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260831-partial-labour-day",
+      "date": "2026-08-31",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群的劳动节，同一个家里可能一个人放假、另一个人照常上班?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "台湾。它是「只有部分人放假」的假日：放假对象限于适用劳动基准法的劳工，公务人员与部分行业照常上班。一个以劳工为名的假日，恰好把「谁算劳工」这件事摊在行事历上，每年重演一次。"
+    },
+    {
+      "question_id": "q-20260901-childrens-day-off",
+      "date": "2026-09-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": "pt-BR",
+      "target_locale": "en",
+      "text": "儿童节那天，你们的小孩放假吗?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎈",
+          "label": "放假"
+        },
+        {
+          "id": "school",
+          "emoji": "🏫",
+          "label": "照常上学但学校有活动"
+        },
+        {
+          "id": "nothing",
+          "emoji": "📅",
+          "label": "就是普通一天"
+        },
+        {
+          "id": "nokids",
+          "emoji": "🙋",
+          "label": "家里没有小孩"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260901-moving-childrens-day",
+      "date": "2026-09-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群的儿童节连日期都不固定，每年由元首重新公告，四十年里搬过至少四次家?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "answer": "en",
+      "explain": "美国。它不是法定假日，存在形式是每年重新发布的总统公告：里根一九八二年订在八月八日、克林顿一九九八年订在十月十一日、小布什二〇〇二年订在六月九日、奥巴马二〇一三年起改到十一月二十日，拜登二〇二四年也是十一月二十日。公告不是法律、不放假，下一任可以换日子。相比之下，印尼的全国儿童节由一九八四年第四十四号总统决定书固定在七月二十三日；巴西的十月十二日则撞上阿帕雷西达圣母日，本来就是全国假日。"
+    },
+    {
+      "question_id": "q-20260902-harvest-thanks",
+      "date": "2026-09-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "zh-CN",
+      "target_locale": "pt-BR",
+      "text": "你们有没有一个「谢收成」的日子?在什么季节?",
+      "options": [
+        {
+          "id": "autumn",
+          "emoji": "🍂",
+          "label": "有，在秋天"
+        },
+        {
+          "id": "other",
+          "emoji": "🌱",
+          "label": "有，但不在秋天"
+        },
+        {
+          "id": "local",
+          "emoji": "🏘️",
+          "label": "只有某些地方有"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "没有"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260902-before-harvest",
+      "date": "2026-09-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群的「农民节」不在收成之后，而是定在立春——也就是还没下田之前?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "台湾。《纪念日及节日实施条例》写的是「农民节：定于立春日」。这与其他地方的收成节刚好相反——感恩节、中国的农民丰收节、日本的勤劳感谢日都排在收完之后，台湾这一天排在开始之前：庆祝的不是已经到手的东西，而是即将下田这件事。立春的日期由天文决定，每年查中央气象署的日历资料表才知道落在二月三日、四日还是五日。这一天不放假。"
+    },
+    {
+      "question_id": "q-20260903-lantern-night",
+      "date": "2026-09-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": "en",
+      "target_locale": "zh-TW",
+      "text": "农历年的第十五夜，你们那里有灯会吗?",
+      "options": [
+        {
+          "id": "city",
+          "emoji": "🏮",
+          "label": "有，城市级的大型灯会"
+        },
+        {
+          "id": "temple",
+          "emoji": "🛕",
+          "label": "有，庙宇或社区办的"
+        },
+        {
+          "id": "home",
+          "emoji": "🕯️",
+          "label": "只在家里吃汤圆"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "没有这个节日"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260903-tatung",
+      "date": "2026-09-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群的「第十五夜」主角不是灯笼，而是被视为受祖灵附身、被抬过街道并以利器贯穿而不见血的人?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "answer": "id",
+      "explain": "印尼。那是 Cap Go Meh——闽南语「十五暝」的音，指农历年后的第十五夜。规模最大的在西加里曼丹的山口洋（Singkawang），核心是「Tatung」，与 Tatung 一起被登录为国家级非物质文化遗产。把这一格与台湾、中国那两格放在一起看很清楚：同一个第十五夜，一边是灯与谜，一边是游行与附身。"
+    },
+    {
+      "question_id": "q-20260904-valentine-school",
+      "date": "2026-09-04",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": "ja",
+      "target_locale": "id",
+      "text": "情人节在你们的学校或公司，是被鼓励、被无视，还是被劝阻?",
+      "options": [
+        {
+          "id": "encouraged",
+          "emoji": "💝",
+          "label": "被鼓励"
+        },
+        {
+          "id": "ignored",
+          "emoji": "😐",
+          "label": "没人管"
+        },
+        {
+          "id": "discouraged",
+          "emoji": "🚫",
+          "label": "被劝阻或禁止"
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": "不知道"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260904-valentine-circulars",
+      "date": "2026-09-04",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪个社群的官方文件提到情人节，是为了叫学生不要过?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "answer": "id",
+      "explain": "印尼。二月十四日不是假日，而且它在制度上留下的痕迹是反方向的：每年这个日子前后，不少地方政府的教育局会发出通函（surat edaran），要求辖内学校劝阻学生庆祝——西爪哇的德波市二〇二三年、东爪哇的巴苏鲁安县二〇一七年、廖内群岛省教育局对高中与职校都发过。理由写得很直白：与宗教、社会与文化规范不合。相对的，国家承认的是另一种：中国把七夕列进二〇〇六年第一批国家级非物质文化遗产名录，而二月十四日在中国一样没有任何制度身分。"
     }
   ]
 }

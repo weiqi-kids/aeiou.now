@@ -679,6 +679,749 @@
       ],
       "answer": "hi",
       "explain": "北インドの結婚式の「バラート」。花婿は白馬に乗り、踊る親族と楽隊に囲まれて式場に到着します。"
+    },
+    {
+      "question_id": "q-20260825-school-lunch",
+      "date": "2026-08-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": "ja",
+      "target_locale": "en",
+      "text": "アメリカの学校の昼食は、弁当を持参するの?それとも学校が出すの?",
+      "options": [
+        {
+          "id": "packed",
+          "emoji": "🍱",
+          "label": "持参する"
+        },
+        {
+          "id": "school",
+          "emoji": "🍽️",
+          "label": "学校が出す"
+        },
+        {
+          "id": "both",
+          "emoji": "🔀",
+          "label": "どちらもある"
+        },
+        {
+          "id": "buy",
+          "emoji": "🛒",
+          "label": "外で買う"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260825-egg-standing",
+      "date": "2026-08-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR8KM720981PCZBPYFQ",
+      "topic_slug": "dragon-boat-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:五月五日の正午に卵を立て、立てば縁起がよいとするのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "台湾。端午の正午に卵を立てること、午の刻の水を汲むことはいずれも川を必要としないため、競漕のない都市でも変わらず行われる。台湾では端午は一年三節の一つでもあり、掛けを清算し贈答を送る節目でもある。"
+    },
+    {
+      "question_id": "q-20260826-shoes-indoors",
+      "date": "2026-08-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": "zh-TW",
+      "target_locale": "pt-BR",
+      "text": "家に入るとき、靴は脱ぎますか?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "✅",
+          "label": "必ずする"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤔",
+          "label": "場合による"
+        },
+        {
+          "id": "no",
+          "emoji": "🙅",
+          "label": "しない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260826-silence-day",
+      "date": "2026-08-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:島全体が丸一日静まりかえり、灯りをつけず、外出せず、空港まで閉まるのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "answer": "id",
+      "explain": "インドネシア。その日はニュピ、バリのサカ暦の新年である。インドネシアはヒンドゥー教を公認宗教の一つに数え、全国の祝日を一日与えているが、その日はバリのニュピであって、北インドのディワリではない。インドネシアのヒンドゥー教徒はバリに集中しており、暦も節期もバリに従う。"
+    },
+    {
+      "question_id": "q-20260827-teacher-gift",
+      "date": "2026-08-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "id",
+      "target_locale": "hi",
+      "text": "教師の日に、先生へ贈り物をしますか?",
+      "options": [
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "贈り物をする"
+        },
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "カードだけ"
+        },
+        {
+          "id": "school",
+          "emoji": "🏫",
+          "label": "学校がまとめてやる"
+        },
+        {
+          "id": "nothing",
+          "emoji": "🤷",
+          "label": "その習慣はない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260827-no-teachers-day",
+      "date": "2026-08-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:そもそも教師の日がなく、国が記念しているのは教師ではなく「教育」なのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "answer": "ja",
+      "explain": "日本。国のレベルでもっとも近いのは文部科学省の「教育・文化週間」で、毎年十一月一日から七日まで、昭和三十四年の閣議了解に基づいて行われる。記念されるのは教育であって教師ではない。「教育の日」の名を掲げているのはむしろ都道府県で、徳島・新潟・埼玉・滋賀などが条例でそれぞれ十一月一日を定めている。単位は国ではなく県である。"
+    },
+    {
+      "question_id": "q-20260828-moon-cake",
+      "date": "2026-08-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "pt-BR",
+      "target_locale": "zh-CN",
+      "text": "中秋節に月餅を贈りますか?誰に?",
+      "options": [
+        {
+          "id": "family",
+          "emoji": "👨‍👩‍👧",
+          "label": "家族に"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "取引先や同僚に"
+        },
+        {
+          "id": "both",
+          "emoji": "🎁",
+          "label": "どちらにも"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "贈らない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260828-sharad-purnima",
+      "date": "2026-08-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:同じ満月の下で夜通し起きて、ミルク粥を月光に置き、翌日に分け合うのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "answer": "hi",
+      "explain": "インド。この夜はシャラド・プールニマー、マハーラーシュトラではコージャーギリー・プールニマーと呼ばれる。アーシュヴィナ月の満月の夜で、たいてい十月に当たる。コージャーギリーとは「誰が起きているか」の意で、夜通しラクシュミーに祈り、キールを月光の下に置いて翌日プラサードとして分け合う。この夜の月は十六の相をすべて備えると言われる。同じ満月に、一方には団欒と月餅、他方には夜通しの祈りと月光の甘味がある。"
+    },
+    {
+      "question_id": "q-20260829-fasting-start",
+      "date": "2026-08-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": "zh-TW",
+      "target_locale": "id",
+      "text": "断食月が始まる日付は、どうやって知りますか?",
+      "options": [
+        {
+          "id": "official",
+          "emoji": "📢",
+          "label": "前夜の公式発表を待つ"
+        },
+        {
+          "id": "calc",
+          "emoji": "🧮",
+          "label": "暦算の表を見る"
+        },
+        {
+          "id": "mosque",
+          "emoji": "🕌",
+          "label": "モスクや地域に聞く"
+        },
+        {
+          "id": "na",
+          "emoji": "🤷",
+          "label": "自分には関係ない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260829-sidang-isbat",
+      "date": "2026-08-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:断食月の初日を、政府が前夜に会議を開き、月の観測と暦算を突き合わせてはじめて発表するのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "answer": "id",
+      "explain": "インドネシア。宗教省が前夜にシダン・イスバットを開き、全国数十か所の観測点から寄せられた月の報告と暦算の結果を突き合わせ、そこではじめて翌日が初日かどうかを宣言する。ヒジュラ暦一四四七年(西暦二〇二六年)は二月十七日に開かれ、全観測点で新月は地平線下にあり、会議は暦算に基づいて二月十九日を初日と定めた。つまり「何日から断食か」の確定答は、制度上、数か月前には得られない。一方、断食明けの連休は三省が一年前に合同決定で組んである。"
+    },
+    {
+      "question_id": "q-20260830-grave-visit",
+      "date": "2026-08-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": "en",
+      "target_locale": "id",
+      "text": "お墓参りは年に何回しますか?",
+      "options": [
+        {
+          "id": "many",
+          "emoji": "🗓️",
+          "label": "三回以上"
+        },
+        {
+          "id": "once",
+          "emoji": "🕯️",
+          "label": "年に一度"
+        },
+        {
+          "id": "rare",
+          "emoji": "🌾",
+          "label": "たまにしか行かない"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "その習慣はない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260830-nyadran",
+      "date": "2026-08-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:断食月が始まる前に墓へ参り、墓を清め、皆で祈り、最後に村じゅうで一つの食事をともにするのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "answer": "id",
+      "explain": "インドネシア(ジャワ)。それはニャドランで、ルワの月、断食月が始まる前に行われる。「ニャドラン」という語はサンスクリットのシュラッダー(信)に由来する。次第は定まっている。まず墓を清め、次に皆で祈り、最後にクンブル・ブジョノ——皆で一つの食事をともにすること——で結ぶ。もとはイスラム伝来以前の信仰に属し、のちにジャワのイスラム実践と融合した。清明と同じく墓を手入れする営みだが、ある一日ではなく「来月から断食が始まる」という事実に合わせている。"
+    },
+    {
+      "question_id": "q-20260831-labour-day-off",
+      "date": "2026-08-31",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": "hi",
+      "target_locale": "zh-TW",
+      "text": "五月一日のメーデー、あなたの職場は休みになりますか?",
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🛌",
+          "label": "休みになる"
+        },
+        {
+          "id": "partial",
+          "emoji": "🧩",
+          "label": "休む人と休まない人がいる"
+        },
+        {
+          "id": "no",
+          "emoji": "🏢",
+          "label": "通常どおり働く"
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": "わからない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260831-partial-labour-day",
+      "date": "2026-08-31",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:同じ家の中で、一方は休み、他方は通常どおり出勤――そんなメーデーになりうるのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "台湾。「一部の人だけが休む」祝日である。休みの対象は労働基準法の適用を受ける労働者に限られ、公務員や一部の業種は通常どおり働く。労働の名を冠した休日が、「誰が労働者に当たるのか」という問いを暦の上に広げ、毎年一度それを繰り返す。"
+    },
+    {
+      "question_id": "q-20260901-childrens-day-off",
+      "date": "2026-09-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": "pt-BR",
+      "target_locale": "en",
+      "text": "こどもの日、子どもたちは休みになりますか?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎈",
+          "label": "休みになる"
+        },
+        {
+          "id": "school",
+          "emoji": "🏫",
+          "label": "登校するが行事がある"
+        },
+        {
+          "id": "nothing",
+          "emoji": "📅",
+          "label": "ふつうの日"
+        },
+        {
+          "id": "nokids",
+          "emoji": "🙋",
+          "label": "家に子どもがいない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260901-moving-childrens-day",
+      "date": "2026-09-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:こどもの日が日付すら定まらず、毎年元首が改めて布告し、四十年で少なくとも四度も引っ越したのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "answer": "en",
+      "explain": "米国。法定の祝日ではなく、毎年出し直される大統領布告として存在する。レーガンは一九八二年に八月八日、クリントンは一九九八年に十月十一日、ブッシュ(子)は二〇〇二年に六月九日、オバマは二〇一三年から十一月二十日へ移し、バイデンも二〇二四年に十一月二十日とした。布告は法律ではなく休みにもならず、次の大統領が日を変えうる。対してインドネシアの全国こどもの日は一九八四年大統領決定第四十四号で七月二十三日に固定され、ブラジルの十月十二日はアパレシーダの聖母の日と重なり、もとより国の祝日である。"
+    },
+    {
+      "question_id": "q-20260902-harvest-thanks",
+      "date": "2026-09-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "zh-CN",
+      "target_locale": "pt-BR",
+      "text": "収穫に感謝する日はありますか?あるとしたら、どの季節?",
+      "options": [
+        {
+          "id": "autumn",
+          "emoji": "🍂",
+          "label": "ある、秋に"
+        },
+        {
+          "id": "other",
+          "emoji": "🌱",
+          "label": "あるが秋ではない"
+        },
+        {
+          "id": "local",
+          "emoji": "🏘️",
+          "label": "一部の地域だけにある"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "ない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260902-before-harvest",
+      "date": "2026-09-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:「農民節」が収穫のあとではなく立春に、つまりまだ田に出る前に置かれているのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "台湾。「記念日及び節日実施条例」は端的にこう記す――「農民節:立春の日に定める」。これは他所の収穫の日とは逆である。感謝祭も中国の農民豊収節も日本の勤労感謝の日も収穫が済んだあとに置かれるが、この日は仕事が始まる前に置かれる。祝われているのは手に入れたものではなく、これから田に出るという事実である。日付は天文が決めるため、二月三日か四日か五日かは毎年、中央気象署の日暦資料表を引いて確かめる。この日は休みではない。"
+    },
+    {
+      "question_id": "q-20260903-lantern-night",
+      "date": "2026-09-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": "en",
+      "target_locale": "zh-TW",
+      "text": "旧正月から十五番目の夜、あなたのところに灯りの催しはありますか?",
+      "options": [
+        {
+          "id": "city",
+          "emoji": "🏮",
+          "label": "ある、市を挙げての大きな催し"
+        },
+        {
+          "id": "temple",
+          "emoji": "🛕",
+          "label": "ある、寺社や地域のもの"
+        },
+        {
+          "id": "home",
+          "emoji": "🕯️",
+          "label": "家で団子を食べるだけ"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "その祭りはない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260903-tatung",
+      "date": "2026-09-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:「十五番目の夜」の主役が提灯ではなく、祖霊が憑いたとされ、街路を担ぎ運ばれ、刃物に貫かれても血を流さない人々であるのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "answer": "id",
+      "explain": "インドネシア。それはCap Go Meh――閩南語の「十五暝」の音で、旧正月から数えて十五番目の夜を指す。最大の規模は西カリマンタンのシンカワンで、中心にあるのは「タトゥン」であり、タトゥンとともに国家級の無形文化遺産に登録されている。この欄を台湾と中国の欄と並べれば要点は明快だ。同じ十五番目の夜に、一方には灯と謎があり、他方には行列と憑依がある。"
+    },
+    {
+      "question_id": "q-20260904-valentine-school",
+      "date": "2026-09-04",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": "ja",
+      "target_locale": "id",
+      "text": "バレンタインデーは、あなたの学校や職場では推奨されますか、無視されますか、それとも控えるよう言われますか?",
+      "options": [
+        {
+          "id": "encouraged",
+          "emoji": "💝",
+          "label": "推奨される"
+        },
+        {
+          "id": "ignored",
+          "emoji": "😐",
+          "label": "誰も気にしない"
+        },
+        {
+          "id": "discouraged",
+          "emoji": "🚫",
+          "label": "控えるよう言われる、禁止される"
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": "わからない"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260904-valentine-circulars",
+      "date": "2026-09-04",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:公文書がバレンタインデーに言及するのが、生徒に「祝うな」と告げるためであるのはどのコミュニティ?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "answer": "id",
+      "explain": "インドネシア。二月十四日は休日ではなく、制度上に残る痕跡はむしろ逆向きである。毎年この日の前後になると、いくつもの地方政府の教育局が通達(スラット・エダラン)を出し、管内の学校に生徒が祝わないよう指導することを求める。西ジャワのデポック市は二〇二三年、東ジャワのパスルアン県は二〇一七年、リアウ諸島州の教育局も高校・職業高校に同様の勧告を行った。理由は明快で、宗教的・社会的・文化的な規範に合わないというものである。対照的に、国家が認めるのはもう一方でありうる。中国は七夕節を二〇〇六年の第一次国家級無形文化遺産名録に載せたが、二月十四日には同様に制度上の身分がない。"
     }
   ]
 }

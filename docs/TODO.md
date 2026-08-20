@@ -144,7 +144,13 @@ node scripts/check-source-urls.mjs --warn-only # 只看報表不擋
 
 ## 每日世界一問(2026-08-15 上線;規格=docs/briefs/daily-question.md)
 
-- [ ] **題庫要持續補**:涵蓋日期用指令查(`SELECT MAX(qdate) FROM questions`),用完前端會停在最近一題
+- [ ] **題庫要持續補**。涵蓋到哪天、還剩幾天,一律查:
+  `sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT qdate) 未來天數, MAX(qdate) FROM questions WHERE qdate >= date('now')"`
+  用完前端不開天窗(退最近一題),但那等於每天給讀者同一題,是可見的產品破口。
+  補法:往 `content/questions.json` 檔尾加題(一天一 poll 一 guess),七語齊全、掛既有 topic;
+  `guess` 的選項用社群 locale 代碼,標籤在所有題目裡都一樣,可以直接沿用既有題目的寫法。
+  存檔後 `node scripts/import-questions.mjs` 會驗(缺語系、topic 不存在、answer 不在選項裡都會擋),
+  再走同一條 hourly 管線上線。**題目內容要有可查證的事實**——與 Topic 內容同一條紅線
   (不開天窗但會失去「每日」感)。補題=編輯 `content/questions.json`。之後可排每週 claude 批次產題
   (額度回復後再議,動工前問用戶)。
 - [ ] **「個人」世界公民排行榜**被 OAuth(M2)擋住(anon_id 無顯示名且 Safari 下不穩,拿來排名會做出隨機掉名次的榜);
