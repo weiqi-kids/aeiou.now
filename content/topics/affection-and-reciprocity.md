@@ -60,11 +60,11 @@
 ### customs TW qixi
 台灣同時有兩個情人節：公曆二月十四日與農曆七月初七的七夕。七夕原本是牛郎織女的節日，也是拜床母、祭七娘媽的日子，後來才被商業檔期接上「情人節」的名字。所以同一年裡有兩次餐廳訂位高峰，兩者的來歷完全不同——一個是外來的日期，一個是農曆的節。
 ### customs US valentine
-美國的情人節在二月十四日，是單一天、不放假，也沒有回禮日。送禮的方向沒有規定，卡片、花、巧克力與外出用餐是常見組合，學校裡則常見全班互送卡片的做法——把它從情侶的日子擴成班級的活動。它在商業上很大，在制度上完全不存在。
+美國的情人節在二月十四日，是單一天、不放假，也沒有回禮日。送禮的方向沒有規定，卡片、花、巧克力與外出用餐是常見組合，學校裡則常見全班互送卡片的做法——把它從情侶的日子擴成班級的活動。它在商業上很大，在制度上完全不存在。美國普查局的專頁把這一天連到人口資料上：依二○二二年的美國社區調查，十五歲以上的男性有百分之四十九點八、女性有百分之四十六點三處於已婚狀態；曾結過婚的人裡有百分之七十五點五只結過一次。用普查資料談情人節，是美國把節日接到統計上的一種典型做法。
 ### customs BR dia-dos-namorados
 巴西的情人節在六月十二日，不是二月十四日。日期選在聖安東尼日（六月十三日）前一天——聖安東尼在巴西被視為主管姻緣的聖人。所以巴西的情人節是接在宗教曆後面的，而不是跟著北半球的二月。它也剛好落在六月節那個月，整個六月都是熱鬧的。
 ### customs IN valentine-week
-印度把情人節拉成一整週：二月七日到十四日，每天各有名目（玫瑰日、巧克力日等），最後一天才是情人節本身。這個「情人週」是近幾十年由商業與媒體形成的，並非傳統節日；它在都市與年輕族群裡明顯，在其他地方與世代裡則不一定被採用。
+印度把情人節拉成一整週：二月七日到十四日，每天各有名目（玫瑰日、巧克力日等），最後一天才是情人節本身。這個「情人週」是近幾十年由商業與媒體形成的，並非傳統節日；它在都市與年輕族群裡明顯，在其他地方與世代裡則不一定被採用。對照印度的全國假日清單就更清楚了：那份清單裡有共和日、獨立日、甘地誕辰、排燈節、開齋節、聖誕節等十七項，沒有情人節，也沒有二月的任何一天屬於它。情人週的存在完全在國家行事曆之外。
 
 ## locale en
 ### title
@@ -80,11 +80,11 @@ White Day on 14 March is Japan's return-gift day: whoever received in February g
 ### customs TW qixi
 Taiwan has two Valentine's Days: 14 February on the Gregorian calendar and Qixi on the seventh day of the seventh lunar month. Qixi began as the festival of the Cowherd and the Weaver Girl and as a day for honouring the bed mother and the Seven Goddesses; only later did the commercial season attach the name 'Valentine's Day' to it. So there are two peaks of restaurant bookings in one year, from two completely different origins — one an imported date, one a lunar festival.
 ### customs US valentine
-Valentine's Day in the United States is 14 February, a single day, not a holiday, and with no return-gift day. There is no rule about which direction gifts flow; cards, flowers, chocolate and going out to eat are the usual combination, while in schools it is common for a whole class to exchange cards — expanding it from a couples' day into a classroom activity. Commercially it is large; institutionally it does not exist at all.
+Valentine's Day in the United States is 14 February, a single day, not a holiday, and with no return-gift day. There is no rule about which direction gifts flow; cards, flowers, chocolate and going out to eat are the usual combination, while in schools it is common for a whole class to exchange cards — expanding it from a couples' day into a classroom activity. Commercially it is large; institutionally it does not exist at all.The Census Bureau's page ties the day to population data: by the 2022 American Community Survey, 49.8 per cent of men and 46.3 per cent of women aged fifteen and over were married, and 75.5 per cent of those who have ever married had made only one trip down the aisle. Talking about Valentine's Day through census figures is a characteristically American way of attaching a holiday to statistics.
 ### customs BR dia-dos-namorados
 Brazil's day for couples is 12 June, not 14 February. The date sits the day before the feast of Saint Anthony on 13 June — in Brazil, the saint associated with matchmaking. So the Brazilian Valentine's follows the religious calendar rather than the northern-hemisphere February. It also falls inside the June festival month, so the whole of June is busy.
 ### customs IN valentine-week
-India stretches Valentine's into a full week, from 7 to 14 February, with each day given its own name — rose day, chocolate day and so on — and Valentine's Day itself at the end. This 'Valentine Week' was formed over recent decades by commerce and media rather than being a traditional festival; it is prominent in cities and among younger people, and not necessarily taken up elsewhere or across generations.
+India stretches Valentine's into a full week, from 7 to 14 February, with each day given its own name — rose day, chocolate day and so on — and Valentine's Day itself at the end. This 'Valentine Week' was formed over recent decades by commerce and media rather than being a traditional festival; it is prominent in cities and among younger people, and not necessarily taken up elsewhere or across generations.Setting it against India's national holiday list makes the position clearer: that list runs to seventeen entries including Republic Day, Independence Day, Gandhi's birthday, Diwali, Id-ul-Fitr and Christmas, and Valentine's is not on it, nor is any day in February assigned to it. Valentine Week exists entirely outside the national calendar.
 
 ## locale ja
 ### title
@@ -100,11 +100,11 @@ India stretches Valentine's into a full week, from 7 to 14 February, with each d
 ### customs TW qixi
 台湾にはバレンタインが二つある。新暦2月14日と、旧暦七月七日の七夕である。七夕はもともと牽牛と織女の節句であり、床母や七娘媽を祀る日でもあった。「情人節」という名がついたのは後から、商業の季節が接続してからのことだ。したがって一年に二度、飲食店の予約が山を作る。由来はまったく別で、一つは外から来た日付、もう一つは旧暦の節句である。
 ### customs US valentine
-米国のバレンタインデーは2月14日、一日だけで、祝日ではなく、お返しの日もない。贈り物の向きに決まりはなく、カード、花、チョコレート、外食が定番の組み合わせで、学校ではクラス全員がカードを交換することも多い。恋人の日から教室の行事へと広げているわけだ。商業的には大きいが、制度上はまったく存在しない。
+米国のバレンタインデーは2月14日、一日だけで、祝日ではなく、お返しの日もない。贈り物の向きに決まりはなく、カード、花、チョコレート、外食が定番の組み合わせで、学校ではクラス全員がカードを交換することも多い。恋人の日から教室の行事へと広げているわけだ。商業的には大きいが、制度上はまったく存在しない。米国国勢調査局のページは、この日を人口データに結びつけている。2022年のアメリカ地域社会調査によれば、15歳以上の男性の49.8％、女性の46.3％が既婚であり、これまでに結婚したことのある人のうち75.5％は結婚が一度だけである。国勢調査の数字でバレンタインを語るのは、祝日を統計に接続する米国らしいやり方だ。
 ### customs BR dia-dos-namorados
 ブラジルの恋人の日は6月12日で、2月14日ではない。この日付は6月13日の聖アントニオの祝日の前日にあたる。ブラジルで聖アントニオは縁結びの聖人とされているからだ。つまりブラジルのバレンタインは、北半球の2月ではなく宗教暦に続いている。しかも六月祭の月に入るため、6月はまるごと賑やかである。
 ### customs IN valentine-week
-インドはバレンタインを一週間に引き延ばす。2月7日から14日まで、ローズデー、チョコレートデーなど日ごとに名前があり、最終日がバレンタインデー本体になる。この「バレンタイン・ウィーク」は伝統的な祭りではなく、ここ数十年に商業とメディアが形づくったものだ。都市部と若い世代では目立つが、それ以外の場所や世代では必ずしも受け入れられていない。
+インドはバレンタインを一週間に引き延ばす。2月7日から14日まで、ローズデー、チョコレートデーなど日ごとに名前があり、最終日がバレンタインデー本体になる。この「バレンタイン・ウィーク」は伝統的な祭りではなく、ここ数十年に商業とメディアが形づくったものだ。都市部と若い世代では目立つが、それ以外の場所や世代では必ずしも受け入れられていない。インドの全国祝日一覧と並べると位置がはっきりする。その一覧は共和国記念日、独立記念日、ガンディー生誕、ディワリ、イド・ウル・フィトル、クリスマスなど17項目からなるが、バレンタインは入っておらず、2月のどの日もそれに充てられていない。バレンタイン・ウィークは国の暦の完全に外側にある。
 
 ## locale zh-CN
 ### title
@@ -120,11 +120,11 @@ India stretches Valentine's into a full week, from 7 to 14 February, with each d
 ### customs TW qixi
 台湾同时有两个情人节：公历2月14日与农历七月初七的七夕。七夕原本是牛郎织女的节日，也是拜床母、祭七娘妈的日子，后来才被商业档期接上“情人节”的名字。所以同一年里有两次餐厅订位高峰，两者的来历完全不同——一个是外来的日期，一个是农历的节。
 ### customs US valentine
-美国的情人节在2月14日，是单一天、不放假，也没有回礼日。送礼的方向没有规定，卡片、花、巧克力与外出用餐是常见组合，学校里则常见全班互送卡片的做法——把它从情侣的日子扩成班级的活动。它在商业上很大，在制度上完全不存在。
+美国的情人节在2月14日，是单一天、不放假，也没有回礼日。送礼的方向没有规定，卡片、花、巧克力与外出用餐是常见组合，学校里则常见全班互送卡片的做法——把它从情侣的日子扩成班级的活动。它在商业上很大，在制度上完全不存在。美国普查局的专页把这一天连到人口资料上：依2022年的美国社区调查，15岁以上的男性有49.8%、女性有46.3%处于已婚状态；曾结过婚的人里有75.5%只结过一次。用普查资料谈情人节，是美国把节日接到统计上的一种典型做法。
 ### customs BR dia-dos-namorados
 巴西的情人节在6月12日，不是2月14日。日期选在圣安东尼日（6月13日）前一天——圣安东尼在巴西被视为主管姻缘的圣人。所以巴西的情人节是接在宗教历后面的，而不是跟着北半球的2月。它也刚好落在六月节那个月，整个6月都是热闹的。
 ### customs IN valentine-week
-印度把情人节拉成一整周：2月7日到14日，每天各有名目（玫瑰日、巧克力日等），最后一天才是情人节本身。这个“情人周”是近几十年由商业与媒体形成的，并非传统节日；它在都市与年轻族群里明显，在其他地方与世代里则不一定被采用。
+印度把情人节拉成一整周：2月7日到14日，每天各有名目（玫瑰日、巧克力日等），最后一天才是情人节本身。这个“情人周”是近几十年由商业与媒体形成的，并非传统节日；它在都市与年轻族群里明显，在其他地方与世代里则不一定被采用。对照印度的全国假日清单就更清楚了：那份清单里有共和日、独立日、甘地诞辰、排灯节、开斋节、圣诞节等17项，没有情人节，也没有2月的任何一天属于它。情人周的存在完全在国家行事历之外。
 
 ## locale hi
 ### title
@@ -140,11 +140,11 @@ India stretches Valentine's into a full week, from 7 to 14 February, with each d
 ### customs TW qixi
 ताइवान में दो वैलेंटाइन हैं: ग्रेगोरियन 14 फ़रवरी और चंद्र सातवें महीने की सातवीं तिथि का क़ीशी। क़ीशी मूलतः ग्वाले और बुनकर कन्या का पर्व था, और शय्या-माता तथा सात देवियों को पूजने का दिन भी; 'वैलेंटाइन' नाम बाद में व्यापारिक मौसम ने जोड़ा। इसलिए एक ही वर्ष में रेस्तराँ बुकिंग के दो शिखर बनते हैं, दो बिलकुल अलग उत्पत्तियों से — एक आयातित तारीख़, दूसरा चंद्र पर्व।
 ### customs US valentine
-अमेरिका में वैलेंटाइन डे 14 फ़रवरी है — एक ही दिन, अवकाश नहीं, और कोई जवाबी-उपहार दिवस भी नहीं। उपहार किस दिशा में जाएँ, इसका कोई नियम नहीं; कार्ड, फूल, चॉकलेट और बाहर खाना आम संयोजन है, जबकि स्कूलों में पूरी कक्षा का कार्ड बदलना आम है — जो इसे जोड़ों के दिन से कक्षा की गतिविधि तक फैला देता है। व्यापारिक रूप से यह बड़ा है; संस्थागत रूप से इसका अस्तित्व ही नहीं।
+अमेरिका में वैलेंटाइन डे 14 फ़रवरी है — एक ही दिन, अवकाश नहीं, और कोई जवाबी-उपहार दिवस भी नहीं। उपहार किस दिशा में जाएँ, इसका कोई नियम नहीं; कार्ड, फूल, चॉकलेट और बाहर खाना आम संयोजन है, जबकि स्कूलों में पूरी कक्षा का कार्ड बदलना आम है — जो इसे जोड़ों के दिन से कक्षा की गतिविधि तक फैला देता है। व्यापारिक रूप से यह बड़ा है; संस्थागत रूप से इसका अस्तित्व ही नहीं।जनगणना ब्यूरो का पृष्ठ इस दिन को जनसंख्या आँकड़ों से जोड़ता है: 2022 के अमेरिकी सामुदायिक सर्वेक्षण के अनुसार पंद्रह वर्ष और उससे ऊपर के 49.8 प्रतिशत पुरुष तथा 46.3 प्रतिशत महिलाएँ विवाहित थीं, और जिन्होंने कभी विवाह किया उनमें 75.5 प्रतिशत ने केवल एक बार विवाह किया। जनगणना के आँकड़ों से वैलेंटाइन की बात करना, त्योहार को सांख्यिकी से जोड़ने का विशिष्ट अमेरिकी तरीक़ा है।
 ### customs BR dia-dos-namorados
 ब्राज़ील का प्रेमी दिवस 12 जून है, 14 फ़रवरी नहीं। यह तारीख़ 13 जून के संत एंटोनी पर्व से ठीक एक दिन पहले पड़ती है — ब्राज़ील में वही संत विवाह-संयोग से जोड़े जाते हैं। यानी ब्राज़ीली वैलेंटाइन उत्तरी गोलार्ध की फ़रवरी नहीं, धार्मिक पंचांग का अनुसरण करता है। और चूँकि यह जून उत्सवों के महीने में पड़ता है, पूरा जून व्यस्त रहता है।
 ### customs IN valentine-week
-भारत वैलेंटाइन को पूरे सप्ताह में फैला देता है, 7 से 14 फ़रवरी तक, जिसमें हर दिन का अपना नाम है — रोज़ डे, चॉकलेट डे इत्यादि — और अंतिम दिन वैलेंटाइन डे। यह 'वैलेंटाइन वीक' पारंपरिक पर्व नहीं, बल्कि पिछले कुछ दशकों में व्यापार और मीडिया ने गढ़ा है; यह शहरों और युवाओं में प्रमुख है, अन्यत्र और अन्य पीढ़ियों में ज़रूरी नहीं कि अपनाया गया हो।
+भारत वैलेंटाइन को पूरे सप्ताह में फैला देता है, 7 से 14 फ़रवरी तक, जिसमें हर दिन का अपना नाम है — रोज़ डे, चॉकलेट डे इत्यादि — और अंतिम दिन वैलेंटाइन डे। यह 'वैलेंटाइन वीक' पारंपरिक पर्व नहीं, बल्कि पिछले कुछ दशकों में व्यापार और मीडिया ने गढ़ा है; यह शहरों और युवाओं में प्रमुख है, अन्यत्र और अन्य पीढ़ियों में ज़रूरी नहीं कि अपनाया गया हो।भारत की राष्ट्रीय अवकाश सूची से मिलाकर देखने पर स्थिति और साफ़ होती है: उस सूची में गणतंत्र दिवस, स्वतंत्रता दिवस, गांधी जयंती, दीवाली, ईद-उल-फ़ित्र और क्रिसमस सहित सत्रह प्रविष्टियाँ हैं, पर वैलेंटाइन उसमें नहीं है, और न फ़रवरी का कोई दिन उसके नाम है। वैलेंटाइन वीक का अस्तित्व पूरी तरह राष्ट्रीय कैलेंडर के बाहर है।
 
 ## locale id
 ### title
@@ -160,11 +160,11 @@ White Day pada 14 Maret adalah hari balasan di Jepang: yang menerima pada Februa
 ### customs TW qixi
 Taiwan punya dua Hari Valentine: 14 Februari pada kalender Gregorius dan Qixi pada hari ketujuh bulan ketujuh lunar. Qixi bermula sebagai perayaan Penggembala dan Gadis Penenun, sekaligus hari menghormati ibu ranjang dan Tujuh Dewi; nama 'Hari Valentine' baru ditempelkan belakangan oleh musim dagang. Maka dalam satu tahun ada dua puncak pemesanan restoran, dari dua asal yang sama sekali berbeda — satu tanggal impor, satu perayaan lunar.
 ### customs US valentine
-Hari Valentine di Amerika Serikat jatuh 14 Februari, satu hari saja, bukan hari libur, dan tanpa hari balasan. Tidak ada aturan tentang arah pemberian; kartu, bunga, cokelat, dan makan di luar adalah kombinasi lazim, sementara di sekolah biasa satu kelas saling bertukar kartu — memperluasnya dari hari pasangan menjadi kegiatan kelas. Secara komersial ia besar; secara kelembagaan ia tidak ada sama sekali.
+Hari Valentine di Amerika Serikat jatuh 14 Februari, satu hari saja, bukan hari libur, dan tanpa hari balasan. Tidak ada aturan tentang arah pemberian; kartu, bunga, cokelat, dan makan di luar adalah kombinasi lazim, sementara di sekolah biasa satu kelas saling bertukar kartu — memperluasnya dari hari pasangan menjadi kegiatan kelas. Secara komersial ia besar; secara kelembagaan ia tidak ada sama sekali.Halaman Biro Sensus mengaitkan hari itu dengan data kependudukan: menurut Survei Komunitas Amerika 2022, 49,8 persen pria dan 46,3 persen wanita berusia lima belas tahun ke atas berstatus menikah, dan 75,5 persen dari mereka yang pernah menikah hanya menikah satu kali. Membicarakan Hari Valentine lewat angka sensus adalah cara khas Amerika menyambungkan hari raya dengan statistik.
 ### customs BR dia-dos-namorados
 Hari kasih sayang di Brasil jatuh 12 Juni, bukan 14 Februari. Tanggalnya berada tepat sehari sebelum perayaan Santo Antonius pada 13 Juni — di Brasil, santo yang dikaitkan dengan jodoh. Jadi Valentine Brasil mengikuti kalender keagamaan, bukan Februari belahan bumi utara. Ia juga jatuh di dalam bulan festival Juni, sehingga sepanjang Juni suasananya ramai.
 ### customs IN valentine-week
-India merentangkan Valentine menjadi sepekan penuh, 7 sampai 14 Februari, dengan tiap hari punya namanya sendiri — hari mawar, hari cokelat, dan seterusnya — dan Hari Valentine sendiri di penghujungnya. 'Valentine Week' ini terbentuk beberapa dasawarsa terakhir oleh perdagangan dan media, bukan perayaan tradisional; ia menonjol di kota dan di kalangan anak muda, dan belum tentu diikuti di tempat lain atau lintas generasi.
+India merentangkan Valentine menjadi sepekan penuh, 7 sampai 14 Februari, dengan tiap hari punya namanya sendiri — hari mawar, hari cokelat, dan seterusnya — dan Hari Valentine sendiri di penghujungnya. 'Valentine Week' ini terbentuk beberapa dasawarsa terakhir oleh perdagangan dan media, bukan perayaan tradisional; ia menonjol di kota dan di kalangan anak muda, dan belum tentu diikuti di tempat lain atau lintas generasi.Menyandingkannya dengan daftar hari libur nasional India membuat kedudukannya lebih jelas: daftar itu berisi tujuh belas entri termasuk Hari Republik, Hari Kemerdekaan, hari lahir Gandhi, Diwali, Id-ul-Fitr, dan Natal, dan Valentine tidak ada di sana, begitu pula tidak ada satu hari pun di bulan Februari yang diberikan untuknya. Valentine Week hidup sepenuhnya di luar kalender nasional.
 
 ## locale pt-BR
 ### title
@@ -180,8 +180,8 @@ O White Day, em 14 de março, é o dia japonês do presente de retorno: quem rec
 ### customs TW qixi
 Taiwan tem dois Dias dos Namorados: 14 de fevereiro no calendário gregoriano e o Qixi, no sétimo dia do sétimo mês lunar. O Qixi começou como a festa do Boiadeiro e da Tecelã, e também como dia de honrar a mãe do leito e as Sete Deusas; só depois a temporada comercial lhe colou o nome de 'Dia dos Namorados'. Assim, há dois picos de reserva em restaurantes no mesmo ano, vindos de origens completamente distintas — uma data importada e uma festa lunar.
 ### customs US valentine
-O Valentine's Day nos Estados Unidos é 14 de fevereiro, um único dia, sem feriado e sem dia de retribuição. Não há regra sobre a direção dos presentes; cartões, flores, chocolate e sair para jantar são a combinação usual, enquanto nas escolas é comum a turma inteira trocar cartões — expandindo a data de um dia de casais para uma atividade de sala. Comercialmente é enorme; institucionalmente não existe.
+O Valentine's Day nos Estados Unidos é 14 de fevereiro, um único dia, sem feriado e sem dia de retribuição. Não há regra sobre a direção dos presentes; cartões, flores, chocolate e sair para jantar são a combinação usual, enquanto nas escolas é comum a turma inteira trocar cartões — expandindo a data de um dia de casais para uma atividade de sala. Comercialmente é enorme; institucionalmente não existe.A página do Bureau do Censo amarra a data a dados populacionais: pela Pesquisa da Comunidade Americana de 2022, 49,8% dos homens e 46,3% das mulheres de quinze anos ou mais estavam casados, e 75,5% de quem já se casou passou pelo altar uma única vez. Falar do Valentine's Day por meio de números do censo é um jeito tipicamente americano de encaixar uma data na estatística.
 ### customs BR dia-dos-namorados
 O Dia dos Namorados no Brasil é 12 de junho, e não 14 de fevereiro. A data fica na véspera do dia de Santo Antônio, 13 de junho — no Brasil, o santo casamenteiro. Ou seja, o Valentine brasileiro segue o calendário religioso, e não o fevereiro do hemisfério norte. E como cai dentro do mês das festas juninas, junho inteiro fica movimentado.
 ### customs IN valentine-week
-A Índia estica o Valentine por uma semana inteira, de 7 a 14 de fevereiro, com cada dia recebendo um nome próprio — dia da rosa, dia do chocolate e assim por diante — e o Dia dos Namorados no fim. Essa 'Valentine Week' foi formada nas últimas décadas pelo comércio e pela mídia, e não é festa tradicional; é proeminente nas cidades e entre os mais jovens, e não necessariamente adotada em outros lugares ou por outras gerações.
+A Índia estica o Valentine por uma semana inteira, de 7 a 14 de fevereiro, com cada dia recebendo um nome próprio — dia da rosa, dia do chocolate e assim por diante — e o Dia dos Namorados no fim. Essa 'Valentine Week' foi formada nas últimas décadas pelo comércio e pela mídia, e não é festa tradicional; é proeminente nas cidades e entre os mais jovens, e não necessariamente adotada em outros lugares ou por outras gerações.Confrontá-lo com a lista de feriados nacionais da Índia deixa a posição mais clara: essa lista tem dezessete entradas, incluindo Dia da República, Dia da Independência, aniversário de Gandhi, Diwali, Id-ul-Fitr e Natal, e o Valentine's não está nela, nem qualquer dia de fevereiro lhe é atribuído. A Valentine Week existe inteiramente fora do calendário nacional.

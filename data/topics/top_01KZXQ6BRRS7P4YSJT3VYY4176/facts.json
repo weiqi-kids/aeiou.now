@@ -76,6 +76,70 @@
       }
     },
     {
+      "observance_id": "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_CN_qinhuai-lantern",
+      "observance_key": "qinhuai-lantern",
+      "country_code": "CN",
+      "local_name": "秦淮灯会（南京）",
+      "observed_date": null,
+      "date_rule": "春节至元宵节期间，江苏省南京市夫子庙一带",
+      "date_range_end": null,
+      "popularity_rank": 6,
+      "source_ids": [
+        "src_CCAC02CCD3279558722EBE1B"
+      ],
+      "source_urls": [
+        "https://www.ihchina.cn/project_details/15014.html"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_CN_qinhuai-lantern_2026_2026-03-03",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-03",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Shanghai",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_CCAC02CCD3279558722EBE1B"
+          ],
+          "source_urls": [
+            "https://www.ihchina.cn/project_details/15014.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_CN_qinhuai-lantern_2027_2027-02-20",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-20",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Shanghai",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_CCAC02CCD3279558722EBE1B"
+          ],
+          "source_urls": [
+            "https://www.ihchina.cn/project_details/15014.html"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_CN_qinhuai-lantern_2027_2027-02-20",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-20",
+        "ends_on": null,
+        "calendar_system": "chinese-lunisolar",
+        "timezone": "Asia/Shanghai",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_CCAC02CCD3279558722EBE1B"
+        ],
+        "source_urls": [
+          "https://www.ihchina.cn/project_details/15014.html"
+        ],
+        "distance_days": 184
+      }
+    },
+    {
       "observance_id": "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_TW_handan",
       "observance_key": "handan",
       "country_code": "TW",
@@ -339,7 +403,8 @@
     {
       "country_code": "CN",
       "observance_ids": [
-        "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_CN_lantern-festival"
+        "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_CN_lantern-festival",
+        "obs_top_01KZXQ6BRRS7P4YSJT3VYY4176_CN_qinhuai-lantern"
       ]
     },
     {
@@ -358,6 +423,7 @@
     "src_509D6FE3CDE66C39605277AB",
     "src_6DFD76B82DF608B35353178A",
     "src_A57891D9FCD3DA50246D04E0",
+    "src_CCAC02CCD3279558722EBE1B",
     "src_D127603232E6078EE5D2E805",
     "src_E405440D6A7FBA9FBC2398FD",
     "src_F12F15DB053D422FA98E2E78"
@@ -367,6 +433,7 @@
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
     "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
     "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=6",
+    "https://www.ihchina.cn/project_details/15014.html",
     "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=83",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
     "https://www.tad.gov.tw/m1.aspx?sNo=0001020"
