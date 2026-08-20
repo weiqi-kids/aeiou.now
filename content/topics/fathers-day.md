@@ -45,9 +45,9 @@
 ### keywords
 父親節、八八節、Father's Day、父の日、Dia dos Pais
 ### customs TW fathers-day
-台灣的父親節在八月八日，理由是「八八」與「爸爸」諧音——這是四個地方裡唯一由語音決定日期的。《紀念日及節日實施條例》把父親節列為節日，同一條也明定它不放假。所以它是一個固定日期、法律承認、但不影響行事曆的節日：如果八月八日落在平日，慶祝就發生在下班以後。
+台灣的父親節在八月八日，理由是「八八」與「爸爸」諧音——這是四個地方裡唯一由語音決定日期的。《紀念日及節日實施條例》把父親節列為節日，同一條也明定它不放假。所以它是一個固定日期、法律承認、但不影響行事曆的節日：如果八月八日落在平日，慶祝就發生在下班以後。也因為不放假，實際的慶祝多半被挪到最近的那個週末：餐廳的訂位高峰落在八月八日前後的星期六與星期日，而不是八月八日當天。這使得台灣的父親節出現一種雙重日期——法律上的日期固定在八月八日，生活上的日期則每年跟著週末浮動。
 ### customs US fathers-day
-美國的父親節花了很久才定案。一九七二年四月二十四日，眾議院聯合決議案第六八七號成為第九二之二七八號公法，把每年六月第三個星期日定為父親節；尼克森總統隨即發布第四一二七號公告，指示政府建築懸掛國旗。相對於母親節在一九一四年就完成同樣的程序，父親節晚了五十八年——兩個節日在制度上的時間差本身就是可讀的資料。
+美國的父親節花了很久才定案。一九七二年四月二十四日，眾議院聯合決議案第六八七號成為第九二之二七八號公法，把每年六月第三個星期日定為父親節；尼克森總統隨即發布第四一二七號公告，指示政府建築懸掛國旗。相對於母親節在一九一四年就完成同樣的程序，父親節晚了五十八年——兩個節日在制度上的時間差本身就是可讀的資料。在立法之前，這個日期已經先由行政部門認可：一九六六年詹森總統發布公告，指定六月第三個星期日為父親節，但公告逐年發布、不具永久效力，因此仍需一部法律才成為固定安排。一九七二年的公法把這件事寫死，日期才不再需要每年重新宣告。
 ### customs JP chichi-no-hi
 日本的父の日在六月第三個星期日，跟著美國的日期走。它在制度上沒有任何位置：不是國民の祝日，也沒有法律或政令指定。與母の日相比，它在花卉需求上的痕跡也淺得多——農林水產省的花卉現況資料點名的是母の日與彼岸這類需求集中的節日，父の日並不在其中。同一個家庭關係，兩個節日留下的可量測痕跡差距很大。
 ### customs BR dia-dos-pais
@@ -63,9 +63,9 @@ Father's Day sits on three different dates across four places, and the origins h
 ### keywords
 Father's Day, Chichi no Hi, Dia dos Pais, Public Law 92-278
 ### customs TW fathers-day
-Taiwan's Father's Day is 8 August, because 'eight-eight' sounds like the word for dad — the only one of these four whose date was chosen by phonetics. The Act on Commemorative Days and Holidays names it as a festival, and the same article states plainly that it is not a day off. So it is a fixed date, recognised in law, that leaves the calendar untouched: if 8 August falls on a weekday, the celebration happens after work.
+Taiwan's Father's Day is 8 August, because 'eight-eight' sounds like the word for dad — the only one of these four whose date was chosen by phonetics. The Act on Commemorative Days and Holidays names it as a festival, and the same article states plainly that it is not a day off. So it is a fixed date, recognised in law, that leaves the calendar untouched: if 8 August falls on a weekday, the celebration happens after work. Because it is not a day off, the celebration itself usually slides to the nearest weekend: restaurant bookings peak on the Saturday and Sunday around the eighth of August rather than on the eighth itself. Taiwan's Father's Day therefore carries two dates at once — a legal one fixed on 8 August, and a lived one that drifts with the weekend each year.
 ### customs US fathers-day
-Father's Day took a long time to settle in the United States. On 24 April 1972 House Joint Resolution 687 became Public Law 92-278, designating the third Sunday in June each year; President Nixon then issued Proclamation 4127 directing government buildings to fly the flag. Mother's Day had completed the same process back in 1914 — fifty-eight years earlier. The gap between the two dates in institutional time is itself readable data.
+Father's Day took a long time to settle in the United States. On 24 April 1972 House Joint Resolution 687 became Public Law 92-278, designating the third Sunday in June each year; President Nixon then issued Proclamation 4127 directing government buildings to fly the flag. Mother's Day had completed the same process back in 1914 — fifty-eight years earlier. The gap between the two dates in institutional time is itself readable data. Before the statute, the date had already been recognised by the executive: in 1966 President Johnson issued a proclamation naming the third Sunday in June, but a proclamation is issued year by year and carries no permanence, so a law was still needed to make the arrangement fixed. The 1972 public law wrote it down, and the date no longer had to be declared afresh each year.
 ### customs JP chichi-no-hi
 Japan's Chichi no Hi is the third Sunday in June, following the American date. It holds no institutional position at all: it is not a national holiday, and no law or ordinance designates it. Its trace in flower demand is also much fainter than Mother's Day's — the agriculture ministry's briefing on the flower sector names Mother's Day and the equinoctial weeks as the occasions where demand concentrates, and Father's Day is not among them. Same family relationship, very different measurable footprints.
 ### customs BR dia-dos-pais
@@ -81,9 +81,9 @@ Indonesia's National Father's Day is 12 November, but it was not established by 
 ### keywords
 父の日, Father's Day, Dia dos Pais, 八八節
 ### customs TW fathers-day
-台湾の父の日は8月8日である。理由は「八八」が「パパ」と同音だから——四つの中で日付が音によって決まったのはここだけだ。紀念日及節日実施条例は父親節を節日として挙げ、同じ条でそれが休みにならないことも明記している。つまり固定日で、法的に認められ、しかし暦には影響しない節日である。8月8日が平日なら、祝いは退勤後に起きる。
+台湾の父の日は8月8日である。理由は「八八」が「パパ」と同音だから——四つの中で日付が音によって決まったのはここだけだ。紀念日及節日実施条例は父親節を節日として挙げ、同じ条でそれが休みにならないことも明記している。つまり固定日で、法的に認められ、しかし暦には影響しない節日である。8月8日が平日なら、祝いは退勤後に起きる。休日ではないため、実際の祝いは最も近い週末に移されることが多い。飲食店の予約が集中するのは八月八日当日ではなく、その前後の土曜と日曜である。台湾の父の日はこうして二重の日付をもつ。法の上では八月八日に固定され、暮らしの上では毎年週末に沿って動く。
 ### customs US fathers-day
-米国の父の日は定着までに長くかかった。1972年4月24日、下院合同決議第687号が公法92-278となり、毎年6月第三日曜と定められた。ニクソン大統領は布告第4127号を出し、政府庁舎に国旗を掲げるよう指示した。母の日が同じ手続きを終えたのは1914年——58年前である。二つの日付の制度上の時間差そのものが読み取れるデータになっている。
+米国の父の日は定着までに長くかかった。1972年4月24日、下院合同決議第687号が公法92-278となり、毎年6月第三日曜と定められた。ニクソン大統領は布告第4127号を出し、政府庁舎に国旗を掲げるよう指示した。母の日が同じ手続きを終えたのは1914年——58年前である。二つの日付の制度上の時間差そのものが読み取れるデータになっている。立法に先立ち、この日付はすでに行政によって認められていた。一九六六年、ジョンソン大統領が六月第三日曜を父の日とする布告を出したが、布告は年ごとに発せられ永続性をもたないため、恒久の取り決めとするには法律が必要だった。一九七二年の公法がそれを書き留め、日付は毎年宣言し直す必要がなくなった。
 ### customs JP chichi-no-hi
 日本の父の日は6月第三日曜で、米国の日付に従っている。制度上の位置づけはまったくない。国民の祝日ではなく、法律や政令による指定もない。花きの需要に残す痕跡も母の日よりずっと薄い——農林水産省の花きの現状に関する資料が需要の集中する行事として挙げるのは母の日やお彼岸であり、父の日はそこに入っていない。同じ家族関係でありながら、測れる痕跡の大きさが大きく違う。
 ### customs BR dia-dos-pais
@@ -99,9 +99,9 @@ Indonesia's National Father's Day is 12 November, but it was not established by 
 ### keywords
 父亲节、Father's Day、父の日、Dia dos Pais
 ### customs TW fathers-day
-台湾的父亲节在8月8日，理由是“八八”与“爸爸”谐音——这是四个地方里唯一由语音决定日期的。《纪念日及节日实施条例》把父亲节列为节日，同一条也明定它不放假。所以它是一个固定日期、法律承认、但不影响行事历的节日：如果8月8日落在平日，庆祝就发生在下班以后。
+台湾的父亲节在8月8日，理由是“八八”与“爸爸”谐音——这是四个地方里唯一由语音决定日期的。《纪念日及节日实施条例》把父亲节列为节日，同一条也明定它不放假。所以它是一个固定日期、法律承认、但不影响行事历的节日：如果8月8日落在平日，庆祝就发生在下班以后。也因为不放假，实际的庆祝多半被挪到最近的那个周末：餐厅的订位高峰落在八月八日前后的星期六与星期日，而不是八月八日当天。这使得台湾的父亲节出现一种双重日期——法律上的日期固定在八月八日，生活上的日期则每年跟着周末浮动。
 ### customs US fathers-day
-美国的父亲节花了很久才定案。1972年4月24日，众议院联合决议案第687号成为第92-278号公法，把每年6月第三个星期日定为父亲节；尼克松总统随即发布第4127号公告，指示政府建筑悬挂国旗。相对于母亲节在1914年就完成同样的程序，父亲节晚了58年——两个节日在制度上的时间差本身就是可读的资料。
+美国的父亲节花了很久才定案。1972年4月24日，众议院联合决议案第687号成为第92-278号公法，把每年6月第三个星期日定为父亲节；尼克松总统随即发布第4127号公告，指示政府建筑悬挂国旗。相对于母亲节在1914年就完成同样的程序，父亲节晚了58年——两个节日在制度上的时间差本身就是可读的资料。在立法之前，这个日期已经先由行政部门认可：一九六六年约翰逊总统发布公告，指定六月第三个星期日为父亲节，但公告逐年发布、不具永久效力，因此仍需一部法律才成为固定安排。一九七二年的公法把这件事写死，日期才不再需要每年重新宣告。
 ### customs JP chichi-no-hi
 日本的父の日在6月第三个星期日，跟着美国的日期走。它在制度上没有任何位置：不是国民の祝日，也没有法律或政令指定。与母の日相比，它在花卉需求上的痕迹也浅得多——农林水产省的花卉现况资料点名的是母の日与彼岸这类需求集中的节日，父の日并不在其中。同一个家庭关系，两个节日留下的可量测痕迹差距很大。
 ### customs BR dia-dos-pais
@@ -117,9 +117,9 @@ Indonesia's National Father's Day is 12 November, but it was not established by 
 ### keywords
 पितृ दिवस, Father's Day, Chichi no Hi, Dia dos Pais
 ### customs TW fathers-day
-ताइवान का पितृ दिवस 8 अगस्त है, क्योंकि 'आठ-आठ' का उच्चारण 'पापा' जैसा लगता है — इन चार में केवल यहीं तारीख़ ध्वनि से तय हुई। स्मृति-दिवस व त्योहार अधिनियम इसे त्योहार के रूप में नाम देता है और उसी अनुच्छेद में साफ़ लिखता है कि यह छुट्टी नहीं है। यानी यह एक निश्चित तारीख़ है, क़ानून में मान्य, पर कैलेंडर को छूती नहीं: यदि 8 अगस्त कार्यदिवस पड़े, तो जश्न काम के बाद होता है।
+ताइवान का पितृ दिवस 8 अगस्त है, क्योंकि 'आठ-आठ' का उच्चारण 'पापा' जैसा लगता है — इन चार में केवल यहीं तारीख़ ध्वनि से तय हुई। स्मृति-दिवस व त्योहार अधिनियम इसे त्योहार के रूप में नाम देता है और उसी अनुच्छेद में साफ़ लिखता है कि यह छुट्टी नहीं है। यानी यह एक निश्चित तारीख़ है, क़ानून में मान्य, पर कैलेंडर को छूती नहीं: यदि 8 अगस्त कार्यदिवस पड़े, तो जश्न काम के बाद होता है। चूँकि यह अवकाश नहीं है, असल जश्न प्रायः निकटतम सप्ताहांत पर खिसक जाता है: रेस्तराँ की बुकिंग आठ अगस्त के आसपास के शनिवार और रविवार को चरम पर होती है, न कि आठ तारीख़ को। इसलिए ताइवान के पितृ दिवस की दो तिथियाँ एक साथ चलती हैं — क़ानूनी, जो 8 अगस्त पर स्थिर है, और जीवित, जो हर वर्ष सप्ताहांत के साथ सरकती है।
 ### customs US fathers-day
-अमेरिका में पितृ दिवस को जमने में लंबा समय लगा। 24 अप्रैल 1972 को हाउस संयुक्त प्रस्ताव 687 सार्वजनिक क़ानून 92-278 बना, जिसने हर वर्ष जून के तीसरे रविवार को नियत किया; फिर राष्ट्रपति निक्सन ने उद्घोषणा 4127 जारी कर सरकारी भवनों पर ध्वज फहराने का निर्देश दिया। मातृ दिवस वही प्रक्रिया 1914 में पूरी कर चुका था — अट्ठावन वर्ष पहले। संस्थागत समय में दोनों तिथियों का यह अंतर स्वयं एक पठनीय आँकड़ा है।
+अमेरिका में पितृ दिवस को जमने में लंबा समय लगा। 24 अप्रैल 1972 को हाउस संयुक्त प्रस्ताव 687 सार्वजनिक क़ानून 92-278 बना, जिसने हर वर्ष जून के तीसरे रविवार को नियत किया; फिर राष्ट्रपति निक्सन ने उद्घोषणा 4127 जारी कर सरकारी भवनों पर ध्वज फहराने का निर्देश दिया। मातृ दिवस वही प्रक्रिया 1914 में पूरी कर चुका था — अट्ठावन वर्ष पहले। संस्थागत समय में दोनों तिथियों का यह अंतर स्वयं एक पठनीय आँकड़ा है। क़ानून से पहले यह तिथि कार्यपालिका द्वारा मान्य की जा चुकी थी: 1966 में राष्ट्रपति जॉनसन ने जून के तीसरे रविवार का नाम लेते हुए उद्घोषणा जारी की, पर उद्घोषणा वर्ष-दर-वर्ष निकलती है और स्थायी नहीं होती, इसलिए इसे पक्का करने के लिए क़ानून चाहिए ही था। 1972 के लोक-अधिनियम ने उसे लिख दिया, और तिथि को हर वर्ष नए सिरे से घोषित करने की ज़रूरत न रही।
 ### customs JP chichi-no-hi
 जापान का चिचि नो ही जून का तीसरा रविवार है, जो अमेरिकी तारीख़ का अनुसरण करता है। संस्थागत रूप से उसकी कोई जगह नहीं: न वह राष्ट्रीय अवकाश है, न किसी क़ानून या अध्यादेश से नामित। फूलों की माँग पर उसका निशान भी मातृ दिवस से कहीं धुँधला है — कृषि मंत्रालय की पुष्प-क्षेत्र रिपोर्ट जिन अवसरों पर माँग केंद्रित बताती है वे मातृ दिवस और विषुव-सप्ताह हैं, पितृ दिवस उनमें नहीं। एक ही पारिवारिक रिश्ता, पर मापने योग्य निशान बहुत अलग।
 ### customs BR dia-dos-pais
@@ -135,9 +135,9 @@ Hari Ayah berada pada tiga tanggal berbeda di empat tempat, dan asal-usulnya sam
 ### keywords
 Hari Ayah, Father's Day, Chichi no Hi, Dia dos Pais
 ### customs TW fathers-day
-Hari Ayah Taiwan jatuh 8 Agustus, karena 'delapan-delapan' berbunyi mirip kata untuk ayah — satu-satunya dari empat ini yang tanggalnya ditentukan oleh bunyi. Undang-Undang Hari Peringatan dan Hari Raya menyebutnya sebagai hari raya, dan pasal yang sama menyatakan terang-terangan bahwa ia bukan hari libur. Jadi ia tanggal tetap, diakui hukum, namun tidak menyentuh kalender: bila 8 Agustus jatuh pada hari kerja, perayaannya terjadi seusai jam kantor.
+Hari Ayah Taiwan jatuh 8 Agustus, karena 'delapan-delapan' berbunyi mirip kata untuk ayah — satu-satunya dari empat ini yang tanggalnya ditentukan oleh bunyi. Undang-Undang Hari Peringatan dan Hari Raya menyebutnya sebagai hari raya, dan pasal yang sama menyatakan terang-terangan bahwa ia bukan hari libur. Jadi ia tanggal tetap, diakui hukum, namun tidak menyentuh kalender: bila 8 Agustus jatuh pada hari kerja, perayaannya terjadi seusai jam kantor. Karena bukan hari libur, perayaannya sendiri biasanya bergeser ke akhir pekan terdekat: pemesanan restoran memuncak pada Sabtu dan Minggu di sekitar 8 Agustus, bukan pada tanggal delapannya. Hari Ayah Taiwan karena itu memikul dua tanggal sekaligus — yang legal, tetap pada 8 Agustus, dan yang dijalani, yang bergeser mengikuti akhir pekan tiap tahun.
 ### customs US fathers-day
-Hari Ayah butuh waktu lama untuk mapan di Amerika Serikat. Pada 24 April 1972 Resolusi Bersama DPR 687 menjadi Undang-Undang Publik 92-278 yang menetapkan Minggu ketiga bulan Juni setiap tahun; Presiden Nixon lalu menerbitkan Proklamasi 4127 yang memerintahkan gedung pemerintah mengibarkan bendera. Hari Ibu telah menuntaskan proses yang sama pada 1914 — lima puluh delapan tahun sebelumnya. Jarak waktu kelembagaan antara dua tanggal itu sendiri merupakan data yang bisa dibaca.
+Hari Ayah butuh waktu lama untuk mapan di Amerika Serikat. Pada 24 April 1972 Resolusi Bersama DPR 687 menjadi Undang-Undang Publik 92-278 yang menetapkan Minggu ketiga bulan Juni setiap tahun; Presiden Nixon lalu menerbitkan Proklamasi 4127 yang memerintahkan gedung pemerintah mengibarkan bendera. Hari Ibu telah menuntaskan proses yang sama pada 1914 — lima puluh delapan tahun sebelumnya. Jarak waktu kelembagaan antara dua tanggal itu sendiri merupakan data yang bisa dibaca. Sebelum undang-undangnya, tanggal itu sudah diakui pihak eksekutif: pada 1966 Presiden Johnson mengeluarkan proklamasi yang menyebut Minggu ketiga bulan Juni, tetapi proklamasi terbit tahun demi tahun dan tidak permanen, sehingga tetap dibutuhkan undang-undang agar tatanannya tetap. Undang-undang publik 1972 menuliskannya, dan tanggal itu tak perlu lagi diumumkan ulang tiap tahun.
 ### customs JP chichi-no-hi
 Chichi no Hi Jepang jatuh pada Minggu ketiga bulan Juni, mengikuti tanggal Amerika. Secara kelembagaan ia tidak punya posisi sama sekali: bukan hari libur nasional, dan tidak ada undang-undang atau peraturan yang menetapkannya. Jejaknya pada permintaan bunga pun jauh lebih tipis daripada Hari Ibu — laporan kementerian pertanian tentang sektor bunga menyebut Hari Ibu dan pekan ekuinoks sebagai momen ketika permintaan menumpuk, dan Hari Ayah tidak termasuk. Hubungan keluarga yang sama, jejak terukur yang sangat berbeda.
 ### customs BR dia-dos-pais
@@ -153,9 +153,9 @@ O Dia dos Pais ocupa três datas diferentes em quatro lugares, e as origens não
 ### keywords
 Dia dos Pais, Father's Day, Chichi no Hi, Sylvio Bhering
 ### customs TW fathers-day
-O Dia dos Pais em Taiwan é 8 de agosto, porque 'oito-oito' soa como a palavra para pai — o único dos quatro cuja data foi escolhida pela fonética. A Lei dos Dias Comemorativos e Feriados o nomeia como festa, e o mesmo artigo diz de forma direta que não é dia de folga. É, portanto, uma data fixa, reconhecida em lei, que não mexe no calendário: se 8 de agosto cai num dia útil, a comemoração acontece depois do expediente.
+O Dia dos Pais em Taiwan é 8 de agosto, porque 'oito-oito' soa como a palavra para pai — o único dos quatro cuja data foi escolhida pela fonética. A Lei dos Dias Comemorativos e Feriados o nomeia como festa, e o mesmo artigo diz de forma direta que não é dia de folga. É, portanto, uma data fixa, reconhecida em lei, que não mexe no calendário: se 8 de agosto cai num dia útil, a comemoração acontece depois do expediente. Como não é folga, a comemoração costuma escorregar para o fim de semana mais próximo: as reservas em restaurantes têm pico no sábado e no domingo em torno de oito de agosto, e não no próprio dia oito. O Dia dos Pais de Taiwan carrega assim duas datas ao mesmo tempo — a legal, fixa em 8 de agosto, e a vivida, que desliza com o fim de semana a cada ano.
 ### customs US fathers-day
-O Dia dos Pais demorou a se firmar nos Estados Unidos. Em 24 de abril de 1972 a Resolução Conjunta 687 da Câmara virou a Lei Pública 92-278, designando o terceiro domingo de junho de cada ano; o presidente Nixon então emitiu a Proclamação 4127 mandando hastear a bandeira nos prédios públicos. O Dia das Mães havia concluído o mesmo processo em 1914 — cinquenta e oito anos antes. A distância entre as duas datas no tempo institucional é, por si só, um dado legível.
+O Dia dos Pais demorou a se firmar nos Estados Unidos. Em 24 de abril de 1972 a Resolução Conjunta 687 da Câmara virou a Lei Pública 92-278, designando o terceiro domingo de junho de cada ano; o presidente Nixon então emitiu a Proclamação 4127 mandando hastear a bandeira nos prédios públicos. O Dia das Mães havia concluído o mesmo processo em 1914 — cinquenta e oito anos antes. A distância entre as duas datas no tempo institucional é, por si só, um dado legível. Antes da lei, a data já havia sido reconhecida pelo Executivo: em 1966 o presidente Johnson emitiu uma proclamação nomeando o terceiro domingo de junho, mas uma proclamação é emitida ano a ano e não tem permanência, de modo que ainda era preciso uma lei para tornar o arranjo fixo. A lei pública de 1972 o pôs por escrito, e a data deixou de precisar ser declarada de novo a cada ano.
 ### customs JP chichi-no-hi
 O Chichi no Hi japonês é o terceiro domingo de junho, seguindo a data norte-americana. Não tem posição institucional alguma: não é feriado nacional e nenhuma lei ou decreto o designa. Seu traço na demanda por flores também é bem mais fraco que o do Dia das Mães — o informe do ministério da agricultura sobre o setor de flores aponta o Dia das Mães e as semanas do equinócio como as ocasiões em que a demanda se concentra, e o Dia dos Pais não está entre elas. Mesma relação familiar, pegadas mensuráveis muito diferentes.
 ### customs BR dia-dos-pais
