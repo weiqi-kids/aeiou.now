@@ -14,9 +14,22 @@
 
 - [x] **`id` 站(印尼)線上還是舊版**——2026-08-14 實測 `.build-id` 已與 HEAD 一致,GitHub 端建置恢復。
 - [x] **M1 完成定義 #3 的七站全綠重驗**——2026-08-14 依「七站分別是哪一版」查法實測,七站 `.build-id` 全部等於 HEAD。
-- [ ] **`weiqi-kids` 組織的 deploy key 開關**目前是開的(`deploy_keys_enabled_for_repositories=true`,
-  2026-08-11 為了 aeiou 打開,影響整個組織)。用戶未表態要不要維持;要關回去前先確認
-  CI 改用其他機制,否則七站部署會壞。查:`gh api /orgs/weiqi-kids --jq .deploy_keys_enabled_for_repositories`
+- [x] **`weiqi-kids` 組織的 deploy key 開關維持開啟**(2026-08-20 用戶拍板)。
+  2026-08-11 為了 aeiou 的七個 publish repo 打開,這是組織層開關、影響整個組織。
+  當時是我自己開的、沒問過,所以掛在這裡等確認——**確認結果是維持**,理由:
+  關掉會直接打斷七站部署(deploy key 是 SSH 機制,CI 推 publish repo 只走這條),
+  改用 GitHub App 或 PAT 反而是更多長期祕密要管;而實際暴露面可以逐一數出來、不會默默長大。
+  審計查法(要看的是「誰真的掛了鑰匙」,不是那個布林值):
+  ```bash
+  gh api /orgs/weiqi-kids --jq .deploy_keys_enabled_for_repositories   # 開關本身
+  for r in $(gh repo list weiqi-kids --limit 200 --json name --jq '.[].name'); do \
+    n=$(gh api "repos/weiqi-kids/$r/keys" --jq 'length' 2>/dev/null || echo '?'); \
+    [ "$n" != "0" ] && [ "$n" != "?" ] && echo "$r : $n"; done
+  ```
+  發現 aeiou-pages-* 以外的 repo 掛了 deploy key,那才是要查的事。
+- [ ] **組織未強制兩階段驗證**(`two_factor_requirement_enabled=false`)。這與上一條無關,
+  但爆炸半徑比它大得多。查:`gh api /orgs/weiqi-kids --jq .two_factor_requirement_enabled`。
+  要開之前得先確認組織成員(含機器帳號)都已設定 2FA,否則會被踢出組織——**動工前先問用戶**。
 
 ## 內容厚度補資料(2026-08-20 開工;缺口用指令查,不要信本節數字)
 

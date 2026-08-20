@@ -21,6 +21,11 @@ db/.local-source-health.json
 .env.*
 !.env.example
 *.log
+
+# logs/ 底下只保留 .gitkeep:執行期 log 與維運封存(例:清 DLQ 前的 jobs 封存)
+# 都是本機營運資料,不進 git。
+logs/*
+!logs/.gitkeep
 .wrangler/
 
 # 視覺驗收截圖(本機產物,不進 git)
