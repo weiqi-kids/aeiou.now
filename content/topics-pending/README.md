@@ -19,19 +19,34 @@
 如果有對不到 active observance 的列,`import-topic-occurrences.mjs` 會 exit 1,一樣擋住管線。
 所以 md 與 occurrence 兩份要一起搬,不能只搬一份。
 
+## 目前等在這裡的 Topic
+
+| slug | 內容 | 缺什麼 |
+|---|---|---|
+| `womens-day` | 8 observance / 7 國全覆蓋 | cover |
+| `exam-season` | 7 observance / 6 國 + US 缺席說明 | cover |
+| `islamic-calendar-days` | 5 observance / ID+IN,另 5 國缺席說明 | cover |
+
+三個都已逐項驗過:七語厚度達標、來源全過 R6、「讀者看到空白格」= 0、
+除了兩支 cover 檢查以外的守門全部 exit 0。**只差圖。**
+
+`exam-season` 與 `islamic-calendar-days` 的缺席說明已經寫進
+`scripts/generate-regional-notes.mjs` 的 `absences` 表並產出到
+`content/topic-regional-notes.json`,搬檔時不必再動那兩個檔。
+
 ## cover 補上之後怎麼上線
 
 ```bash
 # 1. 把 cover 放好(1200×675 PNG)
-#    site/public/covers/womens-day.png
+#    site/public/covers/<slug>.png
 # 2. 搬 md
-mv content/topics-pending/womens-day.md content/topics/womens-day.md
+mv content/topics-pending/<slug>.md content/topics/<slug>.md
 # 3. 把 occurrence 併回主檔(附的是 JSON 陣列片段,併進 .occurrences)
 python3 - <<'PY'
 import json
 main='content/observance-occurrences.json'
 d=json.load(open(main,encoding='utf8'))
-add=json.load(open('content/topics-pending/womens-day.occurrences.json',encoding='utf8'))
+add=json.load(open('content/topics-pending/<slug>.occurrences.json',encoding='utf8'))
 have={(o['topic_slug'],o['country_code'],o['observance_key'],o['occurrence_year']) for o in d['occurrences']}
 d['occurrences'] += [o for o in add if (o['topic_slug'],o['country_code'],o['observance_key'],o['occurrence_year']) not in have]
 d['occurrences'].sort(key=lambda o:(o['topic_slug'],o['country_code'],o['observance_key'],o['occurrence_year']))
@@ -44,7 +59,7 @@ for s in import-topics import-topic-occurrences check-topic-calendar review-topi
   node scripts/$s.mjs >/dev/null 2>&1; echo "$s exit=$?"
 done
 node scripts/check-source-urls.mjs      # 來源存活;exit 1 代表有死連結
-rm content/topics-pending/womens-day.occurrences.json
+rm content/topics-pending/<slug>.occurrences.json
 ```
 
 ⚠️ **不要用 `AEIOU_DB_PATH` 想把 `import-topics.mjs` 導到測試用 DB**——那支**沒有**走

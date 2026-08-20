@@ -31,11 +31,20 @@
   但爆炸半徑比它大得多。查:`gh api /orgs/weiqi-kids --jq .two_factor_requirement_enabled`。
   要開之前得先確認組織成員(含機器帳號)都已設定 2FA,否則會被踢出組織——**動工前先問用戶**。
 
-## 要用戶做:womens-day 的封面圖(唯一卡點)
+## 要用戶做:三個 Topic 的封面圖(唯一卡點)
 
-Topic 內容已寫完並驗過,放在 `content/topics-pending/`。缺的只有一張圖:
+三個 Topic 的內容都已寫完並逐項驗過,放在 `content/topics-pending/`
+(清單與驗收狀態見該目錄 README)。缺的只有三張圖:
 
-    site/public/covers/womens-day.png    1200×675 PNG
+    site/public/covers/womens-day.png             1200×675 PNG
+    site/public/covers/exam-season.png            1200×675 PNG
+    site/public/covers/islamic-calendar-days.png  1200×675 PNG
+
+⚠️ 主機**有出圖能力**(/root/folk.tw-api 用 OpenAI gpt-image-2),但那把 key 是
+folk.tw 的,跨站用別人的帳屬紅線,要用戶點頭或給 aeiou 自己的 key。
+aeiou 自己的 GCP(aeiou-seo)走 Vertex Imagen 也可以,但該專案的 aiplatform API
+是關的,而 seo-ops@aeiou-seo 這把 SA 沒有 serviceusage 權限、開不了。
+給了 key 之後就寫成 scripts/generate-topic-cover.mjs,cover 從此不再是卡點。
 
 現有 38 張封面都是寫實風格的 AI 生成照片,風格屬產品決定,我不自己生成。
 圖放好之後,照 `content/topics-pending/README.md` 的四步搬檔＋驗收即可上線。
