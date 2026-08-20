@@ -33,7 +33,7 @@ export {
 export { inSeason, seasonDistance } from './season.mjs';
 
 export {
-  scoresFor,
+  tiersFor,
   getGlobalRanking,
   globalRankRows,
   globalRankOf,

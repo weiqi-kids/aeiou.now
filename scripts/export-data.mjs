@@ -16,6 +16,9 @@ import { DatabaseSync } from "node:sqlite";
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { isTrendTopic } from "./lib/topics.mjs";
+// 級距門檻的唯一定義處(CLAUDE.md 顯示層規則)。這裡 import 而不是抄一份門檻,
+// 前後端才不會各自漂移。heat.mjs 是純 JS、無 import,可以跨目錄引用。
+import { heatTier } from "../site/src/lib/heat.mjs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -278,9 +281,22 @@ if (existsSync(mergePath)) emit("topic-merges.json", JSON.parse(readFileSync(mer
 for (const locale of LOCALES) {
   const list = topics.map((t) => {
     const i18n = i18nByTopic.get(t.topic_id)?.get(locale);
+    // 這裡刻意**不輸出原始分數**(2026-08-20 根治)。
+    // 原本輸出 scores[win] 的浮點值,但站台對它只有兩種用途:餵 heatTier() 換成
+    // 五個級距之一,以及排序。兩者都不需要浮點精度——而分數含時間項(Proximity),
+    // 每天都會漂移,於是七個 index 檔天天重寫、七站天天重建,換來畫面上零變化。
+    // 改輸出兩個**離散**量:
+    //   ranks[win] 名次(整數)  → 排序用;只在真的換順序時才變
+    //   tiers[win] 級距 id     → 顯示用;只在跨過門檻時才變
+    // 級距門檻仍然只定義在 site/src/lib/heat.mjs 一處(這裡是 import 它,不是抄一份)。
     const global = scoresByTopic.get(t.topic_id)?.get('global');
-    const scores = {};
-    for (const w of STATIC_WINDOWS) scores[w] = global?.get(w)?.score ?? null;
+    const ranks = {};
+    const tiers = {};
+    for (const w of STATIC_WINDOWS) {
+      const row = global?.get(w);
+      ranks[w] = row?.rank ?? null;
+      tiers[w] = row ? heatTier(row.score).id : null;
+    }
     return {
       topic_id: t.topic_id, // 前端打 API 用 topic_id(路徑參數不是 slug)
       ...trendOutputMetadata(t),
@@ -291,7 +307,8 @@ for (const locale of LOCALES) {
       status: t.status,
       is_perennial: t.is_perennial,
       updated_at: t.updated_at,
-      scores,
+      ranks,
+      tiers,
     };
   });
   emit(join("topics", "index", `${locale}.json`), list);
@@ -645,7 +662,8 @@ for (const scope of scopes) {
       // 但沿用了全域 rank,於是六個排行榜頁面在畫面上印出「319」——對讀者無意義,
       // 對 Google 則是六個內容幾乎相同的空頁(當時實測已被判 Crawled - currently not indexed)。
       // 機械層防線=scripts/check-content-depth.mjs 的 R5。
-      .map((r, i) => ({ rank: i + 1, topic_id: r.topic_id, slug: slugByTopic.get(r.topic_id), score: r.score }));
+      // 同理:名次已經是離散的,分數換成級距 id,排行榜檔就不會因為浮點漂移而重寫。
+      .map((r, i) => ({ rank: i + 1, topic_id: r.topic_id, slug: slugByTopic.get(r.topic_id), tier: heatTier(r.score).id }));
     if (items.length === 0) continue; // 沒資料的窗不產檔
     // thin=true 的視窗仍然產檔(頁面照樣可看),但 sitemap 與 robots 會排除它,
     // 不把「只有一兩筆」的清單頁送去給 Google 當索引候選。門檻見 lib/content-depth.mjs。

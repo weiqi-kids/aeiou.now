@@ -16,7 +16,7 @@ export function observancesForFacts(facts) {
 }
 
 /** Topic 清單(本 locale):topics/index/<locale>.json = 裸陣列。
- * index 檔有 commonality / category / is_perennial / scores / slug / status / title / topic_id,
+ * index 檔有 commonality / category / is_perennial / ranks / tiers / slug / status / title / topic_id,
  * 沒有 summary,也沒有國家資訊——摘要在 topics/<id>/i18n.json 的 locales.<locale>.summary,
  * 地方表現在 topics/<id>/facts.json 的 observances / regional_notes。列表頁要用,所以在讀取層補齊,
  * 不動 scripts/export-data.mjs(那支是生產者的匯出腳本,不是靜態站的責任範圍)。
@@ -102,7 +102,9 @@ export function regionalNoteText(i18n, note) {
   return row?.[LOCALE] || row?.en || null;
 }
 
-/** 六窗分數:topics index 是分數的來源(facts.json 不帶 scores) */
+/** 六窗的名次與級距:topics index 是來源(facts.json 不帶)。
+ * 原始分數**不進 data/**——它含時間項、每天漂移,會讓靜態產物天天重建而畫面零變化。
+ * 見 scripts/export-data.mjs 的說明。 */
 
 const COVER_EXTS = ['.png'];
 

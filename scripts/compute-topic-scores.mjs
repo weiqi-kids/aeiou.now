@@ -7,6 +7,7 @@
 //   node scripts/compute-topic-scores.mjs
 //   node scripts/compute-topic-scores.mjs --dry-run     只印分佈,不寫
 //   node scripts/compute-topic-scores.mjs --explain <slug>   印出某個 Topic 的分項
+//   AEIOU_SCORE_NOW=<epoch> node scripts/compute-topic-scores.mjs   假裝是那個時刻(驗換日用)
 //
 // -- 這支補的是哪一半 ----------------------------------------------------
 // `gsc-topic-metrics.mjs` 每天累積 `topic_search_metrics`,但在這支出現以前
@@ -47,7 +48,9 @@ const EXPLAIN = argv[argv.indexOf("--explain") + 1] && argv.includes("--explain"
 // 時窗 → 回看天數。8h 是 Worker 即時層,不在這支的守備範圍(靜態只出六窗)。
 const WINDOWS = { "24h": 1, "72h": 3, "7d": 7, "1m": 30, "3m": 90, "1y": 365 };
 const day = 86400;
-const now = nowSec();
+// AEIOU_SCORE_NOW:覆寫「現在」(epoch 秒)。用途是驗證「換日會不會讓靜態產物大規模重寫」——
+// 沒有這個開關就只能等明天。順帶讓重跑可重現。不設就是真正的現在。
+const now = Number(process.env.AEIOU_SCORE_NOW) || nowSec();
 // 分數的時間基準一律對齊「當日 UTC 午夜」,不是此刻。
 // 2026-08-20 事故:Proximity 直接吃 now(秒),於是每跑一次分數就微幅變動,
 // hourly-export 每小時都判定 data/ 有變 → 每小時 commit 124 檔、822 增 822 刪,

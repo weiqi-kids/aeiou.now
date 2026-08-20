@@ -40,7 +40,7 @@ interface Props {
 // eager:首屏前幾列的 cover 不做 lazy(lazy 的 LCP 元素會拖到 30 秒等級,2026-08-15 Lighthouse 實測)
 const { topic, rank = null, win = '24h', marker = null, tags = [], note = null, eager = false } = Astro.props;
 const codes = (topic.country_codes || []).slice(0, 8);
-const scores = topic.scores || {};
+const tiers = topic.tiers || {};
 const topicHref = withBase(`topic/${topic.slug}/`);
 const coverRel = coverPath(topic.slug);
 const coverSrc = coverRel ? withBase(coverRel) : null;
@@ -91,7 +91,7 @@ const withPosts = !!topic.topic_id;
       </span>
     </span>
     <span class="row-heat">
-      <HeatMeter score={scores[win]} caption={t(`rankings.window.${win}`)} />
+      <HeatMeter tier={tiers[win]} caption={t(`rankings.window.${win}`)} />
     </span>
   </a>
   {withPosts && (

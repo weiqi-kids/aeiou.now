@@ -6,9 +6,9 @@ import { getTopicsIndex, getTopicBundle, observancesForFacts } from './topics-da
 import { seasonDistance } from './season.mjs';
 import { isTrendTopic } from './topic-status.mjs';
 
-export function scoresFor(topicId) {
+export function tiersFor(topicId) {
   const hit = getTopicsIndex().find((topic) => topic.topic_id === topicId);
-  return (hit && hit.scores) || {};
+  return (hit && hit.tiers) || {};
 }
 
 /** 全球排行:rankings/global/<window>.json */
@@ -41,9 +41,12 @@ export function globalRankOf(topicId, win) {
 // 「一年 365 天的環」上比對:用固定非閏年 2001 換成 day-of-year,再算環狀距離。
 // 前後各留 SEASON_DAYS 天的緩衝——節日的話題在當天之前就起來、之後才退。
 
-function heatOf(topic, win) {
-  const raw = topic && topic.scores && topic.scores[win];
-  return typeof raw === 'number' ? raw : 0;
+// 排序鍵改用**名次**而不是原始分數(2026-08-20 根治,見 scripts/export-data.mjs)。
+// 名次是離散的,只在真的換順序時才變;分數是連續的,每天漂移會讓靜態產物天天重建。
+// 名次越小越熱,所以比較方向與原本的分數相反;沒有名次的排最後。
+function rankOf(topic, win) {
+  const raw = topic && topic.ranks && topic.ranks[win];
+  return typeof raw === 'number' ? raw : Number.POSITIVE_INFINITY;
 }
 
 /** 首頁的「近期話題」:快要到的議題排前面(用戶 2026-08-11:「像是最近要到的七夕、鬼門開、
@@ -72,16 +75,16 @@ export function recentTopics(now = new Date(), win = '24h') {
       return { ...topic, season_countries: dated, season_distance: dated[0].season_distance };
     })
     .filter(Boolean)
-    .sort((a, b) => a.season_distance - b.season_distance || heatOf(b, win) - heatOf(a, win));
+    .sort((a, b) => a.season_distance - b.season_distance || rankOf(a, win) - rankOf(b, win));
 }
 
-/** 「熱門話題」/topics/today/ 的排序:topics/index/<locale>.json 的 scores[win] 由高到低。
- * 分數本身不上畫面(顯示層規則:熱度只給級距),這裡只拿來排序。 */
+/** 「熱門話題」/topics/today/ 的排序:topics/index/<locale>.json 的 ranks[win] 由小到大。
+ * 原始分數不再進 data/(顯示層規則本來就規定分數不上畫面),排序改吃名次。 */
 export function topicsByHeat(win = '24h') {
   return getTopicsIndex()
     .slice()
     .sort(
-      (a, b) => heatOf(b, win) - heatOf(a, win) || String(a.slug).localeCompare(String(b.slug))
+      (a, b) => rankOf(a, win) - rankOf(b, win) || String(a.slug).localeCompare(String(b.slug))
     );
 }
 

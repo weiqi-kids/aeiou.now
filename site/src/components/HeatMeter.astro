@@ -3,16 +3,23 @@
 // - 級距定義集中在 src/lib/heat.mjs,三個頁面共用同一支,模板不各自算門檻。
 // - 不只靠顏色:同時給「填滿幾格」的長度差異 + 文字標籤(色盲/灰階列印仍可讀),
 //   最高階再多一層形狀差異(反白實心 chip),對應 PTT 的「爆」。
-import { heatTier, heatLabelKey, HEAT_LEVELS } from '../lib/heat.mjs';
+import { HEAT_TIERS, heatTier, heatLabelKey, HEAT_LEVELS } from '../lib/heat.mjs';
 import { t } from '../lib/i18n.mjs';
 
 interface Props {
-  score?: number;
+  tier?: string;    // 級距 id(data/ 直接給,見 scripts/export-data.mjs 的說明)
+  score?: number;   // 相容用:仍可傳原始分數,由本元件換算
   size?: 'sm' | 'md';
   caption?: string; // 前綴說明(如時窗名),沒有就不畫
 }
-const { score, size = 'sm', caption } = Astro.props;
-const tier = heatTier(score);
+// 2026-08-20:資料層改成直接給 tier(離散),分數不再進 data/。
+// 原因是分數含時間項、每天漂移,會讓靜態產物天天重寫、七站天天重建,
+// 但畫面只用得到五個級距之一,重建換來零變化。仍保留 score 這條路,
+// 讓「手上只有分數」的呼叫端(例如未來的即時層)不必先自己換算。
+const { tier: tierId, score, size = 'sm', caption } = Astro.props;
+const tier = tierId
+  ? (HEAT_TIERS.find((x) => x.id === tierId) || heatTier(0))
+  : heatTier(score);
 const label = t(heatLabelKey(tier.id));
 const cells = Array.from({ length: HEAT_LEVELS }, (_, i) => i < tier.level);
 ---

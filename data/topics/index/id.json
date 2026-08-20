@@ -8,13 +8,21 @@
     "status": "active",
     "is_perennial": 1,
     "updated_at": 1787151130,
-    "scores": {
+    "ranks": {
       "24h": null,
       "72h": null,
       "7d": null,
-      "1m": 2.77,
-      "3m": 2.77,
-      "1y": 2.77
+      "1m": 24,
+      "3m": 24,
+      "1y": 24
+    },
+    "tiers": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": "warm",
+      "3m": "warm",
+      "1y": "warm"
     }
   },
   {
@@ -26,13 +34,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787151130,
-    "scores": {
-      "24h": 28.7,
-      "72h": 49.26,
-      "7d": 55.86,
-      "1m": 55.96,
-      "3m": 55.98,
-      "1y": 55.98
+    "ranks": {
+      "24h": 1,
+      "72h": 1,
+      "7d": 1,
+      "1m": 1,
+      "3m": 2,
+      "1y": 2
+    },
+    "tiers": {
+      "24h": "hot",
+      "72h": "blast",
+      "7d": "blast",
+      "1m": "blast",
+      "3m": "blast",
+      "1y": "blast"
     }
   },
   {
@@ -44,7 +60,15 @@
     "status": "active",
     "is_perennial": 1,
     "updated_at": 1787151130,
-    "scores": {
+    "ranks": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    },
+    "tiers": {
       "24h": null,
       "72h": null,
       "7d": null,
@@ -62,13 +86,21 @@
     "status": "active",
     "is_perennial": 1,
     "updated_at": 1787151130,
-    "scores": {
+    "ranks": {
       "24h": null,
-      "72h": 6.93,
-      "7d": 6.93,
-      "1m": 6.93,
-      "3m": 6.93,
-      "1y": 6.93
+      "72h": 15,
+      "7d": 15,
+      "1m": 18,
+      "3m": 19,
+      "1y": 21
+    },
+    "tiers": {
+      "24h": null,
+      "72h": "rising",
+      "7d": "rising",
+      "1m": "rising",
+      "3m": "rising",
+      "1y": "rising"
     }
   },
   {
@@ -80,7 +112,15 @@
     "status": "active",
     "is_perennial": 1,
     "updated_at": 1787151130,
-    "scores": {
+    "ranks": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    },
+    "tiers": {
       "24h": null,
       "72h": null,
       "7d": null,
@@ -98,13 +138,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787196613,
-    "scores": {
-      "24h": 3.12,
-      "72h": 14.11,
-      "7d": 14.62,
-      "1m": 24.52,
-      "3m": 33.27,
-      "1y": 38.22
+    "ranks": {
+      "24h": 15,
+      "72h": 12,
+      "7d": 12,
+      "1m": 11,
+      "3m": 7,
+      "1y": 8
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "hot",
+      "7d": "hot",
+      "1m": "hot",
+      "3m": "blast",
+      "1y": "blast"
     }
   },
   {
@@ -116,13 +164,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787185047,
-    "scores": {
-      "24h": 3.45,
-      "72h": 3.45,
-      "7d": 3.45,
-      "1m": 3.45,
-      "3m": 3.5,
-      "1y": 8.99
+    "ranks": {
+      "24h": 10,
+      "72h": 19,
+      "7d": 19,
+      "1m": 21,
+      "3m": 21,
+      "1y": 19
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "rising",
+      "7d": "rising",
+      "1m": "rising",
+      "3m": "rising",
+      "1y": "rising"
     }
   },
   {
@@ -134,7 +190,15 @@
     "status": "active",
     "is_perennial": 1,
     "updated_at": 1787151130,
-    "scores": {
+    "ranks": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    },
+    "tiers": {
       "24h": null,
       "72h": null,
       "7d": null,
@@ -152,13 +216,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787185413,
-    "scores": {
-      "24h": 2.41,
-      "72h": 24.1,
-      "7d": 27.26,
-      "1m": 27.28,
-      "3m": 29.7,
-      "1y": 41.77
+    "ranks": {
+      "24h": 21,
+      "72h": 5,
+      "7d": 7,
+      "1m": 9,
+      "3m": 8,
+      "1y": 6
+    },
+    "tiers": {
+      "24h": "warm",
+      "72h": "hot",
+      "7d": "hot",
+      "1m": "hot",
+      "3m": "hot",
+      "1y": "blast"
     }
   },
   {
@@ -170,13 +242,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787195246,
-    "scores": {
-      "24h": 3.6,
-      "72h": 3.6,
-      "7d": 3.6,
-      "1m": 3.89,
-      "3m": 9.43,
-      "1y": 21.58
+    "ranks": {
+      "24h": 8,
+      "72h": 17,
+      "7d": 17,
+      "1m": 19,
+      "3m": 18,
+      "1y": 17
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "rising",
+      "7d": "rising",
+      "1m": "rising",
+      "3m": "rising",
+      "1y": "hot"
     }
   },
   {
@@ -188,13 +268,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787199462,
-    "scores": {
-      "24h": 2.41,
-      "72h": 9.35,
-      "7d": 9.35,
-      "1m": 9.35,
-      "3m": 9.97,
-      "1y": 19.7
+    "ranks": {
+      "24h": 22,
+      "72h": 14,
+      "7d": 14,
+      "1m": 15,
+      "3m": 17,
+      "1y": 18
+    },
+    "tiers": {
+      "24h": "warm",
+      "72h": "rising",
+      "7d": "rising",
+      "1m": "rising",
+      "3m": "rising",
+      "1y": "hot"
     }
   },
   {
@@ -206,13 +294,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787196055,
-    "scores": {
-      "24h": 3.12,
-      "72h": 14.11,
-      "7d": 14.11,
-      "1m": 14.11,
-      "3m": 15.67,
-      "1y": 27.11
+    "ranks": {
+      "24h": 16,
+      "72h": 13,
+      "7d": 13,
+      "1m": 13,
+      "3m": 16,
+      "1y": 13
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "hot",
+      "7d": "hot",
+      "1m": "hot",
+      "3m": "hot",
+      "1y": "hot"
     }
   },
   {
@@ -224,7 +320,15 @@
     "status": "active",
     "is_perennial": 1,
     "updated_at": 1787151130,
-    "scores": {
+    "ranks": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    },
+    "tiers": {
       "24h": null,
       "72h": null,
       "7d": null,
@@ -242,13 +346,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787197007,
-    "scores": {
-      "24h": 3.67,
-      "72h": 23.5,
-      "7d": 31.36,
-      "1m": 39.74,
-      "3m": 41.96,
-      "1y": 42.86
+    "ranks": {
+      "24h": 7,
+      "72h": 6,
+      "7d": 6,
+      "1m": 5,
+      "3m": 5,
+      "1y": 5
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "hot",
+      "7d": "blast",
+      "1m": "blast",
+      "3m": "blast",
+      "1y": "blast"
     }
   },
   {
@@ -260,13 +372,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787151130,
-    "scores": {
-      "24h": 7.8,
-      "72h": 17.8,
-      "7d": 23.47,
-      "1m": 27.67,
-      "3m": 28.63,
-      "1y": 29
+    "ranks": {
+      "24h": 4,
+      "72h": 9,
+      "7d": 9,
+      "1m": 7,
+      "3m": 9,
+      "1y": 9
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "hot",
+      "7d": "hot",
+      "1m": "hot",
+      "3m": "hot",
+      "1y": "hot"
     }
   },
   {
@@ -278,7 +398,15 @@
     "status": "active",
     "is_perennial": 1,
     "updated_at": 1787151130,
-    "scores": {
+    "ranks": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    },
+    "tiers": {
       "24h": null,
       "72h": null,
       "7d": null,
@@ -296,13 +424,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787195753,
-    "scores": {
-      "24h": 3.85,
-      "72h": 3.85,
-      "7d": 3.93,
-      "1m": 10.6,
-      "3m": 20.43,
-      "1y": 27.12
+    "ranks": {
+      "24h": 6,
+      "72h": 16,
+      "7d": 16,
+      "1m": 14,
+      "3m": 12,
+      "1y": 12
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "rising",
+      "7d": "rising",
+      "1m": "hot",
+      "3m": "hot",
+      "1y": "hot"
     }
   },
   {
@@ -314,13 +450,21 @@
     "status": "active",
     "is_perennial": 1,
     "updated_at": 1787151130,
-    "scores": {
-      "24h": 6.76,
-      "72h": 16.76,
-      "7d": 22.43,
-      "1m": 26.63,
-      "3m": 27.59,
-      "1y": 27.96
+    "ranks": {
+      "24h": 5,
+      "72h": 11,
+      "7d": 10,
+      "1m": 10,
+      "3m": 11,
+      "1y": 11
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "hot",
+      "7d": "hot",
+      "1m": "hot",
+      "3m": "hot",
+      "1y": "hot"
     }
   },
   {
@@ -332,13 +476,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787201142,
-    "scores": {
-      "24h": 3.12,
-      "72h": 27.17,
-      "7d": 42.6,
-      "1m": 55.28,
-      "3m": 60.38,
-      "1y": 62.66
+    "ranks": {
+      "24h": 17,
+      "72h": 4,
+      "7d": 3,
+      "1m": 2,
+      "3m": 1,
+      "1y": 1
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "hot",
+      "7d": "blast",
+      "1m": "blast",
+      "3m": "blast",
+      "1y": "blast"
     }
   },
   {
@@ -350,13 +502,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787185835,
-    "scores": {
-      "24h": 3.3,
-      "72h": 3.3,
-      "7d": 3.3,
-      "1m": 3.3,
-      "3m": 3.3,
-      "1y": 4.92
+    "ranks": {
+      "24h": 12,
+      "72h": 21,
+      "7d": 22,
+      "1m": 23,
+      "3m": 23,
+      "1y": 23
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "rising",
+      "7d": "rising",
+      "1m": "rising",
+      "3m": "rising",
+      "1y": "rising"
     }
   },
   {
@@ -368,13 +528,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787195494,
-    "scores": {
-      "24h": 3.3,
-      "72h": 3.3,
-      "7d": 3.34,
-      "1m": 9.03,
-      "3m": 19,
-      "1y": 26.26
+    "ranks": {
+      "24h": 13,
+      "72h": 22,
+      "7d": 21,
+      "1m": 16,
+      "3m": 13,
+      "1y": 15
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "rising",
+      "7d": "rising",
+      "1m": "rising",
+      "3m": "hot",
+      "1y": "hot"
     }
   },
   {
@@ -386,13 +554,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787196879,
-    "scores": {
-      "24h": 3.12,
-      "72h": 16.98,
-      "7d": 16.98,
-      "1m": 16.98,
-      "3m": 17.44,
-      "1y": 26.57
+    "ranks": {
+      "24h": 18,
+      "72h": 10,
+      "7d": 11,
+      "1m": 12,
+      "3m": 14,
+      "1y": 14
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "hot",
+      "7d": "hot",
+      "1m": "hot",
+      "3m": "hot",
+      "1y": "hot"
     }
   },
   {
@@ -404,7 +580,15 @@
     "status": "active",
     "is_perennial": 1,
     "updated_at": 1787151130,
-    "scores": {
+    "ranks": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    },
+    "tiers": {
       "24h": null,
       "72h": null,
       "7d": null,
@@ -422,13 +606,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787151130,
-    "scores": {
-      "24h": 22.09,
-      "72h": 36.23,
-      "7d": 45.89,
-      "1m": 46.77,
-      "3m": 46.95,
-      "1y": 47.01
+    "ranks": {
+      "24h": 2,
+      "72h": 2,
+      "7d": 2,
+      "1m": 3,
+      "3m": 4,
+      "1y": 4
+    },
+    "tiers": {
+      "24h": "hot",
+      "72h": "blast",
+      "7d": "blast",
+      "1m": "blast",
+      "3m": "blast",
+      "1y": "blast"
     }
   },
   {
@@ -440,13 +632,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787196333,
-    "scores": {
-      "24h": 3.6,
-      "72h": 3.6,
-      "7d": 3.6,
-      "1m": 3.6,
-      "3m": 3.62,
-      "1y": 8.24
+    "ranks": {
+      "24h": 9,
+      "72h": 18,
+      "7d": 18,
+      "1m": 20,
+      "3m": 20,
+      "1y": 20
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "rising",
+      "7d": "rising",
+      "1m": "rising",
+      "3m": "rising",
+      "1y": "rising"
     }
   },
   {
@@ -458,7 +658,15 @@
     "status": "active",
     "is_perennial": 1,
     "updated_at": 1787151130,
-    "scores": {
+    "ranks": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    },
+    "tiers": {
       "24h": null,
       "72h": null,
       "7d": null,
@@ -476,7 +684,15 @@
     "status": "active",
     "is_perennial": 1,
     "updated_at": 1787151130,
-    "scores": {
+    "ranks": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    },
+    "tiers": {
       "24h": null,
       "72h": null,
       "7d": null,
@@ -494,13 +710,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787185639,
-    "scores": {
-      "24h": 3.12,
-      "72h": 34.13,
-      "7d": 37.78,
-      "1m": 37.78,
-      "3m": 37.78,
-      "1y": 40.61
+    "ranks": {
+      "24h": 19,
+      "72h": 3,
+      "7d": 4,
+      "1m": 6,
+      "3m": 6,
+      "1y": 7
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "blast",
+      "7d": "blast",
+      "1m": "blast",
+      "3m": "blast",
+      "1y": "blast"
     }
   },
   {
@@ -512,13 +736,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787202205,
-    "scores": {
-      "24h": 3.3,
-      "72h": 22.05,
-      "7d": 32.5,
-      "1m": 44.56,
-      "3m": 48.8,
-      "1y": 50.64
+    "ranks": {
+      "24h": 14,
+      "72h": 7,
+      "7d": 5,
+      "1m": 4,
+      "3m": 3,
+      "1y": 3
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "hot",
+      "7d": "blast",
+      "1m": "blast",
+      "3m": "blast",
+      "1y": "blast"
     }
   },
   {
@@ -530,7 +762,15 @@
     "status": "active",
     "is_perennial": 1,
     "updated_at": 1787151130,
-    "scores": {
+    "ranks": {
+      "24h": null,
+      "72h": null,
+      "7d": null,
+      "1m": null,
+      "3m": null,
+      "1y": null
+    },
+    "tiers": {
       "24h": null,
       "72h": null,
       "7d": null,
@@ -548,13 +788,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787244078,
-    "scores": {
-      "24h": 3.12,
-      "72h": 3.12,
-      "7d": 3.13,
-      "1m": 7.14,
-      "3m": 17.07,
-      "1y": 25.42
+    "ranks": {
+      "24h": 20,
+      "72h": 23,
+      "7d": 23,
+      "1m": 17,
+      "3m": 15,
+      "1y": 16
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "rising",
+      "7d": "rising",
+      "1m": "rising",
+      "3m": "hot",
+      "1y": "hot"
     }
   },
   {
@@ -566,13 +814,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787244078,
-    "scores": {
-      "24h": 12.92,
-      "72h": 21.5,
-      "7d": 25.02,
-      "1m": 27.33,
-      "3m": 27.83,
-      "1y": 28.02
+    "ranks": {
+      "24h": 3,
+      "72h": 8,
+      "7d": 8,
+      "1m": 8,
+      "3m": 10,
+      "1y": 10
+    },
+    "tiers": {
+      "24h": "hot",
+      "72h": "hot",
+      "7d": "hot",
+      "1m": "hot",
+      "3m": "hot",
+      "1y": "hot"
     }
   },
   {
@@ -584,13 +840,21 @@
     "status": "active",
     "is_perennial": 0,
     "updated_at": 1787244078,
-    "scores": {
-      "24h": 3.45,
-      "72h": 3.45,
-      "7d": 3.45,
-      "1m": 3.45,
-      "3m": 3.45,
-      "1y": 5.36
+    "ranks": {
+      "24h": 11,
+      "72h": 20,
+      "7d": 20,
+      "1m": 22,
+      "3m": 22,
+      "1y": 22
+    },
+    "tiers": {
+      "24h": "rising",
+      "72h": "rising",
+      "7d": "rising",
+      "1m": "rising",
+      "3m": "rising",
+      "1y": "rising"
     }
   }
 ]
