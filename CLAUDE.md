@@ -277,6 +277,17 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
 - **`claude -p` 一律在 `/tmp` 空目錄跑,絕不在 repo 目錄跑**——claude 會把 cwd 與各層父目錄的
   `CLAUDE.md` 讀進 context,在 repo 跑等於每次呼叫白花約 12,200 tokens,且譯文行為會被手冊內容綁住。
   改 `scripts/translate-posts.mjs` 的 `cwd` 前先讀該檔檔頭(2026-08-13 實測數據在那)。
+- **`claude -p` 一律明寫 `--model`,絕不吃 CLI 預設**(2026-08-20)——不帶 `--model` 時落點是
+  *當下的*預設模型,實測是 `claude-opus-5[1m]`,連「只回兩個字」都要 $0.106(系統基線約 26k
+  tokens,1M 檔次還加成)。翻譯與趨勢寫稿是機械任務,吃不到 Opus 的推理力,且預設值會隨 CLI
+  版本漂移=管線成本不受碼庫控制。本專案 pin `claude-sonnet-5`,與 seo-ops 全機隊一致
+  (查:`grep -n CLAUDE_MODEL scripts/*.mjs`;seo-ops 側查 `/root/seo-ops/sites/*.json` 的 brain.model)。
+- **`description` 不得等於 `title`**(2026-08-20)——`/questions/` 原本把 description 寫成
+  `t('q.archive_title')`,七站皆然;GSC 抽驗 36 頁,唯一沒進索引的就是它
+  (Discovered - currently not indexed)。新增頁面時 description 要說出這頁有什麼,
+  沒有專屬文案就沿用 `${label} · ${siteDescription()}`。
+  查法:`for p in / /topics/today/ /questions/ /about/; do curl -s "https://aeiou.now$p" \
+  | grep -o '<meta name="description" content="[^"]*"'; done` — 出現「只有幾個字」的就是漏網。
 - **腳本裸執行(不帶任何參數)就必須是正確且完整的行為**;旗標只能是逃生口或縮減行為,
   不得是「不帶就會壞掉」。cron 呼叫一律不帶參數,不能依賴有人記得讀本手冊。
 - **推 D1 只推真的變了的列**——Worker 的 `/internal/sync/*` 是純 upsert、不做 delete,
