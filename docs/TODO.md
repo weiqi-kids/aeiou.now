@@ -31,26 +31,16 @@
   但爆炸半徑比它大得多。查:`gh api /orgs/weiqi-kids --jq .two_factor_requirement_enabled`。
   要開之前得先確認組織成員(含機器帳號)都已設定 2FA,否則會被踢出組織——**動工前先問用戶**。
 
-## 要用戶做:三個 Topic 的封面圖(唯一卡點)
+## 新增 Topic(2026-08-20 起 cover 已自動化)
 
-三個 Topic 的內容都已寫完並逐項驗過,放在 `content/topics-pending/`
-(清單與驗收狀態見該目錄 README)。缺的只有三張圖:
+三個 Topic 已上線:`womens-day`、`exam-season`、`islamic-calendar-days`。
+封面用 `node scripts/generate-topic-cover.mjs --slug <slug> --prompt "…"` 產(走 codex 的
+image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`。
 
-    site/public/covers/womens-day.png             1200×675 PNG
-    site/public/covers/exam-season.png            1200×675 PNG
-    site/public/covers/islamic-calendar-days.png  1200×675 PNG
-
-⚠️ 主機**有出圖能力**(/root/folk.tw-api 用 OpenAI gpt-image-2),但那把 key 是
-folk.tw 的,跨站用別人的帳屬紅線,要用戶點頭或給 aeiou 自己的 key。
-aeiou 自己的 GCP(aeiou-seo)走 Vertex Imagen 也可以,但該專案的 aiplatform API
-是關的,而 seo-ops@aeiou-seo 這把 SA 沒有 serviceusage 權限、開不了。
-給了 key 之後就寫成 scripts/generate-topic-cover.mjs,cover 從此不再是卡點。
-
-現有 38 張封面都是寫實風格的 AI 生成照片,風格屬產品決定,我不自己生成。
-圖放好之後,照 `content/topics-pending/README.md` 的四步搬檔＋驗收即可上線。
-
-⚠️ 不要只搬 md 不搬 occurrence,也不要在沒有 cover 時就搬 md ——
-兩者都會讓 `hourly-export.sh` 中止,線上所有資料停更(不只這個 Topic 不上線)。
+- [ ] **持續工作:再多加 Topic**。GSC 顯示會贏的查詢形態是「用語言 L 問國家 C 的節日 T」,
+      Topic 數就是這個乘法的上限。挑題判準:**同一件事在七個市場的日期或制度差異夠大**,
+      而且每一國都能找到該國官方網域的來源(R6)。
+      反例:購物節(雙十一/Black Friday/Harbolnas)搜尋量高但沒有政府公告,R6 過不了,不要做。
 
 ## 搜尋數據(2026-08-20 開工)
 

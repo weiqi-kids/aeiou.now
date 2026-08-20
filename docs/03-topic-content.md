@@ -82,6 +82,19 @@ How do people express affection?
 | **封面圖 1200×675 PNG** | `site/public/covers/<slug>.png` | `check-topic-calendar.mjs` **exit 1** |
 | taxonomy 白名單 | `scripts/check-final-topic-taxonomy.mjs` 的 `FINAL_SLUGS`(硬編碼) | 該閘門擋下 |
 
+**封面圖怎麼產**(2026-08-20 起自動化):
+
+```bash
+node scripts/generate-topic-cover.mjs --slug <slug> --prompt "……場景描述……"
+```
+
+走 `codex exec` 的內建 `image_gen`(ChatGPT 訂閱 CLI,`/root/.local/bin/codex`),
+**不需要 OPENAI_API_KEY,也不准借用 `/root/folk.tw-api` 那把——那是別站的帳**
+(紅線見 `/root/CLAUDE.md`「共用服務帳號的爆炸半徑」)。
+風格約束寫死在腳本裡以維持全站一致,**場景描述是人給的,腳本不代寫**。
+硬性:畫面不得出現任何文字(AI 生成的文字必是亂碼;宗教主題的亂碼經文會冒犯讀者)。
+腳本直接讀 PNG 檔頭驗尺寸,不採信 codex 回報的 DONE;既有檔案不預設覆蓋,要換帶 `--force`。
+
 ⚠️ **後三項的失敗都是整條管線停擺,不是「這個 Topic 不上線」**——
 `hourly-export.sh` 是 fail-closed 的,任一步非 0 就中止,線上**所有**資料跟著停更。
 所以四樣東西要嘛一起進,要嘛一起不進;寫好但還缺 cover 的 Topic 放
