@@ -2,11 +2,11 @@
   "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
   "slug": "labour-day",
   "canonical_name": "Labour Day",
-  "commonality": "comparing workers' holidays, labour history, public gatherings, and the different calendars used to recognize work",
+  "commonality": "comparing what each system does with 1 May — universal day off, two days, state-by-state, an ordinary working day between four holidays, or moved to September entirely",
   "category": "civic",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-19T14:52:10.000Z",
+  "updated_at": "2026-08-20T04:45:42.000Z",
   "access_level": 0,
   "observances": [
     {
@@ -17,12 +17,12 @@
       "observed_date": "05-01",
       "date_rule": null,
       "date_range_end": null,
-      "popularity_rank": 50,
+      "popularity_rank": 3,
       "source_ids": [
-        "src_765E8EDBE7EB19F03AE6EEC0"
+        "src_8ADF07F096907DFC86796ED4"
       ],
       "source_urls": [
-        "https://www.britannica.com/topic/International-Workers-Day"
+        "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm"
       ],
       "occurrences": [
         {
@@ -34,10 +34,10 @@
           "timezone": "America/Sao_Paulo",
           "date_status": "confirmed",
           "source_ids": [
-            "src_765E8EDBE7EB19F03AE6EEC0"
+            "src_8ADF07F096907DFC86796ED4"
           ],
           "source_urls": [
-            "https://www.britannica.com/topic/International-Workers-Day"
+            "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm"
           ]
         },
         {
@@ -49,10 +49,10 @@
           "timezone": "America/Sao_Paulo",
           "date_status": "confirmed",
           "source_ids": [
-            "src_765E8EDBE7EB19F03AE6EEC0"
+            "src_8ADF07F096907DFC86796ED4"
           ],
           "source_urls": [
-            "https://www.britannica.com/topic/International-Workers-Day"
+            "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm"
           ]
         }
       ],
@@ -65,10 +65,10 @@
         "timezone": "America/Sao_Paulo",
         "date_status": "confirmed",
         "source_ids": [
-          "src_765E8EDBE7EB19F03AE6EEC0"
+          "src_8ADF07F096907DFC86796ED4"
         ],
         "source_urls": [
-          "https://www.britannica.com/topic/International-Workers-Day"
+          "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm"
         ],
         "distance_days": 254
       }
@@ -77,46 +77,46 @@
       "observance_id": "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_CN_labour-day",
       "observance_key": "labour-day",
       "country_code": "CN",
-      "local_name": "五一勞動節",
+      "local_name": "五一劳动节",
       "observed_date": "05-01",
       "date_rule": null,
       "date_range_end": null,
-      "popularity_rank": 20,
+      "popularity_rank": 2,
       "source_ids": [
-        "src_765E8EDBE7EB19F03AE6EEC0"
+        "src_6DFD76B82DF608B35353178A"
       ],
       "source_urls": [
-        "https://www.britannica.com/topic/International-Workers-Day"
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
       ],
       "occurrences": [
         {
           "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_CN_labour-day_2026_2026-05-01",
           "occurrence_year": 2026,
           "starts_on": "2026-05-01",
-          "ends_on": null,
+          "ends_on": "2026-05-02",
           "calendar_system": "gregorian",
           "timezone": "Asia/Shanghai",
           "date_status": "confirmed",
           "source_ids": [
-            "src_765E8EDBE7EB19F03AE6EEC0"
+            "src_6DFD76B82DF608B35353178A"
           ],
           "source_urls": [
-            "https://www.britannica.com/topic/International-Workers-Day"
+            "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
           ]
         },
         {
           "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_CN_labour-day_2027_2027-05-01",
           "occurrence_year": 2027,
           "starts_on": "2027-05-01",
-          "ends_on": null,
+          "ends_on": "2027-05-02",
           "calendar_system": "gregorian",
           "timezone": "Asia/Shanghai",
           "date_status": "confirmed",
           "source_ids": [
-            "src_765E8EDBE7EB19F03AE6EEC0"
+            "src_6DFD76B82DF608B35353178A"
           ],
           "source_urls": [
-            "https://www.britannica.com/topic/International-Workers-Day"
+            "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
           ]
         }
       ],
@@ -124,15 +124,15 @@
         "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_CN_labour-day_2027_2027-05-01",
         "occurrence_year": 2027,
         "starts_on": "2027-05-01",
-        "ends_on": null,
+        "ends_on": "2027-05-02",
         "calendar_system": "gregorian",
         "timezone": "Asia/Shanghai",
         "date_status": "confirmed",
         "source_ids": [
-          "src_765E8EDBE7EB19F03AE6EEC0"
+          "src_6DFD76B82DF608B35353178A"
         ],
         "source_urls": [
-          "https://www.britannica.com/topic/International-Workers-Day"
+          "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
         ],
         "distance_days": 254
       }
@@ -141,16 +141,16 @@
       "observance_id": "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_ID_hari-buruh",
       "observance_key": "hari-buruh",
       "country_code": "ID",
-      "local_name": "Hari Buruh",
+      "local_name": "Hari Buruh Internasional",
       "observed_date": "05-01",
       "date_rule": null,
       "date_range_end": null,
-      "popularity_rank": 40,
+      "popularity_rank": 4,
       "source_ids": [
-        "src_765E8EDBE7EB19F03AE6EEC0"
+        "src_FF4B224E905CC2C8CF8EAF05"
       ],
       "source_urls": [
-        "https://www.britannica.com/topic/International-Workers-Day"
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
       ],
       "occurrences": [
         {
@@ -162,10 +162,10 @@
           "timezone": "Asia/Jakarta",
           "date_status": "confirmed",
           "source_ids": [
-            "src_765E8EDBE7EB19F03AE6EEC0"
+            "src_FF4B224E905CC2C8CF8EAF05"
           ],
           "source_urls": [
-            "https://www.britannica.com/topic/International-Workers-Day"
+            "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
           ]
         },
         {
@@ -177,10 +177,10 @@
           "timezone": "Asia/Jakarta",
           "date_status": "confirmed",
           "source_ids": [
-            "src_765E8EDBE7EB19F03AE6EEC0"
+            "src_FF4B224E905CC2C8CF8EAF05"
           ],
           "source_urls": [
-            "https://www.britannica.com/topic/International-Workers-Day"
+            "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
           ]
         }
       ],
@@ -193,10 +193,10 @@
         "timezone": "Asia/Jakarta",
         "date_status": "confirmed",
         "source_ids": [
-          "src_765E8EDBE7EB19F03AE6EEC0"
+          "src_FF4B224E905CC2C8CF8EAF05"
         ],
         "source_urls": [
-          "https://www.britannica.com/topic/International-Workers-Day"
+          "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
         ],
         "distance_days": 254
       }
@@ -205,16 +205,16 @@
       "observance_id": "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_IN_labour-day",
       "observance_key": "labour-day",
       "country_code": "IN",
-      "local_name": "Labour Day",
+      "local_name": "Labour Day / May Day",
       "observed_date": "05-01",
       "date_rule": null,
       "date_range_end": null,
-      "popularity_rank": 30,
+      "popularity_rank": 5,
       "source_ids": [
-        "src_765E8EDBE7EB19F03AE6EEC0"
+        "src_8881C7B43193D1F50ED0E47C"
       ],
       "source_urls": [
-        "https://www.britannica.com/topic/International-Workers-Day"
+        "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
       ],
       "occurrences": [
         {
@@ -226,10 +226,10 @@
           "timezone": "Asia/Kolkata",
           "date_status": "confirmed",
           "source_ids": [
-            "src_765E8EDBE7EB19F03AE6EEC0"
+            "src_8881C7B43193D1F50ED0E47C"
           ],
           "source_urls": [
-            "https://www.britannica.com/topic/International-Workers-Day"
+            "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
           ]
         },
         {
@@ -241,10 +241,10 @@
           "timezone": "Asia/Kolkata",
           "date_status": "confirmed",
           "source_ids": [
-            "src_765E8EDBE7EB19F03AE6EEC0"
+            "src_8881C7B43193D1F50ED0E47C"
           ],
           "source_urls": [
-            "https://www.britannica.com/topic/International-Workers-Day"
+            "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
           ]
         }
       ],
@@ -257,10 +257,74 @@
         "timezone": "Asia/Kolkata",
         "date_status": "confirmed",
         "source_ids": [
-          "src_765E8EDBE7EB19F03AE6EEC0"
+          "src_8881C7B43193D1F50ED0E47C"
         ],
         "source_urls": [
-          "https://www.britannica.com/topic/International-Workers-Day"
+          "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
+        ],
+        "distance_days": 254
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_JP_golden-week",
+      "observance_key": "golden-week",
+      "country_code": "JP",
+      "local_name": "五月一日（非祝日）／ゴールデンウィーク",
+      "observed_date": null,
+      "date_rule": "5 月 1 日不是祝日；前後的 4/29、5/3、5/4、5/5 才是",
+      "date_range_end": null,
+      "popularity_rank": 6,
+      "source_ids": [
+        "src_1A80A58B5E867818100E7776"
+      ],
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_JP_golden-week_2026_2026-05-01",
+          "occurrence_year": 2026,
+          "starts_on": "2026-05-01",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_1A80A58B5E867818100E7776"
+          ],
+          "source_urls": [
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_JP_golden-week_2027_2027-05-01",
+          "occurrence_year": 2027,
+          "starts_on": "2027-05-01",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_1A80A58B5E867818100E7776"
+          ],
+          "source_urls": [
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_JP_golden-week_2027_2027-05-01",
+        "occurrence_year": 2027,
+        "starts_on": "2027-05-01",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Tokyo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_1A80A58B5E867818100E7776"
+        ],
+        "source_urls": [
+          "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html"
         ],
         "distance_days": 254
       }
@@ -273,12 +337,12 @@
       "observed_date": "05-01",
       "date_rule": null,
       "date_range_end": null,
-      "popularity_rank": 10,
+      "popularity_rank": 1,
       "source_ids": [
-        "src_75CFC0B2BA442C9AE05D2030"
+        "src_F045C3336BEF6186024CF028"
       ],
       "source_urls": [
-        "https://www.dgpa.gov.tw/information?pid=12580&uid=353"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
       ],
       "occurrences": [
         {
@@ -290,10 +354,10 @@
           "timezone": "Asia/Taipei",
           "date_status": "confirmed",
           "source_ids": [
-            "src_75CFC0B2BA442C9AE05D2030"
+            "src_F045C3336BEF6186024CF028"
           ],
           "source_urls": [
-            "https://www.dgpa.gov.tw/information?pid=12580&uid=353"
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
           ]
         },
         {
@@ -305,10 +369,10 @@
           "timezone": "Asia/Taipei",
           "date_status": "confirmed",
           "source_ids": [
-            "src_75CFC0B2BA442C9AE05D2030"
+            "src_F045C3336BEF6186024CF028"
           ],
           "source_urls": [
-            "https://www.dgpa.gov.tw/information?pid=12580&uid=353"
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
           ]
         }
       ],
@@ -321,10 +385,10 @@
         "timezone": "Asia/Taipei",
         "date_status": "confirmed",
         "source_ids": [
-          "src_75CFC0B2BA442C9AE05D2030"
+          "src_F045C3336BEF6186024CF028"
         ],
         "source_urls": [
-          "https://www.dgpa.gov.tw/information?pid=12580&uid=353"
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
         ],
         "distance_days": 254
       }
@@ -335,9 +399,9 @@
       "country_code": "US",
       "local_name": "Labor Day",
       "observed_date": null,
-      "date_rule": "9 月第一個星期一",
+      "date_rule": "9 月第一個星期一（不是 5 月 1 日）",
       "date_range_end": null,
-      "popularity_rank": 60,
+      "popularity_rank": 7,
       "source_ids": [
         "src_F936765E8EFFBF4BDCD32B47"
       ],
@@ -421,6 +485,12 @@
       ]
     },
     {
+      "country_code": "JP",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_JP_golden-week"
+      ]
+    },
+    {
       "country_code": "TW",
       "observance_ids": [
         "obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_TW_labour-day"
@@ -435,13 +505,21 @@
   ],
   "relations": [],
   "source_ids": [
-    "src_75CFC0B2BA442C9AE05D2030",
-    "src_765E8EDBE7EB19F03AE6EEC0",
-    "src_F936765E8EFFBF4BDCD32B47"
+    "src_1A80A58B5E867818100E7776",
+    "src_6DFD76B82DF608B35353178A",
+    "src_8881C7B43193D1F50ED0E47C",
+    "src_8ADF07F096907DFC86796ED4",
+    "src_F045C3336BEF6186024CF028",
+    "src_F936765E8EFFBF4BDCD32B47",
+    "src_FF4B224E905CC2C8CF8EAF05"
   ],
   "source_urls": [
-    "https://www.dgpa.gov.tw/information?pid=12580&uid=353",
-    "https://www.britannica.com/topic/International-Workers-Day",
-    "https://www.usa.gov/holidays"
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html",
+    "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+    "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays",
+    "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://www.usa.gov/holidays",
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
   ]
 }
