@@ -921,6 +921,33 @@
     },
     {
       "topic_slug": "eid-al-adha",
+      "country_code": "CN",
+      "observance_key": "eid-al-adha",
+      "occurrence_year": 2026,
+      "starts_on": "2026-05-27",
+      "calendar_system": "islamic",
+      "timezone": "Asia/Shanghai",
+      "date_status": "confirmed",
+      "source_urls": [
+        "https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html"
+      ],
+      "ends_on": "2026-05-28"
+    },
+    {
+      "topic_slug": "eid-al-adha",
+      "country_code": "CN",
+      "observance_key": "eid-al-adha",
+      "occurrence_year": 2027,
+      "starts_on": "2027-05-17",
+      "calendar_system": "islamic",
+      "timezone": "Asia/Shanghai",
+      "date_status": "estimated",
+      "source_urls": [
+        "https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html"
+      ]
+    },
+    {
+      "topic_slug": "eid-al-adha",
       "country_code": "ID",
       "observance_key": "iduladha",
       "occurrence_year": 2026,
@@ -1497,6 +1524,34 @@
       "date_status": "confirmed",
       "source_urls": [
         "https://www.usa.gov/holidays"
+      ]
+    },
+    {
+      "topic_slug": "lantern-festival",
+      "country_code": "TW",
+      "observance_key": "handan",
+      "occurrence_year": 2026,
+      "starts_on": "2026-03-03",
+      "ends_on": "2026-03-04",
+      "calendar_system": "chinese-lunisolar",
+      "timezone": "Asia/Taipei",
+      "date_status": "estimated",
+      "source_urls": [
+        "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=83"
+      ]
+    },
+    {
+      "topic_slug": "lantern-festival",
+      "country_code": "TW",
+      "observance_key": "handan",
+      "occurrence_year": 2027,
+      "starts_on": "2027-02-20",
+      "ends_on": "2027-02-21",
+      "calendar_system": "chinese-lunisolar",
+      "timezone": "Asia/Taipei",
+      "date_status": "estimated",
+      "source_urls": [
+        "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=83"
       ]
     },
     {
@@ -2371,6 +2426,32 @@
       "date_status": "confirmed",
       "source_urls": [
         "https://www.usa.gov/holidays"
+      ]
+    },
+    {
+      "topic_slug": "ramadan-and-eid",
+      "country_code": "CN",
+      "observance_key": "eid-al-fitr",
+      "occurrence_year": 2026,
+      "starts_on": "2026-03-21",
+      "calendar_system": "islamic",
+      "timezone": "Asia/Shanghai",
+      "date_status": "confirmed",
+      "source_urls": [
+        "https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html"
+      ]
+    },
+    {
+      "topic_slug": "ramadan-and-eid",
+      "country_code": "CN",
+      "observance_key": "eid-al-fitr",
+      "occurrence_year": 2027,
+      "starts_on": "2027-03-09",
+      "calendar_system": "islamic",
+      "timezone": "Asia/Shanghai",
+      "date_status": "estimated",
+      "source_urls": [
+        "https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html"
       ]
     },
     {

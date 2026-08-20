@@ -31,7 +31,7 @@
 - local_name: Valentine's Day
 - date: 02-14
 - rank: 1
-- source: https://www.britannica.com/topic/Valentines-Day
+- source: https://www.census.gov/newsroom/stories/valentines-day.html
 
 ## observance BR dia-dos-namorados
 - local_name: Dia dos Namorados
@@ -44,7 +44,7 @@
 - date: 02-07
 - date_end: 02-14
 - rank: 1
-- source: https://www.britannica.com/topic/Valentines-Day
+- source: https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays
 
 ## locale zh-TW
 ### title

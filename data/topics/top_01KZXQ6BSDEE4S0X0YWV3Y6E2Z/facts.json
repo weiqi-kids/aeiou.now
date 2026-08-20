@@ -10,6 +10,70 @@
   "access_level": 0,
   "observances": [
     {
+      "observance_id": "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_CN_eid-al-fitr",
+      "observance_key": "eid-al-fitr",
+      "country_code": "CN",
+      "local_name": "开斋节（宁夏回族自治区）",
+      "observed_date": null,
+      "date_rule": "伊斯兰历 Shawwal 月初一；由自治区人民政府办公厅逐年在节假日安排通知中公布",
+      "date_range_end": null,
+      "popularity_rank": 5,
+      "source_ids": [
+        "src_CAEA7E7ACF0B1F47F0C4F0C9"
+      ],
+      "source_urls": [
+        "https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_CN_eid-al-fitr_2026_2026-03-21",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-21",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_CAEA7E7ACF0B1F47F0C4F0C9"
+          ],
+          "source_urls": [
+            "https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_CN_eid-al-fitr_2027_2027-03-09",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-09",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Shanghai",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_CAEA7E7ACF0B1F47F0C4F0C9"
+          ],
+          "source_urls": [
+            "https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_CN_eid-al-fitr_2027_2027-03-09",
+        "occurrence_year": 2027,
+        "starts_on": "2027-03-09",
+        "ends_on": null,
+        "calendar_system": "islamic",
+        "timezone": "Asia/Shanghai",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_CAEA7E7ACF0B1F47F0C4F0C9"
+        ],
+        "source_urls": [
+          "https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html"
+        ],
+        "distance_days": 201
+      }
+    },
+    {
       "observance_id": "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_ID_eid-al-fitr",
       "observance_key": "eid-al-fitr",
       "country_code": "ID",
@@ -269,6 +333,12 @@
   "regional_notes": [],
   "countries": [
     {
+      "country_code": "CN",
+      "observance_ids": [
+        "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_CN_eid-al-fitr"
+      ]
+    },
+    {
       "country_code": "ID",
       "observance_ids": [
         "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_ID_eid-al-fitr"
@@ -299,6 +369,7 @@
     "src_71D52CDB9B833DE2EDE16987",
     "src_8881C7B43193D1F50ED0E47C",
     "src_9157B47CDBE6F3ACE4ED9D72",
+    "src_CAEA7E7ACF0B1F47F0C4F0C9",
     "src_FF4B224E905CC2C8CF8EAF05"
   ],
   "source_urls": [
@@ -306,6 +377,7 @@
     "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf",
     "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays",
     "https://www.wda.gov.tw/News_Content.aspx?n=31&s=3599",
+    "https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html",
     "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
   ]
 }

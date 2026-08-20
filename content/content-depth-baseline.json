@@ -5,13 +5,7 @@
     "units": 5,
     "min_chars": 1200
   },
-  "r6_exempt": [
-    "affection-and-reciprocity/IN/valentine-week",
-    "affection-and-reciprocity/US/valentine",
-    "ghosts-ancestors-and-remembrance/JP/obon",
-    "ghosts-ancestors-and-remembrance/JP/setsubun",
-    "homecoming-and-reunion/JP/obon"
-  ],
+  "r6_exempt": [],
   "topics": {
     "affection-and-reciprocity": {
       "units": 6,
@@ -69,9 +63,9 @@
       "min_chars": 882
     },
     "eid-al-adha": {
-      "units": 4,
-      "countries": 4,
-      "min_chars": 948
+      "units": 5,
+      "countries": 5,
+      "min_chars": 1157
     },
     "farewells-and-funerals": {
       "units": 7,
@@ -109,9 +103,9 @@
       "min_chars": 1112
     },
     "lantern-festival": {
-      "units": 4,
+      "units": 5,
       "countries": 2,
-      "min_chars": 691
+      "min_chars": 881
     },
     "mid-autumn-and-moon-viewing": {
       "units": 4,
@@ -149,9 +143,9 @@
       "min_chars": 1041
     },
     "ramadan-and-eid": {
-      "units": 4,
-      "countries": 4,
-      "min_chars": 784
+      "units": 5,
+      "countries": 5,
+      "min_chars": 991
     },
     "teachers-day": {
       "units": 6,

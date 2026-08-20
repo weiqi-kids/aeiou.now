@@ -30,6 +30,12 @@
 - rank: 4
 - source: https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf
 
+## observance CN eid-al-fitr
+- local_name: 开斋节（宁夏回族自治区）
+- date_rule: 伊斯兰历 Shawwal 月初一；由自治区人民政府办公厅逐年在节假日安排通知中公布
+- rank: 5
+- source: https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html
+
 ## locale zh-TW
 ### title
 齋戒月與開齋節
@@ -45,6 +51,8 @@
 台灣不把開齋節列為法定假日。勞動部勞動力發展署的做法是向雇主「籲請」——建議在開齋節前後安排或同意移工休假半日或一日參加集體禮拜，並在齋戒期間持續關心移工身心狀況。也就是說，能不能過節取決於雇主同意，不是法律給的權利。這是台灣與其他三地最大的差別。
 ### customs US eid-al-fitr-school-holiday
 美國沒有把開齋節列為聯邦假日，但紐約市公立學校的官方行事曆把 Eid al-Fitr 列為停課日（二○二六至二七學年落在三月九日，星期二）。同一份行事曆也把 Eid al-Adha 列為停課日。它承認的層級是學區而不是國家，作用範圍是學校而不是職場。
+### customs CN eid-al-fitr
+中國大陸的開齋節不是全國假日，但在回族與維吾爾等穆斯林人口聚居的自治區是地方假日：寧夏回族自治區人民政府辦公廳逐年在節假日安排通知裡公布開齋節與古爾邦節的放假，二○二六年的開齋節落在三月二十一日（週六，遇週末照常休息）。所以同一個節日在中國境內的地位取決於你在哪一個省區——這是七地裡唯一「同國不同待遇」的例子。
 
 ## locale en
 ### title
@@ -61,6 +69,8 @@ India lists Id-ul-Fitr among its national holidays; the published date for 2026 
 Taiwan does not list Eid al-Fitr as a statutory holiday. The Workforce Development Agency's approach is to appeal to employers — suggesting they arrange or approve half a day or a full day of leave so migrant workers can attend collective prayer, and asking them to keep an eye on workers' wellbeing during the fast. In other words, whether the day can be observed depends on an employer's consent rather than a legal right. That is the sharpest difference among the four places here.
 ### customs US eid-al-fitr-school-holiday
 Eid al-Fitr is not a federal holiday in the United States, but the official New York City public school calendar lists it as a day schools are closed (Tuesday, 9 March in the 2026–27 school year). The same calendar also closes schools for Eid al-Adha. The recognition sits at the school-district level rather than the national one, and it reaches classrooms rather than workplaces.
+### customs CN eid-al-fitr
+Eid al-Fitr is not a national holiday in mainland China, but it is a local one in the autonomous regions where Hui, Uyghur and other Muslim populations are concentrated: the general office of the Ningxia Hui Autonomous Region government publishes the days off for Eid al-Fitr and Eid al-Adha in its annual holiday notice, with Eid al-Fitr in 2026 falling on 21 March, a Saturday already covered by the weekend. So the standing of the same festival inside China depends on which province or region you are in — the only case among these seven places of one country treating one day two ways.
 
 ## locale ja
 ### title
@@ -77,6 +87,8 @@ Eid al-Fitr is not a federal holiday in the United States, but the official New 
 台湾はイード・アル＝フィトルを法定の休日にしていない。労働力発展署の対応は雇用主への「呼びかけ」であり、移住労働者が集団礼拝に参加できるよう半日または一日の休暇を認めることを勧め、断食期間中は心身の状態に気を配るよう求めている。つまり祝えるかどうかは雇用主の同意次第で、法的な権利ではない。ここが四つの地域で最も大きな違いである。
 ### customs US eid-al-fitr-school-holiday
 米国ではイード・アル＝フィトルは連邦の祝日ではないが、ニューヨーク市公立学校の公式カレンダーは休校日として記載している（2026–27年度は3月9日火曜）。同じカレンダーはイード・アル＝アドハーも休校としている。認めているのは国ではなく学区であり、及ぶ範囲は職場ではなく教室である。
+### customs CN eid-al-fitr
+中国大陸において開斎節は全国の祝日ではないが、回族やウイグル族などムスリムが多く住む自治区では地方の休日である。寧夏回族自治区人民政府弁公庁は毎年の休日配置の通知で開斎節と犠牲祭の休みを公表しており、2026年の開斎節は3月21日、土曜にあたるため週末の休みと重なる。したがって同じ祭日の位置づけは、中国国内でもどの省・自治区にいるかによって変わる。七つの地域の中で、同じ国が一つの日を二通りに扱う唯一の例である。
 
 ## locale zh-CN
 ### title
@@ -93,6 +105,8 @@ Eid al-Fitr is not a federal holiday in the United States, but the official New 
 台湾不把开斋节列为法定假日。劳动部劳动力发展署的做法是向雇主“呼吁”——建议在开斋节前后安排或同意移工休假半日或一日参加集体礼拜，并在斋戒期间持续关心移工身心状况。也就是说，能不能过节取决于雇主同意，不是法律给的权利。这是台湾与其他三地最大的差别。
 ### customs US eid-al-fitr-school-holiday
 美国没有把开斋节列为联邦假日，但纽约市公立学校的官方行事历把 Eid al-Fitr 列为停课日（2026至27学年落在3月9日，星期二）。同一份行事历也把 Eid al-Adha 列为停课日。它承认的层级是学区而不是国家，作用范围是学校而不是职场。
+### customs CN eid-al-fitr
+中国大陆的开斋节不是全国假日，但在回族与维吾尔等穆斯林人口聚居的自治区是地方假日：宁夏回族自治区人民政府办公厅逐年在节假日安排通知里公布开斋节与古尔邦节的放假，2026年的开斋节落在3月21日（周六，遇周末照常休息）。所以同一个节日在中国境内的地位取决于你在哪一个省区——这是七地里唯一“同国不同待遇”的例子。
 
 ## locale hi
 ### title
@@ -109,6 +123,8 @@ Eid al-Fitr is not a federal holiday in the United States, but the official New 
 ताइवान ईद-उल-फ़ित्र को कानूनी अवकाश नहीं मानता। श्रम शक्ति विकास एजेंसी का तरीक़ा नियोक्ताओं से अनुरोध करना है — सुझाव है कि प्रवासी श्रमिकों को सामूहिक नमाज़ के लिए आधे दिन या पूरे दिन की छुट्टी दी जाए, और रोज़े के दौरान उनके स्वास्थ्य का ध्यान रखा जाए। यानी त्योहार मना पाना नियोक्ता की सहमति पर निर्भर है, कानूनी अधिकार नहीं। यही इन चार जगहों में सबसे तेज़ अंतर है।
 ### customs US eid-al-fitr-school-holiday
 अमेरिका में ईद-उल-फ़ित्र संघीय अवकाश नहीं है, पर न्यूयॉर्क शहर के सरकारी स्कूलों का आधिकारिक कैलेंडर उसे स्कूल बंद रहने के दिन के रूप में दर्ज करता है (2026–27 सत्र में 9 मार्च, मंगलवार)। वही कैलेंडर ईद-उल-अज़हा पर भी स्कूल बंद रखता है। मान्यता देश के स्तर पर नहीं, स्कूल ज़िले के स्तर पर है, और उसका दायरा कार्यस्थल नहीं, कक्षा है।
+### customs CN eid-al-fitr
+मुख्यभूमि चीन में ईद-उल-फ़ित्र राष्ट्रीय अवकाश नहीं है, पर उन स्वायत्त क्षेत्रों में स्थानीय अवकाश है जहाँ हुई, उइग़ुर और अन्य मुस्लिम आबादी केंद्रित है: निंगश्या हुई स्वायत्त क्षेत्र सरकार का महाकार्यालय हर वर्ष की अवकाश-अधिसूचना में ईद-उल-फ़ित्र और ईद-उल-अज़हा की छुट्टियाँ प्रकाशित करता है; 2026 में ईद-उल-फ़ित्र 21 मार्च, शनिवार को पड़ती है, जो पहले से सप्ताहांत में है। यानी एक ही पर्व की स्थिति चीन के भीतर भी इस पर निर्भर है कि आप किस प्रांत या क्षेत्र में हैं — इन सात जगहों में यह इकलौता उदाहरण है जहाँ एक ही देश एक दिन को दो तरह से बरतता है।
 
 ## locale id
 ### title
@@ -125,6 +141,8 @@ India memasukkan Id-ul-Fitr dalam daftar hari libur nasional; tanggal yang diumu
 Taiwan tidak menjadikan Idulfitri hari libur resmi. Pendekatan Badan Pengembangan Tenaga Kerja adalah mengimbau pemberi kerja — menyarankan agar mengatur atau menyetujui cuti setengah hari atau satu hari supaya pekerja migran dapat mengikuti salat berjamaah, serta memperhatikan kondisi fisik dan mental mereka selama berpuasa. Artinya, bisa atau tidaknya berhari raya bergantung pada persetujuan pemberi kerja, bukan hak yang diberikan undang-undang. Ini perbedaan paling tajam di antara empat tempat ini.
 ### customs US eid-al-fitr-school-holiday
 Idulfitri bukan hari libur federal di Amerika Serikat, tetapi kalender resmi sekolah negeri Kota New York mencantumkannya sebagai hari sekolah tutup (Selasa, 9 Maret pada tahun ajaran 2026–27). Kalender yang sama juga menutup sekolah untuk Idul Adha. Pengakuannya berada di tingkat distrik sekolah, bukan negara, dan jangkauannya ruang kelas, bukan tempat kerja.
+### customs CN eid-al-fitr
+Idulfitri bukan hari libur nasional di Tiongkok daratan, tetapi menjadi hari libur setempat di daerah otonom tempat penduduk Hui, Uighur, dan Muslim lainnya terpusat: kantor umum pemerintah Daerah Otonom Hui Ningxia menerbitkan hari libur Idulfitri dan Idul Adha dalam pemberitahuan hari libur tahunannya, dengan Idulfitri 2026 jatuh pada 21 Maret, Sabtu yang memang sudah akhir pekan. Jadi kedudukan hari raya yang sama di dalam Tiongkok bergantung pada provinsi atau daerah tempat Anda berada — satu-satunya kasus di antara tujuh tempat ini di mana satu negara memperlakukan satu hari dengan dua cara.
 
 ## locale pt-BR
 ### title
@@ -141,3 +159,5 @@ A Índia inclui o Id-ul-Fitr entre seus feriados nacionais; a data publicada par
 Taiwan não lista o Eid al-Fitr como feriado legal. A abordagem da agência de desenvolvimento da força de trabalho é apelar aos empregadores — sugerindo que concedam meio dia ou um dia de licença para que trabalhadores migrantes participem da oração coletiva, e pedindo atenção ao bem-estar deles durante o jejum. Ou seja, poder ou não celebrar depende do consentimento do empregador, não de um direito previsto em lei. É a diferença mais nítida entre os quatro lugares aqui.
 ### customs US eid-al-fitr-school-holiday
 O Eid al-Fitr não é feriado federal nos Estados Unidos, mas o calendário oficial das escolas públicas da cidade de Nova York o registra como dia sem aula (terça-feira, 9 de março no ano escolar 2026–27). O mesmo calendário fecha as escolas também no Eid al-Adha. O reconhecimento está no nível do distrito escolar, não do país, e alcança a sala de aula, não o local de trabalho.
+### customs CN eid-al-fitr
+O Eid al-Fitr não é feriado nacional na China continental, mas é feriado local nas regiões autônomas onde se concentram populações hui, uigur e outras muçulmanas: o gabinete-geral do governo da Região Autônoma Hui de Ningxia publica as folgas do Eid al-Fitr e do Eid al-Adha em seu aviso anual de feriados, com o Eid al-Fitr de 2026 caindo em 21 de março, um sábado já coberto pelo fim de semana. Assim, a posição da mesma festa dentro da China depende de em que província ou região você está — o único caso entre estes sete lugares em que um mesmo país trata um dia de duas formas.

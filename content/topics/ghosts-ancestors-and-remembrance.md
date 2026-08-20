@@ -28,12 +28,14 @@
 - local_name: お盆
 - date_rule: 多數地區 08-13 至 08-16，地方日期可能不同
 - rank: 1
+- source: https://jpsearch.go.jp/gallery/ndl-O6a96jYMq9Q
 - source: https://www.japan.travel/en/see-and-do/festivals-and-events/
 
 ## observance JP setsubun
 - local_name: 節分
 - date_rule: 立春前一日左右，日期每年略有差異
 - rank: 1
+- source: https://www.ndl.go.jp/kaleido/entry/21/1.html
 - source: https://www.japan.travel/en/see-and-do/festivals-and-events/
 
 ## observance TW ghost-month
