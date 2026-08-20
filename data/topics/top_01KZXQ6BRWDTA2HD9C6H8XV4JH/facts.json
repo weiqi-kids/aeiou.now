@@ -2,11 +2,11 @@
   "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
   "slug": "mid-autumn-and-moon-viewing",
   "canonical_name": "Mid-Autumn and Moon Viewing",
-  "commonality": "comparing moon-viewing, seasonal food, reunion, and autumn harvest customs without flattening them into one festival",
+  "commonality": "comparing what the fifteenth night of the eighth lunar month becomes — a statutory family holiday, a separately listed tomb-first Chuseok, or a working night watched for its astronomy",
   "category": "festival",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-19T14:52:10.000Z",
+  "updated_at": "2026-08-20T03:11:34.000Z",
   "access_level": 0,
   "observances": [
     {
@@ -15,14 +15,18 @@
       "country_code": "CN",
       "local_name": "中秋节",
       "observed_date": null,
-      "date_rule": "农历八月十五",
+      "date_rule": "农历八月十五，公历日期每年不同",
       "date_range_end": null,
-      "popularity_rank": 1,
+      "popularity_rank": 2,
       "source_ids": [
-        "src_BC89514E4D7BF213AE54D2E0"
+        "src_6DFD76B82DF608B35353178A",
+        "src_140F35709530AB2BEE135010",
+        "src_E405440D6A7FBA9FBC2398FD"
       ],
       "source_urls": [
-        "https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/jiedu/tujie/202411/content_6986437.htm"
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/gongbao/content/2006/content_334718.htm",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
       ],
       "occurrences": [
         {
@@ -74,19 +78,85 @@
       }
     },
     {
+      "observance_id": "obs_top_01KZXQ6BRWDTA2HD9C6H8XV4JH_CN_qiuxi",
+      "observance_key": "qiuxi",
+      "country_code": "CN",
+      "local_name": "中秋节（秋夕）· 延边朝鲜族",
+      "observed_date": null,
+      "date_rule": "农历八月十五前后，节期可持续数日",
+      "date_range_end": null,
+      "popularity_rank": 3,
+      "source_ids": [
+        "src_AD691C046EF0DE79D7DD0A95"
+      ],
+      "source_urls": [
+        "https://www.ihchina.cn/project_details/14935.html"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRWDTA2HD9C6H8XV4JH_CN_qiuxi_2026_2026-09-25",
+          "occurrence_year": 2026,
+          "starts_on": "2026-09-25",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Shanghai",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_AD691C046EF0DE79D7DD0A95"
+          ],
+          "source_urls": [
+            "https://www.ihchina.cn/project_details/14935.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRWDTA2HD9C6H8XV4JH_CN_qiuxi_2027_2027-09-15",
+          "occurrence_year": 2027,
+          "starts_on": "2027-09-15",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Shanghai",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_AD691C046EF0DE79D7DD0A95"
+          ],
+          "source_urls": [
+            "https://www.ihchina.cn/project_details/14935.html"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRWDTA2HD9C6H8XV4JH_CN_qiuxi_2026_2026-09-25",
+        "occurrence_year": 2026,
+        "starts_on": "2026-09-25",
+        "ends_on": null,
+        "calendar_system": "chinese-lunisolar",
+        "timezone": "Asia/Shanghai",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_AD691C046EF0DE79D7DD0A95"
+        ],
+        "source_urls": [
+          "https://www.ihchina.cn/project_details/14935.html"
+        ],
+        "distance_days": 36
+      }
+    },
+    {
       "observance_id": "obs_top_01KZXQ6BRWDTA2HD9C6H8XV4JH_JP_tsukimi",
       "observance_key": "tsukimi",
       "country_code": "JP",
-      "local_name": "月見",
+      "local_name": "中秋の名月（十五夜）",
       "observed_date": null,
-      "date_rule": "農曆八月十五前後的秋季月見",
+      "date_rule": "旧暦八月十五日にあたる夜。満月とは日付がずれることが多い",
       "date_range_end": null,
-      "popularity_rank": 1,
+      "popularity_rank": 4,
       "source_ids": [
-        "src_DC79A8996E6D7ACCC16B4839"
+        "src_DC79A8996E6D7ACCC16B4839",
+        "src_979D4917CDA3B93A8209F421"
       ],
       "source_urls": [
-        "https://www.nao.ac.jp/astro/sky/2026/09-topics03.html"
+        "https://www.nao.ac.jp/astro/sky/2026/09-topics03.html",
+        "https://eco.mtk.nao.ac.jp/koyomi/wiki/C3E6BDA9A4CECCBEB7EEA4C8A4CF2FCCBEB7EEC9ACA4BAA4B7A4E2CBFEB7EEA4CAA4E9A4BA.html"
       ],
       "occurrences": [
         {
@@ -143,14 +213,16 @@
       "country_code": "TW",
       "local_name": "中秋節",
       "observed_date": null,
-      "date_rule": "農曆八月十五",
+      "date_rule": "農曆八月十五，公曆日期每年不同",
       "date_range_end": null,
       "popularity_rank": 1,
       "source_ids": [
-        "src_F12F15DB053D422FA98E2E78"
+        "src_F045C3336BEF6186024CF028",
+        "src_E405440D6A7FBA9FBC2398FD"
       ],
       "source_urls": [
-        "https://www.tad.gov.tw/m1.aspx?sNo=0001020"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
       ],
       "occurrences": [
         {
@@ -207,7 +279,8 @@
     {
       "country_code": "CN",
       "observance_ids": [
-        "obs_top_01KZXQ6BRWDTA2HD9C6H8XV4JH_CN_mid-autumn"
+        "obs_top_01KZXQ6BRWDTA2HD9C6H8XV4JH_CN_mid-autumn",
+        "obs_top_01KZXQ6BRWDTA2HD9C6H8XV4JH_CN_qiuxi"
       ]
     },
     {
@@ -225,19 +298,25 @@
   ],
   "relations": [],
   "source_ids": [
+    "src_140F35709530AB2BEE135010",
     "src_509D6FE3CDE66C39605277AB",
+    "src_6DFD76B82DF608B35353178A",
     "src_75CFC0B2BA442C9AE05D2030",
-    "src_BC89514E4D7BF213AE54D2E0",
+    "src_979D4917CDA3B93A8209F421",
+    "src_AD691C046EF0DE79D7DD0A95",
     "src_DC79A8996E6D7ACCC16B4839",
     "src_E405440D6A7FBA9FBC2398FD",
-    "src_F12F15DB053D422FA98E2E78"
+    "src_F045C3336BEF6186024CF028"
   ],
   "source_urls": [
+    "https://www.gov.cn/gongbao/content/2006/content_334718.htm",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+    "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
     "https://www.dgpa.gov.tw/information?pid=12580&uid=353",
-    "https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/jiedu/tujie/202411/content_6986437.htm",
+    "https://eco.mtk.nao.ac.jp/koyomi/wiki/C3E6BDA9A4CECCBEB7EEA4C8A4CF2FCCBEB7EEC9ACA4BAA4B7A4E2CBFEB7EEA4CAA4E9A4BA.html",
+    "https://www.ihchina.cn/project_details/14935.html",
     "https://www.nao.ac.jp/astro/sky/2026/09-topics03.html",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
-    "https://www.tad.gov.tw/m1.aspx?sNo=0001020"
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
   ]
 }

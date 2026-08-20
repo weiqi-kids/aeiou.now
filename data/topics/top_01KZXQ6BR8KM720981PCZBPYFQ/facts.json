@@ -2,26 +2,30 @@
   "topic_id": "top_01KZXQ6BR8KM720981PCZBPYFQ",
   "slug": "dragon-boat-festival",
   "canonical_name": "Dragon Boat Festival",
-  "commonality": "comparing dragon boat traditions, rice dumplings, water rituals, and the different meanings attached to the fifth lunar month",
-  "category": "seasonal",
+  "commonality": "comparing the fifth of the fifth across a lunar public holiday, a nationally listed heritage complex with separately listed local versions, and a Gregorian statutory children's day",
+  "category": "festival",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-19T14:52:10.000Z",
+  "updated_at": "2026-08-20T03:07:26.000Z",
   "access_level": 0,
   "observances": [
     {
       "observance_id": "obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_duanwu",
       "observance_key": "duanwu",
       "country_code": "CN",
-      "local_name": "端午節",
+      "local_name": "端午节",
       "observed_date": null,
-      "date_rule": "農曆五月初五，公曆日期每年不同",
+      "date_rule": "农历五月初五，公历日期每年不同",
       "date_range_end": null,
-      "popularity_rank": 20,
+      "popularity_rank": 2,
       "source_ids": [
+        "src_6DFD76B82DF608B35353178A",
+        "src_37294ABB26FDF9F31566D66E",
         "src_E405440D6A7FBA9FBC2398FD"
       ],
       "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.ihchina.cn/project_details/20215.html",
         "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
       ],
       "occurrences": [
@@ -74,6 +78,70 @@
       }
     },
     {
+      "observance_id": "obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_luodian-dragon-boat",
+      "observance_key": "luodian-dragon-boat",
+      "country_code": "CN",
+      "local_name": "罗店划龙船习俗（上海）",
+      "observed_date": null,
+      "date_rule": "农历五月初五前后，依当地安排",
+      "date_range_end": null,
+      "popularity_rank": 3,
+      "source_ids": [
+        "src_43F2E374185F07C9573ABFB1"
+      ],
+      "source_urls": [
+        "https://www.ihchina.cn/project_details/20208.html"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_luodian-dragon-boat_2026_2026-06-19",
+          "occurrence_year": 2026,
+          "starts_on": "2026-06-19",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Shanghai",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_43F2E374185F07C9573ABFB1"
+          ],
+          "source_urls": [
+            "https://www.ihchina.cn/project_details/20208.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_luodian-dragon-boat_2027_2027-06-09",
+          "occurrence_year": 2027,
+          "starts_on": "2027-06-09",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Shanghai",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_43F2E374185F07C9573ABFB1"
+          ],
+          "source_urls": [
+            "https://www.ihchina.cn/project_details/20208.html"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_luodian-dragon-boat_2027_2027-06-09",
+        "occurrence_year": 2027,
+        "starts_on": "2027-06-09",
+        "ends_on": null,
+        "calendar_system": "chinese-lunisolar",
+        "timezone": "Asia/Shanghai",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_43F2E374185F07C9573ABFB1"
+        ],
+        "source_urls": [
+          "https://www.ihchina.cn/project_details/20208.html"
+        ],
+        "distance_days": 293
+      }
+    },
+    {
       "observance_id": "obs_top_01KZXQ6BR8KM720981PCZBPYFQ_JP_tango-no-sekku",
       "observance_key": "tango-no-sekku",
       "country_code": "JP",
@@ -81,12 +149,14 @@
       "observed_date": "05-05",
       "date_rule": null,
       "date_range_end": null,
-      "popularity_rank": 30,
+      "popularity_rank": 4,
       "source_ids": [
-        "src_896FE82C2D1B93867E0BB2D7"
+        "src_1A80A58B5E867818100E7776",
+        "src_8EF16E69C09D169D7895BA08"
       ],
       "source_urls": [
-        "https://www.japan.travel/en/see-and-do/festivals-and-events/"
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html",
+        "https://www.mhlw.go.jp/file/04-Houdouhappyou-11906000-Koyoukintoujidoukateikyoku-Ikuseikankyouka/0000082035.pdf"
       ],
       "occurrences": [
         {
@@ -145,11 +215,13 @@
       "observed_date": null,
       "date_rule": "農曆五月初五，公曆日期每年不同",
       "date_range_end": null,
-      "popularity_rank": 10,
+      "popularity_rank": 1,
       "source_ids": [
+        "src_F045C3336BEF6186024CF028",
         "src_E405440D6A7FBA9FBC2398FD"
       ],
       "source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
         "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
       ],
       "occurrences": [
@@ -207,7 +279,8 @@
     {
       "country_code": "CN",
       "observance_ids": [
-        "obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_duanwu"
+        "obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_duanwu",
+        "obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_luodian-dragon-boat"
       ]
     },
     {
@@ -225,13 +298,25 @@
   ],
   "relations": [],
   "source_ids": [
+    "src_1A80A58B5E867818100E7776",
+    "src_37294ABB26FDF9F31566D66E",
+    "src_43F2E374185F07C9573ABFB1",
     "src_509D6FE3CDE66C39605277AB",
+    "src_6DFD76B82DF608B35353178A",
     "src_896FE82C2D1B93867E0BB2D7",
-    "src_E405440D6A7FBA9FBC2398FD"
+    "src_8EF16E69C09D169D7895BA08",
+    "src_E405440D6A7FBA9FBC2398FD",
+    "src_F045C3336BEF6186024CF028"
   ],
   "source_urls": [
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html",
+    "https://www.ihchina.cn/project_details/20215.html",
+    "https://www.ihchina.cn/project_details/20208.html",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+    "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
     "https://www.japan.travel/en/see-and-do/festivals-and-events/",
-    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+    "https://www.mhlw.go.jp/file/04-Houdouhappyou-11906000-Koyoukintoujidoukateikyoku-Ikuseikankyouka/0000082035.pdf",
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
   ]
 }

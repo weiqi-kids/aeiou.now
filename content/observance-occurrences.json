@@ -685,6 +685,32 @@
     },
     {
       "topic_slug": "dragon-boat-festival",
+      "country_code": "CN",
+      "observance_key": "luodian-dragon-boat",
+      "occurrence_year": 2026,
+      "starts_on": "2026-06-19",
+      "calendar_system": "chinese-lunisolar",
+      "timezone": "Asia/Shanghai",
+      "date_status": "estimated",
+      "source_urls": [
+        "https://www.ihchina.cn/project_details/20208.html"
+      ]
+    },
+    {
+      "topic_slug": "dragon-boat-festival",
+      "country_code": "CN",
+      "observance_key": "luodian-dragon-boat",
+      "occurrence_year": 2027,
+      "starts_on": "2027-06-09",
+      "calendar_system": "chinese-lunisolar",
+      "timezone": "Asia/Shanghai",
+      "date_status": "estimated",
+      "source_urls": [
+        "https://www.ihchina.cn/project_details/20208.html"
+      ]
+    },
+    {
+      "topic_slug": "dragon-boat-festival",
       "country_code": "JP",
       "observance_key": "tango-no-sekku",
       "occurrence_year": 2026,
@@ -1045,6 +1071,60 @@
       "date_status": "confirmed",
       "source_urls": [
         "https://www.timeanddate.com/holidays/us/2027"
+      ]
+    },
+    {
+      "topic_slug": "harvest-and-gratitude",
+      "country_code": "CN",
+      "observance_key": "farmers-harvest-festival",
+      "occurrence_year": 2026,
+      "starts_on": "2026-09-23",
+      "calendar_system": "solar-term",
+      "timezone": "Asia/Shanghai",
+      "date_status": "confirmed",
+      "source_urls": [
+        "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5444575.htm",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+      ]
+    },
+    {
+      "topic_slug": "harvest-and-gratitude",
+      "country_code": "CN",
+      "observance_key": "farmers-harvest-festival",
+      "occurrence_year": 2027,
+      "starts_on": "2027-09-23",
+      "calendar_system": "solar-term",
+      "timezone": "Asia/Shanghai",
+      "date_status": "confirmed",
+      "source_urls": [
+        "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5444575.htm",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+      ]
+    },
+    {
+      "topic_slug": "harvest-and-gratitude",
+      "country_code": "JP",
+      "observance_key": "kinro-kansha",
+      "occurrence_year": 2026,
+      "starts_on": "2026-11-23",
+      "calendar_system": "gregorian",
+      "timezone": "Asia/Tokyo",
+      "date_status": "confirmed",
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html"
+      ]
+    },
+    {
+      "topic_slug": "harvest-and-gratitude",
+      "country_code": "JP",
+      "observance_key": "kinro-kansha",
+      "occurrence_year": 2027,
+      "starts_on": "2027-11-23",
+      "calendar_system": "gregorian",
+      "timezone": "Asia/Tokyo",
+      "date_status": "confirmed",
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html"
       ]
     },
     {
@@ -1543,6 +1623,32 @@
       "date_status": "confirmed",
       "source_urls": [
         "https://www.usa.gov/holidays"
+      ]
+    },
+    {
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "country_code": "CN",
+      "observance_key": "qiuxi",
+      "occurrence_year": 2026,
+      "starts_on": "2026-09-25",
+      "calendar_system": "chinese-lunisolar",
+      "timezone": "Asia/Shanghai",
+      "date_status": "estimated",
+      "source_urls": [
+        "https://www.ihchina.cn/project_details/14935.html"
+      ]
+    },
+    {
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "country_code": "CN",
+      "observance_key": "qiuxi",
+      "occurrence_year": 2027,
+      "starts_on": "2027-09-15",
+      "calendar_system": "chinese-lunisolar",
+      "timezone": "Asia/Shanghai",
+      "date_status": "estimated",
+      "source_urls": [
+        "https://www.ihchina.cn/project_details/14935.html"
       ]
     },
     {

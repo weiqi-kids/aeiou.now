@@ -2,11 +2,11 @@
   "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
   "slug": "harvest-and-gratitude",
   "canonical_name": "Harvest and Gratitude",
-  "commonality": "connecting harvest, gratitude, seasonal food, and shared tables across different religious and regional settings",
-  "category": "food",
+  "commonality": "comparing who defines a harvest festival and what it is renamed as — a family table, a boiling pot, a month of saints' days, a policy-created farmers' day, or an imperial rite rewritten as thanks for labour",
+  "category": "festival",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-19T14:52:10.000Z",
+  "updated_at": "2026-08-20T03:15:53.000Z",
   "access_level": 0,
   "observances": [
     {
@@ -14,15 +14,17 @@
       "observance_key": "festa-junina",
       "country_code": "BR",
       "local_name": "Festas Juninas",
-      "observed_date": "06-24",
-      "date_rule": null,
+      "observed_date": null,
+      "date_rule": "六月，聖安東尼／聖若翰／聖伯多祿三個聖人日前後",
       "date_range_end": null,
-      "popularity_rank": 1,
+      "popularity_rank": 3,
       "source_ids": [
-        "src_7095914FF1D5AE2E37F34335"
+        "src_68EB0BD6E5C51DD082CED1CA",
+        "src_A188F3A2F09C0A4FCCE4F9FF"
       ],
       "source_urls": [
-        "https://bndigital.bn.gov.br/festas-juninas/"
+        "https://www.gov.br/iphan/pt-br/assuntos/forro-do-mundo/sobre-o-forro",
+        "https://www.gov.br/turismo/pt-br/assuntos/noticias/festejos-juninos-comecam-no-nordeste-cidades-projetam-mais-publico-e-faturamento-maior-em-2026"
       ],
       "occurrences": [
         {
@@ -74,19 +76,93 @@
       }
     },
     {
+      "observance_id": "obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_CN_farmers-harvest-festival",
+      "observance_key": "farmers-harvest-festival",
+      "country_code": "CN",
+      "local_name": "中国农民丰收节",
+      "observed_date": null,
+      "date_rule": "农历秋分（国务院批复设立）",
+      "date_range_end": null,
+      "popularity_rank": 4,
+      "source_ids": [
+        "src_D0FD9DC03437F523B16F8FEA",
+        "src_E405440D6A7FBA9FBC2398FD"
+      ],
+      "source_urls": [
+        "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5444575.htm",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_CN_farmers-harvest-festival_2026_2026-09-23",
+          "occurrence_year": 2026,
+          "starts_on": "2026-09-23",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_D0FD9DC03437F523B16F8FEA",
+            "src_E405440D6A7FBA9FBC2398FD"
+          ],
+          "source_urls": [
+            "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5444575.htm",
+            "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_CN_farmers-harvest-festival_2027_2027-09-23",
+          "occurrence_year": 2027,
+          "starts_on": "2027-09-23",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_D0FD9DC03437F523B16F8FEA",
+            "src_E405440D6A7FBA9FBC2398FD"
+          ],
+          "source_urls": [
+            "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5444575.htm",
+            "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_CN_farmers-harvest-festival_2026_2026-09-23",
+        "occurrence_year": 2026,
+        "starts_on": "2026-09-23",
+        "ends_on": null,
+        "calendar_system": "solar-term",
+        "timezone": "Asia/Shanghai",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_D0FD9DC03437F523B16F8FEA",
+          "src_E405440D6A7FBA9FBC2398FD"
+        ],
+        "source_urls": [
+          "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5444575.htm",
+          "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+        ],
+        "distance_days": 34
+      }
+    },
+    {
       "observance_id": "obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_IN_pongal",
       "observance_key": "pongal",
       "country_code": "IN",
-      "local_name": "Pongal",
+      "local_name": "Pongal / Thai Pongal",
       "observed_date": null,
-      "date_rule": "太陽曆 01-14 至 01-17 前後，日期依年而略有差異",
+      "date_rule": "泰米爾曆 Thai 月首日前後，四天節期",
       "date_range_end": null,
-      "popularity_rank": 1,
+      "popularity_rank": 2,
       "source_ids": [
-        "src_DF8DE78424784A70528F1F50"
+        "src_DF8DE78424784A70528F1F50",
+        "src_BE0F64A0D2B42E20E4A5D1EC"
       ],
       "source_urls": [
-        "https://www.incredibleindia.gov.in/en/colours-of-india"
+        "https://www.incredibleindia.gov.in/en/colours-of-india",
+        "https://www.sci.gov.in/holiday/makar-sankranti-magh-bihu-pongal-2026/"
       ],
       "occurrences": [
         {
@@ -135,6 +211,72 @@
           "https://www.drikpanchang.com/festivals/pongal/thai-pongal-date-time.html?time-format=24plushour"
         ],
         "distance_days": 148
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_JP_kinro-kansha",
+      "observance_key": "kinro-kansha",
+      "country_code": "JP",
+      "local_name": "勤労感謝の日",
+      "observed_date": null,
+      "date_rule": "11 月 23 日（新暦固定）",
+      "date_range_end": null,
+      "popularity_rank": 5,
+      "source_ids": [
+        "src_1A80A58B5E867818100E7776",
+        "src_BF1D1C56F02953717935FCC1"
+      ],
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html",
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku/keii.html"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_JP_kinro-kansha_2026_2026-11-23",
+          "occurrence_year": 2026,
+          "starts_on": "2026-11-23",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_1A80A58B5E867818100E7776"
+          ],
+          "source_urls": [
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_JP_kinro-kansha_2027_2027-11-23",
+          "occurrence_year": 2027,
+          "starts_on": "2027-11-23",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_1A80A58B5E867818100E7776"
+          ],
+          "source_urls": [
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_JP_kinro-kansha_2026_2026-11-23",
+        "occurrence_year": 2026,
+        "starts_on": "2026-11-23",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Tokyo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_1A80A58B5E867818100E7776"
+        ],
+        "source_urls": [
+          "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html"
+        ],
+        "distance_days": 95
       }
     },
     {
@@ -211,9 +353,21 @@
       ]
     },
     {
+      "country_code": "CN",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_CN_farmers-harvest-festival"
+      ]
+    },
+    {
       "country_code": "IN",
       "observance_ids": [
         "obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_IN_pongal"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "observance_ids": [
+        "obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_JP_kinro-kansha"
       ]
     },
     {
@@ -225,21 +379,33 @@
   ],
   "relations": [],
   "source_ids": [
+    "src_1A80A58B5E867818100E7776",
     "src_2B285153DC83CF193801904A",
     "src_3430209784872A9336B841CA",
+    "src_68EB0BD6E5C51DD082CED1CA",
     "src_6B138B3CADB39768D25D5026",
     "src_7095914FF1D5AE2E37F34335",
+    "src_A188F3A2F09C0A4FCCE4F9FF",
     "src_BE0F64A0D2B42E20E4A5D1EC",
+    "src_BF1D1C56F02953717935FCC1",
+    "src_D0FD9DC03437F523B16F8FEA",
     "src_DF8DE78424784A70528F1F50",
+    "src_E405440D6A7FBA9FBC2398FD",
     "src_F936765E8EFFBF4BDCD32B47"
   ],
   "source_urls": [
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html",
     "https://piv.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
     "https://www.drikpanchang.com/festivals/pongal/thai-pongal-date-time.html?time-format=24plushour",
+    "https://www.gov.br/iphan/pt-br/assuntos/forro-do-mundo/sobre-o-forro",
     "https://www.ferc.gov/news-events/events/thanksgiving-day-11252027",
     "https://bndigital.bn.gov.br/festas-juninas/",
+    "https://www.gov.br/turismo/pt-br/assuntos/noticias/festejos-juninos-comecam-no-nordeste-cidades-projetam-mais-publico-e-faturamento-maior-em-2026",
     "https://www.sci.gov.in/holiday/makar-sankranti-magh-bihu-pongal-2026/",
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku/keii.html",
+    "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5444575.htm",
     "https://www.incredibleindia.gov.in/en/colours-of-india",
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
     "https://www.usa.gov/holidays"
   ]
 }
