@@ -257,21 +257,27 @@ jobs:
           # 輪詢 .build-id 直到它等於本次 commit —— 這才是「新版真的上線」的證據。
           # 只驗 200 不夠:舊部署同樣回 200;_astro 資產只在 CSS/JS 內容有變(檔名 hash 換掉)
           # 時才擋得住,純文字或結構改動時檔名不變,舊版照樣 200 → 假綠。
+          # 輪詢預算 2026-08-20 從 5 分鐘拉到 10 分鐘。緣由:610b87d 那輪 zh-TW 與 zh-CN
+          # 兩個 job 在 5 分鐘內沒等到 .build-id 更新而報 failure,但事後查證七站**都已經**
+          # 是該版、內容也正確 —— GitHub Pages 那次發布單純比較慢。
+          # 這是「假紅」,和這道 gate 當初要防的「假綠」是同一枚硬幣的兩面:假綠讓人以為上線了,
+          # 假紅讓人開始不看紅燈。兩者都會讓這道 gate 失去意義,所以寧可多等 5 分鐘。
+          BUILD_ID_TRIES=40   # 40 × 15s = 10 分鐘上限
           poll_build_id() {
             local url="$BASE/.build-id" got=""
-            for i in $(seq 1 20); do   # 20 × 15s = 5 分鐘上限
+            for i in $(seq 1 "$BUILD_ID_TRIES"); do
               got="$(curl -ks -L --max-time 20 "$url" | tr -d '[:space:]' || true)"
               if [ -z "$got" ]; then
                 got="$(curl -s -L --max-time 20 "${url/https:/http:}" | tr -d '[:space:]' || true)"
               fi
               if [ "$got" = "$GITHUB_SHA" ]; then
-                echo "  [build-id] attempt $i/20 -> 命中 ${GITHUB_SHA::7}"
+                echo "  [build-id] attempt $i/$BUILD_ID_TRIES -> 命中 ${GITHUB_SHA::7}"
                 return 0
               fi
-              echo "  [build-id] attempt $i/20 -> 線上為 '${got:0:7}',等待 ${GITHUB_SHA::7}"
+              echo "  [build-id] attempt $i/$BUILD_ID_TRIES -> 線上為 '${got:0:7}',等待 ${GITHUB_SHA::7}"
               sleep 15
             done
-            echo "::error::[build-id] $url 在 5 分鐘內未更新為 ${GITHUB_SHA::7}(最後為 '${got:0:7}')"
+            echo "::error::[build-id] $url 在 10 分鐘內未更新為 ${GITHUB_SHA::7}(最後為 '${got:0:7}')"
             return 1
           }
 

@@ -105,8 +105,16 @@ const worldCountries = [
   ...countries.map((country) => ({ ...country, kind: 'observance' })),
   ...regionalOnlyNotes.map((note) => ({ ...note, kind: 'regional' })),
 ];
-const observanceAnchor = (observance) =>
-  `observance-${observance.observance_id || `${observance.country_code}-${observance.observance_key || 'default'}`}`;
+// 錨點要可讀(2026-08-20):原本直接用 observance_id,長成
+// #observance-obs_top_01KZXQ6BRP69FEV2DWA2VSH7QD_ID_ramadan —— 對讀者不可分享,
+// 對 Google 也無法當成有意義的段落錨。改用「國碼-observance_key」,
+// 那組合本來就是同一個 Topic 內的唯一鍵。缺 observance_key 的舊資料才退回 id。
+const observanceAnchor = (observance) => {
+  const key = observance.observance_key
+    ? `${observance.country_code}-${observance.observance_key}`
+    : observance.observance_id;
+  return `observance-${String(key).toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '')}`;
+};
 const regionalAnchor = (note) => `regional-${note.country_code.toLowerCase()}`;
 // 「你附近／相關活動」是本語系站代表城市的在地資料，不是七市場資料總覽。
 // 📍 只收可被拜訪的常設地點；🎉 只收有日期與來源的活動。七市場文化比較在 🌎。

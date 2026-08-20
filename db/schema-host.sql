@@ -387,3 +387,27 @@ CREATE TABLE IF NOT EXISTS analytics_aggregates (
   value        INTEGER NOT NULL,
   PRIMARY KEY (bucket_at, dimension, dimension_id, metric)
 );
+
+-- ============ §8.1 搜尋曝光域(2026-08-20 新增) ============
+-- 立法緣由:HotScore 的「瀏覽面」原訂接 GA4,但 2026-08-20 診斷實測 GA4 有 96% 是機器流量
+-- (28 天 146 sessions,其中 140 個是 direct + 0–4 秒 + 落在各站根目錄的資料中心爬蟲),
+-- 而七站在 GitHub Pages 上、前面沒有 CDN,這個汙染擋不掉。GSC 則是 Google 自己去重過的
+-- 搜尋面,爬蟲不會出現在裡面,且天然按 page 聚合 → 對得上 topic slug。
+--
+-- 這張表只是**原始每日觀測值的累積**,不是分數:
+--   * GSC API 只回溯 16 個月且沒有「當時的快照」,今天不開始存,以後補不回來。
+--   * 目前量還太小(28 天 110 曝光),不足以驅動排名——所以先累積,不接 topic_scores。
+--     什麼時候夠?判準寫在 scripts/gsc-topic-metrics.mjs 檔頭。
+CREATE TABLE IF NOT EXISTS topic_search_metrics (
+  metric_date  TEXT NOT NULL,                 -- 'YYYY-MM-DD',GSC 的資料日(非抓取日)
+  topic_id     TEXT NOT NULL,
+  locale       TEXT NOT NULL,                 -- 由子網域反查(aeiou.now→zh-TW、jp.→ja…)
+  scope        TEXT NOT NULL,                 -- 'global' | 'country:XX'(GSC country 維度)
+  impressions  INTEGER NOT NULL DEFAULT 0,
+  clicks       INTEGER NOT NULL DEFAULT 0,
+  position_sum REAL NOT NULL DEFAULT 0,       -- 曝光加權名次的分子;平均名次 = position_sum/impressions
+  fetched_at   INTEGER NOT NULL,
+  PRIMARY KEY (metric_date, topic_id, locale, scope)
+);
+CREATE INDEX IF NOT EXISTS idx_tsm_topic_date ON topic_search_metrics(topic_id, metric_date);
+CREATE INDEX IF NOT EXISTS idx_tsm_date ON topic_search_metrics(metric_date);
