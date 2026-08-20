@@ -18,6 +18,35 @@
   2026-08-11 為了 aeiou 打開,影響整個組織)。用戶未表態要不要維持;要關回去前先確認
   CI 改用其他機制,否則七站部署會壞。查:`gh api /orgs/weiqi-kids --jq .deploy_keys_enabled_for_repositories`
 
+## 內容厚度補資料(2026-08-20 開工;缺口用指令查,不要信本節數字)
+
+GA/GSC 診斷的結論是「頁面撐不起排名」。閘門已上線,補資料是持續工作。
+
+```bash
+node scripts/check-content-depth.mjs --report   # 缺口清單(排序=最該先補的在最上面)
+node scripts/check-content-depth.mjs            # 閘門;存量以 baseline 凍住只能升不能降
+node scripts/seo-health.mjs                     # 量測/索引/排名/內容四層分開診斷
+node scripts/check-source-urls.mjs              # 來源連結存活(404 才擋)
+```
+
+- [x] christmas / diwali / ramadan-and-eid / lantern-festival 已補(2026-08-20)。
+- [ ] **其餘 Topic 依 `--report` 由上往下補**。目標=每語系 1,200 唯一字元、5 個地方變體
+  (對照基準:2026-08-19 實測 folk.tw 主力內容頁渲染後去重 1,600–2,930 字元)。
+  補完一批跑 `--update-baseline` 把新水位鎖住。
+- [ ] **R6 待補:來源不在該國網域的 observance**。清單在
+  `content/content-depth-baseline.json` 的 `r6_exempt`(只能縮不能長)。
+  成因是先前查資料只用英文,拿回 japan.travel 的 `/en/` 觀光頁而非該國官方網域。
+  **修法:先用當地語言查該國官方網域**(日本→`*.go.jp`、印尼→`*.go.id`、
+  巴西→`planalto.gov.br`、中國→`gov.cn`、台灣→`*.gov.tw`),英文頁只當補充。
+  ⚠️ `japan.travel` 是 `.travel` 頂級網域,不是日本政府網域。
+- [ ] **每個 Topic 頁把同一段 lede 與國別敘述各印兩次**(header 一次、「快速回答」再一次)。
+  要降到一次得動版面 —— **版面權威來源是產品草案,屬用戶決定,動工前先問**。
+  現況查法:`cd site && node scripts/check-rendered-depth.mjs --report`(看「最多重複」欄)。
+- [ ] **首頁與清單頁每張 Topic 卡都印一行「討論室暫時關閉」**(四態契約的靜態預設值)。
+  爬蟲看到的因此是一個關著的論壇。要不要在清單頁隱藏該狀態同樣屬版面決定,先問用戶。
+- [ ] **排行榜 thin 視窗已 noindex 並退出 sitemap**(2026-08-20),等 `topic_scores`
+  排名 job 上線、筆數超過門檻會自動恢復索引,不需要改碼。查:`node scripts/check-content-depth.mjs`。
+
 ## 產品功能(版面已定版,這些是資料/行為層)
 
 - [ ] **`/topics/events/`、`/topics/nearby/` 的 emoji 排序只在前端做**(JS 拿
