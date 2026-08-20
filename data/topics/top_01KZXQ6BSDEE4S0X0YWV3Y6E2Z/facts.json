@@ -17,7 +17,7 @@
       "observed_date": null,
       "date_rule": "伊斯兰历 Shawwal 月初一；由自治区人民政府办公厅逐年在节假日安排通知中公布",
       "date_range_end": null,
-      "popularity_rank": 5,
+      "popularity_rank": 6,
       "source_ids": [
         "src_CAEA7E7ACF0B1F47F0C4F0C9"
       ],
@@ -81,7 +81,7 @@
       "observed_date": null,
       "date_rule": "伊斯蘭曆 Shawwal 月初一，日期每年依月相與政府公告而變",
       "date_range_end": null,
-      "popularity_rank": 1,
+      "popularity_rank": 2,
       "source_ids": [
         "src_FF4B224E905CC2C8CF8EAF05"
       ],
@@ -113,10 +113,10 @@
           "timezone": "Asia/Jakarta",
           "date_status": "estimated",
           "source_ids": [
-            "src_628FED1D54D9CDDE3CBA692D"
+            "src_39A688A39492D687A8C1581D"
           ],
           "source_urls": [
-            "https://hari.co.id/en/public-holidays/2027/"
+            "https://kemenag.go.id/en/nasional/kenapa-perlu-sidang-isbat-awal-ramadan-syawal-dan-zulhijjah-ini-penjelasan-kemenag-7x8Mb"
           ]
         }
       ],
@@ -129,12 +129,84 @@
         "timezone": "Asia/Jakarta",
         "date_status": "estimated",
         "source_ids": [
-          "src_628FED1D54D9CDDE3CBA692D"
+          "src_39A688A39492D687A8C1581D"
         ],
         "source_urls": [
-          "https://hari.co.id/en/public-holidays/2027/"
+          "https://kemenag.go.id/en/nasional/kenapa-perlu-sidang-isbat-awal-ramadan-syawal-dan-zulhijjah-ini-penjelasan-kemenag-7x8Mb"
         ],
         "distance_days": 201
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_ID_ramadan",
+      "observance_key": "ramadan",
+      "country_code": "ID",
+      "local_name": "Ramadan（awal puasa）",
+      "observed_date": null,
+      "date_rule": "伊斯蘭曆 Ramadan 月初一至月末；起始日由宗教部在前一晚的 sidang isbat 公告",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_94FFB000B0BB8ADEC36AD1BA",
+        "src_39A688A39492D687A8C1581D"
+      ],
+      "source_urls": [
+        "https://kemenag.go.id/en/pers-rilis/pemerintah-tetapkan-1-ramadan-1447-h-jatuh-pada-19-februari-2026-ELDWq",
+        "https://kemenag.go.id/en/nasional/kenapa-perlu-sidang-isbat-awal-ramadan-syawal-dan-zulhijjah-ini-penjelasan-kemenag-7x8Mb"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_ID_ramadan_2026_2026-02-19",
+          "occurrence_year": 2026,
+          "starts_on": "2026-02-19",
+          "ends_on": "2026-03-20",
+          "calendar_system": "islamic",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_94FFB000B0BB8ADEC36AD1BA",
+            "src_39A688A39492D687A8C1581D"
+          ],
+          "source_urls": [
+            "https://kemenag.go.id/en/pers-rilis/pemerintah-tetapkan-1-ramadan-1447-h-jatuh-pada-19-februari-2026-ELDWq",
+            "https://kemenag.go.id/en/nasional/kenapa-perlu-sidang-isbat-awal-ramadan-syawal-dan-zulhijjah-ini-penjelasan-kemenag-7x8Mb"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_ID_ramadan_2027_2027-02-08",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-08",
+          "ends_on": "2027-03-08",
+          "calendar_system": "islamic",
+          "timezone": "Asia/Jakarta",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_94FFB000B0BB8ADEC36AD1BA",
+            "src_39A688A39492D687A8C1581D"
+          ],
+          "source_urls": [
+            "https://kemenag.go.id/en/pers-rilis/pemerintah-tetapkan-1-ramadan-1447-h-jatuh-pada-19-februari-2026-ELDWq",
+            "https://kemenag.go.id/en/nasional/kenapa-perlu-sidang-isbat-awal-ramadan-syawal-dan-zulhijjah-ini-penjelasan-kemenag-7x8Mb"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_ID_ramadan_2027_2027-02-08",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-08",
+        "ends_on": "2027-03-08",
+        "calendar_system": "islamic",
+        "timezone": "Asia/Jakarta",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_94FFB000B0BB8ADEC36AD1BA",
+          "src_39A688A39492D687A8C1581D"
+        ],
+        "source_urls": [
+          "https://kemenag.go.id/en/pers-rilis/pemerintah-tetapkan-1-ramadan-1447-h-jatuh-pada-19-februari-2026-ELDWq",
+          "https://kemenag.go.id/en/nasional/kenapa-perlu-sidang-isbat-awal-ramadan-syawal-dan-zulhijjah-ini-penjelasan-kemenag-7x8Mb"
+        ],
+        "distance_days": 172
       }
     },
     {
@@ -145,7 +217,7 @@
       "observed_date": null,
       "date_rule": "伊斯蘭曆 Shawwal 月初一；印度的公告日期常比部分國家晚一天",
       "date_range_end": null,
-      "popularity_rank": 2,
+      "popularity_rank": 3,
       "source_ids": [
         "src_8881C7B43193D1F50ED0E47C"
       ],
@@ -209,7 +281,7 @@
       "observed_date": null,
       "date_rule": "伊斯蘭曆 Shawwal 月初一；台灣不放假，集體禮拜多依雇主同意安排",
       "date_range_end": null,
-      "popularity_rank": 3,
+      "popularity_rank": 4,
       "source_ids": [
         "src_9157B47CDBE6F3ACE4ED9D72"
       ],
@@ -273,7 +345,7 @@
       "observed_date": null,
       "date_rule": "伊斯蘭曆 Shawwal 月初一；紐約市公立學校行事曆列為停課日",
       "date_range_end": null,
-      "popularity_rank": 4,
+      "popularity_rank": 5,
       "source_ids": [
         "src_71D52CDB9B833DE2EDE16987"
       ],
@@ -341,7 +413,8 @@
     {
       "country_code": "ID",
       "observance_ids": [
-        "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_ID_eid-al-fitr"
+        "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_ID_eid-al-fitr",
+        "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_ID_ramadan"
       ]
     },
     {
@@ -365,18 +438,20 @@
   ],
   "relations": [],
   "source_ids": [
-    "src_628FED1D54D9CDDE3CBA692D",
+    "src_39A688A39492D687A8C1581D",
     "src_71D52CDB9B833DE2EDE16987",
     "src_8881C7B43193D1F50ED0E47C",
     "src_9157B47CDBE6F3ACE4ED9D72",
+    "src_94FFB000B0BB8ADEC36AD1BA",
     "src_CAEA7E7ACF0B1F47F0C4F0C9",
     "src_FF4B224E905CC2C8CF8EAF05"
   ],
   "source_urls": [
-    "https://hari.co.id/en/public-holidays/2027/",
+    "https://kemenag.go.id/en/nasional/kenapa-perlu-sidang-isbat-awal-ramadan-syawal-dan-zulhijjah-ini-penjelasan-kemenag-7x8Mb",
     "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf",
     "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays",
     "https://www.wda.gov.tw/News_Content.aspx?n=31&s=3599",
+    "https://kemenag.go.id/en/pers-rilis/pemerintah-tetapkan-1-ramadan-1447-h-jatuh-pada-19-februari-2026-ELDWq",
     "https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html",
     "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
   ]
