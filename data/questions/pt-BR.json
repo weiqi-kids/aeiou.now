@@ -1422,6 +1422,686 @@
       ],
       "answer": "id",
       "explain": "Indonésia. Catorze de fevereiro não é feriado, e o rastro institucional que deixa corre no sentido inverso: em torno da data, todo ano, secretarias de educação de vários governos locais emitem circulares — surat edaran — pedindo às escolas de sua área que desestimulem os alunos de marcá-la. Depok, em Java Ocidental, emitiu uma em 2023; o município de Pasuruan, em Java Oriental, em 2017; e a secretaria estadual de educação das Ilhas Riau orientou no mesmo sentido suas escolas de ensino médio e técnico. A razão declarada é direta: não se ajusta às normas religiosas, sociais e culturais. Em contraste, o que um Estado pode reconhecer é a outra: a China inscreveu a festa do Qixi na primeira lista nacional de patrimônio imaterial em 2006, enquanto o 14 de fevereiro também não tem ali estatuto institucional algum."
+    },
+    {
+      "question_id": "q-20260905-fathers-day-date",
+      "date": "2026-09-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": "pt-BR",
+      "target_locale": "ja",
+      "text": "Quando é o Dia dos Pais onde vocês vivem?",
+      "options": [
+        {
+          "id": "june",
+          "emoji": "☀️",
+          "label": "Em junho"
+        },
+        {
+          "id": "august",
+          "emoji": "🌾",
+          "label": "Em agosto"
+        },
+        {
+          "id": "november",
+          "emoji": "🍁",
+          "label": "Em novembro"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Não temos"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260905-pun-fathers-day",
+      "date": "2026-09-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: em qual comunidade a data do Dia dos Pais é decidida por um trocadilho?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. Oito de agosto, porque \"oito-oito\" soa como \"papai\" — o único destes lugares em que a data vem de um som. A Lei das Datas Comemorativas e Feriados o lista como festa e, no mesmo artigo, não lhe dá folga, de modo que a comemoração escorrega em geral para o fim de semana mais próximo. Para contraste: os Estados Unidos levaram sessenta anos, fixando-o só com a Lei Pública 92-278 em 1972, cinquenta e oito anos depois do Dia das Mães; o brasileiro foi proposto em 1953 pelo publicitário Sylvio Bhering para preencher uma lacuna publicitária de agosto; o indonésio foi declarado em 2006 por um grupo civil em Surakarta, para equilibrar um Dia das Mães que o Estado havia fixado."
+    },
+    {
+      "question_id": "q-20260906-wedding-days",
+      "date": "2026-09-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+      "topic_slug": "weddings-and-customs",
+      "asker_locale": "en",
+      "target_locale": "hi",
+      "text": "Quantos dias durou o último casamento a que vocês foram?",
+      "options": [
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "Em um único dia"
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": "Dois dias"
+        },
+        {
+          "id": "three",
+          "emoji": "3️⃣",
+          "label": "Três dias ou mais"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Nunca fui a um"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260906-womens-day-halfday",
+      "date": "2026-09-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: em qual comunidade as normas dão às mulheres meio dia de folga, enquanto às mães não dão dia algum?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        }
+      ],
+      "answer": "zh-CN",
+      "explain": "China. As Medidas do Conselho de Estado sobre Feriados e Datas Comemorativas Nacionais separam as datas entre as de todos os cidadãos e as de parte deles; a segunda lista traz o Dia da Mulher (8 de março, meio dia de folga para as mulheres), o Dia da Juventude, o Dia das Crianças e o Dia do Exército. O Dia das Mães e o Dia dos Pais não estão em nenhuma — a prática popular segue o segundo domingo de maio e o terceiro de junho, mas nenhum é prescrito. O mesmo Estado dá tratamento institucional diferente a \"mulheres\" e a \"mães\": uma tem meia folga, a outra tem uma temporada de floricultura."
+    },
+    {
+      "question_id": "q-20260907-boat-race",
+      "date": "2026-09-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR8KM720981PCZBPYFQ",
+      "topic_slug": "dragon-boat-festival",
+      "asker_locale": "id",
+      "target_locale": "en",
+      "text": "Há corrida de barcos onde vocês vivem? Quando acontece?",
+      "options": [
+        {
+          "id": "lunar",
+          "emoji": "🌙",
+          "label": "Sim, numa data lunar"
+        },
+        {
+          "id": "fixed",
+          "emoji": "📅",
+          "label": "Sim, num fim de semana fixo"
+        },
+        {
+          "id": "sport",
+          "emoji": "🚣",
+          "label": "Sim, mas só como esporte"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "Não"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260907-snake-boat",
+      "date": "2026-09-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR8KM720981PCZBPYFQ",
+      "topic_slug": "dragon-boat-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: a regata de qual comunidade usa barcos-serpente de mais de trinta metros movidos por mais de cem remadores, fixada no segundo sábado de agosto?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "answer": "hi",
+      "explain": "Índia. A Vallam Kali, em Kerala, cuja mais conhecida é a Nehru Trophy Boat Race no lago Punnamada, em Alappuzha. Os barcos são chundan vallams; Nehru visitou em 1952 e doou um troféu de prata, de onde vem o nome. A Índia não tem Duanwu, mas a mesma coisa acontece aqui por outro calendário e em outro barco. A propósito, a Indonésia também tem barcos-dragão, e não como importação recente: o Peh Cun, em Tangerang, é promovido pela comunidade Cina Benteng no rio Cisadane, naquele mesmo quinto dia do quinto mês lunar, com um barco sagrado deslacrado só uma vez por ano."
+    },
+    {
+      "question_id": "q-20260908-memorial-silence",
+      "date": "2026-09-08",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": "zh-TW",
+      "target_locale": "en",
+      "text": "No dia de lembrança de vocês, há um momento em que o país inteiro silencia junto?",
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🤫",
+          "label": "Sim, num horário fixo"
+        },
+        {
+          "id": "local",
+          "emoji": "📍",
+          "label": "Sim, mas os horários variam"
+        },
+        {
+          "id": "no",
+          "emoji": "🔕",
+          "label": "Não"
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": "Não sei"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260908-moment-of-remembrance",
+      "date": "2026-09-08",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: qual comunidade mudou seu dia de lembrança para uma segunda-feira a fim de formar um feriado prolongado, e depois legislou um minuto de silêncio nacional às três da tarde?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "answer": "en",
+      "explain": "Estados Unidos. A Lei Uniforme dos Feriados de Segunda-feira, de 1968, mudou o Memorial Day de 30 de maio para a última segunda-feira de maio, em vigor desde 1971, para que os servidores federais tivessem um fim de semana prolongado previsível. Essa mudança também o transformou na abertura do verão e fez com que para que serve o dia precisasse ser lembrado de propósito — daí a Lei do Momento Nacional de Lembrança, de 2000, que fixa um minuto de silêncio às três da tarde."
+    },
+    {
+      "question_id": "q-20260909-harvest-season",
+      "date": "2026-09-09",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "ja",
+      "target_locale": "id",
+      "text": "Em que estação cai a festa da colheita de vocês?",
+      "options": [
+        {
+          "id": "spring",
+          "emoji": "🌸",
+          "label": "Primavera"
+        },
+        {
+          "id": "summer",
+          "emoji": "☀️",
+          "label": "Verão"
+        },
+        {
+          "id": "autumn",
+          "emoji": "🍂",
+          "label": "Outono"
+        },
+        {
+          "id": "winter",
+          "emoji": "❄️",
+          "label": "Inverno"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260909-seren-taun",
+      "date": "2026-09-09",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: de quem é o rito de colheita que dura sete dias seguidos — levar o arroz, mil lamparinas, a aldeia inteira pilando o grão junta, e encerrando com moradores de fés diferentes rezando lado a lado?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonésia. É o Seren Taun, em Java Ocidental, o rito da comunidade agrária sundanesa de agradecer ao Criador pelo ano que passou e pedir um melhor adiante, fixado no vigésimo segundo dia de Rayagung do calendário Saka sundanês e realizado por sete dias seguidos no Paseban Tri Panca Tunggal, em Cigugur, no município de Kuningan. A sequência inclui carregar o arroz (Nyandak Pare), as mil lamparinas (Damar Sewu) e pilar o grão em conjunto, encerrando com moradores de fés diferentes rezando lado a lado. Está registrado como patrimônio imaterial de Java Ocidental, mas a tabela nacional de feriados não tem esse dia — ele se apoia num calendário e numa aldeia."
+    },
+    {
+      "question_id": "q-20260910-teacher-role-swap",
+      "date": "2026-09-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "hi",
+      "target_locale": "zh-CN",
+      "text": "No Dia dos Professores, os alunos dão aula ou trocam de papel na escola?",
+      "options": [
+        {
+          "id": "swap",
+          "emoji": "🔄",
+          "label": "Sim, os alunos dão aula"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎤",
+          "label": "Só uma assembleia"
+        },
+        {
+          "id": "normal",
+          "emoji": "📚",
+          "label": "Aulas normais"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "Não há Dia dos Professores"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260910-radhakrishnan",
+      "date": "2026-09-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: de quem é o Dia dos Professores que existe porque um professor de filosofia recusou a comemoração do próprio aniversário?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "answer": "hi",
+      "explain": "Índia. Cinco de setembro é o aniversário de Sarvepalli Radhakrishnan, professor de filosofia que depois se tornou presidente. Conta-se que os estudantes quiseram festejar seu aniversário e ele pediu que homenageassem os professores do país em vez disso. Essa origem prende o Dia dos Professores indiano a uma pessoa determinada, e não a uma lei. Para contraste: o chinês só foi fixado em 10 de setembro em 1985, colocado nos primeiros dias do ano letivo, preso ao ritmo do semestre; e o Japão não tem Dia dos Professores algum — o que o Estado marca é a educação."
+    },
+    {
+      "question_id": "q-20260911-national-day-watch",
+      "date": "2026-09-11",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": "id",
+      "target_locale": "pt-BR",
+      "text": "No dia nacional de vocês, vocês vão assistir à cerimônia ou ao desfile?",
+      "options": [
+        {
+          "id": "inperson",
+          "emoji": "🎏",
+          "label": "Sim, presencialmente"
+        },
+        {
+          "id": "tv",
+          "emoji": "📺",
+          "label": "Assisto em casa"
+        },
+        {
+          "id": "rest",
+          "emoji": "🛌",
+          "label": "Só uma folga"
+        },
+        {
+          "id": "work",
+          "emoji": "🏢",
+          "label": "Trabalho"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260911-panjat-pinang",
+      "date": "2026-09-11",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: qual comunidade transforma um poste ensebado em competição no dia da independência, escalando-o para pegar os prêmios pendurados no topo?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonésia. É o panjat pinang, uma das disputas tradicionais realizadas em torno do Dia da Independência, 17 de agosto. O ponto não é quem sobe mais rápido, e sim que ninguém sobe sozinho — os participantes precisam montar uma torre humana e subir nos ombros uns dos outros, então o prêmio costuma ficar com a equipe que melhor coopera. O mesmo dia traz corridas de comer biscoito, cabo de guerra e muito mais, tudo organizado pelas próprias associações de bairro, e não arranjado a partir do centro."
+    },
+    {
+      "question_id": "q-20260912-graduation-hat",
+      "date": "2026-09-12",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRFP513XZ9B02BT8XCZ",
+      "topic_slug": "graduation-season",
+      "asker_locale": "zh-CN",
+      "target_locale": "en",
+      "text": "Na formatura de vocês, qual é a coisa que todo mundo tem de fazer?",
+      "options": [
+        {
+          "id": "cap",
+          "emoji": "🎓",
+          "label": "Jogar o capelo"
+        },
+        {
+          "id": "song",
+          "emoji": "🎵",
+          "label": "Cantar a canção de despedida"
+        },
+        {
+          "id": "flowers",
+          "emoji": "💐",
+          "label": "Dar flores"
+        },
+        {
+          "id": "photo",
+          "emoji": "📸",
+          "label": "Tirar a foto da turma"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260912-school-year-two",
+      "date": "2026-09-12",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: de quem é o ano letivo que atravessa dois anos civis — abre em fevereiro, fecha em dezembro, com uma pausa de meio de ano que o corta ao meio?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        }
+      ],
+      "answer": "pt-BR",
+      "explain": "Brasil. O ano letivo abre em fevereiro e fecha em dezembro, com uma pausa de meio de ano em julho que o corta ao meio. Isso difere de todos os outros pontos de partida aqui: a cerimônia de entrada do Japão cai no início de abril, durante as cerejeiras; a Indonésia começa sobretudo em meados de julho, com os dias de acolhimento anteriores regidos por normas escritas que proíbem qualquer trote; a China tem uma primeira aula transmitida em rede nacional no dia 1.º de setembro; e os Estados Unidos não têm um único dia nacional — a data de início é definida por cada distrito escolar, e dois distritos vizinhos num mesmo estado podem diferir em quinze dias."
+    },
+    {
+      "question_id": "q-20260913-sixteen",
+      "date": "2026-09-13",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR5H0VCT4WAPQM4SZXW",
+      "topic_slug": "coming-of-age",
+      "asker_locale": "en",
+      "target_locale": "zh-TW",
+      "text": "Existe onde vocês vivem um rito que diga que alguém cresceu? Com que idade?",
+      "options": [
+        {
+          "id": "teen",
+          "emoji": "🎂",
+          "label": "Quinze ou dezesseis"
+        },
+        {
+          "id": "eighteen",
+          "emoji": "🗳️",
+          "label": "Dezoito"
+        },
+        {
+          "id": "twenty",
+          "emoji": "🍶",
+          "label": "Vinte"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Não há tal rito"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260913-tainan-sixteen",
+      "date": "2026-09-13",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR5H0VCT4WAPQM4SZXW",
+      "topic_slug": "coming-of-age",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: de quem é o rito de maioridade celebrado no dia da festa dos namorados, com a passagem sob um pavilhão de papel na mesa de oferendas?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. O Qixi carrega ali uma segunda identidade: o aniversário das Sete Mães, tidas como divindade guardiã das crianças. O rito dos dezesseis anos no templo Kailong, em Tainan, acontece exatamente neste dia, com o jovem passando sob o pavilhão de papel da mesa de oferendas para marcar a maioridade. Duas coisas dividem uma só data — de um lado uma noite de namoro, do outro uma família conduzindo o filho por um rito de maioridade, sem relação alguma entre si. Para contraste: a cerimônia de maioridade do Japão tem sua escala definida por cada município e costuma ocorrer no feriado de janeiro; no Brasil o voto é facultativo a partir dos dezesseis e só obrigatório a partir dos dezoito."
+    },
+    {
+      "question_id": "q-20260914-newyear-food",
+      "date": "2026-09-14",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": "hi",
+      "target_locale": "ja",
+      "text": "Na refeição de Ano-Novo, o que vocês sempre comem?",
+      "options": [
+        {
+          "id": "noodles",
+          "emoji": "🍜",
+          "label": "Macarrão"
+        },
+        {
+          "id": "dumpling",
+          "emoji": "🥟",
+          "label": "Massa recheada"
+        },
+        {
+          "id": "sweet",
+          "emoji": "🍡",
+          "label": "Algo doce"
+        },
+        {
+          "id": "other",
+          "emoji": "🍽️",
+          "label": "Outra coisa"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260914-ninth-day",
+      "date": "2026-09-14",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: qual comunidade trata a décima quinta noite após o Ano-Novo Lunar como a linha em que o ano de fato acabou, com trabalho e aulas recomeçando só depois dela?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. A noite das lanternas encerra todo o trecho do Ano-Novo Lunar: passado o dia quinze do primeiro mês, o ano acabou de fato, o trabalho recomeça e as aulas começam. Não é dia de folga, mas é a noite em que a ilha inteira se acende de uma vez — além de levar lanternas, decifrar enigmas e comer os bolinhos redondos, o festival nacional de lanternas é sediado a cada ano por um condado ou cidade diferente, de modo que onde ele será este ano é pergunta a refazer todas as vezes. A Lei das Datas Comemorativas e Feriados também o lista: \"Festa das Lanternas: o décimo quinto dia do primeiro mês lunar.\""
     }
   ]
 }

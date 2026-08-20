@@ -3221,6 +3221,1546 @@
         "id": "Indonesia. Empat belas Februari bukan hari libur, dan jejak kelembagaan yang ditinggalkannya justru berjalan ke arah sebaliknya: menjelang tanggal itu tiap tahun, dinas pendidikan di sejumlah pemerintah daerah menerbitkan surat edaran yang meminta sekolah di wilayahnya mengimbau siswa agar tidak merayakannya. Depok di Jawa Barat menerbitkannya pada 2023, Kabupaten Pasuruan di Jawa Timur pada 2017, dan Dinas Pendidikan Provinsi Kepulauan Riau mengimbau hal serupa kepada SMA dan SMK. Alasannya ditulis terang: tidak sesuai dengan norma agama, sosial, dan budaya. Sebaliknya, yang diakui negara bisa jadi yang lain: Tiongkok memasukkan perayaan Qixi ke daftar nasional pertama warisan budaya takbenda pada 2006, sementara 14 Februari pun di sana tak berpelat kelembagaan.",
         "pt-BR": "Indonésia. Catorze de fevereiro não é feriado, e o rastro institucional que deixa corre no sentido inverso: em torno da data, todo ano, secretarias de educação de vários governos locais emitem circulares — surat edaran — pedindo às escolas de sua área que desestimulem os alunos de marcá-la. Depok, em Java Ocidental, emitiu uma em 2023; o município de Pasuruan, em Java Oriental, em 2017; e a secretaria estadual de educação das Ilhas Riau orientou no mesmo sentido suas escolas de ensino médio e técnico. A razão declarada é direta: não se ajusta às normas religiosas, sociais e culturais. Em contraste, o que um Estado pode reconhecer é a outra: a China inscreveu a festa do Qixi na primeira lista nacional de patrimônio imaterial em 2006, enquanto o 14 de fevereiro também não tem ali estatuto institucional algum."
       }
+    },
+    {
+      "id": "q-20260905-fathers-day-date",
+      "date": "2026-09-05",
+      "kind": "poll",
+      "topic": "fathers-day",
+      "asker": "pt-BR",
+      "target": "ja",
+      "text": {
+        "zh-TW": "你們的父親節是幾月幾號?",
+        "en": "When is Father's Day where you are?",
+        "ja": "あなたのところでは父の日はいつ?",
+        "zh-CN": "你们的父亲节是几月几号?",
+        "hi": "आपके यहाँ पितृ दिवस कब है?",
+        "id": "Kapan Hari Ayah di tempat kalian?",
+        "pt-BR": "Quando é o Dia dos Pais onde vocês vivem?"
+      },
+      "options": [
+        {
+          "id": "june",
+          "emoji": "☀️",
+          "label": {
+            "zh-TW": "六月",
+            "en": "In June",
+            "ja": "六月",
+            "zh-CN": "六月",
+            "hi": "जून में",
+            "id": "Bulan Juni",
+            "pt-BR": "Em junho"
+          }
+        },
+        {
+          "id": "august",
+          "emoji": "🌾",
+          "label": {
+            "zh-TW": "八月",
+            "en": "In August",
+            "ja": "八月",
+            "zh-CN": "八月",
+            "hi": "अगस्त में",
+            "id": "Bulan Agustus",
+            "pt-BR": "Em agosto"
+          }
+        },
+        {
+          "id": "november",
+          "emoji": "🍁",
+          "label": {
+            "zh-TW": "十一月",
+            "en": "In November",
+            "ja": "十一月",
+            "zh-CN": "十一月",
+            "hi": "नवंबर में",
+            "id": "Bulan November",
+            "pt-BR": "Em novembro"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "我們沒有父親節",
+            "en": "We don't have one",
+            "ja": "父の日はない",
+            "zh-CN": "我们没有父亲节",
+            "hi": "हमारे यहाँ नहीं है",
+            "id": "Kami tidak punya",
+            "pt-BR": "Não temos"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260905-pun-fathers-day",
+      "date": "2026-09-05",
+      "kind": "guess",
+      "topic": "fathers-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的父親節日期是由「諧音」決定的?",
+        "en": "Guess: in which community is the date of Father's Day decided by a pun?",
+        "ja": "クイズ:父の日の日付が語呂合わせで決まっているのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群的父亲节日期是由「谐音」决定的?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में पितृ दिवस की तिथि किसी ध्वनि-साम्य से तय होती है?",
+        "id": "Tebak: di komunitas mana tanggal Hari Ayah ditentukan oleh kemiripan bunyi?",
+        "pt-BR": "Adivinhe: em qual comunidade a data do Dia dos Pais é decidida por um trocadilho?"
+      },
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": {
+        "zh-TW": "台灣。八月八日,因為「八八」與「爸爸」諧音——四個地方裡唯一由語音決定日期的。《紀念日及節日實施條例》把它列為節日,同一條也明定不放假,所以慶祝多半被挪到最近的週末。對照組:美國走了六十年,一九七二年公法 92-278 才定案,比母親節晚了五十八年;巴西一九五三年由廣告人 Sylvio Bhering 提議,目的是填補八月的廣告檔期;印尼二○○六年由民間團體在梭羅宣告,為了與國家訂的母親節取得平衡。",
+        "en": "Taiwan. The eighth of August, because \"eight-eight\" sounds like \"papa\" — the only one of these places where the date comes from a sound. The Act on Commemorative Days and Holidays lists it as a festival and in the same article gives it no day off, so the celebration mostly slides to the nearest weekend. For contrast: the United States took sixty years, settling it only with Public Law 92-278 in 1972, fifty-eight years after Mother's Day; Brazil's was proposed in 1953 by the adman Sylvio Bhering to fill an August gap in advertising; Indonesia's was declared in 2006 by a civic group in Surakarta, to balance a Mother's Day the state had set.",
+        "ja": "台湾。八月八日である。「八八」が「パパ」と同じ響きになるからで、ここに挙げた地域の中で日付が音で決まっているのは台湾だけである。「記念日及び節日実施条例」はこれを節日に挙げつつ、同じ条で休みにはしないと明記する。そのため祝いは最も近い週末へ移されることが多い。対照として、米国は六十年を要し、一九七二年の公法92-278でようやく定まった。母の日より五十八年遅い。ブラジルは一九五三年、広告人シルヴィオ・ベリングが八月の広告枠を埋めるために提案した。インドネシアは二〇〇六年、国が定めた母の日との釣り合いを取るため、民間団体がスラカルタで宣言した。",
+        "zh-CN": "台湾。八月八日，因为「八八」与「爸爸」谐音——四个地方里唯一由语音决定日期的。《纪念日及节日实施条例》把它列为节日，同一条也明定不放假，所以庆祝多半被挪到最近的周末。对照组：美国走了六十年，一九七二年公法 92-278 才定案，比母亲节晚了五十八年；巴西一九五三年由广告人 Sylvio Bhering 提议，目的是填补八月的广告档期；印尼二〇〇六年由民间团体在梭罗宣告，为了与国家订的母亲节取得平衡。",
+        "hi": "ताइवान। आठ अगस्त, क्योंकि \"आठ-आठ\" की ध्वनि \"पापा\" जैसी है — इन जगहों में अकेला जहाँ तिथि ध्वनि से आई। स्मृति-दिवस एवं अवकाश अधिनियम इसे पर्व में गिनता है और उसी अनुच्छेद में छुट्टी न देने की बात भी लिखता है, इसलिए जश्न प्रायः निकटतम सप्ताहांत पर खिसक जाता है। तुलना के लिए: अमेरिका को साठ वर्ष लगे, 1972 के लोक-अधिनियम 92-278 से ही तय हुआ, मातृ दिवस से अट्ठावन वर्ष बाद; ब्राज़ील का 1953 में विज्ञापनकर्मी सिल्वियो बेरिंग ने अगस्त का विज्ञापन-मौसम भरने को सुझाया; इंडोनेशिया का 2006 में सुराकार्ता में एक नागरिक संस्था ने घोषित किया, ताकि राज्य द्वारा नियत मातृ दिवस से संतुलन बने।",
+        "id": "Taiwan. Delapan Agustus, karena \"delapan-delapan\" berbunyi seperti \"papa\" — satu-satunya di antara tempat-tempat ini yang tanggalnya lahir dari bunyi. Undang-Undang Hari Peringatan dan Hari Libur mencantumkannya sebagai perayaan dan pada pasal yang sama menyatakan tak ada libur, sehingga perayaannya kebanyakan bergeser ke akhir pekan terdekat. Sebagai pembanding: Amerika butuh enam puluh tahun, baru pasti lewat Undang-Undang Publik 92-278 pada 1972, lima puluh delapan tahun setelah Hari Ibu; punya Brasil diusulkan pada 1953 oleh pengiklan Sylvio Bhering untuk mengisi celah iklan bulan Agustus; punya Indonesia dideklarasikan pada 2006 oleh kelompok masyarakat di Surakarta, demi mengimbangi Hari Ibu yang ditetapkan negara.",
+        "pt-BR": "Taiwan. Oito de agosto, porque \"oito-oito\" soa como \"papai\" — o único destes lugares em que a data vem de um som. A Lei das Datas Comemorativas e Feriados o lista como festa e, no mesmo artigo, não lhe dá folga, de modo que a comemoração escorrega em geral para o fim de semana mais próximo. Para contraste: os Estados Unidos levaram sessenta anos, fixando-o só com a Lei Pública 92-278 em 1972, cinquenta e oito anos depois do Dia das Mães; o brasileiro foi proposto em 1953 pelo publicitário Sylvio Bhering para preencher uma lacuna publicitária de agosto; o indonésio foi declarado em 2006 por um grupo civil em Surakarta, para equilibrar um Dia das Mães que o Estado havia fixado."
+      }
+    },
+    {
+      "id": "q-20260906-wedding-days",
+      "date": "2026-09-06",
+      "kind": "poll",
+      "topic": "weddings-and-customs",
+      "asker": "en",
+      "target": "hi",
+      "text": {
+        "zh-TW": "你們最近參加的婚禮辦了幾天?",
+        "en": "How many days did the last wedding you attended last?",
+        "ja": "最近出席した結婚式は何日間でしたか?",
+        "zh-CN": "你们最近参加的婚礼办了几天?",
+        "hi": "आपने हाल में जिस शादी में हिस्सा लिया, वह कितने दिन चली?",
+        "id": "Pernikahan terakhir yang kalian hadiri berlangsung berapa hari?",
+        "pt-BR": "Quantos dias durou o último casamento a que vocês foram?"
+      },
+      "options": [
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": {
+            "zh-TW": "一天之內",
+            "en": "Within one day",
+            "ja": "一日で終わった",
+            "zh-CN": "一天之内",
+            "hi": "एक ही दिन",
+            "id": "Dalam satu hari",
+            "pt-BR": "Em um único dia"
+          }
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": {
+            "zh-TW": "兩天",
+            "en": "Two days",
+            "ja": "二日間",
+            "zh-CN": "两天",
+            "hi": "दो दिन",
+            "id": "Dua hari",
+            "pt-BR": "Dois dias"
+          }
+        },
+        {
+          "id": "three",
+          "emoji": "3️⃣",
+          "label": {
+            "zh-TW": "三天以上",
+            "en": "Three days or more",
+            "ja": "三日以上",
+            "zh-CN": "三天以上",
+            "hi": "तीन या अधिक दिन",
+            "id": "Tiga hari atau lebih",
+            "pt-BR": "Três dias ou mais"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "沒參加過",
+            "en": "Haven't been to one",
+            "ja": "出席したことがない",
+            "zh-CN": "没参加过",
+            "hi": "कभी नहीं गया",
+            "id": "Belum pernah",
+            "pt-BR": "Nunca fui a um"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260906-womens-day-halfday",
+      "date": "2026-09-06",
+      "kind": "guess",
+      "topic": "mothers-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的法規給「婦女」半天假,卻完全沒有給「母親」任何一天?",
+        "en": "Guess: in which community do the rules give women half a day off, while mothers get no day at all?",
+        "ja": "クイズ:法令が「女性」に半日の休みを与えながら、「母」には一日も与えていないのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群的法规给「妇女」半天假，却完全没有给「母亲」任何一天?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय के नियम \"महिलाओं\" को आधे दिन की छुट्टी देते हैं, जबकि \"माताओं\" को एक भी दिन नहीं?",
+        "id": "Tebak: di komunitas mana aturannya memberi perempuan libur setengah hari, sementara para ibu tak mendapat hari sama sekali?",
+        "pt-BR": "Adivinhe: em qual comunidade as normas dão às mulheres meio dia de folga, enquanto às mães não dão dia algum?"
+      },
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "answer": "zh-CN",
+      "explain": {
+        "zh-TW": "中國。國務院《全國年節及紀念日放假辦法》把節日分成全體公民放假與部分公民放假兩類;後者列的是婦女節(三月八日,婦女放假半天)、青年節、兒童節與建軍節。母親節與父親節兩類都不在——民間多跟隨五月第二個星期日與六月第三個星期日,但沒有一條是被規定的。同一個國家對「女性」與「母親」給了不同的制度待遇:一個有半天假,一個只有花店的檔期。",
+        "en": "China. The State Council's Measures on National Holidays and Commemorative Days sort days into those for all citizens and those for some; the latter list carries Women's Day (8 March, women get half a day off), Youth Day, Children's Day and Army Day. Mother's Day and Father's Day are in neither — popular practice mostly follows the second Sunday in May and the third Sunday in June, but neither is prescribed. The same state gives \"women\" and \"mothers\" different institutional treatment: one has half a holiday, the other has a florists' season.",
+        "ja": "中国。国務院の「全国年節及び記念日休暇弁法」は祝日を全国民が休む日と一部の公民が休む日に分ける。後者に並ぶのは婦人節(三月八日、女性は半日休み)、青年節、児童節、建軍節である。母の日と父の日はそのいずれにもない。民間では五月第二日曜と六月第三日曜に倣うことが多いが、どちらも定められてはいない。同じ国家が「女性」と「母」に異なる制度上の扱いを与えている。一方には半日の休みがあり、他方にあるのは花屋の書き入れ時だけである。",
+        "zh-CN": "中国。国务院《全国年节及纪念日放假办法》把节日分成全体公民放假与部分公民放假两类；后者列的是妇女节（三月八日，妇女放假半天）、青年节、儿童节与建军节。母亲节与父亲节两类都不在——民间多跟随五月第二个星期日与六月第三个星期日，但没有一条是被规定的。同一个国家对「女性」与「母亲」给了不同的制度待遇：一个有半天假，一个只有花店的档期。",
+        "hi": "चीन। राज्य परिषद के राष्ट्रीय अवकाश एवं स्मृति-दिवस उपाय छुट्टियों को सभी नागरिकों के लिए और कुछ के लिए में बाँटते हैं; दूसरी सूची में महिला दिवस (8 मार्च, महिलाओं को आधे दिन की छुट्टी), युवा दिवस, बाल दिवस और सेना दिवस हैं। मातृ दिवस और पितृ दिवस किसी में नहीं — लोक-व्यवहार अधिकतर मई के दूसरे रविवार और जून के तीसरे रविवार का अनुसरण करता है, पर कोई निर्धारित नहीं। वही राज्य \"महिलाओं\" और \"माताओं\" को अलग-अलग संस्थागत बरताव देता है: एक के पास आधी छुट्टी है, दूसरी के पास फूलवालों का मौसम।",
+        "id": "Tiongkok. Ketentuan Dewan Negara tentang Hari Libur dan Hari Peringatan Nasional memilah hari menjadi untuk seluruh warga dan untuk sebagian warga; daftar kedua memuat Hari Perempuan (8 Maret, perempuan libur setengah hari), Hari Pemuda, Hari Anak, dan Hari Tentara. Hari Ibu dan Hari Ayah tak ada di keduanya — kebiasaan umum mengikuti Minggu kedua Mei dan Minggu ketiga Juni, tetapi tak satu pun ditetapkan. Negara yang sama memberi perlakuan kelembagaan berbeda kepada \"perempuan\" dan \"ibu\": yang satu punya setengah hari libur, yang lain punya musim ramai toko bunga.",
+        "pt-BR": "China. As Medidas do Conselho de Estado sobre Feriados e Datas Comemorativas Nacionais separam as datas entre as de todos os cidadãos e as de parte deles; a segunda lista traz o Dia da Mulher (8 de março, meio dia de folga para as mulheres), o Dia da Juventude, o Dia das Crianças e o Dia do Exército. O Dia das Mães e o Dia dos Pais não estão em nenhuma — a prática popular segue o segundo domingo de maio e o terceiro de junho, mas nenhum é prescrito. O mesmo Estado dá tratamento institucional diferente a \"mulheres\" e a \"mães\": uma tem meia folga, a outra tem uma temporada de floricultura."
+      }
+    },
+    {
+      "id": "q-20260907-boat-race",
+      "date": "2026-09-07",
+      "kind": "poll",
+      "topic": "dragon-boat-festival",
+      "asker": "id",
+      "target": "en",
+      "text": {
+        "zh-TW": "你們那裡有划船比賽嗎?什麼時候辦?",
+        "en": "Is there a boat race where you live? When is it held?",
+        "ja": "あなたのところに舟の競漕はありますか?いつ行われますか?",
+        "zh-CN": "你们那里有划船比赛吗?什么时候办?",
+        "hi": "क्या आपके यहाँ नौका-दौड़ होती है? कब होती है?",
+        "id": "Adakah lomba perahu di tempat kalian? Kapan digelar?",
+        "pt-BR": "Há corrida de barcos onde vocês vivem? Quando acontece?"
+      },
+      "options": [
+        {
+          "id": "lunar",
+          "emoji": "🌙",
+          "label": {
+            "zh-TW": "有,跟著農曆走",
+            "en": "Yes, on a lunar date",
+            "ja": "ある、旧暦に沿って",
+            "zh-CN": "有，跟着农历走",
+            "hi": "हाँ, चंद्र तिथि पर",
+            "id": "Ya, mengikuti tanggal lunar",
+            "pt-BR": "Sim, numa data lunar"
+          }
+        },
+        {
+          "id": "fixed",
+          "emoji": "📅",
+          "label": {
+            "zh-TW": "有,固定在某個週末",
+            "en": "Yes, on a fixed weekend",
+            "ja": "ある、決まった週末に",
+            "zh-CN": "有，固定在某个周末",
+            "hi": "हाँ, किसी नियत सप्ताहांत पर",
+            "id": "Ya, pada akhir pekan tertentu",
+            "pt-BR": "Sim, num fim de semana fixo"
+          }
+        },
+        {
+          "id": "sport",
+          "emoji": "🚣",
+          "label": {
+            "zh-TW": "有,但只是體育賽事",
+            "en": "Yes, but purely as sport",
+            "ja": "あるが、あくまでスポーツ",
+            "zh-CN": "有，但只是体育赛事",
+            "hi": "हाँ, पर केवल खेल के रूप में",
+            "id": "Ya, tapi murni sebagai olahraga",
+            "pt-BR": "Sim, mas só como esporte"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": {
+            "zh-TW": "沒有",
+            "en": "No",
+            "ja": "ない",
+            "zh-CN": "没有",
+            "hi": "नहीं",
+            "id": "Tidak ada",
+            "pt-BR": "Não"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260907-snake-boat",
+      "date": "2026-09-07",
+      "kind": "guess",
+      "topic": "dragon-boat-festival",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的划船大會用的是長逾百呎、划手上百人的「蛇船」,而且固定在八月第二個星期六?",
+        "en": "Guess: which community's boat race uses snake boats over a hundred feet long pulled by more than a hundred oarsmen, fixed on the second Saturday of August?",
+        "ja": "クイズ:長さ百フィートを超え、百人以上の漕ぎ手が動かす「蛇舟」を使い、八月第二土曜に定まっているのはどのコミュニティの舟の大会?",
+        "zh-CN": "你猜:哪个社群的划船大会用的是长逾百呎、划手上百人的「蛇船」，而且固定在八月第二个星期六?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय की नौका-दौड़ में सौ फ़ुट से लंबी साँप-नावें चलती हैं जिन्हें सौ से अधिक खिवैया खींचते हैं, और जो अगस्त के दूसरे शनिवार को नियत है?",
+        "id": "Tebak: lomba perahu komunitas mana yang memakai perahu ular sepanjang lebih dari seratus kaki dengan lebih dari seratus pendayung, dan dipancangkan pada Sabtu kedua bulan Agustus?",
+        "pt-BR": "Adivinhe: a regata de qual comunidade usa barcos-serpente de mais de trinta metros movidos por mais de cem remadores, fixada no segundo sábado de agosto?"
+      },
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "hi",
+      "explain": {
+        "zh-TW": "印度。喀拉拉的 Vallam Kali,其中最著名的是尼赫魯盃(Nehru Trophy Boat Race),在阿拉普扎的普南馬達湖舉行。船是「chundan vallam」;一九五二年尼赫魯造訪後捐出銀盃,賽事因此得名。印度沒有端午節,但同一件事在這裡按另一套曆法與另一種船進行。順帶一提,印尼也有龍舟,而且不是近年引進的:丹格朗的 Peh Cun 由 Cina Benteng 社群在芝薩丹尼河上舉行,同樣落在農曆五月初五,核心是一艘一年只開封一次的聖船。",
+        "en": "India. Vallam Kali in Kerala, of which the best known is the Nehru Trophy Boat Race on Punnamada Lake in Alappuzha. The boats are chundan vallams; Nehru visited in 1952 and donated a silver trophy, which is where the name comes from. India has no Duanwu, but the same thing runs here on a different calendar and in a different boat. Incidentally Indonesia has dragon boats too, and not as a recent import: Peh Cun in Tangerang is held by the Cina Benteng community on the Cisadane River, on that same fifth day of the fifth lunar month, centred on a sacred boat unsealed only once a year.",
+        "ja": "インド。ケーララのヴァッラム・カリで、もっともよく知られるのはアラップーラのプンナマダ湖で行われるネルー杯である。舟は「チュンダン・ヴァッラム」。一九五二年にネルーが訪れて銀杯を寄贈したことが大会名の由来となった。インドに端午節はないが、同じ営みが別の暦と別の舟でここに存在する。ちなみにインドネシアにも龍舟があり、近年の輸入ではない。タンゲランのPeh Cunはチナ・ベンテンの社会がチサダネ川で行うもので、同じ旧暦五月五日に当たり、中心にあるのは年に一度だけ封を解かれる聖なる舟である。",
+        "zh-CN": "印度。喀拉拉的 Vallam Kali，其中最著名的是尼赫鲁杯（Nehru Trophy Boat Race），在阿拉普扎的普南马达湖举行。船是「chundan vallam」；一九五二年尼赫鲁造访后捐出银杯，赛事因此得名。印度没有端午节，但同一件事在这里按另一套历法与另一种船进行。顺带一提，印尼也有龙舟，而且不是近年引进的：丹格朗的 Peh Cun 由 Cina Benteng 社群在芝萨丹尼河上举行，同样落在农历五月初五，核心是一艘一年只开封一次的圣船。",
+        "hi": "भारत। केरल की वल्लम कलि, जिनमें सबसे प्रसिद्ध है आलप्पुष़ा की पुन्नमडा झील पर होने वाली नेहरू ट्रॉफ़ी बोट रेस। नावें चुंदन वल्लम हैं; 1952 में नेहरू के आगमन और रजत ट्रॉफ़ी भेंट करने से ही इसका नाम पड़ा। भारत में तुआनवू नहीं है, पर वही बात यहाँ दूसरे पंचांग और दूसरी नाव के साथ चलती है। वैसे इंडोनेशिया में भी ड्रैगन नौकाएँ हैं, और वे हाल का आयात नहीं: तांगेरांग का पेह चुन चीना बेंतेंग समुदाय चिसादाने नदी पर उसी पाँचवें चंद्र मास की पाँचवीं तिथि को मनाता है, जिसके केंद्र में वह पवित्र नाव है जिसकी सील वर्ष में केवल एक बार खुलती है।",
+        "id": "India. Vallam Kali di Kerala, yang paling terkenal adalah Nehru Trophy Boat Race di Danau Punnamada, Alappuzha. Perahunya chundan vallam; Nehru berkunjung pada 1952 dan menyumbangkan piala perak, dan dari situlah namanya. India tak punya Duanwu, tetapi hal yang sama berjalan di sini dengan kalender lain dan perahu yang lain. Omong-omong, Indonesia juga punya perahu naga, dan bukan hasil impor kemarin sore: Peh Cun di Tangerang digelar masyarakat Cina Benteng di Sungai Cisadane, pada hari kelima bulan kelima Imlek yang sama, berporos pada perahu keramat yang hanya dibuka setahun sekali.",
+        "pt-BR": "Índia. A Vallam Kali, em Kerala, cuja mais conhecida é a Nehru Trophy Boat Race no lago Punnamada, em Alappuzha. Os barcos são chundan vallams; Nehru visitou em 1952 e doou um troféu de prata, de onde vem o nome. A Índia não tem Duanwu, mas a mesma coisa acontece aqui por outro calendário e em outro barco. A propósito, a Indonésia também tem barcos-dragão, e não como importação recente: o Peh Cun, em Tangerang, é promovido pela comunidade Cina Benteng no rio Cisadane, naquele mesmo quinto dia do quinto mês lunar, com um barco sagrado deslacrado só uma vez por ano."
+      }
+    },
+    {
+      "id": "q-20260908-memorial-silence",
+      "date": "2026-09-08",
+      "kind": "poll",
+      "topic": "ghosts-ancestors-and-remembrance",
+      "asker": "zh-TW",
+      "target": "en",
+      "text": {
+        "zh-TW": "你們的國殤或追思日,有全國同時默哀的時刻嗎?",
+        "en": "On your day of remembrance, is there a moment when the whole country falls silent together?",
+        "ja": "あなたのところの追悼の日に、全国が同時に黙祷する時刻はありますか?",
+        "zh-CN": "你们的国殇或追思日，有全国同时默哀的时刻吗?",
+        "hi": "आपके स्मृति दिवस पर क्या कोई ऐसा क्षण होता है जब पूरा देश एक साथ मौन हो जाता है?",
+        "id": "Pada hari peringatan kalian, adakah saat ketika seluruh negeri hening bersama?",
+        "pt-BR": "No dia de lembrança de vocês, há um momento em que o país inteiro silencia junto?"
+      },
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🤫",
+          "label": {
+            "zh-TW": "有,固定時刻",
+            "en": "Yes, at a fixed time",
+            "ja": "ある、決まった時刻に",
+            "zh-CN": "有，固定时刻",
+            "hi": "हाँ, नियत समय पर",
+            "id": "Ya, pada waktu tertentu",
+            "pt-BR": "Sim, num horário fixo"
+          }
+        },
+        {
+          "id": "local",
+          "emoji": "📍",
+          "label": {
+            "zh-TW": "有,但各地時間不同",
+            "en": "Yes, but times differ locally",
+            "ja": "あるが、地域で時刻が違う",
+            "zh-CN": "有，但各地时间不同",
+            "hi": "हाँ, पर जगह-जगह समय अलग",
+            "id": "Ya, tapi waktunya beda-beda",
+            "pt-BR": "Sim, mas os horários variam"
+          }
+        },
+        {
+          "id": "no",
+          "emoji": "🔕",
+          "label": {
+            "zh-TW": "沒有",
+            "en": "No",
+            "ja": "ない",
+            "zh-CN": "没有",
+            "hi": "नहीं",
+            "id": "Tidak ada",
+            "pt-BR": "Não"
+          }
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": {
+            "zh-TW": "不知道",
+            "en": "Not sure",
+            "ja": "わからない",
+            "zh-CN": "不知道",
+            "hi": "पता नहीं",
+            "id": "Tidak yakin",
+            "pt-BR": "Não sei"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260908-moment-of-remembrance",
+      "date": "2026-09-08",
+      "kind": "guess",
+      "topic": "ghosts-ancestors-and-remembrance",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群把追思日移到星期一湊成三日連假之後,又立法規定當天下午三時全國默哀一分鐘?",
+        "en": "Guess: which community moved its day of remembrance to a Monday to make a three-day weekend, and then legislated a nationwide minute of silence at three in the afternoon?",
+        "ja": "クイズ:追悼の日を月曜に移して三連休にしたのち、当日午後三時に全国で一分間黙祷することを法で定めたのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群把追思日移到星期一凑成三日连假之后，又立法规定当天下午三时全国默哀一分钟?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय ने अपने स्मृति दिवस को सोमवार पर हटाकर तीन-दिनी सप्ताहांत बनाया, और फिर क़ानून से दोपहर तीन बजे पूरे देश में एक मिनट का मौन नियत किया?",
+        "id": "Tebak: komunitas mana yang memindahkan hari peringatannya ke hari Senin demi akhir pekan tiga hari, lalu mengundangkan hening sejenak satu menit se-negeri pada pukul tiga sore?",
+        "pt-BR": "Adivinhe: qual comunidade mudou seu dia de lembrança para uma segunda-feira a fim de formar um feriado prolongado, e depois legislou um minuto de silêncio nacional às três da tarde?"
+      },
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "en",
+      "explain": {
+        "zh-TW": "美國。一九六八年的統一星期一假日法把陣亡將士紀念日從五月三十日改成五月最後一個星期一,自一九七一年起實施,理由是給聯邦僱員一個穩定的三日連假。這個改法讓它同時變成夏季的起點,也讓「這一天到底在紀念什麼」需要被重新提醒——二○○○年的全國追思時刻法因此規定,當天下午三時全國默哀一分鐘。",
+        "en": "The United States. The Uniform Monday Holiday Act of 1968 moved Memorial Day from 30 May to the last Monday in May, effective 1971, so that federal employees would have a dependable three-day weekend. That change also turned the day into the opening of summer, and made what it is for something that has to be recalled deliberately — hence the National Moment of Remembrance Act of 2000, which sets a minute of silence at three in the afternoon.",
+        "ja": "米国。一九六八年の統一月曜休日法により、戦没者追悼の日は五月三十日から五月最終月曜へ移され、一九七一年から施行された。連邦職員に安定した三連休を与えるためである。この変更は同時にこの日を夏の始まりに変え、「この日が何のためのものか」をあらためて思い起こす必要を生んだ。二〇〇〇年の全国追悼の時法が午後三時に一分間の黙祷を定めたのはそのためである。",
+        "zh-CN": "美国。一九六八年的统一星期一假日法把阵亡将士纪念日从五月三十日改成五月最后一个星期一，自一九七一年起实施，理由是给联邦雇员一个稳定的三日连假。这个改法让它同时变成夏季的起点，也让「这一天到底在纪念什么」需要被重新提醒——二〇〇〇年的全国追思时刻法因此规定，当天下午三时全国默哀一分钟。",
+        "hi": "संयुक्त राज्य। 1968 के एकसमान सोमवार अवकाश अधिनियम ने स्मृति दिवस को 30 मई से हटाकर मई के अंतिम सोमवार पर रखा, जो 1971 से प्रभावी हुआ, ताकि संघीय कर्मचारियों को भरोसेमंद तीन-दिनी सप्ताहांत मिले। उस बदलाव ने इस दिन को गर्मियों की शुरुआत भी बना दिया, और यह कि दिन किसलिए है, उसे जानबूझकर याद दिलाना पड़ने लगा — इसीलिए 2000 का राष्ट्रीय स्मरण-क्षण अधिनियम दोपहर तीन बजे एक मिनट का मौन नियत करता है।",
+        "id": "Amerika Serikat. Undang-Undang Hari Libur Senin Seragam 1968 memindahkan Memorial Day dari 30 Mei ke Senin terakhir bulan Mei, berlaku sejak 1971, agar pegawai federal punya akhir pekan tiga hari yang bisa diandalkan. Perubahan itu sekaligus menjadikannya pembuka musim panas, dan membuat untuk apa hari itu ada menjadi sesuatu yang harus diingatkan dengan sengaja — karenanya Undang-Undang Saat Peringatan Nasional 2000 menetapkan hening satu menit pada pukul tiga sore.",
+        "pt-BR": "Estados Unidos. A Lei Uniforme dos Feriados de Segunda-feira, de 1968, mudou o Memorial Day de 30 de maio para a última segunda-feira de maio, em vigor desde 1971, para que os servidores federais tivessem um fim de semana prolongado previsível. Essa mudança também o transformou na abertura do verão e fez com que para que serve o dia precisasse ser lembrado de propósito — daí a Lei do Momento Nacional de Lembrança, de 2000, que fixa um minuto de silêncio às três da tarde."
+      }
+    },
+    {
+      "id": "q-20260909-harvest-season",
+      "date": "2026-09-09",
+      "kind": "poll",
+      "topic": "harvest-and-gratitude",
+      "asker": "ja",
+      "target": "id",
+      "text": {
+        "zh-TW": "你們的收成慶典在什麼季節?",
+        "en": "In which season does your harvest celebration fall?",
+        "ja": "あなたのところの収穫の祝いは、どの季節にありますか?",
+        "zh-CN": "你们的收成庆典在什么季节?",
+        "hi": "आपके यहाँ फ़सल का उत्सव किस ऋतु में पड़ता है?",
+        "id": "Perayaan panen di tempat kalian jatuh pada musim apa?",
+        "pt-BR": "Em que estação cai a festa da colheita de vocês?"
+      },
+      "options": [
+        {
+          "id": "spring",
+          "emoji": "🌸",
+          "label": {
+            "zh-TW": "春天",
+            "en": "Spring",
+            "ja": "春",
+            "zh-CN": "春天",
+            "hi": "वसंत",
+            "id": "Musim semi",
+            "pt-BR": "Primavera"
+          }
+        },
+        {
+          "id": "summer",
+          "emoji": "☀️",
+          "label": {
+            "zh-TW": "夏天",
+            "en": "Summer",
+            "ja": "夏",
+            "zh-CN": "夏天",
+            "hi": "ग्रीष्म",
+            "id": "Musim panas",
+            "pt-BR": "Verão"
+          }
+        },
+        {
+          "id": "autumn",
+          "emoji": "🍂",
+          "label": {
+            "zh-TW": "秋天",
+            "en": "Autumn",
+            "ja": "秋",
+            "zh-CN": "秋天",
+            "hi": "शरद",
+            "id": "Musim gugur",
+            "pt-BR": "Outono"
+          }
+        },
+        {
+          "id": "winter",
+          "emoji": "❄️",
+          "label": {
+            "zh-TW": "冬天",
+            "en": "Winter",
+            "ja": "冬",
+            "zh-CN": "冬天",
+            "hi": "शीत",
+            "id": "Musim dingin",
+            "pt-BR": "Inverno"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260909-seren-taun",
+      "date": "2026-09-09",
+      "kind": "guess",
+      "topic": "harvest-and-gratitude",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的收成儀式連辦七天,流程包括捧稻、千燈與全村一起舂米,最後由不同信仰的居民一起祈禱?",
+        "en": "Guess: whose harvest rite runs seven days straight — carrying the rice, a thousand lamps, the whole village pounding grain together, and closing with residents of different faiths praying side by side?",
+        "ja": "クイズ:収穫の儀礼を七日続けて行い、稲を捧げ、千の灯をともし、村じゅうで籾を搗き、最後に異なる信仰の住民がともに祈って結ぶのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群的收成仪式连办七天，流程包括捧稻、千灯与全村一起舂米，最后由不同信仰的居民一起祈祷?",
+        "hi": "अंदाज़ा लगाइए: किसका फ़सल-अनुष्ठान लगातार सात दिन चलता है — धान ले चलना, सहस्र दीप, पूरे गाँव का साथ मिलकर कुटाई, और अंत में भिन्न आस्थाओं के निवासियों की साझा प्रार्थना?",
+        "id": "Tebak: ritual panen komunitas mana yang berlangsung tujuh hari berturut-turut — mengarak padi, seribu pelita, sekampung menumbuk padi bersama, dan ditutup doa bersama warga dari berbagai keyakinan?",
+        "pt-BR": "Adivinhe: de quem é o rito de colheita que dura sete dias seguidos — levar o arroz, mil lamparinas, a aldeia inteira pilando o grão junta, e encerrando com moradores de fés diferentes rezando lado a lado?"
+      },
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        }
+      ],
+      "answer": "id",
+      "explain": {
+        "zh-TW": "印尼。那是西爪哇的 Seren Taun,巽他農耕社群向造物者謝過去一年、求來年的儀式,固定在巽他薩卡曆 Rayagung 月二十二日,在庫寧安縣芝古古爾的 Paseban Tri Panca Tunggal 連辦七天。流程包含捧稻(Nyandak Pare)、千燈(Damar Sewu)、共同舂米,結尾是不同信仰的居民一起祈禱。它被登錄為西爪哇的非物質文化遺產,但全國假日表上沒有這一天——它靠的是曆法與村莊。",
+        "en": "Indonesia. It is Seren Taun in West Java, the Sundanese farming community's rite of thanking the Creator for the year past and asking for a better one ahead, fixed on the twenty-second of Rayagung in the Sundanese Saka calendar and held over seven consecutive days at the Paseban Tri Panca Tunggal in Cigugur, Kuningan Regency. The sequence includes carrying the rice (Nyandak Pare), the thousand lamps (Damar Sewu) and pounding the grain together, closing with residents of different faiths praying side by side. It is registered as intangible cultural heritage of West Java, yet the national holiday table has no such day — it rests on a calendar and a village.",
+        "ja": "インドネシア。西ジャワのスレン・タウンである。スンダの農耕社会が過ぎた一年を創造主に感謝し、来る年のよきを願う儀礼で、スンダのサカ暦ラヤグン月二十二日に定まり、クニンガン県チググルのパスバン・トリ・パンチャ・トゥンガルで七日続けて行われる。次第には稲を捧げるニャンダック・パレ、千灯のダマール・セウ、皆で籾を搗く所作が含まれ、最後は異なる信仰の住民がともに祈って結ばれる。西ジャワの無形文化遺産に登録されているが、全国の祝日表にこの日はない。これを支えているのは暦と村である。",
+        "zh-CN": "印尼。那是西爪哇的 Seren Taun，巽他农耕社群向造物者谢过去一年、求来年的仪式，固定在巽他萨卡历 Rayagung 月二十二日，在库宁安县芝古古尔的 Paseban Tri Panca Tunggal 连办七天。流程包含捧稻（Nyandak Pare）、千灯（Damar Sewu）、共同舂米，结尾是不同信仰的居民一起祈祷。它被登录为西爪哇的非物质文化遗产，但全国假日表上没有这一天——它靠的是历法与村庄。",
+        "hi": "इंडोनेशिया। वह पश्चिमी जावा का सेरेन ताउन है — सुंडा कृषक समाज का वह अनुष्ठान जिसमें बीते वर्ष के लिए सृष्टिकर्ता का धन्यवाद और आगे के लिए प्रार्थना होती है, जो सुंडा शक पंचांग के रायागुंग मास की बाईसवीं तिथि पर नियत है और कुनिंगान ज़िले के चिगुगुर स्थित पासेबान त्रि पंचा तुंग्गल में लगातार सात दिन चलता है। क्रम में धान ले चलना (न्यांदक पारे), सहस्र दीप (दामार सेवु) और सामूहिक कुटाई शामिल हैं, और अंत भिन्न आस्थाओं के निवासियों की साझा प्रार्थना से होता है। यह पश्चिमी जावा की अमूर्त सांस्कृतिक विरासत में दर्ज है, फिर भी राष्ट्रीय अवकाश तालिका में ऐसा कोई दिन नहीं — यह एक पंचांग और एक गाँव के भरोसे टिका है।",
+        "id": "Indonesia. Itulah Seren Taun di Jawa Barat, upacara masyarakat agraris Sunda untuk bersyukur kepada Sang Pencipta atas setahun yang lewat dan memohon yang lebih baik ke depan, ditetapkan pada 22 Rayagung penanggalan Saka Sunda dan digelar tujuh hari berturut-turut di Paseban Tri Panca Tunggal, Cigugur, Kabupaten Kuningan. Rangkaiannya mencakup Nyandak Pare, Damar Sewu, dan menumbuk padi bersama, ditutup dengan doa bersama warga dari berbagai keyakinan. Ia tercatat sebagai warisan budaya takbenda Jawa Barat, namun tabel hari libur nasional tak memuat hari ini — yang menopangnya adalah sebuah penanggalan dan sebuah desa.",
+        "pt-BR": "Indonésia. É o Seren Taun, em Java Ocidental, o rito da comunidade agrária sundanesa de agradecer ao Criador pelo ano que passou e pedir um melhor adiante, fixado no vigésimo segundo dia de Rayagung do calendário Saka sundanês e realizado por sete dias seguidos no Paseban Tri Panca Tunggal, em Cigugur, no município de Kuningan. A sequência inclui carregar o arroz (Nyandak Pare), as mil lamparinas (Damar Sewu) e pilar o grão em conjunto, encerrando com moradores de fés diferentes rezando lado a lado. Está registrado como patrimônio imaterial de Java Ocidental, mas a tabela nacional de feriados não tem esse dia — ele se apoia num calendário e numa aldeia."
+      }
+    },
+    {
+      "id": "q-20260910-teacher-role-swap",
+      "date": "2026-09-10",
+      "kind": "poll",
+      "topic": "teachers-day",
+      "asker": "hi",
+      "target": "zh-CN",
+      "text": {
+        "zh-TW": "教師節那天,學校會讓學生代課或角色互換嗎?",
+        "en": "On Teachers' Day, do students take the classes or swap roles at school?",
+        "ja": "教師の日に、生徒が授業を受け持ったり、役割を入れ替えたりしますか?",
+        "zh-CN": "教师节那天，学校会让学生代课或角色互换吗?",
+        "hi": "शिक्षक दिवस पर क्या विद्यार्थी कक्षाएँ लेते हैं या भूमिकाएँ बदली जाती हैं?",
+        "id": "Pada Hari Guru, apakah murid mengajar atau bertukar peran di sekolah?",
+        "pt-BR": "No Dia dos Professores, os alunos dão aula ou trocam de papel na escola?"
+      },
+      "options": [
+        {
+          "id": "swap",
+          "emoji": "🔄",
+          "label": {
+            "zh-TW": "會,學生代課",
+            "en": "Yes, students teach",
+            "ja": "ある、生徒が授業をする",
+            "zh-CN": "会，学生代课",
+            "hi": "हाँ, विद्यार्थी पढ़ाते हैं",
+            "id": "Ya, murid mengajar",
+            "pt-BR": "Sim, os alunos dão aula"
+          }
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎤",
+          "label": {
+            "zh-TW": "只有表揚大會",
+            "en": "Only an assembly",
+            "ja": "表彰の集会だけ",
+            "zh-CN": "只有表扬大会",
+            "hi": "सिर्फ़ सभा होती है",
+            "id": "Hanya apel penghargaan",
+            "pt-BR": "Só uma assembleia"
+          }
+        },
+        {
+          "id": "normal",
+          "emoji": "📚",
+          "label": {
+            "zh-TW": "照常上課",
+            "en": "Classes as usual",
+            "ja": "通常どおり授業",
+            "zh-CN": "照常上课",
+            "hi": "कक्षाएँ सामान्य",
+            "id": "Pelajaran seperti biasa",
+            "pt-BR": "Aulas normais"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": {
+            "zh-TW": "沒有教師節",
+            "en": "No Teachers' Day here",
+            "ja": "教師の日がない",
+            "zh-CN": "没有教师节",
+            "hi": "यहाँ शिक्षक दिवस नहीं",
+            "id": "Tak ada Hari Guru",
+            "pt-BR": "Não há Dia dos Professores"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260910-radhakrishnan",
+      "date": "2026-09-10",
+      "kind": "guess",
+      "topic": "teachers-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的教師節,是因為一位哲學教授婉拒了自己的生日慶祝而來的?",
+        "en": "Guess: whose Teachers' Day exists because a professor of philosophy turned down a celebration of his own birthday?",
+        "ja": "クイズ:哲学の教授が自分の誕生祝いを辞退したことから生まれた教師の日をもつのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群的教师节，是因为一位哲学教授婉拒了自己的生日庆祝而来的?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय का शिक्षक दिवस इसलिए है क्योंकि दर्शन के एक प्राध्यापक ने अपने ही जन्मदिन का उत्सव मनाने से इनकार कर दिया?",
+        "id": "Tebak: Hari Guru milik komunitas mana yang lahir karena seorang guru besar filsafat menolak perayaan hari lahirnya sendiri?",
+        "pt-BR": "Adivinhe: de quem é o Dia dos Professores que existe porque um professor de filosofia recusou a comemoração do próprio aniversário?"
+      },
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "hi",
+      "explain": {
+        "zh-TW": "印度。九月五日是薩瓦帕利·拉達克里希南的生日,一位哲學教授,後來成為總統。流傳的說法是:學生想為他慶生,他請他們改成紀念全國的教師。這個由來讓印度的教師節綁在一個具體的人身上,而不是綁在某條法規上。對照:中國的教師節是一九八五年才定在九月十日,選在學年剛開始的那幾天,綁的是學期的節奏;日本則根本沒有教師節,國家紀念的是「教育」。",
+        "en": "India. The fifth of September is the birthday of Sarvepalli Radhakrishnan, a professor of philosophy who later became president. The story told is that students wished to celebrate his birthday and he asked them to mark the country's teachers instead. That origin ties India's Teachers' Day to a particular person rather than to a statute. For contrast: China's was fixed on 10 September only in 1985, placed in the opening days of the school year, tied to the rhythm of the term; and Japan has no Teachers' Day at all — what the state marks is education.",
+        "ja": "インド。九月五日はサルヴパッリー・ラーダークリシュナンの誕生日である。哲学の教授であり、のちに大統領となった。学生たちが誕生日を祝おうとしたところ、代わりに国じゅうの教師を記念してほしいと告げた、と語り伝えられている。この由来は、インドの教師の日を法令ではなく一人の具体的な人物に結びつけている。対照として、中国の教師節は一九八五年にようやく九月十日に定まり、学年の始まって間もない数日に置かれ、学期の律動に結びついている。日本にはそもそも教師の日がなく、国が記念しているのは「教育」である。",
+        "zh-CN": "印度。九月五日是萨瓦帕利·拉达克里希南的生日，一位哲学教授，后来成为总统。流传的说法是：学生想为他庆生，他请他们改成纪念全国的教师。这个由来让印度的教师节绑在一个具体的人身上，而不是绑在某条法规上。对照：中国的教师节是一九八五年才定在九月十日，选在学年刚开始的那几天，绑的是学期的节奏；日本则根本没有教师节，国家纪念的是「教育」。",
+        "hi": "भारत। पाँच सितंबर सर्वपल्ली राधाकृष्णन का जन्मदिन है — दर्शन के प्राध्यापक, जो बाद में राष्ट्रपति बने। कहा जाता है कि विद्यार्थी उनका जन्मदिन मनाना चाहते थे और उन्होंने कहा कि इसके बदले देश के शिक्षकों को याद किया जाए। यह उद्गम भारत के शिक्षक दिवस को किसी क़ानून से नहीं, एक विशिष्ट व्यक्ति से बाँधता है। तुलना: चीन का शिक्षक दिवस 1985 में ही 10 सितंबर पर तय हुआ, शैक्षणिक वर्ष के आरंभिक दिनों में रखा गया, यानी सत्र की लय से बँधा; और जापान में शिक्षक दिवस है ही नहीं — राज्य \"शिक्षा\" को स्मरण करता है।",
+        "id": "India. Lima September adalah hari lahir Sarvepalli Radhakrishnan, guru besar filsafat yang kemudian menjadi presiden. Ceritanya, para mahasiswa hendak merayakan hari lahirnya dan ia meminta mereka memperingati para guru se-negeri saja. Asal-usul itu mengikat Hari Guru India pada seorang pribadi tertentu, bukan pada sebuah undang-undang. Sebagai pembanding: milik Tiongkok baru dipancangkan pada 10 September tahun 1985, ditaruh pada hari-hari pembuka tahun ajaran, terikat pada irama semester; dan Jepang sama sekali tak punya Hari Guru — yang diperingati negara adalah pendidikan.",
+        "pt-BR": "Índia. Cinco de setembro é o aniversário de Sarvepalli Radhakrishnan, professor de filosofia que depois se tornou presidente. Conta-se que os estudantes quiseram festejar seu aniversário e ele pediu que homenageassem os professores do país em vez disso. Essa origem prende o Dia dos Professores indiano a uma pessoa determinada, e não a uma lei. Para contraste: o chinês só foi fixado em 10 de setembro em 1985, colocado nos primeiros dias do ano letivo, preso ao ritmo do semestre; e o Japão não tem Dia dos Professores algum — o que o Estado marca é a educação."
+      }
+    },
+    {
+      "id": "q-20260911-national-day-watch",
+      "date": "2026-09-11",
+      "kind": "poll",
+      "topic": "national-days",
+      "asker": "id",
+      "target": "pt-BR",
+      "text": {
+        "zh-TW": "國慶日你們會去看典禮或遊行嗎?",
+        "en": "On your national day, do you go and watch the ceremony or parade?",
+        "ja": "建国の記念日に、式典やパレードを見に行きますか?",
+        "zh-CN": "国庆日你们会去看典礼或游行吗?",
+        "hi": "राष्ट्रीय दिवस पर क्या आप समारोह या परेड देखने जाते हैं?",
+        "id": "Pada hari nasional, apakah kalian menonton upacara atau pawainya?",
+        "pt-BR": "No dia nacional de vocês, vocês vão assistir à cerimônia ou ao desfile?"
+      },
+      "options": [
+        {
+          "id": "inperson",
+          "emoji": "🎏",
+          "label": {
+            "zh-TW": "會到現場",
+            "en": "Yes, in person",
+            "ja": "現地に行く",
+            "zh-CN": "会到现场",
+            "hi": "हाँ, मौक़े पर जाता हूँ",
+            "id": "Ya, datang langsung",
+            "pt-BR": "Sim, presencialmente"
+          }
+        },
+        {
+          "id": "tv",
+          "emoji": "📺",
+          "label": {
+            "zh-TW": "在家看轉播",
+            "en": "Watch it at home",
+            "ja": "家で中継を見る",
+            "zh-CN": "在家看转播",
+            "hi": "घर पर देखता हूँ",
+            "id": "Menonton dari rumah",
+            "pt-BR": "Assisto em casa"
+          }
+        },
+        {
+          "id": "rest",
+          "emoji": "🛌",
+          "label": {
+            "zh-TW": "只是放假",
+            "en": "Just a day off",
+            "ja": "ただの休み",
+            "zh-CN": "只是放假",
+            "hi": "बस छुट्टी",
+            "id": "Sekadar libur",
+            "pt-BR": "Só uma folga"
+          }
+        },
+        {
+          "id": "work",
+          "emoji": "🏢",
+          "label": {
+            "zh-TW": "照常上班",
+            "en": "I work",
+            "ja": "通常どおり働く",
+            "zh-CN": "照常上班",
+            "hi": "काम पर रहता हूँ",
+            "id": "Tetap bekerja",
+            "pt-BR": "Trabalho"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260911-panjat-pinang",
+      "date": "2026-09-11",
+      "kind": "guess",
+      "topic": "national-days",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群在獨立紀念日會用塗滿油的樹桿當比賽場地,爬上去搶掛在頂端的獎品?",
+        "en": "Guess: which community turns a greased pole into a contest on independence day, climbing it for the prizes hung at the top?",
+        "ja": "クイズ:独立記念日に油を塗った柱を競技にし、てっぺんに吊るされた賞品を目指してよじ登るのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群在独立纪念日会用涂满油的树杆当比赛场地，爬上去抢挂在顶端的奖品?",
+        "hi": "अंदाज़ा लगाइए: कौन-सा समुदाय स्वतंत्रता दिवस पर चिकने खंभे को प्रतियोगिता बना देता है, और उस पर चढ़कर ऊपर टँगे इनाम लेता है?",
+        "id": "Tebak: komunitas mana yang menjadikan batang berlumur pelicin sebagai lomba pada hari kemerdekaan, memanjatnya demi hadiah yang tergantung di puncak?",
+        "pt-BR": "Adivinhe: qual comunidade transforma um poste ensebado em competição no dia da independência, escalando-o para pegar os prêmios pendurados no topo?"
+      },
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        }
+      ],
+      "answer": "id",
+      "explain": {
+        "zh-TW": "印尼。那是 panjat pinang,八月十七日獨立紀念日前後在各地舉行的傳統競賽之一。它的重點不是誰爬得快,而是一個人單獨爬不上去——參賽者必須疊人牆、互相踩肩,所以最後拿到獎品的通常是最會合作的那一隊。同一天還有搶蝦餅、拔河等各種比賽,全部由鄰里(RT/RW)自己辦,不是中央統一安排。",
+        "en": "Indonesia. It is panjat pinang, one of the traditional contests held around Independence Day on 17 August. The point is not who climbs fastest but that nobody can climb it alone — the entrants have to build a human tower and stand on each other's shoulders, so the prize usually goes to whichever team cooperates best. The same day brings cracker-eating races, tug-of-war and much else, all organised by the neighbourhood associations themselves rather than arranged from the centre.",
+        "ja": "インドネシア。それはパンジャット・ピナンで、八月十七日の独立記念日前後に各地で行われる伝統競技の一つである。眼目は誰が速く登るかではなく、一人では登れないという点にある。参加者は人の塔を組み、互いの肩に乗らねばならない。だから賞品を手にするのは、たいていもっともうまく協力した組である。同じ日にはクルプック食い競走や綱引きなども行われ、いずれも中央の差配ではなく町内会が自ら催す。",
+        "zh-CN": "印尼。那是 panjat pinang，八月十七日独立纪念日前后在各地举行的传统竞赛之一。它的重点不是谁爬得快，而是一个人单独爬不上去——参赛者必须叠人墙、互相踩肩，所以最后拿到奖品的通常是最会合作的那一队。同一天还有抢虾饼、拔河等各种比赛，全部由邻里（RT/RW）自己办，不是中央统一安排。",
+        "hi": "इंडोनेशिया। वह पंजात पिनांग है, 17 अगस्त के स्वतंत्रता दिवस के आसपास जगह-जगह होने वाली पारंपरिक प्रतियोगिताओं में से एक। बात यह नहीं कि कौन तेज़ चढ़ता है, बल्कि यह कि अकेले कोई चढ़ ही नहीं सकता — प्रतिभागियों को मानव-मीनार बनानी पड़ती है और एक-दूसरे के कंधों पर खड़ा होना पड़ता है, इसलिए इनाम प्रायः उसी टोली को मिलता है जो सबसे अच्छा सहयोग करे। उसी दिन क्रुपुक खाने की दौड़, रस्साकशी और बहुत कुछ होता है, और ये सब मोहल्ला-समितियाँ स्वयं आयोजित करती हैं, केंद्र से तय होकर नहीं।",
+        "id": "Indonesia. Itulah panjat pinang, satu dari sekian lomba tradisional yang digelar di sekitar Hari Kemerdekaan 17 Agustus. Intinya bukan siapa yang memanjat paling cepat, melainkan bahwa tak seorang pun bisa memanjatnya sendirian — peserta harus menyusun menara manusia dan berdiri di bahu satu sama lain, sehingga hadiahnya biasanya jatuh ke regu yang paling pandai bekerja sama. Hari yang sama juga menghadirkan lomba makan kerupuk, tarik tambang, dan banyak lagi, semuanya diselenggarakan sendiri oleh RT/RW, bukan diatur dari pusat.",
+        "pt-BR": "Indonésia. É o panjat pinang, uma das disputas tradicionais realizadas em torno do Dia da Independência, 17 de agosto. O ponto não é quem sobe mais rápido, e sim que ninguém sobe sozinho — os participantes precisam montar uma torre humana e subir nos ombros uns dos outros, então o prêmio costuma ficar com a equipe que melhor coopera. O mesmo dia traz corridas de comer biscoito, cabo de guerra e muito mais, tudo organizado pelas próprias associações de bairro, e não arranjado a partir do centro."
+      }
+    },
+    {
+      "id": "q-20260912-graduation-hat",
+      "date": "2026-09-12",
+      "kind": "poll",
+      "topic": "graduation-season",
+      "asker": "zh-CN",
+      "target": "en",
+      "text": {
+        "zh-TW": "你們的畢業典禮上,會做什麼「一定要做」的動作?",
+        "en": "At your graduation, what is the one thing everyone has to do?",
+        "ja": "あなたのところの卒業式で、「これだけは必ずやる」という所作は?",
+        "zh-CN": "你们的毕业典礼上，会做什么「一定要做」的动作?",
+        "hi": "आपके दीक्षांत समारोह में वह एक काम क्या है जो सबको करना ही होता है?",
+        "id": "Pada kelulusan kalian, apa satu hal yang wajib dilakukan semua orang?",
+        "pt-BR": "Na formatura de vocês, qual é a coisa que todo mundo tem de fazer?"
+      },
+      "options": [
+        {
+          "id": "cap",
+          "emoji": "🎓",
+          "label": {
+            "zh-TW": "拋學士帽",
+            "en": "Throw the caps",
+            "ja": "帽子を投げる",
+            "zh-CN": "抛学士帽",
+            "hi": "टोपी उछालना",
+            "id": "Melempar toga",
+            "pt-BR": "Jogar o capelo"
+          }
+        },
+        {
+          "id": "song",
+          "emoji": "🎵",
+          "label": {
+            "zh-TW": "唱驪歌",
+            "en": "Sing the farewell song",
+            "ja": "送別の歌を歌う",
+            "zh-CN": "唱骊歌",
+            "hi": "विदाई गीत गाना",
+            "id": "Menyanyikan lagu perpisahan",
+            "pt-BR": "Cantar a canção de despedida"
+          }
+        },
+        {
+          "id": "flowers",
+          "emoji": "💐",
+          "label": {
+            "zh-TW": "獻花或送花束",
+            "en": "Give flowers",
+            "ja": "花を贈る",
+            "zh-CN": "献花或送花束",
+            "hi": "फूल भेंट करना",
+            "id": "Memberi bunga",
+            "pt-BR": "Dar flores"
+          }
+        },
+        {
+          "id": "photo",
+          "emoji": "📸",
+          "label": {
+            "zh-TW": "拍全班合照",
+            "en": "Take the class photo",
+            "ja": "クラス写真を撮る",
+            "zh-CN": "拍全班合照",
+            "hi": "कक्षा की तस्वीर लेना",
+            "id": "Berfoto sekelas",
+            "pt-BR": "Tirar a foto da turma"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260912-school-year-two",
+      "date": "2026-09-12",
+      "kind": "guess",
+      "topic": "back-to-school",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的學年跨越兩個曆年——二月開學、十二月結束,中間還有一次年中假期把它切成兩半?",
+        "en": "Guess: whose school year straddles two calendar years — opening in February, closing in December, with a mid-year break cutting it in half?",
+        "ja": "クイズ:学年が二つの暦年にまたがり、二月に始まって十二月に終わり、年央の休みがそれを二つに割るのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群的学年跨越两个历年——二月开学、十二月结束，中间还有一次年中假期把它切成两半?",
+        "hi": "अंदाज़ा लगाइए: किसका शैक्षणिक वर्ष दो कैलेंडर वर्षों में फैला है — फ़रवरी में खुलता, दिसंबर में बंद, और बीच का अवकाश उसे दो हिस्सों में काटता है?",
+        "id": "Tebak: tahun ajaran komunitas mana yang melintasi dua tahun kalender — dibuka Februari, ditutup Desember, dengan libur pertengahan tahun yang membelahnya?",
+        "pt-BR": "Adivinhe: de quem é o ano letivo que atravessa dois anos civis — abre em fevereiro, fecha em dezembro, com uma pausa de meio de ano que o corta ao meio?"
+      },
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        }
+      ],
+      "answer": "pt-BR",
+      "explain": {
+        "zh-TW": "巴西。學年二月開學、十二月結束,七月的年中假期把它切成兩半。這與其他地方的起點都不同:日本的入學典禮在四月初的櫻花期;印尼多從七月中開始,開學前幾天的新生輔導週有明文規範,禁止任何形式的整人;中國九月一日有全國同步的「開學第一課」;美國沒有全國統一的那一天,開學日由各學區自訂,同一州內相鄰兩個學區可以差上兩週。",
+        "en": "Brazil. The school year opens in February and closes in December, with a mid-year break in July cutting it in half. That differs from every other starting point here: Japan's entrance ceremony falls in early April during the cherry blossom; Indonesia mostly starts in mid-July, with the orientation days before it governed by written rules forbidding hazing of any kind; China has a nationally broadcast first lesson on 1 September; and the United States has no single national day at all — the start date is set by each school district, and two neighbouring districts in one state can differ by a fortnight.",
+        "ja": "ブラジル。学年は二月に始まり十二月に終わる。七月の年央休暇がそれを二つに割る。ここに挙げた他のどの始まりとも異なる。日本の入学式は四月初め、桜の時期に当たる。インドネシアは七月半ばから始まることが多く、その前の新入生オリエンテーション期間には、いかなる形のしごきも禁じる明文の規定がある。中国は九月一日に全国放送の「開学第一課」がある。米国には全国一律の日がそもそもなく、始業日は学区ごとに定められ、同じ州の隣り合う二学区で二週間ずれることもある。",
+        "zh-CN": "巴西。学年二月开学、十二月结束，七月的年中假期把它切成两半。这与其他地方的起点都不同：日本的入学典礼在四月初的樱花期；印尼多从七月中开始，开学前几天的新生辅导周有明文规范，禁止任何形式的整人；中国九月一日有全国同步的「开学第一课」；美国没有全国统一的那一天，开学日由各学区自订，同一州内相邻两个学区可以差上两周。",
+        "hi": "ब्राज़ील। शैक्षणिक वर्ष फ़रवरी में खुलता और दिसंबर में बंद होता है, और जुलाई का मध्यावधि अवकाश उसे दो हिस्सों में काट देता है। यह यहाँ के हर दूसरे आरंभ-बिंदु से अलग है: जापान का प्रवेश समारोह अप्रैल के आरंभ में, चेरी-पुष्प के मौसम में पड़ता है; इंडोनेशिया अधिकतर जुलाई के मध्य से शुरू होता है, और उससे पहले के परिचय-दिवस लिखित नियमों से संचालित होते हैं जो किसी भी प्रकार की रैगिंग वर्जित करते हैं; चीन में 1 सितंबर को राष्ट्रीय स्तर पर प्रसारित पहला पाठ होता है; और अमेरिका में कोई एक राष्ट्रीय दिन है ही नहीं — आरंभ तिथि हर स्कूल ज़िला स्वयं तय करता है, और एक ही राज्य के दो पड़ोसी ज़िलों में पखवाड़े भर का अंतर हो सकता है।",
+        "id": "Brasil. Tahun ajaran dibuka Februari dan ditutup Desember, dengan libur pertengahan tahun pada Juli yang membelahnya. Itu berbeda dari setiap titik awal lain di sini: upacara penerimaan Jepang jatuh pada awal April di masa bunga sakura; Indonesia umumnya mulai pertengahan Juli, dengan masa pengenalan sebelumnya diatur ketentuan tertulis yang melarang perpeloncoan dalam bentuk apa pun; Tiongkok punya pelajaran pertama yang disiarkan nasional pada 1 September; dan Amerika Serikat sama sekali tak punya satu hari nasional — tanggal masuk ditetapkan tiap distrik sekolah, dan dua distrik bertetangga dalam satu negara bagian bisa berbeda dua pekan.",
+        "pt-BR": "Brasil. O ano letivo abre em fevereiro e fecha em dezembro, com uma pausa de meio de ano em julho que o corta ao meio. Isso difere de todos os outros pontos de partida aqui: a cerimônia de entrada do Japão cai no início de abril, durante as cerejeiras; a Indonésia começa sobretudo em meados de julho, com os dias de acolhimento anteriores regidos por normas escritas que proíbem qualquer trote; a China tem uma primeira aula transmitida em rede nacional no dia 1.º de setembro; e os Estados Unidos não têm um único dia nacional — a data de início é definida por cada distrito escolar, e dois distritos vizinhos num mesmo estado podem diferir em quinze dias."
+      }
+    },
+    {
+      "id": "q-20260913-sixteen",
+      "date": "2026-09-13",
+      "kind": "poll",
+      "topic": "coming-of-age",
+      "asker": "en",
+      "target": "zh-TW",
+      "text": {
+        "zh-TW": "你們那裡有沒有一個「長大了」的儀式?幾歲?",
+        "en": "Is there a rite where you live that says someone has grown up? At what age?",
+        "ja": "あなたのところに「大人になった」ことを示す儀礼はありますか?何歳で?",
+        "zh-CN": "你们那里有没有一个「长大了」的仪式?几岁?",
+        "hi": "आपके यहाँ कोई ऐसा संस्कार है जो कहे कि व्यक्ति बड़ा हो गया? किस उम्र में?",
+        "id": "Adakah upacara di tempat kalian yang menandai seseorang telah dewasa? Pada usia berapa?",
+        "pt-BR": "Existe onde vocês vivem um rito que diga que alguém cresceu? Com que idade?"
+      },
+      "options": [
+        {
+          "id": "teen",
+          "emoji": "🎂",
+          "label": {
+            "zh-TW": "十五、十六歲",
+            "en": "Fifteen or sixteen",
+            "ja": "十五、十六歳",
+            "zh-CN": "十五、十六岁",
+            "hi": "पंद्रह या सोलह",
+            "id": "Lima belas atau enam belas",
+            "pt-BR": "Quinze ou dezesseis"
+          }
+        },
+        {
+          "id": "eighteen",
+          "emoji": "🗳️",
+          "label": {
+            "zh-TW": "十八歲",
+            "en": "Eighteen",
+            "ja": "十八歳",
+            "zh-CN": "十八岁",
+            "hi": "अठारह",
+            "id": "Delapan belas",
+            "pt-BR": "Dezoito"
+          }
+        },
+        {
+          "id": "twenty",
+          "emoji": "🍶",
+          "label": {
+            "zh-TW": "二十歲",
+            "en": "Twenty",
+            "ja": "二十歳",
+            "zh-CN": "二十岁",
+            "hi": "बीस",
+            "id": "Dua puluh",
+            "pt-BR": "Vinte"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "沒有這種儀式",
+            "en": "No such rite",
+            "ja": "そういう儀礼はない",
+            "zh-CN": "没有这种仪式",
+            "hi": "ऐसा कोई संस्कार नहीं",
+            "id": "Tak ada upacara semacam itu",
+            "pt-BR": "Não há tal rito"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260913-tainan-sixteen",
+      "date": "2026-09-13",
+      "kind": "guess",
+      "topic": "coming-of-age",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的成年禮辦在情人節那天,而且要鑽過供桌下的紙亭?",
+        "en": "Guess: whose coming-of-age rite is held on the day of the lovers' festival, and involves passing beneath a paper pavilion on the offering table?",
+        "ja": "クイズ:成年の儀礼が恋人たちの祭りと同じ日に行われ、供物机の下の紙の亭をくぐるのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群的成年礼办在情人节那天，而且要钻过供桌下的纸亭?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय का वयस्कता-संस्कार प्रेमियों के पर्व वाले दिन होता है, और उसमें चढ़ावे की मेज़ के नीचे बने काग़ज़ी मंडप से निकलना पड़ता है?",
+        "id": "Tebak: upacara kedewasaan komunitas mana yang digelar pada hari perayaan kasih sayang, dan mengharuskan melintas di bawah paviliun kertas pada meja sesaji?",
+        "pt-BR": "Adivinhe: de quem é o rito de maioridade celebrado no dia da festa dos namorados, com a passagem sob um pavilhão de papel na mesa de oferendas?"
+      },
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": {
+        "zh-TW": "台灣。七夕在台灣還有另一個身分:七娘媽生,被當成孩子的守護神生日。台南開隆宮的「做十六歲」就辦在這一天——十六歲的孩子鑽過供桌下的紙亭,象徵成年。於是同一個日期上,一端是情人節式的約會,另一端是家族帶著孩子完成的成年禮,兩件事互不相干卻共用一天。對照:日本的成人式規模由市町村決定,多在一月的假日;巴西十六歲可以投票但不強制,十八歲起才成為義務。",
+        "en": "Taiwan. Qixi carries a second identity there: the birthday of the Seven Mothers, held to be the guardian deity of children. The coming-of-sixteen rite at the Kailong Temple in Tainan takes place on this very day, the sixteen-year-old passing beneath the offering table's paper pavilion to mark adulthood. Two things share one date — a courtship evening at one end, a family walking its child through a rite of majority at the other, with nothing to do with each other. For contrast: Japan's coming-of-age ceremony is scaled by each municipality and usually held on the January holiday; in Brazil voting is optional from sixteen and compulsory only from eighteen.",
+        "ja": "台湾。台湾の七夕にはもう一つの顔がある。七娘媽の誕生日であり、子どもの守り神とされる。台南・開隆宮の「十六歳になる儀礼」はまさにこの日に行われ、十六歳の子が供物机の下の紙の亭をくぐって成年を印す。こうして同じ日付の上で、一方には恋人たちの夜があり、他方には家族が子を通わせる成年の儀があって、両者はたがいに関わりを持たない。対照として、日本の成人式は市町村が規模を決め、多くは一月の祝日に行われる。ブラジルでは十六歳から投票は任意で、義務となるのは十八歳からである。",
+        "zh-CN": "台湾。七夕在台湾还有另一个身分：七娘妈生，被当成孩子的守护神生日。台南开隆宫的「做十六岁」就办在这一天——十六岁的孩子钻过供桌下的纸亭，象征成年。于是同一个日期上，一端是情人节式的约会，另一端是家族带着孩子完成的成年礼，两件事互不相干却共用一天。对照：日本的成人式规模由市町村决定，多在一月的假日；巴西十六岁可以投票但不强制，十八岁起才成为义务。",
+        "hi": "ताइवान। वहाँ क़िशी की एक दूसरी पहचान भी है: सात माताओं का जन्मदिन, जिन्हें बच्चों की रक्षक देवी माना जाता है। तैनान के खाइलोंग मंदिर में सोलह वर्ष का संस्कार ठीक इसी दिन होता है, जिसमें सोलह वर्ष का बालक चढ़ावे की मेज़ के नीचे बने काग़ज़ी मंडप से निकलकर वयस्कता चिह्नित करता है। एक ही तिथि पर दो बातें साथ बैठती हैं — एक छोर पर प्रेम की संध्या, दूसरे पर परिवार अपने बच्चे को वयस्कता के संस्कार से गुज़ारता हुआ, और दोनों का आपस में कोई नाता नहीं। तुलना: जापान का वयस्कता समारोह हर नगरपालिका अपने पैमाने पर करती है, प्रायः जनवरी के अवकाश पर; ब्राज़ील में सोलह से मतदान वैकल्पिक है और अठारह से ही अनिवार्य।",
+        "id": "Taiwan. Qixi di sana memikul identitas kedua: hari lahir Tujuh Bunda, yang dianggap dewi pelindung anak-anak. Ritual genap enam belas tahun di Kelenteng Kailong, Tainan, digelar tepat pada hari ini, ketika anak berusia enam belas melintas di bawah paviliun kertas pada meja sesaji untuk menandai kedewasaan. Dua hal berbagi satu tanggal — di satu ujung malam bagi sepasang kekasih, di ujung lain sebuah keluarga menuntun anaknya melewati upacara kedewasaan, tanpa hubungan satu sama lain. Pembanding: upacara kedewasaan Jepang ditentukan skalanya oleh tiap kotamadya dan biasanya digelar pada hari libur Januari; di Brasil memilih bersifat sukarela sejak enam belas dan baru wajib sejak delapan belas.",
+        "pt-BR": "Taiwan. O Qixi carrega ali uma segunda identidade: o aniversário das Sete Mães, tidas como divindade guardiã das crianças. O rito dos dezesseis anos no templo Kailong, em Tainan, acontece exatamente neste dia, com o jovem passando sob o pavilhão de papel da mesa de oferendas para marcar a maioridade. Duas coisas dividem uma só data — de um lado uma noite de namoro, do outro uma família conduzindo o filho por um rito de maioridade, sem relação alguma entre si. Para contraste: a cerimônia de maioridade do Japão tem sua escala definida por cada município e costuma ocorrer no feriado de janeiro; no Brasil o voto é facultativo a partir dos dezesseis e só obrigatório a partir dos dezoito."
+      }
+    },
+    {
+      "id": "q-20260914-newyear-food",
+      "date": "2026-09-14",
+      "kind": "poll",
+      "topic": "new-year",
+      "asker": "hi",
+      "target": "ja",
+      "text": {
+        "zh-TW": "跨年或新年那一餐,你們一定會吃什麼?",
+        "en": "At New Year, what is the one thing you always eat?",
+        "ja": "年越しや正月の食事で、必ず食べるものは?",
+        "zh-CN": "跨年或新年那一餐，你们一定会吃什么?",
+        "hi": "नववर्ष के भोजन में वह एक चीज़ क्या है जो आप हमेशा खाते हैं?",
+        "id": "Pada santapan Tahun Baru, apa satu hal yang selalu kalian makan?",
+        "pt-BR": "Na refeição de Ano-Novo, o que vocês sempre comem?"
+      },
+      "options": [
+        {
+          "id": "noodles",
+          "emoji": "🍜",
+          "label": {
+            "zh-TW": "麵",
+            "en": "Noodles",
+            "ja": "麺",
+            "zh-CN": "面",
+            "hi": "नूडल्स",
+            "id": "Mi",
+            "pt-BR": "Macarrão"
+          }
+        },
+        {
+          "id": "dumpling",
+          "emoji": "🥟",
+          "label": {
+            "zh-TW": "餃子或包餡的東西",
+            "en": "Dumplings or something stuffed",
+            "ja": "餃子など詰め物のもの",
+            "zh-CN": "饺子或包馅的东西",
+            "hi": "पकौड़ी या भरावन वाली चीज़",
+            "id": "Pangsit atau isian",
+            "pt-BR": "Massa recheada"
+          }
+        },
+        {
+          "id": "sweet",
+          "emoji": "🍡",
+          "label": {
+            "zh-TW": "甜的",
+            "en": "Something sweet",
+            "ja": "甘いもの",
+            "zh-CN": "甜的",
+            "hi": "कुछ मीठा",
+            "id": "Yang manis",
+            "pt-BR": "Algo doce"
+          }
+        },
+        {
+          "id": "other",
+          "emoji": "🍽️",
+          "label": {
+            "zh-TW": "別的",
+            "en": "Something else",
+            "ja": "ほかのもの",
+            "zh-CN": "别的",
+            "hi": "कुछ और",
+            "id": "Yang lain",
+            "pt-BR": "Outra coisa"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260914-ninth-day",
+      "date": "2026-09-14",
+      "kind": "guess",
+      "topic": "new-year",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群把農曆年的第十五夜當成「年真的過完了」的界線,過了那天才開工開學?",
+        "en": "Guess: which community treats the fifteenth night after Lunar New Year as the line where the year is properly over, with work and school resuming only after it?",
+        "ja": "クイズ:旧正月から十五番目の夜を「年が本当に明けた」境目とし、それを過ぎてはじめて仕事も学校も始まるのはどのコミュニティ?",
+        "zh-CN": "你猜:哪个社群把农历年的第十五夜当成「年真的过完了」的界线，过了那天才开工开学?",
+        "hi": "अंदाज़ा लगाइए: कौन-सा समुदाय चंद्र नववर्ष के बाद की पंद्रहवीं रात को उस रेखा के रूप में लेता है जहाँ वर्ष सचमुच पूरा होता है, और उसके बाद ही काम और विद्यालय शुरू होते हैं?",
+        "id": "Tebak: komunitas mana yang menganggap malam kelima belas setelah Imlek sebagai garis bahwa tahunnya benar-benar usai, dan baru sesudah itu kerja serta sekolah dimulai?",
+        "pt-BR": "Adivinhe: qual comunidade trata a décima quinta noite após o Ano-Novo Lunar como a linha em que o ano de fato acabou, com trabalho e aulas recomeçando só depois dela?"
+      },
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": {
+        "zh-TW": "台灣。元宵是農曆年這一整段的收尾:正月十五一過,年才算真的過完,該開工的開工、該開學的開學。它不是放假日,卻是全台當晚同時亮起來的一天——提燈籠、猜燈謎、吃元宵之外,台灣燈會由不同縣市輪流主辦,所以「今年在哪裡辦」每年都要重新問一次。《紀念日及節日實施條例》裡也列著它:「元宵節:農曆一月十五日」。",
+        "en": "Taiwan. The lantern night closes the whole stretch of the lunar new year: once the fifteenth of the first month has passed, the year is properly over, work resumes and school starts. It is not a day off, yet it is the evening on which the whole island lights up at once — beyond carrying lanterns, guessing lantern riddles and eating the round dumplings, the national lantern festival is hosted by a different county or city each year, so where it is this year is a question to ask afresh every time. The Act on Commemorative Days and Holidays lists it too: \"Lantern Festival: the fifteenth of the first lunar month.\"",
+        "ja": "台湾。元宵は旧正月という一続きの期間の締めくくりである。正月十五日を過ぎてはじめて年は本当に明け、仕事は再開し、学校は始まる。休日ではないが、その晩、台湾じゅうが一斉に灯る日ではある。提灯を持ち、灯謎を解き、元宵を食べることに加え、台湾ランタンフェスティバルは県市の持ち回りで開かれるため、「今年はどこでやるのか」を毎年あらためて尋ねねばならない。「記念日及び節日実施条例」にもこう載る――「元宵節:旧暦一月十五日」。",
+        "zh-CN": "台湾。元宵是农历年这一整段的收尾：正月十五一过，年才算真的过完，该开工的开工、该开学的开学。它不是放假日，却是全台当晚同时亮起来的一天——提灯笼、猜灯谜、吃元宵之外，台湾灯会由不同县市轮流主办，所以「今年在哪里办」每年都要重新问一次。《纪念日及节日实施条例》里也列着它：「元宵节：农历一月十五日」。",
+        "hi": "ताइवान। लालटेन की रात चंद्र नववर्ष के पूरे खंड को समेट देती है: पहले महीने की पंद्रहवीं बीत जाने पर ही वर्ष सचमुच पूरा होता है, काम फिर शुरू होता है और विद्यालय खुलते हैं। यह छुट्टी का दिन नहीं, फिर भी वही शाम है जब पूरा द्वीप एक साथ जगमगा उठता है — लालटेन उठाने, पहेलियाँ बूझने और गोल पिंड खाने के अलावा, राष्ट्रीय लालटेन उत्सव हर वर्ष किसी दूसरे ज़िले या शहर में होता है, इसलिए \"इस बार कहाँ\" हर बार नए सिरे से पूछना पड़ता है। स्मृति-दिवस एवं अवकाश अधिनियम में भी यह दर्ज है: \"लालटेन पर्व: पहले चंद्र मास की पंद्रहवीं तिथि।\"",
+        "id": "Taiwan. Malam lampion menutup seluruh rentang Tahun Baru Imlek: begitu tanggal lima belas bulan pertama lewat, tahunnya benar-benar usai, pekerjaan dimulai lagi dan sekolah masuk. Ia bukan hari libur, namun itulah malam ketika seluruh pulau menyala serentak — selain menenteng lampion, menebak teka-teki, dan menyantap bola tepung, festival lampion nasional diselenggarakan bergiliran oleh kabupaten atau kota yang berbeda tiap tahun, sehingga \"tahun ini di mana\" harus ditanyakan ulang setiap kali. Undang-Undang Hari Peringatan dan Hari Libur pun mencantumkannya: \"Perayaan Lampion: tanggal lima belas bulan pertama Imlek.\"",
+        "pt-BR": "Taiwan. A noite das lanternas encerra todo o trecho do Ano-Novo Lunar: passado o dia quinze do primeiro mês, o ano acabou de fato, o trabalho recomeça e as aulas começam. Não é dia de folga, mas é a noite em que a ilha inteira se acende de uma vez — além de levar lanternas, decifrar enigmas e comer os bolinhos redondos, o festival nacional de lanternas é sediado a cada ano por um condado ou cidade diferente, de modo que onde ele será este ano é pergunta a refazer todas as vezes. A Lei das Datas Comemorativas e Feriados também o lista: \"Festa das Lanternas: o décimo quinto dia do primeiro mês lunar.\""
+      }
     }
   ]
 }

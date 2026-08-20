@@ -1422,6 +1422,686 @@
       ],
       "answer": "id",
       "explain": "印尼。二月十四日不是假日,而且它在制度上留下的痕跡是反方向的:每年這個日子前後,不少地方政府的教育局會發出通函(surat edaran),要求轄內學校勸阻學生慶祝——西爪哇的德波市二○二三年、東爪哇的巴蘇魯安縣二○一七年、廖內群島省教育局對高中與職校都發過。理由寫得很直白:與宗教、社會與文化規範不合。相對的,國家承認的是另一種:中國把七夕列進二○○六年第一批國家級非物質文化遺產名錄,而二月十四日在中國一樣沒有任何制度身分。"
+    },
+    {
+      "question_id": "q-20260905-fathers-day-date",
+      "date": "2026-09-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": "pt-BR",
+      "target_locale": "ja",
+      "text": "你們的父親節是幾月幾號?",
+      "options": [
+        {
+          "id": "june",
+          "emoji": "☀️",
+          "label": "六月"
+        },
+        {
+          "id": "august",
+          "emoji": "🌾",
+          "label": "八月"
+        },
+        {
+          "id": "november",
+          "emoji": "🍁",
+          "label": "十一月"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "我們沒有父親節"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260905-pun-fathers-day",
+      "date": "2026-09-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的父親節日期是由「諧音」決定的?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "台灣。八月八日,因為「八八」與「爸爸」諧音——四個地方裡唯一由語音決定日期的。《紀念日及節日實施條例》把它列為節日,同一條也明定不放假,所以慶祝多半被挪到最近的週末。對照組:美國走了六十年,一九七二年公法 92-278 才定案,比母親節晚了五十八年;巴西一九五三年由廣告人 Sylvio Bhering 提議,目的是填補八月的廣告檔期;印尼二○○六年由民間團體在梭羅宣告,為了與國家訂的母親節取得平衡。"
+    },
+    {
+      "question_id": "q-20260906-wedding-days",
+      "date": "2026-09-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+      "topic_slug": "weddings-and-customs",
+      "asker_locale": "en",
+      "target_locale": "hi",
+      "text": "你們最近參加的婚禮辦了幾天?",
+      "options": [
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "一天之內"
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": "兩天"
+        },
+        {
+          "id": "three",
+          "emoji": "3️⃣",
+          "label": "三天以上"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "沒參加過"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260906-womens-day-halfday",
+      "date": "2026-09-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的法規給「婦女」半天假,卻完全沒有給「母親」任何一天?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "answer": "zh-CN",
+      "explain": "中國。國務院《全國年節及紀念日放假辦法》把節日分成全體公民放假與部分公民放假兩類;後者列的是婦女節(三月八日,婦女放假半天)、青年節、兒童節與建軍節。母親節與父親節兩類都不在——民間多跟隨五月第二個星期日與六月第三個星期日,但沒有一條是被規定的。同一個國家對「女性」與「母親」給了不同的制度待遇:一個有半天假,一個只有花店的檔期。"
+    },
+    {
+      "question_id": "q-20260907-boat-race",
+      "date": "2026-09-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR8KM720981PCZBPYFQ",
+      "topic_slug": "dragon-boat-festival",
+      "asker_locale": "id",
+      "target_locale": "en",
+      "text": "你們那裡有划船比賽嗎?什麼時候辦?",
+      "options": [
+        {
+          "id": "lunar",
+          "emoji": "🌙",
+          "label": "有,跟著農曆走"
+        },
+        {
+          "id": "fixed",
+          "emoji": "📅",
+          "label": "有,固定在某個週末"
+        },
+        {
+          "id": "sport",
+          "emoji": "🚣",
+          "label": "有,但只是體育賽事"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "沒有"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260907-snake-boat",
+      "date": "2026-09-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR8KM720981PCZBPYFQ",
+      "topic_slug": "dragon-boat-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的划船大會用的是長逾百呎、划手上百人的「蛇船」,而且固定在八月第二個星期六?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "answer": "hi",
+      "explain": "印度。喀拉拉的 Vallam Kali,其中最著名的是尼赫魯盃(Nehru Trophy Boat Race),在阿拉普扎的普南馬達湖舉行。船是「chundan vallam」;一九五二年尼赫魯造訪後捐出銀盃,賽事因此得名。印度沒有端午節,但同一件事在這裡按另一套曆法與另一種船進行。順帶一提,印尼也有龍舟,而且不是近年引進的:丹格朗的 Peh Cun 由 Cina Benteng 社群在芝薩丹尼河上舉行,同樣落在農曆五月初五,核心是一艘一年只開封一次的聖船。"
+    },
+    {
+      "question_id": "q-20260908-memorial-silence",
+      "date": "2026-09-08",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": "zh-TW",
+      "target_locale": "en",
+      "text": "你們的國殤或追思日,有全國同時默哀的時刻嗎?",
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🤫",
+          "label": "有,固定時刻"
+        },
+        {
+          "id": "local",
+          "emoji": "📍",
+          "label": "有,但各地時間不同"
+        },
+        {
+          "id": "no",
+          "emoji": "🔕",
+          "label": "沒有"
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": "不知道"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260908-moment-of-remembrance",
+      "date": "2026-09-08",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群把追思日移到星期一湊成三日連假之後,又立法規定當天下午三時全國默哀一分鐘?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "answer": "en",
+      "explain": "美國。一九六八年的統一星期一假日法把陣亡將士紀念日從五月三十日改成五月最後一個星期一,自一九七一年起實施,理由是給聯邦僱員一個穩定的三日連假。這個改法讓它同時變成夏季的起點,也讓「這一天到底在紀念什麼」需要被重新提醒——二○○○年的全國追思時刻法因此規定,當天下午三時全國默哀一分鐘。"
+    },
+    {
+      "question_id": "q-20260909-harvest-season",
+      "date": "2026-09-09",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "ja",
+      "target_locale": "id",
+      "text": "你們的收成慶典在什麼季節?",
+      "options": [
+        {
+          "id": "spring",
+          "emoji": "🌸",
+          "label": "春天"
+        },
+        {
+          "id": "summer",
+          "emoji": "☀️",
+          "label": "夏天"
+        },
+        {
+          "id": "autumn",
+          "emoji": "🍂",
+          "label": "秋天"
+        },
+        {
+          "id": "winter",
+          "emoji": "❄️",
+          "label": "冬天"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260909-seren-taun",
+      "date": "2026-09-09",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的收成儀式連辦七天,流程包括捧稻、千燈與全村一起舂米,最後由不同信仰的居民一起祈禱?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "answer": "id",
+      "explain": "印尼。那是西爪哇的 Seren Taun,巽他農耕社群向造物者謝過去一年、求來年的儀式,固定在巽他薩卡曆 Rayagung 月二十二日,在庫寧安縣芝古古爾的 Paseban Tri Panca Tunggal 連辦七天。流程包含捧稻(Nyandak Pare)、千燈(Damar Sewu)、共同舂米,結尾是不同信仰的居民一起祈禱。它被登錄為西爪哇的非物質文化遺產,但全國假日表上沒有這一天——它靠的是曆法與村莊。"
+    },
+    {
+      "question_id": "q-20260910-teacher-role-swap",
+      "date": "2026-09-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "hi",
+      "target_locale": "zh-CN",
+      "text": "教師節那天,學校會讓學生代課或角色互換嗎?",
+      "options": [
+        {
+          "id": "swap",
+          "emoji": "🔄",
+          "label": "會,學生代課"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎤",
+          "label": "只有表揚大會"
+        },
+        {
+          "id": "normal",
+          "emoji": "📚",
+          "label": "照常上課"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "沒有教師節"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260910-radhakrishnan",
+      "date": "2026-09-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的教師節,是因為一位哲學教授婉拒了自己的生日慶祝而來的?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "answer": "hi",
+      "explain": "印度。九月五日是薩瓦帕利·拉達克里希南的生日,一位哲學教授,後來成為總統。流傳的說法是:學生想為他慶生,他請他們改成紀念全國的教師。這個由來讓印度的教師節綁在一個具體的人身上,而不是綁在某條法規上。對照:中國的教師節是一九八五年才定在九月十日,選在學年剛開始的那幾天,綁的是學期的節奏;日本則根本沒有教師節,國家紀念的是「教育」。"
+    },
+    {
+      "question_id": "q-20260911-national-day-watch",
+      "date": "2026-09-11",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": "id",
+      "target_locale": "pt-BR",
+      "text": "國慶日你們會去看典禮或遊行嗎?",
+      "options": [
+        {
+          "id": "inperson",
+          "emoji": "🎏",
+          "label": "會到現場"
+        },
+        {
+          "id": "tv",
+          "emoji": "📺",
+          "label": "在家看轉播"
+        },
+        {
+          "id": "rest",
+          "emoji": "🛌",
+          "label": "只是放假"
+        },
+        {
+          "id": "work",
+          "emoji": "🏢",
+          "label": "照常上班"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260911-panjat-pinang",
+      "date": "2026-09-11",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群在獨立紀念日會用塗滿油的樹桿當比賽場地,爬上去搶掛在頂端的獎品?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "answer": "id",
+      "explain": "印尼。那是 panjat pinang,八月十七日獨立紀念日前後在各地舉行的傳統競賽之一。它的重點不是誰爬得快,而是一個人單獨爬不上去——參賽者必須疊人牆、互相踩肩,所以最後拿到獎品的通常是最會合作的那一隊。同一天還有搶蝦餅、拔河等各種比賽,全部由鄰里(RT/RW)自己辦,不是中央統一安排。"
+    },
+    {
+      "question_id": "q-20260912-graduation-hat",
+      "date": "2026-09-12",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRFP513XZ9B02BT8XCZ",
+      "topic_slug": "graduation-season",
+      "asker_locale": "zh-CN",
+      "target_locale": "en",
+      "text": "你們的畢業典禮上,會做什麼「一定要做」的動作?",
+      "options": [
+        {
+          "id": "cap",
+          "emoji": "🎓",
+          "label": "拋學士帽"
+        },
+        {
+          "id": "song",
+          "emoji": "🎵",
+          "label": "唱驪歌"
+        },
+        {
+          "id": "flowers",
+          "emoji": "💐",
+          "label": "獻花或送花束"
+        },
+        {
+          "id": "photo",
+          "emoji": "📸",
+          "label": "拍全班合照"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260912-school-year-two",
+      "date": "2026-09-12",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的學年跨越兩個曆年——二月開學、十二月結束,中間還有一次年中假期把它切成兩半?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "answer": "pt-BR",
+      "explain": "巴西。學年二月開學、十二月結束,七月的年中假期把它切成兩半。這與其他地方的起點都不同:日本的入學典禮在四月初的櫻花期;印尼多從七月中開始,開學前幾天的新生輔導週有明文規範,禁止任何形式的整人;中國九月一日有全國同步的「開學第一課」;美國沒有全國統一的那一天,開學日由各學區自訂,同一州內相鄰兩個學區可以差上兩週。"
+    },
+    {
+      "question_id": "q-20260913-sixteen",
+      "date": "2026-09-13",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR5H0VCT4WAPQM4SZXW",
+      "topic_slug": "coming-of-age",
+      "asker_locale": "en",
+      "target_locale": "zh-TW",
+      "text": "你們那裡有沒有一個「長大了」的儀式?幾歲?",
+      "options": [
+        {
+          "id": "teen",
+          "emoji": "🎂",
+          "label": "十五、十六歲"
+        },
+        {
+          "id": "eighteen",
+          "emoji": "🗳️",
+          "label": "十八歲"
+        },
+        {
+          "id": "twenty",
+          "emoji": "🍶",
+          "label": "二十歲"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "沒有這種儀式"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260913-tainan-sixteen",
+      "date": "2026-09-13",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR5H0VCT4WAPQM4SZXW",
+      "topic_slug": "coming-of-age",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的成年禮辦在情人節那天,而且要鑽過供桌下的紙亭?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "台灣。七夕在台灣還有另一個身分:七娘媽生,被當成孩子的守護神生日。台南開隆宮的「做十六歲」就辦在這一天——十六歲的孩子鑽過供桌下的紙亭,象徵成年。於是同一個日期上,一端是情人節式的約會,另一端是家族帶著孩子完成的成年禮,兩件事互不相干卻共用一天。對照:日本的成人式規模由市町村決定,多在一月的假日;巴西十六歲可以投票但不強制,十八歲起才成為義務。"
+    },
+    {
+      "question_id": "q-20260914-newyear-food",
+      "date": "2026-09-14",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": "hi",
+      "target_locale": "ja",
+      "text": "跨年或新年那一餐,你們一定會吃什麼?",
+      "options": [
+        {
+          "id": "noodles",
+          "emoji": "🍜",
+          "label": "麵"
+        },
+        {
+          "id": "dumpling",
+          "emoji": "🥟",
+          "label": "餃子或包餡的東西"
+        },
+        {
+          "id": "sweet",
+          "emoji": "🍡",
+          "label": "甜的"
+        },
+        {
+          "id": "other",
+          "emoji": "🍽️",
+          "label": "別的"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260914-ninth-day",
+      "date": "2026-09-14",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群把農曆年的第十五夜當成「年真的過完了」的界線,過了那天才開工開學?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "台灣。元宵是農曆年這一整段的收尾:正月十五一過,年才算真的過完,該開工的開工、該開學的開學。它不是放假日,卻是全台當晚同時亮起來的一天——提燈籠、猜燈謎、吃元宵之外,台灣燈會由不同縣市輪流主辦,所以「今年在哪裡辦」每年都要重新問一次。《紀念日及節日實施條例》裡也列著它:「元宵節:農曆一月十五日」。"
     }
   ]
 }

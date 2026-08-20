@@ -1422,6 +1422,686 @@
       ],
       "answer": "id",
       "explain": "Indonesia. The fourteenth of February is not a holiday, and the institutional trace it leaves runs the other way: around the date each year, education offices in a number of local governments issue circulars — surat edaran — asking schools in their area to discourage students from marking it. Depok in West Java issued one in 2023, Pasuruan Regency in East Java in 2017, and the Riau Islands provincial education office advised its senior and vocational secondary schools likewise. The stated reason is plain: it does not fit religious, social and cultural norms. By contrast, what a state may recognise is the other one: China entered the Qixi festival on the first national list of intangible cultural heritage in 2006, while 14 February has no institutional standing there either."
+    },
+    {
+      "question_id": "q-20260905-fathers-day-date",
+      "date": "2026-09-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": "pt-BR",
+      "target_locale": "ja",
+      "text": "When is Father's Day where you are?",
+      "options": [
+        {
+          "id": "june",
+          "emoji": "☀️",
+          "label": "In June"
+        },
+        {
+          "id": "august",
+          "emoji": "🌾",
+          "label": "In August"
+        },
+        {
+          "id": "november",
+          "emoji": "🍁",
+          "label": "In November"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "We don't have one"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260905-pun-fathers-day",
+      "date": "2026-09-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: in which community is the date of Father's Day decided by a pun?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "the United States"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. The eighth of August, because \"eight-eight\" sounds like \"papa\" — the only one of these places where the date comes from a sound. The Act on Commemorative Days and Holidays lists it as a festival and in the same article gives it no day off, so the celebration mostly slides to the nearest weekend. For contrast: the United States took sixty years, settling it only with Public Law 92-278 in 1972, fifty-eight years after Mother's Day; Brazil's was proposed in 1953 by the adman Sylvio Bhering to fill an August gap in advertising; Indonesia's was declared in 2006 by a civic group in Surakarta, to balance a Mother's Day the state had set."
+    },
+    {
+      "question_id": "q-20260906-wedding-days",
+      "date": "2026-09-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+      "topic_slug": "weddings-and-customs",
+      "asker_locale": "en",
+      "target_locale": "hi",
+      "text": "How many days did the last wedding you attended last?",
+      "options": [
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "Within one day"
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": "Two days"
+        },
+        {
+          "id": "three",
+          "emoji": "3️⃣",
+          "label": "Three days or more"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Haven't been to one"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260906-womens-day-halfday",
+      "date": "2026-09-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: in which community do the rules give women half a day off, while mothers get no day at all?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "answer": "zh-CN",
+      "explain": "China. The State Council's Measures on National Holidays and Commemorative Days sort days into those for all citizens and those for some; the latter list carries Women's Day (8 March, women get half a day off), Youth Day, Children's Day and Army Day. Mother's Day and Father's Day are in neither — popular practice mostly follows the second Sunday in May and the third Sunday in June, but neither is prescribed. The same state gives \"women\" and \"mothers\" different institutional treatment: one has half a holiday, the other has a florists' season."
+    },
+    {
+      "question_id": "q-20260907-boat-race",
+      "date": "2026-09-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR8KM720981PCZBPYFQ",
+      "topic_slug": "dragon-boat-festival",
+      "asker_locale": "id",
+      "target_locale": "en",
+      "text": "Is there a boat race where you live? When is it held?",
+      "options": [
+        {
+          "id": "lunar",
+          "emoji": "🌙",
+          "label": "Yes, on a lunar date"
+        },
+        {
+          "id": "fixed",
+          "emoji": "📅",
+          "label": "Yes, on a fixed weekend"
+        },
+        {
+          "id": "sport",
+          "emoji": "🚣",
+          "label": "Yes, but purely as sport"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "No"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260907-snake-boat",
+      "date": "2026-09-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR8KM720981PCZBPYFQ",
+      "topic_slug": "dragon-boat-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community's boat race uses snake boats over a hundred feet long pulled by more than a hundred oarsmen, fixed on the second Saturday of August?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "answer": "hi",
+      "explain": "India. Vallam Kali in Kerala, of which the best known is the Nehru Trophy Boat Race on Punnamada Lake in Alappuzha. The boats are chundan vallams; Nehru visited in 1952 and donated a silver trophy, which is where the name comes from. India has no Duanwu, but the same thing runs here on a different calendar and in a different boat. Incidentally Indonesia has dragon boats too, and not as a recent import: Peh Cun in Tangerang is held by the Cina Benteng community on the Cisadane River, on that same fifth day of the fifth lunar month, centred on a sacred boat unsealed only once a year."
+    },
+    {
+      "question_id": "q-20260908-memorial-silence",
+      "date": "2026-09-08",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": "zh-TW",
+      "target_locale": "en",
+      "text": "On your day of remembrance, is there a moment when the whole country falls silent together?",
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🤫",
+          "label": "Yes, at a fixed time"
+        },
+        {
+          "id": "local",
+          "emoji": "📍",
+          "label": "Yes, but times differ locally"
+        },
+        {
+          "id": "no",
+          "emoji": "🔕",
+          "label": "No"
+        },
+        {
+          "id": "unknown",
+          "emoji": "❓",
+          "label": "Not sure"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260908-moment-of-remembrance",
+      "date": "2026-09-08",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community moved its day of remembrance to a Monday to make a three-day weekend, and then legislated a nationwide minute of silence at three in the afternoon?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "the United States"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "answer": "en",
+      "explain": "The United States. The Uniform Monday Holiday Act of 1968 moved Memorial Day from 30 May to the last Monday in May, effective 1971, so that federal employees would have a dependable three-day weekend. That change also turned the day into the opening of summer, and made what it is for something that has to be recalled deliberately — hence the National Moment of Remembrance Act of 2000, which sets a minute of silence at three in the afternoon."
+    },
+    {
+      "question_id": "q-20260909-harvest-season",
+      "date": "2026-09-09",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "ja",
+      "target_locale": "id",
+      "text": "In which season does your harvest celebration fall?",
+      "options": [
+        {
+          "id": "spring",
+          "emoji": "🌸",
+          "label": "Spring"
+        },
+        {
+          "id": "summer",
+          "emoji": "☀️",
+          "label": "Summer"
+        },
+        {
+          "id": "autumn",
+          "emoji": "🍂",
+          "label": "Autumn"
+        },
+        {
+          "id": "winter",
+          "emoji": "❄️",
+          "label": "Winter"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260909-seren-taun",
+      "date": "2026-09-09",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: whose harvest rite runs seven days straight — carrying the rice, a thousand lamps, the whole village pounding grain together, and closing with residents of different faiths praying side by side?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonesia. It is Seren Taun in West Java, the Sundanese farming community's rite of thanking the Creator for the year past and asking for a better one ahead, fixed on the twenty-second of Rayagung in the Sundanese Saka calendar and held over seven consecutive days at the Paseban Tri Panca Tunggal in Cigugur, Kuningan Regency. The sequence includes carrying the rice (Nyandak Pare), the thousand lamps (Damar Sewu) and pounding the grain together, closing with residents of different faiths praying side by side. It is registered as intangible cultural heritage of West Java, yet the national holiday table has no such day — it rests on a calendar and a village."
+    },
+    {
+      "question_id": "q-20260910-teacher-role-swap",
+      "date": "2026-09-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "hi",
+      "target_locale": "zh-CN",
+      "text": "On Teachers' Day, do students take the classes or swap roles at school?",
+      "options": [
+        {
+          "id": "swap",
+          "emoji": "🔄",
+          "label": "Yes, students teach"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎤",
+          "label": "Only an assembly"
+        },
+        {
+          "id": "normal",
+          "emoji": "📚",
+          "label": "Classes as usual"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "No Teachers' Day here"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260910-radhakrishnan",
+      "date": "2026-09-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: whose Teachers' Day exists because a professor of philosophy turned down a celebration of his own birthday?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "answer": "hi",
+      "explain": "India. The fifth of September is the birthday of Sarvepalli Radhakrishnan, a professor of philosophy who later became president. The story told is that students wished to celebrate his birthday and he asked them to mark the country's teachers instead. That origin ties India's Teachers' Day to a particular person rather than to a statute. For contrast: China's was fixed on 10 September only in 1985, placed in the opening days of the school year, tied to the rhythm of the term; and Japan has no Teachers' Day at all — what the state marks is education."
+    },
+    {
+      "question_id": "q-20260911-national-day-watch",
+      "date": "2026-09-11",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": "id",
+      "target_locale": "pt-BR",
+      "text": "On your national day, do you go and watch the ceremony or parade?",
+      "options": [
+        {
+          "id": "inperson",
+          "emoji": "🎏",
+          "label": "Yes, in person"
+        },
+        {
+          "id": "tv",
+          "emoji": "📺",
+          "label": "Watch it at home"
+        },
+        {
+          "id": "rest",
+          "emoji": "🛌",
+          "label": "Just a day off"
+        },
+        {
+          "id": "work",
+          "emoji": "🏢",
+          "label": "I work"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260911-panjat-pinang",
+      "date": "2026-09-11",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community turns a greased pole into a contest on independence day, climbing it for the prizes hung at the top?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "the United States"
+        }
+      ],
+      "answer": "id",
+      "explain": "Indonesia. It is panjat pinang, one of the traditional contests held around Independence Day on 17 August. The point is not who climbs fastest but that nobody can climb it alone — the entrants have to build a human tower and stand on each other's shoulders, so the prize usually goes to whichever team cooperates best. The same day brings cracker-eating races, tug-of-war and much else, all organised by the neighbourhood associations themselves rather than arranged from the centre."
+    },
+    {
+      "question_id": "q-20260912-graduation-hat",
+      "date": "2026-09-12",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRFP513XZ9B02BT8XCZ",
+      "topic_slug": "graduation-season",
+      "asker_locale": "zh-CN",
+      "target_locale": "en",
+      "text": "At your graduation, what is the one thing everyone has to do?",
+      "options": [
+        {
+          "id": "cap",
+          "emoji": "🎓",
+          "label": "Throw the caps"
+        },
+        {
+          "id": "song",
+          "emoji": "🎵",
+          "label": "Sing the farewell song"
+        },
+        {
+          "id": "flowers",
+          "emoji": "💐",
+          "label": "Give flowers"
+        },
+        {
+          "id": "photo",
+          "emoji": "📸",
+          "label": "Take the class photo"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260912-school-year-two",
+      "date": "2026-09-12",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: whose school year straddles two calendar years — opening in February, closing in December, with a mid-year break cutting it in half?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "answer": "pt-BR",
+      "explain": "Brazil. The school year opens in February and closes in December, with a mid-year break in July cutting it in half. That differs from every other starting point here: Japan's entrance ceremony falls in early April during the cherry blossom; Indonesia mostly starts in mid-July, with the orientation days before it governed by written rules forbidding hazing of any kind; China has a nationally broadcast first lesson on 1 September; and the United States has no single national day at all — the start date is set by each school district, and two neighbouring districts in one state can differ by a fortnight."
+    },
+    {
+      "question_id": "q-20260913-sixteen",
+      "date": "2026-09-13",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR5H0VCT4WAPQM4SZXW",
+      "topic_slug": "coming-of-age",
+      "asker_locale": "en",
+      "target_locale": "zh-TW",
+      "text": "Is there a rite where you live that says someone has grown up? At what age?",
+      "options": [
+        {
+          "id": "teen",
+          "emoji": "🎂",
+          "label": "Fifteen or sixteen"
+        },
+        {
+          "id": "eighteen",
+          "emoji": "🗳️",
+          "label": "Eighteen"
+        },
+        {
+          "id": "twenty",
+          "emoji": "🍶",
+          "label": "Twenty"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "No such rite"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260913-tainan-sixteen",
+      "date": "2026-09-13",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR5H0VCT4WAPQM4SZXW",
+      "topic_slug": "coming-of-age",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: whose coming-of-age rite is held on the day of the lovers' festival, and involves passing beneath a paper pavilion on the offering table?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. Qixi carries a second identity there: the birthday of the Seven Mothers, held to be the guardian deity of children. The coming-of-sixteen rite at the Kailong Temple in Tainan takes place on this very day, the sixteen-year-old passing beneath the offering table's paper pavilion to mark adulthood. Two things share one date — a courtship evening at one end, a family walking its child through a rite of majority at the other, with nothing to do with each other. For contrast: Japan's coming-of-age ceremony is scaled by each municipality and usually held on the January holiday; in Brazil voting is optional from sixteen and compulsory only from eighteen."
+    },
+    {
+      "question_id": "q-20260914-newyear-food",
+      "date": "2026-09-14",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": "hi",
+      "target_locale": "ja",
+      "text": "At New Year, what is the one thing you always eat?",
+      "options": [
+        {
+          "id": "noodles",
+          "emoji": "🍜",
+          "label": "Noodles"
+        },
+        {
+          "id": "dumpling",
+          "emoji": "🥟",
+          "label": "Dumplings or something stuffed"
+        },
+        {
+          "id": "sweet",
+          "emoji": "🍡",
+          "label": "Something sweet"
+        },
+        {
+          "id": "other",
+          "emoji": "🍽️",
+          "label": "Something else"
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "question_id": "q-20260914-ninth-day",
+      "date": "2026-09-14",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which community treats the fifteenth night after Lunar New Year as the line where the year is properly over, with work and school resuming only after it?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "the United States"
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": "Taiwan. The lantern night closes the whole stretch of the lunar new year: once the fifteenth of the first month has passed, the year is properly over, work resumes and school starts. It is not a day off, yet it is the evening on which the whole island lights up at once — beyond carrying lanterns, guessing lantern riddles and eating the round dumplings, the national lantern festival is hosted by a different county or city each year, so where it is this year is a question to ask afresh every time. The Act on Commemorative Days and Holidays lists it too: \"Lantern Festival: the fifteenth of the first lunar month.\""
     }
   ]
 }
