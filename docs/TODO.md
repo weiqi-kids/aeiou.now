@@ -27,9 +27,15 @@
     [ "$n" != "0" ] && [ "$n" != "?" ] && echo "$r : $n"; done
   ```
   發現 aeiou-pages-* 以外的 repo 掛了 deploy key,那才是要查的事。
-- [ ] **組織未強制兩階段驗證**(`two_factor_requirement_enabled=false`)。這與上一條無關,
-  但爆炸半徑比它大得多。查:`gh api /orgs/weiqi-kids --jq .two_factor_requirement_enabled`。
-  要開之前得先確認組織成員(含機器帳號)都已設定 2FA,否則會被踢出組織——**動工前先問用戶**。
+- [ ] **組織未強制兩階段驗證** —— 2026-08-20 已把事實查齊,只差你決定:
+      - 成員只有 1 位(`LightChang`),**已啟用 2FA**,不受影響。
+      - 但**外部協作者有 2 位且都沒啟用 2FA**:`a23222229-dev`、`vegeta1260-ai`。
+        開啟強制後這兩個帳號會**失去存取權**,直到他們自己開 2FA。
+      - 所以這不是「安全起見順手開」,是會切掉別人存取的動作,我不自行執行。
+      - 要開之前的順序:請這兩位先開 2FA → 複查 → 再開組織開關。
+      查法:`gh api '/orgs/weiqi-kids/outside_collaborators?filter=2fa_disabled' --jq '.[].login'`
+        (空 = 可以安全開啟);開關本身 `gh api /orgs/weiqi-kids --jq .two_factor_requirement_enabled`。
+      順帶查過 deploy key 審計:掛 key 的只有 7 個 `aeiou-pages-*`,各 1 把,沒有意外的 repo。
 
 ## 新增 Topic(2026-08-20 起 cover 已自動化)
 
@@ -42,23 +48,24 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       而且每一國都能找到該國官方網域的來源(R6)。
       反例:購物節(雙十一/Black Friday/Harbolnas)搜尋量高但沒有政府公告,R6 過不了,不要做。
 
-## 這一輪留下的兩個尾巴(2026-08-20)
+## 這一輪的收尾(2026-08-20)
 
-- [ ] **HotScore 只做了「收資料」那一半,還沒有算分數的 job**。
-      `scripts/gsc-topic-metrics.mjs` 每天累積 `topic_search_metrics`(cron 已排、已跑成功),
-      但**沒有任何東西把它變成 `topic_scores`**——所以全站(含三個新 Topic)的熱度級距
-      仍是最低階,排行榜六個時窗也還是 thin。
-      不要急著寫那支:可以驅動的判準寫在 `gsc-topic-metrics.mjs` 檔頭
-      (單 Topic 中位曝光 ≥30 + `site/src/lib/heat.mjs` 的 `HEAT_TIERS` 依真實分佈重算)。
-      現況查法就是跑那支腳本,它每次都會印「就緒度」那一行。
-- [ ] **印尼 SNPMB 官網的 TLS 憑證過期**:`snpmb.bppp.kemdikbud.go.id` 回
-      `certificate has expired`(2026-08-20 實測,不是本機網路問題),
-      所以 `exam-season` 的 ID 來源退而用 `portalbpsdm.jambiprov.go.id`
-      (`.go.id` 省級政府、明載「Berdasarkan jadwal resmi dari SNPMB」)。
-      憑證修好後可換回官方站。查:`curl -sI https://snpmb.bppp.kemdikbud.go.id/`。
-- [ ] **`/questions/` 進索引了沒,要過幾天才看得出來**。2026-08-20 修掉
-      「description 等於 title」,那是全站 36 頁抽驗中唯一沒進索引的一頁。
-      複驗:`node scripts/seo-health.mjs` 的 ② 索引層(URL Inspection 那段)。
+- [x] **HotScore 兩半都接上了**。`compute-topic-scores.mjs` 七項全實作,串進
+      `hourly-export.sh`(不 fail-closed:算不出分數只是熱度不新鮮,不值得停整條管線)。
+      結果:排行榜六窗從 thin 恢復索引(可索引頁 39→45)、首頁五個級距全部出現。
+      現況查法:`node scripts/compute-topic-scores.mjs --dry-run`(看分佈)、
+      `--explain <slug>`(看單一 Topic 的分項)。
+- [x] **`/questions/` 的內部連結補上了**(1/53 → 53/53,頁尾)。
+      根因是內鏈幾乎為零,不是 description(那個也修了,但不是全部)。
+      **是否真的進索引要等 Google 重爬**,複驗:
+      `node -e "const {inspectUrl}=await import('/root/seo-ops/lib/google.mjs');
+      console.log((await inspectUrl('/root/.config/aeiou/ga4-sa.json','sc-domain:aeiou.now',
+      'https://aeiou.now/questions/')).inspectionResult.indexStatusResult.coverageState)"`
+- [ ] **印尼 SNPMB 官網 TLS 憑證仍過期**(外部,我們改不了):
+      `snpmb.bppp.kemdikbud.go.id` 回 certificate has expired。
+      `exam-season` 的 ID 來源暫用 `portalbpsdm.jambiprov.go.id`(`.go.id` 省級政府,
+      明載「Berdasarkan jadwal resmi dari SNPMB」)。查:`curl -sI https://snpmb.bppp.kemdikbud.go.id/`,
+      修好了就把來源換回官方站。
 
 ## 搜尋數據(2026-08-20 開工)
 
