@@ -61,6 +61,31 @@ function emit(relPath, obj) {
   console.log(`write data/${relPath}`);
 }
 
+
+// ── content_updated_at:給 sitemap 的 lastmod 用 ────────────────────────────
+// 立法緣由(2026-08-20):sitemap 的 lastmod 原本取 topics.updated_at,而那個欄位只在
+// canonical_name / commonality / category / is_perennial 變動時才推新(import-topics 的
+// WHERE 子句,刻意如此,避免每小時空推)。結果是:新增 observance、改寫七語 customs、
+// 補國別缺席說明——這些**真正改變頁面內容**的動作,一律不會反映在 lastmod 上。
+// 當天實測:ramadan-and-eid 補進齋戒月之後,updated_at 仍停在當日 00:27,
+// 而 Google 對該頁的最後抓取是五天前。「狼來了」的反面同樣有害:少報等於自己拖慢重爬。
+//
+// 這裡改成由**實際輸出的內容**決定時間戳:facts + i18n 兩份合起來的 hash 沒變就沿用
+// 舊時間戳(所以 hash 沒變不寫檔的性質沒有被破壞),變了才蓋今天。
+// 時間戳本身不進 hash(否則自我參照,每次都變)。
+const topicStampPath = (topicId) => join(OUT_DIR, "topics", topicId, "facts.json");
+function contentStamp(topicId, facts, i18n) {
+  const fresh = sha256(JSON.stringify({ facts, i18n }));
+  const abs = topicStampPath(topicId);
+  if (existsSync(abs)) {
+    try {
+      const prev = JSON.parse(readFileSync(abs, "utf8"));
+      if (prev.content_hash === fresh && prev.content_updated_at) return prev.content_updated_at;
+    } catch { /* 壞檔就當成沒有,重新蓋時間戳 */ }
+  }
+  return new Date().toISOString();
+}
+
 const parseJson = (s, fallback) => {
   if (s == null) return fallback;
   try { return JSON.parse(s); } catch { return fallback; }
@@ -337,7 +362,7 @@ for (const t of topics) {
     if (!countryObservances.has(o.country_code)) countryObservances.set(o.country_code, []);
     countryObservances.get(o.country_code).push(o.observance_id);
   }
-  emit(join("topics", t.topic_id, "facts.json"), {
+  const factsOut = {
     topic_id: t.topic_id, // index 與 facts 兩處都要有 topic_id
     ...trendOutputMetadata(t),
     slug: t.slug,
@@ -373,7 +398,7 @@ for (const t of topics) {
       ...([...allSourceIds].sort().map((id) => sourceUrlById.get(id)).filter(Boolean)),
       ...regionalSourceUrls,
     ])],
-  });
+  };
 
   // i18n.json — 七語一檔(title/summary/keywords + 各地方表現 customs_text)
   const locales = {};
@@ -403,13 +428,21 @@ for (const t of topics) {
       if (row.text?.[locale]) regionalOut[row.country_code][locale] = row.text[locale];
     }
   }
-  emit(join("topics", t.topic_id, "i18n.json"), {
+  const i18nOut = {
     topic_id: t.topic_id,
     ...trendOutputMetadata(t),
     locales,
     observances: customsOut,
     regional_notes: regionalOut,
+  };
+  const contentHash = sha256(JSON.stringify({ facts: factsOut, i18n: i18nOut }));
+  emit(join("topics", t.topic_id, "facts.json"), {
+    ...factsOut,
+    // 內容真的改變的時間 —— sitemap 的 lastmod 取這個,不取 topics.updated_at。
+    content_updated_at: contentStamp(t.topic_id, factsOut, i18nOut),
+    content_hash: contentHash,
   });
+  emit(join("topics", t.topic_id, "i18n.json"), i18nOut);
 
   // highlights.json — 歷史精華。M1 骨架期尚無貼文退場流程,items 為空陣列是如實狀態。
   const items = highlightStmt.all(t.topic_id).map((h) => {
