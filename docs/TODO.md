@@ -179,7 +179,16 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
   ⚠ 版面怎麼標示屬產品決定,動工前先問用戶,並先讀產品草案本體。
 - [ ] **趨勢 Topic 的熱度與排序策略未定**:趨勢沒有文化日期,目前是直接給最高「近期」優先序,
   等同蓋過人工策展的節奏。復活時要一併決定。
+- [ ] **差異同步的實地確認**(2026-08-20 改的)。`sync-topics-to-d1.mjs` 已改成只推
+  hash 變了的列,對本機 stub 實測過(改一個 title:2,840 列 → 1 列),
+  **但 production 目前只跑過「全量」那條路徑**(state 檔第一次補逐列 hash 時本來就該全量)。
+  下次有人改 `content/topics/*.md` 之後,查一次確認差異路徑真的有走到:
+  `grep -oE '(全量|差異) upsert.*' logs/cron-15min.log | tail -3`
+  ——應該看到「差異 upsert(送 N 列,全量會是 355 / 2485)」。
 - [ ] **D1 仍留著趨勢 Topic 副本要不要清**(`sync-topics-to-d1.mjs` 照同步,不看靜態閘)。
+  **相關**:同步的 355 個 Topic 裡有 317 個是趨勢 Topic;差異同步之後日常成本接近零,
+  但每次全量推(--force 或六小時保底)仍是 2,840 列。要不要在 SQL 層就濾掉未上線的趨勢 Topic,
+  取決於 D1 上已有的貼文會不會指到它們——**動手前先查,別直接加 WHERE**。
   2026-08-19 修好 TTL 之後**會自然退場**(過期轉 archived 再隨同步下架);在那之前
   TTL 被 kill switch 一起凍結,所以不會自己消失。查退場進度:
   `sqlite3 db/aeiou.sqlite "SELECT status,COUNT(*) FROM topics WHERE access_source='trend' GROUP BY 1"`
