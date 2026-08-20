@@ -93,18 +93,49 @@ try {
 } catch (e) { console.log(`（Sitemaps 讀取失敗：${e.message}）`); }
 
 if (!skipInspect) {
-  const sample = [
-    'https://aeiou.now/', 'https://aeiou.now/topics/today/', 'https://aeiou.now/questions/',
-    'https://en.aeiou.now/', 'https://jp.aeiou.now/', 'https://br.aeiou.now/',
-  ];
+  // 逐頁驗,不抽樣 —— 抽樣只能回答「有沒有問題」,回答不了「是哪一頁」。
+  // 2026-08-20:抽樣報「1 頁不在索引」卻沒說是哪一頁;逐頁掃完才知道是 /questions/,
+  // 而它之所以沒被爬到,是因為 indexnow.mjs 的清單裡從來沒有它(當天已補)。
+  // 主站 sitemap 目前數十頁,配額(URL Inspection 每天 2000 次)綽綽有餘;
+  // 真要省,用 --sample 只驗六頁。
+  let targets = [];
+  if (args.includes('--sample')) {
+    targets = [
+      'https://aeiou.now/', 'https://aeiou.now/topics/today/', 'https://aeiou.now/questions/',
+      'https://en.aeiou.now/', 'https://jp.aeiou.now/', 'https://br.aeiou.now/',
+    ];
+  } else {
+    try {
+      const xml = await (await fetch('https://aeiou.now/sitemap.xml')).text();
+      targets = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+    } catch (e) {
+      console.log(`（sitemap 讀取失敗,退回抽樣：${e.message}）`);
+      targets = ['https://aeiou.now/', 'https://aeiou.now/questions/'];
+    }
+  }
   const tally = {};
-  await Promise.all(sample.map(async (u) => {
-    try { const r = await inspectUrl(SA, GSC_SITE, u); tally[r.coverageState || '(空)'] = (tally[r.coverageState || '(空)'] || 0) + 1; }
-    catch { tally['ERR'] = (tally['ERR'] || 0) + 1; }
+  const notIndexed = [];
+  let cur = 0;
+  await Promise.all(Array.from({ length: 6 }, async () => {
+    while (cur < targets.length) {
+      const u = targets[cur++];
+      let state;
+      try { state = (await inspectUrl(SA, GSC_SITE, u)).coverageState || '(空)'; }
+      catch (e) { state = `ERR ${e.message.slice(0, 40)}`; }
+      tally[state] = (tally[state] || 0) + 1;
+      if (state !== 'Submitted and indexed') notIndexed.push({ u, state });
+    }
   }));
-  console.log('\nURL Inspection 抽樣：', Object.entries(tally).map(([k, v]) => `${v}× ${k}`).join('　'));
-  const indexed = tally['Submitted and indexed'] || 0;
-  if (indexed < sample.length) bottlenecks.push('索引層：有頁面沒被索引');
+  console.log(`\nURL Inspection（${targets.length} 頁逐一驗）：`
+    + Object.entries(tally).map(([k, v]) => `${v}× ${k}`).join('　'));
+  if (notIndexed.length) {
+    console.log('未進索引的頁面：');
+    for (const n of notIndexed.sort((a, b) => a.u.localeCompare(b.u))) {
+      console.log(`   ${n.state.padEnd(26)} ${n.u}`);
+    }
+    console.log('   修法：確認該頁有內部連結、在 sitemap 內、且被 scripts/indexnow.mjs 提交。');
+    bottlenecks.push(`索引層：${notIndexed.length} 頁沒被索引（上面有清單）`);
+  }
 } else {
   console.log('\n（--no-inspect：略過 URL Inspection）');
 }

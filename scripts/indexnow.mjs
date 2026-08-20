@@ -106,7 +106,16 @@ async function main() {
   for (const [locale, origin] of Object.entries(ORIGINS)) {
     const urlList = slugs.map((slug) => `${origin}/topic/${slug}/`);
     // 有 Topic 變動時列表頁的內容也跟著變,一併請重爬。
-    urlList.push(`${origin}/`, `${origin}/topics/today/`);
+    // /questions/ 每天換題,而且是唯一沒有其他入口的頁面 —— 2026-08-20 用 URL Inspection
+    // 逐頁驗過:sitemap 上 36 頁只有它是「URL is unknown to Google」,其餘 35 頁都已索引。
+    // 它一直沒被提交,是因為這份清單原本只推 Topic 頁與 today 列表。
+    urlList.push(
+      `${origin}/`,
+      `${origin}/topics/today/`,
+      `${origin}/topics/nearby/`,
+      `${origin}/topics/events/`,
+      `${origin}/questions/`,
+    );
     await submit(origin, urlList);
   }
 }
