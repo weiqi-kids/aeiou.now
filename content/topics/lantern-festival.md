@@ -45,7 +45,7 @@
 - source: https://www.ihchina.cn/project_details/15014.html
 
 ## observance ID cap-go-meh
-- local_name: Cap Go Meh（山口洋）
+- local_name: Cap Go Meh
 - date_rule: 農曆一月十五日（Imlek 起算的第十五夜）
 - rank: 7
 - source: https://referensi.data.kemendikdasmen.go.id/budayakita/wbtb/objek/AA001528

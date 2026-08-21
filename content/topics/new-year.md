@@ -45,7 +45,7 @@
 - source: https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026
 
 ## observance IN ugadi
-- local_name: Ugadi / Gudi Padwa（地方新年）
+- local_name: Ugadi / Gudi Padwa
 - date_rule: 印度陰陽曆 Chaitra 月白分初一；各邦名稱與日期不同
 - rank: 7
 - source: https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1711143

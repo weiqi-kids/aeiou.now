@@ -41,7 +41,7 @@
 - source: https://www.ihchina.cn/project_details/20209.html
 
 ## observance ID peh-cun
-- local_name: Peh Cun（Petjoen，丹格朗）
+- local_name: Peh Cun (Petjoen)
 - date_rule: 農曆五月初五（Go Gwe Ce Go）
 - rank: 6
 - source: https://www.tangerangkota.go.id/berita/detail/66084/semarak-festival-budaya-petjoen-kota-tangerang-tradisi-khas-cina-benteng-mandikan-perahu-leluhur

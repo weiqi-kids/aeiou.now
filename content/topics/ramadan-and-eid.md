@@ -33,7 +33,7 @@
 - source: https://www.wda.gov.tw/News_Content.aspx?n=31&s=3599
 
 ## observance US eid-al-fitr-school-holiday
-- local_name: Eid al-Fitr（紐約市公立學校假日）
+- local_name: Eid al-Fitr
 - date_rule: 伊斯蘭曆 Shawwal 月初一；紐約市公立學校行事曆列為停課日
 - rank: 5
 - source: https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf

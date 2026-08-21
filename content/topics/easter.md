@@ -31,7 +31,7 @@
 - source: https://www.usa.gov/holidays
 
 ## observance ID kenaikan
-- local_name: Kenaikan Yesus Kristus（耶穌升天）
+- local_name: Kenaikan Yesus Kristus
 - date_rule: 復活節後第四十日；2026 年為 5 月 14 日，列為國定假日
 - rank: 5
 - source: https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026

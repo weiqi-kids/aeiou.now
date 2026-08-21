@@ -1,0 +1,50 @@
+{
+  "note": "Ask the World（草案 §45）的冷啟動題。人工編輯的唯一入口；一題一個物件，原文一律 zh-TW，其餘六語由 15 分 cron 的 translate-posts.mjs 翻。上線方式：node scripts/seed-ask-the-world.mjs（冪等，裸執行即正確）。",
+  "rules": [
+    "topic 用 slug；target_country 用 ISO 3166-1 alpha-2 大寫兩碼，且必須是該 Topic 涵蓋的國家（腳本會擋）。",
+    "問題要問得出當地人才知道的事——制度、實務、感受。不要問頁面上已經寫著答案的事實（幾號、放不放假），那種問題當地人不會想回。",
+    "討論室的 feed 只回近 8 小時的貼文（契約 §1），所以這些題會在 8 小時後從討論室淡出。要讓它們持續在線，重跑腳本即可（已淡出的會補一則新的）。"
+  ],
+  "questions": [
+    {
+      "topic": "ramadan-and-eid",
+      "target_country": "ID",
+      "content": "印尼的開齋節連假是三個部會前一年就用聯合決議排好的，但齋戒月的起始日要等前一晚的 sidang isbat 才公告。實務上公司跟學校怎麼處理這個落差？是先照曆算推估把班表排掉，還是真的等到當晚才確定？"
+    },
+    {
+      "topic": "ramadan-and-eid",
+      "target_country": "TW",
+      "content": "台灣不把開齋節列為法定假日，勞動部的做法是「籲請」雇主讓移工休假去參加集體禮拜。在台灣工作的穆斯林朋友，實際上請得到嗎？是看雇主，還是看產業？"
+    },
+    {
+      "topic": "teachers-day",
+      "target_country": "JP",
+      "content": "日本沒有教師節。那在日本，對老師的感謝是在什麼時候、用什麼形式表達的？是畢業典禮、學期末，還是根本不是一件會被特別標出來的事？"
+    },
+    {
+      "topic": "teachers-day",
+      "target_country": "IN",
+      "content": "印度的教師節是拉達克里希南的生日，據說是他自己建議把慶生改成紀念全國教師。學校那天由高年級學生代課的做法，現在還普遍嗎？被代課的老師那天在做什麼？"
+    },
+    {
+      "topic": "mid-autumn-and-moon-viewing",
+      "target_country": "JP",
+      "content": "日本的月見除了中秋名月，還有十三夜，而且有「片見月」不吉利的說法。現在還有人會特地把兩次都看完嗎？還是十三夜已經變成只有和菓子店在提的事？"
+    },
+    {
+      "topic": "ghosts-ancestors-and-remembrance",
+      "target_country": "BR",
+      "content": "巴西的 Finados（11 月 2 日）是國定假日，掃墓的形式跟東亞的中元、お盆很不一樣。那一天對現在的巴西人來說，比較接近莊重的祭祀，還是家族聚會？"
+    },
+    {
+      "topic": "labour-day",
+      "target_country": "US",
+      "content": "全世界大多把勞動節放在五月一日，美國卻在九月的第一個星期一，而五月一日在美國反而另有名目。一般美國人知道這個分岔的來歷嗎，還是 Labor Day 就只是暑假結束的那個週末？"
+    },
+    {
+      "topic": "exam-season",
+      "target_country": "IN",
+      "content": "印度的 CBSE 大考不是壓縮成一兩天，而是逐科分散在將近兩個月。考生跟家長怎麼撐過那麼長的戰線？中間那些空檔是拿來喘息，還是變成另一種折磨？"
+    }
+  ]
+}

@@ -19,7 +19,7 @@
 - source: https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays
 
 ## observance US eid-al-adha
-- local_name: Eid al-Adha（紐約市公立學校假日）
+- local_name: Eid al-Adha
 - date_rule: 伊斯蘭曆 Dhul Hijjah 月初十；紐約市公立學校行事曆列為停課日
 - rank: 3
 - source: https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf

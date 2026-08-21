@@ -7,7 +7,7 @@
 - commonality: comparing the five-day Diwali sequence and the very different civic status the festival holds where it is a national holiday and where it is a city school closure
 
 ## observance IN diwali
-- local_name: Diwali / Deepavali（Lakshmi–Ganesha Puja 主日）
+- local_name: Diwali / Deepavali
 - date_rule: 印度陰陽曆 Kartika 月新月當日；五天節期的第三天
 - rank: 1
 - source: https://utsav.gov.in/major-festival/diwali
@@ -15,25 +15,25 @@
 - source: https://www.pib.gov.in/FeaturesDeatils.aspx?NoteId=156406&ModuleId=2&reg=3&lang=2
 
 ## observance IN dhanteras
-- local_name: Dhanteras（節期第一天）
+- local_name: Dhanteras
 - date_rule: 主日前兩天；印度陰陽曆日次可能壓縮，實際日期依各地曆書
 - rank: 2
 - source: https://utsav.gov.in/major-festival/diwali
 
 ## observance IN bhai-dooj
-- local_name: Bhai Dooj（節期第五天）
+- local_name: Bhai Dooj
 - date_rule: 主日後兩天；印度陰陽曆日次可能壓縮，實際日期依各地曆書
 - rank: 3
 - source: https://utsav.gov.in/major-festival/diwali
 
 ## observance US diwali-school-holiday
-- local_name: Diwali（紐約市公立學校假日）
+- local_name: Diwali
 - date_rule: 依紐約州法，紐約市公立學校在排燈節當天停課
 - rank: 4
 - source: https://council.nyc.gov/press/2023/11/15/2502/
 
 ## observance IN govardhan-puja
-- local_name: Govardhan Puja（節期第四天）
+- local_name: Govardhan Puja
 - date_rule: 主日次日；印度陰陽曆日次可能壓縮，實際日期依各地曆書
 - rank: 5
 - source: https://utsav.gov.in/major-festival/diwali

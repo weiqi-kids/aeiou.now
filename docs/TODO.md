@@ -101,8 +101,42 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
 - [x] 前端:發文框內加國家選單(**不另開 `#ask` 區塊**,版面硬性規定沒有它);
       名單 = 該 Topic 實際涵蓋的國家;貼文列表上標「問{country}」。
 - [x] 測試:`tests/api/worker.test.mjs` 的「Ask the World:target_country」一組(7 個)。
-- [ ] 冷啟動:現在題庫每日一問是有的,但跨國提問沒有任何種子內容。要不要人工放幾則、
-      放在哪些 Topic,**屬產品決定,動工前問用戶**。
+- [x] **冷啟動第一批題已上線**(2026-08-21 用戶核准)。題庫 `content/ask-the-world.json`
+      (人工編輯的唯一入口),上線 `node scripts/seed-ask-the-world.mjs`(冪等,裸執行即正確)。
+      走 D1 直寫而不是打 `/v1/posts`,理由有兩個且都實測過:① Worker 的 `country_code` 取自
+      `request.cf`,主機在日本,經 API 發文會把站方的題標成「來自日本」;② 入口限流 3 篇/5 分鐘
+      會擋住整批(那道限流是對的,不該為種子資料放寬)。`translation_status='pending'`,
+      走與真人貼文同一條翻譯路,不特例。
+- [ ] 🔴 **種子題會在 8 小時後從討論室淡出** —— 契約 §1 的 feed 只回 `created_at >= now-8h`。
+      重跑腳本會補一則新的(冪等判準就是「這一題現在有沒有活著的副本」),但**要有人或 cron 去跑**。
+      三條路,都要用戶決定:
+        (a) 把 `seed-ask-the-world.mjs` 掛上 cron(改 cron 檔屬 C 級,先問);
+        (b) 改 feed 的時間窗(契約變更);
+        (c) 就讓它淡出,等真人貼文接手。
+      查現在還有幾題在線:`node scripts/seed-ask-the-world.mjs --dry-run`(「已在線 N 題」那一行)。
+
+## 「快速回答」改表 + 兩個單語外洩(2026-08-21)
+
+用戶指正:`#answers` 的兩個 `<dd>` 用「；」把六七個國家串成一行純文字,
+而且沒有 observance 的國家(日本)在第二格尾巴變成沒有下文的孤兒詞。
+
+- [x] 兩張卡改成一國一列的 `<table>`:`caption` =「各地怎麼過?」、欄位 = 國家 | 什麼時候?,
+      國名連到 🌎 對應段落的錨點;窄螢幕堆疊(`data-label`),≥768px 才是真表格。
+      同一國有兩筆(womens-day 的印度、齋戒月的印尼)在國名後接當地叫法區分。
+- [x] `date_rule` **從畫面上整個移除**(表格與 🌎 的 `.country-rule` 都拿掉)。
+      理由:它在資料裡是單一字串、**83 筆 100% 中文**,沒有 per-locale 版本,
+      於是 en/ja/hi/id/pt-BR 五個站長期在畫面上漏中文
+      (`5 月第一個完整星期，地方學區日期可能不同` 出現在 en.aeiou.now 的 🌎)。
+- [x] `local_name` 裡的中文註解清掉 13 筆(`Diwali（紐約市公立學校假日）`→`Diwali` 等)。
+      每一條註解的內容在**逐國散文**裡都有(散文是 per-locale 的,會翻譯),所以沒有掉資訊,
+      掉的是重複。`content-depth-baseline.json` 因此下修並重鎖(那是去重,不是退步)。
+      查法:`node -e` 掃 `data/topics/*/facts.json`,非 CJK 國家的 `local_name` 不得含漢字。
+- [ ] 🔴 **`date_rule` 七語化**,做完才能把「日期怎麼定」那一欄加回表格 ——
+      那一欄正是這一輪 SEO 重新對準要打的「制度依據」,現在六個外語站等於少了它。
+      要動的:`content/topics/*.md` 加 `### date_rule <CC> <key>`(與 `### customs` 同層)、
+      `topic_observance_i18n` 收第二種文字、`import-topics.mjs` / `export-data.mjs` 跟著改、
+      再把現有 83 筆用 `claude -p`(pin sonnet)補六語 = 498 條。
+      **這會動到資料模型(`docs/02-data-model.md`),動工前問用戶。**
 
 ## 搜尋數據(2026-08-20 開工)
 

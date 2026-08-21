@@ -44,7 +44,7 @@
 - source: https://www.gov.cn/zhengce/content/202411/content_6986380.htm
 
 ## observance IN fathers-day
-- local_name: Father's Day（非公定假日）
+- local_name: Father's Day
 - date_rule: 民間跟隨六月第三個星期日；未列入中央或邦的假日表
 - rank: 7
 - source: https://www.india.gov.in/calendar

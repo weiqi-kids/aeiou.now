@@ -277,6 +277,55 @@ const differenceAnswer = [
     })
     .filter(Boolean),
 ].join(' ') || (worldCountries.length === 0 ? whatAnswer : copy.noDate);
+// 「快速回答」的列(2026-08-21 用戶指正後改做)。
+// 原本兩張卡各自把六、七個國家用「；」串成一段純文字:
+//   「台灣 · 2026年9月28日；印度 · 2026年9月5日；中國 · 2026年9月10日；…」
+//   「台灣 · 教師節（孔子誕辰紀念日）；…；美國 · Teacher Appreciation Week · 5 月第一個
+//     完整星期，地方學區日期可能不同；日本」
+// 三個問題:① 分隔號不是資訊架構,一列一國的資料被壓成一行,掃不了也對不起來;
+// ② 同一批國名在兩張卡各印一次;③ 沒有 observance 的國家(日本)在第二張卡尾巴變成
+// 一個沒有下文的孤兒詞。這是同一份資料的四個欄位,本來就該是表。
+// 欄位全部沿用 🌎 已經在用的那幾個,沒有新語意;國名連到 🌎 對應段落的錨點。
+//
+// ⚠ 為什麼沒有「日期怎麼定」那一欄:`date_rule` 在資料裡是**單一字串、100% 中文**
+//   (2026-08-21 實測 83 筆全部含 CJK),沒有 per-locale 版本。原本它印在 🌎 的
+//   .country-rule,於是 en/ja/hi/id/pt-BR 五個站長期在畫面上漏中文
+//   (「5 月第一個完整星期，地方學區日期可能不同」出現在 en.aeiou.now)。
+//   那條 .country-rule 已於同日移除。要把這一欄做出來,得先讓 date_rule 七語化
+//   (md 的 `### date_rule <CC> <key>` + topic_observance_i18n + import/export),
+//   見 docs/TODO.md。在那之前寧可沒有這一欄,也不上一個只有一種語言看得懂的欄位。
+const answerRows = homeFirst([
+  ...observances.map((observance) => ({
+    country_code: observance.country_code,
+    // 同一國兩筆(womens-day 的印度有 2/13 與 3/8;齋戒月的印尼有兩筆)在表格裡會變成
+    // 兩個一模一樣的「印度」列,只有日期不同 —— 讀者對不出哪一列是哪個節。
+    // 用與 🌎 的 h3 同一套辦法:把當地叫法接在國名後面,併進同一個文字節點
+    // (分開成兩個節點的話,長的當地叫法會與 🌎 的 .local-name 撞上 D3 重複段落守門)。
+    label: needsLocalName(observance)
+      ? `${countryName(observance.country_code)} · ${observance.local_name}`
+      : countryName(observance.country_code),
+    key: observance.observance_id,
+    anchor: observanceAnchor(observance),
+    when: observance.next_occurrence
+      ? `${calendarDate(observance.next_occurrence.starts_on)}`
+        + (observance.next_occurrence.ends_on ? ` – ${calendarDate(observance.next_occurrence.ends_on)}` : '')
+      : t('topic.date_unavailable'),
+    note: observance.next_occurrence?.date_status === 'estimated'
+      ? t('topic.date_estimated')
+      : (observance.next_occurrence?.date_status === 'local-variant' ? t('topic.date_local_variant') : null),
+  })),
+  // 「這裡沒有這個節日」是查證過的事實,不是缺資料 —— 與 🌎 底下同一套說法,
+  // 不讓它在表格裡變成空格(那會讀成「還沒查」)。
+  ...regionalOnlyNotes.map((note) => ({
+    country_code: note.country_code,
+    label: countryName(note.country_code),
+    key: `regional-${note.country_code}`,
+    anchor: regionalAnchor(note),
+    when: note.kind === 'absence' ? t('topic.no_local_observance') : t('topic.date_unavailable'),
+    note: null,
+  })),
+]);
+
 const related = relatedTopics(topicId, 4);
 const eventSchema = events.map((event) => ({
   '@type': 'Event',
@@ -393,16 +442,37 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
           四個問答仍**完整保留在下方的 FAQPage JSON-LD**:它們的答案文字都在這一頁上看得到
           (什麼→頁首 lede;不同→🌎 各國段落),符合結構化資料必須對應可見內容的要求。
           機械層防線=site/scripts/check-rendered-depth.mjs 的 D3(同頁長段落重複上限 1)。 */}
-      <dl class="answer-grid">
-        <div class="answer-card">
-          <dt>{copy.when}</dt>
-          <dd>{dateAnswer.length ? dateAnswer.join(copy.itemSep) : copy.noDate}</dd>
-        </div>
-        <div class="answer-card">
-          <dt>{copy.where}</dt>
-          <dd>{whereAnswer}</dd>
-        </div>
-      </dl>
+      {answerRows.length === 0 ? (
+        <p class="answer-empty">{copy.noDate}</p>
+      ) : (
+        <table class="answer-table">
+          {/* 兩個問句都留在畫面上:caption =「各地怎麼過?」,日期欄的表頭 =「什麼時候?」
+              —— FAQPage 的問題字串必須對得上頁面看得到的東西。 */}
+          <caption>{copy.where}</caption>
+          <thead>
+            <tr>
+              <th scope="col">{t('topic.col_country')}</th>
+              <th scope="col">{copy.when}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {answerRows.map((row) => (
+              <tr>
+                <th scope="row" class="answer-country">
+                  <a href={`#${row.anchor}`}>
+                    <span class="answer-flag" aria-hidden="true">{countryFlag(row.country_code)}</span>
+                    {row.label}
+                  </a>
+                </th>
+                <td class="answer-when" data-label={copy.when}>
+                  {row.when}
+                  {row.note && <span class="answer-note">{row.note}</span>}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </section>
 
     <!-- 三區塊:左上 📍 你附近、左下 🎉 相關活動、右 💬 大家正在聊(桌機佔滿整欄高)。
@@ -530,7 +600,6 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
                 {c.next_occurrence?.date_status === 'local-variant' && (
                   <span class="country-date-status">{t('topic.date_local_variant')}</span>
                 )}
-                {c.date_rule && <span class="country-rule">{c.date_rule}</span>}
               </div>
               <div class="country-body">
                 <h3 class="country-name">
@@ -559,7 +628,6 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
                     (同 2026-08-20 closed/loading 的教訓:狀態名稱要說事實)。 */}
                 <span class="country-date">{note.kind === 'absence' ? t('topic.no_local_observance') : t('topic.date_unavailable')}</span>
                 <span class="country-when-label">{t('topic.local_date')}</span>
-                <span class="country-rule">{note.kind === 'absence' ? t('topic.no_local_observance_rule') : t('topic.perennial')}</span>
               </div>
               <div class="country-body">
                 <h3 class="country-name">
@@ -745,30 +813,89 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     margin-block-end: clamp(2.5rem, 6vw, 4rem);
     scroll-margin-block-start: 1rem;
   }
-  .answer-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  /* 「快速回答」= 一國一列的表。窄螢幕先堆疊(表頭以 data-label 顯示在每格前面),
+     ≥768px 才變成真的表格。不橫捲——四欄在手機上橫捲等於沒人看得到後兩欄。 */
+  .answer-table {
+    width: 100%;
+    border-collapse: collapse;
     margin: 0;
-  }
-  .answer-card {
-    margin: 0;
-    padding: 1rem 1.25rem;
-    border-inline-start: 0.25rem solid var(--color-primary);
     background: var(--color-white);
     box-shadow: var(--shadow-card);
   }
-  .answer-card dt {
-    margin-block-end: 0.4rem;
+  .answer-table caption {
+    text-align: start;
+    margin-block-end: 0.6rem;
     font-family: var(--font-display);
     font-size: var(--text-lg);
     font-weight: 700;
     color: var(--color-primary);
   }
-  .answer-card dd {
+  .answer-table th,
+  .answer-table td {
+    text-align: start;
+    vertical-align: baseline;
+    line-height: 1.55;
+  }
+  .answer-table thead th {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-ink-muted);
+  }
+  .answer-country a {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+  .answer-flag {
+    margin-inline-end: 0.35rem;
+  }
+  .answer-when {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+  .answer-note {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: 400;
+    color: var(--color-ink-muted);
+  }
+  .answer-empty {
     margin: 0;
     color: var(--color-ink-soft);
-    line-height: 1.55;
+  }
+  /* ── 窄螢幕:堆疊 ── */
+  .answer-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .answer-table tr {
+    display: block;
+    padding: 0.9rem 1.1rem;
+    border-block-end: 1px solid var(--color-line);
+  }
+  .answer-table tr:last-child {
+    border-block-end: 0;
+  }
+  .answer-table th,
+  .answer-table td {
+    display: block;
+    padding: 0;
+  }
+  .answer-country {
+    margin-block-end: 0.35rem;
+  }
+  .answer-table td[data-label]::before {
+    content: attr(data-label) '　';
+    color: var(--color-ink-muted);
+    font-size: var(--text-sm);
+    font-weight: 400;
+  }
+  /* 沒有內容的格子在堆疊時整格收掉,不留「當地叫法　—」這種空行 */
+  .answer-table td:empty {
+    display: none;
   }
   .source-note,
   .updated-note {
@@ -910,8 +1037,37 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
   }
 
   @media (min-width: 768px) {
-    .answer-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .answer-table thead {
+      position: static;
+      width: auto;
+      height: auto;
+      overflow: visible;
+      clip-path: none;
+    }
+    .answer-table tr {
+      display: table-row;
+      padding: 0;
+    }
+    .answer-table th,
+    .answer-table td {
+      display: table-cell;
+      padding: 0.7rem 0.9rem;
+      border-block-end: 1px solid var(--color-line);
+    }
+    .answer-table thead th {
+      border-block-end: 2px solid var(--color-primary-line);
+      white-space: nowrap;
+    }
+    .answer-table tbody tr:last-child th,
+    .answer-table tbody tr:last-child td {
+      border-block-end: 0;
+    }
+    .answer-country {
+      white-space: nowrap;
+      margin-block-end: 0;
+    }
+    .answer-table td[data-label]::before {
+      content: none;
     }
   }
   .country-list {
@@ -955,11 +1111,6 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     color: var(--color-ink-muted);
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    flex-basis: 100%;
-  }
-  .country-rule {
-    font-size: var(--text-xs);
-    color: var(--color-ink-soft);
     flex-basis: 100%;
   }
   .country-date-status {

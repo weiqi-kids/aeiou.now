@@ -1,6 +1,9 @@
 import { LOCALE } from './config.mjs';
 
 export const SITE_NAME = 'aeiou.now';
+// Non-Topic pages still need a representative large image for social previews
+// and Discover. Topic pages should pass their own cover instead.
+export const SITE_OVERVIEW_IMAGE_PATH = '/covers/about.png';
 
 // 七站正式網域(2026-08-15 切換;映射表=CLAUDE.md 介面常數,ja→jp、zh-CN→cn、pt-BR→br 不同名)。
 // hreflang/canonical 的跨站網址一律從這裡拼,不要讓每個頁面自行組。
