@@ -142,7 +142,11 @@ World
 1. 禁 px 字級——一律 `var(--text-*)` 階梯,最小 18px,內文 ≥ `--text-base`
 2. 顏色只准出現在 `site/src/styles/variables.css`;**元件內連 `oklch()` 字面值也禁**,一律 `var(--color-*)`
 3. 禁 `!important`
-4. 禁外部 CDN(fonts.googleapis / gstatic / cdnjs / unpkg / jsdelivr)。**唯一例外:`googletagmanager.com` 的 GA4**
+4. 禁外部 CDN(fonts.googleapis / gstatic / cdnjs / unpkg / jsdelivr)。**兩個例外**:
+   `googletagmanager.com` 的 GA4;`challenges.cloudflare.com` 的 Turnstile(2026-08-21 用戶核准)。
+   Turnstile 沒有自託管的做法 —— 挑戰必須由那支 script 執行。所以刻意收窄:
+   **只在 Worker 的 `/v1/me` 回報 `turnstile.required=true` 時才插入**(關著時頁面上完全沒有它)、
+   只在討論室元件用到、不進 BaseLayout。查:`curl -s "$API/v1/me" | grep -o '"turnstile":{[^}]*}'`
 5. CSS 檔白名單:只准 `site/src/styles/{variables,global}.css`,元件樣式寫 scoped `<style>`
 6. `--text-*` token 值一律 ≥18px(`clamp()` 以最小值計)
 7. `build` 必須串 `check-design.mjs` 與 `check-content.mjs`,CI 與本地皆然
@@ -164,6 +168,7 @@ World
 | 靜態站 API 位址 | 環境變數 `PUBLIC_API_URL` |
 | GA4 量測 ID(`PUBLIC_GA4_ID`) | `G-ZMTFG68ZJ5`(七站共用一個 web stream,報表以 hostname 區分;CI 已設,手動 build 要自帶,未設不輸出 gtag) |
 | `REACTION_SET` | `["❤️","😂","😮","😢","🤔","🎉","👏"]`(**不含 👍**,用戶明示排除) |
+| Turnstile(2026-08-21) | Worker 側 `TURNSTILE_SECRET`(secret)+ `TURNSTILE_SITEKEY`(var);**兩個都設才生效**。開關由 Worker 說了算,七個站不必為了開關重建 —— 前端問 `/v1/me` 的 `turnstile`。未設 = 不驗(碼先上線、鑰匙後到);設了之後 `POST /v1/posts` 與 `/v1/comments` 要帶 `turnstile_token` |
 | reaction 可掛的對象 | `post` / `comment` / `place` / `event` |
 | 主機 SQLite | `/root/aeiou.now/db/aeiou.sqlite` |
 | API 路徑參數 | `/v1/topics/:id/...` 的 `:id` = **topic_id(ULID)**,不是 slug |
@@ -369,7 +374,17 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
 - **級距不得只靠顏色區分**,需同時有文字與長度/形狀差異。
 - 品牌配色定義在 `site/src/styles/variables.css`,**已非模板佔位色**,不要改回 `#1a4f8a`。
 - 活動時間鎖 `timeZone: 'UTC'`(否則主機與 CI 的 TZ 差異會 build 出不同字串);整日活動只印日期。
-- **貼文內容一律純文字轉義顯示**,絕不 `innerHTML`。
+- **貼文內容一律純文字轉義顯示**,絕不 `innerHTML`。2026-08-21 起前端支援 **Markdown 安全子集**
+  (契約 §1 一直這樣寫,只是沒實作),但**這條紅線沒有放寬**:`site/src/lib/markdown.mjs`
+  回傳的是 **DOM 節點**,一個字元都不經過 innerHTML/insertAdjacentHTML/outerHTML。
+  安全性是結構上的,不是黑名單:使用者寫的 `<script>` 會變成一個文字節點。唯一能產生行為的
+  `<a href>` 走白名單(只有 http/https,且掛 `ugc nofollow noopener noreferrer`)。
+  守這條的是 `node --test tests/site/markdown.test.mjs` —— 它用一個**沒有 innerHTML setter 的**
+  假 DOM 跑,實作一偷用就直接爆炸。不支援標題與圖片(圖片屬 R2 那一項,不從這裡開洞)。
+- **語系切換器在頁尾**(2026-08-21 用戶核准;我當時不建議做,理由是與「七語系是七個獨立的站、
+  讀者只看得到一種語言」有張力)。做的方式是收窄過的:不進右上角導覽、連到**同一頁**的其他
+  語系網址(不是丟回別站首頁)、不做 JS 自動轉向。要撤掉就刪 `BaseLayout.astro` 的
+  `<nav class="footer-langs">` 那一段,其餘版面不受影響。
 
 ---
 

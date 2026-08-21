@@ -129,6 +129,15 @@ M1 沒有 hot_score job,`posts.hot_score` 恆 0,**不得用來排序**。
 
 ## 2. `POST /v1/posts` —— 發文
 
+> **Bot 防護第三層(2026-08-21)**:`POST /v1/posts` 與 `POST /v1/comments` 可帶
+> `turnstile_token`。Worker 兩個環境值都設好(`TURNSTILE_SECRET` + `TURNSTILE_SITEKEY`)時
+> **必帶**,否則 403 `challenge_required`;驗不過 403 `challenge_failed`;
+> Cloudflare 的 siteverify 打不通回 **503 `challenge_unavailable`,不放行**——
+> 「驗不到就當作通過」等於在對方最想要的時刻自動關掉這一層。
+> 未設定時完全不驗(碼先上線、鑰匙後到)。開關由 `GET /v1/me` 的 `turnstile: {required, sitekey}`
+> 回報,前端據此決定要不要載入 challenges.cloudflare.com 的 script ——
+> **七個靜態站不必為了開關重建**。
+
 ### Request
 
 ```json

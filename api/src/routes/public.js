@@ -4,7 +4,7 @@
 import { REACTION_SET, LOCALES, WINDOW_HOURS, POST_MAX_CHARS, COMMENT_MAX_CHARS } from "../constants.js";
 import { json, err, readJson } from "../lib/http.js";
 import { ulid, charLen, cityCode, countryCode, getAnonId, anonCookie } from "../lib/identity.js";
-import { rateLimit, topicGate, isPostOpen, SQL_POST_OPEN } from "../lib/gates.js";
+import { rateLimit, topicGate, isPostOpen, SQL_POST_OPEN, verifyTurnstile, turnstileState } from "../lib/gates.js";
 
 // ---------- 公開端點 ----------
 
@@ -169,6 +169,10 @@ export async function handleCreatePost(request, env, ctx, cors) {
   if (limited) return limited;
   const body = await readJson(request);
   if (!body) return err(400, "invalid_body", "Malformed JSON body", cors);
+  // Bot 防護第三層。未設定 secret 時直接回 null(見 gates.js 的說明)。
+  // 位置在限流之後、寫入之前:限流很便宜,先擋掉洪水再花一次外部往返。
+  const challenged = await verifyTurnstile(request, env, body.turnstile_token, cors);
+  if (challenged) return challenged;
   const { topic_id, content, locale } = body;
   if (typeof topic_id !== "string" || topic_id === "")
     return err(400, "invalid_body", "topic_id is required", cors);
@@ -264,6 +268,8 @@ export async function handleCreateComment(request, env, ctx, cors) {
   if (limited) return limited;
   const body = await readJson(request);
   if (!body) return err(400, "invalid_body", "Malformed JSON body", cors);
+  const challenged = await verifyTurnstile(request, env, body.turnstile_token, cors);
+  if (challenged) return challenged;
   const { post_id, content, locale } = body;
   if (typeof post_id !== "string" || post_id === "")
     return err(400, "invalid_body", "post_id is required", cors);
@@ -457,6 +463,10 @@ export async function handleMe(request, env, cors) {
       country_code: request.cf?.country ?? null,
       city_code: cityCode(request.cf),
       has_posted: hasPosted,
+      // Bot 防護的開關由 Worker 說了算,不由七個站各自 build 時決定(2026-08-21)。
+      // 前端據此決定要不要載入 challenges.cloudflare.com 的 script ——
+      // 沒開啟時那支外部 script 根本不出現。sitekey 是公開值。
+      turnstile: turnstileState(env),
     },
     200,
     cors

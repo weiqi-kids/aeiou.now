@@ -98,6 +98,7 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
 
 <script>
   import { createReactions } from '../lib/reactions.mjs';
+  import { renderMarkdown } from '../lib/markdown.mjs';
 
   // 狀態切換集中在這一支(loading / open / unavailable),免得各處各自 hidden 一半。
   function setPostsState(root, state) {
@@ -141,7 +142,12 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
     item.appendChild(el('p', 'post-meta', origin ? origin + ' · ' + when : when));
 
     const picked = pickText(post, cfg.locale);
-    item.appendChild(el('p', 'post-content', picked.text));
+    // Markdown 安全子集(契約 §1)。renderMarkdown 回的是 **DOM 節點**,一個字元都不經過
+    // innerHTML —— 使用者寫的 <script> 會變成一個文字節點,螢幕上就是那六個字。
+    // 見 src/lib/markdown.mjs 檔頭:安全性來自結構,不是黑名單。
+    const body = el('div', 'post-content');
+    renderMarkdown(picked.text).forEach((node) => body.appendChild(node));
+    item.appendChild(body);
     if (picked.pending) item.appendChild(el('p', 'post-note', cfg.i18n.translating));
 
     const stats = el('p', 'post-stats');
@@ -313,11 +319,28 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
     font-size: var(--text-xs);
     color: var(--color-ink-muted);
   }
+  /* 同 DiscussionRoom:本體是 Markdown 安全子集產生的區塊,不再是單一 <p>。 */
   .posts :global(.post-content) {
     margin: 0 0 0.35rem;
     font-size: var(--text-base);
-    white-space: pre-wrap;
     overflow-wrap: break-word;
+  }
+  .posts :global(.post-content > :first-child) { margin-block-start: 0; }
+  .posts :global(.post-content > :last-child) { margin-block-end: 0; }
+  .posts :global(.post-content p) { margin: 0 0 0.35rem; }
+  .posts :global(.post-content ul),
+  .posts :global(.post-content ol) { margin: 0 0 0.35rem; padding-inline-start: 1.4rem; }
+  .posts :global(.post-content blockquote) {
+    margin: 0 0 0.35rem;
+    padding-inline-start: 0.6rem;
+    border-inline-start: 0.1875rem solid var(--color-line-strong);
+    color: var(--color-ink-soft);
+  }
+  .posts :global(.post-content code) {
+    font-family: ui-monospace, monospace;
+    font-size: 0.95em;
+    background: var(--color-bg-light);
+    padding: 0.05em 0.35em;
   }
   .posts :global(.post-note) {
     margin: 0 0 0.35rem;

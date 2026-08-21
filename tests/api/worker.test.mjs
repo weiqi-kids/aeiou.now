@@ -457,3 +457,80 @@ describe("契約 §7.1:guess 的正解只在投過票之後才給", () => {
     assert.equal(res.status, 400, "正解不在選項裡 = 揭曉時會印出讀者沒看過的 id");
   });
 });
+
+describe("Turnstile:未設定就不驗,設定了就非過不可", () => {
+  beforeEach(() => { seedTopic(); });
+
+  test("沒設 TURNSTILE_SECRET:照舊放行(碼先上線、鑰匙後到的那段時間)", async () => {
+    const res = await call("/v1/posts", {
+      method: "POST", anonId: ANON,
+      body: { topic_id: "top_TEST", content: "hello", locale: "zh-TW" },
+    });
+    assert.equal(res.status, 201);
+  });
+
+  test("設了 secret 但沒帶 token → 403 challenge_required", async () => {
+    env = { ...env, TURNSTILE_SECRET: "s", TURNSTILE_SITEKEY: "k" };
+    const res = await call("/v1/posts", {
+      method: "POST", anonId: ANON,
+      body: { topic_id: "top_TEST", content: "hello", locale: "zh-TW" },
+    });
+    assert.equal(res.status, 403);
+    assert.equal((await res.json()).error.code, "challenge_required");
+  });
+
+  test("siteverify 說不通過 → 403,貼文不進 DB", async () => {
+    env = { ...env, TURNSTILE_SECRET: "s", TURNSTILE_SITEKEY: "k" };
+    const realFetch = globalThis.fetch;
+    globalThis.fetch = async () => new Response(JSON.stringify({ success: false }));
+    try {
+      const res = await call("/v1/posts", {
+        method: "POST", anonId: ANON,
+        body: { topic_id: "top_TEST", content: "hi", locale: "zh-TW", turnstile_token: "bad" },
+      });
+      assert.equal(res.status, 403);
+      assert.equal(raw.prepare("SELECT COUNT(*) AS n FROM posts").get().n, 0);
+    } finally {
+      globalThis.fetch = realFetch;
+    }
+  });
+
+  test("siteverify 打不通 → 503,**不放行**", async () => {
+    env = { ...env, TURNSTILE_SECRET: "s", TURNSTILE_SITEKEY: "k" };
+    const realFetch = globalThis.fetch;
+    globalThis.fetch = async () => { throw new Error("network down"); };
+    try {
+      const res = await call("/v1/posts", {
+        method: "POST", anonId: ANON,
+        body: { topic_id: "top_TEST", content: "hi", locale: "zh-TW", turnstile_token: "t" },
+      });
+      assert.equal(res.status, 503, "驗不到就當作通過 = 在對方最想要的時刻自動關掉這一層");
+      assert.equal(raw.prepare("SELECT COUNT(*) AS n FROM posts").get().n, 0);
+    } finally {
+      globalThis.fetch = realFetch;
+    }
+  });
+
+  test("通過 → 照常寫入", async () => {
+    env = { ...env, TURNSTILE_SECRET: "s", TURNSTILE_SITEKEY: "k" };
+    const realFetch = globalThis.fetch;
+    globalThis.fetch = async () => new Response(JSON.stringify({ success: true }));
+    try {
+      const res = await call("/v1/posts", {
+        method: "POST", anonId: ANON,
+        body: { topic_id: "top_TEST", content: "hi", locale: "zh-TW", turnstile_token: "good" },
+      });
+      assert.equal(res.status, 201);
+    } finally {
+      globalThis.fetch = realFetch;
+    }
+  });
+
+  test("/v1/me 回報開關與 sitekey(前端據此決定要不要載外部 script)", async () => {
+    assert.deepEqual((await (await call("/v1/me")).json()).turnstile,
+      { required: false, sitekey: null }, "沒設定時 sitekey 不得外洩成非 null");
+    env = { ...env, TURNSTILE_SECRET: "s", TURNSTILE_SITEKEY: "0x4AAA" };
+    assert.deepEqual((await (await call("/v1/me")).json()).turnstile,
+      { required: true, sitekey: "0x4AAA" });
+  });
+});

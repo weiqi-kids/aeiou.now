@@ -96,3 +96,52 @@ export function topicGate(row, cors) {
   }
   return null;
 }
+
+// ---------- Turnstile(Bot 防護第三層,2026-08-21) ----------
+//
+// 三層防護,由外而內:① 入口限流(anon_id + IP 雙鍵) ② 價值閘門(翻譯前的 claude 判定)
+// ③ Turnstile。前兩層擋的是「發太多」與「發垃圾」,擋不掉「一個腳本規規矩矩地每五分鐘
+// 發三篇像樣的廢文」—— 那正是 Turnstile 的守備範圍。
+//
+// ── 沒設 secret 就跳過,而且是刻意的 ──────────────────────────────────────
+// `TURNSTILE_SECRET` 沒設 → 不驗、照放行,也就是這一版之前的行為。
+// 這**是** fail-open,所以要講清楚為什麼可以:
+//   · Turnstile 的 widget 只能在 Cloudflare 儀表板(或帶 Turnstile scope 的 API token)
+//     建立,主機這邊建不了 —— 碼先上線、鑰匙後到,中間那段不能讓寫入端點全部 400。
+//   · 前端也不會自己冒出一個看不見的挑戰:sitekey 由 /v1/me 回,沒設就不載入
+//     challenges.cloudflare.com 的那支 script(外部 script 只在真的要用時才出現)。
+//   · 開關一翻(wrangler secret put + vars),兩邊同一秒生效,七個站**不必重建**。
+// 要查現在是開是關:`curl -s "$API/v1/me" | grep -o '"turnstile":{[^}]*}'`。
+const TURNSTILE_VERIFY_URL = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
+
+/** 這個 Worker 現在有沒有在驗 Turnstile。sitekey 是公開值,回給前端是正常用法。 */
+export function turnstileState(env) {
+  const enabled = !!(env.TURNSTILE_SECRET && env.TURNSTILE_SITEKEY);
+  return { required: enabled, sitekey: enabled ? env.TURNSTILE_SITEKEY : null };
+}
+
+/** 沒過就回 403 Response;沒開啟或通過則回 null(與 rateLimit 同一種呼叫慣例)。 */
+export async function verifyTurnstile(request, env, token, cors) {
+  if (!env.TURNSTILE_SECRET || !env.TURNSTILE_SITEKEY) return null; // 未設定 = 不驗(見上)
+  if (typeof token !== "string" || token === "")
+    return err(403, "challenge_required", "Turnstile token missing", cors);
+
+  const form = new FormData();
+  form.append("secret", env.TURNSTILE_SECRET);
+  form.append("response", token);
+  const ip = request.headers.get("CF-Connecting-IP");
+  // remoteip 是選填但強烈建議:少了它,同一個 token 從別的網路重放就驗得過。
+  if (ip) form.append("remoteip", ip);
+
+  let ok = false;
+  try {
+    const res = await fetch(TURNSTILE_VERIFY_URL, { method: "POST", body: form });
+    const data = await res.json();
+    ok = !!(data && data.success);
+  } catch {
+    // Cloudflare 自己的驗證端點打不通時**擋下**,不放行 —— 這一層存在的意義就是擋腳本,
+    // 「驗不到就當作通過」等於在對方最想要的時刻自動關掉。真人重試一次即可。
+    return err(503, "challenge_unavailable", "Could not verify challenge, please retry", cors);
+  }
+  return ok ? null : err(403, "challenge_failed", "Turnstile verification failed", cors);
+}

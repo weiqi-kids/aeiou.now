@@ -114,6 +114,8 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
 
 <script>
   import { createReactions } from '../lib/reactions.mjs';
+  import { renderMarkdown } from '../lib/markdown.mjs';
+  import { turnstileConfig, mountTurnstile } from '../lib/turnstile.mjs';
   import { track } from '../lib/analytics.mjs';
 
   const COMMENT_PREVIEW = 2; // 每則貼文預設露出的留言數,其餘收在展開控制項底下
@@ -135,6 +137,30 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     return String(template).replace(/\{(\w+)\}/g, (whole, key) =>
       Object.prototype.hasOwnProperty.call(values, key) ? String(values[key]) : whole
     );
+  }
+
+  // ── Turnstile:一個討論室**只掛一個** widget,發文框與每一則貼文的回覆框共用 ──────
+  // 每個表單各掛一個的話,一頁二十則貼文就是二十個 widget、二十次 challenge 初始化。
+  // 開關由 Worker 的 /v1/me 回報(見 src/lib/turnstile.mjs 檔頭:七個站不必為了開關重建)。
+  // 拿不到 token 就**不送出** —— 不做「拿不到就照送」,那等於在對方最想要的時刻自動關掉。
+  let roomTokenFn = null;      // null = 沒開啟,或還沒掛好
+  let roomTokenReady = null;   // 掛載中的 promise,送出時要等它
+
+  function setupChallenge(api, container) {
+    if (roomTokenReady) return roomTokenReady;
+    roomTokenReady = turnstileConfig(api)
+      .then((ts) => {
+        if (!ts.required) return null;
+        return mountTurnstile(container, ts.sitekey).then((fn) => { roomTokenFn = fn; return fn; });
+      })
+      .catch(() => { roomTokenFn = null; return null; });
+    return roomTokenReady;
+  }
+
+  /** 送出前拿一次性 token。沒開啟就回 null(Worker 那側也沒在驗,同一個開關)。 */
+  function challengeToken() {
+    return (roomTokenReady || Promise.resolve(null))
+      .then(() => (roomTokenFn ? roomTokenFn() : null));
   }
 
   // 原生 script(無框架)。開狀態的 DOM 全用 createElement/textContent 組——不進 innerHTML。
@@ -303,12 +329,18 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
       const content = box.value.trim();
       if (!content) return;
       send.disabled = true;
-      fetch(api + '/v1/comments', {
+      challengeToken()
+        .then((turnstileToken) => fetch(api + '/v1/comments', {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ post_id: post.post_id, content: content, locale: cfg.locale }),
-      })
+        body: JSON.stringify({
+          post_id: post.post_id,
+          content: content,
+          locale: cfg.locale,
+          turnstile_token: turnstileToken,
+        }),
+      }))
         .then((res) => {
           if (!res.ok) throw new Error('http ' + res.status);
           return res.json();
@@ -355,12 +387,18 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     }
 
     const picked = pickText(post, cfg.locale);
-    item.appendChild(el('p', 'room-post-content', picked.text));
+    // Markdown 安全子集(契約 §1)。renderMarkdown 回的是 **DOM 節點**,一個字元都不經過
+    // innerHTML —— 使用者寫的 <script> 會變成一個文字節點,螢幕上就是那六個字。
+    // 見 src/lib/markdown.mjs 檔頭:安全性來自結構,不是黑名單。
+    const body = el('div', 'room-post-content');
+    renderMarkdown(picked.text).forEach((node) => body.appendChild(node));
+    item.appendChild(body);
     if (picked.pending) {
       item.appendChild(el('p', 'room-post-note', cfg.i18n.translating));
     }
     if (picked.showToggle) {
-      const orig = el('p', 'room-post-original', post.content);
+      const orig = el('div', 'room-post-original');
+      renderMarkdown(post.content).forEach((node) => orig.appendChild(node));
       orig.hidden = true;
       const toggle = el('button', 'room-toggle', cfg.i18n.showOriginal);
       toggle.type = 'button';
@@ -433,8 +471,13 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     send.type = 'submit';
     const err = el('p', 'room-composer-error');
     err.hidden = true;
-    if (ask) form.append(box, ask.wrap, send, err);
-    else form.append(box, send, err);
+    // Turnstile 的容器一定要在 DOM 裡才 render 得起來。整個討論室共用這一個
+    // (發文框一定存在,回覆框不一定,所以掛在這裡)。沒開啟時它是空的,
+    // 而且 challenges.cloudflare.com 那支 script 根本不會被載入。
+    const challenge = el('div', 'room-composer-challenge');
+    setupChallenge(api, challenge);
+    if (ask) form.append(box, ask.wrap, challenge, send, err);
+    else form.append(box, challenge, send, err);
 
     // 「回報錯誤或補充」(2026-08-21)。刻意**不另開端點、不另開表單**:
     // 更正本來就該讓其他讀者看得到、可以接著討論 —— 這是主題頁論壇,討論串就是那一頁
@@ -457,7 +500,10 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
       if (!content) return;
       err.hidden = true;
       send.disabled = true;
-      fetch(api + '/v1/posts', {
+      // token 是一次性的,每次送出都重新拿。沒開啟 Bot 防護時 getToken 是 null → 送 null,
+      // Worker 那側也沒在驗(兩邊的開關是同一個,見 api/src/lib/gates.js)。
+      challengeToken()
+        .then((turnstileToken) => fetch(api + '/v1/posts', {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
@@ -467,8 +513,9 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
           locale: cfg.locale,
           // 空字串 = 不指定。契約要 null 或 ISO 兩碼,不能送空字串。
           target_country: (ask && ask.select.value) ? ask.select.value : null,
+          turnstile_token: turnstileToken,
         }),
-      })
+      }))
         .then((res) => {
           if (!res.ok) throw new Error('http ' + res.status);
           return res.json();
@@ -663,9 +710,30 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     font-size: var(--text-xs);
     margin: 0 0 0.25rem;
   }
+  /* 貼文本體現在是 Markdown 安全子集(見 src/lib/markdown.mjs),所以是一個 <div>
+     裝著 <p>/<ul>/<blockquote>。white-space 不能再是 pre-wrap —— 換行已經由 <br>
+     與分段表達,再保留原始空白會讓每一段前面多出縮排。 */
   .room :global(.room-post-content) {
     margin: 0 0 0.5rem;
-    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+  .room :global(.room-post-content > :first-child) { margin-block-start: 0; }
+  .room :global(.room-post-content > :last-child) { margin-block-end: 0; }
+  .room :global(.room-post-content p) { margin: 0 0 0.5rem; }
+  .room :global(.room-post-content ul),
+  .room :global(.room-post-content ol) { margin: 0 0 0.5rem; padding-inline-start: 1.5rem; }
+  .room :global(.room-post-content blockquote) {
+    margin: 0 0 0.5rem;
+    padding-inline-start: 0.75rem;
+    border-inline-start: 0.1875rem solid var(--color-line-strong);
+    color: var(--color-ink-soft);
+  }
+  .room :global(.room-post-content code) {
+    font-family: ui-monospace, monospace;
+    font-size: 0.95em;
+    background: var(--color-bg-light);
+    padding: 0.05em 0.35em;
+    border-radius: var(--radius-sm);
   }
   .room :global(.room-post-note) {
     color: var(--color-ink-muted);
