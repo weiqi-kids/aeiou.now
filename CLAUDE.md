@@ -35,6 +35,9 @@
 | **Google 上次來爬是什麼時候**(判「改版看不到效果」是不是因為它還沒來) | 用 `inspectUrl` 看 `lastCrawlTime`;GSC 資料本身固定落後 2–3 天,改版當天查一定看不到 |
 | repo 有哪些站 | `gh repo list weiqi-kids --limit 100 \| grep aeiou` |
 | 有沒有殘留的背景 server | `pgrep -af '[a]stro (dev\|preview)'; pgrep -af '[h]ttp\.server'` |
+| **Bot 防護現在是開是關** | `curl -s "$API/v1/me" \| grep -o '"turnstile":{[^}]*}'`(兩個環境值都設才 required=true;七站不必為了開關重建) |
+| reaction 計數回流了什麼 | `sqlite3 db/aeiou.sqlite "SELECT target_type,COUNT(*),SUM(total) FROM reaction_totals GROUP BY 1"` |
+| **跨國/制度型查詢排在哪**(改版效果的唯一判準) | `node scripts/seo-health.mjs` 的 ③ 層「意圖分類」兩行(曝光加權平均名次)。⚠ 要先確認 Google 重爬過:`inspectUrl(...)` 的 `lastCrawlTime`(回傳**就是** indexStatusResult,沒有 `.inspectionResult` 那層) |
 | 題庫有幾題、涵蓋到哪天 | `sqlite3 db/aeiou.sqlite "SELECT kind,COUNT(*),MIN(qdate),MAX(qdate) FROM questions GROUP BY kind"` |
 | 線上投票數(D1) | `cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT COUNT(*) n, COUNT(DISTINCT question_id) q FROM question_votes"` |
 | **搜尋曝光累積了幾天**(判「診斷有沒有判別力」的前提) | `sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT metric_date) days, MIN(metric_date), MAX(metric_date), SUM(impressions) FROM topic_search_metrics WHERE scope='global'"`——天數太少時 `seo-health.mjs` ③ 的佔比不進瓶頸清單(判準寫在該檔) |
@@ -216,7 +219,7 @@ content/topics/<slug>.md   ←── 人工編輯(唯一入口)
 | 排程 | 入口 | 做什麼 |
 |---|---|---|
 | 主機 `*/15 * * * *` | `scripts/cron-15min.sh` | ① `translate-posts.mjs`:D1 撈 pending 貼文 → `claude -p` 翻六語 → 寫回 D1 + **回流主機**(UGC 進主機的唯一通道) ② `sync-topics-to-d1.mjs`:主機 Topic 副本 → D1 ③ `sync-questions-to-d1.mjs`:題庫精簡副本 → D1(2026-08-15 起) |
-| 主機 `0 * * * *` | `scripts/hourly-export.sh` | ① `import-topics.mjs`(content/ md → SQLite) ② `import-questions.mjs`(content/questions.json → SQLite,壞題庫即中止) ③ `export-data.mjs` ④ **只 commit `data/`** ⑤ push source repo |
+| 主機 `0 * * * *` | `scripts/hourly-export.sh` | ① `import-topics.mjs`(content/ md → SQLite) ② `import-questions.mjs`(content/questions.json → SQLite,壞題庫即中止) ③ `compute-topic-scores.mjs` 與 `sync-reactions-from-d1.mjs`(兩者皆**不 fail-closed**:算不出分數/拉不到 reaction 只是不新鮮) ④ `export-data.mjs` ⑤ **只 commit `data/`** ⑥ push source repo。逐步說明看檔內註解 |
 | 主機 `40 4 * * *` | `gsc-topic-metrics.mjs` | GSC「date × page × country」→ 主機 `topic_search_metrics`。HotScore 瀏覽面的**唯一**來源(不接 GA4,理由見紅線)。只累積不算分數;GSC 沒有當時快照,停掉就永久失去那段曲線 |
 | GitHub Actions `17 * * * *` + push | `.github/workflows/build.yml` | 七語系 matrix build → SSH 推七個 publish repo(帶 `.nojekyll` 與 `.build-id`)→ 輪詢驗證**內容真的上線**(比 build-id,不是比 200) |
 
@@ -253,6 +256,7 @@ node scripts/export-data.mjs                    # 匯出靜態 JSON(hash 沒變�
 
 # ── 管線(cron 自動跑,手動可重現) ──
 node scripts/sync-topics-to-d1.mjs              # 主機 → D1 Topic 副本
+node scripts/sync-reactions-from-d1.mjs         # D1 reaction 計數 → 主機(整批覆蓋;掛在 hourly)
 node scripts/translate-posts.mjs                # D1 撈 pending → claude -p 六語 → 寫回 + 回流主機
 bash scripts/hourly-export.sh                   # export + 只 commit data/ + push
 

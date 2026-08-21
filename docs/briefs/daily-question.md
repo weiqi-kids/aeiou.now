@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS questions (
   topic_id      TEXT NOT NULL,             -- import 時由 slug 解析
   asker_locale  TEXT,
   target_locale TEXT,
-  answer_option TEXT,                      -- kind=guess 才有
+  answer_option TEXT,                      -- kind=guess 才有(2026-08-21 起也同步進 D1,見上方第 4 點)
   status        TEXT NOT NULL DEFAULT 'active'
 );
 CREATE TABLE IF NOT EXISTS question_i18n (
