@@ -1,4 +1,5 @@
 import { LOCALE } from './config.mjs';
+import { plainText } from './emphasis.mjs';
 
 export const SITE_NAME = 'aeiou.now';
 // Non-Topic pages still need a representative large image for social previews
@@ -129,7 +130,9 @@ export function fillTemplate(template, values) {
 // Meta descriptions need to be useful in search results without leaking a raw URL.
 // Keep the start of the sentence intact, because it carries the topic's main intent.
 export function compactDescription(value, max = 170) {
-  const text = String(value || '').replace(/\s+/g, ' ').trim();
+  // 先去掉 `**強調**` 標記:description 是純字串,星號會原樣進搜尋結果的摘要
+  // (2026-08-21 實測有三頁如此)。見 src/lib/emphasis.mjs 檔頭。
+  const text = plainText(String(value || '')).replace(/\s+/g, ' ').trim();
   if (text.length <= max) return text;
   return `${text.slice(0, Math.max(1, max - 1)).trimEnd()}…`;
 }

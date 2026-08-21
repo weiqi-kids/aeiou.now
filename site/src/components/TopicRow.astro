@@ -24,6 +24,7 @@ import { withBase } from '../lib/paths.mjs';
 import { countryFlag } from '../lib/format.mjs';
 import { coverPath, coverThumbPath } from '../lib/data.mjs';
 import { isTrendTopic } from '../lib/topic-status.mjs';
+import { emphasisParts } from '../lib/emphasis.mjs';
 import HeatMeter from './HeatMeter.astro';
 import TopicPosts from './TopicPosts.astro';
 
@@ -96,7 +97,13 @@ const withPosts = !!topic.topic_id;
           ))}
         </span>
         {note && <span class="row-note">{note}</span>}
-        {topic.summary && <span class="row-summary">{topic.summary}</span>}
+        {topic.summary && (
+          <span class="row-summary">
+            {emphasisParts(topic.summary).map((part) => (
+              part.strong ? <strong>{part.text}</strong> : <Fragment>{part.text}</Fragment>
+            ))}
+          </span>
+        )}
       </span>
     </span>
     <span class="row-heat">

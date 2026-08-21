@@ -42,6 +42,7 @@ import { calendarDate, dateTime, countryFlag } from '../../lib/format.mjs';
 import { withBase } from '../../lib/paths.mjs';
 import { compactDescription, fillTemplate, seoCopy, sourceLabel, SITE_NAME } from '../../lib/seo.mjs';
 import { calendarLinks, icsFileName } from '../../lib/calendar.mjs';
+import { plainText, emphasisParts } from '../../lib/emphasis.mjs';
 import { isTrendTopic } from '../../lib/topic-status.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
@@ -178,7 +179,10 @@ const sourceUrls = [...new Set([
   ...observances.flatMap((observance) => observance.next_occurrence?.source_urls || []),
   ...regionalNotes.flatMap((note) => note.source_urls || []),
 ])].filter((url) => /^https?:\/\//.test(url));
-const whatAnswer = loc.summary || facts?.commonality || copy.noDate;
+// FAQPage / JSON-LD / meta 一律純文字:`**強調**` 的星號進了結構化資料就是雜訊,
+// 而 Google 抓到的正是這一份(2026-08-21 實測 42 頁的 JSON-LD 帶著星號)。
+// 畫面上的那一份走 emphasisParts,兩者刻意分開。
+const whatAnswer = plainText(loc.summary || facts?.commonality || copy.noDate);
 // 七語系是七個獨立的站,每個站服務一個代表市場。本站市場的那一國要排最前面 ——
 // 2026-08-20 實測:id 站的 affection-and-reciprocity 摘要開頭是「印度、中國」,
 // 印尼自己沒進前兩筆;而落在那一頁的查詢正是 `kapan hari valentine 2027`。
@@ -274,13 +278,13 @@ const whereAnswer = worldCountries.length > 0
 const differenceAnswer = [
   ...countries
   .map((country) => {
-    const text = customsText(i18n, country);
+    const text = plainText(customsText(i18n, country));
     return text ? `${countryName(country.country_code)}${copy.colon}${text}` : null;
   })
   .filter(Boolean),
   ...regionalOnlyNotes
     .map((note) => {
-      const text = regionalNoteText(i18n, note);
+      const text = plainText(regionalNoteText(i18n, note));
       return text ? `${countryName(note.country_code)}${copy.colon}${text}` : null;
     })
     .filter(Boolean),
@@ -372,11 +376,11 @@ const topicSchema = [
       { '@type': 'Question', name: copy.where, acceptedAnswer: { '@type': 'Answer', text: whereAnswer } },
       { '@type': 'Question', name: copy.differences, acceptedAnswer: { '@type': 'Answer', text: differenceAnswer } },
       ...observances
-        .map((observance) => ({ q: observanceHeading(observance), a: customsText(i18n, observance) }))
+        .map((observance) => ({ q: observanceHeading(observance), a: plainText(customsText(i18n, observance)) }))
         .filter((entry) => entry.a)
         .map((entry) => ({ '@type': 'Question', name: entry.q, acceptedAnswer: { '@type': 'Answer', text: entry.a } })),
       ...regionalOnlyNotes
-        .map((note) => ({ q: countryQuestion(note.country_code, note.kind === 'absence'), a: regionalNoteText(i18n, note) }))
+        .map((note) => ({ q: countryQuestion(note.country_code, note.kind === 'absence'), a: plainText(regionalNoteText(i18n, note)) }))
         .filter((entry) => entry.a)
         .map((entry) => ({ '@type': 'Question', name: entry.q, acceptedAnswer: { '@type': 'Answer', text: entry.a } })),
     ],
@@ -438,7 +442,13 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
           </div>
           {/* 只有本站語系的說明。「不同語系顯示相同 Topic 說明」指的是**七個站各自顯示自己的語言**
               (ja 站看到日文、pt-BR 站看到葡文),不是把七語堆在同一頁,也不標示這是哪一國語言。 */}
-          {loc.summary && <p class="topic-lede">{loc.summary}</p>}
+          {loc.summary && (
+            <p class="topic-lede">
+              {emphasisParts(loc.summary).map((part) => (
+                part.strong ? <strong>{part.text}</strong> : <Fragment>{part.text}</Fragment>
+              ))}
+            </p>
+          )}
           {/* 機器彙整的 Topic 要說出來(docs/TODO.md「復活前必須先做」)。
               一句完整的話而不是一個徽章:讀者要判斷的是可信度,徽章的兩三個字說不完
               「沒有經過人工查證」。header 內不得有 <ul>,這是 <p>,不違反版面硬性規定。 */}
@@ -583,7 +593,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
                 {(() => {
                   const cal = calendarLinks({
                     title: ev.name,
-                    details: (ev.descriptions && ev.descriptions[LOCALE]) || '',
+                    details: plainText((ev.descriptions && ev.descriptions[LOCALE]) || ''),
                     location: ev.venue || '',
                     startAt: ev.start_at,
                     endAt: ev.end_at,
@@ -675,7 +685,11 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
                   {!needsLocalName(c) && <span class="local-name">{c.local_name}</span>}
                 </h3>
                 {customsText(i18n, c) && (
-                  <p class="country-customs">{customsText(i18n, c)}</p>
+                  <p class="country-customs">
+                    {emphasisParts(customsText(i18n, c)).map((part) => (
+                      part.strong ? <strong>{part.text}</strong> : <Fragment>{part.text}</Fragment>
+                    ))}
+                  </p>
                 )}
                 {/* 加進行事曆。三條限制,每一條都有代價作為理由:
                     ① **只出本站市場那一國**。七國各兩個連結會讓每頁 HTML 多出約 14KB
@@ -732,7 +746,11 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
                   {countryQuestion(note.country_code, note.kind === 'absence')}
                 </h3>
                 {regionalNoteText(i18n, note) && (
-                  <p class="country-customs">{regionalNoteText(i18n, note)}</p>
+                  <p class="country-customs">
+                    {emphasisParts(regionalNoteText(i18n, note)).map((part) => (
+                      part.strong ? <strong>{part.text}</strong> : <Fragment>{part.text}</Fragment>
+                    ))}
+                  </p>
                 )}
                 {(note.source_urls || []).length > 0 && (
                   <p class="country-sources">

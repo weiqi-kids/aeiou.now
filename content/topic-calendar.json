@@ -1,57 +1,375 @@
 {
   "cycle": "annual",
   "weeks": [
-    {"week": 1, "topics": ["new-year", "homecoming-and-reunion"]},
-    {"week": 2, "topics": ["new-year", "lantern-festival"]},
-    {"week": 3, "topics": ["lantern-festival", "diwali"]},
-    {"week": 4, "topics": ["lantern-festival", "newborn-and-full-moon"]},
-    {"week": 5, "topics": ["affection-and-reciprocity", "coming-of-age"]},
-    {"week": 6, "topics": ["affection-and-reciprocity", "easter"]},
-    {"week": 7, "topics": ["affection-and-reciprocity", "back-to-school"]},
-    {"week": 8, "topics": ["easter", "dragon-boat-festival"]},
-    {"week": 9, "topics": ["dragon-boat-festival", "mothers-day"]},
-    {"week": 10, "topics": ["mothers-day", "caregiving-across-generations"]},
-    {"week": 11, "topics": ["fathers-day", "graduation-season"]},
-    {"week": 12, "topics": ["fathers-day", "graduation-season"]},
-    {"week": 13, "topics": ["harvest-and-gratitude", "mid-autumn-and-moon-viewing"]},
-    {"week": 14, "topics": ["mid-autumn-and-moon-viewing", "harvest-and-gratitude"]},
-    {"week": 15, "topics": ["harvest-and-gratitude", "childrens-day"]},
-    {"week": 16, "topics": ["childrens-day", "teachers-day"]},
-    {"week": 17, "topics": ["teachers-day", "labour-day"]},
-    {"week": 18, "topics": ["labour-day", "national-days"]},
-    {"week": 19, "topics": ["national-days", "ghosts-ancestors-and-remembrance"]},
-    {"week": 20, "topics": ["ghosts-ancestors-and-remembrance", "farewells-and-funerals"]},
-    {"week": 21, "topics": ["ghosts-ancestors-and-remembrance", "caregiving-across-generations"]},
-    {"week": 22, "topics": ["ghosts-ancestors-and-remembrance", "homecoming-and-reunion"]},
-    {"week": 23, "topics": ["mid-autumn-and-moon-viewing", "birthdays-and-blessings"]},
-    {"week": 24, "topics": ["birthdays-and-blessings", "proposals-and-engagements"]},
-    {"week": 25, "topics": ["proposals-and-engagements", "weddings-and-customs"]},
-    {"week": 26, "topics": ["weddings-and-customs", "moving-home"]},
-    {"week": 27, "topics": ["moving-home", "homecoming-and-reunion"]},
-    {"week": 28, "topics": ["ramadan-and-eid", "eid-al-adha"]},
-    {"week": 29, "topics": ["ramadan-and-eid", "eid-al-adha"]},
-    {"week": 30, "topics": ["new-year", "diwali"]},
-    {"week": 31, "topics": ["national-days", "back-to-school"]},
-    {"week": 32, "topics": ["back-to-school", "graduation-season"]},
-    {"week": 33, "topics": ["graduation-season", "coming-of-age"]},
-    {"week": 34, "topics": ["coming-of-age", "birthdays-and-blessings"]},
-    {"week": 35, "topics": ["christmas", "ghosts-ancestors-and-remembrance"]},
-    {"week": 36, "topics": ["christmas", "homecoming-and-reunion"]},
-    {"week": 37, "topics": ["christmas", "harvest-and-gratitude"]},
-    {"week": 38, "topics": ["christmas", "caregiving-across-generations"]},
-    {"week": 39, "topics": ["homecoming-and-reunion", "caregiving-across-generations"]},
-    {"week": 40, "topics": ["caregiving-across-generations", "farewells-and-funerals"]},
-    {"week": 41, "topics": ["farewells-and-funerals", "ask-the-world"]},
-    {"week": 42, "topics": ["ask-the-world", "newborn-and-full-moon"]},
-    {"week": 43, "topics": ["newborn-and-full-moon", "mothers-day"]},
-    {"week": 44, "topics": ["fathers-day", "childrens-day"]},
-    {"week": 45, "topics": ["teachers-day", "labour-day"]},
-    {"week": 46, "topics": ["national-days", "dragon-boat-festival"]},
-    {"week": 47, "topics": ["easter", "lantern-festival"]},
-    {"week": 48, "topics": ["mid-autumn-and-moon-viewing", "diwali"]},
-    {"week": 49, "topics": ["ramadan-and-eid", "eid-al-adha"]},
-    {"week": 50, "topics": ["weddings-and-customs", "moving-home"]},
-    {"week": 51, "topics": ["proposals-and-engagements", "affection-and-reciprocity"]},
-    {"week": 52, "topics": ["new-year", "ask-the-world"]}
+    {
+      "week": 1,
+      "topics": [
+        "new-year",
+        "homecoming-and-reunion"
+      ]
+    },
+    {
+      "week": 2,
+      "topics": [
+        "new-year",
+        "lantern-festival"
+      ]
+    },
+    {
+      "week": 3,
+      "topics": [
+        "lantern-festival",
+        "diwali"
+      ]
+    },
+    {
+      "week": 4,
+      "topics": [
+        "lantern-festival",
+        "newborn-and-full-moon"
+      ]
+    },
+    {
+      "week": 5,
+      "topics": [
+        "affection-and-reciprocity",
+        "coming-of-age"
+      ]
+    },
+    {
+      "week": 6,
+      "topics": [
+        "affection-and-reciprocity",
+        "easter"
+      ]
+    },
+    {
+      "week": 7,
+      "topics": [
+        "affection-and-reciprocity",
+        "back-to-school"
+      ]
+    },
+    {
+      "week": 8,
+      "topics": [
+        "easter",
+        "dragon-boat-festival"
+      ]
+    },
+    {
+      "week": 9,
+      "topics": [
+        "dragon-boat-festival",
+        "mothers-day"
+      ]
+    },
+    {
+      "week": 10,
+      "topics": [
+        "mothers-day",
+        "caregiving-across-generations"
+      ]
+    },
+    {
+      "week": 11,
+      "topics": [
+        "fathers-day",
+        "graduation-season"
+      ]
+    },
+    {
+      "week": 12,
+      "topics": [
+        "fathers-day",
+        "graduation-season"
+      ]
+    },
+    {
+      "week": 13,
+      "topics": [
+        "harvest-and-gratitude",
+        "mid-autumn-and-moon-viewing"
+      ]
+    },
+    {
+      "week": 14,
+      "topics": [
+        "mid-autumn-and-moon-viewing",
+        "harvest-and-gratitude"
+      ]
+    },
+    {
+      "week": 15,
+      "topics": [
+        "harvest-and-gratitude",
+        "childrens-day"
+      ]
+    },
+    {
+      "week": 16,
+      "topics": [
+        "childrens-day",
+        "teachers-day"
+      ]
+    },
+    {
+      "week": 17,
+      "topics": [
+        "teachers-day",
+        "labour-day"
+      ]
+    },
+    {
+      "week": 18,
+      "topics": [
+        "labour-day",
+        "national-days"
+      ]
+    },
+    {
+      "week": 19,
+      "topics": [
+        "national-days",
+        "ghosts-ancestors-and-remembrance"
+      ]
+    },
+    {
+      "week": 20,
+      "topics": [
+        "ghosts-ancestors-and-remembrance",
+        "farewells-and-funerals"
+      ]
+    },
+    {
+      "week": 21,
+      "topics": [
+        "ghosts-ancestors-and-remembrance",
+        "caregiving-across-generations"
+      ]
+    },
+    {
+      "week": 22,
+      "topics": [
+        "ghosts-ancestors-and-remembrance",
+        "homecoming-and-reunion",
+        "elders-day"
+      ]
+    },
+    {
+      "week": 23,
+      "topics": [
+        "mid-autumn-and-moon-viewing",
+        "birthdays-and-blessings"
+      ]
+    },
+    {
+      "week": 24,
+      "topics": [
+        "birthdays-and-blessings",
+        "proposals-and-engagements"
+      ]
+    },
+    {
+      "week": 25,
+      "topics": [
+        "proposals-and-engagements",
+        "weddings-and-customs"
+      ]
+    },
+    {
+      "week": 26,
+      "topics": [
+        "weddings-and-customs",
+        "moving-home"
+      ]
+    },
+    {
+      "week": 27,
+      "topics": [
+        "moving-home",
+        "homecoming-and-reunion"
+      ]
+    },
+    {
+      "week": 28,
+      "topics": [
+        "ramadan-and-eid",
+        "eid-al-adha"
+      ]
+    },
+    {
+      "week": 29,
+      "topics": [
+        "ramadan-and-eid",
+        "eid-al-adha"
+      ]
+    },
+    {
+      "week": 30,
+      "topics": [
+        "new-year",
+        "diwali"
+      ]
+    },
+    {
+      "week": 31,
+      "topics": [
+        "national-days",
+        "back-to-school"
+      ]
+    },
+    {
+      "week": 32,
+      "topics": [
+        "back-to-school",
+        "graduation-season"
+      ]
+    },
+    {
+      "week": 33,
+      "topics": [
+        "graduation-season",
+        "coming-of-age"
+      ]
+    },
+    {
+      "week": 34,
+      "topics": [
+        "coming-of-age",
+        "birthdays-and-blessings",
+        "elders-day"
+      ]
+    },
+    {
+      "week": 35,
+      "topics": [
+        "christmas",
+        "ghosts-ancestors-and-remembrance"
+      ]
+    },
+    {
+      "week": 36,
+      "topics": [
+        "christmas",
+        "homecoming-and-reunion"
+      ]
+    },
+    {
+      "week": 37,
+      "topics": [
+        "christmas",
+        "harvest-and-gratitude",
+        "elders-day"
+      ]
+    },
+    {
+      "week": 38,
+      "topics": [
+        "christmas",
+        "caregiving-across-generations",
+        "elders-day"
+      ]
+    },
+    {
+      "week": 39,
+      "topics": [
+        "homecoming-and-reunion",
+        "caregiving-across-generations"
+      ]
+    },
+    {
+      "week": 40,
+      "topics": [
+        "caregiving-across-generations",
+        "farewells-and-funerals",
+        "elders-day"
+      ]
+    },
+    {
+      "week": 41,
+      "topics": [
+        "farewells-and-funerals",
+        "ask-the-world"
+      ]
+    },
+    {
+      "week": 42,
+      "topics": [
+        "ask-the-world",
+        "newborn-and-full-moon",
+        "elders-day"
+      ]
+    },
+    {
+      "week": 43,
+      "topics": [
+        "newborn-and-full-moon",
+        "mothers-day"
+      ]
+    },
+    {
+      "week": 44,
+      "topics": [
+        "fathers-day",
+        "childrens-day"
+      ]
+    },
+    {
+      "week": 45,
+      "topics": [
+        "teachers-day",
+        "labour-day"
+      ]
+    },
+    {
+      "week": 46,
+      "topics": [
+        "national-days",
+        "dragon-boat-festival"
+      ]
+    },
+    {
+      "week": 47,
+      "topics": [
+        "easter",
+        "lantern-festival"
+      ]
+    },
+    {
+      "week": 48,
+      "topics": [
+        "mid-autumn-and-moon-viewing",
+        "diwali"
+      ]
+    },
+    {
+      "week": 49,
+      "topics": [
+        "ramadan-and-eid",
+        "eid-al-adha"
+      ]
+    },
+    {
+      "week": 50,
+      "topics": [
+        "weddings-and-customs",
+        "moving-home"
+      ]
+    },
+    {
+      "week": 51,
+      "topics": [
+        "proposals-and-engagements",
+        "affection-and-reciprocity"
+      ]
+    },
+    {
+      "week": 52,
+      "topics": [
+        "new-year",
+        "ask-the-world"
+      ]
+    }
   ]
 }

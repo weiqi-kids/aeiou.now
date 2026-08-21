@@ -4,6 +4,7 @@
 //           ② 名次感靠襯線大字號碼 + 前三名的規線與朱紅
 //           ③ 分數不上畫面,只呈現熱度級距(見 src/lib/heat.mjs)
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { emphasisParts } from '../../lib/emphasis.mjs';
 import HeatMeter from '../../components/HeatMeter.astro';
 import { t, tOr } from '../../lib/i18n.mjs';
 import { WINDOWS } from '../../lib/config.mjs';
@@ -68,7 +69,13 @@ const representativeCover = representativeTopic ? coverPath(representativeTopic.
             <span class="rank" aria-hidden="true">{item.rank}</span>
             <span class="rank-main">
               <span class="rank-title">{topic.title || item.slug}</span>
-              {topic.summary && <span class="rank-summary">{topic.summary}</span>}
+              {topic.summary && (
+                <span class="rank-summary">
+                  {emphasisParts(topic.summary).map((part) => (
+                    part.strong ? <strong>{part.text}</strong> : <Fragment>{part.text}</Fragment>
+                  ))}
+                </span>
+              )}
               <span class="rank-meta">
                 {topic.category && (
                   <span class="badge badge--primary">
