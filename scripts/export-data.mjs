@@ -612,9 +612,32 @@ for (const locale of LOCALES) {
 }
 stampFor("questions", questionsByLocale);
 
+// ---------- reaction 計數(2026-08-21;來源 = sync-reactions-from-d1.mjs 的副本表) ----------
+// reaction 的權威在 D1。回流到主機之後,place/event 的 emoji 排序就能在**靜態層**排好,
+// 不必等前端拿到 /v1/reactions/summary 才重排 —— 不執行 JS 的爬蟲看到的也是對的順序。
+// 表不存在(還沒跑過回流)或空的話,一律當成 0:排序退回原本的 mention_count / 日期,
+// 與這一版之前的行為相同,不會壞。
+const reactionTotals = new Map(); // `${type}:${id}` -> {total, actors}
+try {
+  for (const r of db.prepare("SELECT target_type, target_id, total, actors FROM reaction_totals").all()) {
+    reactionTotals.set(`${r.target_type}:${r.target_id}`, { total: r.total, actors: r.actors });
+  }
+} catch {
+  // 舊庫還沒有這張表 —— 不是錯誤,只是還沒回流過。
+}
+const reactionsOf = (type, id) => reactionTotals.get(`${type}:${id}`) || { total: 0, actors: 0 };
+
 // ---------- places/<city_code>.json ----------
 
 const placeRows = db.prepare("SELECT * FROM places ORDER BY city_code, mention_count DESC, place_id").all();
+// 排序鍵加一層 reaction:讀者按過的比沒人按過的前面,同分再照原本的 mention_count。
+// SQL 排不了(reaction 是 JS 層才拼起來的),所以在這裡重排;同分時的 tie-break 沿用
+// SQL 已經定好的順序,輸出才是決定論的(hash 沒變就不寫檔那道保護靠這個)。
+placeRows.forEach((p, i) => { p._ord = i; });
+placeRows.sort((a, b) =>
+  a.city_code.localeCompare(b.city_code)
+  || reactionsOf("place", b.place_id).total - reactionsOf("place", a.place_id).total
+  || a._ord - b._ord);
 const placeI18n = new Map();
 for (const r of db.prepare("SELECT * FROM place_i18n ORDER BY place_id, locale").all()) {
   if (!placeI18n.has(r.place_id)) placeI18n.set(r.place_id, new Map());
@@ -663,6 +686,9 @@ for (const [city, rows] of [...placesByCity.entries()].sort((a, b) => a[0].local
         nav_urls: parseJson(p.nav_urls_json, {}),
         source_urls: parseJson(p.source_urls_json, []),
         mention_count: p.mention_count,
+        // 靜態排序用;前端仍會用 /v1/reactions/summary 微調成這一秒的數字(回流每小時一次)。
+        reaction_total: reactionsOf("place", p.place_id).total,
+        reaction_actors: reactionsOf("place", p.place_id).actors,
         descriptions,
         topics: placeTopics.get(p.place_id) ?? [],
       };
@@ -673,6 +699,14 @@ for (const [city, rows] of [...placesByCity.entries()].sort((a, b) => a[0].local
 // ---------- events/<city_code>.json ----------
 
 const eventRows = db.prepare("SELECT * FROM events ORDER BY city_code, start_at, event_id").all();
+// 活動與店家不同:**時間才是主鍵**,快到的排前面,reaction 只當同一天內的 tie-break。
+// 把 reaction 提到日期之上會把三個月後的熱門活動排到明天的活動前面,那是錯的。
+eventRows.forEach((e, i) => { e._ord = i; });
+eventRows.sort((a, b) =>
+  a.city_code.localeCompare(b.city_code)
+  || (a.start_at || 0) - (b.start_at || 0)
+  || reactionsOf("event", b.event_id).total - reactionsOf("event", a.event_id).total
+  || a._ord - b._ord);
 const eventI18n = new Map();
 for (const r of db.prepare("SELECT * FROM event_i18n ORDER BY event_id, locale").all()) {
   if (!eventI18n.has(r.event_id)) eventI18n.set(r.event_id, new Map());
@@ -708,6 +742,8 @@ for (const [city, rows] of [...eventsByCity.entries()].sort((a, b) => a[0].local
         ticket_url: e.ticket_url,
         source_id: e.source_id,
         source_url: sourceUrlById.get(e.source_id) || null,
+        reaction_total: reactionsOf("event", e.event_id).total,
+        reaction_actors: reactionsOf("event", e.event_id).actors,
         descriptions,
         topics: eventTopics.get(e.event_id) ?? [],
       };

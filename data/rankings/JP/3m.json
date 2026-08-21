@@ -1,7 +1,7 @@
 {
   "scope": "country:JP",
   "window": "3m",
-  "thin": true,
+  "thin": false,
   "items": [
     {
       "rank": 1,
@@ -11,21 +11,27 @@
     },
     {
       "rank": 2,
-      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
-      "slug": "mothers-day",
+      "topic_id": "top_01KZXQ6BSAMVV85AN3D1HXTEYY",
+      "slug": "proposals-and-engagements",
       "tier": "hot"
     },
     {
       "rank": 3,
-      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
-      "slug": "easter",
-      "tier": "rising"
+      "topic_id": "top_01J50000000000000000000T02",
+      "slug": "ask-the-world",
+      "tier": "hot"
     },
     {
       "rank": 4,
-      "topic_id": "top_01KZXQ6BSAMVV85AN3D1HXTEYY",
-      "slug": "proposals-and-engagements",
-      "tier": "rising"
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "slug": "easter",
+      "tier": "hot"
+    },
+    {
+      "rank": 5,
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "slug": "mothers-day",
+      "tier": "hot"
     }
   ]
 }

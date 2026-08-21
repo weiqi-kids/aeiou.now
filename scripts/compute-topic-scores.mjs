@@ -36,7 +36,10 @@
 //
 // 失敗:寫 jobs(job_name='compute-topic-scores'),重試曲線同其他 job。
 
-import { openDb, beginJob, finishJob, slotStart, nowSec, log } from "./lib/aeiou-lib.mjs";
+import { existsSync, readFileSync } from "node:fs";
+import { join } from "node:path";
+
+import { ROOT, openDb, beginJob, finishJob, slotStart, nowSec, log } from "./lib/aeiou-lib.mjs";
 import { SQL_PUBLICLY_VISIBLE } from "./lib/topics.mjs";
 
 const JOB_NAME = "compute-topic-scores";
@@ -97,6 +100,9 @@ try {
   //   * source_topics —— 機器/趨勢 Topic 走這裡
   //   * topic_observances.source_ids_json —— content/topics/*.md 匯入的人工 Topic 走這裡
   // 2026-08-20 初版只讀前者,結果 33 個人工 Topic 全部拿 0 分,實測才發現。
+  // ⚠️ 第三處(2026-08-21 補):常青 Topic 沒有 observance,它們的來源掛在
+  //   content/topic-regional-notes.json 的逐國敘述上。只讀前兩處的話,這一整類
+  //   Topic 的 SourceScore 也是 0 —— 與 Proximity 一起,湊成「七項全 0」。
   const sourceCounts = new Map();
   const addSource = (topicId, sourceId) => {
     if (!topicId || !sourceId) return;
@@ -105,6 +111,27 @@ try {
   };
   for (const r of db.prepare("SELECT topic_id, source_id FROM source_topics").all()) {
     addSource(r.topic_id, r.source_id);
+  }
+  // 第三處:regional notes 的來源。這份資料不在 SQLite 裡(權威是 content/ 的 JSON,
+  // 與 export-data.mjs 讀同一個檔),所以這裡也讀檔;鍵是 slug,要換回 topic_id。
+  // 這裡的 sourceId 用網址本身 —— 它不在 sources 表裡,但 SourceScore 只數「有幾個不同的
+  // 來源」,網址就是那個身分。與另外兩處放進同一個 Set,重複的網址不會被數兩次。
+  const regionalPath = join(ROOT, "content", "topic-regional-notes.json");
+  if (existsSync(regionalPath)) {
+    try {
+      const doc = JSON.parse(readFileSync(regionalPath, "utf8"));
+      const idBySlug = new Map(topics.map((t) => [t.slug, t.topic_id]));
+      for (const [slug, entry] of Object.entries(doc.topics || {})) {
+        const tid = idBySlug.get(slug);
+        if (!tid || !entry) continue;
+        for (const url of entry.source_urls || []) addSource(tid, url);
+        for (const note of Object.values(entry.notes || {})) {
+          for (const url of note?.source_urls || []) addSource(tid, url);
+        }
+      }
+    } catch (e) {
+      log(`[${JOB_NAME}] ⚠️ topic-regional-notes 讀取失敗,常青 Topic 的 SourceScore 這一輪缺席:${e.message}`);
+    }
   }
   for (const r of db.prepare(
     "SELECT topic_id, source_ids_json FROM topic_observances WHERE source_ids_json IS NOT NULL",
@@ -115,6 +142,48 @@ try {
   }
 
   // ── 輸入 4:下一次發生的日期(AgeDecay 的反面:時序鄰近度) ──
+  // ── 輸入 4:常青 Topic 的當令週次(2026-08-21) ──────────────────────────
+  // 「成年禮」「婚俗」「告別式」這一類沒有固定日期,於是 topic_observance_occurrences
+  // 一列都沒有 → Proximity 恆 0 → 七項全 0 → **整個 Topic 不進 topic_scores**,
+  // 首頁與清單頁一律顯示最低級距。而它們同時是 content/topic-calendar.json 排進
+  // 本週的主打 Topic —— 畫面上等於一邊主打、一邊宣告「這個沒人在意」。
+  //
+  // 這些 Topic 的當令訊號本來就在日曆裡(52 週排程,人工策展)。把週次換算成
+  // 「距今幾天」餵進同一個高斯衰減,與節日 Topic 共用一套尺度,不另開一種分數。
+  // 年度循環:週次的距離要繞回去算(第 1 週與第 52 週相鄰,不是差 51 週)。
+  const calendarPath = join(ROOT, "content", "topic-calendar.json");
+  const weeksBySlug = new Map();
+  if (existsSync(calendarPath)) {
+    try {
+      const doc = JSON.parse(readFileSync(calendarPath, "utf8"));
+      for (const wk of doc.weeks || []) {
+        for (const slug of wk.topics || []) {
+          if (!weeksBySlug.has(slug)) weeksBySlug.set(slug, []);
+          weeksBySlug.get(slug).push(wk.week);
+        }
+      }
+    } catch (e) {
+      // 日曆壞掉不該停掉整支算分——常青 Topic 退回原本的 0,節日 Topic 完全不受影響。
+      log(`[${JOB_NAME}] ⚠️ topic-calendar 讀取失敗,常青 Topic 的當令訊號這一輪缺席:${e.message}`);
+    }
+  }
+  // 當年第幾週(1 起算)。只用來對日曆的 52 格,不需要 ISO 8601 的跨年細節。
+  const yearStartSec = Date.UTC(new Date(now * 1000).getUTCFullYear(), 0, 1) / 1000;
+  const todayWeek = Math.floor((midnight - yearStartSec) / (7 * day)) + 1;
+  /** 距離最近一個排程週次幾天(年度環狀,最遠 26 週)。沒排進日曆 = null。 */
+  const calendarDistance = (slug) => {
+    const weeks = weeksBySlug.get(slug);
+    if (!weeks || weeks.length === 0) return null;
+    let best = null;
+    for (const w of weeks) {
+      let d = Math.abs(w - todayWeek);
+      if (d > 26) d = 52 - d; // 第 1 週與第 52 週相鄰
+      const days = d * 7;
+      if (best == null || days < best) best = days;
+    }
+    return best;
+  };
+
   const nextOcc = new Map();
   for (const r of db.prepare(
     `SELECT o.topic_id AS topic_id, oc.starts_on AS starts_on
@@ -198,7 +267,10 @@ try {
     // 結果 1y 窗的 σ 高達三百多天,等於「一年內會發生的節日」全部拿滿分——
     // 實測 1y 榜 24 筆裡 11 筆判為 blast、11 筆 hot,級距形同沒有資訊。
     // 級距的用途是讓讀者一眼分出輕重,全部擠在頂端就是失效。
-    const dist = nextOcc.get(topicId);
+    // 有真實發生日就用它;沒有(常青 Topic)才退到日曆週次。兩者不相加——
+    // 同一個 Topic 只能有一個「當令有多近」,加起來會讓有日期又有排程的 Topic 憑空翻倍。
+    const topicSlug = topics.find((t) => t.topic_id === topicId)?.slug;
+    const dist = nextOcc.get(topicId) ?? calendarDistance(topicSlug);
     const sigma = 10 * Math.sqrt(days / 7);
     const Proximity = dist == null ? 0 : 26 * Math.exp(-((dist / sigma) ** 2) / 2);
 

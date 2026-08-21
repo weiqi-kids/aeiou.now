@@ -35,7 +35,11 @@ function cityCountry(entries) {
  * Topic 頁(草案 §44 的 📍 Near You)。沒有地點的 Topic 仍保留在清單後段,不在靜態頁消失。
  *
  * 城市帶 country_code 與該 Topic 底下的 place_id 清單,供前端向
- * GET /v1/reactions/summary 問 emoji 數排序。單一語系站傳入代表城市,不把七市場混在同一頁。 */
+ * GET /v1/reactions/summary 問 emoji 數排序。單一語系站傳入代表城市,不把七市場混在同一頁。
+ *
+ * emoji 排序 2026-08-21 起**先在靜態排好**:data/places/*.json 的 reaction_total 由
+ * sync-reactions-from-d1.mjs 每小時從 D1 回流。前端那一段重排仍然在,但退成微調
+ * (回流每小時一次,前端拿到的是這一秒的數字)——差別是不執行 JS 的爬蟲也看得到對的順序。 */
 export function topicsWithPlacesByCity(cityCode = null) {
   const byId = new Map(getTopicsIndex().map((topic) => [topic.topic_id, topic]));
   const cities = [];
@@ -45,18 +49,28 @@ export function topicsWithPlacesByCity(cityCode = null) {
     for (const pl of city.places || []) {
       if (pl.place_type !== 'permanent' || pl.topic_relevance !== 'direct') continue;
       for (const id of entryTopicIds(pl)) {
-        const prev = agg.get(id) || { count: 0, ids: [] };
+        const prev = agg.get(id) || { count: 0, reactions: 0, ids: [] };
         prev.count += 1;
+        prev.reactions += Number(pl.reaction_total) || 0;
         if (pl.place_id) prev.ids.push(pl.place_id);
         agg.set(id, prev);
       }
     }
     const topics = [...byId.values()]
       .map((topic, index) => {
-        const value = agg.get(topic.topic_id) || { count: 0, ids: [] };
-        return { ...topic, place_count: value.count, target_ids: value.ids, _index: index };
+        const value = agg.get(topic.topic_id) || { count: 0, reactions: 0, ids: [] };
+        return {
+          ...topic,
+          place_count: value.count,
+          reaction_total: value.reactions,
+          target_ids: value.ids,
+          _index: index,
+        };
       })
-      .sort((a, b) => b.place_count - a.place_count || a._index - b._index)
+      // 讀者按過的排前面,其次才是地點多寡 —— 與前端拿到 summary 之後的重排同一個判準,
+      // 兩處不一致的話畫面會在 JS 載入時跳一次順序。
+      .sort((a, b) =>
+        b.reaction_total - a.reaction_total || b.place_count - a.place_count || a._index - b._index)
       .map(({ _index, ...topic }) => topic);
     cities.push({
       city_code: city.city_code,
@@ -78,7 +92,7 @@ export function topicsWithEventsByCity(cityCode = null) {
     for (const ev of city.events || []) {
       if (ev.start_at == null || !ev.venue || !ev.source_url) continue;
       for (const id of entryTopicIds(ev)) {
-        const prev = agg.get(id) || { count: 0, next_start_at: null, ids: [] };
+        const prev = agg.get(id) || { count: 0, reactions: 0, next_start_at: null, ids: [] };
         const start = typeof ev.start_at === 'number' ? ev.start_at : null;
         const next =
           prev.next_start_at === null
@@ -87,23 +101,35 @@ export function topicsWithEventsByCity(cityCode = null) {
               ? prev.next_start_at
               : Math.min(prev.next_start_at, start);
         if (ev.event_id) prev.ids.push(ev.event_id);
-        agg.set(id, { count: prev.count + 1, next_start_at: next, ids: prev.ids });
+        agg.set(id, {
+          count: prev.count + 1,
+          reactions: prev.reactions + (Number(ev.reaction_total) || 0),
+          next_start_at: next,
+          ids: prev.ids,
+        });
       }
     }
     const topics = [...byId.values()]
       .map((topic, index) => {
-        const value = agg.get(topic.topic_id) || { count: 0, next_start_at: null, ids: [] };
+        const value = agg.get(topic.topic_id) || { count: 0, reactions: 0, next_start_at: null, ids: [] };
         return {
           ...topic,
           event_count: value.count,
+          reaction_total: value.reactions,
           next_start_at: value.next_start_at,
           target_ids: value.ids,
           _index: index,
         };
       })
+      // ⚠ 這裡的比較器必須與 pages/topics/[sort].astro 前端那一段**逐項相同**:
+      // 前端拿到 /v1/reactions/summary 之後會照 `emoji desc, 原順序` 重排。靜態要是用
+      // 另一套鍵,JS 一載入畫面就跳一次順序 —— 那正是這一項待辦要修掉的東西。
+      // 所以 emoji 在最前面,「有沒有活動 / 最近一場什麼時候」退成同分時的 tie-break。
+      // (單一活動在 Topic 頁 🎉 區塊裡仍然是日期優先 —— 那是另一份清單,見 export-data.mjs。)
       .sort(
         (a, b) =>
-          (a.event_count === 0 ? 1 : 0) - (b.event_count === 0 ? 1 : 0)
+          b.reaction_total - a.reaction_total
+          || (a.event_count === 0 ? 1 : 0) - (b.event_count === 0 ? 1 : 0)
           || (a.next_start_at || Number.MAX_SAFE_INTEGER) - (b.next_start_at || Number.MAX_SAFE_INTEGER)
           || a._index - b._index
       )

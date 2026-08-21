@@ -20,6 +20,10 @@
 //
 // nearby / events 的排序只在這個代表城市的全部 Topic 之間進行；
 // 以 GET /v1/reactions/summary 取得 emoji 總數後在同一城市內重排。
+// 2026-08-21 起靜態就已經照同一個鍵排好(data/{places,events}/*.json 的 reaction_total,
+// 由 sync-reactions-from-d1.mjs 每小時從 D1 回流)。這一段因此退成**微調**:
+// 回流每小時一次,這裡拿到的是這一秒的數字。比較器必須與 src/lib/local-data.mjs 那兩支
+// 逐項相同,否則 JS 一載入畫面就跳一次順序。
 // 任何 fetch 失敗 → 維持靜態順序,不清空、不顯示錯誤(見頁尾 script)。
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import TopicBoard from '../../components/TopicBoard.astro';

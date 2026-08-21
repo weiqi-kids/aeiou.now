@@ -158,3 +158,32 @@ export async function handleTranslations(request, env) {
 // 位置以 Cloudflare 的 request.cf 為準:每一次請求都帶,不必等使用者發過文,
 // 也不需要 GPS(GPS 給經緯度,換成城市要反向地理編碼,而資料模型刻意不存座標)。
 // has_posted 供前端判斷「這個人有沒有在站上留下過足跡」。
+
+// GET /internal/ugc/reaction-totals?target_type=place|event|post|comment —— reaction 計數回流主機
+//
+// 為什麼要有這一支(2026-08-21):reaction 的權威在 D1,靜態層沒有。/topics/events/ 與
+// /topics/nearby/ 因此只能「先按靜態順序印出來,等 JS 拿到 /v1/reactions/summary 再重排」——
+// 讀者看得到重排的那一跳,爬蟲看到的則永遠是未排序的那一版。把計數回流到主機、進 data/,
+// 靜態就已經是對的順序,前端那一段重排退成微調。
+//
+// 只回聚合,不回 actor_id —— 主機不需要知道誰按的,回流也不該把匿名者的行為軌跡搬出 D1。
+export async function handleReactionTotals(env, url) {
+  const targetType = url.searchParams.get("target_type") || "";
+  if (!["post", "comment", "place", "event"].includes(targetType))
+    return err(400, "invalid_body", "target_type must be post/comment/place/event");
+
+  const rows = (
+    await env.DB.prepare(
+      `SELECT target_id,
+              COUNT(*) AS total,
+              COUNT(DISTINCT actor_id) AS actors
+         FROM reactions WHERE target_type = ?
+        GROUP BY target_id
+        ORDER BY target_id`
+    )
+      .bind(targetType)
+      .all()
+  ).results;
+
+  return json({ target_type: targetType, items: rows }, 200);
+}

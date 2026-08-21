@@ -3,6 +3,7 @@
 #   /root/aeiou.now/scripts/hourly-export.sh
 #
 # 1. node scripts/export-data.mjs  → 主機 SQLite 匯出到根層 data/(內容 hash 沒變就不寫檔)
+#    (在它之前還有幾個 import/算分/回流步驟,見下方 0.x 與各步的註解)
 # 2. **只 commit 受管理的 data/ 與過期活動快照**(git add 明確路徑 —— 刻意不用 git add -A;
 #    site/ api/ db/ docs/ 的變動不歸這支管,由人工/其他流程處理)
 # 3. push 到 source repo(weiqi-kids/aeiou.now)
@@ -91,6 +92,14 @@ fi
 log "compute-topic-scores.mjs ..."
 if ! "$NODE_BIN" "$REPO/scripts/compute-topic-scores.mjs"; then
   log "WARN: compute-topic-scores 失敗,沿用上一輪分數(不中斷 export)"
+fi
+
+# reaction 計數從 D1 回流(2026-08-21)。要在 export 之前跑,否則匯出的是上一輪的數字。
+# **不 fail-closed**,理由同上一步:Worker 打不通只會讓 place/event 的 emoji 排序不新鮮
+# (前端仍會用 /v1/reactions/summary 微調),不會讓任何資料失真。
+log "sync-reactions-from-d1.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/sync-reactions-from-d1.mjs"; then
+  log "WARN: sync-reactions-from-d1 失敗,沿用上一輪 reaction 計數(不中斷 export)"
 fi
 
 log "update-local-data.mjs ..."

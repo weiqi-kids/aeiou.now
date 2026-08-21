@@ -23,7 +23,7 @@ import {
   handleQuestionResults, handleVote, handleParticipation, handleSyncQuestions,
 } from "./routes/questions.js";
 import {
-  handleSyncTopics, handlePendingTranslation, handleTranslations,
+  handleSyncTopics, handlePendingTranslation, handleTranslations, handleReactionTotals,
 } from "./routes/internal.js";
 
 // ---------- 路由 ----------
@@ -112,6 +112,11 @@ export default {
           if (request.method !== "POST")
             return err(405, "method_not_allowed", "Use POST");
           return await handleTranslations(request, env);
+        }
+        if (path === "/internal/ugc/reaction-totals") {
+          if (request.method !== "GET")
+            return err(405, "method_not_allowed", "Use GET");
+          return await handleReactionTotals(env, url);
         }
         if (path === "/internal/sync/questions") {
           if (request.method !== "POST")

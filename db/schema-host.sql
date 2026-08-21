@@ -417,3 +417,23 @@ CREATE TABLE IF NOT EXISTS topic_search_metrics (
 );
 CREATE INDEX IF NOT EXISTS idx_tsm_topic_date ON topic_search_metrics(topic_id, metric_date);
 CREATE INDEX IF NOT EXISTS idx_tsm_date ON topic_search_metrics(metric_date);
+
+-- ---------------------------------------------------------------------------
+-- reaction 計數回流(2026-08-21)
+-- ---------------------------------------------------------------------------
+-- reaction 的權威在 D1(讀者按的),主機沒有。於是 /topics/events/ 與 /topics/nearby/
+-- 的 emoji 排序只能在前端做:先印出靜態順序,等 JS 拿到 /v1/reactions/summary 再重排。
+-- 讀者看得到那一跳,而不執行 JS 的爬蟲看到的永遠是未排序的那一版。
+--
+-- 這張表是**副本不是權威**:整批以 /internal/ugc/reaction-totals 的回應覆蓋,
+-- 每小時一次(hourly-export.sh)。主機端不寫、不改、不據此做任何判斷,只餵給 export。
+-- 刻意不存 actor_id —— 主機不需要知道誰按的,回流也不該把匿名者的行為軌跡搬出 D1。
+CREATE TABLE IF NOT EXISTS reaction_totals (
+  target_type TEXT NOT NULL,                  -- post|comment|place|event(契約 §4)
+  target_id   TEXT NOT NULL,
+  total       INTEGER NOT NULL DEFAULT 0,     -- reaction 列數(同一人按三顆 = 3)
+  actors      INTEGER NOT NULL DEFAULT 0,     -- 不同 anon_id 數
+  synced_at   INTEGER NOT NULL,
+  PRIMARY KEY (target_type, target_id)
+);
+CREATE INDEX IF NOT EXISTS idx_reaction_totals_type ON reaction_totals(target_type, total DESC);
