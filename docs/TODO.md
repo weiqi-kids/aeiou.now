@@ -69,6 +69,24 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       而且每一國都能找到該國官方網域的來源(R6)。
       反例:購物節(雙十一/Black Friday/Harbolnas)搜尋量高但沒有政府公告,R6 過不了,不要做。
 
+      **2026-08-21 這一輪加了兩個**(用戶核准),兩個都是七個市場七個不同答案:
+      · `elders-day` —— 敬老日/祖父母節。日本九月第三個星期一**放假**、中國重陽寫進
+        《老年人權益保障法》但**不放假**、台灣祖父母節是教育部的行政推廣、美國的名字寫的是
+        **祖父母不是老人**(定義家庭關係不是年齡層)、印尼 5/29 紀念的是「高齡的 Radjiman
+        主持了建國第一場會議」、印度與巴西同在 10/1 跟著聯合國。
+      · `year-end-bonus` —— 年終獎金/十三薪/THR。**確定性**是分歧的主軸:巴西十三薪是
+        1962 年立法的義務(11/30、12/20 兩期,遲付有罰)、印尼 THR 必須節前七天付清不准分期
+        (遲付罰 5%)、印度法定紅利的下限**與有沒有賺錢無關**、而台灣勞基法第 29 條是條件句
+        (有盈餘才分配,沒金額沒期限沒罰則)、美國根本沒有,聯邦法規只管它算不算進加班費基礎。
+
+      ⚠ **選題時先確認七個市場的官方來源從主機打得通**。這一輪原本要做 `tree-planting-day`,
+      七國日期分歧也夠大,但印尼(`menlhk.go.id`/`bphn.go.id`)與美國(`usda.gov`)的頁面
+      從本主機一律 403/000,查不到就不能寫(硬寫等於捏造)。改題比硬湊來源便宜。
+      可用的官方網域(2026-08-21 實測從主機打得通):`law.moj.gov.tw`、`depart.moe.edu.tw`、
+      `laws.e-gov.go.jp`、`flk.npc.gov.cn`、`fgk.chinatax.gov.cn`、`govinfo.gov`、`ecfr.gov`、
+      `pib.gov.in`、`india.gov.in`、`labour.gov.in`、`setneg.go.id`、`kemnaker.go.id`、
+      `kemenag.go.id`、`ayosehat.kemkes.go.id`、`planalto.gov.br`、`gov.br`。
+
 ## 這一輪的收尾(2026-08-20)
 
 - [x] **HotScore 兩半都接上了**。`compute-topic-scores.mjs` 七項全實作,串進
@@ -82,7 +100,8 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       `node -e "const {inspectUrl}=await import('/root/seo-ops/lib/google.mjs');
       console.log((await inspectUrl('/root/.config/aeiou/ga4-sa.json','sc-domain:aeiou.now',
       'https://aeiou.now/questions/')).inspectionResult.indexStatusResult.coverageState)"`
-- [ ] ⛔ **印尼 SNPMB 官網 TLS 憑證仍過期**(外部,我們改不了;2026-08-21 複驗:
+- [ ] ⛔ **印尼 SNPMB 官網 TLS 憑證仍過期**(外部,我們改不了;2026-08-21 **再次**複驗,
+      `notAfter=Oct 13 04:22:27 2024 GMT`、curl 回 000,狀況未變;原記錄:
       `notAfter=Oct 13 04:22:27 2024 GMT`,curl 回 000):
       `snpmb.bppp.kemdikbud.go.id` 回 certificate has expired。
       `exam-season` 的 ID 來源暫用 `portalbpsdm.jambiprov.go.id`(`.go.id` 省級政府,
@@ -130,7 +149,10 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       `request.cf`,主機在日本,經 API 發文會把站方的題標成「來自日本」;② 入口限流 3 篇/5 分鐘
       會擋住整批(那道限流是對的,不該為種子資料放寬)。`translation_status='pending'`,
       走與真人貼文同一條翻譯路,不特例。
-- [ ] 🔴 **種子題會在 8 小時後從討論室淡出** —— 契約 §1 的 feed 只回 `created_at >= now-8h`。
+- [x] **種子題淡出已解**(2026-08-21;下方「Ask the World 保鮮」那節就是解法:`25 */4` cron
+      + 原地刷新)。複驗:`node scripts/seed-ask-the-world.mjs --dry-run` → 「題庫 8 題:在線 8、
+      要刷新 0、要新增 0」。以下是當時的三條路,留著當紀錄 ——
+- [x] ~~🔴 **種子題會在 8 小時後從討論室淡出**~~ —— 契約 §1 的 feed 只回 `created_at >= now-8h`。
       重跑腳本會補一則新的(冪等判準就是「這一題現在有沒有活著的副本」),但**要有人或 cron 去跑**。
       三條路,都要用戶決定:
         (a) 把 `seed-ask-the-world.mjs` 掛上 cron(改 cron 檔屬 C 級,先問);
@@ -214,7 +236,8 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
 - [x] **壓縮進管線**:`generate-topic-cover.mjs` 產完就跑 pngquant(65–90)。
       「裸執行就必須是正確且完整的行為」—— 出圖出來就該跟兄弟一致,不靠有人記得補一刀。
       壓不小就用原檔;pngquant 不在只印警告不當錯誤。
-- [ ] ⛔ **LCP 量不到(外部卡點)**:PageSpeed Insights 免金鑰配額當天已用盡,
+- [ ] ⛔ **LCP 量不到(外部卡點;用戶 2026-08-21 表示會去啟用 PSI API)**:
+      PageSpeed Insights 免金鑰配額當天已用盡,
       而專案的 SA(`~/.config/aeiou/ga4-sa.json`)沒有 PSI 的 scope
       —— 回 `403 Request had insufficient authentication scopes`。
       **解鎖條件**:在該 GCP 專案啟用 PageSpeed Insights API 並給 SA 對應權限(屬用戶授權範圍)。
@@ -338,6 +361,9 @@ node scripts/check-source-urls.mjs              # 來源連結存活(404/410、�
   排名 job 上線、筆數超過門檻會自動恢復索引,不需要改碼。查:`node scripts/check-content-depth.mjs`。
 - [ ] **持續工作:新增 Topic 一律要一次補到水位**。閘門會擋,但擋下來的是部署不是內容——
   別靠閘門提醒才想到要寫。
+  (2026-08-21 的兩個新 Topic 都是一次到位:`elders-day` 1812 唯一字元、`year-end-bonus`
+  2029,各 7–8 個變體、0 空白格,四要件同一輪進 —— md、occurrence、cover、taxonomy 白名單
+  與 52 週日曆。baseline 已重鎖兩次。)
 
 ### 補資料:讀者在自己國家那一格看到空白(2026-08-20 結案,轉為維護)
 
@@ -406,21 +432,34 @@ node scripts/check-source-urls.mjs --warn-only # 只看報表不擋
 
 ## 產品功能(版面已定版,這些是資料/行為層)
 
-- [ ] **`/topics/events/`、`/topics/nearby/` 的 emoji 排序只在前端做**(JS 拿
-  `/v1/reactions/summary` 後重排)。要靜態排好,需把 reaction 計數從 D1 回流主機再進 `data/`
-  (加一支 cron 腳本 + export 欄位)。
-- [ ] **重新整理後「我按過的 emoji」會消失**:feed 端點不回 `mine`(契約 §1 限制)。
-  要修就改契約讓 feed 依 anon_id 附 `mine`,Worker 一條 JOIN 的事,但屬契約變更。
+- [x] **emoji 排序已在靜態排好**(2026-08-21 用戶核准)。真正的後果不只是讀者看得到排序跳一次,
+  而是**不執行 JS 的爬蟲看到的永遠是未排序的那一版**。
+  新增 `GET /internal/ugc/reaction-totals`(只回聚合,不回 actor_id)、
+  `scripts/sync-reactions-from-d1.mjs`(**整批覆蓋而非 upsert** —— reaction 可以被收回,
+  只 upsert 的話歸零的目標會永遠停在最後一次的非零值)、主機表 `reaction_totals`(副本非權威)。
+  掛在 `hourly-export.sh`,不 fail-closed。`local-data.mjs` 兩支比較器與
+  `pages/topics/[sort].astro` 前端那段**逐項相同** —— 不一致的話 JS 一載入就跳一次順序。
+  查:`sqlite3 db/aeiou.sqlite "SELECT target_type,COUNT(*) FROM reaction_totals GROUP BY 1"`
+- [x] **重新整理後「我按過的 emoji」不再消失**(2026-08-21 用戶核准的契約變更)。
+  feed 與 `/v1/reactions/summary` 都補了 `mine`,**一律是陣列**(沒 cookie、沒按過都是 `[]`,
+  不是缺 key —— 缺席會逼前端為兩件事寫兩套判斷)。summary 順帶改成「每個被問到的 id 都有一格」。
+  查:`curl -s "$API/v1/topics/<id>/feed?limit=1" | grep -o '"mine":\[[^]]*\]'`
 - [x] **每個 Topic 都要有正式 cover 圖**(`site/public/covers/<slug>.png`,1200×675、16:9)。
   Google Discover 的大圖最低寬度與預覽比例以此為驗收；`coverPath()` 只接受 `.png`。
 - [x] **首頁「近期話題」內容稀疏**:已建立共通性 Topic、`content/topic-calendar.json` 的 52 週排程與七語內容；
   `scripts/check-topic-calendar.mjs` 會阻擋缺週或缺圖的匯出。
-- [ ] **新 Topic 沒有熱度分數**(import 不碰 `topic_scores`),級距顯示最低階。
-  排名 job 屬 M2 的 19 job 管線;過渡期可決定要不要手動塞 demo 分數(要問用戶,不要自作主張)。
+- [x] **常青 Topic 拿得到熱度分數了**(2026-08-21)。診斷:不是「新 Topic 沒分數」,是
+  **沒有 observance 的常青 Topic 七項全 0** —— 沒有發生日 → Proximity 0,來源掛在
+  regional notes 而不是 observance → SourceScore 也 0 → 整個 Topic 不進 `topic_scores`。
+  而它們同時是 `topic-calendar.json` 排進本週的主打 Topic:一邊主打、一邊宣告「這個沒人在意」。
+  改法:①有真實發生日就用它,沒有才退到日曆週次(年度環狀)換算成天數,餵進同一個高斯衰減;
+  ②SourceScore 補讀第三處來源(`content/topic-regional-notes.json`)。
+  查:`node scripts/compute-topic-scores.mjs --dry-run`(n 應等於 active 人工 Topic 數)。
 
 ## 每日世界一問(2026-08-15 上線;規格=docs/briefs/daily-question.md)
 
-- [ ] **題庫要持續補**。涵蓋到哪天、還剩幾天,一律查:
+- [ ] **題庫要持續補**(2026-08-21 補了兩週 28 題,涵蓋天數 29 → 43,到 2026-10-02)。
+  涵蓋到哪天、還剩幾天,一律查:
   `sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT qdate) 未來天數, MAX(qdate) FROM questions WHERE qdate >= date('now')"`
   用完前端不開天窗(退最近一題),但那等於每天給讀者同一題,是可見的產品破口。
   補法:往 `content/questions.json` 檔尾加題(一天一 poll 一 guess),七語齊全、掛既有 topic;
@@ -429,11 +468,17 @@ node scripts/check-source-urls.mjs --warn-only # 只看報表不擋
   再走同一條 hourly 管線上線。**題目內容要有可查證的事實**——與 Topic 內容同一條紅線
   (不開天窗但會失去「每日」感)。補題=編輯 `content/questions.json`。之後可排每週 claude 批次產題
   (額度回復後再議,動工前問用戶)。
-- [ ] **「個人」世界公民排行榜**被 OAuth(M2)擋住(anon_id 無顯示名且 Safari 下不穩,拿來排名會做出隨機掉名次的榜);
-  本次交付**社群層級**參與榜(participation 端點)。OAuth 上線後升級。
-- [ ] **guess 題的答案在靜態 JSON 裡**(view-source 可先看到)——遊戲性取捨,記錄在案;要藏就得把揭曉搬進 Worker(契約變更)。
-- [ ] **/questions/ 頁每卡各發一次 results 請求**:題庫累積後單次載入的並發會線性成長
-  (GET results 目前無限流、無 Cache-Control)。題數過 30 前加 lazy-load(進 viewport 才 fetch)或批次端點。
+- [ ] ⛔ **「個人」世界公民排行榜**被 OAuth 擋住(anon_id 無顯示名且 Safari 下不穩,拿來排名
+  會做出隨機掉名次的榜);本次交付**社群層級**參與榜(participation 端點)。
+  **解鎖條件**:下面那條 OAuth。用戶 2026-08-21 表示會去開 OAuth app。
+- [x] **guess 的答案已搬進 Worker**(2026-08-21 用戶核准的契約變更)。判準只有一條:
+  **`mine` 非 null 才給** —— 投過票就給,不是「投對才給」也不是「過了某時間才給」。
+  靜態層只留 `has_answer` 布林;缺該語系的解說就不給句子,不退回別的語言。
+  D1 `questions` 加 `answer_option` / `explain_json` 兩欄。
+  查:`curl -s "$API/v1/questions/<id>/results?locale=zh-TW" | python3 -c "import sys,json;print('answer' in json.load(sys.stdin))"` → 沒投票時應為 False
+- [x] **/questions/ 改成進 viewport 才發 results 請求**(2026-08-21)。原本一次載入就是 N 發並發,
+  而卡數等於題庫大小、每天長一題。沒有 `IntersectionObserver` 就退回全部立刻發 ——
+  降級要是可用的舊行為,不是永遠停在 loading。
 - [x] **`scripts/export-data.mjs` 的 NUL 位元組已移除**(2026-08-19)。原問題:三個 NUL 當
   複合鍵分隔符(2026-08-15 發現),git 視其為二進位 → 改動在 diff/PR 上看不見;grep 也一樣,
   且是**靜默回空不報錯**(2026-08-19 診斷時實際被騙過)。改法是複合鍵用巢狀 Map,不用分隔符。
@@ -448,13 +493,16 @@ sqlite3 db/aeiou.sqlite "SELECT access_source,status,COUNT(*) FROM topics GROUP 
 ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 Topic
 ```
 
-- [ ] **復活前必須先做:前端要能區分機器 Topic 與人工 Topic**。`export-data.mjs` 已在輸出掛
-  `topic_kind:'trend'`/`owner:'machine'`,但 `site/` 只有 `src/lib/data.mjs` 用它把趨勢
-  Topic 當「近期話題」推上首頁(`season_distance: 0`),版面上沒有任何標示。
-  拍板當日(2026-08-19)實測 313 個 active trend Topic 對 29 個人工 Topic —— 當日事實,現況請用上面的查法。
-  ⚠ 版面怎麼標示屬產品決定,動工前先問用戶,並先讀產品草案本體。
-- [ ] **趨勢 Topic 的熱度與排序策略未定**:趨勢沒有文化日期,目前是直接給最高「近期」優先序,
-  等同蓋過人工策展的節奏。復活時要一併決定。
+- [x] **前端已能區分機器 Topic 與人工 Topic**(2026-08-21 用戶核准;動工前讀過產品草案
+  §2/§44/§53 —— 草案沒有規定這個標示的長相,所以是新的產品決定,不是照抄編號)。
+  TopicRow 一顆**虛線**徽章(不能只靠顏色分辨)+ Topic 頁頁首一句完整的話:
+  徽章的兩三個字說不完「沒有經過人工查證」,而那正是讀者要判斷的事。
+  判準是輸出層契約 `topic_kind`,不是 category。查:`grep -c 'badge--machine' site/dist/index.html`
+- [x] **趨勢 Topic 的排序策略已定**(2026-08-21):首頁「近期話題」的**第一排序鍵改成策展層**。
+  趨勢 Topic 的 `season_distance` 是 0,但那個 0 是「沒有文化日期」的佔位、不是「今天就是」;
+  與長青主題的 0 放在同一個鍵上比,等於讓機器彙整的話題與人工策展的當令議題並列在首頁最前面,
+  而前者數量可以是後者的十倍。人工的先排完,機器的接在後面,各自內部再比距離與熱度。
+  🔴 復活時要改的仍然是 `sync-topics-to-d1.mjs` 的那個 WHERE,改完要跑一次 `--force`。
 - [x] **差異同步已在 production 走到差異路徑**(2026-08-20)。清完趨勢副本後那一輪:
   「內容有變,差異 upsert(送 0 topics / 0 topic_i18n,全量會是 38 / 266)」
   ——payload 少了 317 個 Topic 所以整體 hash 變了,但留下的每一列都沒變,於是一列都沒送。
@@ -468,12 +516,24 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
   ——差異同步不會自己想起沒送過的列。
   現況查法:
   `cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT COUNT(*) FROM topics"`
-- [ ] Turnstile(Bot 防護第三層,擋純腳本):判斷可後補——限流+價值閘門就位後,等實際被打再上
-  (用戶未明示反對此排序;要提前做先問)
+- [x] **Turnstile 的碼與測試已到位**(2026-08-21 用戶核准提前做),⛔ **只差 widget 的鑰匙**——
+  主機的 wrangler token 沒有 Turnstile scope(實測 `challenges/widgets` 回 Authentication error),
+  建不了 widget。**解鎖條件**:在 Cloudflare 儀表板建一個 Turnstile widget,然後
+  `cd api && npx wrangler secret put TURNSTILE_SECRET`、並在 `wrangler.jsonc` 的 `vars` 加
+  `TURNSTILE_SITEKEY`。兩個都設才生效,設了之後 `POST /v1/posts` 與 `/v1/comments` 要帶
+  `turnstile_token`。設計上的三個決定:①開關由 Worker 說了算(前端問 `/v1/me`),
+  **七個靜態站不必為了開關重建** —— 真的被打的時候沒有等 CI 跑完七站的時間;
+  ②siteverify 打不通回 **503 不放行**(驗不到就當通過 = 在對方最想要的時刻自動關掉);
+  ③一個討論室只掛一個 widget,發文框與二十個回覆框共用。
+  查現在是開是關:`curl -s "$API/v1/me" | grep -o '"turnstile":{[^}]*}'`
 - [x] 七站切換自訂網域(2026-08-15 完成):CI dist 帶 `CNAME`、`BASE_PATH=/`、每站專屬
   `SITE_URL`、hreflang+x-default(=en)指向七個正式網域、Worker CORS 加七網域。
   查:`gh api repos/weiqi-kids/aeiou-pages-<x>/pages --jq '{cname,https_enforced}'` 或打各網域 `.build-id`。
-- [ ] 語系切換器(是否要做、放哪:**版面事項,動工前讀產品草案並問用戶**)
+- [x] **語系切換器已做**(2026-08-21 用戶明示要做)。⚠ 我當時**不建議**做:與「七語系是七個
+  獨立的站、讀者只看得到一種語言」有張力。用戶明示後用最不打擾的方式做:放**頁尾**不進導覽、
+  連到**同一頁**的其他語系網址(不是丟回別站首頁)、每個連結掛 hreflang + lang、
+  不做 `<select>`、不做 JS 自動轉向(偵測到的語言不等於讀者想要的語言)。
+  要撤掉就刪 `BaseLayout.astro` 的 `<nav class="footer-langs">` 那一段,其餘版面不受影響。
 - [x] **IndexNow**(2026-08-19,用戶指示提前):`scripts/indexnow.mjs`,CI 的 indexnow job 在
   七站全部部署完之後跑(best-effort,不擋部署)。只送近 48h 內 `facts.json` 的 `updated_at`
   有變的 Topic —— 該欄位在同日修好無條件推新之前不能拿來當判準。七個網域各送一次
@@ -481,11 +541,34 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
   查:`node scripts/indexnow.mjs --dry-run`;金鑰檔 `curl -s https://aeiou.now/<key>.txt`。
 - [x] **sitemap**:隨 build 產出,七站皆已在 GSC 提交(0 錯誤 0 警告),Topic 頁已帶 lastmod。
 - [x] GSC 提交 job:**不需要** —— sitemap 提交是一次性動作,七站皆已完成。
-- [ ] OAuth(Google/GitHub/LINE;cn 市場皆不通為已知缺口)
-- [ ] GA4 每日拉取 job(property 與 SA 見上節)
-- [ ] Markdown 渲染(M1 純文字轉義)、圖片上傳(R2+審核)
-- [ ] 「回報錯誤/補充」按鈕、「加入行事曆」按鈕(Google Calendar URL + .ics)
-- [ ] 來源清冊與爬搜、19 job 完整管線、Vectorize 語意搜尋、R2 歸檔、moderation 啟用範圍
+- [ ] ⛔ **OAuth**(Google/GitHub/LINE;cn 市場皆不通為已知缺口)——用戶 2026-08-21 表示會去開。
+  **解鎖條件**:三家的 client id / secret。拿到之後放 `~/.config/aeiou/`(不進 git),
+  Worker 側用 `wrangler secret put`。在那之前 `topicGate` 對 `access_level >= 1` 一律 401。
+- [ ] ⛔ **GA4 每日拉取 job** —— 用戶 2026-08-21 表示會去開 property + 專屬 SA。
+  **解鎖條件**:建 aeiou 專屬 GCP 專案 + SA(紅線:**不共用其他站金鑰**),把 SA 加進 GA4
+  property 的檢視者。⚠ 拉到之後**仍然不准拿它算 HotScore 的瀏覽面**(2026-08-20 拍板:
+  GA4 近 28 天 96% 是機器);它的用途是報表,不是分數。
+- [x] **Markdown 安全子集已上線**(2026-08-21 用戶核准)。契約 §1 的 content 一直寫著
+  「Markdown 安全子集」,但 M1 的前端是純文字,所以 `**這樣**` 在畫面上就是一對星號。
+  紅線「絕不 innerHTML」**沒有放寬**:`site/src/lib/markdown.mjs` 回的是 **DOM 節點**,
+  安全性是結構上的、不是黑名單。`<a href>` 走白名單(只有 http/https)。
+  守這條的是 `node --test tests/site/markdown.test.mjs`(19 個)—— 它用一個**沒有
+  innerHTML setter 的**假 DOM 跑,實作一偷用就爆炸。不支援標題與圖片。
+- [ ] ⛔ **圖片上傳(R2+審核)卡在 R2 bucket**(用戶 2026-08-21 表示會去開)。
+  **解鎖條件**:在 Cloudflare 開一個 bucket 並在 `api/wrangler.jsonc` 加 `r2_buckets` binding。
+  在那之前 markdown 刻意不支援圖片語法 —— 不從渲染層開這個洞。
+- [x] **「加入行事曆」與「回報錯誤/補充」都已上線**(2026-08-21 用戶核准)。
+  行事曆:純字串組裝的 Google TEMPLATE 網址 + .ics data URI,不打任何 API、不需要 JS
+  (同「導航一律純字串組裝」那條紅線)。三條限制各有代價作為理由 —— **只出本站市場那一國**
+  (七國各兩條連結實測讓每頁多 14KB,而這個站剛為 LCP 壓過封面)、日期是估算或地方變體時不出
+  (把「大概是那天」寫進別人的日曆是替他做我們沒把握的決定)、說明截到 180 字。
+  ⚠ 全日事件的 DTEND **排他**,要 +1 天;DTSTAMP 用起始時間而非「現在」,否則每次 build
+  產生不同位元組,「hash 沒變就不動」那整套保護會失效。
+  回報錯誤:**不另開端點、不另開表單** —— 按下去把前綴插進討論室發文框並捲過去,走同一條
+  翻譯路、同一道價值閘門、同一個限流。更正因此是公開可討論的(這是主題頁論壇;收在私人信箱
+  裡的更正只有我們知道它被回報過)。沒有 JS 或沒有討論室時整顆按鈕不出現。
+- [ ] 🅤 **來源清冊與爬搜、19 job 完整管線、Vectorize 語意搜尋、R2 歸檔、moderation 啟用範圍**
+  —— 2026-08-21 問過用戶要不要動,**用戶這一輪沒選它們**,留在 M2。
 
 ## 已知缺口(記錄在案,暫不解)
 

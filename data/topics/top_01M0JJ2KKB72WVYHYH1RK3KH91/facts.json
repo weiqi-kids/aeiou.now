@@ -1,0 +1,608 @@
+{
+  "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+  "slug": "year-end-bonus",
+  "canonical_name": "Year-End Bonus, Thirteenth Salary, and Holiday Allowance",
+  "commonality": "the extra payment that arrives once a year before a holiday — whether the law requires it, when the deadline falls, and what happens if it is late",
+  "category": "civic",
+  "status": "active",
+  "is_perennial": 0,
+  "updated_at": "2026-08-21T16:22:14.000Z",
+  "access_level": 0,
+  "observances": [
+    {
+      "observance_id": "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_BR_decimo-terceiro",
+      "observance_key": "decimo-terceiro",
+      "country_code": "BR",
+      "local_name": "Décimo terceiro salário",
+      "observed_date": "12-20",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_885FCD3D63081FC2F168502B",
+        "src_5E229B5DE741B7919B420EA8"
+      ],
+      "source_urls": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l4090.htm",
+        "https://www.planalto.gov.br/ccivil_03/leis/l4749.htm"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_BR_decimo-terceiro_2026_2026-12-20",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-20",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_5E229B5DE741B7919B420EA8"
+          ],
+          "source_urls": [
+            "https://www.planalto.gov.br/ccivil_03/leis/l4749.htm"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_BR_decimo-terceiro_2027_2027-12-20",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-20",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_5E229B5DE741B7919B420EA8"
+          ],
+          "source_urls": [
+            "https://www.planalto.gov.br/ccivil_03/leis/l4749.htm"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_BR_decimo-terceiro_2026_2026-12-20",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-20",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "America/Sao_Paulo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_5E229B5DE741B7919B420EA8"
+        ],
+        "source_urls": [
+          "https://www.planalto.gov.br/ccivil_03/leis/l4749.htm"
+        ],
+        "distance_days": 121
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_CN_nianzhongjiang",
+      "observance_key": "nianzhongjiang",
+      "country_code": "CN",
+      "local_name": "年终奖",
+      "observed_date": null,
+      "date_rule": "農曆春節前後,無法定期限",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_D2D963E53421080222F9F19C",
+        "src_274ECFA6ABF18D7F1854F7CD"
+      ],
+      "source_urls": [
+        "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5211524/content.html",
+        "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/xinhuanet/202308/t20230829_3904516.htm"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_CN_nianzhongjiang_2026_2026-02-16",
+          "occurrence_year": 2026,
+          "starts_on": "2026-02-16",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Shanghai",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_D2D963E53421080222F9F19C"
+          ],
+          "source_urls": [
+            "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5211524/content.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_CN_nianzhongjiang_2027_2027-02-05",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-05",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Shanghai",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_D2D963E53421080222F9F19C"
+          ],
+          "source_urls": [
+            "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5211524/content.html"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_CN_nianzhongjiang_2027_2027-02-05",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-05",
+        "ends_on": null,
+        "calendar_system": "chinese-lunisolar",
+        "timezone": "Asia/Shanghai",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_D2D963E53421080222F9F19C"
+        ],
+        "source_urls": [
+          "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5211524/content.html"
+        ],
+        "distance_days": 167
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_ID_thr",
+      "observance_key": "thr",
+      "country_code": "ID",
+      "local_name": "Tunjangan Hari Raya (THR)",
+      "observed_date": null,
+      "date_rule": "宗教節日前七天(依開齋節日期而定)",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_8963F65C1E8A114F59C3A21F",
+        "src_313EE2D3C2076E164EFC9455"
+      ],
+      "source_urls": [
+        "https://www.setneg.go.id/baca/index/terbitkan_edaran_thr_keagamaan_2026_menaker_harus_dibayar_penuh_tak_boleh_dicicil",
+        "https://kemnaker.go.id/news/detail/menaker-thr-tak-bisa-dicicil-wajib-dibayar-penuh"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_ID_thr_2026_2026-03-13",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-13",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Jakarta",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_313EE2D3C2076E164EFC9455"
+          ],
+          "source_urls": [
+            "https://kemnaker.go.id/news/detail/menaker-thr-tak-bisa-dicicil-wajib-dibayar-penuh"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_ID_thr_2027_2027-03-03",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-03",
+          "ends_on": null,
+          "calendar_system": "islamic",
+          "timezone": "Asia/Jakarta",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_313EE2D3C2076E164EFC9455"
+          ],
+          "source_urls": [
+            "https://kemnaker.go.id/news/detail/menaker-thr-tak-bisa-dicicil-wajib-dibayar-penuh"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_ID_thr_2027_2027-03-03",
+        "occurrence_year": 2027,
+        "starts_on": "2027-03-03",
+        "ends_on": null,
+        "calendar_system": "islamic",
+        "timezone": "Asia/Jakarta",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_313EE2D3C2076E164EFC9455"
+        ],
+        "source_urls": [
+          "https://kemnaker.go.id/news/detail/menaker-thr-tak-bisa-dicicil-wajib-dibayar-penuh"
+        ],
+        "distance_days": 194
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_IN_statutory-bonus",
+      "observance_key": "statutory-bonus",
+      "country_code": "IN",
+      "local_name": "Statutory bonus (Payment of Bonus Act)",
+      "observed_date": "11-30",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_89ADE5F389B7D9BAAA697191",
+        "src_7AAF90CE673BD414331AC6B1"
+      ],
+      "source_urls": [
+        "https://labour.gov.in/mainsecretariatdivisions/information-payment-bonus",
+        "https://www.labour.gov.in/static/uploads/2025/06/71f40bdd15ede77446bb56d7b1c16df7.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_IN_statutory-bonus_2026_2026-11-30",
+          "occurrence_year": 2026,
+          "starts_on": "2026-11-30",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_89ADE5F389B7D9BAAA697191"
+          ],
+          "source_urls": [
+            "https://labour.gov.in/mainsecretariatdivisions/information-payment-bonus"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_IN_statutory-bonus_2027_2027-11-30",
+          "occurrence_year": 2027,
+          "starts_on": "2027-11-30",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_89ADE5F389B7D9BAAA697191"
+          ],
+          "source_urls": [
+            "https://labour.gov.in/mainsecretariatdivisions/information-payment-bonus"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_IN_statutory-bonus_2026_2026-11-30",
+        "occurrence_year": 2026,
+        "starts_on": "2026-11-30",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Kolkata",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_89ADE5F389B7D9BAAA697191"
+        ],
+        "source_urls": [
+          "https://labour.gov.in/mainsecretariatdivisions/information-payment-bonus"
+        ],
+        "distance_days": 101
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_JP_natsu-bonus",
+      "observance_key": "natsu-bonus",
+      "country_code": "JP",
+      "local_name": "夏のボーナス(期末手当)",
+      "observed_date": "06-30",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 2,
+      "source_ids": [
+        "src_26D6B6DEF5B910AF022EAE20"
+      ],
+      "source_urls": [
+        "https://laws.e-gov.go.jp/law/325AC0000000095"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_JP_natsu-bonus_2026_2026-06-30",
+          "occurrence_year": 2026,
+          "starts_on": "2026-06-30",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_26D6B6DEF5B910AF022EAE20"
+          ],
+          "source_urls": [
+            "https://laws.e-gov.go.jp/law/325AC0000000095"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_JP_natsu-bonus_2027_2027-06-30",
+          "occurrence_year": 2027,
+          "starts_on": "2027-06-30",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_26D6B6DEF5B910AF022EAE20"
+          ],
+          "source_urls": [
+            "https://laws.e-gov.go.jp/law/325AC0000000095"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_JP_natsu-bonus_2027_2027-06-30",
+        "occurrence_year": 2027,
+        "starts_on": "2027-06-30",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Tokyo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_26D6B6DEF5B910AF022EAE20"
+        ],
+        "source_urls": [
+          "https://laws.e-gov.go.jp/law/325AC0000000095"
+        ],
+        "distance_days": 312
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_JP_fuyu-bonus",
+      "observance_key": "fuyu-bonus",
+      "country_code": "JP",
+      "local_name": "冬のボーナス(期末手当)",
+      "observed_date": "12-10",
+      "date_rule": null,
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_26D6B6DEF5B910AF022EAE20"
+      ],
+      "source_urls": [
+        "https://laws.e-gov.go.jp/law/325AC0000000095"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_JP_fuyu-bonus_2026_2026-12-10",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-10",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_26D6B6DEF5B910AF022EAE20"
+          ],
+          "source_urls": [
+            "https://laws.e-gov.go.jp/law/325AC0000000095"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_JP_fuyu-bonus_2027_2027-12-10",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-10",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_26D6B6DEF5B910AF022EAE20"
+          ],
+          "source_urls": [
+            "https://laws.e-gov.go.jp/law/325AC0000000095"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_JP_fuyu-bonus_2026_2026-12-10",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-10",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Tokyo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_26D6B6DEF5B910AF022EAE20"
+        ],
+        "source_urls": [
+          "https://laws.e-gov.go.jp/law/325AC0000000095"
+        ],
+        "distance_days": 110
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_TW_year-end",
+      "observance_key": "year-end",
+      "country_code": "TW",
+      "local_name": "年終獎金",
+      "observed_date": null,
+      "date_rule": "農曆春節前發放(公曆日期每年不同)",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_6A453A52838434D00BAB682B"
+      ],
+      "source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=29"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_TW_year-end_2026_2026-02-16",
+          "occurrence_year": 2026,
+          "starts_on": "2026-02-16",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Taipei",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_6A453A52838434D00BAB682B"
+          ],
+          "source_urls": [
+            "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=29"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_TW_year-end_2027_2027-02-05",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-05",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Taipei",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_6A453A52838434D00BAB682B"
+          ],
+          "source_urls": [
+            "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=29"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_TW_year-end_2027_2027-02-05",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-05",
+        "ends_on": null,
+        "calendar_system": "chinese-lunisolar",
+        "timezone": "Asia/Taipei",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_6A453A52838434D00BAB682B"
+        ],
+        "source_urls": [
+          "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=29"
+        ],
+        "distance_days": 167
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_US_discretionary-bonus",
+      "observance_key": "discretionary-bonus",
+      "country_code": "US",
+      "local_name": "Holiday / year-end bonus",
+      "observed_date": null,
+      "date_rule": "沒有法定期限,由雇主決定",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_720ABC03E5BB53A37BBF2A30"
+      ],
+      "source_urls": [
+        "https://www.ecfr.gov/current/title-29/section-778.211"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_US_discretionary-bonus_2026_2026-12-15",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-15",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_720ABC03E5BB53A37BBF2A30"
+          ],
+          "source_urls": [
+            "https://www.ecfr.gov/current/title-29/section-778.211"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_US_discretionary-bonus_2027_2027-12-15",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-15",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_720ABC03E5BB53A37BBF2A30"
+          ],
+          "source_urls": [
+            "https://www.ecfr.gov/current/title-29/section-778.211"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_US_discretionary-bonus_2026_2026-12-15",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-15",
+        "ends_on": null,
+        "calendar_system": "local",
+        "timezone": "America/New_York",
+        "date_status": "local-variant",
+        "source_ids": [
+          "src_720ABC03E5BB53A37BBF2A30"
+        ],
+        "source_urls": [
+          "https://www.ecfr.gov/current/title-29/section-778.211"
+        ],
+        "distance_days": 116
+      }
+    }
+  ],
+  "regional_notes": [],
+  "countries": [
+    {
+      "country_code": "BR",
+      "observance_ids": [
+        "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_BR_decimo-terceiro"
+      ]
+    },
+    {
+      "country_code": "CN",
+      "observance_ids": [
+        "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_CN_nianzhongjiang"
+      ]
+    },
+    {
+      "country_code": "ID",
+      "observance_ids": [
+        "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_ID_thr"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "observance_ids": [
+        "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_IN_statutory-bonus"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "observance_ids": [
+        "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_JP_natsu-bonus",
+        "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_JP_fuyu-bonus"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "observance_ids": [
+        "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_TW_year-end"
+      ]
+    },
+    {
+      "country_code": "US",
+      "observance_ids": [
+        "obs_top_01M0JJ2KKB72WVYHYH1RK3KH91_US_discretionary-bonus"
+      ]
+    }
+  ],
+  "relations": [],
+  "source_ids": [
+    "src_26D6B6DEF5B910AF022EAE20",
+    "src_274ECFA6ABF18D7F1854F7CD",
+    "src_313EE2D3C2076E164EFC9455",
+    "src_5E229B5DE741B7919B420EA8",
+    "src_6A453A52838434D00BAB682B",
+    "src_720ABC03E5BB53A37BBF2A30",
+    "src_7AAF90CE673BD414331AC6B1",
+    "src_885FCD3D63081FC2F168502B",
+    "src_8963F65C1E8A114F59C3A21F",
+    "src_89ADE5F389B7D9BAAA697191",
+    "src_D2D963E53421080222F9F19C"
+  ],
+  "source_urls": [
+    "https://laws.e-gov.go.jp/law/325AC0000000095",
+    "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/xinhuanet/202308/t20230829_3904516.htm",
+    "https://kemnaker.go.id/news/detail/menaker-thr-tak-bisa-dicicil-wajib-dibayar-penuh",
+    "https://www.planalto.gov.br/ccivil_03/leis/l4749.htm",
+    "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=29",
+    "https://www.ecfr.gov/current/title-29/section-778.211",
+    "https://www.labour.gov.in/static/uploads/2025/06/71f40bdd15ede77446bb56d7b1c16df7.pdf",
+    "https://www.planalto.gov.br/ccivil_03/leis/l4090.htm",
+    "https://www.setneg.go.id/baca/index/terbitkan_edaran_thr_keagamaan_2026_menaker_harus_dibayar_penuh_tak_boleh_dicicil",
+    "https://labour.gov.in/mainsecretariatdivisions/information-payment-bonus",
+    "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5211524/content.html"
+  ],
+  "content_updated_at": "2026-08-21T16:26:02.279Z",
+  "content_hash": "f4f1590bcf60d9a1c9cb686f460bd9ed04bbd42522045c214104df5275412042"
+}
