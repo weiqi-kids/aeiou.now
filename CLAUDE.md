@@ -31,6 +31,8 @@
 | i18n 有沒有未翻的佔位 | `grep -l '\[TODO\]' site/src/i18n/*.json` |
 | 七檔 i18n key 是否一致 | `python3 -c "import json,glob; s={f:set(json.load(open(f))) for f in glob.glob('site/src/i18n/*.json')}; b=s['site/src/i18n/zh-TW.json']; print(all(v==b for v in s.values()), len(b))"` |
 | 靜態 JSON 產出了什麼 | `find data -type f -name '*.json' \| sort` |
+| **sitemap 的 lastmod 有沒有漏頁** | `curl -s https://aeiou.now/sitemap.xml \| grep -c '<lastmod>'` 與 `\| grep -c '<loc>'` —— 兩個數字**必須相等**;時間戳來自 `data/meta/stamps.json`(含 `render` = `site/src` 指紋,所以純模板改版也會推新) |
+| **Google 上次來爬是什麼時候**(判「改版看不到效果」是不是因為它還沒來) | 用 `inspectUrl` 看 `lastCrawlTime`;GSC 資料本身固定落後 2–3 天,改版當天查一定看不到 |
 | repo 有哪些站 | `gh repo list weiqi-kids --limit 100 \| grep aeiou` |
 | 有沒有殘留的背景 server | `pgrep -af '[a]stro (dev\|preview)'; pgrep -af '[h]ttp\.server'` |
 | 題庫有幾題、涵蓋到哪天 | `sqlite3 db/aeiou.sqlite "SELECT kind,COUNT(*),MIN(qdate),MAX(qdate) FROM questions GROUP BY kind"` |

@@ -1,5 +1,5 @@
 import { WINDOWS } from '../lib/config.mjs';
-import { coverPath, getGlobalRanking, getTopicBundle, listTopicIds } from '../lib/data.mjs';
+import { coverPath, getGlobalRanking, getTopicBundle, listTopicIds, readJson } from '../lib/data.mjs';
 import { withBase } from '../lib/paths.mjs';
 
 export const prerender = true;
@@ -11,6 +11,25 @@ const escapeXml = (value) => String(value)
   .replaceAll('"', '&quot;')
   .replaceAll("'", '&apos;');
 
+// lastmod 的兩條規則（2026-08-21 用戶拍板）：
+//
+// ① **每一個可索引頁都要有 lastmod。** 在此之前只有 Topic 頁有，首頁、三個清單頁、
+//    問答頁、關於頁、六個排行榜頁共 12 個 URL 完全沒有 —— 對 Google 少了一個回來重爬的
+//    訊號。當天實測四個 Topic 頁的最後抓取是 08-15/16，而改版是 08-21 上線。
+//
+// ② **模板改動也要算進 lastmod。** 原本只取 content_updated_at（資料的指紋），
+//    所以改標題、改版面對 Google 是隱形的。現在每一頁都取
+//    max(自己的內容時間戳, render 時間戳)，render = site/src 的指紋（排除資料鏡像）。
+//
+// 時間戳全部由 export-data.mjs 寫進 data/meta/stamps.json，規則同 content_updated_at：
+// hash 沒變就沿用舊時間戳。**「狼來了」有害，少報同樣有害** —— 這裡兩邊都要守：
+// 不因為資料每小時重算就宣告頁面變了，也不因為只改了模板就裝作沒變。
+const stamps = readJson('meta/stamps.json', {});
+const stampAt = (key) => stamps?.[key]?.updated_at || undefined;
+const RENDER_AT = stampAt('render');
+/** 頁面內容時間戳與模板時間戳取較新的那個（ISO-8601 UTC，字串比較即可） */
+const freshest = (...values) => values.filter(Boolean).sort().pop();
+
 export function GET({ site }) {
   const origin = site || new URL(process.env.SITE_URL || 'https://weiqi-kids.github.io');
   const entries = new Map();
@@ -19,10 +38,15 @@ export function GET({ site }) {
     entries.set(loc, { loc, ...options });
   };
 
-  add('', { changefreq: 'daily', priority: '1.0' });
-  add('about/', { changefreq: 'monthly', priority: '0.3' });
-  add('questions/', { changefreq: 'daily', priority: '0.5' });
-  for (const sort of ['today', 'nearby', 'events']) add(`topics/${sort}/`, { changefreq: 'daily', priority: '0.8' });
+  // 首頁與三個清單頁列的都是 Topic，所以內容時間戳 = 所有 Topic 裡最新的那一個。
+  const topicsAt = stampAt('topics_latest');
+  add('', { lastmod: freshest(topicsAt, RENDER_AT), changefreq: 'daily', priority: '1.0' });
+  // 關於頁沒有資料來源，只會因為模板或文案改動而變。
+  add('about/', { lastmod: RENDER_AT, changefreq: 'monthly', priority: '0.3' });
+  add('questions/', { lastmod: freshest(stampAt('questions'), RENDER_AT), changefreq: 'daily', priority: '0.5' });
+  for (const sort of ['today', 'nearby', 'events']) {
+    add(`topics/${sort}/`, { lastmod: freshest(topicsAt, RENDER_AT), changefreq: 'daily', priority: '0.8' });
+  }
   // 排行頁只在「筆數夠」時才進 sitemap。thin 旗標由 export-data.mjs 依
   // scripts/lib/content-depth.mjs 的門檻標記。2026-08-19:六個時窗各只有一筆,
   // 送進 sitemap 等於主動要求 Google 索引六個內容相同的空頁(實測已被拒兩頁)。
@@ -30,7 +54,14 @@ export function GET({ site }) {
   for (const window of WINDOWS) {
     const ranking = getGlobalRanking(window);
     if (!ranking || ranking.thin) continue;
-    add(`rankings/${window}/`, { changefreq: 'daily', priority: '0.6' });
+    // 排行頁的時間戳是**它自己那一份 ranking JSON** 的指紋，不是借用 Topic 的
+    // （舊註解說「它的內容由 topic_scores 驅動，不在那份 hash 裡，給了就是假的」——
+    //  那是對的，所以 export-data 給了它自己的 stamp，見 stampFor('ranking:<window>')）。
+    add(`rankings/${window}/`, {
+      lastmod: freshest(stampAt(`ranking:${window}`), RENDER_AT),
+      changefreq: 'daily',
+      priority: '0.6',
+    });
   }
 
   for (const topicId of listTopicIds()) {
@@ -46,8 +77,9 @@ export function GET({ site }) {
       // 2026-08-20 實測:ramadan-and-eid 補進齋戒月後 updated_at 仍停在當日 00:27。
       // 「狼來了」有害,少報同樣有害 —— 前者讓 Google 忽略 lastmod,後者讓它不來重爬。
       // 舊值留作 fallback(舊資料尚未帶 content_updated_at 時)。
-      // 排行頁刻意不給:它的內容由 topic_scores 驅動,不在這份 hash 裡,給了就是假的。
-      lastmod: facts.content_updated_at || facts.updated_at || undefined,
+      // 排行頁不借用這份 hash(它的內容由 topic_scores 驅動,不在這裡面);它有自己的 stamp。
+      // 2026-08-21 起再與 render 時間戳取較新者 —— 純模板改版之前不會反映在這裡。
+      lastmod: freshest(facts.content_updated_at || facts.updated_at, RENDER_AT),
       changefreq: facts.is_perennial ? 'monthly' : 'weekly',
       priority: '0.8',
       image: cover ? new URL(withBase(cover), origin).toString() : undefined,

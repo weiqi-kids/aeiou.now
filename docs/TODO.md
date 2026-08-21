@@ -151,27 +151,30 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
 - [x] 接上 `jobs` 表(`job_name='ask-the-world-seed'`),否則 cron 檔尾那條維護查詢看不到它。
       查:`sqlite3 db/aeiou.sqlite "SELECT * FROM jobs WHERE job_name='ask-the-world-seed' ORDER BY rowid DESC LIMIT 5"`
 
-## 🔴 改版效果還量不到,原因不是「還沒生效」(2026-08-21 查證)
+## 改版效果為什麼還量不到(2026-08-21 查證;訊號面已修)
 
 被問「一天過去有沒有改善」時查到的三件事實,**都不是時間問題**:
 
 1. **Google 最後爬取是 08-15/16,改版是 08-21 上線** —— 它還沒看過新標題。
-   查法:`node -e` 呼叫 `inspectUrl` 看 `lastCrawlTime`(見 scripts/seo-health.mjs 的 ② 那段)。
-2. **GSC 最新資料只到 08-19**(固定落後 2–3 天),那是改版前兩天。
-   所以 08-21 之後的任何 GSC 數字都還沒進來,拿現在的數字比較沒有意義。
-3. **12 個可索引頁完全沒有 lastmod**:`/`、`/about/`、`/questions/`、
-   `/topics/{today,nearby,events}/`、`/rankings/{24h,72h,7d,1m,3m,1y}/`。
-   Topic 頁有(取 `content_updated_at`),這 12 個沒有 —— 對 Google 少了一個回來重爬的訊號。
-   查法:`curl -s https://aeiou.now/sitemap.xml | grep -c '<lastmod>'` 與 `grep -c '<loc>'`,
-   兩個數字不相等就是有頁面沒帶。
+   查法:`inspectUrl` 的 `lastCrawlTime`(見 seo-health.mjs ② 那段的用法)。
+2. **GSC 資料固定落後 2–3 天**,查的當下最新只到 08-19,那是改版前兩天。
+   拿當下的 GSC 數字比較改版效果沒有意義;要等資料窗推進到 08-21 之後。
+3. 12 個可索引頁**完全沒有 lastmod**,而 Topic 頁的 lastmod 只反映資料、不反映模板。
 
-- [ ] 給那 12 個頁補 lastmod。難點:它們的內容來自多個 Topic 的彙整,
-      沒有單一 `content_updated_at` 可取;合理的取法是「該頁實際列出的 Topic 裡最新的那個」。
-      **動 sitemap 的 lastmod 語意要小心**(`sitemap.xml.ts` 檔頭寫著「狼來了有害,少報同樣有害」),
-      動工前問用戶。
-- [ ] Topic 頁的 lastmod 目前只反映**資料**變動,不反映**模板**變動。這一輪改標題、改版面
-      之所以還是帶上 08-21,是因為同一天剛好也改了資料(local_name、date_rule)。
-      純模板改版下一次會沒有訊號。要不要把渲染層的指紋也納入 lastmod,同樣要先問。
+- [x] **每一個可索引頁都給 lastmod**(2026-08-21 用戶拍板)。時間戳集中在
+      `data/meta/stamps.json`,由 `export-data.mjs` 以「hash 沒變就沿用舊時間戳」寫入:
+      首頁與三個清單頁取 `topics_latest`、問答頁取 `questions`、
+      六個排行榜頁各取自己的 `ranking:<window>`、關於頁只取 `render`。
+      查法:`curl -s https://aeiou.now/sitemap.xml | grep -c '<lastmod>'` 應等於 `grep -c '<loc>'`。
+- [x] **模板改動也算進 lastmod**:每頁取 `max(自己的內容時間戳, render 時間戳)`,
+      `render` = `site/src` 的指紋(**排除 `site/src/data`** 這個資料鏡像,
+      不然每小時資料一變就等於宣告模板變了 = 狼來了)。
+      驗過:連跑三次 export 不會動時間戳(第三次 0 次寫入);在 `site/src` 動一個檔就推新。
+      ⚠ 時間差:模板改動要等下一輪 hourly-export 才會反映到 stamps.json。
+      CI 若搶在那之前 build,sitemap 會沿用上一個 render 時間戳(最多晚一小時),
+      下一輪 hourly 提交 stamps.json 會再觸發一次 CI,自己收斂。
+- [ ] 效果觀測:等 GSC 資料窗推進到 08-22 之後再看跨國/制度型查詢的平均名次
+      (改版前是 67.6)。**在那之前不要拿數字說改善或沒改善。**
 
 ## 外站的 bot 封鎖不再擋下整條 hourly(2026-08-21 用戶拍板,已解)
 

@@ -14,12 +14,12 @@
 //         → DB 不變時輸出 byte 級相同,hash 比對才有意義。
 import { DatabaseSync } from "node:sqlite";
 import { createHash } from "node:crypto";
-import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { isTrendTopic } from "./lib/topics.mjs";
 // 級距門檻的唯一定義處(CLAUDE.md 顯示層規則)。這裡 import 而不是抄一份門檻,
 // 前後端才不會各自漂移。heat.mjs 是純 JS、無 import,可以跨目錄引用。
 import { heatTier } from "../site/src/lib/heat.mjs";
-import { dirname, join, resolve } from "node:path";
+import { dirname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -87,6 +87,55 @@ function contentStamp(topicId, facts, i18n) {
     } catch { /* 壞檔就當成沒有,重新蓋時間戳 */ }
   }
   return new Date().toISOString();
+}
+
+// ── 通用時間戳:data/meta/stamps.json ──────────────────────────────────────
+// 與上面 contentStamp 同一套規則(hash 沒變就沿用舊時間戳),但服務的是**不屬於單一
+// Topic 的頁面**:首頁、三個清單頁、問答頁、關於頁、六個排行榜頁。
+// 立法緣由(2026-08-21):那 12 個可索引頁在 sitemap 裡**完全沒有 lastmod**,
+// 對 Google 少了一個回來重爬的訊號 —— 當天實測四個 Topic 頁的最後抓取是 08-15/16,
+// 而改版是 08-21 上線,它根本還沒看過新版。
+//
+// `render` 這個 key 解的是另一件事:Topic 頁的 lastmod 只反映**資料**變動,
+// 不反映**模板**變動。改標題、改版面(2026-08-21 那一輪)之所以還是帶上新時間戳,
+// 純粹是因為同一天剛好也改了資料;純模板改版對 Google 會是隱形的。
+// 所以每一頁的 lastmod 都取 max(自己的內容時間戳, render 時間戳)。
+//
+// ⚠ render 的 hash **排除 site/src/data**(那是 data/ 的鏡像,每次資料變動都會動)。
+//   把它算進去等於每小時宣告「模板變了」——那就是 sitemap.xml.ts 檔頭警告的「狼來了」。
+// ⚠ 時間差:模板改動要等下一輪 hourly-export 跑過,stamps.json 才會更新。
+//   CI 若在那之前先 build,sitemap 會沿用上一個 render 時間戳(最多晚一小時)。
+const STAMPS_REL = join("meta", "stamps.json");
+const prevStamps = (() => {
+  const abs = join(OUT_DIR, STAMPS_REL);
+  if (!existsSync(abs)) return {};
+  try { return JSON.parse(readFileSync(abs, "utf8")); } catch { return {}; }
+})();
+const nextStamps = {};
+function stampFor(key, payload) {
+  const fresh = sha256(typeof payload === "string" ? payload : JSON.stringify(payload));
+  const prev = prevStamps[key];
+  const updatedAt = (prev && prev.hash === fresh && prev.updated_at)
+    ? prev.updated_at
+    : new Date().toISOString();
+  nextStamps[key] = { hash: fresh, updated_at: updatedAt };
+  return updatedAt;
+}
+
+/** site/src 底下所有檔的指紋(排除 site/src/data 這個資料鏡像) */
+function renderFingerprint() {
+  const base = resolve(ROOT, "site", "src");
+  const parts = [];
+  const walk = (dir) => {
+    for (const name of readdirSync(dir).sort()) {
+      if (dir === base && name === "data") continue;   // 資料鏡像不算模板
+      const abs = join(dir, name);
+      if (statSync(abs).isDirectory()) walk(abs);
+      else parts.push(`${relative(base, abs)}\0${sha256(readFileSync(abs))}`);
+    }
+  };
+  if (existsSync(base)) walk(base);
+  return parts.join("\n");
 }
 
 const parseJson = (s, fallback) => {
@@ -505,6 +554,8 @@ for (const t of topics) {
 }
 
 // ---------- questions/<locale>.json(每日世界一問;規格 docs/briefs/daily-question.md §5) ----------
+// 七語合起來算一個時間戳:/questions/ 在每個站只有一個 URL,它的內容就是該語系那一份。
+const questionsByLocale = {};
 
 const questionRows = db.prepare(
   "SELECT * FROM questions ORDER BY qdate ASC, CASE kind WHEN 'poll' THEN 0 WHEN 'guess' THEN 1 ELSE 2 END, question_id ASC"
@@ -553,8 +604,10 @@ for (const locale of LOCALES) {
       explain: q.kind === "guess" ? (i18n?.explain ?? null) : null,
     };
   });
+  questionsByLocale[locale] = list;
   emit(join("questions", `${locale}.json`), { questions: list });
 }
+stampFor("questions", questionsByLocale);
 
 // ---------- places/<city_code>.json ----------
 
@@ -685,9 +738,11 @@ for (const scope of scopes) {
     if (items.length === 0) continue; // 沒資料的窗不產檔
     // thin=true 的視窗仍然產檔(頁面照樣可看),但 sitemap 與 robots 會排除它,
     // 不把「只有一兩筆」的清單頁送去給 Google 當索引候選。門檻見 lib/content-depth.mjs。
-    emit(join("rankings", dir, `${window}.json`), {
-      scope, window, thin: items.length < RANKING_ITEMS_MIN, items,
-    });
+    const rankingPayload = { scope, window, thin: items.length < RANKING_ITEMS_MIN, items };
+    // 排行榜頁的 lastmod 從這裡來。舊註解說「排行頁刻意不給,它的內容不在 Topic 的
+    // hash 裡,給了就是假的」—— 那是對的,所以這裡給它**自己的** hash,不是借用 Topic 的。
+    if (scope === "global") stampFor(`ranking:${window}`, rankingPayload);
+    emit(join("rankings", dir, `${window}.json`), rankingPayload);
   }
 }
 
@@ -717,6 +772,23 @@ const cityCodes = db.prepare("SELECT DISTINCT city_code FROM places ORDER BY cit
 const citiesOut = {};
 for (const code of cityCodes) citiesOut[code] = titleCase(code);
 emit(join("meta", "cities.json"), citiesOut);
+
+// ---------- meta/stamps.json(sitemap 的 lastmod 用;見上方 stampFor 的說明) ----------
+stampFor("render", renderFingerprint());
+// 首頁與三個清單頁列的是 Topic,所以它們的內容時間戳 = 所有 Topic 裡最新的那一個。
+// 不另外 hash:那幾頁本來就是 Topic 的不同排序,任何一個 Topic 變了它們就變了。
+const topicStamps = readdirSync(join(OUT_DIR, "topics"), { withFileTypes: true })
+  .filter((e) => e.isDirectory() && e.name.startsWith("top_"))
+  .map((e) => {
+    try { return JSON.parse(readFileSync(join(OUT_DIR, "topics", e.name, "facts.json"), "utf8")).content_updated_at; }
+    catch { return null; }
+  })
+  .filter(Boolean)
+  .sort();
+if (topicStamps.length) {
+  nextStamps.topics_latest = { hash: null, updated_at: topicStamps[topicStamps.length - 1] };
+}
+emit(STAMPS_REL, nextStamps);
 
 db.close();
 
