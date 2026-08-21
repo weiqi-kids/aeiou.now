@@ -151,31 +151,25 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
 - [x] 接上 `jobs` 表(`job_name='ask-the-world-seed'`),否則 cron 檔尾那條維護查詢看不到它。
       查:`sqlite3 db/aeiou.sqlite "SELECT * FROM jobs WHERE job_name='ask-the-world-seed' ORDER BY rowid DESC LIMIT 5"`
 
-## 🔴 外站的 bot 封鎖會擋下整條 hourly(2026-08-21 第三次踩到,未解)
+## 外站的 bot 封鎖不再擋下整條 hourly(2026-08-21 用戶拍板,已解)
 
-2026-08-21 03:00 的 hourly-export 在 `update-local-data.mjs` fail-closed 停下:
+2026-08-21 03:00 的 hourly-export 被
+`https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026` 的 HTTP 404 停掉整條管線。
+複驗發現**那個網域連根目錄都回 403**——不是那一頁沒了,是主機被 WAF 擋
+(同一天用腳本的 UA 再打反而是 200,狀態碼本身就在騙人)。
+與 2026-08-20 `bndigital.bn.gov.br`(主機 403、Actions 404)同一個模式。
 
-```
-在地資料更新失敗：來源 HTTP 404：https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026
-FAILED: 在地資料來源驗證／更新未通過；停止輸出，避免線上顯示未核對資料
-```
-
-04:00 自己恢復(`jobs` 裡是 `attempt 2 success`),重試曲線正常。**但那個網域現在從主機是 403**,
-而且**連根目錄都 403** —— 也就是說不是那一頁失效,是這台主機被整站擋掉。複驗三次都是 403,
-帶瀏覽器 UA 反而連不上(000)。這正是 CLAUDE.md 紅線寫的那件事:
-「驗來源連結不能只看狀態碼…判死前要複驗」(2026-08-20 的 `bndigital.bn.gov.br`
-主機回 403、Actions 回 404,同一個模式)。
-
-**影響面**:`update-local-data.mjs` 是 fail-closed 且排在 `export-data.mjs` 之前,
-所以一個外國政府網站的封鎖 = 七站的 `data/` 全部停更(該檔檔頭自己記著 2026-08-19
-被一個 HTTP 520 擋過一次,這是第三次)。目前它只對 `status >= 500` 重試,4xx 直接 fail。
-
-**建議的判準(要用戶決定,因為這會動到一道 fail-closed 的完整性閘門)**:
-4xx 失敗時先打該網域的**根目錄**再判——
-  根目錄正常 + 該頁 4xx → 內容真的沒了,照舊 fail(這是閘門要擋的情況)
-  根目錄也 4xx/連不上 → 是我們被擋,不是來源失效,降為 WARN 不擋輸出
-查法:`curl -s -o /dev/null -w '%{http_code}\n' -L https://<網域>/`。
-清單在 `content/local-data-sources.json`;整體死連結掃描是 `node scripts/check-source-urls.mjs`。
+- [x] `update-local-data.mjs` 的失敗分類從兩類變三類,新增**封鎖層**:
+      4xx 時先打該網域根目錄再判 —— 根目錄通 → 照舊 fail(內容真的沒了);
+      根目錄也連不上 → 只 WARN、**永不擋輸出**,也不計入傳輸層的容忍計數
+      (等再久都不會變,擋下去只是懲罰七個站)。
+      ⚠ 判準是**根目錄通不通**,不是狀態碼幾號。
+- [x] 兩個分支都用本地伺服器實跑驗過:根目錄 200 + 頁面 404 → fail、擋下輸出;
+      根目錄 403 + 頁面 404 → WARN + 放行。
+- [x] 健康檔加修剪:已不在來源目錄裡的 URL 會被清掉(封鎖層的條目不會因為下一輪成功
+      而自動消失,更需要這道)。
+- [ ] 被擋的來源等於**本輪沒被核對過**。要確認是不是真的失效,得從別的網路打一次
+      (GitHub Actions 就是現成的第二個出口)。要不要做成自動複驗尚未決定。
 
 ## 🔴 國碼有兩套並存(2026-08-21 發現,未解,要用戶決定)
 

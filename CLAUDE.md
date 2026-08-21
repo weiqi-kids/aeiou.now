@@ -343,6 +343,10 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
   `bndigital.bn.gov.br` 從主機回 403、從 GitHub Actions 回 404。緣由見 `docs/TODO.md`
   §「事故:兩種『狀態碼騙人』的來源」。)
   現況查法:`node scripts/check-source-urls.mjs`(exit 1 代表有死連結)。
+  **hourly 的在地資料驗證已照這條紅線改判準**(2026-08-21):`update-local-data.mjs`
+  遇到 4xx 會**先打該網域根目錄**——根目錄通才判「內容真的沒了」並擋下輸出;
+  根目錄也連不上就只 WARN 放行(是主機被擋,不是來源失效),且不計入傳輸層容忍計數。
+  判準是根目錄通不通,不是狀態碼幾號。被擋的來源該從別的網路複驗。
 - **絕不呼叫 Google Places API**、不儲存其回傳資料。導航一律純字串組裝。
 - **自己起的背景 server 一定要收**。`pkill -f` 的 pattern 會比對到**自己那條指令**,
   用 `[h]ttp.server` 這種寫法迴避(2026-08-11 踩過,把自己的 shell 殺掉)。

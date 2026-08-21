@@ -5,14 +5,24 @@
 // 每筆候選來源都要有官方 URL、搜尋脈絡與頁面 marker。頁面不可核對時整次失敗，
 // 不以推測內容替換現有資料；找到新來源後先更新來源目錄，再重跑本支腳本。
 //
-// 失敗分兩類，處理方式不同（2026-08-19 用戶拍板）：
-//   內容層（4xx、marker 對不上、日期 marker 對不上）
+// 失敗分三類，處理方式不同：
+//   內容層（4xx **且該網域的根目錄是通的**、marker 對不上、日期 marker 對不上）
 //     → 來源真的變了，立即整次失敗、擋下輸出。重抓同一頁不會有不同結果。
 //   傳輸層（連線失敗、逾時、5xx）
 //     → 對方伺服器暫時掛了，不是我們的資料錯。記進健康檔並放行本輪；
 //       同一個 URL 連續 TRANSIENT_TOLERANCE 輪都是傳輸層失敗才擋下。
+//   封鎖層（4xx **且該網域的根目錄也連不上**）——2026-08-21 用戶拍板新增
+//     → 是這台主機被對方整站擋掉，不是那一頁失效。**只 WARN，永不擋輸出**，
+//       也不計入傳輸層的容忍計數（等再久都不會變，擋下去只是懲罰七個站）。
 //   會這樣分是因為整條 hourly-export 都掛在這支後面：任何一個來源打個嗝，
 //   Topic 與題庫的匯出也會一起停擺（2026-08-19 實際被一個 HTTP 520 擋過一次）。
+//
+// 封鎖層的立法緣由（2026-08-21）：03:00 那輪被
+// `https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026` 的 HTTP 404 擋停，
+// 但複驗發現**那個網域連根目錄都回 403**——不是那一頁沒了，是主機被 WAF 擋。
+// 這與 2026-08-20 `bndigital.bn.gov.br`（主機回 403、GitHub Actions 回 404）是同一個模式，
+// 也正是 CLAUDE.md 紅線「驗來源連結不能只看狀態碼…判死前要複驗」講的事。
+// ⚠ 判準只看**根目錄通不通**，不是看狀態碼是幾號 —— 狀態碼本身會騙人。
 import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join, resolve, dirname } from "node:path";
@@ -183,6 +193,34 @@ async function fetchSource(url) {
   throw transient;
 }
 
+// 該網域現在對「這台主機」通不通。只在 4xx 之後才會被呼叫,一個 origin 一輪只探一次。
+// 不重試:探測本身失敗就是「連不上」,那正是我們要判的事。
+const originReachable = new Map();
+async function isOriginReachable(url) {
+  const origin = new URL(url).origin;
+  if (originReachable.has(origin)) return originReachable.get(origin);
+  let reachable = false;
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), DEFAULT_TIMEOUT_MS);
+  try {
+    const response = await fetch(`${origin}/`, {
+      redirect: "follow",
+      signal: controller.signal,
+      headers: {
+        "user-agent": "aeiou.now-local-data-updater/1.0 (+https://github.com/weiqi-kids/aeiou.now)",
+        accept: "text/html,application/xhtml+xml",
+      },
+    });
+    reachable = response.status < 400;
+  } catch {
+    reachable = false;   // 連線失敗/逾時 = 連不上,與 4xx 同一類
+  } finally {
+    clearTimeout(timer);
+  }
+  originReachable.set(origin, reachable);
+  return reachable;
+}
+
 async function verifySource(url, source, event) {
   if (offline) return { url, skipped: true, matched: [] };
   let response, rawBody;
@@ -192,7 +230,19 @@ async function verifySource(url, source, event) {
     if (!error.transient) throw error;
     return { url, transient: true, message: error.message, matched: [] };
   }
-  if (!response.ok) fail(`來源 HTTP ${response.status}：${url}`);
+  if (!response.ok) {
+    // 判死前先問:是這一頁沒了,還是整個網域對我們關門?(2026-08-21 用戶拍板)
+    if (await isOriginReachable(url)) {
+      fail(`來源 HTTP ${response.status}：${url}`);
+    }
+    const origin = new URL(url).origin;
+    return {
+      url,
+      blocked: true,
+      matched: [],
+      message: `HTTP ${response.status}，且 ${origin}/ 也連不上 —— 判定為對方擋下本主機,不是來源失效`,
+    };
+  }
   const body = normalizedBody(rawBody);
   const matched = source.markers.filter((marker) => body.includes(marker));
   if (matched.length === 0) {
@@ -243,12 +293,21 @@ async function main() {
   console.log(`來源驗證：${urlsToVerify.length} 個目前仍使用的 URL（${offline ? "offline" : "online"}）`);
   const health = existsSync(HEALTH_PATH) ? readJson(HEALTH_PATH) : {};
   const blocking = [];
+  const blockedByOrigin = [];
   const checks = [];
   for (const url of urlsToVerify) {
     const event = verifiableEvents.find((candidate) => candidate.source_url === url);
     const result = await verifySource(url, catalogByUrl.get(url), event);
     checks.push(result);
     if (result.skipped) console.log(`  skip ${url}`);
+    else if (result.blocked) {
+      // 封鎖層:永不擋輸出。記進健康檔只是為了讓它看得見(維護時查得到、也不會被
+      // 下一次成功悄悄抹掉之前無人知曉),不參與 TRANSIENT_TOLERANCE 的計數。
+      const prev = health[url]?.blocked_since;
+      health[url] = { blocked_since: prev || asOf, last_message: result.message };
+      blockedByOrigin.push(`${url}：${result.message}`);
+      console.log(`  WARN ${url} ${result.message}`);
+    }
     else if (result.transient) {
       const n = (health[url]?.consecutive_failures || 0) + 1;
       health[url] = { consecutive_failures: n, first_failed_at: health[url]?.first_failed_at || asOf, last_message: result.message };
@@ -259,7 +318,18 @@ async function main() {
       console.log(`  ok   ${url} [${result.matched.join(", ")}${result.matchedDates.length ? `; date: ${result.matchedDates.join(", ")}` : ""}]`);
     }
   }
+  // 已經不在來源目錄裡的 URL 不該留在健康檔裡 —— 否則改過的、刪掉的來源會一直掛著,
+  // 讓「現在有幾個來源不健康」這個數字越看越不準(2026-08-21:封鎖層的條目不會因為
+  // 下一輪成功而被清,更需要這道修剪)。
+  const verifying = new Set(urlsToVerify);
+  for (const url of Object.keys(health)) if (!verifying.has(url)) delete health[url];
   writeFileSync(HEALTH_PATH, `${JSON.stringify(health, null, 2)}\n`);
+  if (blockedByOrigin.length) {
+    // 不擋輸出,但一定要吵 —— 被擋的來源等於沒被核對過,人要知道有這回事。
+    console.log(`⚠ ${blockedByOrigin.length} 個來源所在網域對本主機關門(本輪未能核對,已放行):`);
+    for (const line of blockedByOrigin) console.log(`   - ${line}`);
+    console.log("   要確認是不是真的失效,從別的網路打一次;查全站死連結:node scripts/check-source-urls.mjs");
+  }
   if (blocking.length) {
     fail(`來源持續無法連線，停止輸出：\n${blocking.map((b) => `- ${b}`).join("\n")}`);
   }
