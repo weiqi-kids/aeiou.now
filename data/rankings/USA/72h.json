@@ -1,7 +1,7 @@
 {
   "scope": "country:USA",
   "window": "72h",
-  "thin": false,
+  "thin": true,
   "items": [
     {
       "rank": 1,
@@ -11,26 +11,20 @@
     },
     {
       "rank": 2,
-      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
-      "slug": "labour-day",
-      "tier": "hot"
-    },
-    {
-      "rank": 3,
-      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
-      "slug": "mothers-day",
-      "tier": "hot"
-    },
-    {
-      "rank": 4,
-      "topic_id": "top_01KZXQ6BQZK470E6S82GGWHRR5",
-      "slug": "birthdays-and-blessings",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "slug": "teachers-day",
       "tier": "rising"
     },
     {
-      "rank": 5,
-      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
-      "slug": "teachers-day",
+      "rank": 3,
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "slug": "labour-day",
+      "tier": "rising"
+    },
+    {
+      "rank": 4,
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "slug": "mothers-day",
       "tier": "rising"
     }
   ]
