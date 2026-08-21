@@ -41,6 +41,8 @@
   "topic.perennial": "長青主題",
   "topic.no_local_observance": "這裡沒有這個節日",
   "topic.no_local_observance_rule": "不在官方名單上",
+  "topic.q_how_country": "{country}怎麼過{topic}？",
+  "topic.q_country_has": "{country}有{topic}嗎？",
   "topic.load_more": "顯示更多主題",
   "category.festival": "節日",
   "category.community": "社群",
@@ -135,5 +137,7 @@
   "q.error_retry": "出了點問題,請再試一次",
   "q.today_world_empty": "今天世界很安靜",
   "q.your_community": "你的社群",
-  "room.noscript": "討論需要 JavaScript 才能載入;本頁其他內容不受影響。"
+  "room.noscript": "討論需要 JavaScript 才能載入;本頁其他內容不受影響。",
+  "room.ask_any": "不指定國家",
+  "room.ask_badge": "問{country}"
 }

@@ -91,6 +91,7 @@ M1 沒有 hot_score job,`posts.hot_score` 恆 0,**不得用來排序**。
       "content": "原文(Markdown 安全子集;M1 前端一律純文字轉義顯示)",
       "translations": { "zh-TW": "譯文", "en": "..." },
       "translation_status": "done",
+      "target_country": "TW",
       "country_code": "JP",
       "city_code": "tokyo",
       "created_at": 1769999000,
@@ -118,6 +119,7 @@ M1 沒有 hot_score job,`posts.hot_score` 恆 0,**不得用來排序**。
 1. `translations` 只包含**已翻好的** locale;沒翻完就是缺 key(不是空字串)。前端在 `translations[LOCALE]` 缺席時顯示原文 + i18n 的「翻譯中」字串。`original_locale === LOCALE` 時直接顯示 `content`,不查 `translations`。
 2. `reactions` 是 `{emoji: 計數}` 的物件,**只列計數 > 0 的 emoji**;前端仍照 `REACTION_SET` 渲染全部七顆按鈕,缺席的顯示 0。
 3. `comment_count` 是該 post 的**留言總數**;`comments` 陣列是**最新 N 則**(`created_at DESC`,由 query 的 `comments` 參數決定 N)。兩者不同,不可互相推導。
+4. `target_country`(2026-08-21 追加)是 Ask the World 的提問對象:ISO 3166-1 alpha-2 大寫兩碼,或 `null`(不指定)。**不是發文者所在地** —— 發文者在 `country_code`。前端拿它標「這則是問哪一國的」,國名與國旗由前端依本站語系自行組,Worker 不回國名。
 
 `server_time` 供前端算相對時間,避免依賴使用者時鐘。
 
@@ -136,7 +138,7 @@ M1 沒有 hot_score job,`posts.hot_score` 恆 0,**不得用來排序**。
 | `topic_id` | ✅ | ULID |
 | `content` | ✅ | 1–5000 字元。**無標題欄**。Markdown 安全子集,**禁 raw HTML**;M1 儲存原字串,前端純文字轉義顯示 |
 | `locale` | ✅ | 寫入 `posts.original_locale` |
-| `target_country` | ❌ | Ask the World 指定提問對象,預設 NULL |
+| `target_country` | ❌ | Ask the World 指定提問對象。**ISO 3166-1 alpha-2 大寫兩碼**或 `null`/不帶(= 不指定);格式不符回 400 `invalid_body`。2026-08-21 起加驗 —— 這個值會進 DB 也會回給所有讀者,不接受自由字串 |
 
 Worker 端補齊:`post_id`(新 ULID)、`anon_id`(cookie 或新發)、`cycle_id`(取 topics 副本的 `current_cycle_id`)、`country_code`/`city_code`(`request.cf`)、`status='active'`、`translation_status='pending'`、`created_at`/`last_activity_at`、`media_json=NULL`(圖片 M2)。
 

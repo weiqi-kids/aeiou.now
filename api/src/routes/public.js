@@ -37,7 +37,7 @@ export async function handleFeed(request, env, topicId, url, cors) {
   const posts = (
     await env.DB.prepare(
       `SELECT p.post_id, p.topic_id, p.cycle_id, p.original_locale, p.content,
-              p.translation_status, p.country_code, p.city_code, p.created_at,
+              p.translation_status, p.target_country, p.country_code, p.city_code, p.created_at,
               p.comments AS comment_count,
               (SELECT COUNT(DISTINCT r.actor_id) FROM reactions r
                 WHERE r.target_type = 'post' AND r.target_id = p.post_id) AS reaction_actors,
@@ -62,6 +62,9 @@ export async function handleFeed(request, env, topicId, url, cors) {
       content: p.content,
       translations: {},
       translation_status: p.translation_status,
+      // Ask the World:這則貼文是問哪一國的(null = 不指定)。欄位早就在 posts 表裡,
+      // 2026-08-21 才接到 feed 與前端 —— 在那之前寫得進去、讀不出來。
+      target_country: p.target_country,
       country_code: p.country_code,
       city_code: p.city_code,
       created_at: p.created_at,
@@ -151,10 +154,15 @@ export async function handleCreatePost(request, env, ctx, cors) {
     return err(400, "invalid_body", "locale must be one of " + LOCALES.join(", "), cors);
   if (charLen(content) > POST_MAX_CHARS)
     return err(400, "content_too_long", `content exceeds ${POST_MAX_CHARS} characters`, cors);
-  const target_country =
-    typeof body.target_country === "string" && body.target_country !== ""
-      ? body.target_country
-      : null;
+  // Ask the World 的提問對象。null / 未帶 = 不指定。
+  // 2026-08-21 起限定 ISO 3166-1 alpha-2 大寫兩碼 —— 這個值會進 DB 也會回給所有讀者,
+  // 不該接受自由字串。加驗之前沒有任何客戶端送過這個欄位(D1 實查全為 NULL),不影響既有行為。
+  let target_country = null;
+  if (body.target_country != null && body.target_country !== "") {
+    if (typeof body.target_country !== "string" || !/^[A-Z]{2}$/.test(body.target_country))
+      return err(400, "invalid_body", "target_country must be an ISO 3166-1 alpha-2 code", cors);
+    target_country = body.target_country;
+  }
 
   const topic = await env.DB.prepare(
     "SELECT topic_id, status AS topic_status, access_level, current_cycle_id FROM topics WHERE topic_id = ?"
@@ -213,6 +221,7 @@ export async function handleCreatePost(request, env, ctx, cors) {
       content,
       translations: {},
       translation_status: "pending",
+      target_country,
       country_code: cc,
       city_code: city,
       created_at: now,

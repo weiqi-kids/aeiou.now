@@ -41,7 +41,9 @@ export const SEO_COPY = {
     related: '相關主題', updated: '更新於', noDate: '目前沒有可驗證的固定日期；時間會依地區、家庭或個人選擇而不同。',
     sourceLink: '查看來源', home: '首頁', topic: '主題',
     metaSuffix: '日期、習俗與各地差異', coveragePrefix: '涵蓋', sourceMeta: '附日期與來源。',
+    compareSuffix: '{count} 國怎麼過、哪裡放假',
     // 標點是語系的一部分:英文站不該印出「、」「。」「｜」。
+    colon: '：',
     listSep: '、', itemSep: '；', endMark: '。', titleSep: '｜',
   },
   en: {
@@ -50,6 +52,8 @@ export const SEO_COPY = {
     related: 'Related topics', updated: 'Updated', noDate: 'There is no single verified fixed date here; timing varies by place, household, or personal choice.',
     sourceLink: 'View source', home: 'Home', topic: 'Topic',
     metaSuffix: 'Dates, customs, and local differences', coveragePrefix: 'Covers', sourceMeta: 'Includes dates and sources.',
+    compareSuffix: 'How {count} countries mark it',
+    colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '.', titleSep: ' | ',
   },
   ja: {
@@ -58,6 +62,8 @@ export const SEO_COPY = {
     related: '関連テーマ', updated: '更新', noDate: '確認できる一つの固定日はありません。時期は地域、家庭、個人の選択で変わります。',
     sourceLink: '出典を見る', home: 'ホーム', topic: 'テーマ',
     metaSuffix: '日付・習慣・地域差', coveragePrefix: '対象地域', sourceMeta: '日付と出典を掲載。',
+    compareSuffix: '{count}か国の過ごし方と祝日の有無',
+    colon: '：',
     listSep: '、', itemSep: '／', endMark: '。', titleSep: '｜',
   },
   'zh-CN': {
@@ -66,6 +72,8 @@ export const SEO_COPY = {
     related: '相关主题', updated: '更新于', noDate: '目前没有一个可以验证的固定日期；时间会因地区、家庭或个人选择而不同。',
     sourceLink: '查看来源', home: '首页', topic: '主题',
     metaSuffix: '日期、习俗与地区差异', coveragePrefix: '涵盖', sourceMeta: '附有日期和来源。',
+    compareSuffix: '{count} 国怎么过、哪里放假',
+    colon: '：',
     listSep: '、', itemSep: '；', endMark: '。', titleSep: '｜',
   },
   hi: {
@@ -74,6 +82,8 @@ export const SEO_COPY = {
     related: 'संबंधित विषय', updated: 'अपडेट', noDate: 'यहाँ कोई एक सत्यापित निश्चित तारीख़ नहीं है; समय स्थान, परिवार या व्यक्तिगत चुनाव से बदलता है।',
     sourceLink: 'स्रोत देखें', home: 'होम', topic: 'विषय',
     metaSuffix: 'तारीख़, रीति और स्थानीय अंतर', coveragePrefix: 'क्षेत्र', sourceMeta: 'तारीख़ों और स्रोतों सहित।',
+    compareSuffix: '{count} देशों में इसे कैसे मनाया जाता है',
+    colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '।', titleSep: ' | ',
   },
   id: {
@@ -82,6 +92,8 @@ export const SEO_COPY = {
     related: 'Tema terkait', updated: 'Diperbarui', noDate: 'Belum ada satu tanggal tetap yang dapat diverifikasi; waktunya bergantung pada tempat, keluarga, atau pilihan pribadi.',
     sourceLink: 'Lihat sumber', home: 'Beranda', topic: 'topik',
     metaSuffix: 'Tanggal, kebiasaan, dan perbedaan setempat', coveragePrefix: 'Mencakup', sourceMeta: 'Dilengkapi tanggal dan sumber.',
+    compareSuffix: 'Bagaimana {count} negara menjalaninya',
+    colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '.', titleSep: ' | ',
   },
   'pt-BR': {
@@ -90,6 +102,8 @@ export const SEO_COPY = {
     related: 'Temas relacionados', updated: 'Atualizado em', noDate: 'Não há uma única data fixa verificável aqui; o momento varia conforme o lugar, a família ou a escolha pessoal.',
     sourceLink: 'Ver fonte', home: 'Início', topic: 'tema',
     metaSuffix: 'Datas, costumes e diferenças locais', coveragePrefix: 'Abrange', sourceMeta: 'Com datas e fontes.',
+    compareSuffix: 'Como {count} países vivenciam',
+    colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '.', titleSep: ' | ',
   },
 };
@@ -100,6 +114,13 @@ export function siteDescription(locale = LOCALE) {
 
 export function seoCopy(locale = LOCALE) {
   return SEO_COPY[locale] || SEO_COPY.en;
+}
+
+// 樣板填值:{count} / {country} / {topic}。與 DiscussionRoom 客戶端那支 fill() 同一種寫法
+// —— 模板不寫死任何語言的字,語序由各語系自己的字串決定(hi/id/pt-BR 的語序與中文不同)。
+export function fillTemplate(template, values) {
+  return String(template).replace(/\{(\w+)\}/g, (whole, key) =>
+    Object.prototype.hasOwnProperty.call(values, key) ? String(values[key]) : whole);
 }
 
 // Meta descriptions need to be useful in search results without leaking a raw URL.

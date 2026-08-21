@@ -40,7 +40,7 @@ import { t } from '../../lib/i18n.mjs';
 import { LOCALE, MARKET_CITY, MARKET_COUNTRY, REACTION_SET } from '../../lib/config.mjs';
 import { calendarDate, dateTime, countryFlag } from '../../lib/format.mjs';
 import { withBase } from '../../lib/paths.mjs';
-import { compactDescription, seoCopy, sourceLabel, SITE_NAME } from '../../lib/seo.mjs';
+import { compactDescription, fillTemplate, seoCopy, sourceLabel, SITE_NAME } from '../../lib/seo.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
   observancesForFacts, customsText, regionalNotesForFacts, regionalNoteText,
@@ -116,6 +116,48 @@ const observanceAnchor = (observance) => {
   return `observance-${String(key).toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '')}`;
 };
 const regionalAnchor = (note) => `regional-${note.country_code.toLowerCase()}`;
+
+// 🌎 底下每一國的標題改成讀者實際會打的問句(2026-08-21 用戶核准動版面)。
+// 原本是國名(「🇹🇼 台灣」)——那對 Google 宣告的只有「這一段提到台灣」,
+// 但站上最有價值的內容(七國制度比較 + 官方來源)回答的其實是
+// 「台灣怎麼過這個節日」「巴西有沒有這個節日」。GSC 實測有人真的在打
+// `children's day china`、`dia dos namorados japão`、`hari ibu di jepang`、
+// `is teachers day celebrated all over the world`,而我們排 36–71 名。
+// 句型全部來自 i18n(語序各語系自己決定,hi/id/pt-BR 與中文語序不同),
+// 國名與 Topic 名來自資料 —— 這裡不新增任何文案。
+// absence(查證過「這裡沒有這個節日」)用「有沒有」問句,其餘用「怎麼過」。
+// 問句的主詞一律是**本站語系的 Topic 名**,不是 observance 的 local_name。
+// 試過拿 local_name 當主詞來分辨同一國的兩筆(日本的バレンタインデー與ホワイトデー),
+// 結果 pt-BR 站印出「Japão: como vivenciam バレンタインデー?」—— 讀者看不懂的字進了標題。
+// 同一國有兩筆時靠 h3 尾巴的 .local-name 區分(那裡本來就該是當地叫法),問句照樣成立。
+// Ask the World(草案 §45)的提問對象名單 = 這個 Topic 實際涵蓋的國家。
+// 國名用本站語系的說法、國旗由 ISO 兩碼組出來(同 🌎 的國旗列,不用圖檔、不打外部 CDN)。
+// 名單空的 Topic(長青、還沒建國家資料)發文框就不長選單,行為與過去一樣。
+const askCountries = worldCountries.map((country) => ({
+  code: country.country_code,
+  flag: countryFlag(country.country_code),
+  name: countryName(country.country_code),
+}));
+
+const countryQuestion = (countryCode, isAbsence = false) => fillTemplate(
+  t(isAbsence ? 'topic.q_country_has' : 'topic.q_how_country'),
+  { country: countryName(countryCode), topic: title },
+);
+// 同一國在同一個 Topic 底下有兩筆(日本的バレンタインデー與ホワイトデー、印尼的
+// Ramadan 與 Idulfitri)時,光靠問句兩個 h3 會一字不差 —— check-rendered-depth 的 D3
+// (同一頁不得有重複長段落)會擋,而它擋得對:讀者也分不出那兩段在講什麼。
+// 分辨用當地叫法接在問句後面,**不是**拿它當問句主詞:試過
+//「Japão: como vivenciam バレンタインデー?」,那是把讀者看不懂的字放進主詞位置。
+// 併進同一個文字節點(中間不夾標籤),D3 才看得出這兩行不一樣。
+const observanceCountBy = observances.reduce((acc, observance) => {
+  acc[observance.country_code] = (acc[observance.country_code] || 0) + 1;
+  return acc;
+}, {});
+const needsLocalName = (observance) => observanceCountBy[observance.country_code] > 1
+  && Boolean(observance.local_name);
+const observanceHeading = (observance) => (needsLocalName(observance)
+  ? `${countryQuestion(observance.country_code)} · ${observance.local_name}`
+  : countryQuestion(observance.country_code));
 // 「你附近／相關活動」是本語系站代表城市的在地資料，不是七市場資料總覽。
 // 📍 只收可被拜訪的常設地點；🎉 只收有日期與來源的活動。七市場文化比較在 🌎。
 const marketCity = MARKET_CITY[LOCALE] || null;
@@ -153,24 +195,62 @@ const dateAnswer = homeFirst(countries)
     return `${countryName(observance.country_code)} · ${calendarDate(next.starts_on)}${end}`;
   });
 
-// 標題與 meta 先回答「什麼時候」,再談框架 —— 這不是猜的:
-// GSC 實測(2026-08-19)排進前 10 的查詢幾乎都在問日期,例如「2027印尼齋戒月時間」
-// 排名 5.6 卻 32 次曝光 0 點擊。頁面本來就有答案(快速回答區塊),
-// 只是標題沒有年份、摘要開頭是抽象敘述、結尾只說「附日期與來源」而不給日期。
-// 這裡不新增任何文案 —— 年份取自資料,其餘字串全部來自 SEO_COPY。
+// 標題與 meta 宣告的是「跨國制度比較」,不是「這個節日幾號」(2026-08-21 用戶拍板改版)。
+//
+// 前一版(2026-08-19)把日期擺第一,理由是 GSC 上排進前 10 的查詢都在問日期。
+// 那個觀察沒錯,結論錯了 —— 2026-08-21 重查同一份資料,把 63 個查詢按意圖分兩類:
+//   日期/名稱型  44 個查詢、85 曝光、平均名次 32.7、**點擊 0**
+//   跨國/制度型  19 個查詢、25 曝光、平均名次 67.6、**點擊 0**
+// 日期型那批在名次 4–9 累積 41 次曝光仍然 0 點擊(若真實 CTR 有 8%,出現 0 點擊的機率約 3%)
+// —— 因為「X 年 Y 節是幾號」是 Google 答案框的標準品,排第一也不會有人點進來。
+// 反過來,已經有人在問 `is teachers day celebrated all over the world`(名次 71)、
+// `dia dos namorados japão`(45)、`hari ibu di jepang`(36)、`children's day china`(56):
+// 這些正是站上唯一有優勢的內容(七國制度比較 + 官方來源),而我們排在 60–90 名,
+// 因為整頁對 Google 宣告的主題是日期。**資產與宣告錯配,不是排名不夠努力。**
+//
+// 所以:title 保留年份(免費,而且讀者本來就那樣打字),但後綴改成「N 國怎麼過、哪裡放假」;
+// description 改成 summary 先行 —— loc.summary 本來就在講制度差異
+// (例:「開齋節在四個地方有四種身分…」),它才是點擊理由,日期壓到句末。
+// 這裡不新增任何文案 —— 年份與國家數取自資料,其餘字串全部來自 SEO_COPY。
 const nextStart = countries
   .map((observance) => observance.next_occurrence?.starts_on)
   .filter(Boolean)
   .sort()[0] || null;
 const titleYear = nextStart ? nextStart.slice(0, 4) : null;
+// 沒有任何國家資料的 Topic(長青的 ask-the-world 等)沒有「N 國」可講,退回原本的後綴。
+const titleSuffix = worldCountries.length > 0
+  ? fillTemplate(copy.compareSuffix, { count: worldCountries.length })
+  : copy.metaSuffix;
 const pageTitle = titleYear
-  ? `${title} ${titleYear}${copy.titleSep}${copy.metaSuffix}${copy.titleSep}${SITE_NAME}`
-  : `${title}${copy.titleSep}${copy.metaSuffix}${copy.titleSep}${SITE_NAME}`;
+  ? `${title} ${titleYear}${copy.titleSep}${titleSuffix}${copy.titleSep}${SITE_NAME}`
+  : `${title}${copy.titleSep}${titleSuffix}${copy.titleSep}${SITE_NAME}`;
 
+// description 的第一句必須是**本市場那一國**(check-local-scope.mjs 的 assertHomeCountryFirst,
+// 立法緣由 2026-08-20:id 站的摘要開頭是「印度、中國」,印尼自己沒進前兩筆)。
+// 這條規則跟「先講制度、不要先講日期」不衝突,反而合流 —— 讀者要的正是**他自己國家**
+// 的制度答案(「台灣的移工到底放不放假」),那既是首句、也是最強的點擊理由。
+// 本市場那一格沒有敘述時才退回日期開頭(舊行為),不讓守門條件落空。
+const homeCountryEntry = worldCountries.find((country) => country.country_code === HOME_COUNTRY) || null;
+const homeCountryAnswer = homeCountryEntry
+  ? (homeCountryEntry.kind === 'observance'
+    ? customsText(i18n, homeCountryEntry)
+    : regionalNoteText(i18n, homeCountryEntry))
+  : null;
+const dateSentence = dateAnswer.length > 0
+  ? `${dateAnswer.slice(0, 2).join(copy.listSep)}${copy.endMark}`
+  : null;
+// 敘述本來就以國名開頭時不再加一次前綴 —— 否則會印出「台灣：台灣不把開齋節列為…」。
+const homeCountryLabel = homeCountryEntry ? countryName(HOME_COUNTRY) : '';
+const homeLead = homeCountryEntry && homeCountryAnswer
+  ? (homeCountryAnswer.startsWith(homeCountryLabel)
+    ? homeCountryAnswer
+    : `${homeCountryLabel}${copy.colon}${homeCountryAnswer}`)
+  : dateSentence;
 const metaDescription = compactDescription([
-  dateAnswer.length > 0 ? `${dateAnswer.slice(0, 2).join(copy.listSep)}${copy.endMark}` : null,
+  homeLead,
   whatAnswer,
   metaCoverage ? `${copy.coveragePrefix} ${metaCoverage}${copy.endMark}` : null,
+  homeLead === dateSentence ? null : dateSentence,
   sourceUrls.length > 0 ? copy.sourceMeta : null,
 ].filter(Boolean).join(' '));
 const whereAnswer = worldCountries.length > 0
@@ -187,13 +267,13 @@ const differenceAnswer = [
   ...countries
   .map((country) => {
     const text = customsText(i18n, country);
-    return text ? `${countryName(country.country_code)}：${text}` : null;
+    return text ? `${countryName(country.country_code)}${copy.colon}${text}` : null;
   })
   .filter(Boolean),
   ...regionalOnlyNotes
     .map((note) => {
       const text = regionalNoteText(i18n, note);
-      return text ? `${countryName(note.country_code)}：${text}` : null;
+      return text ? `${countryName(note.country_code)}${copy.colon}${text}` : null;
     })
     .filter(Boolean),
 ].join(' ') || (worldCountries.length === 0 ? whatAnswer : copy.noDate);
@@ -218,12 +298,24 @@ const topicSchema = [
     inDefinedTermSet: { '@type': 'DefinedTermSet', name: 'aeiou.now Topics' },
   },
   {
+    // FAQ 的每一題都必須在頁面上看得到(Google 的 FAQPage 規範),所以逐國那幾題用的是
+    // 🌎 底下**實際印出來的那個 h3 問句**與它下面那段文字,不是另外編一組問答。
+    // 逐國問答放在四個通題後面:通題講整個 Topic,逐國題才是這一頁真正獨有的內容
+    // (2026-08-21,與 h3 問句化同一輪)。
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: copy.what, acceptedAnswer: { '@type': 'Answer', text: whatAnswer } },
       { '@type': 'Question', name: copy.when, acceptedAnswer: { '@type': 'Answer', text: dateAnswer.length ? dateAnswer.join(copy.itemSep) : copy.noDate } },
       { '@type': 'Question', name: copy.where, acceptedAnswer: { '@type': 'Answer', text: whereAnswer } },
       { '@type': 'Question', name: copy.differences, acceptedAnswer: { '@type': 'Answer', text: differenceAnswer } },
+      ...observances
+        .map((observance) => ({ q: observanceHeading(observance), a: customsText(i18n, observance) }))
+        .filter((entry) => entry.a)
+        .map((entry) => ({ '@type': 'Question', name: entry.q, acceptedAnswer: { '@type': 'Answer', text: entry.a } })),
+      ...regionalOnlyNotes
+        .map((note) => ({ q: countryQuestion(note.country_code, note.kind === 'absence'), a: regionalNoteText(i18n, note) }))
+        .filter((entry) => entry.a)
+        .map((entry) => ({ '@type': 'Question', name: entry.q, acceptedAnswer: { '@type': 'Answer', text: entry.a } })),
     ],
   },
   ...eventSchema,
@@ -391,7 +483,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
           <p class="eyebrow">{t('marker.now')}</p>
           <h2><span class="section-emoji" aria-hidden="true">💬</span>{t('topic.people_talking')}</h2>
         </div>
-        <DiscussionRoom topicId={topicId} />
+        <DiscussionRoom topicId={topicId} askCountries={askCountries} />
       </section>
     </div>
 
@@ -443,8 +535,8 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
               <div class="country-body">
                 <h3 class="country-name">
                   <span class="country-flag" aria-hidden="true">{countryFlag(c.country_code)}</span>
-                  {countryName(c.country_code)}
-                  <span class="local-name">{c.local_name}</span>
+                  {observanceHeading(c)}
+                  {!needsLocalName(c) && <span class="local-name">{c.local_name}</span>}
                 </h3>
                 {customsText(i18n, c) && (
                   <p class="country-customs">{customsText(i18n, c)}</p>
@@ -472,7 +564,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
               <div class="country-body">
                 <h3 class="country-name">
                   <span class="country-flag" aria-hidden="true">{countryFlag(note.country_code)}</span>
-                  {countryName(note.country_code)}
+                  {countryQuestion(note.country_code, note.kind === 'absence')}
                 </h3>
                 {regionalNoteText(i18n, note) && (
                   <p class="country-customs">{regionalNoteText(i18n, note)}</p>

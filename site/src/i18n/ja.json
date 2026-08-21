@@ -41,6 +41,8 @@
   "topic.perennial": "通年",
   "topic.no_local_observance": "この国にはこの祝いがない",
   "topic.no_local_observance_rule": "公的な一覧にない",
+  "topic.q_how_country": "{country}では{topic}をどう過ごす？",
+  "topic.q_country_has": "{country}に{topic}はある？",
   "topic.load_more": "さらにテーマを表示",
   "category.festival": "祝祭日",
   "category.community": "コミュニティ",
@@ -135,5 +137,7 @@
   "q.error_retry": "エラーが発生しました。もう一度お試しください",
   "q.today_world_empty": "きょうの世界は静かです",
   "q.your_community": "あなたのコミュニティ",
-  "room.noscript": "トークの読み込みには JavaScript が必要です。ページの他の内容には影響しません。"
+  "room.noscript": "トークの読み込みには JavaScript が必要です。ページの他の内容には影響しません。",
+  "room.ask_any": "国を指定しない",
+  "room.ask_badge": "{country}に質問"
 }

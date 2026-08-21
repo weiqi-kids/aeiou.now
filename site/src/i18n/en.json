@@ -41,6 +41,8 @@
   "topic.perennial": "Year-round",
   "topic.no_local_observance": "Not observed here",
   "topic.no_local_observance_rule": "Not on the official list",
+  "topic.q_how_country": "How does {country} mark {topic}?",
+  "topic.q_country_has": "Does {country} have {topic}?",
   "topic.load_more": "Show more topics",
   "category.festival": "Festival",
   "category.community": "Community",
@@ -135,5 +137,7 @@
   "q.error_retry": "Something went wrong, try again",
   "q.today_world_empty": "The world is quiet today",
   "q.your_community": "Your community",
-  "room.noscript": "The discussion needs JavaScript to load. The rest of this page is unaffected."
+  "room.noscript": "The discussion needs JavaScript to load. The rest of this page is unaffected.",
+  "room.ask_any": "No specific country",
+  "room.ask_badge": "Asking {country}"
 }

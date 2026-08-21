@@ -156,6 +156,49 @@ describe("發文的輸入驗證", () => {
   });
 });
 
+describe("Ask the World:target_country", () => {
+  // 欄位 2026-08-21 才接到 feed 與前端。在那之前寫得進 posts 表、卻讀不出來,
+  // 於是「問哪一國」這件事對讀者不存在。這組測試守的是那條路徑不要再斷掉。
+  beforeEach(() => seedTopic());
+
+  test("不帶 target_country 時存 null,feed 也回 null", async () => {
+    const created = await call("/v1/posts", {
+      method: "POST", anonId: ANON,
+      body: { topic_id: "top_TEST", content: "hello", locale: "zh-TW" },
+    });
+    const body = await created.json();
+    assert.equal(created.status, 201, JSON.stringify(body));
+    assert.equal(body.target_country, null);
+
+    const feed = await call("/v1/topics/top_TEST/feed?sort=new");
+    assert.equal((await feed.json()).posts[0].target_country, null);
+  });
+
+  test("帶合法 ISO 兩碼時回寫並出現在 feed", async () => {
+    const created = await call("/v1/posts", {
+      method: "POST", anonId: ANON,
+      body: { topic_id: "top_TEST", content: "hello", locale: "zh-TW", target_country: "JP" },
+    });
+    const body = await created.json();
+    assert.equal(created.status, 201, JSON.stringify(body));
+    assert.equal(body.target_country, "JP");
+
+    const feed = await call("/v1/topics/top_TEST/feed?sort=new");
+    assert.equal((await feed.json()).posts[0].target_country, "JP");
+  });
+
+  for (const value of ["jp", "JPN", "J", "台灣", "'; DROP TABLE posts;--"]) {
+    test(`target_country=${JSON.stringify(value)} 回 400`, async () => {
+      const res = await call("/v1/posts", {
+        method: "POST", anonId: ANON,
+        body: { topic_id: "top_TEST", content: "hello", locale: "zh-TW", target_country: value },
+      });
+      assert.equal(res.status, 400);
+      assert.equal((await res.json()).error.code, "invalid_body");
+    });
+  }
+});
+
 describe("入口限流", () => {
   test("5 分鐘內第 4 篇貼文回 429", async () => {
     seedTopic();

@@ -41,6 +41,8 @@
   "topic.perennial": "O ano todo",
   "topic.no_local_observance": "Não se celebra aqui",
   "topic.no_local_observance_rule": "Fora da lista oficial",
+  "topic.q_how_country": "{country}: como vivenciam {topic}?",
+  "topic.q_country_has": "{country}: existe {topic}?",
   "topic.load_more": "Mostrar mais tópicos",
   "category.festival": "Data festiva",
   "category.community": "Comunidade",
@@ -135,5 +137,7 @@
   "q.error_retry": "Algo deu errado, tente de novo",
   "q.today_world_empty": "O mundo está quieto hoje",
   "q.your_community": "Sua comunidade",
-  "room.noscript": "A discussão precisa de JavaScript para carregar. O resto desta página não é afetado."
+  "room.noscript": "A discussão precisa de JavaScript para carregar. O resto desta página não é afetado.",
+  "room.ask_any": "Sem país específico",
+  "room.ask_badge": "Perguntando a {country}"
 }

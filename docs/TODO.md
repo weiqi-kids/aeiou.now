@@ -66,6 +66,44 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       明載「Berdasarkan jadwal resmi dari SNPMB」)。查:`curl -sI https://snpmb.bppp.kemdikbud.go.id/`,
       修好了就把來源換回官方站。
 
+## 搜尋意圖重新對準(2026-08-21 完成;起因是「距離 20,000 瀏覽人數還有多遠」)
+
+診斷:把 GSC 的查詢按意圖分兩類後,**站上唯一有優勢的那一類排最差**——
+
+| 意圖 | 查詢數 | 曝光 | 點擊 | 平均名次 |
+|---|---|---|---|---|
+| 日期/名稱型(沒有優勢,而且是 Google 答案框的標準品) | 44 | 85 | 0 | 32.7 |
+| 跨國/制度/解釋型(七國制度比較 = 唯一資產) | 19 | 25 | 0 | **67.6** |
+
+真人流量的量測基準:GA4 全期 sessions 裡 96% 是機器,可當真人看的只有 Organic Search 那幾筆。
+現況一律重查:`node scripts/seo-health.mjs`(① 量測層 ③ 排名層)。
+
+- [x] **title 後綴改成跨國比較**(`SEO_COPY.compareSuffix`,七語各自的句子,`{count}` 由資料填)。
+- [x] **description 第一句改成本市場那一國的制度答案**,日期壓到句末。
+      與 `check-local-scope.mjs` 的 `assertHomeCountryFirst` 不衝突,是合流:
+      讀者要的正是他自己國家的答案。敘述本來就以國名開頭時不再加一次前綴。
+- [x] **🌎 底下每一國的 h3 改成問句**(`topic.q_how_country` / `topic.q_country_has`)。
+      同一國有兩筆時把當地叫法接在問句後面(**同一個文字節點**,否則 D3 重複段落守門會擋);
+      🔴 不要拿 local_name 當問句主詞——試過,pt-BR 站會印出
+      「Japão: como vivenciam バレンタインデー?」,讀者看不懂的字進了主詞位置。
+- [x] **FAQPage 結構化資料補逐國問答**,問題字串就是頁面上那個 h3(Google 要求 FAQ 內容可見)。
+- [ ] 效果觀測:等 GSC 累積後重跑 `node scripts/seo-health.mjs`,看跨國/制度型那一類的平均名次
+      有沒有從 67.6 往前走。**這一項不是「再等等看」**——要看的是名次分布的變化,不是時間。
+
+## Ask the World 上線(2026-08-21;草案 §45)
+
+`posts.target_country` 從 M1 就在 schema 裡,但 **feed 不回它、前端也沒有地方填** ——
+寫得進去、讀不出來,等於這個功能對讀者不存在。
+
+- [x] Worker:feed 的 SELECT 與回應物件補 `target_country`;發文回應同構補上。
+- [x] Worker:`target_country` 加格式驗證(ISO 3166-1 alpha-2 大寫兩碼,否則 400)。
+      這個值會進 DB 也會回給所有讀者,不接受自由字串。加驗前 D1 實查全為 NULL,不影響既有資料。
+- [x] 前端:發文框內加國家選單(**不另開 `#ask` 區塊**,版面硬性規定沒有它);
+      名單 = 該 Topic 實際涵蓋的國家;貼文列表上標「問{country}」。
+- [x] 測試:`tests/api/worker.test.mjs` 的「Ask the World:target_country」一組(7 個)。
+- [ ] 冷啟動:現在題庫每日一問是有的,但跨國提問沒有任何種子內容。要不要人工放幾則、
+      放在哪些 Topic,**屬產品決定,動工前問用戶**。
+
 ## 搜尋數據(2026-08-20 開工)
 
 ### 已完成(2026-08-20)

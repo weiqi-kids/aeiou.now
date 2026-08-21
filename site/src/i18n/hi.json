@@ -41,6 +41,8 @@
   "topic.perennial": "सालभर",
   "topic.no_local_observance": "यहाँ यह पर्व नहीं मनाया जाता",
   "topic.no_local_observance_rule": "सरकारी सूची में नहीं",
+  "topic.q_how_country": "{country} में {topic} कैसे मनाया जाता है?",
+  "topic.q_country_has": "क्या {country} में {topic} होता है?",
   "topic.load_more": "और विषय दिखाएँ",
   "category.festival": "त्योहार",
   "category.community": "समुदाय",
@@ -135,5 +137,7 @@
   "q.error_retry": "कुछ गड़बड़ हुई, फिर कोशिश करें",
   "q.today_world_empty": "आज दुनिया शांत है",
   "q.your_community": "आपका समुदाय",
-  "room.noscript": "चर्चा लोड होने के लिए JavaScript चाहिए। इस पृष्ठ की बाक़ी सामग्री पर असर नहीं पड़ता।"
+  "room.noscript": "चर्चा लोड होने के लिए JavaScript चाहिए। इस पृष्ठ की बाक़ी सामग्री पर असर नहीं पड़ता।",
+  "room.ask_any": "कोई देश नहीं",
+  "room.ask_badge": "{country} से सवाल"
 }

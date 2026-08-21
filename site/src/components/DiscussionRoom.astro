@@ -42,14 +42,22 @@ import { LOCALE, REACTION_SET } from '../lib/config.mjs';
 
 interface Props {
   topicId: string; // API 路徑參數是 topic_id(ULID),不是 slug
+  // Ask the World(草案 §45):發文時可以指定「這個問題是問哪一國的」。
+  // 名單不是七國固定清單,而是**這個 Topic 實際涵蓋的國家** —— 問一個沒有這個節日的國家
+  // 沒有意義,而且頁面上就有那一國的段落可以對照。[{ code, flag, name }]
+  askCountries?: Array<{ code: string; flag: string; name: string }>;
 }
-const { topicId } = Astro.props;
+const { topicId, askCountries = [] } = Astro.props;
 const apiUrl = import.meta.env.PUBLIC_API_URL || '';
 
 const roomConfig = {
   locale: LOCALE,
   reactions: REACTION_SET,
+  askCountries,
   i18n: {
+    askLabel: t('topic.ask_the_world_cta'),
+    askAny: t('room.ask_any'),
+    askBadge: t('room.ask_badge'),
     empty: t('room.empty'),
     unavailable: t('room.closed'),
     composePlaceholder: t('room.compose_placeholder'),
@@ -333,6 +341,17 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
       : fmtTime(post.created_at, cfg.locale);
     item.appendChild(meta);
 
+    // Ask the World:這則是問某一國的。標示用該國在**本站語系**裡的名字
+    // (名單與國旗都來自 Astro 側的 askCountries,不在客戶端組國名)。
+    // 名單裡查不到就不標 —— 寧可不標,也不印一個讀者看不懂的國碼。
+    if (post.target_country) {
+      const hit = (cfg.askCountries || []).find((c) => c.code === post.target_country);
+      if (hit) {
+        item.appendChild(el('p', 'room-post-ask',
+          hit.flag + ' ' + fill(cfg.i18n.askBadge, { country: hit.name })));
+      }
+    }
+
     const picked = pickText(post, cfg.locale);
     item.appendChild(el('p', 'room-post-content', picked.text));
     if (picked.pending) {
@@ -379,17 +398,41 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     return item;
   }
 
+  // Ask the World(草案 §45):把問題指定給某一個國家的人。
+  // 這不是新區塊 —— Topic 頁的版面沒有 #ask,選單就長在既有的發文框裡,
+  // 名單來自這個 Topic 實際涵蓋的國家(見 Astro 側的 askCountries)。
+  // 沒有名單(長青 Topic、資料還沒建)就整個不渲染,發文行為與過去一樣。
+  function renderAskPicker(cfg) {
+    const list = Array.isArray(cfg.askCountries) ? cfg.askCountries : [];
+    if (list.length === 0) return null;
+    const wrap = el('div', 'room-composer-ask');
+    const select = el('select', 'room-composer-ask-select');
+    select.setAttribute('aria-label', cfg.i18n.askLabel);
+    const any = el('option', null, cfg.i18n.askAny);
+    any.value = '';
+    select.appendChild(any);
+    list.forEach((country) => {
+      const option = el('option', null, country.flag + ' ' + country.name);
+      option.value = country.code;
+      select.appendChild(option);
+    });
+    wrap.append(select);
+    return { wrap: wrap, select: select };
+  }
+
   function renderComposer(cfg, topicId, api, feedList) {
     const form = el('form', 'room-composer');
     const box = el('textarea', 'room-composer-input');
     box.placeholder = cfg.i18n.composePlaceholder;
     box.required = true;
     box.maxLength = 5000;
+    const ask = renderAskPicker(cfg);
     const send = el('button', 'room-composer-submit', cfg.i18n.submit);
     send.type = 'submit';
     const err = el('p', 'room-composer-error');
     err.hidden = true;
-    form.append(box, send, err);
+    if (ask) form.append(box, ask.wrap, send, err);
+    else form.append(box, send, err);
     form.addEventListener('submit', (ev) => {
       ev.preventDefault();
       const content = box.value.trim();
@@ -400,7 +443,13 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic_id: topicId, content: content, locale: cfg.locale }),
+        body: JSON.stringify({
+          topic_id: topicId,
+          content: content,
+          locale: cfg.locale,
+          // 空字串 = 不指定。契約要 null 或 ISO 兩碼,不能送空字串。
+          target_country: (ask && ask.select.value) ? ask.select.value : null,
+        }),
       })
         .then((res) => {
           if (!res.ok) throw new Error('http ' + res.status);
@@ -556,6 +605,27 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     background: var(--color-primary);
     color: var(--color-white);
     cursor: pointer;
+  }
+  .room :global(.room-composer-ask) {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-block-start: 0.5rem;
+  }
+  .room :global(.room-composer-ask-select) {
+    font: inherit;
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    background: var(--color-white);
+    border: 1px solid var(--color-line);
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    max-width: 100%;
+  }
+  .room :global(.room-post-ask) {
+    margin: 0 0 0.4rem;
+    font-size: var(--text-sm);
+    color: var(--color-primary);
   }
   .room :global(.room-composer-error) {
     margin: 0;

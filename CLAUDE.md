@@ -296,6 +296,21 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
   沒有專屬文案就沿用 `${label} · ${siteDescription()}`。
   查法:`for p in / /topics/today/ /questions/ /about/; do curl -s "https://aeiou.now$p" \
   | grep -o '<meta name="description" content="[^"]*"'; done` — 出現「只有幾個字」的就是漏網。
+- **Topic 頁對外宣告的主題 = 站上唯一有優勢的內容,不是通用查詢**(2026-08-21 用戶拍板)——
+  title 後綴用「N 國怎麼過、哪裡放假」(`SEO_COPY.compareSuffix`),description **第一句是本市場
+  那一國的制度答案**(不是日期),🌎 底下每一國的 h3 是問句(`topic.q_how_country` /
+  `topic.q_country_has`)。緣由:同一份 GSC 資料按意圖分兩類後,日期/名稱型排 32.7 名、
+  跨國/制度型排 67.6 名,兩類點擊都是 0;日期型在名次 4–9 累積 41 次曝光仍 0 點擊
+  (真實 CTR 若有 8%,出現 0 點擊的機率約 3%)——那是 Google 答案框的標準品,排第一也沒人點。
+  **前一版(2026-08-19)把日期擺第一是同一份資料的錯誤結論,已推翻,不要改回去。**
+  查法:`curl -s https://aeiou.now/topic/<slug>/ | grep -o '<title>[^<]*'` 與
+  `| grep -o '<meta name="description" content="[^"]*"'` — description 開頭應是本市場國名或其敘述。
+- **Ask the World 的提問對象選單長在發文框裡,不另開 `#ask` 區塊**(2026-08-21)——
+  Topic 頁版面的硬性規定沒有 `#ask`(見上方版面段),所以 `DiscussionRoom` 的 composer 多一個
+  `<select>`,名單 = 該 Topic 實際涵蓋的國家(`askCountries` prop)。欄位 `posts.target_country`
+  從 M1 就存在,但 2026-08-21 之前 feed 不回它 —— **寫得進去、讀不出來**。
+  查法:`curl -s "$API/v1/topics/<topic_id>/feed?sort=new&limit=1" | grep -o 'target_country'`;
+  合法值只有 ISO 3166-1 alpha-2 大寫兩碼或 null,格式不符回 400(契約 §2)。
 - **腳本裸執行(不帶任何參數)就必須是正確且完整的行為**;旗標只能是逃生口或縮減行為,
   不得是「不帶就會壞掉」。cron 呼叫一律不帶參數,不能依賴有人記得讀本手冊。
 - **推 D1 只推真的變了的列**——Worker 的 `/internal/sync/*` 是純 upsert、不做 delete,

@@ -41,6 +41,8 @@
   "topic.perennial": "Sepanjang tahun",
   "topic.no_local_observance": "Tidak dirayakan di sini",
   "topic.no_local_observance_rule": "Tidak ada di daftar resmi",
+  "topic.q_how_country": "Bagaimana {country} menjalani {topic}?",
+  "topic.q_country_has": "Apakah {country} punya {topic}?",
   "topic.load_more": "Tampilkan topik lainnya",
   "category.festival": "Hari besar",
   "category.community": "Komunitas",
@@ -135,5 +137,7 @@
   "q.error_retry": "Ada masalah, coba lagi",
   "q.today_world_empty": "Dunia sedang tenang hari ini",
   "q.your_community": "Komunitasmu",
-  "room.noscript": "Diskusi memerlukan JavaScript untuk dimuat. Isi halaman lainnya tidak terpengaruh."
+  "room.noscript": "Diskusi memerlukan JavaScript untuk dimuat. Isi halaman lainnya tidak terpengaruh.",
+  "room.ask_any": "Tanpa negara tertentu",
+  "room.ask_badge": "Bertanya ke {country}"
 }
