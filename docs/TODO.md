@@ -99,7 +99,9 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       **是否真的進索引要等 Google 重爬**,複驗:
       `node -e "const {inspectUrl}=await import('/root/seo-ops/lib/google.mjs');
       console.log((await inspectUrl('/root/.config/aeiou/ga4-sa.json','sc-domain:aeiou.now',
-      'https://aeiou.now/questions/')).inspectionResult.indexStatusResult.coverageState)"`
+      'https://aeiou.now/questions/')).coverageState)"`
+      ⚠ 2026-08-21 修正:`inspectUrl()` 回的**就是** indexStatusResult 本身,
+      舊寫法的 `.inspectionResult.indexStatusResult` 會拋 undefined。
 - [ ] ⛔ **印尼 SNPMB 官網 TLS 憑證仍過期**(外部,我們改不了;2026-08-21 **再次**複驗,
       `notAfter=Oct 13 04:22:27 2024 GMT`、curl 回 000,狀況未變;原記錄:
       `notAfter=Oct 13 04:22:27 2024 GMT`,curl 回 000):
@@ -129,8 +131,15 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       🔴 不要拿 local_name 當問句主詞——試過,pt-BR 站會印出
       「Japão: como vivenciam バレンタインデー?」,讀者看不懂的字進了主詞位置。
 - [x] **FAQPage 結構化資料補逐國問答**,問題字串就是頁面上那個 h3(Google 要求 FAQ 內容可見)。
-- [ ] 效果觀測:等 GSC 累積後重跑 `node scripts/seo-health.mjs`,看跨國/制度型那一類的平均名次
-      有沒有從 67.6 往前走。**這一項不是「再等等看」**——要看的是名次分布的變化,不是時間。
+- [ ] ⛔ 效果觀測:看跨國/制度型那一類的平均名次有沒有從 67.6 往前走。
+      **這一項不是「再等等看」**——要看的是名次分布的變化,不是時間。
+      2026-08-21 把這個判準**做進工具**了:`node scripts/seo-health.mjs` 的 ③ 層現在固定印
+      「意圖分類」兩行(曝光加權平均名次),不必再有人手算一次 —— 手算的判準只存在於某一次對話裡。
+      **卡點是事實不是猜測**:`inspectUrl` 實測 `lastCrawlTime=2026-08-19T20:45:53Z`,
+      Google **還沒回來爬過改版後的頁面**;GSC 資料窗也只到 08-19。
+      **解鎖條件**:Google 重爬(查 lastCrawlTime 超過 2026-08-21)且 GSC 資料窗推進到 08-22 之後。
+      當時(改版前、5 天樣本)的基準已量出來:日期/名稱型 23 查詢 69 曝光 0 點擊 17.8 名;
+      跨國/制度型 1 查詢 1 曝光 0 點擊 94.0 名。
 
 ## Ask the World 上線(2026-08-21;草案 §45)
 
@@ -218,8 +227,10 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       ⚠ 時間差:模板改動要等下一輪 hourly-export 才會反映到 stamps.json。
       CI 若搶在那之前 build,sitemap 會沿用上一個 render 時間戳(最多晚一小時),
       下一輪 hourly 提交 stamps.json 會再觸發一次 CI,自己收斂。
-- [ ] 效果觀測:等 GSC 資料窗推進到 08-22 之後再看跨國/制度型查詢的平均名次
-      (改版前是 67.6)。**在那之前不要拿數字說改善或沒改善。**
+- [ ] ⛔ 效果觀測:等 GSC 資料窗推進到 08-22 之後再看跨國/制度型查詢的平均名次(改版前是 67.6)。
+      **在那之前不要拿數字說改善或沒改善。** 與上面那一項是同一件事,同一條指令:
+      `node scripts/seo-health.mjs` 的 ③ 層「意圖分類」。
+      2026-08-21 覆查:資料窗仍停在 08-19、lastCrawlTime 仍是 08-19 —— 兩個前提都還沒到。
 
 ## 部署與封面(2026-08-21 用戶核准三項)
 

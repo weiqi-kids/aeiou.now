@@ -186,6 +186,45 @@ try {
     console.log('   這個佔比目前不足以判定是結構問題，也不足以判定不是 —— 不要拿它當任何一邊的證據。');
     console.log('   要縮短這段空白，靠的是 scripts/gsc-topic-metrics.mjs 每天累積，不是等。');
   }
+  // ── 意圖分類:站上唯一有優勢的那一類排在哪(2026-08-21 補進工具) ────────────
+  // 2026-08-21 的診斷是**手算**的:把查詢按意圖分兩類,發現日期/名稱型排 32.7 名、
+  // 跨國/制度型排 67.6 名,而後者才是站上唯一有優勢的內容。改版就是照那個結論做的。
+  // 但「改版有沒有效」不能靠下次有人再手算一次 —— 那等於這個判準只存在於某一次對話裡。
+  // 所以固定印出來。docs/TODO.md 的「效果觀測」兩項看的就是這一段。
+  //
+  // ⚠ 判準是**查詢問的是什麼**,不是頁面是什麼:
+  //   · 日期/名稱型 = 帶年份、帶「幾號/什麼時候/kapan/when/日期」——Google 答案框的標準品,
+  //     排第一也沒人點(2026-08-21 實證:名次 4–9 累積 41 曝光仍 0 點擊)。
+  //   · 跨國/制度型 = 帶「哪些國家/怎麼過/為什麼/放假嗎/差別/各國」——七國制度比較 = 唯一資產。
+  //   · 其餘歸「未分類」,不進兩邊的平均,免得把雜訊算進去。
+  const DATE_RE = /(\b20\d{2}\b|幾號|什麼時候|什么时候|日期|いつ|何日|kapan|tanggal|when is|quando|कब|तारीख)/i;
+  const INST_RE = /(哪些國家|哪些国家|各國|各国|怎麼過|怎么过|放假|為什麼|为什么|差別|差别|比較|比较|制度|國定|国定|holiday|public holiday|do they|how do|why do|libur|hari libur|feriado|छुट्टी|क्यों|कैसे)/i;
+  const intent = { date: [], inst: [] };
+  for (const x of queryRows) {
+    const q = String(x.keys?.[0] ?? x.query ?? '');
+    // 制度型優先:同時命中兩邊時,「2027 印尼開齋節放假嗎」問的是制度不是日期。
+    if (INST_RE.test(q)) intent.inst.push(x);
+    else if (DATE_RE.test(q)) intent.date.push(x);
+  }
+  const avgPos = (rows) => {
+    const imp = rows.reduce((a, x) => a + x.impressions, 0);
+    if (imp === 0) return null;
+    // 曝光加權平均 —— 與 GSC 自己的算法一致,不能用算術平均(那會讓一次曝光的查詢
+    // 與一百次曝光的查詢等重)。
+    return rows.reduce((a, x) => a + x.position * x.impressions, 0) / imp;
+  };
+  console.log('\n意圖分類（站上唯一有優勢的是跨國/制度型；2026-08-21 改版前是 32.7 對 67.6）：');
+  for (const [label, rows] of [['日期/名稱型（沒有優勢）', intent.date], ['跨國/制度型（唯一資產）', intent.inst]]) {
+    const imp = rows.reduce((a, x) => a + x.impressions, 0);
+    const clk = rows.reduce((a, x) => a + x.clicks, 0);
+    const pos = avgPos(rows);
+    console.log(`  ${label}：查詢 ${rows.length}　曝光 ${imp}　點擊 ${clk}　平均名次 ${pos === null ? '—' : pos.toFixed(1)}`);
+  }
+  const unclassified = queryRows.length - intent.date.length - intent.inst.length;
+  if (unclassified > 0) console.log(`  （未分類 ${unclassified} 個查詢不進兩邊的平均）`);
+  console.log('  ⚠ 這兩個數字要和**改版上線後 Google 重爬過**的資料比才有意義；');
+  console.log('     GSC 資料固定落後 2–3 天，查 lastCrawlTime 確認它看過新標題沒有（見 ② 層）。');
+
   const top = queryRows.filter((x) => x.position <= 10);
   const topImp = top.reduce((a, x) => a + x.impressions, 0);
   const topClicks = top.reduce((a, x) => a + x.clicks, 0);
