@@ -48,6 +48,28 @@ function absolute(value) {
   return /^https?:\/\//i.test(value);
 }
 
+const BASE_PATH = String(process.env.BASE_PATH || '/');
+const BASE_PREFIX = BASE_PATH === '/'
+  ? ''
+  : `/${BASE_PATH.replace(/^\/+|\/+$/g, '')}/`;
+
+function localAssetPath(pathname) {
+  const path = BASE_PREFIX && pathname.startsWith(BASE_PREFIX)
+    ? pathname.slice(BASE_PREFIX.length)
+    : pathname.replace(/^\/+/, '');
+  return join(DIST, path);
+}
+
+function pngDimensions(path) {
+  try {
+    const bytes = readFileSync(path);
+    if (bytes.length < 24 || bytes.readUInt32BE(0) !== 0x89504e47) return null;
+    return { width: bytes.readUInt32BE(16), height: bytes.readUInt32BE(20) };
+  } catch {
+    return null;
+  }
+}
+
 const htmlFiles = files(DIST).filter((path) => path.endsWith('.html'));
 if (htmlFiles.length === 0) errors.push('dist 沒有 HTML');
 
@@ -65,6 +87,35 @@ for (const path of htmlFiles) {
   if (!/name=["']twitter:card["']/i.test(html)) errors.push(`${rel}:缺 twitter:card`);
   if (count(html, /rel=["']alternate["'][^>]*hreflang=/gi) < LOCALES.length + 1) errors.push(`${rel}:hreflang 少於七語加 x-default`);
   const noindex = /name=["'](?:robots|googlebot)["'][^>]*content=["'][^"']*noindex/i.test(html);
+  const ogImage = html.match(/<meta\b[^>]*property=["']og:image["'][^>]*content=["']([^"']+)["']/i)?.[1] || '';
+  const ogImageWidth = html.match(/<meta\b[^>]*property=["']og:image:width["'][^>]*content=["']([^"']+)["']/i)?.[1] || '';
+  const ogImageHeight = html.match(/<meta\b[^>]*property=["']og:image:height["'][^>]*content=["']([^"']+)["']/i)?.[1] || '';
+  if (!noindex) {
+    if (!ogImage || !absolute(ogImage)) errors.push(`${rel}:indexable page 必須有 absolute og:image`);
+    if (ogImageWidth !== '1200' || ogImageHeight !== '675') {
+      errors.push(`${rel}:indexable page 的 og:image 必須宣告 1200×675`);
+    }
+    if (!/primaryImageOfPage/i.test(html)) errors.push(`${rel}:JSON-LD 缺 primaryImageOfPage`);
+  }
+  if (ogImage && absolute(ogImage) && canonical && absolute(canonical)) {
+    try {
+      const imageUrl = new URL(ogImage);
+      const pageUrl = new URL(canonical);
+      if (imageUrl.origin === pageUrl.origin) {
+        const imageFile = localAssetPath(imageUrl.pathname);
+        if (!existsSync(imageFile)) {
+          errors.push(`${rel}:og:image 指向不存在的本地檔案 ${imageUrl.pathname}`);
+        } else {
+          const dimensions = pngDimensions(imageFile);
+          if (dimensions && (dimensions.width !== 1200 || dimensions.height !== 675)) {
+            errors.push(`${rel}:og:image 實際尺寸 ${dimensions.width}×${dimensions.height}，不是 1200×675`);
+          }
+        }
+      }
+    } catch {
+      errors.push(`${rel}:og:image 不是合法 URL`);
+    }
+  }
   if (!noindex && count(html, /<h1\b/gi) !== 1) errors.push(`${rel}:indexable page 必須恰好一個 h1`);
   if (noindex && !noindexAllowed(rel)) errors.push(`${rel}:只有 merged Topic alias 與 thin 排行榜時窗可以輸出 noindex`);
   if (thinRankingPaths.has(rel) && !noindex) errors.push(`${rel}:筆數不足的排行榜時窗必須 noindex（見 export-data.mjs 的 thin 旗標）`);

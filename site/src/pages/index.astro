@@ -31,9 +31,9 @@ import Participation from '../components/Participation.astro';
 import { t } from '../lib/i18n.mjs';
 import { withBase } from '../lib/paths.mjs';
 import { monthDay } from '../lib/format.mjs';
-import { recentTopics, topicsByHeat, countryName, questionsForDate, todayWorld } from '../lib/data.mjs';
+import { recentTopics, topicsByHeat, countryName, questionsForDate, todayWorld, coverPath } from '../lib/data.mjs';
 import { isPubliclyVisible } from '../lib/topic-status.mjs';
-import { seoCopy } from '../lib/seo.mjs';
+import { seoCopy, SITE_OVERVIEW_IMAGE_PATH } from '../lib/seo.mjs';
 
 // 每日世界一問(docs/briefs/daily-question.md §6.3):四個新區塊插在 #trending 之前。
 // poll/guess 各自可能為 null(題庫空、或該 kind 沒有 date<=今日的題目)——為 null 時
@@ -54,6 +54,10 @@ const remaining = topicsByHeat(HOME_WINDOW).filter(
   (topic) => isPubliclyVisible(topic) && !recentIds.has(topic.topic_id)
 );
 const rows = [...recent, ...remaining].map((topic) => ({ topic, note: seasonNote(topic) }));
+const representativeTopic = rows
+  .map(({ topic }) => topic)
+  .find((topic) => coverPath(topic?.slug));
+const representativeCover = representativeTopic ? coverPath(representativeTopic.slug) : null;
 
 // 為什麼它是「近期」:哪一國、哪一天。這是列上的事實,不是頁首的說明文字。
 function seasonNote(topic) {
@@ -75,6 +79,8 @@ function seasonNote(topic) {
   description={t('home.intro')}
   pageType="CollectionPage"
   activeSort="global"
+  image={withBase(representativeCover || SITE_OVERVIEW_IMAGE_PATH)}
+  imageAlt={representativeTopic?.title || t('home.h1')}
 >
   <header class="home-intro">
     <h1>{t('home.h1')}</h1>

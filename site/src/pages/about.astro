@@ -11,12 +11,19 @@
 // 入口只在頁尾:用戶列的主導覽項目(全球熱門/熱門話題/附近訊息/活動資訊/具體 Topic)沒有它。
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { t } from '../lib/i18n.mjs';
+import { withBase } from '../lib/paths.mjs';
+import { SITE_OVERVIEW_IMAGE_PATH } from '../lib/seo.mjs';
 
 const POSITIONS = [1, 2, 3, 4, 5];
 const FLOW = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 ---
 
-<BaseLayout title={`${t('about.title')} — aeiou.now`} description={t('about.one_liner')}>
+<BaseLayout
+  title={`${t('about.title')} — aeiou.now`}
+  description={t('about.one_liner')}
+  image={withBase(SITE_OVERVIEW_IMAGE_PATH)}
+  imageAlt={t('about.title')}
+>
   <article class="about">
     <header class="about-head">
       <h1>{t('about.title')}</h1>
