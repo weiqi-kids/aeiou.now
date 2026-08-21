@@ -33,8 +33,9 @@ interface Question {
   target_locale: string | null;
   text: string;
   options: QuestionOption[];
-  answer: string | null;
-  explain: string | null;
+  /** 這題有沒有正解可揭曉。**正解本身不在靜態層**(2026-08-21 搬進 Worker,
+   *  否則 view-source 就先看到答案);揭曉什麼、什麼時候揭曉都由伺服器決定。 */
+  has_answer: boolean;
 }
 
 interface Props {
@@ -58,9 +59,8 @@ const askedToText = question.target_locale
 const cardConfig = {
   locale: LOCALE,
   kind: question.kind,
-  answer: question.answer || null,
+  hasAnswer: !!question.has_answer,
   options: question.options,
-  explain: question.explain || null,
   communities: COMMUNITIES,
   i18n: {
     voteHint: t('q.vote_hint'),
@@ -245,23 +245,26 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
       wrap.appendChild(topWrap);
     }
 
-    // guess:再加正解、自己對錯、答對率、解說(答案/解說是靜態資料,不經 API)。
-    if (cfg.kind === 'guess' && cfg.answer) {
-      const answerCfg = cfg.options.find((o) => o.id === cfg.answer);
+    // guess:再加正解、自己對錯、答對率、解說。
+    // 2026-08-21 起正解與解說**來自伺服器**(data.answer / data.explain),不再是靜態資料——
+    // 放靜態等於把答案跟題目印在同一張紙上。Worker 只在「這個 anon_id 投過票」時才回,
+    // 所以這裡拿不到 answer 就是還沒投票,什麼都不該印(不要退回靜態值)。
+    if (cfg.kind === 'guess' && data.answer) {
+      const answerCfg = cfg.options.find((o) => o.id === data.answer);
       const answerWrap = el('div', 'q-answer');
       const answerLine = el('p', 'q-answer-line');
       answerLine.appendChild(el('span', 'q-answer-label', cfg.i18n.answerLabel + '：'));
       answerLine.appendChild(
-        document.createTextNode(answerCfg ? (answerCfg.emoji ? answerCfg.emoji + ' ' : '') + answerCfg.label : cfg.answer)
+        document.createTextNode(answerCfg ? (answerCfg.emoji ? answerCfg.emoji + ' ' : '') + answerCfg.label : data.answer)
       );
       answerWrap.appendChild(answerLine);
       if (data.mine) {
-        const correct = data.mine === cfg.answer;
+        const correct = data.mine === data.answer;
         answerWrap.appendChild(el('p', correct ? 'q-correct' : 'q-incorrect', correct ? cfg.i18n.correct : cfg.i18n.incorrect));
       }
-      const correctCount = counts[cfg.answer] || 0;
+      const correctCount = counts[data.answer] || 0;
       answerWrap.appendChild(el('p', 'q-correct-rate', fill(cfg.i18n.correctRate, { pct: pct(correctCount, total) })));
-      if (cfg.explain) answerWrap.appendChild(el('p', 'q-explain', cfg.explain));
+      if (data.explain) answerWrap.appendChild(el('p', 'q-explain', data.explain));
       wrap.appendChild(answerWrap);
     }
 
@@ -348,7 +351,9 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
     // 發 fetch 之前就切 loading,理由同 DiscussionRoom:避免每次正常載入都先閃一下關閉文案。
     setState(root, 'loading');
 
-    fetch(api + '/v1/questions/' + qid + '/results', { credentials: 'include' })
+    fetch(api + '/v1/questions/' + qid + '/results?locale=' + encodeURIComponent(cfg.locale), {
+      credentials: 'include',
+    })
       .then((res) => {
         if (!res.ok) throw new Error('http ' + res.status);
         return res.json();
@@ -371,12 +376,33 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
         setState(root, 'open');
       })
       .catch(() => {
-        // 任何失敗退回 closed,不顯示過期票數、不做 fallback 快照。
+        // 任何失敗切 unavailable,不顯示過期票數、不做 fallback 快照。
         setState(root, 'unavailable');
       });
   }
 
-  document.querySelectorAll('[data-q-card]').forEach(initQuestion);
+  // 進 viewport 才發請求(2026-08-21)。原本是載入時每張卡各打一次 /results ——
+  // /questions/ 的卡數等於題庫大小,每天長一題,單次載入的並發就跟著線性成長,
+  // 而 GET results 目前無限流也無 Cache-Control。題庫過三十題之後那是一次三十發。
+  //
+  // 退場條件寫死成「沒有 IntersectionObserver 就全部照舊立刻發」——降級要是可用的舊行為,
+  // 不是永遠停在 loading。rootMargin 給 200px:讀者捲到之前就備好,不會看到明顯的空窗。
+  const cards = Array.prototype.slice.call(document.querySelectorAll('[data-q-card]'));
+  if (typeof IntersectionObserver !== 'function') {
+    cards.forEach(initQuestion);
+  } else {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          io.unobserve(entry.target); // 一張卡只發一次
+          initQuestion(entry.target);
+        });
+      },
+      { rootMargin: '200px 0px' },
+    );
+    cards.forEach((card) => io.observe(card));
+  }
 </script>
 
 <style>

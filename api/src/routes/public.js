@@ -29,6 +29,11 @@ export async function handleFeed(request, env, topicId, url, cors) {
 
   const now = Math.floor(Date.now() / 1000);
   const since = now - WINDOW_HOURS * 3600;
+  // 契約 §1 的 `mine`(2026-08-21 追加)。在此之前 feed 只回計數,前端無從得知
+  // 「我先前按過哪些」—— 重新整理後已按狀態一律歸零,讀者會以為自己的 reaction 沒送出去。
+  // 沒有 cookie 的讀者拿到的是 `mine: []`(不是缺席):空陣列是事實,缺席會讓前端分不出
+  // 「沒按過」與「這個端點不給」。**本端點不發 cookie**,只讀既有的(比照 questions results)。
+  const anonId = getAnonId(request);
 
   // sort=hot 的 M1 定義:COUNT(DISTINCT reactions.actor_id) + posts.comments,
   // tie-break created_at DESC。hot_score 恆 0,不得用來排序。
@@ -71,6 +76,7 @@ export async function handleFeed(request, env, topicId, url, cors) {
       comment_count: p.comment_count, // 留言總數(≠ comments 陣列長度)
       reactions: {},
       reaction_actors: p.reaction_actors,
+      mine: [], // 契約 §1:一律是陣列;沒 cookie / 沒按過都是 []
       comments: [],
     });
   }
@@ -87,6 +93,18 @@ export async function handleFeed(request, env, topicId, url, cors) {
          WHERE target_type = 'post' AND target_id IN (${ph}) GROUP BY target_id, kind`
       ).bind(...ids),
     ];
+    // 自己按過哪些:只在有 anon_id 時才查(沒 cookie 就不必多打一次 D1)。
+    // 位置固定在 comments 之前,底下用 index 取結果,順序不能換。
+    const mineIdx = anonId ? stmts.length : -1;
+    if (anonId) {
+      stmts.push(
+        env.DB.prepare(
+          `SELECT target_id, kind FROM reactions
+           WHERE target_type = 'post' AND target_id IN (${ph}) AND actor_id = ?`
+        ).bind(...ids, anonId)
+      );
+    }
+    const commentsIdx = nComments > 0 ? stmts.length : -1;
     if (nComments > 0) {
       stmts.push(
         env.DB.prepare(
@@ -109,8 +127,14 @@ export async function handleFeed(request, env, topicId, url, cors) {
       const p = byId.get(row.target_id);
       if (p && row.c > 0) p.reactions[row.kind] = row.c; // 只列計數 > 0 的 emoji
     }
+    if (mineIdx >= 0) {
+      for (const row of res[mineIdx].results) {
+        const p = byId.get(row.target_id);
+        if (p) p.mine.push(row.kind);
+      }
+    }
     if (nComments > 0) {
-      for (const row of res[2].results) {
+      for (const row of res[commentsIdx].results) {
         const p = byId.get(row.post_id);
         if (p) {
           p.comments.push({
@@ -442,7 +466,7 @@ export async function handleMe(request, env, cors) {
 // GET /v1/reactions/summary?target_type=place|event&ids=a,b,c
 // 靜態層拿不到 reaction 計數(它們只在 D1),排序需要,所以開一支唯讀彙總端點。
 // 一次最多 100 個 id;不存在的 id 就不出現在回應裡。
-export async function handleReactionSummary(env, url, cors) {
+export async function handleReactionSummary(request, env, url, cors) {
   const targetType = url.searchParams.get("target_type") || "";
   if (!["post", "comment", "place", "event"].includes(targetType))
     return err(400, "invalid_body", "target_type must be post/comment/place/event", cors);
@@ -452,11 +476,14 @@ export async function handleReactionSummary(env, url, cors) {
     .filter(Boolean)
     .slice(0, 100);
   if (ids.length === 0) return json({ target_type: targetType, items: {} }, 200, cors);
+  // 2026-08-21:與 feed 同一條修正 —— 只回計數的話,place/event 的「我按過的 emoji」
+  // 一重整就消失。沒 cookie 的讀者每個目標拿到的 mine 是 [],不是缺席。
+  const anonId = getAnonId(request);
 
   // SQLite 的視窗函數不支援 COUNT(DISTINCT …) OVER (…),所以拆兩段查:
   // 一段算每個 emoji 的計數,一段算每個目標的 distinct actor 數。
   const ph = ids.map(() => "?").join(",");
-  const [kinds, actors] = await env.DB.batch([
+  const stmts = [
     env.DB.prepare(
       `SELECT target_id, kind, COUNT(DISTINCT actor_id) AS n FROM reactions
        WHERE target_type = ? AND target_id IN (${ph}) GROUP BY target_id, kind`
@@ -465,16 +492,28 @@ export async function handleReactionSummary(env, url, cors) {
       `SELECT target_id, COUNT(DISTINCT actor_id) AS actors FROM reactions
        WHERE target_type = ? AND target_id IN (${ph}) GROUP BY target_id`
     ).bind(targetType, ...ids),
-  ]);
+  ];
+  if (anonId) {
+    stmts.push(
+      env.DB.prepare(
+        `SELECT target_id, kind FROM reactions
+         WHERE target_type = ? AND target_id IN (${ph}) AND actor_id = ?`
+      ).bind(targetType, ...ids, anonId)
+    );
+  }
+  const res = await env.DB.batch(stmts);
+  const [kinds, actors] = res;
 
   const items = {};
-  for (const r of kinds.results || []) {
-    if (!items[r.target_id]) items[r.target_id] = { reactions: {}, reaction_actors: 0 };
-    items[r.target_id].reactions[r.kind] = r.n;
-  }
-  for (const r of actors.results || []) {
-    if (!items[r.target_id]) items[r.target_id] = { reactions: {}, reaction_actors: 0 };
-    items[r.target_id].reaction_actors = r.actors;
-  }
+  // 每一個被問到的 id 都要有一格 —— 沒人按過的目標也該回 mine: [],
+  // 否則前端要為「缺席」與「空」寫兩套判斷。
+  const slot = (id) => {
+    if (!items[id]) items[id] = { reactions: {}, reaction_actors: 0, mine: [] };
+    return items[id];
+  };
+  for (const id of ids) slot(id);
+  for (const r of kinds.results || []) slot(r.target_id).reactions[r.kind] = r.n;
+  for (const r of actors.results || []) slot(r.target_id).reaction_actors = r.actors;
+  if (anonId) for (const r of res[2].results || []) slot(r.target_id).mine.push(r.kind);
   return json({ target_type: targetType, items }, 200, cors);
 }

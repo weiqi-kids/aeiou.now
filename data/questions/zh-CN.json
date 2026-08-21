@@ -31,8 +31,7 @@
           "label": "几乎不喝"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260815-dinner-time",
@@ -65,8 +64,7 @@
           "label": "巴西"
         }
       ],
-      "answer": "pt-BR",
-      "explain": "巴西的晚餐常在 20:00–23:00 之间,越晚越热闹。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260816-izakaya",
@@ -99,8 +97,7 @@
           "label": "看同事和场合"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260816-birthday-noodles",
@@ -133,8 +130,7 @@
           "label": "巴西"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "台湾寿星常吃猪脚面线或长寿面,面不能剪断,象征长长久久。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260817-school-alone",
@@ -167,8 +163,7 @@
           "label": "几乎都家长接送"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260817-bon-odori",
@@ -201,8 +196,7 @@
           "label": "印度"
         }
       ],
-      "answer": "ja",
-      "explain": "日本的盂兰盆节在八月中,各地夏祭都有盆舞,迎接祖先的灵魂回家。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260818-birthday-cake",
@@ -235,8 +229,7 @@
           "label": "通常不特别庆祝"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260818-panjat-pinang",
@@ -269,8 +262,7 @@
           "label": "美国"
         }
       ],
-      "answer": "id",
-      "explain": "印尼 8 月 17 日独立纪念日的 panjat pinang:全村合力叠罗汉爬油杆,抢挂在顶端的奖品。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260819-japan-bath",
@@ -303,8 +295,7 @@
           "label": "夏天淋浴冬天泡"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260819-xmas-chicken",
@@ -337,8 +328,7 @@
           "label": "台湾"
         }
       ],
-      "answer": "ja",
-      "explain": "1970 年代的营销让「圣诞节=肯德基」在日本深入人心,圣诞桶要提前好几周预订。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260820-housewarming",
@@ -371,8 +361,7 @@
           "label": "搬完就开始生活"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260820-multiday-wedding",
@@ -405,8 +394,7 @@
           "label": "台湾"
         }
       ],
-      "answer": "hi",
-      "explain": "印度婚礼常见 Haldi、Mehndi、Sangeet、正式婚礼到婚宴,连办数天、宾客数百人是常态。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260821-elder-redenvelope",
@@ -439,8 +427,7 @@
           "label": "心意到就好"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260821-sweet-sixteen",
@@ -473,8 +460,7 @@
           "label": "印尼"
         }
       ],
-      "answer": "en",
-      "explain": "美国的 Sweet Sixteen 是青春期的重要里程碑;巴西也有类似的 15 岁成年礼 Festa de Quinze Anos。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260822-moon-festival",
@@ -507,8 +493,7 @@
           "label": "我们没有这个节日"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260822-moon-bbq",
@@ -541,8 +526,7 @@
           "label": "巴西"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "1980 年代酱料广告带起风潮,如今台湾中秋夜家家户户在门口烤肉,已成独有新传统。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260823-live-with-parents",
@@ -575,8 +559,7 @@
           "label": "多代同堂很常见"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260823-mudik",
@@ -609,8 +592,7 @@
           "label": "日本"
         }
       ],
-      "answer": "id",
-      "explain": "开斋节前的印尼 mudik 是全球最大规模的年度返乡潮之一,公路、渡轮、机场全面爆满。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260824-graduation",
@@ -643,8 +625,7 @@
           "label": "拍照留念就好"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260824-baraat",
@@ -677,8 +658,7 @@
           "label": "巴西"
         }
       ],
-      "answer": "hi",
-      "explain": "北印度婚礼的 baraat:新郎骑白马(或白马车)在亲友歌舞与乐队簇拥下抵达婚礼现场。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260825-school-lunch",
@@ -711,8 +691,7 @@
           "label": "在外面买"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260825-egg-standing",
@@ -745,8 +724,7 @@
           "label": "巴西"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "台湾。端午当天中午“立蛋”与取“午时水”都不需要河，所以连没有龙舟赛的城市也照做。端午在台湾还是一年三节之一，是传统上结清帐款、致送礼盒的节点。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260826-shoes-indoors",
@@ -774,8 +752,7 @@
           "label": "不会"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260826-silence-day",
@@ -808,8 +785,7 @@
           "label": "台湾"
         }
       ],
-      "answer": "id",
-      "explain": "印尼。那一天是 Nyepi，巴厘萨卡历的新年。印尼把印度教列为官方承认的宗教之一，而且给了它一天全国假日——但那一天是巴厘的 Nyepi，不是北印度的排灯节。印尼的印度教人口集中在巴厘，历法与节期就跟着巴厘走。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260827-teacher-gift",
@@ -842,8 +818,7 @@
           "label": "没有这个习惯"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260827-no-teachers-day",
@@ -876,8 +851,7 @@
           "label": "中国"
         }
       ],
-      "answer": "ja",
-      "explain": "日本。国家层级最接近的是文部科学省的「教育・文化周间」，每年十一月一日到七日，依昭和三十四年的阁议了解举办——纪念的是教育，不是教师。真正挂上「教育の日」名字的是都道府县：德岛、新潟、埼玉、滋贺等地各自以条例把十一月一日定为自己的教育之日。单位是县，不是国。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260828-moon-cake",
@@ -910,8 +884,7 @@
           "label": "不送"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260828-sharad-purnima",
@@ -944,8 +917,7 @@
           "label": "印尼"
         }
       ],
-      "answer": "hi",
-      "explain": "印度。这一夜叫 Sharad Purnima，马哈拉施特拉称 Kojagiri Purnima——阿希温月的满月夜，通常在十月。Kojagiri 的意思就是「谁醒着」：整夜守着向拉克希米祈祷，把 kheer 放在月光下，隔天当 prasad 分食。传说这一夜的月亮圆满到十六分。同一轮满月，一边是团圆与月饼，一边是守夜与月光下的甜点。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260829-fasting-start",
@@ -978,8 +950,7 @@
           "label": "没有这个问题"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260829-sidang-isbat",
@@ -1012,8 +983,7 @@
           "label": "美国"
         }
       ],
-      "answer": "id",
-      "explain": "印尼。宗教部在前一晚召开 sidang isbat，把全国数十个观测点报回的月相与历算结果放在一起，当晚才宣布次日是不是初一。一四四七年（公历二〇二六）那一次在二月十七日开会，各观测点的新月都在地平线以下，会议依历算认定二月十九日为初一。所以「几号开始斋戒」的确定答案，制度上就是拿不到几个月前的——但开斋节的连假，三个部会提前一年就用联合决议排好了。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260830-grave-visit",
@@ -1046,8 +1016,7 @@
           "label": "没有这个习惯"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260830-nyadran",
@@ -1080,8 +1049,7 @@
           "label": "日本"
         }
       ],
-      "answer": "id",
-      "explain": "印尼（爪哇）。那是 Nyadran，在 Ruwah 月、斋戒月开始之前进行。「nyadran」一词来自梵语 sraddha（信）。流程固定：先清理墓地，再共同祈祷，最后以 kembul bujono——大家一起吃一顿——收尾。它原本属于伊斯兰传入前的信仰，后来与爪哇的伊斯兰实践融合。与清明同样是扫墓，但它不对齐某一天，而是对齐「下个月要开始斋戒」这件事。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260831-labour-day-off",
@@ -1114,8 +1082,7 @@
           "label": "不确定"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260831-partial-labour-day",
@@ -1148,8 +1115,7 @@
           "label": "中国"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "台湾。它是「只有部分人放假」的假日：放假对象限于适用劳动基准法的劳工，公务人员与部分行业照常上班。一个以劳工为名的假日，恰好把「谁算劳工」这件事摊在行事历上，每年重演一次。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260901-childrens-day-off",
@@ -1182,8 +1148,7 @@
           "label": "家里没有小孩"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260901-moving-childrens-day",
@@ -1216,8 +1181,7 @@
           "label": "中国"
         }
       ],
-      "answer": "en",
-      "explain": "美国。它不是法定假日，存在形式是每年重新发布的总统公告：里根一九八二年订在八月八日、克林顿一九九八年订在十月十一日、小布什二〇〇二年订在六月九日、奥巴马二〇一三年起改到十一月二十日，拜登二〇二四年也是十一月二十日。公告不是法律、不放假，下一任可以换日子。相比之下，印尼的全国儿童节由一九八四年第四十四号总统决定书固定在七月二十三日；巴西的十月十二日则撞上阿帕雷西达圣母日，本来就是全国假日。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260902-harvest-thanks",
@@ -1250,8 +1214,7 @@
           "label": "没有"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260902-before-harvest",
@@ -1284,8 +1247,7 @@
           "label": "印尼"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "台湾。《纪念日及节日实施条例》写的是「农民节：定于立春日」。这与其他地方的收成节刚好相反——感恩节、中国的农民丰收节、日本的勤劳感谢日都排在收完之后，台湾这一天排在开始之前：庆祝的不是已经到手的东西，而是即将下田这件事。立春的日期由天文决定，每年查中央气象署的日历资料表才知道落在二月三日、四日还是五日。这一天不放假。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260903-lantern-night",
@@ -1318,8 +1280,7 @@
           "label": "没有这个节日"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260903-tatung",
@@ -1352,8 +1313,7 @@
           "label": "印度"
         }
       ],
-      "answer": "id",
-      "explain": "印尼。那是 Cap Go Meh——闽南语「十五暝」的音，指农历年后的第十五夜。规模最大的在西加里曼丹的山口洋（Singkawang），核心是「Tatung」，与 Tatung 一起被登录为国家级非物质文化遗产。把这一格与台湾、中国那两格放在一起看很清楚：同一个第十五夜，一边是灯与谜，一边是游行与附身。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260904-valentine-school",
@@ -1386,8 +1346,7 @@
           "label": "不知道"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260904-valentine-circulars",
@@ -1420,8 +1379,7 @@
           "label": "巴西"
         }
       ],
-      "answer": "id",
-      "explain": "印尼。二月十四日不是假日，而且它在制度上留下的痕迹是反方向的：每年这个日子前后，不少地方政府的教育局会发出通函（surat edaran），要求辖内学校劝阻学生庆祝——西爪哇的德波市二〇二三年、东爪哇的巴苏鲁安县二〇一七年、廖内群岛省教育局对高中与职校都发过。理由写得很直白：与宗教、社会与文化规范不合。相对的，国家承认的是另一种：中国把七夕列进二〇〇六年第一批国家级非物质文化遗产名录，而二月十四日在中国一样没有任何制度身分。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260905-fathers-day-date",
@@ -1454,8 +1412,7 @@
           "label": "我们没有父亲节"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260905-pun-fathers-day",
@@ -1488,8 +1445,7 @@
           "label": "印尼"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "台湾。八月八日，因为「八八」与「爸爸」谐音——四个地方里唯一由语音决定日期的。《纪念日及节日实施条例》把它列为节日，同一条也明定不放假，所以庆祝多半被挪到最近的周末。对照组：美国走了六十年，一九七二年公法 92-278 才定案，比母亲节晚了五十八年；巴西一九五三年由广告人 Sylvio Bhering 提议，目的是填补八月的广告档期；印尼二〇〇六年由民间团体在梭罗宣告，为了与国家订的母亲节取得平衡。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260906-wedding-days",
@@ -1522,8 +1478,7 @@
           "label": "没参加过"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260906-womens-day-halfday",
@@ -1556,8 +1511,7 @@
           "label": "印尼"
         }
       ],
-      "answer": "zh-CN",
-      "explain": "中国。国务院《全国年节及纪念日放假办法》把节日分成全体公民放假与部分公民放假两类；后者列的是妇女节（三月八日，妇女放假半天）、青年节、儿童节与建军节。母亲节与父亲节两类都不在——民间多跟随五月第二个星期日与六月第三个星期日，但没有一条是被规定的。同一个国家对「女性」与「母亲」给了不同的制度待遇：一个有半天假，一个只有花店的档期。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260907-boat-race",
@@ -1590,8 +1544,7 @@
           "label": "没有"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260907-snake-boat",
@@ -1624,8 +1577,7 @@
           "label": "巴西"
         }
       ],
-      "answer": "hi",
-      "explain": "印度。喀拉拉的 Vallam Kali，其中最著名的是尼赫鲁杯（Nehru Trophy Boat Race），在阿拉普扎的普南马达湖举行。船是「chundan vallam」；一九五二年尼赫鲁造访后捐出银杯，赛事因此得名。印度没有端午节，但同一件事在这里按另一套历法与另一种船进行。顺带一提，印尼也有龙舟，而且不是近年引进的：丹格朗的 Peh Cun 由 Cina Benteng 社群在芝萨丹尼河上举行，同样落在农历五月初五，核心是一艘一年只开封一次的圣船。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260908-memorial-silence",
@@ -1658,8 +1610,7 @@
           "label": "不知道"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260908-moment-of-remembrance",
@@ -1692,8 +1643,7 @@
           "label": "巴西"
         }
       ],
-      "answer": "en",
-      "explain": "美国。一九六八年的统一星期一假日法把阵亡将士纪念日从五月三十日改成五月最后一个星期一，自一九七一年起实施，理由是给联邦雇员一个稳定的三日连假。这个改法让它同时变成夏季的起点，也让「这一天到底在纪念什么」需要被重新提醒——二〇〇〇年的全国追思时刻法因此规定，当天下午三时全国默哀一分钟。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260909-harvest-season",
@@ -1726,8 +1676,7 @@
           "label": "冬天"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260909-seren-taun",
@@ -1760,8 +1709,7 @@
           "label": "日本"
         }
       ],
-      "answer": "id",
-      "explain": "印尼。那是西爪哇的 Seren Taun，巽他农耕社群向造物者谢过去一年、求来年的仪式，固定在巽他萨卡历 Rayagung 月二十二日，在库宁安县芝古古尔的 Paseban Tri Panca Tunggal 连办七天。流程包含捧稻（Nyandak Pare）、千灯（Damar Sewu）、共同舂米，结尾是不同信仰的居民一起祈祷。它被登录为西爪哇的非物质文化遗产，但全国假日表上没有这一天——它靠的是历法与村庄。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260910-teacher-role-swap",
@@ -1794,8 +1742,7 @@
           "label": "没有教师节"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260910-radhakrishnan",
@@ -1828,8 +1775,7 @@
           "label": "巴西"
         }
       ],
-      "answer": "hi",
-      "explain": "印度。九月五日是萨瓦帕利·拉达克里希南的生日，一位哲学教授，后来成为总统。流传的说法是：学生想为他庆生，他请他们改成纪念全国的教师。这个由来让印度的教师节绑在一个具体的人身上，而不是绑在某条法规上。对照：中国的教师节是一九八五年才定在九月十日，选在学年刚开始的那几天，绑的是学期的节奏；日本则根本没有教师节，国家纪念的是「教育」。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260911-national-day-watch",
@@ -1862,8 +1808,7 @@
           "label": "照常上班"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260911-panjat-pinang",
@@ -1896,8 +1841,7 @@
           "label": "美国"
         }
       ],
-      "answer": "id",
-      "explain": "印尼。那是 panjat pinang，八月十七日独立纪念日前后在各地举行的传统竞赛之一。它的重点不是谁爬得快，而是一个人单独爬不上去——参赛者必须叠人墙、互相踩肩，所以最后拿到奖品的通常是最会合作的那一队。同一天还有抢虾饼、拔河等各种比赛，全部由邻里（RT/RW）自己办，不是中央统一安排。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260912-graduation-hat",
@@ -1930,8 +1874,7 @@
           "label": "拍全班合照"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260912-school-year-two",
@@ -1964,8 +1907,7 @@
           "label": "印度"
         }
       ],
-      "answer": "pt-BR",
-      "explain": "巴西。学年二月开学、十二月结束，七月的年中假期把它切成两半。这与其他地方的起点都不同：日本的入学典礼在四月初的樱花期；印尼多从七月中开始，开学前几天的新生辅导周有明文规范，禁止任何形式的整人；中国九月一日有全国同步的「开学第一课」；美国没有全国统一的那一天，开学日由各学区自订，同一州内相邻两个学区可以差上两周。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260913-sixteen",
@@ -1998,8 +1940,7 @@
           "label": "没有这种仪式"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260913-tainan-sixteen",
@@ -2032,8 +1973,7 @@
           "label": "巴西"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "台湾。七夕在台湾还有另一个身分：七娘妈生，被当成孩子的守护神生日。台南开隆宫的「做十六岁」就办在这一天——十六岁的孩子钻过供桌下的纸亭，象征成年。于是同一个日期上，一端是情人节式的约会，另一端是家族带着孩子完成的成年礼，两件事互不相干却共用一天。对照：日本的成人式规模由市町村决定，多在一月的假日；巴西十六岁可以投票但不强制，十八岁起才成为义务。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260914-newyear-food",
@@ -2066,8 +2006,7 @@
           "label": "别的"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260914-ninth-day",
@@ -2100,8 +2039,7 @@
           "label": "美国"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "台湾。元宵是农历年这一整段的收尾：正月十五一过，年才算真的过完，该开工的开工、该开学的开学。它不是放假日，却是全台当晚同时亮起来的一天——提灯笼、猜灯谜、吃元宵之外，台湾灯会由不同县市轮流主办，所以「今年在哪里办」每年都要重新问一次。《纪念日及节日实施条例》里也列着它：「元宵节：农历一月十五日」。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260915-eid-leave",
@@ -2134,8 +2072,7 @@
           "label": "不适用"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260915-no-islamic-days",
@@ -2168,8 +2105,7 @@
           "label": "巴西"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "台湾。《纪念日及节日实施条例》逐条列出道教节（农历一月一日）与佛陀诞辰日（农历四月八日），却没有开斋节，也没有宰牲节——伊斯兰的节期在这份清单上完全不存在。实际上台湾有数十万名来自印尼的移工，集体礼拜要不要请得到假取决于雇主；劳动部的做法是发新闻稿呼吁雇主给予弹性，而不是修法。于是这一天在台湾的样子是：清真寺照常满座，但那是用年假换来的。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260916-diwali-days",
@@ -2202,8 +2138,7 @@
           "label": "我们没有排灯节"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260916-ayurveda-day",
@@ -2236,8 +2171,7 @@
           "label": "美国"
         }
       ],
-      "answer": "hi",
-      "explain": "印度。第一天是 Dhanteras；二〇一六年之后，印度政府把它同时订为全国阿育吠陀日，理由是这天也是医神昙梵陀利的诞辰。于是同一个日期上叠着两件事：民间持续进行的购入金属器物与点灯，以及一场由卫生部门主导的全国性推广。传统节日被拿来当公共卫生的日程，这种叠用在其余四天上都没有。五天的最后一天是 Bhai Dooj，走的是姊妹与兄弟之间的关系线——五天各自对应不同的对象，所以把排灯节理解成「一个晚上」会失准。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260917-homecoming-transport",
@@ -2270,8 +2204,7 @@
           "label": "不用返乡"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260917-obon-not-holiday",
@@ -2304,8 +2237,7 @@
           "label": "巴西"
         }
       ],
-      "answer": "ja",
-      "explain": "日本。お盆不是法定假日，却是全年最明显的一次全国性停摆：多数企业在八月中自行安排连休，返乡的车潮与票价因此有固定的高峰。它之所以能一齐发生，正是因为大家把休假排在同一周——不是法律规定的，是彼此对齐的。门口的迎え火与送り火把整件事框成一趟往返：先点火接回来，几天后再点火送走，中间的盆踊り是留在人间的那几天。"
+      "has_answer": true
     },
     {
       "question_id": "q-20260918-birthday-elders",
@@ -2338,8 +2270,7 @@
           "label": "什么都不做"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260918-kanreki",
@@ -2372,8 +2303,7 @@
           "label": "巴西"
         }
       ],
-      "answer": "ja",
-      "explain": "日本。节点的年龄另有一套名字：六十岁还历、七十岁古稀、七十七岁喜寿，各有对应的颜色与贺法。这与其他地方把生日当成一个逐年递增的数字不同——这里的年龄被切成有名字的段落，每一段的抵达本身就是一件要庆祝的事。对照：中国同一个人的公历生日与农历生日常常都被记着，过哪一个往往由家中长辈决定；印度则是当天到长辈面前行礼、到庙里祈福，比切蛋糕更常被视为必要的一步。"
+      "has_answer": true
     }
   ]
 }

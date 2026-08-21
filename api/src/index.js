@@ -62,7 +62,7 @@ export default {
       if (path === "/v1/reactions/summary") {
         if (request.method !== "GET")
           return err(405, "method_not_allowed", "Use GET", cors);
-        return await handleReactionSummary(env, url, cors);
+        return await handleReactionSummary(request, env, url, cors);
       }
       if (path === "/v1/posts" || path === "/v1/comments" || path === "/v1/reactions") {
         if (request.method !== "POST")
@@ -83,6 +83,7 @@ export default {
         return await handleQuestionResults(
           request,
           env,
+          url,
           decodeURIComponent(questionResultsMatch[1]),
           cors
         );

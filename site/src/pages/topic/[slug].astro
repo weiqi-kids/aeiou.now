@@ -384,8 +384,8 @@ const topicSchema = [
 //   所以 HTML 先渲染 0,再用 GET /v1/reactions/summary?target_type=place|event&ids=… 把真實
 //   計數補上(2026-08-11 用戶指示;端點已上線,沒有新增或修改任何端點)。
 //   拿不到就維持 0——不清空、不顯示錯誤。
-// ⚠ 仍在的契約限制(不是 bug,不要「修」):summary 只回計數,**不回 mine**,
-//   所以載入時一律是未按狀態,要按下去拿到 POST /v1/reactions 的回應才知道自己按過哪些。
+// summary 自 2026-08-21 起同時回 mine(契約 §4),所以已按狀態在載入時就正確;
+//   沒有 cookie 的讀者拿到 [],等同全部未按。
 const apiUrl = import.meta.env.PUBLIC_API_URL || '';
 const cardReactionsConfig = {
   emojis: REACTION_SET, // 七顆全渲染(不含 👍)
@@ -750,12 +750,13 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     if (cfg) {
       // counts 為 null 時 reactions.mjs 一律畫 0(靜態資料沒有 reaction 計數,權威在 D1)。
       // summary 回來之後用同一支重畫一次,計數才是真值——reactions.mjs 只讀不改。
-      const mount = (box, counts) => {
+      const mount = (box, counts, mineList) => {
         const row = createReactions({
           targetType: box.dataset.targetType, // 'place' | 'event'(契約 §4 已含這兩種)
           targetId: box.dataset.targetId,
           emojis: cfg.emojis,
           counts: counts || undefined,
+          mine: mineList || undefined,
           api: cfg.api,
           i18n: cfg.i18n,
           classes: {
@@ -775,14 +776,16 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
         document.querySelectorAll('[data-card-reactions]'),
         (box) => !!box.dataset.targetId
       );
-      boxes.forEach((box) => mount(box, null));
+      boxes.forEach((box) => mount(box, null, null));
 
       // 真實計數:一種 target_type 一支請求,一次最多 100 個 id(契約 §4 的 summary)。
       // 失敗就靜靜留著 0——不清空、不顯示錯誤內容。
       if (cfg.api) {
         ['place', 'event'].forEach((type) => {
-          const mine = boxes.filter((box) => box.dataset.targetType === type);
-          const ids = mine.map((box) => box.dataset.targetId).slice(0, 100);
+          // ⚠ 這裡刻意不叫 mine —— 契約 §4 現在有一個同名欄位(我按過的 emoji),
+          // 兩個 mine 擺在同一段裡是製造誤讀。
+          const ofType = boxes.filter((box) => box.dataset.targetType === type);
+          const ids = ofType.map((box) => box.dataset.targetId).slice(0, 100);
           if (ids.length === 0) return;
           fetch(
             cfg.api +
@@ -796,9 +799,9 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
             .then((data) => {
               const items = (data && data.items) || null;
               if (!items) return;
-              mine.forEach((box) => {
+              ofType.forEach((box) => {
                 const hit = items[box.dataset.targetId];
-                if (hit && hit.reactions) mount(box, hit.reactions);
+                if (hit && hit.reactions) mount(box, hit.reactions, hit.mine);
               });
             })
             .catch(() => {});

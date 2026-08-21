@@ -34,8 +34,8 @@
 // 這一次 fetch 的結果——同一份資料不打第二次 API。
 //
 // 七顆 emoji 的按鈕行為在 src/lib/reactions.mjs(與看板列 TopicPosts 共用同一份)。
-// ⚠ 該檔檔頭記著一條 M1 契約限制:feed(api-contract §1)不回 mine,所以載入時所有 emoji
-// 一律是未按狀態,按下去拿到 POST /v1/reactions 的 mine 之後才知道自己按過哪些。
+// feed(api-contract §1)自 2026-08-21 起會回 mine,所以載入時已按狀態就是對的;
+// 沒有 cookie 的讀者拿到 [],等同全部未按。
 // 那是契約缺口,不是 bug;要修得先改契約 §1,M1 不動 Worker。
 import { t } from '../lib/i18n.mjs';
 import { LOCALE, REACTION_SET } from '../lib/config.mjs';
@@ -214,6 +214,7 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
       targetId: post.post_id,
       emojis: cfg.reactions,
       counts: post.reactions,
+      mine: post.mine, // 契約 §1(2026-08-21):重整後已按狀態才不會被洗掉
       api: api,
       i18n: { label: cfg.i18n.reactionLabel, failed: cfg.i18n.reactionFailed },
       classes: {

@@ -37,8 +37,7 @@
 //
 // emoji 照 REACTION_SET 七顆全渲染(缺席顯示 0),而且**是可以按的**(用戶 2026-08-11 指示)。
 // 行為與 Topic 頁討論室共用同一份實作 src/lib/reactions.mjs(契約 §4 POST /v1/reactions),
-// 兩處不可以有兩種行為。⚠ 該檔檔頭記著一條 M1 契約限制:feed 回傳沒有 mine,
-// 所以載入時一律顯示未按狀態,按下拿到回應後才知道自己按過哪些——那是契約缺口不是 bug。
+// 兩處不可以有兩種行為。feed 自 2026-08-21 起回 mine(契約 §1),載入時的已按狀態就是對的。
 import { t } from '../lib/i18n.mjs';
 import { LOCALE, REACTION_SET } from '../lib/config.mjs';
 
@@ -159,6 +158,7 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
       targetId: post.post_id,
       emojis: cfg.reactions,
       counts: post.reactions,
+      mine: post.mine,
       api: api,
       i18n: { label: cfg.i18n.reactionLabel, failed: cfg.i18n.reactionFailed },
       classes: {

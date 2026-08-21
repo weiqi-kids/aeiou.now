@@ -52,14 +52,19 @@ CREATE TABLE IF NOT EXISTS rate_events (
 CREATE INDEX IF NOT EXISTS idx_rate_events ON rate_events(kind, key, ts);
 
 -- 每日世界一問(2026-08-15;規格 docs/briefs/daily-question.md §3)
--- questions 精簡副本(主機 → /internal/sync/questions 覆蓋;文案與答案不進 D1,D1 只驗票)
+-- questions 精簡副本(主機 → /internal/sync/questions 覆蓋)。
+-- 題面文案不進 D1(那是靜態層的事);但 guess 的正解與解說 2026-08-21 起**進 D1** ——
+-- 它們原本在靜態 JSON 裡,view-source 就能先看到答案。揭曉條件是「這個 anon_id 投過票了」,
+-- 只有 D1 知道那件事,所以答案得跟過來(契約 §7.1)。
 CREATE TABLE IF NOT EXISTS questions (
   question_id  TEXT PRIMARY KEY,
   qdate        TEXT NOT NULL,
   kind         TEXT NOT NULL,
   topic_id     TEXT NOT NULL,
   options_json TEXT NOT NULL,              -- JSON 陣列:合法 option_id 清單
-  status       TEXT NOT NULL DEFAULT 'active'
+  status       TEXT NOT NULL DEFAULT 'active',
+  answer_option TEXT,                      -- guess 的正解 option_id;poll 恆 NULL
+  explain_json  TEXT                       -- JSON 物件 {locale: 解說};缺該語系就不給句子
 );
 -- 一人一題一票;重投 = 覆蓋 option_id(created_at 保留首次投票時間,參與統計以它計日)
 CREATE TABLE IF NOT EXISTS question_votes (

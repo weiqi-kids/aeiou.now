@@ -8,6 +8,30 @@ import { rateLimit } from "../lib/gates.js";
 // ---------- 每日世界一問(2026-08-15;規格 docs/briefs/daily-question.md、契約 §7) ----------
 // 社群 = 語言 = 站台:社群由前端送的 locale 決定,不做國家判定、不讀 request.cf.country。
 
+// guess 的正解揭曉(2026-08-21 起由 Worker 負責,不再放在靜態 JSON)。
+//
+// 為什麼搬過來:答案原本跟題目一起印在 /questions/<locale>.json 裡,view-source 就看得到,
+// 猜謎的猜字失去意義。揭曉的條件是「這個人已經投過票」,而那個事實只有 D1 知道。
+//
+// 判準只有一條:**mine 非 null 才給**。不是「投對才給」,也不是「過了某個時間才給」——
+// 投完票就該看到正解與解說,那是這個玩法的回饋;沒投票的人拿到的回應裡連 key 都沒有。
+// poll 沒有正解,任何情況都不回。
+function revealFor(row, locale, mine) {
+  if (!row || row.kind !== "guess" || row.answer_option == null || mine == null) return null;
+  let explain = null;
+  if (row.explain_json) {
+    try {
+      const map = JSON.parse(row.explain_json);
+      // 讀者只看得懂自己站的語言。缺該語系的解說就不給句子(不要退回別的語言:
+      // 那是 CLAUDE.md「只有一種語言看得懂的欄位不准上畫面」那條紅線)。
+      if (map && typeof map === "object" && typeof map[locale] === "string") explain = map[locale];
+    } catch {
+      explain = null;
+    }
+  }
+  return { answer: row.answer_option, explain };
+}
+
 // 聚合結果(GET results 與 POST votes 共用同構回應)。
 // by_locale 只含有票的 locale;options 只含計數 > 0(GROUP BY 的列本就 > 0,天然滿足)。
 export async function questionResults(env, questionId, anonId) {
@@ -43,16 +67,23 @@ export async function questionResults(env, questionId, anonId) {
 }
 
 // GET /v1/questions/:id/results —— 公開,不發 cookie(讀既有 cookie 算 mine,沒有就 null)
-export async function handleQuestionResults(request, env, questionId, cors) {
-  const q = await env.DB.prepare("SELECT question_id FROM questions WHERE question_id = ?")
+export async function handleQuestionResults(request, env, url, questionId, cors) {
+  const q = await env.DB.prepare(
+    "SELECT question_id, kind, answer_option, explain_json FROM questions WHERE question_id = ?"
+  )
     .bind(questionId)
     .first();
   if (!q) return err(404, "not_found", "question not found", cors);
 
+  // 揭曉的解說要挑讀者那一語。locale 不合法就當成沒帶 —— 只會少一句解說,不影響投票。
+  const locale = url.searchParams.get("locale");
   const anonId = getAnonId(request);
   const now = Math.floor(Date.now() / 1000);
   const { total, by_locale, mine } = await questionResults(env, questionId, anonId);
-  return json({ question_id: questionId, server_time: now, total, by_locale, mine }, 200, cors);
+  const body = { question_id: questionId, server_time: now, total, by_locale, mine };
+  const reveal = revealFor(q, LOCALES.includes(locale) ? locale : null, mine);
+  if (reveal) Object.assign(body, reveal);
+  return json(body, 200, cors);
 }
 
 // POST /v1/votes —— 一人一題一票,重投 = 改票(created_at 保留首次值)
@@ -70,7 +101,7 @@ export async function handleVote(request, env, ctx, cors) {
     return err(400, "invalid_body", "locale must be one of " + LOCALES.join(", "), cors);
 
   const q = await env.DB.prepare(
-    "SELECT question_id, status, options_json FROM questions WHERE question_id = ?"
+    "SELECT question_id, status, options_json, kind, answer_option, explain_json FROM questions WHERE question_id = ?"
   )
     .bind(question_id)
     .first();
@@ -107,7 +138,11 @@ export async function handleVote(request, env, ctx, cors) {
   const { total, by_locale, mine } = await questionResults(env, question_id, anonId);
   const headers = { ...cors };
   if (setCookie) headers["Set-Cookie"] = setCookie;
-  return json({ question_id, server_time: now, total, by_locale, mine }, 200, headers);
+  // 投完票就揭曉:回應與 GET results 同構,前端不必為「剛投完」寫第二套路徑。
+  const payload = { question_id, server_time: now, total, by_locale, mine };
+  const reveal = revealFor(q, locale, mine);
+  if (reveal) Object.assign(payload, reveal);
+  return json(payload, 200, headers);
 }
 
 // GET /v1/questions/participation?date=YYYY-MM-DD —— 當日各社群參與數,不發 cookie
@@ -159,20 +194,27 @@ export async function handleSyncQuestions(request, env) {
         "invalid_body",
         "each question needs question_id, qdate, kind, topic_id, options[]"
       );
+    // 正解必須是這一題的選項之一,否則揭曉時會印出一個讀者從沒看過的 id。
+    if (q.answer != null && !q.options.includes(q.answer))
+      return err(400, "invalid_body", `answer is not one of the options: ${q.question_id}`);
     stmts.push(
       env.DB.prepare(
-        `INSERT INTO questions (question_id, qdate, kind, topic_id, options_json, status)
-         VALUES (?, ?, ?, ?, ?, ?)
+        `INSERT INTO questions (question_id, qdate, kind, topic_id, options_json, status,
+                                answer_option, explain_json)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
          ON CONFLICT (question_id) DO UPDATE SET
            qdate = excluded.qdate, kind = excluded.kind, topic_id = excluded.topic_id,
-           options_json = excluded.options_json, status = excluded.status`
+           options_json = excluded.options_json, status = excluded.status,
+           answer_option = excluded.answer_option, explain_json = excluded.explain_json`
       ).bind(
         q.question_id,
         q.qdate,
         q.kind,
         q.topic_id,
         JSON.stringify(q.options),
-        q.status ?? "active"
+        q.status ?? "active",
+        q.answer ?? null,
+        q.explain && typeof q.explain === "object" ? JSON.stringify(q.explain) : null
       )
     );
   }

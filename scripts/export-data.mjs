@@ -600,8 +600,11 @@ for (const locale of LOCALES) {
         emoji: o.emoji,
         label: questionOptionI18n.get(`${q.question_id}:${o.option_id}`)?.get(locale) ?? null,
       })),
-      answer: q.kind === "guess" ? q.answer_option : null,
-      explain: q.kind === "guess" ? (i18n?.explain ?? null) : null,
+      // 2026-08-21:guess 的正解與解說**不再進靜態層** —— 它們在 view-source 就看得到,
+      // 等於答案跟題目一起印在同一張紙上。改由 Worker 在「這個 anon_id 已經投過票」時
+      // 才回(契約 §7.1)。靜態層留 has_answer 讓前端知道這題有正解可揭曉,
+      // 但揭曉什麼由伺服器決定。
+      has_answer: q.kind === "guess" && q.answer_option != null,
     };
   });
   questionsByLocale[locale] = list;

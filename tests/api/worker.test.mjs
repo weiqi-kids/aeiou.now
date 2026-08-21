@@ -322,3 +322,138 @@ describe("路由與 CORS", () => {
     }
   });
 });
+
+// ---------------------------------------------------------------------------
+// 2026-08-21 契約補洞:reaction 的 mine、guess 正解的揭曉時機。
+// 兩者的共同點是「同一個端點對不同的人要回不同的東西」——最容易寫成對所有人都回,
+// 而那正是 guess 原本的毛病(答案跟題目印在同一張紙上)。
+
+describe("契約 §1/§4:mine —— 我按過哪些 emoji", () => {
+  const OTHER = "01JZZZZZZZZZZZZZZZZZZZZZZX";
+
+  beforeEach(async () => {
+    seedTopic();
+    await call("/v1/posts", {
+      method: "POST", anonId: ANON,
+      body: { topic_id: "top_TEST", content: "hello", locale: "zh-TW" },
+    });
+  });
+
+  const onlyPostId = () => raw.prepare("SELECT post_id FROM posts").get().post_id;
+
+  test("feed:按過的人拿得到 mine,沒按過的人拿到空陣列", async () => {
+    const pid = onlyPostId();
+    const react = await call("/v1/reactions", {
+      method: "POST", anonId: ANON,
+      body: { target_type: "post", target_id: pid, kind: "❤️", op: "add" },
+    });
+    assert.equal(react.status, 200);
+
+    const mineRes = await (await call("/v1/topics/top_TEST/feed", { anonId: ANON })).json();
+    assert.deepEqual(mineRes.posts[0].mine, ["❤️"], "自己按過的 emoji 要回得出來");
+
+    const otherRes = await (await call("/v1/topics/top_TEST/feed", { anonId: OTHER })).json();
+    assert.deepEqual(otherRes.posts[0].mine, [], "別人按的不算我的");
+    assert.equal(otherRes.posts[0].reactions["❤️"], 1, "但計數是公開的,別人照樣看得到");
+  });
+
+  test("feed:沒有 cookie 的讀者拿到 [] 而不是缺 key", async () => {
+    const res = await (await call("/v1/topics/top_TEST/feed")).json();
+    assert.ok(Array.isArray(res.posts[0].mine), "一律是陣列 —— 缺席會讓前端要寫兩套判斷");
+    assert.equal(res.posts[0].mine.length, 0);
+  });
+
+  test("feed:comments=0 時 mine 仍然正確(兩段查詢的索引不能互相踩)", async () => {
+    const pid = onlyPostId();
+    await call("/v1/reactions", {
+      method: "POST", anonId: ANON,
+      body: { target_type: "post", target_id: pid, kind: "🎉", op: "add" },
+    });
+    const res = await (await call("/v1/topics/top_TEST/feed?comments=0", { anonId: ANON })).json();
+    assert.deepEqual(res.posts[0].mine, ["🎉"]);
+  });
+
+  test("reactions/summary:每個被問到的 id 都有一格,含沒人按過的", async () => {
+    const pid = onlyPostId();
+    await call("/v1/reactions", {
+      method: "POST", anonId: ANON,
+      body: { target_type: "post", target_id: pid, kind: "😂", op: "add" },
+    });
+    const res = await (
+      await call(`/v1/reactions/summary?target_type=post&ids=${pid},pst_NOBODY`, { anonId: ANON })
+    ).json();
+    assert.deepEqual(res.items[pid].mine, ["😂"]);
+    assert.deepEqual(res.items.pst_NOBODY.mine, [], "沒人按過的目標也要有一格");
+    assert.equal(res.items.pst_NOBODY.reaction_actors, 0);
+  });
+});
+
+describe("契約 §7.1:guess 的正解只在投過票之後才給", () => {
+  beforeEach(() => {
+    seedTopic();
+    raw.prepare(
+      `INSERT INTO questions (question_id, qdate, kind, topic_id, options_json, status,
+                              answer_option, explain_json) VALUES (?,?,?,?,?,?,?,?)`
+    ).run(
+      "qst_g", "2026-08-21", "guess", "top_TEST", JSON.stringify(["a", "b"]), "active",
+      "b", JSON.stringify({ "zh-TW": "因為乙", en: "because b" })
+    );
+    raw.prepare(
+      "INSERT INTO questions (question_id, qdate, kind, topic_id, options_json, status) VALUES (?,?,?,?,?,?)"
+    ).run("qst_p", "2026-08-21", "poll", "top_TEST", JSON.stringify(["a", "b"]), "active");
+  });
+
+  test("沒投票:回應裡連 answer 這個 key 都沒有", async () => {
+    const res = await (await call("/v1/questions/qst_g/results?locale=zh-TW")).json();
+    assert.equal(res.mine, null);
+    assert.ok(!("answer" in res), "沒投票就不該看到正解 —— 這正是原本放靜態 JSON 的毛病");
+    assert.ok(!("explain" in res));
+  });
+
+  test("投完票:同一支 POST 就揭曉,解說用送出的那一語", async () => {
+    const res = await (await call("/v1/votes", {
+      method: "POST", anonId: ANON,
+      body: { question_id: "qst_g", option_id: "a", locale: "zh-TW" },
+    })).json();
+    assert.equal(res.answer, "b");
+    assert.equal(res.explain, "因為乙");
+  });
+
+  test("投過票之後再 GET results 也拿得到(重新整理不會把答案收回去)", async () => {
+    await call("/v1/votes", {
+      method: "POST", anonId: ANON,
+      body: { question_id: "qst_g", option_id: "a", locale: "en" },
+    });
+    const res = await (await call("/v1/questions/qst_g/results?locale=en", { anonId: ANON })).json();
+    assert.equal(res.answer, "b");
+    assert.equal(res.explain, "because b");
+  });
+
+  test("缺該語系的解說就不給句子,不退回別的語言", async () => {
+    const res = await (await call("/v1/votes", {
+      method: "POST", anonId: ANON,
+      body: { question_id: "qst_g", option_id: "b", locale: "ja" },
+    })).json();
+    assert.equal(res.answer, "b", "正解是 option_id,與語言無關,照給");
+    assert.equal(res.explain, null, "只有一種語言看得懂的字串不准上畫面(CLAUDE.md 紅線)");
+  });
+
+  test("poll 沒有正解:投完票也不會多出 answer", async () => {
+    const res = await (await call("/v1/votes", {
+      method: "POST", anonId: ANON,
+      body: { question_id: "qst_p", option_id: "a", locale: "zh-TW" },
+    })).json();
+    assert.ok(!("answer" in res));
+  });
+
+  test("同步端點擋下不在選項裡的正解", async () => {
+    const res = await call("/internal/sync/questions", {
+      method: "POST", headers: { authorization: `Bearer ${SYNC_SECRET}` },
+      body: { questions: [{
+        question_id: "qst_bad", qdate: "2026-08-21", kind: "guess", topic_id: "top_TEST",
+        options: ["a", "b"], answer: "zzz",
+      }] },
+    });
+    assert.equal(res.status, 400, "正解不在選項裡 = 揭曉時會印出讀者沒看過的 id");
+  });
+});

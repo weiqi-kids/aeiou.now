@@ -15,12 +15,11 @@
 //   · 同一顆按鈕請求進行中 disable,連點只會送出一次。
 //   · kind 只能是 REACTION_SET 的七顆(不含 👍),清單由呼叫端從 src/lib/config.mjs 傳進來。
 //
-// ⚠ M1 已知契約限制(不是 bug,不要「修」它):
-//   GET /v1/topics/:id/feed 的回傳只有 reactions 與 reaction_actors,**沒有 mine**
-//   (見 api-contract §1 的 Response 形狀),所以頁面載入時前端無從得知「我先前按過哪些」。
-//   因此初始渲染一律是未按狀態(aria-pressed="false"),只顯示計數;要等使用者按下去、
-//   拿到 POST /v1/reactions 回應的 mine 之後,已按狀態才會正確。
-//   M1 刻意不為此新增或修改任何 Worker / API 端點——要補得先改契約 §1。
+// 2026-08-21 契約 §1/§4 已補 mine:feed 與 reactions/summary 都會回「這個 anon_id
+// 按過哪些 emoji」,所以初始渲染就能是正確的已按狀態,重新整理不再把自己的 reaction 洗掉。
+//   · 呼叫端把回應裡的 mine 原樣傳進 opts.mine;沒帶 = 空集合(等同舊行為,不會壞)。
+//   · 沒有 cookie 的讀者拿到的是 []。**[] 與缺席不是同一件事**——前者是「你沒按過」,
+//     後者是「這個端點不給」。契約規定一律回陣列,所以這裡只接受陣列,其餘一律忽略。
 
 import { track } from './analytics.mjs';
 
@@ -39,6 +38,7 @@ function formatLabel(template, emoji, count) {
  * @param {string}   opts.targetId      pst_… / cmt_…
  * @param {string[]} opts.emojis        REACTION_SET(七顆全渲染,缺席的顯示 0)
  * @param {object}   [opts.counts]      feed 給的 { emoji: 計數 },只列 > 0 的
+ * @param {string[]} [opts.mine]        feed/summary 給的「我按過的 emoji」;沒帶 = 都沒按過
  * @param {string}   [opts.api]         PUBLIC_API_URL;空字串 → 唯讀計數,不做成可按的樣子
  * @param {{label:string, failed:string}} opts.i18n
  * @param {{btn:string, emoji:string, count:string, status:string,
@@ -60,7 +60,9 @@ export function createReactions(opts) {
     const raw = opts.counts && opts.counts[emoji];
     counts[emoji] = typeof raw === 'number' ? raw : 0;
   });
-  const mine = new Set(); // feed 不給 mine(見檔頭限制)→ 初始一律空集合
+  // 初始已按狀態一律來自伺服器(契約 §1/§4 的 mine),前端不自己記、不寫 localStorage:
+  // 那會做出「畫面說按過、伺服器說沒有」的假狀態。
+  const mine = new Set(Array.isArray(opts.mine) ? opts.mine.filter((e) => emojis.includes(e)) : []);
   const pending = new Set();
   const controls = new Map();
 

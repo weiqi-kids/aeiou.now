@@ -3,7 +3,10 @@
 //   node scripts/sync-questions-to-d1.mjs
 //
 // 主機 questions/question_options(全欄+文案)→ POST /internal/sync/questions
-// → D1 questions(精簡副本,見 docs/briefs/daily-question.md §3;文案與答案**不進 D1**,D1 只驗票)。
+// → D1 questions(精簡副本,見 docs/briefs/daily-question.md §3)。
+// 題面文案**不進 D1**(那是靜態層的事);但 guess 的**正解與解說進 D1**(2026-08-21 起)——
+// 它們原本在靜態 JSON 裡,view-source 就能先看到答案。揭曉的時機是「這個人已經投過票」,
+// 那個事實只有 Worker 知道,所以答案得跟著搬過去(契約 §7.1 / daily-question §3)。
 // 語意 = upsert 覆蓋(以 question_id 為準)。
 //
 // 內容沒變就不推(比照 sync-topics-to-d1.mjs 2026-08-13 的教訓):題庫只在人工改
@@ -61,7 +64,7 @@ log(`[${JOB_NAME}] job_id=${job.job_id} attempt=${job.attempt} api=${CONFIG.apiU
 try {
   const rows = db
     .prepare(
-      `SELECT question_id, qdate, kind, topic_id, status
+      `SELECT question_id, qdate, kind, topic_id, status, answer_option
          FROM questions
         ORDER BY question_id`
     )
@@ -76,8 +79,20 @@ try {
     optionsByQuestion.get(r.question_id).push(r.option_id);
   }
 
+  // guess 的解說是七語各一句,揭曉時要用讀者那一語。鍵序固定成 LOCALES 的順序,
+  // 否則同樣的內容會因為 SQL 回列順序而算出不同 hash,每輪都判定「內容有變」。
+  const explainByQuestion = new Map();
+  for (const r of db
+    .prepare("SELECT question_id, locale, explain FROM question_i18n ORDER BY question_id, locale")
+    .all()) {
+    if (r.explain == null || r.explain === "") continue;
+    if (!explainByQuestion.has(r.question_id)) explainByQuestion.set(r.question_id, {});
+    explainByQuestion.get(r.question_id)[r.locale] = r.explain;
+  }
+
   // payload 照 docs/briefs/api-contract.md §7.4:
-  //   { questions: [ { question_id, qdate, kind, topic_id, options: [option_id...ord], status } ] }
+  //   { questions: [ { question_id, qdate, kind, topic_id, options: [option_id...ord], status,
+  //                      answer, explain: {locale: 句子} } ] }
   const payload = {
     questions: rows.map((r) => ({
       question_id: r.question_id,
@@ -86,6 +101,9 @@ try {
       topic_id: r.topic_id,
       options: optionsByQuestion.get(r.question_id) ?? [],
       status: r.status,
+      // poll 沒有正解,一律 null;不要送空字串(那會讓 Worker 分不出「沒有正解」與「正解是空的」)
+      answer: r.kind === "guess" ? r.answer_option ?? null : null,
+      explain: r.kind === "guess" ? explainByQuestion.get(r.question_id) ?? null : null,
     })),
   };
 

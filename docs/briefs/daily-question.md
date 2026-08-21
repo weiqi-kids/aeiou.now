@@ -12,7 +12,10 @@
    → 主機 SQLite → `export-data.mjs` 產 `data/questions/<locale>.json` → 靜態站 build 吃;
    另由 `sync-questions-to-d1.mjs` 推精簡副本進 D1 供 Worker 驗票。
 3. 票(votes)是 UGC,權威在 D1;一個 anon_id 對一題**一票**,重投=改票(覆蓋)。
-4. 猜謎答案(`answer`/`explain`)**不進 D1**、不經 API;揭曉在前端用靜態資料做。
+4. 猜謎答案(`answer`/`explain`)**2026-08-21 起進 D1、由 API 揭曉**(契約 §7.1)。
+   原設計放在靜態 `data/questions/<locale>.json`,view-source 就先看到答案,猜謎的猜字失去意義。
+   揭曉判準只有一條:**這個 anon_id 投過票了**,而那件事只有 D1 知道 —— 所以答案得跟著搬過去。
+   靜態層只留 `has_answer` 布林。**題面文案仍然不進 D1**(那是靜態層的事)。
 5. 降級紅線:投票區塊靜態預設 `data-q-state="loading"`(2026-08-20 起;舊值 `closed` 已廢);fetch 失敗切 `unavailable`;
    不顯示過期票數、不做 fallback 快照。`PUBLIC_API_URL` 未設→完全不 fetch。
 6. 熱度紅線不適用於票數:**投票的百分比與人數可以上畫面**(它不是 hot_score)。
@@ -150,7 +153,8 @@ export const COMMUNITIES = {
   - 結果視圖(poll):每選項一列:emoji+label+整體百分比長條(寬度 style width%,色用 var(--color-*),
     自己投的那項標 `q.your_vote`);其下「`q.community_top`」列出**有票的社群**:旗+endonym+該社群最多人選的
     label 與其社群內百分比。總數行 `q.answered_count`。
-  - 結果視圖(guess):先同上顯示分佈,再加:`q.answer_label` + 正解選項(靜態資料的 `answer`)、
+  - 結果視圖(guess):先同上顯示分佈,再加:`q.answer_label` + 正解選項(**API 回應的 `answer`**,
+    拿不到就什麼都不印 —— 那代表還沒投票,不要退回任何靜態值)、
     自己對錯(`q.correct`/`q.incorrect`)、`q.correct_rate`(答對票/總票)、`explain` 一段。
   - 底部:`nextHref` 連結(`q.next` 或 `q.all_questions`)。
   - 0 票時 open 狀態顯示 `q.no_votes`。百分比一律四捨五入整數,分母 0 不除。

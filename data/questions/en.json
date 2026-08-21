@@ -31,8 +31,7 @@
           "label": "Hardly ever"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260815-dinner-time",
@@ -65,8 +64,7 @@
           "label": "Brazil"
         }
       ],
-      "answer": "pt-BR",
-      "explain": "In Brazil dinner is often between 8 and 11 pm — the later, the livelier."
+      "has_answer": true
     },
     {
       "question_id": "q-20260816-izakaya",
@@ -99,8 +97,7 @@
           "label": "Depends on coworkers"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260816-birthday-noodles",
@@ -133,8 +130,7 @@
           "label": "Brazil"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "In Taiwan the birthday person often eats uncut longevity noodles — long noodles, long life."
+      "has_answer": true
     },
     {
       "question_id": "q-20260817-school-alone",
@@ -167,8 +163,7 @@
           "label": "Mostly escorted by parents"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260817-bon-odori",
@@ -201,8 +196,7 @@
           "label": "India"
         }
       ],
-      "answer": "ja",
-      "explain": "Japan's Obon falls in mid-August; Bon Odori dances welcome ancestors' spirits home."
+      "has_answer": true
     },
     {
       "question_id": "q-20260818-birthday-cake",
@@ -235,8 +229,7 @@
           "label": "Usually no celebration"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260818-panjat-pinang",
@@ -269,8 +262,7 @@
           "label": "United States"
         }
       ],
-      "answer": "id",
-      "explain": "Indonesia's August 17th features panjat pinang — teams climb greased poles to grab prizes hung on top."
+      "has_answer": true
     },
     {
       "question_id": "q-20260819-japan-bath",
@@ -303,8 +295,7 @@
           "label": "Shower in summer, bath in winter"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260819-xmas-chicken",
@@ -337,8 +328,7 @@
           "label": "Taiwan"
         }
       ],
-      "answer": "ja",
-      "explain": "A 1970s marketing campaign made “Kentucky for Christmas” a Japanese tradition — buckets are booked weeks ahead."
+      "has_answer": true
     },
     {
       "question_id": "q-20260820-housewarming",
@@ -371,8 +361,7 @@
           "label": "Just move in and live"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260820-multiday-wedding",
@@ -405,8 +394,7 @@
           "label": "Taiwan"
         }
       ],
-      "answer": "hi",
-      "explain": "Indian weddings often span days — Haldi, Mehndi, Sangeet, the ceremony and reception — with hundreds of guests."
+      "has_answer": true
     },
     {
       "question_id": "q-20260821-elder-redenvelope",
@@ -439,8 +427,7 @@
           "label": "Just good wishes"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260821-sweet-sixteen",
@@ -473,8 +460,7 @@
           "label": "Indonesia"
         }
       ],
-      "answer": "en",
-      "explain": "The Sweet Sixteen is a classic American milestone; Brazil has a similar one at 15 — the Festa de Quinze Anos."
+      "has_answer": true
     },
     {
       "question_id": "q-20260822-moon-festival",
@@ -507,8 +493,7 @@
           "label": "We don't have this festival"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260822-moon-bbq",
@@ -541,8 +526,7 @@
           "label": "Brazil"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "A 1980s sauce ad sparked it — now Taiwanese families grill on their doorsteps every Mid-Autumn night."
+      "has_answer": true
     },
     {
       "question_id": "q-20260823-live-with-parents",
@@ -575,8 +559,7 @@
           "label": "Multi-generation homes are common"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260823-mudik",
@@ -609,8 +592,7 @@
           "label": "Japan"
         }
       ],
-      "answer": "id",
-      "explain": "Before Eid, Indonesia's mudik is one of the world's largest annual homecomings — roads, ferries and airports all packed."
+      "has_answer": true
     },
     {
       "question_id": "q-20260824-graduation",
@@ -643,8 +625,7 @@
           "label": "Just photos"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260824-baraat",
@@ -677,8 +658,7 @@
           "label": "Brazil"
         }
       ],
-      "answer": "hi",
-      "explain": "The baraat of North Indian weddings — the groom rides in on a white horse amid dancing relatives and a live band."
+      "has_answer": true
     },
     {
       "question_id": "q-20260825-school-lunch",
@@ -711,8 +691,7 @@
           "label": "Bought nearby"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260825-egg-standing",
@@ -745,8 +724,7 @@
           "label": "Brazil"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "Taiwan. Standing an egg at noon on Duanwu, and drawing \"noon water\", need no river at all, so both continue in cities with no boat race. Duanwu is also one of Taiwan's three annual festivals — a point at which accounts are settled and gift boxes sent."
+      "has_answer": true
     },
     {
       "question_id": "q-20260826-shoes-indoors",
@@ -774,8 +752,7 @@
           "label": "No"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260826-silence-day",
@@ -808,8 +785,7 @@
           "label": "Taiwan"
         }
       ],
-      "answer": "id",
-      "explain": "Indonesia. The day is Nyepi, the Balinese Saka new year. Indonesia counts Hinduism among its officially recognised religions and gives it a national holiday — but that day is Bali's Nyepi, not North India's Diwali. Indonesia's Hindu population is concentrated in Bali, so the calendar and the festivals follow Bali."
+      "has_answer": true
     },
     {
       "question_id": "q-20260827-teacher-gift",
@@ -842,8 +818,7 @@
           "label": "No such custom"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260827-no-teachers-day",
@@ -876,8 +851,7 @@
           "label": "China"
         }
       ],
-      "answer": "ja",
-      "explain": "Japan. The closest thing at national level is the Ministry of Education's Education and Culture Week, 1 to 7 November each year under a 1959 cabinet understanding — what it commemorates is education, not teachers. The name Education Day belongs to the prefectures instead: Tokushima, Niigata, Saitama, Shiga and others have each fixed 1 November by their own ordinance. The unit is the prefecture, not the country."
+      "has_answer": true
     },
     {
       "question_id": "q-20260828-moon-cake",
@@ -910,8 +884,7 @@
           "label": "We don't"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260828-sharad-purnima",
@@ -944,8 +917,7 @@
           "label": "Indonesia"
         }
       ],
-      "answer": "hi",
-      "explain": "India. The night is Sharad Purnima, called Kojagiri Purnima in Maharashtra — the full moon of the month of Ashwin, usually in October. Kojagiri means \"who is awake\": the night is spent in prayer to Lakshmi, with kheer set out under the moonlight and shared the next day as prasad, and the moon of this night is said to show all sixteen of its parts. The same full moon: reunion and mooncakes on one side, a vigil and a sweet in the moonlight on the other."
+      "has_answer": true
     },
     {
       "question_id": "q-20260829-fasting-start",
@@ -978,8 +950,7 @@
           "label": "Doesn't apply to me"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260829-sidang-isbat",
@@ -1012,8 +983,7 @@
           "label": "the United States"
         }
       ],
-      "answer": "id",
-      "explain": "Indonesia. The Ministry of Religious Affairs convenes a sidang isbat the evening before, weighing crescent reports from dozens of stations across the country against the calculation, and only then declares whether the next day is the first. For 1447 AH (2026) the session met on 17 February; the crescent stood below the horizon at every station, and the session settled on 19 February by calculation. So a confirmed answer to \"what date does fasting start\" is, by design, unavailable months ahead — while the Eid break is scheduled a year in advance by joint decree of three ministries."
+      "has_answer": true
     },
     {
       "question_id": "q-20260830-grave-visit",
@@ -1046,8 +1016,7 @@
           "label": "No such custom"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260830-nyadran",
@@ -1080,8 +1049,7 @@
           "label": "Japan"
         }
       ],
-      "answer": "id",
-      "explain": "Indonesia, in Java. It is Nyadran, done in the month of Ruwah before Ramadan begins. The word comes from the Sanskrit sraddha, faith. The sequence is fixed — clean the graves, then pray together, then close with kembul bujono, everyone eating one meal side by side. It began in pre-Islamic belief and later merged with Javanese Islamic practice. Like Qingming it is grave-tending, but it aligns not with a particular date so much as with the fact that fasting starts next month."
+      "has_answer": true
     },
     {
       "question_id": "q-20260831-labour-day-off",
@@ -1114,8 +1082,7 @@
           "label": "Not sure"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260831-partial-labour-day",
@@ -1148,8 +1115,7 @@
           "label": "China"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "Taiwan. It is a holiday on which only some people are off: the day off is limited to workers covered by the Labour Standards Act, while civil servants and parts of some industries work as usual. A holiday named for labour thus lays the question of who counts as a worker out on the calendar, replayed once a year."
+      "has_answer": true
     },
     {
       "question_id": "q-20260901-childrens-day-off",
@@ -1182,8 +1148,7 @@
           "label": "No children at home"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260901-moving-childrens-day",
@@ -1216,8 +1181,7 @@
           "label": "China"
         }
       ],
-      "answer": "en",
-      "explain": "The United States. It is not a statutory holiday; it exists as a presidential proclamation reissued each year: Reagan put it on 8 August in 1982, Clinton on 11 October in 1998, George W. Bush on 9 June in 2002, Obama moved it to 20 November from 2013, and Biden kept 20 November in 2024. A proclamation is not a law, brings no day off, and the next occupant can move it. By contrast Indonesia's National Children's Day was fixed on 23 July by Presidential Decision No. 44 of 1984, and Brazil's 12 October coincides with Our Lady of Aparecida, already a national holiday."
+      "has_answer": true
     },
     {
       "question_id": "q-20260902-harvest-thanks",
@@ -1250,8 +1214,7 @@
           "label": "No"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260902-before-harvest",
@@ -1284,8 +1247,7 @@
           "label": "Indonesia"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "Taiwan. The Act on Commemorative Days and Holidays says plainly: \"Farmers' Day: fixed on the day of Lichun.\" That is the reverse of harvest days elsewhere — Thanksgiving, China's farmers' harvest festival and Japan's Labour Thanksgiving all sit after the crop is in, while this one sits before the work starts: what it marks is not what has been gathered but the fact of going back to the field. The date is set by astronomy, so whether it lands on 3, 4 or 5 February must be looked up each year in the Central Weather Administration's calendar tables. It is not a day off."
+      "has_answer": true
     },
     {
       "question_id": "q-20260903-lantern-night",
@@ -1318,8 +1280,7 @@
           "label": "No such festival here"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260903-tatung",
@@ -1352,8 +1313,7 @@
           "label": "India"
         }
       ],
-      "answer": "id",
-      "explain": "Indonesia. It is Cap Go Meh — the Hokkien for \"fifteenth evening\", the fifteenth night after Lunar New Year. The largest is in Singkawang, West Kalimantan, and its centre is the Tatung; it is entered, together with the Tatung, on the national register of intangible cultural heritage. Read this cell beside Taiwan's and China's and the point is clear: the same fifteenth night, lanterns and riddles on one side, procession and possession on the other."
+      "has_answer": true
     },
     {
       "question_id": "q-20260904-valentine-school",
@@ -1386,8 +1346,7 @@
           "label": "Not sure"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260904-valentine-circulars",
@@ -1420,8 +1379,7 @@
           "label": "Brazil"
         }
       ],
-      "answer": "id",
-      "explain": "Indonesia. The fourteenth of February is not a holiday, and the institutional trace it leaves runs the other way: around the date each year, education offices in a number of local governments issue circulars — surat edaran — asking schools in their area to discourage students from marking it. Depok in West Java issued one in 2023, Pasuruan Regency in East Java in 2017, and the Riau Islands provincial education office advised its senior and vocational secondary schools likewise. The stated reason is plain: it does not fit religious, social and cultural norms. By contrast, what a state may recognise is the other one: China entered the Qixi festival on the first national list of intangible cultural heritage in 2006, while 14 February has no institutional standing there either."
+      "has_answer": true
     },
     {
       "question_id": "q-20260905-fathers-day-date",
@@ -1454,8 +1412,7 @@
           "label": "We don't have one"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260905-pun-fathers-day",
@@ -1488,8 +1445,7 @@
           "label": "Indonesia"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "Taiwan. The eighth of August, because \"eight-eight\" sounds like \"papa\" — the only one of these places where the date comes from a sound. The Act on Commemorative Days and Holidays lists it as a festival and in the same article gives it no day off, so the celebration mostly slides to the nearest weekend. For contrast: the United States took sixty years, settling it only with Public Law 92-278 in 1972, fifty-eight years after Mother's Day; Brazil's was proposed in 1953 by the adman Sylvio Bhering to fill an August gap in advertising; Indonesia's was declared in 2006 by a civic group in Surakarta, to balance a Mother's Day the state had set."
+      "has_answer": true
     },
     {
       "question_id": "q-20260906-wedding-days",
@@ -1522,8 +1478,7 @@
           "label": "Haven't been to one"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260906-womens-day-halfday",
@@ -1556,8 +1511,7 @@
           "label": "Indonesia"
         }
       ],
-      "answer": "zh-CN",
-      "explain": "China. The State Council's Measures on National Holidays and Commemorative Days sort days into those for all citizens and those for some; the latter list carries Women's Day (8 March, women get half a day off), Youth Day, Children's Day and Army Day. Mother's Day and Father's Day are in neither — popular practice mostly follows the second Sunday in May and the third Sunday in June, but neither is prescribed. The same state gives \"women\" and \"mothers\" different institutional treatment: one has half a holiday, the other has a florists' season."
+      "has_answer": true
     },
     {
       "question_id": "q-20260907-boat-race",
@@ -1590,8 +1544,7 @@
           "label": "No"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260907-snake-boat",
@@ -1624,8 +1577,7 @@
           "label": "Brazil"
         }
       ],
-      "answer": "hi",
-      "explain": "India. Vallam Kali in Kerala, of which the best known is the Nehru Trophy Boat Race on Punnamada Lake in Alappuzha. The boats are chundan vallams; Nehru visited in 1952 and donated a silver trophy, which is where the name comes from. India has no Duanwu, but the same thing runs here on a different calendar and in a different boat. Incidentally Indonesia has dragon boats too, and not as a recent import: Peh Cun in Tangerang is held by the Cina Benteng community on the Cisadane River, on that same fifth day of the fifth lunar month, centred on a sacred boat unsealed only once a year."
+      "has_answer": true
     },
     {
       "question_id": "q-20260908-memorial-silence",
@@ -1658,8 +1610,7 @@
           "label": "Not sure"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260908-moment-of-remembrance",
@@ -1692,8 +1643,7 @@
           "label": "Brazil"
         }
       ],
-      "answer": "en",
-      "explain": "The United States. The Uniform Monday Holiday Act of 1968 moved Memorial Day from 30 May to the last Monday in May, effective 1971, so that federal employees would have a dependable three-day weekend. That change also turned the day into the opening of summer, and made what it is for something that has to be recalled deliberately — hence the National Moment of Remembrance Act of 2000, which sets a minute of silence at three in the afternoon."
+      "has_answer": true
     },
     {
       "question_id": "q-20260909-harvest-season",
@@ -1726,8 +1676,7 @@
           "label": "Winter"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260909-seren-taun",
@@ -1760,8 +1709,7 @@
           "label": "Japan"
         }
       ],
-      "answer": "id",
-      "explain": "Indonesia. It is Seren Taun in West Java, the Sundanese farming community's rite of thanking the Creator for the year past and asking for a better one ahead, fixed on the twenty-second of Rayagung in the Sundanese Saka calendar and held over seven consecutive days at the Paseban Tri Panca Tunggal in Cigugur, Kuningan Regency. The sequence includes carrying the rice (Nyandak Pare), the thousand lamps (Damar Sewu) and pounding the grain together, closing with residents of different faiths praying side by side. It is registered as intangible cultural heritage of West Java, yet the national holiday table has no such day — it rests on a calendar and a village."
+      "has_answer": true
     },
     {
       "question_id": "q-20260910-teacher-role-swap",
@@ -1794,8 +1742,7 @@
           "label": "No Teachers' Day here"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260910-radhakrishnan",
@@ -1828,8 +1775,7 @@
           "label": "Brazil"
         }
       ],
-      "answer": "hi",
-      "explain": "India. The fifth of September is the birthday of Sarvepalli Radhakrishnan, a professor of philosophy who later became president. The story told is that students wished to celebrate his birthday and he asked them to mark the country's teachers instead. That origin ties India's Teachers' Day to a particular person rather than to a statute. For contrast: China's was fixed on 10 September only in 1985, placed in the opening days of the school year, tied to the rhythm of the term; and Japan has no Teachers' Day at all — what the state marks is education."
+      "has_answer": true
     },
     {
       "question_id": "q-20260911-national-day-watch",
@@ -1862,8 +1808,7 @@
           "label": "I work"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260911-panjat-pinang",
@@ -1896,8 +1841,7 @@
           "label": "the United States"
         }
       ],
-      "answer": "id",
-      "explain": "Indonesia. It is panjat pinang, one of the traditional contests held around Independence Day on 17 August. The point is not who climbs fastest but that nobody can climb it alone — the entrants have to build a human tower and stand on each other's shoulders, so the prize usually goes to whichever team cooperates best. The same day brings cracker-eating races, tug-of-war and much else, all organised by the neighbourhood associations themselves rather than arranged from the centre."
+      "has_answer": true
     },
     {
       "question_id": "q-20260912-graduation-hat",
@@ -1930,8 +1874,7 @@
           "label": "Take the class photo"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260912-school-year-two",
@@ -1964,8 +1907,7 @@
           "label": "India"
         }
       ],
-      "answer": "pt-BR",
-      "explain": "Brazil. The school year opens in February and closes in December, with a mid-year break in July cutting it in half. That differs from every other starting point here: Japan's entrance ceremony falls in early April during the cherry blossom; Indonesia mostly starts in mid-July, with the orientation days before it governed by written rules forbidding hazing of any kind; China has a nationally broadcast first lesson on 1 September; and the United States has no single national day at all — the start date is set by each school district, and two neighbouring districts in one state can differ by a fortnight."
+      "has_answer": true
     },
     {
       "question_id": "q-20260913-sixteen",
@@ -1998,8 +1940,7 @@
           "label": "No such rite"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260913-tainan-sixteen",
@@ -2032,8 +1973,7 @@
           "label": "Brazil"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "Taiwan. Qixi carries a second identity there: the birthday of the Seven Mothers, held to be the guardian deity of children. The coming-of-sixteen rite at the Kailong Temple in Tainan takes place on this very day, the sixteen-year-old passing beneath the offering table's paper pavilion to mark adulthood. Two things share one date — a courtship evening at one end, a family walking its child through a rite of majority at the other, with nothing to do with each other. For contrast: Japan's coming-of-age ceremony is scaled by each municipality and usually held on the January holiday; in Brazil voting is optional from sixteen and compulsory only from eighteen."
+      "has_answer": true
     },
     {
       "question_id": "q-20260914-newyear-food",
@@ -2066,8 +2006,7 @@
           "label": "Something else"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260914-ninth-day",
@@ -2100,8 +2039,7 @@
           "label": "the United States"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "Taiwan. The lantern night closes the whole stretch of the lunar new year: once the fifteenth of the first month has passed, the year is properly over, work resumes and school starts. It is not a day off, yet it is the evening on which the whole island lights up at once — beyond carrying lanterns, guessing lantern riddles and eating the round dumplings, the national lantern festival is hosted by a different county or city each year, so where it is this year is a question to ask afresh every time. The Act on Commemorative Days and Holidays lists it too: \"Lantern Festival: the fifteenth of the first lunar month.\""
+      "has_answer": true
     },
     {
       "question_id": "q-20260915-eid-leave",
@@ -2134,8 +2072,7 @@
           "label": "Doesn't apply to me"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260915-no-islamic-days",
@@ -2168,8 +2105,7 @@
           "label": "Brazil"
         }
       ],
-      "answer": "zh-TW",
-      "explain": "Taiwan. The Act on Commemorative Days and Holidays enumerates the Daoist day (first of the first lunar month) and the Buddha's birthday (eighth of the fourth lunar month), yet neither Eid al-Fitr nor Eid al-Adha appears; the Islamic calendar is simply absent from that list. In practice Taiwan hosts hundreds of thousands of migrant workers from Indonesia, and whether leave can be had for the congregational prayer rests with the employer. The Ministry of Labor's approach is a press release urging flexibility, not an amendment. So the day looks like this: the mosques fill as usual, but the attendance was paid for out of personal leave."
+      "has_answer": true
     },
     {
       "question_id": "q-20260916-diwali-days",
@@ -2202,8 +2138,7 @@
           "label": "We don't have Diwali"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260916-ayurveda-day",
@@ -2236,8 +2171,7 @@
           "label": "the United States"
         }
       ],
-      "answer": "hi",
-      "explain": "India. The first day is Dhanteras; since 2016 the Indian government has also designated it National Ayurveda Day, on the ground that it is the birth anniversary of Dhanvantari, the physician of the gods. Two things therefore sit on the same date: the household buying of metal and the lighting of lamps that continue as before, and a nationwide campaign run by the health authorities. A traditional festival used as a public-health calendar slot happens on none of the other four days. The last of the five is Bhai Dooj, which follows the line between sisters and brothers — each of the five days addresses a different party, which is why treating Diwali as a single evening goes wrong."
+      "has_answer": true
     },
     {
       "question_id": "q-20260917-homecoming-transport",
@@ -2270,8 +2204,7 @@
           "label": "I don't travel"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260917-obon-not-holiday",
@@ -2304,8 +2237,7 @@
           "label": "Brazil"
         }
       ],
-      "answer": "ja",
-      "explain": "Japan. Obon is not a statutory holiday, yet it is the year's most visible national pause: most firms set their own closure in mid-August, so the homeward traffic and the fares have a fixed peak. It can happen all at once precisely because everyone places the break in the same week — not by law, but by aligning with each other. The welcome fire and the send-off fire at the door frame the whole thing as a round trip: a fire to bring them back, another a few days later to see them off, with the Bon dance filling the days between."
+      "has_answer": true
     },
     {
       "question_id": "q-20260918-birthday-elders",
@@ -2338,8 +2270,7 @@
           "label": "Nothing in particular"
         }
       ],
-      "answer": null,
-      "explain": null
+      "has_answer": false
     },
     {
       "question_id": "q-20260918-kanreki",
@@ -2372,8 +2303,7 @@
           "label": "Brazil"
         }
       ],
-      "answer": "ja",
-      "explain": "Japan. Milestone ages carry their own names: sixty is kanreki, seventy koki, seventy-seven kiju, each with its own colour and its own way of being marked. That differs from treating a birthday as a number that simply goes up each year — here age is cut into named stages, and arriving at one is itself the thing to celebrate. For contrast: in China both the Gregorian and the lunar birthday are usually remembered for the same person, and which one is kept tends to be decided by the elders; in India, touching the feet of elders and a visit to the temple are more often treated as the necessary step than cutting a cake is."
+      "has_answer": true
     }
   ]
 }
