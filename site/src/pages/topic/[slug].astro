@@ -41,6 +41,8 @@ import { LOCALE, MARKET_CITY, MARKET_COUNTRY, REACTION_SET } from '../../lib/con
 import { calendarDate, dateTime, countryFlag } from '../../lib/format.mjs';
 import { withBase } from '../../lib/paths.mjs';
 import { compactDescription, fillTemplate, seoCopy, sourceLabel, SITE_NAME } from '../../lib/seo.mjs';
+import { calendarLinks, icsFileName } from '../../lib/calendar.mjs';
+import { isTrendTopic } from '../../lib/topic-status.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
   observancesForFacts, customsText, dateRuleText, regionalNotesForFacts, regionalNoteText,
@@ -71,6 +73,12 @@ const { topicId, aliasFor = null } = Astro.props;
 const { facts, i18n } = getTopicBundle(topicId);
 const loc = (i18n && i18n.locales && i18n.locales[LOCALE]) || {};
 const title = loc.title || (facts && facts.canonical_name) || topicId;
+// 這個 Topic 在索引裡的那一筆 —— topic_kind 是**輸出層契約**,facts.json 沒有它,
+// 判「是不是機器彙整的」只能問索引(見 lib/topic-status.mjs 的說明)。
+const topicIndexEntry = getTopicsIndex().find((x) => x.topic_id === topicId) || null;
+// 這一頁的絕對網址。行事曆項目要帶得回來源(讀者半年後在日曆上看到它,得點得回這一頁);
+// Astro.site 是該站 build 時的正式網域(astro.config.mjs 的 LOCALE_ORIGINS)。
+const pageUrl = new URL(withBase(`topic/${facts?.slug}/`), Astro.site).href;
 
 // cover 圖(1200×675,Google Discover 建議的 16:9 大圖,同時餵 og:image)。檔案不存在時 coverPath() 回 null,
 // 整個 <figure> 就不渲染——不留破圖,版面照樣成立。
@@ -431,6 +439,12 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
           {/* 只有本站語系的說明。「不同語系顯示相同 Topic 說明」指的是**七個站各自顯示自己的語言**
               (ja 站看到日文、pt-BR 站看到葡文),不是把七語堆在同一頁,也不標示這是哪一國語言。 */}
           {loc.summary && <p class="topic-lede">{loc.summary}</p>}
+          {/* 機器彙整的 Topic 要說出來(docs/TODO.md「復活前必須先做」)。
+              一句完整的話而不是一個徽章:讀者要判斷的是可信度,徽章的兩三個字說不完
+              「沒有經過人工查證」。header 內不得有 <ul>,這是 <p>,不違反版面硬性規定。 */}
+          {isTrendTopic(topicIndexEntry) && (
+            <p class="topic-machine-note">{t('topic.machine_made_note')}</p>
+          )}
         </div>
       </div>
     </header>
@@ -483,6 +497,25 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
           </tbody>
         </table>
       )}
+      {/* 回報錯誤或補充(2026-08-21)。放在事實表底下 —— 讀者發現不對的地方就是在這裡。
+          它不另開端點:按下去會把前綴插進討論室的發文框並捲過去,更正因此是公開的、
+          可以被接著討論的(這是主題頁論壇)。沒有 JS 時整顆按鈕不出現,不做一個按了沒反應的東西。 */}
+      <p class="answers-report" hidden data-report-issue>
+        <button class="report-issue-btn" type="button">{t('topic.report_issue')}</button>
+        <span class="report-issue-hint">{t('topic.report_issue_hint')}</span>
+      </p>
+      <script is:inline>
+        (function () {
+          var wrap = document.querySelector('[data-report-issue]');
+          var room = document.querySelector('[data-room]');
+          // 沒有討論室(例如 API 位址沒設)就沒有地方可以送 —— 那就不要出現這顆按鈕。
+          if (!wrap || !room) return;
+          wrap.hidden = false;
+          wrap.querySelector('button').addEventListener('click', function () {
+            document.dispatchEvent(new CustomEvent('aeiou:report-issue', { detail: {} }));
+          });
+        })();
+      </script>
     </section>
 
     <!-- 三區塊:左上 📍 你附近、左下 🎉 相關活動、右 💬 大家正在聊(桌機佔滿整欄高)。
@@ -545,6 +578,30 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
                     {t('topic.tickets')} <span aria-hidden="true">↗</span>
                   </a>
                 )}
+                {/* 加入行事曆:兩個純字串組裝的連結,不打任何 API、不需要 JS。
+                    沒有可用時間就整組不出現(見 lib/calendar.mjs 的說明)。 */}
+                {(() => {
+                  const cal = calendarLinks({
+                    title: ev.name,
+                    details: (ev.descriptions && ev.descriptions[LOCALE]) || '',
+                    location: ev.venue || '',
+                    startAt: ev.start_at,
+                    endAt: ev.end_at,
+                    uid: ev.event_id,
+                    url: ev.ticket_url || ev.source_url || '',
+                  });
+                  return cal ? (
+                    <p class="card-calendar">
+                      <span class="card-calendar-label">{t('topic.add_to_calendar')}</span>
+                      <a class="card-link" href={cal.google} rel="noopener" target="_blank">
+                        {t('topic.add_to_calendar_google')} <span aria-hidden="true">↗</span>
+                      </a>
+                      <a class="card-link" href={cal.ics} download={icsFileName(facts?.slug, ev.event_id)}>
+                        {t('topic.add_to_calendar_ics')}
+                      </a>
+                    </p>
+                  ) : null;
+                })()}
                 <div
                   class="card-reactions"
                   data-card-reactions
@@ -620,6 +677,36 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
                 {customsText(i18n, c) && (
                   <p class="country-customs">{customsText(i18n, c)}</p>
                 )}
+                {/* 加進行事曆。三條限制,每一條都有代價作為理由:
+                    ① **只出本站市場那一國**。七國各兩個連結會讓每頁 HTML 多出約 14KB
+                       (實測),而這個站剛為了 LCP 把封面壓過一輪。讀者要的本來就是
+                       他自己國家的日期(同 title/description 那條紅線)。
+                    ② 日期是估算或地方變體時不出 —— 把「大概是那天」寫進讀者的日曆,
+                       是在替他做一個我們自己沒把握的決定。
+                    ③ 不帶逐國散文(只帶連結):那些字在頁面上本來就看得到。 */}
+                {(() => {
+                  if (c.country_code !== MARKET_COUNTRY[LOCALE]) return null;
+                  const occ = c.next_occurrence;
+                  if (!occ || occ.date_status === 'estimated' || occ.date_status === 'local-variant') return null;
+                  const cal = calendarLinks({
+                    title: `${observanceHeading(c)} · ${countryName(c.country_code)}`,
+                    startDate: occ.starts_on,
+                    endDate: occ.ends_on || null,
+                    uid: c.observance_id,
+                    url: `${pageUrl}#${observanceAnchor(c)}`,
+                  });
+                  return cal ? (
+                    <p class="country-calendar">
+                      <span class="card-calendar-label">{t('topic.add_to_calendar')}</span>
+                      <a class="source-link" href={cal.google} rel="noopener" target="_blank">
+                        {t('topic.add_to_calendar_google')} <span aria-hidden="true">↗</span>
+                      </a>
+                      <a class="source-link" href={cal.ics} download={icsFileName(facts?.slug, c.country_code)}>
+                        {t('topic.add_to_calendar_ics')}
+                      </a>
+                    </p>
+                  ) : null;
+                })()}
                 {(c.source_urls || []).length > 0 && (
                   <p class="country-sources">
                     {(c.source_urls || []).slice(0, 2).map((url) => (
@@ -980,6 +1067,45 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
   /* 七語系的 lede 全部疊在這一欄裡(沒有另外的語系區塊)。
      當前站台語系那一段是主角:大一級、對比高;其餘六語降一級接在後面。
      用視覺層級講「這是你在看的語言」,不寫任何一句「本站有七種語言」。 */
+  /* 機器彙整的說明:一句完整的話,比 lede 弱一階但仍然讀得到 —— 讀者要靠它判斷可信度,
+     不能弱到像頁尾聲明。 */
+  .topic-machine-note {
+    margin: 0.5rem 0 0;
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+  /* 加入行事曆 / 回報錯誤:同一種「次要動作列」的長相 */
+  .card-calendar,
+  .country-calendar,
+  .answers-report {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.75rem;
+    margin: 0.5rem 0 0;
+  }
+  .card-calendar-label,
+  .report-issue-hint {
+    font-size: var(--text-sm);
+    color: var(--color-ink-muted);
+  }
+  .answers-report {
+    margin-block-start: 1rem;
+  }
+  .report-issue-btn {
+    font: inherit;
+    font-size: var(--text-sm);
+    color: var(--color-accent-dark);
+    background: none;
+    border: 0.0625rem solid var(--color-accent);
+    border-radius: var(--radius-pill);
+    padding: 0.25rem 0.9rem;
+    cursor: pointer;
+  }
+  .report-issue-btn:hover {
+    background: var(--color-accent-soft);
+  }
+
   .head-primary {
     min-width: 0;
     border-inline-start: 0.25rem solid var(--color-accent);

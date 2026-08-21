@@ -64,7 +64,7 @@ export function recentTopics(now = new Date(), win = '24h') {
       // 讓趨勢 Topic 不只存在於排行頁，也能被首頁發現。
       // 判準見 topic-status.mjs(輸出層契約 topic_kind,不是 category)。
       if (isTrendTopic(topic)) {
-        return { ...topic, season_countries: [], season_distance: 0 };
+        return { ...topic, season_countries: [], season_distance: 0, curation_tier: 1 };
       }
       const facts = readJson(`topics/${topic.topic_id}/facts.json`, null);
       const dated = observancesForFacts(facts)
@@ -75,7 +75,17 @@ export function recentTopics(now = new Date(), win = '24h') {
       return { ...topic, season_countries: dated, season_distance: dated[0].season_distance };
     })
     .filter(Boolean)
-    .sort((a, b) => a.season_distance - b.season_distance || rankOf(a, win) - rankOf(b, win));
+    // 排序鍵的第一項是**策展層**,不是距離(2026-08-21 定案,docs/TODO.md「趨勢 Topic 的
+    // 熱度與排序策略」)。趨勢 Topic 的 season_distance 是 0 —— 它沒有文化日期,那個 0
+    // 是「沒有日期」的佔位,不是「今天就是」。與長青主題的 0 放在同一個鍵上比較,
+    // 等於讓機器彙整的話題與人工策展的當令議題並列在首頁最前面,而前者的數量
+    // 可以是後者的十倍(查:sqlite3 db/aeiou.sqlite "SELECT access_source,COUNT(*)
+    // FROM topics WHERE status='active' GROUP BY 1")。
+    // 策展層讓兩者不必互相比較:人工的先排完,機器的接在後面,各自內部再比距離與熱度。
+    .sort((a, b) =>
+      (a.curation_tier || 0) - (b.curation_tier || 0)
+      || a.season_distance - b.season_distance
+      || rankOf(a, win) - rankOf(b, win));
 }
 
 /** 「熱門話題」/topics/today/ 的排序:topics/index/<locale>.json 的 ranks[win] 由小到大。

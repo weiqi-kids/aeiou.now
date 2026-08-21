@@ -250,6 +250,22 @@ const jumpTopics = hotTopics(2).filter((topic) => topic && topic.slug);
             questions/index.astro 的作者也刻意寫明不加導覽項。用既有的 i18n 字串,不另造文案。 */}
         <a class="footer-link" href={withBase('questions/')}>{t('q.archive_title')}</a>
       </div>
+      {/* 語系切換器(2026-08-21 用戶核准)。
+          ⚠ 這與「七語系是七個獨立的站,讀者只看得到一種語言」那條原則有張力,我當時
+             不建議做;用戶明示要做,所以做,並且用最不打擾的方式:
+               · 放**頁尾**,不進右上角導覽(導覽是四項契約:首頁/熱門/附近/活動)。
+               · 連到**同一頁**在別的語系站的網址(alternates 已經是 hreflang 用的那一份),
+                 不是把人丟回別站首頁 —— 丟回首頁的切換器等於要讀者重新找一次。
+               · 每個連結掛 hreflang + lang,語言名稱寫該語言自己的寫法(locale.<code>),
+                 讀者才認得出哪個是自己的。
+               · 不做 <select>,不做 JS 自動轉向:偵測到的語言不等於讀者想要的語言。
+          要撤掉的話刪這一段就好,其餘版面不受影響。 */}
+      <nav class="footer-langs container" aria-label={t('nav.other_languages')}>
+        <span class="footer-langs-label">{t('nav.other_languages')}</span>
+        {alternates.filter(({ locale }) => locale !== LOCALE).map(({ locale, href }) => (
+          <a class="footer-link" href={href} hreflang={locale} lang={locale}>{t(`locale.${locale}`)}</a>
+        ))}
+      </nav>
     </footer>
   </body>
 </html>
@@ -399,5 +415,19 @@ const jumpTopics = hotTopics(2).filter((topic) => topic && topic.slug);
   .footer-link:hover {
     color: var(--color-white);
     border-block-end-color: var(--color-white);
+  }
+  /* 語系切換器:頁尾第二行,刻意比主要頁尾項目更弱。它是逃生口不是導覽。 */
+  .footer-langs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 1rem;
+    margin-block-start: 1rem;
+    padding-block-start: 1rem;
+    border-block-start: 0.0625rem solid var(--color-primary-a60);
+  }
+  .footer-langs-label {
+    font-size: var(--text-sm);
+    color: var(--color-primary-line);
   }
 </style>

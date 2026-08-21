@@ -142,6 +142,12 @@ video {
   color: var(--color-accent-dark);
   background: var(--color-accent-soft);
 }
+/* 機器彙整的 Topic(topic_kind='trend')。虛線是刻意的:同一排徽章裡不能只靠顏色分辨,
+   而「這是機器做的、沒人查證過」是讀者判斷可信度的依據,不是裝飾。 */
+.badge--machine {
+  border-style: dashed;
+  color: var(--color-ink-muted);
+}
 
 .badge-row {
   display: flex;

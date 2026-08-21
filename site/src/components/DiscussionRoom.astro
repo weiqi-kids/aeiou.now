@@ -62,6 +62,7 @@ const roomConfig = {
     unavailable: t('room.closed'),
     composePlaceholder: t('room.compose_placeholder'),
     submit: t('room.submit'),
+    reportPrefix: t('topic.report_issue_prefix'),
     commentPlaceholder: t('room.comment_placeholder'),
     commentSubmit: t('room.comment_submit'),
     commentsExpand: t('room.comments_expand'),
@@ -434,6 +435,22 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     err.hidden = true;
     if (ask) form.append(box, ask.wrap, send, err);
     else form.append(box, send, err);
+
+    // 「回報錯誤或補充」(2026-08-21)。刻意**不另開端點、不另開表單**:
+    // 更正本來就該讓其他讀者看得到、可以接著討論 —— 這是主題頁論壇,討論串就是那一頁
+    // 存在的理由。收在私人信箱裡的更正,只有我們知道它被回報過。
+    // 行為:把前綴插進發文框、聚焦、捲過來,其餘與一般發文完全相同(同一條翻譯路、
+    // 同一道價值閘門、同一個限流)。
+    document.addEventListener('aeiou:report-issue', (ev) => {
+      const prefix = cfg.i18n.reportPrefix || '';
+      const subject = (ev && ev.detail && ev.detail.subject) || '';
+      const seed = prefix + (subject ? subject + '：' : '');
+      if (!box.value.startsWith(seed)) box.value = seed + box.value;
+      form.scrollIntoView({ block: 'center' });
+      box.focus();
+      // 游標放到最後,讀者接著打字就是了 —— 不要讓他先自己按 End。
+      box.setSelectionRange(box.value.length, box.value.length);
+    });
     form.addEventListener('submit', (ev) => {
       ev.preventDefault();
       const content = box.value.trim();

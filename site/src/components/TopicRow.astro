@@ -23,6 +23,7 @@ import { t, tOr } from '../lib/i18n.mjs';
 import { withBase } from '../lib/paths.mjs';
 import { countryFlag } from '../lib/format.mjs';
 import { coverPath, coverThumbPath } from '../lib/data.mjs';
+import { isTrendTopic } from '../lib/topic-status.mjs';
 import HeatMeter from './HeatMeter.astro';
 import TopicPosts from './TopicPosts.astro';
 
@@ -79,6 +80,14 @@ const withPosts = !!topic.topic_id;
             </span>
           )}
           {topic.is_perennial ? <span class="badge">{t('topic.perennial')}</span> : null}
+          {/* 機器 Topic 要看得出來是機器做的(docs/TODO.md「復活前必須先做」)。
+              判準是輸出層契約 topic_kind,不是 category —— category 是主題分類軸。
+              給 title 是因為徽章只有兩三個字,說不完「沒有經過人工查證」這件事。 */}
+          {isTrendTopic(topic) && (
+            <span class="badge badge--machine" title={t('topic.machine_made_note')}>
+              {t('topic.machine_made')}
+            </span>
+          )}
           {tags.map((tag) => (
             <span class="badge">
               {tag.label}
