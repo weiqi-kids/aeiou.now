@@ -1,3 +1,25 @@
+## 國碼統一為 ISO-2(2026-08-21 已解)
+
+`topic_scores.scope` 曾同時存在 `country:TW` 與 `country:TWN`,指同一個國家。
+**方向不是二選一**:`topic_search_metrics` 自己的 schema 註解本來就寫 `'country:XX'`(兩碼),
+而 `posts.country_code`(Cloudflare,契約 §0)、`topic_observances`/`places` 的 country_code、
+`data/meta/countries.json` 的 key 全是兩碼 —— 只有 GSC 給三碼。所以是 GSC 那側寫錯。
+
+- [x] `scripts/lib/country-codes.mjs`:完整 249 組 alpha-3 → alpha-2,由
+      `/usr/share/iso-codes/json/iso_3166-1.json` 產出後**寫死進 repo**
+      (不在執行期讀那個檔:CI runner 不保證裝了它,一份會因環境而變的對照表比沒有更糟)。
+      **不做部分對照** —— 漏掉的會靜靜變成第三套代碼。
+- [x] `gsc-topic-metrics.mjs` 轉成兩碼才寫;查不到對照會**吵出來**並列出代碼,
+      而且只跳過該列的國別 scope、**global 照樣累加**(第一版寫成 continue 會把 global 也跳掉)。
+- [x] 既有資料已遷移:刪掉三碼列再重抓(回補窗 10 天 > 資料跨度 4 天,不會掉資料),
+      `topic_scores` 重算。三處殘留皆為 0。
+- [x] `export-data.mjs` 補上 `removeStaleRankingDirs` —— 舊的三碼目錄不會自己消失
+      (`places` 那邊早有 `removeStaleCityFiles`,rankings 缺同一道)。
+
+- [x] **種子題保鮮已解**(2026-08-21):`25 */4 * * *` 掛上 `seed-ask-the-world.mjs`,
+      腳本改成**原地刷新**(一題一列,淡出時把 created_at 推到現在,不重翻、不長新列),
+      被留言或 reaction 碰過的那一列不再刷新。詳見下方「Ask the World 保鮮」。
+
 # 待辦(2026-08-11 M1 收尾時整理;完成一項劃掉一項)
 
 > 現況不要信本檔——逐項用附的指令查,查完再動手。
@@ -60,7 +82,8 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       `node -e "const {inspectUrl}=await import('/root/seo-ops/lib/google.mjs');
       console.log((await inspectUrl('/root/.config/aeiou/ga4-sa.json','sc-domain:aeiou.now',
       'https://aeiou.now/questions/')).inspectionResult.indexStatusResult.coverageState)"`
-- [ ] **印尼 SNPMB 官網 TLS 憑證仍過期**(外部,我們改不了):
+- [ ] ⛔ **印尼 SNPMB 官網 TLS 憑證仍過期**(外部,我們改不了;2026-08-21 複驗:
+      `notAfter=Oct 13 04:22:27 2024 GMT`,curl 回 000):
       `snpmb.bppp.kemdikbud.go.id` 回 certificate has expired。
       `exam-season` 的 ID 來源暫用 `portalbpsdm.jambiprov.go.id`(`.go.id` 省級政府,
       明載「Berdasarkan jadwal resmi dari SNPMB」)。查:`curl -sI https://snpmb.bppp.kemdikbud.go.id/`,
@@ -191,7 +214,13 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
 - [x] **壓縮進管線**:`generate-topic-cover.mjs` 產完就跑 pngquant(65–90)。
       「裸執行就必須是正確且完整的行為」—— 出圖出來就該跟兄弟一致,不靠有人記得補一刀。
       壓不小就用原檔;pngquant 不在只印警告不當錯誤。
-- [ ] 觀測:那三頁的 LCP 有沒有改善。手上沒有 RUM,要量得用 PageSpeed Insights 之類的外部工具。
+- [ ] ⛔ **LCP 量不到(外部卡點)**:PageSpeed Insights 免金鑰配額當天已用盡,
+      而專案的 SA(`~/.config/aeiou/ga4-sa.json`)沒有 PSI 的 scope
+      —— 回 `403 Request had insufficient authentication scopes`。
+      **解鎖條件**:在該 GCP 專案啟用 PageSpeed Insights API 並給 SA 對應權限(屬用戶授權範圍)。
+      在那之前只能量到實際傳輸:壓縮後三張封面各 403–433 KB、
+      從主機取檔 0.29–0.63 秒;壓縮前是 1712–1845 KB,同一條線路約 4.5 倍時間。
+      這是 LCP 的主要成分,但**不等於 Lighthouse 的 LCP 數字**,不要當成同一件事講。
 
 ## 外站的 bot 封鎖不再擋下整條 hourly(2026-08-21 用戶拍板,已解)
 
@@ -218,8 +247,12 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       「從來沒驗過」而立刻擋。健康檔的 `ok_at` 在降級與封鎖的分支都要保留,
       不留的話第一次降級就把證據弄丟,第二輪等於這一層沒做。
       三條路徑都實跑驗過:驗過 OK → 1/3、2/3 放行、第 3 輪擋下;從沒驗過 OK → 立刻擋。
-- [ ] 被擋的來源等於**本輪沒被核對過**。要確認是不是真的失效,得從別的網路打一次
-      (GitHub Actions 就是現成的第二個出口)。要不要做成自動複驗尚未決定。
+- [x] **第二出口複驗已接上**(2026-08-21):被擋的來源等於本輪沒被核對過,
+      所以由 `check-source-urls.mjs` 補驗 —— 它跑在 GitHub Actions(build.yml),
+      是現成的另一個網路出口。原本它只收 Topic 來源,現在也收
+      `content/local-data-sources.json` 的在地來源(222 個網址,實測失效 0)。
+      兩邊判準不同是刻意的:主機那支要決定「要不要擋住本站發佈」,CI 這支只回答
+      「這個連結到底還活著嗎」。
 
 ## 🔴 國碼有兩套並存(2026-08-21 發現,未解,要用戶決定)
 

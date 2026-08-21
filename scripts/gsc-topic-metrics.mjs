@@ -42,6 +42,7 @@ import { homedir } from "node:os";
 import { join } from "node:path";
 
 import { openDb, beginJob, finishJob, slotStart, nowSec, log } from "./lib/aeiou-lib.mjs";
+import { alpha2From } from "./lib/country-codes.mjs";
 
 const JOB_NAME = "gsc-topic-metrics";
 const SA = process.env.AEIOU_GSC_SA || join(homedir(), ".config", "aeiou", "ga4-sa.json");
@@ -107,6 +108,7 @@ try {
   // 聚合到 (date, topic, locale, scope)。
   const agg = new Map();
   let unmapped = 0;
+  const unmappedCountries = new Set();   // GSC 給了但對照表查不到的 alpha-3
   const unmappedSample = new Set();
   for (const r of rows) {
     const [date, pageUrl, country] = r.keys;
@@ -129,8 +131,18 @@ try {
       continue;
     }
 
-    const cc = String(country || "").toUpperCase();
-    for (const scope of ["global", `country:${cc}`]) {
+    // GSC 的 country 維度是 **alpha-3**,但本專案的國碼標準是 alpha-2
+    // (posts.country_code 來自 Cloudflare、observances/places 的 country_code、
+    //  甚至 topic_search_metrics 自己的 schema 註解都寫 'country:XX')。
+    // 2026-08-21 之前這裡直接串三碼進 scope,結果同一個國家被切成兩個:
+    // `country:TW`(貼文)與 `country:TWN`(GSC),data/rankings/ 也長出兩個目錄。
+    // 查不到對照就**吵出來**,不要靜靜地生出第三套代碼。
+    const raw = String(country || "").toUpperCase();
+    const cc = alpha2From(raw);
+    if (!cc) unmappedCountries.add(raw);
+    // 查不到對照時**只跳過國別 scope,global 照樣累加** —— 曝光數不能因為
+    // 一個沒見過的國碼就整列不算。(第一版寫成 continue,會把 global 也跳掉。)
+    for (const scope of cc ? ["global", `country:${cc}`] : ["global"]) {
       const key = `${date} ${topicId} ${locale} ${scope}`;
       const cur = agg.get(key) || { impressions: 0, clicks: 0, position_sum: 0 };
       cur.impressions += r.impressions;
@@ -142,6 +154,12 @@ try {
   if (unmapped > 0) {
     // 這通常代表 Topic 被改名或退役,而舊網址還在被搜尋 —— 是訊號不是噪音,要印出來。
     log(`[${JOB_NAME}] 注意:${unmapped} 列的 slug 在主機庫找不到:${[...unmappedSample].slice(0, 8).join(", ")}`);
+  }
+  if (unmappedCountries.size > 0) {
+    // 吵出來:查不到對照代表 GSC 給了對照表沒有的 alpha-3(新代碼、或表過期了)。
+    // 這些列的國別 scope 沒被記,global 有。要補就重產 scripts/lib/country-codes.mjs。
+    log(`[${JOB_NAME}] ⚠ ${unmappedCountries.size} 個 alpha-3 查不到 alpha-2 對照,`
+      + `該國的國別 scope 本輪未記錄:${[...unmappedCountries].sort().join(", ")}`);
   }
   log(`[${JOB_NAME}] 聚合為 ${agg.size} 筆 (date x topic x locale x scope)`);
 

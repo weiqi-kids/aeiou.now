@@ -68,6 +68,21 @@ for (const entry of readdirSync(topicsDir)) {
   for (const n of f.regional_notes || []) for (const u of n.source_urls || []) note(u, `${f.slug}/${n.country_code}`);
 }
 
+// ── 在地資料來源（2026-08-21 加）──────────────────────────────────────────
+// 為什麼要一起收：hourly-export 的 update-local-data.mjs 會驗這批，但它跑在**主機**上，
+// 而主機會被某些網站的 WAF 擋（2026-08-21 實測 www.jakarta.go.id 從主機連根目錄都 403/000，
+// 從別的網路卻正常）。那支已經改成「被擋就只 WARN 不擋輸出」——代價是那一輪等於沒驗。
+// 這支跑在 GitHub Actions，是現成的**第二個網路出口**：主機驗不到的，由這裡補驗。
+// 兩邊判準不同也是刻意的：主機那邊要決定「要不要擋住本站發佈」，這邊只要回答
+// 「這個連結到底還活著嗎」。
+const localSourcesPath = join(ROOT, 'content', 'local-data-sources.json');
+if (existsSync(localSourcesPath)) {
+  const local = JSON.parse(readFileSync(localSourcesPath, 'utf8'));
+  for (const source of local.sources || []) {
+    note(source.url, `在地/${source.market || '?'}/${source.kind || '?'}`);
+  }
+}
+
 const urls = [...usedBy.keys()].sort();
 if (urls.length === 0) { console.error('✗ 一個來源都沒收到——收集邏輯可能壞了'); process.exit(1); }
 

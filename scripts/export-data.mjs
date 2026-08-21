@@ -713,6 +713,19 @@ for (const [city, rows] of [...eventsByCity.entries()].sort((a, b) => a[0].local
 }
 
 // ---------- rankings/(以 topic_scores 為源;只出六窗,8h 不出) ----------
+// 過期的 scope 目錄要清掉。2026-08-21:GSC 的國碼從 alpha-3 改成 alpha-2 之後,
+// data/rankings/ 底下同時留著 TWN/ 與 TW/、JPN/ 與 JP/ —— 舊目錄不會自己消失,
+// 而 sitemap 與任何掃 data/ 的東西都會把它們當現況。places 那邊早有
+// removeStaleCityFiles,這裡缺同一道。
+function removeStaleRankingDirs(validDirs) {
+  const absDir = join(OUT_DIR, "rankings");
+  if (!existsSync(absDir)) return;
+  for (const name of readdirSync(absDir)) {
+    if (validDirs.has(name)) continue;
+    rmSync(join(absDir, name), { recursive: true, force: true });
+    console.log(`remove stale data/rankings/${name}`);
+  }
+}
 // 厚度門檻與 gate 共用同一個常數,避免兩邊各自定義「太少」。
 const { THRESHOLDS: DEPTH_THRESHOLDS } = await import("./lib/content-depth.mjs");
 const RANKING_ITEMS_MIN = DEPTH_THRESHOLDS.rankingItemsMin;
@@ -721,6 +734,7 @@ const scopes = db.prepare(
   "SELECT DISTINCT scope FROM topic_scores WHERE scope = 'global' OR scope LIKE 'country:%' ORDER BY scope"
 ).all().map((r) => r.scope);
 
+removeStaleRankingDirs(new Set(scopes.map((sc) => (sc === "global" ? "global" : sc.slice("country:".length)))));
 for (const scope of scopes) {
   const dir = scope === "global" ? "global" : scope.slice("country:".length);
   for (const window of STATIC_WINDOWS) {
