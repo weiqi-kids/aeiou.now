@@ -151,6 +151,32 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
 - [x] 接上 `jobs` 表(`job_name='ask-the-world-seed'`),否則 cron 檔尾那條維護查詢看不到它。
       查:`sqlite3 db/aeiou.sqlite "SELECT * FROM jobs WHERE job_name='ask-the-world-seed' ORDER BY rowid DESC LIMIT 5"`
 
+## 🔴 外站的 bot 封鎖會擋下整條 hourly(2026-08-21 第三次踩到,未解)
+
+2026-08-21 03:00 的 hourly-export 在 `update-local-data.mjs` fail-closed 停下:
+
+```
+在地資料更新失敗：來源 HTTP 404：https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026
+FAILED: 在地資料來源驗證／更新未通過；停止輸出，避免線上顯示未核對資料
+```
+
+04:00 自己恢復(`jobs` 裡是 `attempt 2 success`),重試曲線正常。**但那個網域現在從主機是 403**,
+而且**連根目錄都 403** —— 也就是說不是那一頁失效,是這台主機被整站擋掉。複驗三次都是 403,
+帶瀏覽器 UA 反而連不上(000)。這正是 CLAUDE.md 紅線寫的那件事:
+「驗來源連結不能只看狀態碼…判死前要複驗」(2026-08-20 的 `bndigital.bn.gov.br`
+主機回 403、Actions 回 404,同一個模式)。
+
+**影響面**:`update-local-data.mjs` 是 fail-closed 且排在 `export-data.mjs` 之前,
+所以一個外國政府網站的封鎖 = 七站的 `data/` 全部停更(該檔檔頭自己記著 2026-08-19
+被一個 HTTP 520 擋過一次,這是第三次)。目前它只對 `status >= 500` 重試,4xx 直接 fail。
+
+**建議的判準(要用戶決定,因為這會動到一道 fail-closed 的完整性閘門)**:
+4xx 失敗時先打該網域的**根目錄**再判——
+  根目錄正常 + 該頁 4xx → 內容真的沒了,照舊 fail(這是閘門要擋的情況)
+  根目錄也 4xx/連不上 → 是我們被擋,不是來源失效,降為 WARN 不擋輸出
+查法:`curl -s -o /dev/null -w '%{http_code}\n' -L https://<網域>/`。
+清單在 `content/local-data-sources.json`;整體死連結掃描是 `node scripts/check-source-urls.mjs`。
+
 ## 🔴 國碼有兩套並存(2026-08-21 發現,未解,要用戶決定)
 
 `topic_scores.scope` 同時存在 `country:TW` 與 `country:TWN`,指同一個國家。來源:

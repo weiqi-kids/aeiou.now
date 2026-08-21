@@ -34,7 +34,7 @@
 // (問一個沒有這個節日的國家可以,但那個國家要在 regional_notes 裡有一格,
 //  否則前端的國家選單也選不到它,標示會因為查不到國名而不顯示)。
 
-import { execFileSync } from "node:child_process";
+import { spawnSync } from "node:child_process";
 import { randomBytes } from "node:crypto";
 import { existsSync, readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { join, resolve, dirname } from "node:path";
@@ -81,13 +81,39 @@ function ulid(nowMs = Date.now()) {
   return ts + rand;
 }
 
+// wrangler 呼叫。兩件事是踩過才加的:
+//
+// ① **錯誤要帶 stderr 與 stdout**。第一版只讓 execFileSync 的預設訊息冒出來,
+//    於是 2026-08-21 04:25 那次 cron 失敗在 log 與 jobs 表裡只看得到一句
+//    「Command failed: npx wrangler d1 execute …」加一整段 SQL,完全查不出原因。
+//    這條教訓 translate-posts.mjs 檔頭早就寫著(CLI 的錯誤常印在 stdout,不是 stderr),
+//    這裡沒套用是我的疏漏。
+//
+// ② **重試**。api/ 沒有 package.json,`npx wrangler` 每次都要從 npx 快取解析,
+//    而 Cloudflare 的 token 偶爾會回 7403(2026-08-21 手動與 cron 各遇過一次,
+//    同一條指令隔幾秒重跑就好)。這一支是冪等的,重試沒有副作用。
+//    退避短(2s / 6s)是因為它排 4 小時一次,不該為了一次抖動空等到下一輪。
 function d1(sql, { file = false } = {}) {
   const args = ["wrangler", "d1", "execute", "aeiou-ugc", "--remote", "--json"];
   args.push(file ? "--file" : "--command", sql);
-  const out = execFileSync("npx", args, { cwd: API_DIR, encoding: "utf8", maxBuffer: 32 * 1024 * 1024 });
-  const start = out.indexOf("[");
-  if (start < 0) throw new Error(`wrangler 沒有回傳 JSON:${out.slice(0, 200)}`);
-  return JSON.parse(out.slice(start));
+  const backoffMs = [2000, 6000];
+  for (let attempt = 0; ; attempt += 1) {
+    const r = spawnSync("npx", args, { cwd: API_DIR, encoding: "utf8", maxBuffer: 32 * 1024 * 1024 });
+    const stdout = String(r.stdout || "");
+    const stderr = String(r.stderr || "");
+    if (!r.error && r.status === 0) {
+      const start = stdout.indexOf("[");
+      if (start >= 0) return JSON.parse(stdout.slice(start));
+    }
+    const why = r.error
+      ? `spawn failed: ${r.error.message}`
+      : (r.status !== 0
+        ? `wrangler exited ${r.status}: stderr=${stderr.slice(0, 400)} stdout=${stdout.slice(0, 400)}`
+        : `wrangler 沒有回傳 JSON:${stdout.slice(0, 400)}`);
+    if (attempt >= backoffMs.length) throw new Error(why);
+    log(`wrangler 失敗(第 ${attempt + 1} 次),${backoffMs[attempt] / 1000}s 後重試 —— ${why.slice(0, 200)}`);
+    Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, backoffMs[attempt]);
+  }
 }
 
 // ── 題庫與 Topic 對照 ──────────────────────────────────────────────────────
