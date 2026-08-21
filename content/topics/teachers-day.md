@@ -19,7 +19,7 @@
 - source: http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s3580/moe_2390/moe_2391/tnull_38105.html
 
 ## observance IN teachers-day
-- local_name: शिक्षक दिवस（Teachers' Day）
+- local_name: शिक्षक दिवस (Teachers' Day)
 - date: 09-05
 - rank: 3
 - source: https://www.presidentofindia.gov.in/
@@ -84,6 +84,8 @@ Indonesia's National Teachers' Day is 25 November, established by Presidential D
 ### customs US teacher-appreciation
 The United States has no national Teachers' Day; it has Teacher Appreciation Week in the first full week of May, with the actual dates arranged by each school district. Its form sits at the level of the school community: parent associations, students and staff each prepare something, rather than a national commemoration. UNESCO separately marks World Teachers' Day on 5 October, but that is a different thing from the week in the American school calendar.
 
+### date_rule US teacher-appreciation
+The first full week of May; local school district dates may vary
 ## locale ja
 ### title
 教師の日
@@ -104,6 +106,8 @@ The United States has no national Teachers' Day; it has Teacher Appreciation Wee
 ### customs US teacher-appreciation
 米国に全国的な教師の日はなく、5月の最初の完全な一週間が「教師感謝週間」にあたる。実際の日付は各学区が定める。その形は学校コミュニティの水準にある。保護者会、生徒、教職員がそれぞれ何かを用意するのであって、国家の記念日ではない。ユネスコは別に10月5日を世界教師デーとしているが、米国の学校暦上のこの週とは別物である。
 
+### date_rule US teacher-appreciation
+5月の最初の完全な週、地域の学区によって日付が異なる場合がある
 ## locale zh-CN
 ### title
 教师节
@@ -124,6 +128,8 @@ The United States has no national Teachers' Day; it has Teacher Appreciation Wee
 ### customs US teacher-appreciation
 美国没有全国性的教师节，而是五月第一个完整星期的“教师感谢周”，实际日期由各学区自行安排。它的形式偏向学校社群层级：家长会、学生与校方各自准备感谢的活动，而不是国家层级的纪念日。联合国教科文组织另订10月5日为世界教师日，但那与美国校历上的这一周是两回事。
 
+### date_rule US teacher-appreciation
+5月第一个完整星期，地方学区日期可能不同
 ## locale hi
 ### title
 शिक्षक दिवस
@@ -144,6 +150,8 @@ The United States has no national Teachers' Day; it has Teacher Appreciation Wee
 ### customs US teacher-appreciation
 अमेरिका में कोई राष्ट्रीय शिक्षक दिवस नहीं है; वहाँ मई के पहले पूरे सप्ताह में 'शिक्षक आभार सप्ताह' होता है, जिसकी असल तिथियाँ हर स्कूल ज़िला तय करता है। इसका स्वरूप विद्यालय समुदाय के स्तर पर है: अभिभावक संघ, विद्यार्थी और कर्मचारी अपनी-अपनी तैयारी करते हैं, यह कोई राष्ट्रीय स्मरण नहीं। यूनेस्को अलग से 5 अक्टूबर को विश्व शिक्षक दिवस मानता है, पर वह अमेरिकी स्कूल कैलेंडर के इस सप्ताह से भिन्न है।
 
+### date_rule US teacher-appreciation
+मई का पहला पूरा सप्ताह, स्थानीय स्कूल जिले की तिथियाँ भिन्न हो सकती हैं
 ## locale id
 ### title
 Hari Guru
@@ -164,6 +172,8 @@ Hari Guru Nasional Indonesia jatuh 25 November, ditetapkan lewat Keputusan Presi
 ### customs US teacher-appreciation
 Amerika Serikat tidak punya Hari Guru nasional; yang ada adalah Pekan Apresiasi Guru pada pekan penuh pertama bulan Mei, dengan tanggal sebenarnya diatur tiap distrik sekolah. Bentuknya berada di tingkat komunitas sekolah: komite orang tua, siswa, dan staf masing-masing menyiapkan sesuatu, bukan peringatan tingkat negara. UNESCO secara terpisah menandai Hari Guru Sedunia pada 5 Oktober, tetapi itu hal berbeda dari pekan dalam kalender sekolah Amerika.
 
+### date_rule US teacher-appreciation
+Minggu penuh pertama bulan Mei, tanggal distrik sekolah setempat dapat berbeda
 ## locale pt-BR
 ### title
 Dia dos Professores
@@ -183,3 +193,6 @@ O Dia dos Professores no Brasil é 15 de outubro, instituído pelo Decreto 52.68
 O Dia Nacional dos Professores da Indonésia é 25 de novembro, instituído pelo Decreto Presidencial nº 78 de 1994. A data vem de 25 de novembro de 1945, quando organizações de professores do país recém-independente se uniram para fundar a Associação dos Professores da Indonésia. O decreto também afirma claramente que o dia **não é feriado nacional**. As escolas costumam marcá-lo com hasteamento da bandeira, premiações e atividades de agradecimento organizadas pelos próprios alunos.
 ### customs US teacher-appreciation
 Os Estados Unidos não têm um Dia dos Professores nacional; têm a Semana de Valorização do Professor, na primeira semana completa de maio, com as datas efetivas definidas por cada distrito escolar. Sua forma fica no nível da comunidade escolar: associações de pais, alunos e funcionários preparam algo cada um, e não uma comemoração nacional. A UNESCO marca à parte o Dia Mundial dos Professores em 5 de outubro, mas isso é coisa diferente da semana do calendário escolar americano.
+
+### date_rule US teacher-appreciation
+A primeira semana completa de maio; as datas do distrito escolar local podem variar

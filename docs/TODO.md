@@ -131,12 +131,52 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       每一條註解的內容在**逐國散文**裡都有(散文是 per-locale 的,會翻譯),所以沒有掉資訊,
       掉的是重複。`content-depth-baseline.json` 因此下修並重鎖(那是去重,不是退步)。
       查法:`node -e` 掃 `data/topics/*/facts.json`,非 CJK 國家的 `local_name` 不得含漢字。
-- [ ] 🔴 **`date_rule` 七語化**,做完才能把「日期怎麼定」那一欄加回表格 ——
-      那一欄正是這一輪 SEO 重新對準要打的「制度依據」,現在六個外語站等於少了它。
-      要動的:`content/topics/*.md` 加 `### date_rule <CC> <key>`(與 `### customs` 同層)、
-      `topic_observance_i18n` 收第二種文字、`import-topics.mjs` / `export-data.mjs` 跟著改、
-      再把現有 83 筆用 `claude -p`(pin sonnet)補六語 = 498 條。
-      **這會動到資料模型(`docs/02-data-model.md`),動工前問用戶。**
+- [x] **`date_rule` 七語化完成**(2026-08-21 用戶核准),「日期怎麼定」那一欄已加回表格。
+      `topic_observance_i18n` 多一欄 `date_rule_text`(可為 NULL;固定日期的 observance
+      本來就沒有規則可講);md 側是 `### date_rule <CC> <key>`,**zh-TW 不寫**——
+      `- date_rule:` 那一行就是中文原文,再抄一次只會製造兩份會漂移的同一句話。
+      匯入會擋缺譯;補譯用 `node scripts/translate-date-rules.mjs`(冪等,只補缺的)。
+      既有主機庫的欄位由 `import-topics.mjs` 自我修補(`PRAGMA table_info` + `ALTER`),
+      不需要有人記得先跑 migration。
+      前端一律走 `dateRuleText(i18n, observance)`,**不得再讀 `observance.date_rule`**。
+
+## Ask the World 保鮮(2026-08-21)
+
+- [x] `25 */4 * * *` 掛上 `seed-ask-the-world.mjs`(用戶核准的 C 級改動)。
+      4 小時配 8 小時時間窗:淡出當下的下一輪就接上,空窗趨近於零。
+- [x] 腳本改成**原地刷新**而不是補新的:一題一列,淡出時把 `created_at` 推到現在。
+      第一版「淡出就補一則新的」會每天多出十幾列一樣的貼文,而且每一列都是
+      `translation_status='pending'`,等於每天再花數十次 claude 呼叫翻同一段話。
+      被留言或 reaction 碰過的那一列**不再刷新**——它已經是一串有歷史的討論。
+- [x] 接上 `jobs` 表(`job_name='ask-the-world-seed'`),否則 cron 檔尾那條維護查詢看不到它。
+      查:`sqlite3 db/aeiou.sqlite "SELECT * FROM jobs WHERE job_name='ask-the-world-seed' ORDER BY rowid DESC LIMIT 5"`
+
+## 🔴 國碼有兩套並存(2026-08-21 發現,未解,要用戶決定)
+
+`topic_scores.scope` 同時存在 `country:TW` 與 `country:TWN`,指同一個國家。來源:
+
+| 來源 | 欄位 | 編碼 | 出處 |
+|---|---|---|---|
+| GSC 每日曝光 | `topic_search_metrics.scope` | **ISO-3**(`TWN`/`JPN`/`BRA`) | Google 給的就是 ISO-3(`gsc-topic-metrics.mjs`) |
+| UGC 貼文 | `posts.country_code` | **ISO-2**(`TW`/`JP`/`BR`) | Cloudflare `request.cf.country`(契約 §0) |
+
+`compute-topic-scores.mjs` 兩邊都直接 `country:${代碼}` 串進 scope,於是同一國被切成兩個。
+這是既存設計,2026-08-21 之前沒被看見只是因為主機上的貼文太少;
+放了 Ask the World 種子題(`country_code='TW'`)之後 `data/rankings/TW/` 就冒出來了,
+與旁邊的 `TWN/` 並排。
+
+**現在不影響讀者**:站上只讀 `rankings/global/<window>.json`,
+country scope 有輸出但沒有任何頁面吃它(查:`grep -rn "rankings/" site/src/lib/ranking.mjs`)。
+
+要決定的是**哪一套當標準**,兩個方向都要動資料與腳本:
+- 站在產品這邊 → ISO-2(observance 的 `country_code`、`target_country`、`countryFlag()` 都是 ISO-2),
+  那就要在 `gsc-topic-metrics.mjs` 把 ISO-3 轉成 ISO-2,並把既有的 `topic_search_metrics` 轉一次
+  (目前只有幾天資料,轉起來便宜)。
+- 站在既有資料量這邊 → ISO-3(現在絕大多數 scope 是 ISO-3),那就在 `compute-topic-scores.mjs`
+  把 posts 的 ISO-2 轉成 ISO-3。
+兩個方向都需要一份完整的 alpha-2 ↔ alpha-3 對照(Node 沒有內建),**只做七個市場的部分對照不行**
+——貼文可能來自任何國家,漏掉的會靜靜地變成第三套代碼。
+**屬資料模型決定(`docs/02-data-model.md`),動工前問用戶。**
 
 ## 搜尋數據(2026-08-20 開工)
 

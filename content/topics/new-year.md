@@ -83,8 +83,12 @@ New Year
 New Year, Lunar New Year, Chunjie, Ganjitsu, Réveillon, Tahun Baru, Ugadi, Gudi Padwa
 ### customs TW lunar-new-year
 Taiwan's new year sits on the first day of the first lunar month. Under the Act on Commemorative Days and Holidays, Lunar New Year's Eve and the Spring Festival are days off, and in practice they merge with the weekend into one long break. The reunion dinner on the eve, the first visits on day one, and red envelopes form the frame; each household extends it from there. 1 January is also a holiday as Founding Day, but it is not in the same weight class as the lunar year.
+### date_rule TW lunar-new-year
+Around the 1st day of the first lunar month; the holiday begins from New Year's Eve
 ### customs CN chunjie
 In mainland China the Spring Festival gets four days off under the national holiday regulation: Lunar New Year's Eve and the first three days of the first month. The eve was **added in the 2024 revision** — before that it was not a statutory day off, and many people relied on shifted workdays to get home in time. The detail shows that the boundary of a festival can be rewritten by regulation: whether you can be home on the eve depends on how the rule is worded.
+### date_rule CN chunjie
+From Lunar New Year's Eve to the 3rd day of the first lunar month, 4 days off (Lunar New Year's Eve added after the 2024 revision)
 ### customs JP oshogatsu
 Japan's new year is 1 January, the national holiday Ganjitsu, whose stated purpose in the Cabinet Office text is a single line: to celebrate the beginning of the year. In practice it is the heaviest season of the year — year-end travel home, the first shrine visit, osechi food and new-year cards all cluster into these days. Japan moved to the Gregorian calendar after the Meiji era, and the lunar new year stopped being the main festival in most regions; that is the sharpest fork between Japan and its neighbours here.
 ### customs US new-year
@@ -96,6 +100,8 @@ Indonesia lists 1 January as the national holiday Tahun Baru Masehi. It is one o
 ### customs IN ugadi
 India's national holiday list contains no 1 January. The new year here mostly falls on the first day of the bright fortnight of Chaitra in the Hindu lunisolar calendar, in March or April, and carries a different name in each region: Ugadi in Andhra Pradesh and Telangana, Yugadi in Karnataka, Gudi Padwa in Maharashtra, Puthandu in Tamil Nadu, Vishu in Kerala, Vaisakhi in Punjab, Pana Sankranti in Odisha, Poila Boishakh in West Bengal, Bohag Bihu in Assam. Ugadi and Gudi Padwa fall on 19 March in 2026 and 7 April in 2027.
 
+### date_rule IN ugadi
+The first day of the bright half (Shukla Paksha) of the month of Chaitra in the Indian lunisolar calendar; names and dates vary by state
 ## locale ja
 ### title
 新年
@@ -105,8 +111,12 @@ India's national holiday list contains no 1 January. The new year here mostly fa
 新年, 春節, 除夕, 元日, レヴェイヨン, ウガディ, グディ・パドワ
 ### customs TW lunar-new-year
 台湾の新年の中心は旧暦一月一日である。紀念日及節日実施条例により、大晦日（除夕）と春節は休日で、実際には週末とつながって一続きの長期休暇になる。大晦日の団らんの食事、元日の年始回り、紅包が骨格で、その先は家庭ごとに広がる。新暦一月一日（開国紀念日）も休みだが、旧正月とは重みの桁が違う。
+### date_rule TW lunar-new-year
+旧暦正月一日前後、大晦日から休暇が始まる
 ### customs CN chunjie
 中国大陸の春節は、全国年節及紀念日放假辦法で四日間の休みとなる——旧暦の大晦日と正月一日から三日まで。大晦日は**2024年の改正で加えられた**。それ以前は法定の休日ではなく、多くの人が振替出勤で帰省の時間を作っていた。この一点が示すのは、祝日の境界が制度によって書き換えられるということだ。大晦日に家に着けるかどうかは、条文の書き方次第だった。
+### date_rule CN chunjie
+旧暦大晦日から正月三日まで、4日間の休暇(2024年の改定後に大晦日が追加された)
 ### customs JP oshogatsu
 日本の新年は新暦一月一日の国民の祝日「元日」で、内閣府が示す趣旨は一行——年のはじめを祝う。実際には一年で最も重い時期であり、年末年始の帰省、初詣、おせち、年賀状がこの数日に集中する。明治以降に新暦へ移行し、多くの地域で旧正月は主要な行事ではなくなった。ここが台湾・中国大陸との最大の分岐点である。
 ### customs US new-year
@@ -118,6 +128,8 @@ India's national holiday list contains no 1 January. The new year here mostly fa
 ### customs IN ugadi
 インドの全国祝日一覧に一月一日はない。ここでの新年は多くの場合、ヒンドゥー太陰太陽暦チャイトラ月の白分一日、すなわち三月か四月にあたり、地域ごとに名前が異なる。アーンドラ・プラデーシュとテランガーナではウガディ、カルナータカではユガディ、マハーラーシュトラではグディ・パドワ、タミル・ナードゥではプタンドゥ、ケーララではヴィシュ、パンジャーブではバイサキ、オリッサではパナ・サンクランティ、西ベンガルではポイラ・ボイシャク、アッサムではボハグ・ビフ。ウガディとグディ・パドワは2026年が3月19日、2027年が4月7日である。
 
+### date_rule IN ugadi
+インド太陰太陽暦のチャイトラ月白分（シュクラ・パクシャ）の第1日；名称と日付は州により異なる
 ## locale zh-CN
 ### title
 新年
@@ -127,8 +139,12 @@ India's national holiday list contains no 1 January. The new year here mostly fa
 新年、春节、除夕、元日、Réveillon、Tahun Baru、Ugadi
 ### customs TW lunar-new-year
 台湾的新年重心在农历正月初一。依《纪念日及节日实施条例》，农历除夕与春节属放假的节日，实务上会与周末并成一段长假。除夕围炉、初一走春、发红包是骨架，之后各家自己延伸。公历1月1日（开国纪念日）也放假，但分量与农历年不在同一个量级。
+### date_rule TW lunar-new-year
+农历正月初一前后；除夕起放假
 ### customs CN chunjie
 中国大陆的春节在《全国年节及纪念日放假办法》里放假四天：农历除夕与正月初一至初三。除夕是2024年修订时**新加进去**的——在那之前除夕不在法定放假日内，很多人是靠调休回家。这个细节说明节日的边界会被制度改写：同一个年，能不能在除夕当天到家，取决于法规怎么写。
+### date_rule CN chunjie
+农历除夕至正月初三，放假四天(2024年修订后加入除夕)
 ### customs JP oshogatsu
 日本的新年是公历1月1日的国民の祝日“元日”，内阁府载明的趣旨只有一句：庆祝一年的开始。实际生活里它是全年最重的节期——年末年始返乡、初诣、御节料理与贺年卡都集中在这几天。明治以后日本改用公历，农历新年在多数地区不再是主要节日，这是它与台湾、中国大陆最大的分岔点。
 ### customs US new-year
@@ -140,6 +156,8 @@ India's national holiday list contains no 1 January. The new year here mostly fa
 ### customs IN ugadi
 印度的全国假日清单里没有1月1日。这里的新年多半落在三、四月的印度阴阳历 Chaitra 月白分初一，而且各地名称不同：安得拉与泰伦加纳叫 Ugadi、卡纳塔卡叫 Yugadi、马哈拉施特拉叫 Gudi Padwa、泰米尔纳德叫 Puthandu、喀拉拉叫 Vishu、旁遮普是 Vaisakhi、奥里萨是 Pana Sankranti、西孟加拉是 Poila Boishakh、阿萨姆是 Bohag Bihu。2026年的 Ugadi／Gudi Padwa 是3月19日，2027年是4月7日。
 
+### date_rule IN ugadi
+印度阴阳历Chaitra月白分初一；各邦名称与日期不同
 ## locale hi
 ### title
 नया साल
@@ -149,8 +167,12 @@ India's national holiday list contains no 1 January. The new year here mostly fa
 नया साल, चंद्र नववर्ष, गंजित्सु, रेवेयों, उगादी, गुड़ी पड़वा, पुथांडु
 ### customs TW lunar-new-year
 ताइवान का नया साल चंद्र वर्ष के पहले महीने की पहली तिथि पर टिका है। स्मृति-दिवस व त्योहार अधिनियम के तहत चंद्र नववर्ष की पूर्वसंध्या और वसंत पर्व दोनों अवकाश हैं, और व्यवहार में ये सप्ताहांत से जुड़कर एक लंबी छुट्टी बन जाते हैं। पूर्वसंध्या का पारिवारिक भोज, पहले दिन की मुलाक़ातें और लाल लिफ़ाफ़े ढाँचा बनाते हैं; आगे हर घर अपने ढंग से बढ़ता है। 1 जनवरी भी अवकाश है, पर उसका वज़न चंद्र नववर्ष जैसा नहीं।
+### date_rule TW lunar-new-year
+चंद्र कैलेंडर के पहले महीने के पहले दिन के आसपास; छुट्टी नए साल की पूर्वसंध्या से शुरू होती है
 ### customs CN chunjie
 मुख्यभूमि चीन में वसंत पर्व को राष्ट्रीय अवकाश नियम के तहत चार दिन की छुट्टी मिलती है: चंद्र नववर्ष की पूर्वसंध्या और पहले महीने के पहले तीन दिन। पूर्वसंध्या **2024 के संशोधन में जोड़ी गई** — उससे पहले वह क़ानूनी छुट्टी नहीं थी और बहुत से लोग कार्यदिवस बदलकर घर पहुँचने का समय निकालते थे। यह ब्योरा दिखाता है कि त्योहार की सीमा नियम से दोबारा लिखी जा सकती है।
+### date_rule CN chunjie
+चंद्र नववर्ष की पूर्वसंध्या से चंद्र वर्ष के पहले महीने की तीसरी तारीख तक, चार दिन की छुट्टी (2024 के संशोधन के बाद पूर्वसंध्या को शामिल किया गया)
 ### customs JP oshogatsu
 जापान का नया साल 1 जनवरी है, राष्ट्रीय अवकाश गंजित्सु, जिसका कैबिनेट कार्यालय में दर्ज उद्देश्य एक ही पंक्ति है: वर्ष के आरंभ का उत्सव। व्यवहार में यह साल का सबसे भारी मौसम है — वर्षांत की घर-वापसी, पहली मंदिर-यात्रा, ओसेची भोजन और नववर्ष कार्ड इन्हीं दिनों में सिमटते हैं। मेइजी काल के बाद जापान ग्रेगोरियन पंचांग पर आ गया और अधिकांश क्षेत्रों में चंद्र नववर्ष मुख्य पर्व नहीं रहा — यही उसका ताइवान और चीन से सबसे बड़ा विभाजन है।
 ### customs US new-year
@@ -162,6 +184,8 @@ India's national holiday list contains no 1 January. The new year here mostly fa
 ### customs IN ugadi
 भारत की राष्ट्रीय अवकाश सूची में 1 जनवरी नहीं है। यहाँ नया साल प्रायः हिंदू चांद्र-सौर पंचांग के चैत्र शुक्ल प्रतिपदा को पड़ता है, यानी मार्च या अप्रैल में, और हर क्षेत्र में उसका नाम अलग है: आंध्र प्रदेश व तेलंगाना में उगादी, कर्नाटक में युगादी, महाराष्ट्र में गुड़ी पड़वा, तमिलनाडु में पुथांडु, केरल में विशु, पंजाब में वैसाखी, ओडिशा में पना संक्रांति, पश्चिम बंगाल में पोइला बोइशाख, असम में बोहाग बिहू। उगादी और गुड़ी पड़वा 2026 में 19 मार्च और 2027 में 7 अप्रैल को हैं।
 
+### date_rule IN ugadi
+भारतीय चंद्र-सौर पंचांग के अनुसार चैत्र मास के शुक्ल पक्ष का प्रथम दिन; नाम और तिथि राज्य के अनुसार भिन्न होते हैं
 ## locale id
 ### title
 Tahun Baru
@@ -171,8 +195,12 @@ Tahun Baru
 Tahun Baru, Imlek, Chunjie, Ganjitsu, Réveillon, Ugadi, Gudi Padwa
 ### customs TW lunar-new-year
 Tahun baru Taiwan bertumpu pada hari pertama bulan pertama penanggalan lunar. Menurut Undang-Undang Hari Peringatan dan Hari Raya, malam Tahun Baru Imlek dan Festival Musim Semi adalah hari libur, dan pada praktiknya menyatu dengan akhir pekan menjadi satu libur panjang. Makan malam berkumpul di malam sebelumnya, kunjungan pertama pada hari pertama, dan amplop merah menjadi kerangkanya; selanjutnya tiap rumah melanjutkan dengan caranya. 1 Januari juga libur, tetapi bobotnya tidak sekelas tahun baru lunar.
+### date_rule TW lunar-new-year
+Sekitar hari pertama bulan pertama penanggalan lunar; libur dimulai sejak malam Tahun Baru
 ### customs CN chunjie
 Di Tiongkok daratan Festival Musim Semi mendapat empat hari libur menurut aturan hari libur nasional: malam Tahun Baru Imlek dan tiga hari pertama bulan pertama. Malam sebelumnya **baru ditambahkan pada revisi 2024** — sebelum itu ia bukan hari libur resmi, dan banyak orang mengandalkan tukar hari kerja agar sempat pulang. Detail ini menunjukkan bahwa batas sebuah hari raya bisa ditulis ulang oleh peraturan.
+### date_rule CN chunjie
+Dari malam Tahun Baru Imlek hingga hari ketiga bulan pertama penanggalan lunar, libur empat hari (malam Tahun Baru ditambahkan setelah revisi tahun 2024)
 ### customs JP oshogatsu
 Tahun baru Jepang adalah 1 Januari, hari libur nasional Ganjitsu, yang tujuannya dalam teks Kantor Kabinet hanya satu baris: merayakan awal tahun. Dalam praktiknya inilah musim terberat sepanjang tahun — mudik akhir tahun, kunjungan kuil pertama, hidangan osechi, dan kartu tahun baru menumpuk di hari-hari ini. Jepang beralih ke kalender Gregorius setelah era Meiji, dan tahun baru lunar tidak lagi menjadi perayaan utama di sebagian besar wilayah; di sinilah percabangannya paling tajam dari Taiwan dan Tiongkok.
 ### customs US new-year
@@ -184,6 +212,8 @@ Indonesia mencantumkan 1 Januari sebagai hari libur nasional Tahun Baru Masehi. 
 ### customs IN ugadi
 Daftar hari libur nasional India tidak memuat 1 Januari. Tahun baru di sana umumnya jatuh pada hari pertama paruh terang bulan Chaitra dalam kalender lunisolar Hindu, yaitu Maret atau April, dan bernama berbeda di tiap wilayah: Ugadi di Andhra Pradesh dan Telangana, Yugadi di Karnataka, Gudi Padwa di Maharashtra, Puthandu di Tamil Nadu, Vishu di Kerala, Vaisakhi di Punjab, Pana Sankranti di Odisha, Poila Boishakh di Benggala Barat, Bohag Bihu di Assam. Ugadi dan Gudi Padwa jatuh pada 19 Maret 2026 dan 7 April 2027.
 
+### date_rule IN ugadi
+Hari pertama paruh terang (Shukla Paksha) bulan Chaitra dalam kalender lunisolar India; nama dan tanggal berbeda-beda menurut negara bagian
 ## locale pt-BR
 ### title
 Ano-Novo
@@ -193,8 +223,12 @@ Ano-Novo
 Ano-Novo, Réveillon, Ano-Novo Lunar, Chunjie, Ganjitsu, Ugadi, Gudi Padwa
 ### customs TW lunar-new-year
 O ano-novo de Taiwan está no primeiro dia do primeiro mês lunar. Pela Lei dos Dias Comemorativos e Feriados, a véspera do Ano-Novo Lunar e o Festival da Primavera são dias de folga e, na prática, se juntam ao fim de semana em um feriadão. O jantar de reunião na véspera, as primeiras visitas no dia um e os envelopes vermelhos formam a estrutura; daí cada casa segue seu caminho. 1º de janeiro também é feriado, mas não está na mesma categoria de peso.
+### date_rule TW lunar-new-year
+Por volta do 1º dia do primeiro mês lunar; o feriado começa na véspera do Ano Novo
 ### customs CN chunjie
 Na China continental o Festival da Primavera tem quatro dias de folga pela norma nacional de feriados: a véspera do Ano-Novo Lunar e os três primeiros dias do primeiro mês. A véspera **foi acrescentada na revisão de 2024** — antes disso não era folga legal, e muita gente dependia de trocar dias de trabalho para chegar em casa a tempo. O detalhe mostra que a fronteira de uma festa pode ser reescrita por norma.
+### date_rule CN chunjie
+Da véspera do Ano Novo Lunar até o 3º dia do primeiro mês lunar, quatro dias de feriado (a véspera foi incluída após a revisão de 2024)
 ### customs JP oshogatsu
 O ano-novo japonês é 1º de janeiro, o feriado nacional Ganjitsu, cuja finalidade no texto do Gabinete é uma linha só: celebrar o início do ano. Na prática é a temporada mais pesada do ano — viagem de fim de ano para casa, primeira visita ao santuário, comida osechi e cartões de ano-novo se concentram nesses dias. O Japão passou ao calendário gregoriano depois da era Meiji, e o ano-novo lunar deixou de ser a festa principal na maior parte do país; é aí que ele mais se separa de Taiwan e da China.
 ### customs US new-year
@@ -205,3 +239,6 @@ No Brasil, 1º de janeiro é feriado nacional pela Lei 662. O peso do Réveillon
 A Indonésia lista 1º de janeiro como o feriado nacional Tahun Baru Masehi. Ele é um entre vários anos-novos: a mesma lista de feriados nacionais traz também o ano-novo islâmico, o Nyepi de Bali e o ano-novo lunar. Um único país reconhecendo vários 'começos de ano' no mesmo calendário é algo que, entre os sete mercados deste site, aparece com mais clareza ali.
 ### customs IN ugadi
 A lista de feriados nacionais da Índia não traz 1º de janeiro. O ano-novo ali costuma cair no primeiro dia da quinzena clara de Chaitra no calendário lunissolar hindu, em março ou abril, e tem nome diferente em cada região: Ugadi em Andhra Pradesh e Telangana, Yugadi em Karnataka, Gudi Padwa em Maharashtra, Puthandu em Tamil Nadu, Vishu em Kerala, Vaisakhi no Punjab, Pana Sankranti em Odisha, Poila Boishakh em Bengala Ocidental, Bohag Bihu em Assam. Ugadi e Gudi Padwa caem em 19 de março de 2026 e 7 de abril de 2027.
+
+### date_rule IN ugadi
+Primeiro dia da quinzena clara (Shukla Paksha) do mês de Chaitra no calendário lunissolar indiano; nomes e datas variam conforme o estado

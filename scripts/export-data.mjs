@@ -229,14 +229,21 @@ for (const r of db.prepare(
   occurrencesByObservance.get(r.observance_id).push(r);
 }
 
-const customsByObservance = new Map(); // observance_id -> Map(locale -> text)
+const customsByObservance = new Map();  // observance_id -> Map(locale -> text)
+// 「日期怎麼定」的本地語言說法(2026-08-21)。與 customs 分開一張表,是因為它可以是空的
+// (固定日期的 observance 沒有規則可講),而 customs 是每一國每一語都必填。
+const dateRulesByObservance = new Map(); // observance_id -> Map(locale -> text)
 for (const r of db.prepare(
-  "SELECT o.topic_id, i.observance_id, i.locale, i.customs_text " +
+  "SELECT o.topic_id, i.observance_id, i.locale, i.customs_text, i.date_rule_text " +
   "FROM topic_observance_i18n i JOIN topic_observances o ON o.observance_id = i.observance_id " +
   "ORDER BY o.topic_id, i.observance_id, i.locale"
 ).all()) {
   if (!customsByObservance.has(r.observance_id)) customsByObservance.set(r.observance_id, new Map());
   customsByObservance.get(r.observance_id).set(r.locale, r.customs_text);
+  if (r.date_rule_text) {
+    if (!dateRulesByObservance.has(r.observance_id)) dateRulesByObservance.set(r.observance_id, new Map());
+    dateRulesByObservance.get(r.observance_id).set(r.locale, r.date_rule_text);
+  }
 }
 
 const relationsByTopic = new Map();
@@ -438,6 +445,16 @@ for (const t of topics) {
     }
     customsOut[o.observance_id] = entry;
   }
+  const dateRulesOut = {};
+  for (const o of observances) {
+    const byLocale = dateRulesByObservance.get(o.observance_id);
+    if (!byLocale) continue;
+    const entry = {};
+    for (const locale of LOCALES) {
+      if (byLocale.has(locale)) entry[locale] = byLocale.get(locale);
+    }
+    if (Object.keys(entry).length) dateRulesOut[o.observance_id] = entry;
+  }
   const regionalOut = {};
   for (const row of regionalRows) {
     regionalOut[row.country_code] = {};
@@ -450,6 +467,7 @@ for (const t of topics) {
     ...trendOutputMetadata(t),
     locales,
     observances: customsOut,
+    observance_date_rules: dateRulesOut,
     regional_notes: regionalOut,
   };
   const contentHash = sha256(JSON.stringify({ facts: factsOut, i18n: i18nOut }));

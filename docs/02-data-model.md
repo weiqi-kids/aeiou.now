@@ -149,14 +149,23 @@ CREATE INDEX idx_topic_observance_occurrences_observance
   ON topic_observance_occurrences(observance_id, occurrence_year, starts_on);
 
 CREATE TABLE topic_observance_i18n (
-  observance_id TEXT NOT NULL,
-  locale       TEXT NOT NULL,
-  customs_text TEXT NOT NULL,              -- 「女生送巧克力,分本命/義理」的該語系版本
+  observance_id  TEXT NOT NULL,
+  locale         TEXT NOT NULL,
+  customs_text   TEXT NOT NULL,            -- 「女生送巧克力,分本命/義理」的該語系版本
+  date_rule_text TEXT,                     -- 「日期怎麼定」的該語系版本(2026-08-21;可為 NULL)
   PRIMARY KEY (observance_id, locale)
 );
 ```
 
 > `source_ids_json` 是必填,不是選填。每一條文化事實都要能點回原始來源——這既是內容品質,也是對 Google「scaled content abuse」政策的正面抗辯:這一頁的價值來自跨國真實來源的彙整,不是生成的散文。
+>
+> **`date_rule` 有兩份,分工不同(2026-08-21):**`topic_observances.date_rule` 是**中文原文**,
+> 屬於 observance 的定義(也是「這一筆有沒有規則可講」的判準);`topic_observance_i18n.date_rule_text`
+> 才是**上畫面的那一份**,一語一段。前者**不得直接渲染** —— 它實測 100% 是中文,而七語系是七個
+> 獨立的站,讀者只看得到一種語言;2026-08-21 之前 Topic 頁的 🌎 直接印它,結果 en/ja/hi/id/pt-BR
+> 五個站長期在畫面上漏中文。zh-TW 的那一列由匯入時從 `topic_observances.date_rule` 帶過來
+> (md 不重複寫),其餘六語寫在 `content/topics/*.md` 的 `### date_rule <CC> <key>`。
+> 前端一律走 `dateRuleText(i18n, observance)`,拿不到就是空格。
 >
 > **年度日期是獨立層:**`observed_date` / `date_rule` 是文化規則與無年份的摘要；`topic_observance_occurrences` 保存每一年的實際日期、時區、狀態與來源。頁面排序只使用匯出的 `next_occurrence`，不在 Astro build 解析自然語言。 「加入行事曆」同樣以 occurrence 產生 Google Calendar URL 與靜態 `.ics`(cn 市場不依賴 Google)。
 

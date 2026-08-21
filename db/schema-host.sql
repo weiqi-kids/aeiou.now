@@ -83,9 +83,15 @@ CREATE INDEX IF NOT EXISTS idx_topic_observance_occurrences_observance
   ON topic_observance_occurrences(observance_id, occurrence_year, starts_on);
 
 CREATE TABLE IF NOT EXISTS topic_observance_i18n (
-  observance_id TEXT NOT NULL,
-  locale        TEXT NOT NULL,
-  customs_text  TEXT NOT NULL,
+  observance_id  TEXT NOT NULL,
+  locale         TEXT NOT NULL,
+  customs_text   TEXT NOT NULL,
+  -- 「日期怎麼定」的本地語言說法(2026-08-21)。可為 NULL:固定日期的 observance
+  -- 本來就沒有規則可講。**為什麼要有這一欄**:topic_observances.date_rule 是單一字串,
+  -- 實際上 100% 是中文,但它會出現在七個站的畫面上——en/ja/hi/id/pt-BR 的讀者
+  -- 看到的是「5 月第一個完整星期，地方學區日期可能不同」。七語系是七個獨立的站,
+  -- 沒有 per-locale 版本的字串就不該渲染,所以那一欄先從畫面移除,改由這裡供應。
+  date_rule_text TEXT,
   PRIMARY KEY (observance_id, locale)
 );
 

@@ -128,6 +128,53 @@
       "pt-BR": "Os Estados Unidos não listam a Páscoa como feriado federal, e a Sexta-feira Santa também não. Nenhum dia batizado com uma data cristã aparece na lista de feriados federais além do Natal. Parte da razão de a Páscoa não 'precisar' de feriado é a mesma da Índia: ela já cai num domingo. O conteúdo real do dia — culto, ovos, almoço em família, a rolagem de ovos no gramado da Casa Branca — acontece todo dentro de um fim de semana que já existia, sem tirar nada do calendário. A Páscoa nos Estados Unidos cai sempre num domingo, de modo que não precisa ser nem nunca foi feriado federal — um feriado federal existe para liberar um dia útil, e domingo não é um. A diferença é feita pela sexta-feira anterior: a Sexta-feira Santa é feriado estadual em alguns estados e não em outros, então, ao cruzar a fronteira estadual, o mesmo fim de semana de Páscoa pode conter um número diferente de dias úteis."
     }
   },
+  "observance_date_rules": {
+    "obs_top_01KZXQ6BR92AZA5DJBBW90DPHH_BR_pascoa": {
+      "zh-TW": "春分後首個滿月後的星期日；聖週五屬市級宗教假日",
+      "en": "The Sunday after the first full moon following the vernal equinox; Good Friday is a municipal religious holiday",
+      "ja": "春分後最初の満月の後の日曜日。聖金曜日は市レベルの宗教祝日",
+      "zh-CN": "春分后首个满月后的星期日；圣周五属市级宗教假日",
+      "hi": "वसंत विषुव के बाद पहली पूर्णिमा के बाद के रविवार को; गुड फ्राइडे एक नगरपालिका स्तर का धार्मिक अवकाश है",
+      "id": "Hari Minggu setelah bulan purnama pertama setelah ekuinoks musim semi; Jumat Agung merupakan hari libur keagamaan tingkat kotamadya",
+      "pt-BR": "O domingo após a primeira lua cheia depois do equinócio de primavera; a Sexta-feira Santa é feriado religioso municipal"
+    },
+    "obs_top_01KZXQ6BR92AZA5DJBBW90DPHH_ID_kenaikan": {
+      "zh-TW": "復活節後第四十日；2026 年為 5 月 14 日，列為國定假日",
+      "en": "The fortieth day after Easter; in 2026 it falls on May 14, designated as a national holiday",
+      "ja": "復活祭後の40日目；2026年は5月14日で、国民の祝日に指定されている",
+      "zh-CN": "复活节后第四十日；2026年为5月14日，列为国定假日",
+      "hi": "ईस्टर के चालीसवें दिन; 2026 में यह 14 मई को पड़ता है, राष्ट्रीय अवकाश के रूप में सूचीबद्ध",
+      "id": "Empat puluh hari setelah Paskah; pada tahun 2026 jatuh pada tanggal 14 Mei, ditetapkan sebagai hari libur nasional",
+      "pt-BR": "O quadragésimo dia após a Páscoa; em 2026 cai em 14 de maio, designado feriado nacional"
+    },
+    "obs_top_01KZXQ6BR92AZA5DJBBW90DPHH_ID_paskah": {
+      "zh-TW": "春分後首個滿月後的星期日；受難日、復活節、升天節、聖誕節皆為國定假日",
+      "en": "The Sunday after the first full moon following the vernal equinox; Good Friday, Easter, Ascension Day, and Christmas are all national holidays",
+      "ja": "春分後最初の満月の後の日曜日。聖金曜日、復活祭、昇天祭、クリスマスはいずれも国民の祝日",
+      "zh-CN": "春分后首个满月后的星期日；受难日、复活节、升天节、圣诞节皆为国定假日",
+      "hi": "वसंत विषुव के बाद पहली पूर्णिमा के बाद के रविवार को; गुड फ्राइडे, ईस्टर, स्वर्गारोहण पर्व और क्रिसमस सभी राष्ट्रीय अवकाश हैं",
+      "id": "Hari Minggu setelah bulan purnama pertama setelah ekuinoks musim semi; Jumat Agung, Paskah, Kenaikan Isa Almasih, dan Natal semuanya merupakan hari libur nasional",
+      "pt-BR": "O domingo após a primeira lua cheia depois do equinócio de primavera; Sexta-feira Santa, Páscoa, Ascensão e Natal são todos feriados nacionais"
+    },
+    "obs_top_01KZXQ6BR92AZA5DJBBW90DPHH_IN_easter": {
+      "zh-TW": "春分後首個滿月後的星期日；全國假日清單列的是聖週五，不是復活節",
+      "en": "The Sunday after the first full moon following the vernal equinox; the national holiday list includes Good Friday, not Easter",
+      "ja": "春分後最初の満月の後の日曜日。全国の祝日リストに記載されているのは聖金曜日であり、復活祭ではない",
+      "zh-CN": "春分后首个满月后的星期日；全国假日清单列的是圣周五，不是复活节",
+      "hi": "वसंत विषुव के बाद पहली पूर्णिमा के बाद के रविवार को; राष्ट्रीय अवकाश सूची में गुड फ्राइडे शामिल है, ईस्टर नहीं",
+      "id": "Hari Minggu setelah bulan purnama pertama setelah ekuinoks musim semi; daftar hari libur nasional mencantumkan Jumat Agung, bukan Paskah",
+      "pt-BR": "O domingo após a primeira lua cheia depois do equinócio de primavera; a lista de feriados nacionais inclui a Sexta-feira Santa, não a Páscoa"
+    },
+    "obs_top_01KZXQ6BR92AZA5DJBBW90DPHH_US_easter-sunday": {
+      "zh-TW": "春分後首個滿月後的星期日；不是聯邦假日",
+      "en": "The Sunday after the first full moon following the spring equinox; not a federal holiday",
+      "ja": "春分後の最初の満月の次の日曜日；連邦祝日ではない",
+      "zh-CN": "春分后首个满月后的星期日；不是联邦假日",
+      "hi": "वसंत विषुव के बाद पहली पूर्णिमा के बाद वाला रविवार; यह संघीय अवकाश नहीं है",
+      "id": "Hari Minggu setelah bulan purnama pertama setelah ekuinoks musim semi; bukan hari libur federal",
+      "pt-BR": "O domingo após a primeira lua cheia depois do equinócio de primavera; não é feriado federal"
+    }
+  },
   "regional_notes": {
     "CN": {
       "zh-TW": "中國的《全國年節及紀念日放假辦法》兩類名單都沒有復活節。這裡的宗教節日是**地方**的事:古爾邦節與開齋節由信仰人口集中的自治區域自行規定放假,全國一律不放。復活節連地方層級都沒有,因為那套機制是為特定自治區域設計的,不是一個開放給任何宗教的通道。復活節在星期日,受難日則照常上班。",

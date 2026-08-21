@@ -114,6 +114,27 @@ function stripHidden(html) {
   return out + html.slice(cursor);
 }
 
+/**
+ * 「快速回答」表的資料格文字（2026-08-21）。
+ *
+ * D3 擋的是**同一段散文在一頁裡印很多次**（2026-08-19 診斷：某些頁面可見文字有三分之一是
+ * 複印）。但比較表的資料格不是段落 —— 端午節的台灣與中國「日期怎麼定」本來就是同一條規則
+ * （農曆五月初五），兩格印一樣的字正是這張表要說的事。中文原文短於 D3 的 40 字門檻所以
+ * 從沒觸發，翻成英文之後長度過線就被判成重複段落，那是誤判。
+ *
+ * 處理方式與狀態標籤（EMPTY_MARKERS）一致：**仍然計入 total/unique 字元數**，
+ * 只是不進「重複段落」那份計數。所以它擋不到的只有「表格資料格重複」這一種情況，
+ * 散文複印照樣擋。
+ */
+function answerTableCells(html) {
+  const cells = new Set();
+  for (const m of html.matchAll(/<td\b[^>]*class="[^"]*\banswer-basis\b[^"]*"[^>]*>([\s\S]*?)<\/td>/gi)) {
+    const text = m[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    if (text) cells.add(text);
+  }
+  return cells;
+}
+
 /** 抽出 body 的可見文字，逐行切開（script/style/註解/hidden/noscript 都不算內容） */
 function visibleLines(html) {
   let body = html.includes('<body') ? html.slice(html.indexOf('<body')) : html;
@@ -143,12 +164,15 @@ for (const path of htmlFiles) {
   const total = lines.join('').length;
   const unique = [...new Set(lines)].join('').length;
   const isStatusLabel = (line) => EMPTY_MARKERS.some((m) => line.includes(m));
+  const tableCells = answerTableCells(html);
   const repeats = new Map();
   const bodyRepeats = new Map();
   for (const line of lines) {
     if (line.length < LONG_PARAGRAPH_CHARS) continue;
     repeats.set(line, (repeats.get(line) || 0) + 1);
-    if (!isStatusLabel(line)) bodyRepeats.set(line, (bodyRepeats.get(line) || 0) + 1);
+    if (!isStatusLabel(line) && !tableCells.has(line)) {
+      bodyRepeats.set(line, (bodyRepeats.get(line) || 0) + 1);
+    }
   }
   const worst = [...repeats.entries()].sort((a, b) => b[1] - a[1])[0] || ['', 0];
   const worstBody = [...bodyRepeats.entries()].sort((a, b) => b[1] - a[1])[0] || ['', 0];

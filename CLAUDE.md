@@ -312,9 +312,13 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
   查法:`curl -s "$API/v1/topics/<topic_id>/feed?sort=new&limit=1" | grep -o 'target_country'`;
   合法值只有 ISO 3166-1 alpha-2 大寫兩碼或 null,格式不符回 400(契約 §2)。
 - **只有一種語言看得懂的欄位不准上畫面**(2026-08-21)——七語系是七個獨立的站,讀者只看得到
-  一種語言,所以**沒有 per-locale 版本的資料就不要渲染**。已知兩處:`date_rule`(83 筆 100%
-  中文,已從 Topic 頁移除,七語化之前不加回來)、`local_name` 的中文註解(13 筆已清,內容在
-  逐國散文裡都有)。查法:
+  一種語言,所以**沒有 per-locale 版本的資料就不要渲染**。踩過兩次:
+  ① `date_rule` 原本直接渲染 `topic_observances.date_rule`(單一字串、100% 中文),
+     五個非漢字站長期漏中文;**已七語化** —— 上畫面的那一份是
+     `topic_observance_i18n.date_rule_text`,前端一律走 `dateRuleText(i18n, observance)`,
+     md 側寫在 `### date_rule <CC> <key>`(zh-TW 不寫,退回 `- date_rule:`)。
+     補譯:`node scripts/translate-date-rules.mjs`(冪等);匯入會擋缺譯。
+  ② `local_name` 的中文註解(13 筆已清,內容在逐國散文裡都有)。查法:
   `python3 -c "import json,glob,re;print([ (json.load(open(f))['slug'],o['country_code'],o['local_name']) for f in glob.glob('data/topics/top_*/facts.json') for o in (json.load(open(f)).get('observances') or []) if o.get('local_name') and o['country_code'] not in ('TW','CN','JP') and re.search(r'[\u4e00-\u9fff]',o['local_name'])])"`
   —— 非漢字圈國家的 `local_name` 不得含漢字。新增可見欄位前先問:這個字串有七語嗎?
 - **腳本裸執行(不帶任何參數)就必須是正確且完整的行為**;旗標只能是逃生口或縮減行為,

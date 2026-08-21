@@ -24,6 +24,7 @@ export {
   listTopicIds,
   getTopicBundle,
   customsText,
+  dateRuleText,
   regionalNotesForFacts,
   regionalNoteText,
   coverPath,

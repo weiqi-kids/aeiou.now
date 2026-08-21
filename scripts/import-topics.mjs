@@ -14,6 +14,8 @@
 //   ## country <ISO2>          - 舊格式相容讀法,轉成各國唯一的 legacy-<iso2> key
 //   ## locale <code>           - 底下用 ### title / ### summary / ### keywords /
 //                                ### customs <ISO2> <key>
+//                                ### date_rule <ISO2> <key>   ← 非 zh-TW 才需要;
+//                                  zh-TW 退回 ## observance 的 `- date_rule:`
 //
 // 寫入語意:
 //   - topics:以 slug 對應;已存在就沿用 topic_id 與 status,不存在就發新 ULID、status='active'
@@ -58,7 +60,9 @@ function parseTopicMd(text, file) {
     if (!h2 || h2.kind !== "locale" || !h3) { buf = []; return; }
     const locObj = doc.locales[h2.arg];
     const textVal = buf.join("\n").trim();
-    if (h3.key === "customs") {
+    if (h3.key === "date_rule") {
+      if (textVal) locObj.date_rules[h3.arg] = textVal;
+    } else if (h3.key === "customs") {
       if (textVal) locObj.customs[h3.arg] = textVal;
     } else if (textVal) {
       locObj[h3.key] = textVal;
@@ -96,7 +100,7 @@ function parseTopicMd(text, file) {
       } else if ((m = head.match(/^locale\s+(\S+)$/))) {
         if (!LOCALES.includes(m[1])) throw new Error(`${file}: 不認識的 locale「${m[1]}」(合法:${LOCALES.join(" ")})`);
         h2 = { kind: "locale", arg: m[1] };
-        doc.locales[h2.arg] ??= { customs: {} };
+        doc.locales[h2.arg] ??= { customs: {}, date_rules: {} };
       } else throw new Error(`${file}: 不認識的段落「## ${head}」(只准 meta / observance XX key / locale <code>)`);
       continue;
     }
@@ -108,10 +112,12 @@ function parseTopicMd(text, file) {
       if (["title", "summary", "keywords"].includes(head)) h3 = { key: head };
       else if ((m = head.match(/^customs\s+([A-Za-z]{2})\s+([a-z0-9-]+)$/))) {
         h3 = { key: "customs", arg: `${m[1].toUpperCase()}:${m[2]}` };
+      } else if ((m = head.match(/^date_rule\s+([A-Za-z]{2})\s+([a-z0-9-]+)$/))) {
+        h3 = { key: "date_rule", arg: `${m[1].toUpperCase()}:${m[2]}` };
       } else if ((m = head.match(/^customs\s+([A-Za-z]{2})$/))) {
         // 舊格式相容讀法。
         h3 = { key: "customs", arg: `${m[1].toUpperCase()}:legacy-${m[1].toLowerCase()}` };
-      } else throw new Error(`${file}: 不認識的小節「### ${head}」(只准 title/summary/keywords/customs XX key)`);
+      } else throw new Error(`${file}: 不認識的小節「### ${head}」(只准 title/summary/keywords/customs/date_rule XX key)`);
       continue;
     }
     // 清單項(meta 與 observance 用)
@@ -154,6 +160,22 @@ function parseTopicMd(text, file) {
   for (const id of Object.keys(doc.observances)) {
     const lacking = LOCALES.filter((code) => !doc.locales[code]?.customs[id]);
     if (lacking.length) errs.push(`observance ${id} 的 customs 缺:${lacking.join(" ")}`);
+    // date_rule 七語化(2026-08-21):`- date_rule:` 那一行是 zh-TW 的說法,
+    // 其餘六語各自寫在 `### date_rule <CC> <key>`。有規則才要求譯文;
+    // 固定日期的 observance 本來就沒有規則可講,不逼人生一段出來。
+    // 為什麼一定要譯文:這段字會出現在七個站的畫面上,而它 100% 是中文(2026-08-21 實測 83 筆),
+    // 沒有本地語言版本就等於對五個非漢字站漏中文。補譯:node scripts/translate-date-rules.mjs
+    if (doc.observances[id].date_rule) {
+      const need = LOCALES.filter((code) => code !== "zh-TW");
+      const short = need.filter((code) => !doc.locales[code]?.date_rules[id]);
+      if (short.length) errs.push(`observance ${id} 有 date_rule,但缺這幾語的 ### date_rule:${short.join(" ")}`);
+    }
+  }
+  for (const [code, l] of Object.entries(doc.locales)) {
+    for (const id of Object.keys(l.date_rules || {})) {
+      if (!doc.observances[id]) errs.push(`locale ${code} 有 date_rule ${id},但沒有對應的 ## observance`);
+      else if (!doc.observances[id].date_rule) errs.push(`locale ${code} 有 date_rule ${id},但那個 observance 沒有 \`- date_rule:\``);
+    }
   }
   if (errs.length) throw new Error(`${file}:\n  - ` + errs.join("\n  - "));
   return doc;
@@ -249,9 +271,15 @@ function importOne(db, doc, now) {
        VALUES (?, ?, ?, ?, ?, ?)`
     ).run(topicId, code, l.title, l.summary || null, JSON.stringify(kw), now);
     for (const [id, textVal] of Object.entries(l.customs)) {
+      // zh-TW 不另寫 ### date_rule —— `- date_rule:` 那一行本來就是中文原文,
+      // 再抄一次只會製造兩份會漂移的同一句話。
+      const ruleText = code === "zh-TW"
+        ? (doc.observances[id]?.date_rule || null)
+        : (l.date_rules?.[id] || null);
       db.prepare(
-        `INSERT INTO topic_observance_i18n (observance_id, locale, customs_text) VALUES (?, ?, ?)`
-      ).run(observanceIds.get(id), code, textVal);
+        `INSERT INTO topic_observance_i18n (observance_id, locale, customs_text, date_rule_text)
+         VALUES (?, ?, ?, ?)`
+      ).run(observanceIds.get(id), code, textVal, ruleText);
     }
   }
 
@@ -276,6 +304,16 @@ if (files.length === 0) { console.log("content/topics/ 沒有 .md,無事可做�
 
 const db = new DatabaseSync(DB_PATH);
 db.exec("PRAGMA busy_timeout = 15000;"); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)
+
+// 既有主機庫的欄位自我修補(2026-08-21 新增 date_rule_text)。schema-host.sql 已經帶了這一欄,
+// 但既有的 db/aeiou.sqlite 是先前建的 —— 讓匯入自己補,才不用有人記得先跑一次 migration。
+{
+  const cols = db.prepare("PRAGMA table_info(topic_observance_i18n)").all().map((c) => c.name);
+  if (cols.length && !cols.includes("date_rule_text")) {
+    db.exec("ALTER TABLE topic_observance_i18n ADD COLUMN date_rule_text TEXT");
+    console.log("已補上 topic_observance_i18n.date_rule_text 欄位");
+  }
+}
 db.exec("PRAGMA foreign_keys = ON;");
 const now = Math.floor(Date.now() / 1000);
 let created = 0, updated = 0, failed = 0;

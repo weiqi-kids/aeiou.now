@@ -48,6 +48,7 @@
 ### keywords
 表達愛意, 親密關係, 禮物, 回禮  ← 逗號分隔
 ### customs TW valentines       ← 每個 observance 都要有七語 customs
+### date_rule TW valentines     ← 有 `- date_rule:` 的 observance,zh-TW 以外六語都要有
 台灣常把農曆七月初七稱為七夕情人節,商場和餐廳會推出約會活動,但它不是全台一致的法定節日。
 ### customs TW qixi
 台灣的七夕情人節,常見約會、送禮和商業企劃,但不同家庭與年齡層不一定參與。
@@ -113,6 +114,13 @@ node scripts/generate-topic-cover.mjs --slug <slug> --prompt "……場景描述
 2. **每個 observance 至少一個 `source`**——`source_ids_json` 是必填。每一條文化事實都要能點回原始來源,
    這是內容品質,也是對 Google「scaled content abuse」政策的正面抗辯(草案 §44 註)。
 3. **每個 `## observance XX key` 在七語都要有對應的 `### customs XX key`**——事實一份、七語各自呈現。
+3b. **有 `- date_rule:` 的 observance,在 zh-TW 以外的六語都要有 `### date_rule XX key`**
+   (2026-08-21 起,匯入會擋)。zh-TW 不用寫——`- date_rule:` 那一行本身就是中文原文,
+   再抄一次只會製造兩份會漂移的同一句話。
+   **為什麼要六語**:這段字會出現在七個站的「快速回答」表的「日期怎麼定」欄,
+   而原文 100% 是中文;沒有本地語言版本就等於對五個非漢字站漏中文。
+   補譯不用手打:`node scripts/translate-date-rules.mjs`(冪等,只補缺的;
+   `--dry-run` 先看要補什麼)。
 4. `date` 格式 `MM-DD`;非固定日期(農曆、第 N 個星期日…)寫 `date_rule`,跨日區間用 `date_end`。
 5. Topic slug 與 observance key 只准 `a-z0-9-`。
 6. **每個 Topic 都要填 `commonality`**——它是分類依據；日期是 observance 的觸發資料，不是 Topic 的主鍵。

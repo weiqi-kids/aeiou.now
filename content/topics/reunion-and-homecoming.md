@@ -72,14 +72,24 @@ Mid-Autumn Festival, Obon, Thanksgiving, Eid al-Fitr, and Christmas all make peo
 Mid-Autumn Festival, Obon, Eid, Thanksgiving, homecoming, reunion
 ### customs TW mid-autumn
 Taiwan's Mid-Autumn Festival brings family gatherings, moon-viewing, mooncakes, and gifts. Barbecuing is a newer popular habit, not a required family tradition.
+### date_rule TW mid-autumn
+The 15th day of the 8th month of the lunar calendar.
 ### customs CN mid-autumn
 China's Mid-Autumn Festival links the moon, mooncakes, and family reunion. Some people travel, work, or observe the day in a way that fits their own lives.
+### date_rule CN mid-autumn
+The 15th day of the 8th month of the lunar calendar.
 ### customs JP obon
 Obon is often a time to return home, welcome ancestors, and see them off. Bon odori and local events matter too, while dates and travel patterns differ by region.
+### date_rule JP obon
+Most regions: 08-13 to 08-16; local dates may vary
 ### customs US thanksgiving
 Thanksgiving often sends people across cities or states for a shared meal. Turkey is common, but menus, family arrangements, and participation vary widely.
+### date_rule US thanksgiving
+The fourth Thursday of November
 ### customs ID eid-homecoming
 Mudik around Idul Fitri is one of Indonesia's major homecoming movements, alongside family visits and asking forgiveness. Not everyone can afford the journey or wants to make it.
+### date_rule ID eid-homecoming
+Around the first day of the month of Shawwal in the Islamic calendar
 ### customs BR christmas
 Brazilian Christmas often gathers relatives for dinner, gifts, Mass, or a community event. The table changes with the city, the family's faith, and its food traditions.
 
@@ -92,14 +102,24 @@ Brazilian Christmas often gathers relatives for dinner, gifts, Mass, or a commun
 中秋節, お盆, イド, 感謝祭, 帰省, 再会
 ### customs TW mid-autumn
 台湾の中秋節には、家族の集まり、月見、月餅、贈り物がある。バーベキューは近年広まった習慣で、すべての家庭の決まりではない。
+### date_rule TW mid-autumn
+旧暦8月15日。
 ### customs CN mid-autumn
 中国の中秋節は月見、月餅、家族の再会と結びつく。帰省する人も、旅行や仕事をする人もいて、暮らしに合わせた過ごし方がある。
+### date_rule CN mid-autumn
+旧暦8月15日。
 ### customs JP obon
 日本のお盆は、先祖を迎え、送り出し、帰省する時期とされることが多い。盆踊りなどの地域行事もあり、日程と移動の形は地域で違う。
+### date_rule JP obon
+多くの地域では08-13から08-16、地域によって日付が異なる場合がある
 ### customs US thanksgiving
 米国の感謝祭には、都市や州をまたいで帰る人もいる。七面鳥はよく食べられるが、献立、家族の形、参加の仕方はさまざまだ。
+### date_rule US thanksgiving
+11月の第4木曜日
 ### customs ID eid-homecoming
 インドネシアではイドゥル・フィトリの前後に大規模なムディック帰省が起こる。家族訪問と謝罪が重視されるが、誰もが帰省できるわけではない。
+### date_rule ID eid-homecoming
+イスラム暦シャウワール月1日前後
 ### customs BR christmas
 ブラジルのクリスマスには、家族の夕食、贈り物、ミサ、地域活動がある。都市、信仰、食文化によって食卓の姿は変わる。
 
@@ -112,14 +132,24 @@ Brazilian Christmas often gathers relatives for dinner, gifts, Mass, or a commun
 中秋节, 盂兰盆会, 开斋节, 感恩节, 返乡, 团聚
 ### customs TW mid-autumn
 台湾中秋节常见家人相聚、赏月、月饼和送礼。烤肉是近代流行的过法，但不是每个家庭的固定安排。
+### date_rule TW mid-autumn
+农历八月十五
 ### customs CN mid-autumn
 中国中秋节常把赏月、月饼和家庭团聚放在一起。有人返乡，有人旅行或工作，节日会随着生活条件改变。
+### date_rule CN mid-autumn
+农历八月十五
 ### customs JP obon
 日本盂兰盆会常被视为迎接和送别祖先、返乡的时节，盆踊等地方活动也很重要。日期和安排因地区而异。
+### date_rule JP obon
+多数地区08-13至08-16，地方日期可能不同
 ### customs US thanksgiving
 美国感恩节常促成跨城返家和共享晚餐。火鸡很常见，但菜单、家庭形式和是否参加都可以不同。
+### date_rule US thanksgiving
+11月第四个星期四
 ### customs ID eid-homecoming
 印尼开斋节前后的 mudik 是大规模返乡现象，家庭拜访和互相求宽恕很重要。不是每个人都有能力或愿意踏上返乡路。
+### date_rule ID eid-homecoming
+伊斯兰历Shawwal月初一前后
 ### customs BR christmas
 巴西圣诞节常通过家庭晚餐、交换礼物、弥撒或社区活动团聚。城市、信仰和饮食习惯会改变餐桌的样子。
 
@@ -132,14 +162,24 @@ Brazilian Christmas often gathers relatives for dinner, gifts, Mass, or a commun
 मध्य-शरद उत्सव, ओबोन, ईद, Thanksgiving, घर वापसी, मिलन
 ### customs TW mid-autumn
 ताइवान में मध्य-शरद उत्सव पर परिवार मिलते, चाँद देखते, मूनकेक खाते और उपहार देते हैं। बारबेक्यू नया लोकप्रिय चलन है, हर घर की अनिवार्य परंपरा नहीं।
+### date_rule TW mid-autumn
+चंद्र कैलेंडर के आठवें महीने की पंद्रहवीं तारीख.
 ### customs CN mid-autumn
 चीन का मध्य-शरद उत्सव चाँद, मूनकेक और परिवार के मिलन से जुड़ा है। कुछ लोग घर लौटते हैं, कुछ काम या यात्रा करते हैं।
+### date_rule CN mid-autumn
+चंद्र कैलेंडर के आठवें महीने की पंद्रहवीं तारीख.
 ### customs JP obon
 जापान का ओबोन पूर्वजों का स्वागत और विदाई करने तथा घर लौटने का समय माना जाता है। Bon odori और स्थानीय कार्यक्रम भी होते हैं; तारीख़ क्षेत्र के अनुसार बदलती है।
+### date_rule JP obon
+अधिकांश क्षेत्रों में 08-13 से 08-16 तक, स्थानीय तिथियाँ भिन्न हो सकती हैं
 ### customs US thanksgiving
 अमेरिका में Thanksgiving पर लोग शहर या राज्य पार करके घर लौट सकते हैं। टर्की आम है, लेकिन मेनू, परिवार और भागीदारी हर घर में अलग हो सकती है।
+### date_rule US thanksgiving
+नवंबर का चौथा गुरुवार
 ### customs ID eid-homecoming
 इंडोनेशिया में ईद उल-फ़ित्र के आसपास mudik की बड़ी आवाजाही होती है। परिवार से मिलना और माफ़ी माँगना महत्वपूर्ण है, पर हर कोई यात्रा कर सके या करना चाहे, ऐसा नहीं।
+### date_rule ID eid-homecoming
+इस्लामी कैलेंडर के शव्वाल महीने की पहली तारीख के आसपास
 ### customs BR christmas
 ब्राज़ील में क्रिसमस पारिवारिक भोजन, उपहार, मिस्सा या सामुदायिक कार्यक्रम के साथ आता है। शहर, विश्वास और भोजन की आदतें उस मेज़ का रूप बदल देती हैं।
 
@@ -152,14 +192,24 @@ Festival Pertengahan Musim Gugur, Obon, Thanksgiving, Idulfitri, dan Natal sama-
 Festival Pertengahan Musim Gugur, Obon, Idulfitri, Thanksgiving, pulang kampung, reuni
 ### customs TW mid-autumn
 Festival Pertengahan Musim Gugur di Taiwan diisi berkumpul, melihat bulan, makan kue bulan, dan bertukar hadiah. Barbeku adalah kebiasaan populer yang lebih baru, bukan kewajiban setiap keluarga.
+### date_rule TW mid-autumn
+Tanggal 15 bulan ke-8 penanggalan lunar.
 ### customs CN mid-autumn
 Festival Pertengahan Musim Gugur di Tiongkok menghubungkan bulan, kue bulan, dan reuni keluarga. Ada yang pulang, bepergian, atau bekerja sesuai keadaan hidupnya.
+### date_rule CN mid-autumn
+Tanggal 15 bulan ke-8 penanggalan lunar.
 ### customs JP obon
 Obon di Jepang sering menjadi waktu pulang untuk menyambut dan melepas leluhur. Bon odori dan acara daerah ikut membentuknya, dengan jadwal yang berbeda menurut wilayah.
+### date_rule JP obon
+Sebagian besar wilayah dari 08-13 hingga 08-16, tanggal setempat dapat berbeda
 ### customs US thanksgiving
 Thanksgiving sering membuat orang bepergian lintas kota atau negara bagian untuk makan bersama. Kalkun umum, tetapi menu, bentuk keluarga, dan pilihan untuk ikut sangat beragam.
+### date_rule US thanksgiving
+Kamis keempat bulan November
 ### customs ID eid-homecoming
 Mudik sekitar Idulfitri merupakan arus pulang kampung besar di Indonesia, disertai kunjungan keluarga dan saling meminta maaf. Tidak semua orang mampu atau ingin melakukan perjalanan itu.
+### date_rule ID eid-homecoming
+Sekitar tanggal 1 Syawal dalam kalender Hijriah
 ### customs BR christmas
 Natal di Brasil sering mempertemukan keluarga lewat makan malam, hadiah, misa, atau kegiatan komunitas. Kota, keyakinan, dan tradisi makanan mengubah suasana meja makan.
 
@@ -172,13 +222,23 @@ O Meio do Outono, o Obon, o Thanksgiving, o Eid al-Fitr e o Natal fazem as pesso
 Meio do Outono, Obon, Eid, Thanksgiving, volta para casa, reunião familiar
 ### customs TW mid-autumn
 Em Taiwan, o Festival do Meio do Outono reúne família, lua, bolos lunares e presentes. O churrasco se tornou popular mais recentemente, mas não é obrigatório em todas as casas.
+### date_rule TW mid-autumn
+15º dia do 8º mês do calendário lunar.
 ### customs CN mid-autumn
 Na China, o Festival do Meio do Outono liga lua, bolos lunares e reencontro familiar. Há quem volte para casa, viaje ou trabalhe conforme a própria rotina.
+### date_rule CN mid-autumn
+15º dia do 8º mês do calendário lunar.
 ### customs JP obon
 No Japão, o Obon costuma ser um período de retorno para receber e despedir-se dos ancestrais. O Bon odori e as festas locais também contam, e as datas variam por região.
+### date_rule JP obon
+Na maioria das regiões, de 08-13 a 08-16; as datas locais podem variar
 ### customs US thanksgiving
 O Thanksgiving leva muitas pessoas a atravessar cidades ou estados para uma refeição em família. O peru é comum, mas cardápios, famílias e participação assumem formas diversas.
+### date_rule US thanksgiving
+A quarta quinta-feira de novembro
 ### customs ID eid-homecoming
 Na Indonésia, o mudik em torno do Eid al-Fitr é um grande movimento de volta para casa, acompanhado de visitas e pedidos de perdão. Nem todos podem ou querem fazer a viagem.
+### date_rule ID eid-homecoming
+Por volta do primeiro dia do mês de Shawwal no calendário islâmico
 ### customs BR christmas
 O Natal brasileiro costuma reunir parentes em jantares, presentes, missas ou atividades comunitárias. A cidade, a fé e os costumes alimentares mudam a mesa de cada família.

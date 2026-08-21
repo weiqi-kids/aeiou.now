@@ -89,9 +89,13 @@ Indonesia lists International Workers' Day on 1 May as a national holiday, writt
 India's national holiday list does **not** contain 1 May. May Day is a state holiday in Maharashtra, Tamil Nadu and others, while elsewhere it is an ordinary working day — so on the same date some places in India close and some do not. This is normal for the Indian holiday system: the national list is short, and what actually shapes daily life is usually the state list and the institution's own list.
 ### customs JP golden-week
 1 May is not a national holiday in Japan, and it is an ordinary working and school day. The holidays sit around it: Showa Day on 29 April, Constitution Day on 3 May, Greenery Day on 4 May and Children's Day on 5 May — four public holidays inside a single week make up Golden Week, with 1 May caught in the middle as a working day. Some companies schedule it as leave on their own, but that is a company decision rather than a national one.
+### date_rule JP golden-week
+May 1 is not a public holiday (shukujitsu); the surrounding dates of April 29, May 3, May 4, and May 5 are.
 ### customs US labor-day
 The United States does not hold Labor Day on 1 May but on the first Monday of September, as a federal holiday. Its placement is itself a historical choice: International Workers' Day on 1 May grew out of the American eight-hour-day movement, yet the official American observance ended up in September. In practice that Monday functions as the end of summer and the last long weekend before school, and labour issues are not its most visible content.
 
+### date_rule US labor-day
+The first Monday of September (not May 1).
 ## locale ja
 ### title
 メーデー・労働の日
@@ -111,9 +115,13 @@ The United States does not hold Labor Day on 1 May but on the first Monday of Se
 インドの全国祝日一覧に5月1日は**ない**。メーデーはマハーラーシュトラやタミル・ナードゥなどでは州の祝日だが、それ以外の地域では通常の勤務日である。したがって同じ日でもインド国内で休むところと休まないところがある。これはインドの祝日制度では普通のことだ。全国の一覧は短く、生活を実際に左右するのはたいてい州の一覧と所属機関の一覧である。
 ### customs JP golden-week
 日本の5月1日は国民の祝日ではなく、通常の勤務日・登校日である。休日はその前後にある。4月29日の昭和の日、5月3日の憲法記念日、5月4日のみどりの日、5月5日のこどもの日——一週間に四つの祝日が集まってゴールデンウィークを形づくり、5月1日はその間に挟まれた平日になる。独自に休業日とする企業もあるが、それは企業の判断であって国の定めではない。
+### date_rule JP golden-week
+5月1日は祝日ではない。前後の4/29、5/3、5/4、5/5が祝日である。
 ### customs US labor-day
 米国の労働の日は5月1日ではなく、9月第1月曜であり、連邦の祝日である。その配置自体が歴史的な選択の結果だ。5月1日の国際労働者の日は米国の8時間労働運動から生まれたが、米国の公式の記念日は9月に置かれることになった。実際にはその月曜は夏の終わり、新学期前の最後の連休として機能しており、労働の問題はこの日の最も目立つ中身ではない。
 
+### date_rule US labor-day
+9月の第1月曜日（5月1日ではない）。
 ## locale zh-CN
 ### title
 劳动节
@@ -133,9 +141,13 @@ The United States does not hold Labor Day on 1 May but on the first Monday of Se
 印度的全国假日清单里**没有**5月1日。May Day 在马哈拉施特拉、泰米尔纳德等邦是邦级假日，其他地方则照常上班——所以同一天在印度境内有的地方放假、有的没有。这是印度假日制度的常态：全国清单很短，真正影响生活的多半是邦级与机构层级的清单。
 ### customs JP golden-week
 日本的5月1日不是国民の祝日，那天照常上班上学。真正放假的是它前后：4月29日的昭和の日、5月3日的宪法记念日、5月4日的みどりの日、5月5日的こどもの日——四个祝日挤在一周内形成黄金周，5月1日夹在中间反而是工作日。有些公司会自行把它排成休假，但那是企业决定，不是国家的。
+### date_rule JP golden-week
+5月1日不是祝日（法定假日）；前后的4/29、5/3、5/4、5/5才是。
 ### customs US labor-day
 美国的劳动节不在5月1日，而是9月第一个星期一，是联邦假日。它的位置本身就是历史选择的结果：5月1日的国际劳动节源自美国的八小时工时运动，但美国官方纪念日最后被放在九月。实务上九月的那个周一被当成夏天的结束、开学前的最后一个长周末，劳工议题反而不是它最显眼的内容。
 
+### date_rule US labor-day
+9月第一个星期一（不是5月1日）。
 ## locale hi
 ### title
 श्रमिक दिवस
@@ -155,9 +167,13 @@ The United States does not hold Labor Day on 1 May but on the first Monday of Se
 भारत की राष्ट्रीय अवकाश सूची में 1 मई **नहीं** है। मई दिवस महाराष्ट्र, तमिलनाडु और कुछ अन्य राज्यों में राज्य अवकाश है, जबकि अन्यत्र वह सामान्य कार्यदिवस है — यानी एक ही तारीख़ पर भारत के भीतर कहीं बंदी है, कहीं नहीं। भारतीय अवकाश व्यवस्था में यह सामान्य है: राष्ट्रीय सूची छोटी है, और रोज़मर्रा को असल में आकार राज्य की सूची और संस्था की अपनी सूची देती है।
 ### customs JP golden-week
 जापान में 1 मई राष्ट्रीय अवकाश नहीं है और वह सामान्य कार्य व विद्यालय दिवस होता है। अवकाश उसके आगे-पीछे हैं: 29 अप्रैल का शोवा दिवस, 3 मई का संविधान दिवस, 4 मई का हरियाली दिवस और 5 मई का बाल दिवस — एक ही सप्ताह में चार सार्वजनिक अवकाश मिलकर गोल्डन वीक बनाते हैं, और 1 मई बीच में फँसा कार्यदिवस रह जाता है। कुछ कंपनियाँ इसे स्वयं अवकाश रखती हैं, पर वह कंपनी का निर्णय है, राष्ट्र का नहीं।
+### date_rule JP golden-week
+1 मई को सार्वजनिक अवकाश (शुकुजित्सु) नहीं होता; इसके आगे-पीछे के 4/29, 5/3, 5/4 और 5/5 अवकाश होते हैं।
 ### customs US labor-day
 अमेरिका श्रमिक दिवस 1 मई को नहीं, सितंबर के पहले सोमवार को मनाता है और वह संघीय अवकाश है। यह स्थान स्वयं एक ऐतिहासिक चुनाव है: 1 मई का अंतरराष्ट्रीय श्रमिक दिवस अमेरिकी आठ-घंटे आंदोलन से निकला, फिर भी अमेरिकी आधिकारिक स्मरण सितंबर में जा बैठा। व्यवहार में वह सोमवार गर्मियों के अंत और स्कूल से पहले के आख़िरी लंबे सप्ताहांत की तरह काम करता है, और श्रम के मुद्दे उसका सबसे दृश्य हिस्सा नहीं हैं।
 
+### date_rule US labor-day
+सितंबर का पहला सोमवार (1 मई नहीं)।
 ## locale id
 ### title
 Hari Buruh
@@ -177,9 +193,13 @@ Indonesia mencantumkan Hari Buruh Internasional pada 1 Mei sebagai hari libur na
 Daftar hari libur nasional India **tidak** memuat 1 Mei. May Day adalah hari libur negara bagian di Maharashtra, Tamil Nadu, dan beberapa lainnya, sementara di tempat lain ia hari kerja biasa — jadi pada tanggal yang sama sebagian wilayah India tutup dan sebagian tidak. Ini normal bagi sistem hari libur India: daftar nasionalnya pendek, dan yang benar-benar membentuk keseharian biasanya daftar negara bagian dan daftar institusi masing-masing.
 ### customs JP golden-week
 1 Mei bukan hari libur nasional di Jepang, dan ia hari kerja serta hari sekolah biasa. Hari liburnya berada di sekitarnya: Hari Showa pada 29 April, Hari Konstitusi pada 3 Mei, Hari Hijau pada 4 Mei, dan Hari Anak pada 5 Mei — empat hari libur dalam satu pekan membentuk Golden Week, dengan 1 Mei terjepit di tengah sebagai hari kerja. Sebagian perusahaan menjadwalkannya sebagai cuti sendiri, tetapi itu keputusan perusahaan, bukan negara.
+### date_rule JP golden-week
+1 Mei bukan hari libur nasional (shukujitsu); tanggal-tanggal di sekitarnya, yaitu 29/4, 3/5, 4/5, dan 5/5, adalah hari libur.
 ### customs US labor-day
 Amerika Serikat tidak menggelar Hari Buruh pada 1 Mei melainkan pada Senin pertama September, sebagai hari libur federal. Penempatannya sendiri merupakan pilihan sejarah: Hari Buruh Internasional 1 Mei tumbuh dari gerakan delapan jam kerja di Amerika, namun peringatan resmi Amerika justru berakhir di September. Praktiknya Senin itu berfungsi sebagai penutup musim panas dan akhir pekan panjang terakhir sebelum sekolah, dan isu perburuhan bukan isi yang paling terlihat.
 
+### date_rule US labor-day
+Senin pertama bulan September (bukan 1 Mei).
 ## locale pt-BR
 ### title
 Dia do Trabalho
@@ -199,5 +219,10 @@ A Indonésia lista o Dia Internacional dos Trabalhadores, em 1º de maio, como f
 A lista de feriados nacionais da Índia **não** contém 1º de maio. O Dia do Trabalho é feriado estadual em Maharashtra, Tamil Nadu e outros, enquanto em outros lugares é dia útil comum — então, na mesma data, parte da Índia fecha e parte não. Isso é normal no sistema indiano de feriados: a lista nacional é curta, e o que de fato molda o cotidiano costuma ser a lista estadual e a lista da própria instituição.
 ### customs JP golden-week
 1º de maio não é feriado nacional no Japão, e é um dia normal de trabalho e de aula. Os feriados ficam em volta: Dia de Showa em 29 de abril, Dia da Constituição em 3 de maio, Dia do Verde em 4 de maio e Dia das Crianças em 5 de maio — quatro feriados dentro de uma única semana formam a Golden Week, com 1º de maio preso no meio como dia útil. Algumas empresas o marcam como folga por conta própria, mas isso é decisão da empresa, não do país.
+### date_rule JP golden-week
+1º de maio não é feriado nacional (shukujitsu); as datas ao redor, 29/4, 3/5, 4/5 e 5/5, é que são.
 ### customs US labor-day
 Os Estados Unidos não celebram o Dia do Trabalho em 1º de maio, e sim na primeira segunda-feira de setembro, como feriado federal. Essa colocação é ela mesma uma escolha histórica: o 1º de maio internacional nasceu do movimento norte-americano pela jornada de oito horas, mas a data oficial americana acabou em setembro. Na prática, aquela segunda-feira funciona como o fim do verão e o último feriadão antes das aulas, e as pautas trabalhistas não são seu conteúdo mais visível.
+
+### date_rule US labor-day
+A primeira segunda-feira de setembro (não 1º de maio).

@@ -56,13 +56,19 @@ Ghost Month, Zhongyuan, Setsubun, and Halloween all give stories about spirits a
 Ghost Month, Zhongyuan, Setsubun, Halloween, warding off evil
 ### customs TW ghost-month
 Taiwan's Ghost Month includes offerings, household tables, taboos, and in some places large events such as Qianggu. Families, religions, and neighbourhoods do not share one list of things to avoid.
+### date_rule TW ghost-month
+The seventh lunar month; the date of the local Pudu (ghost festival rites) varies by community
 ### customs JP setsubun
 Japanese Setsubun uses bean-throwing and the call “Demons out, fortune in” to turn protection into a family ritual with a playful side. Temples and shrines may stage much larger events before spring.
+### date_rule JP setsubun
+Around the day before Risshun (the first day of spring); the date varies slightly from year to year
 ### customs US halloween
 Halloween in the United States is known for costumes, trick-or-treating, pumpkins, and neighbourhood parties. Its present-day emphasis is seasonal play and social contact, not a Taiwanese-style offering rite.
 ### customs CN zhongyuan
 Zhongyuan practices in China may include ancestor offerings, communal rites, incense, and local ceremonies. Like Ghost Month, it brings the dead and wandering spirits into view, but local religions and families observe it differently.
 
+### date_rule CN zhongyuan
+Around the 15th day of the seventh lunar month; local practices vary
 ## locale ja
 ### title
 鬼月・中元・節分・ハロウィン
@@ -72,13 +78,19 @@ Zhongyuan practices in China may include ancestor offerings, communal rites, inc
 鬼月, 中元, 節分, ハロウィン, 厄除け
 ### customs TW ghost-month
 台湾の鬼月には、普渡、供物、家の前の祭壇、地域の大きな行事がある。何を避けるかは、家庭、宗教、地域によって変わる。
+### date_rule TW ghost-month
+旧暦7月、地方の普渡（供養行事）の日付は地域により異なる
 ### customs JP setsubun
 節分では豆をまき、「鬼は外、福は内」と唱えて厄を払う。家族の遊びのような形もあれば、寺社で大規模に行う場合もある。
+### date_rule JP setsubun
+立春の前日頃、日付は年によって多少異なる
 ### customs US halloween
 米国のハロウィンには、仮装、トリック・オア・トリート、かぼちゃ、近所のパーティーがある。現在は季節の遊びや交流として参加する人が多く、普渡とは別の行事だ。
 ### customs CN zhongyuan
 中国の中元には、先祖への供え物、普渡、焼香、地域の儀礼などがある。亡者や無縁の霊を意識する点は鬼月と重なるが、地域と家の作法は一つではない。
 
+### date_rule CN zhongyuan
+旧暦7月15日前後、地方によって行い方が異なる
 ## locale zh-CN
 ### title
 鬼节：鬼月、中元、节分与万圣节
@@ -88,13 +100,19 @@ Zhongyuan practices in China may include ancestor offerings, communal rites, inc
 鬼节, 鬼月, 中元节, 节分, 万圣节
 ### customs TW ghost-month
 台湾农历七月常见普渡、供桌和避讳，有些地方还会举办抢孤等大型活动。不同家庭、宗教和社区对禁忌的理解并不一样。
+### date_rule TW ghost-month
+农历七月，地方普渡日期依社区而异
 ### customs JP setsubun
 日本节分通过撒豆、喊“鬼出去、福进来”来驱邪，也常成为家庭一起玩的仪式。寺社可能举办更大的撒豆活动，迎接立春。
+### date_rule JP setsubun
+立春前一日左右，日期每年略有差异
 ### customs US halloween
 美国万圣节常见装扮、挨家挨户讨糖、南瓜和邻里派对。现代过法偏向季节游戏和社区交往，不等同于中元普渡。
 ### customs CN zhongyuan
 中国中元的做法可能包括祭祖、普渡、焚香和地方仪式。它和鬼月一样会谈到逝者与孤魂，但不同地区和家庭的信仰并不相同。
 
+### date_rule CN zhongyuan
+农历七月十五前后，地方做法不同
 ## locale hi
 ### title
 भूत-प्रेत के पर्व, सेत्सुबुन और हैलोवीन
@@ -104,13 +122,19 @@ Ghost Month, Zhongyuan, Setsubun और Halloween में आत्माओ�
 भूतों के पर्व, Zhongyuan, Setsubun, हैलोवीन, बुरी किस्मत दूर करना
 ### customs TW ghost-month
 ताइवान के Ghost Month में सामुदायिक भेंट, घर की वेदी, वर्जनाएँ और कुछ जगहों पर बड़े आयोजन होते हैं। किन चीज़ों से बचना है, यह परिवार, धर्म और पड़ोस के अनुसार बदलता है।
+### date_rule TW ghost-month
+चंद्र कैलेंडर के सातवें महीने में; स्थानीय पूदू (भूत पर्व अनुष्ठान) की तिथि समुदाय के अनुसार भिन्न होती है
 ### customs JP setsubun
 जापान के Setsubun में बीन्स फेंककर और “राक्षस बाहर, भाग्य अंदर” कहकर बुरी चीज़ों को दूर किया जाता है। घर में यह खेल जैसा हो सकता है, मंदिरों में आयोजन बहुत बड़ा भी होता है।
+### date_rule JP setsubun
+रिस्शुन (वसंत के पहले दिन) से एक दिन पहले के आसपास; तिथि प्रति वर्ष थोड़ी भिन्न होती है
 ### customs US halloween
 अमेरिका में Halloween पर पोशाक, trick-or-treat, कद्दू और पड़ोस की पार्टियाँ होती हैं। आज इसका ज़ोर मौसमी खेल और मेलजोल पर है, ताइवान की पूजा पर नहीं।
 ### customs CN zhongyuan
 चीन में Zhongyuan से जुड़े कामों में पूर्वजों को भेंट, सामुदायिक पूजा, अगरबत्ती और स्थानीय रस्में शामिल हो सकती हैं। मृतकों और भटकती आत्माओं का विचार साझा है, पर परिवार और क्षेत्र के तरीके अलग हैं।
 
+### date_rule CN zhongyuan
+चंद्र कैलेंडर के सातवें महीने की 15वीं तिथि के आसपास; स्थानीय प्रथाएँ भिन्न होती हैं
 ## locale id
 ### title
 Bulan Hantu, Setsubun, dan Halloween
@@ -120,13 +144,19 @@ Ghost Month, Zhongyuan, Setsubun, dan Halloween sama-sama memberi ruang bagi cer
 Bulan Hantu, Zhongyuan, Setsubun, Halloween, menangkal kesialan
 ### customs TW ghost-month
 Ghost Month di Taiwan mencakup persembahan, meja sesaji, pantangan, dan di beberapa tempat acara besar seperti Qianggu. Hal yang dianggap perlu dihindari berbeda menurut keluarga, agama, dan lingkungan.
+### date_rule TW ghost-month
+Bulan ketujuh penanggalan lunar; tanggal upacara Pudu (ritual sembahyang arwah) setempat berbeda-beda menurut komunitas
 ### customs JP setsubun
 Setsubun di Jepang memakai lempar kacang dan seruan “oni keluar, keberuntungan masuk” untuk menangkal hal buruk. Di rumah bentuknya dapat menjadi permainan keluarga, sedangkan kuil bisa mengadakan acara besar.
+### date_rule JP setsubun
+Sekitar satu hari sebelum Risshun (hari pertama musim semi); tanggalnya sedikit berbeda setiap tahun
 ### customs US halloween
 Halloween di Amerika Serikat dikenal melalui kostum, trick-or-treat, labu, dan pesta lingkungan. Dalam praktik sekarang, penekanannya lebih pada permainan musiman dan pergaulan, bukan ritual persembahan.
 ### customs CN zhongyuan
 Praktik Zhongyuan di Tiongkok dapat mencakup persembahan leluhur, ritual bersama, dupa, dan kebiasaan daerah. Hubungannya dengan orang meninggal atau roh berkeliaran mirip, tetapi cara keluarga dan wilayah menjalaninya beragam.
 
+### date_rule CN zhongyuan
+Sekitar tanggal 15 bulan ketujuh penanggalan lunar; praktiknya berbeda-beda menurut daerah
 ## locale pt-BR
 ### title
 Mês dos Fantasmas, Setsubun e Halloween
@@ -136,9 +166,16 @@ O Mês dos Fantasmas, o Zhongyuan, o Setsubun e o Halloween colocam histórias s
 Mês dos Fantasmas, Zhongyuan, Setsubun, Halloween, afastar o azar
 ### customs TW ghost-month
 O Mês dos Fantasmas em Taiwan inclui oferendas, mesas de culto, tabus e, em alguns lugares, grandes eventos como o Qianggu. O que deve ser evitado muda conforme a família, a religião e a vizinhança.
+### date_rule TW ghost-month
+Sétimo mês do calendário lunar; a data do Pudu (ritual local de oferendas aos espíritos) varia conforme a comunidade
 ### customs JP setsubun
 No Setsubun japonês, jogar feijões e dizer “demônios para fora, sorte para dentro” serve para afastar o azar. Em casa pode virar brincadeira; nos templos, a celebração pode ser muito maior.
+### date_rule JP setsubun
+Por volta do dia anterior ao Risshun (primeiro dia da primavera); a data varia ligeiramente a cada ano
 ### customs US halloween
 Nos Estados Unidos, o Halloween envolve fantasias, trick-or-treat, abóboras e festas de bairro. Hoje seu centro costuma ser a brincadeira sazonal e a convivência, não um ritual de oferendas.
 ### customs CN zhongyuan
 As práticas ligadas ao Zhongyuan na China podem incluir oferendas aos ancestrais, ritos comunitários, incenso e costumes locais. A presença dos mortos e dos espíritos aproxima o tema do Mês dos Fantasmas, mas as práticas variam.
+
+### date_rule CN zhongyuan
+Por volta do 15º dia do sétimo mês do calendário lunar; as práticas locais variam

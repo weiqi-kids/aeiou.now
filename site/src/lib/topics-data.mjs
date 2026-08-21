@@ -90,6 +90,19 @@ export function customsText(i18n, observance) {
   return (legacy && legacy[LOCALE]) || null;
 }
 
+/**
+ * 「日期怎麼定」的本地語言說法（2026-08-21）。
+ * `observance.date_rule` 是單一字串、實測 100% 中文，**不得直接渲染** —— 那會讓
+ * en/ja/hi/id/pt-BR 五個站在畫面上漏中文。這裡只回本站語系那一段；沒有就回 null，
+ * 呼叫端要能接受「這一格是空的」。
+ */
+export function dateRuleText(i18n, observance) {
+  if (!i18n || !observance) return null;
+  const id = typeof observance === 'string' ? observance : observance.observance_id;
+  const entry = i18n.observance_date_rules && i18n.observance_date_rules[id];
+  return (entry && entry[LOCALE]) || null;
+}
+
 /** 長青 Topic 的國別生活筆記；沒有固定日期，不應被當成 observance 排序。 */
 export function regionalNotesForFacts(facts) {
   return Array.isArray(facts?.regional_notes) ? facts.regional_notes : [];

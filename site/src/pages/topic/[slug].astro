@@ -43,7 +43,7 @@ import { withBase } from '../../lib/paths.mjs';
 import { compactDescription, fillTemplate, seoCopy, sourceLabel, SITE_NAME } from '../../lib/seo.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
-  observancesForFacts, customsText, regionalNotesForFacts, regionalNoteText,
+  observancesForFacts, customsText, dateRuleText, regionalNotesForFacts, regionalNoteText,
   coverPath, relatedTopics, readJson, getTopicsIndex,
 } from '../../lib/data.mjs';
 
@@ -287,13 +287,13 @@ const differenceAnswer = [
 // 一個沒有下文的孤兒詞。這是同一份資料的四個欄位,本來就該是表。
 // 欄位全部沿用 🌎 已經在用的那幾個,沒有新語意;國名連到 🌎 對應段落的錨點。
 //
-// ⚠ 為什麼沒有「日期怎麼定」那一欄:`date_rule` 在資料裡是**單一字串、100% 中文**
-//   (2026-08-21 實測 83 筆全部含 CJK),沒有 per-locale 版本。原本它印在 🌎 的
-//   .country-rule,於是 en/ja/hi/id/pt-BR 五個站長期在畫面上漏中文
-//   (「5 月第一個完整星期，地方學區日期可能不同」出現在 en.aeiou.now)。
-//   那條 .country-rule 已於同日移除。要把這一欄做出來,得先讓 date_rule 七語化
-//   (md 的 `### date_rule <CC> <key>` + topic_observance_i18n + import/export),
-//   見 docs/TODO.md。在那之前寧可沒有這一欄,也不上一個只有一種語言看得懂的欄位。
+// 「日期怎麼定」那一欄取的是 **dateRuleText()**,不是 observance.date_rule。
+//   facts.json 的 date_rule 是單一字串、實測 100% 中文,直接渲染會讓 en/ja/hi/id/pt-BR
+//   五個站在畫面上漏中文(2026-08-21 之前 🌎 的 .country-rule 就是這樣漏的,那條已移除)。
+//   現在本地語言版本在 i18n.json 的 observance_date_rules,由 md 的
+//   `### date_rule <CC> <key>` 供應(zh-TW 退回 `- date_rule:` 原文)。
+//   拿不到就是空格 —— 空格的意思是「這一筆沒有規則可講」或「還沒補譯」,
+//   兩者都不該用中文填補。
 const answerRows = homeFirst([
   ...observances.map((observance) => ({
     country_code: observance.country_code,
@@ -306,6 +306,7 @@ const answerRows = homeFirst([
       : countryName(observance.country_code),
     key: observance.observance_id,
     anchor: observanceAnchor(observance),
+    basis: dateRuleText(i18n, observance),
     when: observance.next_occurrence
       ? `${calendarDate(observance.next_occurrence.starts_on)}`
         + (observance.next_occurrence.ends_on ? ` – ${calendarDate(observance.next_occurrence.ends_on)}` : '')
@@ -319,12 +320,17 @@ const answerRows = homeFirst([
   ...regionalOnlyNotes.map((note) => ({
     country_code: note.country_code,
     label: countryName(note.country_code),
+    basis: note.kind === 'absence' ? t('topic.no_local_observance_rule') : t('topic.perennial'),
     key: `regional-${note.country_code}`,
     anchor: regionalAnchor(note),
     when: note.kind === 'absence' ? t('topic.no_local_observance') : t('topic.date_unavailable'),
     note: null,
   })),
 ]);
+
+// date_rule 在資料裡不是每一筆都有(固定日期的 observance 本來就沒有規則可講),
+// 整個 Topic 一筆都沒有時就不要出這一欄——整欄「—」是死欄位。
+const hasBasisColumn = answerRows.some((row) => row.basis);
 
 const related = relatedTopics(topicId, 4);
 const eventSchema = events.map((event) => ({
@@ -453,6 +459,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
             <tr>
               <th scope="col">{t('topic.col_country')}</th>
               <th scope="col">{copy.when}</th>
+              {hasBasisColumn && <th scope="col">{t('topic.col_basis')}</th>}
             </tr>
           </thead>
           <tbody>
@@ -468,6 +475,9 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
                   {row.when}
                   {row.note && <span class="answer-note">{row.note}</span>}
                 </td>
+                {hasBasisColumn && (
+                  <td class="answer-basis" data-label={t('topic.col_basis')}>{row.basis || '—'}</td>
+                )}
               </tr>
             ))}
           </tbody>
@@ -857,6 +867,10 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     font-size: var(--text-sm);
     font-weight: 400;
     color: var(--color-ink-muted);
+  }
+  .answer-basis {
+    color: var(--color-ink-soft);
+    font-size: var(--text-sm);
   }
   .answer-empty {
     margin: 0;

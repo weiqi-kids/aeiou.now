@@ -38,7 +38,7 @@
 - source: https://www.gov.br/arquivonacional/pt-br/canais_atendimento/imprensa/copy_of_noticias/dia-da-crianca
 
 ## observance IN childrens-day
-- local_name: बाल दिवस（Children's Day）
+- local_name: बाल दिवस (Children's Day)
 - date: 11-14
 - rank: 6
 - source: https://www.presidentofindia.gov.in/president-childrens-day

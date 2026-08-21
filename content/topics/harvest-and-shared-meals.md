@@ -72,17 +72,27 @@ Some celebrations bring a harvest to the table; others use a familiar food to sa
 harvest festivals, Mid-Autumn Festival, tsukimi, festival food, shared meals
 ### customs TW mid-autumn
 In Taiwan, mooncakes, pomelos, and family meals make seasonal food part of social exchange. Barbecues are popular today, but no single meal defines the festival.
+### date_rule TW mid-autumn
+The 15th day of the 8th lunar month
 ### customs JP tsukimi
 Japanese tsukimi looks at the autumn moon and offers foods such as rice dumplings and pampas grass. The point is a sense of season and gratitude for the harvest, not a prescribed dinner.
+### date_rule JP tsukimi
+Autumn moon-viewing (Tsukimi) around the 15th day of the 8th lunar month
 ### customs IN pongal
 Pongal is a major harvest season in South India. New rice, thanks to the sun and cattle, and family gatherings connect the festival to farming life, especially in Tamil regions.
+### date_rule IN pongal
+Around January 14–17 on the solar calendar; the date varies slightly from year to year
 ### customs US thanksgiving
 Thanksgiving places a shared meal and gratitude at the centre of a national holiday. Turkey is common, but menus, family arrangements, and views of the history are not uniform.
+### date_rule US thanksgiving
+The fourth Thursday of November
 ### customs BR festa-junina
 Brazil's June festivals gather people around corn-based foods, bonfires, music, dancing, and community games. Catholic saint days and rural traditions are part of the story, so it is more than a harvest festival.
 ### customs CN mid-autumn
 In China, mooncakes, moon-viewing, and reunion tie food to the season. Some people travel or work, while others keep the day through their own foods and routines.
 
+### date_rule CN mid-autumn
+The 15th day of the 8th month in the Chinese lunar calendar
 ## locale ja
 ### title
 収穫祭と祝いの食卓
@@ -92,17 +102,27 @@ In China, mooncakes, moon-viewing, and reunion tie food to the season. Some peop
 収穫祭, 中秋節, 月見, 行事食, 共食
 ### customs TW mid-autumn
 台湾の中秋節では、月餅、文旦、家族の食事が人付き合いのきっかけになる。バーベキューは広まった過ごし方だが、どの家庭にも共通するわけではない。
+### date_rule TW mid-autumn
+旧暦8月15日
 ### customs JP tsukimi
 日本の月見は秋の月を眺め、すすきや団子を供える。決まった夕食を食べる日というより、季節と実りを味わう行事だ。
+### date_rule JP tsukimi
+旧暦8月15日前後の秋の月見
 ### customs IN pongal
 南インドのポンガルは収穫期の大切な祭りで、新米を炊き、太陽と牛に感謝する。タミル地域を離れると、祝い方や重心は変わる。
+### date_rule IN pongal
+太陽暦1月14日〜17日前後、年によって日付が若干異なる
 ### customs US thanksgiving
 米国の感謝祭では、料理を囲むことと感謝を言葉にすることが大きな役割を持つ。七面鳥はよく登場するが、献立も家族の形も一つではない。
+### date_rule US thanksgiving
+11月の第4木曜日
 ### customs BR festa-junina
 ブラジルの六月祭は、とうもろこし料理、焚き火、音楽、踊り、地域の遊びで人を集める。カトリックの聖人祭と農村文化の影響も強い。
 ### customs CN mid-autumn
 中国の中秋節では月餅、月見、家族の再会が季節の食卓を作る。旅行や仕事をする人もいて、家ごとの食べ方がある。
 
+### date_rule CN mid-autumn
+旧暦8月15日
 ## locale zh-CN
 ### title
 收获节与节庆餐桌
@@ -112,17 +132,27 @@ In China, mooncakes, moon-viewing, and reunion tie food to the season. Some peop
 收获节, 中秋节, 月见, 节庆食物, 共同用餐
 ### customs TW mid-autumn
 台湾中秋节常见月饼、柚子和家人聚餐，季节食物也成为往来的方式。烤肉很流行，但不是所有家庭唯一的过节方法。
+### date_rule TW mid-autumn
+农历八月十五
 ### customs JP tsukimi
 日本月见会赏秋月，并供奉芒草、团子等食物。它强调季节感和对收成的感谢，不是一顿固定的家庭晚餐。
+### date_rule JP tsukimi
+农历八月十五前后的秋季赏月（月见）
 ### customs IN pongal
 印度南部的 Pongal 是重要的收获节期，会煮新米、感谢太阳和牛，并安排家庭活动。离开泰米尔地区后，庆祝重点可能不同。
+### date_rule IN pongal
+阳历1月14日至17日前后，日期依年而略有差异
 ### customs US thanksgiving
 美国感恩节把共享餐食和感谢放在公共节日的中心。火鸡很常见，但家庭菜单、参与方式以及对历史的理解并不统一。
+### date_rule US thanksgiving
+11月第四个星期四
 ### customs BR festa-junina
 巴西六月节用玉米食品、篝火、音乐、舞蹈和社区游戏聚集人群。它同时带有天主教圣人节和乡村文化背景，不只是收获节。
 ### customs CN mid-autumn
 中国中秋节常以月饼、赏月和团聚连接季节与家庭。有人旅行或工作，也有人按自己的饮食和生活安排度过。
 
+### date_rule CN mid-autumn
+农历八月十五
 ## locale hi
 ### title
 फसल, त्योहार और साझा भोजन
@@ -132,17 +162,27 @@ In China, mooncakes, moon-viewing, and reunion tie food to the season. Some peop
 फसल उत्सव, पोंगल, त्सुकिमी, त्योहार का भोजन, साथ भोजन
 ### customs TW mid-autumn
 ताइवान में मध्य-शरद उत्सव के दौरान मूनकेक, पोमेलो और पारिवारिक भोजन आम हैं। बारबेक्यू लोकप्रिय है, पर हर परिवार उसी तरह नहीं मनाता।
+### date_rule TW mid-autumn
+चंद्र कैलेंडर के आठवें महीने की 15वीं तारीख
 ### customs JP tsukimi
 जापान का त्सुकिमी शरद चाँद देखने और घास व चावल के पकवान चढ़ाने का अवसर है। इसमें मौसम और फ़सल के प्रति आभार है, कोई तय पारिवारिक डिनर नहीं।
+### date_rule JP tsukimi
+चंद्र कैलेंडर के आठवें महीने की 15वीं तारीख के आसपास शरद ऋतु का चंद्र-दर्शन (त्सुकिमी)
 ### customs IN pongal
 दक्षिण भारत का पोंगल फ़सल का बड़ा पर्व है। नया चावल पकाना, सूर्य और मवेशियों को धन्यवाद देना, तथा परिवार के साथ समय बिताना इसके अहम हिस्से हैं; तमिल इलाक़ों में भी रूप बदलते हैं।
+### date_rule IN pongal
+सौर कैलेंडर के अनुसार 14 से 17 जनवरी के आसपास; तारीख हर साल थोड़ी अलग होती है
 ### customs US thanksgiving
 अमेरिका में Thanksgiving साझा भोजन और आभार व्यक्त करने का दिन है। टर्की आम है, लेकिन मेनू, परिवार और इतिहास को समझने के तरीके अलग-अलग हैं।
+### date_rule US thanksgiving
+नवंबर का चौथा गुरुवार
 ### customs BR festa-junina
 ब्राज़ील की जून की festas में मकई के व्यंजन, अलाव, संगीत, नाच और पड़ोस के खेल लोगों को साथ लाते हैं। कैथोलिक संतों के दिन और ग्रामीण परंपराएँ भी इसकी कहानी का हिस्सा हैं।
 ### customs CN mid-autumn
 चीन का मध्य-शरद उत्सव मूनकेक, चाँद और पारिवारिक मिलन को जोड़ता है। कुछ लोग यात्रा या काम करते हैं, और कुछ अपने घर के भोजन से दिन मनाते हैं।
 
+### date_rule CN mid-autumn
+चीनी चंद्र कैलेंडर के आठवें महीने की 15वीं तारीख
 ## locale id
 ### title
 Panen, Perayaan, dan Makan Bersama
@@ -152,17 +192,27 @@ Ada perayaan yang berhubungan langsung dengan panen, ada pula yang memakai makan
 panen, Pongal, tsukimi, makanan perayaan, makan bersama
 ### customs TW mid-autumn
 Di Taiwan, kue bulan, pomelo, dan makan bersama keluarga membuat makanan musiman menjadi bagian dari hubungan sosial. Barbeku populer sekarang, tetapi bukan satu-satunya cara merayakan.
+### date_rule TW mid-autumn
+Tanggal 15 bulan ke-8 penanggalan lunar
 ### customs JP tsukimi
 Tsukimi di Jepang berarti menikmati bulan musim gugur sambil mempersembahkan susuki dan dango. Yang ditekankan adalah musim dan rasa syukur atas hasil bumi, bukan menu makan malam tertentu.
+### date_rule JP tsukimi
+Perayaan melihat bulan musim gugur (Tsukimi) sekitar tanggal 15 bulan ke-8 penanggalan lunar
 ### customs IN pongal
 Pongal adalah perayaan panen penting di India Selatan. Memasak beras baru, berterima kasih kepada matahari dan sapi, serta berkumpul dengan keluarga menghubungkannya dengan kehidupan agraris, terutama di wilayah Tamil.
+### date_rule IN pongal
+Sekitar tanggal 14–17 Januari menurut kalender matahari; tanggalnya sedikit berbeda setiap tahun
 ### customs US thanksgiving
 Thanksgiving di Amerika Serikat berpusat pada makan bersama dan mengucapkan syukur. Kalkun umum disajikan, tetapi menu, bentuk keluarga, dan cara membaca sejarahnya beragam.
+### date_rule US thanksgiving
+Kamis keempat bulan November
 ### customs BR festa-junina
 Festa junina di Brasil menghadirkan makanan berbahan jagung, api unggun, musik, tarian, dan permainan warga. Hari santo Katolik dan budaya pedesaan juga membentuk perayaan ini.
 ### customs CN mid-autumn
 Festival Pertengahan Musim Gugur di Tiongkok menghubungkan kue bulan, melihat bulan, dan berkumpul dengan keluarga. Sebagian orang bepergian atau bekerja, sementara yang lain mengikuti kebiasaan rumahnya sendiri.
 
+### date_rule CN mid-autumn
+Tanggal 15 bulan ke-8 penanggalan lunar Tiongkok
 ## locale pt-BR
 ### title
 Colheitas e mesas de festa
@@ -172,13 +222,24 @@ Algumas festas celebram diretamente a colheita; outras usam comidas da estação
 colheita, Pongal, tsukimi, comidas de festa, refeições compartilhadas
 ### customs TW mid-autumn
 Em Taiwan, bolos lunares, pomelos e refeições em família fazem da comida da estação uma forma de convivência. O churrasco se popularizou, mas não é a única maneira de celebrar.
+### date_rule TW mid-autumn
+15º dia do 8º mês lunar
 ### customs JP tsukimi
 O tsukimi japonês observa a lua de outono e oferece susuki e bolinhos de arroz. A ocasião valoriza a estação e a gratidão pela colheita, não um jantar obrigatório.
+### date_rule JP tsukimi
+Contemplação da lua de outono (Tsukimi) por volta do 15º dia do 8º mês lunar
 ### customs IN pongal
 O Pongal é uma importante festa da colheita no sul da Índia. Preparar arroz novo e agradecer ao sol e ao gado aproximam a festa da vida agrícola, sobretudo nas regiões tâmeis.
+### date_rule IN pongal
+Por volta de 14 a 17 de janeiro no calendário solar; a data varia ligeiramente de ano para ano
 ### customs US thanksgiving
 Nos Estados Unidos, o Thanksgiving coloca a refeição compartilhada e a gratidão no centro do feriado. O peru é comum, mas cardápios, famílias e leituras da história variam.
+### date_rule US thanksgiving
+Quarta quinta-feira de novembro
 ### customs BR festa-junina
 As festas juninas brasileiras reúnem pessoas com comidas de milho, fogueira, música, dança e brincadeiras. As festas dos santos católicos e as tradições rurais também fazem parte de sua formação.
 ### customs CN mid-autumn
 Na China, o Festival do Meio do Outono liga bolos lunares, contemplação da lua e reencontro familiar. Há quem viaje ou trabalhe, enquanto outras famílias mantêm seus próprios costumes à mesa.
+
+### date_rule CN mid-autumn
+15º dia do 8º mês do calendário lunar chinês

@@ -77,17 +77,29 @@ Whether the harvest becomes a holiday, and who gets to define it, is answered fi
 Thanksgiving, Pongal, Festas Juninas, Farmers' Harvest Festival, Labour Thanksgiving Day
 ### customs US thanksgiving
 Thanksgiving in the United States is a federal holiday on the fourth Thursday of November. Its centre of gravity now is the family table and long-distance travel rather than farming itself, and the shopping that follows often draws more attention than the day. Some treat it as tradition, some as a founding story that needs re-examining, and some households simply use it as one of the few days a year when everyone can be in the same room.
+### date_rule US thanksgiving
+The fourth Thursday of November
 ### customs IN pongal
 Pongal is the Tamil harvest festival of South India, four days long, timed by the Tamil calendar and the sun's entry into Capricorn, usually falling in mid-January. The festival is named after the dish: newly harvested rice boiled with milk and jaggery until it spills over the rim, and the overflowing is read as a sign of abundance. Each of the four days has its own object — the sun, the cattle that pull the plough, the household, the neighbours — so it is at once an agricultural festival, a thanks to working animals, and a round of family visits. Other regions of India mark the same window under different names.
+### date_rule IN pongal
+Around the first day of the month of Thai in the Tamil calendar, a four-day festival period
 ### customs BR festa-junina
 Brazil's June festivals are not a single day but a whole month organised around the Catholic feast days of Saint Anthony, Saint John and Saint Peter: bonfires, quadrilha dancing, sweet and savoury dishes made from corn, and squares strung with bunting. Forró, the music at its root, was registered by IPHAN as Brazilian intangible cultural heritage in 2021, and cities in the Northeast treat the June season as the largest tourism and revenue window of their year. Religious calendar, agricultural calendar, and urban economy all stack up on the same dates.
+### date_rule BR festa-junina
+In June, around the three saints' days of St. Anthony, St. John, and St. Peter
 ### customs CN farmers-harvest-festival
 Mainland China's Farmers' Harvest Festival is new: approved by the Party Central Committee and confirmed by the State Council, from 2018 the autumn equinox in the lunar calendar became a festival for farmers themselves — the first national-level festival created specifically for them. The equinox was chosen because it is where the autumn harvest, autumn ploughing and autumn sowing meet. It is not a day off for all citizens but a policy-initiated occasion whose theme is set each year by the Ministry of Agriculture and Rural Affairs — the opposite origin story to the four harvest festivals here that grew from below. This is a very new festival: created in 2018 and set on the autumn equinox, it is the first nationwide festival in China established specifically for farmers. The choice of date states the design intent by itself — it does not follow the lunar calendar or the week, but is pinned to the autumn equinox among the twenty-four solar terms, so that the whole country, north and south alike, lands inside its own harvest rhythm. How it is marked is left to each locality, so the content of the same day differs widely between provinces.
+### date_rule CN farmers-harvest-festival
+Autumnal Equinox in the lunar calendar (established with approval from the State Council)
 ### customs JP kinro-kansha
 In Japan, 23 November is the national holiday Kinro Kansha no Hi, whose stated purpose is to honour labour, celebrate production, and give thanks to one another. The date was previously Niiname-sai, the imperial rite in which the Emperor offers the new grain to the deities. When the postwar holiday law was drafted, the date was kept and the subject was swapped: an imperial harvest rite became a day on which the whole population thanks one another for their work. The harvest did not vanish from the holiday, but it was renamed 'production'. The date of 23 November is far older than the holiday's name: it was the harvest thanksgiving rite at which the emperor offered and tasted the year's new grain. The 1948 Act on National Holidays rewrote it as Labour Thanksgiving Day, its text speaking of honouring labour, celebrating production and citizens thanking one another — the object of gratitude moved from grain to work, while the date did not shift by a day. The same slot changed its contents, and that is an easy line to read past on a holiday table.
+### date_rule JP kinro-kansha
+November 23 (fixed on the Gregorian calendar)
 ### customs TW farmers-day
 Taiwan's Farmers' Day is not in autumn but at the **beginning of spring** — the Act on Commemorative Days and Holidays says plainly: "Farmers' Day: fixed on the day of Lichun." That is the reverse of the harvest days elsewhere: Thanksgiving, the farmers' harvest festival, Labour Thanksgiving all sit after the crop is in, while this one sits before the work starts. What it marks is not what has been gathered but the fact of going back to the field. The date is set by astronomy rather than by a fixed month and day, so whether it lands on 3, 4 or 5 February is something to look up each year in the Central Weather Administration's calendar tables. It is not a day off.
 
+### date_rule TW farmers-day
+Set on the day of Start of Spring (Lichun) (per the Act Governing the Observance of Anniversary Days and Holidays; the date of Lichun follows the calendar data table of the Central Weather Administration)
 ## locale ja
 ### title
 収穫と感謝
@@ -97,17 +109,29 @@ Taiwan's Farmers' Day is not in autumn but at the **beginning of spring** — th
 感謝祭, ポンガル, フェスタ・ジュニーナ, 農民豊収節, 勤労感謝の日
 ### customs US thanksgiving
 米国の感謝祭は11月第4木曜日の連邦の祝日である。今日の重心は農作業そのものより家族の食卓と長距離の帰省にあり、翌日から始まる買い物の方が話題になることも多い。伝統と受け止める人もいれば、建国の物語として問い直すべきだと考える人もおり、単に一年で家族全員がそろう数少ない日として使う家庭もある。
+### date_rule US thanksgiving
+11月の第4木曜日
 ### customs IN pongal
 ポンガルは南インド・タミル地方（South India）の収穫祭で、四日間続く。日取りはタミル暦と太陽の山羊宮入りで決まり、通常は1月半ばになる。祭りの名は料理そのものだ——収穫したばかりの米を牛乳と粗糖で煮て、鍋の縁からあふれさせる。あふれることが豊かさのしるしとされる。四日はそれぞれ太陽、鋤を引く牛、家族、隣人に向けられており、農の祭りであり、家畜への感謝であり、親族訪問の期間でもある。インドの他の地域も同じ時期を別の名で祝う。
+### date_rule IN pongal
+タミル暦タイ月の初日前後、4日間の祭期
 ### customs BR festa-junina
 ブラジルのフェスタ・ジュニーナは一日ではなく、カトリック暦（Catholic）の聖アントニオ、聖ヨハネ、聖ペトロの祝日をめぐる一か月である。かがり火、カドリーリャの踊り、とうもろこしの甘いもの塩気のもの、旗で飾られた広場。その根にある音楽フォホーは2021年、IPHAN によりブラジルの無形文化遺産として登録された。北東部の都市にとって六月は一年で最大の観光と収入の時期でもある。宗教暦と農業暦と都市経済が同じ日付に重なっている。
+### date_rule BR festa-junina
+6月、聖アントニオ／聖ヨハネ／聖ペテロの三聖人の日前後
 ### customs CN farmers-harvest-festival
 中国大陸の「中国農民豊収節」は新しい。党中央の承認と国務院の批復により、2018年から毎年の旧暦**秋分**が農民自身のための祝日と定められた。国家レベルで農民のために設けられた最初の節である。秋分が選ばれたのは、秋の収穫・耕起・播種が交わる時期だからだ。全国民の休日ではなく、政策として始まり、毎年農業農村部がテーマを定める行事である——民間から育った他の四つの収穫祭とは、成り立ちがちょうど逆になっている。これは非常に新しい祝いである。二〇一八年に設けられ、毎年の秋分に置かれた、中国で初めて農民のために設けられた全国的な節日である。日付の選び方そのものが設計の意図を語る。旧暦にも曜日にも従わず、二十四節気の秋分に結びつけることで、南北を問わず全国がそれぞれの収穫の律動の内側に収まる。祝い方は各地に委ねられるため、同じ日の中身は省ごとに大きく異なる。
+### date_rule CN farmers-harvest-festival
+旧暦の秋分（国務院の批准により制定）
 ### customs JP kinro-kansha
 日本の11月23日は国民の祝日「勤労感謝の日」で、趣旨は「勤労をたつとび、生産を祝い、国民たがいに感謝しあう」である。この日付はもともと新嘗祭——天皇が新穀を神に供える皇室の祭典だった。戦後に祝日法が制定される際、日付は残し、主体を入れ替えた。皇室の収穫祭が、国民が互いの労働に感謝する日へと書き換えられたのである。収穫は祝日から消えていないが、「生産」と呼び直された。十一月二十三日という日付は、祝日の名よりはるかに古い。もとは新嘗祭であり、天皇がその年の新穀を供え、自ら食する日であった。一九四八年の祝日法はこれを「勤労感謝の日」と書き改め、条文は勤労をたつとび、生産を祝い、国民がたがいに感謝しあうと記す。感謝の対象は穀物から労働へ移り、日付は一日も動かなかった。同じ枠が中身を入れ替えた——祝日一覧の上では読み飛ばされやすい一行である。
+### date_rule JP kinro-kansha
+11月23日（新暦固定）
 ### customs TW farmers-day
 台湾の農民節は秋ではなく**立春**にある。「記念日及び節日実施条例」は端的にこう記す—— 「農民節:立春の日に定める」。これは他所の収穫の日とは逆である。感謝祭も農民豊収節も勤労感謝の日も 収穫が済んだあとに置かれるが、この日は仕事が始まる前に置かれる。祝われているのは手に入れたものではなく、 これから田に出るという事実である。日付は固定の月日ではなく天文が決めるため、二月三日か四日か五日かは 毎年、中央気象署の日暦資料表を引いて確かめることになる。この日は休みではない。
 
+### date_rule TW farmers-day
+立春の日に定める（《記念日及び祝日実施条例》による。立春の日付は中央気象署の暦データ表による）
 ## locale zh-CN
 ### title
 收获与感恩
@@ -117,17 +141,29 @@ Taiwan's Farmers' Day is not in autumn but at the **beginning of spring** — th
 感恩节、Pongal、Festas Juninas、丰收节、勤労感謝の日、收获
 ### customs US thanksgiving
 美国的感恩节是11月第四个星期四的联邦假日。它现在的重心是家庭餐桌与长途返乡，而不是农事本身；隔天的购物季往往比节日更受注意。有人视它为传统，有人视它为需要被重新检视的建国叙事，也有家庭只是把它当成一年里少数几次全家能到齐的日子。
+### date_rule US thanksgiving
+11月第四个星期四
 ### customs IN pongal
 印度的 Pongal 是南印度泰米尔地区的收获节，四天一组，日期依泰米尔历与太阳入摩羯宫而定，通常落在1月中。节名就是那道菜：新收的米、牛奶与粗糖一起煮到溢出锅缘，溢出来被视为丰足的征兆。四天各有对象——太阳、耕牛、家族与邻里，所以它同时是农事节、感谢畜力的日子与亲属走动的日子。印度其他地区在同一段时间有各自的名称与做法。
+### date_rule IN pongal
+泰米尔历Thai月首日前后，四天节期
 ### customs BR festa-junina
 巴西的六月节不是一天，而是绕着天主教历上圣安东尼、圣若翰与圣伯多禄三个圣人日展开的一整个月：篝火、方阵舞、玉米做的甜点与咸点、旗帜串起的广场。它的音乐根源 forró 在2021年由 IPHAN 登录为巴西非物质文化遗产，而东北部的城市把六月节当成一年里最大的旅游与营收档期。宗教历、农业历与城市经济在这里叠在一起。
+### date_rule BR festa-junina
+六月，圣安东尼／圣若翰／圣伯多禄三个圣人日前后
 ### customs CN farmers-harvest-festival
 中国大陆的“中国农民丰收节”是新的：经党中央批准、国务院批复，自2018年起，把每年**农历秋分**设为农民自己的节日，这是国家层面第一个专门为农民设立的节。选秋分是因为它是秋收、秋耕、秋种交会的节点。它不是全体公民放假的节日，而是一个由政策发动、逐年由农业农村部布置主题的活动——与其他四地由民间长出来的收获节，来历刚好相反。这是一个很新的节日：二〇一八年设立，定在每年秋分，是中国第一个专为农民设立的全国性节日。它的日期选择本身就说明了设计意图——不跟农历走，也不跟星期走，而是绑在二十四节气的秋分上，让全国无论南北都落在自己的收成节奏里。庆祝方式由各地自订，因此同一天的内容各省差异很大。
+### date_rule CN farmers-harvest-festival
+农历秋分（国务院批复设立）
 ### customs JP kinro-kansha
 日本的11月23日是国民の祝日“勤労感謝の日”，趣旨是“尊崇劳动、庆祝生产、国民互相感谢”。这个日期本来是新尝祭——天皇向神献上新谷的皇室祭典，战后制定祝日法时保留了日期、换掉了主体：从皇室的收获祭改写成全体国民彼此感谢劳动的日子。收获没有从节日里消失，但被重新命名成“生产”。十一月二十三日这个日期比节日的名字老得多：它原本是新尝祭，天皇以当年新谷祭祀并亲尝的日子。一九四八年的祝日法把它改写成“勤劳感谢の日”，法条写的是崇尚勤劳、庆祝生产、国民互相感谢——收成的对象从谷物换成了劳动，但日期一天没动。同一个格子换了内容，这在假日表上是很容易被读过去的一笔。
+### date_rule JP kinro-kansha
+11月23日（新历固定）
 ### customs TW farmers-day
 台湾的农民节不在秋天，在**立春**——《纪念日及节日实施条例》写的是「农民节：定于立春日」。 这与其他地方的收成节刚好相反：感恩节、丰收节、勤劳感谢日都排在收完之后，台湾这一天排在开始之前。 它庆祝的不是已经到手的东西，而是即将下田这件事。立春的日期由天文决定，不是固定的月日， 每年查中央气象署的日历资料表才知道落在二月三日、四日还是五日。这一天不放假。
 
+### date_rule TW farmers-day
+定于立春日（《纪念日及节日实施条例》；立春日期依中央气象署日历资料表）
 ## locale hi
 ### title
 फ़सल और कृतज्ञता
@@ -137,17 +173,29 @@ Taiwan's Farmers' Day is not in autumn but at the **beginning of spring** — th
 थैंक्सगिविंग, पोंगल, फ़ेस्ता जुनिना, किसान फ़सल पर्व, श्रम आभार दिवस
 ### customs US thanksgiving
 अमेरिका में थैंक्सगिविंग नवंबर के चौथे गुरुवार को संघीय अवकाश है। इसका केंद्र अब खेती नहीं, बल्कि पारिवारिक मेज़ और लंबी यात्रा है, और अगले दिन की ख़रीदारी अक्सर त्योहार से ज़्यादा चर्चा में रहती है। कुछ इसे परंपरा मानते हैं, कुछ इसे राष्ट्र-निर्माण की ऐसी कथा मानते हैं जिसकी पुनर्समीक्षा ज़रूरी है, और कुछ घरों के लिए यह साल के उन गिने-चुने दिनों में से एक है जब सब एक साथ हो पाते हैं।
+### date_rule US thanksgiving
+नवंबर का चौथा गुरुवार
 ### customs IN pongal
 पोंगल दक्षिण भारत (South India) के तमिल क्षेत्र का फ़सल पर्व है, चार दिन का, जिसकी तिथि तमिल पंचांग और सूर्य के मकर राशि में प्रवेश से तय होती है और आम तौर पर जनवरी के मध्य में पड़ती है। पर्व का नाम पकवान से ही है: नई फ़सल का चावल दूध और गुड़ के साथ तब तक पकाया जाता है जब तक वह हांडी के किनारे से उफ़न न जाए — उफ़नना समृद्धि का संकेत माना जाता है। चारों दिनों का अपना लक्ष्य है — सूर्य, हल खींचने वाले बैल, परिवार, पड़ोस — इसलिए यह एक साथ कृषि पर्व, पशुओं के प्रति आभार और रिश्तेदारी की फेरी है। भारत के अन्य क्षेत्र उसी अवधि को दूसरे नामों से मनाते हैं।
+### date_rule IN pongal
+तमिल कैलेंडर के थाई माह के पहले दिन के आसपास, चार दिनों का पर्व
 ### customs BR festa-junina
 ब्राज़ील के जून उत्सव एक दिन नहीं, बल्कि कैथोलिक (Catholic) पंचांग के संत एंटोनी, संत जॉन और संत पीटर के पर्व-दिनों के इर्द-गिर्द पूरा एक महीना हैं: अलाव, क्वाड्रिल्या नृत्य, मक्के से बने मीठे-नमकीन व्यंजन, और झंडियों से सजे चौक। इसकी जड़ में बसा संगीत फ़ोहो 2021 में IPHAN द्वारा ब्राज़ील की अमूर्त सांस्कृतिक धरोहर के रूप में दर्ज हुआ, और पूर्वोत्तर के शहरों के लिए जून साल का सबसे बड़ा पर्यटन और आय का मौसम है। धार्मिक पंचांग, कृषि पंचांग और शहरी अर्थव्यवस्था यहाँ एक ही तारीख़ों पर आ जुड़ते हैं।
+### date_rule BR festa-junina
+जून में, संत एंटनी/संत जॉन/संत पीटर के तीन संत दिवसों के आसपास
 ### customs CN farmers-harvest-festival
 मुख्यभूमि चीन का 'किसान फ़सल पर्व' नया है: पार्टी केंद्र की मंज़ूरी और राज्य परिषद की स्वीकृति से, 2018 से चंद्र पंचांग का **शरद विषुव** किसानों का अपना पर्व बना — राष्ट्रीय स्तर पर विशेष रूप से किसानों के लिए बनाया गया पहला पर्व। विषुव इसलिए चुना गया कि वहीं शरद की कटाई, जुताई और बुवाई मिलती हैं। यह सभी नागरिकों की छुट्टी नहीं, बल्कि नीति से शुरू हुआ आयोजन है जिसकी थीम हर साल कृषि व ग्रामीण मामलों का मंत्रालय तय करता है — यहाँ के बाक़ी चार फ़सल पर्वों से इसकी उत्पत्ति ठीक उलटी है। यह बहुत नया पर्व है: 2018 में बनाया गया और शरद विषुव पर रखा गया, यह चीन का पहला राष्ट्रीय पर्व है जो विशेष रूप से किसानों के लिए स्थापित हुआ। तिथि का चुनाव स्वयं उसकी अभिकल्पना बता देता है — यह न चंद्र पंचांग के पीछे चलता है न सप्ताह के, बल्कि चौबीस सौर कालखंडों में से शरद विषुव पर टँगा है, ताकि पूरा देश, उत्तर हो या दक्षिण, अपनी ही फ़सल-लय के भीतर पड़े। मनाने का तरीक़ा हर इलाक़े पर छोड़ा गया है, इसलिए एक ही दिन की अंतर्वस्तु प्रांतों में बहुत भिन्न होती है।
+### date_rule CN farmers-harvest-festival
+चंद्र कैलेंडर के अनुसार शरद विषुव (राज्य परिषद की स्वीकृति से स्थापित)
 ### customs JP kinro-kansha
 जापान में 23 नवंबर राष्ट्रीय अवकाश 'किनरो कांशा नो ही' है, जिसका घोषित उद्देश्य है श्रम का सम्मान करना, उत्पादन का उत्सव मनाना और एक-दूसरे के प्रति आभार जताना। यह तिथि पहले निइनामे-साई थी — वह शाही अनुष्ठान जिसमें सम्राट नई फ़सल देवताओं को अर्पित करते हैं। युद्धोत्तर अवकाश क़ानून बनाते समय तिथि रखी गई और कर्ता बदल दिया गया: शाही फ़सल अनुष्ठान पूरी जनता के आपसी श्रम-आभार का दिन बन गया। फ़सल अवकाश से ग़ायब नहीं हुई, पर उसे 'उत्पादन' नाम दे दिया गया। 23 नवंबर की तिथि इस अवकाश के नाम से कहीं पुरानी है: यह मूलतः वह फ़सल-कृतज्ञता अनुष्ठान था जिसमें सम्राट वर्ष का नया अन्न अर्पित कर स्वयं चखते थे। 1948 के राष्ट्रीय अवकाश अधिनियम ने इसे श्रम कृतज्ञता दिवस के रूप में फिर से लिखा, और उसका पाठ श्रम के सम्मान, उत्पादन के उत्सव और नागरिकों के परस्पर आभार की बात करता है — कृतज्ञता का विषय अन्न से हटकर श्रम हो गया, जबकि तिथि एक दिन भी नहीं खिसकी। उसी ख़ाने ने अपनी अंतर्वस्तु बदल ली, और अवकाश-तालिका पर यह पंक्ति आसानी से छूट जाती है।
+### date_rule JP kinro-kansha
+23 नवंबर (ग्रेगोरियन कैलेंडर पर निश्चित)
 ### customs TW farmers-day
 ताइवान का किसान दिवस शरद में नहीं, **वसंत के आरंभ** में पड़ता है — स्मृति-दिवस एवं अवकाश अधिनियम साफ़ कहता है: "किसान दिवस: लिचुन के दिन नियत।" यह अन्यत्र के फ़सल-दिवसों से उलटा है: थैंक्सगिविंग, किसान फ़सल पर्व, श्रम कृतज्ञता दिवस — सब फ़सल आ जाने के बाद बैठते हैं, जबकि यह काम शुरू होने से पहले बैठता है। यह जो चिह्नित करता है वह बटोरा हुआ नहीं, बल्कि खेत पर लौटने का तथ्य है। तिथि निश्चित मास-दिवस से नहीं बल्कि खगोल से तय होती है, इसलिए वह 3, 4 या 5 फ़रवरी को पड़ेगी — यह हर वर्ष केंद्रीय मौसम प्रशासन की पंचांग तालिकाओं में देखना पड़ता है। इस दिन छुट्टी नहीं होती।
 
+### date_rule TW farmers-day
+स्प्रिंग की शुरुआत यानी लीछुन (立春) के दिन तय होता है (स्मृति दिवस एवं अवकाश कार्यान्वयन अधिनियम के अनुसार; लीछुन की तारीख केंद्रीय मौसम प्रशासन (Central Weather Administration) की कैलेंडर डेटा तालिका के अनुसार तय होती है)
 ## locale id
 ### title
 Panen dan Rasa Syukur
@@ -157,17 +205,29 @@ Apakah panen menjadi hari raya, dan siapa yang berhak mendefinisikannya, dijawab
 Thanksgiving, Pongal, Festas Juninas, Hari Panen Petani, Kinro Kansha no Hi
 ### customs US thanksgiving
 Thanksgiving di Amerika Serikat adalah hari libur federal pada Kamis keempat bulan November. Titik beratnya kini adalah meja makan keluarga dan perjalanan jauh, bukan pertanian itu sendiri, dan belanja yang menyusul kerap lebih menyita perhatian daripada harinya. Ada yang memandangnya sebagai tradisi, ada yang menganggapnya kisah pendirian bangsa yang perlu ditinjau ulang, dan ada rumah tangga yang sekadar memakainya sebagai satu dari sedikit hari ketika semua orang bisa berkumpul.
+### date_rule US thanksgiving
+Kamis keempat bulan November
 ### customs IN pongal
 Pongal adalah hari panen Tamil di South India (India selatan), berlangsung empat hari, ditentukan oleh kalender Tamil dan masuknya matahari ke rasi Makara, biasanya jatuh pertengahan Januari. Nama perayaannya diambil dari masakannya: beras hasil panen baru direbus bersama susu dan gula merah sampai meluap dari bibir periuk, dan luapan itu dibaca sebagai tanda kelimpahan. Masing-masing dari empat hari punya sasarannya sendiri — matahari, sapi penarik bajak, rumah tangga, tetangga — sehingga ia sekaligus hari raya pertanian, ucapan terima kasih kepada hewan kerja, dan rangkaian kunjungan keluarga. Wilayah India lain menandai rentang yang sama dengan nama berbeda.
+### date_rule IN pongal
+Sekitar hari pertama bulan Thai dalam kalender Tamil, periode perayaan empat hari
 ### customs BR festa-junina
 Festa Juni di Brasil bukan satu hari, melainkan sebulan penuh yang tersusun di sekitar hari raya Katolik (Catholic) Santo Antonius, Santo Yohanes, dan Santo Petrus: api unggun, tarian quadrilha, penganan manis dan gurih dari jagung, serta alun-alun yang dihiasi umbul-umbul. Forró, musik yang menjadi akarnya, didaftarkan IPHAN sebagai warisan budaya takbenda Brasil pada 2021, dan kota-kota di Timur Laut memperlakukan musim Juni sebagai jendela pariwisata dan pendapatan terbesar sepanjang tahun. Kalender keagamaan, kalender pertanian, dan ekonomi kota bertumpuk pada tanggal yang sama.
+### date_rule BR festa-junina
+Bulan Juni, sekitar tiga hari orang suci yaitu Santo Antonius/Santo Yohanes/Santo Petrus
 ### customs CN farmers-harvest-festival
 Hari Panen Petani Tiongkok tergolong baru: disetujui Komite Sentral Partai dan dikukuhkan Dewan Negara, sejak 2018 ekuinoks musim gugur dalam penanggalan lunar menjadi hari raya bagi petani sendiri — hari raya tingkat nasional pertama yang dibuat khusus untuk mereka. Ekuinoks dipilih karena di situlah panen, pembajakan, dan penyemaian musim gugur bertemu. Ia bukan hari libur bagi seluruh warga, melainkan acara yang lahir dari kebijakan dan temanya ditetapkan tiap tahun oleh Kementerian Pertanian dan Urusan Pedesaan — asal-usulnya justru kebalikan dari empat hari panen lain di halaman ini yang tumbuh dari bawah. Ini perayaan yang sangat baru: dibentuk pada 2018 dan ditaruh pada ekuinoks musim gugur, ia perayaan nasional pertama di Tiongkok yang didirikan khusus bagi para petani. Pilihan tanggalnya sendiri menyatakan maksud rancangannya — ia tidak mengikuti kalender lunar maupun hari dalam pekan, melainkan dipatok pada ekuinoks musim gugur di antara dua puluh empat penanda matahari, sehingga seluruh negeri, utara maupun selatan, jatuh di dalam irama panennya sendiri. Cara merayakannya diserahkan kepada tiap daerah, sehingga isi hari yang sama sangat berbeda antarprovinsi.
+### date_rule CN farmers-harvest-festival
+Ekuinoks musim gugur menurut kalender lunar (ditetapkan dengan persetujuan Dewan Negara)
 ### customs JP kinro-kansha
 Di Jepang, 23 November adalah hari libur nasional Kinro Kansha no Hi, yang tujuannya dinyatakan sebagai menghormati kerja, merayakan produksi, dan saling berterima kasih. Tanggal itu sebelumnya adalah Niiname-sai, ritual kekaisaran ketika Kaisar mempersembahkan gabah baru kepada para dewa. Ketika undang-undang hari libur pascaperang disusun, tanggalnya dipertahankan dan subjeknya ditukar: ritual panen kekaisaran menjadi hari ketika seluruh rakyat saling berterima kasih atas kerja masing-masing. Panen tidak lenyap dari hari raya itu, tetapi diberi nama baru: 'produksi'. Tanggal 23 November jauh lebih tua daripada nama hari liburnya: semula ia ritual syukur panen ketika kaisar mempersembahkan dan mencicipi bulir baru tahun itu. Undang-Undang Hari Libur Nasional 1948 menuliskannya kembali sebagai Hari Syukur Buruh, naskahnya berbicara tentang memuliakan kerja, merayakan produksi, dan warga saling berterima kasih — sasaran syukurnya berpindah dari padi ke pekerjaan, sementara tanggalnya tak bergeser sehari pun. Kotak yang sama berganti isi, dan pada tabel hari libur itu baris yang mudah terlewat dibaca.
+### date_rule JP kinro-kansha
+23 November (tetap menurut kalender Masehi)
 ### customs TW farmers-day
 Hari Tani Taiwan bukan di musim gugur melainkan pada **awal musim semi** — Undang-Undang Hari Peringatan dan Hari Libur menyatakannya terang: "Hari Tani: ditetapkan pada hari Lichun." Itu kebalikan dari hari-hari panen di tempat lain: Thanksgiving, festival panen petani, Hari Syukur Buruh, semuanya duduk setelah panen masuk, sedangkan yang ini duduk sebelum pekerjaannya dimulai. Yang ditandainya bukan apa yang sudah terkumpul, melainkan kenyataan bahwa orang akan kembali ke sawah. Tanggalnya ditetapkan astronomi, bukan oleh bulan dan hari yang tetap, sehingga jatuh pada 3, 4, atau 5 Februari adalah sesuatu yang harus dicari tiap tahun pada tabel penanggalan Badan Cuaca Pusat. Hari itu bukan hari libur.
 
+### date_rule TW farmers-day
+Ditetapkan pada hari Awal Musim Semi (Lichun) (berdasarkan Undang-Undang Pelaksanaan Hari Peringatan dan Hari Libur; tanggal Lichun mengikuti tabel data kalender Badan Meteorologi Pusat (Central Weather Administration))
 ## locale pt-BR
 ### title
 Colheita e gratidão
@@ -177,13 +237,26 @@ Se a colheita vira feriado, e quem tem o direito de defini-la, recebe cinco resp
 Ação de Graças, Pongal, Festas Juninas, Festa da Colheita dos Agricultores, Dia de Gratidão ao Trabalho
 ### customs US thanksgiving
 Nos Estados Unidos, o Dia de Ação de Graças é feriado federal na quarta quinta-feira de novembro. Seu centro de gravidade hoje é a mesa da família e a viagem de longa distância, não a lavoura em si, e as compras do dia seguinte muitas vezes atraem mais atenção que a data. Há quem o trate como tradição, quem o veja como um relato de fundação que precisa ser reexaminado, e famílias que apenas o usam como um dos poucos dias do ano em que todos conseguem estar na mesma sala.
+### date_rule US thanksgiving
+Quarta quinta-feira de novembro
 ### customs IN pongal
 O Pongal é a festa da colheita tâmil do sul da Índia (South India), com quatro dias, marcada pelo calendário tâmil e pela entrada do sol em Capricórnio, caindo em geral em meados de janeiro. A festa leva o nome do prato: arroz recém-colhido fervido com leite e rapadura até transbordar da borda da panela, e o transbordamento é lido como sinal de fartura. Cada um dos quatro dias tem seu destinatário — o sol, o gado que puxa o arado, a casa, a vizinhança — de modo que é ao mesmo tempo festa agrícola, agradecimento aos animais de trabalho e ronda de visitas familiares. Outras regiões da Índia marcam a mesma janela com outros nomes.
+### date_rule IN pongal
+Por volta do primeiro dia do mês de Thai no calendário tâmil, um período festivo de quatro dias
 ### customs BR festa-junina
 As festas juninas brasileiras não são um dia, e sim um mês inteiro organizado em torno dos dias católicos de Santo Antônio, São João e São Pedro: fogueiras, quadrilha, doces e salgados de milho, praças enfeitadas de bandeirinhas. O forró, música que está na sua raiz, foi registrado pelo IPHAN como patrimônio cultural imaterial brasileiro em 2021, e cidades do Nordeste tratam o ciclo junino como a maior janela de turismo e faturamento do ano. Calendário religioso, calendário agrícola e economia urbana se empilham nas mesmas datas.
+### date_rule BR festa-junina
+Em junho, por volta dos dias dos três santos: Santo Antônio, São João e São Pedro
 ### customs CN farmers-harvest-festival
 A Festa da Colheita dos Agricultores da China continental é recente: aprovada pelo Comitê Central do Partido e confirmada pelo Conselho de Estado, desde 2018 o equinócio de outono no calendário lunar passou a ser uma festa dos próprios agricultores — a primeira em nível nacional criada especificamente para eles. O equinócio foi escolhido por ser onde a colheita, a aração e a semeadura de outono se encontram. Não é folga para todos os cidadãos, e sim uma ocasião iniciada por política pública, cujo tema é definido a cada ano pelo Ministério da Agricultura — origem exatamente inversa à das outras quatro festas de colheita desta página, que nasceram de baixo. Esta é uma festa muito nova: criada em 2018 e fixada no equinócio de outono, é a primeira festa de alcance nacional na China estabelecida especificamente para os agricultores. A escolha da data já enuncia a intenção do desenho — não segue o calendário lunar nem a semana, mas está presa ao equinócio de outono entre os vinte e quatro termos solares, de modo que o país inteiro, norte e sul, caia dentro do próprio ritmo de colheita. Como se marca fica a cargo de cada localidade, então o conteúdo do mesmo dia difere muito de província para província.
+### date_rule CN farmers-harvest-festival
+Equinócio de outono no calendário lunar (estabelecido com aprovação do Conselho de Estado)
 ### customs JP kinro-kansha
 No Japão, 23 de novembro é o feriado nacional Kinro Kansha no Hi, cuja finalidade declarada é honrar o trabalho, celebrar a produção e agradecer uns aos outros. A data era antes o Niiname-sai, o rito imperial em que o Imperador oferece o grão novo às divindades. Quando a lei de feriados do pós-guerra foi redigida, a data foi mantida e o sujeito trocado: um rito imperial de colheita virou um dia em que toda a população agradece o trabalho alheio. A colheita não sumiu do feriado, mas foi rebatizada de 'produção'. A data de 23 de novembro é bem mais velha que o nome do feriado: era o rito de ação de graças pela colheita em que o imperador oferecia e provava o grão novo do ano. A Lei dos Feriados Nacionais de 1948 reescreveu-a como Dia de Ação de Graças ao Trabalho, e seu texto fala em honrar o trabalho, celebrar a produção e os cidadãos agradecerem uns aos outros — o objeto da gratidão passou do grão ao trabalho, enquanto a data não se moveu um dia sequer. A mesma casa trocou de conteúdo, e essa é uma linha fácil de passar batido numa tabela de feriados.
+### date_rule JP kinro-kansha
+23 de novembro (fixo no calendário gregoriano)
 ### customs TW farmers-day
 O Dia do Agricultor em Taiwan não é no outono, mas no **começo da primavera** — a Lei das Datas Comemorativas e Feriados diz claramente: "Dia do Agricultor: fixado no dia de Lichun." É o inverso dos dias de colheita em outros lugares: o Thanksgiving, a festa da colheita dos agricultores, o Dia de Ação de Graças ao Trabalho, todos ficam depois de a safra entrar, enquanto este fica antes de o trabalho começar. O que ele marca não é o que se recolheu, e sim o fato de voltar à lavoura. A data é dada pela astronomia, não por um mês e dia fixos, de modo que cair em 3, 4 ou 5 de fevereiro é coisa para consultar a cada ano nas tabelas de calendário da Administração Meteorológica Central. Não é dia de folga.
+
+### date_rule TW farmers-day
+Definido no dia do Início da Primavera (Lichun) (conforme a Lei de Implementação dos Dias Comemorativos e Feriados; a data do Lichun segue a tabela de dados do calendário da Administração Central de Meteorologia)

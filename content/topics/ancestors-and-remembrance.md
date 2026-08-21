@@ -64,12 +64,20 @@ Qingming, Obon, Dia de Finados, and Memorial Day all remember people who have di
 Qingming, Obon, ancestors, remembrance, memorial days
 ### customs TW qingming
 In Taiwan, Qingming brings grave visits, cleaning, and family rites. Some people travel home early; others adapt the day to city life, family schedules, or personal belief.
+### date_rule TW qingming
+Around the 15th day after the Spring Equinox; the date varies slightly each year
 ### customs CN qingming
 China's Qingming combines grave visits, remembrance, and spring outings. Some families now use online memorials or quieter ways of marking the loss.
+### date_rule CN qingming
+Around 04-04 to 04-06 in the Gregorian calendar
 ### customs JP obon
 Obon is a time to welcome and see off ancestors. Returning home, tending graves, and local Bon odori are connected in some places, while dates and customs differ across Japan.
+### date_rule JP obon
+Most regions observe it from 08-13 to 08-16, though local dates may vary
 ### customs US memorial-day
 Memorial Day honours service members who died in military service. Flags at cemeteries, public ceremonies, and leisure can share the same weekend; it is not a festival for every deceased person.
+### date_rule US memorial-day
+The last Monday in May
 ### customs BR finados
 On Dia de Finados, many people visit cemeteries, leave flowers, and pray or remember quietly. Families, churches, and local communities mark the day in their own ways.
 
@@ -82,12 +90,20 @@ On Dia de Finados, many people visit cemeteries, leave flowers, and pray or reme
 清明節, お盆, 墓参り, 追悼, メモリアルデー
 ### customs TW qingming
 台湾の清明節では、墓参り、墓の手入れ、家族の祭祀が行われる。帰省する人もいれば、都市での暮らしや家族の予定に合わせて別の方法を選ぶ人もいる。
+### date_rule TW qingming
+春分の日から15日目頃、日付は毎年若干異なる
 ### customs CN qingming
 中国の清明節は、墓参りや追悼と春の行楽が重なる時期だ。家族で祭祀をするほか、オンラインで故人を偲ぶ家庭もある。
+### date_rule CN qingming
+西暦4月4日から4月6日前後
 ### customs JP obon
 日本のお盆では先祖を迎え、送り出す。帰省、墓の手入れ、盆踊りなどが地域の行事と結びつくが、日程と過ごし方には幅がある。
+### date_rule JP obon
+多くの地域では8月13日から8月16日、地域によって日付が異なる場合がある
 ### customs US memorial-day
 米国のメモリアルデーは、軍務中に亡くなった兵士を追悼する日だ。墓地の旗や式典が行われる一方、連休の余暇として過ごす人もいる。
+### date_rule US memorial-day
+5月の最終月曜日
 ### customs BR finados
 ブラジルのフィナードスには、墓参り、献花、祈りや静かな追憶がある。家庭、教会、地域によって一日の過ごし方は異なる。
 
@@ -100,12 +116,20 @@ On Dia de Finados, many people visit cemeteries, leave flowers, and pray or reme
 清明, 盂兰盆, 祭祖, 扫墓, 追思
 ### customs TW qingming
 台湾清明节常见扫墓、整理墓地和家族祭祀。有人提前返乡，也有人按照城市生活、家庭安排或个人信念改变做法。
+### date_rule TW qingming
+春分后第十五日左右，日期每年略有差异
 ### customs CN qingming
 中国清明节把扫墓、追思和踏青放在同一时节。除了家族祭祀，有些家庭也会用网络纪念或更安静的方式悼念逝者。
+### date_rule CN qingming
+公历04-04至04-06前后
 ### customs JP obon
 日本盂兰盆会迎接并送别祖先，返乡、整理墓地和盆踊等地方活动常常相连。日期和仪式因地区而异。
+### date_rule JP obon
+多数地区08-13至08-16，地方日期可能不同
 ### customs US memorial-day
 美国 Memorial Day 主要纪念服役期间死亡的军人。墓地插旗、公共典礼和家庭休闲可能同时存在，它不是纪念所有逝者的节日。
+### date_rule US memorial-day
+5月最后一个星期一
 ### customs BR finados
 巴西 Dia de Finados 常见前往墓园、献花、祈祷和追思。家庭、宗教团体与地方社群的做法并不相同。
 
@@ -118,12 +142,20 @@ On Dia de Finados, many people visit cemeteries, leave flowers, and pray or reme
 क़िंगमिंग, ओबोन, पूर्वज, स्मरण, समाधि
 ### customs TW qingming
 ताइवान में Qingming पर कब्रों की सफ़ाई, कब्रिस्तान जाना और पारिवारिक पूजा आम है। परिवार अपनी यात्रा, शहर की ज़िंदगी और निजी विश्वास के अनुसार तरीका बदल सकते हैं।
+### date_rule TW qingming
+वसंत विषुव के लगभग पंद्रहवें दिन बाद, तिथि हर साल थोड़ी भिन्न होती है
 ### customs CN qingming
 चीन में Qingming पर कब्र पर जाना, पूर्वजों को याद करना और वसंत की सैर साथ दिखाई देती है। कुछ परिवार ऑनलाइन स्मरण या शांत निजी रस्म चुनते हैं।
+### date_rule CN qingming
+ग्रेगोरियन कैलेंडर के अनुसार लगभग 04-04 से 04-06 के आसपास
 ### customs JP obon
 जापान का Obon पूर्वजों का स्वागत और विदाई करने का समय है। घर लौटना, कब्र की देखभाल और Bon odori अलग-अलग इलाक़ों में अलग रूप लेते हैं।
+### date_rule JP obon
+अधिकांश क्षेत्रों में 08-13 से 08-16 तक, स्थानीय तिथियाँ भिन्न हो सकती हैं
 ### customs US memorial-day
 अमेरिका का Memorial Day सैन्य सेवा में मारे गए लोगों को याद करता है। कब्रिस्तानों में झंडे और सार्वजनिक समारोह होते हैं, लेकिन यह हर मृत व्यक्ति का त्योहार नहीं है।
+### date_rule US memorial-day
+मई के अंतिम सोमवार
 ### customs BR finados
 ब्राज़ील में Dia de Finados पर लोग कब्रिस्तान जाते, फूल चढ़ाते और प्रार्थना या स्मरण करते हैं। परिवार और धार्मिक समुदाय अपने ढंग से दिन बिताते हैं।
 
@@ -136,12 +168,20 @@ Qingming, Obon, Dia de Finados, dan Memorial Day sama-sama berhubungan dengan me
 Qingming, Obon, leluhur, ziarah makam, mengenang
 ### customs TW qingming
 Di Taiwan, Qingming sering diisi dengan ziarah makam, membersihkan makam, dan ritual keluarga. Jadwal kerja, kehidupan kota, serta keyakinan pribadi ikut menentukan caranya.
+### date_rule TW qingming
+Sekitar hari ke-15 setelah Ekuinoks Musim Semi, tanggalnya sedikit berbeda setiap tahun
 ### customs CN qingming
 Qingming di Tiongkok menggabungkan ziarah makam, mengenang leluhur, dan bepergian di musim semi. Sebagian keluarga memakai memorial daring atau cara yang lebih pribadi.
+### date_rule CN qingming
+Sekitar tanggal 04-04 hingga 04-06 dalam kalender Masehi
 ### customs JP obon
 Obon di Jepang menjadi waktu untuk menyambut dan melepas leluhur. Pulang kampung, merawat makam, dan Bon odori hadir dalam bentuk yang berbeda menurut daerah.
+### date_rule JP obon
+Sebagian besar wilayah merayakannya dari 08-13 hingga 08-16, tanggal lokal dapat berbeda
 ### customs US memorial-day
 Memorial Day di Amerika Serikat mengenang anggota militer yang meninggal saat bertugas. Bendera di makam dan upacara publik dapat berdampingan dengan kegiatan liburan; ini bukan hari untuk semua orang yang wafat.
+### date_rule US memorial-day
+Senin terakhir bulan Mei
 ### customs BR finados
 Pada Dia de Finados di Brasil, orang mengunjungi makam, membawa bunga, berdoa, atau mengenang dalam hening. Keluarga, gereja, dan komunitas setempat memiliki kebiasaan masing-masing.
 
@@ -154,11 +194,19 @@ Qingming, Obon, Dia de Finados e Memorial Day lembram pessoas que morreram, mas 
 Qingming, Obon, ancestrais, cemitério, memória dos mortos
 ### customs TW qingming
 Em Taiwan, o Qingming costuma envolver visita ao túmulo, limpeza e ritos familiares. A vida urbana, os horários da família e a crença de cada pessoa mudam a forma de participar.
+### date_rule TW qingming
+Por volta do 15º dia após o Equinócio de Primavera; a data varia ligeiramente a cada ano
 ### customs CN qingming
 Na China, o Qingming reúne visita aos túmulos, lembrança dos antepassados e passeios de primavera. Algumas famílias recorrem a memoriais on-line ou a uma homenagem mais reservada.
+### date_rule CN qingming
+Por volta de 04-04 a 04-06 no calendário gregoriano
 ### customs JP obon
 No Japão, o Obon recebe e despede os ancestrais. Voltar para casa, cuidar dos túmulos e participar do Bon odori fazem parte de costumes que variam conforme a região.
+### date_rule JP obon
+Na maioria das regiões, de 13/08 a 16/08, mas as datas locais podem variar
 ### customs US memorial-day
 Nos Estados Unidos, o Memorial Day homenageia militares que morreram em serviço. Bandeiras nos cemitérios e cerimônias públicas convivem com o feriado prolongado; não é um dia dedicado a todos os mortos.
+### date_rule US memorial-day
+Última segunda-feira de maio
 ### customs BR finados
 No Dia de Finados, muitas pessoas visitam cemitérios, levam flores e rezam ou fazem uma lembrança silenciosa. Famílias, igrejas e comunidades locais têm maneiras próprias de marcar a data.

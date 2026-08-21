@@ -82,19 +82,31 @@ Every country here runs a national test that decides university places, but how 
 university entrance exam, gaokao, ENEM, entrance exam season, national exam
 ### customs TW gsat
 Taiwan's first stage is the General Scholastic Ability Test (GSAT), run by the College Entrance Examination Center over three consecutive days in late January; the brochure for the 116th academic year sets it at January 22–24, 2027. The GSAT is positioned as an ability test rather than the whole verdict: it determines application thresholds and which departments are open to a candidate, while admission still depends on each university's second-stage screening, which includes portfolio review and interviews. So January is not the end point for Taiwanese candidates but a narrowing of the field; the real sorting happens in the spring application and interview season, and for those who miss out, in July's Advanced Subjects Test.
+### date_rule TW gsat
+Late January every year, for three consecutive days; the dates are announced by the College Entrance Examination Center in its exam prospectus.
 ### customs TW ast
 The Advanced Subjects Test is Taiwan's second stage, two consecutive days in mid-July — July 10–11, 2027 for the 116th academic year. It mainly serves two groups: candidates who did not get the department they wanted through application, and those who planned to go through the placement route from the start. Unlike the GSAT's ability-test framing, this one tests subject depth and its scores feed directly into placement. Taiwan therefore has two peaks a year, January and July, with the application and interview season from March to May in between. That "two major exams in one year" structure is unusual among the seven places compared here.
+### date_rule TW ast
+Mid-July every year, for two consecutive days; the dates are announced by the College Entrance Examination Center in its exam prospectus.
 ### customs JP common-test
 Japan's Common Test for University Admissions is run by the National Center for University Entrance Examinations, on a rule rather than a fixed date: the first Saturday and Sunday on or after January 13. For the 2027 cycle that falls on January 16–17, with make-up sittings on January 23–24. The Common Test is followed by each university's own examination; national and public universities split these into early and late schedules. So Japan is two-stage like Taiwan, but arranged differently: the second stage is held by individual universities in February and March, and candidates for national and public universities file their choices after their Common Test scores are known — scores first, then choose, the reverse of Taiwan's apply-then-interview order.
+### date_rule JP common-test
+The first Saturday and Sunday on or after January 13, a two-day period.
 ### customs CN gaokao
 China's gaokao is the most concentrated of the seven. The Ministry of Education's 2026 admissions circular sets the national sitting for June 7 and 8, a date fixed since 2003 that does not move with the day of the week. What is distinctive is not only its brevity but that it is very nearly the sole gateway: the score determines which universities and majors a candidate may apply to, and institutions do not generally run their own entrance exams. During the exam cities reorganise around it — horns banned near test centres, construction halted, dedicated traffic lanes, and in some places shifted working hours to keep the school run clear. That scale of collective accommodation has no parallel in the other six.
 ### customs IN cbse-board
 India's Central Board of Secondary Education runs the Senior School Certificate Examination for Class XII in the opposite manner to most of the others: not compressed into a day or two but dispersed subject by subject across nearly two months. The 2026 schedule ran from February 17 to April 10, with one or several papers on a given day. India also has separate national professional entrance exams — JEE for engineering, NEET for medicine — conducted by the NTA on their own calendar. So an Indian candidate faces not one great examination but a stretch of weeks in which any day may carry a paper, followed by a second round of professional tests. The pressure is shaped as a long plateau rather than a spike.
+### date_rule IN cbse-board
+From mid-February to early April, tests are held separately for each subject; the dates are announced in CBSE's date sheet.
 ### customs ID utbk-snbt
 Indonesia's national selection test is the UTBK-SNBT, run by SNPMB, the national admissions committee, as a computer-based test whose results feed the SNBT route into state universities. The 2026 sitting was held in a single wave in late April, with registration from late March to early April and results in late May. Indonesia also has SNBP, a route with no test at all, based on school grades and the school's own standing, running earlier in the year. So the Indonesian structure runs two tracks in parallel — recommendation on record, and the common test — and candidates can try the first before committing to the second, unlike China's single road or Taiwan's two-stage relay.
+### date_rule ID utbk-snbt
+Late April, single round of computer-based testing; date announced annually by SNPMB
 ### customs BR enem
 Brazil's Enem, the National High School Examination, is run by Inep under the Ministry of Education across two Sundays a week apart: November 8 and November 15 in 2026. The first day covers languages, humanities and the essay; the second covers natural sciences and mathematics. Enem scores feed the SiSU placement system for federal and state universities and also govern access to ProUni scholarships and Fies student loans, so it functions as an entrance exam and a social policy gateway at once. Splitting the exam across two Sundays a week apart reduces the single-day load in a country of great distances and uneven transport — the opposite design choice to compressing a nation into the same two days.
 
+### date_rule BR enem
+Two Sundays in November, one week apart
 ## locale ja
 ### title
 受験シーズン
@@ -104,19 +116,31 @@ Brazil's Enem, the National High School Examination, is run by Inep under the Mi
 大学入学共通テスト, 受験, 高考, 大学入試, 入学試験
 ### customs TW gsat
 台湾の第一段階が学科能力測験(学測)である。大学入学試験センターが一月下旬に三日連続で実施し、一一六学年度の要項は民国一一六年一月二十二日から二十四日と定める。学測は「能力測験」と位置づけられ、それだけで合否が決まるものではない。出願の基準と選べる学科の範囲を決めるにとどまり、最終的な合格には各大学が行う第二段階の選考、すなわち書類審査と面接が必要となる。したがって台湾の受験生にとって一月は終点ではなく、選択肢を絞る一歩である。実際の振り分けは春の出願と面接、そして不合格だった者には七月の分科測験で行われる。
+### date_rule TW gsat
+毎年一月下旬、連続三日間。日程は大学入試センター(大考中心)の試験要項で公告される。
 ### customs TW ast
 分科測験は台湾の第二段階で、七月中旬に二日連続、一一六学年度は民国一一六年七月十日と十一日に置かれる。主な利用者は二種類ある。出願で志望の学科に届かず再挑戦する者と、初めから配分の経路を選んでいた者である。学測の「能力測験」という位置づけとは異なり、こちらは科目ごとの深さを問い、成績はそのまま配分に用いられる。台湾には一月と七月という二つの山があり、その間に三月から五月の出願と面接の時期が挟まる。「一年に大きな試験が二度ある」というこの構造は、本サイトが比較する七つの地域では珍しい。
+### date_rule TW ast
+毎年七月中旬、連続二日間。日程は大学入試センター(大考中心)の試験要項で公告される。
 ### customs JP common-test
 日本の大学入学共通テストは独立行政法人大学入試センターが実施し、日付は固定ではなく規則で決まる。一月十三日以降の最初の土曜と日曜の二日間である。令和九年度は一月十六日と十七日にあたり、追試験は一月二十三日と二十四日に予定される。共通テストの後に各大学の個別学力検査があり、国公立大学は前期日程と後期日程に分かれる。日本も台湾と同じく二段階だが、配置が異なる。第二段階は二月と三月に各大学が実施し、国公立大学の志願は共通テストの成績が判明した後に行う。点数を知ってから選ぶという順序であり、先に出願して面接に進む台湾とは逆である。
+### date_rule JP common-test
+一月十三日以降の最初の土曜・日曜の二日間。
 ### customs CN gaokao
 中国の高考は七つの地域で最も凝縮された試験である。教育部の二〇二六年の募集業務通知は全国統一試験を六月七日と八日に定めており、この日付は二〇〇三年以降固定で、曜日によって動かない。特徴は期間の短さだけではなく、それがほぼ唯一の入口である点にある。点数がどの大学のどの専攻に出願できるかを決め、各大学は原則として独自の入学試験を行わない。試験期間中、都市はそれに合わせて動きを変える。試験場周辺の警笛禁止、工事の停止、交通警察による専用通路、地域によっては送迎の混雑を避けるための勤務時間の調整まで行われる。この規模の社会的な配慮は他の六つの地域には見られない。
 ### customs IN cbse-board
 インドの中央中等教育委員会(CBSE)が実施する第十二学年の修了試験は、他の多くとは逆の作りになっている。一日か二日に圧縮するのではなく、科目ごとに二か月近くへ分散させるのである。二〇二六年の日程は二月十七日に始まり四月十日まで続き、日によって一科目から数科目が置かれた。インドにはこのほか、工学のJEE、医学のNEETという全国規模の専門入学試験があり、NTAが別の日程で実施する。したがってインドの受験生が向き合うのは一度の大試験ではなく、いつ試験が来てもおかしくない数週間の期間と、その後の専門試験である。重圧の形は尖った山ではなく長い台地に近い。
+### date_rule IN cbse-board
+二月中旬から四月上旬にかけて、科目ごとに分散して実施される。日程はCBSEのデートシート(date sheet)で公告される。
 ### customs ID utbk-snbt
 インドネシアの全国的な選抜試験はUTBK-SNBTで、全国新入生募集委員会SNPMBが実施する。形式はコンピュータ方式の試験(UTBK)で、その成績が国立大学への全国配分経路SNBTに用いられる。二〇二六年の実施は四月下旬の一回のみで、出願は三月下旬から四月初旬、結果は五月下旬に発表された。インドネシアには試験を伴わないSNBPという経路もあり、在学成績と出身校の実績に基づく推薦で、時期はより早い。つまりインドネシアは「成績による推薦」と「統一試験」の二つの経路を並行させ、受験生は前者を試してから後者に臨むことができる。単線の中国とも、二段階の台湾とも異なる設計である。
+### date_rule ID utbk-snbt
+4月下旬、単一回のコンピュータ方式試験。日程はSNPMBが毎年公告
 ### customs BR enem
 ブラジルのEnem(中等教育全国試験)は教育省傘下のInepが実施し、一週間隔てた二つの日曜に分けて行われる。二〇二六年は十一月八日と十一月十五日であった。初日は言語、人文、小論文、二日目は自然科学と数学を扱う。Enemの成績は連邦立および州立大学の配分制度SiSUに用いられるほか、ProUni奨学金やFies学資融資の可否にも連動する。入学試験であると同時に社会政策の入口でもある。一週間の間隔を置いた二つの日曜に分ける設計は、距離が長く交通条件の差も大きい国で一日あたりの負荷を下げるためのものであり、全国を同じ二日間に圧縮する中国とはちょうど逆の選択である。
 
+### date_rule BR enem
+11月の2つの日曜日、1週間の間隔
 ## locale zh-CN
 ### title
 大考季
@@ -126,19 +150,31 @@ Brazil's Enem, the National High School Examination, is run by Inep under the Mi
 高考, 大考, 学测, 共同测验, 大学入学考试
 ### customs TW gsat
 台湾是两段式的第一段。学科能力测验（学测）由大考中心办理，每年一月下旬连考三日，成绩同时供繁星推荐与个人申请使用；一一六学年度的简章把日期定在民国一一六年一月二十二日至二十四日。学测的定位是「能力测验」而非全部定生死——它决定的是申请门槛与可选校系范围，最终录取还要看各校自办的二阶甄试，包含书面审查与面试。所以台湾考生的一月不是终点，而是把选择范围缩小的一步；真正的分流在春天的申请与面试，以及没录取者七月的分科测验。
+### date_rule TW gsat
+每年一月下旬，连续三日；日期由大考中心考试简章公告
 ### customs TW ast
 分科测验是台湾的第二段，每年七月中旬连考两日，一一六学年度定在民国一一六年七月十日至十一日。它的使用者主要是两种人：申请入学没有录取理想校系而选择再拼一次的，以及一开始就打算走分发管道的。与学测的「能力测验」定位不同，分科测验考的是分科的深度，成绩直接用于分发。台湾因此形成一月与七月两个高峰，中间夹着三到五月的申请与面试期——这个「一年里有两次大考」的结构，在本站比较的七个地方里不多见。
+### date_rule TW ast
+每年七月中旬，连续两日；日期由大考中心考试简章公告
 ### customs JP common-test
 日本的大学入学共通测验由独立行政法人大学入试中心办理，日期规则是「一月十三日以后的第一个星期六与星期日」两天；令和九年度（二〇二七年）落在一月十六、十七日，追试（补考）则在一月二十三、二十四日。共通测验之后才是各大学自办的个别学力检查（二次试验），国公立大学分前期与后期日程。所以日本与台湾一样是两段式，但配置不同：日本的第二段由各校在二、三月自办，且国公立大学的志愿填报是在共通测验成绩出来之后——先知道分数再选学校，这与台湾先申请再面试的顺序相反。
+### date_rule JP common-test
+1月13日以后的第一个星期六与星期日这两天
 ### customs CN gaokao
 中国的高考是七个地方里最集中的一场。教育部二〇二六年的招生工作通知把全国统考定在六月七日、八日，这个日期自二〇〇三年起就固定下来，不随星期几移动。高考的特点不只是时间短，而是它几乎是唯一的入口——分数决定可以填报哪些学校与专业，各校原则上不另办入学考试。考试期间，城市会为它调整运作：考点周边禁鸣喇叭、工地停工、交警设专用通道、部分地方调整上班时间以避开接送尖峰。这种「全社会让路」的规模，是其他六个地方没有的。
 ### customs IN cbse-board
 印度的中央中等教育委员会（CBSE）办理十二年级的毕业会考，做法与其他六地相反：不是压缩成一两天，而是逐科分散在近两个月。二〇二六年的日程从二月十七日开始，一路排到四月十日，每天一到数科。印度另有全国性的专业入学考（工程类的 JEE、医学类的 NEET）由 NTA 另行办理，时间与会考错开。所以印度考生面对的不是「一场大考」，而是一段长达两个月、天天都可能有考试的期程，加上之后另一轮专业考试——压力的形状是拉长而不是尖峰。
+### date_rule IN cbse-board
+二月中旬至四月上旬，逐科分散施测；日期由CBSE的date sheet公告
 ### customs ID utbk-snbt
 印尼的全国性升学测验是 UTBK-SNBT，由 SNPMB（全国新生招生委员会）办理，形式是电脑化测验（UTBK），成绩用于国立大学的全国联合分发管道 SNBT。二〇二六年的施测期在四月下旬、只有一个梯次，报名在三月下旬到四月初，五月下旬放榜。印尼另有一条不考试的管道 SNBP，依在校成绩与学校排名推荐，时间更早。所以印尼的结构是「成绩推荐」与「统一测验」两条路并行，考生可以先试前者、再拼后者——与中国只有一条路、台湾两段接力的设计都不同。
+### date_rule ID utbk-snbt
+四月下旬，单一梯次计算机化施测；日期由SNPMB每年公告
 ### customs BR enem
 巴西的 Enem（中等教育全国考试）由教育部下辖的 Inep 办理，分两个星期日进行、中间隔一周：二〇二六年是十一月八日与十一月十五日。第一天考语言、人文与作文，第二天考自然科学与数学。Enem 的成绩用于联邦与州立大学的 SiSU 分发，也连动 ProUni 奖学金与 Fies 学贷，所以它同时是入学考与社会政策的入口。把考试拆成相隔一周的两个星期日，是为了在幅员辽阔、交通条件差异大的国家降低单日负荷——这个设计取向与中国把全国压在同两天，正好是相反的选择。
 
+### date_rule BR enem
+十一月的两个星期日，相隔一周
 ## locale hi
 ### title
 परीक्षा का मौसम
@@ -148,19 +184,31 @@ Brazil's Enem, the National High School Examination, is run by Inep under the Mi
 बोर्ड परीक्षा, सीबीएसई, प्रवेश परीक्षा, गाओकाओ, परीक्षा का मौसम
 ### customs TW gsat
 ताइवान का पहला चरण सामान्य शैक्षिक योग्यता परीक्षा (GSAT) है, जिसे कॉलेज प्रवेश परीक्षा केंद्र जनवरी के अंतिम दिनों में लगातार तीन दिन आयोजित करता है; 116वें शैक्षिक वर्ष की विवरणिका इसे 22 से 24 जनवरी 2027 तय करती है। GSAT को पूर्ण फ़ैसले के बजाय योग्यता परीक्षा माना जाता है: यह आवेदन की सीमा और कौन से विभाग खुले हैं, यह तय करती है, जबकि प्रवेश अब भी हर विश्वविद्यालय की दूसरे चरण की छँटनी पर निर्भर करता है, जिसमें पोर्टफ़ोलियो समीक्षा और साक्षात्कार शामिल हैं। इसलिए ताइवानी अभ्यर्थियों के लिए जनवरी अंतिम बिंदु नहीं, विकल्पों का संकुचन है; असली छँटाई वसंत के आवेदन और साक्षात्कार में होती है, और चूक जाने वालों के लिए जुलाई की उन्नत विषय परीक्षा में।
+### date_rule TW gsat
+हर वर्ष जनवरी के अंतिम सप्ताह में, लगातार तीन दिन; तिथियाँ कॉलेज एंट्रेंस परीक्षा केंद्र (大考中心) द्वारा परीक्षा विवरणिका में घोषित की जाती हैं।
 ### customs TW ast
 उन्नत विषय परीक्षा ताइवान का दूसरा चरण है, जुलाई के मध्य में लगातार दो दिन — 116वें शैक्षिक वर्ष के लिए 10 और 11 जुलाई 2027। यह मुख्यतः दो समूहों के काम आती है: वे जिन्हें आवेदन से मनचाहा विभाग नहीं मिला, और वे जिन्होंने आरंभ से ही नियोजन मार्ग चुना था। GSAT की योग्यता-परीक्षा वाली पहचान से अलग, यह विषय की गहराई जाँचती है और इसके अंक सीधे नियोजन में लगते हैं। इस तरह ताइवान में वर्ष में दो शिखर होते हैं, जनवरी और जुलाई, और बीच में मार्च से मई तक आवेदन और साक्षात्कार का मौसम। "एक वर्ष में दो बड़ी परीक्षाएँ" वाली यह बनावट यहाँ तुलना किए गए सात स्थानों में असामान्य है।
+### date_rule TW ast
+हर वर्ष जुलाई के मध्य में, लगातार दो दिन; तिथियाँ कॉलेज एंट्रेंस परीक्षा केंद्र (大考中心) द्वारा परीक्षा विवरणिका में घोषित की जाती हैं।
 ### customs JP common-test
 जापान की विश्वविद्यालय प्रवेश हेतु सामान्य परीक्षा राष्ट्रीय विश्वविद्यालय प्रवेश परीक्षा केंद्र चलाता है, और उसकी तारीख़ नियत नहीं बल्कि नियम से तय होती है: 13 जनवरी को या उसके बाद का पहला शनिवार और रविवार। 2027 के चक्र में यह 16–17 जनवरी पड़ती है, और पूरक बैठकें 23–24 जनवरी को। सामान्य परीक्षा के बाद हर विश्वविद्यालय की अपनी परीक्षा होती है; राष्ट्रीय और सार्वजनिक विश्वविद्यालय इन्हें आरंभिक और उत्तरवर्ती अनुसूचियों में बाँटते हैं। तो जापान ताइवान की तरह दो-चरणीय है, पर व्यवस्था भिन्न: दूसरा चरण फ़रवरी और मार्च में अलग-अलग विश्वविद्यालय कराते हैं, और राष्ट्रीय तथा सार्वजनिक विश्वविद्यालयों के अभ्यर्थी अपने अंक जानने के बाद विकल्प भरते हैं — पहले अंक, फिर चुनाव, जो ताइवान के पहले-आवेदन-फिर-साक्षात्कार क्रम से उलटा है।
+### date_rule JP common-test
+13 जनवरी के बाद आने वाला पहला शनिवार और रविवार, यानी दो दिन।
 ### customs CN gaokao
 चीन का गाओकाओ सातों में सबसे संकेंद्रित है। शिक्षा मंत्रालय के 2026 के प्रवेश परिपत्र ने राष्ट्रीय बैठक 7 और 8 जून तय की, एक ऐसी तिथि जो 2003 से नियत है और सप्ताह के दिन के साथ नहीं हटती। विशिष्ट बात केवल उसकी संक्षिप्तता नहीं, बल्कि यह है कि वह लगभग एकमात्र द्वार है: अंक तय करते हैं कि अभ्यर्थी किन विश्वविद्यालयों और विषयों में आवेदन कर सकता है, और संस्थान प्रायः अपनी प्रवेश परीक्षा नहीं कराते। परीक्षा के दौरान शहर उसके इर्द-गिर्द फिर से गोठ जाते हैं — केंद्रों के पास हॉर्न पर रोक, निर्माण कार्य ठप, यातायात के लिए समर्पित गलियाँ, और कहीं-कहीं आने-जाने की भीड़ टालने के लिए बदले हुए कार्यसमय। सामूहिक समायोजन का यह पैमाना शेष छह में कहीं नहीं मिलता।
 ### customs IN cbse-board
 भारत का केंद्रीय माध्यमिक शिक्षा बोर्ड कक्षा बारहवीं की वरिष्ठ विद्यालय प्रमाणपत्र परीक्षा अधिकांश अन्य से उलट ढंग से कराता है: एक या दो दिन में सिकोड़ने के बजाय विषय दर विषय लगभग दो महीनों में फैलाकर। 2026 की अनुसूची 17 फ़रवरी से 10 अप्रैल तक चली, किसी दिन एक और किसी दिन कई पर्चे। भारत में इसके अलावा राष्ट्रीय व्यावसायिक प्रवेश परीक्षाएँ भी हैं — अभियांत्रिकी के लिए JEE, चिकित्सा के लिए NEET — जिन्हें NTA अपनी अलग समय-सारणी पर कराता है। इसलिए भारतीय अभ्यर्थी के सामने एक महापरीक्षा नहीं, बल्कि कई सप्ताहों का ऐसा खंड होता है जिसमें किसी भी दिन पर्चा हो सकता है, और उसके बाद व्यावसायिक परीक्षाओं का दूसरा दौर। दबाव का आकार नुकीली चोटी नहीं, लंबा पठार है।
+### date_rule IN cbse-board
+फ़रवरी के मध्य से अप्रैल के प्रारंभ तक, विषयवार अलग-अलग तिथियों पर परीक्षाएँ आयोजित की जाती हैं; तिथियाँ CBSE की डेट शीट (date sheet) में घोषित की जाती हैं।
 ### customs ID utbk-snbt
 इंडोनेशिया की राष्ट्रीय चयन परीक्षा UTBK-SNBT है, जिसे राष्ट्रीय प्रवेश समिति SNPMB कंप्यूटर आधारित परीक्षा के रूप में कराती है और जिसके परिणाम राजकीय विश्वविद्यालयों के SNBT मार्ग में लगते हैं। 2026 की बैठक अप्रैल के अंतिम दिनों में एक ही चरण में हुई, पंजीकरण मार्च के अंत से अप्रैल के आरंभ तक और परिणाम मई के अंत में। इंडोनेशिया में SNBP नाम का एक ऐसा मार्ग भी है जिसमें कोई परीक्षा नहीं होती; वह विद्यालय के अंकों और विद्यालय की अपनी प्रतिष्ठा पर आधारित है और वर्ष में पहले चलता है। इस प्रकार इंडोनेशिया दो पटरियाँ साथ-साथ चलाता है — अभिलेख पर संस्तुति, और साझा परीक्षा।
+### date_rule ID utbk-snbt
+अप्रैल के अंत में, एकल चरण की कंप्यूटरीकृत परीक्षा; तिथि हर साल SNPMB द्वारा घोषित की जाती है
 ### customs BR enem
 ब्राज़ील का Enem, राष्ट्रीय माध्यमिक विद्यालय परीक्षा, शिक्षा मंत्रालय के अधीन Inep एक सप्ताह के अंतर वाले दो रविवारों में कराता है: 2026 में 8 नवंबर और 15 नवंबर। पहले दिन भाषाएँ, मानविकी और निबंध; दूसरे दिन प्राकृतिक विज्ञान और गणित। Enem के अंक संघीय और राज्य विश्वविद्यालयों की SiSU नियोजन प्रणाली में लगते हैं और ProUni छात्रवृत्ति तथा Fies शिक्षा ऋण तक पहुँच भी तय करते हैं, इसलिए वह एक साथ प्रवेश परीक्षा और सामाजिक नीति का द्वार है। एक सप्ताह के अंतर वाले दो रविवारों में बाँटना लंबी दूरियों और असमान परिवहन वाले देश में एक दिन का बोझ घटाता है — पूरे राष्ट्र को उन्हीं दो दिनों में सिकोड़ने के उलट चुनाव।
 
+### date_rule BR enem
+नवंबर के दो रविवार, एक सप्ताह के अंतराल पर
 ## locale id
 ### title
 Musim ujian masuk
@@ -170,19 +218,31 @@ Setiap negara yang dibandingkan di sini menjalankan ujian nasional yang menentuk
 UTBK, SNBT, SNPMB, ujian masuk perguruan tinggi, musim ujian
 ### customs TW gsat
 Tahap pertama Taiwan adalah General Scholastic Ability Test (GSAT), diselenggarakan Pusat Ujian Masuk Perguruan Tinggi selama tiga hari berturut-turut pada akhir Januari; panduan tahun akademik ke-116 menetapkannya pada 22–24 Januari 2027. GSAT diposisikan sebagai tes kemampuan, bukan vonis keseluruhan: ia menentukan ambang pendaftaran dan jurusan mana yang terbuka, sementara kelulusan masih bergantung pada seleksi tahap kedua tiap universitas, yang mencakup penilaian berkas dan wawancara. Jadi Januari bukan titik akhir bagi peserta Taiwan, melainkan penyempitan pilihan; penyortiran sesungguhnya terjadi pada musim pendaftaran dan wawancara di musim semi, dan bagi yang belum diterima, pada Ujian Mata Pelajaran Lanjutan bulan Juli.
+### date_rule TW gsat
+Akhir Januari setiap tahun, selama tiga hari berturut-turut; tanggalnya diumumkan oleh Pusat Ujian Masuk Perguruan Tinggi (大考中心) dalam buku panduan ujian.
 ### customs TW ast
 Ujian Mata Pelajaran Lanjutan adalah tahap kedua Taiwan, dua hari berturut-turut pada pertengahan Juli — 10–11 Juli 2027 untuk tahun akademik ke-116. Ia terutama melayani dua kelompok: peserta yang tidak memperoleh jurusan yang diinginkan lewat pendaftaran, dan mereka yang sejak awal menempuh jalur penempatan. Berbeda dari pembingkaian GSAT sebagai tes kemampuan, yang ini menguji kedalaman mata pelajaran dan nilainya langsung dipakai untuk penempatan. Taiwan karena itu punya dua puncak setahun, Januari dan Juli, dengan musim pendaftaran dan wawancara dari Maret sampai Mei di antaranya. Struktur "dua ujian besar dalam satu tahun" ini tidak umum di antara tujuh tempat yang dibandingkan di sini.
+### date_rule TW ast
+Pertengahan Juli setiap tahun, selama dua hari berturut-turut; tanggalnya diumumkan oleh Pusat Ujian Masuk Perguruan Tinggi (大考中心) dalam buku panduan ujian.
 ### customs JP common-test
 Ujian Bersama Masuk Universitas Jepang diselenggarakan Pusat Nasional Ujian Masuk Universitas, dengan tanggal yang ditentukan bukan oleh angka tetap melainkan oleh aturan: Sabtu dan Minggu pertama pada atau setelah 13 Januari. Untuk siklus 2027 itu jatuh pada 16–17 Januari, dengan ujian susulan pada 23–24 Januari. Setelah Ujian Bersama barulah ujian masing-masing universitas; universitas negeri dan publik membaginya menjadi jadwal awal dan akhir. Jadi Jepang dua tahap seperti Taiwan, tetapi susunannya berbeda: tahap kedua digelar tiap universitas pada Februari dan Maret, dan pendaftar universitas negeri mengisi pilihan setelah nilai Ujian Bersama mereka diketahui — nilai dulu, baru memilih, kebalikan dari urutan mendaftar-lalu-wawancara di Taiwan.
+### date_rule JP common-test
+Sabtu dan Minggu pertama setelah tanggal 13 Januari, selama dua hari.
 ### customs CN gaokao
 Gaokao Tiongkok adalah yang paling terpusat dari tujuh ini. Surat edaran penerimaan Kementerian Pendidikan 2026 menetapkan pelaksanaan nasional pada 7 dan 8 Juni, tanggal yang tetap sejak 2003 dan tidak bergeser mengikuti hari dalam pekan. Yang khas bukan hanya keringkasannya, melainkan bahwa ia nyaris satu-satunya gerbang: nilai menentukan universitas dan program studi mana yang boleh dilamar, dan perguruan tinggi umumnya tidak menggelar ujian masuk sendiri. Selama ujian, kota-kota menata ulang diri di sekitarnya — larangan membunyikan klakson di dekat lokasi ujian, penghentian pekerjaan konstruksi, jalur khusus lalu lintas, dan di sejumlah tempat jam kerja digeser agar antar-jemput tidak berdesakan. Skala penyesuaian bersama seperti ini tidak ada bandingannya di enam tempat lain.
 ### customs IN cbse-board
 Central Board of Secondary Education India menggelar Senior School Certificate Examination untuk Kelas XII dengan cara yang berlawanan dari kebanyakan lainnya: bukan dipadatkan menjadi satu atau dua hari, melainkan disebar mata pelajaran demi mata pelajaran hampir dua bulan. Jadwal 2026 berlangsung dari 17 Februari sampai 10 April, dengan satu atau beberapa naskah pada hari tertentu. India juga punya ujian masuk profesional nasional yang terpisah — JEE untuk teknik, NEET untuk kedokteran — diselenggarakan NTA pada kalendernya sendiri. Jadi peserta India menghadapi bukan satu ujian besar, melainkan rentang berminggu-minggu yang setiap harinya bisa membawa naskah, disusul putaran kedua ujian profesional. Bentuk tekanannya adalah dataran panjang, bukan puncak yang runcing.
+### date_rule IN cbse-board
+Pertengahan Februari hingga awal April, ujian dilaksanakan secara terpisah per mata pelajaran; tanggalnya diumumkan dalam date sheet CBSE.
 ### customs ID utbk-snbt
 Ujian seleksi nasional Indonesia adalah UTBK-SNBT, diselenggarakan SNPMB selaku panitia penerimaan nasional, berupa ujian berbasis komputer yang hasilnya dipakai untuk jalur SNBT ke perguruan tinggi negeri. Pelaksanaan 2026 digelar dalam satu gelombang pada akhir April, dengan pendaftaran dari akhir Maret sampai awal April dan pengumuman pada akhir Mei. Indonesia juga punya SNBP, jalur tanpa ujian sama sekali, yang bertumpu pada nilai rapor dan rekam jejak sekolah, dan berjalan lebih awal dalam tahun itu. Jadi struktur Indonesia menjalankan dua jalur berdampingan — rekomendasi atas rekam jejak, dan ujian bersama — dan peserta dapat mencoba yang pertama sebelum menaruh harapan pada yang kedua, tidak seperti jalan tunggal Tiongkok atau estafet dua tahap Taiwan.
+### date_rule ID utbk-snbt
+Akhir April, satu gelombang ujian berbasis komputer; tanggal diumumkan setiap tahun oleh SNPMB
 ### customs BR enem
 Enem Brasil, Ujian Nasional Sekolah Menengah, diselenggarakan Inep di bawah Kementerian Pendidikan pada dua hari Minggu berjarak sepekan: 8 November dan 15 November pada 2026. Hari pertama mencakup bahasa, humaniora, dan esai; hari kedua mencakup ilmu alam dan matematika. Nilai Enem dipakai sistem penempatan SiSU untuk universitas federal dan negeri, dan juga menentukan akses ke beasiswa ProUni serta pinjaman pendidikan Fies, sehingga ia sekaligus ujian masuk dan pintu kebijakan sosial. Membelah ujian ke dua hari Minggu berjarak sepekan mengurangi beban satu hari di negara berjarak jauh dengan transportasi yang tidak merata — pilihan rancangan yang berlawanan dengan memadatkan satu bangsa ke dalam dua hari yang sama.
 
+### date_rule BR enem
+Dua hari Minggu di bulan November, berjarak satu minggu
 ## locale pt-BR
 ### title
 Temporada de provas
@@ -192,15 +252,28 @@ Todos os países comparados aqui aplicam um exame nacional que decide as vagas n
 Enem, vestibular, exame nacional, SiSU, temporada de provas
 ### customs TW gsat
 A primeira etapa de Taiwan é o Teste Geral de Aptidão Escolar (GSAT), aplicado pelo Centro de Exames de Ingresso Universitário em três dias consecutivos no fim de janeiro; o edital do 116º ano letivo o fixa em 22 a 24 de janeiro de 2027. O GSAT é apresentado como teste de aptidão e não como veredito completo: define o patamar de candidatura e quais cursos ficam abertos, enquanto a admissão ainda depende da triagem de segunda etapa de cada universidade, que inclui análise de portfólio e entrevista. Janeiro, portanto, não é o ponto final para os candidatos taiwaneses, e sim um estreitamento do campo; a seleção real acontece na temporada de candidatura e entrevistas da primavera e, para quem não passa, no Exame de Disciplinas Avançadas de julho.
+### date_rule TW gsat
+No final de janeiro de cada ano, por três dias consecutivos; as datas são anunciadas pelo Centro de Exames de Admissão Universitária (大考中心) em seu prospecto de exame.
 ### customs TW ast
 O Exame de Disciplinas Avançadas é a segunda etapa de Taiwan, dois dias consecutivos em meados de julho — 10 e 11 de julho de 2027 para o 116º ano letivo. Atende sobretudo dois grupos: quem não conseguiu o curso desejado pela via da candidatura e quem já pretendia seguir pela via de distribuição desde o início. Diferentemente do enquadramento do GSAT como teste de aptidão, este avalia profundidade por disciplina e suas notas alimentam diretamente a distribuição. Taiwan tem assim dois picos por ano, janeiro e julho, com a temporada de candidatura e entrevistas de março a maio no intervalo. Essa estrutura de "dois grandes exames em um ano" é incomum entre os sete lugares comparados aqui.
+### date_rule TW ast
+Em meados de julho de cada ano, por dois dias consecutivos; as datas são anunciadas pelo Centro de Exames de Admissão Universitária (大考中心) em seu prospecto de exame.
 ### customs JP common-test
 O Exame Comum de Ingresso Universitário do Japão é aplicado pelo Centro Nacional de Exames de Ingresso, com data definida por regra e não por número fixo: o primeiro sábado e domingo em 13 de janeiro ou depois. No ciclo de 2027 isso recai em 16 e 17 de janeiro, com sessões de reposição em 23 e 24 de janeiro. Depois do Exame Comum vem a prova de cada universidade; as instituições nacionais e públicas as dividem em calendários inicial e tardio. O Japão é, portanto, de duas etapas como Taiwan, mas com arranjo diferente: a segunda etapa é realizada pelas universidades em fevereiro e março, e os candidatos às nacionais e públicas registram suas escolhas depois de conhecerem a nota do Exame Comum — primeiro a nota, depois a escolha, o inverso da ordem taiwanesa de candidatar-se e então entrevistar.
+### date_rule JP common-test
+O primeiro sábado e domingo a partir de 13 de janeiro, um período de dois dias.
 ### customs CN gaokao
 O gaokao chinês é o mais concentrado dos sete. A circular de admissões de 2026 do Ministério da Educação fixa a aplicação nacional em 7 e 8 de junho, data estabelecida desde 2003 e que não se desloca conforme o dia da semana. O que a distingue não é apenas a brevidade, mas o fato de ser quase o único portão: a nota determina a quais universidades e cursos o candidato pode concorrer, e as instituições em geral não aplicam exames próprios. Durante a prova, as cidades se reorganizam em torno dela — buzinas proibidas perto dos locais de exame, obras paralisadas, faixas de trânsito dedicadas e, em alguns lugares, horários de trabalho alterados para desafogar o transporte dos candidatos. Essa escala de acomodação coletiva não tem paralelo nos outros seis.
 ### customs IN cbse-board
 O Conselho Central de Educação Secundária da Índia aplica o Exame de Certificado de Ensino Médio da Classe XII de maneira oposta à da maioria: em vez de comprimir em um ou dois dias, dispersa disciplina por disciplina ao longo de quase dois meses. O calendário de 2026 foi de 17 de fevereiro a 10 de abril, com uma ou várias provas em cada dia. A Índia tem ainda exames nacionais de ingresso profissional separados — JEE para engenharia, NEET para medicina — conduzidos pela NTA em calendário próprio. O candidato indiano enfrenta, portanto, não um grande exame, mas um período de semanas em que qualquer dia pode trazer uma prova, seguido de uma segunda rodada de exames profissionais. A pressão tem a forma de um platô longo, não de um pico.
+### date_rule IN cbse-board
+De meados de fevereiro a início de abril, os exames são realizados separadamente por disciplina; as datas são anunciadas na date sheet do CBSE.
 ### customs ID utbk-snbt
 O exame nacional de seleção da Indonésia é o UTBK-SNBT, aplicado pelo SNPMB, o comitê nacional de admissões, como prova baseada em computador cujos resultados alimentam a via SNBT de ingresso nas universidades estatais. A aplicação de 2026 ocorreu em uma única leva no fim de abril, com inscrições do fim de março ao início de abril e resultados no fim de maio. A Indonésia mantém também o SNBP, uma via sem prova alguma, baseada nas notas escolares e no histórico da própria escola, que corre mais cedo no ano. A estrutura indonésia roda, assim, duas vias em paralelo — recomendação por histórico e exame comum — e o candidato pode tentar a primeira antes de apostar na segunda, diferentemente da estrada única chinesa ou do revezamento em duas etapas de Taiwan.
+### date_rule ID utbk-snbt
+Final de abril, uma única rodada de teste computadorizado; data anunciada anualmente pelo SNPMB
 ### customs BR enem
 O Enem, Exame Nacional do Ensino Médio, é aplicado pelo Inep, vinculado ao Ministério da Educação, em dois domingos separados por uma semana: 8 e 15 de novembro em 2026. O primeiro dia cobre linguagens, ciências humanas e a redação; o segundo cobre ciências da natureza e matemática. As notas do Enem alimentam o SiSU para universidades federais e estaduais e também governam o acesso às bolsas do ProUni e ao financiamento do Fies, de modo que o exame funciona ao mesmo tempo como prova de ingresso e como porta de política social. Dividi-lo em dois domingos separados por uma semana reduz a carga de um único dia num país de grandes distâncias e transporte desigual — a escolha de projeto oposta à de comprimir uma nação nos mesmos dois dias.
+
+### date_rule BR enem
+Dois domingos de novembro, com uma semana de intervalo

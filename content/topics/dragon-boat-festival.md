@@ -76,14 +76,24 @@ The fifth day of the fifth lunar month is a public holiday in both Taiwan and ma
 Dragon Boat Festival, Duanwu, zongzi, dragon boat racing, Tango no Sekku, Children's Day Japan
 ### customs TW duanwu
 In Taiwan the Dragon Boat Festival is a paid public holiday under the Act on Commemorative Days and Holidays, falling on the fifth day of the fifth lunar month, so its Gregorian date moves each year. The common parts are wrapping and eating zongzi, dragon boat races, hanging mugwort and calamus, and wearing scented pouches; some people only stand an egg upright at noon. It is also one of the three major festivals, so the homecoming and the family meal often outweigh the ritual. How far a household takes it varies a great deal. Duanwu is also one of the three annual festivals in Taiwan, standing with Mid-Autumn and Lunar New Year as a point at which accounts are settled and gift boxes sent — a commercial meaning that has nothing to do with boats yet is another reason the day is remembered each year. Household practice adds standing an egg on its end and drawing noon water around midday; neither needs a river, so both continue in cities with no race at all.
+### date_rule TW duanwu
+The 5th day of the 5th lunar month; the Gregorian calendar date varies each year
 ### customs CN duanwu
 Mainland China lists Duanwu among the days off for all citizens in the national holiday regulation. It was published in the very first batch of national intangible cultural heritage in 2006 under the code X-3, and is now administered by the Ministry of Culture and Tourism. The listing names commemorating historical figures, dragon boat racing, eating zongzi, and a whole set of practices for warding off the 'five poisons': paper-cut charms, hanging mugwort and calamus, scented pouches, and herbal baths. In the register the festival is a plural set of customs, not a single image.
+### date_rule CN duanwu
+The 5th day of the 5th lunar month; the Gregorian calendar date varies each year
 ### customs CN luodian-dragon-boat
 Within the same festival, the dragon boat custom of Luodian in Shanghai is listed as a national intangible heritage item in its own right. That tells you something: dragon boating is not one nationally uniform race but a set of local traditions with their own rules, hull shapes, and ceremonies, some of which are judged worth protecting separately. Looking only at the nationwide picture of 'how Duanwu is kept' misses this layer entirely.
+### date_rule CN luodian-dragon-boat
+Around the 5th day of the 5th lunar month, according to local arrangements
 ### customs CN jiangcun-dragon-boat
 A second dragon boat custom is listed separately under the same code X-3: the Jiangcun Dragon Boat Gathering in the Xihu district of Hangzhou, Zhejiang, published in the third batch in 2011. Residents organise it themselves on the day of Duanwu, and the story told is that the Qianlong Emperor, travelling south, found the racing at Jiangcun as lively as a market fair and bestowed the name 'Dragon Boat Gathering'. One to two hundred boats converge at Shentankou in the Xixi wetland, perform along a set route, and finish with a full turn in the centre; households wrap zongzi, hang mugwort and calamus, and eat the 'five yellows', with each village then dining together afterwards.
+### date_rule CN jiangcun-dragon-boat
+On the 5th day of the 5th lunar month, Jiangcun, Xihu District, Hangzhou City, Zhejiang Province
 ### customs ID peh-cun
 Indonesia has dragon boats too, and not as a recent import: Peh Cun — written locally as Petjoen — is held on the Cisadane River in the city of Tangerang by the Cina Benteng, the Chinese community around the old Batavia fortress, on the same fifth day of the fifth lunar month. At the centre is a sacred boat unsealed only once a year: opened, bathed and blessed before any racing happens, alongside throwing rice dumplings into the river, standing eggs on end and releasing ducks. The Tangerang city government lists it among the city's intangible cultural heritage. Elsewhere on this page the comparison is one festival across countries; here it is one festival that travelled with people for three centuries.
+### date_rule ID peh-cun
+The 5th day of the 5th lunar month (Go Gwe Ce Go)
 ### customs JP tango-no-sekku
 Japan fixes 5 May as the national holiday Kodomo no Hi, on the Gregorian calendar, so it does not move with the lunar year. The statutory purpose recorded by the Cabinet Office is to respect a child's character, work for a child's happiness, and thank the mother — legally it is not aimed only at boys. The date landed on 5 May because an earlier proposal to merge the 3 March doll festival with the 5 May Tango no Sekku onto 3 May was dropped once 3 May became Constitution Day. The Ministry of Health, Labour and Welfare has held a carp-streamer raising ceremony on this day since before the war. The 1948 Act on National Holidays set the fifth of May as Children's Day, and the text speaks of respecting children's character, seeking their happiness — and thanking mothers. A day that began as the boys' seasonal festival was, on becoming a statutory holiday, rewritten to give thanks to mothers as well, and that turn can be read in the provision itself. The iris bath and the carp streamers stayed in custom and never entered the law.
 
@@ -96,14 +106,24 @@ Japan fixes 5 May as the national holiday Kodomo no Hi, on the Gregorian calenda
 端午節, ちまき, ドラゴンボート, 端午の節句, こどもの日, 鯉のぼり
 ### customs TW duanwu
 台湾の端午節は紀念日及節日実施条例により一日の祝日で、旧暦五月五日にあたるため新暦の日付は毎年変わる。ちまきを包んで食べる、龍舟の競漕、ヨモギとショウブを掛ける、香り袋を身につけるなどが一般的で、正午に卵を立てるだけの人もいる。三大節の一つでもあるので、儀礼そのものより帰省と家族の食事の比重が大きいことが多い。どこまでやるかは家庭差が大きい。端午は台湾において一年三節の一つでもあり、中秋・旧正月と並んで、掛けを清算し贈答の箱を送る節目とされる。舟とは関わりのない商いの意味だが、この日が毎年覚えられるもう一つの理由になっている。家庭ではさらに、正午前後に卵を立て、午の刻の水を汲む。いずれも川を必要としないため、競漕のない都市でも変わらず続く。
+### date_rule TW duanwu
+旧暦5月5日。新暦(グレゴリオ暦)の日付は毎年異なる
 ### customs CN duanwu
 中国大陸は端午節を全国年節及紀念日放假辦法の全国民の休日に含めている。2006年の第一次公布で国家級無形文化遺産（番号 Ⅹ-3）となり、現在は文化観光部が保護を担う。名録が挙げる中心的な活動は歴史上の人物の記念、龍舟競漕、ちまき、そして「五毒除け」の一連の作法——端午符の切り紙、ヨモギとショウブ、香り袋、蘭湯の沐浴である。名録の中でこの節句は複数の習俗の集合であり、単一の画像ではない。
+### date_rule CN duanwu
+旧暦5月5日。新暦(グレゴリオ暦)の日付は毎年異なる
 ### customs CN luodian-dragon-boat
 同じ端午の中で、上海・羅店の龍船習俗は**単独で**国家級無形文化遺産に登録されている。これが示すのは、龍舟が全国一律の競技ではなく、規定も船形も儀礼も土地ごとに異なる地域の伝統であり、その一部が個別に保護対象と判断されているということだ。全国的な画だけを見ると、この層がまるごと抜け落ちる。
+### date_rule CN luodian-dragon-boat
+旧暦5月5日前後、現地の取り決めによる
 ### customs CN jiangcun-dragon-boat
 同じ番号Ⅹ-3の下に、単独で登録されたもう一つの龍舟習俗がある。浙江省杭州市西湖区の「蒋村龍舟勝会」で、2011年に第三次で公布された。端午の当日に住民が自ら組織するもので、乾隆帝が江南を巡ったとき、蒋村の龍舟が市の賑わいのようだとして「龍舟勝会」の名を賜ったと伝えられる。当日は百から二百艘の龍舟が西渓湿地の深潭口に集まり、定められた経路で演技し、最後に中心で三百六十度回転する。各家はちまきを包み、ヨモギとショウブを掛け、「五黄」を食べ、終了後は村ごとに会食する。
+### date_rule CN jiangcun-dragon-boat
+旧暦5月5日当日、浙江省杭州市西湖区蒋村
 ### customs ID peh-cun
 インドネシアにも龍舟がある。しかも近年の輸入ではない。タンゲラン市のPeh Cun(現地表記はPetjoen)は、 旧バタヴィア要塞一帯の華人社会「チナ・ベンテン」がチサダネ川で行うもので、同じく旧暦五月五日に当たる。 中心にあるのは年に一度だけ封を解かれる聖なる舟である。開け、清め、祈ってから、はじめて競漕に入る。 あわせて川に粽を投げ、卵を立て、鴨を放つ。タンゲラン市政府はこれを市の無形文化遺産に挙げている。 このページの他の地域が語るのは「同じ祭りの国ごとの姿」だが、インドネシアのこの欄が語るのは 「同じ祭りが人とともに三百年を旅した」ことである。
+### date_rule ID peh-cun
+旧暦5月5日(Go Gwe Ce Go)
 ### customs JP tango-no-sekku
 日本は五月五日を国民の祝日「こどもの日」と定めており、新暦の日付なので旧暦に合わせて動くことはない。内閣府が示す法定の趣旨は「こどもの人格を重んじ、こどもの幸福をはかるとともに、母に感謝する」であり、法律上は男の子だけを対象としたものではない。五月五日になったのは、三月三日のひな祭りと五月五日の端午の節句を合わせて五月三日とする案があったものの、五月三日が憲法記念日となったため、季節のよい五月五日が採られたからである。厚生労働省は戦前からこの日に鯉のぼり掲揚式を行っている。一九四八年の国民の祝日に関する法律は五月五日を「こどもの日」と定めた。条文は、こどもの人格を重んじ、こどもの幸福をはかるとともに、「母に感謝する」と記す。男の子の節句を前身とする日が、法定の祝日となる際に母への感謝をも併せ持つ日として書き直された——その転回は条文そのものに読み取れる。菖蒲湯と鯉のぼりは民間に残り、法には入らなかった。
 
@@ -116,14 +136,24 @@ Japan fixes 5 May as the national holiday Kodomo no Hi, on the Gregorian calenda
 端午节、粽子、龙舟、立蛋、端午の節句、こどもの日
 ### customs TW duanwu
 台湾的端午节依《纪念日及节日实施条例》放假一日，日期是农历五月初五，换算成公历每年不同。常见的是包粽子与吃粽子、龙舟竞渡、挂艾草菖蒲、戴香包，也有人只在中午立蛋。它同时是三大节之一，所以返乡与家庭聚餐的分量往往大过仪式本身；做到哪一步，家庭之间差别很大。端午在台湾也是一年三节之一，与中秋、农历年并列为传统上结清帐款、致送礼盒的节点，这层商业意义与划船无关，却是它每年被记住的另一个理由。当天的家常做法还有立蛋与取午时水：正午前后把蛋立起来、把水装起来，两者都不需要河，因此在没有龙舟赛的城市也照样进行。
+### date_rule TW duanwu
+农历五月初五，公历日期每年不同
 ### customs CN duanwu
 中国大陆把端午节列入《全国年节及纪念日放假办法》全体公民放假的节日。它在2006年第一批就被公布为国家级非物质文化遗产（编号 Ⅹ-3），主管单位是文化和旅游部。名录列的核心活动是纪念历史人物、划龙舟、吃粽子，以及一整套“防五毒”的做法：贴端午符剪纸、挂艾草菖蒲、佩香包、兰汤沐浴。同一个节日在名录里是复数的习俗集合，不是单一画面。
+### date_rule CN duanwu
+农历五月初五，公历日期每年不同
 ### customs CN luodian-dragon-boat
 同一个端午之下，上海罗店的划龙船习俗被**单独**列入国家级非物质文化遗产名录。这说明一件事：龙舟不是一种全国统一的比赛，而是各地各有规制、各有船式与仪节的地方传统，其中一部分被认定为值得单独保护的项目。看“端午怎么过”如果只看全国性的画面，会漏掉这一层。
+### date_rule CN luodian-dragon-boat
+农历五月初五前后，依当地安排
 ### customs CN jiangcun-dragon-boat
 同一个编号 Ⅹ-3 底下还有第二个被单独列入的龙舟习俗：浙江杭州西湖区的“蒋村龙舟胜会”，2011年以第三批公布。它由居民在端午当天自发组织，据传乾隆下江南时见蒋村划龙舟热闹如赶集，御赐“龙舟胜会”之名。当天有一两百条龙舟汇聚在西溪湿地的深潭口“胜漾”，按规定路线表演，最后在中心做360度旋转；家家裹粽、挂艾叶菖蒲、吃“五黄”，结束后以村为单位聚餐。
+### date_rule CN jiangcun-dragon-boat
+农历五月初五当日，浙江省杭州市西湖区蒋村
 ### customs ID peh-cun
 印尼也有龙舟，而且不是近年才引进的：丹格朗市的 Peh Cun（当地写作 Petjoen）由「Cina Benteng」 ——巴达维亚旧堡垒一带的华人社群——在芝萨丹尼河上举行，同样落在农历五月初五。 仪式的核心是一艘一年只开封一次的圣船：开箱、沐浴、祝祷，然后才是竞渡；另有向河中投粽、立蛋、放鸭。 丹格朗市政府把它列入该市的非物质文化遗产。这一页的其他地方谈的是「同一个节日在不同国家」， 印尼这一格谈的是「同一个节日跟着人走了三百年」。
+### date_rule ID peh-cun
+农历五月初五(Go Gwe Ce Go)
 ### customs JP tango-no-sekku
 日本把五月五日定为国民の祝日“こどもの日”，用的是公历日期，不随农历移动。内阁府载明的法定趣旨是“重视孩子的人格、谋求孩子的幸福，同时感谢母亲”——法律上并非只针对男孩。日期会落在五月五日，是因为原本考虑把三月三日的雏祭与五月五日的端午の節句合并订在五月三日，但五月三日已是宪法记念日，才改采季节较好的五月五日。厚生劳动省从战前就在端午这天办鲤鱼旗升旗式。一九四八年的《国民の祝日に関する法律》把五月五日定为“こどもの日”，法条写的是尊重儿童人格、谋求幸福，并且“感谢母亲”——一个以男孩节句为前身的日子，在成为法定假日时被重写成同时向母亲致谢，这个转折在条文本身读得到。菖蒲汤与鲤鱼旗则留在民间，没有进入法律。
 
@@ -136,14 +166,24 @@ Japan fixes 5 May as the national holiday Kodomo no Hi, on the Gregorian calenda
 ड्रैगन बोट फेस्टिवल, दुआनवू, ज़ोंगज़ी, नौका दौड़, कोदोमो नो ही
 ### customs TW duanwu
 ताइवान में यह त्योहार स्मृति-दिवस व त्योहार अधिनियम के तहत एक दिन का सवेतन अवकाश है और चंद्र पंचांग के पाँचवें महीने की पाँचवीं तिथि को पड़ता है, इसलिए ग्रेगोरियन तारीख़ हर साल बदलती है। आम बातें हैं ज़ोंगज़ी बाँधना और खाना, नौका दौड़, मुगवर्ट और बच का गुच्छा टाँगना, सुगंधित थैली पहनना; कुछ लोग बस दोपहर में अंडा खड़ा करते हैं। यह तीन बड़े त्योहारों में भी है, इसलिए घर लौटना और पारिवारिक भोजन अक्सर कर्मकांड से भारी पड़ते हैं। तुआनवू ताइवान में वर्ष के तीन पर्वों में से एक भी है, जो मध्य-शरद और चंद्र नववर्ष के साथ खड़ा होकर हिसाब चुकाने और उपहार-पेटियाँ भेजने का बिंदु बनता है — यह व्यापारिक अर्थ नौकाओं से कोई नाता नहीं रखता, फिर भी हर वर्ष इस दिन को याद रखे जाने का दूसरा कारण है। घरेलू रिवाज़ में दोपहर के आसपास अंडे को खड़ा करना और दोपहर का जल भरना जुड़ता है; दोनों को नदी नहीं चाहिए, इसलिए वे उन शहरों में भी चलते रहते हैं जहाँ कोई दौड़ नहीं होती।
+### date_rule TW duanwu
+चंद्र कैलेंडर के पांचवें महीने का पांचवां दिन; ग्रेगोरियन कैलेंडर की तिथि हर साल अलग होती है
 ### customs CN duanwu
 मुख्यभूमि चीन दुआनवू को राष्ट्रीय अवकाश नियम में सभी नागरिकों की छुट्टी में रखता है। 2006 में पहली ही सूची में इसे राष्ट्रीय अमूर्त सांस्कृतिक धरोहर (कोड X-3) घोषित किया गया और अब संस्कृति व पर्यटन मंत्रालय इसका संरक्षक है। सूची में मुख्य गतिविधियाँ हैं ऐतिहासिक व्यक्तियों का स्मरण, नौका दौड़, ज़ोंगज़ी, और 'पाँच विषों' से बचाव की पूरी विधि: कागज़ के ताबीज़, मुगवर्ट और बच, सुगंधित थैली, जड़ी-बूटी स्नान। रजिस्टर में यह त्योहार रीति-रिवाजों का बहुवचन समुच्चय है, कोई एक तस्वीर नहीं।
+### date_rule CN duanwu
+चंद्र कैलेंडर के पांचवें महीने का पांचवां दिन; ग्रेगोरियन कैलेंडर की तिथि हर साल अलग होती है
 ### customs CN luodian-dragon-boat
 उसी त्योहार के भीतर, शंघाई के लुओदियान की नौका परंपरा **अलग से** राष्ट्रीय अमूर्त धरोहर के रूप में दर्ज है। इससे एक बात पता चलती है: नौका दौड़ देशभर में एक जैसी प्रतियोगिता नहीं, बल्कि अपने-अपने नियम, नाव के आकार और रस्मों वाली स्थानीय परंपराओं का समूह है, जिनमें से कुछ को अलग से संरक्षण योग्य माना गया। केवल राष्ट्रीय तस्वीर देखने पर यह परत पूरी छूट जाती है।
+### date_rule CN luodian-dragon-boat
+चंद्र-सौर पंचांग के पांचवें महीने के पांचवें दिन के आसपास, स्थानीय व्यवस्था के अनुसार
 ### customs CN jiangcun-dragon-boat
 उसी कोड X-3 के नीचे एक दूसरी नौका-परंपरा भी अलग से दर्ज है: चेच्यांग के हांगचोऊ के शीहू ज़िले का 'च्यांगत्सुन नौका सम्मेलन', जो 2011 में तीसरी सूची में प्रकाशित हुआ। निवासी इसे दुआनवू के दिन स्वयं आयोजित करते हैं, और कथा है कि छियानलोंग सम्राट ने दक्षिण यात्रा में च्यांगत्सुन की दौड़ को मेले जितना जीवंत पाकर 'नौका सम्मेलन' नाम प्रदान किया। सौ से दो सौ नावें शीशी आर्द्रभूमि के शेनतानकोऊ पर जुटती हैं, तय मार्ग पर प्रदर्शन करती हैं और अंत में केंद्र पर पूरा घूमती हैं; घरों में ज़ोंगज़ी बाँधे जाते हैं, मुगवर्ट और बच टाँगे जाते हैं, 'पाँच पीले' खाए जाते हैं, और बाद में हर गाँव साथ भोजन करता है।
+### date_rule CN jiangcun-dragon-boat
+चंद्र-सौर पंचांग के पांचवें महीने के पांचवें दिन, झेजियांग प्रांत के हांगचो शहर के शीहू ज़िले के जियांगछुन में
 ### customs ID peh-cun
 इंडोनेशिया में भी ड्रैगन नौकाएँ हैं, और वे हाल का आयात नहीं: पेह चुन — स्थानीय वर्तनी में Petjoen — तांगेरांग शहर में चिसादाने नदी पर चीना बेंतेंग समुदाय द्वारा, पुराने बटाविया क़िले के आसपास बसे चीनी लोगों द्वारा, उसी पाँचवें चंद्र मास के पाँचवें दिन मनाया जाता है। केंद्र में है एक पवित्र नाव जिसकी सील वर्ष में केवल एक बार खुलती है: खोली जाती है, नहलाई जाती है, आशीषी जाती है — और तभी दौड़ शुरू होती है; साथ में नदी में चावल की पोटलियाँ फेंकना, अंडे खड़े करना और बत्तख़ें छोड़ना। तांगेरांग नगर सरकार इसे शहर की अमूर्त सांस्कृतिक विरासत में गिनती है। इस पृष्ठ पर अन्यत्र तुलना एक पर्व की देशों के आर-पार है; यहाँ वह एक पर्व की है जो तीन सदियों तक लोगों के साथ चला।
+### date_rule ID peh-cun
+चंद्र-सौर पंचांग के पांचवें महीने के पांचवें दिन (Go Gwe Ce Go)
 ### customs JP tango-no-sekku
 जापान 5 मई को राष्ट्रीय अवकाश 'कोदोमो नो ही' मानता है, ग्रेगोरियन तिथि पर, इसलिए यह चंद्र वर्ष के साथ नहीं खिसकता। कैबिनेट कार्यालय में दर्ज क़ानूनी उद्देश्य है बच्चे के व्यक्तित्व का आदर करना, उसकी ख़ुशी के लिए प्रयास करना, और माँ के प्रति आभार जताना — क़ानूनन यह केवल लड़कों के लिए नहीं है। तारीख़ 5 मई इसलिए बनी कि 3 मार्च के गुड़िया उत्सव और 5 मई के तांगो नो सेक्कु को मिलाकर 3 मई करने का प्रस्ताव था, पर 3 मई संविधान दिवस बन गया। स्वास्थ्य, श्रम व कल्याण मंत्रालय युद्ध-पूर्व काल से इस दिन कोइनोबोरी ध्वजारोहण करता आया है। 1948 के राष्ट्रीय अवकाश अधिनियम ने पाँच मई को बाल दिवस ठहराया, और पाठ बच्चों के व्यक्तित्व के सम्मान, उनके सुख की खोज — और माताओं के प्रति आभार की बात करता है। जो दिन लड़कों के ऋतु-पर्व के रूप में शुरू हुआ था, वह वैधानिक अवकाश बनते समय माताओं के आभार को भी समेटने के लिए फिर से लिखा गया, और यह मोड़ प्रावधान में ही पढ़ा जा सकता है। सोसन का स्नान और कार्प की पताकाएँ रिवाज़ में रह गईं और क़ानून में कभी नहीं आईं।
 
@@ -156,14 +196,24 @@ Hari kelima bulan kelima penanggalan lunar adalah hari libur di Taiwan maupun Ti
 Festival Perahu Naga, Duanwu, bakcang, zongzi, Tango no Sekku, Kodomo no Hi
 ### customs TW duanwu
 Di Taiwan festival ini adalah hari libur berbayar menurut Undang-Undang Hari Peringatan dan Hari Raya, jatuh pada hari kelima bulan kelima penanggalan lunar, sehingga tanggal Gregoriusnya berpindah tiap tahun. Yang umum adalah membungkus dan menyantap zongzi, lomba perahu naga, menggantung mugwort dan jerangau, serta mengenakan kantong wangi; sebagian orang hanya menegakkan telur pada tengah hari. Ini juga salah satu dari tiga hari raya besar, jadi mudik dan makan keluarga sering lebih berat daripada ritualnya. Duanwu juga salah satu dari tiga perayaan tahunan di Taiwan, sejajar dengan Pertengahan Musim Gugur dan Tahun Baru Imlek sebagai titik pelunasan utang dagang dan pengiriman parsel — makna niaga yang tak ada sangkut pautnya dengan perahu, namun menjadi alasan lain hari itu diingat tiap tahun. Kebiasaan rumah tangga menambahkan mendirikan telur dan menimba air tengah hari sekitar pukul dua belas; keduanya tak memerlukan sungai, sehingga tetap berlangsung di kota yang sama sekali tak menggelar lomba.
+### date_rule TW duanwu
+Hari kelima bulan kelima penanggalan lunar; tanggal dalam kalender Gregorian berbeda setiap tahun
 ### customs CN duanwu
 Tiongkok daratan memasukkan Duanwu sebagai hari libur bagi seluruh warga dalam aturan hari libur nasional. Pada 2006 ia diumumkan dalam angkatan pertama warisan budaya takbenda nasional dengan kode X-3, dan kini dikelola Kementerian Kebudayaan dan Pariwisata. Daftar itu menyebut peringatan tokoh sejarah, lomba perahu naga, zongzi, serta serangkaian praktik penangkal 'lima racun': jimat kertas, mugwort dan jerangau, kantong wangi, dan mandi ramuan. Dalam daftar itu festival ini adalah kumpulan adat yang jamak, bukan satu gambar tunggal.
+### date_rule CN duanwu
+Hari kelima bulan kelima penanggalan lunar; tanggal dalam kalender Gregorian berbeda setiap tahun
 ### customs CN luodian-dragon-boat
 Di dalam festival yang sama, tradisi perahu naga Luodian di Shanghai terdaftar **tersendiri** sebagai warisan budaya takbenda nasional. Itu menunjukkan satu hal: perahu naga bukan satu lomba seragam se-negara, melainkan sekumpulan tradisi setempat dengan aturan, bentuk lambung, dan upacaranya masing-masing, sebagian di antaranya dinilai layak dilindungi secara terpisah. Melihat hanya gambaran nasional membuat lapisan ini hilang seluruhnya.
+### date_rule CN luodian-dragon-boat
+Sekitar tanggal 5 bulan 5 penanggalan lunar, sesuai pengaturan setempat
 ### customs CN jiangcun-dragon-boat
 Satu tradisi perahu naga lain terdaftar tersendiri di bawah kode yang sama, X-3: Perhelatan Perahu Naga Jiangcun di Distrik Xihu, Hangzhou, Zhejiang, diumumkan pada angkatan ketiga tahun 2011. Warga menyelenggarakannya sendiri pada hari Duanwu, dan ceritanya Kaisar Qianlong, dalam perjalanan ke selatan, mendapati lomba di Jiangcun seramai pasar dan menganugerahkan nama 'Perhelatan Perahu Naga'. Seratus sampai dua ratus perahu berkumpul di Shentankou di lahan basah Xixi, tampil menurut rute yang ditetapkan, dan menutup dengan putaran penuh di tengah; rumah tangga membungkus zongzi, menggantung mugwort dan jerangau, menyantap 'lima kuning', lalu tiap desa makan bersama sesudahnya.
+### date_rule CN jiangcun-dragon-boat
+Pada tanggal 5 bulan 5 penanggalan lunar, Jiangcun, Distrik Xihu, Kota Hangzhou, Provinsi Zhejiang
 ### customs ID peh-cun
 Indonesia juga punya perahu naga, dan bukan hasil impor kemarin sore: Peh Cun — ditulis setempat Petjoen — digelar di Sungai Cisadane, Kota Tangerang, oleh masyarakat Cina Benteng, yakni warga Tionghoa di sekitar bekas benteng Batavia, pada hari kelima bulan kelima penanggalan Imlek yang sama. Intinya adalah perahu keramat yang disegel dan hanya dibuka setahun sekali: dibuka, dimandikan, dan didoakan sebelum ada lomba apa pun, disertai melempar bacang ke sungai, mendirikan telur, dan melepas bebek. Pemerintah Kota Tangerang mencatatnya sebagai warisan budaya takbenda kota. Di bagian lain halaman ini yang dibandingkan adalah satu perayaan lintas negara; di kolom ini yang dibandingkan adalah satu perayaan yang ikut berjalan bersama orangnya selama tiga abad.
+### date_rule ID peh-cun
+Tanggal 5 bulan 5 penanggalan lunar (Go Gwe Ce Go)
 ### customs JP tango-no-sekku
 Jepang menetapkan 5 Mei sebagai hari libur nasional Kodomo no Hi, pada kalender Gregorius, sehingga tidak bergeser mengikuti tahun lunar. Tujuan hukum yang dicatat Kantor Kabinet adalah menghormati kepribadian anak, mengupayakan kebahagiaannya, dan berterima kasih kepada ibu — secara hukum tidak ditujukan hanya untuk anak laki-laki. Tanggal 5 Mei terpilih karena usulan menggabungkan festival boneka 3 Maret dengan Tango no Sekku 5 Mei menjadi 3 Mei gugur setelah 3 Mei ditetapkan sebagai Hari Konstitusi. Kementerian Kesehatan, Ketenagakerjaan dan Kesejahteraan mengadakan upacara pengibaran koinobori pada hari ini sejak sebelum perang. Undang-Undang Hari Libur Nasional 1948 menetapkan lima Mei sebagai Hari Anak, dan naskahnya berbicara tentang menghormati kepribadian anak, mengupayakan kebahagiaannya — serta berterima kasih kepada para ibu. Hari yang bermula sebagai perayaan musiman anak laki-laki itu, saat menjadi hari libur menurut undang-undang, ditulis ulang agar sekaligus berterima kasih kepada ibu, dan belokan itu terbaca pada pasalnya sendiri. Mandi iris dan panji ikan mas tinggal dalam adat dan tak pernah masuk ke hukum.
 
@@ -176,13 +226,23 @@ O quinto dia do quinto mês lunar é feriado tanto em Taiwan quanto na China con
 Festival do Barco-Dragão, Duanwu, zongzi, corrida de barcos, Tango no Sekku, Kodomo no Hi
 ### customs TW duanwu
 Em Taiwan o festival é feriado remunerado pela Lei dos Dias Comemorativos e Feriados e cai no quinto dia do quinto mês lunar, então a data gregoriana muda a cada ano. O comum é embrulhar e comer zongzi, correr barcos-dragão, pendurar artemísia e cálamo e usar sachês perfumados; há quem apenas equilibre um ovo em pé ao meio-dia. É também uma das três grandes festas, então a volta para casa e a refeição em família costumam pesar mais que o rito. O quanto cada casa faz varia bastante. O Duanwu é também uma das três festas anuais de Taiwan, ao lado do Meio-Outono e do Ano-Novo Lunar como ponto em que se acertam contas e se enviam caixas de presente — um sentido comercial que nada tem a ver com barcos e é, ainda assim, outra razão para o dia ser lembrado todo ano. A prática doméstica acrescenta equilibrar um ovo em pé e tirar a água do meio-dia por volta das doze; nenhuma das duas precisa de rio, então ambas seguem em cidades sem corrida alguma.
+### date_rule TW duanwu
+5º dia do 5º mês do calendário lunar; a data no calendário gregoriano varia a cada ano
 ### customs CN duanwu
 A China continental inclui o Duanwu entre os dias de folga para todos os cidadãos na norma nacional de feriados. Em 2006 ele foi publicado já na primeira leva do patrimônio cultural imaterial nacional, sob o código X-3, e hoje é administrado pelo Ministério da Cultura e Turismo. A lista nomeia a homenagem a figuras históricas, a corrida de barcos-dragão, os zongzi e todo um conjunto de práticas contra os 'cinco venenos': amuletos recortados, artemísia e cálamo, sachês perfumados e banhos de ervas. No registro, a festa é um conjunto plural de costumes, não uma imagem única.
+### date_rule CN duanwu
+5º dia do 5º mês do calendário lunar; a data no calendário gregoriano varia a cada ano
 ### customs CN luodian-dragon-boat
 Dentro da mesma festa, a tradição de barcos de Luodian, em Xangai, está tombada **separadamente** como patrimônio imaterial nacional. Isso diz algo: barco-dragão não é uma corrida uniforme em todo o país, e sim um conjunto de tradições locais com regras, formatos de casco e cerimônias próprias, parte das quais julgada digna de proteção em separado. Olhar apenas o quadro nacional faz essa camada desaparecer.
+### date_rule CN luodian-dragon-boat
+Por volta do 5º dia do 5º mês do calendário lunar, conforme os arranjos locais
 ### customs CN jiangcun-dragon-boat
 Um segundo costume de barco-dragão está tombado à parte sob o mesmo código X-3: o Encontro de Barcos-Dragão de Jiangcun, no distrito de Xihu, em Hangzhou, Zhejiang, publicado na terceira leva em 2011. Os moradores o organizam por conta própria no dia do Duanwu, e conta-se que o imperador Qianlong, em viagem ao sul, achou a corrida de Jiangcun tão animada quanto uma feira e concedeu o nome de 'Encontro de Barcos-Dragão'. De cem a duzentos barcos convergem em Shentankou, na várzea de Xixi, apresentam-se por um percurso definido e terminam com um giro completo no centro; as casas embrulham zongzi, penduram artemísia e cálamo e comem os 'cinco amarelos', e depois cada aldeia janta junta.
+### date_rule CN jiangcun-dragon-boat
+No 5º dia do 5º mês do calendário lunar, em Jiangcun, distrito de Xihu, cidade de Hangzhou, província de Zhejiang
 ### customs ID peh-cun
 A Indonésia também tem barcos-dragão, e não como importação recente: o Peh Cun — grafado localmente Petjoen — acontece no rio Cisadane, na cidade de Tangerang, promovido pelos Cina Benteng, a comunidade chinesa do entorno da antiga fortaleza de Batávia, no mesmo quinto dia do quinto mês lunar. No centro está um barco sagrado deslacrado apenas uma vez por ano: aberto, banhado e abençoado antes de qualquer corrida, junto com lançar bolinhos de arroz ao rio, equilibrar ovos em pé e soltar patos. A prefeitura de Tangerang o inscreve entre os patrimônios imateriais da cidade. No resto desta página a comparação é de uma festa entre países; aqui é de uma festa que viajou com as pessoas por três séculos.
+### date_rule ID peh-cun
+O 5º dia do 5º mês do calendário lunar (Go Gwe Ce Go)
 ### customs JP tango-no-sekku
 O Japão fixa 5 de maio como o feriado nacional Kodomo no Hi, no calendário gregoriano, então ele não se move com o ano lunar. A finalidade legal registrada pelo Gabinete é respeitar a personalidade da criança, trabalhar pela sua felicidade e agradecer à mãe — juridicamente não é voltado só para meninos. A data caiu em 5 de maio porque a proposta de juntar o festival das bonecas de 3 de março com o Tango no Sekku de 5 de maio em 3 de maio foi abandonada quando 3 de maio virou o Dia da Constituição. O Ministério da Saúde, Trabalho e Bem-Estar realiza a cerimônia de içar as carpas nesse dia desde antes da guerra. A Lei dos Feriados Nacionais de 1948 fixou o dia cinco de maio como Dia das Crianças, e o texto fala em respeitar a personalidade da criança, buscar sua felicidade — e agradecer às mães. Um dia nascido como festa sazonal dos meninos foi, ao tornar-se feriado legal, reescrito para agradecer também às mães, e essa virada se lê no próprio dispositivo. O banho de íris e as bandeirolas de carpa ficaram no costume e nunca entraram na lei.

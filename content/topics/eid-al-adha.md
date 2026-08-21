@@ -13,7 +13,7 @@
 - source: https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026
 
 ## observance IN bakrid
-- local_name: Id-ul-Zuha（Bakrid）
+- local_name: Id-ul-Zuha (Bakrid)
 - date_rule: 伊斯蘭曆 Dhul Hijjah 月初十；列在全國假日清單
 - rank: 2
 - source: https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays
@@ -25,7 +25,7 @@
 - source: https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf
 
 ## observance BR eid-al-adha
-- local_name: Eid al-Adha（Festa do Sacrifício）
+- local_name: Eid al-Adha (Festa do Sacrifício)
 - date_rule: 伊斯蘭曆 Dhul Hijjah 月初十；非法定假日，依各清真寺公告
 - rank: 4
 - source: https://www12.senado.leg.br/noticias/materias/2024/02/20/comissao-inclui-festas-judaicas-e-islamicas-nas-datas-comemorativas-do-brasil
@@ -72,17 +72,29 @@ One date in the Islamic calendar, four different institutional treatments: Indon
 Eid al-Adha, Feast of Sacrifice, Iduladha, Bakrid, Id-ul-Zuha, Festa do Sacrifício
 ### customs ID iduladha
 Indonesia lists Iduladha as a national holiday. The government notice for 2026 gives 27 May (Wednesday), with joint leave (cuti bersama) added the next day, 28 May, effectively stretching it into a long weekend. The core act is the sacrifice and the sharing of the meat with relatives and the poor. The date follows the Islamic calendar and a government announcement, so the Gregorian date moves each year. As with Eid al-Fitr, this is a system that aligns a religious obligation directly with the state calendar.
+### date_rule ID iduladha
+The tenth day of the month of Dzulhijah in the Islamic calendar; the date is announced by the government, and joint leave days are usually arranged separately
 ### customs IN bakrid
 India lists Id-ul-Zuha, locally often called Bakrid, among its national holidays; the date published for 2026 is 27 May (Wednesday). Congregational prayer at the mosque, the sacrifice, and dividing the meat into three parts — household, relatives and friends, the poor — form the shared frame. But in India this is a national holiday in a country where Muslims are a minority, so the same day carries very different weight between communities, and practice differs by state.
+### date_rule IN bakrid
+The tenth day of the month of Dhul Hijjah in the Islamic calendar; listed on the national holiday calendar
 ### customs US eid-al-adha
 The United States has no federal holiday for Eid al-Adha. New York City's official public school calendar, however, lists it as a day schools are closed: Monday 17 May in the 2026–27 school year. The same calendar also closes schools for Eid al-Fitr, on 9 March. The recognition sits at school-district level rather than national, and reaches the classroom rather than the workplace — which is the usual shape of religious holidays in the United States, handled locally according to who lives there.
+### date_rule US eid-al-adha
+The tenth day of the month of Dhul Hijjah in the Islamic calendar; listed as a school closure day on the New York City public school calendar
 ### customs BR eid-al-adha
 In Brazil, Eid al-Adha is neither a national holiday nor, yet, a statutory commemorative date. In February 2024 a Senate committee approved a proposal to add Jewish and Islamic festivals to the national list of commemorative dates. According to the 2010 census, Muslims were about 0.02 per cent of the population, some 35,000 people, so the day runs on announcements and arrangements made by individual mosques and communities. Here the question about the festival is not how it is kept, but whether it has been written into the country's calendar at all.
+### date_rule BR eid-al-adha
+The tenth day of the month of Dhul Hijjah in the Islamic calendar; not a statutory holiday, determined by each mosque's announcement
 ### customs CN eid-al-adha
 Eid al-Adha — known locally as Gurbang — is not a national holiday in mainland China, but it is a local one in the Ningxia Hui Autonomous Region, with two days off: 27 and 28 May in 2026. That is a day more than Eid al-Fitr received, because Eid al-Fitr fell on a Saturday that year. The number of days is published each year in the regional government's annual holiday notice, so the length of the break for the same festival inside China is re-decided at regional level every year. In China, Eid al-Adha is not a nationwide holiday but a local one: autonomous regions such as Xinjiang, where the believing population is concentrated, set the day off themselves, while the rest of the country works as usual. The same festival holding two calendar states inside one country shows why the question of whether the day is off depends on which level of rule is being asked.
+### date_rule CN eid-al-adha
+The 10th day of Dhul Hijjah in the Islamic calendar; announced annually by the General Office of the Autonomous Region People's Government in its holiday arrangement notice, usually a two-day holiday.
 ### customs TW eid-al-adha
 Taiwan's Act on Commemorative Days and Holidays lists religious days one by one — the Daoist day, the Buddha's birthday — yet neither Eid al-Fitr nor Eid al-Adha appears; the Islamic calendar is simply absent from that list. In practice Taiwan hosts hundreds of thousands of migrant workers from Indonesia, and whether leave can be had for the congregational prayer rests with the employer. The Ministry of Labor's approach is a press release urging employers to be flexible, not an amendment to the Act. So the day looks like this here: the mosques fill as usual, but the attendance was paid for out of personal leave.
 
+### date_rule TW eid-al-adha
+The 10th day of Dhu al-Hijjah in the Islamic calendar; not included in the Regulations for Implementing Commemoration Days and Holidays, collective prayers are mostly arranged with the employer's consent.
 ## locale ja
 ### title
 犠牲祭（イード・アル＝アドハー）
@@ -92,17 +104,29 @@ Taiwan's Act on Commemorative Days and Holidays lists religious days one by one 
 犠牲祭, イード・アル＝アドハー, イドゥル・アドハ, バクリード, 巡礼
 ### customs ID iduladha
 インドネシアはイドゥル・アドハを国の祝日としている。2026年の政府告示は5月27日（水）で、翌28日には共同休暇（cuti bersama）が置かれ、実質的な連休になる。犠牲を捧げ、その肉を親族と貧しい人々に分けることが中心の行為である。日付はイスラム暦と政府の発表によって決まるため、西暦では毎年動く。イード・アル＝フィトルと同様、宗教上の務めを国家の暦に直接そろえるやり方だ。
+### date_rule ID iduladha
+イスラム暦ズルヒッジャ月10日；政府が日付を公告し、通常は別途共同休暇(cuti bersama)が設けられる
 ### customs IN bakrid
 インドはイド・ウル・ズハ（現地ではバクリードと呼ばれることが多い）を全国の祝日一覧に入れており、2026年の公表日は5月27日（水）である。モスクでの集団礼拝、犠牲、そして肉を三分割する——自家、親族と友人、貧しい人々——という枠組みは共通している。ただしインドではムスリムが少数派であり、同じ一日の重みは共同体によって大きく異なり、州ごとの実際の運用も同じではない。
+### date_rule IN bakrid
+イスラム暦ズー・アル=ヒッジャ月10日；全国の祝日リストに掲載されている
 ### customs US eid-al-adha
 米国に犠牲祭の連邦祝日はない。しかしニューヨーク市の公立学校の公式カレンダーは休校日として記載しており、2026–27年度は5月17日（月）にあたる。同じカレンダーはイード・アル＝フィトル（3月9日）も休校としている。承認は国ではなく学区の水準にあり、及ぶ範囲は職場ではなく教室である——住民構成に応じて地方が個別に処理するという、米国の宗教祝日によくある形だ。
+### date_rule US eid-al-adha
+イスラム暦ズー・アル=ヒッジャ月10日；ニューヨーク市公立学校の年間予定表で休校日として記載されている
 ### customs BR eid-al-adha
 ブラジルでは犠牲祭は国の祝日でもなく、法定の記念日ですらまだない。2024年2月、連邦上院の委員会がユダヤ教とイスラム教の祭日を国の記念日一覧に加える案を可決した。2010年の国勢調査によればムスリムは人口の約0.02％、およそ3万5千人であり、実際の運営は各地のモスクと共同体自身の告知と手配に委ねられている。ここでのこの祭日をめぐる問いは「どう過ごすか」ではなく、「国の暦に書き込まれているか」である。
+### date_rule BR eid-al-adha
+イスラム暦ズー・アル=ヒッジャ月10日；法定祝日ではなく、各モスクの発表に従う
 ### customs CN eid-al-adha
 中国大陸の犠牲祭（現地では古爾邦節と呼ばれる）は全国の祝日ではないが、寧夏回族自治区では地方の休日であり、2日間の休みとなる。2026年は5月27日から28日である。開斎節より1日多いのは、その年の開斎節が土曜に当たったためだ。休みの日数は自治区人民政府弁公庁の年度ごとの休日配置通知で公表されるため、同じ祭日でも中国国内の休暇の長さは、毎年、省・自治区の水準で決め直されている。中国において犠牲祭は全国の祝日ではなく、地方の祝日である。新疆をはじめ信徒人口の集まる自治区域が自ら当地の休みを定め、それ以外の地域は通常どおり働く。同じ祭りが一つの国の中で二つの暦の状態をもつという事実は、「この日は休みか」という問いの答えが、どの階層の規定を尋ねているかに依ることを示している。
+### date_rule CN eid-al-adha
+イスラム暦ズルヒッジャ月十日。自治区人民政府弁公庁が毎年、祝祭日の取り決めに関する通知で公布し、通常二日間の休暇となる。
 ### customs TW eid-al-adha
 台湾の「記念日及び節日実施条例」は道教節や仏陀誕辰日といった宗教関連の日を一つずつ挙げているが、 そこに断食明けの祭りも犠牲祭もない。イスラムの節期はこの一覧に存在しない。 実際には台湾には数十万人のインドネシア出身の移住労働者がおり、集団礼拝のための休みが取れるかどうかは 雇用主次第である。労働部のやり方は、法の改正ではなく、雇用主に柔軟な対応を促す報道発表を出すことだ。 それゆえこの日の台湾での姿はこうなる。モスクはいつもどおり満員だが、その出席は有給休暇で買われている。
 
+### date_rule TW eid-al-adha
+イスラム暦ズルヒッジャ月十日。「記念日及び節日実施条例」には定められておらず、集団礼拝の多くは雇用主の同意により手配される。
 ## locale zh-CN
 ### title
 宰牲节
@@ -112,17 +136,29 @@ Taiwan's Act on Commemorative Days and Holidays lists religious days one by one 
 宰牲节、古尔邦节、Eid al-Adha、Iduladha、Bakrid
 ### customs ID iduladha
 印度尼西亚把 Iduladha 列为国定假日。2026年的政府公告是5月27日（星期三），隔天5月28日另安排共同休假（cuti bersama），等于把它拉成连假。宰牲之后把肉分给亲族与贫户是核心动作；日期依伊斯兰历与政府公告而定，所以每年公历日期不同。它与开斋节一样，是把宗教义务和国家行事历直接对齐的做法。
+### date_rule ID iduladha
+伊斯兰历Dzulhijah月初十；政府公告日期，通常另安排共同休假
 ### customs IN bakrid
 印度把 Id-ul-Zuha（当地常称 Bakrid）列在全国假日清单里，2026年公告的日期是5月27日（星期三）。清真寺的会礼、宰牲、把肉分成三份（自家、亲友、贫户）是共同的骨架，但在印度这是一个穆斯林人口占少数的全国假日——同一天对不同社群的意义差距很大，各邦的实际运作也不一样。
+### date_rule IN bakrid
+伊斯兰历Dhul Hijjah月初十；列在全国假日清单
 ### customs US eid-al-adha
 美国没有把宰牲节列为联邦假日。但纽约市公立学校的官方行事历把 Eid al-Adha 列为停课日：2026至27学年落在5月17日（星期一）。同一份行事历也把 Eid al-Fitr 列为停课日（3月9日）。承认的层级是学区而不是国家，作用范围是教室而不是职场——这是美国宗教节日常见的样子：由地方政府按人口组成各自处理。
+### date_rule US eid-al-adha
+伊斯兰历Dhul Hijjah月初十；纽约市公立学校行事历列为停课日
 ### customs BR eid-al-adha
 巴西的宰牲节既不是全国假日，也还不是法定纪念日。2024年2月，联邦参议院的委员会才通过把犹太教与伊斯兰教节日纳入国家纪念日清单的提案。依2010年人口普查，穆斯林约占全国人口的0.02%、约三万五千人，所以节日的实际运作靠各地清真寺与社群自己公告与安排。同一个节日在这里的问题不是“怎么过”，而是“有没有被写进国家的日历”。
+### date_rule BR eid-al-adha
+伊斯兰历Dhul Hijjah月初十；非法定假日，依各清真寺公告
 ### customs CN eid-al-adha
 中国大陆的宰牲节（当地称古尔邦节）不是全国假日，但在宁夏回族自治区是地方假日，且放假两天——2026年是5月27日到28日。这比开斋节多一天，因为开斋节那年刚好落在周六。放假天数由自治区人民政府办公厅的年度节假日安排通知逐年公布，所以同一个节日在中国境内的假期长度，是省区层级每年重新决定的。在中国，古尔邦节不是全国性的假日，而是地方性的：新疆等信仰人口集中的自治区域自行规定当地放假，其余地区照常上班。同一个节日在同一个国家内有两种行事历状态，这说明了为什么“这一天放不放假”这个问题，答案取决于问的是哪一级的规定。
+### date_rule CN eid-al-adha
+伊斯兰历Dhul Hijjah月初十；由自治区人民政府办公厅逐年在节假日安排通知中公布，通常放假两天
 ### customs TW eid-al-adha
 台湾的《纪念日及节日实施条例》逐条列出了道教节、佛陀诞辰日等宗教相关的节日，却没有开斋节， 也没有宰牲节——伊斯兰的节期在这份清单上完全不存在。实际上台湾有数十万名来自印尼的移工， 集体礼拜要不要请得到假，取决于雇主；劳动部的做法是发新闻稿呼吁雇主给予弹性，而不是修法。 于是这一天在台湾的样子是：清真寺照常满座，但那是用年假换来的。
 
+### date_rule TW eid-al-adha
+伊斯兰历Dhu al-Hijjah月十日；《纪念日及节日实施条例》未列入，集体礼拜多依雇主同意安排
 ## locale hi
 ### title
 ईद-उल-अज़हा
@@ -132,17 +168,29 @@ Taiwan's Act on Commemorative Days and Holidays lists religious days one by one 
 ईद-उल-अज़हा, बक़रीद, क़ुर्बानी, इदुल अदहा, हज
 ### customs ID iduladha
 इंडोनेशिया इदुल अदहा को राष्ट्रीय अवकाश मानता है। 2026 की सरकारी अधिसूचना में तारीख़ 27 मई (बुधवार) है, और अगले दिन 28 मई को साझा छुट्टी (cuti bersama) रखी गई है, जिससे यह लंबा सप्ताहांत बन जाता है। मुख्य कर्म है क़ुर्बानी और उसके गोश्त को रिश्तेदारों तथा ज़रूरतमंदों में बाँटना। तारीख़ इस्लामी पंचांग और सरकारी घोषणा से तय होती है, इसलिए ग्रेगोरियन तारीख़ हर साल बदलती है। ईद-उल-फ़ित्र की तरह यह भी धार्मिक कर्तव्य को सीधे राज्य के कैलेंडर से जोड़ने की व्यवस्था है।
+### date_rule ID iduladha
+इस्लामी कैलेंडर के धुल हिज्जा (Dzulhijah) महीने की दसवीं तारीख; तारीख सरकार द्वारा घोषित की जाती है, और आमतौर पर अलग से सामूहिक अवकाश (cuti bersama) की व्यवस्था की जाती है
 ### customs IN bakrid
 भारत ईद-उल-ज़ुहा को, जिसे स्थानीय रूप से अक्सर बक़रीद कहा जाता है, राष्ट्रीय अवकाशों में रखता है; 2026 के लिए प्रकाशित तारीख़ 27 मई (बुधवार) है। मस्जिद की सामूहिक नमाज़, क़ुर्बानी, और गोश्त को तीन हिस्सों में बाँटना — घर, रिश्तेदार-मित्र, ज़रूरतमंद — साझा ढाँचा है। पर भारत में यह ऐसा राष्ट्रीय अवकाश है जहाँ मुसलमान अल्पसंख्यक हैं, इसलिए एक ही दिन का भार समुदायों के बीच बहुत अलग है और राज्यवार व्यवहार भी एक जैसा नहीं।
+### date_rule IN bakrid
+इस्लामी कैलेंडर के ज़ुल हिज्जा (Dhul Hijjah) महीने की दसवीं तारीख; राष्ट्रीय अवकाश सूची में सूचीबद्ध
 ### customs US eid-al-adha
 अमेरिका में ईद-उल-अज़हा के लिए कोई संघीय अवकाश नहीं है। पर न्यूयॉर्क शहर के सरकारी स्कूलों का आधिकारिक कैलेंडर उसे स्कूल बंद रहने के दिन के रूप में दर्ज करता है: 2026–27 सत्र में सोमवार 17 मई। वही कैलेंडर 9 मार्च को ईद-उल-फ़ित्र पर भी स्कूल बंद रखता है। मान्यता देश के नहीं, स्कूल ज़िले के स्तर पर है और उसका दायरा कार्यस्थल नहीं, कक्षा है — अमेरिका में धार्मिक अवकाशों का यही सामान्य रूप है, जिसे स्थानीय स्तर पर आबादी के अनुसार तय किया जाता है।
+### date_rule US eid-al-adha
+इस्लामी कैलेंडर के ज़ुल हिज्जा (Dhul Hijjah) महीने की दसवीं तारीख; न्यूयॉर्क सिटी के सार्वजनिक स्कूलों के कैलेंडर में अवकाश दिवस के रूप में सूचीबद्ध
 ### customs BR eid-al-adha
 ब्राज़ील में ईद-उल-अज़हा न राष्ट्रीय अवकाश है, न अभी तक क़ानूनी स्मृति-तिथि। फ़रवरी 2024 में संघीय सीनेट की एक समिति ने यहूदी और इस्लामी पर्वों को राष्ट्रीय स्मृति-तिथियों की सूची में जोड़ने का प्रस्ताव पारित किया। 2010 की जनगणना के अनुसार मुसलमान आबादी का लगभग 0.02 प्रतिशत, क़रीब 35 हज़ार लोग थे, इसलिए यह दिन स्थानीय मस्जिदों और समुदायों की अपनी घोषणाओं व व्यवस्थाओं पर चलता है। यहाँ सवाल यह नहीं कि पर्व कैसे मनाया जाए, बल्कि यह कि वह देश के कैलेंडर में लिखा गया है या नहीं।
+### date_rule BR eid-al-adha
+इस्लामी कैलेंडर के ज़ुल हिज्जा (Dhul Hijjah) महीने की दसवीं तारीख; यह वैधानिक अवकाश नहीं है, प्रत्येक मस्जिद की घोषणा के अनुसार तय होता है
 ### customs CN eid-al-adha
 मुख्यभूमि चीन में ईद-उल-अज़हा — जिसे स्थानीय रूप से गुरबांग कहा जाता है — राष्ट्रीय अवकाश नहीं है, पर निंगश्या हुई स्वायत्त क्षेत्र में स्थानीय अवकाश है, और दो दिन की छुट्टी मिलती है: 2026 में 27 और 28 मई। यह ईद-उल-फ़ित्र से एक दिन अधिक है, क्योंकि उस वर्ष ईद-उल-फ़ित्र शनिवार को पड़ी। दिनों की संख्या हर वर्ष क्षेत्रीय सरकार की वार्षिक अवकाश-अधिसूचना में प्रकाशित होती है, यानी चीन के भीतर उसी पर्व की छुट्टी की लंबाई हर साल क्षेत्रीय स्तर पर फिर से तय होती है। चीन में ईद-उल-अज़हा राष्ट्रव्यापी अवकाश नहीं बल्कि स्थानीय है: शिनजियांग जैसे स्वायत्त क्षेत्र, जहाँ मानने वाली आबादी केंद्रित है, स्वयं वहाँ की छुट्टी तय करते हैं, जबकि शेष देश सामान्य रूप से काम करता है। एक ही पर्व का एक ही देश के भीतर दो कैलेंडर-स्थितियाँ रखना दिखाता है कि 'उस दिन छुट्टी है या नहीं' का उत्तर इस पर निर्भर है कि किस स्तर के नियम के बारे में पूछा जा रहा है।
+### date_rule CN eid-al-adha
+इस्लामी कैलेंडर के अनुसार धुल हिज्जा माह की 10 तारीख़; स्वायत्त क्षेत्र की जनता सरकार के महासचिवालय (जनरल ऑफिस) द्वारा हर वर्ष छुट्टियों की व्यवस्था संबंधी सूचना में घोषित किया जाता है, आमतौर पर दो दिन की छुट्टी होती है।
 ### customs TW eid-al-adha
 ताइवान का स्मृति-दिवस एवं अवकाश अधिनियम धार्मिक दिनों को एक-एक कर गिनाता है — दाओवादी दिवस, बुद्ध जयंती — फिर भी उसमें न ईद-उल-फ़ित्र है न ईद-उल-अज़हा; इस्लामी पंचांग उस सूची से पूरी तरह ग़ायब है। व्यवहार में ताइवान में इंडोनेशिया से आए लाखों प्रवासी कामगार हैं, और सामूहिक नमाज़ के लिए छुट्टी मिलेगी या नहीं यह नियोक्ता पर निर्भर है। श्रम मंत्रालय का तरीक़ा क़ानून में संशोधन नहीं, बल्कि नियोक्ताओं से लचीलेपन का आग्रह करता प्रेस विज्ञप्ति जारी करना है। इसलिए यहाँ यह दिन ऐसा दिखता है: मस्जिदें हमेशा की तरह भर जाती हैं, पर वह उपस्थिति निजी छुट्टी से चुकाई गई है।
 
+### date_rule TW eid-al-adha
+इस्लामी कैलेंडर के अनुसार धू अल-हिज्जा माह की 10 तारीख़; यह "स्मृति दिवस एवं त्योहार कार्यान्वयन विनियम" में शामिल नहीं है, सामूहिक नमाज़ की व्यवस्था अधिकतर नियोक्ता की सहमति पर निर्भर करती है।
 ## locale id
 ### title
 Iduladha
@@ -152,17 +200,29 @@ Satu tanggal dalam kalender Islam, empat perlakuan kelembagaan yang berbeda: Ind
 Iduladha, Idul Adha, kurban, Eid al-Adha, Bakrid, haji
 ### customs ID iduladha
 Indonesia menetapkan Iduladha sebagai hari libur nasional. Pengumuman pemerintah untuk 2026 menyebut 27 Mei (Rabu), dengan cuti bersama pada hari berikutnya, 28 Mei, sehingga praktis menjadi libur panjang. Inti perbuatannya adalah berkurban dan membagikan dagingnya kepada kerabat serta yang membutuhkan. Tanggalnya mengikuti kalender Islam dan pengumuman pemerintah, jadi tanggal Gregoriusnya bergeser setiap tahun. Seperti Idulfitri, ini adalah cara menyelaraskan kewajiban agama langsung dengan kalender negara.
+### date_rule ID iduladha
+Tanggal sepuluh bulan Dzulhijah dalam kalender Islam; tanggalnya diumumkan oleh pemerintah, dan biasanya diatur cuti bersama secara terpisah
 ### customs IN bakrid
 India memasukkan Id-ul-Zuha, yang secara lokal sering disebut Bakrid, ke dalam daftar hari libur nasional; tanggal yang diumumkan untuk 2026 adalah 27 Mei (Rabu). Salat berjamaah di masjid, penyembelihan kurban, dan pembagian daging menjadi tiga bagian — keluarga, kerabat dan teman, kaum miskin — menjadi kerangka bersamanya. Namun di India ini adalah hari libur nasional di negeri tempat Muslim menjadi minoritas, sehingga bobot hari yang sama sangat berbeda antar komunitas, dan pelaksanaannya berbeda antar negara bagian.
+### date_rule IN bakrid
+Tanggal sepuluh bulan Dhul Hijjah dalam kalender Islam; tercantum dalam daftar hari libur nasional
 ### customs US eid-al-adha
 Amerika Serikat tidak memiliki hari libur federal untuk Iduladha. Namun kalender resmi sekolah negeri Kota New York mencantumkannya sebagai hari sekolah tutup: Senin 17 Mei pada tahun ajaran 2026–27. Kalender yang sama juga menutup sekolah untuk Idulfitri pada 9 Maret. Pengakuannya berada di tingkat distrik sekolah, bukan negara, dan menjangkau ruang kelas alih-alih tempat kerja — bentuk yang lazim bagi hari raya keagamaan di Amerika Serikat, ditangani secara lokal sesuai komposisi warganya.
+### date_rule US eid-al-adha
+Tanggal sepuluh bulan Dhul Hijjah dalam kalender Islam; tercantum sebagai hari libur sekolah dalam kalender sekolah negeri Kota New York
 ### customs BR eid-al-adha
 Di Brasil, Iduladha bukan hari libur nasional dan bahkan belum menjadi tanggal peringatan resmi. Pada Februari 2024 sebuah komite Senat menyetujui usul untuk menambahkan hari raya Yahudi dan Islam ke daftar tanggal peringatan nasional. Menurut sensus 2010, Muslim berjumlah sekitar 0,02 persen penduduk, kira-kira 35 ribu orang, sehingga hari itu berjalan berdasarkan pengumuman dan pengaturan masing-masing masjid dan komunitas. Di sini pertanyaannya bukan bagaimana hari raya itu dijalani, melainkan apakah ia sudah tertulis dalam kalender negara.
+### date_rule BR eid-al-adha
+Tanggal sepuluh bulan Dhul Hijjah dalam kalender Islam; bukan hari libur resmi, ditentukan berdasarkan pengumuman masing-masing masjid
 ### customs CN eid-al-adha
 Idul Adha — yang secara lokal disebut Gurbang — bukan hari libur nasional di Tiongkok daratan, tetapi menjadi hari libur setempat di Daerah Otonom Hui Ningxia, dengan libur dua hari: 27 dan 28 Mei pada 2026. Itu sehari lebih banyak daripada Idulfitri, karena Idulfitri tahun itu jatuh pada Sabtu. Jumlah harinya diterbitkan tiap tahun dalam pemberitahuan hari libur pemerintah daerah, sehingga panjang libur untuk hari raya yang sama di dalam Tiongkok diputuskan ulang di tingkat daerah setiap tahun. Di Tiongkok, Iduladha bukan hari libur nasional melainkan lokal: daerah otonom seperti Xinjiang, tempat penduduk yang meyakininya terpusat, menetapkan sendiri liburnya, sementara wilayah lain bekerja seperti biasa. Perayaan yang sama memikul dua keadaan kalender di dalam satu negara menunjukkan mengapa jawaban atas pertanyaan apakah hari itu libur bergantung pada tingkat aturan mana yang ditanyakan.
+### date_rule CN eid-al-adha
+Tanggal 10 bulan Dzulhijjah dalam kalender Islam; diumumkan setiap tahun oleh Kantor Umum Pemerintah Rakyat Daerah Otonom dalam pemberitahuan pengaturan hari libur, biasanya libur selama dua hari.
 ### customs TW eid-al-adha
 Undang-Undang Hari Peringatan dan Hari Libur Taiwan menyebut hari-hari keagamaan satu per satu — hari Taoisme, hari lahir Buddha — namun Idulfitri maupun Iduladha tak ada di sana; kalender Islam sama sekali absen dari daftar itu. Kenyataannya Taiwan menampung ratusan ribu pekerja migran asal Indonesia, dan apakah izin untuk salat berjamaah bisa didapat bergantung pada majikan. Cara Kementerian Ketenagakerjaan adalah menerbitkan siaran pers yang mengimbau majikan agar luwes, bukan mengubah undang-undangnya. Maka beginilah rupa hari itu di sini: masjid tetap penuh, tetapi kehadiran itu dibayar dengan cuti pribadi.
 
+### date_rule TW eid-al-adha
+Tanggal 10 bulan Dzulhijjah dalam kalender Islam; tidak tercantum dalam "Peraturan Pelaksanaan Hari Peringatan dan Hari Libur", ibadah salat berjamaah kebanyakan diatur berdasarkan persetujuan pemberi kerja.
 ## locale pt-BR
 ### title
 Eid al-Adha
@@ -172,13 +232,26 @@ Uma mesma data do calendário islâmico, quatro tratamentos institucionais difer
 Eid al-Adha, Festa do Sacrifício, Iduladha, Bakrid, Id-ul-Zuha, hajj
 ### customs ID iduladha
 A Indonésia define o Iduladha como feriado nacional. O aviso do governo para 2026 traz 27 de maio (quarta-feira), com folga coletiva (cuti bersama) no dia seguinte, 28 de maio, o que na prática cria um feriado prolongado. O ato central é o sacrifício e a partilha da carne com parentes e com os pobres. A data segue o calendário islâmico e um anúncio do governo, então a data gregoriana muda a cada ano. Como no Idulfitri, é um sistema que alinha a obrigação religiosa diretamente ao calendário do Estado.
+### date_rule ID iduladha
+O décimo dia do mês de Dzulhijah no calendário islâmico; a data é anunciada pelo governo, e geralmente são organizados dias de folga conjunta separadamente
 ### customs IN bakrid
 A Índia lista o Id-ul-Zuha, localmente chamado com frequência de Bakrid, entre seus feriados nacionais; a data publicada para 2026 é 27 de maio (quarta-feira). A oração comunitária na mesquita, o sacrifício e a divisão da carne em três partes — a casa, os parentes e amigos, os pobres — formam o esqueleto comum. Mas na Índia este é um feriado nacional num país onde os muçulmanos são minoria, então o mesmo dia tem pesos muito diferentes entre comunidades, e a prática varia por estado.
+### date_rule IN bakrid
+O décimo dia do mês de Dhul Hijjah no calendário islâmico; listado no calendário nacional de feriados
 ### customs US eid-al-adha
 Os Estados Unidos não têm feriado federal para o Eid al-Adha. O calendário oficial das escolas públicas da cidade de Nova York, porém, o registra como dia sem aula: segunda-feira, 17 de maio, no ano escolar 2026–27. O mesmo calendário fecha as escolas também no Eid al-Fitr, em 9 de março. O reconhecimento está no nível do distrito escolar, não do país, e alcança a sala de aula em vez do local de trabalho — formato usual dos feriados religiosos nos Estados Unidos, resolvidos localmente conforme quem mora ali.
+### date_rule US eid-al-adha
+O décimo dia do mês de Dhul Hijjah no calendário islâmico; listado como dia de suspensão das aulas no calendário das escolas públicas da cidade de Nova York
 ### customs BR eid-al-adha
 No Brasil, o Eid al-Adha não é feriado nacional nem, ainda, data comemorativa oficial. Em fevereiro de 2024 uma comissão do Senado aprovou proposta para incluir festas judaicas e islâmicas na lista de datas comemorativas nacionais. Segundo o censo de 2010, os muçulmanos eram cerca de 0,02% da população, aproximadamente 35 mil pessoas, de modo que o dia funciona a partir de anúncios e arranjos feitos por cada mesquita e comunidade. Aqui a pergunta sobre a festa não é como ela é vivida, e sim se ela chegou a ser escrita no calendário do país.
+### date_rule BR eid-al-adha
+O décimo dia do mês de Dhul Hijjah no calendário islâmico; não é feriado oficial, determinado pelo anúncio de cada mesquita
 ### customs CN eid-al-adha
 O Eid al-Adha — localmente chamado de Gurbang — não é feriado nacional na China continental, mas é feriado local na Região Autônoma Hui de Ningxia, com dois dias de folga: 27 e 28 de maio em 2026. É um dia a mais do que o Eid al-Fitr recebeu, porque naquele ano o Eid al-Fitr caiu num sábado. O número de dias é publicado a cada ano no aviso anual de feriados do governo regional, de modo que a duração do descanso para a mesma festa dentro da China é redecidida em nível regional todos os anos. Na China, o Eid al-Adha não é feriado nacional, e sim local: regiões autônomas como Xinjiang, onde a população crente se concentra, fixam elas próprias a folga, enquanto o resto do país trabalha normalmente. A mesma festa sustentando dois estados de calendário dentro de um só país mostra por que a resposta à pergunta se o dia é de folga depende de qual nível de norma se está consultando.
+### date_rule CN eid-al-adha
+10º dia do mês de Dhul Hijjah no calendário islâmico; anunciado anualmente pelo Gabinete Geral do Governo Popular da Região Autônoma em seu comunicado de organização de feriados, geralmente um feriado de dois dias.
 ### customs TW eid-al-adha
 A Lei das Datas Comemorativas e Feriados de Taiwan enumera dias religiosos um a um — o dia taoista, o nascimento do Buda — e ainda assim não traz nem o Eid al-Fitr nem o Eid al-Adha; o calendário islâmico simplesmente não está nessa lista. Na prática, Taiwan abriga centenas de milhares de trabalhadores migrantes vindos da Indonésia, e conseguir folga para a oração comunitária depende do empregador. A via do Ministério do Trabalho é um comunicado pedindo flexibilidade aos empregadores, não uma emenda à lei. Então o dia se parece com isto aqui: as mesquitas enchem como sempre, mas essa presença foi paga com férias pessoais.
+
+### date_rule TW eid-al-adha
+10º dia do mês de Dhu al-Hijjah no calendário islâmico; não consta no "Regulamento de Implementação de Datas Comemorativas e Feriados", as orações coletivas costumam ser organizadas mediante o consentimento do empregador.
