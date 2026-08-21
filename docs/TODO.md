@@ -151,6 +151,28 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
 - [x] 接上 `jobs` 表(`job_name='ask-the-world-seed'`),否則 cron 檔尾那條維護查詢看不到它。
       查:`sqlite3 db/aeiou.sqlite "SELECT * FROM jobs WHERE job_name='ask-the-world-seed' ORDER BY rowid DESC LIMIT 5"`
 
+## 🔴 改版效果還量不到,原因不是「還沒生效」(2026-08-21 查證)
+
+被問「一天過去有沒有改善」時查到的三件事實,**都不是時間問題**:
+
+1. **Google 最後爬取是 08-15/16,改版是 08-21 上線** —— 它還沒看過新標題。
+   查法:`node -e` 呼叫 `inspectUrl` 看 `lastCrawlTime`(見 scripts/seo-health.mjs 的 ② 那段)。
+2. **GSC 最新資料只到 08-19**(固定落後 2–3 天),那是改版前兩天。
+   所以 08-21 之後的任何 GSC 數字都還沒進來,拿現在的數字比較沒有意義。
+3. **12 個可索引頁完全沒有 lastmod**:`/`、`/about/`、`/questions/`、
+   `/topics/{today,nearby,events}/`、`/rankings/{24h,72h,7d,1m,3m,1y}/`。
+   Topic 頁有(取 `content_updated_at`),這 12 個沒有 —— 對 Google 少了一個回來重爬的訊號。
+   查法:`curl -s https://aeiou.now/sitemap.xml | grep -c '<lastmod>'` 與 `grep -c '<loc>'`,
+   兩個數字不相等就是有頁面沒帶。
+
+- [ ] 給那 12 個頁補 lastmod。難點:它們的內容來自多個 Topic 的彙整,
+      沒有單一 `content_updated_at` 可取;合理的取法是「該頁實際列出的 Topic 裡最新的那個」。
+      **動 sitemap 的 lastmod 語意要小心**(`sitemap.xml.ts` 檔頭寫著「狼來了有害,少報同樣有害」),
+      動工前問用戶。
+- [ ] Topic 頁的 lastmod 目前只反映**資料**變動,不反映**模板**變動。這一輪改標題、改版面
+      之所以還是帶上 08-21,是因為同一天剛好也改了資料(local_name、date_rule)。
+      純模板改版下一次會沒有訊號。要不要把渲染層的指紋也納入 lastmod,同樣要先問。
+
 ## 外站的 bot 封鎖不再擋下整條 hourly(2026-08-21 用戶拍板,已解)
 
 2026-08-21 03:00 的 hourly-export 被

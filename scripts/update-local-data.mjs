@@ -158,10 +158,20 @@ function validateShape() {
 const sleep = (ms) => new Promise((resolveSleep) => setTimeout(resolveSleep, ms));
 const FETCH_ATTEMPTS = 3;
 
-// 只重試「網路層」失敗(斷線、逾時、5xx)。內容層問題(4xx、marker 不符)不重試:
-// 那代表來源真的變了,重抓同一頁不會改變結果,照原設計整次失敗、擋下輸出。
+// 重試「網路層」失敗(斷線、逾時、5xx),**4xx 也重試**(2026-08-21 改)。
+//
+// 原本的註解寫著「4xx 代表來源真的變了,重抓同一頁不會改變結果」。那個前提被實測推翻:
+// 2026-08-21 對 `https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026` 用本腳本
+// 同一個 UA 連打 8 次,得到 4 次 200、3 次 404、1 次連不上 —— 同一個網址、同一分鐘內,
+// 狀態碼在跳。那個 404 不是「內容沒了」,是對方的來源不穩。
+// 而 CLAUDE.md 的紅線本來就寫著「**判死前要複驗**」;這裡不重試 4xx 等於沒複驗就判死,
+// 代價是整條 hourly-export 停擺(2026-08-20 13:00 起的 24 小時內被擋停 5 次)。
+//
+// 分流不變:重試完仍是 5xx → 傳輸層(丟 transient);仍是 4xx → 把 response 交回呼叫端,
+// 由它打根目錄再決定是內容層還是封鎖層。**沒有放寬判準,只是判死前先複驗。**
 async function fetchSource(url) {
   let lastMessage;
+  let lastClientError = null;   // 最後一次 4xx 的 response,重試用盡後交回呼叫端判
   for (let attempt = 1; attempt <= FETCH_ATTEMPTS; attempt++) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), DEFAULT_TIMEOUT_MS);
@@ -176,6 +186,9 @@ async function fetchSource(url) {
       });
       if (response.status >= 500) {
         lastMessage = `HTTP ${response.status}`;
+      } else if (!response.ok) {
+        lastMessage = `HTTP ${response.status}`;
+        lastClientError = { response, rawBody: await response.text() };
       } else {
         return { response, rawBody: await response.text() };
       }
@@ -188,6 +201,8 @@ async function fetchSource(url) {
     }
     if (attempt < FETCH_ATTEMPTS) await sleep(2000 * attempt);
   }
+  // 重試用盡仍是 4xx:交回呼叫端(它會打根目錄,再判內容層還是封鎖層)。
+  if (lastClientError) return lastClientError;
   const transient = new Error(`來源讀取失敗（已重試 ${FETCH_ATTEMPTS} 次）：${url}；${lastMessage}`);
   transient.transient = true;   // 傳輸層，不是內容層 —— 由呼叫端決定要不要擋
   throw transient;
