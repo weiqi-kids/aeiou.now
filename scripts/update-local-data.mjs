@@ -11,6 +11,13 @@
 //   傳輸層（連線失敗、逾時、5xx）
 //     → 對方伺服器暫時掛了，不是我們的資料錯。記進健康檔並放行本輪；
 //       同一個 URL 連續 TRANSIENT_TOLERANCE 輪都是傳輸層失敗才擋下。
+//   不可信層（4xx **且這個 URL 24 小時內驗過 OK**）——2026-08-21 用戶拍板新增
+//     → 我們有證據它一小時前還在。重試三次仍 4xx 也不足以判死,降為傳輸層,
+//       走「連續 TRANSIENT_TOLERANCE 輪才擋」。真的被撤掉的來源會在約 3 小時後擋下。
+//       為什麼要有:實測 jakarta.go.id 那個來源同一分鐘內 8 次請求得到 4 次 200、3 次 404,
+//       三次重試全落空的機率仍有約 12.5%,等於每天還會停 3 次全站更新。
+//       判準用「24 小時內」而不是「上一輪」:中間若有輪次被擋掉或跳過,
+//       「上一輪」會誤判成「從來沒驗過」而立刻擋。
 //   封鎖層（4xx **且該網域的根目錄也連不上**）——2026-08-21 用戶拍板新增
 //     → 是這台主機被對方整站擋掉，不是那一頁失效。**只 WARN，永不擋輸出**，
 //       也不計入傳輸層的容忍計數（等再久都不會變，擋下去只是懲罰七個站）。
@@ -236,7 +243,16 @@ async function isOriginReachable(url) {
   return reachable;
 }
 
-async function verifySource(url, source, event) {
+// lastOkAt: 這個 URL 上次驗過 OK 的日期(YYYY-MM-DD),沒有就是 null。
+// 由呼叫端從健康檔取,不讓這支自己讀檔(它在 --offline 時也會被呼叫)。
+const TRUST_WINDOW_DAYS = Number(process.env.AEIOU_LOCAL_SOURCE_TRUST_DAYS || 1);
+const withinTrustWindow = (lastOkAt) => {
+  if (!lastOkAt) return false;
+  const diff = (Date.parse(`${asOf}T00:00:00Z`) - Date.parse(`${lastOkAt}T00:00:00Z`)) / 86400000;
+  return Number.isFinite(diff) && diff >= 0 && diff <= TRUST_WINDOW_DAYS;
+};
+
+async function verifySource(url, source, event, lastOkAt = null) {
   if (offline) return { url, skipped: true, matched: [] };
   let response, rawBody;
   try {
@@ -246,7 +262,21 @@ async function verifySource(url, source, event) {
     return { url, transient: true, message: error.message, matched: [] };
   }
   if (!response.ok) {
-    // 判死前先問:是這一頁沒了,還是整個網域對我們關門?(2026-08-21 用戶拍板)
+    // 判死前先問兩件事(2026-08-21 用戶拍板):
+    //   ① 這個 URL 最近驗過 OK 嗎?有的話這個 4xx 不可信 —— 來源會跳,不是內容沒了。
+    // ⚠ 這裡要 **return** 傳輸層的結果形狀,不能 throw ——
+    //    fetchSource 的 throw 有 try/catch 接,這一段在 catch 之外,throw 會直接冒到頂層
+    //    變成硬失敗(2026-08-21 寫的時候就是這樣錯了一次,測試抓到)。
+    if (withinTrustWindow(lastOkAt)) {
+      return {
+        url,
+        transient: true,   // 交給傳輸層的容忍計數,連續 3 輪才擋
+        matched: [],
+        message: `HTTP ${response.status}(已重試 ${FETCH_ATTEMPTS} 次),`
+          + `但 ${lastOkAt} 才驗過 OK —— 不採信這次的判死`,
+      };
+    }
+    //   ② 是這一頁沒了,還是整個網域對我們關門?
     if (await isOriginReachable(url)) {
       fail(`來源 HTTP ${response.status}：${url}`);
     }
@@ -312,24 +342,32 @@ async function main() {
   const checks = [];
   for (const url of urlsToVerify) {
     const event = verifiableEvents.find((candidate) => candidate.source_url === url);
-    const result = await verifySource(url, catalogByUrl.get(url), event);
+    const result = await verifySource(url, catalogByUrl.get(url), event, health[url]?.ok_at || null);
     checks.push(result);
     if (result.skipped) console.log(`  skip ${url}`);
     else if (result.blocked) {
       // 封鎖層:永不擋輸出。記進健康檔只是為了讓它看得見(維護時查得到、也不會被
       // 下一次成功悄悄抹掉之前無人知曉),不參與 TRANSIENT_TOLERANCE 的計數。
       const prev = health[url]?.blocked_since;
-      health[url] = { blocked_since: prev || asOf, last_message: result.message };
+      health[url] = { blocked_since: prev || asOf, ok_at: health[url]?.ok_at || null, last_message: result.message };
       blockedByOrigin.push(`${url}：${result.message}`);
       console.log(`  WARN ${url} ${result.message}`);
     }
     else if (result.transient) {
       const n = (health[url]?.consecutive_failures || 0) + 1;
-      health[url] = { consecutive_failures: n, first_failed_at: health[url]?.first_failed_at || asOf, last_message: result.message };
+      health[url] = {
+        consecutive_failures: n,
+        first_failed_at: health[url]?.first_failed_at || asOf,
+        // ok_at 要留著:不留的話第一次降級就把「最近驗過」的證據弄丟,
+        // 第二輪會變成「從來沒驗過」而立刻判死 —— 那等於這一層沒做。
+        ok_at: health[url]?.ok_at || null,
+        last_message: result.message,
+      };
       if (n >= TRANSIENT_TOLERANCE) blocking.push(`${url} 連續 ${n} 輪傳輸層失敗（容忍上限 ${TRANSIENT_TOLERANCE}）：${result.message}`);
       else console.log(`  WARN ${url} 傳輸層失敗第 ${n}/${TRANSIENT_TOLERANCE} 輪，本輪放行：${result.message}`);
     } else {
-      delete health[url];   // 一次成功就歸零,不累積歷史
+      // 一次成功就把失敗計數歸零,但**保留 ok_at** —— 下一輪的 4xx 要靠它判斷可不可信。
+      health[url] = { ok_at: asOf };
       console.log(`  ok   ${url} [${result.matched.join(", ")}${result.matchedDates.length ? `; date: ${result.matchedDates.join(", ")}` : ""}]`);
     }
   }

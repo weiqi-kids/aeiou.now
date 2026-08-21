@@ -167,9 +167,36 @@ jobs:
         run: |
           set -euo pipefail
           PUB_DIR="$RUNNER_TEMP/publish"
-          rm -rf "$PUB_DIR"
-          # SSH remote(deploy key 是 SSH 機制,HTTPS 走不通)
-          git clone --depth 1 "git@github.com:${{ matrix.repo }}.git" "$PUB_DIR"
+
+          # 網路動作一律重試(2026-08-21 新增)。當天實測:同一次推送裡
+          # `ssh: connect to host github.com port 22: Connection refused` 連中兩次,
+          # 七個語系是七個獨立 job、不是原子的,於是站台停在「六站新版、主站舊版」——
+          # 不同語系跑不同的碼,比乾脆整輪失敗更糟。
+          # clone 與 push 都是冪等的(publish repo 只有這個 job 會寫),重試沒有副作用。
+          # ⚠ 變數一律帶 _retry_ 前綴:bash 的 local 是**動態作用域**,被 retry 呼叫的函式
+          #    會看到這裡的區域變數。用 n / max 這種通用名,日後誰寫一個也用 n 的函式
+          #    就會互相踩(2026-08-21 寫這段時實測踩到)。
+          retry() {
+            local _retry_label="$1" _retry_max="$2"; shift 2
+            local _retry_n=1 _retry_wait
+            until "$@"; do
+              if [ "$_retry_n" -ge "$_retry_max" ]; then
+                echo "✗ ${_retry_label} 連續 ${_retry_max} 次失敗" >&2
+                return 1
+              fi
+              _retry_wait=$(( _retry_n * 10 ))
+              echo "⚠ ${_retry_label} 第 ${_retry_n}/${_retry_max} 次失敗,${_retry_wait}s 後重試" >&2
+              sleep "$_retry_wait"
+              _retry_n=$(( _retry_n + 1 ))
+            done
+          }
+          clone_publish() {
+            # 失敗會留下半套目錄,每次重試都要先清掉
+            rm -rf "$PUB_DIR"
+            # SSH remote(deploy key 是 SSH 機制,HTTPS 走不通)
+            git clone --depth 1 "git@github.com:${{ matrix.repo }}.git" "$PUB_DIR"
+          }
+          retry "clone ${{ matrix.repo }}" 3 clone_publish
 
           git -C "$PUB_DIR" config user.name  "aeiou-ci"
           git -C "$PUB_DIR" config user.email "lightman.chang@gmail.com"
@@ -204,7 +231,7 @@ jobs:
               echo "pushed=false" >> "$GITHUB_OUTPUT"
             else
               git -C "$PUB_DIR" commit -m "deploy ${{ matrix.locale }} @ ${GITHUB_SHA::7}"
-              git -C "$PUB_DIR" push origin HEAD:main
+              retry "push ${{ matrix.repo }}" 3 git -C "$PUB_DIR" push origin HEAD:main
               echo "pushed=true" >> "$GITHUB_OUTPUT"
             fi
           fi

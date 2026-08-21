@@ -123,7 +123,33 @@ if (!isPng || w !== WIDTH || h !== HEIGHT) {
 }
 
 mkdirSync(COVER_DIR, { recursive: true });
-copyFileSync(produced, target);
+
+// ── 壓縮(2026-08-21 新增) ──────────────────────────────────────────────────
+// codex 的輸出是未壓縮的 RGB PNG,約 1.7–2.0 MB;而封面在 Topic 頁是
+// `loading="eager" fetchpriority="high"` 的大圖 —— 它就是那一頁的 LCP 圖。
+// 2026-08-21 盤點:33 張封面裡有 3 張是 1.7–1.8 MB(exam-season、
+// islamic-calendar-days、womens-day),其餘 270–460 KB —— 差 5 倍,因為那 30 幾張
+// 是某個時點手工壓過的,而出圖管線沒有這一步。「裸執行就必須是正確且完整的行為」:
+// 產出來就該跟兄弟一致,不該靠有人記得補一刀。
+// 實測 womens-day:1712 KB → 422 KB(縮 76%),顯示尺寸下看不出差別。
+// pngquant 不在就跳過(只是檔案大,不是錯誤),但會印出來讓人知道。
+const compressed = join(workdir, "cover-min.png");
+const q = spawnSync("pngquant", ["--quality", "65-90", "--speed", "1", "--force",
+  "--output", compressed, produced], { encoding: "utf8" });
+let source = produced;
+if (q.status === 0 && existsSync(compressed)) {
+  const before = statSync(produced).size;
+  const after = statSync(compressed).size;
+  // 壓不小就用原檔(pngquant 對某些圖會變大)
+  if (after < before) {
+    source = compressed;
+    console.log(`[cover] pngquant ${Math.round(before / 1024)} KB → ${Math.round(after / 1024)} KB`);
+  }
+} else {
+  console.log(`[cover] ⚠ 未壓縮(pngquant 不可用或失敗:${(q.stderr || q.error?.message || "").toString().slice(0, 80)})`);
+}
+
+copyFileSync(source, target);
 console.log(`✓ ${target}(${w}x${h}, ${Math.round(statSync(target).size / 1024)} KB)`);
 console.log("  下一步:把 content/topics-pending/<slug>.md 搬進 content/topics/,");
 console.log("  併回 occurrences,並把 slug 加進 check-final-topic-taxonomy.mjs 的 FINAL_SLUGS。");
