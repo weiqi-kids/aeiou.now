@@ -2304,6 +2304,930 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20260919-harvest-table",
+      "date": "2026-09-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "pt-BR",
+      "target_locale": "ja",
+      "text": "साल में कौन-सा भोजन आपको सबसे ज़्यादा फ़सल जैसा लगता है?",
+      "options": [
+        {
+          "id": "newrice",
+          "emoji": "🌾",
+          "label": "मौसम का पहला चावल"
+        },
+        {
+          "id": "family",
+          "emoji": "🍲",
+          "label": "पूरे परिवार के लिए एक ही पतीला"
+        },
+        {
+          "id": "street",
+          "emoji": "🍢",
+          "label": "मंदिर या बाज़ार का स्ट्रीट फ़ूड"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "यहाँ ऐसा कुछ नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260919-harvest-thanks-date",
+      "date": "2026-09-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किसका थैंक्सगिविंग नवंबर में नहीं, अक्टूबर में पड़ता है?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260920-moon-plan",
+      "date": "2026-09-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "zh-TW",
+      "target_locale": "id",
+      "text": "मध्य-शरद की रात आप सबसे अधिक कहाँ होंगे?",
+      "options": [
+        {
+          "id": "home",
+          "emoji": "🏠",
+          "label": "घर पर परिवार के साथ"
+        },
+        {
+          "id": "outdoor",
+          "emoji": "🔥",
+          "label": "बाहर बारबेक्यू पर"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "हमेशा की तरह काम या स्कूल"
+        },
+        {
+          "id": "unknown",
+          "emoji": "🌙",
+          "label": "यहाँ ऐसी कोई रात नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260920-moon-barbecue",
+      "date": "2026-09-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस समुदाय में मध्य-शरद की सबसे आम गतिविधि चाँद देखना नहीं, बारबेक्यू है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260921-moving-day",
+      "date": "2026-09-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": "zh-CN",
+      "target_locale": "pt-BR",
+      "text": "गृह-प्रवेश के दिन नए घर में सबसे पहले क्या जाता है?",
+      "options": [
+        {
+          "id": "rice",
+          "emoji": "🍚",
+          "label": "चावल, नमक या पानी"
+        },
+        {
+          "id": "altar",
+          "emoji": "🕯️",
+          "label": "देवस्थान या पूर्वजों का स्थान"
+        },
+        {
+          "id": "bed",
+          "emoji": "🛏️",
+          "label": "बिस्तर"
+        },
+        {
+          "id": "nothing",
+          "emoji": "📦",
+          "label": "कोई तय क्रम नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260921-moving-auspicious",
+      "date": "2026-09-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: कौन-सा समुदाय पंचांग देखकर गृह-प्रवेश का शुभ दिन चुनता है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260922-remember-how",
+      "date": "2026-09-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": "hi",
+      "target_locale": "en",
+      "text": "किसी दिवंगत को याद करते समय आपका परिवार क्या करता है?",
+      "options": [
+        {
+          "id": "food",
+          "emoji": "🍚",
+          "label": "उनकी पसंद का भोजन रखते हैं"
+        },
+        {
+          "id": "grave",
+          "emoji": "💐",
+          "label": "क़ब्र या समाधि पर जाते हैं"
+        },
+        {
+          "id": "talk",
+          "emoji": "🗣️",
+          "label": "बच्चों को उनकी बातें सुनाते हैं"
+        },
+        {
+          "id": "quiet",
+          "emoji": "🕯️",
+          "label": "चुपचाप याद करते हैं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260922-pitru-paksha",
+      "date": "2026-09-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस समुदाय में पूर्वजों के लिए **लगातार सोलह दिन** नियत हैं?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260923-mooncake-honest",
+      "date": "2026-09-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "id",
+      "target_locale": "zh-CN",
+      "text": "सच बताइए — आप कितने मूनकेक खाते हैं?",
+      "options": [
+        {
+          "id": "many",
+          "emoji": "😋",
+          "label": "बहुत — मुझे बहुत पसंद हैं"
+        },
+        {
+          "id": "one",
+          "emoji": "🥮",
+          "label": "बस एक, रस्म के लिए"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "ज़्यादातर उपहार में देता हूँ"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "कभी खाया ही नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260923-moon-not-full",
+      "date": "2026-09-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किसकी प्रसिद्ध चाँद-दर्शन की रात में **पूर्णिमा ज़रूरी नहीं** — और वे यह जानते हैं?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260924-caregiving-who",
+      "date": "2026-09-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+      "topic_slug": "caregiving-across-generations",
+      "asker_locale": "pt-BR",
+      "target_locale": "zh-TW",
+      "text": "माता-पिता के बुज़ुर्ग होने पर आपके घर में देखभाल कौन करता है?",
+      "options": [
+        {
+          "id": "child",
+          "emoji": "🏠",
+          "label": "संतान, साथ रहकर"
+        },
+        {
+          "id": "hired",
+          "emoji": "🧑‍⚕️",
+          "label": "देखभाल के लिए रखा गया व्यक्ति"
+        },
+        {
+          "id": "facility",
+          "emoji": "🏥",
+          "label": "देखभाल-गृह में"
+        },
+        {
+          "id": "alone",
+          "emoji": "🚪",
+          "label": "वे स्वयं रहते हैं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260924-respect-aged-holiday",
+      "date": "2026-09-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+      "topic_slug": "caregiving-across-generations",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस समुदाय में बुज़ुर्गों के सम्मान के लिए साल में एक राजपत्रित छुट्टी है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260925-moon-holiday",
+      "date": "2026-09-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "ja",
+      "target_locale": "hi",
+      "text": "क्या आज (मध्य-शरद) आपकी छुट्टी है?",
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🎊",
+          "label": "हाँ — राजपत्रित छुट्टी है"
+        },
+        {
+          "id": "half",
+          "emoji": "🌗",
+          "label": "छुट्टी नहीं, पर जल्दी घर जाऊँगा"
+        },
+        {
+          "id": "no",
+          "emoji": "💼",
+          "label": "नहीं — सामान्य दिन"
+        },
+        {
+          "id": "what",
+          "emoji": "❓",
+          "label": "आज कौन-सा दिन है?"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260925-mooncake-salary",
+      "date": "2026-09-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस समुदाय में कंपनियाँ मध्य-शरद के आसपास कर्मचारियों को मूनकेक या उपहार-पेटी देना लगभग रिवाज़ मानती हैं?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260926-harvest-who",
+      "date": "2026-09-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "en",
+      "target_locale": "id",
+      "text": "क्या आपके परिवार में कोई अब भी खेती या सब्ज़ी उगाता है?",
+      "options": [
+        {
+          "id": "farm",
+          "emoji": "🌾",
+          "label": "हाँ — यही मुख्य आय है"
+        },
+        {
+          "id": "garden",
+          "emoji": "🪴",
+          "label": "हाँ — अपने लिए"
+        },
+        {
+          "id": "past",
+          "emoji": "👵",
+          "label": "पिछली पीढ़ी करती थी"
+        },
+        {
+          "id": "never",
+          "emoji": "🏙️",
+          "label": "कभी नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260926-harvest-thanksgiving-brazil",
+      "date": "2026-09-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस समुदाय में थैंक्सगिविंग **क़ानून द्वारा** तय राष्ट्रीय दिवस है, फिर भी उस दिन सामान्य कामकाज होता है?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260927-teacher-gift",
+      "date": "2026-09-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "zh-TW",
+      "target_locale": "en",
+      "text": "शिक्षक दिवस पर छात्र आमतौर पर क्या करते हैं?",
+      "options": [
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "कार्ड लिखते हैं"
+        },
+        {
+          "id": "flower",
+          "emoji": "🌸",
+          "label": "फूल या छोटा उपहार"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎤",
+          "label": "स्कूल समारोह करता है"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "कुछ भी नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260927-teachers-day-dates",
+      "date": "2026-09-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस समुदाय में शिक्षक दिवस **कन्फ़्यूशियस के जन्मदिन** पर है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260928-teacher-remember",
+      "date": "2026-09-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "hi",
+      "target_locale": "pt-BR",
+      "text": "जिस शिक्षक का नाम आज भी याद है — उन्होंने आपको क्या सिखाया?",
+      "options": [
+        {
+          "id": "subject",
+          "emoji": "📐",
+          "label": "एक विषय"
+        },
+        {
+          "id": "life",
+          "emoji": "🧭",
+          "label": "इंसान बनना"
+        },
+        {
+          "id": "saw",
+          "emoji": "👀",
+          "label": "उन्होंने मुझे देखा"
+        },
+        {
+          "id": "none",
+          "emoji": "🌫️",
+          "label": "याद नहीं आता"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260928-teachers-day-holiday",
+      "date": "2026-09-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: इन चार समुदायों में से कितनों में शिक्षक दिवस पर **छात्र सामान्य रूप से स्कूल जाते हैं**?",
+      "options": [
+        {
+          "id": "four",
+          "emoji": "4️⃣",
+          "label": "चारों में"
+        },
+        {
+          "id": "three",
+          "emoji": "3️⃣",
+          "label": "तीन में"
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": "दो में"
+        },
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "केवल एक में"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260929-national-day-feel",
+      "date": "2026-09-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": "id",
+      "target_locale": "ja",
+      "text": "आपके देश का राष्ट्रीय दिवस आपको सबसे ज़्यादा किसके जैसा लगता है?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🏖️",
+          "label": "बस एक छुट्टी"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎺",
+          "label": "समारोह और झंडा"
+        },
+        {
+          "id": "family",
+          "emoji": "🍽️",
+          "label": "परिवार के साथ भोजन"
+        },
+        {
+          "id": "nothing",
+          "emoji": "😐",
+          "label": "कुछ ख़ास नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260929-golden-week-october",
+      "date": "2026-09-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किसका राष्ट्रीय दिवस पूरे एक सप्ताह को राष्ट्रव्यापी अवकाश बना देता है — और राजमार्ग तक मुफ़्त हो जाते हैं?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260930-school-year-start",
+      "date": "2026-09-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": "en",
+      "target_locale": "zh-CN",
+      "text": "आपका शैक्षिक वर्ष कब शुरू होता है?",
+      "options": [
+        {
+          "id": "aug",
+          "emoji": "🍂",
+          "label": "अगस्त अंत या सितंबर"
+        },
+        {
+          "id": "apr",
+          "emoji": "🌸",
+          "label": "अप्रैल"
+        },
+        {
+          "id": "feb",
+          "emoji": "☀️",
+          "label": "जनवरी या फ़रवरी"
+        },
+        {
+          "id": "jun",
+          "emoji": "📚",
+          "label": "जून या जुलाई"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260930-school-year-april",
+      "date": "2026-09-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किसका शैक्षिक वर्ष **अप्रैल** में शुरू होता है — और भर्ती का मौसम तथा वित्त-वर्ष भी उसी रेखा पर?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261001-flag-at-home",
+      "date": "2026-10-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": "zh-CN",
+      "target_locale": "hi",
+      "text": "राष्ट्रीय दिवस पर क्या आपके घर झंडा लगता है?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🚩",
+          "label": "हर साल"
+        },
+        {
+          "id": "street",
+          "emoji": "🏘️",
+          "label": "पूरी गली लगाती है"
+        },
+        {
+          "id": "never",
+          "emoji": "🙅",
+          "label": "कभी नहीं"
+        },
+        {
+          "id": "nohome",
+          "emoji": "🏢",
+          "label": "लगाने की जगह नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261001-two-national-days",
+      "date": "2026-10-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस समुदाय में राष्ट्रीय दिवस और स्वतंत्रता दिवस **दो अलग तारीख़ें** हैं, और दोनों छुट्टियाँ हैं?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261002-funeral-colour",
+      "date": "2026-10-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRCW71GA7PD20TQ1K12",
+      "topic_slug": "farewells-and-funerals",
+      "asker_locale": "pt-BR",
+      "target_locale": "zh-TW",
+      "text": "आपके यहाँ अंत्येष्टि में लोग किस रंग के कपड़े पहनते हैं?",
+      "options": [
+        {
+          "id": "black",
+          "emoji": "🖤",
+          "label": "काला"
+        },
+        {
+          "id": "white",
+          "emoji": "🤍",
+          "label": "सफ़ेद"
+        },
+        {
+          "id": "plain",
+          "emoji": "👔",
+          "label": "कोई भी सादा रंग"
+        },
+        {
+          "id": "bright",
+          "emoji": "🌈",
+          "label": "बल्कि चमकीले रंग"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261002-funeral-white",
+      "date": "2026-10-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRCW71GA7PD20TQ1K12",
+      "topic_slug": "farewells-and-funerals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस समुदाय में शोक का वस्त्र परंपरागत रूप से काला नहीं, **सफ़ेद** होता है?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

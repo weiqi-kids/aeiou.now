@@ -5377,6 +5377,2162 @@
         "id": "Jepang. Usia-usia penting punya namanya sendiri: enam puluh disebut kanreki, tujuh puluh koki, tujuh puluh tujuh kiju, masing-masing dengan warnanya dan cara merayakannya sendiri. Itu berbeda dari memperlakukan ulang tahun sebagai angka yang sekadar bertambah tiap tahun — di sini usia dipotong menjadi tahap-tahap bernama, dan sampai pada satu tahap itulah yang dirayakan. Pembanding: di Tiongkok ulang tahun Gregorius dan lunar biasanya sama-sama diingat untuk orang yang sama, dan mana yang dirayakan cenderung ditentukan yang dituakan; di India, menyentuh kaki orang tua dan berkunjung ke kuil lebih sering dianggap langkah wajib ketimbang memotong kue.",
         "pt-BR": "Japão. As idades marcantes têm nomes próprios: sessenta é kanreki, setenta koki, setenta e sete kiju, cada uma com sua cor e seu modo de ser celebrada. Isso difere de tratar o aniversário como um número que só aumenta a cada ano — aqui a idade é cortada em etapas nomeadas, e chegar a uma delas é já o motivo da festa. Para contraste: na China costuma-se lembrar tanto o aniversário gregoriano quanto o lunar da mesma pessoa, e qual deles se comemora tende a ser decidido pelos mais velhos; na Índia, tocar os pés dos mais velhos e ir ao templo são mais frequentemente o passo necessário do que cortar um bolo."
       }
+    },
+    {
+      "id": "q-20260919-harvest-table",
+      "date": "2026-09-19",
+      "kind": "poll",
+      "topic": "harvest-and-gratitude",
+      "asker": "pt-BR",
+      "target": "ja",
+      "text": {
+        "zh-TW": "一年之中,哪一頓飯最像「收成」的味道?",
+        "en": "Which meal of the year tastes most like harvest to you?",
+        "ja": "一年のうち、いちばん「実り」を感じる食事はどれ?",
+        "zh-CN": "一年之中，哪一顿饭最像“收成”的味道?",
+        "hi": "साल में कौन-सा भोजन आपको सबसे ज़्यादा फ़सल जैसा लगता है?",
+        "id": "Makan apa dalam setahun yang paling terasa seperti panen?",
+        "pt-BR": "Qual refeição do ano tem mais gosto de colheita para você?"
+      },
+      "options": [
+        {
+          "id": "newrice",
+          "emoji": "🌾",
+          "label": {
+            "zh-TW": "新米或新穀",
+            "en": "The first rice of the season",
+            "ja": "新米",
+            "zh-CN": "新米或新谷",
+            "hi": "मौसम का पहला चावल",
+            "id": "Beras panen pertama",
+            "pt-BR": "O primeiro arroz da safra"
+          }
+        },
+        {
+          "id": "family",
+          "emoji": "🍲",
+          "label": {
+            "zh-TW": "全家圍一鍋",
+            "en": "One pot, whole family",
+            "ja": "家族で囲む鍋",
+            "zh-CN": "全家围一锅",
+            "hi": "पूरे परिवार के लिए एक ही पतीला",
+            "id": "Satu panci untuk sekeluarga",
+            "pt-BR": "Uma panela para a família toda"
+          }
+        },
+        {
+          "id": "street",
+          "emoji": "🍢",
+          "label": {
+            "zh-TW": "廟口或市集的小吃",
+            "en": "Street food at the temple or market",
+            "ja": "縁日や市場の屋台",
+            "zh-CN": "庙口或市集的小吃",
+            "hi": "मंदिर या बाज़ार का स्ट्रीट फ़ूड",
+            "id": "Jajanan di pasar atau kelenteng",
+            "pt-BR": "Comida de rua na feira ou no templo"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "沒有這種感覺",
+            "en": "No such meal here",
+            "ja": "そういう食事はない",
+            "zh-CN": "没有这种感觉",
+            "hi": "यहाँ ऐसा कुछ नहीं",
+            "id": "Tidak ada yang seperti itu",
+            "pt-BR": "Não temos nada assim"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260919-harvest-thanks-date",
+      "date": "2026-09-19",
+      "kind": "guess",
+      "topic": "harvest-and-gratitude",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的感恩節不在十一月,而在十月?",
+        "en": "Guess: whose Thanksgiving falls in October, not November?",
+        "ja": "クイズ:感謝祭が11月ではなく10月にあるのはどこ?",
+        "zh-CN": "你猜:哪个社群的感恩节不在十一月，而在十月?",
+        "hi": "अंदाज़ा लगाइए: किसका थैंक्सगिविंग नवंबर में नहीं, अक्टूबर में पड़ता है?",
+        "id": "Tebak: Thanksgiving siapa yang jatuh pada Oktober, bukan November?",
+        "pt-BR": "Adivinhe: o Dia de Ação de Graças de quem cai em outubro, e não em novembro?"
+      },
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "en",
+      "explain": {
+        "zh-TW": "這題有陷阱:美國的感恩節在十一月第四個星期四,但**加拿大**的在十月第二個星期一——同一個名字、同一個大陸,差了六週。收成的節期本來就跟緯度走:加拿大的作物收得早,節日就早。四個選項裡只有美國有「感恩節」這個節日,所以答案是美國,但它的日期是十一月;真正在十月的是它北邊的鄰居。日本的收穫感謝在十一月二十三日的勤勞感謝之日,台灣沒有全國性的收成假日,巴西則把感恩節(Dia de Ação de Graças)訂在十一月第四個星期四,直接照美國的日子走。",
+        "en": "This one has a catch: the United States marks Thanksgiving on the fourth Thursday of November, but **Canada** marks it on the second Monday of October — same name, same continent, six weeks apart. Harvest festivals follow latitude: Canadian crops come in earlier, so the holiday does. Of the four options only the United States has a holiday called Thanksgiving, so that is the answer — but its date is in November; the October one belongs to its northern neighbour. Japan gives thanks for the harvest on Labour Thanksgiving Day, 23 November; Taiwan has no national harvest holiday; Brazil sets its Dia de Ação de Graças on the fourth Thursday of November, following the US date.",
+        "ja": "この問題には仕掛けがあります。アメリカの感謝祭は11月第4木曜日ですが、**カナダ**は10月第2月曜日——同じ名前、同じ大陸で6週間の差。収穫の祭りは緯度に従います。カナダは作物が早く実るので祝日も早い。選択肢のうち「感謝祭」という祝日があるのはアメリカだけなので答えはアメリカですが、その日付は11月。10月なのは北の隣国です。日本は11月23日の勤労感謝の日、台湾に全国的な収穫の祝日はなく、ブラジルのDia de Ação de Graçasは11月第4木曜日でアメリカに合わせています。",
+        "zh-CN": "这题有陷阱:美国的感恩节在十一月第四个星期四，但**加拿大**的在十月第二个星期一——同一个名字、同一个大陆，差了六周。收成的节期本来就跟纬度走:加拿大的作物收得早，节日就早。四个选项里只有美国有“感恩节”这个节日，所以答案是美国，但它的日期是十一月;真正在十月的是它北边的邻居。日本的收获感谢在十一月二十三日的勤劳感谢之日，台湾没有全国性的收成假日，巴西则把感恩节订在十一月第四个星期四，直接照美国的日子走。",
+        "hi": "इसमें एक पेच है: अमेरिका में थैंक्सगिविंग नवंबर के चौथे गुरुवार को है, पर **कनाडा** में अक्टूबर के दूसरे सोमवार को — एक ही नाम, एक ही महाद्वीप, छह हफ़्ते का फ़र्क़। फ़सल के त्योहार अक्षांश के साथ चलते हैं: कनाडा में फ़सल जल्दी आती है, इसलिए छुट्टी भी जल्दी। चारों विकल्पों में थैंक्सगिविंग नाम का त्योहार सिर्फ़ अमेरिका में है, इसलिए उत्तर अमेरिका है — पर उसकी तारीख़ नवंबर में है; अक्टूबर वाला उसका उत्तरी पड़ोसी है। जापान 23 नवंबर को श्रम-कृतज्ञता दिवस मनाता है, ताइवान में फ़सल की कोई राष्ट्रीय छुट्टी नहीं, और ब्राज़ील अपना Dia de Ação de Graças नवंबर के चौथे गुरुवार को रखता है।",
+        "id": "Ada jebakannya: Thanksgiving Amerika Serikat jatuh pada Kamis keempat November, tetapi **Kanada** merayakannya pada Senin kedua Oktober — nama sama, benua sama, selisih enam minggu. Perayaan panen mengikuti lintang: panen Kanada lebih awal, maka hari liburnya pun lebih awal. Dari empat pilihan, hanya Amerika Serikat yang punya hari bernama Thanksgiving, jadi itulah jawabannya — tetapi tanggalnya November; yang Oktober adalah tetangga di utaranya. Jepang bersyukur atas panen pada Hari Syukur Buruh, 23 November; Taiwan tidak punya hari libur panen nasional; Brasil menetapkan Dia de Ação de Graças pada Kamis keempat November mengikuti Amerika.",
+        "pt-BR": "Esta tem pegadinha: os Estados Unidos marcam o Thanksgiving na quarta quinta-feira de novembro, mas o **Canadá** o marca na segunda segunda-feira de outubro — mesmo nome, mesmo continente, seis semanas de diferença. Festas de colheita seguem a latitude: no Canadá a safra chega antes, e o feriado também. Das quatro opções, só os Estados Unidos têm um feriado chamado Thanksgiving, então essa é a resposta — mas a data dele é novembro; o de outubro é do vizinho ao norte. O Japão agradece a colheita no Dia de Ação de Graças ao Trabalho, 23 de novembro; Taiwan não tem feriado nacional de colheita; o Brasil fixa seu Dia de Ação de Graças na quarta quinta-feira de novembro, seguindo a data americana."
+      }
+    },
+    {
+      "id": "q-20260920-moon-plan",
+      "date": "2026-09-20",
+      "kind": "poll",
+      "topic": "mid-autumn-and-moon-viewing",
+      "asker": "zh-TW",
+      "target": "id",
+      "text": {
+        "zh-TW": "中秋那天,你最可能在哪裡?",
+        "en": "Where are you most likely to be on the Mid-Autumn night?",
+        "ja": "中秋の夜、いちばんいそうな場所は?",
+        "zh-CN": "中秋那天，你最可能在哪里?",
+        "hi": "मध्य-शरद की रात आप सबसे अधिक कहाँ होंगे?",
+        "id": "Pada malam Pertengahan Musim Gugur, di mana kemungkinan besar kamu berada?",
+        "pt-BR": "Na noite do Meio do Outono, onde você provavelmente estará?"
+      },
+      "options": [
+        {
+          "id": "home",
+          "emoji": "🏠",
+          "label": {
+            "zh-TW": "在家裡跟家人",
+            "en": "At home with family",
+            "ja": "家で家族と",
+            "zh-CN": "在家里跟家人",
+            "hi": "घर पर परिवार के साथ",
+            "id": "Di rumah bersama keluarga",
+            "pt-BR": "Em casa com a família"
+          }
+        },
+        {
+          "id": "outdoor",
+          "emoji": "🔥",
+          "label": {
+            "zh-TW": "在戶外烤肉",
+            "en": "Outdoors at a barbecue",
+            "ja": "屋外でバーベキュー",
+            "zh-CN": "在户外烤肉",
+            "hi": "बाहर बारबेक्यू पर",
+            "id": "Di luar, bakar-bakar",
+            "pt-BR": "Ao ar livre, num churrasco"
+          }
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": {
+            "zh-TW": "照常上班上課",
+            "en": "At work or school as usual",
+            "ja": "いつもどおり仕事か学校",
+            "zh-CN": "照常上班上课",
+            "hi": "हमेशा की तरह काम या स्कूल",
+            "id": "Kerja atau sekolah seperti biasa",
+            "pt-BR": "No trabalho ou na escola, como sempre"
+          }
+        },
+        {
+          "id": "unknown",
+          "emoji": "🌙",
+          "label": {
+            "zh-TW": "我這裡沒有這個節日",
+            "en": "There is no such night here",
+            "ja": "ここにはその行事がない",
+            "zh-CN": "我这里没有这个节日",
+            "hi": "यहाँ ऐसी कोई रात नहीं",
+            "id": "Di sini tidak ada malam seperti itu",
+            "pt-BR": "Aqui não existe essa noite"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260920-moon-barbecue",
+      "date": "2026-09-20",
+      "kind": "guess",
+      "topic": "mid-autumn-and-moon-viewing",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的中秋節最普遍的活動不是賞月,而是烤肉?",
+        "en": "Guess: for which community is the most common Mid-Autumn activity not moon-gazing but barbecue?",
+        "ja": "クイズ:中秋にいちばん多い過ごし方が月見ではなくバーベキューなのはどこ?",
+        "zh-CN": "你猜:哪个社群的中秋节最普遍的活动不是赏月，而是烤肉?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में मध्य-शरद की सबसे आम गतिविधि चाँद देखना नहीं, बारबेक्यू है?",
+        "id": "Tebak: bagi komunitas mana kegiatan Pertengahan Musim Gugur yang paling umum bukan memandang bulan, melainkan bakar-bakar?",
+        "pt-BR": "Adivinhe: para qual comunidade a atividade mais comum do Meio do Outono não é olhar a lua, mas fazer churrasco?"
+      },
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": {
+        "zh-TW": "台灣。烤肉不是古俗,是晚近幾十年才長出來的習慣,如今卻是當天最普遍的活動——騎樓、公園、河堤都在烤,空氣裡的味道比月亮更容易辨認出今天是中秋。柚子與月餅仍在,只是烤肉把「賞月」從抬頭看變成了在戶外待一整晚。對照:中國的中秋是法定假日,重點在返鄉與家宴;日本的十五夜擺芒草與月見糰子,而且**名月不一定是滿月**;印尼沒有這個節日,華人社群在部分城市自己過。",
+        "en": "Taiwan. The barbecue is not an old custom — it grew up over the last few decades — yet it is now the most common thing people do that night. Arcades, parks and riverbanks all smell of grilling, and the smell tells you it is Mid-Autumn faster than the moon does. Pomelo and mooncakes are still there; the barbecue simply turned moon-gazing from looking up into spending the whole evening outside. By contrast: in China Mid-Autumn is a public holiday centred on going home for a family meal; Japan's jūgoya sets out pampas grass and rice dumplings, and the famous moon is **not necessarily full**; Indonesia has no such holiday, though Chinese communities in some cities mark it themselves.",
+        "ja": "台湾です。バーベキューは古い習わしではなく、ここ数十年で広まったもの。それが今では中秋の夜にいちばん多い過ごし方で、アーケードも公園も河川敷も焼く匂いに包まれ、月より先に匂いで中秋だと分かります。文旦も月餅も健在ですが、バーベキューが「月見」を見上げる行為から一晩じゅう外にいる行為に変えました。対して、中国では法定休日で帰省と家族の食卓が中心。日本の十五夜はススキと月見団子を供え、しかも**名月は必ずしも満月ではありません**。インドネシアにこの祝日はなく、一部の都市で華人コミュニティが独自に祝います。",
+        "zh-CN": "台湾。烤肉不是古俗，是晚近几十年才长出来的习惯，如今却是当天最普遍的活动——骑楼、公园、河堤都在烤，空气里的味道比月亮更容易辨认出今天是中秋。柚子与月饼仍在，只是烤肉把“赏月”从抬头看变成了在户外待一整晚。对照:中国的中秋是法定假日，重点在返乡与家宴;日本的十五夜摆芒草与月见团子，而且**名月不一定是满月**;印尼没有这个节日，华人社群在部分城市自己过。",
+        "hi": "ताइवान। बारबेक्यू कोई पुरानी परंपरा नहीं — यह पिछले कुछ दशकों में बनी आदत है — पर आज उस रात सबसे आम यही है। बरामदे, पार्क, नदी-किनारे सब भुनने की महक से भरे रहते हैं, और वह महक चाँद से पहले बता देती है कि आज मध्य-शरद है। पोमेलो और मूनकेक अब भी हैं; बारबेक्यू ने बस 'चाँद देखना' को ऊपर देखने से बदलकर पूरी शाम बाहर बिताना बना दिया। इसके उलट: चीन में यह राजपत्रित छुट्टी है और घर लौटकर परिवार के भोजन पर केंद्रित; जापान का जूगोया पम्पास घास और चावल के गोले रखता है, और वह प्रसिद्ध चाँद **ज़रूरी नहीं कि पूर्णिमा का हो**; इंडोनेशिया में ऐसा कोई त्योहार नहीं, हालाँकि कुछ शहरों में चीनी समुदाय इसे मनाता है।",
+        "id": "Taiwan. Bakar-bakar bukan adat lama — kebiasaan ini tumbuh beberapa dekade terakhir — tetapi kini justru paling umum dilakukan pada malam itu. Emper toko, taman, dan tepi sungai semuanya berbau panggangan, dan bau itu lebih cepat memberi tahu bahwa ini Pertengahan Musim Gugur daripada bulannya sendiri. Jeruk bali dan kue bulan tetap ada; bakar-bakar hanya mengubah 'memandang bulan' dari menengadah menjadi menghabiskan semalaman di luar. Sebaliknya: di Tiongkok ini hari libur resmi yang berpusat pada pulang kampung dan makan bersama keluarga; jūgoya Jepang menyajikan rumput pampas dan bola beras, dan bulan termasyhur itu **belum tentu purnama**; Indonesia tidak punya hari raya ini, meski komunitas Tionghoa di sebagian kota merayakannya sendiri.",
+        "pt-BR": "Taiwan. O churrasco não é um costume antigo — cresceu nas últimas décadas — mas hoje é a coisa mais comum de se fazer naquela noite. Galerias, parques e margens de rio cheiram todos a grelha, e o cheiro avisa que é Meio do Outono antes da lua avisar. A toranja e os bolos da lua continuam ali; o churrasco só transformou 'olhar a lua' de erguer a cabeça em passar a noite inteira ao ar livre. Em contraste: na China é feriado nacional centrado em voltar para casa e na refeição em família; o jūgoya japonês dispõe capim-dos-pampas e bolinhos de arroz, e a lua célebre **não é necessariamente cheia**; a Indonésia não tem esse feriado, embora comunidades chinesas em algumas cidades o marquem por conta própria."
+      }
+    },
+    {
+      "id": "q-20260921-moving-day",
+      "date": "2026-09-21",
+      "kind": "poll",
+      "topic": "moving-home",
+      "asker": "zh-CN",
+      "target": "pt-BR",
+      "text": {
+        "zh-TW": "搬家那天,你們家會先搬什麼進新家?",
+        "en": "On moving day, what goes into the new home first?",
+        "ja": "引っ越しの日、新居にまず何を入れますか?",
+        "zh-CN": "搬家那天，你们家会先搬什么进新家?",
+        "hi": "गृह-प्रवेश के दिन नए घर में सबसे पहले क्या जाता है?",
+        "id": "Pada hari pindah, apa yang pertama masuk ke rumah baru?",
+        "pt-BR": "No dia da mudança, o que entra primeiro na casa nova?"
+      },
+      "options": [
+        {
+          "id": "rice",
+          "emoji": "🍚",
+          "label": {
+            "zh-TW": "米、鹽或水",
+            "en": "Rice, salt or water",
+            "ja": "米・塩・水",
+            "zh-CN": "米、盐或水",
+            "hi": "चावल, नमक या पानी",
+            "id": "Beras, garam, atau air",
+            "pt-BR": "Arroz, sal ou água"
+          }
+        },
+        {
+          "id": "altar",
+          "emoji": "🕯️",
+          "label": {
+            "zh-TW": "神明或祖先的位置",
+            "en": "The shrine or the ancestors' place",
+            "ja": "神棚や仏壇",
+            "zh-CN": "神明或祖先的位置",
+            "hi": "देवस्थान या पूर्वजों का स्थान",
+            "id": "Tempat ibadah atau leluhur",
+            "pt-BR": "O altar ou o lugar dos antepassados"
+          }
+        },
+        {
+          "id": "bed",
+          "emoji": "🛏️",
+          "label": {
+            "zh-TW": "床",
+            "en": "The bed",
+            "ja": "ベッド",
+            "zh-CN": "床",
+            "hi": "बिस्तर",
+            "id": "Kasur",
+            "pt-BR": "A cama"
+          }
+        },
+        {
+          "id": "nothing",
+          "emoji": "📦",
+          "label": {
+            "zh-TW": "沒有先後之分",
+            "en": "No particular order",
+            "ja": "特に決まりはない",
+            "zh-CN": "没有先后之分",
+            "hi": "कोई तय क्रम नहीं",
+            "id": "Tidak ada urutan khusus",
+            "pt-BR": "Não há ordem definida"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260921-moving-auspicious",
+      "date": "2026-09-21",
+      "kind": "guess",
+      "topic": "moving-home",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群會為了「搬家的好日子」而特地挑日曆上的某一天?",
+        "en": "Guess: which community picks a specific day off the calendar because it is an auspicious day to move?",
+        "ja": "クイズ:引っ越しに「良い日」を暦から選ぶのはどこ?",
+        "zh-CN": "你猜:哪个社群会为了“搬家的好日子”而特地挑日历上的某一天?",
+        "hi": "अंदाज़ा लगाइए: कौन-सा समुदाय पंचांग देखकर गृह-प्रवेश का शुभ दिन चुनता है?",
+        "id": "Tebak: komunitas mana yang memilih hari tertentu dari penanggalan karena dianggap baik untuk pindah rumah?",
+        "pt-BR": "Adivinhe: qual comunidade escolhe um dia específico do calendário por ser dia propício para mudar de casa?"
+      },
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": {
+        "zh-TW": "台灣——不過印度也是,這題兩邊都對得起來,差別在**依據哪一本曆**。台灣看農民曆的「宜入宅」,吉日集中在少數幾天,搬家公司當天會漲價、也會被訂滿;印度看 panchāng 選 gṛha-praveśa 的時辰,還要配上點火、煮第一鍋牛奶讓它溢出來的儀式。美國與巴西沒有這一層:搬家日由租約與月底決定,美國許多地方的租約在月初起算,所以最忙的是月底那個週末。這題答台灣或印度都不算誤解,只是題目問的是**日曆上的某一天**,而台灣的農民曆把它印成一格一格看得見的字。",
+        "en": "Taiwan — though India fits too; the difference is **which almanac**. Taiwan reads the farmer's almanac for days marked suitable for entering a house; the good days cluster on a handful of dates, and movers raise prices and book out on them. India reads the panchāng to pick the hour for gṛha-praveśa, along with lighting the first fire and boiling milk until it overflows. The United States and Brazil have no such layer: moving day is set by the lease and the end of the month — in much of the US leases start on the first, so the busiest time is the last weekend of the month. Either Taiwan or India is a defensible answer; the question asks about a **day printed on a calendar**, and Taiwan's almanac prints it as a visible square.",
+        "ja": "台湾です。ただしインドも当てはまり、違いは**どの暦を見るか**。台湾は農民暦の「入宅に宜し」を見ます。吉日は数日に集中し、その日は引っ越し業者が値上げし、予約も埋まります。インドはパンチャーングでグリハ・プラヴェーシャの時刻を選び、初めての火を灯し、牛乳を吹きこぼす儀式を伴います。アメリカとブラジルにこの層はなく、引っ越し日は賃貸契約と月末で決まります。アメリカの多くの地域では契約が1日始まりなので、最も混むのは月末の週末です。台湾でもインドでも筋は通りますが、設問は**暦の上のある日**なので、農民暦がそれを目に見えるマス目として印刷している台湾を答えとします。",
+        "zh-CN": "台湾——不过印度也是，这题两边都对得起来，差别在**依据哪一本历**。台湾看农民历的“宜入宅”，吉日集中在少数几天，搬家公司当天会涨价、也会被订满;印度看 panchāng 选 gṛha-praveśa 的时辰，还要配上点火、煮第一锅牛奶让它溢出来的仪式。美国与巴西没有这一层:搬家日由租约与月底决定，美国许多地方的租约在月初起算，所以最忙的是月底那个周末。这题答台湾或印度都不算误解，只是题目问的是**日历上的某一天**，而台湾的农民历把它印成一格一格看得见的字。",
+        "hi": "ताइवान — हालाँकि भारत भी सही बैठता है; फ़र्क़ **किस पंचांग** का है। ताइवान किसान-पंचांग में 'गृह-प्रवेश के लिए शुभ' दिन देखता है; शुभ दिन कुछ ही तारीख़ों पर सिमटे होते हैं और उस दिन मूवर्स दाम बढ़ा देते हैं और बुक हो जाते हैं। भारत पंचांग से गृह-प्रवेश का मुहूर्त चुनता है, साथ में पहला दीप जलाना और दूध उबालकर उफनाना। अमेरिका और ब्राज़ील में यह परत नहीं: गृह-परिवर्तन का दिन किराया-अनुबंध और महीने के अंत से तय होता है — अमेरिका में अधिकतर अनुबंध पहली तारीख़ से शुरू होते हैं, इसलिए सबसे व्यस्त समय महीने का आख़िरी सप्ताहांत है।",
+        "id": "Taiwan — meski India juga cocok; bedanya **penanggalan mana**. Taiwan membaca penanggalan petani untuk hari yang 'baik untuk masuk rumah'; hari baik menumpuk pada beberapa tanggal saja, dan pada hari itu jasa pindahan menaikkan harga dan penuh dipesan. India membaca panchāng untuk memilih waktu gṛha-praveśa, disertai menyalakan api pertama dan merebus susu sampai luber. Amerika Serikat dan Brasil tidak punya lapisan ini: hari pindah ditentukan kontrak sewa dan akhir bulan — di banyak wilayah AS kontrak dimulai tanggal 1, jadi yang tersibuk adalah akhir pekan terakhir bulan itu.",
+        "pt-BR": "Taiwan — embora a Índia também se encaixe; a diferença é **qual almanaque**. Taiwan consulta o almanaque do agricultor para os dias marcados como próprios para entrar numa casa; os dias bons se concentram em poucas datas, e nelas as transportadoras sobem o preço e lotam a agenda. A Índia consulta o panchāng para escolher a hora do gṛha-praveśa, com o primeiro fogo aceso e o leite fervido até transbordar. Estados Unidos e Brasil não têm essa camada: o dia da mudança é definido pelo contrato e pelo fim do mês — em boa parte dos EUA os contratos começam no dia 1º, então o pico é o último fim de semana do mês."
+      }
+    },
+    {
+      "id": "q-20260922-remember-how",
+      "date": "2026-09-22",
+      "kind": "poll",
+      "topic": "ghosts-ancestors-and-remembrance",
+      "asker": "hi",
+      "target": "en",
+      "text": {
+        "zh-TW": "想起過世的親人時,你們家怎麼做?",
+        "en": "When you remember someone who has died, what does your family do?",
+        "ja": "亡くなった人を思い出すとき、家ではどうしますか?",
+        "zh-CN": "想起过世的亲人时，你们家怎么做?",
+        "hi": "किसी दिवंगत को याद करते समय आपका परिवार क्या करता है?",
+        "id": "Saat mengenang orang yang sudah meninggal, apa yang keluargamu lakukan?",
+        "pt-BR": "Quando vocês lembram de alguém que morreu, o que a família faz?"
+      },
+      "options": [
+        {
+          "id": "food",
+          "emoji": "🍚",
+          "label": {
+            "zh-TW": "擺一份他愛吃的",
+            "en": "Set out food they liked",
+            "ja": "好きだった物を供える",
+            "zh-CN": "摆一份他爱吃的",
+            "hi": "उनकी पसंद का भोजन रखते हैं",
+            "id": "Menyajikan makanan kesukaannya",
+            "pt-BR": "Põem um prato de que ele gostava"
+          }
+        },
+        {
+          "id": "grave",
+          "emoji": "💐",
+          "label": {
+            "zh-TW": "去墓前或塔位",
+            "en": "Go to the grave",
+            "ja": "お墓参りに行く",
+            "zh-CN": "去墓前或塔位",
+            "hi": "क़ब्र या समाधि पर जाते हैं",
+            "id": "Ziarah ke makam",
+            "pt-BR": "Vão ao túmulo"
+          }
+        },
+        {
+          "id": "talk",
+          "emoji": "🗣️",
+          "label": {
+            "zh-TW": "講他的事給小孩聽",
+            "en": "Tell the children about them",
+            "ja": "子どもに話して聞かせる",
+            "zh-CN": "讲他的事给小孩听",
+            "hi": "बच्चों को उनकी बातें सुनाते हैं",
+            "id": "Menceritakannya kepada anak-anak",
+            "pt-BR": "Contam dele para as crianças"
+          }
+        },
+        {
+          "id": "quiet",
+          "emoji": "🕯️",
+          "label": {
+            "zh-TW": "安靜地想著",
+            "en": "Just think of them quietly",
+            "ja": "静かに思う",
+            "zh-CN": "安静地想着",
+            "hi": "चुपचाप याद करते हैं",
+            "id": "Mengenang dalam hening",
+            "pt-BR": "Apenas lembram em silêncio"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260922-pitru-paksha",
+      "date": "2026-09-22",
+      "kind": "guess",
+      "topic": "ghosts-ancestors-and-remembrance",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群有一段**連續十六天**專門用來祭祖的日子?",
+        "en": "Guess: which community has a stretch of **sixteen consecutive days** set aside for the ancestors?",
+        "ja": "クイズ:先祖のために**16日間続けて**充てる期間があるのはどこ?",
+        "zh-CN": "你猜:哪个社群有一段**连续十六天**专门用来祭祖的日子?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में पूर्वजों के लिए **लगातार सोलह दिन** नियत हैं?",
+        "id": "Tebak: komunitas mana yang punya **enam belas hari berturut-turut** khusus untuk leluhur?",
+        "pt-BR": "Adivinhe: qual comunidade tem **dezesseis dias seguidos** reservados aos antepassados?"
+      },
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "answer": "hi",
+      "explain": {
+        "zh-TW": "印度。那段時間叫 Pitru Paksha,在印度曆 Bhadrapada 月的下半月,前後約十六天,每一天對應祖先過世的那個曆日,家人在那一天行 tarpaṇ 與 śrāddha。這期間普遍被視為不宜開始新事:不辦婚禮、不買新車、不搬家。對照:台灣的中元是**一個月**的鬼月加上七月十五那天的普渡;日本的盂蘭盆通常是八月十三到十六共四天,而且**不是國定假日**——放假是靠企業慣例;印尼的爪哇有 Nyadran,在齋戒月前掃墓,是一次性的而不是連續多日。",
+        "en": "India. The stretch is Pitru Paksha, the dark fortnight of Bhadrapada, about sixteen days; each day corresponds to the lunar date on which an ancestor died, and the family performs tarpaṇ and śrāddha on that day. The period is widely treated as unsuitable for beginnings: no weddings, no new cars, no moving house. By contrast: Taiwan has a whole **ghost month** plus the Zhongyuan offering on the fifteenth; Japan's Obon is usually four days, 13–16 August, and is **not a public holiday** — the time off comes from company practice; in Java, Nyadran cleans the graves before Ramadan, a single occasion rather than a run of days.",
+        "ja": "インドです。その期間はピトゥル・パクシャ。インド暦バードラパダ月の下半分、およそ16日間で、先祖が亡くなった暦日にあたる日にタルパンとシュラーッダを行います。この間は新しいことを始めるのに向かないとされ、結婚式も新車購入も引っ越しも避けられます。対して台湾は**鬼月**まるまる一か月と七月十五日の普渡。日本の盆は通常8月13〜16日の4日間で、しかも**国民の祝日ではありません**——休みは企業の慣行によるもの。インドネシアのジャワにはラマダン前に墓を清めるニャドランがありますが、連続した日々ではなく一度きりです。",
+        "zh-CN": "印度。那段时间叫 Pitru Paksha，在印度历 Bhadrapada 月的下半月，前后约十六天，每一天对应祖先过世的那个历日，家人在那一天行 tarpaṇ 与 śrāddha。这期间普遍被视为不宜开始新事:不办婚礼、不买新车、不搬家。对照:台湾的中元是**一个月**的鬼月加上七月十五那天的普渡;日本的盂兰盆通常是八月十三到十六共四天，而且**不是国定假日**——放假是靠企业惯例;印尼的爪哇有 Nyadran，在斋戒月前扫墓，是一次性的而不是连续多日。",
+        "hi": "भारत। यह अवधि पितृ पक्ष है — भाद्रपद का कृष्ण पक्ष, लगभग सोलह दिन; हर दिन उस तिथि से जुड़ा है जिस दिन कोई पूर्वज गया था, और परिवार उसी दिन तर्पण और श्राद्ध करता है। इस दौरान नई शुरुआत टाली जाती है: न विवाह, न नई गाड़ी, न गृह-प्रवेश। इसके उलट: ताइवान में पूरा **भूत-मास** और सातवें महीने की पंद्रहवीं को झोंगयुआन का अर्पण; जापान का ओबोन आमतौर पर 13–16 अगस्त चार दिन का है और **राजपत्रित छुट्टी नहीं** — छुट्टी कंपनियों की प्रथा से मिलती है; जावा में न्यादरान रमज़ान से पहले क़ब्रों की सफ़ाई है, जो एक ही अवसर है, लगातार दिनों की शृंखला नहीं।",
+        "id": "India. Rentang itu bernama Pitru Paksha, paruh gelap bulan Bhadrapada, sekitar enam belas hari; tiap hari sesuai tanggal bulan wafatnya seorang leluhur, dan keluarga melakukan tarpaṇ serta śrāddha pada hari itu. Masa ini umumnya dianggap tidak cocok untuk memulai sesuatu: tidak ada pernikahan, tidak beli mobil baru, tidak pindah rumah. Sebaliknya: Taiwan punya **bulan hantu** sepenuh bulan ditambah persembahan Zhongyuan pada tanggal lima belas; Obon Jepang biasanya empat hari, 13–16 Agustus, dan **bukan hari libur nasional** — liburnya datang dari kebiasaan perusahaan; di Jawa, Nyadran membersihkan makam menjelang Ramadan, satu kali saja, bukan rangkaian hari.",
+        "pt-BR": "Índia. O período chama-se Pitru Paksha, a quinzena escura de Bhadrapada, cerca de dezesseis dias; cada dia corresponde à data lunar em que um antepassado morreu, e a família faz tarpaṇ e śrāddha nesse dia. O período é amplamente tido como impróprio para começos: nada de casamentos, carros novos ou mudanças. Em contraste: Taiwan tem um **mês dos fantasmas** inteiro mais a oferenda de Zhongyuan no dia quinze; o Obon japonês costuma durar quatro dias, 13 a 16 de agosto, e **não é feriado nacional** — a folga vem da prática das empresas; em Java, o Nyadran limpa os túmulos antes do Ramadã, uma ocasião única e não uma sequência de dias."
+      }
+    },
+    {
+      "id": "q-20260923-mooncake-honest",
+      "date": "2026-09-23",
+      "kind": "poll",
+      "topic": "mid-autumn-and-moon-viewing",
+      "asker": "id",
+      "target": "zh-CN",
+      "text": {
+        "zh-TW": "老實說,月餅你吃幾個?",
+        "en": "Honestly — how many mooncakes do you eat?",
+        "ja": "正直に言って、月餅はいくつ食べる?",
+        "zh-CN": "老实说，月饼你吃几个?",
+        "hi": "सच बताइए — आप कितने मूनकेक खाते हैं?",
+        "id": "Jujur saja — berapa kue bulan yang kamu makan?",
+        "pt-BR": "Sinceramente — quantos bolos da lua você come?"
+      },
+      "options": [
+        {
+          "id": "many",
+          "emoji": "😋",
+          "label": {
+            "zh-TW": "很多,我很愛",
+            "en": "A lot — I love them",
+            "ja": "たくさん、大好き",
+            "zh-CN": "很多，我很爱",
+            "hi": "बहुत — मुझे बहुत पसंद हैं",
+            "id": "Banyak — aku suka sekali",
+            "pt-BR": "Muitos — eu adoro"
+          }
+        },
+        {
+          "id": "one",
+          "emoji": "🥮",
+          "label": {
+            "zh-TW": "一個意思一下",
+            "en": "One, for the sake of it",
+            "ja": "一個だけ、形だけ",
+            "zh-CN": "一个意思一下",
+            "hi": "बस एक, रस्म के लिए",
+            "id": "Satu saja, sekadarnya",
+            "pt-BR": "Um, só para marcar"
+          }
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": {
+            "zh-TW": "主要是拿來送人",
+            "en": "Mostly I give them away",
+            "ja": "もっぱら贈り物",
+            "zh-CN": "主要是拿来送人",
+            "hi": "ज़्यादातर उपहार में देता हूँ",
+            "id": "Kebanyakan untuk dibagikan",
+            "pt-BR": "Na maioria, dou de presente"
+          }
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": {
+            "zh-TW": "我沒吃過",
+            "en": "I have never had one",
+            "ja": "食べたことがない",
+            "zh-CN": "我没吃过",
+            "hi": "कभी खाया ही नहीं",
+            "id": "Belum pernah makan",
+            "pt-BR": "Nunca comi"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260923-moon-not-full",
+      "date": "2026-09-23",
+      "kind": "guess",
+      "topic": "mid-autumn-and-moon-viewing",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的「賞月之夜」**不保證看到滿月**,而且他們知道?",
+        "en": "Guess: whose famous moon-viewing night is **not guaranteed to have a full moon** — and they know it?",
+        "ja": "クイズ:「名月の夜」が**必ずしも満月ではない**と知られているのはどこ?",
+        "zh-CN": "你猜:哪个社群的“赏月之夜”**不保证看到满月**，而且他们知道?",
+        "hi": "अंदाज़ा लगाइए: किसकी प्रसिद्ध चाँद-दर्शन की रात में **पूर्णिमा ज़रूरी नहीं** — और वे यह जानते हैं?",
+        "id": "Tebak: malam memandang bulan milik siapa yang **belum tentu purnama** — dan mereka menyadarinya?",
+        "pt-BR": "Adivinhe: a célebre noite de contemplar a lua de quem **não garante lua cheia** — e eles sabem disso?"
+      },
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        }
+      ],
+      "answer": "ja",
+      "explain": {
+        "zh-TW": "日本。十五夜的「名月」是舊曆八月十五那一晚,而從朔到望的間隔在十三點九天到十五點六天之間浮動(月球軌道是橢圓,離地球近時公轉較快),所以名月常常不是滿月。日本國立天文台每年都會特別說明這件事。二〇二六年的中秋名月是九月二十五日,滿月落在兩天後的二十七日。另一件對照:日本的賞月不只一次——八月十五夜之後還有九月的十三夜,兩者被視為一組,只賞其中一個而漏掉另一個,舊時稱為「片見月」,被認為不吉。",
+        "en": "Japan. The famous moon of jūgoya is the night of the fifteenth of the eighth lunar month, but the interval from new moon to full varies between about 13.9 and 15.6 days (the Moon's orbit is elliptical, so it moves faster when closer to Earth) — so the famous moon is often not full. Japan's National Astronomical Observatory points this out every year. In 2026 the harvest moon falls on 25 September while the full moon is two days later, on the 27th. A second contrast: moon-viewing there is not a single night — the fifteenth-night moon is paired with the thirteenth night in the following month, and viewing only one of the pair was traditionally called katami-zuki and considered unlucky.",
+        "ja": "日本です。十五夜の名月は旧暦八月十五日の晩ですが、朔から望までの間隔は約13.9日から15.6日の間で変動します(月の軌道は楕円で、地球に近いときほど速く公転するため)。そのため名月はしばしば満月ではありません。国立天文台は毎年この点を説明しています。2026年の中秋の名月は9月25日、満月はその2日後の27日です。もう一つの対比として、日本の月見は一度きりではありません。八月十五夜のあとに九月の十三夜があり、二つで一組。片方だけ見ることは「片見月」と呼ばれ、忌まれてきました。",
+        "zh-CN": "日本。十五夜的“名月”是旧历八月十五那一晚，而从朔到望的间隔在十三点九天到十五点六天之间浮动(月球轨道是椭圆，离地球近时公转较快)，所以名月常常不是满月。日本国立天文台每年都会特别说明这件事。二〇二六年的中秋名月是九月二十五日，满月落在两天后的二十七日。另一件对照:日本的赏月不只一次——八月十五夜之后还有九月的十三夜，两者被视为一组，只赏其中一个而漏掉另一个，旧时称为“片见月”，被认为不吉。",
+        "hi": "जापान। जूगोया का प्रसिद्ध चाँद आठवें चंद्र-मास की पंद्रहवीं रात का है, पर अमावस्या से पूर्णिमा तक का अंतराल लगभग 13.9 से 15.6 दिन के बीच बदलता है (चंद्रमा की कक्षा दीर्घवृत्ताकार है, पृथ्वी के पास होने पर वह तेज़ चलता है) — इसलिए वह प्रसिद्ध चाँद अक्सर पूर्ण नहीं होता। जापान की राष्ट्रीय खगोल वेधशाला हर साल यह बताती है। 2026 में यह चाँद 25 सितंबर को है जबकि पूर्णिमा दो दिन बाद, 27 को। दूसरा अंतर: वहाँ चाँद-दर्शन एक रात का नहीं — पंद्रहवीं रात के साथ अगले महीने की तेरहवीं रात जुड़ी है, और दोनों में से केवल एक देखना 'कातामी-ज़ुकी' कहलाता था और अशुभ माना जाता था।",
+        "id": "Jepang. Bulan termasyhur jūgoya adalah malam tanggal lima belas bulan kedelapan penanggalan lunar, tetapi selang dari bulan baru ke purnama berubah-ubah antara sekitar 13,9 dan 15,6 hari (orbit Bulan berbentuk elips, sehingga bergerak lebih cepat saat dekat Bumi) — jadi bulan termasyhur itu sering bukan purnama. Observatorium Astronomi Nasional Jepang menjelaskan hal ini setiap tahun. Pada 2026 bulan panen jatuh 25 September sementara purnama dua hari sesudahnya, tanggal 27. Perbedaan kedua: memandang bulan di sana bukan satu malam saja — malam kelima belas berpasangan dengan malam ketiga belas bulan berikutnya, dan memandang salah satunya saja dahulu disebut katami-zuki dan dianggap membawa sial.",
+        "pt-BR": "Japão. A lua célebre do jūgoya é a noite do dia quinze do oitavo mês lunar, mas o intervalo da lua nova à cheia varia entre cerca de 13,9 e 15,6 dias (a órbita da Lua é elíptica, então ela se move mais rápido quando está mais perto da Terra) — por isso a lua célebre muitas vezes não está cheia. O Observatório Astronômico Nacional do Japão explica isso todo ano. Em 2026 a lua da colheita cai em 25 de setembro, enquanto a lua cheia é dois dias depois, no dia 27. Um segundo contraste: contemplar a lua ali não é uma única noite — a lua da décima quinta noite forma par com a décima terceira noite do mês seguinte, e ver só uma das duas era chamado katami-zuki e tido como azarado."
+      }
+    },
+    {
+      "id": "q-20260924-caregiving-who",
+      "date": "2026-09-24",
+      "kind": "poll",
+      "topic": "caregiving-across-generations",
+      "asker": "pt-BR",
+      "target": "zh-TW",
+      "text": {
+        "zh-TW": "父母年紀大了以後,你們家最可能是誰在照顧?",
+        "en": "When parents get old, who in your family is most likely to be caring for them?",
+        "ja": "親が高齢になったとき、家では誰が世話をすることが多い?",
+        "zh-CN": "父母年纪大了以后，你们家最可能是谁在照顾?",
+        "hi": "माता-पिता के बुज़ुर्ग होने पर आपके घर में देखभाल कौन करता है?",
+        "id": "Saat orang tua menua, siapa di keluargamu yang paling mungkin merawat?",
+        "pt-BR": "Quando os pais envelhecem, quem na sua família provavelmente cuida deles?"
+      },
+      "options": [
+        {
+          "id": "child",
+          "emoji": "🏠",
+          "label": {
+            "zh-TW": "子女同住照顧",
+            "en": "A child, living together",
+            "ja": "子どもが同居して世話する",
+            "zh-CN": "子女同住照顾",
+            "hi": "संतान, साथ रहकर",
+            "id": "Anak, tinggal bersama",
+            "pt-BR": "Um filho, morando junto"
+          }
+        },
+        {
+          "id": "hired",
+          "emoji": "🧑‍⚕️",
+          "label": {
+            "zh-TW": "請看護或幫傭",
+            "en": "A hired caregiver",
+            "ja": "介護者を雇う",
+            "zh-CN": "请看护或帮佣",
+            "hi": "देखभाल के लिए रखा गया व्यक्ति",
+            "id": "Perawat yang dipekerjakan",
+            "pt-BR": "Uma cuidadora contratada"
+          }
+        },
+        {
+          "id": "facility",
+          "emoji": "🏥",
+          "label": {
+            "zh-TW": "住到機構",
+            "en": "They move to a facility",
+            "ja": "施設に入る",
+            "zh-CN": "住到机构",
+            "hi": "देखभाल-गृह में",
+            "id": "Pindah ke panti",
+            "pt-BR": "Vão para uma instituição"
+          }
+        },
+        {
+          "id": "alone",
+          "emoji": "🚪",
+          "label": {
+            "zh-TW": "他們自己住",
+            "en": "They live on their own",
+            "ja": "本人たちだけで暮らす",
+            "zh-CN": "他们自己住",
+            "hi": "वे स्वयं रहते हैं",
+            "id": "Mereka tinggal sendiri",
+            "pt-BR": "Eles moram sozinhos"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260924-respect-aged-holiday",
+      "date": "2026-09-24",
+      "kind": "guess",
+      "topic": "caregiving-across-generations",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群把「敬老」放進國定假日,一年放一天?",
+        "en": "Guess: which community has a national public holiday for respecting the aged, one day a year?",
+        "ja": "クイズ:「敬老」を国民の祝日にして年に一日設けているのはどこ?",
+        "zh-CN": "你猜:哪个社群把“敬老”放进国定假日，一年放一天?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में बुज़ुर्गों के सम्मान के लिए साल में एक राजपत्रित छुट्टी है?",
+        "id": "Tebak: komunitas mana yang menjadikan penghormatan kepada lansia sebagai hari libur nasional, satu hari setahun?",
+        "pt-BR": "Adivinhe: qual comunidade tem um feriado nacional para honrar os idosos, um dia por ano?"
+      },
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "answer": "ja",
+      "explain": {
+        "zh-TW": "日本。敬老の日是國民之祝日,自二〇〇三年起改為九月第三個星期一(Happy Monday 制度把幾個祝日移到星期一,以形成連假)。這是**放假的**一天,不只是紀念日。對照:台灣有「祖父母節」在八月的第四個星期日,由教育部推動,不放假;中國的重陽節(農曆九月初九)被定為老年節,寫進老年人權益保障法,但不是法定休假日;印尼沒有對應的全國假日。這題的分辨點不是「有沒有這個概念」——四個地方都有——而是**有沒有把它變成一天假**。",
+        "en": "Japan. Respect for the Aged Day is a national holiday, moved in 2003 to the third Monday of September (the Happy Monday system shifted several holidays to Mondays to create long weekends). It is a day **off**, not merely an observance. By contrast: Taiwan's Grandparents' Day falls on the fourth Sunday of August, promoted by the Ministry of Education, with no day off; China's Double Ninth (ninth day of the ninth lunar month) is designated Seniors' Day in the law on protecting the rights of the elderly, but is not a statutory holiday; Indonesia has no equivalent national holiday. What separates them is not whether the idea exists — all four have it — but whether it became **a day off**.",
+        "ja": "日本です。敬老の日は国民の祝日で、2003年から9月第3月曜日になりました(ハッピーマンデー制度がいくつかの祝日を月曜に移し、連休を作りました)。単なる記念日ではなく**休みになる**日です。対して台湾の「祖父母節」は8月第4日曜日で、教育部が推進するものの休日ではありません。中国の重陽節(旧暦9月9日)は高齢者権益保障法で老年節と定められていますが法定休日ではありません。インドネシアに相当する国民の祝日はありません。分かれ目は概念の有無ではなく——四つとも持っています——それが**一日の休み**になったかどうかです。",
+        "zh-CN": "日本。敬老之日是国民之祝日，自二〇〇三年起改为九月第三个星期一(Happy Monday 制度把几个祝日移到星期一，以形成连假)。这是**放假的**一天，不只是纪念日。对照:台湾有“祖父母节”在八月的第四个星期日，由教育部推动，不放假;中国的重阳节(农历九月初九)被定为老年节，写进老年人权益保障法，但不是法定休假日;印尼没有对应的全国假日。这题的分辨点不是“有没有这个概念”——四个地方都有——而是**有没有把它变成一天假**。",
+        "hi": "जापान। वृद्धजन-सम्मान दिवस राष्ट्रीय अवकाश है, जो 2003 से सितंबर के तीसरे सोमवार को है (हैपी मंडे व्यवस्था ने कई छुट्टियाँ सोमवार पर खिसकाईं ताकि लंबा सप्ताहांत बने)। यह सचमुच **छुट्टी** का दिन है, केवल स्मृति-दिवस नहीं। इसके उलट: ताइवान का दादा-दादी दिवस अगस्त के चौथे रविवार को है, शिक्षा मंत्रालय द्वारा प्रवर्तित, पर छुट्टी नहीं; चीन का डबल नाइन्थ (नवें चंद्र-मास का नवाँ दिन) वृद्धजन अधिकार क़ानून में वरिष्ठ दिवस घोषित है, पर वैधानिक अवकाश नहीं; इंडोनेशिया में समकक्ष राष्ट्रीय छुट्टी नहीं। भेद इसमें नहीं कि विचार है या नहीं — चारों में है — बल्कि इसमें कि वह **छुट्टी** बना या नहीं।",
+        "id": "Jepang. Hari Menghormati Lansia adalah hari libur nasional, sejak 2003 dipindah ke Senin ketiga September (sistem Happy Monday menggeser beberapa hari libur ke Senin agar tercipta akhir pekan panjang). Ini benar-benar hari **libur**, bukan sekadar peringatan. Sebaliknya: Hari Kakek-Nenek Taiwan jatuh pada Minggu keempat Agustus, digalakkan Kementerian Pendidikan, tanpa libur; Double Ninth Tiongkok (hari kesembilan bulan kesembilan lunar) ditetapkan sebagai Hari Lansia dalam undang-undang perlindungan hak lansia, tetapi bukan hari libur resmi; Indonesia tidak punya padanannya. Pembedanya bukan ada tidaknya gagasan itu — keempatnya punya — melainkan apakah ia menjadi **satu hari libur**.",
+        "pt-BR": "Japão. O Dia do Respeito aos Idosos é feriado nacional, transferido em 2003 para a terceira segunda-feira de setembro (o sistema Happy Monday deslocou vários feriados para segundas, criando fins de semana longos). É um dia de **folga**, não apenas uma efeméride. Em contraste: o Dia dos Avós de Taiwan cai no quarto domingo de agosto, promovido pelo Ministério da Educação, sem folga; o Duplo Nove chinês (nono dia do nono mês lunar) é designado Dia dos Idosos na lei de proteção dos direitos da terceira idade, mas não é feriado estatutário; a Indonésia não tem equivalente nacional. O que os separa não é a existência da ideia — os quatro a têm — mas se ela virou **um dia de folga**."
+      }
+    },
+    {
+      "id": "q-20260925-moon-holiday",
+      "date": "2026-09-25",
+      "kind": "poll",
+      "topic": "mid-autumn-and-moon-viewing",
+      "asker": "ja",
+      "target": "hi",
+      "text": {
+        "zh-TW": "今天(中秋)你放假嗎?",
+        "en": "Is today (Mid-Autumn) a day off for you?",
+        "ja": "今日(中秋)は休みですか?",
+        "zh-CN": "今天(中秋)你放假吗?",
+        "hi": "क्या आज (मध्य-शरद) आपकी छुट्टी है?",
+        "id": "Apakah hari ini (Pertengahan Musim Gugur) kamu libur?",
+        "pt-BR": "Hoje (Meio do Outono) é folga para você?"
+      },
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🎊",
+          "label": {
+            "zh-TW": "放,是國定假日",
+            "en": "Yes — it is a public holiday",
+            "ja": "はい、国民の祝日",
+            "zh-CN": "放，是国定假日",
+            "hi": "हाँ — राजपत्रित छुट्टी है",
+            "id": "Ya — hari libur nasional",
+            "pt-BR": "Sim — é feriado nacional"
+          }
+        },
+        {
+          "id": "half",
+          "emoji": "🌗",
+          "label": {
+            "zh-TW": "不放假,但會早點回家",
+            "en": "No, but I will head home early",
+            "ja": "休みではないが早く帰る",
+            "zh-CN": "不放假，但会早点回家",
+            "hi": "छुट्टी नहीं, पर जल्दी घर जाऊँगा",
+            "id": "Tidak libur, tapi pulang lebih awal",
+            "pt-BR": "Não, mas vou para casa mais cedo"
+          }
+        },
+        {
+          "id": "no",
+          "emoji": "💼",
+          "label": {
+            "zh-TW": "照常,跟平常一樣",
+            "en": "No — an ordinary day",
+            "ja": "いつもどおり",
+            "zh-CN": "照常，跟平常一样",
+            "hi": "नहीं — सामान्य दिन",
+            "id": "Tidak — hari biasa",
+            "pt-BR": "Não — um dia comum"
+          }
+        },
+        {
+          "id": "what",
+          "emoji": "❓",
+          "label": {
+            "zh-TW": "今天是什麼日子?",
+            "en": "What day is today?",
+            "ja": "今日は何の日?",
+            "zh-CN": "今天是什么日子?",
+            "hi": "आज कौन-सा दिन है?",
+            "id": "Hari ini hari apa?",
+            "pt-BR": "Que dia é hoje?"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260925-mooncake-salary",
+      "date": "2026-09-25",
+      "kind": "guess",
+      "topic": "mid-autumn-and-moon-viewing",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的公司在中秋前後普遍發月餅或禮盒給員工,幾乎算是一項慣例?",
+        "en": "Guess: in which community do companies routinely hand out mooncakes or gift boxes to staff around Mid-Autumn, almost as a matter of course?",
+        "ja": "クイズ:中秋の前後に会社が社員へ月餅や贈答品を配るのがほぼ慣例なのはどこ?",
+        "zh-CN": "你猜:哪个社群的公司在中秋前后普遍发月饼或礼盒给员工，几乎算是一项惯例?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में कंपनियाँ मध्य-शरद के आसपास कर्मचारियों को मूनकेक या उपहार-पेटी देना लगभग रिवाज़ मानती हैं?",
+        "id": "Tebak: di komunitas mana perusahaan lazim membagikan kue bulan atau parsel kepada karyawan menjelang Pertengahan Musim Gugur, hampir sebagai kebiasaan?",
+        "pt-BR": "Adivinhe: em qual comunidade as empresas costumam distribuir bolos da lua ou cestas aos funcionários no Meio do Outono, quase por praxe?"
+      },
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": {
+        "zh-TW": "台灣。中秋、端午與春節是三個「發禮」的節點,公司送月餅禮盒、往來廠商互送,是普遍到不必解釋的慣例;稅法上這類節慶禮品也有處理方式,可見它不是零星行為。中國同樣盛行企業送月餅,但選項裡沒有中國——這題要在四個裡挑。對照:日本的對應慣例不在中秋,而是七月的お中元與十二月的お歳暮;印尼的對應物是開齋節前的 THR(Tunjangan Hari Raya),那是**法律規定**雇主必須發的節慶津貼,不是禮盒;巴西的對應物是十三薪(13º salário),同樣是法律規定,發在年底。",
+        "en": "Taiwan. Mid-Autumn, Dragon Boat and Lunar New Year are the three gift-giving points of the year: companies send mooncake boxes to staff and to the firms they work with, so routinely that nobody explains it, and the tax code has settled treatment for such festival gifts — a sign it is not occasional. Mainland China does the same, but it is not among the four options here. By contrast: Japan's equivalent custom is not at Mid-Autumn but at o-chūgen in July and o-seibo in December; Indonesia's equivalent is THR before Eid, a festival allowance employers are **required by law** to pay, not a gift box; Brazil's equivalent is the thirteenth salary, likewise required by law and paid at year's end.",
+        "ja": "台湾です。中秋・端午・旧正月は贈答の三つの節目で、会社が社員に月餅の詰め合わせを配り、取引先同士でも贈り合うのは説明不要なほど一般的。税制上もこの種の節句贈答の扱いが定まっており、散発的な行為でないことが分かります。中国本土も同様ですが、この四択には入っていません。対して日本の相当する慣例は中秋ではなく、七月のお中元と十二月のお歳暮。インドネシアの相当物は断食明け前のTHRで、これは**法律で**雇用主に支給が義務づけられた手当であって贈答品ではありません。ブラジルの相当物は第13給与で、同じく法定、年末に支払われます。",
+        "zh-CN": "台湾。中秋、端午与春节是三个“发礼”的节点，公司送月饼礼盒、往来厂商互送，是普遍到不必解释的惯例;税法上这类节庆礼品也有处理方式，可见它不是零星行为。中国同样盛行企业送月饼，但选项里没有中国——这题要在四个里挑。对照:日本的对应惯例不在中秋，而是七月的御中元与十二月的御岁暮;印尼的对应物是开斋节前的 THR，那是**法律规定**雇主必须发的节庆津贴，不是礼盒;巴西的对应物是十三薪，同样是法律规定，发在年底。",
+        "hi": "ताइवान। मध्य-शरद, ड्रैगन बोट और चंद्र नववर्ष — साल के तीन उपहार-अवसर हैं: कंपनियाँ कर्मचारियों और साझेदार फ़र्मों को मूनकेक की पेटियाँ भेजती हैं, इतना आम कि कोई समझाता नहीं, और कर-क़ानून में ऐसे त्योहारी उपहारों का तय बरताव है — यह संकेत कि यह इक्का-दुक्का बात नहीं। मुख्यभूमि चीन में भी ऐसा ही है, पर वह इन चार विकल्पों में नहीं। इसके उलट: जापान की समकक्ष प्रथा मध्य-शरद पर नहीं, जुलाई के ओ-चूगेन और दिसंबर के ओ-सेइबो पर है; इंडोनेशिया का समकक्ष ईद से पहले THR है, जो **क़ानूनन** देय त्योहारी भत्ता है, उपहार-पेटी नहीं; ब्राज़ील का समकक्ष तेरहवाँ वेतन है, वह भी क़ानूनी और साल के अंत में।",
+        "id": "Taiwan. Pertengahan Musim Gugur, Perahu Naga, dan Tahun Baru Imlek adalah tiga titik pemberian hadiah dalam setahun: perusahaan mengirim parsel kue bulan kepada karyawan dan mitra usaha, begitu lazimnya sampai tak perlu dijelaskan, dan hukum pajak pun punya perlakuan baku untuk hadiah hari raya semacam itu — tanda bahwa ini bukan kejadian sesekali. Tiongkok daratan juga demikian, tetapi tidak termasuk empat pilihan di sini. Sebaliknya: kebiasaan setara di Jepang bukan pada Pertengahan Musim Gugur, melainkan o-chūgen pada Juli dan o-seibo pada Desember; padanan Indonesia adalah THR menjelang Lebaran, tunjangan hari raya yang **diwajibkan undang-undang**, bukan parsel; padanan Brasil adalah gaji ketiga belas, juga diwajibkan hukum dan dibayar akhir tahun.",
+        "pt-BR": "Taiwan. Meio do Outono, Barco-Dragão e Ano-Novo Lunar são os três momentos de presentear do ano: empresas mandam caixas de bolo da lua a funcionários e a parceiros, com tal naturalidade que ninguém explica, e a legislação tributária tem tratamento definido para esses presentes de festa — sinal de que não é algo esporádico. A China continental faz o mesmo, mas não está entre as quatro opções. Em contraste: o costume equivalente no Japão não é no Meio do Outono, e sim o o-chūgen em julho e o o-seibo em dezembro; o equivalente indonésio é o THR antes do Eid, um abono de festa que a lei **obriga** o empregador a pagar, não uma cesta; o equivalente brasileiro é o décimo terceiro salário, também obrigatório por lei e pago no fim do ano."
+      }
+    },
+    {
+      "id": "q-20260926-harvest-who",
+      "date": "2026-09-26",
+      "kind": "poll",
+      "topic": "harvest-and-gratitude",
+      "asker": "en",
+      "target": "id",
+      "text": {
+        "zh-TW": "你家裡還有人種田或種菜嗎?",
+        "en": "Does anyone in your family still farm or grow food?",
+        "ja": "家族に農業や家庭菜園をしている人はいますか?",
+        "zh-CN": "你家里还有人种田或种菜吗?",
+        "hi": "क्या आपके परिवार में कोई अब भी खेती या सब्ज़ी उगाता है?",
+        "id": "Apakah masih ada anggota keluargamu yang bertani atau berkebun?",
+        "pt-BR": "Alguém na sua família ainda planta ou cultiva alimento?"
+      },
+      "options": [
+        {
+          "id": "farm",
+          "emoji": "🌾",
+          "label": {
+            "zh-TW": "有,是主要收入",
+            "en": "Yes — it is the main income",
+            "ja": "はい、主な収入源",
+            "zh-CN": "有，是主要收入",
+            "hi": "हाँ — यही मुख्य आय है",
+            "id": "Ya — itu penghasilan utama",
+            "pt-BR": "Sim — é a renda principal"
+          }
+        },
+        {
+          "id": "garden",
+          "emoji": "🪴",
+          "label": {
+            "zh-TW": "有,種著自己吃",
+            "en": "Yes — a garden for ourselves",
+            "ja": "はい、自家用に",
+            "zh-CN": "有，种着自己吃",
+            "hi": "हाँ — अपने लिए",
+            "id": "Ya — untuk konsumsi sendiri",
+            "pt-BR": "Sim — uma horta para nós"
+          }
+        },
+        {
+          "id": "past",
+          "emoji": "👵",
+          "label": {
+            "zh-TW": "上一代有,現在沒有",
+            "en": "My parents' generation did",
+            "ja": "親の世代まで",
+            "zh-CN": "上一代有，现在没有",
+            "hi": "पिछली पीढ़ी करती थी",
+            "id": "Dulu generasi orang tua",
+            "pt-BR": "A geração dos meus pais tinha"
+          }
+        },
+        {
+          "id": "never",
+          "emoji": "🏙️",
+          "label": {
+            "zh-TW": "從來沒有",
+            "en": "Never in my family",
+            "ja": "一度もない",
+            "zh-CN": "从来没有",
+            "hi": "कभी नहीं",
+            "id": "Tidak pernah",
+            "pt-BR": "Nunca"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260926-harvest-thanksgiving-brazil",
+      "date": "2026-09-26",
+      "kind": "guess",
+      "topic": "harvest-and-gratitude",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的感恩節是**法律訂定**的全國性紀念日,但那天照常上班?",
+        "en": "Guess: in which community is Thanksgiving a nationally recognised day fixed **by law** — yet an ordinary working day?",
+        "ja": "クイズ:感謝祭が**法律で**定められた全国的記念日でありながら、その日は普通に働くのはどこ?",
+        "zh-CN": "你猜:哪个社群的感恩节是**法律订定**的全国性纪念日，但那天照常上班?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में थैंक्सगिविंग **क़ानून द्वारा** तय राष्ट्रीय दिवस है, फिर भी उस दिन सामान्य कामकाज होता है?",
+        "id": "Tebak: di komunitas mana Thanksgiving adalah hari nasional yang ditetapkan **undang-undang**, tetapi tetap hari kerja biasa?",
+        "pt-BR": "Adivinhe: em qual comunidade o Dia de Ação de Graças é uma data nacional fixada **por lei** e, ainda assim, dia normal de trabalho?"
+      },
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        }
+      ],
+      "answer": "pt-BR",
+      "explain": {
+        "zh-TW": "巴西。Dia de Ação de Graças 由聯邦法律訂在十一月第四個星期四,與美國同一天,但它是**紀念日不是假日**——那天照常上班上課,教會與部分學校有活動,街上看不出差別。美國同一天是聯邦假日,商店關門、機場擠滿人。這一組是很好的對照:同樣的日期、同樣的名字,一邊只是寫進法律,一邊改變了整週的節奏。台灣與日本沒有名為感恩節的節日,日本最接近的是十一月二十三日的勤労感謝の日,那**是**國定假日,而它的前身是新嘗祭——天皇獻上新穀的儀式。",
+        "en": "Brazil. Dia de Ação de Graças is fixed by federal law on the fourth Thursday of November, the same day as in the United States — but it is a **commemorative date, not a holiday**: people work and go to school, churches and some schools hold events, and the street looks no different. In the US the same day is a federal holiday: shops shut and airports fill. The pair makes a clean contrast: same date, same name, one merely written into law, the other reshaping a whole week. Taiwan and Japan have no holiday by that name; Japan's nearest is Labour Thanksgiving Day on 23 November, which **is** a public holiday, and whose predecessor was Niiname-sai, the emperor's offering of the new grain.",
+        "ja": "ブラジルです。Dia de Ação de Graçasは連邦法で11月第4木曜日と定められ、アメリカと同じ日ですが、**記念日であって祝日ではありません**。その日は普通に働き、学校もあり、教会や一部の学校で行事があるだけで、街の様子は変わりません。アメリカの同じ日は連邦の祝日で、店は閉まり空港は混雑します。同じ日付、同じ名前で、一方は法に書かれただけ、他方は一週間の流れを変える——きれいな対比です。台湾と日本にその名の祝日はなく、日本で最も近いのは11月23日の勤労感謝の日。こちらは**祝日**であり、前身は天皇が新穀を供える新嘗祭でした。",
+        "zh-CN": "巴西。Dia de Ação de Graças 由联邦法律订在十一月第四个星期四，与美国同一天，但它是**纪念日不是假日**——那天照常上班上课，教会与部分学校有活动，街上看不出差别。美国同一天是联邦假日，商店关门、机场挤满人。这一组是很好的对照:同样的日期、同样的名字，一边只是写进法律，一边改变了整周的节奏。台湾与日本没有名为感恩节的节日，日本最接近的是十一月二十三日的勤劳感谢之日，那**是**国定假日，而它的前身是新尝祭——天皇献上新谷的仪式。",
+        "hi": "ब्राज़ील। Dia de Ação de Graças संघीय क़ानून द्वारा नवंबर के चौथे गुरुवार को तय है, अमेरिका के उसी दिन — पर यह **स्मृति-दिवस है, छुट्टी नहीं**: लोग काम पर जाते हैं, स्कूल खुले रहते हैं, गिरजों और कुछ स्कूलों में कार्यक्रम होते हैं, और सड़क पर कोई फ़र्क़ नहीं दिखता। अमेरिका में वही दिन संघीय अवकाश है: दुकानें बंद, हवाई अड्डे भरे। यह जोड़ी साफ़ विरोधाभास है: वही तारीख़, वही नाम — एक बस क़ानून में लिखा, दूसरा पूरे सप्ताह की चाल बदल देता है। ताइवान और जापान में इस नाम का त्योहार नहीं; जापान में निकटतम 23 नवंबर का श्रम-कृतज्ञता दिवस है, जो **राजपत्रित छुट्टी है**, और जिसका पूर्ववर्ती नीनामे-साई था — सम्राट द्वारा नए अनाज का अर्पण।",
+        "id": "Brasil. Dia de Ação de Graças ditetapkan undang-undang federal pada Kamis keempat November, hari yang sama dengan Amerika Serikat — tetapi ini **hari peringatan, bukan hari libur**: orang tetap bekerja dan bersekolah, gereja dan sebagian sekolah mengadakan acara, dan jalanan tampak biasa saja. Di AS hari yang sama adalah libur federal: toko tutup, bandara penuh. Pasangan ini adalah kontras yang bersih: tanggal sama, nama sama — yang satu sekadar tertulis dalam hukum, yang lain mengubah irama sepekan penuh. Taiwan dan Jepang tak punya hari raya bernama itu; yang terdekat di Jepang adalah Hari Syukur Buruh 23 November, yang **memang** hari libur nasional, dan pendahulunya adalah Niiname-sai, persembahan gabah baru oleh kaisar.",
+        "pt-BR": "Brasil. O Dia de Ação de Graças é fixado por lei federal na quarta quinta-feira de novembro, o mesmo dia dos Estados Unidos — mas é uma **data comemorativa, não feriado**: trabalha-se, há aula, igrejas e algumas escolas fazem eventos, e a rua não muda. Nos EUA o mesmo dia é feriado federal: lojas fecham e aeroportos lotam. O par é um contraste limpo: mesma data, mesmo nome — um apenas escrito na lei, o outro remodelando uma semana inteira. Taiwan e Japão não têm feriado com esse nome; o mais próximo no Japão é o Dia de Ação de Graças ao Trabalho, 23 de novembro, que **é** feriado nacional e cujo antecessor foi o Niiname-sai, a oferta do grão novo pelo imperador."
+      }
+    },
+    {
+      "id": "q-20260927-teacher-gift",
+      "date": "2026-09-27",
+      "kind": "poll",
+      "topic": "teachers-day",
+      "asker": "zh-TW",
+      "target": "en",
+      "text": {
+        "zh-TW": "教師節那天,學生通常會做什麼?",
+        "en": "On Teachers' Day, what do students usually do?",
+        "ja": "教師の日に、生徒はふつう何をしますか?",
+        "zh-CN": "教师节那天，学生通常会做什么?",
+        "hi": "शिक्षक दिवस पर छात्र आमतौर पर क्या करते हैं?",
+        "id": "Pada Hari Guru, apa yang biasanya dilakukan murid?",
+        "pt-BR": "No Dia do Professor, o que os alunos costumam fazer?"
+      },
+      "options": [
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": {
+            "zh-TW": "寫卡片",
+            "en": "Write a card",
+            "ja": "カードを書く",
+            "zh-CN": "写卡片",
+            "hi": "कार्ड लिखते हैं",
+            "id": "Menulis kartu",
+            "pt-BR": "Escrevem um cartão"
+          }
+        },
+        {
+          "id": "flower",
+          "emoji": "🌸",
+          "label": {
+            "zh-TW": "送花或小禮物",
+            "en": "Bring flowers or a small gift",
+            "ja": "花や小さな贈り物",
+            "zh-CN": "送花或小礼物",
+            "hi": "फूल या छोटा उपहार",
+            "id": "Membawa bunga atau hadiah kecil",
+            "pt-BR": "Levam flores ou um presente"
+          }
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎤",
+          "label": {
+            "zh-TW": "學校辦典禮",
+            "en": "The school holds a ceremony",
+            "ja": "学校が式典を行う",
+            "zh-CN": "学校办典礼",
+            "hi": "स्कूल समारोह करता है",
+            "id": "Sekolah mengadakan upacara",
+            "pt-BR": "A escola faz uma cerimônia"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "什麼都沒有",
+            "en": "Nothing at all",
+            "ja": "特に何もない",
+            "zh-CN": "什么都没有",
+            "hi": "कुछ भी नहीं",
+            "id": "Tidak ada apa-apa",
+            "pt-BR": "Nada"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260927-teachers-day-dates",
+      "date": "2026-09-27",
+      "kind": "guess",
+      "topic": "teachers-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的教師節訂在**孔子誕辰**那一天?",
+        "en": "Guess: which community sets Teachers' Day on **Confucius's birthday**?",
+        "ja": "クイズ:教師の日を**孔子の誕生日**に定めているのはどこ?",
+        "zh-CN": "你猜:哪个社群的教师节订在**孔子诞辰**那一天?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में शिक्षक दिवस **कन्फ़्यूशियस के जन्मदिन** पर है?",
+        "id": "Tebak: komunitas mana yang menetapkan Hari Guru pada **hari lahir Konfusius**?",
+        "pt-BR": "Adivinhe: qual comunidade marca o Dia do Professor no **aniversário de Confúcio**?"
+      },
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": {
+        "zh-TW": "台灣,九月二十八日。當天各地孔廟舉行釋奠典禮,台北孔廟的佾舞在天亮前就開始。這一天**不放假**——一九九〇年代的假期改革把它從放假日改成只紀念。對照:中國的教師節是九月十日,一九八五年由全國人大常委會通過設立,與孔子無關;印度的教師節是九月五日,紀念第二任總統 Sarvepalli Radhakrishnan 的生日,他本人是哲學教授,據說學生要為他慶生時他說「不如把這一天給老師」;印尼的 Hari Guru Nasional 是十一月二十五日,那是全國教師組織 PGRI 成立的日子。四個地方都有教師節,四個日期沒有一個相同——各自紀念的是不同的人與不同的事。",
+        "en": "Taiwan, on 28 September. Confucian temples hold the Shidian ceremony that day, and the eight-row dance at the Taipei Confucius Temple begins before dawn. The day is **not a day off** — the holiday reforms of the 1990s turned it into a commemoration only. By contrast: China's Teachers' Day is 10 September, established in 1985 by the Standing Committee of the National People's Congress, with no link to Confucius; India's is 5 September, the birthday of its second president Sarvepalli Radhakrishnan, himself a professor of philosophy, who is said to have replied to students wanting to celebrate his birthday that they should give the day to teachers instead; Indonesia's Hari Guru Nasional is 25 November, the founding date of the national teachers' organisation PGRI. All four have a Teachers' Day, and no two share a date — each commemorates a different person and a different thing.",
+        "ja": "台湾、9月28日です。当日は各地の孔子廟で釈奠の儀が行われ、台北孔子廟の佾舞は夜明け前に始まります。この日は**休みではありません**——1990年代の休日改革で、休日から記念日のみに変わりました。対して中国の教師の日は9月10日、1985年に全国人民代表大会常務委員会が定めたもので孔子とは無関係。インドは9月5日、第2代大統領サルヴパッリー・ラーダークリシュナンの誕生日で、彼自身が哲学の教授であり、誕生日を祝いたいという学生に「その日は教師に贈りなさい」と答えたと伝えられます。インドネシアのHari Guru Nasionalは11月25日、全国教員組織PGRIの創立日です。四つとも教師の日を持ちながら、日付は一つも重なりません。記念しているものがそれぞれ違うからです。",
+        "zh-CN": "台湾，九月二十八日。当天各地孔庙举行释奠典礼，台北孔庙的佾舞在天亮前就开始。这一天**不放假**——一九九〇年代的假期改革把它从放假日改成只纪念。对照:中国的教师节是九月十日，一九八五年由全国人大常委会通过设立，与孔子无关;印度的教师节是九月五日，纪念第二任总统 Sarvepalli Radhakrishnan 的生日，他本人是哲学教授，据说学生要为他庆生时他说“不如把这一天给老师”;印尼的 Hari Guru Nasional 是十一月二十五日，那是全国教师组织 PGRI 成立的日子。四个地方都有教师节，四个日期没有一个相同——各自纪念的是不同的人与不同的事。",
+        "hi": "ताइवान, 28 सितंबर। उस दिन कन्फ़्यूशियस मंदिरों में शिदियान अनुष्ठान होता है, और ताइपे मंदिर का आठ-पंक्ति नृत्य भोर से पहले शुरू होता है। यह दिन **छुट्टी नहीं है** — 1990 के दशक के अवकाश-सुधारों ने इसे केवल स्मृति-दिवस बना दिया। इसके उलट: चीन का शिक्षक दिवस 10 सितंबर है, जिसे 1985 में राष्ट्रीय जन कांग्रेस की स्थायी समिति ने स्थापित किया, कन्फ़्यूशियस से कोई संबंध नहीं; भारत का 5 सितंबर है, दूसरे राष्ट्रपति सर्वपल्ली राधाकृष्णन का जन्मदिन — वे स्वयं दर्शन के प्राध्यापक थे और कहा जाता है कि जन्मदिन मनाने को उत्सुक छात्रों से उन्होंने कहा कि वह दिन शिक्षकों को दे दें; इंडोनेशिया का Hari Guru Nasional 25 नवंबर है, राष्ट्रीय शिक्षक संगठन PGRI की स्थापना का दिन। चारों के पास शिक्षक दिवस है और कोई भी दो तारीख़ें एक नहीं — हर एक किसी और को, किसी और बात को याद करता है।",
+        "id": "Taiwan, 28 September. Hari itu kelenteng-kelenteng Konfusius menggelar upacara Shidian, dan tarian delapan baris di Kelenteng Konfusius Taipei dimulai sebelum fajar. Hari itu **bukan hari libur** — reformasi hari libur pada 1990-an mengubahnya menjadi peringatan saja. Sebaliknya: Hari Guru Tiongkok adalah 10 September, ditetapkan pada 1985 oleh Komite Tetap Kongres Rakyat Nasional, tanpa kaitan dengan Konfusius; India pada 5 September, hari lahir presiden keduanya Sarvepalli Radhakrishnan, seorang guru besar filsafat, yang konon menjawab murid-murid yang ingin merayakan ulang tahunnya agar hari itu diberikan kepada para guru; Hari Guru Nasional Indonesia adalah 25 November, hari berdirinya PGRI. Keempatnya punya Hari Guru, dan tak ada dua tanggal yang sama — masing-masing memperingati orang dan hal yang berbeda.",
+        "pt-BR": "Taiwan, 28 de setembro. Nesse dia os templos de Confúcio realizam a cerimônia Shidian, e a dança de oito fileiras no Templo de Confúcio de Taipé começa antes do amanhecer. O dia **não é folga** — as reformas de feriados dos anos 1990 o transformaram em mera comemoração. Em contraste: o Dia do Professor da China é 10 de setembro, instituído em 1985 pelo Comitê Permanente da Assembleia Popular Nacional, sem ligação com Confúcio; o da Índia é 5 de setembro, aniversário de seu segundo presidente Sarvepalli Radhakrishnan, ele próprio professor de filosofia, que teria respondido aos alunos que queriam festejá-lo que dessem o dia aos professores; o Hari Guru Nasional da Indonésia é 25 de novembro, data de fundação da organização nacional de professores PGRI. Os quatro têm Dia do Professor, e nenhuma data coincide — cada um comemora uma pessoa e uma coisa diferentes."
+      }
+    },
+    {
+      "id": "q-20260928-teacher-remember",
+      "date": "2026-09-28",
+      "kind": "poll",
+      "topic": "teachers-day",
+      "asker": "hi",
+      "target": "pt-BR",
+      "text": {
+        "zh-TW": "你現在還記得名字的老師,是教你什麼的?",
+        "en": "The teacher whose name you still remember — what did they teach you?",
+        "ja": "名前を今でも覚えている先生は、何を教えてくれた人?",
+        "zh-CN": "你现在还记得名字的老师，是教你什么的?",
+        "hi": "जिस शिक्षक का नाम आज भी याद है — उन्होंने आपको क्या सिखाया?",
+        "id": "Guru yang namanya masih kamu ingat — apa yang ia ajarkan?",
+        "pt-BR": "O professor de quem você ainda lembra o nome — o que ele ensinou?"
+      },
+      "options": [
+        {
+          "id": "subject",
+          "emoji": "📐",
+          "label": {
+            "zh-TW": "一門科目",
+            "en": "A subject",
+            "ja": "教科を",
+            "zh-CN": "一门科目",
+            "hi": "एक विषय",
+            "id": "Sebuah mata pelajaran",
+            "pt-BR": "Uma matéria"
+          }
+        },
+        {
+          "id": "life",
+          "emoji": "🧭",
+          "label": {
+            "zh-TW": "做人的方法",
+            "en": "How to be a person",
+            "ja": "人としての在り方",
+            "zh-CN": "做人的方法",
+            "hi": "इंसान बनना",
+            "id": "Cara menjadi manusia",
+            "pt-BR": "Como ser gente"
+          }
+        },
+        {
+          "id": "saw",
+          "emoji": "👀",
+          "label": {
+            "zh-TW": "他看見了我",
+            "en": "They saw me",
+            "ja": "私を見てくれた",
+            "zh-CN": "他看见了我",
+            "hi": "उन्होंने मुझे देखा",
+            "id": "Ia melihat aku",
+            "pt-BR": "Ele enxergou a mim"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🌫️",
+          "label": {
+            "zh-TW": "我想不起來",
+            "en": "I cannot think of one",
+            "ja": "思い出せない",
+            "zh-CN": "我想不起来",
+            "hi": "याद नहीं आता",
+            "id": "Tidak terpikir siapa pun",
+            "pt-BR": "Não consigo lembrar de nenhum"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260928-teachers-day-holiday",
+      "date": "2026-09-28",
+      "kind": "guess",
+      "topic": "teachers-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:四個社群裡,教師節那天**學生要照常上課**的有幾個?",
+        "en": "Guess: of these four communities, in how many do students **still go to class** on Teachers' Day?",
+        "ja": "クイズ:この四つのうち、教師の日に**生徒が普通に登校する**のはいくつ?",
+        "zh-CN": "你猜:四个社群里，教师节那天**学生要照常上课**的有几个?",
+        "hi": "अंदाज़ा लगाइए: इन चार समुदायों में से कितनों में शिक्षक दिवस पर **छात्र सामान्य रूप से स्कूल जाते हैं**?",
+        "id": "Tebak: dari empat komunitas ini, di berapa banyak murid **tetap masuk sekolah** pada Hari Guru?",
+        "pt-BR": "Adivinhe: destas quatro comunidades, em quantas os alunos **têm aula normalmente** no Dia do Professor?"
+      },
+      "options": [
+        {
+          "id": "four",
+          "emoji": "4️⃣",
+          "label": {
+            "zh-TW": "四個都要上課",
+            "en": "All four",
+            "ja": "四つとも登校",
+            "zh-CN": "四个都要上课",
+            "hi": "चारों में",
+            "id": "Keempatnya",
+            "pt-BR": "Todas as quatro"
+          }
+        },
+        {
+          "id": "three",
+          "emoji": "3️⃣",
+          "label": {
+            "zh-TW": "三個",
+            "en": "Three",
+            "ja": "三つ",
+            "zh-CN": "三个",
+            "hi": "तीन में",
+            "id": "Tiga",
+            "pt-BR": "Três"
+          }
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": {
+            "zh-TW": "兩個",
+            "en": "Two",
+            "ja": "二つ",
+            "zh-CN": "两个",
+            "hi": "दो में",
+            "id": "Dua",
+            "pt-BR": "Duas"
+          }
+        },
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": {
+            "zh-TW": "只有一個",
+            "en": "Only one",
+            "ja": "一つだけ",
+            "zh-CN": "只有一个",
+            "hi": "केवल एक में",
+            "id": "Hanya satu",
+            "pt-BR": "Apenas uma"
+          }
+        }
+      ],
+      "answer": "four",
+      "explain": {
+        "zh-TW": "四個都要上課。台灣、中國、印度、印尼的教師節都**不是**法定放假日——它們是紀念日,學校當天多半照常,只是把課表挪出一段時間辦活動。這件事常被誤會,因為節日的存在感很強:典禮、卡片、花束都在,唯獨沒有假。想放假的話得看別的名單:台灣的假日依《紀念日及節日實施條例》,中國依《全國年節及紀念日放假辦法》,印尼的假日由三部會聯合決定書(SKB)每年公告,印度則是中央訂三天強制假日、其餘由各邦自訂。教師節不在這些名單裡的任何一份。",
+        "en": "All four. Teachers' Day in Taiwan, China, India and Indonesia is **not** a statutory holiday in any of them — it is a commemorative day; schools normally run, they simply clear a slot in the timetable for the ceremony. This surprises people because the day feels substantial: the ceremonies, the cards, the flowers are all there — only the day off is missing. For actual holidays you have to look at other lists: Taiwan's are set by the Act on Commemorative Days and Holidays, China's by the State Council measures on holidays, Indonesia's are announced each year by a joint decree of three ministries, and India fixes three national holidays centrally with the rest left to each state. Teachers' Day is on none of those lists.",
+        "ja": "四つとも登校します。台湾・中国・インド・インドネシアの教師の日は、いずれも**法定の休日ではありません**。記念日であり、学校は通常どおり、時間割の一部を式典に充てるだけです。式典もカードも花もあるので実感が強く、それゆえ誤解されやすいのですが、休みだけがありません。実際の休日は別の名簿を見る必要があります。台湾は「紀念日及節日実施条例」、中国は国務院の年節・記念日放假弁法、インドネシアは三省庁の共同決定書(SKB)による毎年の公告、インドは中央が3日の祝日を定め残りは州ごと。教師の日はそのどれにも載っていません。",
+        "zh-CN": "四个都要上课。台湾、中国、印度、印尼的教师节都**不是**法定放假日——它们是纪念日，学校当天多半照常，只是把课表挪出一段时间办活动。这件事常被误会，因为节日的存在感很强:典礼、卡片、花束都在，唯独没有假。想放假的话得看别的名单:台湾的假日依《纪念日及节日实施条例》，中国依《全国年节及纪念日放假办法》，印尼的假日由三部会联合决定书(SKB)每年公告，印度则是中央订三天强制假日、其余由各邦自订。教师节不在这些名单里的任何一份。",
+        "hi": "चारों में। ताइवान, चीन, भारत और इंडोनेशिया — किसी में भी शिक्षक दिवस **वैधानिक अवकाश नहीं** है; यह स्मृति-दिवस है, स्कूल सामान्य रूप से चलते हैं और समय-सारणी में समारोह के लिए बस एक हिस्सा निकाल लिया जाता है। यह चौंकाता है क्योंकि दिन भरा-पूरा लगता है: समारोह, कार्ड, फूल सब हैं — बस छुट्टी नहीं। असली छुट्टियों के लिए दूसरी सूचियाँ देखनी पड़ती हैं: ताइवान में स्मृति-दिवस एवं त्योहार अधिनियम, चीन में राज्य परिषद का अवकाश उपाय, इंडोनेशिया में तीन मंत्रालयों का संयुक्त निर्णय (SKB) जो हर साल घोषित होता है, और भारत में केंद्र तीन राष्ट्रीय अवकाश तय करता है, बाक़ी राज्यों पर। शिक्षक दिवस इनमें से किसी सूची में नहीं।",
+        "id": "Keempatnya. Hari Guru di Taiwan, Tiongkok, India, dan Indonesia **bukan** hari libur resmi di satu pun dari keempatnya — ia hari peringatan; sekolah berjalan seperti biasa, hanya menyisihkan satu slot di jadwal untuk upacara. Hal ini kerap disalahpahami karena harinya terasa penuh: upacara, kartu, dan bunga semuanya ada — hanya liburnya yang tidak. Untuk hari libur sungguhan, lihat daftar lain: Taiwan lewat Undang-Undang Hari Peringatan dan Hari Raya, Tiongkok lewat peraturan libur Dewan Negara, Indonesia lewat SKB tiga kementerian yang diumumkan tiap tahun, dan India menetapkan tiga hari libur nasional di pusat sementara sisanya diserahkan ke tiap negara bagian. Hari Guru tidak ada di daftar mana pun itu.",
+        "pt-BR": "Todas as quatro. O Dia do Professor em Taiwan, China, Índia e Indonésia **não** é feriado estatutário em nenhuma delas — é data comemorativa; as escolas funcionam normalmente e apenas abrem um espaço no horário para a cerimônia. Isso surpreende porque o dia parece cheio: as cerimônias, os cartões, as flores estão todos ali — só falta a folga. Para feriados de verdade é preciso olhar outras listas: Taiwan pela Lei de Dias Comemorativos e Feriados, a China pelas medidas de feriados do Conselho de Estado, a Indonésia por decreto conjunto de três ministérios anunciado a cada ano, e a Índia fixa três feriados nacionais no centro deixando o resto a cada estado. O Dia do Professor não está em nenhuma dessas listas."
+      }
+    },
+    {
+      "id": "q-20260929-national-day-feel",
+      "date": "2026-09-29",
+      "kind": "poll",
+      "topic": "national-days",
+      "asker": "id",
+      "target": "ja",
+      "text": {
+        "zh-TW": "你們國家的國慶日,對你來說最像什麼?",
+        "en": "Your country's national day feels most like what to you?",
+        "ja": "あなたの国の建国記念日、あなたにとって何に近い?",
+        "zh-CN": "你们国家的国庆日，对你来说最像什么?",
+        "hi": "आपके देश का राष्ट्रीय दिवस आपको सबसे ज़्यादा किसके जैसा लगता है?",
+        "id": "Hari nasional negaramu terasa paling mirip apa bagimu?",
+        "pt-BR": "O dia nacional do seu país parece mais o quê para você?"
+      },
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🏖️",
+          "label": {
+            "zh-TW": "一天假",
+            "en": "A day off",
+            "ja": "ただの休み",
+            "zh-CN": "一天假",
+            "hi": "बस एक छुट्टी",
+            "id": "Sekadar hari libur",
+            "pt-BR": "Só um dia de folga"
+          }
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎺",
+          "label": {
+            "zh-TW": "典禮與升旗",
+            "en": "Ceremony and the flag",
+            "ja": "式典と国旗掲揚",
+            "zh-CN": "典礼与升旗",
+            "hi": "समारोह और झंडा",
+            "id": "Upacara dan bendera",
+            "pt-BR": "Cerimônia e bandeira"
+          }
+        },
+        {
+          "id": "family",
+          "emoji": "🍽️",
+          "label": {
+            "zh-TW": "跟家人吃飯",
+            "en": "A meal with family",
+            "ja": "家族の食事",
+            "zh-CN": "跟家人吃饭",
+            "hi": "परिवार के साथ भोजन",
+            "id": "Makan bersama keluarga",
+            "pt-BR": "Uma refeição em família"
+          }
+        },
+        {
+          "id": "nothing",
+          "emoji": "😐",
+          "label": {
+            "zh-TW": "沒什麼感覺",
+            "en": "Not much at all",
+            "ja": "特に何も",
+            "zh-CN": "没什么感觉",
+            "hi": "कुछ ख़ास नहीं",
+            "id": "Tidak terasa apa-apa",
+            "pt-BR": "Quase nada"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260929-golden-week-october",
+      "date": "2026-09-29",
+      "kind": "guess",
+      "topic": "national-days",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的國慶把整整一週變成全國性的假期,連高速公路都免費?",
+        "en": "Guess: whose national day turns a whole week into a nationwide holiday — with the motorways free of charge?",
+        "ja": "クイズ:建国記念日が一週間まるごと全国的な連休になり、高速道路まで無料になるのはどこ?",
+        "zh-CN": "你猜:哪个社群的国庆把整整一周变成全国性的假期，连高速公路都免费?",
+        "hi": "अंदाज़ा लगाइए: किसका राष्ट्रीय दिवस पूरे एक सप्ताह को राष्ट्रव्यापी अवकाश बना देता है — और राजमार्ग तक मुफ़्त हो जाते हैं?",
+        "id": "Tebak: hari nasional siapa yang mengubah satu minggu penuh menjadi libur nasional — bahkan jalan tolnya digratiskan?",
+        "pt-BR": "Adivinhe: o dia nacional de quem transforma uma semana inteira em feriado nacional — com as rodovias de graça?"
+      },
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "zh-CN",
+      "explain": {
+        "zh-TW": "中國。十月一日國慶,加上調休形成的長假通稱「十一黃金週」,是一年兩個全國同時放長假的時段之一(另一個是春節)。小客車在這幾天走收費公路免收通行費——這項政策從二〇一二年開始,適用於春節、清明、勞動節與國慶四個假期。對照:台灣的雙十節放一天;印尼的獨立紀念日是八月十七日,放一天,但村里與學校的競賽(panjat pinang 之類)從前一週就開始;巴西的獨立日是九月七日,放一天,重點是閱兵。這題的分辨點不是「哪一國比較重視國慶」,而是**哪一國把假期集中成塊**——中國一年只有兩個長假,所以那兩塊特別厚。",
+        "en": "China. National Day is 1 October, and with the shifted working days around it becomes the week-long \"Golden Week\", one of only two stretches a year when the whole country is off at once (the other is Lunar New Year). Passenger cars pay no tolls on the expressways during it — a policy in place since 2012, applying to four holidays: Spring Festival, Qingming, Labour Day and National Day. By contrast: Taiwan's Double Tenth is one day; Indonesia's Independence Day is 17 August, one day, though the village and school contests such as panjat pinang start a week earlier; Brazil's Independence Day is 7 September, one day, centred on the parade. The question is not which country cares most about its national day, but which one **bundles its days off into blocks** — China has only two long breaks a year, which is why those two are so thick.",
+        "ja": "中国です。10月1日の国慶節は、振替出勤を組み合わせて一週間の「十一ゴールデンウィーク」になります。全国が同時に長期休暇に入る年二回のうちの一つです(もう一つは春節)。この期間、乗用車は高速道路の通行料が無料になります。2012年に始まった政策で、春節・清明・労働節・国慶節の四つの休暇に適用されます。対して台湾の双十節は一日、インドネシアの独立記念日は8月17日で一日ですが、パンジャット・ピナンなど村や学校の競技は一週間前から始まります。ブラジルの独立記念日は9月7日で一日、中心は軍事パレードです。問われているのはどの国が建国記念日を重んじるかではなく、**どの国が休みを塊にまとめるか**。中国には年に二つしか長期休暇がないので、その二つが特に厚いのです。",
+        "zh-CN": "中国。十月一日国庆，加上调休形成的长假通称“十一黄金周”，是一年两个全国同时放长假的时段之一(另一个是春节)。小客车在这几天走收费公路免收通行费——这项政策从二〇一二年开始，适用于春节、清明、劳动节与国庆四个假期。对照:台湾的双十节放一天;印尼的独立纪念日是八月十七日，放一天，但村里与学校的竞赛(panjat pinang 之类)从前一周就开始;巴西的独立日是九月七日，放一天，重点是阅兵。这题的分辨点不是“哪一国比较重视国庆”，而是**哪一国把假期集中成块**——中国一年只有两个长假，所以那两块特别厚。",
+        "hi": "चीन। राष्ट्रीय दिवस 1 अक्टूबर है, और आगे-पीछे कार्यदिवस खिसकाकर यह हफ़्ते भर का 'गोल्डन वीक' बन जाता है — साल में केवल दो ऐसे मौक़ों में से एक जब पूरा देश एक साथ छुट्टी पर होता है (दूसरा चंद्र नववर्ष)। इस दौरान कारों से एक्सप्रेसवे पर टोल नहीं लिया जाता — यह नीति 2012 से है और चार छुट्टियों पर लागू होती है: वसंत उत्सव, चिंगमिंग, श्रम दिवस और राष्ट्रीय दिवस। इसके उलट: ताइवान का डबल टेन्थ एक दिन का; इंडोनेशिया का स्वतंत्रता दिवस 17 अगस्त, एक दिन, हालाँकि गाँव और स्कूल की प्रतियोगिताएँ (जैसे पंजात पिनांग) हफ़्ता भर पहले शुरू हो जाती हैं; ब्राज़ील का स्वतंत्रता दिवस 7 सितंबर, एक दिन, परेड पर केंद्रित। सवाल यह नहीं कि कौन अपने राष्ट्रीय दिवस को अधिक महत्व देता है, बल्कि यह कि कौन **छुट्टियों को गुच्छों में बाँधता है** — चीन में साल में सिर्फ़ दो लंबे अवकाश हैं, इसलिए वे दोनों इतने मोटे हैं।",
+        "id": "Tiongkok. Hari Nasional jatuh 1 Oktober, dan dengan penggeseran hari kerja di sekitarnya menjadi 'Golden Week' sepanjang sepekan — satu dari hanya dua periode dalam setahun ketika seluruh negeri libur bersamaan (yang lain Tahun Baru Imlek). Selama itu mobil penumpang bebas tol di jalan bebas hambatan — kebijakan sejak 2012 yang berlaku untuk empat hari libur: Festival Musim Semi, Qingming, Hari Buruh, dan Hari Nasional. Sebaliknya: Double Tenth Taiwan satu hari; Hari Kemerdekaan Indonesia 17 Agustus, satu hari, meski lomba kampung dan sekolah seperti panjat pinang mulai sepekan sebelumnya; Hari Kemerdekaan Brasil 7 September, satu hari, berpusat pada parade. Pertanyaannya bukan negara mana yang paling menghargai hari nasionalnya, melainkan negara mana yang **menumpuk hari liburnya menjadi blok** — Tiongkok hanya punya dua libur panjang setahun, itulah sebabnya keduanya begitu tebal.",
+        "pt-BR": "China. O Dia Nacional é 1º de outubro e, com os dias de trabalho remanejados em volta, vira a 'Semana Dourada' — um dos apenas dois períodos do ano em que o país inteiro para junto (o outro é o Ano-Novo Lunar). Nesse intervalo, carros de passeio não pagam pedágio nas rodovias expressas — política em vigor desde 2012, aplicada a quatro feriados: Festival da Primavera, Qingming, Dia do Trabalho e Dia Nacional. Em contraste: o Duplo Dez de Taiwan é um dia; o Dia da Independência da Indonésia é 17 de agosto, um dia, embora as competições de bairro e escola como o panjat pinang comecem uma semana antes; o Dia da Independência do Brasil é 7 de setembro, um dia, centrado no desfile. A pergunta não é qual país dá mais importância ao dia nacional, e sim qual **junta suas folgas em blocos** — a China tem só duas pausas longas por ano, por isso essas duas são tão grossas."
+      }
+    },
+    {
+      "id": "q-20260930-school-year-start",
+      "date": "2026-09-30",
+      "kind": "poll",
+      "topic": "back-to-school",
+      "asker": "en",
+      "target": "zh-CN",
+      "text": {
+        "zh-TW": "你們的學年是什麼時候開始的?",
+        "en": "When does your school year begin?",
+        "ja": "そちらの学年はいつ始まりますか?",
+        "zh-CN": "你们的学年是什么时候开始的?",
+        "hi": "आपका शैक्षिक वर्ष कब शुरू होता है?",
+        "id": "Kapan tahun ajaran di tempatmu dimulai?",
+        "pt-BR": "Quando começa o ano letivo aí?"
+      },
+      "options": [
+        {
+          "id": "aug",
+          "emoji": "🍂",
+          "label": {
+            "zh-TW": "八月底或九月",
+            "en": "Late August or September",
+            "ja": "8月末か9月",
+            "zh-CN": "八月底或九月",
+            "hi": "अगस्त अंत या सितंबर",
+            "id": "Akhir Agustus atau September",
+            "pt-BR": "Fim de agosto ou setembro"
+          }
+        },
+        {
+          "id": "apr",
+          "emoji": "🌸",
+          "label": {
+            "zh-TW": "四月",
+            "en": "April",
+            "ja": "4月",
+            "zh-CN": "四月",
+            "hi": "अप्रैल",
+            "id": "April",
+            "pt-BR": "Abril"
+          }
+        },
+        {
+          "id": "feb",
+          "emoji": "☀️",
+          "label": {
+            "zh-TW": "一月或二月",
+            "en": "January or February",
+            "ja": "1月か2月",
+            "zh-CN": "一月或二月",
+            "hi": "जनवरी या फ़रवरी",
+            "id": "Januari atau Februari",
+            "pt-BR": "Janeiro ou fevereiro"
+          }
+        },
+        {
+          "id": "jun",
+          "emoji": "📚",
+          "label": {
+            "zh-TW": "六月或七月",
+            "en": "June or July",
+            "ja": "6月か7月",
+            "zh-CN": "六月或七月",
+            "hi": "जून या जुलाई",
+            "id": "Juni atau Juli",
+            "pt-BR": "Junho ou julho"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260930-school-year-april",
+      "date": "2026-09-30",
+      "kind": "guess",
+      "topic": "back-to-school",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的學年在**四月**開始,而且求職與會計年度也跟著同一個起點?",
+        "en": "Guess: whose school year starts in **April** — with the hiring season and the fiscal year on the same starting line?",
+        "ja": "クイズ:学年が**4月**に始まり、就職活動も会計年度も同じ起点に揃うのはどこ?",
+        "zh-CN": "你猜:哪个社群的学年在**四月**开始，而且求职与会计年度也跟着同一个起点?",
+        "hi": "अंदाज़ा लगाइए: किसका शैक्षिक वर्ष **अप्रैल** में शुरू होता है — और भर्ती का मौसम तथा वित्त-वर्ष भी उसी रेखा पर?",
+        "id": "Tebak: tahun ajaran siapa yang dimulai pada **April** — dengan musim rekrutmen dan tahun anggaran bertolak dari garis yang sama?",
+        "pt-BR": "Adivinhe: o ano letivo de quem começa em **abril** — com a temporada de contratações e o ano fiscal na mesma linha de largada?"
+      },
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "ja",
+      "explain": {
+        "zh-TW": "日本。學年、會計年度與新人入社日都是四月一日,所以「新學期」與「新年度」在日語裡幾乎是同一件事:三月畢業、四月入學或入社,櫻花恰好開在那個接縫上。這個對齊有實際後果——應屆新卒的招聘週期綁死在同一個節奏上,錯過那一輪的人走的是另一條路。對照:台灣與中國的學年九月開始,會計年度是一月;印度的學年多在六月前後開始,而會計年度是四月到三月——**兩者不對齊**;巴西的學年在二月開始,因為南半球的暑假在十二月到一月。",
+        "en": "Japan. The school year, the fiscal year and the day new employees join a company are all 1 April, so \"new term\" and \"new year\" are nearly the same phrase in Japanese: you graduate in March and start school or work in April, with the cherry blossom falling exactly on the seam. The alignment has real consequences — recruitment of new graduates is locked to that one rhythm, and anyone who misses that round takes a different path. By contrast: Taiwan and China start school in September while the fiscal year starts in January; India's school year mostly begins around June while its fiscal year runs April to March — **the two do not line up**; Brazil starts school in February, because the southern summer holiday falls in December and January.",
+        "ja": "日本です。学年も会計年度も新入社員の入社日も4月1日なので、日本語では「新学期」と「新年度」がほぼ同じことを指します。3月に卒業し4月に入学・入社、その継ぎ目にちょうど桜が咲きます。この一致には実際の帰結があり、新卒採用がこの一つのリズムに縛られていて、その回を逃した人は別の道を行くことになります。対して台湾と中国は学年が9月始まりで会計年度は1月。インドは学年が概ね6月前後に始まり、会計年度は4月から3月——**両者は揃いません**。ブラジルは南半球の夏休みが12月から1月にあるため、学年は2月に始まります。",
+        "zh-CN": "日本。学年、会计年度与新人入社日都是四月一日，所以“新学期”与“新年度”在日语里几乎是同一件事:三月毕业、四月入学或入社，樱花恰好开在那个接缝上。这个对齐有实际后果——应届新卒的招聘周期绑死在同一个节奏上，错过那一轮的人走的是另一条路。对照:台湾与中国的学年九月开始，会计年度是一月;印度的学年多在六月前后开始，而会计年度是四月到三月——**两者不对齐**;巴西的学年在二月开始，因为南半球的暑假在十二月到一月。",
+        "hi": "जापान। शैक्षिक वर्ष, वित्त-वर्ष और नए कर्मचारियों के कंपनी में शामिल होने का दिन — तीनों 1 अप्रैल हैं, इसलिए जापानी में 'नया सत्र' और 'नया वर्ष' लगभग एक ही बात हैं: मार्च में स्नातक, अप्रैल में प्रवेश या नौकरी, और उसी जोड़ पर चेरी के फूल खिलते हैं। इस संरेखण के ठोस परिणाम हैं — नए स्नातकों की भर्ती उसी एक लय से बँधी है, और जो वह चक्र चूक जाए उसका रास्ता अलग हो जाता है। इसके उलट: ताइवान और चीन में स्कूल सितंबर में शुरू होता है जबकि वित्त-वर्ष जनवरी से; भारत में स्कूल प्रायः जून के आसपास शुरू होता है जबकि वित्त-वर्ष अप्रैल से मार्च — **दोनों मेल नहीं खाते**; ब्राज़ील में स्कूल फ़रवरी में शुरू होता है, क्योंकि दक्षिणी गोलार्ध की गर्मी की छुट्टी दिसंबर-जनवरी में पड़ती है।",
+        "id": "Jepang. Tahun ajaran, tahun anggaran, dan hari karyawan baru masuk perusahaan semuanya 1 April, sehingga 'semester baru' dan 'tahun baru' hampir merupakan ungkapan yang sama dalam bahasa Jepang: lulus pada Maret, masuk sekolah atau kerja pada April, dan bunga sakura mekar tepat di sambungan itu. Keselarasan ini berdampak nyata — rekrutmen lulusan baru terkunci pada satu irama itu, dan siapa pun yang melewatkan putaran tersebut menempuh jalur lain. Sebaliknya: Taiwan dan Tiongkok memulai sekolah pada September sementara tahun anggaran mulai Januari; tahun ajaran India umumnya mulai sekitar Juni sedangkan tahun anggarannya April sampai Maret — **keduanya tidak sejajar**; Brasil memulai sekolah pada Februari, karena liburan musim panas belahan selatan jatuh Desember–Januari.",
+        "pt-BR": "Japão. O ano letivo, o ano fiscal e o dia em que novos funcionários entram na empresa são todos 1º de abril, de modo que 'novo semestre' e 'novo ano' são quase a mesma expressão em japonês: forma-se em março e começa-se a escola ou o trabalho em abril, com as cerejeiras florindo exatamente na emenda. O alinhamento tem consequências reais — a contratação de recém-formados está presa a esse ritmo único, e quem perde aquela rodada segue outro caminho. Em contraste: Taiwan e China começam a escola em setembro enquanto o ano fiscal começa em janeiro; o ano letivo indiano em geral começa por volta de junho enquanto o fiscal vai de abril a março — **os dois não se alinham**; o Brasil começa em fevereiro, porque as férias de verão do hemisfério sul caem em dezembro e janeiro."
+      }
+    },
+    {
+      "id": "q-20261001-flag-at-home",
+      "date": "2026-10-01",
+      "kind": "poll",
+      "topic": "national-days",
+      "asker": "zh-CN",
+      "target": "hi",
+      "text": {
+        "zh-TW": "國慶日,你家會掛國旗嗎?",
+        "en": "On the national day, does your household put out a flag?",
+        "ja": "建国記念日に、家で国旗を掲げますか?",
+        "zh-CN": "国庆日，你家会挂国旗吗?",
+        "hi": "राष्ट्रीय दिवस पर क्या आपके घर झंडा लगता है?",
+        "id": "Pada hari nasional, apakah rumahmu memasang bendera?",
+        "pt-BR": "No dia nacional, sua casa hasteia bandeira?"
+      },
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🚩",
+          "label": {
+            "zh-TW": "每年都掛",
+            "en": "Every year",
+            "ja": "毎年掲げる",
+            "zh-CN": "每年都挂",
+            "hi": "हर साल",
+            "id": "Setiap tahun",
+            "pt-BR": "Todo ano"
+          }
+        },
+        {
+          "id": "street",
+          "emoji": "🏘️",
+          "label": {
+            "zh-TW": "整條街都會掛",
+            "en": "The whole street does",
+            "ja": "通り全体で掲げる",
+            "zh-CN": "整条街都会挂",
+            "hi": "पूरी गली लगाती है",
+            "id": "Satu jalan memasang semua",
+            "pt-BR": "A rua inteira hasteia"
+          }
+        },
+        {
+          "id": "never",
+          "emoji": "🙅",
+          "label": {
+            "zh-TW": "從來不掛",
+            "en": "Never",
+            "ja": "掲げたことはない",
+            "zh-CN": "从来不挂",
+            "hi": "कभी नहीं",
+            "id": "Tidak pernah",
+            "pt-BR": "Nunca"
+          }
+        },
+        {
+          "id": "nohome",
+          "emoji": "🏢",
+          "label": {
+            "zh-TW": "我們沒有可以掛的地方",
+            "en": "We have nowhere to put one",
+            "ja": "掲げる場所がない",
+            "zh-CN": "我们没有可以挂的地方",
+            "hi": "लगाने की जगह नहीं",
+            "id": "Tidak ada tempat memasangnya",
+            "pt-BR": "Não temos onde pôr"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261001-two-national-days",
+      "date": "2026-10-01",
+      "kind": "guess",
+      "topic": "national-days",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的「國慶日」與「獨立日」是**兩個不同的日子**,而且都放假?",
+        "en": "Guess: for which community are the national day and independence day **two different dates**, both days off?",
+        "ja": "クイズ:「建国記念日」と「独立記念日」が**別々の日**で、しかも両方とも祝日なのはどこ?",
+        "zh-CN": "你猜:哪个社群的“国庆日”与“独立日”是**两个不同的日子**，而且都放假?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में राष्ट्रीय दिवस और स्वतंत्रता दिवस **दो अलग तारीख़ें** हैं, और दोनों छुट्टियाँ हैं?",
+        "id": "Tebak: bagi komunitas mana hari nasional dan hari kemerdekaan adalah **dua tanggal berbeda**, dan keduanya libur?",
+        "pt-BR": "Adivinhe: para qual comunidade o dia nacional e o dia da independência são **duas datas distintas**, ambas feriado?"
+      },
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "hi",
+      "explain": {
+        "zh-TW": "印度。獨立日是八月十五日(一九四七年脫離英國),共和日是一月二十六日(一九五〇年憲法生效),兩天都是全國強制假日——印度中央只訂三天全國假日,這兩天佔了其中兩天,第三天是甘地誕辰十月二日。也就是說印度沒有第三種選擇:那三天以外的假期全部由各邦自己決定,所以同一個國家裡不同邦的行事曆長得不一樣。對照:中國的十月一日是國慶,沒有另一個獨立日;印尼的八月十七日是獨立日,也就是它的國慶;巴西的九月七日是獨立日,十一月十五日另有共和國宣告日,兩天都放假——所以巴西其實也答得通,差別在印度那兩天是**憲法層級的全國強制假日**,而巴西的假日結構是聯邦法定假日再加上各州各市自訂。",
+        "en": "India. Independence Day is 15 August (from Britain in 1947) and Republic Day is 26 January (the constitution taking effect in 1950); both are gazetted national holidays — India's centre fixes only three national holidays, and these are two of them, the third being Gandhi Jayanti on 2 October. That is to say India has no fourth: every other holiday is left to each state, which is why calendars differ from state to state within one country. By contrast: China's 1 October is its national day and there is no separate independence day; Indonesia's 17 August is its independence day and therefore also its national day; Brazil's 7 September is Independence Day with 15 November as Proclamation of the Republic, both days off — so Brazil is arguably right too; the difference is that India's two are **constitutional-level nationwide holidays**, while Brazil's structure is federal holidays plus state and municipal ones.",
+        "ja": "インドです。独立記念日は8月15日(1947年、英国から)、共和国記念日は1月26日(1950年、憲法施行)。どちらも全国一律の祝日です。インドの中央政府が定める全国祝日は三日だけで、この二日がそのうち二つ、残る一つが10月2日のガンディー生誕日です。つまりインドには四つ目がなく、他の休日はすべて州ごとの判断なので、同じ国でも州によって暦が異なります。対して中国の10月1日は国慶節で、別の独立記念日はありません。インドネシアの8月17日は独立記念日であり、そのまま建国記念日です。ブラジルは9月7日が独立記念日、11月15日が共和国宣言記念日で、どちらも休日——ですからブラジルも筋は通ります。違いは、インドの二日が**全国一律の祝日**であるのに対し、ブラジルは連邦の祝日に州・市の祝日が積み重なる構造だという点です。",
+        "zh-CN": "印度。独立日是八月十五日(一九四七年脱离英国)，共和日是一月二十六日(一九五〇年宪法生效)，两天都是全国强制假日——印度中央只订三天全国假日，这两天占了其中两天，第三天是甘地诞辰十月二日。也就是说印度没有第三种选择:那三天以外的假期全部由各邦自己决定，所以同一个国家里不同邦的行事历长得不一样。对照:中国的十月一日是国庆，没有另一个独立日;印尼的八月十七日是独立日，也就是它的国庆;巴西的九月七日是独立日，十一月十五日另有共和国宣告日，两天都放假——所以巴西其实也答得通，差别在印度那两天是**全国强制假日**，而巴西的假日结构是联邦法定假日再加上各州各市自订。",
+        "hi": "भारत। स्वतंत्रता दिवस 15 अगस्त (1947, ब्रिटेन से) और गणतंत्र दिवस 26 जनवरी (1950, संविधान लागू) — दोनों राजपत्रित राष्ट्रीय अवकाश हैं। भारत का केंद्र केवल तीन राष्ट्रीय अवकाश तय करता है, और ये उनमें से दो हैं; तीसरा 2 अक्टूबर गांधी जयंती। यानी चौथा है ही नहीं: बाक़ी सभी छुट्टियाँ राज्यों पर छोड़ी गई हैं, इसीलिए एक ही देश में राज्य-दर-राज्य पंचांग अलग दिखते हैं। इसके उलट: चीन का 1 अक्टूबर राष्ट्रीय दिवस है और अलग से स्वतंत्रता दिवस नहीं; इंडोनेशिया का 17 अगस्त स्वतंत्रता दिवस है और वही राष्ट्रीय दिवस भी; ब्राज़ील का 7 सितंबर स्वतंत्रता दिवस और 15 नवंबर गणतंत्र-घोषणा दिवस, दोनों छुट्टी — तो ब्राज़ील भी सही ठहराया जा सकता है; अंतर यह कि भारत के वे दो **पूरे देश पर लागू** हैं, जबकि ब्राज़ील की संरचना संघीय छुट्टियों के ऊपर राज्य और नगर की छुट्टियाँ जोड़ती है।",
+        "id": "India. Hari Kemerdekaan 15 Agustus (dari Inggris, 1947) dan Hari Republik 26 Januari (konstitusi berlaku, 1950); keduanya hari libur nasional resmi — pusat India hanya menetapkan tiga hari libur nasional, dan dua di antaranya adalah ini, yang ketiga Gandhi Jayanti pada 2 Oktober. Artinya tidak ada yang keempat: semua libur lain diserahkan ke tiap negara bagian, itulah sebabnya penanggalan berbeda dari satu negara bagian ke negara bagian lain dalam satu negara. Sebaliknya: 1 Oktober Tiongkok adalah hari nasionalnya dan tidak ada hari kemerdekaan terpisah; 17 Agustus Indonesia adalah hari kemerdekaan sekaligus hari nasional; Brasil punya 7 September sebagai Hari Kemerdekaan dan 15 November sebagai Proklamasi Republik, keduanya libur — jadi Brasil pun bisa dibenarkan; bedanya, dua hari India itu **berlaku nasional secara mutlak**, sedangkan struktur Brasil adalah libur federal ditambah libur negara bagian dan kota.",
+        "pt-BR": "Índia. O Dia da Independência é 15 de agosto (do Reino Unido, em 1947) e o Dia da República é 26 de janeiro (a constituição entrando em vigor, em 1950); ambos são feriados nacionais oficiais — o governo central indiano fixa apenas três feriados nacionais, e estes são dois deles, sendo o terceiro o Gandhi Jayanti em 2 de outubro. Ou seja, não há um quarto: todos os outros feriados ficam a cargo de cada estado, e por isso os calendários diferem de estado para estado dentro de um mesmo país. Em contraste: 1º de outubro na China é o dia nacional e não há data separada de independência; 17 de agosto na Indonésia é a independência e portanto também o dia nacional; o Brasil tem 7 de setembro como Independência e 15 de novembro como Proclamação da República, ambos feriados — então o Brasil também é defensável; a diferença é que os dois dias indianos **valem para o país inteiro**, ao passo que a estrutura brasileira soma feriados federais a estaduais e municipais."
+      }
+    },
+    {
+      "id": "q-20261002-funeral-colour",
+      "date": "2026-10-02",
+      "kind": "poll",
+      "topic": "farewells-and-funerals",
+      "asker": "pt-BR",
+      "target": "zh-TW",
+      "text": {
+        "zh-TW": "你們那裡的喪禮,大家穿什麼顏色?",
+        "en": "At a funeral where you live, what colour do people wear?",
+        "ja": "そちらの葬儀では、皆どんな色を着ますか?",
+        "zh-CN": "你们那里的丧礼，大家穿什么颜色?",
+        "hi": "आपके यहाँ अंत्येष्टि में लोग किस रंग के कपड़े पहनते हैं?",
+        "id": "Di tempatmu, warna apa yang dikenakan saat pemakaman?",
+        "pt-BR": "No velório aí, de que cor as pessoas se vestem?"
+      },
+      "options": [
+        {
+          "id": "black",
+          "emoji": "🖤",
+          "label": {
+            "zh-TW": "黑色",
+            "en": "Black",
+            "ja": "黒",
+            "zh-CN": "黑色",
+            "hi": "काला",
+            "id": "Hitam",
+            "pt-BR": "Preto"
+          }
+        },
+        {
+          "id": "white",
+          "emoji": "🤍",
+          "label": {
+            "zh-TW": "白色",
+            "en": "White",
+            "ja": "白",
+            "zh-CN": "白色",
+            "hi": "सफ़ेद",
+            "id": "Putih",
+            "pt-BR": "Branco"
+          }
+        },
+        {
+          "id": "plain",
+          "emoji": "👔",
+          "label": {
+            "zh-TW": "素色就好",
+            "en": "Anything plain",
+            "ja": "地味な色なら何でも",
+            "zh-CN": "素色就好",
+            "hi": "कोई भी सादा रंग",
+            "id": "Warna polos apa saja",
+            "pt-BR": "Qualquer cor discreta"
+          }
+        },
+        {
+          "id": "bright",
+          "emoji": "🌈",
+          "label": {
+            "zh-TW": "反而穿亮色",
+            "en": "Bright colours, actually",
+            "ja": "むしろ明るい色",
+            "zh-CN": "反而穿亮色",
+            "hi": "बल्कि चमकीले रंग",
+            "id": "Justru warna cerah",
+            "pt-BR": "Cores vivas, na verdade"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261002-funeral-white",
+      "date": "2026-10-02",
+      "kind": "guess",
+      "topic": "farewells-and-funerals",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪個社群的喪服傳統上是**白色**而不是黑色?",
+        "en": "Guess: in which community is mourning dress traditionally **white**, not black?",
+        "ja": "クイズ:喪の装いが伝統的に黒ではなく**白**なのはどこ?",
+        "zh-CN": "你猜:哪个社群的丧服传统上是**白色**而不是黑色?",
+        "hi": "अंदाज़ा लगाइए: किस समुदाय में शोक का वस्त्र परंपरागत रूप से काला नहीं, **सफ़ेद** होता है?",
+        "id": "Tebak: di komunitas mana pakaian berkabung secara tradisional **putih**, bukan hitam?",
+        "pt-BR": "Adivinhe: em qual comunidade o luto se veste tradicionalmente de **branco**, e não de preto?"
+      },
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        }
+      ],
+      "answer": "hi",
+      "explain": {
+        "zh-TW": "印度。印度教傳統的喪服是白色,尤其寡婦此後長期著白;白在這裡不是空缺而是脫離色彩、脫離裝飾的狀態。這件事在東亞也成立——漢人傳統的孝服是白色麻布,所以「披麻戴孝」四個字裡沒有黑;日本雖然現代喪禮穿黑,但白裝束仍用在死者身上。真正把黑色定為喪色的是近代歐洲的習慣,再隨著西式禮儀傳到各地,於是今天很多地方是**兩套並存**:告別式穿黑西裝,而家屬在儀式的某些環節仍披白。所以這題的重點不是哪一種顏色比較對,而是黑色作為喪色其實比多數人以為的年輕。",
+        "en": "India. Hindu mourning dress is white — a widow in particular may wear it long after — and white here is not emptiness but the state of having stepped out of colour and ornament. The same holds in East Asia: Han Chinese mourning garments are unbleached white hemp, which is why the classical phrase for going into mourning contains no black at all; and although modern Japanese funerals are attended in black, white is still what the dead are dressed in. It was early-modern Europe that fixed black as the colour of mourning, and Western funeral manners carried it outward, so many places now run **two systems at once**: a black suit for the ceremony, while the family still wears white at certain moments. The point is not which colour is correct, but that black as a mourning colour is younger than most people assume.",
+        "ja": "インドです。ヒンドゥーの喪の装いは白で、とりわけ寡婦はその後長く白を着ます。ここでの白は空白ではなく、色と飾りから離れた状態を指します。同じことは東アジアにも当てはまり、漢族の伝統的な喪服は晒していない白い麻。喪に服することを表す古い言い回しに黒は一切出てきません。日本も現代の葬儀は黒ですが、白装束は今も死者に着せるものです。黒を喪の色として定着させたのは近世ヨーロッパの習慣で、西洋式の礼法とともに各地へ広がりました。その結果、今では**二つの体系が同居**している場所が多く、式では黒い礼服、遺族は場面によって白をまといます。要点はどちらの色が正しいかではなく、喪の色としての黒が多くの人の想像より新しいということです。",
+        "zh-CN": "印度。印度教传统的丧服是白色，尤其寡妇此后长期着白;白在这里不是空缺而是脱离色彩、脱离装饰的状态。这件事在东亚也成立——汉人传统的孝服是白色麻布，所以“披麻戴孝”四个字里没有黑;日本虽然现代丧礼穿黑，但白装束仍用在死者身上。真正把黑色定为丧色的是近代欧洲的习惯，再随着西式礼仪传到各地，于是今天很多地方是**两套并存**:告别式穿黑西装，而家属在仪式的某些环节仍披白。所以这题的重点不是哪一种颜色比较对，而是黑色作为丧色其实比多数人以为的年轻。",
+        "hi": "भारत। हिंदू शोक-वस्त्र सफ़ेद है — विशेषकर विधवा उसे लंबे समय तक पहनती है — और यहाँ सफ़ेद रिक्तता नहीं, बल्कि रंग और अलंकार से बाहर निकल आने की अवस्था है। यही बात पूर्वी एशिया में भी लागू है: हान चीनी परंपरा का शोक-वस्त्र बिना ब्लीच किया सफ़ेद सन है, इसीलिए शोक में जाने के शास्त्रीय मुहावरे में काला कहीं नहीं आता; और जापान में आधुनिक अंत्येष्टि काले में होती है, फिर भी मृतक को सफ़ेद ही पहनाया जाता है। काले को शोक का रंग बनाने का काम आधुनिक-पूर्व यूरोप की प्रथा ने किया, और पश्चिमी अंत्येष्टि-शिष्टाचार उसे बाहर ले गया — इसलिए आज कई जगह **दो व्यवस्थाएँ साथ चलती हैं**: समारोह के लिए काला सूट, जबकि परिवार कुछ क्षणों में अब भी सफ़ेद पहनता है। बात यह नहीं कि कौन-सा रंग सही है, बल्कि यह कि शोक-रंग के रूप में काला उतना पुराना नहीं जितना लोग मानते हैं।",
+        "id": "India. Pakaian berkabung Hindu berwarna putih — janda khususnya mengenakannya lama sesudahnya — dan putih di sini bukan kekosongan, melainkan keadaan telah keluar dari warna dan hiasan. Hal yang sama berlaku di Asia Timur: kain berkabung Tionghoa Han adalah rami putih yang tidak dikelantang, itulah sebabnya ungkapan klasik untuk berkabung sama sekali tidak memuat kata hitam; dan meski pemakaman Jepang modern dihadiri dengan pakaian hitam, putih tetap yang dikenakan pada jenazah. Yang memantapkan hitam sebagai warna duka adalah kebiasaan Eropa awal-modern, lalu tata cara pemakaman Barat membawanya keluar — sehingga kini banyak tempat menjalankan **dua sistem sekaligus**: jas hitam untuk upacara, sementara keluarga tetap berputih pada saat-saat tertentu. Intinya bukan warna mana yang benar, melainkan bahwa hitam sebagai warna duka jauh lebih muda daripada yang diduga kebanyakan orang.",
+        "pt-BR": "Índia. O luto hindu se veste de branco — a viúva em especial pode usá-lo por muito tempo depois — e o branco aqui não é vazio, e sim o estado de ter saído da cor e do ornamento. O mesmo vale no Leste Asiático: as vestes de luto chinesas han são de linho branco não alvejado, e por isso a expressão clássica para entrar em luto não contém preto algum; e embora os funerais japoneses modernos sejam de preto, é de branco que se veste o morto. Foi a Europa moderna inicial que fixou o preto como cor do luto, e a etiqueta fúnebre ocidental o levou adiante — de modo que hoje muitos lugares rodam **dois sistemas ao mesmo tempo**: terno preto na cerimônia, enquanto a família ainda usa branco em certos momentos. O ponto não é qual cor está certa, mas que o preto como cor de luto é bem mais recente do que a maioria supõe."
+      }
     }
   ]
 }

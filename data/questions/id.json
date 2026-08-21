@@ -2304,6 +2304,930 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20260919-harvest-table",
+      "date": "2026-09-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "pt-BR",
+      "target_locale": "ja",
+      "text": "Makan apa dalam setahun yang paling terasa seperti panen?",
+      "options": [
+        {
+          "id": "newrice",
+          "emoji": "🌾",
+          "label": "Beras panen pertama"
+        },
+        {
+          "id": "family",
+          "emoji": "🍲",
+          "label": "Satu panci untuk sekeluarga"
+        },
+        {
+          "id": "street",
+          "emoji": "🍢",
+          "label": "Jajanan di pasar atau kelenteng"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Tidak ada yang seperti itu"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260919-harvest-thanks-date",
+      "date": "2026-09-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: Thanksgiving siapa yang jatuh pada Oktober, bukan November?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260920-moon-plan",
+      "date": "2026-09-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "zh-TW",
+      "target_locale": "id",
+      "text": "Pada malam Pertengahan Musim Gugur, di mana kemungkinan besar kamu berada?",
+      "options": [
+        {
+          "id": "home",
+          "emoji": "🏠",
+          "label": "Di rumah bersama keluarga"
+        },
+        {
+          "id": "outdoor",
+          "emoji": "🔥",
+          "label": "Di luar, bakar-bakar"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "Kerja atau sekolah seperti biasa"
+        },
+        {
+          "id": "unknown",
+          "emoji": "🌙",
+          "label": "Di sini tidak ada malam seperti itu"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260920-moon-barbecue",
+      "date": "2026-09-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: bagi komunitas mana kegiatan Pertengahan Musim Gugur yang paling umum bukan memandang bulan, melainkan bakar-bakar?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260921-moving-day",
+      "date": "2026-09-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": "zh-CN",
+      "target_locale": "pt-BR",
+      "text": "Pada hari pindah, apa yang pertama masuk ke rumah baru?",
+      "options": [
+        {
+          "id": "rice",
+          "emoji": "🍚",
+          "label": "Beras, garam, atau air"
+        },
+        {
+          "id": "altar",
+          "emoji": "🕯️",
+          "label": "Tempat ibadah atau leluhur"
+        },
+        {
+          "id": "bed",
+          "emoji": "🛏️",
+          "label": "Kasur"
+        },
+        {
+          "id": "nothing",
+          "emoji": "📦",
+          "label": "Tidak ada urutan khusus"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260921-moving-auspicious",
+      "date": "2026-09-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: komunitas mana yang memilih hari tertentu dari penanggalan karena dianggap baik untuk pindah rumah?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260922-remember-how",
+      "date": "2026-09-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": "hi",
+      "target_locale": "en",
+      "text": "Saat mengenang orang yang sudah meninggal, apa yang keluargamu lakukan?",
+      "options": [
+        {
+          "id": "food",
+          "emoji": "🍚",
+          "label": "Menyajikan makanan kesukaannya"
+        },
+        {
+          "id": "grave",
+          "emoji": "💐",
+          "label": "Ziarah ke makam"
+        },
+        {
+          "id": "talk",
+          "emoji": "🗣️",
+          "label": "Menceritakannya kepada anak-anak"
+        },
+        {
+          "id": "quiet",
+          "emoji": "🕯️",
+          "label": "Mengenang dalam hening"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260922-pitru-paksha",
+      "date": "2026-09-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: komunitas mana yang punya **enam belas hari berturut-turut** khusus untuk leluhur?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260923-mooncake-honest",
+      "date": "2026-09-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "id",
+      "target_locale": "zh-CN",
+      "text": "Jujur saja — berapa kue bulan yang kamu makan?",
+      "options": [
+        {
+          "id": "many",
+          "emoji": "😋",
+          "label": "Banyak — aku suka sekali"
+        },
+        {
+          "id": "one",
+          "emoji": "🥮",
+          "label": "Satu saja, sekadarnya"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "Kebanyakan untuk dibagikan"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "Belum pernah makan"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260923-moon-not-full",
+      "date": "2026-09-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: malam memandang bulan milik siapa yang **belum tentu purnama** — dan mereka menyadarinya?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260924-caregiving-who",
+      "date": "2026-09-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+      "topic_slug": "caregiving-across-generations",
+      "asker_locale": "pt-BR",
+      "target_locale": "zh-TW",
+      "text": "Saat orang tua menua, siapa di keluargamu yang paling mungkin merawat?",
+      "options": [
+        {
+          "id": "child",
+          "emoji": "🏠",
+          "label": "Anak, tinggal bersama"
+        },
+        {
+          "id": "hired",
+          "emoji": "🧑‍⚕️",
+          "label": "Perawat yang dipekerjakan"
+        },
+        {
+          "id": "facility",
+          "emoji": "🏥",
+          "label": "Pindah ke panti"
+        },
+        {
+          "id": "alone",
+          "emoji": "🚪",
+          "label": "Mereka tinggal sendiri"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260924-respect-aged-holiday",
+      "date": "2026-09-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+      "topic_slug": "caregiving-across-generations",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: komunitas mana yang menjadikan penghormatan kepada lansia sebagai hari libur nasional, satu hari setahun?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260925-moon-holiday",
+      "date": "2026-09-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "ja",
+      "target_locale": "hi",
+      "text": "Apakah hari ini (Pertengahan Musim Gugur) kamu libur?",
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🎊",
+          "label": "Ya — hari libur nasional"
+        },
+        {
+          "id": "half",
+          "emoji": "🌗",
+          "label": "Tidak libur, tapi pulang lebih awal"
+        },
+        {
+          "id": "no",
+          "emoji": "💼",
+          "label": "Tidak — hari biasa"
+        },
+        {
+          "id": "what",
+          "emoji": "❓",
+          "label": "Hari ini hari apa?"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260925-mooncake-salary",
+      "date": "2026-09-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: di komunitas mana perusahaan lazim membagikan kue bulan atau parsel kepada karyawan menjelang Pertengahan Musim Gugur, hampir sebagai kebiasaan?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260926-harvest-who",
+      "date": "2026-09-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "en",
+      "target_locale": "id",
+      "text": "Apakah masih ada anggota keluargamu yang bertani atau berkebun?",
+      "options": [
+        {
+          "id": "farm",
+          "emoji": "🌾",
+          "label": "Ya — itu penghasilan utama"
+        },
+        {
+          "id": "garden",
+          "emoji": "🪴",
+          "label": "Ya — untuk konsumsi sendiri"
+        },
+        {
+          "id": "past",
+          "emoji": "👵",
+          "label": "Dulu generasi orang tua"
+        },
+        {
+          "id": "never",
+          "emoji": "🏙️",
+          "label": "Tidak pernah"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260926-harvest-thanksgiving-brazil",
+      "date": "2026-09-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: di komunitas mana Thanksgiving adalah hari nasional yang ditetapkan **undang-undang**, tetapi tetap hari kerja biasa?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260927-teacher-gift",
+      "date": "2026-09-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "zh-TW",
+      "target_locale": "en",
+      "text": "Pada Hari Guru, apa yang biasanya dilakukan murid?",
+      "options": [
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "Menulis kartu"
+        },
+        {
+          "id": "flower",
+          "emoji": "🌸",
+          "label": "Membawa bunga atau hadiah kecil"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎤",
+          "label": "Sekolah mengadakan upacara"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Tidak ada apa-apa"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260927-teachers-day-dates",
+      "date": "2026-09-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: komunitas mana yang menetapkan Hari Guru pada **hari lahir Konfusius**?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260928-teacher-remember",
+      "date": "2026-09-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "hi",
+      "target_locale": "pt-BR",
+      "text": "Guru yang namanya masih kamu ingat — apa yang ia ajarkan?",
+      "options": [
+        {
+          "id": "subject",
+          "emoji": "📐",
+          "label": "Sebuah mata pelajaran"
+        },
+        {
+          "id": "life",
+          "emoji": "🧭",
+          "label": "Cara menjadi manusia"
+        },
+        {
+          "id": "saw",
+          "emoji": "👀",
+          "label": "Ia melihat aku"
+        },
+        {
+          "id": "none",
+          "emoji": "🌫️",
+          "label": "Tidak terpikir siapa pun"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260928-teachers-day-holiday",
+      "date": "2026-09-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: dari empat komunitas ini, di berapa banyak murid **tetap masuk sekolah** pada Hari Guru?",
+      "options": [
+        {
+          "id": "four",
+          "emoji": "4️⃣",
+          "label": "Keempatnya"
+        },
+        {
+          "id": "three",
+          "emoji": "3️⃣",
+          "label": "Tiga"
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": "Dua"
+        },
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "Hanya satu"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260929-national-day-feel",
+      "date": "2026-09-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": "id",
+      "target_locale": "ja",
+      "text": "Hari nasional negaramu terasa paling mirip apa bagimu?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🏖️",
+          "label": "Sekadar hari libur"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎺",
+          "label": "Upacara dan bendera"
+        },
+        {
+          "id": "family",
+          "emoji": "🍽️",
+          "label": "Makan bersama keluarga"
+        },
+        {
+          "id": "nothing",
+          "emoji": "😐",
+          "label": "Tidak terasa apa-apa"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260929-golden-week-october",
+      "date": "2026-09-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: hari nasional siapa yang mengubah satu minggu penuh menjadi libur nasional — bahkan jalan tolnya digratiskan?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260930-school-year-start",
+      "date": "2026-09-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": "en",
+      "target_locale": "zh-CN",
+      "text": "Kapan tahun ajaran di tempatmu dimulai?",
+      "options": [
+        {
+          "id": "aug",
+          "emoji": "🍂",
+          "label": "Akhir Agustus atau September"
+        },
+        {
+          "id": "apr",
+          "emoji": "🌸",
+          "label": "April"
+        },
+        {
+          "id": "feb",
+          "emoji": "☀️",
+          "label": "Januari atau Februari"
+        },
+        {
+          "id": "jun",
+          "emoji": "📚",
+          "label": "Juni atau Juli"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260930-school-year-april",
+      "date": "2026-09-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: tahun ajaran siapa yang dimulai pada **April** — dengan musim rekrutmen dan tahun anggaran bertolak dari garis yang sama?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261001-flag-at-home",
+      "date": "2026-10-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": "zh-CN",
+      "target_locale": "hi",
+      "text": "Pada hari nasional, apakah rumahmu memasang bendera?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🚩",
+          "label": "Setiap tahun"
+        },
+        {
+          "id": "street",
+          "emoji": "🏘️",
+          "label": "Satu jalan memasang semua"
+        },
+        {
+          "id": "never",
+          "emoji": "🙅",
+          "label": "Tidak pernah"
+        },
+        {
+          "id": "nohome",
+          "emoji": "🏢",
+          "label": "Tidak ada tempat memasangnya"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261001-two-national-days",
+      "date": "2026-10-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: bagi komunitas mana hari nasional dan hari kemerdekaan adalah **dua tanggal berbeda**, dan keduanya libur?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261002-funeral-colour",
+      "date": "2026-10-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRCW71GA7PD20TQ1K12",
+      "topic_slug": "farewells-and-funerals",
+      "asker_locale": "pt-BR",
+      "target_locale": "zh-TW",
+      "text": "Di tempatmu, warna apa yang dikenakan saat pemakaman?",
+      "options": [
+        {
+          "id": "black",
+          "emoji": "🖤",
+          "label": "Hitam"
+        },
+        {
+          "id": "white",
+          "emoji": "🤍",
+          "label": "Putih"
+        },
+        {
+          "id": "plain",
+          "emoji": "👔",
+          "label": "Warna polos apa saja"
+        },
+        {
+          "id": "bright",
+          "emoji": "🌈",
+          "label": "Justru warna cerah"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261002-funeral-white",
+      "date": "2026-10-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRCW71GA7PD20TQ1K12",
+      "topic_slug": "farewells-and-funerals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: di komunitas mana pakaian berkabung secara tradisional **putih**, bukan hitam?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

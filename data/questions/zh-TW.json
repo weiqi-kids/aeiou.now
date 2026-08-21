@@ -2304,6 +2304,930 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20260919-harvest-table",
+      "date": "2026-09-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "pt-BR",
+      "target_locale": "ja",
+      "text": "一年之中,哪一頓飯最像「收成」的味道?",
+      "options": [
+        {
+          "id": "newrice",
+          "emoji": "🌾",
+          "label": "新米或新穀"
+        },
+        {
+          "id": "family",
+          "emoji": "🍲",
+          "label": "全家圍一鍋"
+        },
+        {
+          "id": "street",
+          "emoji": "🍢",
+          "label": "廟口或市集的小吃"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "沒有這種感覺"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260919-harvest-thanks-date",
+      "date": "2026-09-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的感恩節不在十一月,而在十月?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260920-moon-plan",
+      "date": "2026-09-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "zh-TW",
+      "target_locale": "id",
+      "text": "中秋那天,你最可能在哪裡?",
+      "options": [
+        {
+          "id": "home",
+          "emoji": "🏠",
+          "label": "在家裡跟家人"
+        },
+        {
+          "id": "outdoor",
+          "emoji": "🔥",
+          "label": "在戶外烤肉"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "照常上班上課"
+        },
+        {
+          "id": "unknown",
+          "emoji": "🌙",
+          "label": "我這裡沒有這個節日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260920-moon-barbecue",
+      "date": "2026-09-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的中秋節最普遍的活動不是賞月,而是烤肉?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260921-moving-day",
+      "date": "2026-09-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": "zh-CN",
+      "target_locale": "pt-BR",
+      "text": "搬家那天,你們家會先搬什麼進新家?",
+      "options": [
+        {
+          "id": "rice",
+          "emoji": "🍚",
+          "label": "米、鹽或水"
+        },
+        {
+          "id": "altar",
+          "emoji": "🕯️",
+          "label": "神明或祖先的位置"
+        },
+        {
+          "id": "bed",
+          "emoji": "🛏️",
+          "label": "床"
+        },
+        {
+          "id": "nothing",
+          "emoji": "📦",
+          "label": "沒有先後之分"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260921-moving-auspicious",
+      "date": "2026-09-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群會為了「搬家的好日子」而特地挑日曆上的某一天?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260922-remember-how",
+      "date": "2026-09-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": "hi",
+      "target_locale": "en",
+      "text": "想起過世的親人時,你們家怎麼做?",
+      "options": [
+        {
+          "id": "food",
+          "emoji": "🍚",
+          "label": "擺一份他愛吃的"
+        },
+        {
+          "id": "grave",
+          "emoji": "💐",
+          "label": "去墓前或塔位"
+        },
+        {
+          "id": "talk",
+          "emoji": "🗣️",
+          "label": "講他的事給小孩聽"
+        },
+        {
+          "id": "quiet",
+          "emoji": "🕯️",
+          "label": "安靜地想著"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260922-pitru-paksha",
+      "date": "2026-09-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群有一段**連續十六天**專門用來祭祖的日子?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260923-mooncake-honest",
+      "date": "2026-09-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "id",
+      "target_locale": "zh-CN",
+      "text": "老實說,月餅你吃幾個?",
+      "options": [
+        {
+          "id": "many",
+          "emoji": "😋",
+          "label": "很多,我很愛"
+        },
+        {
+          "id": "one",
+          "emoji": "🥮",
+          "label": "一個意思一下"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "主要是拿來送人"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "我沒吃過"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260923-moon-not-full",
+      "date": "2026-09-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的「賞月之夜」**不保證看到滿月**,而且他們知道?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260924-caregiving-who",
+      "date": "2026-09-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+      "topic_slug": "caregiving-across-generations",
+      "asker_locale": "pt-BR",
+      "target_locale": "zh-TW",
+      "text": "父母年紀大了以後,你們家最可能是誰在照顧?",
+      "options": [
+        {
+          "id": "child",
+          "emoji": "🏠",
+          "label": "子女同住照顧"
+        },
+        {
+          "id": "hired",
+          "emoji": "🧑‍⚕️",
+          "label": "請看護或幫傭"
+        },
+        {
+          "id": "facility",
+          "emoji": "🏥",
+          "label": "住到機構"
+        },
+        {
+          "id": "alone",
+          "emoji": "🚪",
+          "label": "他們自己住"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260924-respect-aged-holiday",
+      "date": "2026-09-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+      "topic_slug": "caregiving-across-generations",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群把「敬老」放進國定假日,一年放一天?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260925-moon-holiday",
+      "date": "2026-09-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "ja",
+      "target_locale": "hi",
+      "text": "今天(中秋)你放假嗎?",
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🎊",
+          "label": "放,是國定假日"
+        },
+        {
+          "id": "half",
+          "emoji": "🌗",
+          "label": "不放假,但會早點回家"
+        },
+        {
+          "id": "no",
+          "emoji": "💼",
+          "label": "照常,跟平常一樣"
+        },
+        {
+          "id": "what",
+          "emoji": "❓",
+          "label": "今天是什麼日子?"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260925-mooncake-salary",
+      "date": "2026-09-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的公司在中秋前後普遍發月餅或禮盒給員工,幾乎算是一項慣例?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260926-harvest-who",
+      "date": "2026-09-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "en",
+      "target_locale": "id",
+      "text": "你家裡還有人種田或種菜嗎?",
+      "options": [
+        {
+          "id": "farm",
+          "emoji": "🌾",
+          "label": "有,是主要收入"
+        },
+        {
+          "id": "garden",
+          "emoji": "🪴",
+          "label": "有,種著自己吃"
+        },
+        {
+          "id": "past",
+          "emoji": "👵",
+          "label": "上一代有,現在沒有"
+        },
+        {
+          "id": "never",
+          "emoji": "🏙️",
+          "label": "從來沒有"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260926-harvest-thanksgiving-brazil",
+      "date": "2026-09-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的感恩節是**法律訂定**的全國性紀念日,但那天照常上班?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260927-teacher-gift",
+      "date": "2026-09-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "zh-TW",
+      "target_locale": "en",
+      "text": "教師節那天,學生通常會做什麼?",
+      "options": [
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "寫卡片"
+        },
+        {
+          "id": "flower",
+          "emoji": "🌸",
+          "label": "送花或小禮物"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎤",
+          "label": "學校辦典禮"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "什麼都沒有"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260927-teachers-day-dates",
+      "date": "2026-09-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的教師節訂在**孔子誕辰**那一天?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260928-teacher-remember",
+      "date": "2026-09-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "hi",
+      "target_locale": "pt-BR",
+      "text": "你現在還記得名字的老師,是教你什麼的?",
+      "options": [
+        {
+          "id": "subject",
+          "emoji": "📐",
+          "label": "一門科目"
+        },
+        {
+          "id": "life",
+          "emoji": "🧭",
+          "label": "做人的方法"
+        },
+        {
+          "id": "saw",
+          "emoji": "👀",
+          "label": "他看見了我"
+        },
+        {
+          "id": "none",
+          "emoji": "🌫️",
+          "label": "我想不起來"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260928-teachers-day-holiday",
+      "date": "2026-09-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:四個社群裡,教師節那天**學生要照常上課**的有幾個?",
+      "options": [
+        {
+          "id": "four",
+          "emoji": "4️⃣",
+          "label": "四個都要上課"
+        },
+        {
+          "id": "three",
+          "emoji": "3️⃣",
+          "label": "三個"
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": "兩個"
+        },
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "只有一個"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260929-national-day-feel",
+      "date": "2026-09-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": "id",
+      "target_locale": "ja",
+      "text": "你們國家的國慶日,對你來說最像什麼?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🏖️",
+          "label": "一天假"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎺",
+          "label": "典禮與升旗"
+        },
+        {
+          "id": "family",
+          "emoji": "🍽️",
+          "label": "跟家人吃飯"
+        },
+        {
+          "id": "nothing",
+          "emoji": "😐",
+          "label": "沒什麼感覺"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260929-golden-week-october",
+      "date": "2026-09-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的國慶把整整一週變成全國性的假期,連高速公路都免費?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260930-school-year-start",
+      "date": "2026-09-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": "en",
+      "target_locale": "zh-CN",
+      "text": "你們的學年是什麼時候開始的?",
+      "options": [
+        {
+          "id": "aug",
+          "emoji": "🍂",
+          "label": "八月底或九月"
+        },
+        {
+          "id": "apr",
+          "emoji": "🌸",
+          "label": "四月"
+        },
+        {
+          "id": "feb",
+          "emoji": "☀️",
+          "label": "一月或二月"
+        },
+        {
+          "id": "jun",
+          "emoji": "📚",
+          "label": "六月或七月"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260930-school-year-april",
+      "date": "2026-09-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的學年在**四月**開始,而且求職與會計年度也跟著同一個起點?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261001-flag-at-home",
+      "date": "2026-10-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": "zh-CN",
+      "target_locale": "hi",
+      "text": "國慶日,你家會掛國旗嗎?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🚩",
+          "label": "每年都掛"
+        },
+        {
+          "id": "street",
+          "emoji": "🏘️",
+          "label": "整條街都會掛"
+        },
+        {
+          "id": "never",
+          "emoji": "🙅",
+          "label": "從來不掛"
+        },
+        {
+          "id": "nohome",
+          "emoji": "🏢",
+          "label": "我們沒有可以掛的地方"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261001-two-national-days",
+      "date": "2026-10-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的「國慶日」與「獨立日」是**兩個不同的日子**,而且都放假?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261002-funeral-colour",
+      "date": "2026-10-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRCW71GA7PD20TQ1K12",
+      "topic_slug": "farewells-and-funerals",
+      "asker_locale": "pt-BR",
+      "target_locale": "zh-TW",
+      "text": "你們那裡的喪禮,大家穿什麼顏色?",
+      "options": [
+        {
+          "id": "black",
+          "emoji": "🖤",
+          "label": "黑色"
+        },
+        {
+          "id": "white",
+          "emoji": "🤍",
+          "label": "白色"
+        },
+        {
+          "id": "plain",
+          "emoji": "👔",
+          "label": "素色就好"
+        },
+        {
+          "id": "bright",
+          "emoji": "🌈",
+          "label": "反而穿亮色"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261002-funeral-white",
+      "date": "2026-10-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRCW71GA7PD20TQ1K12",
+      "topic_slug": "farewells-and-funerals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪個社群的喪服傳統上是**白色**而不是黑色?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

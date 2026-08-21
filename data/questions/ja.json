@@ -2304,6 +2304,930 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20260919-harvest-table",
+      "date": "2026-09-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "pt-BR",
+      "target_locale": "ja",
+      "text": "一年のうち、いちばん「実り」を感じる食事はどれ?",
+      "options": [
+        {
+          "id": "newrice",
+          "emoji": "🌾",
+          "label": "新米"
+        },
+        {
+          "id": "family",
+          "emoji": "🍲",
+          "label": "家族で囲む鍋"
+        },
+        {
+          "id": "street",
+          "emoji": "🍢",
+          "label": "縁日や市場の屋台"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "そういう食事はない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260919-harvest-thanks-date",
+      "date": "2026-09-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:感謝祭が11月ではなく10月にあるのはどこ?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260920-moon-plan",
+      "date": "2026-09-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "zh-TW",
+      "target_locale": "id",
+      "text": "中秋の夜、いちばんいそうな場所は?",
+      "options": [
+        {
+          "id": "home",
+          "emoji": "🏠",
+          "label": "家で家族と"
+        },
+        {
+          "id": "outdoor",
+          "emoji": "🔥",
+          "label": "屋外でバーベキュー"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "いつもどおり仕事か学校"
+        },
+        {
+          "id": "unknown",
+          "emoji": "🌙",
+          "label": "ここにはその行事がない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260920-moon-barbecue",
+      "date": "2026-09-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:中秋にいちばん多い過ごし方が月見ではなくバーベキューなのはどこ?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260921-moving-day",
+      "date": "2026-09-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": "zh-CN",
+      "target_locale": "pt-BR",
+      "text": "引っ越しの日、新居にまず何を入れますか?",
+      "options": [
+        {
+          "id": "rice",
+          "emoji": "🍚",
+          "label": "米・塩・水"
+        },
+        {
+          "id": "altar",
+          "emoji": "🕯️",
+          "label": "神棚や仏壇"
+        },
+        {
+          "id": "bed",
+          "emoji": "🛏️",
+          "label": "ベッド"
+        },
+        {
+          "id": "nothing",
+          "emoji": "📦",
+          "label": "特に決まりはない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260921-moving-auspicious",
+      "date": "2026-09-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:引っ越しに「良い日」を暦から選ぶのはどこ?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260922-remember-how",
+      "date": "2026-09-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": "hi",
+      "target_locale": "en",
+      "text": "亡くなった人を思い出すとき、家ではどうしますか?",
+      "options": [
+        {
+          "id": "food",
+          "emoji": "🍚",
+          "label": "好きだった物を供える"
+        },
+        {
+          "id": "grave",
+          "emoji": "💐",
+          "label": "お墓参りに行く"
+        },
+        {
+          "id": "talk",
+          "emoji": "🗣️",
+          "label": "子どもに話して聞かせる"
+        },
+        {
+          "id": "quiet",
+          "emoji": "🕯️",
+          "label": "静かに思う"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260922-pitru-paksha",
+      "date": "2026-09-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:先祖のために**16日間続けて**充てる期間があるのはどこ?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260923-mooncake-honest",
+      "date": "2026-09-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "id",
+      "target_locale": "zh-CN",
+      "text": "正直に言って、月餅はいくつ食べる?",
+      "options": [
+        {
+          "id": "many",
+          "emoji": "😋",
+          "label": "たくさん、大好き"
+        },
+        {
+          "id": "one",
+          "emoji": "🥮",
+          "label": "一個だけ、形だけ"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "もっぱら贈り物"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "食べたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260923-moon-not-full",
+      "date": "2026-09-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:「名月の夜」が**必ずしも満月ではない**と知られているのはどこ?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260924-caregiving-who",
+      "date": "2026-09-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+      "topic_slug": "caregiving-across-generations",
+      "asker_locale": "pt-BR",
+      "target_locale": "zh-TW",
+      "text": "親が高齢になったとき、家では誰が世話をすることが多い?",
+      "options": [
+        {
+          "id": "child",
+          "emoji": "🏠",
+          "label": "子どもが同居して世話する"
+        },
+        {
+          "id": "hired",
+          "emoji": "🧑‍⚕️",
+          "label": "介護者を雇う"
+        },
+        {
+          "id": "facility",
+          "emoji": "🏥",
+          "label": "施設に入る"
+        },
+        {
+          "id": "alone",
+          "emoji": "🚪",
+          "label": "本人たちだけで暮らす"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260924-respect-aged-holiday",
+      "date": "2026-09-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+      "topic_slug": "caregiving-across-generations",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:「敬老」を国民の祝日にして年に一日設けているのはどこ?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260925-moon-holiday",
+      "date": "2026-09-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "ja",
+      "target_locale": "hi",
+      "text": "今日(中秋)は休みですか?",
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🎊",
+          "label": "はい、国民の祝日"
+        },
+        {
+          "id": "half",
+          "emoji": "🌗",
+          "label": "休みではないが早く帰る"
+        },
+        {
+          "id": "no",
+          "emoji": "💼",
+          "label": "いつもどおり"
+        },
+        {
+          "id": "what",
+          "emoji": "❓",
+          "label": "今日は何の日?"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260925-mooncake-salary",
+      "date": "2026-09-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:中秋の前後に会社が社員へ月餅や贈答品を配るのがほぼ慣例なのはどこ?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260926-harvest-who",
+      "date": "2026-09-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "en",
+      "target_locale": "id",
+      "text": "家族に農業や家庭菜園をしている人はいますか?",
+      "options": [
+        {
+          "id": "farm",
+          "emoji": "🌾",
+          "label": "はい、主な収入源"
+        },
+        {
+          "id": "garden",
+          "emoji": "🪴",
+          "label": "はい、自家用に"
+        },
+        {
+          "id": "past",
+          "emoji": "👵",
+          "label": "親の世代まで"
+        },
+        {
+          "id": "never",
+          "emoji": "🏙️",
+          "label": "一度もない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260926-harvest-thanksgiving-brazil",
+      "date": "2026-09-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:感謝祭が**法律で**定められた全国的記念日でありながら、その日は普通に働くのはどこ?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260927-teacher-gift",
+      "date": "2026-09-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "zh-TW",
+      "target_locale": "en",
+      "text": "教師の日に、生徒はふつう何をしますか?",
+      "options": [
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "カードを書く"
+        },
+        {
+          "id": "flower",
+          "emoji": "🌸",
+          "label": "花や小さな贈り物"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎤",
+          "label": "学校が式典を行う"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "特に何もない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260927-teachers-day-dates",
+      "date": "2026-09-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:教師の日を**孔子の誕生日**に定めているのはどこ?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260928-teacher-remember",
+      "date": "2026-09-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "hi",
+      "target_locale": "pt-BR",
+      "text": "名前を今でも覚えている先生は、何を教えてくれた人?",
+      "options": [
+        {
+          "id": "subject",
+          "emoji": "📐",
+          "label": "教科を"
+        },
+        {
+          "id": "life",
+          "emoji": "🧭",
+          "label": "人としての在り方"
+        },
+        {
+          "id": "saw",
+          "emoji": "👀",
+          "label": "私を見てくれた"
+        },
+        {
+          "id": "none",
+          "emoji": "🌫️",
+          "label": "思い出せない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260928-teachers-day-holiday",
+      "date": "2026-09-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:この四つのうち、教師の日に**生徒が普通に登校する**のはいくつ?",
+      "options": [
+        {
+          "id": "four",
+          "emoji": "4️⃣",
+          "label": "四つとも登校"
+        },
+        {
+          "id": "three",
+          "emoji": "3️⃣",
+          "label": "三つ"
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": "二つ"
+        },
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "一つだけ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260929-national-day-feel",
+      "date": "2026-09-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": "id",
+      "target_locale": "ja",
+      "text": "あなたの国の建国記念日、あなたにとって何に近い?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🏖️",
+          "label": "ただの休み"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎺",
+          "label": "式典と国旗掲揚"
+        },
+        {
+          "id": "family",
+          "emoji": "🍽️",
+          "label": "家族の食事"
+        },
+        {
+          "id": "nothing",
+          "emoji": "😐",
+          "label": "特に何も"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260929-golden-week-october",
+      "date": "2026-09-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:建国記念日が一週間まるごと全国的な連休になり、高速道路まで無料になるのはどこ?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260930-school-year-start",
+      "date": "2026-09-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": "en",
+      "target_locale": "zh-CN",
+      "text": "そちらの学年はいつ始まりますか?",
+      "options": [
+        {
+          "id": "aug",
+          "emoji": "🍂",
+          "label": "8月末か9月"
+        },
+        {
+          "id": "apr",
+          "emoji": "🌸",
+          "label": "4月"
+        },
+        {
+          "id": "feb",
+          "emoji": "☀️",
+          "label": "1月か2月"
+        },
+        {
+          "id": "jun",
+          "emoji": "📚",
+          "label": "6月か7月"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260930-school-year-april",
+      "date": "2026-09-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:学年が**4月**に始まり、就職活動も会計年度も同じ起点に揃うのはどこ?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261001-flag-at-home",
+      "date": "2026-10-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": "zh-CN",
+      "target_locale": "hi",
+      "text": "建国記念日に、家で国旗を掲げますか?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🚩",
+          "label": "毎年掲げる"
+        },
+        {
+          "id": "street",
+          "emoji": "🏘️",
+          "label": "通り全体で掲げる"
+        },
+        {
+          "id": "never",
+          "emoji": "🙅",
+          "label": "掲げたことはない"
+        },
+        {
+          "id": "nohome",
+          "emoji": "🏢",
+          "label": "掲げる場所がない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261001-two-national-days",
+      "date": "2026-10-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:「建国記念日」と「独立記念日」が**別々の日**で、しかも両方とも祝日なのはどこ?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261002-funeral-colour",
+      "date": "2026-10-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRCW71GA7PD20TQ1K12",
+      "topic_slug": "farewells-and-funerals",
+      "asker_locale": "pt-BR",
+      "target_locale": "zh-TW",
+      "text": "そちらの葬儀では、皆どんな色を着ますか?",
+      "options": [
+        {
+          "id": "black",
+          "emoji": "🖤",
+          "label": "黒"
+        },
+        {
+          "id": "white",
+          "emoji": "🤍",
+          "label": "白"
+        },
+        {
+          "id": "plain",
+          "emoji": "👔",
+          "label": "地味な色なら何でも"
+        },
+        {
+          "id": "bright",
+          "emoji": "🌈",
+          "label": "むしろ明るい色"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261002-funeral-white",
+      "date": "2026-10-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRCW71GA7PD20TQ1K12",
+      "topic_slug": "farewells-and-funerals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:喪の装いが伝統的に黒ではなく**白**なのはどこ?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

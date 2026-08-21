@@ -2304,6 +2304,930 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20260919-harvest-table",
+      "date": "2026-09-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "pt-BR",
+      "target_locale": "ja",
+      "text": "Qual refeição do ano tem mais gosto de colheita para você?",
+      "options": [
+        {
+          "id": "newrice",
+          "emoji": "🌾",
+          "label": "O primeiro arroz da safra"
+        },
+        {
+          "id": "family",
+          "emoji": "🍲",
+          "label": "Uma panela para a família toda"
+        },
+        {
+          "id": "street",
+          "emoji": "🍢",
+          "label": "Comida de rua na feira ou no templo"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Não temos nada assim"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260919-harvest-thanks-date",
+      "date": "2026-09-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: o Dia de Ação de Graças de quem cai em outubro, e não em novembro?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260920-moon-plan",
+      "date": "2026-09-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "zh-TW",
+      "target_locale": "id",
+      "text": "Na noite do Meio do Outono, onde você provavelmente estará?",
+      "options": [
+        {
+          "id": "home",
+          "emoji": "🏠",
+          "label": "Em casa com a família"
+        },
+        {
+          "id": "outdoor",
+          "emoji": "🔥",
+          "label": "Ao ar livre, num churrasco"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "No trabalho ou na escola, como sempre"
+        },
+        {
+          "id": "unknown",
+          "emoji": "🌙",
+          "label": "Aqui não existe essa noite"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260920-moon-barbecue",
+      "date": "2026-09-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: para qual comunidade a atividade mais comum do Meio do Outono não é olhar a lua, mas fazer churrasco?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260921-moving-day",
+      "date": "2026-09-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": "zh-CN",
+      "target_locale": "pt-BR",
+      "text": "No dia da mudança, o que entra primeiro na casa nova?",
+      "options": [
+        {
+          "id": "rice",
+          "emoji": "🍚",
+          "label": "Arroz, sal ou água"
+        },
+        {
+          "id": "altar",
+          "emoji": "🕯️",
+          "label": "O altar ou o lugar dos antepassados"
+        },
+        {
+          "id": "bed",
+          "emoji": "🛏️",
+          "label": "A cama"
+        },
+        {
+          "id": "nothing",
+          "emoji": "📦",
+          "label": "Não há ordem definida"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260921-moving-auspicious",
+      "date": "2026-09-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRYHNPRPSVQAFR6F981",
+      "topic_slug": "moving-home",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: qual comunidade escolhe um dia específico do calendário por ser dia propício para mudar de casa?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260922-remember-how",
+      "date": "2026-09-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": "hi",
+      "target_locale": "en",
+      "text": "Quando vocês lembram de alguém que morreu, o que a família faz?",
+      "options": [
+        {
+          "id": "food",
+          "emoji": "🍚",
+          "label": "Põem um prato de que ele gostava"
+        },
+        {
+          "id": "grave",
+          "emoji": "💐",
+          "label": "Vão ao túmulo"
+        },
+        {
+          "id": "talk",
+          "emoji": "🗣️",
+          "label": "Contam dele para as crianças"
+        },
+        {
+          "id": "quiet",
+          "emoji": "🕯️",
+          "label": "Apenas lembram em silêncio"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260922-pitru-paksha",
+      "date": "2026-09-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: qual comunidade tem **dezesseis dias seguidos** reservados aos antepassados?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260923-mooncake-honest",
+      "date": "2026-09-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "id",
+      "target_locale": "zh-CN",
+      "text": "Sinceramente — quantos bolos da lua você come?",
+      "options": [
+        {
+          "id": "many",
+          "emoji": "😋",
+          "label": "Muitos — eu adoro"
+        },
+        {
+          "id": "one",
+          "emoji": "🥮",
+          "label": "Um, só para marcar"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "Na maioria, dou de presente"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "Nunca comi"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260923-moon-not-full",
+      "date": "2026-09-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: a célebre noite de contemplar a lua de quem **não garante lua cheia** — e eles sabem disso?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260924-caregiving-who",
+      "date": "2026-09-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+      "topic_slug": "caregiving-across-generations",
+      "asker_locale": "pt-BR",
+      "target_locale": "zh-TW",
+      "text": "Quando os pais envelhecem, quem na sua família provavelmente cuida deles?",
+      "options": [
+        {
+          "id": "child",
+          "emoji": "🏠",
+          "label": "Um filho, morando junto"
+        },
+        {
+          "id": "hired",
+          "emoji": "🧑‍⚕️",
+          "label": "Uma cuidadora contratada"
+        },
+        {
+          "id": "facility",
+          "emoji": "🏥",
+          "label": "Vão para uma instituição"
+        },
+        {
+          "id": "alone",
+          "emoji": "🚪",
+          "label": "Eles moram sozinhos"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260924-respect-aged-holiday",
+      "date": "2026-09-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR0VQW50WM78Z3QER1J",
+      "topic_slug": "caregiving-across-generations",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: qual comunidade tem um feriado nacional para honrar os idosos, um dia por ano?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260925-moon-holiday",
+      "date": "2026-09-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": "ja",
+      "target_locale": "hi",
+      "text": "Hoje (Meio do Outono) é folga para você?",
+      "options": [
+        {
+          "id": "yes",
+          "emoji": "🎊",
+          "label": "Sim — é feriado nacional"
+        },
+        {
+          "id": "half",
+          "emoji": "🌗",
+          "label": "Não, mas vou para casa mais cedo"
+        },
+        {
+          "id": "no",
+          "emoji": "💼",
+          "label": "Não — um dia comum"
+        },
+        {
+          "id": "what",
+          "emoji": "❓",
+          "label": "Que dia é hoje?"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260925-mooncake-salary",
+      "date": "2026-09-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: em qual comunidade as empresas costumam distribuir bolos da lua ou cestas aos funcionários no Meio do Outono, quase por praxe?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260926-harvest-who",
+      "date": "2026-09-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": "en",
+      "target_locale": "id",
+      "text": "Alguém na sua família ainda planta ou cultiva alimento?",
+      "options": [
+        {
+          "id": "farm",
+          "emoji": "🌾",
+          "label": "Sim — é a renda principal"
+        },
+        {
+          "id": "garden",
+          "emoji": "🪴",
+          "label": "Sim — uma horta para nós"
+        },
+        {
+          "id": "past",
+          "emoji": "👵",
+          "label": "A geração dos meus pais tinha"
+        },
+        {
+          "id": "never",
+          "emoji": "🏙️",
+          "label": "Nunca"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260926-harvest-thanksgiving-brazil",
+      "date": "2026-09-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: em qual comunidade o Dia de Ação de Graças é uma data nacional fixada **por lei** e, ainda assim, dia normal de trabalho?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260927-teacher-gift",
+      "date": "2026-09-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "zh-TW",
+      "target_locale": "en",
+      "text": "No Dia do Professor, o que os alunos costumam fazer?",
+      "options": [
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "Escrevem um cartão"
+        },
+        {
+          "id": "flower",
+          "emoji": "🌸",
+          "label": "Levam flores ou um presente"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎤",
+          "label": "A escola faz uma cerimônia"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Nada"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260927-teachers-day-dates",
+      "date": "2026-09-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: qual comunidade marca o Dia do Professor no **aniversário de Confúcio**?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260928-teacher-remember",
+      "date": "2026-09-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": "hi",
+      "target_locale": "pt-BR",
+      "text": "O professor de quem você ainda lembra o nome — o que ele ensinou?",
+      "options": [
+        {
+          "id": "subject",
+          "emoji": "📐",
+          "label": "Uma matéria"
+        },
+        {
+          "id": "life",
+          "emoji": "🧭",
+          "label": "Como ser gente"
+        },
+        {
+          "id": "saw",
+          "emoji": "👀",
+          "label": "Ele enxergou a mim"
+        },
+        {
+          "id": "none",
+          "emoji": "🌫️",
+          "label": "Não consigo lembrar de nenhum"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260928-teachers-day-holiday",
+      "date": "2026-09-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: destas quatro comunidades, em quantas os alunos **têm aula normalmente** no Dia do Professor?",
+      "options": [
+        {
+          "id": "four",
+          "emoji": "4️⃣",
+          "label": "Todas as quatro"
+        },
+        {
+          "id": "three",
+          "emoji": "3️⃣",
+          "label": "Três"
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": "Duas"
+        },
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "Apenas uma"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260929-national-day-feel",
+      "date": "2026-09-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": "id",
+      "target_locale": "ja",
+      "text": "O dia nacional do seu país parece mais o quê para você?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🏖️",
+          "label": "Só um dia de folga"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎺",
+          "label": "Cerimônia e bandeira"
+        },
+        {
+          "id": "family",
+          "emoji": "🍽️",
+          "label": "Uma refeição em família"
+        },
+        {
+          "id": "nothing",
+          "emoji": "😐",
+          "label": "Quase nada"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260929-golden-week-october",
+      "date": "2026-09-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: o dia nacional de quem transforma uma semana inteira em feriado nacional — com as rodovias de graça?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20260930-school-year-start",
+      "date": "2026-09-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": "en",
+      "target_locale": "zh-CN",
+      "text": "Quando começa o ano letivo aí?",
+      "options": [
+        {
+          "id": "aug",
+          "emoji": "🍂",
+          "label": "Fim de agosto ou setembro"
+        },
+        {
+          "id": "apr",
+          "emoji": "🌸",
+          "label": "Abril"
+        },
+        {
+          "id": "feb",
+          "emoji": "☀️",
+          "label": "Janeiro ou fevereiro"
+        },
+        {
+          "id": "jun",
+          "emoji": "📚",
+          "label": "Junho ou julho"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260930-school-year-april",
+      "date": "2026-09-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+      "topic_slug": "back-to-school",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: o ano letivo de quem começa em **abril** — com a temporada de contratações e o ano fiscal na mesma linha de largada?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261001-flag-at-home",
+      "date": "2026-10-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": "zh-CN",
+      "target_locale": "hi",
+      "text": "No dia nacional, sua casa hasteia bandeira?",
+      "options": [
+        {
+          "id": "always",
+          "emoji": "🚩",
+          "label": "Todo ano"
+        },
+        {
+          "id": "street",
+          "emoji": "🏘️",
+          "label": "A rua inteira hasteia"
+        },
+        {
+          "id": "never",
+          "emoji": "🙅",
+          "label": "Nunca"
+        },
+        {
+          "id": "nohome",
+          "emoji": "🏢",
+          "label": "Não temos onde pôr"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261001-two-national-days",
+      "date": "2026-10-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: para qual comunidade o dia nacional e o dia da independência são **duas datas distintas**, ambas feriado?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261002-funeral-colour",
+      "date": "2026-10-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRCW71GA7PD20TQ1K12",
+      "topic_slug": "farewells-and-funerals",
+      "asker_locale": "pt-BR",
+      "target_locale": "zh-TW",
+      "text": "No velório aí, de que cor as pessoas se vestem?",
+      "options": [
+        {
+          "id": "black",
+          "emoji": "🖤",
+          "label": "Preto"
+        },
+        {
+          "id": "white",
+          "emoji": "🤍",
+          "label": "Branco"
+        },
+        {
+          "id": "plain",
+          "emoji": "👔",
+          "label": "Qualquer cor discreta"
+        },
+        {
+          "id": "bright",
+          "emoji": "🌈",
+          "label": "Cores vivas, na verdade"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261002-funeral-white",
+      "date": "2026-10-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRCW71GA7PD20TQ1K12",
+      "topic_slug": "farewells-and-funerals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: em qual comunidade o luto se veste tradicionalmente de **branco**, e não de preto?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }
