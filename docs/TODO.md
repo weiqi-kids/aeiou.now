@@ -64,7 +64,8 @@
 封面用 `node scripts/generate-topic-cover.mjs --slug <slug> --prompt "…"` 產(走 codex 的
 image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`。
 
-- [ ] **持續工作:再多加 Topic**。GSC 顯示會贏的查詢形態是「用語言 L 問國家 C 的節日 T」,
+- [ ] **持續工作:再多加 Topic**(2026-08-22 這一輪加了三個,見本項下方)。
+      GSC 顯示會贏的查詢形態是「用語言 L 問國家 C 的節日 T」,
       Topic 數就是這個乘法的上限。挑題判準:**同一件事在七個市場的日期或制度差異夠大**,
       而且每一國都能找到該國官方網域的來源(R6)。
       反例:購物節(雙十一/Black Friday/Harbolnas)搜尋量高但沒有政府公告,R6 過不了,不要做。
@@ -92,6 +93,39 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       grep -h '^- source:' content/topics/*.md | sed 's|^- source: ||' \
         | awk -F/ '{print $3}' | sort -u
       ```
+
+      **2026-08-22 這一輪加了三個制度型 Topic**(用戶核准):`voting-and-elections`、
+      `parental-leave`、`military-service`。三個都是「同一件事,七個市場七種制度」,
+      而且每一國的引用條文都當場抓下來核對過原文。
+
+      ⚠ **這一輪學到的兩件事,下次選題前先看**:
+
+      ① **不是每個議題都能做成 observance。** 選舉、產假、兵役都沒有年度日期,
+         而 `import-topic-occurrences.mjs` 硬性要求每個 active observance 都有今年與明年的
+         occurrence(見該檔 `currentYear` 那一段)。硬塞 = 替沒有選舉的年份捏造一個日期。
+         **正解是走既有的長青路線**:`perennial: yes` + 零 observance,
+         七國內容放 `scripts/generate-regional-notes.mjs` 的 `notes`
+         (`content/topic-regional-notes.json` 是**產物**,不要直接改)。
+         R1 的覆蓋單位吃 regional_notes,所以七國照樣算七個變體。
+         既有同型 Topic:`moving-home`、`weddings-and-customs`、`caregiving-across-generations`。
+
+      ② **「狀態碼 200」不等於「這一頁有內容」。** 這一輪撞到的實例:
+         `labour.gov.in` 已改成 Next.js SPA,**每一個路徑都回同一份幾 KB 的空殼**;
+         `indiacode.nic.in` 回 504;`peraturan.bpk.go.id`、`npc.gov.cn`、`tse.jus.br`、
+         `dol.gov` 從本主機是 403/000。這些狀況會變,**不要抄這份清單,自己打一次**,
+         而且要看的是**抓下來有沒有正文**,不是狀態碼:
+         ```bash
+         curl -sL --max-time 25 -A 'Mozilla/5.0' "<網址>" \
+           | python3 -c "import sys,re,html;t=sys.stdin.buffer.read().decode('utf-8','replace');\
+         t=re.sub(r'(?is)<(script|style)[^>]*>.*?</\1>',' ',t);t=re.sub(r'<[^>]+>',' ',t);\
+         print(len(re.sub(r'\s+',' ',html.unescape(t))))"
+         ```
+         幾百字元 = 空殼。**抓不到正文就換來源,不要靠記憶寫**(硬寫等於捏造)。
+         這一輪找到的替代路徑,可以當下次的起點:各國憲法/法典全文多半抓得到 ——
+         `planalto.gov.br`、`law.moj.gov.tw`、`laws.e-gov.go.jp`(含 `/api/1/lawdata/<id>`)、
+         `www.gov.cn/guoqing/...` 憲法全文、`govinfo.gov` 的 USCODE、
+         `cdnbbsr.s3waas.gov.in` 的印度憲法 PDF、`jdih.kemnaker.go.id/asset/data_puu/*.pdf`、
+         `jdih.bawaslu.go.id/peraturan/download?id=uu_1945_1_uud1945.pdf`。
 
 ## 這一輪的收尾(2026-08-20)
 
@@ -282,23 +316,26 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       判準是 Google 的 Core Web Vitals:LCP ≤2.5s 良好、≤4s 需改善、>4s 差。
       **要看的是哪一個指標把分數拉下來**,不是分數本身 —— 而且對 LCP 要再往下拆一層:
       PSI 的 `lcp-breakdown-insight` 把它分成 TTFB / 資源發現延遲 / 資源下載 / **元素渲染延遲**
-      四段。**先看哪一段最長再決定改什麼**,不然會拿圖片的藥治渲染的病(下面就是實例)。
+      四段。先看哪一段最長再決定改什麼,不然會拿圖片的藥治渲染的病。
 
-      **2026-08-22 診斷:清單頁的 LCP 不是被圖片拖垮的,是被自己的討論串請求拖垮的。**
-      實測 `/topics/today/` 的四段是 TTFB 4ms、發現 66ms、下載 44ms、**元素渲染延遲 1184ms**
-      —— 封面縮圖早就下載完了,畫面還沒畫出來。原因在時間軸上一眼可見:載入後約 730ms
-      同時射出三十幾發 `/v1/topics/<id>/feed`(**一張 Topic 卡一發**),回來的時候各自組 DOM,
-      主執行緒卡出一個 100ms 的 long task,LCP 元素就跟著等;下半頁的縮圖也被擠到 1.3 秒後才開始下載。
-      **這與 `/questions/` 2026-08-21 修掉的是同一個病**(卡數 = 內容數,並發跟著線性成長),
-      只是那次只修了問答卡,清單頁的討論串沒一起修。
-      已改:`TopicPosts.astro` 改成**進 viewport 才發 fetch**(`IntersectionObserver`,
-      `rootMargin: 200px`,沒有 IO 就退回全部立刻發 —— 降級要是可用的舊行為)。
-      查:`grep -c IntersectionObserver site/dist/_astro/TopicPosts*.js`
+      **2026-08-22 診斷:清單頁的 LCP 不是被圖片拖垮的。** `/topics/today/` 的四段裡,
+      TTFB 與資源下載都只有個位數到數十毫秒,**元素渲染延遲吃掉九成以上**——封面縮圖早就
+      下載完了,畫面還沒畫出來。當時時間軸上看得到的元凶是:載入後約 730ms 同時射出
+      三十幾發 `/v1/topics/<id>/feed`(一張 Topic 卡一發),回來時各自組 DOM,
+      主執行緒卡出一個 100ms 的 long task。
+
+      **⚠ 已改,但沒有解決 LCP —— 這一格要照實記。**
+      `TopicPosts.astro` 已改成進 viewport 才發 fetch(`IntersectionObserver`,`rootMargin: 200px`,
+      沒有 IO 就退回全部立刻發)。**改完實測到的**:那三十幾發 fetch 從約 730ms 移到約 1.4 秒
+      之後、而且只發看得到的那幾張,DOM 元素數下降,載入視窗裡那個 long task 消失。
+      **但四頁的 LCP 幾乎沒動**(最慢那頁只從「差」的邊緣退到「需改善」的邊緣,在雜訊範圍內)。
+      結論:並發請求是**真的問題但不是主導項**;元素渲染延遲仍然是主導項。
+      別把這次的改動當成 LCP 已修 —— 現況一律重跑 `psi-check.mjs`。
 
       **下一個槓桿(尚未做,要用戶決定,因為它動的是量測而不是版面)**:GA4 的 `gtag/js`
-      是整頁最大的一筆下載,而且四成是這個站用不到的碼;它在 `<head>` 以 `async` 載入,
-      在 Lighthouse 的行動網路模擬下那些位元組會直接算進 LCP 前的頻寬。
-      現況查法(不要抄數字):
+      是整頁最大的一筆下載(**遠大於其他所有資源的總和**),而且有相當比例是這個站用不到的碼;
+      它在 `<head>` 以 `async` 載入,在 Lighthouse 的行動網路模擬下那些位元組會直接算進 LCP 前
+      的頻寬。現況查法(不要抄數字):
       ```bash
       node scripts/psi-check.mjs --detail --url https://aeiou.now/topics/today/
       ```
@@ -306,10 +343,12 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       不會被計到,GA4 的 session 數會少一點 —— 那是量測政策,不是我能自己改的。
       要改的話動 `site/src/layouts/BaseLayout.astro` 的 GA4 那兩個 `<script is:inline>`。
 
-      已知的結構性原因(不是現況,是設計):Topic 頁的 LCP 元素是封面。
-      2026-08-21 壓過一輪 PNG 體積、2026-08-22 已改成響應式 WebP(`<picture>` + `srcset`),
-      所以圖片那一側目前不是瓶頸;要再確認就看該頁 `lcp-breakdown-insight` 的
-      「資源下載」那一段有沒有變長。
+      **第二個候選**:清單頁一次渲染當令的全部 Topic 卡,DOM 元素數上千,Style & Layout
+      是主執行緒最大的一塊。要壓渲染延遲就得少畫東西(分頁或下半頁延後渲染),
+      而那會動到版面與資訊架構 —— 屬產品決定,動工前問用戶。
+
+      Topic 頁那一側:2026-08-21 壓過 PNG 體積、2026-08-22 已改成響應式 WebP,
+      圖片目前不是瓶頸;要再確認就看該頁 `lcp-breakdown-insight` 的「資源下載」那一段。
 
 ## 外站的 bot 封鎖不再擋下整條 hourly(2026-08-21 用戶拍板,已解)
 
