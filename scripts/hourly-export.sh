@@ -163,6 +163,15 @@ if ! "$NODE_BIN" "$REPO/scripts/check-content-depth.mjs"; then
   record_job failed 0 0 0 1 "check-content-depth.mjs failed"
   exit 1
 fi
+
+# 草案 §31/§32 的 Job 15(Content Quality Check)與 Job 16(Duplicate Check)。
+# **不是閘門** —— 擋發布的是上面那幾支 check-*;這一支負責把判定**留下來**,
+# 讓「哪些 Topic 一直在 needs-review」變成查得到的問題,而不是每次重跑全部閘門才知道。
+# 位置刻意在 export 與所有閘門**之後**:它讀的是 data/ 的產出,而且是這一輪剛寫出來的那一份。
+log "quality-check.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/quality-check.mjs"; then
+  log "WARN: quality-check 失敗,這一輪沒有品質標籤(不中斷 export)"
+fi
 WROTE="$(echo "$EXPORT_OUT" | grep -c '^write ')"
 
 # --- 2. 只看受管理輸出有沒有變 -----------------------------------------------
