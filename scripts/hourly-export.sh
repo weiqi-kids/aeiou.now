@@ -168,6 +168,17 @@ fi
 # **不是閘門** —— 擋發布的是上面那幾支 check-*;這一支負責把判定**留下來**,
 # 讓「哪些 Topic 一直在 needs-review」變成查得到的問題,而不是每次重跑全部閘門才知道。
 # 位置刻意在 export 與所有閘門**之後**:它讀的是 data/ 的產出,而且是這一輪剛寫出來的那一份。
+# 草案 §12/§13 的 Job 1/2(來源清冊與爬搜),2026-08-22 上線。
+# 清冊是 content/source-registry.json(人工入口);這一支匯入它,再抓 next_crawl_at
+# 到期的來源。**每輪上限 25 個**:同網域串行 + Crawl-delay,抓太多會讓 hourly 變慢,
+# 而低頻來源一天只需要碰一次,不必急。
+# ⚠ 爬蟲守則見腳本檔頭 —— robots.txt、Crawl-delay、表明身分、不繞過存取控制。
+# **不 fail-closed**:抓不到來源不影響本站要輸出的任何資料。
+log "source-refresh.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/source-refresh.mjs"; then
+  log "WARN: source-refresh 失敗,這一輪沒有更新來源(不中斷 export)"
+fi
+
 log "quality-check.mjs ..."
 if ! "$NODE_BIN" "$REPO/scripts/quality-check.mjs"; then
   log "WARN: quality-check 失敗,這一輪沒有品質標籤(不中斷 export)"

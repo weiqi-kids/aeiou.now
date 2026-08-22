@@ -1,0 +1,1645 @@
+{
+  "$comment": "來源清冊(人工編輯的唯一入口;草案 §12 §13)。import-sources.mjs 匯入 sources 表,source-refresh.mjs 依 next_crawl_at 抓。type 用草案 §12 的八類。crawl_freq_s 只能是 900|3600|21600|86400。⚠ 只放**允許被抓**的頁面:遵守 robots.txt 與網站條款,不得繞過登入/CAPTCHA/付費牆/存取控制(草案 §12)。",
+  "sources": [
+    {
+      "url": "http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s3580/moe_2390/moe_2391/tnull_38105.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "http://www.moe.gov.cn/srcsite/A15/moe_776/s3258/202601/t20260121_1427110.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "http://www.mof.gov.cn/zhengwuxinxi/caijingshidian/xinhuanet/202308/t20230829_3904516.htm",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://ayosehat.kemkes.go.id/hari-lanjut-usia-nasional",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://berita.depok.go.id/disdik-depok-keluarkan-se-larangan-rayakan-hari-valentine",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/jiedu/tujie/202411/content_6986437.htm",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://bndigital.bn.gov.br/festas-juninas/",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://council.nyc.gov/press/2023/11/15/2502/",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://depart.moe.edu.tw/ED2400/News_Content.aspx?n=15388506A60ACB81&sms=87137EA6056ADFD1&s=202F85DB5615A4F8",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/C3E6BDA9A4CECCBEB7EEA4C8A4CF2FBDBDBBB0CCEB.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/C3E6BDA9A4CECCBEB7EEA4C8A4CF2FCCBEB7EEC9ACA4BAA4B7A4E2CBFEB7EEA4CAA4E9A4BA.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5211524/content.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://flk.npc.gov.cn/detail2.html?ZmY4MDgwODE2ZjNjYmIzYzAxNmY0MTBlMzYyNTA2ZDA%3D",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://ham.go.id/2014/11/12/sejarah-lahirnya-hari-ayah-nasional/",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://hari.co.id/en/public-holidays/2027/",
+      "type": "event_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 21600
+    },
+    {
+      "url": "https://history.house.gov/Historical-Highlights/1951-2000/Father-s-Day-becomes-a-national-holiday/",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://history.house.gov/HistoricalHighlight/Detail/35444",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://jpsearch.go.jp/gallery/ndl-O6a96jYMq9Q",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://kab-jayawijaya.kpu.go.id/blog/read/8734_kenapa-hari-ayah-nasional-diperingati-setiap-12-november-ini-penjelasan-lengkapnya",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://kemenag.go.id/en/nasional/kenapa-perlu-sidang-isbat-awal-ramadan-syawal-dan-zulhijjah-ini-penjelasan-kemenag-7x8Mb",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://kemenag.go.id/en/nasional/pemerintah-tetapkan-17-hari-libur-nasional-dan-8-cuti-bersama-2026-cAwAy",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://kemenag.go.id/en/pers-rilis/pemerintah-tetapkan-1-ramadan-1447-h-jatuh-pada-19-februari-2026-ELDWq",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://kemenag.go.id/opini/refleksi-hari-lanjut-usia-nasional-6si366",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://kemnaker.go.id/news/detail/menaker-thr-tak-bisa-dicicil-wajib-dibayar-penuh",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://kepriprov.go.id/berita/pemprov-kepri/disdik-kepri-imbau-pelajar-tidak-rayakan-valentine-day",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://kids.ey.gov.tw/Page/C86A10EB58C65C86",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://labour.gov.in/mainsecretariatdivisions/information-payment-bonus",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050037",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=N0030001&flno=29",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/323AC1000000178",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://laws.e-gov.go.jp/law/325AC0000000095",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://nit.immigration.gov.tw/Multicultural/Detail/1000013",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://piv.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+      "type": "event_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 21600
+    },
+    {
+      "url": "https://portalbpsdm.jambiprov.go.id/artikel/pekerjaan-pendidikan/daftar-utbk-2026-kapan-dibuka-simak-jadwal-lengkap-dan-syarat-terbaru/",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://ppid.inhilkab.go.id/berita/detail/hari-guru-nasional-diperingati-setiap-25-november",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://prefeitura.sp.gov.br/web/direitos_humanos/w/smdhc-celebra-o-dia-das-criancas-e-reitera-seu-compromisso-com-a-defesa-da-infancia",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://referensi.data.kemendikdasmen.go.id/budayakita/wbtb/objek/AA001528",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "type": "event_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 21600
+    },
+    {
+      "url": "https://smartcity.tangerangkota.go.id/dimensi/kategori/detail/mengenal-tujuh-warisan-budaya-takbenda-di-kota-tangerang",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/mar/doc202637813901.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=6",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=83",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://taiwangods.moi.gov.tw/html/cultural/3_0011.aspx?i=86",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://utsav.gov.in/major-festival/diwali",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.beijing.gov.cn/gate/big5/www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202511/t20251104_4258838.html",
+      "type": "event_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 21600
+    },
+    {
+      "url": "https://www.britannica.com/topic/Childrens-Day",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.britannica.com/topic/Easter-holiday",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.britannica.com/topic/Fathers-Day",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.britannica.com/topic/International-Workers-Day",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.britannica.com/topic/Mothers-Day",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.britannica.com/topic/Valentines-Day",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.camara.leg.br/noticias/1061356-congresso-se-ilumina-de-rosa-neste-domingo-12-pelo-dia-das-maes/",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.cbse.gov.in/cbsenew/documents/Revised_Class_XII_Date_Sheet_31122025.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.ceec.edu.tw/files/file_pool/1/0p217324423450953093/115%E5%AD%B8%E5%B9%B4%E5%BA%A6%E7%B0%A1%E7%AB%A0.pdf",
+      "type": "event_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 21600
+    },
+    {
+      "url": "https://www.ceec.edu.tw/files/file_pool/1/0q215601929252011195/116%E5%AD%B8%E5%B9%B4%E5%BA%A6%E7%B0%A1%E7%AB%A0.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.census.gov/newsroom/stories/valentines-day.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.comunicacao.pr.gov.br/noticias/aen/185ca999-f90c-4884-a739-b384ac5a12d6",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.defense.gov/Spotlights/Memorial-Day/",
+      "type": "event_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 21600
+    },
+    {
+      "url": "https://www.dgpa.gov.tw/information?pid=12580&uid=353",
+      "type": "event_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 21600
+    },
+    {
+      "url": "https://www.djkn.kemenkeu.go.id/kpknl-singaraja/baca-artikel/16715/Memahami-Lebih-Jauh-Tentang-Sejarah-Peringatan-Hari-Ibu-di-Indonesia.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.dnc.ac.jp/kyotsu/shiken_jouhou/r9/",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.drikpanchang.com/calendars/indian/indiancalendar.html?year=2027",
+      "type": "event_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 21600
+    },
+    {
+      "url": "https://www.drikpanchang.com/festivals/pongal/thai-pongal-date-time.html?time-format=24plushour",
+      "type": "event_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 21600
+    },
+    {
+      "url": "https://www.ecfr.gov/current/title-29/section-778.211",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.ed.gov/",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.education.gov.in/",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.ferc.gov/news-events/events/thanksgiving-day-11252027",
+      "type": "event_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 21600
+    },
+    {
+      "url": "https://www.gender.go.jp/international/int_un_kaigi/int_iwd/index.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.gov-online.go.jp/article/202112/entry-9910.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.gov.br/arquivonacional/pt-br/canais_atendimento/imprensa/copy_of_noticias/dia-da-crianca",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.gov.br/iphan/pt-br/assuntos/forro-do-mundo/sobre-o-forro",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.gov.br/turismo/pt-br/assuntos/noticias/festejos-juninos-comecam-no-nordeste-cidades-projetam-mais-publico-e-faturamento-maior-em-2026",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.gov.cn/gongbao/content/2006/content_334718.htm",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.gov.cn/zhengce/content/202411/content_6986380.htm",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5444575.htm",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.gov.cn/zhengce/zhengceku/202411/content_6986381.htm",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/PLAW-105publ225/html/PLAW-105publ225.htm",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/STATUTE-101/pdf/STATUTE-101-Pg99.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
+      "type": "event_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 21600
+    },
+    {
+      "url": "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+      "type": "event_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 21600
+    },
+    {
+      "url": "https://www.ihchina.cn/project_details/14935.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.ihchina.cn/project_details/15014.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.ihchina.cn/project_details/20208.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.ihchina.cn/project_details/20209.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.ihchina.cn/project_details/20215.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.incredibleindia.gov.in/en/colours-of-india",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.incredibleindia.gov.in/en/festivals-and-events/diwali",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.india.gov.in/calendar",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.japan.travel/en/guide/december/",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.japan.travel/en/guide/may/",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.japan.travel/en/see-and-do/festivals-and-events/",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.japan.travel/en/us/blog/valentines-day-white-day-in-japan/",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.justica.pr.gov.br/Noticia/Dia-dos-Namorados-Procon-PR-orienta-consumidores-sobre-compras-e-trocas-de-presentes",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.kemendikdasmen.go.id/siaran-pers/15794-hari-anak-nasional-2026-kemendikdasmen-ajak-anak-kembali-bermain-dan-kurangi-pemakaian-gawai",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.kemenpppa.go.id/page/view/MTQ1NA==",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.kemenpppa.go.id/page/view/NTc1OA==",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.kemlu.go.id/ankara/berita/idul-fitri-1447-h?type=publication",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.kemlu.go.id/baghdad/pelayanan-perwakilan/pengumuman/hari-libur-nasional--setempat/pengumuan-hari-libur-setempat--cuti-bersama-nasional-tahun-2026?type=publication",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.labour.gov.in/static/uploads/2025/06/71f40bdd15ede77446bb56d7b1c16df7.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.maff.go.jp/j/seisan/kaki/flower/attach/pdf/index-113.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.mext.go.jp/content/20250815-mxt_daigakuc02-000044214_04.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.mhlw.go.jp/file/04-Houdouhappyou-11906000-Koyoukintoujidoukateikyoku-Ikuseikankyouka/0000082035.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.moi.gov.tw/News_Content.aspx?n=18683&s=207543&sms=9015",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.nao.ac.jp/astro/sky/2026/09-topics03.html",
+      "type": "event_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 21600
+    },
+    {
+      "url": "https://www.ndl.go.jp/kaleido/entry/21/1.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.nhc.gov.cn/jnr/etjjrjj/etj_lmtt.shtml",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.nihongo-ews.mext.go.jp/contents_files/download/?cfid=406&content_id=864",
+      "type": "event_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 21600
+    },
+    {
+      "url": "https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.pa-tulungagung.go.id/en/peraturan-dan-kebijakan/ucapan-selamat-dan-duka/1156-hari-ayah-nasional-sabtu-12-november-2022",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.pib.gov.in/FeaturesDeatils.aspx?NoteId=156406&ModuleId=2&reg=3&lang=2",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1711143",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1760010",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2227395&reg=3&lang=2",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11433.htm",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/lei/l15261.htm",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto/1950-1969/D52682.htm",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/1980-1988/l6791.htm",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l4090.htm",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l4749.htm",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9093.htm",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.presidentofindia.gov.in/",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.presidentofindia.gov.in/president-childrens-day",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.sci.gov.in/holiday/makar-sankranti-magh-bihu-pongal-2026/",
+      "type": "event_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 21600
+    },
+    {
+      "url": "https://www.setneg.go.id/baca/index/terbitkan_edaran_thr_keagamaan_2026_menaker_harus_dibayar_penuh_tak_boleh_dicicil",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.stat.go.jp/data/kakei/tsushin/pdf/24_12.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.stat.go.jp/data/kakei/tsushin/pdf/29_12.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.stat.go.jp/data/kakei/tsushin/pdf/29_2.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.tad.gov.tw/m1.aspx?sNo=0001020",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.tad.gov.tw/m1.aspx?sNo=0020552",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.tangerangkota.go.id/berita/detail/66084/semarak-festival-budaya-petjoen-kota-tangerang-tradisi-khas-cina-benteng-mandikan-perahu-leluhur",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.timeanddate.com/holidays/common/eid-al-adha",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.timeanddate.com/holidays/us/2027",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.unesco.org/en/days/teachers?hub=66705",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.unicef.org/take-action/campaigns/world-childrens-day?itok=BHGfqsz2",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.usa.gov/holidays",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.utsav.gov.in/view-event/ugadi-1",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.wda.gov.tw/News_Content.aspx?n=31&s=3599",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www12.senado.leg.br/noticias/materias/2024/02/20/comissao-inclui-festas-judaicas-e-islamicas-nas-datas-comemorativas-do-brasil",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www2.census.gov/programs-surveys/sis/resources/fathers-day-ff.pdf",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www2.portoalegre.rs.gov.br/pwdtcomemorativas/default.php?reg=22&p_secao=13",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku/keii.html",
+      "type": "official_website",
+      "country_code": null,
+      "language": null,
+      "city_code": null,
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://agenciasp.sp.gov.br/revelando-sp-2026-sao-paulo-capital/",
+      "type": "official_website",
+      "country_code": "BR",
+      "language": null,
+      "city_code": "sao-paulo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://amigosdaarte.org.br/atencao-sp-o-revelando-sp-sao-paulo-mudou-de-data/",
+      "type": "official_website",
+      "country_code": "BR",
+      "language": null,
+      "city_code": "sao-paulo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://amigosdaarte.org.br/revelando-sp-2026/",
+      "type": "official_website",
+      "country_code": "BR",
+      "language": null,
+      "city_code": "sao-paulo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://eventos.sp.senac.br/evento/workshop-mesa-para-dois-food-design-para-o-dia-dos-namorados/",
+      "type": "official_website",
+      "country_code": "BR",
+      "language": null,
+      "city_code": "sao-paulo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://eventos.sp.senac.br/unidades/senac-aclimacao/",
+      "type": "official_website",
+      "country_code": "BR",
+      "language": null,
+      "city_code": "sao-paulo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://museudofutebol.org.br/exposicoes/museu-do-futebol/",
+      "type": "official_website",
+      "country_code": "BR",
+      "language": null,
+      "city_code": "sao-paulo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://museudoipiranga.org.br/en/visit/",
+      "type": "official_website",
+      "country_code": "BR",
+      "language": null,
+      "city_code": "sao-paulo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.dengo.com.br/fabrica-de-dengo",
+      "type": "official_website",
+      "country_code": "BR",
+      "language": null,
+      "city_code": "sao-paulo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.dengo.com.br/nossas-lojas",
+      "type": "official_website",
+      "country_code": "BR",
+      "language": null,
+      "city_code": "sao-paulo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.sp.senac.br/senac-aclimacao",
+      "type": "official_website",
+      "country_code": "BR",
+      "language": null,
+      "city_code": "sao-paulo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://english.shanghai.gov.cn/en-FirstStores/20260624/50f678163fcf42a1b0dc4409376de73b.html",
+      "type": "official_website",
+      "country_code": "CN",
+      "language": null,
+      "city_code": "shanghai",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://english.shanghai.gov.cn/en-MajorConsumerEvents/20260706/d4819e8683d049c8a715842864ce97d2.html",
+      "type": "official_website",
+      "country_code": "CN",
+      "language": null,
+      "city_code": "shanghai",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://english.shanghai.gov.cn/en-MuseumsGalleries/20231218/01fdd3f62d0c4877bc289ec0b1de6afa.html",
+      "type": "official_website",
+      "country_code": "CN",
+      "language": null,
+      "city_code": "shanghai",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://english.shanghai.gov.cn/en-UniqueExperience-travelinshanghai/20250729/25cfb8bce97d4e798f99ac62986255ff.html",
+      "type": "official_website",
+      "country_code": "CN",
+      "language": null,
+      "city_code": "shanghai",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://xxgk.shbsq.gov.cn/article.html?infoid=ad7e7534-18a7-45bc-bda1-99b3ce4ca731",
+      "type": "official_website",
+      "country_code": "CN",
+      "language": null,
+      "city_code": "shanghai",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://turis.istiqlal.or.id/",
+      "type": "official_website",
+      "country_code": "ID",
+      "language": null,
+      "city_code": "jakarta",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.godiva.co.id/our-location/",
+      "type": "official_website",
+      "country_code": "ID",
+      "language": null,
+      "city_code": "jakarta",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.jakarta.go.id/landmark-jakarta",
+      "type": "official_website",
+      "country_code": "ID",
+      "language": null,
+      "city_code": "jakarta",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026",
+      "type": "official_website",
+      "country_code": "ID",
+      "language": null,
+      "city_code": "jakarta",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.soehannahall.com/contact-us/",
+      "type": "official_website",
+      "country_code": "ID",
+      "language": null,
+      "city_code": "jakarta",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.soehannahall.com/news_and_event/night-music-lights-candlelight-concerts-soehanna-hall/",
+      "type": "official_website",
+      "country_code": "ID",
+      "language": null,
+      "city_code": "jakarta",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://nehruhall.com/about/",
+      "type": "official_website",
+      "country_code": "IN",
+      "language": null,
+      "city_code": "pune",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://nehruhall.com/contact/",
+      "type": "official_website",
+      "country_code": "IN",
+      "language": null,
+      "city_code": "pune",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://newsroom.feverup.com/en-IN/262080-candlelight-s-valentine-s-day-special-brings-a-romantic-experience-to-pune-on-14th-february/",
+      "type": "official_website",
+      "country_code": "IN",
+      "language": null,
+      "city_code": "pune",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://pune.gov.in/en/tourist-place/aagakhan-palace/",
+      "type": "official_website",
+      "country_code": "IN",
+      "language": null,
+      "city_code": "pune",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.anandampune.com/",
+      "type": "official_website",
+      "country_code": "IN",
+      "language": null,
+      "city_code": "pune",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.choconuts.in/",
+      "type": "official_website",
+      "country_code": "IN",
+      "language": null,
+      "city_code": "pune",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.dagdushethganpati.com/?p=11699",
+      "type": "official_website",
+      "country_code": "IN",
+      "language": null,
+      "city_code": "pune",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://mini-mal.tokyo/pages/access",
+      "type": "official_website",
+      "country_code": "JP",
+      "language": null,
+      "city_code": "tokyo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://tokyofestival.jp/en/about",
+      "type": "official_website",
+      "country_code": "JP",
+      "language": null,
+      "city_code": "tokyo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.gotokyo.org/en/destinations/eastern-tokyo/fukagawa/",
+      "type": "official_website",
+      "country_code": "JP",
+      "language": null,
+      "city_code": "tokyo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.gotokyo.org/en/spot/ev093/index.html",
+      "type": "official_website",
+      "country_code": "JP",
+      "language": null,
+      "city_code": "tokyo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/350/detail.html",
+      "type": "official_website",
+      "country_code": "JP",
+      "language": null,
+      "city_code": "tokyo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/index.html",
+      "type": "official_website",
+      "country_code": "JP",
+      "language": null,
+      "city_code": "tokyo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=113Impey&lang=en",
+      "type": "official_website",
+      "country_code": "JP",
+      "language": null,
+      "city_code": "tokyo",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://tam.gov.taipei/Default.aspx",
+      "type": "official_website",
+      "country_code": "TW",
+      "language": null,
+      "city_code": "taipei",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://tam.gov.taipei/News_Content.aspx?n=49854D6439EC40C0&sms=72544237BBE4C5F6&s=133D3D29CFCDAD86",
+      "type": "official_website",
+      "country_code": "TW",
+      "language": null,
+      "city_code": "taipei",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://tam.gov.taipei/News_Content.aspx?n=794B17A953424610&s=259D7CDEDEAEC283&sms=9D72E82EC16F3E64",
+      "type": "official_website",
+      "country_code": "TW",
+      "language": null,
+      "city_code": "taipei",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.2026tpe-nightmarket-festival.com/",
+      "type": "official_website",
+      "country_code": "TW",
+      "language": null,
+      "city_code": "taipei",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.burgercarnival.taipei/",
+      "type": "official_website",
+      "country_code": "TW",
+      "language": null,
+      "city_code": "taipei",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.chocoholic.com.tw/about_2.htm",
+      "type": "official_website",
+      "country_code": "TW",
+      "language": null,
+      "city_code": "taipei",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.facebook.com/chocoholic.taipei/",
+      "type": "official_website",
+      "country_code": "TW",
+      "language": null,
+      "city_code": "taipei",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.npm.edu.tw/Articles.aspx?l=2&sno=02007001",
+      "type": "official_website",
+      "country_code": "TW",
+      "language": null,
+      "city_code": "taipei",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.npm.gov.tw/Articles.aspx?l=2&sno=02007001",
+      "type": "official_website",
+      "country_code": "TW",
+      "language": null,
+      "city_code": "taipei",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.ntm.gov.tw/en/cl.aspx?n=5703",
+      "type": "official_website",
+      "country_code": "TW",
+      "language": null,
+      "city_code": "taipei",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.travel.taipei/en/event-calendar/2026",
+      "type": "official_website",
+      "country_code": "TW",
+      "language": null,
+      "city_code": "taipei",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.travel.taipei/en/event-calendar/details/66783",
+      "type": "official_website",
+      "country_code": "TW",
+      "language": null,
+      "city_code": "taipei",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.travel.taipei/en/event-calendar/details/66803",
+      "type": "official_website",
+      "country_code": "TW",
+      "language": null,
+      "city_code": "taipei",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.travel.taipei/zh-tw/activity/details/67635",
+      "type": "official_website",
+      "country_code": "TW",
+      "language": null,
+      "city_code": "taipei",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://loveland.org/events-2/corn-roast-festival/",
+      "type": "official_website",
+      "country_code": "US",
+      "language": null,
+      "city_code": "loveland",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://visitloveland.com/business-directory/fairgrounds-park/",
+      "type": "official_website",
+      "country_code": "US",
+      "language": null,
+      "city_code": "loveland",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://visitloveland.com/sweetheartfestival/",
+      "type": "official_website",
+      "country_code": "US",
+      "language": null,
+      "city_code": "loveland",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://visitloveland.com/visitors-center/",
+      "type": "official_website",
+      "country_code": "US",
+      "language": null,
+      "city_code": "loveland",
+      "crawl_freq_s": 86400
+    },
+    {
+      "url": "https://www.lovgov.org/services/parks-recreation/parks-facilities/parks-reservation-spaces/fairgrounds-park/-fsiteid-1",
+      "type": "official_website",
+      "country_code": "US",
+      "language": null,
+      "city_code": "loveland",
+      "crawl_freq_s": 86400
+    }
+  ]
+}
