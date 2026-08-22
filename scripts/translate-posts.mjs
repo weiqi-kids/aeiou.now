@@ -43,6 +43,7 @@
 //   譯文行為就可能跟著變。翻譯要的是這支腳本自己的 prompt,不是專案手冊。
 //   空目錄必須在 /root 之外(/root/CLAUDE.md 會被 /root 底下任何 cwd 往上撿到)。
 
+import { randomUUID } from "node:crypto";
 import { spawnSync } from "node:child_process";
 import { mkdirSync } from "node:fs";
 import { tmpdir } from "node:os";
@@ -117,9 +118,13 @@ function buildPrompt(items) {
 
 輸出規則(違反即整批作廢):
 - **只輸出一個 JSON 物件**,不要 markdown code fence,不要任何 JSON 以外的字元。
-- 格式:{"judgments":[{"id":"<原樣抄回輸入的 id>","valuable":true}],
+- 格式:{"judgments":[{"id":"<原樣抄回輸入的 id>","valuable":true,"reason":null}],
         "translations":[{"id":"<id>","locale":"<目標語言代碼>","content":"<譯文>"}]}
 - judgments 必須涵蓋輸入中**每一個 id**,一個都不能少。
+- valuable=false 時 "reason" 必填,只能是這五個字串之一:
+  "commercial"(廣告/推銷/導流)、"bot"(亂打或隨機字元)、"spam"(灌水複製貼上)、
+  "illegal"(詐騙)、"harassment"(色情或攻擊)。valuable=true 時 "reason" 填 null。
+  這個值會進審核工作檯給人看,所以要說出**為什麼**被判掉,不能只說被判掉了。
 - translations 必須為每一個 valuable=true 的 id 的**每一個目標語言**各輸出一筆,
   一筆都不能少、不能多;valuable=false 的 id 不得出現在 translations。
 - content 內的換行用 \\n 轉義(合法 JSON 字串)。
@@ -184,12 +189,17 @@ function translateChunk(posts) {
 
   // 價值判定:每個 id 都要有一筆;缺漏 → 整批作廢
   const valuable = new Map(); // post_id → boolean
+  const reasons = new Map();  // post_id → 為什麼被判掉(進審核工作檯,2026-08-22 加)
+  const REASONS = new Set(["commercial", "bot", "spam", "illegal", "harassment"]);
   for (const j of parsed.judgments) {
     if (!j || typeof j.id !== "string" || typeof j.valuable !== "boolean")
       throw new Error("malformed judgment entry in claude output");
     const postId = idOf.get(j.id);
     if (!postId) throw new Error(`claude judgment returned unknown id ${j.id}`);
     valuable.set(postId, j.valuable);
+    // reason 只在判掉時要求。模型給了不在列舉裡的值就**當成沒給**而不是整批作廢 ——
+    // 判定本身是對的,壞掉的只是分類標籤,為了標籤丟掉一整批翻譯不划算。
+    if (j.valuable === false) reasons.set(postId, REASONS.has(j.reason) ? j.reason : "spam");
   }
   for (const p of posts)
     if (!valuable.has(p.post_id)) throw new Error(`missing judgment for ${p.post_id}`);
@@ -221,7 +231,7 @@ function translateChunk(posts) {
         throw new Error(`missing/empty translation for ${p.post_id} locale ${l}`);
     }
   }
-  return { ok: out, rejected };
+  return { ok: out, rejected, reasons };
 }
 
 // ---------- 主機回流 ----------
@@ -315,15 +325,17 @@ try {
 
   const okPairs = cached.slice(); // [[post, {locale: content}], ...]
   const rejectedIds = []; // 價值閘門判定沒價值 → moderation + skipped,不翻不露出
+  const rejectReasons = new Map(); // post_id → 為什麼(2026-08-22:要進審核工作檯)
 
   for (let i = 0; i < todo.length; i += CHUNK) {
     const chunk = todo.slice(i, i + CHUNK);
     const label = `${i / CHUNK + 1}/${Math.ceil(todo.length / CHUNK)}`;
     log(`[${JOB_NAME}] claude batch ${label}: ${chunk.length} post(s) × 6 locales`);
     try {
-      const { ok: map, rejected } = translateChunk(chunk);
+      const { ok: map, rejected, reasons } = translateChunk(chunk);
       for (const p of chunk) if (map.has(p.post_id)) okPairs.push([p, map.get(p.post_id)]);
       rejectedIds.push(...rejected);
+      for (const [pid, why] of reasons) rejectReasons.set(pid, why);
       log(`[${JOB_NAME}] claude batch ${label}: ok (${rejected.length} rejected)`);
     } catch (e) {
       failed += chunk.length;
@@ -377,6 +389,31 @@ try {
       body: { translations, done_post_ids: [...okIds], rejected_post_ids: rejectedIds },
     });
     log(`[${JOB_NAME}] worker: ${JSON.stringify(res)}`);
+  }
+
+  // 價值閘門判掉的貼文進審核工作檯(2026-08-22)。在這一版之前它們只是靜靜地變成
+  // status='moderation' —— **沒有任何人看得到那件事發生過**,也沒有翻案的路徑。
+  // 建檔用 (target_type, target_id) 冪等;decided_by='llm' 與規則層的 'rule' 分開,
+  // 兩層誤判的樣態不同,混在一起就分不出該調哪一層。
+  if (rejectedIds.length > 0) {
+    const insQ = db.prepare(
+      `INSERT INTO moderation_queue
+         (item_id, target_type, target_id, reason, reported_by, severity, status,
+          decision, decided_by, created_at, resolved_at)
+       VALUES (?, 'post', ?, ?, NULL, 'medium', 'resolved', 'hide', 'llm', ?, ?)`,
+    );
+    const hasQ = db.prepare(
+      "SELECT 1 AS x FROM moderation_queue WHERE target_type = 'post' AND target_id = ?",
+    );
+    const ts = nowSec();
+    let queued = 0;
+    for (const pid of rejectedIds) {
+      if (hasQ.get(pid)) continue;
+      insQ.run(`mod_${randomUUID().replace(/-/g, "").slice(0, 24)}`, pid,
+        rejectReasons.get(pid) || "spam", ts, ts);
+      queued += 1;
+    }
+    if (queued > 0) log(`[${JOB_NAME}] 價值閘門判掉 ${queued} 則,已建檔進 moderation_queue`);
   }
 
   const status = failed === 0 ? "success" : okIds.size > 0 ? "partial_success" : "failed";

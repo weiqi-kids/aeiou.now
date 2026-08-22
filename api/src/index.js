@@ -24,6 +24,7 @@ import {
 } from "./routes/questions.js";
 import {
   handleSyncTopics, handlePendingTranslation, handleTranslations, handleReactionTotals,
+  handleModerationFlags, handleModerationDecisions,
 } from "./routes/internal.js";
 
 // ---------- 路由 ----------
@@ -117,6 +118,16 @@ export default {
           if (request.method !== "GET")
             return err(405, "method_not_allowed", "Use GET");
           return await handleReactionTotals(env, url);
+        }
+        if (path === "/internal/moderation/flags") {
+          if (request.method !== "GET")
+            return err(405, "method_not_allowed", "Use GET");
+          return await handleModerationFlags(env, url);
+        }
+        if (path === "/internal/moderation/decisions") {
+          if (request.method !== "POST")
+            return err(405, "method_not_allowed", "Use POST");
+          return await handleModerationDecisions(request, env);
         }
         if (path === "/internal/sync/questions") {
           if (request.method !== "POST")

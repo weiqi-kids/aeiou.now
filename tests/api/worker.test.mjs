@@ -534,3 +534,101 @@ describe("Turnstile:未設定就不驗,設定了就非過不可", () => {
       { required: true, sitekey: "0x4AAA" });
   });
 });
+
+// ---------------------------------------------------------------------------
+// 規則層 moderation(2026-08-22)。這一層決定讀者看不看得到一則內容,而且是**同步**
+// 在寫入時判的 —— 判錯就是直接吃掉一則真人留言。所以誤殺的那幾種情形要一條一條釘住。
+
+describe("規則層 moderation:留言終於有人看了", () => {
+  const ANON2 = "01JZZZZZZZZZZZZZZZZZZZZZZW";
+
+  beforeEach(async () => {
+    seedTopic();
+    await call("/v1/posts", {
+      method: "POST", anonId: ANON,
+      body: { topic_id: "top_TEST", content: "來聊聊各國怎麼過", locale: "zh-TW" },
+    });
+  });
+
+  const onlyPostId = () => raw.prepare("SELECT post_id FROM posts ORDER BY rowid DESC").get().post_id;
+  const comment = (content, anonId = ANON2) => call("/v1/comments", {
+    method: "POST", anonId,
+    body: { post_id: onlyPostId(), content, locale: "zh-TW" },
+  });
+  const statusOf = (id) => raw.prepare("SELECT status FROM comments WHERE comment_id = ?").get(id).status;
+
+  test("縮網址 → 寫得進去、露不出來(status='moderation'),但回應仍是 201", async () => {
+    const res = await comment("看這個 https://bit.ly/abc123");
+    assert.equal(res.status, 201, "不回 4xx —— 告訴對方他被擋了等於送他一個偵測器");
+    assert.equal(statusOf((await res.json()).comment_id), "moderation");
+  });
+
+  test("整則只有連結 → moderation", async () => {
+    const res = await comment("https://example.com/aaa");
+    assert.equal(statusOf((await res.json()).comment_id), "moderation");
+  });
+
+  test("正常留言帶一個來源連結 → 照常 active", async () => {
+    const res = await comment("日本那邊我查到的是這樣,來源在 https://www.gov.tw/abc 這頁的第三段");
+    assert.equal(statusOf((await res.json()).comment_id), "active", "帶來源是好行為,不能擋");
+  });
+
+  test("完全沒有連結的普通留言 → active", async () => {
+    const res = await comment("我們家都是初二才回外婆家");
+    assert.equal(statusOf((await res.json()).comment_id), "active");
+  });
+
+  test("emoji 不會被誤判成重複字元(代理對不能拆開算)", async () => {
+    const res = await comment("太好笑了 😂😂😂 我阿嬤也這樣");
+    assert.equal(statusOf((await res.json()).comment_id), "active");
+  });
+
+  test("同一字元洗三十次以上 → 記 flag(medium,不吃掉內容)", async () => {
+    const res = await comment("啊".repeat(40));
+    const id = (await res.json()).comment_id;
+    assert.equal(statusOf(id), "active", "medium 不改變呈現");
+    const flag = raw.prepare("SELECT severity, reason FROM moderation_flags WHERE target_id = ?").get(id);
+    assert.equal(flag.severity, "medium");
+    assert.equal(flag.reason, "bot");
+  });
+
+  test("被判定的內容會留下 flag,而且一則只留一列", async () => {
+    const id = (await (await comment("https://bit.ly/x")).json()).comment_id;
+    const n = raw.prepare("SELECT COUNT(*) AS n FROM moderation_flags WHERE target_id = ?").get(id).n;
+    assert.equal(n, 1);
+    const row = raw.prepare("SELECT * FROM moderation_flags WHERE target_id = ?").get(id);
+    assert.equal(row.reason, "malicious_link");
+    assert.equal(row.synced_at, null, "主機還沒拉走");
+  });
+
+  test("貼文也走同一層:滿版連結的貼文寫成 moderation", async () => {
+    const res = await call("/v1/posts", {
+      method: "POST", anonId: ANON2,
+      body: { topic_id: "top_TEST", content: "https://bit.ly/aa", locale: "zh-TW" },
+    });
+    assert.equal(res.status, 201);
+    const st = raw.prepare("SELECT status FROM posts WHERE post_id = ?").get((await res.json()).post_id).status;
+    assert.equal(st, "moderation");
+  });
+
+  test("貼文的連結容忍度比留言高(兩千字放幾個來源是正常的)", async () => {
+    const body = "各國的規定我整理在下面:" + [
+      "https://law.moj.gov.tw/a", "https://laws.e-gov.go.jp/b", "https://www.gov.cn/c",
+    ].join(" ");
+    const res = await call("/v1/posts", {
+      method: "POST", anonId: ANON2,
+      body: { topic_id: "top_TEST", content: body, locale: "zh-TW" },
+    });
+    const st = raw.prepare("SELECT status FROM posts WHERE post_id = ?").get((await res.json()).post_id).status;
+    assert.equal(st, "active");
+  });
+
+  test("被判 moderation 的留言不出現在 feed 的內嵌留言裡", async () => {
+    await comment("https://bit.ly/x");
+    await comment("這則是正常的");
+    const feed = await (await call("/v1/topics/top_TEST/feed?comments=10")).json();
+    const contents = feed.posts[0].comments.map((c) => c.content);
+    assert.ok(!contents.some((c) => c.includes("bit.ly")), "露不出來才是這一層的目的");
+    assert.ok(contents.some((c) => c === "這則是正常的"));
+  });
+});

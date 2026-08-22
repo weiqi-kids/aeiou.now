@@ -187,3 +187,73 @@ export async function handleReactionTotals(env, url) {
 
   return json({ target_type: targetType, items: rows }, 200);
 }
+
+// GET /internal/moderation/flags?limit=N —— 規則層判定的原始紀錄 → 主機工作檯
+//
+// 分工(docs/02-data-model.md §7):D1 的 `moderation_flags` 是「發生過什麼」的原始紀錄,
+// 主機的 `moderation_queue` 才是**人工複核的工作檯**。這一支只搬運,不做判斷 ——
+// 判斷在主機端的 moderation-queue.mjs,因為那裡才看得到同一個 anon_id 的歷史。
+export async function handleModerationFlags(env, url) {
+  let limit = Number.parseInt(url.searchParams.get("limit") ?? "200", 10);
+  if (!Number.isFinite(limit)) limit = 200;
+  limit = Math.min(1000, Math.max(1, limit));
+
+  const rows = (
+    await env.DB.prepare(
+      `SELECT target_type, target_id, anon_id, severity, reason, detail, created_at
+         FROM moderation_flags WHERE synced_at IS NULL
+        ORDER BY created_at ASC LIMIT ?`
+    )
+      .bind(limit)
+      .all()
+  ).results;
+  return json({ flags: rows }, 200);
+}
+
+// POST /internal/moderation/decisions —— 主機的複核結果回寫 D1
+//
+// body: { synced: [{target_type,target_id}], hide: [...], restore: [...] }
+//   synced  = 已建檔(標 synced_at,下次不再拉)
+//   hide    = 決定下架 → status='moderation'(**資料仍然留著**,只是 feed 不收)
+//   restore = 翻案 → status='active'
+// hide/restore 一律隱含 synced —— 決定做完了就是處理過了,不必呼叫端再列一次。
+export async function handleModerationDecisions(request, env) {
+  const body = await readJson(request);
+  if (!body) return err(400, "invalid_body", "Malformed JSON body");
+  const pick = (k) => (Array.isArray(body[k]) ? body[k] : []).filter(
+    (x) => x && typeof x.target_type === "string" && typeof x.target_id === "string"
+  );
+  const synced = pick("synced");
+  const hide = pick("hide");
+  const restore = pick("restore");
+
+  const now = Math.floor(Date.now() / 1000);
+  const stmts = [];
+  const table = (t) => (t === "post" ? "posts" : t === "comment" ? "comments" : null);
+  const idCol = (t) => (t === "post" ? "post_id" : "comment_id");
+
+  for (const x of [...hide, ...restore]) {
+    const tbl = table(x.target_type);
+    if (!tbl) return err(400, "invalid_body", `unknown target_type: ${x.target_type}`);
+  }
+  for (const x of hide) {
+    stmts.push(env.DB.prepare(
+      `UPDATE ${table(x.target_type)} SET status = 'moderation' WHERE ${idCol(x.target_type)} = ?`
+    ).bind(x.target_id));
+  }
+  for (const x of restore) {
+    // 翻案只把 moderation 改回 active —— 不碰 archived/deleted,那是別的軸(CLAUDE.md 紅線:
+    // posts.status='archived' 是永久鎖定,與「被審核擋下」不是同一件事)。
+    stmts.push(env.DB.prepare(
+      `UPDATE ${table(x.target_type)} SET status = 'active'
+        WHERE ${idCol(x.target_type)} = ? AND status = 'moderation'`
+    ).bind(x.target_id));
+  }
+  for (const x of [...synced, ...hide, ...restore]) {
+    stmts.push(env.DB.prepare(
+      "UPDATE moderation_flags SET synced_at = ? WHERE target_type = ? AND target_id = ?"
+    ).bind(now, x.target_type, x.target_id));
+  }
+  if (stmts.length > 0) await env.DB.batch(stmts);
+  return json({ synced: synced.length, hidden: hide.length, restored: restore.length }, 200);
+}

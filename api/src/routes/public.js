@@ -5,6 +5,7 @@ import { REACTION_SET, LOCALES, WINDOW_HOURS, POST_MAX_CHARS, COMMENT_MAX_CHARS 
 import { json, err, readJson } from "../lib/http.js";
 import { ulid, charLen, cityCode, countryCode, getAnonId, anonCookie } from "../lib/identity.js";
 import { rateLimit, topicGate, isPostOpen, SQL_POST_OPEN, verifyTurnstile, turnstileState } from "../lib/gates.js";
+import { screenContent, recordFlag } from "../lib/moderation.js";
 
 // ---------- 公開端點 ----------
 
@@ -213,6 +214,12 @@ export async function handleCreatePost(request, env, ctx, cors) {
   const cc = countryCode(request.cf);
   const city = cityCode(request.cf);
 
+  // 規則層 moderation(2026-08-22)。貼文另有 LLM 價值閘門,但那是**翻譯時**才跑的,
+  // 中間這段時間垃圾貼文照樣在 feed 上;規則層擋的是「一望即知」的那一類,擋在門口。
+  // 兩層互不取代:規則層便宜且同步,價值閘門貴但看得懂語意。
+  const verdict = screenContent(content, "post");
+  const postStatus = verdict.severity === "high" ? "moderation" : "active";
+
   await env.DB.prepare(
     `INSERT INTO posts (post_id, topic_id, cycle_id, user_id, anon_id,
        original_locale, content, media_json, target_country,
@@ -220,7 +227,7 @@ export async function handleCreatePost(request, env, ctx, cors) {
        views, unique_views, comments, likes, shares, cross_country_engagements, hot_score,
        status, translation_status, created_at, last_activity_at, archived_at)
      VALUES (?, ?, ?, NULL, ?, ?, ?, NULL, ?, ?, ?,
-             0, 0, 0, 0, 0, 0, 0, 'active', 'pending', ?, ?, NULL)`
+             0, 0, 0, 0, 0, 0, 0, ?, 'pending', ?, ?, NULL)`
   )
     .bind(
       postId,
@@ -232,6 +239,7 @@ export async function handleCreatePost(request, env, ctx, cors) {
       target_country,
       cc,
       city,
+      postStatus,
       now,
       now
     )
@@ -239,6 +247,7 @@ export async function handleCreatePost(request, env, ctx, cors) {
 
   const headers = { ...cors };
   if (setCookie) headers["Set-Cookie"] = setCookie;
+  recordFlag(env, ctx, { targetType: "post", targetId: postId, anonId, verdict });
   // 與 feed 中同構的單一 post 物件
   return json(
     {
@@ -306,13 +315,20 @@ export async function handleCreateComment(request, env, ctx, cors) {
   const cc = countryCode(request.cf);
   const city = cityCode(request.cf);
 
+  // 規則層 moderation(2026-08-22)。留言不翻譯 → 從來不進 LLM 價值閘門,
+  // 在這一版之前它是**完全沒有被看過的**。high 直接寫成 moderation:資料仍然存下來
+  // (要能複核、要能翻案),但 feed 不收。**不回 4xx** —— 告訴對方他被擋了,
+  // 等於免費送他一個可以逐次試錯的偵測器。見 lib/moderation.js 檔頭。
+  const verdict = screenContent(content, "comment");
+  const commentStatus = verdict.severity === "high" ? "moderation" : "active";
+
   // 同一交易:寫留言 + posts.comments +1 + last_activity_at 更新
   await env.DB.batch([
     env.DB.prepare(
       `INSERT INTO comments (comment_id, post_id, topic_id, user_id, anon_id,
          locale, content, country_code, city_code, likes, status, created_at)
-       VALUES (?, ?, ?, NULL, ?, ?, ?, ?, ?, 0, 'active', ?)`
-    ).bind(commentId, post_id, row.topic_id, anonId, locale, content, cc, city, now),
+       VALUES (?, ?, ?, NULL, ?, ?, ?, ?, ?, 0, ?, ?)`
+    ).bind(commentId, post_id, row.topic_id, anonId, locale, content, cc, city, commentStatus, now),
     env.DB.prepare(
       "UPDATE posts SET comments = comments + 1, last_activity_at = ? WHERE post_id = ?"
     ).bind(now, post_id),
@@ -320,6 +336,8 @@ export async function handleCreateComment(request, env, ctx, cors) {
 
   const headers = { ...cors };
   if (setCookie) headers["Set-Cookie"] = setCookie;
+  recordFlag(env, ctx, { targetType: "comment", targetId: commentId, anonId, verdict });
+  // 回應形狀不因為被判定而改變 —— 送出者看到的就是送出成功了。
   return json(
     {
       comment_id: commentId,

@@ -78,3 +78,29 @@ CREATE TABLE IF NOT EXISTS question_votes (
 );
 CREATE INDEX IF NOT EXISTS idx_question_votes_q   ON question_votes (question_id, locale, option_id);
 CREATE INDEX IF NOT EXISTS idx_question_votes_day ON question_votes (created_at);
+
+-- ---------------------------------------------------------------------------
+-- 規則層 moderation 的原始紀錄(2026-08-22;草案 §33 Job 17 的寫入端那一半)
+-- ---------------------------------------------------------------------------
+-- 為什麼要有這張表:**留言從來沒有被任何東西看過**。貼文有 LLM 價值閘門(翻譯前判一次),
+-- 但留言不翻譯(契約 §3),所以它從來不進那條路;而留言連回流主機都沒有,
+-- 主機端的任何審核也看不到它。
+--
+-- 這張表只是「發生過什麼」的**原始紀錄**,不是工作檯 —— 人工複核用的
+-- `moderation_queue` 在主機(見 docs/02-data-model.md §7)。主機端 job 每 15 分鐘
+-- 把 synced_at IS NULL 的列拉回去建檔,建完回寫 synced_at。
+--
+-- 一個目標只留一列(ON CONFLICT DO NOTHING):同一則內容被規則層判過就是判過了,
+-- 重複寫入只會讓同一件事在工作檯上出現兩次。
+CREATE TABLE IF NOT EXISTS moderation_flags (
+  target_type TEXT NOT NULL,                 -- post|comment
+  target_id   TEXT NOT NULL,
+  anon_id     TEXT,                          -- 誰送的(供「同一人反覆命中」的判斷)
+  severity    TEXT NOT NULL,                 -- low|medium|high
+  reason      TEXT NOT NULL,                 -- 與 moderation_queue.reason 同一組列舉
+  detail      TEXT,                          -- 命中了哪一條規則(給人看的,不做判斷)
+  created_at  INTEGER NOT NULL,
+  synced_at   INTEGER,                       -- NULL = 主機還沒拉走
+  PRIMARY KEY (target_type, target_id)
+);
+CREATE INDEX IF NOT EXISTS idx_moderation_flags_pending ON moderation_flags(synced_at, created_at);

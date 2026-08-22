@@ -63,5 +63,8 @@ rc_sync=$?
 "$NODE_BIN" "$REPO/scripts/sync-questions-to-d1.mjs"
 rc_sync_questions=$?
 
-echo "$(date -Is) [cron-15min] === end (translate=$rc_translate trend=$rc_trend sync=$rc_sync sync_questions=$rc_sync_questions) ==="
-[ $rc_translate -eq 0 ] && [ $rc_trend -eq 0 ] && [ $rc_sync -eq 0 ] && [ $rc_sync_questions -eq 0 ]
+"$NODE_BIN" "$REPO/scripts/moderation-queue.mjs"
+rc_moderation=$?
+
+echo "$(date -Is) [cron-15min] === end (translate=$rc_translate trend=$rc_trend sync=$rc_sync sync_questions=$rc_sync_questions moderation=$rc_moderation) ==="
+[ $rc_translate -eq 0 ] && [ $rc_trend -eq 0 ] && [ $rc_sync -eq 0 ] && [ $rc_sync_questions -eq 0 ] && [ $rc_moderation -eq 0 ]
