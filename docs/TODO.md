@@ -306,48 +306,56 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       key 在 `~/.config/aeiou/psi-api-key`(chmod 600,**絕不進 git**)。
       工具:`node scripts/psi-check.mjs`(裸執行量四頁 × 手機;`--detail` 看 LCP 元素與改善機會)。
 
-- [ ] 🔴 **手機 LCP 仍未達「良好」——但主執行緒這條路已經走到底了**(2026-08-22)。
-      **現況一律用指令查,本節不寫數字**:
+- [x] **手機 LCP 這一輪追到底了,降級收工**(2026-08-22 用戶拍板)。
+      四頁全部停在「需改善」(≤4s),沒有一頁到「良好」(≤2.5s)。**不再追**,
+      理由與證據在下面。要重新開這一項的條件寫在最後一段。
+
+      現況一律用指令查:
       ```bash
       node scripts/psi-check.mjs                    # 四頁 × 手機,含判定
       node scripts/psi-check.mjs --detail --url <該頁>
       ```
-      判準是 Core Web Vitals:LCP ≤2.5s 良好、≤4s 需改善、>4s 差。
-      **看 LCP 要再往下拆一層**:PSI 的 `lcp-breakdown-insight` 分成 TTFB / 資源發現延遲 /
-      資源下載 / 元素渲染延遲四段;另外 `metrics` 那一支同時給 **observed(未模擬)**與
-      **simulated(模擬節流後)**兩組值,**兩組差很多的時候,差距本身就是答案**。
+      **看 LCP 要往下拆兩層**:①`lcp-breakdown-insight` 分成 TTFB / 資源發現延遲 /
+      資源下載 / 元素渲染延遲;②`metrics` 那一支同時給 **observed(未模擬)**與
+      **simulated(模擬節流後)**兩組值 —— **兩組差很多時,差距本身就是答案**。
+      ⚠ 同一個網址短時間內重跑會拿到 **PSI 的快取**(兩輪數字會一模一樣),
+      那不是「穩定」,拿它判雜訊無效;要獨立樣本得隔一段時間或換網址。
 
-      ### 這一輪做了三件事,結果分三種(照實記,不要只留成功的那一件)
+      ### 五個改動,結果照實記(不要只留成功的那一個)
 
-      | 改動 | 量到的效果 |
-      |---|---|
-      | 清單頁討論串改進 viewport 才 fetch | 並發請求與 long task 消失,**LCP 沒動** |
-      | GA4 `gtag/js` 延到 `load` 之後 | **FCP 掉了將近兩秒**,分數跳一級;LCP 只動一點 |
-      | 國旗列與熱度階梯收成單一元素 | Style & Layout **腰斬**、TBT 剩個位數,**LCP 沒動** |
+      | 改動 | 機制有沒有生效 | LCP |
+      |---|---|---|
+      | 清單頁討論串改進 viewport 才 fetch | ✅ 並發請求與 long task 消失 | **沒動** |
+      | GA4 `gtag/js` 延到 `load` 之後 | ✅ gtag 落到 load 之後才發 | **FCP 掉了將近兩秒**,LCP 動一點 |
+      | 國旗列 + 熱度階梯收成單一元素 | ✅ Style & Layout 腰斬、TBT 剩個位數 | **沒動** |
+      | CSS 內聯(`inlineStylesheets: 'always'`) | ✅ dist 已無 `<link rel=stylesheet>` | **沒動** |
+      | LCP 圖 preload | ✅ 標籤有出去 | **沒動**,連 `resourceLoadDelay` 都沒變 |
 
-      ### 目前的判準:主執行緒已經不是綁住 LCP 的那一項
+      五個裡只有 GA4 那一個真的改善了使用者看得到的指標(FCP)。
+      **preload 那一項量到的效益是零** —— 資源發現延遲改前改後一樣,
+      因為 `<picture>` 本來就在 body 很前面,preload scanner 早就掃到了。
+      它現在沒有害處(每頁的 LCP 元素都逐一確認過才下),但**不要以為它在撐著什麼**。
 
-      清單頁改完之後,主執行緒各項加起來只剩幾百毫秒、TBT 個位數、頁面自己一個 long task
-      都沒有,而 LCP 仍然停在「需改善」。**所以再砍 DOM 沒有意義了** ——
-      討論室載入骨架那 76 個元素、以及「清單頁分頁少畫幾張卡」那個提案,
-      都不必為了 LCP 去做(分頁還會減少 Topic 內鏈,方向相反)。
+      ### 結論:兩條路都走到底了
 
-      ### 剩下的是網路形狀,不是頁面形狀
+      · **主執行緒不是瓶頸**:頁面自己一個 long task 都沒有、TBT 個位數,LCP 仍不動。
+        → 再砍 DOM 沒有意義(討論室骨架那 76 個元素不用做);
+        「清單頁分頁少畫幾張卡」也不必為了 LCP 做,而且它會減少 Topic 內鏈,方向相反。
+      · **自己加 CDN 對速度沒用**:GitHub Pages 本來就在 Fastly 後面
+        (查:`curl -sI https://aeiou.now/ | grep -i x-served-by`),實測 TTFB 只有幾毫秒;
+        而 Lighthouse 的模擬把 RTT 寫死在模型裡,真實伺服器多快都不影響模擬值。
+        ⚠ **CDN 這件事沒有死,只是理由不是速度** —— 見下方 GA4 機器流量那條紅線。
 
-      同一份 PSI 結果裡,**observed 的 FCP 與 LCP 幾乎同時發生、都在一秒多**,
-      而 simulated 的 LCP 是它的兩倍以上。差距來自 Lighthouse 的行動網路模型
-      (慢速 4G + 150ms RTT):連線建立、HTML 本體、擋渲染的 CSS,每一段都要吃 RTT。
-      也就是說 **在快網路上這幾頁其實是好的,被判「需改善」的是慢速連線的讀者**。
+      ### 剩下的差距是模擬器的形狀,不是頁面的形狀
 
-      還沒做、屬純工程(不必問用戶)的兩個小槓桿,合計大概只值零點幾秒:
-      · 把兩支擋渲染的 CSS 內聯進 HTML(省一次 round trip,代價是 HTML 變大)
-      · 對 LCP 那張圖下 `<link rel="preload" as="image" imagesrcset=...>`
+      同一份結果裡 observed 的 FCP 與 LCP 幾乎同時、都在一秒多,simulated 的 LCP 是它
+      兩倍以上。差距來自慢速 4G + 高 RTT 的模型。**在快網路上這幾頁是好的,
+      被判「需改善」的是慢速連線的讀者。** 而且 —— **PSI 沒有這個網域的 CrUX 實地資料**
+      (流量太低,`loadingExperience` 是空的),所以連「真實讀者到底慢不慢」都還不知道。
+      查:見 `scripts/psi-check.mjs` 檔頭。
 
-      **真正能把差距補起來的是 CDN**:七站直接掛 GitHub Pages、前面沒有東西,
-      RTT 與 TTFB 對遠端讀者只會更差。⚠ 這件事與另一條紅線是同一個根:
-      CLAUDE.md 的「HotScore 瀏覽面不接 GA4」寫的理由正是
-      「七站在 GitHub Pages 上、前面沒有 CDN,擋不掉機器流量」——
-      **加 CDN 會同時動到 LCP 與 GA4 可用性兩件事**。屬基礎設施決定,動工前問用戶。
+      **要重新開這一項的條件**:CrUX 開始有這個網域的實地資料(代表流量夠了),
+      而且實地的 LCP 也落在「需改善」。在那之前繼續追的是模擬器,不是讀者。
 
 ## 外站的 bot 封鎖不再擋下整條 hourly(2026-08-21 用戶拍板,已解)
 
