@@ -108,3 +108,27 @@ CREATE TABLE IF NOT EXISTS moderation_flags (
   PRIMARY KEY (target_type, target_id)
 );
 CREATE INDEX IF NOT EXISTS idx_moderation_flags_pending ON moderation_flags(synced_at, created_at);
+
+-- ---------------------------------------------------------------------------
+-- 圖片(2026-08-22;草案 §33 的 Image 那一列)
+-- ---------------------------------------------------------------------------
+-- 位元組在 R2(binding ARCHIVE,鍵 media/<media_id>.<ext>),這張表只記元資料與狀態。
+--
+-- 🔴 `status` 預設 **pending** —— 上傳成功不等於看得到。這個站沒有影像分類模型,
+--    也沒有隨時在線的審核者;在那個前提下直接公開任意使用者圖片,是整個系統裡
+--    風險最高的一件事(文字最糟是難看,圖片最糟是違法內容掛在七個網域上)。
+--    要有人在工作檯上放行才會公開:`node scripts/moderation-queue.mjs --approve <media_id>`
+--
+-- 供圖走 Worker 代理而不是開放 bucket:R2 一開公開存取,那個網址就永遠是公開的,
+-- 「下架」對一個已經在外面流傳的網址沒有作用。走代理則是狀態一改、下一次請求就 404。
+CREATE TABLE IF NOT EXISTS media (
+  media_id   TEXT PRIMARY KEY,
+  r2_key     TEXT NOT NULL,
+  mime       TEXT NOT NULL,               -- image/jpeg|image/png|image/webp(魔術位元組判定,不看 Content-Type)
+  bytes      INTEGER NOT NULL,
+  anon_id    TEXT,
+  status     TEXT NOT NULL DEFAULT 'pending',  -- pending|approved|rejected
+  created_at INTEGER NOT NULL,
+  decided_at INTEGER
+);
+CREATE INDEX IF NOT EXISTS idx_media_status ON media(status, created_at);

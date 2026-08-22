@@ -7,12 +7,17 @@
 //   node scripts/moderation-queue.mjs
 //   node scripts/moderation-queue.mjs --dry-run    只印會怎麼判,不寫任何一邊
 //   node scripts/moderation-queue.mjs --report     印工作檯現況(待複核清單)
+//   node scripts/moderation-queue.mjs --approve <media_id>   放行一張圖(圖片預設看不到)
+//   node scripts/moderation-queue.mjs --reject  <media_id>   退掉一張圖
 //
 // -- 啟用範圍(2026-08-22 定版;這一項待辦的標題就是「moderation 啟用範圍」)-----
 //   ✅ Post    —— 兩層:寫入時的規則層(Worker)+ 翻譯前的 LLM 價值閘門(translate-posts)
 //   ✅ Comment —— 只有規則層。**留言不翻譯,所以永遠不會進 LLM 那條路**,
-//                在這一版之前它是完全沒有被看過的(主機 comments 表 0 筆就是證據)。
-//   ⬜ Image   —— 沒有圖片上傳,沒有東西可審(R2 接上之後才有意義)
+//                在這一版之前它是完全沒有被看過的。
+//   ✅ Image   —— 2026-08-22 起有了(R2 接上之後)。**預設 pending,看不到** ——
+//                這個站沒有影像分類模型也沒有隨時在線的審核者,在那個前提下直接公開
+//                任意使用者圖片是整個系統風險最高的一件事。要人放行才會公開:
+//                `--approve <media_id>`。這不是保守,是現在唯一誠實的做法。
 //   ⬜ User    —— 沒有帳號系統(OAuth 未上線),「停權」現在沒有對象
 //   ⬜ 人工檢舉 —— 前台的「回報錯誤/補充」刻意走**討論串**而不是這裡:
 //                那是內容更正,不是違規檢舉。要做違規檢舉得先有帳號,否則檢舉本身
@@ -41,11 +46,58 @@ const JOB_NAME = "moderation-queue";
 const argv = process.argv.slice(2);
 const DRY_RUN = argv.includes("--dry-run");
 const REPORT = argv.includes("--report");
+const APPROVE = argv.includes("--approve") ? argv[argv.indexOf("--approve") + 1] : null;
+const REJECT = argv.includes("--reject") ? argv[argv.indexOf("--reject") + 1] : null;
 
 /** 同一人反覆命中的門檻。1 次可能是誤判,3 次不是。 */
 const REPEAT_HIDE_AT = 3;
 
 const db = openDb();
+
+// ── 放行 / 退回一張圖 ─────────────────────────────────────────────────────
+// 圖片的位元組與狀態都在 D1(主機沒有它們),所以這一段是薄的:改 D1、記主機工作檯。
+// 放行之後 `GET /v1/media/<id>` 才會回圖;退回之後永遠是 404(**不回 403** ——
+// 403 等於告訴對方「東西在這裡,只是不給你」)。
+if (APPROVE || REJECT) {
+  const mediaId = APPROVE || REJECT;
+  const decision = APPROVE ? "approved" : "rejected";
+  if (!/^med_[A-Za-z0-9]+$/.test(mediaId || "")) {
+    console.error("✗ 用法:--approve med_… / --reject med_…");
+    db.close();
+    process.exit(2);
+  }
+  const out = await api("/internal/moderation/media", {
+    method: "POST",
+    body: { media_id: mediaId, status: decision },
+  });
+  if (!out.updated) {
+    console.error(`✗ 找不到 ${mediaId}(或狀態已經是 ${decision})`);
+    db.close();
+    process.exit(1);
+  }
+  // 主機工作檯同步記一筆,否則「誰放行的、什麼時候」只存在於 D1。
+  const now = nowSec();
+  const hit = db.prepare(
+    "SELECT item_id FROM moderation_queue WHERE target_type = 'image' AND target_id = ?",
+  ).get(mediaId);
+  if (hit) {
+    db.prepare(
+      "UPDATE moderation_queue SET status='resolved', decision=?, decided_by='human', resolved_at=? WHERE item_id=?",
+    ).run(APPROVE ? "keep" : "hide", now, hit.item_id);
+  } else {
+    db.prepare(
+      `INSERT INTO moderation_queue
+         (item_id, target_type, target_id, reason, reported_by, severity, status,
+          decision, decided_by, created_at, resolved_at)
+       VALUES (?, 'image', ?, 'needs_review', NULL, 'medium', 'resolved', ?, 'human', ?, ?)`,
+    ).run(`mod_${randomUUID().replace(/-/g, "").slice(0, 24)}`, mediaId,
+      APPROVE ? "keep" : "hide", now, now);
+  }
+  console.log(`✓ ${mediaId} → ${decision}`);
+  if (APPROVE) console.log(`  看圖:${CONFIG.apiUrl}/v1/media/${mediaId}`);
+  db.close();
+  process.exit(0);
+}
 
 if (REPORT) {
   const rows = db.prepare(
@@ -63,6 +115,10 @@ if (REPORT) {
   }
   const pending = db.prepare("SELECT COUNT(*) AS n FROM moderation_queue WHERE status = 'pending'").get().n;
   console.log(`\n待人工複核:${pending} 筆`);
+  console.log("待放行的圖片(它們**現在看不到**,要人放行才會公開)查:");
+  console.log("  cd api && npx wrangler d1 execute aeiou-ugc --remote \\");
+  console.log("    --command \"SELECT media_id,mime,bytes,datetime(created_at,'unixepoch') FROM media WHERE status='pending' ORDER BY created_at\"");
+  console.log("  放行:node scripts/moderation-queue.mjs --approve <media_id>");
   if (pending > 0) {
     console.log("看清單:sqlite3 -header -column db/aeiou.sqlite \"SELECT item_id,target_type,target_id,reason,severity,datetime(created_at,'unixepoch') FROM moderation_queue WHERE status='pending' ORDER BY severity DESC, created_at\"");
   }

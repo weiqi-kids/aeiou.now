@@ -599,9 +599,16 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
   🔴 拉進來的數字仍然**不准算 HotScore 的瀏覽面**(2026-08-20 拍板未變)。
   查:`node scripts/ga4-daily.mjs --report`
 
-- [ ] ⛔ **圖片上傳(R2+審核)卡在 R2 bucket**(用戶 2026-08-21 表示會去開)。
-  **解鎖條件**:在 Cloudflare 開一個 bucket 並在 `api/wrangler.jsonc` 加 `r2_buckets` binding。
-  在那之前 markdown 刻意不支援圖片語法 —— 不從渲染層開這個洞。
+- [x] **圖片上傳(R2+審核)已上線**(2026-08-22)。R2 bucket 已建好,所以這一項不再卡住。
+  🔴 **設計上的關鍵決定:上傳成功 ≠ 看得到。** 圖片預設 `pending`,要人在工作檯放行才公開。
+  這個站沒有影像分類模型也沒有隨時在線的審核者,在那個前提下直接公開任意使用者圖片,
+  是整個系統裡風險最高的一件事 —— 文字最糟是難看,圖片最糟是違法內容掛在七個網域上。
+  **這不是保守,是現在唯一誠實的做法**;有了分類模型或有人固定看隊列之後再放寬。
+  型別用魔術位元組判定不看 Content-Type;供圖走 Worker 代理而不是開放 bucket
+  (R2 一開公開,那個網址就永遠是公開的,「下架」對它沒有作用)。
+  pending/rejected 一律回 404 不回 403。契約 §1c。
+  查:`node scripts/moderation-queue.mjs --report`(最後幾行有待放行圖片的查法)
+  放行:`node scripts/moderation-queue.mjs --approve <media_id>`
 - [x] **「加入行事曆」與「回報錯誤/補充」都已上線**(2026-08-21 用戶核准)。
   行事曆:純字串組裝的 Google TEMPLATE 網址 + .ics data URI,不打任何 API、不需要 JS
   (同「導航一律純字串組裝」那條紅線)。三條限制各有代價作為理由 —— **只出本站市場那一國**

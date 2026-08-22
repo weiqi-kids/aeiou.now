@@ -23,10 +23,11 @@ import {
   handleQuestionResults, handleVote, handleParticipation, handleSyncQuestions,
 } from "./routes/questions.js";
 import { handleSearch, handleSearchIndex, handleSearchDelete } from "./routes/search.js";
+import { handleUpload, handleMediaGet } from "./routes/media.js";
 import {
   handleSyncTopics, handlePendingTranslation, handleTranslations, handleReactionTotals,
   handleModerationFlags, handleModerationDecisions, handleFeedMaintenance,
-  handleArchivePut, handleArchivePosts,
+  handleArchivePut, handleArchivePosts, handleModerationMedia,
 } from "./routes/internal.js";
 
 // ---------- 路由 ----------
@@ -73,6 +74,17 @@ export default {
         if (path === "/v1/posts") return await handleCreatePost(request, env, ctx, cors);
         if (path === "/v1/comments") return await handleCreateComment(request, env, ctx, cors);
         return await handleReaction(request, env, ctx, cors);
+      }
+      if (path === "/v1/uploads") {
+        if (request.method !== "POST")
+          return err(405, "method_not_allowed", "Use POST", cors);
+        return await handleUpload(request, env, ctx, cors);
+      }
+      const mediaMatch = path.match(/^\/v1\/media\/([A-Za-z0-9_-]+)$/);
+      if (mediaMatch) {
+        if (request.method !== "GET")
+          return err(405, "method_not_allowed", "Use GET", cors);
+        return await handleMediaGet(env, decodeURIComponent(mediaMatch[1]), cors);
       }
       if (path === "/v1/search") {
         if (request.method !== "GET")
@@ -155,6 +167,11 @@ export default {
           if (request.method !== "GET")
             return err(405, "method_not_allowed", "Use GET");
           return await handleModerationFlags(env, url);
+        }
+        if (path === "/internal/moderation/media") {
+          if (request.method !== "POST")
+            return err(405, "method_not_allowed", "Use POST");
+          return await handleModerationMedia(request, env);
         }
         if (path === "/internal/moderation/decisions") {
           if (request.method !== "POST")

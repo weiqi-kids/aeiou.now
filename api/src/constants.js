@@ -38,6 +38,16 @@ export const RATE_LIMITS = {
     { window: 300, max: 30 },
     { window: 86400, max: 300 },
   ],
+  // 上傳比發文更貴(頻寬 + R2 寫入 + 一個要人看的隊列項目),所以比發文更嚴。
+  upload: [
+    { window: 300, max: 3 },
+    { window: 86400, max: 12 },
+  ],
 };
+
+// 圖片(2026-08-22;草案 §33 的 Image 那一列)。改動屬契約變更。
+// 2 MB:手機直拍的照片多半在這個量級之下,而再大對一則討論串貼文沒有意義。
+export const MEDIA_MAX_BYTES = 2 * 1024 * 1024;
+export const MEDIA_MAX_PER_POST = 4;
 
 export const DATE_RE = /^\d{4}-\d{2}-\d{2}$/; // YYYY-MM-DD(UTC 當日),每日世界一問 participation 查詢用

@@ -103,13 +103,15 @@ export function installWorkerCryptoShim() {
 }
 
 /** 組一個帶 anon cookie 的 Request。 */
-export function req(path, { method = "GET", body, anonId, origin = "https://aeiou.now", headers = {} } = {}) {
+export function req(path, { method = "GET", body, raw, anonId, origin = "https://aeiou.now", headers = {} } = {}) {
   const h = new Headers({ origin, ...headers });
   if (anonId) h.set("cookie", `anon_id=${anonId}`);   // 名稱必須與 getAnonId 一致
   if (body !== undefined) h.set("content-type", "application/json");
+  // `raw` 走原始位元組(圖片上傳用)。**不設 content-type** —— 那個端點刻意只看
+  // 魔術位元組,測試也不該幫它把型別填對。
   return new Request(`https://aeiou-api.test${path}`, {
     method,
     headers: h,
-    body: body === undefined ? undefined : JSON.stringify(body),
+    body: raw !== undefined ? raw : body === undefined ? undefined : JSON.stringify(body),
   });
 }

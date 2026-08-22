@@ -169,6 +169,41 @@ M1 沒有 hot_score job,`posts.hot_score` 恆 0,**不得用來排序**。
 
 ---
 
+## 1c. 圖片(2026-08-22 新增;草案 §33 的 Image 那一列)
+
+### `POST /v1/uploads` —— 上傳(公開,CORS;限流 kind=`upload`)
+
+Body 是**原始位元組**,不是 multipart(少一層解析、少一種可以騙人的地方)。
+
+- 型別用**魔術位元組**判定,只收 JPEG / PNG / WebP。**不看 `Content-Type`** —— 那是使用者送的。
+  型別不對回 400 `unsupported_media`。
+- 超過 `MEDIA_MAX_BYTES` 回 413 `media_too_large`。未綁 R2 回 503 `media_unavailable`。
+
+Response 201:
+```json
+{ "media_id": "med_01J...", "status": "pending", "url": "/v1/media/med_01J...",
+  "note": "pending review — not publicly visible yet", "max_per_post": 4 }
+```
+
+🔴 **`status` 一律是 `pending`,上傳成功不等於看得到。** 這個站沒有影像分類模型,也沒有
+隨時在線的審核者;在那個前提下直接公開任意使用者圖片,是整個系統裡風險最高的一件事
+(文字最糟是難看,圖片最糟是違法內容掛在七個網域上)。回應**必須明說**它還看不到 ——
+不說會讓前端做出「圖片壞了」的錯誤結論(同討論室四態的紀律:狀態名稱要說事實)。
+
+### `GET /v1/media/:id` —— 供圖(公開,CORS)
+
+只有 `approved` 的才回圖;`pending` 與 `rejected` 都回 **404 而不是 403** ——
+403 等於告訴對方「東西在這裡,只是不給你」,那是在確認一個他不該知道的事實。
+
+> **為什麼供圖走 Worker 而不是開放 bucket**:R2 一開公開存取,那個網址就永遠是公開的,
+> 「下架」對一個已經在外面流傳的網址沒有作用。走代理則是狀態一改、下一次請求就 404。
+> 代價是每次看圖多一次 Worker 呼叫,值得。
+
+放行/退回:`node scripts/moderation-queue.mjs --approve|--reject <media_id>`
+(內部端點 `POST /internal/moderation/media`)。
+
+---
+
 ## 2. `POST /v1/posts` —— 發文
 
 > **Bot 防護第三層(2026-08-21)**:`POST /v1/posts` 與 `POST /v1/comments` 可帶

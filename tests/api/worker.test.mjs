@@ -700,3 +700,87 @@ describe("語意搜尋:沒綁 Vectorize 時要說事實", () => {
     assert.equal(clamped.min_score, 0.3, "夾住下限");
   });
 });
+
+describe("圖片:上傳成功 ≠ 看得到", () => {
+  // 真的 PNG 的前 8 個位元組;sniff() 只看魔術位元組,不看 Content-Type。
+  const PNG = new Uint8Array([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a, 0, 0, 0, 13, 1, 2, 3]);
+  let store;
+
+  beforeEach(() => {
+    store = new Map();
+    env = {
+      ...env,
+      ARCHIVE: {
+        put: async (k, v) => { store.set(k, v); },
+        get: async (k) => (store.has(k) ? { body: "bytes" } : null),
+      },
+    };
+  });
+
+  const upload = (bytes) => call("/v1/uploads", { method: "POST", anonId: ANON, raw: bytes });
+
+  test("沒綁 R2 → 503,不是靜靜失敗", async () => {
+    env = { ...env, ARCHIVE: undefined };
+    const res = await upload(PNG);
+    assert.equal(res.status, 503);
+    assert.equal((await res.json()).error.code, "media_unavailable");
+  });
+
+  test("上傳成功但狀態是 pending,而且回應要明說", async () => {
+    const res = await upload(PNG);
+    assert.equal(res.status, 201);
+    const body = await res.json();
+    assert.equal(body.status, "pending");
+    assert.match(body.note, /not publicly visible/i, "不明說會讓前端以為圖片壞了");
+    const row = raw.prepare("SELECT status FROM media WHERE media_id = ?").get(body.media_id);
+    assert.equal(row.status, "pending");
+  });
+
+  test("pending 的圖回 404 而不是 403", async () => {
+    const { media_id: id } = await (await upload(PNG)).json();
+    const res = await call(`/v1/media/${id}`);
+    assert.equal(res.status, 404, "403 等於告訴對方東西在這裡、只是不給他");
+  });
+
+  test("放行之後才看得到,退回之後又看不到", async () => {
+    const { media_id: id } = await (await upload(PNG)).json();
+    const ok = await call("/internal/moderation/media", {
+      method: "POST", headers: { authorization: `Bearer ${SYNC_SECRET}` },
+      body: { media_id: id, status: "approved" },
+    });
+    assert.equal((await ok.json()).updated, 1);
+    assert.equal((await call(`/v1/media/${id}`)).status, 200);
+
+    await call("/internal/moderation/media", {
+      method: "POST", headers: { authorization: `Bearer ${SYNC_SECRET}` },
+      body: { media_id: id, status: "rejected" },
+    });
+    assert.equal((await call(`/v1/media/${id}`)).status, 404);
+  });
+
+  test("文字檔冒充 PNG 被擋下(只看魔術位元組,不看 Content-Type)", async () => {
+    const fake = new TextEncoder().encode("not an image at all, just text");
+    const res = await call("/v1/uploads", {
+      method: "POST", anonId: ANON, raw: fake,
+      headers: { "content-type": "image/png" },
+    });
+    assert.equal(res.status, 400);
+    assert.equal((await res.json()).error.code, "unsupported_media");
+  });
+
+  test("超過上限擋下", async () => {
+    const big = new Uint8Array(2 * 1024 * 1024 + 1);
+    big.set(PNG.slice(0, 8));
+    const res = await upload(big);
+    assert.equal(res.status, 413);
+  });
+
+  test("每一次上傳都進審核工作檯", async () => {
+    const { media_id: id } = await (await upload(PNG)).json();
+    const flag = raw.prepare(
+      "SELECT reason, severity FROM moderation_flags WHERE target_type='image' AND target_id=?"
+    ).get(id);
+    assert.ok(flag, "沒進工作檯 = 沒有人會知道有圖在等");
+    assert.equal(flag.reason, "needs_review");
+  });
+});

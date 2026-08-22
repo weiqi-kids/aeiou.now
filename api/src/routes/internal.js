@@ -424,3 +424,30 @@ export async function handleArchivePosts(request, env) {
   if (stmts.length > 0) await env.DB.batch(stmts);
   return json({ candidates: rows.length, moved, cutoff }, 200);
 }
+
+// POST /internal/moderation/media —— body: { media_id, status }
+// 圖片的放行/退回。位元組與狀態都在 D1,主機沒有它們,所以決定要經這一支。
+export async function handleModerationMedia(request, env) {
+  const body = await readJson(request);
+  if (!body) return err(400, "invalid_body", "Malformed JSON body");
+  const { media_id: mediaId, status } = body;
+  if (typeof mediaId !== "string" || !/^med_[A-Za-z0-9]+$/.test(mediaId))
+    return err(400, "invalid_body", "media_id must look like med_…");
+  if (!["approved", "rejected", "pending"].includes(status))
+    return err(400, "invalid_body", "status must be approved|rejected|pending");
+
+  const now = Math.floor(Date.now() / 1000);
+  const res = await env.DB.prepare(
+    "UPDATE media SET status = ?, decided_at = ? WHERE media_id = ? AND status <> ?"
+  )
+    .bind(status, now, mediaId, status)
+    .run();
+  const updated = res?.meta?.changes ?? 0;
+  if (updated > 0) {
+    // 決定做完了,flag 就不必再被主機拉一次。
+    await env.DB.prepare(
+      "UPDATE moderation_flags SET synced_at = ? WHERE target_type = 'image' AND target_id = ?"
+    ).bind(now, mediaId).run();
+  }
+  return json({ media_id: mediaId, status, updated }, 200);
+}
