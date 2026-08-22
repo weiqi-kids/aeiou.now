@@ -34,7 +34,7 @@ import { LOCALE, MARKET_CITY } from '../../lib/config.mjs';
 import { siteDescription, SITE_OVERVIEW_IMAGE_PATH } from '../../lib/seo.mjs';
 import { withBase } from '../../lib/paths.mjs';
 import {
-  topicsByHeat, topicsWithPlacesByCity, topicsWithEventsByCity, cityName, coverPath,
+  topicsByHeat, topicsWithPlacesByCity, topicsWithEventsByCity, cityName, coverPath, coverThumbPath,
 } from '../../lib/data.mjs';
 
 export function getStaticPaths() {
@@ -101,6 +101,14 @@ const representativeTopic = groups
   .map((row) => row.topic)
   .find((topic) => coverPath(topic?.slug));
 const representativeCover = representativeTopic ? coverPath(representativeTopic.slug) : null;
+// 首屏第一列的縮圖 = 這一頁的 LCP 元素(TopicBoard 只給前兩列 eager,第一列就是它)。
+// 先 preload,瀏覽器才不必等解析到 <picture>。TopicRow 用 <source type="image/webp">
+// 無 media,所以這裡也只給一筆、不帶 media —— 兩邊必須一致,否則會下載兩個檔。
+const firstRowSlug = groups[0]?.rows?.[0]?.topic?.slug || null;
+const firstRowThumb = firstRowSlug ? coverThumbPath(firstRowSlug) : null;
+const heroPreloads = firstRowThumb
+  ? [{ href: withBase(firstRowThumb), type: 'image/webp' }]
+  : null;
 // </script> 防拆:JSON 內任何 "<" 都轉義
 const sortConfigJson = sortConfig
   ? JSON.stringify(sortConfig).replace(/</g, '\\u003c')
@@ -114,6 +122,7 @@ const sortConfigJson = sortConfig
   activeSort={sort}
   image={withBase(representativeCover || SITE_OVERVIEW_IMAGE_PATH)}
   imageAlt={representativeTopic?.title || label}
+  preloadImages={heroPreloads}
 >
   <header class="sort-head">
     <h1><span class="sort-emoji" aria-hidden="true">{emoji}</span>{label}</h1>

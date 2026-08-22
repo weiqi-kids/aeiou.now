@@ -86,6 +86,15 @@ const pageUrl = new URL(withBase(`topic/${facts?.slug}/`), Astro.site).href;
 const coverRel = coverPath(facts && facts.slug);
 const coverSrc = coverRel ? withBase(coverRel) : null;
 const heroSources = coverHeroSources(facts && facts.slug);
+// 頁首封面 = 這一頁的 LCP 元素(PSI 實測),先在 <head> preload。
+// ⚠ 下面的 <picture> 是用 media 分版本(w800 給 max-width:767px、w1200 是預設),
+// 所以 preload 也**必須逐版本各給一筆、media 與 <source> 完全互補** ——
+// 少一筆或條件寫錯,瀏覽器會兩個檔都抓,比不 preload 還糟。
+// 兩個 <source> 都不存在時就不發 preload(<img> 那個 PNG 不值得搶頻寬)。
+const heroPreloads = [
+  heroSources.w800 && { href: withBase(heroSources.w800), type: 'image/webp', media: '(max-width: 767px)' },
+  heroSources.w1200 && { href: withBase(heroSources.w1200), type: 'image/webp', media: '(min-width: 768px)' },
+].filter(Boolean);
 
 // next_occurrence 是匯出層依地方時區產出的下一次實際日期；頁面不解析 date_rule。
 // 日期相同時才用 popularity_rank，沒有 occurrence 的舊資料排在最後，且不補猜日期。
@@ -419,6 +428,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
   indexable={!aliasFor}
   redirectTo={aliasFor ? withBase(`topic/${aliasFor}/`) : null}
   structuredData={topicSchema}
+  preloadImages={heroPreloads.length ? heroPreloads : null}
 >
   <article class="topic" data-topic-slug={facts?.slug}>
     <!-- 頁首 = 第一屏的上半:cover 圖 + 七語系的 lede 並陳 + 「🌎 全世界怎麼過」的連結。

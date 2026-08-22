@@ -38,6 +38,12 @@ interface Props {
   activeSort?: string | null;
   /** cover 圖的**站內路徑**(呼叫端已過 withBase);這裡再組成絕對網址給 og:image。 */
   image?: string | null;
+  /** 首屏那張圖要不要在 <head> 先 preload。給了瀏覽器就不必等解析到 <picture>
+   *  才開始下載。**只給真正的 LCP 元素** —— preload 一張不是首屏的圖,
+   *  等於從首屏手上搶頻寬,是負的。
+   *  ⚠ `<picture>` 用 media 分版本時,**每個版本各給一筆、media 要與 <source> 完全對應**,
+   *  少一筆或條件寫錯會變成兩個檔都下載(雙倍流量),比不 preload 還糟。 */
+  preloadImages?: Array<{ href: string; type?: string; media?: string }> | null;
   imageAlt?: string | null;
   pageType?: string;
   modified?: string | null;
@@ -53,6 +59,7 @@ const {
   activeSort = null,
   image = null,
   imageAlt = null,
+  preloadImages = null,
   pageType = 'WebPage',
   modified = null,
   canonicalPath = null,
@@ -164,6 +171,13 @@ const jumpTopics = hotTopics(2).filter((topic) => topic && topic.slug);
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {/* ⚠ preload 一定要排在 canonical **後面**:check-seo.mjs 是拿「文件裡第一個
+        <link>」當 canonical 檢查(見該檔 `attr(html, 'link', 'href')`),
+        插到它前面會讓整批頁面報「canonical 必須是 absolute URL」。
+        排在這裡對 preload scanner 沒有差別 —— 一樣在 head 的前幾行就被掃到。 */}
+    {(preloadImages || []).map((p) => (
+      <link rel="preload" as="image" href={p.href} type={p.type} media={p.media} fetchpriority="high" />
+    ))}
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
     <link rel="icon" href={withBase('/favicon.ico')} sizes="32x32" />
     <link rel="apple-touch-icon" href={withBase('/apple-touch-icon.png')} />

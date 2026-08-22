@@ -26,4 +26,15 @@ export default defineConfig({
   output: 'static',
   site: SITE_URL,
   base: BASE_PATH,
+  build: {
+    // 擋渲染的 CSS 內聯進 HTML(2026-08-22 用戶核准)。
+    // 為什麼:元件樣式只有幾 KB,但它們是獨立請求 —— 在慢速連線上那是實打實的
+    // 一次 round trip,而且擋著首次繪製。**這一項對真實的慢速讀者是真的省,
+    // 不只是討好 Lighthouse 的模擬器。**
+    // 代價:CSS 不再跨頁快取,每頁 HTML 各帶一份。這個站的讀者絕大多數是從搜尋
+    // 進來的單頁訪客,首次載入的成本比回訪的快取命中重要,所以取 'always'。
+    // 要退回原本的行為就刪掉這個 build 區塊(預設是 'auto',只內聯小於
+    // vite 的 assetsInlineLimit 的那些)。
+    inlineStylesheets: 'always',
+  },
 });
