@@ -11,10 +11,10 @@
  * 金鑰檔也要能在該網域上取得。七個語系是七個獨立網域,所以是七次獨立提交,
  * 不是一次七語混送 —— 混送會被整批拒絕。
  *
- * 送什麼:只送「近期真的變過」的 Topic 頁。判準是 data/topics/<id>/facts.json 的
- * updated_at,而它可信是有前提的 —— import-topics 的 upsert 在 2026-08-19 補上
- * WHERE 子句之後,這個欄位才只在內容真的改變時推新。在那之前它每小時空推一次,
- * 那時若拿來當判準,等於每小時把全站 URL 重送一遍,會被引擎當濫用。
+ * 送什麼:只送「近期真的變過」的 Topic 頁。判準是 export-data 寫入
+ * data/topics/<id>/facts.json 的 content_updated_at；它由 facts+i18n 的實際輸出 hash
+ * 決定，所以改七語 summary/customs 也會觸發提交。不能用 topics.updated_at：那個欄位
+ * 刻意只在 Topic metadata 改變時更新，內容改了但 canonical/commonality 沒變時不會動。
  *
  * best-effort:任何網路或 API 錯誤都只印警告並以 0 結束,絕不擋部署。
  *
@@ -62,7 +62,7 @@ function changedSlugs() {
     let facts;
     try { facts = JSON.parse(readFileSync(factsPath, "utf8")); } catch { continue; }
     if (!facts?.slug) continue;
-    const updated = Date.parse(facts.updated_at || "");
+    const updated = Date.parse(facts.content_updated_at || facts.updated_at || "");
     if (!Number.isFinite(updated) || updated < cutoff) continue;
     slugs.push(facts.slug);
   }

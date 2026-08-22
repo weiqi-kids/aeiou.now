@@ -23,7 +23,7 @@
 ### title
 返鄉與團聚
 ### summary
-這一頁把「返鄉與團聚」放在日期、關係與地方差異中比較；我們不預設每個家庭或社群都會用同一種方式參與。
+返鄉不只是一個節日名詞：台灣主要在農曆春節、日本集中在年末年始與お盆、中國大陸有前後約四十天的春運，美國以感恩節形成最大返鄉潮；印度的移動則跟著各邦節日分散，印尼的 mudik 常在開齋節前後，巴西也會受學校與家庭行事曆影響。這一頁比較每個地方的日期、休假、交通壓力與團聚方式，也保留不返鄉或無法返鄉的家庭選擇。
 ### keywords
 返鄉與團聚、返鄉、團聚、回家
 ### customs ID eid-homecoming
@@ -35,7 +35,7 @@
 ### title
 Homecoming and Reunion
 ### summary
-This guide looks at Homecoming and Reunion through dates, relationships, and local differences. It does not assume that every household or community follows the same practice.
+Homecoming is not one holiday pattern: Taiwan's main wave is Lunar New Year; Japan has year-end/New Year and Obon; China's roughly forty-day chunyun surrounds Spring Festival; and Thanksgiving drives the largest U.S. wave. India's travel follows state festivals, Indonesia's mudik clusters around Idul Fitri, and Brazil's return trips also follow school and family calendars. This guide compares dates, leave, transport pressure, and ways of reuniting, while leaving room for people who cannot or do not want to travel.
 ### keywords
 Homecoming and Reunion, Homecoming, Family Reunion, Returning Home
 ### customs ID eid-homecoming
@@ -51,7 +51,7 @@ Obon is often a time to return home, welcome ancestors, and see them off. Bon od
 ### title
 帰省と再会
 ### summary
-ここでは「帰省と再会」を、日付や人間関係、地域差とともに見ていきます。すべての家庭や地域が同じ形で参加するわけではありません。
+帰省は一つの祝日の型ではない。台湾は旧正月、日本は年末年始とお盆、中国大陸は春節を中心に約40日の春運、米国は感謝祭が最大の波をつくる。インドは州ごとの祭り、インドネシアはイドゥル・フィトリ前後のムディック、ブラジルは学校と家族の予定に沿って移動が分散する。このページでは日付、休暇、交通の混雑、再会の形を比べ、帰省できない・帰省しない選択も含めて見る。
 ### keywords
 帰省と再会, 帰省, 再会, 里帰り
 ### customs ID eid-homecoming
@@ -67,7 +67,7 @@ Obon is often a time to return home, welcome ancestors, and see them off. Bon od
 ### title
 返乡与团聚
 ### summary
-这一页把“返乡与团聚”放在时间、关系与地区差异中比较；我们不预设每个家庭或社群都会用同一种方式参与。
+返乡不只是一个节日名词：台湾主要集中在农历春节，日本集中在年末年始与お盆，中国大陆有前后约四十天的春运，美国以感恩节形成最大返乡潮；印度的移动跟着各邦节日分散，印度尼西亚的 mudik 常在开斋节前后，巴西也会受到学校与家庭日历影响。这一页比较各地的日期、休假、交通压力与团聚方式，也保留不返乡或无法返乡的家庭选择。
 ### keywords
 返乡与团聚、返乡、团聚、回家
 ### customs ID eid-homecoming
@@ -83,7 +83,7 @@ Obon is often a time to return home, welcome ancestors, and see them off. Bon od
 ### title
 घर वापसी और पुनर्मिलन
 ### summary
-यह पृष्ठ घर वापसी और पुनर्मिलन को तारीख़, रिश्तों और स्थानीय भिन्नताओं के साथ देखता है। हर परिवार या समुदाय इसे एक ही तरह से नहीं मनाता या निभाता।
+घर वापसी किसी एक त्योहार का एक जैसा ढंग नहीं है: ताइवान में मुख्य लहर चंद्र नववर्ष की है, जापान में वर्षांत/नववर्ष और ओबोन, चीन में वसंत पर्व के आसपास लगभग चालीस दिनों का चुनयुन, और अमेरिका में थैंक्सगिविंग सबसे बड़ी लहर बनाता है। भारत में यात्रा राज्यों के त्योहारों के साथ बँटती है, इंडोनेशिया में ईद उल-फ़ित्र के आसपास mudik होता है, और ब्राज़ील में स्कूल व परिवार के कैलेंडर भी समय तय करते हैं। यह पृष्ठ तारीख़, छुट्टी, यात्रा-दबाव और मिलन के तरीकों की तुलना करता है, साथ ही उन लोगों की पसंद को भी मानता है जो यात्रा नहीं कर सकते या नहीं करना चाहते।
 ### keywords
 घर वापसी और पुनर्मिलन, घर वापसी, पुनर्मिलन
 ### customs ID eid-homecoming
@@ -99,7 +99,7 @@ Obon is often a time to return home, welcome ancestors, and see them off. Bon od
 ### title
 Mudik dan Reuni
 ### summary
-Halaman ini melihat Mudik dan Reuni melalui tanggal, hubungan, dan perbedaan setempat. Tidak semua keluarga atau komunitas menjalaninya dengan cara yang sama.
+Pulang kampung bukan pola satu hari raya: di Taiwan gelombang utamanya Tahun Baru Imlek, di Jepang pergantian tahun dan Obon, di Tiongkok chunyun sekitar empat puluh hari di sekitar Festival Musim Semi, sedangkan Thanksgiving menjadi gelombang terbesar di Amerika Serikat. Di India, perjalanan mengikuti festival tiap negara bagian; di Indonesia, mudik berkumpul sekitar Idulfitri; di Brasil, kalender sekolah dan keluarga ikut menentukan waktunya. Halaman ini membandingkan tanggal, cuti, tekanan perjalanan, dan cara berkumpul, sambil mengakui pilihan orang yang tidak bisa atau tidak ingin bepergian.
 ### keywords
 Mudik dan Reuni, Mudik, Reuni Keluarga
 ### customs ID eid-homecoming
@@ -115,7 +115,7 @@ Sebagian besar wilayah tanggal 08-13 hingga 08-16, tanggal setempat dapat berbed
 ### title
 Volta para Casa e Reencontros
 ### summary
-Esta página observa Volta para Casa e Reencontros a partir das datas, dos vínculos e das diferenças locais. Nenhuma família ou comunidade precisa vivê-lo do mesmo modo.
+Voltar para casa não segue um único feriado: em Taiwan, a maior onda vem do Ano-Novo Lunar; no Japão, da virada do ano e do Obon; na China continental, do chunyun de cerca de quarenta dias em torno do Festival da Primavera; e, nos Estados Unidos, do Dia de Ação de Graças. Na Índia, as viagens acompanham as festas de cada estado; na Indonésia, o mudik se concentra em torno do Eid al-Fitr; no Brasil, calendários escolares e familiares também distribuem os retornos. Esta página compara datas, folgas, pressão sobre o transporte e formas de reencontro, incluindo a escolha de quem não pode ou não quer viajar.
 ### keywords
 Volta para Casa e Reencontros, Volta para Casa, Reencontro
 ### customs ID eid-homecoming

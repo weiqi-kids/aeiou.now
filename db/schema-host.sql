@@ -418,6 +418,29 @@ CREATE TABLE IF NOT EXISTS topic_search_metrics (
 CREATE INDEX IF NOT EXISTS idx_tsm_topic_date ON topic_search_metrics(topic_id, metric_date);
 CREATE INDEX IF NOT EXISTS idx_tsm_date ON topic_search_metrics(metric_date);
 
+-- ============ §8.2 搜尋查詢域(2026-08-22 新增) =============================
+-- GSC 的 page/country 聚合可以餵 HotScore，但無法回答「哪個查詢落在哪頁、
+-- 為什麼前十名沒有點擊」。這張表保存主機私有的 query × page × date 聚合，
+-- 不進 data/、D1 或前端；page_url 直接保存當時的 canonical URL，避免 slug
+-- 改名後把歷史查詢錯接到新頁。
+--
+-- 查詢字串來自 Google Search Console 的聚合報表，不直接等於讀者身分，
+-- 但仍可能含敏感詞；只留在主機，用於 SEO 工作清單，不在任何靜態 export 路徑上。
+CREATE TABLE IF NOT EXISTS gsc_query_metrics (
+  metric_date  TEXT NOT NULL,                 -- 'YYYY-MM-DD',GSC 的資料日
+  locale       TEXT NOT NULL,                 -- 由頁面子網域反查
+  query        TEXT NOT NULL,                 -- GSC query 維度
+  page_url     TEXT NOT NULL,                 -- GSC page 維度
+  impressions  INTEGER NOT NULL DEFAULT 0,
+  clicks       INTEGER NOT NULL DEFAULT 0,
+  position_sum REAL NOT NULL DEFAULT 0,       -- 曝光加權名次的分子
+  fetched_at   INTEGER NOT NULL,
+  PRIMARY KEY (metric_date, locale, query, page_url)
+);
+CREATE INDEX IF NOT EXISTS idx_gqm_date ON gsc_query_metrics(metric_date);
+CREATE INDEX IF NOT EXISTS idx_gqm_page ON gsc_query_metrics(page_url, metric_date);
+CREATE INDEX IF NOT EXISTS idx_gqm_query ON gsc_query_metrics(query, metric_date);
+
 -- ---------------------------------------------------------------------------
 -- reaction 計數回流(2026-08-21)
 -- ---------------------------------------------------------------------------

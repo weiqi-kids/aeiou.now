@@ -681,6 +681,29 @@ CREATE TABLE analytics_aggregates (
 );
 ```
 
+### 8.2 GSC query/page 工作清單
+
+`gsc_query_metrics` 是主機私有的 SEO 診斷累積表。查詢字串來自 GSC 的聚合報表，
+不直接等於讀者身分但仍可能含敏感詞，因此不出主機。`gsc-topic-metrics.mjs` 每日以
+`date × query × page` 拉取並冪等覆蓋最近資料窗，供 `seo-growth.mjs` 判斷「前十名
+卻沒有點擊」、「11–20 名可搶救」與「查詢和落地頁可能答非所問」。它不進
+`data/`、D1、靜態站或前端；若只需要搜尋曝光熱度，使用前一節的
+`topic_search_metrics`。
+
+```sql
+CREATE TABLE gsc_query_metrics (
+  metric_date  TEXT NOT NULL,
+  locale       TEXT NOT NULL,
+  query        TEXT NOT NULL,
+  page_url     TEXT NOT NULL,
+  impressions  INTEGER NOT NULL DEFAULT 0,
+  clicks       INTEGER NOT NULL DEFAULT 0,
+  position_sum REAL NOT NULL DEFAULT 0,
+  fetched_at   INTEGER NOT NULL,
+  PRIMARY KEY (metric_date, locale, query, page_url)
+);
+```
+
 > 草案 §35 的「不保存不必要的個資」在此落實:GA4 只收匿名聚合維度(前端直送 Google,不經 Worker);D1 只承載互動寫入本身,不存瀏覽原始事件。
 
 ---

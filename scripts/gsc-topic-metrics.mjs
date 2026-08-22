@@ -8,6 +8,9 @@
 //   node scripts/gsc-topic-metrics.mjs --days 90    一次回補更長區間
 //   node scripts/gsc-topic-metrics.mjs --dry-run    只印不寫
 //
+// 除了 page/country 的 HotScore 累積，本支也保存 query/page/date 的主機私有聚合
+// (`gsc_query_metrics`)。這是 SEO 工作清單的證據來源，不進 data/、D1 或前端。
+//
 // -- 為什麼是 GSC 而不是 GA4 ---------------------------------------------
 // 2026-08-20 實測:GA4 近 28 天 146 sessions,其中 140 個(96%)是機器——
 // direct + 平均停留 0-4 秒 + 落在七站根目錄,來源國集中在美/德/波/愛(資料中心)。
@@ -69,10 +72,32 @@ const HOST_LOCALE = {
   "br.aeiou.now": "pt-BR",
 };
 
+// schema-host.sql 是新庫的權威；這個小型 CREATE IF NOT EXISTS 讓既有主機庫在
+// 不需重建、不需停掉其他資料的情況下，第一次跑新版腳本也能安全補上加法欄位。
+function ensureQueryMetricsSchema(db) {
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS gsc_query_metrics (
+      metric_date TEXT NOT NULL,
+      locale TEXT NOT NULL,
+      query TEXT NOT NULL,
+      page_url TEXT NOT NULL,
+      impressions INTEGER NOT NULL DEFAULT 0,
+      clicks INTEGER NOT NULL DEFAULT 0,
+      position_sum REAL NOT NULL DEFAULT 0,
+      fetched_at INTEGER NOT NULL,
+      PRIMARY KEY (metric_date, locale, query, page_url)
+    );
+    CREATE INDEX IF NOT EXISTS idx_gqm_date ON gsc_query_metrics(metric_date);
+    CREATE INDEX IF NOT EXISTS idx_gqm_page ON gsc_query_metrics(page_url, metric_date);
+    CREATE INDEX IF NOT EXISTS idx_gqm_query ON gsc_query_metrics(query, metric_date);
+  `);
+}
+
 const dayStr = (n) => new Date(Date.now() - n * 86400000).toISOString().slice(0, 10);
 
 const db = openDb();
-const job = beginJob(db, { jobName: JOB_NAME, scheduledAt: slotStart(86400) });
+if (!DRY_RUN) ensureQueryMetricsSchema(db);
+const job = DRY_RUN ? null : beginJob(db, { jobName: JOB_NAME, scheduledAt: slotStart(86400) });
 
 try {
   if (!existsSync(SA)) throw new Error(`缺 SA 金鑰:${SA}`);
@@ -89,21 +114,28 @@ try {
   const endDate = dayStr(0);
   log(`[${JOB_NAME}] 抓 GSC ${startDate} -> ${endDate}(date x page x country)`);
 
+  const fetchRows = async (dimensions) => {
+    const out = [];
+    for (let startRow = 0; ; startRow += PAGE_SIZE) {
+      const res = await gscQuery(SA, GSC_SITE, {
+        startDate,
+        endDate,
+        dimensions,
+        rowLimit: PAGE_SIZE,
+        startRow,
+      });
+      const batch = res.rows || [];
+      out.push(...batch);
+      if (batch.length < PAGE_SIZE) break;
+    }
+    return out;
+  };
+
   // 一次把三個維度都要下來:date 讓我們存得到每日曲線,country 讓 scope 分得出國別。
-  const rows = [];
-  for (let startRow = 0; ; startRow += PAGE_SIZE) {
-    const res = await gscQuery(SA, GSC_SITE, {
-      startDate,
-      endDate,
-      dimensions: ["date", "page", "country"],
-      rowLimit: PAGE_SIZE,
-      startRow,
-    });
-    const batch = res.rows || [];
-    rows.push(...batch);
-    if (batch.length < PAGE_SIZE) break;
-  }
-  log(`[${JOB_NAME}] GSC 回 ${rows.length} 列`);
+  const rows = await fetchRows(["date", "page", "country"]);
+  // query/page 不帶 country，避免把同一查詢拆成很多小列；page 的 host 已足以反查 locale。
+  const queryRows = await fetchRows(["date", "query", "page"]);
+  log(`[${JOB_NAME}] GSC 回 ${rows.length} 列 page/country、${queryRows.length} 列 query/page`);
 
   // 聚合到 (date, topic, locale, scope)。
   const agg = new Map();
@@ -163,7 +195,26 @@ try {
   }
   log(`[${JOB_NAME}] 聚合為 ${agg.size} 筆 (date x topic x locale x scope)`);
 
+  // 聚合到 (date, locale, query, page)。非本站七個正式 host 的舊網址不進來，
+  // 但不因為頁面不是 Topic 就丟掉——首頁、問題頁等入口也可能是 CTR 瓶頸。
+  const queryAgg = new Map();
+  for (const r of queryRows) {
+    const [date, query, pageUrl] = r.keys;
+    if (!query || !pageUrl) continue;
+    let locale;
+    try { locale = HOST_LOCALE[new URL(pageUrl).host]; } catch { locale = null; }
+    if (!locale) continue;
+    const key = `${date}\t${locale}\t${query}\t${pageUrl}`;
+    const cur = queryAgg.get(key) || { impressions: 0, clicks: 0, position_sum: 0 };
+    cur.impressions += Number(r.impressions) || 0;
+    cur.clicks += Number(r.clicks) || 0;
+    cur.position_sum += (Number(r.position) || 0) * (Number(r.impressions) || 0);
+    queryAgg.set(key, cur);
+  }
+  log(`[${JOB_NAME}] query/page 聚合為 ${queryAgg.size} 筆 (主機私有)`);
+
   let written = 0;
+  let queryWritten = 0;
   if (DRY_RUN) {
     log(`[${JOB_NAME}] --dry-run:不寫入`);
   } else {
@@ -178,6 +229,16 @@ try {
          position_sum = excluded.position_sum,
          fetched_at   = excluded.fetched_at`,
     );
+    const queryStmt = db.prepare(
+      `INSERT INTO gsc_query_metrics
+         (metric_date, locale, query, page_url, impressions, clicks, position_sum, fetched_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+       ON CONFLICT(metric_date, locale, query, page_url) DO UPDATE SET
+         impressions = excluded.impressions,
+         clicks = excluded.clicks,
+         position_sum = excluded.position_sum,
+         fetched_at = excluded.fetched_at`,
+    );
     // node:sqlite 沒有 better-sqlite3 的 db.transaction() —— 用 exec 手開,
     // 比照 scripts/import-questions.mjs 的寫法(失敗一律 ROLLBACK,不留半套資料)。
     db.exec("BEGIN");
@@ -186,12 +247,17 @@ try {
         const [date, topicId, locale, scope] = key.split(" ");
         stmt.run(date, topicId, locale, scope, v.impressions, v.clicks, v.position_sum, at);
       }
+      for (const [key, v] of queryAgg.entries()) {
+        const [date, locale, query, pageUrl] = key.split("\t");
+        queryStmt.run(date, locale, query, pageUrl, v.impressions, v.clicks, v.position_sum, at);
+      }
       db.exec("COMMIT");
     } catch (e) {
       db.exec("ROLLBACK");
       throw e;
     }
     written = agg.size;
+    queryWritten = queryAgg.size;
   }
 
   // -- 就緒度:什麼時候可以拿來驅動 HotScore(判準見檔頭) --
@@ -209,10 +275,10 @@ try {
       + `(判準 >=30 才可驅動 HotScore;現在${median >= 30 ? "已達標" : "未達標,繼續累積"})`,
   );
 
-  finishJob(db, job, { status: "success", read: rows.length, created: written });
-  log(`[${JOB_NAME}] success(讀 ${rows.length} 列,寫 ${written} 筆)`);
+  if (!DRY_RUN) finishJob(db, job, { status: "success", read: rows.length + queryRows.length, created: written + queryWritten });
+  log(`[${JOB_NAME}] success(讀 ${rows.length} + ${queryRows.length} 列,寫 ${written} + ${queryWritten} 筆)`);
 } catch (err) {
-  finishJob(db, job, { status: "failed", error: String(err && err.message ? err.message : err) });
+  if (!DRY_RUN) finishJob(db, job, { status: "failed", error: String(err && err.message ? err.message : err) });
   log(`[${JOB_NAME}] failed:${err && err.stack ? err.stack : err}`);
   process.exit(1);
 }

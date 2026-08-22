@@ -23,6 +23,19 @@ B=export-data; grep -rl "$B" scripts .github docs site api | grep -v "scripts/$B
 cat /etc/cron.d/aeiou
 ```
 
+## 搜尋成長診斷（不屬於 cron）
+
+先用每日 GSC job 累積查詢與落地頁，再產生只讀工作清單：
+
+```bash
+node scripts/gsc-topic-metrics.mjs --days 28
+node scripts/seo-growth.mjs --days 28
+```
+
+`gsc_query_metrics` 只存在主機，`seo-growth.mjs` 會把前十名零點擊、
+11–20 名可搶救、查詢與落地頁可能不對題，以及未來 120 天的 T-21 季節跑道
+排成優先序；它不改內容、不改 HotScore，也不匯出查詢字串。
+
 ## `scripts/oneoff/` 的紅線
 
 **這裡的腳本不要因為「看起來可以重跑」就重跑。**它們會覆寫已經人工維護過的檔案:

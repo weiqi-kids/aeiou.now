@@ -40,11 +40,11 @@
 
 ## locale zh-TW
 ### title
-排燈節
+排燈節（Diwali）
 ### summary
-排燈節是五天的節期，不是一天。這一頁把主日（Lakshmi–Ganesha Puja）、開場的 Dhanteras、收尾的 Bhai Dooj 分開看，並比較它在印度與在美國紐約市的不同身分：一邊是全國假日與五天儀式，一邊是二○二三年才立法確立的公立學校停課日。
+排燈節（Diwali）是五天的節期，不是一天。這一頁把主日（Lakshmi–Ganesha Puja）、開場的 Dhanteras、收尾的 Bhai Dooj 分開看，並比較它在印度與在美國紐約市的不同身分：一邊是全國假日與五天儀式，一邊是二○二三年才立法確立的公立學校停課日。
 ### keywords
-排燈節、屠妖節、Deepavali、Dhanteras、Bhai Dooj、Lakshmi Puja
+排燈節、屠妖節、Diwali、Deepavali、Dhanteras、Bhai Dooj、Lakshmi Puja
 ### customs IN diwali
 排燈節主日是五天節期的第三天，家戶點燈、祭拜象頭神 Ganesha 與財富女神 Lakshmi，祈求豐足。印度觀光部把阿約提亞、瓦拉納西、阿姆利則、齋浦爾與南印各地列為節期最具規模的地方，但點幾盞燈、拜哪一位、要不要放煙火，家庭之間差很多。二○二五年，Deepavali 被列入聯合國教科文組織的人類非物質文化遺產名錄。
 ### customs IN dhanteras
@@ -86,11 +86,11 @@ Diwali is not a federal holiday in the United States, but New York State passed 
 Under New York State law, New York City public schools are closed on the day of Diwali
 ## locale ja
 ### title
-ディワリ
+ディワリ（Diwali）
 ### summary
-ディワリは一日ではなく五日間の期間である。このページでは中心日（ラクシュミー・ガネーシャ供養）、初日のダンテラス、最終日のバーイー・ドゥージを分けて見ながら、インドでの国民の祝日としての姿と、2023年に法で定まったニューヨーク市の公立学校休校日という姿を比べる。
+ディワリ（Diwali）は一日ではなく五日間の期間である。このページでは中心日（ラクシュミー・ガネーシャ供養）、初日のダンテラス、最終日のバーイー・ドゥージを分けて見ながら、インドでの国民の祝日としての姿と、2023年に法で定まったニューヨーク市の公立学校休校日という姿を比べる。
 ### keywords
-ディワリ, ディーパーバリ, ダンテラス, バーイー・ドゥージ, 光の祭り
+ディワリ, Diwali, ディーパーバリ, ダンテラス, バーイー・ドゥージ, 光の祭り
 ### customs IN diwali
 中心日は五日間の三日目にあたる。各家庭が灯りをともし、ガネーシャとラクシュミーに豊かさを祈る。インド観光省はアヨーディヤー、ヴァーラーナシー、アムリトサル、ジャイプル、南インド各地を規模の大きい場所として挙げるが、灯りの数、祈る対象、花火を使うかどうかは家庭ごとに大きく違う。2025年、ディーパーバリはユネスコ無形文化遺産に登録された。
 ### date_rule IN diwali
@@ -114,11 +114,11 @@ Under New York State law, New York City public schools are closed on the day of 
 ニューヨーク州法により、ニューヨーク市の公立学校はディワリ当日休校となる
 ## locale zh-CN
 ### title
-排灯节
+排灯节（Diwali）
 ### summary
-排灯节是五天的节期，不是一天。这一页把主日（Lakshmi–Ganesha Puja）、开场的 Dhanteras、收尾的 Bhai Dooj 分开看，并比较它在印度与在美国纽约市的不同身份：一边是全国假日与五天仪式，一边是2023年才立法确立的公立学校停课日。
+排灯节（Diwali）是五天的节期，不是一天。这一页把主日（Lakshmi–Ganesha Puja）、开场的 Dhanteras、收尾的 Bhai Dooj 分开看，并比较它在印度与在美国纽约市的不同身份：一边是全国假日与五天仪式，一边是2023年才立法确立的公立学校停课日。
 ### keywords
-排灯节、万灯节、Deepavali、Dhanteras、Bhai Dooj
+排灯节、万灯节、Diwali、Deepavali、Dhanteras、Bhai Dooj
 ### customs IN diwali
 排灯节主日是五天节期的第三天，家户点灯、祭拜象头神 Ganesha 与财富女神 Lakshmi，祈求丰足。印度旅游部把阿约提亚、瓦拉纳西、阿姆利则、斋浦尔与南印各地列为节期规模最大的地方，但点几盏灯、拜哪一位、要不要放烟火，家庭之间差别很大。2025年，Deepavali 被列入联合国教科文组织人类非物质文化遗产名录。
 ### date_rule IN diwali
