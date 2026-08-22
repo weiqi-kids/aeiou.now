@@ -67,9 +67,7 @@ const withPosts = !!topic.topic_id;
       <span class="row-copy">
         <span class="row-head">
           {codes.length > 0 && (
-            <span class="row-flags" aria-hidden="true">
-              {codes.map((code) => <span class="row-flag">{countryFlag(code)}</span>)}
-            </span>
+            <span class="row-flags" aria-hidden="true">{codes.map(countryFlag).join(' ')}</span>
           )}
           <span class="row-title">{topic.title}</span>
         </span>
@@ -187,9 +185,17 @@ const withPosts = !!topic.topic_id;
     gap: 0.25rem 0.6rem;
   }
   /* 國旗列:字元本身就是內容,給它比內文大一階,才看得出「這個議題涵蓋哪些國家」 */
+  /* 一面國旗一個 <span> 時,清單頁光是這一列就佔掉全頁元素的一成多(七面 × 每張卡),
+     而它整段是 aria-hidden 的純裝飾 —— 爬蟲與螢幕閱讀器都看不到,拆成元素只是白付
+     排版成本。改成一個 span 裝一串 emoji,間距用字元空白撐(**不能用 letter-spacing**:
+     國旗是兩個 regional indicator 組成的,字距會插進中間把旗子拆散)。
+     `nowrap` 是為了保留原本 inline-flex 不換行的行為。 */
   .row-flags {
-    display: inline-flex;
-    gap: 0.15em;
+    display: inline-block;
+    white-space: nowrap;
+    /* 空白字元本身約 0.25em,比原本的 gap 0.15em 寬一點,用 word-spacing 收回來。
+       只影響空白字元,不會像 letter-spacing 那樣插進國旗的兩個 code point 中間。 */
+    word-spacing: -0.1em;
     font-size: var(--text-lg);
     line-height: 1;
   }

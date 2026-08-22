@@ -22,13 +22,31 @@ const tier = tierId
   : heatTier(score);
 const label = t(heatLabelKey(tier.id));
 const cells = Array.from({ length: HEAT_LEVELS }, (_, i) => i < tier.level);
+
+// 階梯條改成「一個元素、N 層背景」而不是「N 個 <span>」(2026-08-22)。
+// 理由:整段是 aria-hidden 的純裝飾,但在清單頁它是每張卡都乘一次的固定成本
+// (卡數 × HEAT_LEVELS 個盒子要排版)。畫面編碼不變 —— 格數與階梯高度仍然雙重編碼,
+// 加上外面的文字標籤,不依賴顏色也讀得出強弱。
+// **幾何值在這裡算,不寫死進 CSS** —— HEAT_LEVELS 來自 HEAT_TIERS.length,
+// 級距數一改,CSS 若寫死就會默默畫錯。
+const BAR_W = 0.3;      // 每根寬(em)
+const BAR_GAP = 0.14;   // 根與根的間距(em)
+const BAR_MIN = 0.4;    // 最矮那根(em)
+const BAR_MAX = 1.1;    // 最高那根(em)
+const barStep = HEAT_LEVELS > 1 ? (BAR_MAX - BAR_MIN) / (HEAT_LEVELS - 1) : 0;
+const fill = (on: boolean) => (on ? 'var(--heat-fill)' : 'var(--color-heat-track)');
+const barsStyle = [
+  `--heat-bars-w:${(HEAT_LEVELS * BAR_W + (HEAT_LEVELS - 1) * BAR_GAP).toFixed(3)}em`,
+  `--heat-bars-h:${BAR_MAX}em`,
+  `background-image:${cells.map((on) => `linear-gradient(${fill(on)},${fill(on)})`).join(',')}`,
+  `background-size:${cells.map((_, i) => `${BAR_W}em ${(BAR_MIN + i * barStep).toFixed(3)}em`).join(',')}`,
+  `background-position:${cells.map((_, i) => `${(i * (BAR_W + BAR_GAP)).toFixed(3)}em 100%`).join(',')}`,
+].join(';');
 ---
 
 <span class="heat" data-tier={tier.id} data-size={size}>
   {caption && <span class="heat-caption">{caption}</span>}
-  <span class="heat-bars" aria-hidden="true">
-    {cells.map((on) => <span class:list={['heat-bar', { on }]} />)}
-  </span>
+  <span class="heat-bars" aria-hidden="true" style={barsStyle} />
   <span class="heat-label">{label}</span>
 </span>
 
@@ -46,29 +64,19 @@ const cells = Array.from({ length: HEAT_LEVELS }, (_, i) => i < tier.level);
   .heat-caption {
     color: var(--color-ink-muted);
   }
+  /* 幾何(寬/高/每根的位置與高度)由 frontmatter 以 inline style 給,見上面的說明。
+     這裡只留不隨級距變的部分,以及「填滿的那幾根用什麼顏色」。 */
   .heat-bars {
-    display: inline-flex;
-    align-items: flex-end;
-    gap: 0.14em;
-    height: 1.1em;
+    display: inline-block;
+    inline-size: var(--heat-bars-w);
+    block-size: var(--heat-bars-h);
+    background-repeat: no-repeat;
   }
-  .heat-bar {
-    width: 0.3em;
-    background: var(--color-heat-track);
-    border-radius: var(--radius-sm);
-  }
-  /* 階梯狀高度:格數與高度雙重編碼,不依賴顏色也讀得出強弱 */
-  .heat-bar:nth-child(1) { height: 0.4em; }
-  .heat-bar:nth-child(2) { height: 0.575em; }
-  .heat-bar:nth-child(3) { height: 0.75em; }
-  .heat-bar:nth-child(4) { height: 0.925em; }
-  .heat-bar:nth-child(5) { height: 1.1em; }
-
-  .heat[data-tier='quiet'] .heat-bar.on { background: var(--color-heat-quiet); }
-  .heat[data-tier='warm'] .heat-bar.on { background: var(--color-heat-warm); }
-  .heat[data-tier='rising'] .heat-bar.on { background: var(--color-heat-rising); }
-  .heat[data-tier='hot'] .heat-bar.on { background: var(--color-heat-hot); }
-  .heat[data-tier='blast'] .heat-bar.on { background: var(--color-heat-blast); }
+  .heat[data-tier='quiet'] .heat-bars { --heat-fill: var(--color-heat-quiet); }
+  .heat[data-tier='warm'] .heat-bars { --heat-fill: var(--color-heat-warm); }
+  .heat[data-tier='rising'] .heat-bars { --heat-fill: var(--color-heat-rising); }
+  .heat[data-tier='hot'] .heat-bars { --heat-fill: var(--color-heat-hot); }
+  .heat[data-tier='blast'] .heat-bars { --heat-fill: var(--color-heat-blast); }
 
   .heat-label {
     font-weight: 700;
