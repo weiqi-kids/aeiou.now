@@ -254,7 +254,7 @@ CREATE TABLE topic_cycles (
 >
 > **2026-08-22 上線時修正兩處**:
 > ① 向量來源除了 `canonical_name` + alias + 七語 `title`,**還要加七語 keywords**。只放 title 時,「mooncake」「kue bulan」一個結果都沒有 —— 中秋那個 Topic 的英文與印尼文標題裡沒有「月餅」這個詞,而 keywords 正好是人工策展的「別人會怎麼稱呼它」。仍然不含 summary 與逐國散文(那些字太長,會把「這是什麼」稀釋成「提到過什麼」)。
-> ② **一個向量會把精確名稱稀釋掉**,所以搜尋是**兩層**的:先用 D1 的 slug/title/keywords 做字面比對(命中即確定,`score=1`,排最前),向量只留給「用不同的字講同一件事」。實測「Dia dos Namorados」查它自己的 Topic 只有 0.494,而純亂碼雜訊可以到 0.485 —— 兩個區間重疊,**沒有任何門檻分得開**。判準與量測見 `api/src/routes/search.js` 檔頭與契約 §1b。
+> ② **一個向量會把精確名稱稀釋掉**,所以搜尋是**兩層**的:先用 D1 的 slug/title/keywords 做字面比對(命中即確定,`score=1`,排最前),向量只留給「用不同的字講同一件事」。2026-08-22 掃過一輪真實查詢,真陽性與雜訊的分數區間**重疊**,沒有任何門檻分得開。當時的量測值與判準寫在 `api/src/routes/search.js` 檔頭(那是判準的依據,不是現況);要重新校準就用 `min_score=0.3` 打一輪看分佈。契約 §1b。
 >
 > Place / Event / Post 都不進 Vectorize(討論結論)。Place/Event 用 D1 索引,Post 不提供搜尋。
 

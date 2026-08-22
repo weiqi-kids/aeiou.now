@@ -82,10 +82,16 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       ⚠ **選題時先確認七個市場的官方來源從主機打得通**。這一輪原本要做 `tree-planting-day`,
       七國日期分歧也夠大,但印尼(`menlhk.go.id`/`bphn.go.id`)與美國(`usda.gov`)的頁面
       從本主機一律 403/000,查不到就不能寫(硬寫等於捏造)。改題比硬湊來源便宜。
-      可用的官方網域(2026-08-21 實測從主機打得通):`law.moj.gov.tw`、`depart.moe.edu.tw`、
-      `laws.e-gov.go.jp`、`flk.npc.gov.cn`、`fgk.chinatax.gov.cn`、`govinfo.gov`、`ecfr.gov`、
-      `pib.gov.in`、`india.gov.in`、`labour.gov.in`、`setneg.go.id`、`kemnaker.go.id`、
-      `kemenag.go.id`、`ayosehat.kemkes.go.id`、`planalto.gov.br`、`gov.br`。
+      **選題前先確認七個市場的官方來源從主機打得通**(這件事會變,不要抄清單,自己打一次):
+      ```bash
+      for u in <候選網址...>; do
+        printf '%s  %s\n' "$(curl -sL --max-time 25 -o /dev/null -w '%{http_code}' \
+          -A 'Mozilla/5.0' "$u")" "$u"
+      done
+      # 000/403 = 從本主機打不通。既有 Topic 用過而且驗得過的網域可以當起點:
+      grep -h '^- source:' content/topics/*.md | sed 's|^- source: ||' \
+        | awk -F/ '{print $3}' | sort -u
+      ```
 
 ## 這一輪的收尾(2026-08-20)
 
@@ -135,11 +141,16 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       **這一項不是「再等等看」**——要看的是名次分布的變化,不是時間。
       2026-08-21 把這個判準**做進工具**了:`node scripts/seo-health.mjs` 的 ③ 層現在固定印
       「意圖分類」兩行(曝光加權平均名次),不必再有人手算一次 —— 手算的判準只存在於某一次對話裡。
-      **卡點是事實不是猜測。2026-08-22 覆查:兩個前提已經達成一個** ——
-      `lastCrawlTime=2026-08-21T18:17:38Z`(前一次是 08-19T20:45),**Google 已經回來爬過改版後的頁面**;
-      但 GSC 資料窗仍停在 08-19。GSC 固定落後 2–3 天,所以 08-21 的資料約 08-23/24 才會出現。
-      **剩下的解鎖條件只有一個**:資料窗推進到 08-21 之後。到那天跑
-      `node scripts/seo-health.mjs` 看 ③ 層的「意圖分類」兩行即可,不必再手算。
+      **卡點有兩個前提,兩個都用指令查,不要在這裡寫當下的值**:
+      ```bash
+      # 前提①:Google 有沒有回來爬過改版後的頁面(改版是 2026-08-21)
+      node -e "const {inspectUrl}=await import('/root/seo-ops/lib/google.mjs');
+        const r=await inspectUrl('/root/.config/aeiou/ga4-sa.json','sc-domain:aeiou.now',
+        'https://aeiou.now/'); console.log(r.lastCrawlTime, r.coverageState)"
+      # 前提②:GSC 資料窗有沒有推進到 2026-08-21 之後(GSC 固定落後 2–3 天)
+      sqlite3 db/aeiou.sqlite "SELECT MAX(metric_date) FROM topic_search_metrics WHERE scope='global'"
+      ```
+      兩個都到了就跑 `node scripts/seo-health.mjs`,看 ③ 層的「意圖分類」兩行,**不必再手算**。
       當時(改版前、5 天樣本)的基準已量出來:日期/名稱型 23 查詢 69 曝光 0 點擊 17.8 名;
       跨國/制度型 1 查詢 1 曝光 0 點擊 94.0 名。
 
@@ -161,8 +172,8 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       會擋住整批(那道限流是對的,不該為種子資料放寬)。`translation_status='pending'`,
       走與真人貼文同一條翻譯路,不特例。
 - [x] **種子題淡出已解**(2026-08-21;下方「Ask the World 保鮮」那節就是解法:`25 */4` cron
-      + 原地刷新)。複驗:`node scripts/seed-ask-the-world.mjs --dry-run` → 「題庫 8 題:在線 8、
-      要刷新 0、要新增 0」。以下是當時的三條路,留著當紀錄 ——
+      + 原地刷新)。複驗:`node scripts/seed-ask-the-world.mjs --dry-run`,看「在線 N 題」
+      那一行是不是等於題庫題數。以下是當時的三條路,留著當紀錄 ——
 - [x] ~~🔴 **種子題會在 8 小時後從討論室淡出**~~ —— 契約 §1 的 feed 只回 `created_at >= now-8h`。
       重跑腳本會補一則新的(冪等判準就是「這一題現在有沒有活著的副本」),但**要有人或 cron 去跑**。
       三條路,都要用戶決定:
@@ -232,7 +243,7 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
 - [ ] ⛔ 效果觀測:等 GSC 資料窗推進到 08-22 之後再看跨國/制度型查詢的平均名次(改版前是 67.6)。
       **在那之前不要拿數字說改善或沒改善。** 與上面那一項是同一件事,同一條指令:
       `node scripts/seo-health.mjs` 的 ③ 層「意圖分類」。
-      2026-08-22 覆查:lastCrawlTime 已推進到 08-21T18:17(前提①達成),資料窗仍停在 08-19(前提②未到)。
+      與上面那一項是同一件事、同一組前提查法,不重複寫。
 
 ## 部署與封面(2026-08-21 用戶核准三項)
 
@@ -261,13 +272,20 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       key 在 `~/.config/aeiou/psi-api-key`(chmod 600,**絕不進 git**)。
       工具:`node scripts/psi-check.mjs`(裸執行量四頁 × 手機;`--detail` 看 LCP 元素與改善機會)。
 
-- [ ] 🔴 **Topic 頁手機 LCP 5.5 秒(判準「差」)** —— 量到之後才看得見的問題,不是舊卡點。
-      2026-08-22 實測(mobile):首頁 3.7s 需改善、`/topics/today/` 4.2s 差、
-      `/questions/` 3.3s 需改善、**Topic 頁 5.5s 差**(桌機 1.1s 良好)。
-      CLS 全部 0、TBT 全部良好 —— 唯一的問題就是 LCP。
-      Topic 頁的 LCP 元素是封面(1200×675 PNG、`loading="eager" fetchpriority="high"`,
-      403–461 KB)。2026-08-21 壓過一輪 PNG,但**沒有換格式也沒有給手機小尺寸**。
-      複驗:`node scripts/psi-check.mjs`
+- [ ] 🔴 **手機 LCP 未達「良好」**(2026-08-22 開始量得到之後才看得見的問題,不是舊卡點)。
+      **現況一律用指令查,本節不寫數字**:
+      ```bash
+      node scripts/psi-check.mjs                    # 四頁 × 手機,含判定(良好/需改善/差)
+      node scripts/psi-check.mjs --desktop          # 桌機對照
+      node scripts/psi-check.mjs --detail --url <該頁>   # LCP 元素與改善機會
+      ```
+      判準是 Google 的 Core Web Vitals:LCP ≤2.5s 良好、≤4s 需改善、>4s 差。
+      **要看的是哪一個指標把分數拉下來**,不是分數本身。
+      已知的結構性原因(不是現況,是設計):Topic 頁的 LCP 元素是封面 ——
+      1200×675 PNG、`loading="eager" fetchpriority="high"`,而且**只有一種尺寸一種格式**。
+      2026-08-21 壓過一輪 PNG 體積,但沒換格式、也沒給手機小尺寸;
+      列表頁用的 `site/public/covers/thumbs/*.webp` 那套機制 Topic 頁 hero 沒有用到。
+      要改的話動 `site/src/pages/topic/[slug].astro` 的 `<figure class="topic-cover">`
 
 ## 外站的 bot 封鎖不再擋下整條 hourly(2026-08-21 用戶拍板,已解)
 
@@ -385,9 +403,9 @@ node scripts/check-source-urls.mjs              # 來源連結存活(404/410、�
   排名 job 上線、筆數超過門檻會自動恢復索引,不需要改碼。查:`node scripts/check-content-depth.mjs`。
 - [ ] **持續工作:新增 Topic 一律要一次補到水位**。閘門會擋,但擋下來的是部署不是內容——
   別靠閘門提醒才想到要寫。
-  (2026-08-21 的兩個新 Topic 都是一次到位:`elders-day` 1812 唯一字元、`year-end-bonus`
-  2029,各 7–8 個變體、0 空白格,四要件同一輪進 —— md、occurrence、cover、taxonomy 白名單
-  與 52 週日曆。baseline 已重鎖兩次。)
+  (2026-08-21 的兩個新 Topic 都是四要件同一輪進:md、occurrence、cover、taxonomy 白名單
+  與 52 週日曆,baseline 當輪重鎖。**水位現況查 `node scripts/check-content-depth.mjs --report`**,
+  不在這裡寫字元數。)
 
 ### 補資料:讀者在自己國家那一格看到空白(2026-08-20 結案,轉為維護)
 
@@ -482,8 +500,7 @@ node scripts/check-source-urls.mjs --warn-only # 只看報表不擋
 
 ## 每日世界一問(2026-08-15 上線;規格=docs/briefs/daily-question.md)
 
-- [ ] **題庫要持續補**(2026-08-21 補了兩週 28 題,涵蓋天數 29 → 43,到 2026-10-02)。
-  涵蓋到哪天、還剩幾天,一律查:
+- [ ] **題庫要持續補**(2026-08-21 補過一輪)。涵蓋到哪天、還剩幾天,一律查:
   `sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT qdate) 未來天數, MAX(qdate) FROM questions WHERE qdate >= date('now')"`
   用完前端不開天窗(退最近一題),但那等於每天給讀者同一題,是可見的產品破口。
   補法:往 `content/questions.json` 檔尾加題(一天一 poll 一 guess),七語齊全、掛既有 topic;
@@ -572,7 +589,8 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
   ⚠ **先前把這一項記成「卡在專屬 property 與 SA 還沒開」,那是錯的** —— 用戶反問
   「GA4 不是原本就有嗎?不然你怎麼抓報告的?」之後查證:aeiou 早就有自己的 GCP 專案與 SA
   (`seo-ops@aeiou-seo.iam.gserviceaccount.com`,專案 `aeiou-seo`),
-  `node /root/seo-ops/bin/identity-audit.mjs --all` 實測它**不在**那 11 個共用金鑰的群組裡,
+  `node /root/seo-ops/bin/identity-audit.mjs --all` 實測它**不在**共用金鑰的分組裡
+  (那支工具會列出當下誰跟誰共用,現況以它的輸出為準),
   而 `seo-health.mjs` 一直在用它讀 GA4。缺的從來不是授權,只是腳本沒寫。
   **教訓:把「還沒做」寫成「被擋住」,會讓一件五分鐘的事永遠排不進來。**
   現在 `scripts/ga4-daily.mjs` 同時寫 `page_views`(原始)與 `page_views_human`
@@ -599,8 +617,13 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
 
   · **moderation 啟用範圍**定版:Post 兩層(規則層 + LLM 價值閘門)、Comment 只有規則層、
     Image/User/人工檢舉不做(沒有圖片上傳、沒有帳號系統;檢舉沒有帳號會變成新的攻擊面)。
-    診斷:主機 `comments` 0 筆而 D1 有筆數 —— **留言從來沒被任何東西看過**,
-    因為它不翻譯就不進價值閘門,又不回流主機。查:`node scripts/moderation-queue.mjs --report`
+    **診斷的方法**(不是結論)—— 比對主機與 D1 的留言數,差額就是沒被看過的那些:
+    ```bash
+    sqlite3 db/aeiou.sqlite "SELECT COUNT(*) FROM comments"
+    cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT COUNT(*) FROM comments"
+    node scripts/moderation-queue.mjs --report      # 工作檯待複核
+    ```
+    成因是結構性的:留言不翻譯就不進價值閘門,又不回流主機,所以主機端看不到它。
   · **19 job**:補齊 #2 #9 #10 #15 #16 #17 #18 #19。過程中揭出一個沉默的 bug ——
     `posts.cross_country_engagements` 從來沒有任何東西寫過它,而 CrossCountryScore
     一直在讀它(HotScore 七項裡有一項恆為 0,從分數上完全看不出來)。
@@ -612,10 +635,16 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
   · **R2 歸檔**:專屬 bucket `aeiou-archive`(不與同帳號其他專案共用)。
     先寫 R2 → 確認成功 → 才清原文。查:`node scripts/archive-to-r2.mjs --report`
   · **Vectorize**:index `aeiou-topics`,一個 Topic 一個向量(多語模型的全部理由)。
-    量出來的結論是**單靠門檻分不開**(真陽性 0.452–0.637 vs 雜訊最高 0.485,區間重疊),
-    所以改成兩層:字面比對命中即確定、向量只管「用不同的字講同一件事」。
-    結果 11/12 命中、5/5 正確落空、零誤報。契約 §1b。
-    查:`curl -s "$API/v1/search?q=$(printf %s 'バレンタイン' | jq -sRr @uri)"`
+    2026-08-22 當時掃過一輪真實查詢,結論是**單靠相似度門檻分不開**(真陽性與雜訊的分數
+    區間重疊),所以改成兩層:字面比對命中即確定、向量只管「用不同的字講同一件事」。
+    判準與當時的量測值寫在 `api/src/routes/search.js` 檔頭(那是判準的依據,不是現況)。
+    **現況一律重測**:
+    ```bash
+    curl -s -G "$API/v1/search" --data-urlencode "q=バレンタイン" | python3 -m json.tool
+    curl -s -G "$API/v1/search" --data-urlencode "q=<詞>" --data-urlencode "min_score=0.3"  # 看分數分佈,校準門檻用
+    cd api && npx wrangler vectorize info aeiou-topics                                       # 索引裡有幾個向量
+    ```
+    契約 §1b。
 
 ## 已知缺口(記錄在案,暫不解)
 

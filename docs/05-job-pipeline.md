@@ -56,7 +56,8 @@
 1. **#19 的 `page_views` 有,但它旁邊一定要有第二個數字。**
    ⚠ 2026-08-22 更正:先前我把這一項記成「卡在專屬 property 與 SA 還沒開」,**那是錯的**。
    aeiou 早就有自己的 GCP 專案與 SA(`seo-ops@aeiou-seo`),`identity-audit --all` 實測
-   它不在那 11 個共用金鑰的群組裡,`seo-health.mjs` 也一直在用它讀 GA4。缺的只是腳本。
+   它**不在**共用金鑰的分組裡(現況以那支工具的輸出為準),
+   而 `seo-health.mjs` 一直在用它讀 GA4。缺的從來不是授權,只是腳本沒寫。
    現在由 `ga4-daily.mjs` 拉,而且**同時寫兩個 metric**:
    `page_views`(原始值,是事實但不是「有人在看」的證據)與 `page_views_human`
    (只計 Organic Search —— 本專案認定可當真人看的那一部分)。只寫其中一個都會說謊。
