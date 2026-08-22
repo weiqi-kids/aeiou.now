@@ -518,7 +518,7 @@ node scripts/check-source-urls.mjs --warn-only # 只看報表不擋
 
 ## 每日世界一問(2026-08-15 上線;規格=docs/briefs/daily-question.md)
 
-- [ ] **題庫要持續補**(2026-08-21 補過一輪)。涵蓋到哪天、還剩幾天,一律查:
+- [ ] **題庫要持續補**(2026-08-21、2026-08-22 各補過一輪;2026-08-22 那輪加 10-03～10-09 七天)。涵蓋到哪天、還剩幾天,一律查:
   `sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT qdate) 未來天數, MAX(qdate) FROM questions WHERE qdate >= date('now')"`
   用完前端不開天窗(退最近一題),但那等於每天給讀者同一題,是可見的產品破口。
   補法:往 `content/questions.json` 檔尾加題(一天一 poll 一 guess),七語齊全、掛既有 topic;
