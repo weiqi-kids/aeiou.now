@@ -183,6 +183,16 @@ fi
 # 每一次 upsert 都要跑一次 embedding,而 Workers AI 是按用量計的。
 # 要在 import-topics 之後(名字與 keywords 才是最新的)。**不 fail-closed**:
 # 索引不新鮮只是搜尋結果少一個 Topic,不該讓線上資料停更。
+# GA4 每日拉取(docs/02-data-model.md §8)。掛在每小時但**自我節流成每日**
+# (job_locks 對齊 UTC 當日)—— 新增 cron 排程行屬 C 級改動,先問用戶;
+# 用鎖節流的效果一樣,而且少一個要維護的排程行。
+# 🔴 拉進來的數字**不准算 HotScore 的瀏覽面**(2026-08-20 拍板);用途是報表。
+# **不 fail-closed**。
+log "ga4-daily.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/ga4-daily.mjs"; then
+  log "WARN: ga4-daily 失敗,今天沒有 GA4 報表資料(不中斷 export)"
+fi
+
 log "sync-search-index.mjs ..."
 if ! "$NODE_BIN" "$REPO/scripts/sync-search-index.mjs"; then
   log "WARN: sync-search-index 失敗,語意索引這一輪不更新(不中斷 export)"

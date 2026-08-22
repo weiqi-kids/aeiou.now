@@ -44,7 +44,7 @@
 | 16 | Duplicate Check | 同 #15(Source / Topic / Translation 三種) | 每小時 | 同上 |
 | 17 | Moderation Queue | Worker 規則層(寫入當下)＋ `moderation-queue.mjs`(工作檯) | 15 分鐘 | `node scripts/moderation-queue.mjs --report` |
 | 18 | Ranking Snapshot | `ranking-snapshot.mjs`(Top 100;hourly 留 30 天、daily 永久) | 每小時 | `node scripts/ranking-snapshot.mjs --report` |
-| 19 | Analytics Aggregation | `analytics-aggregate.mjs`(**沒有 page_views**,見下) | 每小時 | `node scripts/analytics-aggregate.mjs --report` |
+| 19 | Analytics Aggregation | `analytics-aggregate.mjs`(GSC 搜尋面 + 互動面)＋ `ga4-daily.mjs`(瀏覽面) | 每小時 / 每日 | `node scripts/analytics-aggregate.mjs --report`、`node scripts/ga4-daily.mjs --report` |
 
 管線外另有三支(草案沒列,但這個站需要):
 `sync-topics-to-d1` / `sync-questions-to-d1` / `sync-reactions-from-d1`(主機 ↔ D1)、
@@ -53,12 +53,19 @@
 
 ## 三個刻意的缺口(是決定,不是漏做)
 
-1. **#19 沒有 `page_views` / `unique_users`。** 唯一的瀏覽面來源 GA4 在 2026-08-20 查出
-   近 28 天 96% 是機器(七站在 GitHub Pages 上、前面沒有 CDN,擋不掉),而專屬 property
-   還沒開。**不為了湊滿草案的十二個維度去填一個沒有來源的欄位** —— 一個恆為 0 的
-   page_views 比沒有這個維度更糟,它看起來像量測結果。
-   (`posts.views`/`unique_views` 就是這種欄位;`cross_country_engagements` 曾經也是,
-   而它一直被 HotScore 的 CrossCountryScore 讀著 —— 2026-08-22 由 #10 補上。)
+1. **#19 的 `page_views` 有,但它旁邊一定要有第二個數字。**
+   ⚠ 2026-08-22 更正:先前我把這一項記成「卡在專屬 property 與 SA 還沒開」,**那是錯的**。
+   aeiou 早就有自己的 GCP 專案與 SA(`seo-ops@aeiou-seo`),`identity-audit --all` 實測
+   它不在那 11 個共用金鑰的群組裡,`seo-health.mjs` 也一直在用它讀 GA4。缺的只是腳本。
+   現在由 `ga4-daily.mjs` 拉,而且**同時寫兩個 metric**:
+   `page_views`(原始值,是事實但不是「有人在看」的證據)與 `page_views_human`
+   (只計 Organic Search —— 本專案認定可當真人看的那一部分)。只寫其中一個都會說謊。
+   🔴 **仍然不准拿它算 HotScore 的瀏覽面**(2026-08-20 拍板未變);瀏覽面走 GSC。
+
+   這一條的普遍教訓:**不為了湊滿草案的維度去填一個沒有來源的欄位** —— 一個恆為 0 的
+   欄位比沒有這個欄位更糟,它看起來像量測結果。`posts.views`/`unique_views` 就是這種欄位;
+   `cross_country_engagements` 曾經也是,而它一直被 CrossCountryScore 讀著
+   —— 2026-08-22 由 #10 補上。
 
 2. **#3 Topic Detection 的開關是關的。** 它產生機器 Topic,而前端雖然已能標示
    (虛線徽章 + 頁首說明),排序策略也定了(策展層:人工先、機器後),

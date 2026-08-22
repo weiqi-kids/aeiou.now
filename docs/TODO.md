@@ -247,14 +247,25 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
 - [x] **壓縮進管線**:`generate-topic-cover.mjs` 產完就跑 pngquant(65–90)。
       「裸執行就必須是正確且完整的行為」—— 出圖出來就該跟兄弟一致,不靠有人記得補一刀。
       壓不小就用原檔;pngquant 不在只印警告不當錯誤。
-- [ ] ⛔ **LCP 量不到(外部卡點;用戶 2026-08-21 表示會去啟用 PSI API)**:
-      PageSpeed Insights 免金鑰配額當天已用盡,
-      而專案的 SA(`~/.config/aeiou/ga4-sa.json`)沒有 PSI 的 scope
-      —— 回 `403 Request had insufficient authentication scopes`。
-      **解鎖條件**:在該 GCP 專案啟用 PageSpeed Insights API 並給 SA 對應權限(屬用戶授權範圍)。
-      在那之前只能量到實際傳輸:壓縮後三張封面各 403–433 KB、
-      從主機取檔 0.29–0.63 秒;壓縮前是 1712–1845 KB,同一條線路約 4.5 倍時間。
-      這是 LCP 的主要成分,但**不等於 Lighthouse 的 LCP 數字**,不要當成同一件事講。
+- [x] **LCP 量到了**(2026-08-22 解開)。先前記著「PSI 免金鑰配額當天用盡」,查證後發現
+      那個配額是 **Google 的共用匿名池**(不帶 key 時所有人共用同一個 project_number),
+      不是我們用掉的,所以「等明天」永遠不會好。而專案 SA 只有 GA4/GSC 的 scope,
+      拿它打 PSI 是 403。兩條路都不通,於是被記成外部卡點。
+      **真正的解法是第三條**:在自己的 GCP 專案開一把只給 PSI 用的 API key。
+      本機 gcloud 是用戶本人帳號、對 `aeiou-seo` 是 owner,所以做得到:
+      `gcloud services enable pagespeedonline.googleapis.com --project=aeiou-seo` +
+      `gcloud services api-keys create --project=aeiou-seo --display-name=aeiou-psi
+       --api-target=service=pagespeedonline.googleapis.com`;
+      key 在 `~/.config/aeiou/psi-api-key`(chmod 600,**絕不進 git**)。
+      工具:`node scripts/psi-check.mjs`(裸執行量四頁 × 手機;`--detail` 看 LCP 元素與改善機會)。
+
+- [ ] 🔴 **Topic 頁手機 LCP 5.5 秒(判準「差」)** —— 量到之後才看得見的問題,不是舊卡點。
+      2026-08-22 實測(mobile):首頁 3.7s 需改善、`/topics/today/` 4.2s 差、
+      `/questions/` 3.3s 需改善、**Topic 頁 5.5s 差**(桌機 1.1s 良好)。
+      CLS 全部 0、TBT 全部良好 —— 唯一的問題就是 LCP。
+      Topic 頁的 LCP 元素是封面(1200×675 PNG、`loading="eager" fetchpriority="high"`,
+      403–461 KB)。2026-08-21 壓過一輪 PNG,但**沒有換格式也沒有給手機小尺寸**。
+      複驗:`node scripts/psi-check.mjs`
 
 ## 外站的 bot 封鎖不再擋下整條 hourly(2026-08-21 用戶拍板,已解)
 
@@ -555,16 +566,19 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
 - [ ] ⛔ **OAuth**(Google/GitHub/LINE;cn 市場皆不通為已知缺口)——用戶 2026-08-21 表示會去開。
   **解鎖條件**:三家的 client id / secret。拿到之後放 `~/.config/aeiou/`(不進 git),
   Worker 側用 `wrangler secret put`。在那之前 `topicGate` 對 `access_level >= 1` 一律 401。
-- [ ] ⛔ **GA4 每日拉取 job** —— 用戶 2026-08-21 表示會去開 property + 專屬 SA。
-  **解鎖條件**:建 aeiou 專屬 GCP 專案 + SA(紅線:**不共用其他站金鑰**),把 SA 加進 GA4
-  property 的檢視者。⚠ 拉到之後**仍然不准拿它算 HotScore 的瀏覽面**(2026-08-20 拍板:
-  GA4 近 28 天 96% 是機器);它的用途是報表,不是分數。
-- [x] **Markdown 安全子集已上線**(2026-08-21 用戶核准)。契約 §1 的 content 一直寫著
-  「Markdown 安全子集」,但 M1 的前端是純文字,所以 `**這樣**` 在畫面上就是一對星號。
-  紅線「絕不 innerHTML」**沒有放寬**:`site/src/lib/markdown.mjs` 回的是 **DOM 節點**,
-  安全性是結構上的、不是黑名單。`<a href>` 走白名單(只有 http/https)。
-  守這條的是 `node --test tests/site/markdown.test.mjs`(19 個)—— 它用一個**沒有
-  innerHTML setter 的**假 DOM 跑,實作一偷用就爆炸。不支援標題與圖片。
+- [x] **GA4 每日拉取 job 已上線**(2026-08-22)。
+  ⚠ **先前把這一項記成「卡在專屬 property 與 SA 還沒開」,那是錯的** —— 用戶反問
+  「GA4 不是原本就有嗎?不然你怎麼抓報告的?」之後查證:aeiou 早就有自己的 GCP 專案與 SA
+  (`seo-ops@aeiou-seo.iam.gserviceaccount.com`,專案 `aeiou-seo`),
+  `node /root/seo-ops/bin/identity-audit.mjs --all` 實測它**不在**那 11 個共用金鑰的群組裡,
+  而 `seo-health.mjs` 一直在用它讀 GA4。缺的從來不是授權,只是腳本沒寫。
+  **教訓:把「還沒做」寫成「被擋住」,會讓一件五分鐘的事永遠排不進來。**
+  現在 `scripts/ga4-daily.mjs` 同時寫 `page_views`(原始)與 `page_views_human`
+  (只計 Organic Search)—— 只寫其中一個都會說謊。掛在 hourly 但用 job_locks 自我節流成
+  每日(**新增 cron 排程行屬 C 級,沒問過就不加**)。
+  🔴 拉進來的數字仍然**不准算 HotScore 的瀏覽面**(2026-08-20 拍板未變)。
+  查:`node scripts/ga4-daily.mjs --report`
+
 - [ ] ⛔ **圖片上傳(R2+審核)卡在 R2 bucket**(用戶 2026-08-21 表示會去開)。
   **解鎖條件**:在 Cloudflare 開一個 bucket 並在 `api/wrangler.jsonc` 加 `r2_buckets` binding。
   在那之前 markdown 刻意不支援圖片語法 —— 不從渲染層開這個洞。
