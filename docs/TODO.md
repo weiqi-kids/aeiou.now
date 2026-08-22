@@ -272,7 +272,7 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       key 在 `~/.config/aeiou/psi-api-key`(chmod 600,**絕不進 git**)。
       工具:`node scripts/psi-check.mjs`(裸執行量四頁 × 手機;`--detail` 看 LCP 元素與改善機會)。
 
-- [ ] 🔴 **手機 LCP 未達「良好」**(2026-08-22 開始量得到之後才看得見的問題,不是舊卡點)。
+- [ ] 🔴 **手機 LCP 仍未達「良好」**(2026-08-22 開始量得到之後才看得見的問題,不是舊卡點)。
       **現況一律用指令查,本節不寫數字**:
       ```bash
       node scripts/psi-check.mjs                    # 四頁 × 手機,含判定(良好/需改善/差)
@@ -280,12 +280,36 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       node scripts/psi-check.mjs --detail --url <該頁>   # LCP 元素與改善機會
       ```
       判準是 Google 的 Core Web Vitals:LCP ≤2.5s 良好、≤4s 需改善、>4s 差。
-      **要看的是哪一個指標把分數拉下來**,不是分數本身。
-      已知的結構性原因(不是現況,是設計):Topic 頁的 LCP 元素是封面 ——
-      1200×675 PNG、`loading="eager" fetchpriority="high"`,而且**只有一種尺寸一種格式**。
-      2026-08-21 壓過一輪 PNG 體積,但沒換格式、也沒給手機小尺寸;
-      列表頁用的 `site/public/covers/thumbs/*.webp` 那套機制 Topic 頁 hero 沒有用到。
-      要改的話動 `site/src/pages/topic/[slug].astro` 的 `<figure class="topic-cover">`
+      **要看的是哪一個指標把分數拉下來**,不是分數本身 —— 而且對 LCP 要再往下拆一層:
+      PSI 的 `lcp-breakdown-insight` 把它分成 TTFB / 資源發現延遲 / 資源下載 / **元素渲染延遲**
+      四段。**先看哪一段最長再決定改什麼**,不然會拿圖片的藥治渲染的病(下面就是實例)。
+
+      **2026-08-22 診斷:清單頁的 LCP 不是被圖片拖垮的,是被自己的討論串請求拖垮的。**
+      實測 `/topics/today/` 的四段是 TTFB 4ms、發現 66ms、下載 44ms、**元素渲染延遲 1184ms**
+      —— 封面縮圖早就下載完了,畫面還沒畫出來。原因在時間軸上一眼可見:載入後約 730ms
+      同時射出三十幾發 `/v1/topics/<id>/feed`(**一張 Topic 卡一發**),回來的時候各自組 DOM,
+      主執行緒卡出一個 100ms 的 long task,LCP 元素就跟著等;下半頁的縮圖也被擠到 1.3 秒後才開始下載。
+      **這與 `/questions/` 2026-08-21 修掉的是同一個病**(卡數 = 內容數,並發跟著線性成長),
+      只是那次只修了問答卡,清單頁的討論串沒一起修。
+      已改:`TopicPosts.astro` 改成**進 viewport 才發 fetch**(`IntersectionObserver`,
+      `rootMargin: 200px`,沒有 IO 就退回全部立刻發 —— 降級要是可用的舊行為)。
+      查:`grep -c IntersectionObserver site/dist/_astro/TopicPosts*.js`
+
+      **下一個槓桿(尚未做,要用戶決定,因為它動的是量測而不是版面)**:GA4 的 `gtag/js`
+      是整頁最大的一筆下載,而且四成是這個站用不到的碼;它在 `<head>` 以 `async` 載入,
+      在 Lighthouse 的行動網路模擬下那些位元組會直接算進 LCP 前的頻寬。
+      現況查法(不要抄數字):
+      ```bash
+      node scripts/psi-check.mjs --detail --url https://aeiou.now/topics/today/
+      ```
+      改法是把它延到 `window.load` 之後才插入。**代價要講清楚**:在 load 之前就離開的訪客
+      不會被計到,GA4 的 session 數會少一點 —— 那是量測政策,不是我能自己改的。
+      要改的話動 `site/src/layouts/BaseLayout.astro` 的 GA4 那兩個 `<script is:inline>`。
+
+      已知的結構性原因(不是現況,是設計):Topic 頁的 LCP 元素是封面。
+      2026-08-21 壓過一輪 PNG 體積、2026-08-22 已改成響應式 WebP(`<picture>` + `srcset`),
+      所以圖片那一側目前不是瓶頸;要再確認就看該頁 `lcp-breakdown-insight` 的
+      「資源下載」那一段有沒有變長。
 
 ## 外站的 bot 封鎖不再擋下整條 hourly(2026-08-21 用戶拍板,已解)
 
@@ -319,32 +343,26 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       兩邊判準不同是刻意的:主機那支要決定「要不要擋住本站發佈」,CI 這支只回答
       「這個連結到底還活著嗎」。
 
-## 🔴 國碼有兩套並存(2026-08-21 發現,未解,要用戶決定)
+## 國碼兩套並存 —— 已解,本節只留緣由(2026-08-22 覆核)
 
-`topic_scores.scope` 同時存在 `country:TW` 與 `country:TWN`,指同一個國家。來源:
+⚠ **這一節在 2026-08-21 標成「未解、要用戶決定」,但當天稍晚就已經解掉了**(結論寫在本檔最上面
+那一節「國碼統一為 ISO-2」),兩處並存了一天,是文件漂移。**現況一律用指令查**:
 
-| 來源 | 欄位 | 編碼 | 出處 |
-|---|---|---|---|
-| GSC 每日曝光 | `topic_search_metrics.scope` | **ISO-3**(`TWN`/`JPN`/`BRA`) | Google 給的就是 ISO-3(`gsc-topic-metrics.mjs`) |
-| UGC 貼文 | `posts.country_code` | **ISO-2**(`TW`/`JP`/`BR`) | Cloudflare `request.cf.country`(契約 §0) |
+```bash
+sqlite3 db/aeiou.sqlite "SELECT DISTINCT scope FROM topic_scores        WHERE scope LIKE 'country:%'"
+sqlite3 db/aeiou.sqlite "SELECT DISTINCT scope FROM topic_search_metrics WHERE scope LIKE 'country:%'"
+ls data/rankings/
+```
+三處出現的國碼都應該是**兩碼**;冒出三碼(`TWN`/`JPN`/`BRA`)就是 `gsc-topic-metrics.mjs`
+的轉碼漏了,查 `scripts/lib/country-codes.mjs` 的對照。
 
-`compute-topic-scores.mjs` 兩邊都直接 `country:${代碼}` 串進 scope,於是同一國被切成兩個。
-這是既存設計,2026-08-21 之前沒被看見只是因為主機上的貼文太少;
-放了 Ask the World 種子題(`country_code='TW'`)之後 `data/rankings/TW/` 就冒出來了,
-與旁邊的 `TWN/` 並排。
-
-**現在不影響讀者**:站上只讀 `rankings/global/<window>.json`,
-country scope 有輸出但沒有任何頁面吃它(查:`grep -rn "rankings/" site/src/lib/ranking.mjs`)。
-
-要決定的是**哪一套當標準**,兩個方向都要動資料與腳本:
-- 站在產品這邊 → ISO-2(observance 的 `country_code`、`target_country`、`countryFlag()` 都是 ISO-2),
-  那就要在 `gsc-topic-metrics.mjs` 把 ISO-3 轉成 ISO-2,並把既有的 `topic_search_metrics` 轉一次
-  (目前只有幾天資料,轉起來便宜)。
-- 站在既有資料量這邊 → ISO-3(現在絕大多數 scope 是 ISO-3),那就在 `compute-topic-scores.mjs`
-  把 posts 的 ISO-2 轉成 ISO-3。
-兩個方向都需要一份完整的 alpha-2 ↔ alpha-3 對照(Node 沒有內建),**只做七個市場的部分對照不行**
-——貼文可能來自任何國家,漏掉的會靜靜地變成第三套代碼。
-**屬資料模型決定(`docs/02-data-model.md`),動工前問用戶。**
+緣由(歷史事實,留著是因為它解釋了為什麼對照表必須是完整 249 組):
+`topic_scores.scope` 曾同時存在 `country:TW` 與 `country:TWN`,指同一個國家 ——
+GSC 給的是 ISO-3,而 `posts.country_code`(Cloudflare,契約 §0)、`topic_observances`/`places`
+的 country_code、`data/meta/countries.json` 的 key 全是 ISO-2。`compute-topic-scores.mjs`
+兩邊都直接 `country:${代碼}` 串進 scope,於是同一國被切成兩個。方向選 ISO-2(產品這邊),
+因為只有 GSC 那一側是外來編碼。**只做七個市場的部分對照不行** —— 貼文可能來自任何國家,
+漏掉的會靜靜地變成第三套代碼。
 
 ## 搜尋數據(2026-08-20 開工)
 

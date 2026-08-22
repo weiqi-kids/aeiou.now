@@ -239,7 +239,29 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
       });
   }
 
-  document.querySelectorAll('[data-posts]').forEach(initPosts);
+  // 進 viewport 才發請求(2026-08-22)。原本是載入時每張 Topic 卡各打一次 /feed ——
+  // 清單頁(首頁/熱門/附近/活動)的卡數等於當令 Topic 數,實測單次載入是三十幾發並發,
+  // 而它們把封面縮圖擠到 1.3 秒之後才開始下載,LCP 直接被自己的討論串請求拖垮。
+  // 同一個病、同一個藥:`QuestionCard.astro` 2026-08-21 已經這樣改過。
+  //
+  // 退場條件寫死成「沒有 IntersectionObserver 就全部照舊立刻發」——降級要是可用的舊行為,
+  // 不是永遠停在 loading。rootMargin 給 200px:讀者捲到之前就備好,不會看到明顯的空窗。
+  const rooms = Array.prototype.slice.call(document.querySelectorAll('[data-posts]'));
+  if (typeof IntersectionObserver !== 'function') {
+    rooms.forEach(initPosts);
+  } else {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          io.unobserve(entry.target); // 一個看板只發一次
+          initPosts(entry.target);
+        });
+      },
+      { rootMargin: '200px 0px' },
+    );
+    rooms.forEach((room) => io.observe(room));
+  }
 </script>
 
 <style>
