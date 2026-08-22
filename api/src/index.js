@@ -25,6 +25,7 @@ import {
 import {
   handleSyncTopics, handlePendingTranslation, handleTranslations, handleReactionTotals,
   handleModerationFlags, handleModerationDecisions, handleFeedMaintenance,
+  handleArchivePut, handleArchivePosts,
 } from "./routes/internal.js";
 
 // ---------- 路由 ----------
@@ -118,6 +119,16 @@ export default {
           if (request.method !== "GET")
             return err(405, "method_not_allowed", "Use GET");
           return await handleReactionTotals(env, url);
+        }
+        if (path === "/internal/archive/put") {
+          if (request.method !== "POST")
+            return err(405, "method_not_allowed", "Use POST");
+          return await handleArchivePut(request, env);
+        }
+        if (path === "/internal/jobs/archive-posts") {
+          if (request.method !== "POST")
+            return err(405, "method_not_allowed", "Use POST");
+          return await handleArchivePosts(request, env);
         }
         if (path === "/internal/jobs/feed-maintenance") {
           if (request.method !== "POST")

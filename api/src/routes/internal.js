@@ -343,3 +343,83 @@ export async function handleFeedMaintenance(request, env) {
     200
   );
 }
+
+// ---------------------------------------------------------------------------
+// R2 冷資料歸檔(2026-08-22;docs/02-data-model.md §4 §6)
+// ---------------------------------------------------------------------------
+// 兩個方向,兩支端點:
+//   PUT  主機把 source_contents 的全文送過來(那份資料在主機 SQLite)
+//   JOB  Worker 自己把 D1 裡已封存的貼文全文搬進 R2(那份資料在 D1)
+// 兩邊都遵守同一條:**搬走的是全文,不是紀錄**。列還在、指標還在,只有那一大塊字
+// 換了地方 —— 歷史排行只需要 snapshot 不需要貼文全文,所以搬走完全不影響 1Y 排行。
+
+/** 沒有綁 R2 時一律明確回 503,不要靜靜當作成功 —— 那會讓主機把 raw_text 清掉
+ *  卻沒有任何地方存著它。這是唯一一種會真的弄丟資料的失敗方式。 */
+function requireArchive(env) {
+  if (!env.ARCHIVE) return err(503, "archive_unavailable", "R2 binding ARCHIVE is not configured");
+  return null;
+}
+
+// POST /internal/archive/put —— body: { key, text }
+export async function handleArchivePut(request, env) {
+  const gate = requireArchive(env);
+  if (gate) return gate;
+  const body = await readJson(request);
+  if (!body) return err(400, "invalid_body", "Malformed JSON body");
+  const { key, text } = body;
+  // key 只准這個形狀:避免路徑穿越(不准出現 `.`,所以 `..` 不可能組出來),
+  // 副檔名固定 .txt,讓桶裡的東西一眼看得出是什麼。
+  // ⚠ 要接受大寫:source_id 是 `src_5D3017C3…` 這種大寫十六進位。
+  //   第一版只收小寫,於是整支歸檔在第一筆就 400 —— 好在它是**先寫 R2 才清本地**,
+  //   失敗時本地全文一個字都沒掉。
+  if (typeof key !== "string" || !/^[A-Za-z0-9][A-Za-z0-9/_-]{2,180}\.txt$/.test(key))
+    return err(400, "invalid_body", "key must match ^[A-Za-z0-9][A-Za-z0-9/_-]{2,180}\\.txt$");
+  if (typeof text !== "string" || text.length === 0)
+    return err(400, "invalid_body", "text is required");
+
+  await env.ARCHIVE.put(key, text, {
+    httpMetadata: { contentType: "text/plain; charset=utf-8" },
+  });
+  return json({ key, bytes: text.length }, 200);
+}
+
+// POST /internal/jobs/archive-posts —— 把已封存的貼文全文搬進 R2
+//
+// 判準是 `archived_at`(Job 9 封存時寫的),不是 created_at:一則貼文可能很舊
+// 但一直有人在回,那它還沒被封存,不該被搬走。
+// 搬完把 content 設成空字串而**不是 NULL** —— content 是 NOT NULL,而且「空字串」
+// 與「NULL」在讀取端要走不同分支,徒增一種狀態。前端本來就不顯示 archived 貼文。
+export async function handleArchivePosts(request, env) {
+  const gate = requireArchive(env);
+  if (gate) return gate;
+  const body = (await readJson(request)) || {};
+  const olderThanDays = Number.isFinite(body.older_than_days) ? body.older_than_days : 30;
+  let limit = Number.isFinite(body.limit) ? body.limit : 200;
+  limit = Math.min(1000, Math.max(1, limit));
+  const cutoff = Math.floor(Date.now() / 1000) - olderThanDays * 86400;
+
+  const rows = (
+    await env.DB.prepare(
+      `SELECT post_id, content FROM posts
+        WHERE status = 'archived' AND archived_at IS NOT NULL AND archived_at < ?
+          AND content <> '' LIMIT ?`
+    )
+      .bind(cutoff, limit)
+      .all()
+  ).results;
+
+  let moved = 0;
+  const stmts = [];
+  for (const r of rows) {
+    const key = `posts/${r.post_id}.txt`;
+    // 一則一則 put:R2 沒有批次寫入,而且失敗要能只影響那一則。
+    // **先寫 R2 再清 D1** —— 反過來會在 put 失敗時弄丟全文。
+    await env.ARCHIVE.put(key, r.content, {
+      httpMetadata: { contentType: "text/plain; charset=utf-8" },
+    });
+    stmts.push(env.DB.prepare("UPDATE posts SET content = '' WHERE post_id = ?").bind(r.post_id));
+    moved += 1;
+  }
+  if (stmts.length > 0) await env.DB.batch(stmts);
+  return json({ candidates: rows.length, moved, cutoff }, 200);
+}

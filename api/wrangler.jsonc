@@ -17,6 +17,16 @@
       "database_name": "aeiou-ugc",
       "database_id": "75c7322a-9cdc-43d8-9d2b-4fe62aa51d9a"
     }
+  ],
+  // 冷資料歸檔(2026-08-22;docs/02-data-model.md §4 §6)。
+  // **專屬 bucket,不與同帳號的其他專案共用** —— 路徑分開不代表身分分開,
+  // 但至少不要讓兩個專案的資料落在同一個桶裡(主機 CLAUDE.md「爆炸半徑」那條)。
+  // 免費額度 10 GB;這裡放的是純文字(來源全文與封存貼文),量級是 MB 不是 GB。
+  "r2_buckets": [
+    {
+      "binding": "ARCHIVE",
+      "bucket_name": "aeiou-archive"
+    }
   ]
   // secret:SYNC_SECRET(npx wrangler secret put SYNC_SECRET;值不進 git)
 }

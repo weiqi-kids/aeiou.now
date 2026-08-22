@@ -174,6 +174,16 @@ fi
 # 而低頻來源一天只需要碰一次,不必急。
 # ⚠ 爬蟲守則見腳本檔頭 —— robots.txt、Crawl-delay、表明身分、不繞過存取控制。
 # **不 fail-closed**:抓不到來源不影響本站要輸出的任何資料。
+# R2 冷資料歸檔(docs/02-data-model.md §4 §6)。每小時跑但一輪只搬 50 筆 ——
+# R2 沒有批次寫入,一筆一次往返。判準是「超過 30 天」,所以平常這一支什麼都不做。
+# ⚠ 唯一一種會真的弄丟資料的失敗是「以為存進去了於是把原文清掉」,
+#   所以兩邊都是先寫 R2、確認成功、才清原文;Worker 沒綁 R2 時明確回 503。
+# **不 fail-closed**。
+log "archive-to-r2.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/archive-to-r2.mjs"; then
+  log "WARN: archive-to-r2 失敗,冷資料這一輪不搬(不中斷 export)"
+fi
+
 log "source-refresh.mjs ..."
 if ! "$NODE_BIN" "$REPO/scripts/source-refresh.mjs"; then
   log "WARN: source-refresh 失敗,這一輪沒有更新來源(不中斷 export)"
