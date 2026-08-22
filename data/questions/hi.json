@@ -3228,6 +3228,468 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20261003-national-day-off",
+      "date": "2026-10-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "क्या आपके यहाँ का राष्ट्रीय दिवस वह वाला है जिस दिन सचमुच छुट्टी होती है?",
+      "options": [
+        {
+          "id": "day_off",
+          "emoji": "🏖️",
+          "label": "एक दिन की छुट्टी"
+        },
+        {
+          "id": "long_weekend",
+          "emoji": "🎉",
+          "label": "लंबा वीकेंड बन जाता है"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "काम और स्कूल सामान्य रहते हैं"
+        },
+        {
+          "id": "depends",
+          "emoji": "🗺️",
+          "label": "इलाक़े पर निर्भर करता है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261003-constitution-holiday",
+      "date": "2026-10-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस देश में स्वतंत्रता दिवस के अलावा एक और राष्ट्रीय अवकाश है, जो **संविधान लागू होने** का दिन है?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261004-elders-what",
+      "date": "2026-10-04",
+      "kind": "poll",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके यहाँ बुज़ुर्गों के दिन लोग आम तौर पर क्या करते हैं?",
+      "options": [
+        {
+          "id": "visit",
+          "emoji": "🏠",
+          "label": "बड़ों से मिलने जाते हैं"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "तोहफ़ा या खाना"
+        },
+        {
+          "id": "event",
+          "emoji": "🎪",
+          "label": "समुदाय या स्कूल का कार्यक्रम"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "यहाँ ऐसा रिवाज़ नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261004-elders-holiday",
+      "date": "2026-10-04",
+      "kind": "guess",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस देश में बुज़ुर्गों का दिन सचमुच **राष्ट्रीय अवकाश** है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261005-teachers-gift",
+      "date": "2026-10-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके यहाँ शिक्षक दिवस पर क्या विद्यार्थी शिक्षक को कुछ देते हैं?",
+      "options": [
+        {
+          "id": "flower",
+          "emoji": "💐",
+          "label": "फूल"
+        },
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "कार्ड या संदेश"
+        },
+        {
+          "id": "nothing",
+          "emoji": "🙅",
+          "label": "कुछ नहीं"
+        },
+        {
+          "id": "no_day",
+          "emoji": "🤷",
+          "label": "हमारे यहाँ शिक्षक दिवस नहीं है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261005-teachers-philosopher",
+      "date": "2026-10-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस देश का शिक्षक दिवस एक ऐसे **दार्शनिक के जन्मदिन** पर है जो राष्ट्रपति भी रहे?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261006-labour-day-off",
+      "date": "2026-10-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "मज़दूर दिवस पर क्या आप काम करते हैं?",
+      "options": [
+        {
+          "id": "off",
+          "emoji": "🛌",
+          "label": "छुट्टी रहती है"
+        },
+        {
+          "id": "work_paid",
+          "emoji": "💰",
+          "label": "काम करता/करती हूँ, पर अतिरिक्त वेतन मिलता है"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "सामान्य दिन की तरह"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "हमारे यहाँ वह दिन नहीं होता"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261006-labour-september",
+      "date": "2026-10-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस देश में मज़दूर दिवस 1 मई नहीं, बल्कि **सितंबर का पहला सोमवार** है?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261007-childrens-school",
+      "date": "2026-10-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके यहाँ बाल दिवस पर स्कूल में क्या होता है?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎈",
+          "label": "स्कूल बंद रहता है"
+        },
+        {
+          "id": "party",
+          "emoji": "🎪",
+          "label": "कक्षाएँ चलती हैं, पर कार्यक्रम होते हैं"
+        },
+        {
+          "id": "normal",
+          "emoji": "📚",
+          "label": "बिलकुल सामान्य दिन"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "हमारे यहाँ बाल दिवस नहीं है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261007-childrens-july",
+      "date": "2026-10-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस देश का राष्ट्रीय बाल दिवस **23 जुलाई** को होता है?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261008-bonus-expect",
+      "date": "2026-10-08",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "साल के अंत में क्या आपको कोई अतिरिक्त रक़म मिलती है?",
+      "options": [
+        {
+          "id": "law",
+          "emoji": "⚖️",
+          "label": "क़ानून से मिलना ही है"
+        },
+        {
+          "id": "company",
+          "emoji": "📈",
+          "label": "कंपनी के मुनाफ़े पर निर्भर"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "ऐसा कुछ नहीं होता"
+        },
+        {
+          "id": "dunno",
+          "emoji": "🤷",
+          "label": "पता नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261008-thirteenth-salary",
+      "date": "2026-10-08",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस देश में **तेरहवाँ वेतन** 1962 में ही क़ानून बना दायित्व है, और देर से देने पर जुर्माना लगता है?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261009-exam-days",
+      "date": "2026-10-09",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके यहाँ सबसे बड़ी प्रवेश परीक्षा कितने दिन चलती है?",
+      "options": [
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "एक दिन"
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": "दो दिन"
+        },
+        {
+          "id": "three_plus",
+          "emoji": "📅",
+          "label": "तीन दिन या उससे ज़्यादा"
+        },
+        {
+          "id": "no_exam",
+          "emoji": "🤷",
+          "label": "ऐसी कोई राष्ट्रीय परीक्षा नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261009-exam-june",
+      "date": "2026-10-09",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस देश की विश्वविद्यालय प्रवेश परीक्षा हर साल **7 और 8 जून** को होती है और पूरे देश में एक ही समय शुरू होती है?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

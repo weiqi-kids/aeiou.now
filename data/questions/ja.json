@@ -3228,6 +3228,468 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20261003-national-day-off",
+      "date": "2026-10-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "そちらの建国記念の日は、実際に休みになる種類のものですか?",
+      "options": [
+        {
+          "id": "day_off",
+          "emoji": "🏖️",
+          "label": "一日休み"
+        },
+        {
+          "id": "long_weekend",
+          "emoji": "🎉",
+          "label": "連休になる"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "通常どおり仕事・学校"
+        },
+        {
+          "id": "depends",
+          "emoji": "🗺️",
+          "label": "地域による"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261003-constitution-holiday",
+      "date": "2026-10-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:独立記念日とは別に、**憲法が施行された日**を祝う国民の祝日をもつのはどこ?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261004-elders-what",
+      "date": "2026-10-04",
+      "kind": "poll",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "そちらで高齢者を敬う日には、みんな何をしますか?",
+      "options": [
+        {
+          "id": "visit",
+          "emoji": "🏠",
+          "label": "実家や施設に会いに行く"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "贈り物や食事"
+        },
+        {
+          "id": "event",
+          "emoji": "🎪",
+          "label": "地域や学校の行事"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "そういう習慣はない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261004-elders-holiday",
+      "date": "2026-10-04",
+      "kind": "guess",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:高齢者を敬う日を**国民の祝日**にして、実際に休みになるのはどこ?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261005-teachers-gift",
+      "date": "2026-10-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "そちらの教師の日、生徒は先生に何か渡しますか?",
+      "options": [
+        {
+          "id": "flower",
+          "emoji": "💐",
+          "label": "花を渡す"
+        },
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "カードやメッセージ"
+        },
+        {
+          "id": "nothing",
+          "emoji": "🙅",
+          "label": "何も渡さない"
+        },
+        {
+          "id": "no_day",
+          "emoji": "🤷",
+          "label": "教師の日というものがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261005-teachers-philosopher",
+      "date": "2026-10-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:教師の日を、**大統領を務めた哲学者**の誕生日にしている国はどこ?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261006-labour-day-off",
+      "date": "2026-10-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "労働者の日、あなたは仕事ですか?",
+      "options": [
+        {
+          "id": "off",
+          "emoji": "🛌",
+          "label": "休み"
+        },
+        {
+          "id": "work_paid",
+          "emoji": "💰",
+          "label": "仕事だが割増がつく"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "通常どおりで特に違いはない"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "そういう日はない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261006-labour-september",
+      "date": "2026-10-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:労働者の日を5月1日ではなく**9月の第1月曜日**に置いている国はどこ?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261007-childrens-school",
+      "date": "2026-10-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "そちらの子どもの日、学校はどうなりますか?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎈",
+          "label": "休みになる"
+        },
+        {
+          "id": "party",
+          "emoji": "🎪",
+          "label": "授業はあるが行事がある"
+        },
+        {
+          "id": "normal",
+          "emoji": "📚",
+          "label": "普段どおり"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "子どもの日はない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261007-childrens-july",
+      "date": "2026-10-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:国の子どもの日が **7月23日** なのはどこ?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261008-bonus-expect",
+      "date": "2026-10-08",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "年末に、給与とは別のお金を受け取りますか?",
+      "options": [
+        {
+          "id": "law",
+          "emoji": "⚖️",
+          "label": "法律で必ず出る"
+        },
+        {
+          "id": "company",
+          "emoji": "📈",
+          "label": "会社の業績しだい"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "そういうものはない"
+        },
+        {
+          "id": "dunno",
+          "emoji": "🤷",
+          "label": "わからない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261008-thirteenth-salary",
+      "date": "2026-10-08",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:「**13か月目の給与**」が1962年に立法された義務で、遅配には罰則まであるのはどこ?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261009-exam-days",
+      "date": "2026-10-09",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "そちらでいちばん重い進学試験は、何日かかりますか?",
+      "options": [
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "1日"
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": "2日"
+        },
+        {
+          "id": "three_plus",
+          "emoji": "📅",
+          "label": "3日以上"
+        },
+        {
+          "id": "no_exam",
+          "emoji": "🤷",
+          "label": "そうした全国試験はない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261009-exam-june",
+      "date": "2026-10-09",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クイズ:大学入学試験が毎年**6月7日・8日**に固定され、全国一斉に始まるのはどこ?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

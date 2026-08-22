@@ -7533,6 +7533,1084 @@
         "id": "India. Pakaian berkabung Hindu berwarna putih — janda khususnya mengenakannya lama sesudahnya — dan putih di sini bukan kekosongan, melainkan keadaan telah keluar dari warna dan hiasan. Hal yang sama berlaku di Asia Timur: kain berkabung Tionghoa Han adalah rami putih yang tidak dikelantang, itulah sebabnya ungkapan klasik untuk berkabung sama sekali tidak memuat kata hitam; dan meski pemakaman Jepang modern dihadiri dengan pakaian hitam, putih tetap yang dikenakan pada jenazah. Yang memantapkan hitam sebagai warna duka adalah kebiasaan Eropa awal-modern, lalu tata cara pemakaman Barat membawanya keluar — sehingga kini banyak tempat menjalankan **dua sistem sekaligus**: jas hitam untuk upacara, sementara keluarga tetap berputih pada saat-saat tertentu. Intinya bukan warna mana yang benar, melainkan bahwa hitam sebagai warna duka jauh lebih muda daripada yang diduga kebanyakan orang.",
         "pt-BR": "Índia. O luto hindu se veste de branco — a viúva em especial pode usá-lo por muito tempo depois — e o branco aqui não é vazio, e sim o estado de ter saído da cor e do ornamento. O mesmo vale no Leste Asiático: as vestes de luto chinesas han são de linho branco não alvejado, e por isso a expressão clássica para entrar em luto não contém preto algum; e embora os funerais japoneses modernos sejam de preto, é de branco que se veste o morto. Foi a Europa moderna inicial que fixou o preto como cor do luto, e a etiqueta fúnebre ocidental o levou adiante — de modo que hoje muitos lugares rodam **dois sistemas ao mesmo tempo**: terno preto na cerimônia, enquanto a família ainda usa branco em certos momentos. O ponto não é qual cor está certa, mas que o preto como cor de luto é bem mais recente do que a maioria supõe."
       }
+    },
+    {
+      "id": "q-20261003-national-day-off",
+      "date": "2026-10-03",
+      "kind": "poll",
+      "topic": "national-days",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你們的國慶日,是會放假的那一種嗎?",
+        "en": "Is your country's national day the kind you actually get off?",
+        "ja": "そちらの建国記念の日は、実際に休みになる種類のものですか?",
+        "zh-CN": "你们的国庆日，是会放假的那一种吗?",
+        "hi": "क्या आपके यहाँ का राष्ट्रीय दिवस वह वाला है जिस दिन सचमुच छुट्टी होती है?",
+        "id": "Hari nasional di tempatmu, termasuk yang benar-benar libur?",
+        "pt-BR": "O feriado nacional aí é daqueles em que se folga de verdade?"
+      },
+      "options": [
+        {
+          "id": "day_off",
+          "emoji": "🏖️",
+          "label": {
+            "zh-TW": "放一天假",
+            "en": "One day off",
+            "ja": "一日休み",
+            "zh-CN": "放一天假",
+            "hi": "एक दिन की छुट्टी",
+            "id": "Libur satu hari",
+            "pt-BR": "Um dia de folga"
+          }
+        },
+        {
+          "id": "long_weekend",
+          "emoji": "🎉",
+          "label": {
+            "zh-TW": "會湊成連假",
+            "en": "It becomes a long weekend",
+            "ja": "連休になる",
+            "zh-CN": "会凑成连假",
+            "hi": "लंबा वीकेंड बन जाता है",
+            "id": "Jadi libur panjang",
+            "pt-BR": "Vira feriadão"
+          }
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": {
+            "zh-TW": "照常上班上課",
+            "en": "Work and school as usual",
+            "ja": "通常どおり仕事・学校",
+            "zh-CN": "照常上班上课",
+            "hi": "काम और स्कूल सामान्य रहते हैं",
+            "id": "Kerja dan sekolah seperti biasa",
+            "pt-BR": "Trabalho e aula normalmente"
+          }
+        },
+        {
+          "id": "depends",
+          "emoji": "🗺️",
+          "label": {
+            "zh-TW": "看地方,不是全國一致",
+            "en": "Depends on the region",
+            "ja": "地域による",
+            "zh-CN": "看地方，不是全国一致",
+            "hi": "इलाक़े पर निर्भर करता है",
+            "id": "Tergantung daerah",
+            "pt-BR": "Depende da região"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261003-constitution-holiday",
+      "date": "2026-10-03",
+      "kind": "guess",
+      "topic": "national-days",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪一國除了獨立紀念日之外,還另外有一個國定假日,紀念的是**憲法生效**?",
+        "en": "Guess: which country has, besides its independence day, a second national holiday marking the day its **constitution took effect**?",
+        "ja": "クイズ:独立記念日とは別に、**憲法が施行された日**を祝う国民の祝日をもつのはどこ?",
+        "zh-CN": "你猜:哪一国除了独立纪念日之外，还另外有一个国定假日，纪念的是**宪法生效**?",
+        "hi": "अंदाज़ा लगाइए: किस देश में स्वतंत्रता दिवस के अलावा एक और राष्ट्रीय अवकाश है, जो **संविधान लागू होने** का दिन है?",
+        "id": "Tebak: negara mana yang selain hari kemerdekaan juga punya hari libur nasional untuk memperingati **berlakunya konstitusi**?",
+        "pt-BR": "Adivinhe: qual país tem, além da independência, outro feriado nacional que marca a **entrada em vigor da constituição**?"
+      },
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        }
+      ],
+      "answer": "hi",
+      "explain": {
+        "zh-TW": "印度。印度有兩個日子容易被混在一起:8 月 15 日獨立日,紀念 1947 年脫離英國;1 月 26 日共和日,紀念 1950 年那一天憲法正式生效、印度從自治領變成共和國。挑 1 月 26 日不是隨便挑的——1930 年的同一天,國大黨在拉合爾宣告了「完全獨立」的目標,二十年後才在同一個日期兌現。兩個日子都是印度只有三個的全國性假日之一(第三個是 10 月 2 日甘地誕辰)。對照之下,美國的憲法日(9 月 17 日)是法定的紀念日但不放假,學校要上一堂憲法課;巴西 11 月 15 日紀念的是共和宣告而不是某一部憲法生效;印尼 8 月 17 日獨立宣言與隔天通過的 1945 年憲法幾乎同時,所以沒有分成兩個節日。**「有沒有放假」與「重不重要」是兩件事**,這題問的是前者。",
+        "en": "India. Two dates get confused: 15 August is Independence Day, marking the end of British rule in 1947; 26 January is Republic Day, marking the day in 1950 when the constitution came into force and India stopped being a dominion. The date was not arbitrary — on that same day in 1930 the Congress had declared complete independence as its goal, and twenty years later the promise was redeemed on the anniversary. Both are among India's mere three nationwide holidays (the third is Gandhi Jayanti, 2 October). By contrast the United States has a Constitution Day on 17 September that is an observance, not a day off — schools are required to teach the constitution instead. Brazil's 15 November marks the proclamation of the republic rather than the entry into force of any one constitution, and Indonesia's independence proclamation of 17 August and the 1945 constitution adopted the next day are close enough that they never split into two holidays. **Being important and being a day off are different things**; this question asked about the second.",
+        "ja": "インドです。混同されやすい二つの日があります。8月15日は独立記念日で、1947年の英国支配の終わりを記念します。1月26日は共和国記念日で、1950年に憲法が施行され、インドが自治領から共和国になった日です。この日付は偶然ではありません——1930年の同じ日に国民会議派が「完全独立」を目標として宣言し、二十年後にその同じ日付で実現したのです。どちらもインドに三つしかない全国的な祝日に含まれます(三つ目は10月2日のガンディー生誕記念日)。対照的に、アメリカの憲法記念日(9月17日)は法定の記念日ですが休日ではなく、学校で憲法を教えることが義務づけられています。ブラジルの11月15日は共和制宣言であって特定の憲法の施行ではなく、インドネシアは8月17日の独立宣言と翌日採択の1945年憲法がほぼ同時なので、二つの祝日に分かれませんでした。**重要かどうかと休みになるかどうかは別の話**で、この問いは後者を尋ねています。",
+        "zh-CN": "印度。印度有两个日子容易被混在一起:8 月 15 日独立日，纪念 1947 年脱离英国;1 月 26 日共和日，纪念 1950 年那一天宪法正式生效、印度从自治领变成共和国。挑 1 月 26 日不是随便挑的——1930 年的同一天，国大党在拉合尔宣告了「完全独立」的目标，二十年后才在同一个日期兑现。两个日子都是印度只有三个的全国性假日之一(第三个是 10 月 2 日甘地诞辰)。对照之下，美国的宪法日(9 月 17 日)是法定的纪念日但不放假，学校要上一堂宪法课;巴西 11 月 15 日纪念的是共和宣告而不是某一部宪法生效;印尼 8 月 17 日独立宣言与隔天通过的 1945 年宪法几乎同时，所以没有分成两个节日。**「有没有放假」与「重不重要」是两件事**，这题问的是前者。",
+        "hi": "भारत। दो तारीख़ें अक्सर आपस में गड्डमड्ड हो जाती हैं: 15 अगस्त स्वतंत्रता दिवस है, जो 1947 में ब्रिटिश शासन के अंत का दिन है; और 26 जनवरी गणतंत्र दिवस है, जिस दिन 1950 में संविधान लागू हुआ और भारत डोमिनियन से गणराज्य बना। यह तारीख़ यूँ ही नहीं चुनी गई — 1930 में इसी दिन कांग्रेस ने पूर्ण स्वराज को अपना लक्ष्य घोषित किया था, और बीस साल बाद उसी तारीख़ पर वह वादा पूरा हुआ। ये दोनों भारत के केवल तीन राष्ट्रीय अवकाशों में से हैं (तीसरा 2 अक्टूबर गांधी जयंती है)। इसके उलट अमेरिका में 17 सितंबर संविधान दिवस है, पर वह छुट्टी नहीं — स्कूलों को उस दिन संविधान पढ़ाना होता है। ब्राज़ील का 15 नवंबर गणतंत्र की घोषणा का दिन है, किसी एक संविधान के लागू होने का नहीं; और इंडोनेशिया में 17 अगस्त की स्वतंत्रता घोषणा और अगले दिन अपनाया गया 1945 का संविधान इतने पास हैं कि वे कभी दो अलग पर्वों में बँटे ही नहीं। **महत्वपूर्ण होना और छुट्टी होना दो अलग बातें हैं**; यह सवाल दूसरी वाली के बारे में था।",
+        "id": "India. Dua tanggal sering tertukar: 15 Agustus adalah Hari Kemerdekaan, menandai berakhirnya kekuasaan Inggris pada 1947; 26 Januari adalah Hari Republik, menandai hari pada 1950 ketika konstitusi mulai berlaku dan India berhenti menjadi dominion. Tanggalnya bukan kebetulan — pada hari yang sama tahun 1930, Kongres mendeklarasikan kemerdekaan penuh sebagai tujuannya, dan dua puluh tahun kemudian janji itu ditebus pada tanggal yang sama. Keduanya termasuk dalam hanya tiga hari libur nasional India (yang ketiga adalah Gandhi Jayanti, 2 Oktober). Sebaliknya, Amerika Serikat punya Hari Konstitusi pada 17 September, tetapi itu peringatan, bukan hari libur — sekolah justru diwajibkan mengajarkan konstitusi. Tanggal 15 November di Brasil menandai proklamasi republik, bukan berlakunya satu konstitusi tertentu. Dan di Indonesia, proklamasi 17 Agustus dan UUD 1945 yang disahkan sehari kemudian begitu berdekatan sehingga tidak pernah terpisah menjadi dua hari besar. **Penting dan libur adalah dua hal berbeda**; pertanyaan ini menanyakan yang kedua.",
+        "pt-BR": "Índia. Duas datas se confundem: 15 de agosto é o Dia da Independência, que marca o fim do domínio britânico em 1947; 26 de janeiro é o Dia da República, que marca o dia de 1950 em que a constituição entrou em vigor e a Índia deixou de ser um domínio. A data não foi arbitrária — no mesmo dia de 1930 o Congresso havia declarado a independência plena como objetivo, e vinte anos depois a promessa foi cumprida na mesma data. Ambas estão entre os apenas três feriados nacionais da Índia (o terceiro é o Gandhi Jayanti, 2 de outubro). Em contraste, os Estados Unidos têm um Dia da Constituição em 17 de setembro que é uma data comemorativa, não folga — as escolas são obrigadas a ensinar a constituição. O 15 de novembro brasileiro marca a proclamação da república, e não a vigência de uma constituição específica; e na Indonésia a proclamação de 17 de agosto e a constituição de 1945, adotada no dia seguinte, são próximas demais para virarem dois feriados. **Ser importante e dar folga são coisas diferentes**; esta pergunta tratava da segunda."
+      }
+    },
+    {
+      "id": "q-20261004-elders-what",
+      "date": "2026-10-04",
+      "kind": "poll",
+      "topic": "elders-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "敬老的那個日子,你們那裡的人通常會做什麼?",
+        "en": "On the day that honours older people where you live, what do people usually do?",
+        "ja": "そちらで高齢者を敬う日には、みんな何をしますか?",
+        "zh-CN": "敬老的那个日子，你们那里的人通常会做什么?",
+        "hi": "आपके यहाँ बुज़ुर्गों के दिन लोग आम तौर पर क्या करते हैं?",
+        "id": "Pada hari untuk menghormati orang tua di tempatmu, orang biasanya melakukan apa?",
+        "pt-BR": "No dia dedicado aos mais velhos aí, o que as pessoas costumam fazer?"
+      },
+      "options": [
+        {
+          "id": "visit",
+          "emoji": "🏠",
+          "label": {
+            "zh-TW": "回去看長輩",
+            "en": "Visit the older family members",
+            "ja": "実家や施設に会いに行く",
+            "zh-CN": "回去看长辈",
+            "hi": "बड़ों से मिलने जाते हैं",
+            "id": "Mengunjungi orang tua",
+            "pt-BR": "Visitar os mais velhos"
+          }
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": {
+            "zh-TW": "送禮或請吃飯",
+            "en": "Give a gift or a meal",
+            "ja": "贈り物や食事",
+            "zh-CN": "送礼或请吃饭",
+            "hi": "तोहफ़ा या खाना",
+            "id": "Memberi hadiah atau makan bersama",
+            "pt-BR": "Dar presente ou almoço"
+          }
+        },
+        {
+          "id": "event",
+          "emoji": "🎪",
+          "label": {
+            "zh-TW": "社區或學校辦活動",
+            "en": "A community or school event",
+            "ja": "地域や学校の行事",
+            "zh-CN": "社区或学校办活动",
+            "hi": "समुदाय या स्कूल का कार्यक्रम",
+            "id": "Acara komunitas atau sekolah",
+            "pt-BR": "Evento da comunidade ou escola"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "沒有這個習慣",
+            "en": "No such custom here",
+            "ja": "そういう習慣はない",
+            "zh-CN": "没有这个习惯",
+            "hi": "यहाँ ऐसा रिवाज़ नहीं",
+            "id": "Tidak ada kebiasaan itu",
+            "pt-BR": "Não existe esse costume"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261004-elders-holiday",
+      "date": "2026-10-04",
+      "kind": "guess",
+      "topic": "elders-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪一國把敬老的日子訂成**國定假日**,當天真的放假?",
+        "en": "Guess: which country makes its day for older people an actual **public holiday** — a day off?",
+        "ja": "クイズ:高齢者を敬う日を**国民の祝日**にして、実際に休みになるのはどこ?",
+        "zh-CN": "你猜:哪一国把敬老的日子订成**国定假日**，当天真的放假?",
+        "hi": "अंदाज़ा लगाइए: किस देश में बुज़ुर्गों का दिन सचमुच **राष्ट्रीय अवकाश** है?",
+        "id": "Tebak: negara mana yang menjadikan hari untuk orang lanjut usia sebagai **hari libur nasional** yang benar-benar libur?",
+        "pt-BR": "Adivinhe: em qual país o dia dedicado aos idosos é de fato **feriado nacional**?"
+      },
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        }
+      ],
+      "answer": "ja",
+      "explain": {
+        "zh-TW": "日本。敬老の日是《國民の祝日に関する法律》裡列名的祝日,九月的第三個星期一,全國放假——而且因為 2003 年起改成「星期一固定制」,它常常和秋分連成一段連假。這一點在七個市場裡是孤例。中國的重陽節寫進了《老年人權益保障法》,法律明定那天是老年節,但**法律沒有給它假**;台灣的祖父母節(八月第四個星期日)是教育部推動的行政節日,本來就落在星期日;美國的 Grandparents Day 是總統公告的紀念日,不是聯邦假日,而且名字寫的是「祖父母」——它定義的是家庭關係,不是年齡層;印尼的 Hari Lanjut Usia Nasional(5 月 29 日)紀念的是高齡的拉吉曼主持了建國第一場會議;印度與巴西則跟著聯合國的 10 月 1 日。**「寫進法律」與「放假」是兩個不同的門檻**,這題問的是後面那個。",
+        "en": "Japan. Respect for the Aged Day is named in the Act on National Holidays, falls on the third Monday of September, and closes the country — and since the Monday-shifting reform of 2003 it often links up with the autumn equinox into a run of days off. Among these seven markets it stands alone. China's Double Ninth Festival is written into the Law on Protection of the Rights and Interests of the Elderly, which designates it as the day for older people — but **the law grants no holiday**. Taiwan's Grandparents Day (fourth Sunday of August) is an administrative observance promoted by the education ministry and already falls on a Sunday. America's Grandparents Day is proclaimed by the president but is not a federal holiday, and its name says grandparents — it defines a family relationship, not an age group. Indonesia's Hari Lanjut Usia Nasional (29 May) commemorates the elderly Radjiman chairing the first session of the nation's founding body, and India and Brazil follow the UN's 1 October. **Being written into law and being a day off are two different thresholds**; this question asked about the second.",
+        "ja": "日本です。敬老の日は「国民の祝日に関する法律」に名前が挙がる祝日で、9月の第3月曜日、全国が休みになります。しかも2003年のハッピーマンデー化以降、秋分の日とつながって連休になることも多い。この七つの市場のなかで唯一の例です。中国の重陽節は「高齢者権益保障法」に老年節として明記されていますが、**法律は休みを与えていません**。台湾の祖父母の日(8月第4日曜)は教育部が進める行政上の記念日で、そもそも日曜日にあたります。アメリカの祖父母の日は大統領布告による記念日で連邦の休日ではなく、名前が指しているのは「祖父母」——年齢層ではなく家族関係を定義しています。インドネシアの国民高齢者の日(5月29日)は、高齢のラジマンが建国の最初の会議を主宰したことを記念する日。インドとブラジルは国連の10月1日に合わせています。**法律に書かれることと休みになることは別の関門**で、この問いは後者を尋ねています。",
+        "zh-CN": "日本。敬老之日是《国民之祝日相关法律》里列名的祝日，九月的第三个星期一，全国放假——而且因为 2003 年起改成「星期一固定制」，它常常和秋分连成一段连假。这一点在七个市场里是孤例。中国的重阳节写进了《老年人权益保障法》，法律明定那天是老年节，但**法律没有给它假**;台湾的祖父母节(八月第四个星期日)是教育部推动的行政节日，本来就落在星期日;美国的 Grandparents Day 是总统公告的纪念日，不是联邦假日，而且名字写的是「祖父母」——它定义的是家庭关系，不是年龄层;印尼的 Hari Lanjut Usia Nasional(5 月 29 日)纪念的是高龄的拉吉曼主持了建国第一场会议;印度与巴西则跟着联合国的 10 月 1 日。**「写进法律」与「放假」是两个不同的门槛**，这题问的是后面那个。",
+        "hi": "जापान। 'केइरो नो ही' (बुज़ुर्गों के सम्मान का दिन) राष्ट्रीय अवकाश क़ानून में नाम से दर्ज है, सितंबर के तीसरे सोमवार को पड़ता है और पूरा देश बंद रहता है — और 2003 के सोमवार-वाले सुधार के बाद यह अक्सर शरद विषुव से जुड़कर लंबी छुट्टी बन जाता है। इन सात बाज़ारों में यह अकेला उदाहरण है। चीन का चोंगयांग पर्व वृद्धजन अधिकार संरक्षण क़ानून में वृद्धजन दिवस के रूप में लिखा है, पर **क़ानून छुट्टी नहीं देता**। ताइवान का दादा-दादी दिवस (अगस्त का चौथा रविवार) शिक्षा मंत्रालय का प्रशासनिक आयोजन है और वैसे भी रविवार को पड़ता है। अमेरिका का ग्रैंडपेरेंट्स डे राष्ट्रपति की घोषणा से बनता है, संघीय अवकाश नहीं — और उसका नाम 'दादा-दादी' कहता है, यानी वह पारिवारिक रिश्ता तय करता है, आयु-वर्ग नहीं। इंडोनेशिया का राष्ट्रीय वृद्धजन दिवस (29 मई) उस दिन को याद करता है जब वयोवृद्ध राडजिमान ने राष्ट्र-निर्माण की पहली बैठक की अध्यक्षता की; भारत और ब्राज़ील संयुक्त राष्ट्र की 1 अक्टूबर वाली तारीख़ मानते हैं। **क़ानून में लिखा होना और छुट्टी होना दो अलग कसौटियाँ हैं**; यह सवाल दूसरी वाली का था।",
+        "id": "Jepang. Hari Menghormati Orang Lanjut Usia tercantum namanya dalam Undang-Undang Hari Libur Nasional, jatuh pada Senin ketiga bulan September, dan seluruh negeri libur — sejak reformasi 'Senin bergeser' tahun 2003, hari itu bahkan sering menyambung dengan ekuinoks musim gugur menjadi libur panjang. Di antara tujuh pasar ini, ia satu-satunya. Festival Chongyang di Tiongkok tercantum dalam Undang-Undang Perlindungan Hak dan Kepentingan Lansia sebagai hari lansia, tetapi **undang-undang itu tidak memberi libur**. Hari Kakek-Nenek Taiwan (Minggu keempat Agustus) adalah peringatan administratif dari kementerian pendidikan dan memang sudah jatuh pada hari Minggu. Grandparents Day Amerika diumumkan lewat proklamasi presiden, bukan hari libur federal, dan namanya menyebut 'kakek-nenek' — mendefinisikan hubungan keluarga, bukan kelompok usia. Hari Lanjut Usia Nasional Indonesia (29 Mei) memperingati Radjiman yang sudah sepuh memimpin sidang pertama badan pendiri negara; India dan Brasil mengikuti tanggal 1 Oktober dari PBB. **Tercantum dalam hukum dan menjadi hari libur adalah dua ambang berbeda**; pertanyaan ini soal yang kedua.",
+        "pt-BR": "Japão. O Dia do Respeito aos Idosos está nomeado na Lei dos Feriados Nacionais, cai na terceira segunda-feira de setembro e para o país — e desde a reforma de 2003, que fixou feriados às segundas, costuma emendar com o equinócio de outono. Entre estes sete mercados, é caso único. O Festival Chongyang, na China, está inscrito na Lei de Proteção dos Direitos e Interesses dos Idosos, que o designa como o dia dos mais velhos — mas **a lei não concede folga**. O Dia dos Avós de Taiwan (quarto domingo de agosto) é uma data administrativa promovida pelo ministério da educação e já cai num domingo. O Grandparents Day americano vem de proclamação presidencial e não é feriado federal, e seu nome fala em avós — define um laço familiar, não uma faixa etária. O Hari Lanjut Usia Nasional indonésio (29 de maio) lembra o já idoso Radjiman presidindo a primeira sessão do órgão fundador do país; Índia e Brasil seguem o 1º de outubro da ONU. **Estar na lei e dar folga são dois patamares diferentes**; esta pergunta era sobre o segundo."
+      }
+    },
+    {
+      "id": "q-20261005-teachers-gift",
+      "date": "2026-10-05",
+      "kind": "poll",
+      "topic": "teachers-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "教師節那天,學生會送老師東西嗎?",
+        "en": "On your teachers' day, do students give the teacher anything?",
+        "ja": "そちらの教師の日、生徒は先生に何か渡しますか?",
+        "zh-CN": "教师节那天，学生会送老师东西吗?",
+        "hi": "आपके यहाँ शिक्षक दिवस पर क्या विद्यार्थी शिक्षक को कुछ देते हैं?",
+        "id": "Pada hari guru di tempatmu, apakah murid memberi sesuatu kepada guru?",
+        "pt-BR": "No dia dos professores aí, os alunos dão alguma coisa ao professor?"
+      },
+      "options": [
+        {
+          "id": "flower",
+          "emoji": "💐",
+          "label": {
+            "zh-TW": "送花",
+            "en": "Flowers",
+            "ja": "花を渡す",
+            "zh-CN": "送花",
+            "hi": "फूल",
+            "id": "Bunga",
+            "pt-BR": "Flores"
+          }
+        },
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": {
+            "zh-TW": "卡片或訊息",
+            "en": "A card or a message",
+            "ja": "カードやメッセージ",
+            "zh-CN": "卡片或讯息",
+            "hi": "कार्ड या संदेश",
+            "id": "Kartu atau pesan",
+            "pt-BR": "Cartão ou mensagem"
+          }
+        },
+        {
+          "id": "nothing",
+          "emoji": "🙅",
+          "label": {
+            "zh-TW": "什麼都不送",
+            "en": "Nothing at all",
+            "ja": "何も渡さない",
+            "zh-CN": "什么都不送",
+            "hi": "कुछ नहीं",
+            "id": "Tidak memberi apa-apa",
+            "pt-BR": "Nada"
+          }
+        },
+        {
+          "id": "no_day",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "我們沒有教師節",
+            "en": "We don't have a teachers' day",
+            "ja": "教師の日というものがない",
+            "zh-CN": "我们没有教师节",
+            "hi": "हमारे यहाँ शिक्षक दिवस नहीं है",
+            "id": "Kami tidak punya hari guru",
+            "pt-BR": "Não temos dia dos professores"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261005-teachers-philosopher",
+      "date": "2026-10-05",
+      "kind": "guess",
+      "topic": "teachers-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪一國的教師節,訂在一位**當過總統的哲學家**的生日那天?",
+        "en": "Guess: which country's teachers' day falls on the birthday of a **philosopher who became president**?",
+        "ja": "クイズ:教師の日を、**大統領を務めた哲学者**の誕生日にしている国はどこ?",
+        "zh-CN": "你猜:哪一国的教师节，订在一位**当过总统的哲学家**的生日那天?",
+        "hi": "अंदाज़ा लगाइए: किस देश का शिक्षक दिवस एक ऐसे **दार्शनिक के जन्मदिन** पर है जो राष्ट्रपति भी रहे?",
+        "id": "Tebak: hari guru di negara mana yang jatuh pada hari lahir seorang **filsuf yang pernah menjadi presiden**?",
+        "pt-BR": "Adivinhe: o dia dos professores de qual país cai no aniversário de um **filósofo que foi presidente**?"
+      },
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "answer": "hi",
+      "explain": {
+        "zh-TW": "印度。9 月 5 日是薩瓦帕利·拉達克里希南的生日,他是研究印度哲學的學者、牛津大學的教授,後來當上印度第二任總統。傳說學生想幫他慶生,他回說:與其慶祝我的生日,不如把這一天給所有老師——於是 1962 年起這天成了教師節。**它不是假日,學校照常開,只是那天上課的常常是學生**:高年級接手低年級的課,自己站上講台。這個「日期來自一個人」的做法在七個市場裡不是通例:中國的教師節(9 月 10 日)是 1985 年由全國人大常委會決議設立的,挑的是開學不久的日子;台灣選 9 月 28 日,因為那是孔子誕辰;印尼的 Hari Guru Nasional(11 月 25 日)紀念的是教師工會 PGRI 成立;巴西 10 月 15 日的起點是 1827 年一道關於初等教育的帝國法令。**同一個節日,四種完全不同的來源:一個人、一次立法、一位先師、一個組織。**",
+        "en": "India. 5 September is the birthday of Sarvepalli Radhakrishnan — a scholar of Indian philosophy, a professor at Oxford, and later the country's second president. The story goes that when students wanted to celebrate his birthday he replied that rather than marking his day, they should give it to all teachers; from 1962 it has been Teachers' Day. **It is not a holiday — schools stay open, and often it is the students who teach**: senior pupils take over the junior classes and stand at the front themselves. Naming a teachers' day after a person is not the norm across these seven markets. China's Teachers' Day (10 September) was established by a 1985 resolution of the NPC Standing Committee and deliberately set just after the school year begins. Taiwan uses 28 September because it is Confucius's birthday. Indonesia's Hari Guru Nasional (25 November) marks the founding of the teachers' union PGRI, and Brazil's 15 October traces back to an 1827 imperial decree on primary schooling. **One festival, four completely different origins: a person, a statute, an ancient teacher, an organisation.**",
+        "ja": "インドです。9月5日はサルヴパッリー・ラーダークリシュナンの誕生日。インド哲学の学者でオックスフォードの教授、のちにインド第二代大統領になった人物です。学生が誕生日を祝いたいと申し出たとき、彼は「私の誕生日を祝うより、この日をすべての教師に」と答えたと伝えられ、1962年から教師の日になりました。**休日ではなく学校はあり、しかも授業をするのはしばしば生徒のほう**——上級生が下級生のクラスを引き受けて教壇に立ちます。日付を一人の人物から採るやり方は、この七つの市場では通例ではありません。中国の教師節(9月10日)は1985年の全人代常務委員会の決議で設けられ、新学期の直後が選ばれました。台湾は孔子の生誕日である9月28日。インドネシアの国民教師の日(11月25日)は教員組合PGRIの設立を記念し、ブラジルの10月15日は初等教育に関する1827年の帝国令に遡ります。**同じ祝日に、まったく違う四つの起点——一人の人間、一つの立法、一人の先師、一つの組織。**",
+        "zh-CN": "印度。9 月 5 日是萨瓦帕利·拉达克里希南的生日，他是研究印度哲学的学者、牛津大学的教授，后来当上印度第二任总统。传说学生想帮他庆生，他回说:与其庆祝我的生日，不如把这一天给所有老师——于是 1962 年起这天成了教师节。**它不是假日，学校照常开，只是那天上课的常常是学生**:高年级接手低年级的课，自己站上讲台。这个「日期来自一个人」的做法在七个市场里不是通例:中国的教师节(9 月 10 日)是 1985 年由全国人大常委会决议设立的，挑的是开学不久的日子;台湾选 9 月 28 日，因为那是孔子诞辰;印尼的 Hari Guru Nasional(11 月 25 日)纪念的是教师工会 PGRI 成立;巴西 10 月 15 日的起点是 1827 年一道关于初等教育的帝国法令。**同一个节日，四种完全不同的来源:一个人、一次立法、一位先师、一个组织。**",
+        "hi": "भारत। 5 सितंबर सर्वपल्ली राधाकृष्णन का जन्मदिन है — भारतीय दर्शन के विद्वान, ऑक्सफ़ोर्ड के प्राध्यापक, और बाद में देश के दूसरे राष्ट्रपति। कहा जाता है कि जब विद्यार्थियों ने उनका जन्मदिन मनाना चाहा तो उन्होंने कहा: मेरा जन्मदिन मनाने के बजाय इस दिन को सभी शिक्षकों को दे दीजिए। 1962 से यही शिक्षक दिवस है। **यह अवकाश नहीं है — स्कूल खुले रहते हैं, और अक्सर पढ़ाते विद्यार्थी हैं**: बड़ी कक्षाओं के छात्र छोटी कक्षाएँ सँभालते हैं। किसी व्यक्ति के नाम पर शिक्षक दिवस रखना इन सात बाज़ारों में आम नहीं है। चीन का शिक्षक दिवस (10 सितंबर) 1985 में राष्ट्रीय जन कांग्रेस की स्थायी समिति के प्रस्ताव से बना और जानबूझकर सत्र शुरू होने के तुरंत बाद रखा गया। ताइवान 28 सितंबर लेता है क्योंकि वह कन्फ़्यूशियस का जन्मदिन है। इंडोनेशिया का राष्ट्रीय शिक्षक दिवस (25 नवंबर) शिक्षक संघ PGRI की स्थापना का दिन है, और ब्राज़ील का 15 अक्टूबर 1827 के एक शाही आदेश से आता है। **एक ही पर्व, चार बिलकुल अलग स्रोत: एक व्यक्ति, एक क़ानून, एक प्राचीन गुरु, एक संगठन।**",
+        "id": "India. 5 September adalah hari lahir Sarvepalli Radhakrishnan — pengkaji filsafat India, guru besar di Oxford, dan kemudian presiden kedua negara itu. Ceritanya, ketika para mahasiswa ingin merayakan ulang tahunnya, ia menjawab: daripada merayakan hari saya, berikanlah hari itu untuk semua guru. Sejak 1962 itulah Hari Guru. **Ia bukan hari libur — sekolah tetap masuk, dan sering justru murid yang mengajar**: siswa kelas atas mengambil alih kelas adik-adiknya dan berdiri di depan. Menamai hari guru dari seorang tokoh bukan kebiasaan umum di tujuh pasar ini. Hari Guru Tiongkok (10 September) lahir dari resolusi Komite Tetap NPC tahun 1985 dan sengaja diletakkan tepat setelah tahun ajaran dimulai. Taiwan memakai 28 September karena itu hari lahir Konfusius. Hari Guru Nasional Indonesia (25 November) memperingati berdirinya PGRI, dan 15 Oktober di Brasil berakar pada dekret kekaisaran 1827 tentang pendidikan dasar. **Satu perayaan, empat asal-usul yang sama sekali berbeda: seorang tokoh, sebuah undang-undang, seorang guru purba, sebuah organisasi.**",
+        "pt-BR": "Índia. 5 de setembro é o aniversário de Sarvepalli Radhakrishnan — estudioso da filosofia indiana, professor em Oxford e depois segundo presidente do país. Conta-se que, quando os alunos quiseram celebrar seu aniversário, ele respondeu que em vez de marcar o dia dele, dessem o dia a todos os professores; desde 1962 é o Dia dos Professores. **Não é feriado — as escolas funcionam, e muitas vezes quem dá aula são os alunos**: os mais velhos assumem as turmas menores e sobem à frente da sala. Batizar o dia dos professores com o nome de uma pessoa não é a regra nestes sete mercados. O Dia dos Professores chinês (10 de setembro) foi criado por resolução do Comitê Permanente da APN em 1985 e posto logo após o início do ano letivo. Taiwan usa 28 de setembro por ser o aniversário de Confúcio. O Hari Guru Nasional indonésio (25 de novembro) marca a fundação do sindicato PGRI, e o 15 de outubro brasileiro remonta a um decreto imperial de 1827 sobre a instrução primária. **Uma mesma data, quatro origens completamente diferentes: uma pessoa, uma lei, um mestre antigo, uma organização.**"
+      }
+    },
+    {
+      "id": "q-20261006-labour-day-off",
+      "date": "2026-10-06",
+      "kind": "poll",
+      "topic": "labour-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "勞動節那天,你上班嗎?",
+        "en": "On labour day, do you work?",
+        "ja": "労働者の日、あなたは仕事ですか?",
+        "zh-CN": "劳动节那天，你上班吗?",
+        "hi": "मज़दूर दिवस पर क्या आप काम करते हैं?",
+        "id": "Pada hari buruh, kamu tetap bekerja?",
+        "pt-BR": "No dia do trabalhador, você trabalha?"
+      },
+      "options": [
+        {
+          "id": "off",
+          "emoji": "🛌",
+          "label": {
+            "zh-TW": "放假",
+            "en": "I get the day off",
+            "ja": "休み",
+            "zh-CN": "放假",
+            "hi": "छुट्टी रहती है",
+            "id": "Libur",
+            "pt-BR": "Folgo"
+          }
+        },
+        {
+          "id": "work_paid",
+          "emoji": "💰",
+          "label": {
+            "zh-TW": "上班,但有加給",
+            "en": "I work, but I'm paid extra",
+            "ja": "仕事だが割増がつく",
+            "zh-CN": "上班，但有加给",
+            "hi": "काम करता/करती हूँ, पर अतिरिक्त वेतन मिलता है",
+            "id": "Kerja, tapi dapat upah lembur",
+            "pt-BR": "Trabalho, mas recebo adicional"
+          }
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": {
+            "zh-TW": "照常上班,沒有不同",
+            "en": "I work, no difference",
+            "ja": "通常どおりで特に違いはない",
+            "zh-CN": "照常上班，没有不同",
+            "hi": "सामान्य दिन की तरह",
+            "id": "Kerja seperti biasa",
+            "pt-BR": "Trabalho normalmente"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "我們沒有這個節日",
+            "en": "We don't have that day",
+            "ja": "そういう日はない",
+            "zh-CN": "我们没有这个节日",
+            "hi": "हमारे यहाँ वह दिन नहीं होता",
+            "id": "Kami tidak punya hari itu",
+            "pt-BR": "Não temos esse dia"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261006-labour-september",
+      "date": "2026-10-06",
+      "kind": "guess",
+      "topic": "labour-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪一國把勞動節訂在**九月的第一個星期一**,而不是五月一日?",
+        "en": "Guess: which country puts labour day on the **first Monday of September** instead of 1 May?",
+        "ja": "クイズ:労働者の日を5月1日ではなく**9月の第1月曜日**に置いている国はどこ?",
+        "zh-CN": "你猜:哪一国把劳动节订在**九月的第一个星期一**，而不是五月一日?",
+        "hi": "अंदाज़ा लगाइए: किस देश में मज़दूर दिवस 1 मई नहीं, बल्कि **सितंबर का पहला सोमवार** है?",
+        "id": "Tebak: negara mana yang menempatkan hari buruh pada **Senin pertama bulan September**, bukan 1 Mei?",
+        "pt-BR": "Adivinhe: qual país marca o dia do trabalhador na **primeira segunda-feira de setembro**, e não em 1º de maio?"
+      },
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "en",
+      "explain": {
+        "zh-TW": "美國。這裡有一個很少被講出來的轉折:五月一日之所以成為全世界的勞動節,起因正是 1886 年芝加哥的乾草市場事件——那場爭取八小時工時的罷工發生在美國。但美國自己沒有採用這個日子。1894 年聯邦立法把 Labor Day 定在九月第一個星期一,刻意避開帶有那段抗爭記憶的五月一日;後來 5 月 1 日在美國反而被公告為「忠誠日」。所以美國的勞動節在制度上是一個夏末的長週末,不是一個抗爭的紀念日。對照之下,台灣、中國、印尼、巴西、印度大體上都在五月一日放假或紀念(印度是各邦決定,不是全國統一)。日本又是另一種:五月一日不是國定假日,勞動節性質的祝日是十一月二十三日的勤勞感謝之日,而它的前身是天皇主持的新嘗祭——一個從收穫祭改寫而來的日子。**同一個訴求,三種完全不同的安放方式:紀念抗爭、抽掉抗爭、接到收穫祭上。**",
+        "en": "The United States. There is a rarely told twist here: 1 May became international labour day precisely because of the Haymarket affair of 1886 in Chicago — the eight-hour strike that set it off happened in America. Yet America did not adopt the date. Federal law in 1894 fixed Labor Day on the first Monday of September, deliberately avoiding the first of May and the memory of that confrontation; 1 May was later proclaimed Loyalty Day instead. So the American labour day is institutionally a long weekend at the end of summer rather than a commemoration of struggle. By contrast Taiwan, China, Indonesia and Brazil observe 1 May as a holiday, and India marks it too though the day is decided state by state rather than nationally. Japan is different again: 1 May is not a public holiday, and the labour-flavoured holiday is Labour Thanksgiving Day on 23 November — which grew out of Niinamesai, the harvest rite conducted by the emperor. **One demand, three quite different ways of housing it: commemorate the struggle, subtract the struggle, or graft it onto a harvest festival.**",
+        "ja": "アメリカです。あまり語られない捻れがあります。5月1日が世界の労働者の日になったのは、まさに1886年シカゴのヘイマーケット事件がきっかけ——八時間労働を求めたそのストライキはアメリカで起きました。ところがアメリカ自身はこの日付を採りませんでした。1894年の連邦法はレイバー・デーを9月第1月曜日に定め、あの対立の記憶をもつ5月1日を意図的に避けたのです。のちに5月1日はむしろ「忠誠の日」と布告されました。だからアメリカの労働者の日は、制度としては闘争の記念日ではなく夏の終わりの三連休です。対して台湾・中国・インドネシア・ブラジルはおおむね5月1日を休日とし、インドも記念しますが日付の扱いは州ごとです。日本はまた別で、5月1日は祝日ではなく、労働に関わる祝日は11月23日の勤労感謝の日——天皇が執り行う新嘗祭を書き換えた日です。**同じ要求に対する、まったく異なる三つの収め方:闘争を記念する、闘争を抜き取る、収穫祭に接ぎ木する。**",
+        "zh-CN": "美国。这里有一个很少被讲出来的转折:五月一日之所以成为全世界的劳动节，起因正是 1886 年芝加哥的干草市场事件——那场争取八小时工时的罢工发生在美国。但美国自己没有采用这个日子。1894 年联邦立法把 Labor Day 定在九月第一个星期一，刻意避开带有那段抗争记忆的五月一日;后来 5 月 1 日在美国反而被公告为「忠诚日」。所以美国的劳动节在制度上是一个夏末的长周末，不是一个抗争的纪念日。对照之下，台湾、中国、印尼、巴西、印度大体上都在五月一日放假或纪念(印度是各邦决定，不是全国统一)。日本又是另一种:五月一日不是国定假日，劳动节性质的祝日是十一月二十三日的勤劳感谢之日，而它的前身是天皇主持的新尝祭——一个从收获祭改写而来的日子。**同一个诉求，三种完全不同的安放方式:纪念抗争、抽掉抗争、接到收获祭上。**",
+        "hi": "अमेरिका। यहाँ एक कम बताया जाने वाला मोड़ है: 1 मई अंतरराष्ट्रीय मज़दूर दिवस बना ही इसलिए क्योंकि 1886 में शिकागो में हेमार्केट की घटना हुई थी — आठ घंटे के कार्यदिवस की वह हड़ताल अमेरिका में ही हुई थी। फिर भी अमेरिका ने वह तारीख़ नहीं अपनाई। 1894 के संघीय क़ानून ने लेबर डे को सितंबर के पहले सोमवार पर तय किया, और उस टकराव की याद से जुड़ी 1 मई को जानबूझकर टाल दिया; बाद में 1 मई को वहाँ 'लॉयल्टी डे' घोषित किया गया। इसलिए अमेरिकी मज़दूर दिवस संस्थागत रूप से गर्मियों के अंत का लंबा वीकेंड है, संघर्ष की स्मृति नहीं। इसके उलट ताइवान, चीन, इंडोनेशिया और ब्राज़ील 1 मई को अवकाश मानते हैं; भारत भी मनाता है, पर वहाँ यह राज्य-दर-राज्य तय होता है, राष्ट्रीय रूप से नहीं। जापान फिर अलग है: 1 मई अवकाश नहीं है, और श्रम से जुड़ा अवकाश 23 नवंबर का 'श्रम धन्यवाद दिवस' है — जो सम्राट द्वारा किए जाने वाले फ़सल-अनुष्ठान निइनामेसाइ से निकला है। **एक ही माँग, उसे रखने के तीन बिलकुल अलग तरीक़े: संघर्ष को याद रखना, संघर्ष को हटा देना, या उसे फ़सल-पर्व पर चढ़ा देना।**",
+        "id": "Amerika Serikat. Ada satu belokan yang jarang diceritakan: 1 Mei menjadi hari buruh sedunia justru karena peristiwa Haymarket di Chicago tahun 1886 — pemogokan menuntut delapan jam kerja itu terjadi di Amerika. Namun Amerika sendiri tidak memakai tanggal itu. Undang-undang federal tahun 1894 menetapkan Labor Day pada Senin pertama September, sengaja menghindari 1 Mei beserta ingatan akan bentrokan tersebut; belakangan 1 Mei di sana justru diumumkan sebagai Loyalty Day. Jadi hari buruh Amerika secara kelembagaan adalah akhir pekan panjang di penghujung musim panas, bukan peringatan perjuangan. Sebaliknya Taiwan, Tiongkok, Indonesia, dan Brasil menjadikan 1 Mei hari libur; India juga memperingatinya, tetapi tanggalnya diputuskan per negara bagian, bukan secara nasional. Jepang lain lagi: 1 Mei bukan hari libur, dan hari libur bernuansa perburuhan adalah Hari Syukur Buruh pada 23 November — yang tumbuh dari Niinamesai, ritus panen yang dipimpin kaisar. **Satu tuntutan, tiga cara yang sangat berbeda untuk menampungnya: mengenang perjuangan, mencabut perjuangan, atau menempelkannya pada perayaan panen.**",
+        "pt-BR": "Estados Unidos. Há aqui uma reviravolta pouco contada: 1º de maio virou o dia do trabalhador no mundo justamente por causa do caso Haymarket, em Chicago, em 1886 — a greve pelas oito horas que o desencadeou aconteceu nos Estados Unidos. Ainda assim, o país não adotou a data. Uma lei federal de 1894 fixou o Labor Day na primeira segunda-feira de setembro, evitando de propósito o 1º de maio e a memória daquele confronto; mais tarde o 1º de maio passou a ser proclamado ali como Dia da Lealdade. O dia do trabalhador americano é, institucionalmente, um feriadão de fim de verão, não uma comemoração de luta. Em contraste, Taiwan, China, Indonésia e Brasil observam o 1º de maio como feriado, e a Índia também o marca, embora a data seja decidida estado a estado e não nacionalmente. O Japão é outro caso: 1º de maio não é feriado, e o feriado de teor trabalhista é o Dia de Ação de Graças pelo Trabalho, em 23 de novembro — nascido do Niinamesai, o rito da colheita conduzido pelo imperador. **Uma mesma reivindicação, três formas bem diferentes de acomodá-la: lembrar a luta, subtrair a luta, ou enxertá-la numa festa da colheita.**"
+      }
+    },
+    {
+      "id": "q-20261007-childrens-school",
+      "date": "2026-10-07",
+      "kind": "poll",
+      "topic": "childrens-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你們的兒童節,學校那天怎麼過?",
+        "en": "On your children's day, what happens at school?",
+        "ja": "そちらの子どもの日、学校はどうなりますか?",
+        "zh-CN": "你们的儿童节，学校那天怎么过?",
+        "hi": "आपके यहाँ बाल दिवस पर स्कूल में क्या होता है?",
+        "id": "Pada hari anak di tempatmu, apa yang terjadi di sekolah?",
+        "pt-BR": "No dia das crianças aí, o que acontece na escola?"
+      },
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎈",
+          "label": {
+            "zh-TW": "放假",
+            "en": "School is closed",
+            "ja": "休みになる",
+            "zh-CN": "放假",
+            "hi": "स्कूल बंद रहता है",
+            "id": "Sekolah libur",
+            "pt-BR": "A escola fecha"
+          }
+        },
+        {
+          "id": "party",
+          "emoji": "🎪",
+          "label": {
+            "zh-TW": "照常上課,但有活動",
+            "en": "Class as usual, but with events",
+            "ja": "授業はあるが行事がある",
+            "zh-CN": "照常上课，但有活动",
+            "hi": "कक्षाएँ चलती हैं, पर कार्यक्रम होते हैं",
+            "id": "Tetap sekolah, tapi ada acara",
+            "pt-BR": "Aula normal, mas com festa"
+          }
+        },
+        {
+          "id": "normal",
+          "emoji": "📚",
+          "label": {
+            "zh-TW": "跟平常一樣",
+            "en": "Just a normal day",
+            "ja": "普段どおり",
+            "zh-CN": "跟平常一样",
+            "hi": "बिलकुल सामान्य दिन",
+            "id": "Sama seperti hari biasa",
+            "pt-BR": "Um dia como outro qualquer"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "我們沒有兒童節",
+            "en": "We don't have a children's day",
+            "ja": "子どもの日はない",
+            "zh-CN": "我们没有儿童节",
+            "hi": "हमारे यहाँ बाल दिवस नहीं है",
+            "id": "Kami tidak punya hari anak",
+            "pt-BR": "Não temos dia das crianças"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261007-childrens-july",
+      "date": "2026-10-07",
+      "kind": "guess",
+      "topic": "childrens-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪一國的全國兒童節在 **7 月 23 日**?",
+        "en": "Guess: which country's national children's day falls on **23 July**?",
+        "ja": "クイズ:国の子どもの日が **7月23日** なのはどこ?",
+        "zh-CN": "你猜:哪一国的全国儿童节在 **7 月 23 日**?",
+        "hi": "अंदाज़ा लगाइए: किस देश का राष्ट्रीय बाल दिवस **23 जुलाई** को होता है?",
+        "id": "Tebak: hari anak nasional negara mana yang jatuh pada **23 Juli**?",
+        "pt-BR": "Adivinhe: o dia nacional das crianças de qual país cai em **23 de julho**?"
+      },
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        }
+      ],
+      "answer": "id",
+      "explain": {
+        "zh-TW": "印尼。Hari Anak Nasional 訂在 7 月 23 日,依據是 1984 年的第 44 號總統決定書。這個日期本身就是一段爭論的結果——印尼在此之前換過好幾個兒童節日期,最後定在七月,理由與學年、與兒童福利政策的推動有關,而不是任何一個節慶傳統。**它不是假日**:那天學校照常,活動由各級政府與學校辦。七個市場的兒童節幾乎沒有一個對得上:中國與台灣是 4 月 4 日(中國的六一國際兒童節則是 6 月 1 日,兩者不同來源);日本的こどもの日是 5 月 5 日,而且是七個市場裡少數真的放假的兒童節,它接的是端午的男孩節傳統;印度的 Bal Diwas 是 11 月 14 日,尼赫魯的生日;巴西的 Dia das Crianças 是 10 月 12 日,和聖母顯現節同一天,所以那天全國放假,但假是給宗教節日的,不是給兒童節的。**同一個對象,日期從四月到十一月散落七處,而「放不放假」還另外由別的理由決定。**",
+        "en": "Indonesia. Hari Anak Nasional falls on 23 July, set by Presidential Decision No. 44 of 1984. The date is itself the outcome of an argument — Indonesia had moved its children's day more than once before settling on July, for reasons tied to the school year and to child-welfare policy rather than to any festive tradition. **It is not a holiday**: schools run normally and the events are organised by schools and local government. Across these seven markets almost no two children's days coincide. China and Taiwan use 4 April, while China's International Children's Day on 1 June comes from a different lineage entirely. Japan's Kodomo no Hi is 5 May and is one of the few children's days here that is genuinely a day off, having grown out of the boys' festival at Tango. India's Bal Diwas is 14 November, Nehru's birthday. Brazil's Dia das Crianças is 12 October, which shares the date with Our Lady of Aparecida — so the country does stop, but the holiday belongs to the religious feast, not to the children. **One subject, dates scattered from April to November, and whether anyone gets the day off decided by something else entirely.**",
+        "ja": "インドネシアです。国民こどもの日は7月23日で、根拠は1984年大統領決定第44号。この日付自体が議論の産物で、インドネシアは以前に何度か日付を変えており、最終的に7月に落ち着いた理由は学年や児童福祉政策の推進にあって、祝祭の伝統ではありません。**休日ではなく**、学校は通常どおりで、行事は学校や各級政府が催します。七つの市場のこどもの日はほとんど一致しません。中国と台湾は4月4日で、中国の6月1日の国際児童節はまったく別系統。日本のこどもの日は5月5日で、ここでは数少ない実際に休みになるこどもの日であり、端午の男の子の節句から続いています。インドのバール・ディワスは11月14日、ネルーの誕生日。ブラジルの子どもの日は10月12日で、アパレシーダの聖母の祝日と同じ日——だから国は休みますが、その休みは宗教祭のもので、子どものためではありません。**同じ対象に、4月から11月まで散らばる日付。そして「休みになるかどうか」はまったく別の理由が決めている。**",
+        "zh-CN": "印尼。Hari Anak Nasional 订在 7 月 23 日，依据是 1984 年的第 44 号总统决定书。这个日期本身就是一段争论的结果——印尼在此之前换过好几个儿童节日期，最后定在七月，理由与学年、与儿童福利政策的推动有关，而不是任何一个节庆传统。**它不是假日**:那天学校照常，活动由各级政府与学校办。七个市场的儿童节几乎没有一个对得上:中国与台湾是 4 月 4 日(中国的六一国际儿童节则是 6 月 1 日，两者不同来源);日本的こどもの日是 5 月 5 日，而且是七个市场里少数真的放假的儿童节，它接的是端午的男孩节传统;印度的 Bal Diwas 是 11 月 14 日，尼赫鲁的生日;巴西的 Dia das Crianças 是 10 月 12 日，和圣母显现节同一天，所以那天全国放假，但假是给宗教节日的，不是给儿童节的。**同一个对象，日期从四月到十一月散落七处，而「放不放假」还另外由别的理由决定。**",
+        "hi": "इंडोनेशिया। राष्ट्रीय बाल दिवस 23 जुलाई को पड़ता है, जिसका आधार 1984 का राष्ट्रपति निर्णय संख्या 44 है। यह तारीख़ अपने आप में एक बहस का नतीजा है — इंडोनेशिया इससे पहले कई बार बाल दिवस की तारीख़ बदल चुका था, और जुलाई पर टिकने की वजह शैक्षिक सत्र और बाल-कल्याण नीति से जुड़ी थी, किसी उत्सव-परंपरा से नहीं। **यह अवकाश नहीं है**: स्कूल सामान्य रूप से चलते हैं और कार्यक्रम स्कूल तथा स्थानीय सरकारें कराती हैं। इन सात बाज़ारों में शायद ही किन्हीं दो का बाल दिवस मेल खाता हो। चीन और ताइवान 4 अप्रैल लेते हैं, जबकि चीन का 1 जून वाला अंतरराष्ट्रीय बाल दिवस बिलकुल अलग परंपरा से आता है। जापान का कोदोमो नो ही 5 मई है और यहाँ के गिने-चुने सचमुच छुट्टी वाले बाल दिवसों में से एक है, जो तांगो के बालक-पर्व से निकला है। भारत का बाल दिवस 14 नवंबर, नेहरू का जन्मदिन है। ब्राज़ील का 12 अक्टूबर अपारेसीदा की देवी माँ के पर्व के साथ पड़ता है — इसलिए देश रुकता तो है, पर वह छुट्टी धार्मिक पर्व की है, बच्चों की नहीं। **एक ही विषय, अप्रैल से नवंबर तक बिखरी तारीख़ें, और 'छुट्टी मिलेगी या नहीं' यह कोई और ही बात तय करती है।**",
+        "id": "Indonesia. Hari Anak Nasional jatuh pada 23 Juli, berdasarkan Keputusan Presiden Nomor 44 Tahun 1984. Tanggal itu sendiri hasil perdebatan — Indonesia sempat beberapa kali mengubah tanggal hari anak, dan alasan akhirnya berlabuh di Juli berkaitan dengan tahun ajaran dan dorongan kebijakan kesejahteraan anak, bukan tradisi perayaan mana pun. **Ia bukan hari libur**: sekolah berjalan seperti biasa dan acaranya digelar sekolah serta pemerintah daerah. Di tujuh pasar ini nyaris tidak ada dua hari anak yang bertepatan. Tiongkok dan Taiwan memakai 4 April, sementara Hari Anak Internasional 1 Juni di Tiongkok berasal dari garis yang sama sekali lain. Kodomo no Hi Jepang jatuh 5 Mei dan termasuk sedikit hari anak di sini yang benar-benar libur, tumbuh dari perayaan anak laki-laki Tango. Bal Diwas India adalah 14 November, hari lahir Nehru. Dia das Crianças Brasil pada 12 Oktober berbagi tanggal dengan Bunda Maria Aparecida — jadi negara memang berhenti, tetapi liburnya milik perayaan keagamaan, bukan milik anak-anak. **Satu subjek, tanggal berserak dari April sampai November, dan soal libur atau tidak ditentukan oleh hal yang sama sekali berbeda.**",
+        "pt-BR": "Indonésia. O Hari Anak Nasional cai em 23 de julho, fixado pela Decisão Presidencial nº 44 de 1984. A data é ela própria resultado de uma discussão — a Indonésia mudou o dia das crianças mais de uma vez antes de firmar julho, por razões ligadas ao ano letivo e à política de bem-estar infantil, não a alguma tradição festiva. **Não é feriado**: as escolas funcionam e as atividades ficam a cargo das escolas e dos governos locais. Nestes sete mercados quase nenhum dia das crianças coincide. China e Taiwan usam 4 de abril, enquanto o Dia Internacional da Criança chinês, em 1º de junho, vem de outra linhagem. O Kodomo no Hi japonês é 5 de maio e está entre os poucos aqui que dão folga de verdade, tendo nascido da festa dos meninos em Tango. O Bal Diwas indiano é 14 de novembro, aniversário de Nehru. O Dia das Crianças brasileiro, 12 de outubro, divide a data com Nossa Senhora Aparecida — o país para, mas o feriado é da festa religiosa, não das crianças. **Um mesmo destinatário, datas espalhadas de abril a novembro, e a folga decidida por outra coisa inteiramente.**"
+      }
+    },
+    {
+      "id": "q-20261008-bonus-expect",
+      "date": "2026-10-08",
+      "kind": "poll",
+      "topic": "year-end-bonus",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "年底,你會拿到額外的一筆錢嗎?",
+        "en": "At the end of the year, do you get an extra payment?",
+        "ja": "年末に、給与とは別のお金を受け取りますか?",
+        "zh-CN": "年底，你会拿到额外的一笔钱吗?",
+        "hi": "साल के अंत में क्या आपको कोई अतिरिक्त रक़म मिलती है?",
+        "id": "Di akhir tahun, apakah kamu menerima uang tambahan?",
+        "pt-BR": "No fim do ano, você recebe algum pagamento extra?"
+      },
+      "options": [
+        {
+          "id": "law",
+          "emoji": "⚖️",
+          "label": {
+            "zh-TW": "法律規定一定有",
+            "en": "The law requires it",
+            "ja": "法律で必ず出る",
+            "zh-CN": "法律规定一定有",
+            "hi": "क़ानून से मिलना ही है",
+            "id": "Wajib menurut undang-undang",
+            "pt-BR": "A lei obriga"
+          }
+        },
+        {
+          "id": "company",
+          "emoji": "📈",
+          "label": {
+            "zh-TW": "看公司賺不賺",
+            "en": "Depends on how the company did",
+            "ja": "会社の業績しだい",
+            "zh-CN": "看公司赚不赚",
+            "hi": "कंपनी के मुनाफ़े पर निर्भर",
+            "id": "Tergantung untung perusahaan",
+            "pt-BR": "Depende do lucro da empresa"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": {
+            "zh-TW": "沒有這回事",
+            "en": "No such thing here",
+            "ja": "そういうものはない",
+            "zh-CN": "没有这回事",
+            "hi": "ऐसा कुछ नहीं होता",
+            "id": "Tidak ada yang begitu",
+            "pt-BR": "Não existe isso"
+          }
+        },
+        {
+          "id": "dunno",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "不確定",
+            "en": "Not sure",
+            "ja": "わからない",
+            "zh-CN": "不确定",
+            "hi": "पता नहीं",
+            "id": "Tidak yakin",
+            "pt-BR": "Não sei"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261008-thirteenth-salary",
+      "date": "2026-10-08",
+      "kind": "guess",
+      "topic": "year-end-bonus",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪一國的「**第十三個月薪水**」是 1962 年就立法的義務,遲付還要罰?",
+        "en": "Guess: in which country is the **thirteenth salary** an obligation legislated back in 1962, with penalties for paying late?",
+        "ja": "クイズ:「**13か月目の給与**」が1962年に立法された義務で、遅配には罰則まであるのはどこ?",
+        "zh-CN": "你猜:哪一国的「**第十三个月薪水**」是 1962 年就立法的义务，迟付还要罚?",
+        "hi": "अंदाज़ा लगाइए: किस देश में **तेरहवाँ वेतन** 1962 में ही क़ानून बना दायित्व है, और देर से देने पर जुर्माना लगता है?",
+        "id": "Tebak: di negara mana **gaji ke-13** merupakan kewajiban yang diundangkan sejak 1962, lengkap dengan sanksi bila terlambat dibayar?",
+        "pt-BR": "Adivinhe: em qual país o **décimo terceiro salário** é uma obrigação legislada em 1962, com punição por atraso?"
+      },
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        }
+      ],
+      "answer": "pt-BR",
+      "explain": {
+        "zh-TW": "巴西。1962 年的第 4.090 號法律把「第十三個月薪水」寫成雇主的義務,不是獎勵:金額以年資按月計、分兩期發,第一期最遲 11 月 30 日,第二期最遲 12 月 20 日,遲付有行政罰。**它與公司賺不賺錢無關**——這是這題真正的分水嶺。同樣是義務的還有印尼的 THR(節慶津貼):它綁在宗教節日而不是年底,而且法規要求最遲在節前七天一次付清、不准分期,遲付罰 5%。印度的法定紅利下限也與盈虧脫鉤,連虧損的年度都要付。相對地,台灣勞基法第 29 條是一個條件句:有盈餘才分配,沒有寫金額、沒有寫期限、也沒有罰則,所以年終獎金在實務上是慣例而非權利。美國則根本沒有這一項,聯邦法規只在意獎金算不算進加班費的計算基礎。**「有沒有」不是重點,「確定不確定」才是。**",
+        "en": "Brazil. Law 4,090 of 1962 makes the thirteenth salary an employer's obligation rather than a reward: it is calculated month by month over the year and paid in two instalments, the first by 30 November and the second by 20 December, with administrative penalties for lateness. **It has nothing to do with whether the company made money** — that is the real dividing line in this question. Indonesia's THR is likewise an obligation, but it is tied to the religious holiday rather than the year's end, must be paid in full at least seven days before the feast, cannot be split into instalments, and carries a 5% penalty for delay. India's statutory minimum bonus is also decoupled from profit and must be paid even in a loss-making year. Taiwan, by contrast, has Article 29 of the Labour Standards Act — a conditional sentence: distribute if there is a surplus, with no amount, no deadline and no penalty, so the year-end bonus is custom rather than entitlement. The United States has nothing of the kind; federal rules care only about whether a bonus counts toward the overtime base. **The question is not whether extra money exists, but whether it is certain.**",
+        "ja": "ブラジルです。1962年の第4,090号法は「13か月目の給与」を報奨ではなく雇用者の義務と定めています。年内の月数に応じて計算し、二回に分けて支払い、第一回は11月30日まで、第二回は12月20日まで。遅れれば行政罰があります。**会社が儲かったかどうかとは無関係**——ここがこの問いの本当の分かれ目です。インドネシアのTHR(祝祭手当)も義務ですが、年末ではなく宗教祭に紐づき、祭りの七日前までに全額一括、分割は不可、遅配には5%の制裁金。インドの法定賞与の下限も損益から切り離されており、赤字の年でも支払わねばなりません。対して台湾の労働基準法第29条は条件文です——利益があれば分配する、金額の定めなし、期限の定めなし、罰則もなし。だから年末賞与は実務上、権利ではなく慣行です。アメリカにはそもそもこの制度がなく、連邦規則が気にするのは賞与が残業代の算定基礎に入るかどうかだけ。**問題は「あるかないか」ではなく「確実かどうか」です。**",
+        "zh-CN": "巴西。1962 年的第 4.090 号法律把「第十三个月薪水」写成雇主的义务，不是奖励:金额以年资按月计、分两期发，第一期最迟 11 月 30 日，第二期最迟 12 月 20 日，迟付有行政罚。**它与公司赚不赚钱无关**——这是这题真正的分水岭。同样是义务的还有印尼的 THR(节庆津贴):它绑在宗教节日而不是年底，而且法规要求最迟在节前七天一次付清、不准分期，迟付罚 5%。印度的法定红利下限也与盈亏脱钩，连亏损的年度都要付。相对地，台湾劳基法第 29 条是一个条件句:有盈余才分配，没有写金额、没有写期限、也没有罚则，所以年终奖金在实务上是惯例而非权利。美国则根本没有这一项，联邦法规只在意奖金算不算进加班费的计算基础。**「有没有」不是重点，「确定不确定」才是。**",
+        "hi": "ब्राज़ील। 1962 का क़ानून संख्या 4,090 'तेरहवें वेतन' को इनाम नहीं, नियोक्ता का दायित्व बनाता है: साल भर के महीनों के हिसाब से गणना, दो किस्तों में भुगतान — पहली 30 नवंबर तक और दूसरी 20 दिसंबर तक, और देरी पर प्रशासनिक जुर्माना। **इसका कंपनी के मुनाफ़े से कोई लेना-देना नहीं** — यही इस सवाल की असली विभाजक रेखा है। इंडोनेशिया का THR भी दायित्व है, पर वह साल के अंत से नहीं, धार्मिक पर्व से बँधा है; पर्व से कम से कम सात दिन पहले पूरा भुगतान अनिवार्य है, किस्तों में नहीं, और देरी पर 5% जुर्माना। भारत में क़ानूनी न्यूनतम बोनस भी लाभ-हानि से अलग है और घाटे के वर्ष में भी देना पड़ता है। इसके उलट ताइवान के श्रम मानक अधिनियम की धारा 29 एक शर्तवाला वाक्य है: अधिशेष हो तो बाँटो — न रक़म तय, न समय-सीमा, न दंड। इसलिए वहाँ साल के अंत का बोनस अधिकार नहीं, प्रथा है। अमेरिका में यह चीज़ है ही नहीं; संघीय नियम केवल इतना देखते हैं कि बोनस ओवरटाइम की गणना में जुड़ेगा या नहीं। **सवाल यह नहीं कि अतिरिक्त पैसा मिलता है या नहीं, सवाल यह है कि वह निश्चित है या नहीं।**",
+        "id": "Brasil. Undang-Undang Nomor 4.090 tahun 1962 menjadikan 'gaji ke-13' sebagai kewajiban pemberi kerja, bukan penghargaan: dihitung per bulan sepanjang tahun dan dibayar dalam dua tahap, tahap pertama paling lambat 30 November dan tahap kedua paling lambat 20 Desember, dengan sanksi administratif bila terlambat. **Tidak ada kaitannya dengan untung atau ruginya perusahaan** — di situlah garis pemisah sebenarnya dalam pertanyaan ini. THR di Indonesia juga kewajiban, tetapi terikat pada hari raya keagamaan, bukan akhir tahun; harus dibayar penuh paling lambat tujuh hari sebelum hari raya, tidak boleh dicicil, dan keterlambatan dikenai denda 5%. Bonus minimum menurut undang-undang di India pun terlepas dari laba-rugi dan tetap harus dibayar pada tahun merugi. Sebaliknya, Pasal 29 Undang-Undang Standar Ketenagakerjaan Taiwan adalah kalimat bersyarat: dibagikan jika ada surplus — tanpa nominal, tanpa tenggat, tanpa sanksi; jadi bonus akhir tahun di sana adalah kebiasaan, bukan hak. Amerika Serikat sama sekali tidak punya hal semacam ini; aturan federal hanya peduli apakah bonus dihitung dalam dasar upah lembur. **Pertanyaannya bukan ada atau tidaknya uang tambahan, melainkan pasti atau tidaknya.**",
+        "pt-BR": "Brasil. A Lei 4.090, de 1962, torna o décimo terceiro uma obrigação do empregador, e não um prêmio: é calculado mês a mês ao longo do ano e pago em duas parcelas, a primeira até 30 de novembro e a segunda até 20 de dezembro, com penalidade administrativa em caso de atraso. **Nada disso depende de a empresa ter lucrado** — é essa a verdadeira linha divisória da pergunta. O THR indonésio também é obrigação, mas está atado à festa religiosa e não ao fim do ano: deve ser pago integralmente até sete dias antes da data, não pode ser parcelado, e o atraso custa 5%. O bônus mínimo legal da Índia igualmente independe do resultado e deve ser pago mesmo em ano de prejuízo. Já o artigo 29 da Lei de Padrões do Trabalho de Taiwan é uma frase condicional: distribua-se havendo superávit — sem valor, sem prazo, sem punição; por isso o bônus de fim de ano é ali costume, não direito. Os Estados Unidos não têm nada semelhante; as regras federais só se interessam por saber se o bônus entra na base das horas extras. **A questão não é se existe dinheiro extra, e sim se ele é certo.**"
+      }
+    },
+    {
+      "id": "q-20261009-exam-days",
+      "date": "2026-10-09",
+      "kind": "poll",
+      "topic": "exam-season",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你們那裡最重要的升學考試,要考幾天?",
+        "en": "How many days does the big entrance exam take where you live?",
+        "ja": "そちらでいちばん重い進学試験は、何日かかりますか?",
+        "zh-CN": "你们那里最重要的升学考试，要考几天?",
+        "hi": "आपके यहाँ सबसे बड़ी प्रवेश परीक्षा कितने दिन चलती है?",
+        "id": "Di tempatmu, ujian masuk yang paling menentukan berlangsung berapa hari?",
+        "pt-BR": "Aí, o exame de acesso mais decisivo dura quantos dias?"
+      },
+      "options": [
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": {
+            "zh-TW": "一天",
+            "en": "One day",
+            "ja": "1日",
+            "zh-CN": "一天",
+            "hi": "एक दिन",
+            "id": "Satu hari",
+            "pt-BR": "Um dia"
+          }
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": {
+            "zh-TW": "兩天",
+            "en": "Two days",
+            "ja": "2日",
+            "zh-CN": "两天",
+            "hi": "दो दिन",
+            "id": "Dua hari",
+            "pt-BR": "Dois dias"
+          }
+        },
+        {
+          "id": "three_plus",
+          "emoji": "📅",
+          "label": {
+            "zh-TW": "三天以上",
+            "en": "Three days or more",
+            "ja": "3日以上",
+            "zh-CN": "三天以上",
+            "hi": "तीन दिन या उससे ज़्यादा",
+            "id": "Tiga hari atau lebih",
+            "pt-BR": "Três dias ou mais"
+          }
+        },
+        {
+          "id": "no_exam",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "沒有這種全國性考試",
+            "en": "No nationwide exam like that",
+            "ja": "そうした全国試験はない",
+            "zh-CN": "没有这种全国性考试",
+            "hi": "ऐसी कोई राष्ट्रीय परीक्षा नहीं",
+            "id": "Tidak ada ujian nasional semacam itu",
+            "pt-BR": "Não existe exame nacional assim"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261009-exam-june",
+      "date": "2026-10-09",
+      "kind": "guess",
+      "topic": "exam-season",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪一國的大學入學考試固定在**六月七日、八日**這兩天,全國同一時間開考?",
+        "en": "Guess: which country holds its university entrance exam on **7 and 8 June** every year, starting at the same hour nationwide?",
+        "ja": "クイズ:大学入学試験が毎年**6月7日・8日**に固定され、全国一斉に始まるのはどこ?",
+        "zh-CN": "你猜:哪一国的大学入学考试固定在**六月七日、八日**这两天，全国同一时间开考?",
+        "hi": "अंदाज़ा लगाइए: किस देश की विश्वविद्यालय प्रवेश परीक्षा हर साल **7 और 8 जून** को होती है और पूरे देश में एक ही समय शुरू होती है?",
+        "id": "Tebak: negara mana yang menggelar ujian masuk universitas tetap pada **7 dan 8 Juni** setiap tahun, serentak di seluruh negeri?",
+        "pt-BR": "Adivinhe: qual país realiza o exame de ingresso na universidade sempre em **7 e 8 de junho**, começando à mesma hora em todo o território?"
+      },
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "zh-CN",
+      "explain": {
+        "zh-TW": "中國。高考自 2003 年起固定在每年 6 月 7 日與 8 日(部分省份因科目設置多考一到兩天),全國同一時間開考。這個「同一時間」造成的社會動員在別處很少見:考場周邊道路管制、工地停工、鳴笛禁止,計程車與警車載送遲到的考生成為每年的新聞。這與其他六個市場的做法差距很大。台灣分成一月的學測與七月的分科測驗,是兩次機會而不是一次;日本一月的大學入學共通測驗之後,各校還要再考一次自己的試;印度沒有單一入口,工程的 JEE、醫學的 NEET 各自成一套,而 NEET 是單日單場;印尼的 SNBT 改成電腦化施測、分梯次進行,連日期都不是全國同一天;巴西的 ENEM 辦在兩個星期日,而且它同時是高中學力測驗與大學入口;美國的 SAT/ACT 一年考很多次,分數只是申請材料之一。**「一次定終身」不是考試的天性,是制度選擇的結果。**",
+        "en": "China. The gaokao has been fixed on 7 and 8 June since 2003 (a few provinces run an extra day or two for additional subjects), starting at the same hour across the country. That simultaneity produces a mobilisation rarely seen elsewhere: traffic diverted around exam centres, construction halted, horns banned, and the annual news of taxis and police cars ferrying late candidates. The other six markets differ sharply. Taiwan splits the process into a January general test and a July subject test — two chances rather than one. In Japan, the January Common Test is followed by each university's own second-stage exam. India has no single gateway at all: JEE for engineering and NEET for medicine run as separate systems, and NEET is a single sitting on one day. Indonesia's SNBT is computer-based and staged in waves, so not even the date is uniform. Brazil's ENEM runs over two Sundays and doubles as a school-leaving assessment. The American SAT and ACT are offered many times a year and are only one item in an application. **A single life-defining sitting is not the nature of exams; it is a choice of design.**",
+        "ja": "中国です。高考は2003年以降、毎年6月7日・8日に固定され(科目構成の都合で一〜二日多い省もあります)、全国一斉に始まります。この「一斉」が生む社会的動員は他ではあまり見られません——試験場周辺の交通規制、工事の停止、クラクションの禁止、遅刻しそうな受験生をタクシーやパトカーが運ぶ光景が毎年の風物詩です。他の六市場とはかなり違います。台湾は1月の学科能力テストと7月の分科テストに分かれ、機会は一度ではなく二度。日本は1月の大学入学共通テストのあと、各大学の二次試験があります。インドにはそもそも単一の入口がなく、工学のJEEと医学のNEETが別系統で、NEETは一日一回のみ。インドネシアのSNBTはコンピュータ方式で複数回に分けて実施され、日付すら全国一律ではありません。ブラジルのENEMは二つの日曜に行われ、高校の学力評価も兼ねます。アメリカのSAT/ACTは年に何度もあり、点数は出願材料の一つにすぎません。**「一度で人生が決まる」は試験の本性ではなく、制度設計の結果です。**",
+        "zh-CN": "中国。高考自 2003 年起固定在每年 6 月 7 日与 8 日(部分省份因科目设置多考一到两天)，全国同一时间开考。这个「同一时间」造成的社会动员在别处很少见:考场周边道路管制、工地停工、鸣笛禁止，出租车与警车载送迟到的考生成为每年的新闻。这与其他六个市场的做法差距很大。台湾分成一月的学测与七月的分科测验，是两次机会而不是一次;日本一月的大学入学共通测验之后，各校还要再考一次自己的试;印度没有单一入口，工程的 JEE、医学的 NEET 各自成一套，而 NEET 是单日单场;印尼的 SNBT 改成计算机化施测、分梯次进行，连日期都不是全国同一天;巴西的 ENEM 办在两个星期日，而且它同时是高中学力测验与大学入口;美国的 SAT/ACT 一年考很多次，分数只是申请材料之一。**「一次定终身」不是考试的天性，是制度选择的结果。**",
+        "hi": "चीन। गाओकाओ 2003 से हर साल 7 और 8 जून को तय है (कुछ प्रांतों में विषयों के कारण एक-दो दिन ज़्यादा), और पूरे देश में एक ही समय शुरू होती है। यह एक-साथ होना ऐसी सामाजिक लामबंदी पैदा करता है जो कहीं और कम दिखती है: परीक्षा केंद्रों के आसपास यातायात मोड़ा जाता है, निर्माण रुकता है, हॉर्न बजाना मना होता है, और देर से पहुँचते परीक्षार्थियों को टैक्सी और पुलिस गाड़ियाँ पहुँचाती हैं — हर साल की ख़बर। बाक़ी छह बाज़ार बहुत अलग हैं। ताइवान में जनवरी की सामान्य परीक्षा और जुलाई की विषय परीक्षा — यानी एक नहीं, दो मौक़े। जापान में जनवरी की साझा परीक्षा के बाद हर विश्वविद्यालय अपनी दूसरी परीक्षा लेता है। भारत में तो कोई एक द्वार है ही नहीं: अभियांत्रिकी के लिए JEE और चिकित्सा के लिए NEET अलग-अलग तंत्र हैं, और NEET एक ही दिन एक ही पाली में होती है। इंडोनेशिया की SNBT कंप्यूटर आधारित है और चरणों में होती है — तारीख़ तक पूरे देश में एक नहीं। ब्राज़ील की ENEM दो रविवारों को होती है और साथ ही स्कूल-अंत का मूल्यांकन भी है। अमेरिका में SAT/ACT साल में कई बार होते हैं और अंक आवेदन का बस एक हिस्सा हैं। **'एक ही परीक्षा से पूरा जीवन तय' परीक्षा का स्वभाव नहीं, व्यवस्था का चुनाव है।**",
+        "id": "Tiongkok. Gaokao sudah dipatok pada 7 dan 8 Juni sejak 2003 (beberapa provinsi menambah satu-dua hari karena susunan mata ujinya), dan dimulai pada jam yang sama di seluruh negeri. Keserentakan itu memicu mobilisasi sosial yang jarang terlihat di tempat lain: lalu lintas dialihkan di sekitar lokasi ujian, pembangunan dihentikan, membunyikan klakson dilarang, dan setiap tahun ada berita taksi serta mobil polisi mengantar peserta yang nyaris terlambat. Enam pasar lainnya jauh berbeda. Taiwan memisahkan ujian umum Januari dan ujian mata pelajaran Juli — dua kesempatan, bukan satu. Di Jepang, setelah Ujian Bersama Januari, tiap universitas masih menggelar ujian tahap keduanya sendiri. India bahkan tidak punya pintu tunggal: JEE untuk teknik dan NEET untuk kedokteran berjalan sebagai sistem terpisah, dan NEET hanya satu sesi dalam satu hari. SNBT Indonesia berbasis komputer dan digelar bergelombang, sehingga tanggalnya pun tidak seragam. ENEM Brasil berlangsung dua hari Minggu dan sekaligus menjadi asesmen akhir sekolah. SAT/ACT Amerika tersedia berkali-kali setahun dan nilainya hanya salah satu berkas pendaftaran. **'Sekali ujian menentukan seumur hidup' bukan sifat bawaan ujian, melainkan hasil pilihan kelembagaan.**",
+        "pt-BR": "China. O gaokao está fixado em 7 e 8 de junho desde 2003 (algumas províncias acrescentam um ou dois dias por causa das disciplinas) e começa à mesma hora em todo o país. Essa simultaneidade produz uma mobilização raramente vista noutro lugar: trânsito desviado ao redor dos locais de prova, obras paradas, buzinas proibidas, e a notícia anual de táxis e viaturas levando candidatos atrasados. Os outros seis mercados divergem bastante. Taiwan reparte o processo entre a prova geral de janeiro e a prova por disciplina de julho — duas chances, não uma. No Japão, depois do Exame Comum de janeiro, cada universidade ainda aplica a sua segunda fase. A Índia não tem porta única: o JEE, para engenharia, e o NEET, para medicina, são sistemas separados, e o NEET é uma única aplicação em um só dia. O SNBT indonésio é informatizado e ocorre em ondas, de modo que nem a data é uniforme. O ENEM brasileiro acontece em dois domingos e funciona também como avaliação de fim de ensino médio. Nos Estados Unidos, SAT e ACT são oferecidos várias vezes por ano e a nota é apenas um item da candidatura. **'Uma prova que define a vida inteira' não é a natureza dos exames, é uma escolha de desenho institucional.**"
+      }
     }
   ]
 }

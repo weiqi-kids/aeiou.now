@@ -3228,6 +3228,468 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20261003-national-day-off",
+      "date": "2026-10-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "O feriado nacional aí é daqueles em que se folga de verdade?",
+      "options": [
+        {
+          "id": "day_off",
+          "emoji": "🏖️",
+          "label": "Um dia de folga"
+        },
+        {
+          "id": "long_weekend",
+          "emoji": "🎉",
+          "label": "Vira feriadão"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "Trabalho e aula normalmente"
+        },
+        {
+          "id": "depends",
+          "emoji": "🗺️",
+          "label": "Depende da região"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261003-constitution-holiday",
+      "date": "2026-10-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: qual país tem, além da independência, outro feriado nacional que marca a **entrada em vigor da constituição**?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261004-elders-what",
+      "date": "2026-10-04",
+      "kind": "poll",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "No dia dedicado aos mais velhos aí, o que as pessoas costumam fazer?",
+      "options": [
+        {
+          "id": "visit",
+          "emoji": "🏠",
+          "label": "Visitar os mais velhos"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "Dar presente ou almoço"
+        },
+        {
+          "id": "event",
+          "emoji": "🎪",
+          "label": "Evento da comunidade ou escola"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Não existe esse costume"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261004-elders-holiday",
+      "date": "2026-10-04",
+      "kind": "guess",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: em qual país o dia dedicado aos idosos é de fato **feriado nacional**?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261005-teachers-gift",
+      "date": "2026-10-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "No dia dos professores aí, os alunos dão alguma coisa ao professor?",
+      "options": [
+        {
+          "id": "flower",
+          "emoji": "💐",
+          "label": "Flores"
+        },
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "Cartão ou mensagem"
+        },
+        {
+          "id": "nothing",
+          "emoji": "🙅",
+          "label": "Nada"
+        },
+        {
+          "id": "no_day",
+          "emoji": "🤷",
+          "label": "Não temos dia dos professores"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261005-teachers-philosopher",
+      "date": "2026-10-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: o dia dos professores de qual país cai no aniversário de um **filósofo que foi presidente**?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261006-labour-day-off",
+      "date": "2026-10-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "No dia do trabalhador, você trabalha?",
+      "options": [
+        {
+          "id": "off",
+          "emoji": "🛌",
+          "label": "Folgo"
+        },
+        {
+          "id": "work_paid",
+          "emoji": "💰",
+          "label": "Trabalho, mas recebo adicional"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "Trabalho normalmente"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Não temos esse dia"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261006-labour-september",
+      "date": "2026-10-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: qual país marca o dia do trabalhador na **primeira segunda-feira de setembro**, e não em 1º de maio?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261007-childrens-school",
+      "date": "2026-10-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "No dia das crianças aí, o que acontece na escola?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎈",
+          "label": "A escola fecha"
+        },
+        {
+          "id": "party",
+          "emoji": "🎪",
+          "label": "Aula normal, mas com festa"
+        },
+        {
+          "id": "normal",
+          "emoji": "📚",
+          "label": "Um dia como outro qualquer"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Não temos dia das crianças"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261007-childrens-july",
+      "date": "2026-10-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: o dia nacional das crianças de qual país cai em **23 de julho**?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261008-bonus-expect",
+      "date": "2026-10-08",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "No fim do ano, você recebe algum pagamento extra?",
+      "options": [
+        {
+          "id": "law",
+          "emoji": "⚖️",
+          "label": "A lei obriga"
+        },
+        {
+          "id": "company",
+          "emoji": "📈",
+          "label": "Depende do lucro da empresa"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "Não existe isso"
+        },
+        {
+          "id": "dunno",
+          "emoji": "🤷",
+          "label": "Não sei"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261008-thirteenth-salary",
+      "date": "2026-10-08",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: em qual país o **décimo terceiro salário** é uma obrigação legislada em 1962, com punição por atraso?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261009-exam-days",
+      "date": "2026-10-09",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Aí, o exame de acesso mais decisivo dura quantos dias?",
+      "options": [
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "Um dia"
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": "Dois dias"
+        },
+        {
+          "id": "three_plus",
+          "emoji": "📅",
+          "label": "Três dias ou mais"
+        },
+        {
+          "id": "no_exam",
+          "emoji": "🤷",
+          "label": "Não existe exame nacional assim"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261009-exam-june",
+      "date": "2026-10-09",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adivinhe: qual país realiza o exame de ingresso na universidade sempre em **7 e 8 de junho**, começando à mesma hora em todo o território?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

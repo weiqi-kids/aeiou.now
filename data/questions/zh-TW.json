@@ -3228,6 +3228,468 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20261003-national-day-off",
+      "date": "2026-10-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你們的國慶日,是會放假的那一種嗎?",
+      "options": [
+        {
+          "id": "day_off",
+          "emoji": "🏖️",
+          "label": "放一天假"
+        },
+        {
+          "id": "long_weekend",
+          "emoji": "🎉",
+          "label": "會湊成連假"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "照常上班上課"
+        },
+        {
+          "id": "depends",
+          "emoji": "🗺️",
+          "label": "看地方,不是全國一致"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261003-constitution-holiday",
+      "date": "2026-10-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一國除了獨立紀念日之外,還另外有一個國定假日,紀念的是**憲法生效**?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261004-elders-what",
+      "date": "2026-10-04",
+      "kind": "poll",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "敬老的那個日子,你們那裡的人通常會做什麼?",
+      "options": [
+        {
+          "id": "visit",
+          "emoji": "🏠",
+          "label": "回去看長輩"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "送禮或請吃飯"
+        },
+        {
+          "id": "event",
+          "emoji": "🎪",
+          "label": "社區或學校辦活動"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "沒有這個習慣"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261004-elders-holiday",
+      "date": "2026-10-04",
+      "kind": "guess",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一國把敬老的日子訂成**國定假日**,當天真的放假?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261005-teachers-gift",
+      "date": "2026-10-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "教師節那天,學生會送老師東西嗎?",
+      "options": [
+        {
+          "id": "flower",
+          "emoji": "💐",
+          "label": "送花"
+        },
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "卡片或訊息"
+        },
+        {
+          "id": "nothing",
+          "emoji": "🙅",
+          "label": "什麼都不送"
+        },
+        {
+          "id": "no_day",
+          "emoji": "🤷",
+          "label": "我們沒有教師節"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261005-teachers-philosopher",
+      "date": "2026-10-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一國的教師節,訂在一位**當過總統的哲學家**的生日那天?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261006-labour-day-off",
+      "date": "2026-10-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "勞動節那天,你上班嗎?",
+      "options": [
+        {
+          "id": "off",
+          "emoji": "🛌",
+          "label": "放假"
+        },
+        {
+          "id": "work_paid",
+          "emoji": "💰",
+          "label": "上班,但有加給"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "照常上班,沒有不同"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "我們沒有這個節日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261006-labour-september",
+      "date": "2026-10-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一國把勞動節訂在**九月的第一個星期一**,而不是五月一日?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261007-childrens-school",
+      "date": "2026-10-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你們的兒童節,學校那天怎麼過?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎈",
+          "label": "放假"
+        },
+        {
+          "id": "party",
+          "emoji": "🎪",
+          "label": "照常上課,但有活動"
+        },
+        {
+          "id": "normal",
+          "emoji": "📚",
+          "label": "跟平常一樣"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "我們沒有兒童節"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261007-childrens-july",
+      "date": "2026-10-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一國的全國兒童節在 **7 月 23 日**?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261008-bonus-expect",
+      "date": "2026-10-08",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "年底,你會拿到額外的一筆錢嗎?",
+      "options": [
+        {
+          "id": "law",
+          "emoji": "⚖️",
+          "label": "法律規定一定有"
+        },
+        {
+          "id": "company",
+          "emoji": "📈",
+          "label": "看公司賺不賺"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "沒有這回事"
+        },
+        {
+          "id": "dunno",
+          "emoji": "🤷",
+          "label": "不確定"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261008-thirteenth-salary",
+      "date": "2026-10-08",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一國的「**第十三個月薪水**」是 1962 年就立法的義務,遲付還要罰?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261009-exam-days",
+      "date": "2026-10-09",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你們那裡最重要的升學考試,要考幾天?",
+      "options": [
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "一天"
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": "兩天"
+        },
+        {
+          "id": "three_plus",
+          "emoji": "📅",
+          "label": "三天以上"
+        },
+        {
+          "id": "no_exam",
+          "emoji": "🤷",
+          "label": "沒有這種全國性考試"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261009-exam-june",
+      "date": "2026-10-09",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一國的大學入學考試固定在**六月七日、八日**這兩天,全國同一時間開考?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

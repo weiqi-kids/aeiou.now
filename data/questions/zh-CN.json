@@ -3228,6 +3228,468 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20261003-national-day-off",
+      "date": "2026-10-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你们的国庆日，是会放假的那一种吗?",
+      "options": [
+        {
+          "id": "day_off",
+          "emoji": "🏖️",
+          "label": "放一天假"
+        },
+        {
+          "id": "long_weekend",
+          "emoji": "🎉",
+          "label": "会凑成连假"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "照常上班上课"
+        },
+        {
+          "id": "depends",
+          "emoji": "🗺️",
+          "label": "看地方，不是全国一致"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261003-constitution-holiday",
+      "date": "2026-10-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一国除了独立纪念日之外，还另外有一个国定假日，纪念的是**宪法生效**?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261004-elders-what",
+      "date": "2026-10-04",
+      "kind": "poll",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "敬老的那个日子，你们那里的人通常会做什么?",
+      "options": [
+        {
+          "id": "visit",
+          "emoji": "🏠",
+          "label": "回去看长辈"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "送礼或请吃饭"
+        },
+        {
+          "id": "event",
+          "emoji": "🎪",
+          "label": "社区或学校办活动"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "没有这个习惯"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261004-elders-holiday",
+      "date": "2026-10-04",
+      "kind": "guess",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一国把敬老的日子订成**国定假日**，当天真的放假?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261005-teachers-gift",
+      "date": "2026-10-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "教师节那天，学生会送老师东西吗?",
+      "options": [
+        {
+          "id": "flower",
+          "emoji": "💐",
+          "label": "送花"
+        },
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "卡片或讯息"
+        },
+        {
+          "id": "nothing",
+          "emoji": "🙅",
+          "label": "什么都不送"
+        },
+        {
+          "id": "no_day",
+          "emoji": "🤷",
+          "label": "我们没有教师节"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261005-teachers-philosopher",
+      "date": "2026-10-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一国的教师节，订在一位**当过总统的哲学家**的生日那天?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261006-labour-day-off",
+      "date": "2026-10-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "劳动节那天，你上班吗?",
+      "options": [
+        {
+          "id": "off",
+          "emoji": "🛌",
+          "label": "放假"
+        },
+        {
+          "id": "work_paid",
+          "emoji": "💰",
+          "label": "上班，但有加给"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "照常上班，没有不同"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "我们没有这个节日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261006-labour-september",
+      "date": "2026-10-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一国把劳动节订在**九月的第一个星期一**，而不是五月一日?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261007-childrens-school",
+      "date": "2026-10-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你们的儿童节，学校那天怎么过?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎈",
+          "label": "放假"
+        },
+        {
+          "id": "party",
+          "emoji": "🎪",
+          "label": "照常上课，但有活动"
+        },
+        {
+          "id": "normal",
+          "emoji": "📚",
+          "label": "跟平常一样"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "我们没有儿童节"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261007-childrens-july",
+      "date": "2026-10-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一国的全国儿童节在 **7 月 23 日**?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261008-bonus-expect",
+      "date": "2026-10-08",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "年底，你会拿到额外的一笔钱吗?",
+      "options": [
+        {
+          "id": "law",
+          "emoji": "⚖️",
+          "label": "法律规定一定有"
+        },
+        {
+          "id": "company",
+          "emoji": "📈",
+          "label": "看公司赚不赚"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "没有这回事"
+        },
+        {
+          "id": "dunno",
+          "emoji": "🤷",
+          "label": "不确定"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261008-thirteenth-salary",
+      "date": "2026-10-08",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一国的「**第十三个月薪水**」是 1962 年就立法的义务，迟付还要罚?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261009-exam-days",
+      "date": "2026-10-09",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你们那里最重要的升学考试，要考几天?",
+      "options": [
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "一天"
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": "两天"
+        },
+        {
+          "id": "three_plus",
+          "emoji": "📅",
+          "label": "三天以上"
+        },
+        {
+          "id": "no_exam",
+          "emoji": "🤷",
+          "label": "没有这种全国性考试"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261009-exam-june",
+      "date": "2026-10-09",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一国的大学入学考试固定在**六月七日、八日**这两天，全国同一时间开考?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

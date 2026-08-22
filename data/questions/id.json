@@ -3228,6 +3228,468 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20261003-national-day-off",
+      "date": "2026-10-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Hari nasional di tempatmu, termasuk yang benar-benar libur?",
+      "options": [
+        {
+          "id": "day_off",
+          "emoji": "🏖️",
+          "label": "Libur satu hari"
+        },
+        {
+          "id": "long_weekend",
+          "emoji": "🎉",
+          "label": "Jadi libur panjang"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "Kerja dan sekolah seperti biasa"
+        },
+        {
+          "id": "depends",
+          "emoji": "🗺️",
+          "label": "Tergantung daerah"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261003-constitution-holiday",
+      "date": "2026-10-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: negara mana yang selain hari kemerdekaan juga punya hari libur nasional untuk memperingati **berlakunya konstitusi**?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261004-elders-what",
+      "date": "2026-10-04",
+      "kind": "poll",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Pada hari untuk menghormati orang tua di tempatmu, orang biasanya melakukan apa?",
+      "options": [
+        {
+          "id": "visit",
+          "emoji": "🏠",
+          "label": "Mengunjungi orang tua"
+        },
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "Memberi hadiah atau makan bersama"
+        },
+        {
+          "id": "event",
+          "emoji": "🎪",
+          "label": "Acara komunitas atau sekolah"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Tidak ada kebiasaan itu"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261004-elders-holiday",
+      "date": "2026-10-04",
+      "kind": "guess",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: negara mana yang menjadikan hari untuk orang lanjut usia sebagai **hari libur nasional** yang benar-benar libur?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261005-teachers-gift",
+      "date": "2026-10-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Pada hari guru di tempatmu, apakah murid memberi sesuatu kepada guru?",
+      "options": [
+        {
+          "id": "flower",
+          "emoji": "💐",
+          "label": "Bunga"
+        },
+        {
+          "id": "card",
+          "emoji": "💌",
+          "label": "Kartu atau pesan"
+        },
+        {
+          "id": "nothing",
+          "emoji": "🙅",
+          "label": "Tidak memberi apa-apa"
+        },
+        {
+          "id": "no_day",
+          "emoji": "🤷",
+          "label": "Kami tidak punya hari guru"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261005-teachers-philosopher",
+      "date": "2026-10-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: hari guru di negara mana yang jatuh pada hari lahir seorang **filsuf yang pernah menjadi presiden**?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261006-labour-day-off",
+      "date": "2026-10-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Pada hari buruh, kamu tetap bekerja?",
+      "options": [
+        {
+          "id": "off",
+          "emoji": "🛌",
+          "label": "Libur"
+        },
+        {
+          "id": "work_paid",
+          "emoji": "💰",
+          "label": "Kerja, tapi dapat upah lembur"
+        },
+        {
+          "id": "work",
+          "emoji": "💼",
+          "label": "Kerja seperti biasa"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Kami tidak punya hari itu"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261006-labour-september",
+      "date": "2026-10-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: negara mana yang menempatkan hari buruh pada **Senin pertama bulan September**, bukan 1 Mei?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261007-childrens-school",
+      "date": "2026-10-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Pada hari anak di tempatmu, apa yang terjadi di sekolah?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎈",
+          "label": "Sekolah libur"
+        },
+        {
+          "id": "party",
+          "emoji": "🎪",
+          "label": "Tetap sekolah, tapi ada acara"
+        },
+        {
+          "id": "normal",
+          "emoji": "📚",
+          "label": "Sama seperti hari biasa"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Kami tidak punya hari anak"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261007-childrens-july",
+      "date": "2026-10-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: hari anak nasional negara mana yang jatuh pada **23 Juli**?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261008-bonus-expect",
+      "date": "2026-10-08",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di akhir tahun, apakah kamu menerima uang tambahan?",
+      "options": [
+        {
+          "id": "law",
+          "emoji": "⚖️",
+          "label": "Wajib menurut undang-undang"
+        },
+        {
+          "id": "company",
+          "emoji": "📈",
+          "label": "Tergantung untung perusahaan"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "Tidak ada yang begitu"
+        },
+        {
+          "id": "dunno",
+          "emoji": "🤷",
+          "label": "Tidak yakin"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261008-thirteenth-salary",
+      "date": "2026-10-08",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: di negara mana **gaji ke-13** merupakan kewajiban yang diundangkan sejak 1962, lengkap dengan sanksi bila terlambat dibayar?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261009-exam-days",
+      "date": "2026-10-09",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempatmu, ujian masuk yang paling menentukan berlangsung berapa hari?",
+      "options": [
+        {
+          "id": "one",
+          "emoji": "1️⃣",
+          "label": "Satu hari"
+        },
+        {
+          "id": "two",
+          "emoji": "2️⃣",
+          "label": "Dua hari"
+        },
+        {
+          "id": "three_plus",
+          "emoji": "📅",
+          "label": "Tiga hari atau lebih"
+        },
+        {
+          "id": "no_exam",
+          "emoji": "🤷",
+          "label": "Tidak ada ujian nasional semacam itu"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261009-exam-june",
+      "date": "2026-10-09",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: negara mana yang menggelar ujian masuk universitas tetap pada **7 dan 8 Juni** setiap tahun, serentak di seluruh negeri?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }
