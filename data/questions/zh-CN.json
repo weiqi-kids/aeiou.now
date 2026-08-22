@@ -3690,6 +3690,468 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20261010-vote-travel",
+      "date": "2026-10-10",
+      "kind": "poll",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "投票那天，你要跑多远才投得到票?",
+      "options": [
+        {
+          "id": "walk",
+          "emoji": "🚶",
+          "label": "走路就到"
+        },
+        {
+          "id": "same_city",
+          "emoji": "🚌",
+          "label": "同一个城市，但要搭车"
+        },
+        {
+          "id": "go_home",
+          "emoji": "🚄",
+          "label": "要回原本的户籍地"
+        },
+        {
+          "id": "post",
+          "emoji": "📮",
+          "label": "用邮寄或提前投票"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261010-vote-duty",
+      "date": "2026-10-10",
+      "kind": "guess",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一国把投票写成**义务**，没去要说明理由或缴罚金?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261011-dad-leave",
+      "date": "2026-10-11",
+      "kind": "poll",
+      "topic_id": "top_01M0KT72E9XE1MCH7JRCFW5H3B",
+      "topic_slug": "parental-leave",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "小孩出生的时候，另一半有假可以请吗?",
+      "options": [
+        {
+          "id": "paid",
+          "emoji": "💰",
+          "label": "有，而且有薪"
+        },
+        {
+          "id": "unpaid",
+          "emoji": "📄",
+          "label": "有，但没薪水"
+        },
+        {
+          "id": "company",
+          "emoji": "🏢",
+          "label": "看公司，不是法律规定"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "没有这种假"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261011-unpaid-leave",
+      "date": "2026-10-11",
+      "kind": "guess",
+      "topic_id": "top_01M0KT72E9XE1MCH7JRCFW5H3B",
+      "topic_slug": "parental-leave",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一国的法律**明文写着**这段育婴假「得为无薪」?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261012-service-known",
+      "date": "2026-10-12",
+      "kind": "poll",
+      "topic_id": "top_01M0KV33545VM31076TA2CX8FK",
+      "topic_slug": "military-service",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你身边有服过兵役的人吗?",
+      "options": [
+        {
+          "id": "myself",
+          "emoji": "🎽",
+          "label": "我自己服过"
+        },
+        {
+          "id": "family",
+          "emoji": "👨‍👩‍👦",
+          "label": "家人服过"
+        },
+        {
+          "id": "volunteer",
+          "emoji": "🎖️",
+          "label": "有，但那是志愿从军"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "没有，这里没有征兵"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261012-no-forces",
+      "date": "2026-10-12",
+      "kind": "guess",
+      "topic_id": "top_01M0KV33545VM31076TA2CX8FK",
+      "topic_slug": "military-service",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一国的宪法白纸黑字写着「**陆海空军及其他战力不保持**」?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261013-home-language",
+      "date": "2026-10-13",
+      "kind": "poll",
+      "topic_id": "top_01M0MJ5G7W8CNCNJYJBSKVNW0Y",
+      "topic_slug": "official-languages",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你在家讲的话，和学校、公家机关用的是同一种吗?",
+      "options": [
+        {
+          "id": "same",
+          "emoji": "✅",
+          "label": "一样"
+        },
+        {
+          "id": "dialect",
+          "emoji": "🗣️",
+          "label": "家里讲另一种，但听得懂官方那种"
+        },
+        {
+          "id": "switch",
+          "emoji": "🔀",
+          "label": "看场合换，两种都用"
+        },
+        {
+          "id": "struggle",
+          "emoji": "😶",
+          "label": "不太一样，有时候会卡"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261013-no-single-language",
+      "date": "2026-10-13",
+      "kind": "guess",
+      "topic_id": "top_01M0MJ5G7W8CNCNJYJBSKVNW0Y",
+      "topic_slug": "official-languages",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一国的法律**不指定单一国语**，而是把各族群的语言连同手语全部列为国家语言?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261014-school-start",
+      "date": "2026-10-14",
+      "kind": "poll",
+      "topic_id": "top_01M0MK287HXZ71YZ2E3SWFP3KW",
+      "topic_slug": "compulsory-education",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你们那里，小孩几岁开始上学?",
+      "options": [
+        {
+          "id": "four_five",
+          "emoji": "🧸",
+          "label": "四到五岁"
+        },
+        {
+          "id": "six",
+          "emoji": "✏️",
+          "label": "六岁"
+        },
+        {
+          "id": "seven",
+          "emoji": "🎒",
+          "label": "七岁"
+        },
+        {
+          "id": "varies",
+          "emoji": "🗺️",
+          "label": "看地方，不一定"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261014-edu-budget",
+      "date": "2026-10-14",
+      "kind": "guess",
+      "topic_id": "top_01M0MK287HXZ71YZ2E3SWFP3KW",
+      "topic_slug": "compulsory-education",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一国把「**教育预算至少占百分之二十**」写进了宪法?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261015-religion-form",
+      "date": "2026-10-15",
+      "kind": "poll",
+      "topic_id": "top_01M0MKPFF2Y01CF0W15C7FDWY0",
+      "topic_slug": "religion-and-the-state",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你们那里的身分证或官方表格，会问你的宗教吗?",
+      "options": [
+        {
+          "id": "yes_id",
+          "emoji": "🪪",
+          "label": "会，身份证上就有"
+        },
+        {
+          "id": "some_forms",
+          "emoji": "📋",
+          "label": "有些表格会问"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "从来不问"
+        },
+        {
+          "id": "dunno",
+          "emoji": "🤔",
+          "label": "不确定"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261015-propagate",
+      "date": "2026-10-15",
+      "kind": "guess",
+      "topic_id": "top_01M0MKPFF2Y01CF0W15C7FDWY0",
+      "topic_slug": "religion-and-the-state",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一国的宪法把「**传播**宗教」的自由也明文写了进去?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261016-local-vote",
+      "date": "2026-10-16",
+      "kind": "poll",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你投过最「小」的一场选举是什么?",
+      "options": [
+        {
+          "id": "village",
+          "emoji": "🏘️",
+          "label": "村里长那一级"
+        },
+        {
+          "id": "city",
+          "emoji": "🏙️",
+          "label": "市长或市议员"
+        },
+        {
+          "id": "national",
+          "emoji": "🏛️",
+          "label": "只投过全国性的"
+        },
+        {
+          "id": "never",
+          "emoji": "🙅",
+          "label": "还没投过票"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261016-direct-level",
+      "date": "2026-10-16",
+      "kind": "guess",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜:哪一国的宪法规定，**由选民直接选举的只到县与乡这一级**，再往上是一层层间接选出的?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

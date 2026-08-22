@@ -584,7 +584,13 @@ node scripts/check-source-urls.mjs --warn-only # 只看報表不擋
 
 ## 每日世界一問(2026-08-15 上線;規格=docs/briefs/daily-question.md)
 
-- [ ] **題庫要持續補**(2026-08-21、2026-08-22 各補過一輪;2026-08-22 那輪加 10-03～10-09 七天)。涵蓋到哪天、還剩幾天,一律查:
+- [ ] **題庫要持續補**(2026-08-21 一輪;2026-08-22 兩輪,分別加 10-03～10-09 與 10-10～10-16)。
+  💡 **出題最省力的來源是制度型 Topic**:`voting-and-elections`、`parental-leave`、
+  `military-service`、`official-languages`、`compulsory-education`、`religion-and-the-state`
+  這幾個每一個都是現成的「七國七種答案」,而且條文都已核對過原文 ——
+  guess 的解說可以直接從 `scripts/generate-regional-notes.mjs` 的內容改寫,不必重查。
+  ⚠ 但**答案國別要刻意分散**:10-10～10-16 那一輪的七題答案剛好是
+  pt-BR / en / ja / zh-TW / id / hi / zh-CN 各一次,這是排出來的不是碰巧。涵蓋到哪天、還剩幾天,一律查:
   `sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT qdate) 未來天數, MAX(qdate) FROM questions WHERE qdate >= date('now')"`
   用完前端不開天窗(退最近一題),但那等於每天給讀者同一題,是可見的產品破口。
   補法:往 `content/questions.json` 檔尾加題(一天一 poll 一 guess),七語齊全、掛既有 topic;

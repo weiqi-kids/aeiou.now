@@ -3690,6 +3690,468 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20261010-vote-travel",
+      "date": "2026-10-10",
+      "kind": "poll",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Pada hari pemungutan suara, seberapa jauh kamu harus pergi untuk memilih?",
+      "options": [
+        {
+          "id": "walk",
+          "emoji": "🚶",
+          "label": "Cukup jalan kaki"
+        },
+        {
+          "id": "same_city",
+          "emoji": "🚌",
+          "label": "Masih sekota, tapi naik kendaraan"
+        },
+        {
+          "id": "go_home",
+          "emoji": "🚄",
+          "label": "Harus pulang ke daerah asal"
+        },
+        {
+          "id": "post",
+          "emoji": "📮",
+          "label": "Lewat pos atau memilih lebih awal"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261010-vote-duty",
+      "date": "2026-10-10",
+      "kind": "guess",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: di negara mana memilih adalah **kewajiban**, sehingga tidak hadir berarti harus beralasan resmi atau membayar denda?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261011-dad-leave",
+      "date": "2026-10-11",
+      "kind": "poll",
+      "topic_id": "top_01M0KT72E9XE1MCH7JRCFW5H3B",
+      "topic_slug": "parental-leave",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Saat bayi lahir, apakah pasangan mendapat cuti?",
+      "options": [
+        {
+          "id": "paid",
+          "emoji": "💰",
+          "label": "Ada, dan dibayar"
+        },
+        {
+          "id": "unpaid",
+          "emoji": "📄",
+          "label": "Ada, tapi tanpa upah"
+        },
+        {
+          "id": "company",
+          "emoji": "🏢",
+          "label": "Tergantung perusahaan, bukan undang-undang"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "Tidak ada cuti semacam itu"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261011-unpaid-leave",
+      "date": "2026-10-11",
+      "kind": "guess",
+      "topic_id": "top_01M0KT72E9XE1MCH7JRCFW5H3B",
+      "topic_slug": "parental-leave",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: undang-undang negara mana yang **secara harfiah** menyatakan cuti keluarga ini \"boleh berupa cuti tanpa upah\"?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261012-service-known",
+      "date": "2026-10-12",
+      "kind": "poll",
+      "topic_id": "top_01M0KV33545VM31076TA2CX8FK",
+      "topic_slug": "military-service",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Adakah orang di sekitarmu yang pernah menjalani wajib militer?",
+      "options": [
+        {
+          "id": "myself",
+          "emoji": "🎽",
+          "label": "Saya sendiri pernah"
+        },
+        {
+          "id": "family",
+          "emoji": "👨‍👩‍👦",
+          "label": "Ada di keluarga saya"
+        },
+        {
+          "id": "volunteer",
+          "emoji": "🎖️",
+          "label": "Ada, tapi sebagai sukarelawan"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Tidak — di sini tak ada wajib militer"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261012-no-forces",
+      "date": "2026-10-12",
+      "kind": "guess",
+      "topic_id": "top_01M0KV33545VM31076TA2CX8FK",
+      "topic_slug": "military-service",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: konstitusi negara mana yang hitam di atas putih menyatakan bahwa **angkatan darat, laut, dan udara tidak akan pernah dipelihara**?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261013-home-language",
+      "date": "2026-10-13",
+      "kind": "poll",
+      "topic_id": "top_01M0MJ5G7W8CNCNJYJBSKVNW0Y",
+      "topic_slug": "official-languages",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Bahasa yang kamu pakai di rumah, sama dengan yang dipakai di sekolah dan kantor pemerintah?",
+      "options": [
+        {
+          "id": "same",
+          "emoji": "✅",
+          "label": "Sama"
+        },
+        {
+          "id": "dialect",
+          "emoji": "🗣️",
+          "label": "Di rumah lain, tapi paham bahasa resmi"
+        },
+        {
+          "id": "switch",
+          "emoji": "🔀",
+          "label": "Berganti tergantung tempat"
+        },
+        {
+          "id": "struggle",
+          "emoji": "😶",
+          "label": "Cukup berbeda, kadang kesulitan"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261013-no-single-language",
+      "date": "2026-10-13",
+      "kind": "guess",
+      "topic_id": "top_01M0MJ5G7W8CNCNJYJBSKVNW0Y",
+      "topic_slug": "official-languages",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: undang-undang negara mana yang **menolak menyebut satu bahasa nasional** dan justru mendaftarkan bahasa tiap komunitas — termasuk bahasa isyarat — sebagai bahasa nasional?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261014-school-start",
+      "date": "2026-10-14",
+      "kind": "poll",
+      "topic_id": "top_01M0MK287HXZ71YZ2E3SWFP3KW",
+      "topic_slug": "compulsory-education",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempatmu, pada usia berapa anak mulai bersekolah?",
+      "options": [
+        {
+          "id": "four_five",
+          "emoji": "🧸",
+          "label": "Empat atau lima tahun"
+        },
+        {
+          "id": "six",
+          "emoji": "✏️",
+          "label": "Enam tahun"
+        },
+        {
+          "id": "seven",
+          "emoji": "🎒",
+          "label": "Tujuh tahun"
+        },
+        {
+          "id": "varies",
+          "emoji": "🗺️",
+          "label": "Berbeda-beda tergantung daerah"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261014-edu-budget",
+      "date": "2026-10-14",
+      "kind": "guess",
+      "topic_id": "top_01M0MK287HXZ71YZ2E3SWFP3KW",
+      "topic_slug": "compulsory-education",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: negara mana yang menuliskan **\"anggaran pendidikan sekurang-kurangnya dua puluh persen\"** ke dalam konstitusinya?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261015-religion-form",
+      "date": "2026-10-15",
+      "kind": "poll",
+      "topic_id": "top_01M0MKPFF2Y01CF0W15C7FDWY0",
+      "topic_slug": "religion-and-the-state",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempatmu, apakah KTP atau formulir resmi menanyakan agamamu?",
+      "options": [
+        {
+          "id": "yes_id",
+          "emoji": "🪪",
+          "label": "Ya — tercantum di KTP"
+        },
+        {
+          "id": "some_forms",
+          "emoji": "📋",
+          "label": "Sebagian formulir menanyakan"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "Tidak pernah ditanya"
+        },
+        {
+          "id": "dunno",
+          "emoji": "🤔",
+          "label": "Tidak yakin"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261015-propagate",
+      "date": "2026-10-15",
+      "kind": "guess",
+      "topic_id": "top_01M0MKPFF2Y01CF0W15C7FDWY0",
+      "topic_slug": "religion-and-the-state",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: konstitusi negara mana yang menuliskan kebebasan **menyiarkan** agama ke dalam teksnya sendiri?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261016-local-vote",
+      "date": "2026-10-16",
+      "kind": "poll",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Pemilihan paling \"kecil\" yang pernah kamu ikuti itu apa?",
+      "options": [
+        {
+          "id": "village",
+          "emoji": "🏘️",
+          "label": "Kepala desa atau RT/RW"
+        },
+        {
+          "id": "city",
+          "emoji": "🏙️",
+          "label": "Wali kota atau DPRD"
+        },
+        {
+          "id": "national",
+          "emoji": "🏛️",
+          "label": "Hanya yang tingkat nasional"
+        },
+        {
+          "id": "never",
+          "emoji": "🙅",
+          "label": "Belum pernah memilih"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261016-direct-level",
+      "date": "2026-10-16",
+      "kind": "guess",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: konstitusi negara mana yang menetapkan bahwa **pemilih memilih langsung hanya sampai tingkat kabupaten dan kecamatan**, sedangkan di atasnya dipilih secara tidak langsung?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

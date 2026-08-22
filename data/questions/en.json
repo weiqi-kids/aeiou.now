@@ -3690,6 +3690,468 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20261010-vote-travel",
+      "date": "2026-10-10",
+      "kind": "poll",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "On election day, how far do you have to go to cast your vote?",
+      "options": [
+        {
+          "id": "walk",
+          "emoji": "🚶",
+          "label": "Within walking distance"
+        },
+        {
+          "id": "same_city",
+          "emoji": "🚌",
+          "label": "Same city, but I take transport"
+        },
+        {
+          "id": "go_home",
+          "emoji": "🚄",
+          "label": "I have to travel back to where I'm registered"
+        },
+        {
+          "id": "post",
+          "emoji": "📮",
+          "label": "By post or early voting"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261010-vote-duty",
+      "date": "2026-10-10",
+      "kind": "guess",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: in which country is voting a **duty**, so that missing it means filing a justification or paying a fine?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261011-dad-leave",
+      "date": "2026-10-11",
+      "kind": "poll",
+      "topic_id": "top_01M0KT72E9XE1MCH7JRCFW5H3B",
+      "topic_slug": "parental-leave",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "When a baby is born, does the other parent get leave?",
+      "options": [
+        {
+          "id": "paid",
+          "emoji": "💰",
+          "label": "Yes, and it is paid"
+        },
+        {
+          "id": "unpaid",
+          "emoji": "📄",
+          "label": "Yes, but unpaid"
+        },
+        {
+          "id": "company",
+          "emoji": "🏢",
+          "label": "Depends on the employer, not the law"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "No such leave"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261011-unpaid-leave",
+      "date": "2026-10-11",
+      "kind": "guess",
+      "topic_id": "top_01M0KT72E9XE1MCH7JRCFW5H3B",
+      "topic_slug": "parental-leave",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: whose law says **in so many words** that this family leave \"may consist of unpaid leave\"?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "the United States"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261012-service-known",
+      "date": "2026-10-12",
+      "kind": "poll",
+      "topic_id": "top_01M0KV33545VM31076TA2CX8FK",
+      "topic_slug": "military-service",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Does anyone around you have military service behind them?",
+      "options": [
+        {
+          "id": "myself",
+          "emoji": "🎽",
+          "label": "I did it myself"
+        },
+        {
+          "id": "family",
+          "emoji": "👨‍👩‍👦",
+          "label": "Someone in my family"
+        },
+        {
+          "id": "volunteer",
+          "emoji": "🎖️",
+          "label": "Yes, but as a volunteer"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "No — there's no conscription here"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261012-no-forces",
+      "date": "2026-10-12",
+      "kind": "guess",
+      "topic_id": "top_01M0KV33545VM31076TA2CX8FK",
+      "topic_slug": "military-service",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: whose constitution states in black and white that **land, sea and air forces will never be maintained**?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261013-home-language",
+      "date": "2026-10-13",
+      "kind": "poll",
+      "topic_id": "top_01M0MJ5G7W8CNCNJYJBSKVNW0Y",
+      "topic_slug": "official-languages",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Is the language you speak at home the same one used at school and in government offices?",
+      "options": [
+        {
+          "id": "same",
+          "emoji": "✅",
+          "label": "The same"
+        },
+        {
+          "id": "dialect",
+          "emoji": "🗣️",
+          "label": "Another one at home, but I understand the official one"
+        },
+        {
+          "id": "switch",
+          "emoji": "🔀",
+          "label": "I switch depending on where I am"
+        },
+        {
+          "id": "struggle",
+          "emoji": "😶",
+          "label": "Not really — sometimes I struggle"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261013-no-single-language",
+      "date": "2026-10-13",
+      "kind": "guess",
+      "topic_id": "top_01M0MJ5G7W8CNCNJYJBSKVNW0Y",
+      "topic_slug": "official-languages",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: whose law **declines to name a single national language** and instead lists every community's language — plus sign language — as national languages?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261014-school-start",
+      "date": "2026-10-14",
+      "kind": "poll",
+      "topic_id": "top_01M0MK287HXZ71YZ2E3SWFP3KW",
+      "topic_slug": "compulsory-education",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Where you live, at what age do children start school?",
+      "options": [
+        {
+          "id": "four_five",
+          "emoji": "🧸",
+          "label": "Four or five"
+        },
+        {
+          "id": "six",
+          "emoji": "✏️",
+          "label": "Six"
+        },
+        {
+          "id": "seven",
+          "emoji": "🎒",
+          "label": "Seven"
+        },
+        {
+          "id": "varies",
+          "emoji": "🗺️",
+          "label": "It varies by place"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261014-edu-budget",
+      "date": "2026-10-14",
+      "kind": "guess",
+      "topic_id": "top_01M0MK287HXZ71YZ2E3SWFP3KW",
+      "topic_slug": "compulsory-education",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: which country wrote **\"at least twenty per cent of the budget for education\"** into its constitution?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261015-religion-form",
+      "date": "2026-10-15",
+      "kind": "poll",
+      "topic_id": "top_01M0MKPFF2Y01CF0W15C7FDWY0",
+      "topic_slug": "religion-and-the-state",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Do official forms or ID documents where you live ask about your religion?",
+      "options": [
+        {
+          "id": "yes_id",
+          "emoji": "🪪",
+          "label": "Yes — it's on the ID card itself"
+        },
+        {
+          "id": "some_forms",
+          "emoji": "📋",
+          "label": "Some forms ask"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "Never asked"
+        },
+        {
+          "id": "dunno",
+          "emoji": "🤔",
+          "label": "Not sure"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261015-propagate",
+      "date": "2026-10-15",
+      "kind": "guess",
+      "topic_id": "top_01M0MKPFF2Y01CF0W15C7FDWY0",
+      "topic_slug": "religion-and-the-state",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: whose constitution writes the freedom to **propagate** religion into the text itself?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "the United States"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261016-local-vote",
+      "date": "2026-10-16",
+      "kind": "poll",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "What is the smallest election you have ever voted in?",
+      "options": [
+        {
+          "id": "village",
+          "emoji": "🏘️",
+          "label": "Village or neighbourhood head"
+        },
+        {
+          "id": "city",
+          "emoji": "🏙️",
+          "label": "Mayor or city council"
+        },
+        {
+          "id": "national",
+          "emoji": "🏛️",
+          "label": "Only national ones"
+        },
+        {
+          "id": "never",
+          "emoji": "🙅",
+          "label": "I haven't voted yet"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261016-direct-level",
+      "date": "2026-10-16",
+      "kind": "guess",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess: whose constitution provides that **voters elect directly only up to the county and township level**, everything above being chosen indirectly, one rung at a time?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

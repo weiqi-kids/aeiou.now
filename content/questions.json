@@ -8611,6 +8611,1084 @@
         "id": "Tiongkok. Gaokao sudah dipatok pada 7 dan 8 Juni sejak 2003 (beberapa provinsi menambah satu-dua hari karena susunan mata ujinya), dan dimulai pada jam yang sama di seluruh negeri. Keserentakan itu memicu mobilisasi sosial yang jarang terlihat di tempat lain: lalu lintas dialihkan di sekitar lokasi ujian, pembangunan dihentikan, membunyikan klakson dilarang, dan setiap tahun ada berita taksi serta mobil polisi mengantar peserta yang nyaris terlambat. Enam pasar lainnya jauh berbeda. Taiwan memisahkan ujian umum Januari dan ujian mata pelajaran Juli — dua kesempatan, bukan satu. Di Jepang, setelah Ujian Bersama Januari, tiap universitas masih menggelar ujian tahap keduanya sendiri. India bahkan tidak punya pintu tunggal: JEE untuk teknik dan NEET untuk kedokteran berjalan sebagai sistem terpisah, dan NEET hanya satu sesi dalam satu hari. SNBT Indonesia berbasis komputer dan digelar bergelombang, sehingga tanggalnya pun tidak seragam. ENEM Brasil berlangsung dua hari Minggu dan sekaligus menjadi asesmen akhir sekolah. SAT/ACT Amerika tersedia berkali-kali setahun dan nilainya hanya salah satu berkas pendaftaran. **'Sekali ujian menentukan seumur hidup' bukan sifat bawaan ujian, melainkan hasil pilihan kelembagaan.**",
         "pt-BR": "China. O gaokao está fixado em 7 e 8 de junho desde 2003 (algumas províncias acrescentam um ou dois dias por causa das disciplinas) e começa à mesma hora em todo o país. Essa simultaneidade produz uma mobilização raramente vista noutro lugar: trânsito desviado ao redor dos locais de prova, obras paradas, buzinas proibidas, e a notícia anual de táxis e viaturas levando candidatos atrasados. Os outros seis mercados divergem bastante. Taiwan reparte o processo entre a prova geral de janeiro e a prova por disciplina de julho — duas chances, não uma. No Japão, depois do Exame Comum de janeiro, cada universidade ainda aplica a sua segunda fase. A Índia não tem porta única: o JEE, para engenharia, e o NEET, para medicina, são sistemas separados, e o NEET é uma única aplicação em um só dia. O SNBT indonésio é informatizado e ocorre em ondas, de modo que nem a data é uniforme. O ENEM brasileiro acontece em dois domingos e funciona também como avaliação de fim de ensino médio. Nos Estados Unidos, SAT e ACT são oferecidos várias vezes por ano e a nota é apenas um item da candidatura. **'Uma prova que define a vida inteira' não é a natureza dos exames, é uma escolha de desenho institucional.**"
       }
+    },
+    {
+      "id": "q-20261010-vote-travel",
+      "date": "2026-10-10",
+      "kind": "poll",
+      "topic": "voting-and-elections",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "投票那天,你要跑多遠才投得到票?",
+        "en": "On election day, how far do you have to go to cast your vote?",
+        "ja": "投票日、あなたは投票するためにどれくらい移動しますか?",
+        "zh-CN": "投票那天，你要跑多远才投得到票?",
+        "hi": "मतदान के दिन वोट डालने के लिए आपको कितनी दूर जाना पड़ता है?",
+        "id": "Pada hari pemungutan suara, seberapa jauh kamu harus pergi untuk memilih?",
+        "pt-BR": "No dia da eleição, quanto você precisa se deslocar para votar?"
+      },
+      "options": [
+        {
+          "id": "walk",
+          "emoji": "🚶",
+          "label": {
+            "zh-TW": "走路就到",
+            "en": "Within walking distance",
+            "ja": "歩いて行ける",
+            "zh-CN": "走路就到",
+            "hi": "पैदल पहुँच जाता हूँ",
+            "id": "Cukup jalan kaki",
+            "pt-BR": "Vou a pé"
+          }
+        },
+        {
+          "id": "same_city",
+          "emoji": "🚌",
+          "label": {
+            "zh-TW": "同一個城市,但要搭車",
+            "en": "Same city, but I take transport",
+            "ja": "同じ市内だが乗り物で",
+            "zh-CN": "同一个城市，但要搭车",
+            "hi": "उसी शहर में, पर वाहन से",
+            "id": "Masih sekota, tapi naik kendaraan",
+            "pt-BR": "Mesma cidade, mas de transporte"
+          }
+        },
+        {
+          "id": "go_home",
+          "emoji": "🚄",
+          "label": {
+            "zh-TW": "要回原本的戶籍地",
+            "en": "I have to travel back to where I'm registered",
+            "ja": "住民登録のある土地まで帰る",
+            "zh-CN": "要回原本的户籍地",
+            "hi": "पंजीकरण वाली जगह लौटना पड़ता है",
+            "id": "Harus pulang ke daerah asal",
+            "pt-BR": "Preciso voltar para o meu domicílio eleitoral"
+          }
+        },
+        {
+          "id": "post",
+          "emoji": "📮",
+          "label": {
+            "zh-TW": "用郵寄或提前投票",
+            "en": "By post or early voting",
+            "ja": "郵便か期日前投票",
+            "zh-CN": "用邮寄或提前投票",
+            "hi": "डाक या अग्रिम मतदान से",
+            "id": "Lewat pos atau memilih lebih awal",
+            "pt-BR": "Pelo correio ou voto antecipado"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261010-vote-duty",
+      "date": "2026-10-10",
+      "kind": "guess",
+      "topic": "voting-and-elections",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪一國把投票寫成**義務**,沒去要說明理由或繳罰金?",
+        "en": "Guess: in which country is voting a **duty**, so that missing it means filing a justification or paying a fine?",
+        "ja": "クイズ:投票を**義務**と定め、行かなければ理由の届け出か罰金が要るのはどこ?",
+        "zh-CN": "你猜:哪一国把投票写成**义务**，没去要说明理由或缴罚金?",
+        "hi": "अंदाज़ा लगाइए: किस देश में मतदान एक **कर्तव्य** है, और न जाने पर कारण बताना या जुर्माना भरना पड़ता है?",
+        "id": "Tebak: di negara mana memilih adalah **kewajiban**, sehingga tidak hadir berarti harus beralasan resmi atau membayar denda?",
+        "pt-BR": "Adivinhe: em qual país votar é um **dever**, de modo que faltar exige justificar ou pagar multa?"
+      },
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        }
+      ],
+      "answer": "pt-BR",
+      "explain": {
+        "zh-TW": "巴西。憲法第十四條第一項寫得很清楚:選民登記與投票對**十八歲以上、未滿七十歲**的公民是強制的;對文盲、七十歲以上、以及十六到未滿十八歲的人則是自願的。缺席要在法定期間內提出理由或繳罰金,否則辦護照、報考公職、取得某些證明都會卡住。同條第二項還規定,外國人與服義務兵役期間的應徵者不得登記為選民。日期也不是誰決定的:一九九七年第 9.504 號法律把全國各級選舉一律訂在該年**十月的第一個星期日**。對照之下,其他六個市場都把投票寫成權利:印度憲法第三二六條是成年普選、印尼憲法第二十二E條規定五年一次的直接普選、日本與台灣則各自把年齡與居住要件寫進選舉法。**「有沒有投票權」和「投不投是不是你的自由」是兩個不同的問題**,這一題問的是後面那個。",
+        "en": "Brazil. Article 14 §1 of the constitution is explicit: electoral registration and voting are compulsory for citizens **over eighteen and under seventy**, and optional for the illiterate, for those over seventy, and for sixteen- and seventeen-year-olds. Missing it means filing a justification within the legal window or paying a fine; otherwise a passport application, a public-service examination or certain certificates get stuck. Clause §2 adds that foreigners, and conscripts during compulsory military service, may not register as electors. The date is not anyone's choice either: Law 9,504 of 1997 sets every election in the country on the **first Sunday of October**. By contrast, the other six markets all write voting as a right: India's Article 326 is adult suffrage, Indonesia's Article 22E requires a direct general election every five years, and Japan and Taiwan each put age and residence requirements into their election statutes. **Whether you have the vote and whether using it is up to you are two different questions**; this one asked the second.",
+        "ja": "ブラジルです。憲法第14条第1項は明快で、選挙人登録と投票は**18歳以上70歳未満**の国民にとって強制、非識字者・70歳以上・16歳以上18歳未満の者には任意と定めます。棄権した場合は法定の期間内に理由を届け出るか罰金を納めねばならず、さもなければ旅券の申請、公務員試験の受験、いくつかの証明書の取得が滞ります。第2項はさらに、外国人と義務兵役期間中の徴集兵は選挙人として登録できないと定めます。日付も誰かの裁量ではありません。1997年第9.504号法が国内のすべての選挙をその年の**10月第1日曜日**と定めています。対して他の六市場は投票を権利として書きます。インド憲法第326条は成年普通選挙、インドネシア憲法第22E条は5年に一度の直接選挙、日本と台湾は年齢と居住要件を選挙法に置いています。**選挙権があるかどうかと、使うかどうかが自由かどうかは別の問い**で、この問題は後者を尋ねました。",
+        "zh-CN": "巴西。宪法第十四条第一项写得很清楚:选民登记与投票对**十八岁以上、未满七十岁**的公民是强制的;对文盲、七十岁以上、以及十六到未满十八岁的人则是自愿的。缺席要在法定期间内提出理由或缴罚金，否则办护照、报考公职、取得某些证明都会卡住。同条第二项还规定，外国人与服义务兵役期间的应征者不得登记为选民。日期也不是谁决定的:一九九七年第 9.504 号法律把全国各级选举一律订在该年**十月的第一个星期日**。对照之下，其他六个市场都把投票写成权利:印度宪法第三二六条是成年普选、印尼宪法第二十二E条规定五年一次的直接普选、日本与台湾则各自把年龄与居住要件写进选举法。**「有没有投票权」和「投不投是不是你的自由」是两个不同的问题**，这一题问的是后面那个。",
+        "hi": "ब्राज़ील। संविधान का अनुच्छेद 14 §1 साफ़ कहता है: मतदाता पंजीकरण और मतदान **अठारह से ऊपर और सत्तर से कम** आयु के नागरिकों के लिए अनिवार्य हैं, और निरक्षरों, सत्तर से ऊपर वालों तथा सोलह-सत्रह वर्ष वालों के लिए वैकल्पिक। न जाने पर क़ानूनी अवधि में कारण दाखिल करना या जुर्माना भरना पड़ता है; वरना पासपोर्ट का आवेदन, सरकारी नौकरी की परीक्षा या कुछ प्रमाणपत्र अटक जाते हैं। §2 यह भी कहता है कि विदेशी और अनिवार्य सैन्य सेवा के दौरान भर्ती हुए युवक मतदाता नहीं बन सकते। तारीख़ भी किसी की मर्ज़ी नहीं: 1997 का क़ानून संख्या 9.504 देश के हर चुनाव को **अक्टूबर के पहले रविवार** पर तय करता है। इसके उलट बाक़ी छह बाज़ार मतदान को अधिकार की तरह लिखते हैं। **मताधिकार होना और उसका प्रयोग आपकी मर्ज़ी होना दो अलग प्रश्न हैं**; यह सवाल दूसरे वाले का था।",
+        "id": "Brasil. Pasal 14 §1 konstitusinya tegas: pendaftaran pemilih dan pemungutan suara bersifat wajib bagi warga **di atas delapan belas dan di bawah tujuh puluh tahun**, dan menjadi pilihan bagi yang buta huruf, yang di atas tujuh puluh, serta yang berumur enam belas dan tujuh belas. Ketidakhadiran harus dipertanggungjawabkan dalam tenggat resmi atau dibayar dengan denda; kalau tidak, permohonan paspor, ujian jabatan publik, dan sejumlah surat keterangan akan tersendat. Ayat §2 menambahkan bahwa orang asing, serta wajib militer yang sedang berdinas, tidak boleh terdaftar sebagai pemilih. Tanggalnya pun bukan pilihan siapa pun: Undang-Undang Nomor 9.504 Tahun 1997 menetapkan seluruh pemilihan pada **Minggu pertama Oktober**. Sebaliknya, enam pasar lain menuliskan memilih sebagai hak. **Punya hak pilih dan bebas memakainya adalah dua pertanyaan berbeda**; ini menanyakan yang kedua.",
+        "pt-BR": "Brasil. O artigo 14, §1º, da Constituição é explícito: o alistamento eleitoral e o voto são obrigatórios para os **maiores de dezoito e menores de setenta anos**, e facultativos para os analfabetos, os maiores de setenta e os maiores de dezesseis e menores de dezoito. Faltar exige justificar no prazo legal ou pagar multa; caso contrário, emissão de passaporte, inscrição em concurso público e certas certidões travam. O §2º acrescenta que estrangeiros e conscritos, durante o serviço militar obrigatório, não podem alistar-se. A data também não é escolha de ninguém: a Lei 9.504, de 1997, marca todas as eleições do país no **primeiro domingo de outubro**. Em contraste, os outros seis mercados escrevem o voto como direito. **Ter o voto e ser livre para usá-lo são perguntas distintas**; esta era sobre a segunda."
+      }
+    },
+    {
+      "id": "q-20261011-dad-leave",
+      "date": "2026-10-11",
+      "kind": "poll",
+      "topic": "parental-leave",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "小孩出生的時候,另一半有假可以請嗎?",
+        "en": "When a baby is born, does the other parent get leave?",
+        "ja": "子どもが生まれるとき、もう一方の親に休みはありますか?",
+        "zh-CN": "小孩出生的时候，另一半有假可以请吗?",
+        "hi": "बच्चा होने पर क्या दूसरे अभिभावक को छुट्टी मिलती है?",
+        "id": "Saat bayi lahir, apakah pasangan mendapat cuti?",
+        "pt-BR": "Quando o bebê nasce, o outro pai ou mãe tem licença?"
+      },
+      "options": [
+        {
+          "id": "paid",
+          "emoji": "💰",
+          "label": {
+            "zh-TW": "有,而且有薪",
+            "en": "Yes, and it is paid",
+            "ja": "ある。しかも有給",
+            "zh-CN": "有，而且有薪",
+            "hi": "हाँ, और सवेतन",
+            "id": "Ada, dan dibayar",
+            "pt-BR": "Sim, e remunerada"
+          }
+        },
+        {
+          "id": "unpaid",
+          "emoji": "📄",
+          "label": {
+            "zh-TW": "有,但沒薪水",
+            "en": "Yes, but unpaid",
+            "ja": "あるが無給",
+            "zh-CN": "有，但没薪水",
+            "hi": "हाँ, पर बिना वेतन",
+            "id": "Ada, tapi tanpa upah",
+            "pt-BR": "Sim, mas sem remuneração"
+          }
+        },
+        {
+          "id": "company",
+          "emoji": "🏢",
+          "label": {
+            "zh-TW": "看公司,不是法律規定",
+            "en": "Depends on the employer, not the law",
+            "ja": "法律ではなく会社しだい",
+            "zh-CN": "看公司，不是法律规定",
+            "hi": "कंपनी पर निर्भर, क़ानून पर नहीं",
+            "id": "Tergantung perusahaan, bukan undang-undang",
+            "pt-BR": "Depende da empresa, não da lei"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": {
+            "zh-TW": "沒有這種假",
+            "en": "No such leave",
+            "ja": "そういう休暇はない",
+            "zh-CN": "没有这种假",
+            "hi": "ऐसी कोई छुट्टी नहीं",
+            "id": "Tidak ada cuti semacam itu",
+            "pt-BR": "Não existe essa licença"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261011-unpaid-leave",
+      "date": "2026-10-11",
+      "kind": "guess",
+      "topic": "parental-leave",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪一國的法律**明文寫著**這段育嬰假「得為無薪」?",
+        "en": "Guess: whose law says **in so many words** that this family leave \"may consist of unpaid leave\"?",
+        "ja": "クイズ:この育児のための休暇が「**無給でありうる**」と法律に明記されているのはどこ?",
+        "zh-CN": "你猜:哪一国的法律**明文写着**这段育婴假「得为无薪」?",
+        "hi": "अंदाज़ा लगाइए: किस देश का क़ानून **साफ़ शब्दों में** कहता है कि यह पारिवारिक अवकाश \"अवैतनिक हो सकता है\"?",
+        "id": "Tebak: undang-undang negara mana yang **secara harfiah** menyatakan cuti keluarga ini \"boleh berupa cuti tanpa upah\"?",
+        "pt-BR": "Adivinhe: a lei de qual país diz **com todas as letras** que essa licença \"pode consistir em licença não remunerada\"?"
+      },
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "answer": "en",
+      "explain": {
+        "zh-TW": "美國。一九九三年的《家庭與醫療假法》給符合資格的員工在任何十二個月期間十二個工作週的假,理由包括子女出生、收養或寄養安置;而同一節的 (c) 項毫不迂迴地寫著:這段假「**得為無薪**」。這句話讓美國在七個市場裡成為唯一一個——別的地方爭的是幾天、由誰付、付幾成,美國的法律連「要付」都沒說。而且它還有門檻:雇主規模與工作時數都要達標,達不到的人連這十二週都沒有。對照:巴西《勞動法彙編》第三九二條是一百二十天且不損及薪資;印尼二○二四年第四號法逐月列出比例(前三個月全額、第四個月全額、五六個月百分之七十五);中國由**生育保險基金**支付而不是雇主;台灣勞基法第五十條的產假八星期,滿六個月者工資照給。**有沒有假、由誰付錢,是兩層不同的保障。**",
+        "en": "The United States. The Family and Medical Leave Act of 1993 entitles an eligible employee to twelve workweeks of leave in any twelve-month period, for the birth of a child, for adoption or foster placement, among other reasons — and subsection (c) of the same section says without hedging that the leave \"**may consist of unpaid leave**\". That sentence makes the United States singular among these seven markets: elsewhere the argument is about how many days, who pays and at what percentage; here the law never says anyone has to pay at all. It also carries thresholds of employer size and hours worked, so people below them do not get even the twelve weeks. Compare: Brazil's Consolidation of Labour Laws gives 120 days without loss of salary; Indonesia's Law 4 of 2024 spells the percentage out month by month (full for three months, full for the fourth, 75% for the fifth and sixth); in China the allowance is paid by the **maternity insurance fund** rather than the employer; Taiwan's Labour Standards Act gives eight weeks, fully paid after six months of service. **Whether leave exists and who pays for it are two separate layers of protection.**",
+        "ja": "アメリカです。1993年の家族医療休暇法は、適格な被用者に対し任意の12か月間で12労働週の休暇を与えます。理由には子の出生、養子縁組や里親委託が含まれます。そして同条(c)項は、その休暇が「**無給でありうる**」と言い切ります。この一文が、七つの市場のなかでアメリカを唯一の例にしています。ほかの場所では日数、負担者、支給割合が争点になるのに、アメリカの法律は「払え」とすら書いていません。しかも使用者の規模と労働時間の要件があり、それに満たない人はこの12週間さえ得られません。対照すると、ブラジルの労働法集成第392条は120日で雇用と賃金を失わず、インドネシアの2024年第4号法は月ごとに割合を書き分け(最初の3か月は全額、4か月目も全額、5・6か月目は75%)、中国では**出産保険基金**が支払い、台湾は労働基準法第50条で産休8週間、勤続6か月以上なら全額です。**休暇があるかどうかと、誰が払うかは別の層の保障です。**",
+        "zh-CN": "美国。一九九三年的《家庭与医疗假法》给符合资格的员工在任何十二个月期间十二个工作周的假，理由包括子女出生、收养或寄养安置;而同一节的 (c) 项毫不迂回地写着:这段假「**得为无薪**」。这句话让美国在七个市场里成为唯一一个——别的地方争的是几天、由谁付、付几成，美国的法律连「要付」都没说。而且它还有门槛:雇主规模与工作时数都要达标，达不到的人连这十二周都没有。对照:巴西《劳动法汇编》第三九二条是一百二十天且不损及薪资;印尼二○二四年第四号法逐月列出比例(前三个月全额、第四个月全额、五六个月百分之七十五);中国由**生育保险基金**支付而不是雇主;台湾劳基法第五十条的产假八星期，满六个月者工资照给。**有没有假、由谁付钱，是两层不同的保障。**",
+        "hi": "अमेरिका। 1993 का परिवार एवं चिकित्सा अवकाश अधिनियम पात्र कर्मचारी को किसी भी बारह महीने में बारह कार्य-सप्ताह का अवकाश देता है — बच्चे के जन्म, गोद लेने या पालन-पोषण में रखे जाने आदि के लिए — और उसी धारा का उपखंड (c) बिना लाग-लपेट कहता है कि यह अवकाश \"**अवैतनिक हो सकता है**\"। यही वाक्य अमेरिका को इन सात बाज़ारों में अकेला बनाता है: और जगह बहस इस पर है कि कितने दिन, कौन देगा, कितने प्रतिशत; यहाँ क़ानून यह कहता ही नहीं कि किसी को देना है। इसमें नियोक्ता के आकार और काम के घंटों की शर्तें भी हैं, इसलिए उनसे नीचे वालों को ये बारह सप्ताह भी नहीं मिलते। तुलना करें: ब्राज़ील 120 दिन बिना वेतन-हानि; इंडोनेशिया का 2024 का चौथा क़ानून महीने-दर-महीने प्रतिशत लिखता है; चीन में भुगतान **प्रसूति बीमा कोष** करता है, नियोक्ता नहीं; ताइवान में आठ सप्ताह, छह महीने की सेवा के बाद पूरा वेतन। **अवकाश होना और उसका ख़र्च कौन उठाए, संरक्षण की दो अलग परतें हैं।**",
+        "id": "Amerika Serikat. Undang-Undang Cuti Keluarga dan Medis 1993 memberi pekerja yang memenuhi syarat dua belas minggu kerja cuti dalam periode dua belas bulan mana pun — untuk kelahiran anak, pengangkatan atau penempatan asuh, dan sebab lain — dan ayat (c) pasal yang sama berkata tanpa berputar bahwa cuti itu \"**boleh berupa cuti tanpa upah**\". Kalimat itu membuat Amerika Serikat unik di antara tujuh pasar ini: di tempat lain perdebatannya soal berapa hari, siapa yang membayar, berapa persen; di sini undang-undangnya bahkan tidak pernah mengatakan seseorang harus membayar. Ada pula ambang ukuran perusahaan dan jam kerja, sehingga yang di bawahnya tidak memperoleh dua belas minggu itu sama sekali. Bandingkan: Brasil 120 hari tanpa kehilangan gaji; UU 4/2024 Indonesia merinci persentase bulan demi bulan; di Tiongkok yang membayar adalah **dana asuransi melahirkan**, bukan pemberi kerja; Taiwan delapan minggu, penuh setelah enam bulan masa kerja. **Ada tidaknya cuti dan siapa yang membiayainya adalah dua lapis perlindungan yang berbeda.**",
+        "pt-BR": "Estados Unidos. A Lei de Licença Familiar e Médica de 1993 assegura ao empregado elegível doze semanas de licença em qualquer período de doze meses — pelo nascimento de um filho, por adoção ou colocação em lar substituto, entre outras razões — e a alínea (c) do mesmo artigo diz sem rodeios que a licença \"**pode consistir em licença não remunerada**\". É essa frase que torna os Estados Unidos singulares entre estes sete mercados: em outros lugares discute-se quantos dias, quem paga e em que percentual; aqui a lei nunca chega a dizer que alguém precisa pagar. Há ainda limiares de porte do empregador e de horas trabalhadas, de modo que quem fica abaixo deles não recebe nem as doze semanas. Compare: a CLT brasileira dá 120 dias sem prejuízo do salário; a Lei nº 4 de 2024 da Indonésia detalha o percentual mês a mês; na China quem paga é o **fundo do seguro-maternidade**, não o empregador; Taiwan dá oito semanas, integrais após seis meses de casa. **Existir licença e haver quem a pague são duas camadas distintas de proteção.**"
+      }
+    },
+    {
+      "id": "q-20261012-service-known",
+      "date": "2026-10-12",
+      "kind": "poll",
+      "topic": "military-service",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你身邊有服過兵役的人嗎?",
+        "en": "Does anyone around you have military service behind them?",
+        "ja": "身近に兵役を務めた人はいますか?",
+        "zh-CN": "你身边有服过兵役的人吗?",
+        "hi": "आपके आसपास कोई है जिसने सैन्य सेवा की हो?",
+        "id": "Adakah orang di sekitarmu yang pernah menjalani wajib militer?",
+        "pt-BR": "Alguém à sua volta já prestou serviço militar?"
+      },
+      "options": [
+        {
+          "id": "myself",
+          "emoji": "🎽",
+          "label": {
+            "zh-TW": "我自己服過",
+            "en": "I did it myself",
+            "ja": "自分が務めた",
+            "zh-CN": "我自己服过",
+            "hi": "मैंने स्वयं की है",
+            "id": "Saya sendiri pernah",
+            "pt-BR": "Eu mesmo prestei"
+          }
+        },
+        {
+          "id": "family",
+          "emoji": "👨‍👩‍👦",
+          "label": {
+            "zh-TW": "家人服過",
+            "en": "Someone in my family",
+            "ja": "家族が務めた",
+            "zh-CN": "家人服过",
+            "hi": "परिवार में किसी ने की है",
+            "id": "Ada di keluarga saya",
+            "pt-BR": "Alguém da minha família"
+          }
+        },
+        {
+          "id": "volunteer",
+          "emoji": "🎖️",
+          "label": {
+            "zh-TW": "有,但那是志願從軍",
+            "en": "Yes, but as a volunteer",
+            "ja": "いる。ただし志願",
+            "zh-CN": "有，但那是志愿从军",
+            "hi": "हाँ, पर स्वेच्छा से",
+            "id": "Ada, tapi sebagai sukarelawan",
+            "pt-BR": "Sim, mas como voluntário"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "沒有,這裡沒有徵兵",
+            "en": "No — there's no conscription here",
+            "ja": "いない。徴兵制がない",
+            "zh-CN": "没有，这里没有征兵",
+            "hi": "नहीं — यहाँ भर्ती अनिवार्य नहीं",
+            "id": "Tidak — di sini tak ada wajib militer",
+            "pt-BR": "Não — aqui não há conscrição"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261012-no-forces",
+      "date": "2026-10-12",
+      "kind": "guess",
+      "topic": "military-service",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪一國的憲法白紙黑字寫著「**陸海空軍其他戰力不保持**」?",
+        "en": "Guess: whose constitution states in black and white that **land, sea and air forces will never be maintained**?",
+        "ja": "クイズ:憲法に「**陸海空軍その他の戦力は、これを保持しない**」と明記しているのはどこ?",
+        "zh-CN": "你猜:哪一国的宪法白纸黑字写着「**陆海空军及其他战力不保持**」?",
+        "hi": "अंदाज़ा लगाइए: किस देश का संविधान साफ़-साफ़ कहता है कि **थल, जल और वायु सेनाएँ कभी नहीं रखी जाएँगी**?",
+        "id": "Tebak: konstitusi negara mana yang hitam di atas putih menyatakan bahwa **angkatan darat, laut, dan udara tidak akan pernah dipelihara**?",
+        "pt-BR": "Adivinhe: qual constituição afirma, com todas as letras, que **forças terrestres, navais e aéreas jamais serão mantidas**?"
+      },
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "answer": "ja",
+      "explain": {
+        "zh-TW": "日本。憲法第九條第一項放棄以國權發動的戰爭,以及以武力威嚇或行使武力作為解決國際爭端的手段;第二項接著寫:「為達成前項目的,**陸海空軍及其他戰力,不保持之。國家的交戰權,不予承認**。」其他六個市場的憲法都在講「誰要服役、幾歲到幾歲」,日本的起點卻是「根本不保持什麼」。實際的防衛由依《自衛隊法》設立的自衛隊承擔,隊員是志願應募錄用的——不是國家點名叫人,而是個人來應徵。對照之下:台灣兵役法第一條「中華民國男子依法皆有服兵役之義務」、常備兵現役一年;中國憲法第五十五條說服兵役是「光榮義務」;巴西憲法第一四三條說義務,但同條讓良心因素者改服替代役;美國只要求十八到二十六歲男性**登記**,一九七三年後幾乎沒有人被徵召;印尼與印度的憲法都寫著公民有防衛國家的義務,卻都沒有徵兵制。",
+        "en": "Japan. Article 9(1) renounces war as a sovereign right of the nation and the threat or use of force as means of settling international disputes; clause (2) continues: \"In order to accomplish the aim of the preceding paragraph, **land, sea, and air forces, as well as other war potential, will never be maintained. The right of belligerency of the state will not be recognized.**\" The constitutions of the other six markets talk about who serves and between which ages; Japan's starting point is what shall not be maintained at all. Defence in practice is carried by the Self-Defense Forces under their own statute, and its members are recruited by application — the state does not call the individual; the individual applies. By contrast: Article 1 of Taiwan's Military Service Act states that every male citizen has the duty to serve, with active conscript service of one year; China's Article 55 calls military service an honourable obligation; Brazil's Article 143 declares it obligatory but lets conscientious objectors take alternative service; the United States requires men aged 18 to 26 only to **register**, and almost nobody has been called since 1973; Indonesia and India both write a duty to defend into their constitutions and have no conscription at all.",
+        "ja": "日本です。憲法第9条第1項は国権の発動たる戦争と、武力による威嚇又は武力の行使を、国際紛争を解決する手段としては永久に放棄すると述べ、第2項がこう続きます。「前項の目的を達するため、**陸海空軍その他の戦力は、これを保持しない。国の交戦権は、これを認めない。**」他の六市場の憲法が「誰が、何歳から何歳まで務めるか」を語るのに対し、日本の出発点は「そもそも何を保持しないか」です。実際の防衛は自衛隊法に基づく自衛隊が担い、隊員は志願して採用されます——国が個人を呼び出すのではなく、個人が応募するのです。対照すると、台湾は兵役法第1条で男子皆兵の義務を定め常備兵の現役は1年、中国憲法第55条は兵役を「光栄ある義務」と呼び、ブラジル憲法第143条は義務としつつ良心的兵役拒否者に代替役を認め、アメリカは18歳から26歳の男性に**登録**のみを求め1973年以降ほとんど召集していません。インドネシアとインドは憲法に国防の義務を書きながら徴兵制をもちません。",
+        "zh-CN": "日本。宪法第九条第一项放弃以国权发动的战争，以及以武力威胁或行使武力作为解决国际争端的手段;第二项接着写:「为达成前项目的，**陆海空军及其他战力，不保持之。国家的交战权，不予承认**。」其他六个市场的宪法都在讲「谁要服役、几岁到几岁」，日本的起点却是「根本不保持什么」。实际的防卫由依《自卫队法》设立的自卫队承担，队员是志愿应募录用的——不是国家点名叫人，而是个人来应征。对照之下:台湾兵役法第一条「中华民国男子依法皆有服兵役之义务」、常备兵现役一年;中国宪法第五十五条说服兵役是「光荣义务」;巴西宪法第一四三条说义务，但同条让良心因素者改服替代役;美国只要求十八到二十六岁男性**登记**，一九七三年后几乎没有人被征召;印尼与印度的宪法都写着公民有防卫国家的义务，却都没有征兵制。",
+        "hi": "जापान। अनुच्छेद 9(1) राष्ट्र के संप्रभु अधिकार के रूप में युद्ध को, और अंतरराष्ट्रीय विवाद सुलझाने के साधन के रूप में बल की धमकी या प्रयोग को त्यागता है; खंड (2) आगे कहता है: \"उपर्युक्त उद्देश्य की पूर्ति के लिए **थल, जल और वायु सेनाएँ तथा अन्य युद्ध-क्षमता कभी नहीं रखी जाएँगी। राज्य का युद्ध करने का अधिकार मान्य नहीं होगा।**\" बाक़ी छह बाज़ारों के संविधान बताते हैं कि कौन, किस आयु से किस आयु तक सेवा करेगा; जापान का आरंभ-बिंदु यह है कि रखा ही क्या नहीं जाएगा। व्यवहार में रक्षा आत्म-रक्षा बल करता है, और उसके सदस्य आवेदन देकर भर्ती होते हैं। तुलना करें: ताइवान में हर पुरुष नागरिक पर सेवा का कर्तव्य और सक्रिय सेवा एक वर्ष; चीन के अनुच्छेद 55 में सैन्य सेवा \"गौरवपूर्ण दायित्व\"; ब्राज़ील का अनुच्छेद 143 अनिवार्य कहकर अंतरात्मा के आधार पर वैकल्पिक सेवा देता है; अमेरिका केवल **पंजीकरण** माँगता है; इंडोनेशिया और भारत संविधान में रक्षा का कर्तव्य लिखते हैं पर अनिवार्य भर्ती नहीं रखते।",
+        "id": "Jepang. Pasal 9(1) melepaskan perang sebagai hak berdaulat bangsa serta ancaman atau penggunaan kekuatan sebagai cara menyelesaikan sengketa internasional; ayat (2) melanjutkan: \"Untuk mencapai maksud ayat sebelumnya, **angkatan darat, laut, dan udara, serta potensi perang lainnya, tidak akan pernah dipelihara. Hak berperang negara tidak diakui.**\" Konstitusi enam pasar lainnya berbicara tentang siapa yang berdinas dan pada rentang usia berapa; titik berangkat Jepang justru apa yang sama sekali tidak akan dipelihara. Pertahanan sehari-hari dijalankan Pasukan Bela Diri berdasarkan undang-undangnya sendiri, dan anggotanya direkrut lewat pendaftaran — negara tidak memanggil orang; oranglah yang melamar. Bandingkan: Pasal 1 Undang-Undang Wajib Militer Taiwan mewajibkan setiap warga laki-laki berdinas, dengan dinas aktif satu tahun; Pasal 55 Tiongkok menyebutnya kewajiban terhormat; Pasal 143 Brasil menyatakannya wajib namun memberi dinas alternatif; Amerika Serikat hanya meminta **pendaftaran**; Indonesia dan India menulis kewajiban bela negara tanpa wajib militer.",
+        "pt-BR": "Japão. O artigo 9(1) renuncia à guerra como direito soberano da nação e à ameaça ou uso da força como meio de resolver disputas internacionais; o item (2) continua: \"Para cumprir o objetivo do parágrafo anterior, **forças terrestres, navais e aéreas, bem como outro potencial de guerra, jamais serão mantidas. O direito de beligerância do Estado não será reconhecido.**\" As constituições dos outros seis mercados falam de quem serve e entre que idades; o ponto de partida japonês é o que não se manterá de modo algum. A defesa cotidiana cabe às Forças de Autodefesa, regidas por lei própria, e seus integrantes entram por candidatura — o Estado não convoca o indivíduo; o indivíduo se candidata. Em contraste: o artigo 1 da lei taiwanesa impõe o dever a todo cidadão do sexo masculino, com um ano de serviço ativo; o artigo 55 chinês chama o serviço de obrigação honrosa; o artigo 143 brasileiro o declara obrigatório mas admite serviço alternativo por consciência; os Estados Unidos exigem apenas o **alistamento** de homens de 18 a 26 anos; Indonésia e Índia inscrevem o dever de defender sem ter conscrição."
+      }
+    },
+    {
+      "id": "q-20261013-home-language",
+      "date": "2026-10-13",
+      "kind": "poll",
+      "topic": "official-languages",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你在家講的話,和學校、公家機關用的是同一種嗎?",
+        "en": "Is the language you speak at home the same one used at school and in government offices?",
+        "ja": "家で話す言葉は、学校や役所で使う言葉と同じですか?",
+        "zh-CN": "你在家讲的话，和学校、公家机关用的是同一种吗?",
+        "hi": "आप घर में जो भाषा बोलते हैं, क्या वही स्कूल और सरकारी दफ़्तरों में चलती है?",
+        "id": "Bahasa yang kamu pakai di rumah, sama dengan yang dipakai di sekolah dan kantor pemerintah?",
+        "pt-BR": "A língua que você fala em casa é a mesma da escola e das repartições públicas?"
+      },
+      "options": [
+        {
+          "id": "same",
+          "emoji": "✅",
+          "label": {
+            "zh-TW": "一樣",
+            "en": "The same",
+            "ja": "同じ",
+            "zh-CN": "一样",
+            "hi": "एक ही",
+            "id": "Sama",
+            "pt-BR": "A mesma"
+          }
+        },
+        {
+          "id": "dialect",
+          "emoji": "🗣️",
+          "label": {
+            "zh-TW": "家裡講另一種,但聽得懂官方那種",
+            "en": "Another one at home, but I understand the official one",
+            "ja": "家では別。役所の言葉もわかる",
+            "zh-CN": "家里讲另一种，但听得懂官方那种",
+            "hi": "घर में दूसरी, पर सरकारी वाली समझ लेता हूँ",
+            "id": "Di rumah lain, tapi paham bahasa resmi",
+            "pt-BR": "Outra em casa, mas entendo a oficial"
+          }
+        },
+        {
+          "id": "switch",
+          "emoji": "🔀",
+          "label": {
+            "zh-TW": "看場合換,兩種都用",
+            "en": "I switch depending on where I am",
+            "ja": "場面で使い分ける",
+            "zh-CN": "看场合换，两种都用",
+            "hi": "जगह के हिसाब से बदलता हूँ",
+            "id": "Berganti tergantung tempat",
+            "pt-BR": "Alterno conforme o lugar"
+          }
+        },
+        {
+          "id": "struggle",
+          "emoji": "😶",
+          "label": {
+            "zh-TW": "不太一樣,有時候會卡",
+            "en": "Not really — sometimes I struggle",
+            "ja": "かなり違い、困ることもある",
+            "zh-CN": "不太一样，有时候会卡",
+            "hi": "बहुत अलग है, कभी दिक़्क़त होती है",
+            "id": "Cukup berbeda, kadang kesulitan",
+            "pt-BR": "Bem diferente, às vezes travo"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261013-no-single-language",
+      "date": "2026-10-13",
+      "kind": "guess",
+      "topic": "official-languages",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪一國的法律**不指定單一國語**,而是把各族群的語言連同手語全部列為國家語言?",
+        "en": "Guess: whose law **declines to name a single national language** and instead lists every community's language — plus sign language — as national languages?",
+        "ja": "クイズ:**単一の国語を指定せず**、各族群の言語に手話まで加えてすべて国家言語とする法律をもつのはどこ?",
+        "zh-CN": "你猜:哪一国的法律**不指定单一国语**，而是把各族群的语言连同手语全部列为国家语言?",
+        "hi": "अंदाज़ा लगाइए: किस देश का क़ानून **किसी एक राष्ट्रभाषा को नामित नहीं करता**, बल्कि हर समुदाय की भाषा और सांकेतिक भाषा तक को राष्ट्रीय भाषा मानता है?",
+        "id": "Tebak: undang-undang negara mana yang **menolak menyebut satu bahasa nasional** dan justru mendaftarkan bahasa tiap komunitas — termasuk bahasa isyarat — sebagai bahasa nasional?",
+        "pt-BR": "Adivinhe: a lei de qual país **se recusa a nomear uma língua nacional única** e lista as línguas de cada comunidade — e até a língua de sinais — como línguas nacionais?"
+      },
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "zh-TW",
+      "explain": {
+        "zh-TW": "台灣。《國家語言發展法》第三條說,本法所稱國家語言,指「臺灣各固有族群使用之自然語言**及臺灣手語**」;第四條接著寫「國家語言一律平等,國民使用國家語言應不受歧視或限制」。這部法律不是從眾多語言裡挑一個扶正,而是把它們整批納進來、再宣告彼此對等——**手語被寫進同一個清單**,是這一點最直接的證據:國家語言在這裡的定義是「這塊土地上的人實際在用的語言」,不是「政府辦公用的語言」。第七條另外規定,對面臨傳承危機的國家語言,政府應優先推動其傳承與復振。對照之下:印度憲法第三四三條指定天城體印地語為聯邦官方語言、另給英語十五年過渡條款;印尼憲法第三十六條一句話「國家語言是印尼語」;巴西憲法第十三條同樣一句;中國憲法沒有「官方語言」這個詞;日本根本沒有法定官方語言;美國到二○二五年三月才用行政命令指定英語。",
+        "en": "Taiwan. Article 3 of the National Languages Development Act defines national languages as the natural languages used by each of Taiwan's indigenous communities **and Taiwan Sign Language**; Article 4 then states that all national languages are equal and that no one may be discriminated against or restricted for using them. The statute does not elevate one language out of many — it takes them in as a set and declares them equal. That sign language sits in the same list is the clearest evidence of what is meant: a national language here is one that people on this island actually use, not one the government works in. Article 7 gives priority to revitalising languages facing a break in transmission. Compare: India's Article 343 names Hindi in Devanagari as the official language of the Union, with a fifteen-year transition for English; Indonesia's Article 36 settles it in one sentence — the language of the state is Indonesian; Brazil's Article 13 does the same; China's constitution never uses the phrase \"official language\"; Japan has no statutory official language at all; and the United States designated English only in March 2025, by executive order.",
+        "ja": "台湾です。国家言語発展法第3条は、この法律にいう国家言語とは「台湾の各固有族群が使用する自然言語**および台湾手話**」を指すと定め、第4条は「国家言語は一律に平等であり、国民が国家言語を使用することは差別または制限を受けない」と続けます。この法律は多くの言語から一つを選び上げるのではなく、まとめて取り込んだうえで互いに対等だと宣言しています。手話が同じ一覧に入っていることが、その意味を端的に示す証拠です。ここでいう国家言語とは「この島の人が実際に使っている言語」であって、「政府が事務に使う言語」ではありません。第7条は継承の危機にある言語の復振を優先すべきことも定めます。対照すると、インド憲法第343条はデーヴァナーガリー文字のヒンディー語を連邦の公用語とし英語に15年の経過規定を置き、インドネシア憲法第36条は一文で「国の言語はインドネシア語」と決め、ブラジル第13条も同様、中国憲法に「公用語」の語はなく、日本には法定公用語がそもそもなく、アメリカは2025年3月に大統領令で英語を指定しました。",
+        "zh-CN": "台湾。《国家语言发展法》第三条说，本法所称国家语言，指「台湾各固有族群使用之自然语言**及台湾手语**」;第四条接着写「国家语言一律平等，国民使用国家语言应不受歧视或限制」。这部法律不是从众多语言里挑一个扶正，而是把它们整批纳进来、再宣告彼此对等——**手语被写进同一个清单**，是这一点最直接的证据:国家语言在这里的定义是「这块土地上的人实际在用的语言」，不是「政府办公用的语言」。第七条另外规定，对面临传承危机的国家语言，政府应优先推动其传承与复振。对照之下:印度宪法第三四三条指定天城体印地语为联邦官方语言、另给英语十五年过渡条款;印尼宪法第三十六条一句话「国家语言是印尼语」;巴西宪法第十三条同样一句;中国宪法没有「官方语言」这个词;日本根本没有法定官方语言;美国到二○二五年三月才用行政命令指定英语。",
+        "hi": "ताइवान। राष्ट्रीय भाषा विकास अधिनियम की धारा 3 राष्ट्रीय भाषाओं को ताइवान के हर मूल समुदाय द्वारा प्रयुक्त प्राकृतिक भाषाओं **तथा ताइवानी सांकेतिक भाषा** के रूप में परिभाषित करती है; धारा 4 कहती है कि सभी राष्ट्रीय भाषाएँ समान हैं और उनके प्रयोग पर भेदभाव या रोक नहीं होगी। यह क़ानून अनेक में से एक को ऊपर नहीं उठाता — वह सबको एक साथ लेकर परस्पर समान घोषित करता है। सांकेतिक भाषा का उसी सूची में होना इसका सबसे साफ़ प्रमाण है: यहाँ राष्ट्रीय भाषा वह है जो इस द्वीप के लोग सचमुच बोलते हैं, न कि वह जिसमें सरकार काम करती है। धारा 7 लुप्तप्राय भाषाओं के पुनरुज्जीवन को प्राथमिकता देती है। तुलना करें: भारत का अनुच्छेद 343 देवनागरी हिन्दी को संघ की राजभाषा बनाता है; इंडोनेशिया का 36 एक वाक्य में; ब्राज़ील का 13 भी; चीन के संविधान में यह शब्द ही नहीं; जापान में क़ानूनी राजभाषा नहीं; अमेरिका ने मार्च 2025 में कार्यकारी आदेश से अंग्रेज़ी नामित की।",
+        "id": "Taiwan. Pasal 3 Undang-Undang Pengembangan Bahasa Nasional mendefinisikan bahasa nasional sebagai bahasa alami yang dipakai setiap komunitas asli Taiwan **serta Bahasa Isyarat Taiwan**; Pasal 4 menyatakan semua bahasa nasional setara dan tidak seorang pun boleh didiskriminasi atau dibatasi karena memakainya. Undang-undang itu tidak mengangkat satu bahasa dari sekian banyak — ia merangkul semuanya lalu menyatakan mereka sederajat. Bahwa bahasa isyarat ada dalam daftar yang sama adalah bukti paling terang tentang maksudnya: bahasa nasional di sini adalah bahasa yang benar-benar dipakai orang di pulau itu, bukan bahasa kerja pemerintah. Pasal 7 memprioritaskan penghidupan kembali bahasa yang terancam. Bandingkan: Pasal 343 India menetapkan Hindi beraksara Devanagari; Pasal 36 Indonesia menuntaskannya dalam satu kalimat; Pasal 13 Brasil sama; konstitusi Tiongkok tak memakai istilah itu; Jepang tak punya bahasa resmi menurut undang-undang; Amerika Serikat baru menetapkan bahasa Inggris pada Maret 2025 lewat perintah eksekutif.",
+        "pt-BR": "Taiwan. O artigo 3 da Lei de Desenvolvimento das Línguas Nacionais define línguas nacionais como as línguas naturais usadas por cada comunidade originária de Taiwan **e a Língua de Sinais de Taiwan**; o artigo 4 acrescenta que todas são iguais e que ninguém pode ser discriminado ou restringido por usá-las. A lei não eleva uma língua dentre muitas — acolhe todas em conjunto e as declara equivalentes. Que a língua de sinais esteja na mesma lista é a evidência mais clara do sentido: língua nacional ali é a que as pessoas da ilha de fato usam, não aquela em que o governo despacha. O artigo 7 dá prioridade à revitalização das línguas ameaçadas. Compare: o artigo 343 indiano nomeia o hindi em devanágari; o artigo 36 indonésio resolve em uma frase; o artigo 13 brasileiro também; a constituição chinesa nunca usa a expressão; o Japão não tem língua oficial em lei; e os Estados Unidos designaram o inglês só em março de 2025, por ordem executiva."
+      }
+    },
+    {
+      "id": "q-20261014-school-start",
+      "date": "2026-10-14",
+      "kind": "poll",
+      "topic": "compulsory-education",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你們那裡,小孩幾歲開始上學?",
+        "en": "Where you live, at what age do children start school?",
+        "ja": "そちらでは、子どもは何歳から学校に通いますか?",
+        "zh-CN": "你们那里，小孩几岁开始上学?",
+        "hi": "आपके यहाँ बच्चे किस उम्र में स्कूल जाना शुरू करते हैं?",
+        "id": "Di tempatmu, pada usia berapa anak mulai bersekolah?",
+        "pt-BR": "Aí, com que idade as crianças começam a escola?"
+      },
+      "options": [
+        {
+          "id": "four_five",
+          "emoji": "🧸",
+          "label": {
+            "zh-TW": "四到五歲",
+            "en": "Four or five",
+            "ja": "4〜5歳",
+            "zh-CN": "四到五岁",
+            "hi": "चार-पाँच वर्ष",
+            "id": "Empat atau lima tahun",
+            "pt-BR": "Quatro ou cinco"
+          }
+        },
+        {
+          "id": "six",
+          "emoji": "✏️",
+          "label": {
+            "zh-TW": "六歲",
+            "en": "Six",
+            "ja": "6歳",
+            "zh-CN": "六岁",
+            "hi": "छह वर्ष",
+            "id": "Enam tahun",
+            "pt-BR": "Seis"
+          }
+        },
+        {
+          "id": "seven",
+          "emoji": "🎒",
+          "label": {
+            "zh-TW": "七歲",
+            "en": "Seven",
+            "ja": "7歳",
+            "zh-CN": "七岁",
+            "hi": "सात वर्ष",
+            "id": "Tujuh tahun",
+            "pt-BR": "Sete"
+          }
+        },
+        {
+          "id": "varies",
+          "emoji": "🗺️",
+          "label": {
+            "zh-TW": "看地方,不一定",
+            "en": "It varies by place",
+            "ja": "地域によって違う",
+            "zh-CN": "看地方，不一定",
+            "hi": "जगह के अनुसार बदलता है",
+            "id": "Berbeda-beda tergantung daerah",
+            "pt-BR": "Varia conforme o lugar"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261014-edu-budget",
+      "date": "2026-10-14",
+      "kind": "guess",
+      "topic": "compulsory-education",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪一國把「**教育預算至少占百分之二十**」寫進了憲法?",
+        "en": "Guess: which country wrote **\"at least twenty per cent of the budget for education\"** into its constitution?",
+        "ja": "クイズ:「**教育予算は少なくとも20%**」を憲法に書き込んでいる国はどこ?",
+        "zh-CN": "你猜:哪一国把「**教育预算至少占百分之二十**」写进了宪法?",
+        "hi": "अंदाज़ा लगाइए: किस देश ने **\"बजट का कम से कम बीस प्रतिशत शिक्षा पर\"** अपने संविधान में लिख दिया है?",
+        "id": "Tebak: negara mana yang menuliskan **\"anggaran pendidikan sekurang-kurangnya dua puluh persen\"** ke dalam konstitusinya?",
+        "pt-BR": "Adivinhe: qual país inscreveu na constituição **\"ao menos vinte por cento do orçamento para a educação\"**?"
+      },
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        }
+      ],
+      "answer": "id",
+      "explain": {
+        "zh-TW": "印尼。一九四五年憲法第三十一條第四項規定,**國家在預算中優先編列教育,至少占百分之二十**。把具體的預算比例寫進憲法,意味著這件事被刻意設計成不能靠每年的政治協商去縮水——它不是「應該重視教育」的宣示,而是一個可以拿去對帳的數字。同條還有另一個特別之處:第二項把義務放在**兩邊**——每個公民有義務接受基礎教育,而**政府有義務為其出資**。其他六個市場的憲法談教育時談的是年限、權利或義務,唯獨印尼談錢。對照:巴西憲法第二〇八條是四歲到十七歲(七國裡跨度最寬);印度憲法第二十一A條六到十四歲,放在**可訴的基本權利**篇;日本憲法第二十六條的義務落在**家長**身上;中國憲法第四十六條一句話把受教育同時寫成權利與義務;台灣國民教育法是六到十五歲、九年;美國聯邦完全沒有規定,各州自己訂。",
+        "en": "Indonesia. Article 31(4) of the 1945 constitution provides that **the state shall prioritise education in the budget, at no less than twenty per cent**. Writing a specific budget share into a constitution means the matter was deliberately put beyond the reach of annual political bargaining — not a declaration that education matters, but a number that can be audited. The same article has another peculiarity: clause (2) puts the duty on **both sides** — every citizen is obliged to attend basic education, and **the government is obliged to fund it**. When the other six constitutions speak of education they speak of years, of rights, of duties; only Indonesia's speaks of money. Compare: Brazil's Article 208 runs from four to seventeen (the widest span of the seven); India's Article 21A covers six to fourteen and sits among the **justiciable fundamental rights**; Japan's Article 26 places the duty on **parents**; China's Article 46 makes education a right and a duty in one sentence; Taiwan's Compulsory Education Act sets six to fifteen, nine years; and the United States has no federal rule at all.",
+        "ja": "インドネシアです。1945年憲法第31条第4項は、**国家は予算において教育を優先し、その額は少なくとも20%とする**と定めます。具体的な予算比率を憲法に書き込むということは、この件を毎年の政治的な駆け引きの外に置くよう意図的に設計したということです。「教育を重視すべし」という宣言ではなく、突き合わせて検算できる数字なのです。同条にはもう一つ特別な点があります。第2項は義務を**両側**に置く——すべての国民は基礎教育を受ける義務を負い、**政府はその費用を負担する義務を負う**。他の六つの憲法が教育について語るとき、年限、権利、義務を語りますが、インドネシアだけが金額を語ります。対照すると、ブラジル第208条は4歳から17歳(七つで最も幅が広い)、インド第21A条は6歳から14歳で**訴求可能な基本的権利**の篇、日本第26条の義務は**保護者**、中国第46条は権利と義務を一文で、台湾は6歳から15歳の9年、アメリカには連邦の規定がありません。",
+        "zh-CN": "印尼。一九四五年宪法第三十一条第四项规定，**国家在预算中优先编列教育，至少占百分之二十**。把具体的预算比例写进宪法，意味着这件事被刻意设计成不能靠每年的政治协商去缩水——它不是「应该重视教育」的宣示，而是一个可以拿去对账的数字。同条还有另一个特别之处:第二项把义务放在**两边**——每个公民有义务接受基础教育，而**政府有义务为其出资**。其他六个市场的宪法谈教育时谈的是年限、权利或义务，唯独印尼谈钱。对照:巴西宪法第二〇八条是四岁到十七岁(七国里跨度最宽);印度宪法第二十一A条六到十四岁，放在**可诉的基本权利**篇;日本宪法第二十六条的义务落在**家长**身上;中国宪法第四十六条一句话把受教育同时写成权利与义务;台湾国民教育法是六到十五岁、九年;美国联邦完全没有规定，各州自己订。",
+        "hi": "इंडोनेशिया। 1945 के संविधान का अनुच्छेद 31(4) कहता है कि **राज्य बजट में शिक्षा को प्राथमिकता देगा, कम से कम बीस प्रतिशत**। बजट का ठोस अनुपात संविधान में लिखने का अर्थ है कि इसे जानबूझकर हर साल के राजनीतिक मोल-भाव से बाहर रखा गया — यह \"शिक्षा महत्वपूर्ण है\" की घोषणा नहीं, बल्कि एक ऐसा आँकड़ा है जिसका मिलान किया जा सकता है। उसी अनुच्छेद में एक और ख़ासियत है: खंड (2) कर्तव्य **दोनों ओर** रखता है — हर नागरिक को बुनियादी शिक्षा लेनी होगी, और **सरकार को उसका ख़र्च उठाना होगा**। बाक़ी छह संविधान शिक्षा पर बात करते समय वर्ष, अधिकार या कर्तव्य की बात करते हैं; केवल इंडोनेशिया पैसे की। तुलना करें: ब्राज़ील का 208 चार से सत्रह; भारत का 21A छह से चौदह और **वाद-योग्य मूल अधिकारों** में; जापान का 26 कर्तव्य **अभिभावकों** पर; चीन का 46 एक वाक्य में अधिकार और कर्तव्य; ताइवान छह से पंद्रह, नौ वर्ष; अमेरिका में कोई संघीय नियम नहीं।",
+        "id": "Indonesia. Pasal 31 ayat (4) UUD 1945 menetapkan bahwa **negara memprioritaskan anggaran pendidikan sekurang-kurangnya dua puluh persen**. Menuliskan porsi anggaran yang konkret ke dalam konstitusi berarti perkara itu sengaja ditempatkan di luar jangkauan tawar-menawar politik tahunan — bukan pernyataan bahwa pendidikan itu penting, melainkan angka yang bisa diaudit. Pasal yang sama punya keistimewaan lain: ayat (2) menaruh kewajiban di **dua sisi** — setiap warga negara wajib mengikuti pendidikan dasar, dan **pemerintah wajib membiayainya**. Ketika enam konstitusi lain berbicara tentang pendidikan, mereka berbicara tentang tahun, hak, atau kewajiban; hanya Indonesia yang berbicara tentang uang. Bandingkan: Pasal 208 Brasil dari empat sampai tujuh belas tahun (rentang terlebar); Pasal 21A India enam sampai empat belas dan berada di **hak dasar yang dapat digugat**; Pasal 26 Jepang menaruh kewajiban pada **orang tua**; Pasal 46 Tiongkok menjadikannya hak sekaligus kewajiban dalam satu kalimat; Taiwan enam sampai lima belas, sembilan tahun; Amerika Serikat tanpa aturan federal.",
+        "pt-BR": "Indonésia. O artigo 31(4) da constituição de 1945 determina que **o Estado priorizará a educação no orçamento, em não menos de vinte por cento**. Inscrever uma fatia orçamentária concreta na constituição significa que a matéria foi deliberadamente posta fora do alcance da barganha política anual — não uma declaração de que a educação importa, e sim um número que se pode auditar. O mesmo artigo tem outra peculiaridade: o item (2) põe o dever **dos dois lados** — todo cidadão é obrigado a cursar a educação básica, e **o governo é obrigado a custeá-la**. Quando as outras seis constituições falam de educação, falam de anos, de direitos, de deveres; só a indonésia fala de dinheiro. Compare: o artigo 208 brasileiro vai dos 4 aos 17 (o intervalo mais largo dos sete); o 21A indiano cobre dos seis aos catorze e está entre os **direitos fundamentais exigíveis**; o 26 japonês põe o dever sobre **os pais**; o 46 chinês faz da educação direito e dever na mesma frase; Taiwan fixa dos seis aos quinze, nove anos; e os Estados Unidos não têm regra federal alguma."
+      }
+    },
+    {
+      "id": "q-20261015-religion-form",
+      "date": "2026-10-15",
+      "kind": "poll",
+      "topic": "religion-and-the-state",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你們那裡的身分證或官方表格,會問你的宗教嗎?",
+        "en": "Do official forms or ID documents where you live ask about your religion?",
+        "ja": "そちらの身分証や役所の書類は、宗教を尋ねますか?",
+        "zh-CN": "你们那里的身分证或官方表格，会问你的宗教吗?",
+        "hi": "आपके यहाँ पहचान-पत्र या सरकारी फ़ॉर्म आपका धर्म पूछते हैं?",
+        "id": "Di tempatmu, apakah KTP atau formulir resmi menanyakan agamamu?",
+        "pt-BR": "Aí, documentos de identidade ou formulários oficiais perguntam a sua religião?"
+      },
+      "options": [
+        {
+          "id": "yes_id",
+          "emoji": "🪪",
+          "label": {
+            "zh-TW": "會,身分證上就有",
+            "en": "Yes — it's on the ID card itself",
+            "ja": "身分証に記載がある",
+            "zh-CN": "会，身份证上就有",
+            "hi": "हाँ — पहचान-पत्र पर ही लिखा होता है",
+            "id": "Ya — tercantum di KTP",
+            "pt-BR": "Sim — consta no próprio documento"
+          }
+        },
+        {
+          "id": "some_forms",
+          "emoji": "📋",
+          "label": {
+            "zh-TW": "有些表格會問",
+            "en": "Some forms ask",
+            "ja": "一部の書類で聞かれる",
+            "zh-CN": "有些表格会问",
+            "hi": "कुछ फ़ॉर्म पूछते हैं",
+            "id": "Sebagian formulir menanyakan",
+            "pt-BR": "Alguns formulários perguntam"
+          }
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": {
+            "zh-TW": "從來不問",
+            "en": "Never asked",
+            "ja": "聞かれたことがない",
+            "zh-CN": "从来不问",
+            "hi": "कभी नहीं पूछा जाता",
+            "id": "Tidak pernah ditanya",
+            "pt-BR": "Nunca perguntam"
+          }
+        },
+        {
+          "id": "dunno",
+          "emoji": "🤔",
+          "label": {
+            "zh-TW": "不確定",
+            "en": "Not sure",
+            "ja": "わからない",
+            "zh-CN": "不确定",
+            "hi": "पता नहीं",
+            "id": "Tidak yakin",
+            "pt-BR": "Não sei"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261015-propagate",
+      "date": "2026-10-15",
+      "kind": "guess",
+      "topic": "religion-and-the-state",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪一國的憲法把「**傳播**宗教」的自由也明文寫了進去?",
+        "en": "Guess: whose constitution writes the freedom to **propagate** religion into the text itself?",
+        "ja": "クイズ:宗教を「**布教する**」自由まで憲法に明記しているのはどこ?",
+        "zh-CN": "你猜:哪一国的宪法把「**传播**宗教」的自由也明文写了进去?",
+        "hi": "अंदाज़ा लगाइए: किस देश का संविधान धर्म के **प्रचार** की स्वतंत्रता को भी पाठ में लिख देता है?",
+        "id": "Tebak: konstitusi negara mana yang menuliskan kebebasan **menyiarkan** agama ke dalam teksnya sendiri?",
+        "pt-BR": "Adivinhe: qual constituição inscreve no próprio texto a liberdade de **propagar** religião?"
+      },
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "the United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        }
+      ],
+      "answer": "hi",
+      "explain": {
+        "zh-TW": "印度。憲法第二十五條第一項的用字是關鍵:在公共秩序、道德與健康,以及本篇其他規定的限制下,所有人平等地享有良心的自由,以及自由地**信奉、實行與傳播**宗教的權利。注意最後那個動詞——傳播(propagate)。把傳教的自由明文寫進憲法,在這七部憲法裡是獨一份:別處保障的是信與不信、以及參不參加儀式,印度連向他人傳布也一併寫入。同時,那串限制也寫在同一句裡:公共秩序、道德、健康。序言另外自稱這是一個**世俗**共和國。對照之下,其他六個市場的落點差距很大:印尼憲法第二十九條第一項說「**國家以至高神性為基礎**」;巴西第十九條禁止政府設立、補助、妨礙宗教或與之結盟;日本第二十條寫到「**國家及其機關不得從事宗教教育或任何宗教活動**」;美國第一修正案的主語是「國會」;中國第三十六條保護的是「正常的」宗教活動;台灣憲法第十三條只有七個字。",
+        "en": "India. The wording of Article 25(1) is where to look: subject to public order, morality and health and to the other provisions of this Part, all persons are equally entitled to freedom of conscience and the right freely to **profess, practise and propagate** religion. Note that last verb — propagate. Writing the freedom to spread one's religion into the constitution itself is unique among these seven: elsewhere what is protected is believing or not believing, and taking part or not taking part in rites; India includes carrying the faith to others. The string of limits sits in the same sentence: public order, morality, health. The preamble separately calls the republic **secular**. The other six markets land very differently: Article 29(1) of Indonesia's constitution says **the state is based upon belief in the One and Only God**; Brazil's Article 19 forbids government to establish, subsidise, hinder or ally with religion; Japan's Article 20 goes as far as **the state and its organs shall refrain from religious education or any other religious activity**; the subject of the American First Amendment is Congress; China's Article 36 protects \"normal\" religious activities; and Taiwan's Article 13 is seven characters long.",
+        "ja": "インドです。第25条第1項の語り口が鍵になります。公共の秩序、道徳、健康、および本篇の他の規定に服することを条件として、すべての人は等しく良心の自由と、宗教を**信奉し、実践し、そして布教する**権利を有する。最後の動詞に注目してください——布教です。布教の自由を憲法本文に書き込んでいるのは、この七つのなかでインドだけです。他所で守られるのは信じるか信じないか、儀式に参加するかしないかであるのに対し、インドは他者へ伝えることまで含めます。制限の連なりも同じ一文にあります。公共の秩序、道徳、健康。前文は別途、この共和国を**世俗的**と称します。他の六市場の落としどころは大きく異なります。インドネシア憲法第29条第1項は「**国家は唯一神への信仰に基づく**」、ブラジル第19条は政府が宗教を設立・補助・妨害・同盟することを禁じ、日本第20条は「**国及びその機関は、宗教教育その他いかなる宗教的活動もしてはならない**」とまで書き、アメリカ修正第1条の主語は「連邦議会」、中国第36条が保護するのは「正常な」宗教活動、台湾憲法第13条はわずか七文字です。",
+        "zh-CN": "印度。宪法第二十五条第一项的用字是关键:在公共秩序、道德与健康，以及本篇其他规定的限制下，所有人平等地享有良心的自由，以及自由地**信奉、实行与传播**宗教的权利。注意最后那个动词——传播(propagate)。把传教的自由明文写进宪法，在这七部宪法里是独一份:别处保障的是信与不信、以及参不参加仪式，印度连向他人传布也一并写入。同时，那串限制也写在同一句里:公共秩序、道德、健康。序言另外自称这是一个**世俗**共和国。对照之下，其他六个市场的落点差距很大:印尼宪法第二十九条第一项说「**国家以至高神性为基础**」;巴西第十九条禁止政府设立、补助、妨碍宗教或与之结盟;日本第二十条写到「**国家及其机关不得从事宗教教育或任何宗教活动**」;美国第一修正案的主语是「国会」;中国第三十六条保护的是「正常的」宗教活动;台湾宪法第十三条只有七个字。",
+        "hi": "भारत। देखने की जगह अनुच्छेद 25(1) की शब्दावली है: लोक व्यवस्था, सदाचार और स्वास्थ्य तथा इस भाग के अन्य उपबंधों के अधीन रहते हुए, सभी व्यक्तियों को अंत:करण की स्वतंत्रता तथा धर्म को अबाध रूप से **मानने, आचरण करने और प्रचार करने** का समान अधिकार होगा। उस अंतिम क्रिया पर ध्यान दें — प्रचार। अपने धर्म के प्रसार की स्वतंत्रता को संविधान में ही लिख देना इन सातों में अकेला उदाहरण है: और जगह जो सुरक्षित है वह है मानना या न मानना, संस्कारों में भाग लेना या न लेना; भारत उसमें दूसरों तक पहुँचाना भी जोड़ता है। सीमाओं की कतार उसी वाक्य में है: लोक व्यवस्था, सदाचार, स्वास्थ्य। प्रस्तावना अलग से गणराज्य को **पंथनिरपेक्ष** कहती है। बाक़ी छह बहुत भिन्न जगह उतरते हैं: इंडोनेशिया का 29(1) कहता है **राज्य एकमेव ईश्वर में आस्था पर आधारित है**; ब्राज़ील का 19 सरकार को धर्म स्थापित करने, अनुदान देने, बाधा डालने या गठजोड़ करने से रोकता है; जापान का 20 राज्य-अंगों को किसी भी धार्मिक गतिविधि से रोकता है; अमेरिकी पहले संशोधन का कर्ता \"कांग्रेस\" है; चीन का 36 \"सामान्य\" धार्मिक गतिविधियों की रक्षा करता है; ताइवान का 13 केवल एक छोटा वाक्य है।",
+        "id": "India. Yang perlu dilihat adalah rumusan Pasal 25(1): dengan tunduk pada ketertiban umum, kesusilaan, dan kesehatan serta ketentuan lain dalam Bagian ini, semua orang berhak setara atas kebebasan nurani dan hak untuk secara bebas **menganut, menjalankan, dan menyiarkan** agama. Perhatikan kata kerja terakhir itu — menyiarkan. Menuliskan kebebasan menyebarkan agama ke dalam konstitusi sendiri adalah satu-satunya di antara tujuh ini: di tempat lain yang dilindungi adalah percaya atau tidak percaya, dan ikut atau tidak ikut ritual; India memasukkan pula menyampaikannya kepada orang lain. Rentetan pembatasnya berada dalam kalimat yang sama: ketertiban umum, kesusilaan, kesehatan. Pembukaannya secara terpisah menyebut republik itu **sekuler**. Enam pasar lain mendarat sangat berbeda: Pasal 29(1) Indonesia menyatakan **negara berdasar atas Ketuhanan Yang Maha Esa**; Pasal 19 Brasil melarang pemerintah mendirikan, mensubsidi, menghalangi, atau bersekutu dengan agama; Pasal 20 Jepang bahkan melarang perangkat negara melakukan kegiatan keagamaan apa pun; subjek Amendemen Pertama Amerika adalah Kongres; Pasal 36 Tiongkok melindungi kegiatan keagamaan yang \"normal\"; dan Pasal 13 Taiwan hanya satu kalimat pendek.",
+        "pt-BR": "Índia. O lugar a observar é a redação do artigo 25(1): sujeitos à ordem pública, à moralidade e à saúde e às demais disposições desta Parte, todos têm igual direito à liberdade de consciência e ao direito de livremente **professar, praticar e propagar** religião. Repare no último verbo — propagar. Inscrever a liberdade de difundir a própria religião na constituição é único entre estas sete: noutros lugares o que se protege é crer ou não crer, participar ou não de ritos; a Índia inclui levá-la a outros. A série de limites está na mesma frase: ordem pública, moralidade, saúde. O preâmbulo, à parte, chama a república de **laica**. Os outros seis pousam em lugares bem distintos: o artigo 29(1) da Indonésia diz que **o Estado se funda na crença no Deus Único**; o 19 brasileiro proíbe o poder público de estabelecer, subvencionar, embaraçar ou aliar-se a cultos; o 20 japonês chega a vedar aos órgãos estatais qualquer atividade religiosa; o sujeito da Primeira Emenda americana é o Congresso; o 36 chinês protege as atividades religiosas \"normais\"; e o 13 de Taiwan tem sete caracteres."
+      }
+    },
+    {
+      "id": "q-20261016-local-vote",
+      "date": "2026-10-16",
+      "kind": "poll",
+      "topic": "voting-and-elections",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你投過最「小」的一場選舉是什麼?",
+        "en": "What is the smallest election you have ever voted in?",
+        "ja": "これまでに投票したなかで、いちばん「小さい」選挙は?",
+        "zh-CN": "你投过最「小」的一场选举是什么?",
+        "hi": "आपने अब तक जिस सबसे \"छोटे\" चुनाव में वोट डाला, वह कौन-सा था?",
+        "id": "Pemilihan paling \"kecil\" yang pernah kamu ikuti itu apa?",
+        "pt-BR": "Qual foi a menor eleição em que você já votou?"
+      },
+      "options": [
+        {
+          "id": "village",
+          "emoji": "🏘️",
+          "label": {
+            "zh-TW": "村里長那一級",
+            "en": "Village or neighbourhood head",
+            "ja": "町内・村レベル",
+            "zh-CN": "村里长那一级",
+            "hi": "गाँव या मोहल्ले का प्रमुख",
+            "id": "Kepala desa atau RT/RW",
+            "pt-BR": "Chefe de bairro ou de vila"
+          }
+        },
+        {
+          "id": "city",
+          "emoji": "🏙️",
+          "label": {
+            "zh-TW": "市長或市議員",
+            "en": "Mayor or city council",
+            "ja": "市長や市議会",
+            "zh-CN": "市长或市议员",
+            "hi": "महापौर या नगर परिषद",
+            "id": "Wali kota atau DPRD",
+            "pt-BR": "Prefeito ou vereador"
+          }
+        },
+        {
+          "id": "national",
+          "emoji": "🏛️",
+          "label": {
+            "zh-TW": "只投過全國性的",
+            "en": "Only national ones",
+            "ja": "国政選挙だけ",
+            "zh-CN": "只投过全国性的",
+            "hi": "केवल राष्ट्रीय चुनाव",
+            "id": "Hanya yang tingkat nasional",
+            "pt-BR": "Só as nacionais"
+          }
+        },
+        {
+          "id": "never",
+          "emoji": "🙅",
+          "label": {
+            "zh-TW": "還沒投過票",
+            "en": "I haven't voted yet",
+            "ja": "まだ投票したことがない",
+            "zh-CN": "还没投过票",
+            "hi": "अभी तक वोट नहीं डाला",
+            "id": "Belum pernah memilih",
+            "pt-BR": "Ainda não votei"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20261016-direct-level",
+      "date": "2026-10-16",
+      "kind": "guess",
+      "topic": "voting-and-elections",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:哪一國的憲法規定,**由選民直接選舉的只到縣與鄉這一級**,再往上是一層層間接選出的?",
+        "en": "Guess: whose constitution provides that **voters elect directly only up to the county and township level**, everything above being chosen indirectly, one rung at a time?",
+        "ja": "クイズ:憲法で**有権者が直接選ぶのは県・郷のレベルまで**とし、その上は段階を追った間接選挙としているのはどこ?",
+        "zh-CN": "你猜:哪一国的宪法规定，**由选民直接选举的只到县与乡这一级**，再往上是一层层间接选出的?",
+        "hi": "अंदाज़ा लगाइए: किस देश का संविधान कहता है कि **मतदाता सीधे केवल काउंटी और टाउनशिप स्तर तक चुनते हैं**, उससे ऊपर सब परोक्ष रूप से?",
+        "id": "Tebak: konstitusi negara mana yang menetapkan bahwa **pemilih memilih langsung hanya sampai tingkat kabupaten dan kecamatan**, sedangkan di atasnya dipilih secara tidak langsung?",
+        "pt-BR": "Adivinhe: qual constituição prevê que **os eleitores elegem diretamente apenas até o nível de condado e distrito**, e acima disso a escolha é indireta?"
+      },
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "answer": "zh-CN",
+      "explain": {
+        "zh-TW": "中國。憲法第九十七條寫得很明確:縣、不設區的市、市轄區、鄉、民族鄉、鎮的人民代表大會代表**由選民直接選舉**;而省、直轄市、設區的市這一級的代表,是由**下一級的人民代表大會**選出的。也就是說,選民手上那一票直接投到的是縣與鄉這一層,再往上是一層層的間接選舉。同一部憲法第三十四條給出的門檻其實很低:年滿十八周歲的公民,不分民族、種族、性別、職業、家庭出身、宗教信仰、教育程度、財產狀況、**居住期限**,都有選舉權和被選舉權——「不問居住期限」這一句,恰好是台灣要求選區居住四個月、日本地方選舉要求連續居住三個月的反面。對照之下:巴西憲法把投票寫成十八到七十歲的義務;印尼憲法第二十二E條規定五年一次的直接普選;美國的選舉日寫在聯邦法典裡,但幾乎其他所有事都由各州決定。",
+        "en": "China. Article 97 of the constitution is explicit: deputies to the people's congresses of counties, cities not divided into districts, municipal districts, townships, nationality townships and towns are **elected directly by the voters**, while deputies at the provincial level and in cities divided into districts are elected by **the people's congress one level below**. A voter's ballot therefore reaches the county and township tier directly; everything above that is chosen indirectly, one rung at a time. The threshold in the same constitution is in fact low: Article 34 gives the right to vote and to be elected to every citizen who has reached eighteen, irrespective of ethnicity, race, sex, occupation, family background, religion, education, property or **length of residence** — and that last clause is precisely the mirror image of Taiwan's four months of residence in the constituency and Japan's three continuous months for local elections. By contrast: Brazil's constitution makes voting a duty between eighteen and seventy; Indonesia's Article 22E requires a direct general election every five years; and in the United States the election day is fixed in the federal code while almost everything else is left to the states.",
+        "ja": "中国です。憲法第97条は明確です。県、区を設けない市、市轄区、郷、民族郷、鎮の人民代表大会の代表は**選挙民が直接選挙する**が、省、直轄市、区を設ける市のレベルの代表は、**一つ下の級の人民代表大会**が選ぶ。つまり有権者の一票が直接届くのは県と郷の層までで、その上は段階を追った間接選挙になります。同じ憲法の第34条が示す敷居はむしろ低く、満18歳に達した公民は、民族、人種、性別、職業、家庭の出身、宗教信仰、教育の程度、財産の状況、**居住期間**を問わず選挙権と被選挙権をもちます。この「居住期間を問わず」という一句は、選挙区に4か月の居住を求める台湾、地方選挙に3か月の継続居住を求める日本のちょうど裏返しです。対照すると、ブラジル憲法は投票を18歳から70歳の義務とし、インドネシア憲法第22E条は5年に一度の直接選挙を定め、アメリカは選挙日こそ連邦法典にありますが他のほとんどは州が決めます。",
+        "zh-CN": "中国。宪法第九十七条写得很明确:县、不设区的市、市辖区、乡、民族乡、镇的人民代表大会代表**由选民直接选举**;而省、直辖市、设区的市这一级的代表，是由**下一级的人民代表大会**选出的。也就是说，选民手上那一票直接投到的是县与乡这一层，再往上是一层层的间接选举。同一部宪法第三十四条给出的门槛其实很低:年满十八周岁的公民，不分民族、种族、性别、职业、家庭出身、宗教信仰、教育程度、财产状况、**居住期限**，都有选举权和被选举权——「不问居住期限」这一句，恰好是台湾要求选区居住四个月、日本地方选举要求连续居住三个月的反面。对照之下:巴西宪法把投票写成十八到七十岁的义务;印尼宪法第二十二E条规定五年一次的直接普选;美国的选举日写在联邦法典里，但几乎其他所有事都由各州决定。",
+        "hi": "चीन। संविधान का अनुच्छेद 97 स्पष्ट है: काउंटी, बिना ज़िलों वाले शहर, नगर-ज़िले, टाउनशिप, राष्ट्रीयता-टाउनशिप और क़स्बों की जन-प्रतिनिधि सभाओं के प्रतिनिधि **मतदाता सीधे चुनते हैं**, जबकि प्रांत तथा ज़िलों में बँटे शहरों के प्रतिनिधि **एक स्तर नीचे की सभा** चुनती है। यानी मतदाता का मत सीधे काउंटी और टाउनशिप तक पहुँचता है; उससे ऊपर सब परोक्ष रूप से, एक-एक सीढ़ी चढ़कर। उसी संविधान का अनुच्छेद 34 दहलीज़ बहुत नीची रखता है: अठारह वर्ष पूरे कर चुका हर नागरिक — जाति, नस्ल, लिंग, पेशा, पारिवारिक पृष्ठभूमि, धर्म, शिक्षा, संपत्ति और **निवास की अवधि** का भेद किए बिना — मत देने और चुने जाने का अधिकार रखता है। यह अंतिम वाक्यांश ताइवान के चार महीने और जापान के तीन महीने का ठीक उलटा है। तुलना करें: ब्राज़ील मतदान को अठारह से सत्तर तक कर्तव्य बनाता है; इंडोनेशिया का 22E हर पाँच साल में प्रत्यक्ष चुनाव; अमेरिका में चुनाव का दिन संघीय संहिता में है पर बाक़ी लगभग सब राज्यों पर।",
+        "id": "Tiongkok. Pasal 97 konstitusinya tegas: wakil dalam kongres rakyat di tingkat kabupaten, kota tanpa distrik, distrik kota, kecamatan, kecamatan suku bangsa, dan kota kecil **dipilih langsung oleh pemilih**, sedangkan wakil di tingkat provinsi dan kota berdistrik dipilih oleh **kongres rakyat satu tingkat di bawahnya**. Jadi suara seorang pemilih langsung sampai ke lapis kabupaten dan kecamatan; di atas itu semuanya tidak langsung, setingkat demi setingkat. Ambang dalam konstitusi yang sama justru rendah: Pasal 34 memberi hak memilih dan dipilih kepada setiap warga yang telah genap delapan belas tahun, tanpa membedakan suku, ras, jenis kelamin, pekerjaan, asal keluarga, agama, pendidikan, harta, maupun **lama tinggal** — dan kalimat terakhir itu justru kebalikan dari empat bulan di Taiwan serta tiga bulan berturut-turut di Jepang untuk pemilihan daerah. Bandingkan: konstitusi Brasil menjadikan memilih kewajiban bagi usia delapan belas sampai tujuh puluh; Pasal 22E Indonesia mewajibkan pemilu langsung lima tahun sekali; di Amerika Serikat hari pemilu ditetapkan undang-undang federal sementara hampir semua hal lain diserahkan ke negara bagian.",
+        "pt-BR": "China. O artigo 97 da constituição é explícito: os deputados às assembleias populares de condados, cidades sem distritos, distritos urbanos, subdistritos, subdistritos de nacionalidades e vilas são **eleitos diretamente pelos eleitores**, enquanto os deputados no nível provincial e nas cidades divididas em distritos são escolhidos pela **assembleia do nível imediatamente inferior**. O voto do eleitor alcança diretamente a camada do condado e da vila; acima disso, tudo é indireto, degrau por degrau. O limiar na mesma constituição é, aliás, baixo: o artigo 34 dá o direito de votar e ser eleito a todo cidadão que completou dezoito anos, sem distinção de etnia, raça, sexo, ocupação, origem familiar, religião, escolaridade, patrimônio ou **tempo de residência** — e essa última cláusula é exatamente o inverso dos quatro meses de Taiwan e dos três meses contínuos do Japão para eleições locais. Em contraste: a constituição brasileira torna o voto um dever dos dezoito aos setenta; o artigo 22E indonésio exige eleição direta a cada cinco anos; e nos Estados Unidos o dia da eleição está no código federal, mas quase todo o resto fica com os estados."
+      }
     }
   ]
 }

@@ -3690,6 +3690,468 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20261010-vote-travel",
+      "date": "2026-10-10",
+      "kind": "poll",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "मतदान के दिन वोट डालने के लिए आपको कितनी दूर जाना पड़ता है?",
+      "options": [
+        {
+          "id": "walk",
+          "emoji": "🚶",
+          "label": "पैदल पहुँच जाता हूँ"
+        },
+        {
+          "id": "same_city",
+          "emoji": "🚌",
+          "label": "उसी शहर में, पर वाहन से"
+        },
+        {
+          "id": "go_home",
+          "emoji": "🚄",
+          "label": "पंजीकरण वाली जगह लौटना पड़ता है"
+        },
+        {
+          "id": "post",
+          "emoji": "📮",
+          "label": "डाक या अग्रिम मतदान से"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261010-vote-duty",
+      "date": "2026-10-10",
+      "kind": "guess",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस देश में मतदान एक **कर्तव्य** है, और न जाने पर कारण बताना या जुर्माना भरना पड़ता है?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261011-dad-leave",
+      "date": "2026-10-11",
+      "kind": "poll",
+      "topic_id": "top_01M0KT72E9XE1MCH7JRCFW5H3B",
+      "topic_slug": "parental-leave",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "बच्चा होने पर क्या दूसरे अभिभावक को छुट्टी मिलती है?",
+      "options": [
+        {
+          "id": "paid",
+          "emoji": "💰",
+          "label": "हाँ, और सवेतन"
+        },
+        {
+          "id": "unpaid",
+          "emoji": "📄",
+          "label": "हाँ, पर बिना वेतन"
+        },
+        {
+          "id": "company",
+          "emoji": "🏢",
+          "label": "कंपनी पर निर्भर, क़ानून पर नहीं"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "ऐसी कोई छुट्टी नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261011-unpaid-leave",
+      "date": "2026-10-11",
+      "kind": "guess",
+      "topic_id": "top_01M0KT72E9XE1MCH7JRCFW5H3B",
+      "topic_slug": "parental-leave",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस देश का क़ानून **साफ़ शब्दों में** कहता है कि यह पारिवारिक अवकाश \"अवैतनिक हो सकता है\"?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261012-service-known",
+      "date": "2026-10-12",
+      "kind": "poll",
+      "topic_id": "top_01M0KV33545VM31076TA2CX8FK",
+      "topic_slug": "military-service",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके आसपास कोई है जिसने सैन्य सेवा की हो?",
+      "options": [
+        {
+          "id": "myself",
+          "emoji": "🎽",
+          "label": "मैंने स्वयं की है"
+        },
+        {
+          "id": "family",
+          "emoji": "👨‍👩‍👦",
+          "label": "परिवार में किसी ने की है"
+        },
+        {
+          "id": "volunteer",
+          "emoji": "🎖️",
+          "label": "हाँ, पर स्वेच्छा से"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "नहीं — यहाँ भर्ती अनिवार्य नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261012-no-forces",
+      "date": "2026-10-12",
+      "kind": "guess",
+      "topic_id": "top_01M0KV33545VM31076TA2CX8FK",
+      "topic_slug": "military-service",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस देश का संविधान साफ़-साफ़ कहता है कि **थल, जल और वायु सेनाएँ कभी नहीं रखी जाएँगी**?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261013-home-language",
+      "date": "2026-10-13",
+      "kind": "poll",
+      "topic_id": "top_01M0MJ5G7W8CNCNJYJBSKVNW0Y",
+      "topic_slug": "official-languages",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप घर में जो भाषा बोलते हैं, क्या वही स्कूल और सरकारी दफ़्तरों में चलती है?",
+      "options": [
+        {
+          "id": "same",
+          "emoji": "✅",
+          "label": "एक ही"
+        },
+        {
+          "id": "dialect",
+          "emoji": "🗣️",
+          "label": "घर में दूसरी, पर सरकारी वाली समझ लेता हूँ"
+        },
+        {
+          "id": "switch",
+          "emoji": "🔀",
+          "label": "जगह के हिसाब से बदलता हूँ"
+        },
+        {
+          "id": "struggle",
+          "emoji": "😶",
+          "label": "बहुत अलग है, कभी दिक़्क़त होती है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261013-no-single-language",
+      "date": "2026-10-13",
+      "kind": "guess",
+      "topic_id": "top_01M0MJ5G7W8CNCNJYJBSKVNW0Y",
+      "topic_slug": "official-languages",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस देश का क़ानून **किसी एक राष्ट्रभाषा को नामित नहीं करता**, बल्कि हर समुदाय की भाषा और सांकेतिक भाषा तक को राष्ट्रीय भाषा मानता है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261014-school-start",
+      "date": "2026-10-14",
+      "kind": "poll",
+      "topic_id": "top_01M0MK287HXZ71YZ2E3SWFP3KW",
+      "topic_slug": "compulsory-education",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके यहाँ बच्चे किस उम्र में स्कूल जाना शुरू करते हैं?",
+      "options": [
+        {
+          "id": "four_five",
+          "emoji": "🧸",
+          "label": "चार-पाँच वर्ष"
+        },
+        {
+          "id": "six",
+          "emoji": "✏️",
+          "label": "छह वर्ष"
+        },
+        {
+          "id": "seven",
+          "emoji": "🎒",
+          "label": "सात वर्ष"
+        },
+        {
+          "id": "varies",
+          "emoji": "🗺️",
+          "label": "जगह के अनुसार बदलता है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261014-edu-budget",
+      "date": "2026-10-14",
+      "kind": "guess",
+      "topic_id": "top_01M0MK287HXZ71YZ2E3SWFP3KW",
+      "topic_slug": "compulsory-education",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस देश ने **\"बजट का कम से कम बीस प्रतिशत शिक्षा पर\"** अपने संविधान में लिख दिया है?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261015-religion-form",
+      "date": "2026-10-15",
+      "kind": "poll",
+      "topic_id": "top_01M0MKPFF2Y01CF0W15C7FDWY0",
+      "topic_slug": "religion-and-the-state",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके यहाँ पहचान-पत्र या सरकारी फ़ॉर्म आपका धर्म पूछते हैं?",
+      "options": [
+        {
+          "id": "yes_id",
+          "emoji": "🪪",
+          "label": "हाँ — पहचान-पत्र पर ही लिखा होता है"
+        },
+        {
+          "id": "some_forms",
+          "emoji": "📋",
+          "label": "कुछ फ़ॉर्म पूछते हैं"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "कभी नहीं पूछा जाता"
+        },
+        {
+          "id": "dunno",
+          "emoji": "🤔",
+          "label": "पता नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261015-propagate",
+      "date": "2026-10-15",
+      "kind": "guess",
+      "topic_id": "top_01M0MKPFF2Y01CF0W15C7FDWY0",
+      "topic_slug": "religion-and-the-state",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस देश का संविधान धर्म के **प्रचार** की स्वतंत्रता को भी पाठ में लिख देता है?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261016-local-vote",
+      "date": "2026-10-16",
+      "kind": "poll",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपने अब तक जिस सबसे \"छोटे\" चुनाव में वोट डाला, वह कौन-सा था?",
+      "options": [
+        {
+          "id": "village",
+          "emoji": "🏘️",
+          "label": "गाँव या मोहल्ले का प्रमुख"
+        },
+        {
+          "id": "city",
+          "emoji": "🏙️",
+          "label": "महापौर या नगर परिषद"
+        },
+        {
+          "id": "national",
+          "emoji": "🏛️",
+          "label": "केवल राष्ट्रीय चुनाव"
+        },
+        {
+          "id": "never",
+          "emoji": "🙅",
+          "label": "अभी तक वोट नहीं डाला"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261016-direct-level",
+      "date": "2026-10-16",
+      "kind": "guess",
+      "topic_id": "top_01M0KRCDGQ2TVZXD0THYCYG64B",
+      "topic_slug": "voting-and-elections",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: किस देश का संविधान कहता है कि **मतदाता सीधे केवल काउंटी और टाउनशिप स्तर तक चुनते हैं**, उससे ऊपर सब परोक्ष रूप से?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }
