@@ -102,6 +102,29 @@ if ! "$NODE_BIN" "$REPO/scripts/sync-reactions-from-d1.mjs"; then
   log "WARN: sync-reactions-from-d1 失敗,沿用上一輪 reaction 計數(不中斷 export)"
 fi
 
+# 草案 §23/§25 的 Job 9(Feed Expiration)與 Job 10(Comment Activity),2026-08-22 上線。
+# 兩個 job 在 Worker 端合成一次掃描(D1 免費額度按 rows_read 計)。
+# **不 fail-closed**:它改的是 D1 的貼文活性,與本支要輸出的靜態資料無關;
+# 打不通只是熱度不新鮮,不該讓線上資料整批停更。
+log "feed-maintenance.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/feed-maintenance.mjs"; then
+  log "WARN: feed-maintenance 失敗,貼文活性這一輪不更新(不中斷 export)"
+fi
+
+# 草案 §34 Job 18(Ranking Snapshot)。要在 compute-topic-scores **之後** ——
+# 它存的就是那一輪算出來的名次。granularity 用 hourly 而不是草案的 15m,
+# 理由寫在腳本檔頭(分數每小時才變一次,存四份一樣的不是歷史是雜訊)。
+log "ranking-snapshot.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/ranking-snapshot.mjs"; then
+  log "WARN: ranking-snapshot 失敗,這一小時沒有快照(不中斷 export)"
+fi
+
+# 草案 §35 Job 19(Analytics Aggregation)。刻意沒有 page_views —— 見腳本檔頭。
+log "analytics-aggregate.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/analytics-aggregate.mjs"; then
+  log "WARN: analytics-aggregate 失敗(不中斷 export)"
+fi
+
 log "update-local-data.mjs ..."
 if ! "$NODE_BIN" "$REPO/scripts/update-local-data.mjs"; then
   log "FAILED: 在地資料來源驗證／更新未通過；停止輸出，避免線上顯示未核對資料"

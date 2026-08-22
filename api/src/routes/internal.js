@@ -257,3 +257,89 @@ export async function handleModerationDecisions(request, env) {
   if (stmts.length > 0) await env.DB.batch(stmts);
   return json({ synced: synced.length, hidden: hide.length, restored: restore.length }, 200);
 }
+
+// POST /internal/jobs/feed-maintenance —— 草案 §23 Job 9(Feed Expiration)
+//                                        + §25 Job 10(Comment Activity)
+//
+// 兩個 job 合成**一次掃描**是刻意的:它們都要走 posts 全表,而 D1 免費額度是按
+// rows_read 計的(CLAUDE.md 紅線:寫入量應與真人流量同一量級)。分兩支跑等於白讀一遍。
+//
+// ── Job 9 衰退(草案 §23)────────────────────────────────────────────────
+//   active  且 last_activity_at 超過 8H  → cooling
+//   cooling 且 last_activity_at 超過 30 天 → archived
+//   cooling 但**又有新留言**(8H 內有活動) → 回到 active(草案的 "Keep Alive")
+// ⚠ archived **不復活**。CLAUDE.md 紅線:`posts.status='archived'` 是永久鎖定,
+//   與 topics 的 archived(只是不熱)同名不同義。把它改回 active 等於重開一個
+//   已經關掉的討論串,而且沒有任何地方記錄過它為什麼被關。
+// ⚠ 也不碰 moderation / deleted —— 那是審核軸,不是活性軸。兩個軸共用一個欄位是
+//   既有設計,所以每一次 UPDATE 都要明寫 status 條件,不能只看時間。
+//
+// ── Job 10 活性(草案 §25)──────────────────────────────────────────────
+//   comments                  = 實際還活著的留言數(Worker 在寫入時 +1,但留言被
+//                               審核下架之後那個計數就不對了 —— 這裡從真相重算)
+//   cross_country_engagements = 留言者所在國**不同於**貼文所在國的留言數
+//   ⚠ 這一欄在此之前**從來沒有任何東西寫過它**(只有 INSERT 時的字面 0),
+//     而 compute-topic-scores.mjs 的 CrossCountryScore 一直在讀它 ——
+//     也就是說那一項分數從上線以來恆為 0。這一支就是補上它。
+export async function handleFeedMaintenance(request, env) {
+  const now = Math.floor(Date.now() / 1000);
+  const H8 = 8 * 3600;
+  const D30 = 30 * 86400;
+
+  // ── Job 10 先跑:衰退要看 last_activity_at,而活性重算可能會改變它的意義 ──
+  // (實際上 last_activity_at 由 Worker 在留言寫入時更新,這裡只重算計數;
+  //  順序仍照「先算真相、再依真相判定」,免得下一個人改動時踩到。)
+  const activity = (
+    await env.DB.prepare(
+      `SELECT p.post_id,
+              COUNT(c.comment_id) AS n,
+              SUM(CASE WHEN c.country_code IS NOT NULL
+                        AND p.country_code IS NOT NULL
+                        AND c.country_code <> p.country_code THEN 1 ELSE 0 END) AS cross_n
+         FROM posts p
+         LEFT JOIN comments c ON c.post_id = p.post_id AND c.status = 'active'
+        GROUP BY p.post_id
+       HAVING n <> p.comments OR COALESCE(cross_n, 0) <> p.cross_country_engagements`
+    ).all()
+  ).results;
+
+  const stmts = [];
+  for (const r of activity) {
+    stmts.push(
+      env.DB.prepare(
+        "UPDATE posts SET comments = ?, cross_country_engagements = ? WHERE post_id = ?"
+      ).bind(r.n, r.cross_n || 0, r.post_id)
+    );
+  }
+
+  // ── Job 9:三條各自明寫 status,不靠時間單獨判定 ──
+  stmts.push(
+    // 復活:cooling 但最近有活動
+    env.DB.prepare(
+      "UPDATE posts SET status = 'active' WHERE status = 'cooling' AND last_activity_at >= ?"
+    ).bind(now - H8),
+    // 降溫:active 但 8H 沒有動靜
+    env.DB.prepare(
+      "UPDATE posts SET status = 'cooling' WHERE status = 'active' AND last_activity_at < ?"
+    ).bind(now - H8),
+    // 封存:cooling 超過 30 天。archived_at 同時寫入 —— 沒有它就不知道是哪一天封的,
+    // 之後要做 R2 歸檔會找不到判準。
+    env.DB.prepare(
+      "UPDATE posts SET status = 'archived', archived_at = ? WHERE status = 'cooling' AND last_activity_at < ?"
+    ).bind(now, now - D30)
+  );
+
+  const res = await env.DB.batch(stmts);
+  const tail = res.slice(-3);
+  const changed = (i) => tail[i]?.meta?.changes ?? 0;
+  return json(
+    {
+      activity_updated: activity.length,
+      revived: changed(0),
+      cooled: changed(1),
+      archived: changed(2),
+      server_time: now,
+    },
+    200
+  );
+}
