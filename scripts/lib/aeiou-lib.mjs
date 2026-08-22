@@ -175,6 +175,28 @@ export const MAX_ATTEMPTS = 3;
  */
 export function beginJob(db, { jobName, scope = "global", scheduledAt = nowSec() }) {
   const now = nowSec();
+
+  // 收掉早已死掉卻卡在 running 的列。行程被硬殺(OOM、逾時、機器重開、開發時 Ctrl-C)
+  // 時沒有人會去改狀態,於是它永遠停在 running —— finishJob 只在 try/catch 走得到的
+  // 路徑上被呼叫,行程整個消失時那兩條路都不會走。
+  // 同一個坑 trend-pipeline.mjs 已經為 trend_runs 修過(見該檔「收斂卡住的 running run」),
+  // jobs 表當時漏了同一道;2026-08-20 開發期間就留下 19 筆 compute-topic-scores 的殘留,
+  // 讓手冊裡「最近的 job 成敗」那條查法讀起來像現在壞掉。
+  // 判準用 6 小時的絕對值,不用「兩倍 slot」——jobs 表混著 15 分、每小時、每日三種節奏,
+  // 沒有共用的 slot 間隔可以推。6 小時遠大於最長的一支(hourly-export 必須在一小時內
+  // 跑完,否則會撞上下一輪),又遠小於「隔天才被發現」。
+  // **刻意標成 failed 而不是刪列**:這一次執行的真實結果是「沒有收尾」,那就是失敗;
+  // 刪掉等於把它從沒發生過。next_retry_at 保持 NULL,所以不會觸發重試鏈
+  // (下面那個 SELECT 要求 next_retry_at IS NOT NULL)。
+  const stale = db.prepare(
+    `UPDATE jobs SET status = 'failed',
+                     finished_at = COALESCE(finished_at, started_at),
+                     error_message = COALESCE(error_message,
+                       'stale: 行程未正常結束(未走到 finishJob),由後續執行收斂')
+      WHERE status = 'running' AND started_at < ?`
+  ).run(now - 6 * 3600);
+  if (stale.changes) log(`[jobs] 收斂 ${stale.changes} 筆卡住的 running job`);
+
   const prev = db
     .prepare(
       `SELECT job_id, attempt FROM jobs
