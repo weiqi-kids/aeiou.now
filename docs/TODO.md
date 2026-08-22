@@ -64,7 +64,7 @@
 封面用 `node scripts/generate-topic-cover.mjs --slug <slug> --prompt "…"` 產(走 codex 的
 image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`。
 
-- [ ] **持續工作:再多加 Topic**(2026-08-22 這一輪加了三個,見本項下方)。
+- [ ] **持續工作:再多加 Topic**(2026-08-22 這一輪加了**六個**,分兩批,見本項下方)。
       GSC 顯示會贏的查詢形態是「用語言 L 問國家 C 的節日 T」,
       Topic 數就是這個乘法的上限。挑題判準:**同一件事在七個市場的日期或制度差異夠大**,
       而且每一國都能找到該國官方網域的來源(R6)。
@@ -126,6 +126,26 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
          `www.gov.cn/guoqing/...` 憲法全文、`govinfo.gov` 的 USCODE、
          `cdnbbsr.s3waas.gov.in` 的印度憲法 PDF、`jdih.kemnaker.go.id/asset/data_puu/*.pdf`、
          `jdih.bawaslu.go.id/peraturan/download?id=uu_1945_1_uud1945.pdf`。
+
+      **第二批(同日,用戶核准)**:`official-languages`、`compulsory-education`、
+      `religion-and-the-state`。這三個是**照著第一批學到的限制反過來選題**的 ——
+      既然中國只能用憲法或國務院文件、印度只能用憲法,那就挑**七國答案剛好都在憲法裡**
+      的題目。選對題之後,七國來源一次到齊,不必再為單一國家的網站四處找路。
+
+      ③ **七國的憲法/法典全文都已驗過可讀,這是選題時最可靠的地基**
+         (一樣自己打一次,不要抄):
+         TW `law.moj.gov.tw`(憲法 `A0000001`,任何法規換 pcode)、
+         JP `laws.e-gov.go.jp`(⚠ 人看的網頁是 SPA,**要抓內文得用 `/api/1/lawdata/<id>`**;
+         憲法 `321CONSTITUTION`)、CN `www.gov.cn/guoqing/2018-03/22/content_5276318.htm`
+         (憲法全文)、US `govinfo.gov` 的 USCODE ＋ `archives.gov` 的權利法案
+         (⚠ `constitution.congress.gov` 從本主機 403)、
+         IN `cdnbbsr.s3waas.gov.in` 的憲法 PDF、ID `jdih.bawaslu.go.id` 的 UUD 1945 PDF、
+         BR `planalto.gov.br/ccivil_03/constituicao/constituicao.htm`。
+
+      ④ **通用來源也要先打過**。這一批兩次被 `check-source-urls.mjs` 抓到自己引進的
+         死連結(`icrc.org/en/war-and-law`、`unesco.org/en/languages`,都是 404),
+         兩次都是 Topic 層那個「國際組織」欄位。國別來源查得很仔細、通用來源憑印象寫,
+         是這一輪重複犯的同一個錯。
 
 ## 這一輪的收尾(2026-08-20)
 
