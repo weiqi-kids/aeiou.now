@@ -29,6 +29,7 @@ export {
   regionalNoteText,
   coverPath,
   coverThumbPath,
+  coverHeroSources,
 } from './topics-data.mjs';
 
 export { inSeason, seasonDistance } from './season.mjs';

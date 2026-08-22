@@ -47,7 +47,7 @@ import { isTrendTopic } from '../../lib/topic-status.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
   observancesForFacts, customsText, dateRuleText, regionalNotesForFacts, regionalNoteText,
-  coverPath, relatedTopics, readJson, getTopicsIndex,
+  coverPath, coverHeroSources, relatedTopics, readJson, getTopicsIndex,
 } from '../../lib/data.mjs';
 
 export function getStaticPaths() {
@@ -85,6 +85,7 @@ const pageUrl = new URL(withBase(`topic/${facts?.slug}/`), Astro.site).href;
 // 整個 <figure> 就不渲染——不留破圖,版面照樣成立。
 const coverRel = coverPath(facts && facts.slug);
 const coverSrc = coverRel ? withBase(coverRel) : null;
+const heroSources = coverHeroSources(facts && facts.slug);
 
 // next_occurrence 是匯出層依地方時區產出的下一次實際日期；頁面不解析 date_rule。
 // 日期相同時才用 popularity_rank，沒有 occurrence 的舊資料排在最後，且不補猜日期。
@@ -424,9 +425,21 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
          header 內沒有 <ul>,也沒有另開的語系方格區塊——七段 lede 就疊在 .head-primary 裡。 -->
     <header class="topic-head">
       <div class="head-main">
+        {/* LCP 元素。<picture> 由窄到寬,瀏覽器取第一個 media 命中的 —— 手機拿 800×450
+            的 WebP,桌機拿 1200×675 的,兩個都沒有才退回 PNG。
+            PNG 留著不只是備胎:og:image 指的就是它,而社群平台的爬蟲對 WebP 的支援
+            仍然不一致。width/height 一律寫原圖比例,佔位才不會造成 CLS。
+            ⚠ 註解不能放在 `{cond && (` 之後的第一個位置 —— 那會把一個 JSX 運算式
+            拆成兩個,Astro 編譯直接失敗(2026-08-22 踩過)。 */}
         {coverSrc && (
           <figure class="topic-cover">
-            <img src={coverSrc} alt={title} width="1200" height="675" loading="eager" fetchpriority="high" decoding="async" />
+            <picture>
+              {heroSources.w800 && (
+                <source media="(max-width: 767px)" type="image/webp" srcset={withBase(heroSources.w800)} />
+              )}
+              {heroSources.w1200 && <source type="image/webp" srcset={withBase(heroSources.w1200)} />}
+              <img src={coverSrc} alt={title} width="1200" height="675" loading="eager" fetchpriority="high" decoding="async" />
+            </picture>
           </figure>
         )}
         <div class="head-primary">

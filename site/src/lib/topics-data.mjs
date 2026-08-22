@@ -136,3 +136,24 @@ export function coverThumbPath(slug) {
   const rel = `covers/thumbs/${slug}.webp`;
   return existsSync(join(process.cwd(), 'public', rel)) ? rel : null;
 }
+
+/**
+ * Topic 頁 hero 的響應式來源(2026-08-22)。
+ *
+ * Topic 頁的 LCP 元素就是封面,而先前它**只有一種尺寸一種格式**(1200×675 PNG)——
+ * 手機拿到一張遠大於它需要的圖,LCP 就被它決定。這一支回 WebP 的兩個寬度給 <picture>,
+ * `coverPath()` 的 PNG 留作 <img> 的退路(也是 og:image 用的那一張)。
+ *
+ * 檔案不存在就回 null,呼叫端整個 <source> 不渲染 —— 退回 PNG,畫面一樣,只是比較慢。
+ * **不做「找不到就用別的 slug」那種回退**:那會讓某個 Topic 顯示另一個 Topic 的圖。
+ *
+ * @returns {{w800: string|null, w1200: string|null}}
+ */
+export function coverHeroSources(slug) {
+  const pick = (dir) => {
+    if (!slug) return null;
+    const rel = `covers/${dir}/${slug}.webp`;
+    return existsSync(join(process.cwd(), 'public', rel)) ? rel : null;
+  };
+  return { w800: pick('w800'), w1200: pick('w1200') };
+}

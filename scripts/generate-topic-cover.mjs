@@ -151,5 +151,17 @@ if (q.status === 0 && existsSync(compressed)) {
 
 copyFileSync(source, target);
 console.log(`✓ ${target}(${w}x${h}, ${Math.round(statSync(target).size / 1024)} KB)`);
+
+// 響應式衍生檔跟著出(2026-08-22)。「裸執行就必須是完整正確的行為」——
+// Topic 頁的 LCP 元素是封面,而只有 PNG 的話手機會拿到一張遠大於它需要的圖。
+// 與 pngquant 那一步同一條紀律:不靠有人記得補一刀。
+{
+  const v = spawnSync(process.execPath, [join(ROOT, "scripts", "generate-cover-variants.mjs")],
+    { encoding: "utf8" });
+  const line = (v.stdout || "").trim().split("\n").find((l) => l.includes("封面"));
+  if (v.status === 0) console.log(`[cover] 衍生檔:${line || "已產生"}`);
+  else console.log(`[cover] ⚠ 衍生檔產生失敗,手機會退回大 PNG:${(v.stderr || "").trim().slice(0, 120)}`);
+}
+
 console.log("  下一步:把 content/topics-pending/<slug>.md 搬進 content/topics/,");
 console.log("  併回 occurrences,並把 slug 加進 check-final-topic-taxonomy.mjs 的 FINAL_SLUGS。");
