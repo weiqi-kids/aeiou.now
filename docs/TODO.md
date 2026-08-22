@@ -485,6 +485,24 @@ node scripts/check-source-urls.mjs              # 來源連結存活(404/410、�
   失敗態另名 `unavailable`)。查:`curl -s https://aeiou.now/ | grep -o 'data-room-state="[a-z]*"' | sort | uniq -c`。
 - [x] **排行榜 thin 視窗已 noindex 並退出 sitemap**(2026-08-20),等 `topic_scores`
   排名 job 上線、筆數超過門檻會自動恢復索引,不需要改碼。查:`node scripts/check-content-depth.mjs`。
+- [ ] 🔴 **新增/修改內容之後,本機一定要 build 七語系,不能只 build zh-TW**
+  (2026-08-22 事故)。`religion-and-the-state` 上線後 CI **連續五次失敗**,
+  en 與 br 兩站因此落後兩個 commit —— 而 zh-TW 那五站是綠的,
+  「七站分別是哪一版」以外的查法完全看不出來。
+  根因是渲染層 D3(同一段文字在同一頁出現兩次):我在 en 與 pt-BR 的 summary 裡
+  **逐字引了日本憲法第二十條那一句**,而 JP 那一格的 regional note 也引了同一句 ——
+  **只有那兩個語系會撞**,中文/日文/印地文/印尼文都不會,因為它們的譯法不同。
+  ⚠ 這類錯誤**天生只在部分語系出現**,本機 build 一個語系必定漏掉。
+  ```bash
+  cd site && for L in zh-TW en ja zh-CN hi id pt-BR; do LOCALE=$L pnpm build || break; done
+  ```
+  修法是改 summary 不是改 note ——「summary 的工作是預告,不是引述」。
+
+- [ ] 🔴 **不要因為「不盯 CI」就不看 CI 結果**(2026-08-22 同一次事故的另一半)。
+  「不要花時間等 CI」與「不要檢查 CI 有沒有紅」是兩件事;這一輪把兩者混在一起,
+  結果五次失敗都沒被發現,直到全面巡檢才抓到。
+  收尾時至少跑一次:`gh run list -R weiqi-kids/aeiou.now --limit 5`
+
 - [ ] **持續工作:新增 Topic 一律要一次補到水位**。閘門會擋,但擋下來的是部署不是內容——
   別靠閘門提醒才想到要寫。
   (2026-08-21 的兩個新 Topic 都是四要件同一輪進:md、occurrence、cover、taxonomy 白名單
