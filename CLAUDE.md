@@ -3,6 +3,7 @@
 > 本檔是**索引與紅線**,不是現況報告。
 > 詳細內容:`docs/01-architecture.md`(架構)、`docs/02-data-model.md`(**資料結構權威文件**)、
 > `docs/briefs/api-contract.md`(API 契約)、`docs/briefs/daily-question.md`(**每日世界一問規格**)、
+> `docs/05-job-pipeline.md`(**19 job 對照表**:哪一支實作哪一個、為什麼節奏不是全部 15 分鐘)、
 > `docs/TODO.md`(**待辦**)。
 
 ## § 現況一律用指令查(本手冊第一鐵則)
@@ -25,6 +26,12 @@
 | CI 最近跑得如何 | `gh run list -R weiqi-kids/aeiou.now --limit 5` |
 | cron 排程現況 | `cat /etc/cron.d/aeiou` |
 | **hourly-export 連續失敗了嗎** | `sqlite3 db/aeiou.sqlite "SELECT status,datetime(scheduled_at,'unixepoch') FROM jobs WHERE job_name='hourly-export' ORDER BY scheduled_at DESC LIMIT 5"` |
+| **審核工作檯有東西等人看嗎** | `node scripts/moderation-queue.mjs --report`(pending 那一行) |
+| 內容品質標籤現在長怎樣 | `node scripts/quality-check.mjs --report` |
+| 來源清冊抓到哪了 | `node scripts/source-refresh.mjs --report` |
+| 排名快照存了多久 | `node scripts/ranking-snapshot.mjs --report` |
+| 冷資料搬走多少 | `node scripts/archive-to-r2.mjs --report` |
+| **語意搜尋現在找不找得到某個詞** | `curl -s -G "$API/v1/search" --data-urlencode "q=<詞>" \| python3 -m json.tool`;要校準門檻加 `--data-urlencode "min_score=0.3"` 看分佈 |
 | 最近的 job 成敗 | `sqlite3 db/aeiou.sqlite "SELECT job_name,status,datetime(scheduled_at,'unixepoch'),error_message FROM jobs ORDER BY scheduled_at DESC LIMIT 20"` |
 | 哪些 job 進了 DLQ | `sqlite3 db/aeiou.sqlite "SELECT * FROM jobs WHERE status='dlq'"` |
 | 有沒有待翻譯的貼文 | `curl -s -H "Authorization: Bearer $(cat ~/.config/aeiou/sync-secret)" "$API/internal/ugc/pending-translation?limit=50" \| head -c 300` |
@@ -218,8 +225,8 @@ content/topics/<slug>.md   ←── 人工編輯(唯一入口)
 
 | 排程 | 入口 | 做什麼 |
 |---|---|---|
-| 主機 `*/15 * * * *` | `scripts/cron-15min.sh` | ① `translate-posts.mjs`:D1 撈 pending 貼文 → `claude -p` 翻六語 → 寫回 D1 + **回流主機**(UGC 進主機的唯一通道) ② `sync-topics-to-d1.mjs`:主機 Topic 副本 → D1 ③ `sync-questions-to-d1.mjs`:題庫精簡副本 → D1(2026-08-15 起) |
-| 主機 `0 * * * *` | `scripts/hourly-export.sh` | ① `import-topics.mjs`(content/ md → SQLite) ② `import-questions.mjs`(content/questions.json → SQLite,壞題庫即中止) ③ `compute-topic-scores.mjs` 與 `sync-reactions-from-d1.mjs`(兩者皆**不 fail-closed**:算不出分數/拉不到 reaction 只是不新鮮) ④ `export-data.mjs` ⑤ **只 commit `data/`** ⑥ push source repo。逐步說明看檔內註解 |
+| 主機 `*/15 * * * *` | `scripts/cron-15min.sh` | ⑤ `moderation-queue.mjs`(草案 §33 Job 17;排最後 —— 這一輪裡唯一會改變讀者看得到什麼的一支) ① `translate-posts.mjs`:D1 撈 pending 貼文 → `claude -p` 翻六語 → 寫回 D1 + **回流主機**(UGC 進主機的唯一通道) ② `sync-topics-to-d1.mjs`:主機 Topic 副本 → D1 ③ `sync-questions-to-d1.mjs`:題庫精簡副本 → D1(2026-08-15 起) |
+| 主機 `0 * * * *` | `scripts/hourly-export.sh` | 二十步。**fail-closed 的**是 import 與內容閘門那幾支(錯了會讓讀者看到假資料);**不 fail-closed 的**是分數/快照/標籤/索引/歸檔/爬搜那幾支(錯了只是不新鮮)。兩種性質不要混。逐步說明看檔內註解,job 對照見 `docs/05-job-pipeline.md` |
 | 主機 `40 4 * * *` | `gsc-topic-metrics.mjs` | GSC「date × page × country」→ 主機 `topic_search_metrics`。HotScore 瀏覽面的**唯一**來源(不接 GA4,理由見紅線)。只累積不算分數;GSC 沒有當時快照,停掉就永久失去那段曲線 |
 | GitHub Actions `17 * * * *` + push | `.github/workflows/build.yml` | 七語系 matrix build → SSH 推七個 publish repo(帶 `.nojekyll` 與 `.build-id`)→ 輪詢驗證**內容真的上線**(比 build-id,不是比 200) |
 
@@ -282,6 +289,16 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
 ## 絕不可破壞的紅線
 
 - **兩個權威來源**:主機 SQLite(爬搜/Topic 生產)、D1(UGC)。靜態 JSON 全是衍生品。
+  R2(`aeiou-archive`)與 Vectorize(`aeiou-topics`)都是**衍生層**:前者是搬走的全文
+  (列與指標都還在原處),後者是可以整個重建的索引。兩者掉了都不會弄丟事實。
+- **爬蟲守則不是選項**(2026-08-22,草案 §12):遵守 robots.txt 與 Crawl-delay、
+  UA 表明身分、同網域串行、**401/403 一律當「不准抓」** —— 不換 UA、不重試、不繞路,
+  直接標 `ignored`。違反任何一條就不是「抓得比較多」,是這個管線不能用。
+  查:`node scripts/source-refresh.mjs --report`
+- **歸檔一定是「先寫遠端、確認成功、才清本地」**(2026-08-22)。唯一一種會真的弄丟資料的
+  失敗是「以為存進去了於是把原文清掉」。Worker 沒綁 R2 時明確回 503,不靜靜當成功。
+  ⚠ `wrangler r2 object get` **預設讀本地模擬儲存**,少了 `--remote` 會回
+  「The specified key does not exist.」—— 那句話在剛清掉本地全文之後讀起來像資料沒了。
 - **降級不做 fallback 快照**:動態異常時顯示 `unavailable`,**不顯示過期資料**。靜態 HTML 預設
   `data-room-state="loading"`(2026-08-20 起;**舊值 `closed` 已廢**,見上方四態表的事故)。
   curl 驗降級改查 `curl -s https://aeiou.now/topic/<slug>/ | grep -o 'data-room-state="[a-z]*"'`

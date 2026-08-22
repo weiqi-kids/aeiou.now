@@ -578,8 +578,28 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
   回報錯誤:**不另開端點、不另開表單** —— 按下去把前綴插進討論室發文框並捲過去,走同一條
   翻譯路、同一道價值閘門、同一個限流。更正因此是公開可討論的(這是主題頁論壇;收在私人信箱
   裡的更正只有我們知道它被回報過)。沒有 JS 或沒有討論室時整顆按鈕不出現。
-- [ ] 🅤 **來源清冊與爬搜、19 job 完整管線、Vectorize 語意搜尋、R2 歸檔、moderation 啟用範圍**
-  —— 2026-08-21 問過用戶要不要動,**用戶這一輪沒選它們**,留在 M2。
+- [x] **來源清冊與爬搜、19 job 完整管線、Vectorize 語意搜尋、R2 歸檔、moderation 啟用範圍**
+  —— 2026-08-22 用戶指示「也都要」,五項全部上線。對照表:`docs/05-job-pipeline.md`。
+
+  · **moderation 啟用範圍**定版:Post 兩層(規則層 + LLM 價值閘門)、Comment 只有規則層、
+    Image/User/人工檢舉不做(沒有圖片上傳、沒有帳號系統;檢舉沒有帳號會變成新的攻擊面)。
+    診斷:主機 `comments` 0 筆而 D1 有筆數 —— **留言從來沒被任何東西看過**,
+    因為它不翻譯就不進價值閘門,又不回流主機。查:`node scripts/moderation-queue.mjs --report`
+  · **19 job**:補齊 #2 #9 #10 #15 #16 #17 #18 #19。過程中揭出一個沉默的 bug ——
+    `posts.cross_country_engagements` 從來沒有任何東西寫過它,而 CrossCountryScore
+    一直在讀它(HotScore 七項裡有一項恆為 0,從分數上完全看不出來)。
+    ⚠ **刻意不照抄草案的「全部每 15 分鐘」**:跑得比資料變化還快產生的是雜訊不是新鮮度,
+    三個實例與理由寫在 `docs/05-job-pipeline.md`。
+  · **來源清冊**:`content/source-registry.json`(人工入口)。爬蟲守則逐條實作 ——
+    robots.txt、Crawl-delay、表明身分、同網域串行、**401/403 一律當「不准抓」不繞過**。
+    查:`node scripts/source-refresh.mjs --report`
+  · **R2 歸檔**:專屬 bucket `aeiou-archive`(不與同帳號其他專案共用)。
+    先寫 R2 → 確認成功 → 才清原文。查:`node scripts/archive-to-r2.mjs --report`
+  · **Vectorize**:index `aeiou-topics`,一個 Topic 一個向量(多語模型的全部理由)。
+    量出來的結論是**單靠門檻分不開**(真陽性 0.452–0.637 vs 雜訊最高 0.485,區間重疊),
+    所以改成兩層:字面比對命中即確定、向量只管「用不同的字講同一件事」。
+    結果 11/12 命中、5/5 正確落空、零誤報。契約 §1b。
+    查:`curl -s "$API/v1/search?q=$(printf %s 'バレンタイン' | jq -sRr @uri)"`
 
 ## 已知缺口(記錄在案,暫不解)
 
