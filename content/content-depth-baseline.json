@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-21",
+  "as_of": "2026-08-22",
   "note": "存量內容厚度水位。只能升不能降；補完資料後重跑 --update-baseline 鎖住新水位。 目標值見 scripts/lib/content-depth.mjs 的 THRESHOLDS。",
   "thresholds_target": {
     "units": 5,
@@ -166,6 +166,11 @@
       "units": 7,
       "countries": 7,
       "min_chars": 1499
+    },
+    "voting-and-elections": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 1936
     },
     "weddings-and-customs": {
       "units": 7,
