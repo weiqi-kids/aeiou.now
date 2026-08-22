@@ -192,9 +192,9 @@ The fourteenth of February carries no official standing in China — neither lis
 ### title
 Hari Valentine
 ### summary
-Hari untuk menyatakan kasih sayang bukan satu, dan tidak jatuh bersamaan: Jepang punya perempuan memberi cokelat pada 14 Februari dan hadiah balasan pada 14 Maret, Taiwan menjalani 14 Februari sekaligus Qixi menurut kalender lunar, Brasil menempatkannya pada 12 Juni, India merentangkannya menjadi sepekan, dan Amerika Serikat menahannya pada satu hari saja. Halaman ini membandingkan siapa yang memberi, siapa yang membalas, apa yang diberikan, dan seberapa besar jejak terukur yang ditinggalkan hari itu.
+Hari Valentine 2027 di Indonesia jatuh pada 14 Februari; tanggal ini bukan hari libur nasional, dan beberapa dinas pendidikan daerah justru menerbitkan imbauan agar sekolah tidak merayakannya. Halaman ini membandingkan status kelembagaan dan kebiasaan di tujuh tempat: Jepang membalas hadiah pada 14 Maret, Taiwan memiliki Qixi, Brasil merayakannya pada 12 Juni, dan India membentuk Valentine Week.
 ### keywords
-Valentine, Qixi, White Day, hadiah, balasan
+Hari Valentine 2027, kapan hari Valentine 2027, tanggal Valentine, Valentine, Qixi, White Day, hadiah, balasan
 ### customs JP valentine
 Di Jepang, 14 Februari adalah saat perempuan memberi cokelat kepada laki-laki. Menurut Biro Statistik, kebiasaan ini disebut mulai populer sekitar 1958 dan mengendap menjadi adat pada akhir 1960-an hingga 1970-an. Jejaknya terukur: survei rumah tangga menunjukkan pengeluaran cokelat pada Februari mencapai 2,8 kali rata-rata bulanan setahun, yakni 1.376 yen pada Februari tersebut. Pembedaan cokelat honmei dan giri mengubah pemberian hadiah menjadi penggolongan hubungan, meski cokelat kewajiban di tempat kerja terlihat jelas menyusut.
 ### customs JP white-day

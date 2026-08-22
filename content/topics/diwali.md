@@ -42,9 +42,9 @@
 ### title
 排燈節（Diwali）
 ### summary
-排燈節（Diwali）是五天的節期，不是一天。這一頁把主日（Lakshmi–Ganesha Puja）、開場的 Dhanteras、收尾的 Bhai Dooj 分開看，並比較它在印度與在美國紐約市的不同身分：一邊是全國假日與五天儀式，一邊是二○二三年才立法確立的公立學校停課日。
+2026 年印度排燈節（Diwali）主日是 11 月 8 日，五天節期約從 11 月 6 日的 Dhanteras 到 11 月 10 日的 Bhai Dooj；紐約市公立學校也在主日停課。這一頁把五天分開看，再比較印度的全國假日與美國城市學校假日，而不是把 Diwali 簡化成一個晚上。
 ### keywords
-排燈節、屠妖節、Diwali、Deepavali、Dhanteras、Bhai Dooj、Lakshmi Puja
+印度排燈節2026、2026印度排燈節、排燈節日期2026、排燈節、屠妖節、Diwali、Deepavali、Dhanteras、Bhai Dooj、Lakshmi Puja
 ### customs IN diwali
 排燈節主日是五天節期的第三天，家戶點燈、祭拜象頭神 Ganesha 與財富女神 Lakshmi，祈求豐足。印度觀光部把阿約提亞、瓦拉納西、阿姆利則、齋浦爾與南印各地列為節期最具規模的地方，但點幾盞燈、拜哪一位、要不要放煙火，家庭之間差很多。二○二五年，Deepavali 被列入聯合國教科文組織的人類非物質文化遺產名錄。
 ### customs IN dhanteras

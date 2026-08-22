@@ -68,9 +68,9 @@
 ### title
 Teachers' Day
 ### summary
-Six places put Teachers' Day on six different dates, and the reasons for choosing them have nothing in common: Taiwan picks Confucius's birthday, mainland China's was set by a resolution of the national legislature for 10 September, India uses the birthday of a philosopher who became its second president, Brazil traces it to an 1827 schooling decree, Indonesia uses the founding day of its teachers' union, and the United States turns it into a whole week in May. Only in Taiwan is it a day off.
+In 2027, the dates on this page are India on 5 September, mainland China on 10 September, Taiwan on 28 September, Brazil on 15 October, Indonesia on 25 November, and the United States' Teacher Appreciation Week on 3–7 May, with local district dates varying. Only Taiwan makes Teachers' Day a national day off; the other dates are commemorative or school-community observances. The page then explains why each place chose its date.
 ### keywords
-Teachers' Day, Confucius, Hari Guru, Dia dos Professores, Teacher Appreciation Week
+2027 Teachers' Day date, when is Teachers' Day 2027, Teachers' Day, Confucius, Hari Guru, Dia dos Professores, Teacher Appreciation Week 2027
 ### customs TW teachers-day
 Taiwan's Teachers' Day is 28 September, the birthday of Confucius. Article 6 of the Act on Commemorative Days and Holidays lists Children's Day, Tomb-Sweeping Day, Labour Day, the Dragon Boat Festival, Teachers' Day and the Mid-Autumn Festival as each being a one-day holiday — among these six places, only Taiwan's Teachers' Day is a public holiday for everyone. On the same morning the Confucius temples in Tainan and Taipei hold the sacrificial rite, an old-form ceremony running alongside the thank-your-teacher events inside schools.
 ### customs CN teachers-day
