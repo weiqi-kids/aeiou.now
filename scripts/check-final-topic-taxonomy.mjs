@@ -17,7 +17,7 @@ const FINAL_SLUGS = [
   'coming-of-age', 'birthdays-and-blessings', 'proposals-and-engagements', 'weddings-and-customs',
   'farewells-and-funerals', 'moving-home', 'homecoming-and-reunion', 'caregiving-across-generations',
   'ask-the-world', 'womens-day', 'exam-season', 'islamic-calendar-days', 'elders-day', 'year-end-bonus',
-  'voting-and-elections',
+  'voting-and-elections', 'parental-leave',
 ].sort();
 const FINAL = new Set(FINAL_SLUGS);
 const errors = [];
