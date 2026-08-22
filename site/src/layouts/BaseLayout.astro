@@ -191,15 +191,44 @@ const jumpTopics = hotTopics(2).filter((topic) => topic && topic.slug);
     <meta name="author" content={SITE_NAME} />
     <script type="application/ld+json" set:html={jsonLd} />
     {GA4_ID && (
-      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`}></script>
-    )}
-    {GA4_ID && (
       <script is:inline define:vars={{ GA4_ID }}>
+        // GA4:stub 立刻裝好、真正的 gtag/js 等 load 之後才載(2026-08-22 用戶核准)。
+        //
+        // 為什麼:gtag/js 是整頁最大的一筆下載，遠大於本站自己的所有資源總和，而它在
+        // <head> 用 async 載入時仍然要跟首屏的封面縮圖搶頻寬。行動網路上那些位元組
+        // 直接算進 LCP 之前的時間。量測本身不需要那麼早——**頁面畫出來比較急**。
+        //
+        // 為什麼可以這樣做:標準 snippet 的設計本來就是「stub 先把呼叫推進 dataLayer，
+        // 函式庫載入後再一次處理」。所以下面的 gtag('js') / gtag('config') 以及
+        // lib/analytics.mjs 的事件都照舊排隊，一件都不會掉——analytics.mjs 只檢查
+        // `typeof window.gtag === 'function'`，stub 就滿足它。
+        //
+        // 代價(要講清楚):在 load 事件之前就離開的訪客不會被計到，GA4 的 session 數
+        // 會比現在略低。這是用戶明示同意的取捨。
+        //
+        // 為什麼還要一個 10 秒的保險:load 事件會被任何一張還沒下載完的圖片拖住，
+        // 極端情況下可能永遠不觸發。真的拖到那個地步時，頻寬之爭早就結束了，
+        // 這時候補載入不會傷到 LCP，但不補就等於整批訪客量測不到。
         window.dataLayer = window.dataLayer || [];
         function gtag() { window.dataLayer.push(arguments); }
         window.gtag = gtag;
         gtag('js', new Date());
         gtag('config', GA4_ID);
+
+        (function () {
+          var done = false;
+          function load() {
+            if (done) return;
+            done = true;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+            document.head.appendChild(s);
+          }
+          if (document.readyState === 'complete') load();
+          else window.addEventListener('load', load, { once: true });
+          setTimeout(load, 10000);
+        })();
       </script>
     )}
   </head>
