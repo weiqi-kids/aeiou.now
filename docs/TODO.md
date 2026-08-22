@@ -24,6 +24,33 @@
 
 > 現況不要信本檔——逐項用附的指令查,查完再動手。
 
+## 全面巡檢的做法(2026-08-22 第一次做,抓到一件真的壞掉的事)
+
+**巡檢的價值不在「確認一切正常」,在於抓到那種「只有一條查法看得出來」的故障。**
+這次就抓到:CI 連續五次失敗、en 與 br 兩站落後兩個 commit,而其餘五站是綠的 ——
+除了「七站分別是哪一版」那條,其他查法全部正常。緣由與修法見上面那兩條 🔴。
+
+要跑的清單(全部是 CLAUDE.md 已有的查法,這裡只記順序與判準):
+
+| # | 查什麼 | 判準 |
+|---|---|---|
+| 1 | 七站 `.build-id` vs `git rev-parse HEAD` | **七個都要等於 HEAD**;有一個落後就往下查 CI |
+| 2 | `gh run list -R weiqi-kids/aeiou.now --limit 5` | 有 failure 就看 `--log-failed` |
+| 3 | `git log -1 --format=%cr -- data/` | 超過約 2 小時就查 `jobs` 表 |
+| 4 | `jobs` 表非 success/skipped 的列 | ⚠ 要**排除已標註處理過的舊列**再看,否則會被歷史嚇到 |
+| 5 | 七語系全部 build | 只 build 一個語系必定漏掉「只在部分語系撞」的錯 |
+| 6 | i18n 佔位與 key 一致 / sitemap lastmod=loc | 兩個數字必須相等 |
+| 7 | `seo-health.mjs` 四層 | ② 層列出的未索引頁要逐一判「是新頁還是有缺陷」 |
+| 8 | 各 `--report`(quality/source/ranking/archive/ga4/moderation) | 看有沒有需要人看的項目 |
+| 9 | `npx wrangler d1 info aeiou-ugc` | **讀應該多於寫**;寫遠大於讀=自己的同步在灌 |
+| 10 | `npx wrangler vectorize info aeiou-topics` | 向量數應等於 active Topic 數 |
+| 11 | `pgrep -af '[a]stro (dev\|preview)'` / `'[h]ttp\.server'` | 必須是空的 |
+| 12 | `/root/.claude/bin/maint-summary.sh --brief` | 主機層,不屬本專案但會影響 seo-ops |
+
+⚠ **巡檢時最容易自己騙自己的一點**:用自己臨時寫的解析去讀 API 回應。
+這次查語意搜尋時我讀成 `results` 而回應其實叫 `matches`,差點把好的功能報成壞的。
+**照 CLAUDE.md 寫的查法用 `python3 -m json.tool` 看原始回應**,不要自己挑欄位。
+
 ## 部署與基礎
 
 - [x] **主機 checkout 一定要停在 main**(2026-08-19 事故):`hourly-export.sh` 刻意
