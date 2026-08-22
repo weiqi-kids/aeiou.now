@@ -306,49 +306,48 @@ image_gen,不需要 API key)。四要件與紅線見 `docs/03-topic-content.md`�
       key 在 `~/.config/aeiou/psi-api-key`(chmod 600,**絕不進 git**)。
       工具:`node scripts/psi-check.mjs`(裸執行量四頁 × 手機;`--detail` 看 LCP 元素與改善機會)。
 
-- [ ] 🔴 **手機 LCP 仍未達「良好」**(2026-08-22 開始量得到之後才看得見的問題,不是舊卡點)。
+- [ ] 🔴 **手機 LCP 仍未達「良好」——但主執行緒這條路已經走到底了**(2026-08-22)。
       **現況一律用指令查,本節不寫數字**:
       ```bash
-      node scripts/psi-check.mjs                    # 四頁 × 手機,含判定(良好/需改善/差)
-      node scripts/psi-check.mjs --desktop          # 桌機對照
-      node scripts/psi-check.mjs --detail --url <該頁>   # LCP 元素與改善機會
+      node scripts/psi-check.mjs                    # 四頁 × 手機,含判定
+      node scripts/psi-check.mjs --detail --url <該頁>
       ```
-      判準是 Google 的 Core Web Vitals:LCP ≤2.5s 良好、≤4s 需改善、>4s 差。
-      **要看的是哪一個指標把分數拉下來**,不是分數本身 —— 而且對 LCP 要再往下拆一層:
-      PSI 的 `lcp-breakdown-insight` 把它分成 TTFB / 資源發現延遲 / 資源下載 / **元素渲染延遲**
-      四段。先看哪一段最長再決定改什麼,不然會拿圖片的藥治渲染的病。
+      判準是 Core Web Vitals:LCP ≤2.5s 良好、≤4s 需改善、>4s 差。
+      **看 LCP 要再往下拆一層**:PSI 的 `lcp-breakdown-insight` 分成 TTFB / 資源發現延遲 /
+      資源下載 / 元素渲染延遲四段;另外 `metrics` 那一支同時給 **observed(未模擬)**與
+      **simulated(模擬節流後)**兩組值,**兩組差很多的時候,差距本身就是答案**。
 
-      **2026-08-22 診斷:清單頁的 LCP 不是被圖片拖垮的。** `/topics/today/` 的四段裡,
-      TTFB 與資源下載都只有個位數到數十毫秒,**元素渲染延遲吃掉九成以上**——封面縮圖早就
-      下載完了,畫面還沒畫出來。當時時間軸上看得到的元凶是:載入後約 730ms 同時射出
-      三十幾發 `/v1/topics/<id>/feed`(一張 Topic 卡一發),回來時各自組 DOM,
-      主執行緒卡出一個 100ms 的 long task。
+      ### 這一輪做了三件事,結果分三種(照實記,不要只留成功的那一件)
 
-      **⚠ 已改,但沒有解決 LCP —— 這一格要照實記。**
-      `TopicPosts.astro` 已改成進 viewport 才發 fetch(`IntersectionObserver`,`rootMargin: 200px`,
-      沒有 IO 就退回全部立刻發)。**改完實測到的**:那三十幾發 fetch 從約 730ms 移到約 1.4 秒
-      之後、而且只發看得到的那幾張,DOM 元素數下降,載入視窗裡那個 long task 消失。
-      **但四頁的 LCP 幾乎沒動**(最慢那頁只從「差」的邊緣退到「需改善」的邊緣,在雜訊範圍內)。
-      結論:並發請求是**真的問題但不是主導項**;元素渲染延遲仍然是主導項。
-      別把這次的改動當成 LCP 已修 —— 現況一律重跑 `psi-check.mjs`。
+      | 改動 | 量到的效果 |
+      |---|---|
+      | 清單頁討論串改進 viewport 才 fetch | 並發請求與 long task 消失,**LCP 沒動** |
+      | GA4 `gtag/js` 延到 `load` 之後 | **FCP 掉了將近兩秒**,分數跳一級;LCP 只動一點 |
+      | 國旗列與熱度階梯收成單一元素 | Style & Layout **腰斬**、TBT 剩個位數,**LCP 沒動** |
 
-      **下一個槓桿(尚未做,要用戶決定,因為它動的是量測而不是版面)**:GA4 的 `gtag/js`
-      是整頁最大的一筆下載(**遠大於其他所有資源的總和**),而且有相當比例是這個站用不到的碼;
-      它在 `<head>` 以 `async` 載入,在 Lighthouse 的行動網路模擬下那些位元組會直接算進 LCP 前
-      的頻寬。現況查法(不要抄數字):
-      ```bash
-      node scripts/psi-check.mjs --detail --url https://aeiou.now/topics/today/
-      ```
-      改法是把它延到 `window.load` 之後才插入。**代價要講清楚**:在 load 之前就離開的訪客
-      不會被計到,GA4 的 session 數會少一點 —— 那是量測政策,不是我能自己改的。
-      要改的話動 `site/src/layouts/BaseLayout.astro` 的 GA4 那兩個 `<script is:inline>`。
+      ### 目前的判準:主執行緒已經不是綁住 LCP 的那一項
 
-      **第二個候選**:清單頁一次渲染當令的全部 Topic 卡,DOM 元素數上千,Style & Layout
-      是主執行緒最大的一塊。要壓渲染延遲就得少畫東西(分頁或下半頁延後渲染),
-      而那會動到版面與資訊架構 —— 屬產品決定,動工前問用戶。
+      清單頁改完之後,主執行緒各項加起來只剩幾百毫秒、TBT 個位數、頁面自己一個 long task
+      都沒有,而 LCP 仍然停在「需改善」。**所以再砍 DOM 沒有意義了** ——
+      討論室載入骨架那 76 個元素、以及「清單頁分頁少畫幾張卡」那個提案,
+      都不必為了 LCP 去做(分頁還會減少 Topic 內鏈,方向相反)。
 
-      Topic 頁那一側:2026-08-21 壓過 PNG 體積、2026-08-22 已改成響應式 WebP,
-      圖片目前不是瓶頸;要再確認就看該頁 `lcp-breakdown-insight` 的「資源下載」那一段。
+      ### 剩下的是網路形狀,不是頁面形狀
+
+      同一份 PSI 結果裡,**observed 的 FCP 與 LCP 幾乎同時發生、都在一秒多**,
+      而 simulated 的 LCP 是它的兩倍以上。差距來自 Lighthouse 的行動網路模型
+      (慢速 4G + 150ms RTT):連線建立、HTML 本體、擋渲染的 CSS,每一段都要吃 RTT。
+      也就是說 **在快網路上這幾頁其實是好的,被判「需改善」的是慢速連線的讀者**。
+
+      還沒做、屬純工程(不必問用戶)的兩個小槓桿,合計大概只值零點幾秒:
+      · 把兩支擋渲染的 CSS 內聯進 HTML(省一次 round trip,代價是 HTML 變大)
+      · 對 LCP 那張圖下 `<link rel="preload" as="image" imagesrcset=...>`
+
+      **真正能把差距補起來的是 CDN**:七站直接掛 GitHub Pages、前面沒有東西,
+      RTT 與 TTFB 對遠端讀者只會更差。⚠ 這件事與另一條紅線是同一個根:
+      CLAUDE.md 的「HotScore 瀏覽面不接 GA4」寫的理由正是
+      「七站在 GitHub Pages 上、前面沒有 CDN,擋不掉機器流量」——
+      **加 CDN 會同時動到 LCP 與 GA4 可用性兩件事**。屬基礎設施決定,動工前問用戶。
 
 ## 外站的 bot 封鎖不再擋下整條 hourly(2026-08-21 用戶拍板,已解)
 
