@@ -45,9 +45,10 @@ export async function handleSyncTopics(request, env) {
       return err(400, "invalid_body", "each topic_i18n needs topic_id, locale, title");
     stmts.push(
       env.DB.prepare(
-        `INSERT INTO topic_i18n (topic_id, locale, title) VALUES (?, ?, ?)
-         ON CONFLICT (topic_id, locale) DO UPDATE SET title = excluded.title`
-      ).bind(i.topic_id, i.locale, i.title)
+        `INSERT INTO topic_i18n (topic_id, locale, title, keywords_json) VALUES (?, ?, ?, ?)
+         ON CONFLICT (topic_id, locale) DO UPDATE SET
+           title = excluded.title, keywords_json = excluded.keywords_json`
+      ).bind(i.topic_id, i.locale, i.title, i.keywords_json ?? null)
     );
   }
   if (stmts.length > 0) await env.DB.batch(stmts);

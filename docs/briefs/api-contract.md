@@ -127,6 +127,46 @@ M1 沒有 hot_score job,`posts.hot_score` 恆 0,**不得用來排序**。
 
 ---
 
+## 1b. `GET /v1/search` —— 跨語言語意搜尋(2026-08-22 新增;草案 §57–§59)
+
+### Query
+
+| 參數 | 型別 | 預設 | 說明 |
+|---|---|---|---|
+| `q` | string | 必填 | 1–200 字元;空字串或過長回 400 |
+| `limit` | 1–25 | `10` | 回傳筆數上限 |
+| `min_score` | 0.3–0.95 | `0.5` | 語意層的相似度下限。**校準用**,平常不要帶 |
+
+### Response 200
+
+```json
+{ "q": "バレンタイン", "min_score": 0.5, "count": 1,
+  "matches": [ { "topic_id": "top_01J...", "slug": "affection-and-reciprocity",
+                 "category": "relationship", "status": "active",
+                 "score": 1, "match": "literal" } ] }
+```
+
+**兩層,`match` 說明是哪一層命中的:**
+
+1. `literal` —— 查詢字串是該 Topic 的 slug / 七語 title / 七語 keywords 的子字串。
+   確定的事不交給機率,所以 `score` 恆為 `1`,而且**排在所有語意結果前面**。
+2. `semantic` —— Vectorize + `@cf/baai/bge-m3`(多語,1024 維)。一個 Topic 一個向量,
+   所以日文查得到葡萄牙文的 Topic。`score` 是 cosine 相似度。
+
+> **為什麼要兩層**:一個 Topic 的向量是三十幾個名稱跨七語的重心,**精確名稱會被稀釋**。
+> 2026-08-22 實測「Dia dos Namorados」查它自己的 Topic 只有 0.494,而純亂碼的雜訊
+> 可以到 0.485 —— 兩個區間重疊,**沒有任何門檻分得開**。分不開是因為問錯問題:
+> 「這個字串是不是這個 Topic 的名字」可以確定回答,不該交給相似度。
+
+- `candidate` / `merged` 的 Topic 兩層都排除(那是不公開的兩種)。
+- Vectorize / Workers AI 綁定未設定時回 **503 `search_unavailable`**,不是空結果 ——
+  空結果會讓前端說「找不到」,而事實是「沒有在找」(同討論室四態的紀律)。
+- 已知限制:字面層要整個查詢字串是子字串,多詞查詢只有一部分對得上時接不住。
+  **刻意不做逐詞回退**(會讓「day」這種詞命中一整排);要接住就把常見說法補進該 Topic 的
+  keywords —— 那是內容工作,不是判準工作。
+
+---
+
 ## 2. `POST /v1/posts` —— 發文
 
 > **Bot 防護第三層(2026-08-21)**:`POST /v1/posts` 與 `POST /v1/comments` 可帶

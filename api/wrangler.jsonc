@@ -1,6 +1,9 @@
 // aeiou-api — Cloudflare Worker(動態互動層:討論室 + 8H 即時 feed)
 // 介面常數皆來自 docs/briefs/_shared-context.md,不得改名。
-// 保持 Workers Free:只用 Worker + D1。不用 DO / Queues / Workflows / Cron Triggers / Analytics Engine。
+// 保持 Workers Free。用到的綁定:D1(UGC)、R2(冷資料歸檔)、Vectorize + Workers AI(語意搜尋)。
+// 四個都在免費額度內,量級差得很遠(R2 用的是 MB 對 10 GB、Vectorize 是 35 個向量對 4,880)。
+// **仍然不用** DO / Queues / Workflows / Cron Triggers / Analytics Engine ——
+// 排程一律在主機 cron,那裡看得到 log、記得進 jobs 表、失敗有重試曲線。
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "aeiou-api",
@@ -27,6 +30,21 @@
       "binding": "ARCHIVE",
       "bucket_name": "aeiou-archive"
     }
-  ]
+  ],
+  // 語意搜尋(2026-08-22;docs/02-data-model.md §2.7)。
+  // 一個索引就夠:bge-m3 是多語模型,日文查「バレンタイン」與中文查「情人節」
+  // 落在相近的向量空間,**一個 Topic 只需要一個向量,不必每語系存一份** ——
+  // 這是選它而不是「先翻譯再搜」的全部理由。1024 維 × 免費額度 500 萬 ≈ 4,880 個 Topic。
+  "vectorize": [
+    {
+      "binding": "VECTORIZE",
+      "index_name": "aeiou-topics"
+    }
+  ],
+  // 產 embedding 用。**只用來算向量**,不拿它做內容判定 ——
+  // 內容判定在 claude -p(價值閘門)與規則層,兩者的判準都是寫得出來的。
+  "ai": {
+    "binding": "AI"
+  }
   // secret:SYNC_SECRET(npx wrangler secret put SYNC_SECRET;值不進 git)
 }

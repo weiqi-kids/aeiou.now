@@ -22,6 +22,7 @@ import {
 import {
   handleQuestionResults, handleVote, handleParticipation, handleSyncQuestions,
 } from "./routes/questions.js";
+import { handleSearch, handleSearchIndex, handleSearchDelete } from "./routes/search.js";
 import {
   handleSyncTopics, handlePendingTranslation, handleTranslations, handleReactionTotals,
   handleModerationFlags, handleModerationDecisions, handleFeedMaintenance,
@@ -73,6 +74,11 @@ export default {
         if (path === "/v1/comments") return await handleCreateComment(request, env, ctx, cors);
         return await handleReaction(request, env, ctx, cors);
       }
+      if (path === "/v1/search") {
+        if (request.method !== "GET")
+          return err(405, "method_not_allowed", "Use GET", cors);
+        return await handleSearch(request, env, url, cors);
+      }
       if (path === "/v1/questions/participation") {
         if (request.method !== "GET")
           return err(405, "method_not_allowed", "Use GET", cors);
@@ -119,6 +125,16 @@ export default {
           if (request.method !== "GET")
             return err(405, "method_not_allowed", "Use GET");
           return await handleReactionTotals(env, url);
+        }
+        if (path === "/internal/search/index") {
+          if (request.method !== "POST")
+            return err(405, "method_not_allowed", "Use POST");
+          return await handleSearchIndex(request, env);
+        }
+        if (path === "/internal/search/delete") {
+          if (request.method !== "POST")
+            return err(405, "method_not_allowed", "Use POST");
+          return await handleSearchDelete(request, env);
         }
         if (path === "/internal/archive/put") {
           if (request.method !== "POST")

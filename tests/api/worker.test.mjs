@@ -632,3 +632,71 @@ describe("規則層 moderation:留言終於有人看了", () => {
     assert.ok(contents.some((c) => c === "這則是正常的"));
   });
 });
+
+describe("語意搜尋:沒綁 Vectorize 時要說事實", () => {
+  test("沒有綁定 → 503 search_unavailable,不是空結果", async () => {
+    const res = await call("/v1/search?q=%E6%83%85%E4%BA%BA%E7%AF%80");
+    assert.equal(res.status, 503, "空結果會讓前端說「找不到」,而事實是「沒有在找」");
+    assert.equal((await res.json()).error.code, "search_unavailable");
+  });
+
+  test("q 是必填", async () => {
+    env = { ...env, VECTORIZE: {}, AI: {} };
+    assert.equal((await call("/v1/search?q=")).status, 400);
+  });
+
+  test("q 過長擋下(embedding 成本與長度成正比)", async () => {
+    env = { ...env, VECTORIZE: {}, AI: {} };
+    assert.equal((await call(`/v1/search?q=${"a".repeat(201)}`)).status, 400);
+  });
+
+  test("字面命中排在語意結果前面,且不重複同一個 Topic", async () => {
+    seedTopic({ topic_id: "top_MOON", slug: "mid-autumn" });
+    raw.prepare("INSERT INTO topic_i18n (topic_id, locale, title, keywords_json) VALUES (?,?,?,?)")
+      .run("top_MOON", "en", "Mid-Autumn", JSON.stringify(["mooncake"]));
+    env = {
+      ...env,
+      AI: { run: async (_m, { text }) => ({ data: text.map(() => new Array(1024).fill(0.1)) }) },
+      VECTORIZE: {
+        query: async () => ({
+          matches: [
+            // 同一個 Topic 也出現在語意結果裡 —— 不該重複列出
+            { id: "top_MOON", score: 0.9, metadata: { topic_id: "top_MOON", slug: "mid-autumn", status: "active" } },
+            { id: "top_OTHER", score: 0.61, metadata: { topic_id: "top_OTHER", slug: "other", status: "active" } },
+            // 低於門檻 → 不該出現
+            { id: "top_LOW", score: 0.31, metadata: { topic_id: "top_LOW", slug: "low", status: "active" } },
+            // 不公開 → 不該出現
+            { id: "top_HID", score: 0.99, metadata: { topic_id: "top_HID", slug: "hid", status: "merged" } },
+          ],
+        }),
+      },
+    };
+    const body = await (await call("/v1/search?q=mooncake")).json();
+    const slugs = body.matches.map((m) => m.slug);
+    assert.equal(body.matches[0].match, "literal", "確定的事排前面");
+    assert.equal(body.matches[0].score, 1);
+    assert.equal(slugs.filter((s) => s === "mid-autumn").length, 1, "同一個 Topic 不重複");
+    assert.ok(slugs.includes("other"));
+    assert.ok(!slugs.includes("low"), "低於門檻的要被切掉");
+    assert.ok(!slugs.includes("hid"), "merged 是不公開的,不該出現在搜尋結果");
+  });
+
+  test("min_score 可覆寫(校準用),且夾在合理區間", async () => {
+    seedTopic({ topic_id: "top_X", slug: "x" });
+    env = {
+      ...env,
+      AI: { run: async (_m, { text }) => ({ data: text.map(() => new Array(1024).fill(0.1)) }) },
+      VECTORIZE: {
+        query: async () => ({
+          matches: [{ id: "top_LOW", score: 0.35, metadata: { topic_id: "top_LOW", slug: "low", status: "active" } }],
+        }),
+      },
+    };
+    assert.equal((await (await call("/v1/search?q=zzz")).json()).count, 0, "預設門檻切掉它");
+    const loose = await (await call("/v1/search?q=zzz&min_score=0.3")).json();
+    assert.equal(loose.min_score, 0.3);
+    assert.equal(loose.count, 1, "放寬之後看得到,這就是校準要的東西");
+    const clamped = await (await call("/v1/search?q=zzz&min_score=0.01")).json();
+    assert.equal(clamped.min_score, 0.3, "夾住下限");
+  });
+});

@@ -179,6 +179,15 @@ fi
 # ⚠ 唯一一種會真的弄丟資料的失敗是「以為存進去了於是把原文清掉」,
 #   所以兩邊都是先寫 R2、確認成功、才清原文;Worker 沒綁 R2 時明確回 503。
 # **不 fail-closed**。
+# Topic 語意索引(草案 §57;docs/02-data-model.md §2.7)。只推指紋變了的 ——
+# 每一次 upsert 都要跑一次 embedding,而 Workers AI 是按用量計的。
+# 要在 import-topics 之後(名字與 keywords 才是最新的)。**不 fail-closed**:
+# 索引不新鮮只是搜尋結果少一個 Topic,不該讓線上資料停更。
+log "sync-search-index.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/sync-search-index.mjs"; then
+  log "WARN: sync-search-index 失敗,語意索引這一輪不更新(不中斷 export)"
+fi
+
 log "archive-to-r2.mjs ..."
 if ! "$NODE_BIN" "$REPO/scripts/archive-to-r2.mjs"; then
   log "WARN: archive-to-r2 失敗,冷資料這一輪不搬(不中斷 export)"

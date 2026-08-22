@@ -97,7 +97,7 @@ try {
   // 留下一堆指不到 topic 的孤兒。
   const i18n = db
     .prepare(
-      `SELECT i.topic_id, i.locale, i.title
+      `SELECT i.topic_id, i.locale, i.title, i.keywords_json
          FROM topic_i18n i
          JOIN topics t ON t.topic_id = i.topic_id
         WHERE t.access_source IS NOT ?
@@ -115,7 +115,11 @@ try {
       global_score: r.global_score,
       current_cycle_id: r.current_cycle_id ?? null,
     })),
-    topic_i18n: i18n.map((r) => ({ topic_id: r.topic_id, locale: r.locale, title: r.title })),
+    // keywords 2026-08-22 起也送:Worker 的搜尋要用它做**字面命中**那一層
+    // (向量把精確名稱稀釋掉了,見 api/src/routes/search.js 的說明)。
+    topic_i18n: i18n.map((r) => ({
+      topic_id: r.topic_id, locale: r.locale, title: r.title, keywords_json: r.keywords_json ?? null,
+    })),
   };
 
   const read = payload.topics.length + payload.topic_i18n.length;

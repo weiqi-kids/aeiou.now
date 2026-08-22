@@ -38,6 +38,10 @@ CREATE TABLE IF NOT EXISTS topic_i18n (
   topic_id TEXT NOT NULL,
   locale   TEXT NOT NULL,
   title    TEXT NOT NULL,
+  -- 2026-08-22:語意搜尋的**確定性比對層**要用(別名/俗名的字面命中,見 routes/search.js)。
+  -- ⚠ 逗號要在同一行的欄位定義後面 —— 把註解夾在欄位與逗號之間會讓整個 CREATE TABLE
+  --   語法錯誤,而測試用的 D1 就是從這個檔建的(2026-08-22 踩過,整批測試一次全紅)。
+  keywords_json TEXT,
   PRIMARY KEY (topic_id, locale)
 );
 
