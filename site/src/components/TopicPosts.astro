@@ -77,22 +77,15 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
   <script type="application/json" data-posts-config set:html={postsConfigJson} />
   <!-- 載入中 = 靜態預設值(2026-08-20,見檔頭)。骨架條純裝飾 -->
   <div class="posts-loading">
-    <p class="posts-loading-text" role="status">{t('room.loading')}</p>
     <div class="posts-skeleton" aria-hidden="true">
       <span class="posts-skeleton-bar"></span>
       <span class="posts-skeleton-bar"></span>
     </div>
   </div>
-  <!-- 沒有 JS 的讀者:載入中不會結束,藏掉並講實話。清單頁一張卡只給一行,不重複提示句。 -->
+  <!-- 沒有 JS 的讀者:載入中不會結束,藏掉；主題摘要本身已經是完整的靜態內容。 -->
   <noscript>
     <style>.posts-loading { display: none; }</style>
-    <p class="posts-noscript">{t('room.noscript')}</p>
   </noscript>
-  <!-- 這一次拿不到資料。**不是**靜態預設值。 -->
-  <div class="posts-fallback" hidden>
-    <p class="posts-closed-title">{t('room.closed')}</p>
-    <p class="posts-closed-hint">{t('room.closed_hint')}</p>
-  </div>
   <div class="posts-live" hidden></div>
 </div>
 
@@ -102,12 +95,11 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
 
   // 狀態切換集中在這一支(loading / open / unavailable),免得各處各自 hidden 一半。
   function setPostsState(root, state) {
-    const fallback = root.querySelector('.posts-fallback');
     const loading = root.querySelector('.posts-loading');
     const live = root.querySelector('.posts-live');
-    if (fallback) fallback.hidden = state !== 'unavailable';
     if (loading) loading.hidden = state !== 'loading';
     if (live) live.hidden = state !== 'open';
+    root.hidden = state === 'unavailable';
     root.dataset.roomState = state;
   }
 

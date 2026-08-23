@@ -91,7 +91,6 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
   <!-- 載入中 = 靜態預設值(2026-08-20)。資料還沒到是事實;「已關閉」不是。
        骨架條純裝飾(aria-hidden),要唸的字在上面那一行 role="status"。 -->
   <div class="room-loading">
-    <p class="room-loading-text" role="status">{t('room.loading')}</p>
     <div class="room-skeleton" aria-hidden="true">
       <span class="room-skeleton-bar"></span>
       <span class="room-skeleton-bar"></span>
@@ -102,7 +101,6 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
        <noscript> 內的 <style> 只在 JS 停用時生效,是達成這件事最省的做法(不需要 JS 才能修正 JS 缺席)。 -->
   <noscript>
     <style>.room-loading { display: none; }</style>
-    <p class="room-noscript">{t('room.noscript')}</p>
   </noscript>
   <!-- 這一次拿不到資料(fetch 失敗/非 2xx/JSON 壞掉/未設 API)。**不是**靜態預設值。 -->
   <div class="room-fallback" hidden>
@@ -129,6 +127,7 @@ const roomConfigJson = JSON.stringify(roomConfig).replace(/</g, '\\u003c');
     if (fallback) fallback.hidden = state !== 'unavailable';
     if (loading) loading.hidden = state !== 'loading';
     if (live) live.hidden = state !== 'open';
+    root.hidden = state === 'unavailable';
     root.dataset.roomState = state;
   }
 

@@ -43,6 +43,7 @@ import { withBase } from '../../lib/paths.mjs';
 import { compactDescription, fillTemplate, seoCopy, sourceLabel, SITE_NAME } from '../../lib/seo.mjs';
 import { calendarLinks, icsFileName } from '../../lib/calendar.mjs';
 import { plainText, emphasisParts } from '../../lib/emphasis.mjs';
+import { summaryLead } from '../../lib/summary.mjs';
 import { isTrendTopic } from '../../lib/topic-status.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
@@ -74,6 +75,7 @@ const { topicId, aliasFor = null } = Astro.props;
 const { facts, i18n } = getTopicBundle(topicId);
 const loc = (i18n && i18n.locales && i18n.locales[LOCALE]) || {};
 const title = loc.title || (facts && facts.canonical_name) || topicId;
+const lede = summaryLead(loc.summary || facts?.commonality || '');
 // 這個 Topic 在索引裡的那一筆 —— topic_kind 是**輸出層契約**,facts.json 沒有它,
 // 判「是不是機器彙整的」只能問索引(見 lib/topic-status.mjs 的說明)。
 const topicIndexEntry = getTopicsIndex().find((x) => x.topic_id === topicId) || null;
@@ -465,9 +467,9 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
           </div>
           {/* 只有本站語系的說明。「不同語系顯示相同 Topic 說明」指的是**七個站各自顯示自己的語言**
               (ja 站看到日文、pt-BR 站看到葡文),不是把七語堆在同一頁,也不標示這是哪一國語言。 */}
-          {loc.summary && (
+          {lede && (
             <p class="topic-lede">
-              {emphasisParts(loc.summary).map((part) => (
+              {emphasisParts(lede).map((part) => (
                 part.strong ? <strong>{part.text}</strong> : <Fragment>{part.text}</Fragment>
               ))}
             </p>

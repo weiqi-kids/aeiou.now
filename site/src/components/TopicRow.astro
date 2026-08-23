@@ -25,6 +25,7 @@ import { countryFlag } from '../lib/format.mjs';
 import { coverPath, coverThumbPath } from '../lib/data.mjs';
 import { isTrendTopic } from '../lib/topic-status.mjs';
 import { emphasisParts } from '../lib/emphasis.mjs';
+import { summaryLead } from '../lib/summary.mjs';
 import HeatMeter from './HeatMeter.astro';
 import TopicPosts from './TopicPosts.astro';
 
@@ -48,6 +49,7 @@ const coverRel = coverPath(topic.slug);
 const coverSrc = coverRel ? withBase(coverRel) : null;
 const coverThumbRel = coverThumbPath(topic.slug);
 const coverThumbSrc = coverThumbRel ? withBase(coverThumbRel) : null;
+const teaser = topic.summary ? summaryLead(topic.summary) : null;
 // 沒有 topic_id 就打不到 /v1/topics/:id/feed(:id 是 ULID 不是 slug),那一列只出左欄。
 const withPosts = !!topic.topic_id;
 ---
@@ -95,9 +97,9 @@ const withPosts = !!topic.topic_id;
           ))}
         </span>
         {note && <span class="row-note">{note}</span>}
-        {topic.summary && (
+        {teaser && (
           <span class="row-summary">
-            {emphasisParts(topic.summary).map((part) => (
+            {emphasisParts(teaser).map((part) => (
               part.strong ? <strong>{part.text}</strong> : <Fragment>{part.text}</Fragment>
             ))}
           </span>

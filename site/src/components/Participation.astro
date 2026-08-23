@@ -29,11 +29,9 @@ const participationConfigJson = JSON.stringify(participationConfig).replace(/</g
 
   {/* 2026-08-20:靜態預設值改成 loading。參與榜沒有被關閉過,只是資料還沒到。 */}
   <div class="q-p-loading">
-    <p class="q-p-loading-note" role="status">{t('q.loading')}</p>
   </div>
   <noscript>
-    <style>.q-p-loading { display: none; }</style>
-    <p class="q-p-closed-note">{t('room.noscript')}</p>
+    <style>.q-p { display: none; }</style>
   </noscript>
 
   <div class="q-p-fallback" hidden>
@@ -51,6 +49,7 @@ const participationConfigJson = JSON.stringify(participationConfig).replace(/</g
     if (fallback) fallback.hidden = state !== 'unavailable';
     if (loading) loading.hidden = state !== 'loading';
     if (live) live.hidden = state !== 'open';
+    root.hidden = state === 'unavailable';
     root.dataset.qState = state;
   }
 

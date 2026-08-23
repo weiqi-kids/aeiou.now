@@ -107,12 +107,10 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
         </button>
       ))}
     </div>
-    <p class="q-loading-note" role="status">{t('q.loading')}</p>
     <p class="q-closed-note" hidden>{t('q.closed')}</p>
   </div>
   <noscript>
-    <style>.q-loading-note { display: none; }</style>
-    <p class="q-closed-note">{t('room.noscript')}</p>
+    <style>.q-card { display: none; }</style>
   </noscript>
 
   <div class="q-live" hidden></div>
@@ -138,6 +136,7 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
     if (loadingNote) loadingNote.hidden = state !== 'loading';
     if (closedNote) closedNote.hidden = state !== 'unavailable';
     if (live) live.hidden = state !== 'open';
+    root.hidden = state === 'unavailable';
     root.dataset.qState = state;
   }
 
