@@ -18,7 +18,7 @@ function sentences(text) {
   // Chinese/Japanese sentences often have no space after punctuation. English
   // punctuation is split only when followed by whitespace, which keeps `U.S.`
   // and decimal numbers inside the same sentence.
-  return value.split(/(?<=[。！？!?])|(?<=[.!?])(?=\s+)/gu).map((part) => part.trim()).filter(Boolean);
+  return value.split(/(?<=[。！？!?।])|(?<=[.!?])(?=\s+)/gu).map((part) => part.trim()).filter(Boolean);
 }
 
 /** Return the shortest useful, fact-first teaser for a topic list. */
@@ -29,7 +29,8 @@ export function summaryLead(text) {
   const useful = parts.filter((part) => (
     !EDITORIAL_SENTENCE_MARKERS.some((marker) => part.includes(marker))
   ));
-  const lead = useful[0] || parts[0];
+  if (useful.length === 0) return '';
+  const lead = useful[0];
 
   // Very short question-style summaries benefit from one follow-up fact, but never
   // from the generic “this page compares…” sentence that follows them in old content.
