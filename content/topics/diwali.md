@@ -42,7 +42,7 @@
 ### title
 排燈節（Diwali）
 ### summary
-2026 年印度排燈節（Diwali）主日是 11 月 8 日，五天節期約從 11 月 6 日的 Dhanteras 到 11 月 10 日的 Bhai Dooj；紐約市公立學校也在主日停課。這一頁把五天分開看，再比較印度的全國假日與美國城市學校假日，而不是把 Diwali 簡化成一個晚上。
+2026 年印度排燈節（Diwali）主日是 11 月 8 日，五天節期約從 11 月 6 日的 Dhanteras 到 11 月 10 日的 Bhai Dooj；紐約市公立學校也在主日停課。這一頁把五天分開看，再比較印度的全國假日與美國城市學校假日，而不是把 Diwali 簡化成一個晚上；查印度排燈節 2026 日期時，別把主日和前後四天混成同一天。
 ### keywords
 印度排燈節2026、2026印度排燈節、排燈節日期2026、排燈節、屠妖節、Diwali、Deepavali、Dhanteras、Bhai Dooj、Lakshmi Puja
 ### customs IN diwali

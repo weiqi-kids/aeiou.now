@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-22",
+  "as_of": "2026-08-23",
   "note": "存量內容厚度水位。只能升不能降；補完資料後重跑 --update-baseline 鎖住新水位。 目標值見 scripts/lib/content-depth.mjs 的 THRESHOLDS。",
   "thresholds_target": {
     "units": 5,
@@ -20,17 +20,17 @@
     "back-to-school": {
       "units": 7,
       "countries": 7,
-      "min_chars": 1334
+      "min_chars": 1432
     },
     "birthdays-and-blessings": {
       "units": 7,
       "countries": 7,
-      "min_chars": 1309
+      "min_chars": 1427
     },
     "caregiving-across-generations": {
       "units": 7,
       "countries": 7,
-      "min_chars": 1311
+      "min_chars": 1434
     },
     "childrens-day": {
       "units": 7,
@@ -45,7 +45,7 @@
     "coming-of-age": {
       "units": 7,
       "countries": 7,
-      "min_chars": 1301
+      "min_chars": 1419
     },
     "compulsory-education": {
       "units": 7,
@@ -55,7 +55,7 @@
     "diwali": {
       "units": 10,
       "countries": 7,
-      "min_chars": 2018
+      "min_chars": 2037
     },
     "dragon-boat-festival": {
       "units": 9,
@@ -85,7 +85,7 @@
     "farewells-and-funerals": {
       "units": 7,
       "countries": 7,
-      "min_chars": 1326
+      "min_chars": 1447
     },
     "fathers-day": {
       "units": 7,
@@ -100,7 +100,7 @@
     "graduation-season": {
       "units": 7,
       "countries": 7,
-      "min_chars": 1403
+      "min_chars": 1509
     },
     "harvest-and-gratitude": {
       "units": 7,
@@ -110,7 +110,7 @@
     "homecoming-and-reunion": {
       "units": 9,
       "countries": 7,
-      "min_chars": 1242
+      "min_chars": 1346
     },
     "islamic-calendar-days": {
       "units": 10,
@@ -120,7 +120,7 @@
     "labour-day": {
       "units": 7,
       "countries": 7,
-      "min_chars": 1233
+      "min_chars": 1240
     },
     "lantern-festival": {
       "units": 11,
@@ -145,12 +145,12 @@
     "moving-home": {
       "units": 7,
       "countries": 7,
-      "min_chars": 1317
+      "min_chars": 1426
     },
     "national-days": {
       "units": 7,
       "countries": 7,
-      "min_chars": 1267
+      "min_chars": 1274
     },
     "new-year": {
       "units": 7,
@@ -160,7 +160,7 @@
     "newborn-and-full-moon": {
       "units": 7,
       "countries": 7,
-      "min_chars": 1211
+      "min_chars": 1311
     },
     "official-languages": {
       "units": 7,
@@ -172,15 +172,25 @@
       "countries": 7,
       "min_chars": 2192
     },
+    "pet-preparedness": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 1222
+    },
+    "pets-and-family": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 1233
+    },
     "proposals-and-engagements": {
       "units": 7,
       "countries": 7,
-      "min_chars": 1294
+      "min_chars": 1395
     },
     "ramadan-and-eid": {
       "units": 8,
       "countries": 7,
-      "min_chars": 1859
+      "min_chars": 1877
     },
     "religion-and-the-state": {
       "units": 7,
@@ -190,7 +200,7 @@
     "teachers-day": {
       "units": 7,
       "countries": 7,
-      "min_chars": 1499
+      "min_chars": 1504
     },
     "voting-and-elections": {
       "units": 7,
@@ -200,7 +210,7 @@
     "weddings-and-customs": {
       "units": 7,
       "countries": 7,
-      "min_chars": 1296
+      "min_chars": 1406
     },
     "womens-day": {
       "units": 8,

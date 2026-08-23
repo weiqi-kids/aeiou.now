@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 // ===========================================================================
-// aeiou.now — SEO growth worklist (read-only)
+// aeiou.now — SEO growth worklist + daily feedback snapshot
 // ===========================================================================
 //
-// 把 GA4/GSC、內容與季節資料放在同一張可執行清單裡。這支不呼叫外部 API、
-// 不改資料；先跑 gsc-topic-metrics.mjs 累積 query/page，再跑本支即可。
+// 把 GA4/GSC、內容與季節資料放在同一張可執行清單裡。預設唯讀；
+// --record 才會把聚合快照與工作清單寫進主機 SQLite。
 //
 //   node scripts/seo-growth.mjs
 //   node scripts/seo-growth.mjs --days 28
 //   node scripts/seo-growth.mjs --json
+//   node scripts/seo-growth.mjs --record --days 28
+//   node scripts/seo-growth.mjs --history
 //
 // 優先序不是「流量越大越值得做」的排行榜，而是可操作性：
 //   P0  前十名已有曝光卻沒有點擊，先檢查 title/description 與查詢是否對題
@@ -18,7 +20,9 @@
 //
 // query/page 表是主機私有資料，不會被 export 到靜態站或 D1。
 
-import { openDb } from "./lib/aeiou-lib.mjs";
+import {
+  openDb, acquireLock, beginJob, finishJob, slotStart, nowSec,
+} from "./lib/aeiou-lib.mjs";
 
 const args = process.argv.slice(2);
 const DAYS = (() => {
@@ -27,6 +31,8 @@ const DAYS = (() => {
   return Number.isFinite(n) && n > 0 ? Math.floor(n) : 28;
 })();
 const JSON_OUTPUT = args.includes("--json");
+const RECORD = args.includes("--record");
+const HISTORY = args.includes("--history");
 const HOST_LOCALE = {
   "aeiou.now": "zh-TW", "en.aeiou.now": "en", "jp.aeiou.now": "ja", "cn.aeiou.now": "zh-CN",
   "hi.aeiou.now": "hi", "id.aeiou.now": "id", "br.aeiou.now": "pt-BR",
@@ -34,11 +40,34 @@ const HOST_LOCALE = {
 const DATE_RE = /(\b20\d{2}\b|幾號|什麼時候|什么时候|日期|いつ|何日|kapan|tanggal|when is|quando|कब|तारीख)/i;
 const INST_RE = /(哪些國家|哪些国家|各國|各国|怎麼過|怎么过|放假|為什麼|为什么|差別|差别|比較|比较|制度|國定|国定|holiday|public holiday|do they|how do|why do|libur|hari libur|feriado|छुट्टी|क्यों|कैसे)/i;
 
-const db = openDb(true);
+const db = openDb(!RECORD);
 const cutoff = new Date(Date.now() - DAYS * 86400000).toISOString().slice(0, 10);
 const tableExists = (name) => Boolean(db.prepare(
   "SELECT 1 FROM sqlite_master WHERE type='table' AND name = ?"
 ).get(name));
+
+function ensureGrowthSchema() {
+  db.exec(
+    "CREATE TABLE IF NOT EXISTS seo_growth_snapshots (" +
+    "snapshot_date TEXT PRIMARY KEY, generated_at INTEGER NOT NULL, window_days INTEGER NOT NULL, " +
+    "cutoff TEXT NOT NULL, data_days INTEGER NOT NULL DEFAULT 0, query_page_pairs INTEGER NOT NULL DEFAULT 0, " +
+    "impressions INTEGER NOT NULL DEFAULT 0, clicks INTEGER NOT NULL DEFAULT 0, weighted_position REAL, " +
+    "ga_page_views INTEGER NOT NULL DEFAULT 0, ga_page_views_human INTEGER NOT NULL DEFAULT 0, " +
+    "ga_sessions INTEGER NOT NULL DEFAULT 0, p0 INTEGER NOT NULL DEFAULT 0, p1 INTEGER NOT NULL DEFAULT 0, " +
+    "p2 INTEGER NOT NULL DEFAULT 0, p3 INTEGER NOT NULL DEFAULT 0, intent_json TEXT NOT NULL DEFAULT '{}', " +
+    "season_json TEXT NOT NULL DEFAULT '[]');" +
+    "CREATE TABLE IF NOT EXISTS seo_growth_actions (" +
+    "locale TEXT NOT NULL, query TEXT NOT NULL, page_url TEXT NOT NULL, first_seen_at INTEGER NOT NULL, " +
+    "last_seen_at INTEGER NOT NULL, priority TEXT NOT NULL, impressions INTEGER NOT NULL DEFAULT 0, " +
+    "clicks INTEGER NOT NULL DEFAULT 0, position REAL, action TEXT NOT NULL, reasons_json TEXT NOT NULL DEFAULT '[]', " +
+    "status TEXT NOT NULL DEFAULT 'open', updated_at INTEGER NOT NULL, " +
+    "PRIMARY KEY (locale, query, page_url));" +
+    "CREATE INDEX IF NOT EXISTS idx_seo_growth_actions_priority " +
+    "ON seo_growth_actions(status, priority, last_seen_at);",
+  );
+}
+
+if (RECORD) ensureGrowthSchema();
 
 function pct(n, d) { return d ? `${((n / d) * 100).toFixed(1)}%` : "—"; }
 function avgPos(row) { return row.impressions ? row.position_sum / row.impressions : null; }
@@ -53,6 +82,14 @@ function tokenize(text) {
     .split(/[^\p{L}\p{N}]+/u)
     .map((part) => part.trim())
     .filter((part) => part.length >= 2);
+}
+function intentFor(query) {
+  const hasDate = DATE_RE.test(query);
+  const hasInstitution = INST_RE.test(query);
+  if (hasDate && hasInstitution) return 'date_and_institution';
+  if (hasDate) return 'date_or_name';
+  if (hasInstitution) return 'cross_country_or_institution';
+  return 'other';
 }
 function localeForUrl(pageUrl) {
   try { return HOST_LOCALE[new URL(pageUrl).host] || null; } catch { return null; }
@@ -157,6 +194,7 @@ function mergeRows(rows) {
       summary: context.summary,
       position,
       ctr: row.clicks / Math.max(row.impressions, 1),
+      intent: intentFor(row.query),
       priority,
       action,
       reasons,
@@ -257,15 +295,125 @@ const payload = {
   generated_at: new Date().toISOString(),
   summary,
   measurement,
+  intent: (() => {
+    const grouped = new Map();
+    for (const row of opportunities) {
+      const current = grouped.get(row.intent) || { impressions: 0, clicks: 0, position_sum: 0 };
+      current.impressions += row.impressions;
+      current.clicks += row.clicks;
+      current.position_sum += row.position_sum;
+      grouped.set(row.intent, current);
+    }
+    return Object.fromEntries([...grouped].map(([intent, row]) => [intent, {
+      impressions: row.impressions,
+      clicks: row.clicks,
+      avg_position: row.impressions ? row.position_sum / row.impressions : null,
+    }]));
+  })(),
   opportunities: opportunities.slice(0, 50),
   season_runway: seasonRunway.slice(0, 50).map((row) => ({ ...row, countries: row.countries })),
 };
 
+function recordSnapshot() {
+  const scheduledAt = slotStart(86400);
+  const lock = acquireLock(db, { jobName: "seo-growth-record", scheduledAt });
+  if (!lock.ok) return { recorded: false, reason: lock.reason };
+  const job = beginJob(db, { jobName: "seo-growth-record", scheduledAt });
+  const now = nowSec();
+  const snapshotDate = new Date().toISOString().slice(0, 10);
+  try {
+    const measurementValues = measurement || {};
+    db.exec("BEGIN");
+    db.prepare(
+      "INSERT INTO seo_growth_snapshots " +
+      "(snapshot_date,generated_at,window_days,cutoff,data_days,query_page_pairs,impressions,clicks," +
+      "weighted_position,ga_page_views,ga_page_views_human,ga_sessions,p0,p1,p2,p3,intent_json,season_json) " +
+      "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) " +
+      "ON CONFLICT(snapshot_date) DO UPDATE SET generated_at=excluded.generated_at, " +
+      "window_days=excluded.window_days, cutoff=excluded.cutoff, data_days=excluded.data_days, " +
+      "query_page_pairs=excluded.query_page_pairs, impressions=excluded.impressions, clicks=excluded.clicks, " +
+      "weighted_position=excluded.weighted_position, ga_page_views=excluded.ga_page_views, " +
+      "ga_page_views_human=excluded.ga_page_views_human, ga_sessions=excluded.ga_sessions, " +
+      "p0=excluded.p0, p1=excluded.p1, p2=excluded.p2, p3=excluded.p3, " +
+      "intent_json=excluded.intent_json, season_json=excluded.season_json",
+    ).run(
+      snapshotDate, now, DAYS, cutoff, dataDays, summary.query_page_pairs, summary.impressions, summary.clicks,
+      summary.weighted_position, measurementValues.page_views || 0, measurementValues.page_views_human || 0,
+      measurementValues.sessions || 0, summary.priorities.P0, summary.priorities.P1,
+      summary.priorities.P2, summary.priorities.P3, JSON.stringify(payload.intent), JSON.stringify(seasonRunway),
+    );
+
+    const existing = db.prepare(
+      "SELECT first_seen_at,status FROM seo_growth_actions WHERE locale=? AND query=? AND page_url=?",
+    );
+    const action = db.prepare(
+      "INSERT INTO seo_growth_actions " +
+      "(locale,query,page_url,first_seen_at,last_seen_at,priority,impressions,clicks,position,action," +
+      "reasons_json,status,updated_at) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?) " +
+      "ON CONFLICT(locale,query,page_url) DO UPDATE SET last_seen_at=excluded.last_seen_at, " +
+      "priority=excluded.priority, impressions=excluded.impressions, clicks=excluded.clicks, " +
+      "position=excluded.position, action=excluded.action, reasons_json=excluded.reasons_json, " +
+      "updated_at=excluded.updated_at",
+    );
+    for (const row of opportunities) {
+      const previous = existing.get(row.locale, row.query, row.page_url);
+      action.run(
+        row.locale, row.query, row.page_url, previous?.first_seen_at || now, now, row.priority,
+        row.impressions, row.clicks, row.position, row.action, JSON.stringify(row.reasons),
+        previous?.status || "open", now,
+      );
+    }
+    db.exec("COMMIT");
+    finishJob(db, job, {
+      status: "success", read: queryRows.length, created: opportunities.length, updated: 1,
+    });
+    return { recorded: true, snapshot_date: snapshotDate, actions: opportunities.length };
+  } catch (error) {
+    try { db.exec("ROLLBACK"); } catch {}
+    finishJob(db, job, { status: "failed", error: error.stack || error.message || error });
+    throw error;
+  }
+}
+
+function printHistory() {
+  if (!tableExists("seo_growth_snapshots")) {
+    console.log("尚無 SEO 成長快照；先執行：node scripts/seo-growth.mjs --record");
+    return;
+  }
+  const rows = db.prepare(
+    "SELECT snapshot_date,data_days,impressions,clicks,weighted_position," +
+    "ga_page_views,ga_page_views_human,p0,p1,p2,p3 " +
+    "FROM seo_growth_snapshots ORDER BY snapshot_date DESC LIMIT 30",
+  ).all();
+  console.log("SEO 成長快照（最近 30 次）");
+  console.log("日期        GSC天  曝光  點擊  平均名次  GA瀏覽  真人瀏覽  P0  P1  P2  P3");
+  console.log("----------  ----  ----  ----  --------  ------  --------  --  --  --  --");
+  for (const row of rows) {
+    console.log(
+      row.snapshot_date + "  " + String(row.data_days).padStart(4) + "  " +
+      String(row.impressions).padStart(4) + "  " + String(row.clicks).padStart(4) + "  " +
+      fmtPos(row.weighted_position).padStart(8) + "  " + String(row.ga_page_views).padStart(6) + "  " +
+      String(row.ga_page_views_human).padStart(8) + "  " + String(row.p0).padStart(2) + "  " +
+      String(row.p1).padStart(2) + "  " + String(row.p2).padStart(2) + "  " + String(row.p3).padStart(2),
+    );
+  }
+}
+
+let recordResult = null;
+if (RECORD) recordResult = recordSnapshot();
+
+if (HISTORY && !JSON_OUTPUT) {
+  printHistory();
+  if (recordResult && !recordResult.recorded) console.log("本次記錄略過：" + recordResult.reason);
+  db.close();
+  process.exit(0);
+}
+
 if (JSON_OUTPUT) {
-  process.stdout.write(`${JSON.stringify(payload, null, 2)}\n`);
+  process.stdout.write(JSON.stringify({ ...payload, record: recordResult }, null, 2) + "\n");
   db.close();
 } else {
-  console.log(`SEO growth worklist（唯讀，近 ${DAYS} 天；GSC 實際資料 ${dataDays} 天）`);
+  console.log(`SEO growth worklist（${RECORD ? "已記錄；" : "唯讀；"}近 ${DAYS} 天；GSC 實際資料 ${dataDays} 天）`);
   console.log("=".repeat(72));
   if (measurement) {
     const raw = measurement.page_views || 0;
@@ -300,6 +448,12 @@ if (JSON_OUTPUT) {
     for (const row of seasonRunway.slice(0, 20)) {
       console.log(`${row.phase.padEnd(6)}  ${row.starts_on}  ${row.target_date}  ${String(row.days_until).padStart(4)} 天  ${row.countries.join(",").padEnd(4)}  ${row.slug}`);
     }
+  }
+
+  if (recordResult) {
+    console.log(recordResult.recorded
+      ? "\n已寫入每日快照 " + recordResult.snapshot_date + "，更新 " + recordResult.actions + " 筆搜尋工作。"
+      : "\n本次快照略過：" + recordResult.reason);
   }
 
   console.log("\n三、固定驗收（每次內容或模板變更後）");

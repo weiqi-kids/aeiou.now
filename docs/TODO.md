@@ -475,6 +475,15 @@ GSC 給的是 ISO-3,而 `posts.country_code`(Cloudflare,契約 §0)、`topic_obs
 - [x] **CI build-id 輪詢 5 → 10 分鐘**(假紅:發布較慢被判失敗,但七站其實都上線了)。
 - [x] **兩個會說謊的指標修掉**:`regional_notes=0` 不再誤報成國別缺口;
       seo-health ③ 的排名佔比一定要跟樣本量一起印。緣由見該次 commit。
+- [x] **SEO 成長工作清單改成每日可回看的快照**(2026-08-23)。
+      `seo-growth.mjs` 預設仍是唯讀；`--record` 由 hourly-export 以 `job_locks` 對齊 UTC 日,
+      把 GSC query/page 的 P0–P3、GA4 原始／可當真人看的瀏覽、意圖分類與 120 天季節跑道
+      寫入主機私有的 `seo_growth_snapshots`／`seo_growth_actions`。查:
+      `node scripts/seo-growth.mjs --history`。這些資料不進 data/、D1 或前端。
+- [x] **首頁與關於頁去產品簡報語氣**(2026-08-23)。七語系改成讀者實際會查的問題、
+      來源、下一步與經驗分享；移除「平台／Topic Engine／自動彙整」作為價值主張,
+      `scripts/check-editorial-voice.mjs` 已加入 CI 守門。趨勢 Topic 的自動產生仍明白標註,
+      不把自動化冒充人工查證。
 
 ### 不要再做的事(2026-08-20 查證後撤銷)
 
@@ -494,10 +503,12 @@ node scripts/seo-health.mjs                     # 量測/索引/排名/內容四
 node scripts/check-source-urls.mjs              # 來源連結存活(404/410、或 redirect 落在錯誤頁才擋)
 ```
 
-- [x] **全部 Topic 補到目標水位(2026-08-20)**。目標=每語系 1,200 唯一字元、5 個地方變體
+- [x] **全部 Topic 補到目標水位(2026-08-23)**。目標=每語系 1,200 唯一字元、5 個地方變體
   (對照基準:2026-08-19 實測 folk.tw 主力內容頁渲染後去重 1,600–2,930 字元)。
   現況查法:`node scripts/check-content-depth.mjs --report`(看最後一行「未達目標」)。
   補完一批一定要跑 `--update-baseline` 把新水位鎖住,否則下次改動可以無聲退回去。
+  本輪補強了 `pet-preparedness` 與 `pets-and-family` 的簡體中文實質段落，現在 43/43 通過,
+  最薄頁為 1,210 唯一字元，baseline 已在 2026-08-23 重鎖。
 - [x] **R6:來源不在該國網域的 observance**(2026-08-20 當時已清空;`r6_exempt` 現況查
   `python3 -c "import json;print(json.load(open('content/content-depth-baseline.json'))['r6_exempt'])"`;
   這份清單只能縮不能長)。

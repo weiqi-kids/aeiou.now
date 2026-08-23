@@ -441,6 +441,49 @@ CREATE INDEX IF NOT EXISTS idx_gqm_date ON gsc_query_metrics(metric_date);
 CREATE INDEX IF NOT EXISTS idx_gqm_page ON gsc_query_metrics(page_url, metric_date);
 CREATE INDEX IF NOT EXISTS idx_gqm_query ON gsc_query_metrics(query, metric_date);
 
+-- ============ §8.3 SEO 成長回饋域(2026-08-23) =============================
+-- 每日把 GA4 報表、GSC 查詢工作與季節跑道凍成一筆快照，避免「跑過一次就忘了」
+-- 或拿不同資料窗直接比較。query/page 本身已在 gsc_query_metrics 保存；這裡只留
+-- 可回看的聚合與目前工作狀態，仍不進 data/、D1 或前端。
+CREATE TABLE IF NOT EXISTS seo_growth_snapshots (
+  snapshot_date       TEXT PRIMARY KEY,       -- UTC YYYY-MM-DD
+  generated_at        INTEGER NOT NULL,
+  window_days         INTEGER NOT NULL,
+  cutoff              TEXT NOT NULL,
+  data_days           INTEGER NOT NULL DEFAULT 0,
+  query_page_pairs    INTEGER NOT NULL DEFAULT 0,
+  impressions         INTEGER NOT NULL DEFAULT 0,
+  clicks              INTEGER NOT NULL DEFAULT 0,
+  weighted_position   REAL,
+  ga_page_views       INTEGER NOT NULL DEFAULT 0,
+  ga_page_views_human INTEGER NOT NULL DEFAULT 0,
+  ga_sessions         INTEGER NOT NULL DEFAULT 0,
+  p0                  INTEGER NOT NULL DEFAULT 0,
+  p1                  INTEGER NOT NULL DEFAULT 0,
+  p2                  INTEGER NOT NULL DEFAULT 0,
+  p3                  INTEGER NOT NULL DEFAULT 0,
+  intent_json         TEXT NOT NULL DEFAULT '{}',
+  season_json         TEXT NOT NULL DEFAULT '[]'
+);
+CREATE TABLE IF NOT EXISTS seo_growth_actions (
+  locale        TEXT NOT NULL,
+  query         TEXT NOT NULL,
+  page_url      TEXT NOT NULL,
+  first_seen_at INTEGER NOT NULL,
+  last_seen_at  INTEGER NOT NULL,
+  priority      TEXT NOT NULL,
+  impressions   INTEGER NOT NULL DEFAULT 0,
+  clicks        INTEGER NOT NULL DEFAULT 0,
+  position      REAL,
+  action        TEXT NOT NULL,
+  reasons_json  TEXT NOT NULL DEFAULT '[]',
+  status        TEXT NOT NULL DEFAULT 'open',
+  updated_at    INTEGER NOT NULL,
+  PRIMARY KEY (locale, query, page_url)
+);
+CREATE INDEX IF NOT EXISTS idx_seo_growth_actions_priority
+  ON seo_growth_actions(status, priority, last_seen_at);
+
 -- ---------------------------------------------------------------------------
 -- reaction 計數回流(2026-08-21)
 -- ---------------------------------------------------------------------------

@@ -706,6 +706,14 @@ CREATE TABLE gsc_query_metrics (
 
 > 草案 §35 的「不保存不必要的個資」在此落實:GA4 只收匿名聚合維度(前端直送 Google,不經 Worker);D1 只承載互動寫入本身,不存瀏覽原始事件。
 
+### 8.3 SEO 成長快照
+
+`seo-growth.mjs --record` 每日把同一個資料窗的 GSC 工作清單、GA4 報表、
+查詢意圖和季節跑道存成 `seo_growth_snapshots`；目前出現的 query/page 工作存於
+`seo_growth_actions`。兩張表都在主機 SQLite，不能 export 到 `data/`、D1 或前端。
+`--record` 由 `hourly-export.sh` 呼叫並用 `job_locks` 限制為每天一次；`--history`
+用來比較內容改動前後，而不是拿 GA4 的機器流量推算 HotScore。
+
 ---
 
 ## 9. 靜態 JSON 的目錄結構

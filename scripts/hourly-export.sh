@@ -193,6 +193,14 @@ if ! "$NODE_BIN" "$REPO/scripts/ga4-daily.mjs"; then
   log "WARN: ga4-daily 失敗,今天沒有 GA4 報表資料(不中斷 export)"
 fi
 
+# GA4 與 GSC 的搜尋工作要留成每日可比較的快照；腳本自己用 job_locks 對齊 UTC 日,
+# 所以掛在 hourly 不會每小時重寫,也不需要新增一條 cron。這是報表／工作清單,
+# 不接 HotScore,且 query/page 仍只留在主機 SQLite。
+log "seo-growth.mjs --record ..."
+if ! "$NODE_BIN" "$REPO/scripts/seo-growth.mjs" --record --days 28; then
+  log "WARN: seo-growth record 失敗,今天沒有成長快照(不中斷 export)"
+fi
+
 log "sync-search-index.mjs ..."
 if ! "$NODE_BIN" "$REPO/scripts/sync-search-index.mjs"; then
   log "WARN: sync-search-index 失敗,語意索引這一輪不更新(不中斷 export)"

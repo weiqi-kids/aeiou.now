@@ -66,6 +66,10 @@ jobs:
       - name: 內容厚度守門
         run: node scripts/check-content-depth.mjs
 
+      # 讀者文案守門：首頁與關於頁不能退回「平台／引擎」產品簡報口吻。
+      - name: 讀者文案守門
+        run: node scripts/check-editorial-voice.mjs
+
       # 來源存活檢查(2026-08-19 加):頁面上印出來的 source 連結有沒有 404。
       # 🔴 刻意不進主機每小時管線——那會把別人的網站狀態綁進本站的資料匯出。
       #    這裡也只擋 404/410;403/412/5xx 是對方擋機器人或暫時故障,只警告。

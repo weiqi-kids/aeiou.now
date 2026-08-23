@@ -846,25 +846,48 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
   import { track } from '../../lib/analytics.mjs';
 
   const topicArticle = document.querySelector('article[data-topic-slug]');
+  const topicSlug = topicArticle?.dataset.topicSlug;
+  const locale = document.documentElement.lang;
+  // 只記錄讀者真的捲到的區塊，讓 GA4 能回答「搜尋進來後讀了哪一段」；
+  // 不把停在頁首的機器請求誤當成深度閱讀，也不收集任何文字內容。
+  if (topicArticle && 'IntersectionObserver' in window) {
+    const seen = new Set();
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting || seen.has(entry.target.id)) return;
+        seen.add(entry.target.id);
+        track('topic_section_view', {
+          topic_slug: topicSlug,
+          section: entry.target.id,
+          locale,
+        });
+        sectionObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.2 });
+    ['answers', 'nearby', 'events', 'talking', 'world', 'sources', 'related']
+      .map((id) => document.getElementById(id))
+      .filter(Boolean)
+      .forEach((section) => sectionObserver.observe(section));
+  }
   document.querySelectorAll('[data-source-link]').forEach((link) => {
     link.addEventListener('click', () => {
       let domain = '';
       try { domain = new URL(link.dataset.sourceUrl || link.href).hostname.replace(/^www\./, ''); } catch {}
       track('source_click', {
-        topic_slug: topicArticle?.dataset.topicSlug,
+        topic_slug: topicSlug,
         source_domain: domain,
-        locale: document.documentElement.lang,
+        locale,
       });
     });
   });
   document.querySelectorAll('[data-local-action]').forEach((link) => {
     link.addEventListener('click', () => {
       track('local_action_click', {
-        topic_slug: topicArticle?.dataset.topicSlug,
+        topic_slug: topicSlug,
         action: link.dataset.localAction,
         target_type: link.dataset.localType,
         target_id: link.dataset.localId,
-        locale: document.documentElement.lang,
+        locale,
       });
     });
   });
