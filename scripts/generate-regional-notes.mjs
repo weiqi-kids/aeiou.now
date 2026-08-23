@@ -763,6 +763,20 @@ const notes = {
 // back to another language.
 notes['pet-preparedness'].BR['pt-BR'] = 'As orientações oficiais do Brasil colocam os animais dentro da prevenção, da preparação e da resposta a desastres, em vez de deixar a busca por abrigo para depois do evento. A Defesa Civil Nacional destaca o planejamento prévio e a coordenação entre instituições, e o conselho de medicina veterinária trata de resgate e protocolos para emergências com animais em eventos climáticos extremos. Para a família, a preparação que continua útil é saber como transportar o animal, quem poderá cuidar dele, onde existe apoio veterinário ou abrigo e onde estão os registros de vacinação e identificação; os detalhes variam conforme o estado, o município e o tipo de risco.';
 
+notes['pet-preparedness'].country_sources.CN = [
+  'https://www.cneb.gov.cn/kepu/',
+  'https://www.cneb.gov.cn/cnebzw/kepushipin/yingjishipin/nhkzaihaiyingdui/20200915/t20200915_525255200.html',
+];
+notes['pet-preparedness'].CN = text(
+  '中國大陸家庭的寵物防災，可以先從國家應急廣播的家庭科普做起：發生自然災害時盡量帶貓狗一起避難，準備可攜式寵物包或籠具，並替寵物保留聯絡方式。這是家庭層級的防災建議，不代表全國避難所規則一致；能否進入、是否有寵物專區、由誰照護，仍要向所在地確認。',
+  'In mainland China, a household can start pet preparedness with the family guidance published by the National Emergency Broadcasting service: when natural disasters occur, try to evacuate with cats and dogs, prepare a portable pet bag or cage, and keep contact information with the animal. This is household-level guidance, not one national shelter rule; entry, pet areas and care arrangements still need to be confirmed locally.',
+  '中国大陸の家庭では、国家応急放送の家庭向け防災情報からペットの備えを始められる。自然災害が起きたら猫や犬をできるだけ連れて避難し、持ち運べるペット用バッグやケージを用意し、連絡先を動物と一緒に保つよう案内している。これは家庭向けの助言であり、全国の避難所に同じ規則があるという意味ではない。入所、ペット専用区画、世話の担当は地域で確認する必要がある。',
+  '中国大陆家庭的宠物防灾，可以先从国家应急广播的家庭科普做起：发生自然灾害时尽量带猫狗一起避难，准备可携带的宠物包或笼具，并让宠物带有联系方式。这是家庭层面的防灾建议，不代表全国避难所规则一致；能否进入、是否有宠物专区、由谁照护，仍要向所在地确认。',
+  'मुख्यभूमि चीन में परिवार राष्ट्रीय आपात प्रसारण की घरेलू आपदा-जानकारी से पालतू पशु की तैयारी शुरू कर सकते हैं: प्राकृतिक आपदा में बिल्ली या कुत्ते को यथासंभव साथ लेकर निकलें, ले जाने योग्य पालतू बैग या पिंजरा रखें और पशु के साथ संपर्क जानकारी रखें। यह घरों के लिए सलाह है, पूरे देश के आश्रयों का एक नियम नहीं; प्रवेश, पशु-क्षेत्र और देखभाल की व्यवस्था स्थानीय स्तर पर पूछनी होगी।',
+  'Di Tiongkok daratan, keluarga dapat memulai kesiapsiagaan hewan dari panduan rumah tangga National Emergency Broadcasting: ketika bencana alam terjadi, usahakan membawa kucing dan anjing saat mengungsi, siapkan tas atau kandang yang mudah dibawa, dan sertakan informasi kontak bersama hewan. Ini adalah panduan tingkat rumah tangga, bukan aturan nasional yang sama untuk semua tempat pengungsian; izin masuk, area hewan, dan pengaturan perawatan tetap harus dikonfirmasi di daerah setempat.',
+  'Na China continental, a família pode começar a preparação dos animais pelas orientações domésticas do serviço nacional de radiodifusão de emergência: em caso de desastre natural, tentar levar cães e gatos na evacuação, preparar bolsa ou caixa portátil e manter os contatos junto do animal. É uma orientação para as famílias, não uma regra nacional única para todos os abrigos; entrada, áreas para animais e responsáveis pelos cuidados devem ser confirmados localmente.',
+);
+
 const output = {
   as_of: '2026-08-14',
   version: 1,
