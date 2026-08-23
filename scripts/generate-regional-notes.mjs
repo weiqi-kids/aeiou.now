@@ -44,7 +44,7 @@ const text = (zhTW, en, ja, zhCN, hi, id, ptBR) => ({
 const notes = {
   'pets-and-family': {
     country_sources: {
-      TW: ['https://law.moa.gov.tw/LawContent.aspx?id=FL014739', 'https://animal.moa.gov.tw/Frontend/Know/Detail/LT00000867?parentID=Tab0000003'],
+      TW: ['https://law.moa.gov.tw/LawContent.aspx?id=FL014739', 'https://law.moa.gov.tw/LawContent.aspx?id=FL014741'],
       JP: ['https://www.env.go.jp/nature/dobutsu/aigo/pickup/owner.html', 'https://www.env.go.jp/nature/dobutsu/aigo/1_law/outline.html'],
       CN: ['https://www.spt.gov.cn/xxgk/bmxxgkml/sptqlyhcyj/fdzdgknr_73681/pfxc_73708/202502/P020250227564617044462.pdf', 'https://www.fuzhou.gov.cn/zwgk/ggqsydwxx/wsjkxx/202312/t20231227_4745532.htm'],
       US: ['https://www.nal.usda.gov/animal-health-and-welfare/animal-welfare-act', 'https://www.aphis.usda.gov/pet-travel'],
