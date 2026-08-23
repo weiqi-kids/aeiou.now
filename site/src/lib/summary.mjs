@@ -15,7 +15,10 @@ const EDITORIAL_SENTENCE_MARKERS = [
 function sentences(text) {
   const value = String(text || '').replace(/\s+/g, ' ').trim();
   if (!value) return [];
-  return value.match(/[^。！？!?]+[。！？!?]|[^.!?]+[.!?](?=\s|$)|[^。！？!?]+$/gu) || [value];
+  // Chinese/Japanese sentences often have no space after punctuation. English
+  // punctuation is split only when followed by whitespace, which keeps `U.S.`
+  // and decimal numbers inside the same sentence.
+  return value.split(/(?<=[。！？!?])|(?<=[.!?])(?=\s+)/gu).map((part) => part.trim()).filter(Boolean);
 }
 
 /** Return the shortest useful, fact-first teaser for a topic list. */
