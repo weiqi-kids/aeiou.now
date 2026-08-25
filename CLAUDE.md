@@ -333,6 +333,14 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
   **前一版(2026-08-19)把日期擺第一是同一份資料的錯誤結論,已推翻,不要改回去。**
   查法:`curl -s https://aeiou.now/topic/<slug>/ | grep -o '<title>[^<]*'` 與
   `| grep -o '<meta name="description" content="[^"]*"'` — description 開頭應是本市場國名或其敘述。
+  ⚠ **上面那組 32.7 / 67.6 已作廢,不要拿它當比較基準**(2026-08-25):它出自一個
+  只抓顯式多國詞、**抓不到「節日＋國名」**的二分類器,而「本市場的人問外國的事」才是
+  站上真正排得上去的查詢。改成四分類重算後,「國家×節日」是全站名次最好的一類。
+  分類器已修進 `scripts/seo-health.mjs` ③ 層,現況一律跑它,**不要改回二分類**。
+  ⚠ **「description 第一句 = 本市場那一國」這條規則本身正在被檢討**(2026-08-25 查出,
+  尚未拍板):`seo-health.mjs` 新增的「摘要答對國家了嗎」那一層顯示,排進前 15 名的
+  帶國名查詢**全部**是「問外國」且 0 點擊,問本國的一個都沒進前 15。緣由與候選修法
+  見 `docs/TODO.md` §「搜尋意圖重新對準」的 2026-08-25 條目。**改這條要用戶點頭。**
 - **Ask the World 的提問對象選單長在發文框裡,不另開 `#ask` 區塊**(2026-08-21)——
   Topic 頁版面的硬性規定沒有 `#ask`(見上方版面段),所以 `DiscussionRoom` 的 composer 多一個
   `<select>`,名單 = 該 Topic 實際涵蓋的國家(`askCountries` prop)。欄位 `posts.target_country`

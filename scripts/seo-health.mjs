@@ -186,44 +186,117 @@ try {
     console.log('   這個佔比目前不足以判定是結構問題，也不足以判定不是 —— 不要拿它當任何一邊的證據。');
     console.log('   要縮短這段空白，靠的是 scripts/gsc-topic-metrics.mjs 每天累積，不是等。');
   }
-  // ── 意圖分類:站上唯一有優勢的那一類排在哪(2026-08-21 補進工具) ────────────
+  // ── 意圖分類:站上唯一有優勢的那一類排在哪(2026-08-21 補進工具;2026-08-25 改三類) ──
   // 2026-08-21 的診斷是**手算**的:把查詢按意圖分兩類,發現日期/名稱型排 32.7 名、
   // 跨國/制度型排 67.6 名,而後者才是站上唯一有優勢的內容。改版就是照那個結論做的。
   // 但「改版有沒有效」不能靠下次有人再手算一次 —— 那等於這個判準只存在於某一次對話裡。
   // 所以固定印出來。docs/TODO.md 的「效果觀測」兩項看的就是這一段。
   //
-  // ⚠ 判準是**查詢問的是什麼**,不是頁面是什麼:
-  //   · 日期/名稱型 = 帶年份、帶「幾號/什麼時候/kapan/when/日期」——Google 答案框的標準品,
-  //     排第一也沒人點(2026-08-21 實證:名次 4–9 累積 41 曝光仍 0 點擊)。
-  //   · 跨國/制度型 = 帶「哪些國家/怎麼過/為什麼/放假嗎/差別/各國」——七國制度比較 = 唯一資產。
-  //   · 其餘歸「未分類」,不進兩邊的平均,免得把雜訊算進去。
-  const DATE_RE = /(\b20\d{2}\b|幾號|什麼時候|什么时候|日期|いつ|何日|kapan|tanggal|when is|quando|कब|तारीख)/i;
-  const INST_RE = /(哪些國家|哪些国家|各國|各国|怎麼過|怎么过|放假|為什麼|为什么|差別|差别|比較|比较|制度|國定|国定|holiday|public holiday|do they|how do|why do|libur|hari libur|feriado|छुट्टी|क्यों|कैसे)/i;
-  const intent = { date: [], inst: [] };
+  // ⚠ 2026-08-25 修正:原本的二分類**會把站上最有價值的那一類藏起來**,不要改回去。
+  //   舊 INST_RE 只抓顯式多國詞(哪些國家/各國/怎麼過…),抓不到「節日＋國名」——
+  //   而「本市場的人問外國的事」才是這個站真正排得上去的查詢。實測(28 天):
+  //   舊分類說「跨國/制度型 2 個查詢、平均 86.5 名」,看起來像沒需求;
+  //   拆成三類後真相是「國家×節日 25 個查詢、97 曝光、平均 14.2 名」——**全站表現最好的一類**。
+  //   同一份資料,結論相反。判準是**查詢問的是什麼**,不是頁面是什麼:
+  //   · 跨國/比較/制度規則 = 哪些國家/各國/全世界/放假嗎/每年都一樣嗎
+  //   · 國家×節日        = 節日名＋國名(印尼齋戒月、grandparents day taiwan、dia dos namorados japão)
+  //   · 名稱/翻譯型      = diwali 中文 / diwali とは / hari peringatan in english
+  //   以上三類都是站上的資產;純日期型(帶年份、when is、幾號)是 Google 答案框的標準品,不是。
+  const CROSS_RE = /(哪些國家|哪些国家|各國|各国|全世界|世界|海外|all over the world|around the world|kaun sa desh|international|antarrashtriya|怎麼過|怎么过|傳統|伝統|traditions?|放假|為什麼|为什么|差別|差别|比較|比较|制度|國定|国定|public holiday|do they|how do|why do|does .* change|is .* always|libur|hari libur|feriado|छुट्टी|क्यों|कैसे)/i;
+  const NAME_RE = /(中文|とは|in english|意思|是什么|什麼意思)/i;
+  const COUNTRY_RE = /(taiwan|japan|japão|japao|jepang|china|chinese|india|indonesia|usa|u\.s\.|united states|estados unidos|uae|brazil|brasil|台湾|台灣|日本|中国|中國|印度|印尼|美国|美國|巴西|韓國|韩国|भारत)/i;
+  const DATE_RE = /(\b20\d{2}\b|幾號|什麼時候|什么时候|日期|いつ|何日|何時|kapan|tanggal|when is|when i |what date|what day|what month|quando|कब|तारीख)/i;
+  const intent = { cross: [], country: [], name: [], date: [] };
   for (const x of queryRows) {
     const q = String(x.keys?.[0] ?? x.query ?? '');
-    // 制度型優先:同時命中兩邊時,「2027 印尼開齋節放假嗎」問的是制度不是日期。
-    if (INST_RE.test(q)) intent.inst.push(x);
+    // 順序即優先權:顯式跨國 > 名稱翻譯 > 帶國名 > 純日期。
+    // 「2027印尼齋戒月」同時命中國名與年份 —— 它問的是**印尼的**齋戒月,歸國家×節日。
+    if (CROSS_RE.test(q)) intent.cross.push(x);
+    else if (NAME_RE.test(q)) intent.name.push(x);
+    else if (COUNTRY_RE.test(q)) intent.country.push(x);
     else if (DATE_RE.test(q)) intent.date.push(x);
   }
   const avgPos = (rows) => {
-    const imp = rows.reduce((a, x) => a + x.impressions, 0);
-    if (imp === 0) return null;
+    const imp2 = rows.reduce((a, x) => a + x.impressions, 0);
+    if (imp2 === 0) return null;
     // 曝光加權平均 —— 與 GSC 自己的算法一致,不能用算術平均(那會讓一次曝光的查詢
     // 與一百次曝光的查詢等重)。
-    return rows.reduce((a, x) => a + x.position * x.impressions, 0) / imp;
+    return rows.reduce((a, x) => a + x.position * x.impressions, 0) / imp2;
   };
-  console.log('\n意圖分類（站上唯一有優勢的是跨國/制度型；2026-08-21 改版前是 32.7 對 67.6）：');
-  for (const [label, rows] of [['日期/名稱型（沒有優勢）', intent.date], ['跨國/制度型（唯一資產）', intent.inst]]) {
-    const imp = rows.reduce((a, x) => a + x.impressions, 0);
-    const clk = rows.reduce((a, x) => a + x.clicks, 0);
-    const pos = avgPos(rows);
-    console.log(`  ${label}：查詢 ${rows.length}　曝光 ${imp}　點擊 ${clk}　平均名次 ${pos === null ? '—' : pos.toFixed(1)}`);
-  }
-  const unclassified = queryRows.length - intent.date.length - intent.inst.length;
-  if (unclassified > 0) console.log(`  （未分類 ${unclassified} 個查詢不進兩邊的平均）`);
-  console.log('  ⚠ 這兩個數字要和**改版上線後 Google 重爬過**的資料比才有意義；');
+  const line = (label, rows) => {
+    const i2 = rows.reduce((a, x) => a + x.impressions, 0);
+    const c2 = rows.reduce((a, x) => a + x.clicks, 0);
+    const p2 = avgPos(rows);
+    console.log(`  ${label}：查詢 ${rows.length}　曝光 ${i2}　點擊 ${c2}　CTR ${pct(c2, i2)}　平均名次 ${p2 === null ? '—' : p2.toFixed(1)}`);
+  };
+  console.log('\n意圖分類（前三類是站上的資產，第四類是 Google 答案框的標準品）：');
+  line('跨國/比較/制度規則      ', intent.cross);
+  line('國家×節日（單一國制度） ', intent.country);
+  line('名稱/翻譯型            ', intent.name);
+  line('純日期型（沒有優勢）    ', intent.date);
+  const unclassified = queryRows.length - intent.cross.length - intent.country.length
+    - intent.name.length - intent.date.length;
+  if (unclassified > 0) console.log(`  （未分類 ${unclassified} 個查詢不進任何一類的平均）`);
+  console.log('  ⚠ 這些數字要和**改版上線後 Google 重爬過**的資料比才有意義；');
   console.log('     GSC 資料固定落後 2–3 天，查 lastCrawlTime 確認它看過新標題沒有（見 ② 層）。');
+
+  // ── 摘要答對國家了嗎(2026-08-25 補進工具) ────────────────────────────────
+  // 立法緣由:2026-08-21 拍板「description 第一句是**本市場那一國**的制度答案」。
+  // 2026-08-25 用 query×page 交叉查下去,發現站上排進前 15 名的帶國名查詢**全部**是
+  // 「本市場的人問外國的事」(11 個查詢、83 曝光、平均 6.5 名、**0 點擊**),
+  // 而問本國的查詢一個都沒進前 15。也就是說那條規則正好答錯了每一個排得上去的查詢:
+  // 搜尋者問「2027印尼齋戒月時間」(排 5.2、41 曝光),摘要開頭是「台灣不把開齋節列為法定假日」。
+  // 頁面上**有**印尼那一段,只是摘要沒把它擺前面。這一層就是為了讓這個錯配不再隱形。
+  try {
+    const qp = await gscQuery(SA, GSC_SITE, {
+      startDate: dayStr(days), endDate: dayStr(0), dimensions: ['query', 'page'], rowLimit: 1000,
+    });
+    const SITE_COUNTRY = {
+      'aeiou.now': 'TW', 'en.aeiou.now': 'US', 'jp.aeiou.now': 'JP', 'cn.aeiou.now': 'CN',
+      'hi.aeiou.now': 'IN', 'id.aeiou.now': 'ID', 'br.aeiou.now': 'BR',
+    };
+    const Q_COUNTRY = [
+      [/taiwan|台湾|台灣/i, 'TW'], [/japan|japão|japao|jepang|日本/i, 'JP'],
+      [/china|chinese|中国|中國/i, 'CN'], [/india|印度|भारत/i, 'IN'],
+      [/indonesia|印尼/i, 'ID'], [/usa|united states|estados unidos|美国|美國|u\.s\./i, 'US'],
+      [/brazil|brasil|巴西/i, 'BR'],
+    ];
+    const same = []; const cross = [];
+    for (const x of (qp.rows || [])) {
+      const [q, page] = x.keys;
+      let host; try { host = new URL(page).host; } catch { continue; }
+      const site = SITE_COUNTRY[host];
+      if (!site) continue;
+      let qc = null;
+      for (const [re, cc] of Q_COUNTRY) if (re.test(q)) { qc = cc; break; }
+      if (!qc) continue;
+      (qc === site ? same : cross).push({ ...x, qc, site });
+    }
+    console.log('\n摘要答對國家了嗎（只看查詢裡有指名國家的）：');
+    line('問本國（摘要答得對）   ', same);
+    line('問外國（摘要答錯國）   ', cross);
+    const topCross = cross.filter((x) => x.position <= 15);
+    const topSame = same.filter((x) => x.position <= 15);
+    const tcImp = topCross.reduce((a, x) => a + x.impressions, 0);
+    const tcClk = topCross.reduce((a, x) => a + x.clicks, 0);
+    if (topCross.length) {
+      console.log(`  其中排進前 15 名的：問外國 ${topCross.length} 個查詢／${tcImp} 曝光／${tcClk} 點擊`
+        + `　　問本國 ${topSame.length} 個查詢`);
+      // 判準:排得上去的全是「問外國」而且點不到 —— 那是摘要答錯國,不是沒需求也不是排名不夠。
+      if (tcImp >= 30 && tcClk === 0 && topSame.length === 0) {
+        bottlenecks.push(`摘要錯配：前 15 名的帶國名查詢全是「問外國」（${tcImp} 曝光 0 點擊），`
+          + 'description 第一句卻講本市場那一國');
+        console.log('  ⚠️ 排得上去的帶國名查詢**全部**是「本市場的人問外國的事」，且一次都沒被點。');
+        console.log('     頁面涵蓋那個國家（查 data/topics/*/facts.json 的 observances），是摘要沒把它擺前面。');
+      }
+      for (const x of topCross.sort((a, b) => b.impressions - a.impressions).slice(0, 10)) {
+        console.log(`     imp=${String(x.impressions).padStart(3)} clk=${x.clicks} `
+          + `pos=${x.position.toFixed(1).padStart(5)}  問${x.qc}→站${x.site}  ${x.keys[0]}`);
+      }
+    }
+  } catch (e) {
+    console.log(`\n摘要答對國家了嗎：查不到（${e.message}）`);
+  }
 
   const top = queryRows.filter((x) => x.position <= 10);
   const topImp = top.reduce((a, x) => a + x.impressions, 0);
