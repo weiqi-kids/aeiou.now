@@ -160,11 +160,29 @@ function assertSortPageScope(sort) {
 }
 
 
-// 本站市場那一國要排在「什麼時候」答案的最前面。
+// meta description 的第一句要講「這個站的讀者搜這個 Topic 時、問的那一國」。
+//
 // 立法緣由（2026-08-20）：id 站 affection-and-reciprocity 的 meta description 開頭是
 // 「印度、中國」，印尼自己沒進前兩筆 —— 而 GSC 顯示落在那一頁的查詢正是
 // `kapan hari valentine 2027`。讀者問自己的國家，搜尋結果先給他別人的日期。
-// 這條只在「該 Topic 確實有本市場的 observance」時才要求，沒有就沒有，不逼人補資料。
+//
+// 修正（2026-08-25）：上面那個判斷（讀者問誰就先答誰）是對的，錯的是把「讀者問誰」
+// 直接等同於「讀者住哪」。GSC 的 query x page 顯示，站上排進前 15 名的帶國名查詢
+// **全部**是「本市場的人問外國的事」（11 查詢／83 曝光／0 點擊），問本國的一個都沒進
+// 前 15。所以有 `facts.demand_countries[LOCALE]`（scripts/gsc-demand-country.mjs 算的
+// 需求主題國）時，排最前面的應該是它；沒有那一格時仍然是本市場那一國（舊行為）。
+//
+// 這條守門因此檢查的是：**lead country 要排在其他國家前面**
+// （防 2026-08-20 那種「隨機別國跑到開頭」）。
+//
+// 為什麼不同時要求「本市場那一國也必須出現在 description 裡」：試過，會失敗，
+// 而且失敗得有道理。description 上限 170 字（seo.mjs 的 compactDescription），
+// 而 lead country 的制度敘述本來就佔滿那個額度 —— zh-TW 的 ramadan-and-eid
+// 光印尼那段就吃掉全部。硬塞一句台灣進去等於用有限字元去服務一類「在這個站上
+// 排不上去」的查詢（實測：問本國的帶國名查詢一個都沒進前 15），
+// 排 5.2 名的那類（問印尼）反而被稀釋。所以 lead 不是本市場時，本市場那一句
+// 由 [slug].astro 放在第二順位「塞得下就塞」，守門不強制它存活。
+// 只在「該 Topic 確實有本市場的 observance」時才要求，沒有就沒有，不逼人補資料。
 function assertHomeCountryFirst(topicId) {
   const { facts } = getTopicBundle(topicId);
   const slug = facts?.slug;
@@ -175,20 +193,31 @@ function assertHomeCountryFirst(topicId) {
   if (!existsSync(path)) fail(`dist 找不到 Topic 頁：${path}`);
   const page = readFileSync(path, 'utf8');
   const desc = page.match(/<meta\s+name=["']description["']\s+content=["']([\s\S]*?)["']/i)?.[1] || '';
+  // lead 必須是這一頁真的有內容的國家 —— 與 [slug].astro 的判斷同一條規則。
+  const covered = new Set((facts.observances || []).map((o) => o.country_code));
+  const demand = (facts.demand_countries || {})[LOCALE] || null;
+  const leadCode = demand && covered.has(demand) ? demand : marketCountry;
+  const lead = htmlEscape(countryName(leadCode));
   const home = htmlEscape(countryName(marketCountry));
   const others = [...new Set(dated.map((o) => o.country_code))]
-    .filter((code) => code !== marketCountry)
+    .filter((code) => code !== leadCode)
     .map((code) => htmlEscape(countryName(code)));
-  const homeAt = desc.indexOf(home);
-  if (homeAt < 0) {
+  const leadAt = desc.indexOf(lead);
+  if (leadAt < 0) {
+    fail(`${LOCALE}/${slug} meta description 沒有提到 lead country ${leadCode}（${lead}）`);
+  }
+  // lead 就是本市場時，本市場當然要在裡面；lead 是別國時不強制（理由見上面註解）。
+  if (leadCode === marketCountry && desc.indexOf(home) < 0) {
     fail(`${LOCALE}/${slug} meta description 沒有提到本市場 ${marketCountry}（${home}）`);
   }
   for (const other of others) {
     const at = desc.indexOf(other);
-    if (at >= 0 && at < homeAt) {
-      fail(`${LOCALE}/${slug} meta description 把 ${other} 排在本市場 ${home} 前面`
+    if (at >= 0 && at < leadAt) {
+      fail(`${LOCALE}/${slug} meta description 把 ${other} 排在 lead country ${lead} 前面`
         + `\n        「${desc.slice(0, 90)}…」`
-        + '\n        本站服務單一市場,讀者問的是自己的國家;排序見 src/pages/topic/[slug].astro 的 homeFirst()。');
+        + `\n        lead country = ${leadCode}`
+        + `（${demand && covered.has(demand) ? 'facts.demand_countries 算出的需求主題國' : '本市場，無需求資料'}）；`
+        + '\n        見 src/pages/topic/[slug].astro 的 leadCountryCode。');
     }
   }
 }

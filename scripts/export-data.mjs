@@ -262,6 +262,19 @@ for (const r of scoreRows) {
   byWindow.set(r.window, r);
 }
 
+// 每個 (Topic x 站) 的「搜尋需求問的是哪一國」 -> facts.json 的 demand_countries。
+// 產生者 scripts/gsc-demand-country.mjs;Topic 頁拿它決定 description 第一句講誰。
+// 這張表可能還不存在(新庫、或那支還沒跑過),缺表一律當成空 —— 前端會退回本市場那一國。
+const demandByTopic = new Map();
+try {
+  for (const r of db.prepare(
+    "SELECT topic_id, locale, country_code FROM topic_demand_country ORDER BY topic_id, locale"
+  ).all()) {
+    if (!demandByTopic.has(r.topic_id)) demandByTopic.set(r.topic_id, {});
+    demandByTopic.get(r.topic_id)[r.locale] = r.country_code;
+  }
+} catch { /* 沒有這張表就是沒有結論,不是錯誤 */ }
+
 const observancesByTopic = new Map();
 for (const r of db.prepare(
   "SELECT * FROM topic_observances ORDER BY topic_id, country_code, observed_date, observance_key"
@@ -447,6 +460,10 @@ for (const t of topics) {
     updated_at: new Date(t.updated_at * 1000).toISOString(),
     access_level: t.access_level,
     observances: factObservances,
+    // (locale -> alpha-2) 這個站的讀者搜這個 Topic 時問的是哪一國(2026-08-25)。
+    // 只有過門檻的格子才在這裡;沒有這一格時 Topic 頁退回本市場那一國。
+    // 語意是「查詢問誰」,不是「搜尋者在哪」 —— 見 db/schema-host.sql 的 topic_demand_country。
+    demand_countries: demandByTopic.get(t.topic_id) ?? {},
     // 長青 Topic 沒有固定日期，改用明確標記的 regional_notes；這些資料不進日期排序。
     regional_notes: regionalRows.map((row) => ({
       country_code: row.country_code,

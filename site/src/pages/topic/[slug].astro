@@ -249,29 +249,54 @@ const pageTitle = titleYear
   ? `${title} ${titleYear}${copy.titleSep}${titleSuffix}${copy.titleSep}${SITE_NAME}`
   : `${title}${copy.titleSep}${titleSuffix}${copy.titleSep}${SITE_NAME}`;
 
-// description 的第一句必須是**本市場那一國**(check-local-scope.mjs 的 assertHomeCountryFirst,
-// 立法緣由 2026-08-20:id 站的摘要開頭是「印度、中國」,印尼自己沒進前兩筆)。
-// 這條規則跟「先講制度、不要先講日期」不衝突,反而合流 —— 讀者要的正是**他自己國家**
-// 的制度答案(「台灣的移工到底放不放假」),那既是首句、也是最強的點擊理由。
-// 本市場那一格沒有敘述時才退回日期開頭(舊行為),不讓守門條件落空。
-const homeCountryEntry = worldCountries.find((country) => country.country_code === HOME_COUNTRY) || null;
-const homeCountryAnswer = homeCountryEntry
-  ? (homeCountryEntry.kind === 'observance'
-    ? customsText(i18n, homeCountryEntry)
-    : regionalNoteText(i18n, homeCountryEntry))
-  : null;
+// description 的第一句是**這個站的讀者搜這個 Topic 時、問的那一國**的制度答案。
+//
+// 2026-08-20 的版本是「一律講本市場那一國」,立法緣由是 id 站的摘要開頭變成
+// 「印度、中國」,印尼自己沒進前兩筆,而落在那頁的查詢正是 `kapan hari valentine 2027`。
+// 那個判斷(讀者問誰就先答誰)是對的;錯的是把「讀者問誰」直接等同於「讀者住哪」。
+//
+// 2026-08-25 用 GSC 的 query x page 交叉查下去:站上**排進前 15 名的帶國名查詢
+// 全部是「本市場的人問外國的事」**(11 個查詢、83 曝光、平均 6.5 名、**0 點擊**),
+// 問本國的查詢一個都沒進前 15。最大一筆 `2027印尼齋戒月時間` 排 5.2、41 曝光、0 點擊,
+// 搜尋者在 TWN/HKG/IDN,落在**這個 zh-TW 站**的 ramadan-and-eid,
+// 而摘要開頭是「台灣不把開齋節列為法定假日…」。頁面上**有**印尼那一段,
+// 只是摘要沒把它擺前面。一個問印尼的人看到摘要在講台灣,不點是理性的。
+//
+// 所以 lead country 改成資料算出來的**需求主題國**(facts.demand_countries[LOCALE],
+// 產生者 scripts/gsc-demand-country.mjs)。沒有那一格(資料不足或該 Topic 沒人指名國家)
+// 就退回本市場那一國 —— **沒資料時的行為必須是 2026-08-20 的舊行為**。
+// lead 不是本市場時,本市場那一國接在第二句:同一頁也服務直接搜這個節日的本地讀者。
+//
+// 這不是推翻 2026-08-21 的「先講制度、不要先講日期」—— 那半是對的
+// (純日期型名次 32.7→18.2),換掉的只是「哪一國」的選法。
+const demandCountry = (facts?.demand_countries || {})[LOCALE] || null;
+// 需求主題國必須是這一頁真的有那一段的國家,否則摘要會承諾頁面上不存在的內容。
+const leadCountryCode = demandCountry
+  && worldCountries.some((country) => country.country_code === demandCountry)
+  ? demandCountry
+  : HOME_COUNTRY;
+const countryAnswerText = (entry) => (entry
+  ? (entry.kind === 'observance' ? customsText(i18n, entry) : regionalNoteText(i18n, entry))
+  : null);
+// 敘述本來就以國名開頭時不再加一次前綴 —— 否則會印出「台灣：台灣不把開齋節列為…」。
+const countrySentence = (entry) => {
+  const answer = entry ? countryAnswerText(entry) : null;
+  if (!entry || !answer) return null;
+  const label = countryName(entry.country_code);
+  return answer.startsWith(label) ? answer : `${label}${copy.colon}${answer}`;
+};
+const leadCountryEntry = worldCountries.find((country) => country.country_code === leadCountryCode) || null;
+const homeCountryEntry = leadCountryCode === HOME_COUNTRY
+  ? null
+  : (worldCountries.find((country) => country.country_code === HOME_COUNTRY) || null);
 const dateSentence = dateAnswer.length > 0
   ? `${dateAnswer.slice(0, 2).join(copy.listSep)}${copy.endMark}`
   : null;
-// 敘述本來就以國名開頭時不再加一次前綴 —— 否則會印出「台灣：台灣不把開齋節列為…」。
-const homeCountryLabel = homeCountryEntry ? countryName(HOME_COUNTRY) : '';
-const homeLead = homeCountryEntry && homeCountryAnswer
-  ? (homeCountryAnswer.startsWith(homeCountryLabel)
-    ? homeCountryAnswer
-    : `${homeCountryLabel}${copy.colon}${homeCountryAnswer}`)
-  : dateSentence;
+// lead 那一格沒有敘述時才退回日期開頭(舊行為),不讓守門條件落空。
+const homeLead = countrySentence(leadCountryEntry) || dateSentence;
 const metaDescription = compactDescription([
   homeLead,
+  countrySentence(homeCountryEntry),
   whatAnswer,
   metaCoverage ? `${copy.coveragePrefix} ${metaCoverage}${copy.endMark}` : null,
   homeLead === dateSentence ? null : dateSentence,

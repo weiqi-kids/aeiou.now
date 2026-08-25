@@ -441,6 +441,33 @@ CREATE INDEX IF NOT EXISTS idx_gqm_date ON gsc_query_metrics(metric_date);
 CREATE INDEX IF NOT EXISTS idx_gqm_page ON gsc_query_metrics(page_url, metric_date);
 CREATE INDEX IF NOT EXISTS idx_gqm_query ON gsc_query_metrics(query, metric_date);
 
+-- 每個 (Topic x 站) 的「搜尋需求問的是哪一國」(2026-08-25)。
+-- 產生者:scripts/gsc-demand-country.mjs(從 gsc_query_metrics 解析查詢字串裡的國名)。
+-- 消費者:export-data.mjs -> facts.json.demand_countries -> Topic 頁 description 第一句。
+--
+-- 立法緣由:2026-08-21 拍板「description 第一句是**本市場那一國**」,但 2026-08-25
+-- 的 query x page 交叉顯示,站上排進前 15 名的帶國名查詢**全部**是「本市場的人問外國的事」
+-- (11 查詢/83 曝光/0 點擊),問本國的一個都沒進前 15 —— 那條規則正好答錯了每一個
+-- 排得上去的查詢。這張表就是「第一句該講哪一國」的答案。
+--
+-- 這裡的 country_code 是**查詢問的那一國**,不是搜尋者所在國。
+--    搜尋者所在國在 topic_search_metrics.scope('country:XX'),兩者不可混用:
+--    `2027印尼齋戒月時間` 的搜尋者在 TWN/HKG/IDN,問的卻是印尼。
+--
+-- 只存過門檻的那一格(門檻見 scripts/lib/demand-country.mjs);沒這一格時前端
+-- 退回本市場那一國 = 2026-08-21 的行為。**沒資料時的行為必須是舊行為。**
+CREATE TABLE IF NOT EXISTS topic_demand_country (
+  topic_id     TEXT NOT NULL,
+  locale       TEXT NOT NULL,
+  country_code TEXT NOT NULL,                 -- 查詢問的那一國(alpha-2),必為該 Topic 有內容的國家
+  impressions  INTEGER NOT NULL,              -- 該國的指名曝光
+  share        REAL NOT NULL,                 -- 佔該 (topic, locale) 全部指名曝光的比例
+  window_days  INTEGER NOT NULL,              -- 算這一格用了幾天的資料
+  computed_at  INTEGER NOT NULL,
+  PRIMARY KEY (topic_id, locale)
+);
+CREATE INDEX IF NOT EXISTS idx_tdc_locale ON topic_demand_country(locale);
+
 -- ============ §8.3 SEO 成長回饋域(2026-08-23) =============================
 -- 每日把 GA4 報表、GSC 查詢工作與季節跑道凍成一筆快照，避免「跑過一次就忘了」
 -- 或拿不同資料窗直接比較。query/page 本身已在 gsc_query_metrics 保存；這裡只留

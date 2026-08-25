@@ -139,6 +139,14 @@ if ! "$NODE_BIN" "$REPO/scripts/review-topic-content.mjs"; then
   exit 1
 fi
 
+# 需求主題國(Topic 頁 description 第一句要講哪一國)。必須排在 export-data 之前 ——
+# 它的結論要進 facts.json。**不 fail-closed**:算不出來只是這一輪沿用上一輪的結論,
+# 前端本來就會在沒有結論時退回本市場那一國(＝2026-08-21 的行為),不會顯示假資料。
+log "gsc-demand-country.mjs ..."
+if ! "$NODE_BIN" "$REPO/scripts/gsc-demand-country.mjs"; then
+  log "WARN: gsc-demand-country 失敗,這一輪沿用既有的需求主題國(不中斷 export)"
+fi
+
 log "export-data.mjs ..."
 EXPORT_OUT="$("$NODE_BIN" "$REPO/scripts/export-data.mjs" 2>&1)"
 EXPORT_RC=$?

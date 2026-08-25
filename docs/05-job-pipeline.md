@@ -49,7 +49,15 @@
 管線外另有三支(草案沒列,但這個站需要):
 `sync-topics-to-d1` / `sync-questions-to-d1` / `sync-reactions-from-d1`(主機 ↔ D1)、
 `sync-search-index`(Topic → Vectorize)、`archive-to-r2`(冷資料)、
-`gsc-topic-metrics`(每日 GSC)、`seed-ask-the-world`(種子題保鮮)。
+`gsc-topic-metrics`(每日 GSC)、`seed-ask-the-world`(種子題保鮮)、
+`gsc-demand-country`(每小時,排在 `export-data` 前面 —— 結論要進 facts.json)。
+
+`gsc-demand-country` 算的是**每個 (Topic × 站) 的搜尋需求問的是哪一國**,
+Topic 頁的 description 第一句就講那一國。⚠ 那個「哪一國」是**查詢問誰**,
+不是**搜尋者住哪** —— 後者在 `topic_search_metrics.scope`(`country:XX`),兩者不可混用。
+沒算出結論的格子,前端退回本市場那一國(＝2026-08-21 的行為);
+所以這一支**不 fail-closed**,失敗只是不新鮮,不會讓讀者看到假資料。
+查法:`node scripts/gsc-demand-country.mjs --report`。
 
 ## 三個刻意的缺口(是決定,不是漏做)
 

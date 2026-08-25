@@ -44,6 +44,7 @@
 | 有沒有殘留的背景 server | `pgrep -af '[a]stro (dev\|preview)'; pgrep -af '[h]ttp\.server'` |
 | **Bot 防護現在是開是關** | `curl -s "$API/v1/me" \| grep -o '"turnstile":{[^}]*}'`(兩個環境值都設才 required=true;七站不必為了開關重建) |
 | reaction 計數回流了什麼 | `sqlite3 db/aeiou.sqlite "SELECT target_type,COUNT(*),SUM(total) FROM reaction_totals GROUP BY 1"` |
+| **Topic 頁第一句該講哪一國**(需求主題國;沒結論=退回本市場那一國) | `node scripts/gsc-demand-country.mjs --report` —— 印出過門檻與未過門檻的格子 |
 | **跨國/制度型查詢排在哪**(改版效果的唯一判準) | `node scripts/seo-health.mjs` 的 ③ 層「意圖分類」兩行(曝光加權平均名次)。⚠ 要先確認 Google 重爬過:`inspectUrl(...)` 的 `lastCrawlTime`(回傳**就是** indexStatusResult,沒有 `.inspectionResult` 那層) |
 | 題庫有幾題、涵蓋到哪天 | `sqlite3 db/aeiou.sqlite "SELECT kind,COUNT(*),MIN(qdate),MAX(qdate) FROM questions GROUP BY kind"` |
 | 線上投票數(D1) | `cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT COUNT(*) n, COUNT(DISTINCT question_id) q FROM question_votes"` |
@@ -275,6 +276,7 @@ cd site && for L in zh-TW en ja zh-CN hi id pt-BR; do LOCALE=$L pnpm build || br
 node scripts/seo-health.mjs                     # 量測/索引/排名/內容四層診斷(含樣本量)
 node scripts/gsc-topic-metrics.mjs              # GSC 每日 Topic 曝光累積(冪等,重跑安全)
 node scripts/gsc-topic-metrics.mjs --days 480   # 回補 GSC 全部保留期
+node scripts/gsc-demand-country.mjs --report    # 每個 (Topic × 站) 的需求主題國(查詢問誰,不是搜尋者住哪)
 
 # ── Worker ──
 cd api && npx wrangler deploy
@@ -337,10 +339,20 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
   只抓顯式多國詞、**抓不到「節日＋國名」**的二分類器,而「本市場的人問外國的事」才是
   站上真正排得上去的查詢。改成四分類重算後,「國家×節日」是全站名次最好的一類。
   分類器已修進 `scripts/seo-health.mjs` ③ 層,現況一律跑它,**不要改回二分類**。
-  ⚠ **「description 第一句 = 本市場那一國」這條規則本身正在被檢討**(2026-08-25 查出,
-  尚未拍板):`seo-health.mjs` 新增的「摘要答對國家了嗎」那一層顯示,排進前 15 名的
-  帶國名查詢**全部**是「問外國」且 0 點擊,問本國的一個都沒進前 15。緣由與候選修法
-  見 `docs/TODO.md` §「搜尋意圖重新對準」的 2026-08-25 條目。**改這條要用戶點頭。**
+  ⚠ **「description 第一句 = 本市場那一國」已改成「= 需求主題國」**(2026-08-25 用戶核准)——
+  `seo-health.mjs` 的「摘要答對國家了嗎」那一層顯示,排進前 15 名的帶國名查詢**全部**是
+  「本市場的人問外國的事」且 0 點擊,問本國的一個都沒進前 15;那條規則正好答錯了每一個
+  排得上去的查詢。現在第一句講 `facts.demand_countries[LOCALE]`(產生者
+  `scripts/gsc-demand-country.mjs`,掛在 hourly 的 `export-data` 之前)。
+  🔴 那個「哪一國」是**查詢問誰**,不是**搜尋者住哪** —— 後者在
+  `topic_search_metrics.scope`(`country:XX`),**兩者不可混用**:
+  `2027印尼齋戒月時間` 的搜尋者在 TWN/HKG/IDN,問的卻是印尼。
+  沒有結論的格子退回本市場那一國(舊行為),所以**沒資料時的行為必須是舊行為**。
+  門檻在 `scripts/lib/demand-country.mjs`(指名曝光 >=5 且佔該格多數),
+  刻意保守 —— 這是會改變每個讀者看到什麼的判斷。
+  查法:`node scripts/gsc-demand-country.mjs --report`;守門是
+  `site/scripts/check-local-scope.mjs` 的 `assertHomeCountryFirst`(檢查 lead 排最前面;
+  lead 不是本市場時**不**強制本市場出現在摘要裡,理由寫在該函式註解)。
 - **Ask the World 的提問對象選單長在發文框裡,不另開 `#ask` 區塊**(2026-08-21)——
   Topic 頁版面的硬性規定沒有 `#ask`(見上方版面段),所以 `DiscussionRoom` 的 composer 多一個
   `<select>`,名單 = 該 Topic 實際涵蓋的國家(`askCountries` prop)。欄位 `posts.target_country`
