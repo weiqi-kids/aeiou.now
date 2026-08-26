@@ -1,0 +1,347 @@
+{
+  "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+  "slug": "carnival",
+  "canonical_name": "Carnival, Mardi Gras, and Carnaval",
+  "commonality": "the days of licensed excess immediately before Lent, and the parades that inherited the form without the fast",
+  "category": "festival",
+  "status": "active",
+  "is_perennial": 0,
+  "updated_at": "2026-08-26T09:11:25.000Z",
+  "access_level": 0,
+  "observances": [
+    {
+      "observance_id": "obs_top_01M0YNDARW4N54N5F89EWDX75T_BR_carnaval",
+      "observance_key": "carnaval",
+      "country_code": "BR",
+      "local_name": "Carnaval",
+      "observed_date": null,
+      "date_rule": "復活節前第 48 至第 47 日（四旬期首日「聖灰星期三」的前兩天）",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_E7CD104399E6A4F964C2C4D8",
+        "src_4175A93DA23D8D8952FA692B"
+      ],
+      "source_urls": [
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+        "https://www.gov.br/gestao/pt-br/assuntos/noticias/2025/dezembro/confira-o-calendario-oficial-de-feriados-nacionais-e-pontos-facultativos-em-2026"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_BR_carnaval_2026_2026-02-16",
+          "occurrence_year": 2026,
+          "starts_on": "2026-02-16",
+          "ends_on": "2026-02-17",
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E7CD104399E6A4F964C2C4D8"
+          ],
+          "source_urls": [
+            "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_BR_carnaval_2027_2027-02-08",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-08",
+          "ends_on": "2027-02-09",
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_E7CD104399E6A4F964C2C4D8"
+          ],
+          "source_urls": [
+            "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_BR_carnaval_2027_2027-02-08",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-08",
+        "ends_on": "2027-02-09",
+        "calendar_system": "gregorian",
+        "timezone": "America/Sao_Paulo",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_E7CD104399E6A4F964C2C4D8"
+        ],
+        "source_urls": [
+          "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+        ],
+        "distance_days": 166
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0YNDARW4N54N5F89EWDX75T_IN_goa-carnaval",
+      "observance_key": "goa-carnaval",
+      "country_code": "IN",
+      "local_name": "Viva Carnaval",
+      "observed_date": null,
+      "date_rule": "復活節前第 50 至第 47 日（聖灰星期三前的星期六到星期二）",
+      "date_range_end": null,
+      "popularity_rank": 3,
+      "source_ids": [
+        "src_D8578735418EC731A995A4EF",
+        "src_235BDAECE86AC595BDB5F7DD"
+      ],
+      "source_urls": [
+        "https://goatourism.gov.in/events-calendar/",
+        "https://goatourism.gov.in/wp-content/uploads/2018/12/Goa_State_Festivals_2025-26.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_IN_goa-carnaval_2026_2026-02-14",
+          "occurrence_year": 2026,
+          "starts_on": "2026-02-14",
+          "ends_on": "2026-02-17",
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_D8578735418EC731A995A4EF"
+          ],
+          "source_urls": [
+            "https://goatourism.gov.in/events-calendar/"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_IN_goa-carnaval_2027_2027-02-06",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-06",
+          "ends_on": "2027-02-09",
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_D8578735418EC731A995A4EF"
+          ],
+          "source_urls": [
+            "https://goatourism.gov.in/events-calendar/"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_IN_goa-carnaval_2027_2027-02-06",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-06",
+        "ends_on": "2027-02-09",
+        "calendar_system": "gregorian",
+        "timezone": "Asia/Kolkata",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_D8578735418EC731A995A4EF"
+        ],
+        "source_urls": [
+          "https://goatourism.gov.in/events-calendar/"
+        ],
+        "distance_days": 164
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0YNDARW4N54N5F89EWDX75T_JP_asakusa-samba",
+      "observance_key": "asakusa-samba",
+      "country_code": "JP",
+      "local_name": "浅草サンバカーニバル",
+      "observed_date": null,
+      "date_rule": "八月的最後一個星期六",
+      "date_range_end": null,
+      "popularity_rank": 4,
+      "source_ids": [
+        "src_3E5FF914ED7B451624E5BD73"
+      ],
+      "source_urls": [
+        "https://www.city.taito.lg.jp/event/kanko/asakusa-sanba.html"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_JP_asakusa-samba_2026_2026-08-29",
+          "occurrence_year": 2026,
+          "starts_on": "2026-08-29",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_3E5FF914ED7B451624E5BD73"
+          ],
+          "source_urls": [
+            "https://www.city.taito.lg.jp/event/kanko/asakusa-sanba.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_JP_asakusa-samba_2027_2027-08-28",
+          "occurrence_year": 2027,
+          "starts_on": "2027-08-28",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "Asia/Tokyo",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_3E5FF914ED7B451624E5BD73"
+          ],
+          "source_urls": [
+            "https://www.city.taito.lg.jp/event/kanko/asakusa-sanba.html"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_JP_asakusa-samba_2026_2026-08-29",
+        "occurrence_year": 2026,
+        "starts_on": "2026-08-29",
+        "ends_on": null,
+        "calendar_system": "local",
+        "timezone": "Asia/Tokyo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_3E5FF914ED7B451624E5BD73"
+        ],
+        "source_urls": [
+          "https://www.city.taito.lg.jp/event/kanko/asakusa-sanba.html"
+        ],
+        "distance_days": 3
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0YNDARW4N54N5F89EWDX75T_US_mardi-gras",
+      "observance_key": "mardi-gras",
+      "country_code": "US",
+      "local_name": "Mardi Gras",
+      "observed_date": null,
+      "date_rule": "復活節前第 47 日（聖灰星期三前一日）",
+      "date_range_end": null,
+      "popularity_rank": 2,
+      "source_ids": [
+        "src_C1793383A3C04440C051CB9B"
+      ],
+      "source_urls": [
+        "https://legis.la.gov/Legis/Law.aspx?d=74097"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_US_mardi-gras_2026_2026-02-17",
+          "occurrence_year": 2026,
+          "starts_on": "2026-02-17",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Chicago",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_C1793383A3C04440C051CB9B"
+          ],
+          "source_urls": [
+            "https://legis.la.gov/Legis/Law.aspx?d=74097"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_US_mardi-gras_2027_2027-02-09",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-09",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Chicago",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_C1793383A3C04440C051CB9B"
+          ],
+          "source_urls": [
+            "https://legis.la.gov/Legis/Law.aspx?d=74097"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_US_mardi-gras_2027_2027-02-09",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-09",
+        "ends_on": null,
+        "calendar_system": "gregorian",
+        "timezone": "America/Chicago",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_C1793383A3C04440C051CB9B"
+        ],
+        "source_urls": [
+          "https://legis.la.gov/Legis/Law.aspx?d=74097"
+        ],
+        "distance_days": 167
+      }
+    }
+  ],
+  "demand_countries": {},
+  "regional_notes": [
+    {
+      "country_code": "CN",
+      "kind": "absence",
+      "source_urls": [
+        "https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/jiedu/tujie/202411/content_6986437.htm",
+        "https://whlyj.sh.gov.cn/cysc/20230804/78ab671cc9844bb4b7ae22020b15d69c.html"
+      ]
+    },
+    {
+      "country_code": "ID",
+      "kind": "absence",
+      "source_urls": [
+        "https://kemenag.go.id/nasional/pemerintah-tetapkan-17-hari-libur-nasional-dan-8-cuti-bersama-2026-cAwAy"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "kind": "absence",
+      "source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "country_code": "BR",
+      "observance_ids": [
+        "obs_top_01M0YNDARW4N54N5F89EWDX75T_BR_carnaval"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "observance_ids": [
+        "obs_top_01M0YNDARW4N54N5F89EWDX75T_IN_goa-carnaval"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "observance_ids": [
+        "obs_top_01M0YNDARW4N54N5F89EWDX75T_JP_asakusa-samba"
+      ]
+    },
+    {
+      "country_code": "US",
+      "observance_ids": [
+        "obs_top_01M0YNDARW4N54N5F89EWDX75T_US_mardi-gras"
+      ]
+    }
+  ],
+  "relations": [],
+  "source_ids": [
+    "src_235BDAECE86AC595BDB5F7DD",
+    "src_3E5FF914ED7B451624E5BD73",
+    "src_4175A93DA23D8D8952FA692B",
+    "src_C1793383A3C04440C051CB9B",
+    "src_D8578735418EC731A995A4EF",
+    "src_E7CD104399E6A4F964C2C4D8"
+  ],
+  "source_urls": [
+    "https://goatourism.gov.in/wp-content/uploads/2018/12/Goa_State_Festivals_2025-26.pdf",
+    "https://www.city.taito.lg.jp/event/kanko/asakusa-sanba.html",
+    "https://www.gov.br/gestao/pt-br/assuntos/noticias/2025/dezembro/confira-o-calendario-oficial-de-feriados-nacionais-e-pontos-facultativos-em-2026",
+    "https://legis.la.gov/Legis/Law.aspx?d=74097",
+    "https://goatourism.gov.in/events-calendar/",
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+    "https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/jiedu/tujie/202411/content_6986437.htm",
+    "https://whlyj.sh.gov.cn/cysc/20230804/78ab671cc9844bb4b7ae22020b15d69c.html",
+    "https://kemenag.go.id/nasional/pemerintah-tetapkan-17-hari-libur-nasional-dan-8-cuti-bersama-2026-cAwAy",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+  ],
+  "content_updated_at": "2026-08-26T09:16:41.012Z",
+  "content_hash": "a3665dde4a9ecc676cb39447310f1f91928a9e6c8f2d8ff102571954d866a292"
+}

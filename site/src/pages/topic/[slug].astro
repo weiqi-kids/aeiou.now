@@ -245,10 +245,17 @@ const dateAnswer = homeFirst(countries)
 // description 改成 summary 先行 —— loc.summary 本來就在講制度差異
 // (例:「開齋節在四個地方有四種身分…」),它才是點擊理由,日期壓到句末。
 // 這裡不新增任何文案 —— 年份與國家數取自資料,其餘字串全部來自 SEO_COPY。
-const nextStart = countries
+// title 的年份以**本市場那一國**的下一次為準,沒有才退回全站最近的一次(2026-08-26)。
+// 起因:carnival 上線時 pt-BR 站的標題印成「Carnaval 2026」,而巴西的下一次是 2027-02-08
+// —— 2026 那個年份來自日本八月的浅草サンバカーニバル(全站最近的一次)。
+// 要接的查詢是 `carnaval 2027`(Bing 實測 br 市場精準量 38,488),印 2026 等於打偏。
+// 讀者問的是自己國家的那一次,同 description 的 lead 規則。
+const nextStartOf = (list) => list
   .map((observance) => observance.next_occurrence?.starts_on)
   .filter(Boolean)
   .sort()[0] || null;
+const nextStart = nextStartOf(countries.filter((o) => o.country_code === HOME_COUNTRY))
+  || nextStartOf(countries);
 const titleYear = nextStart ? nextStart.slice(0, 4) : null;
 
 // <title> 開頭放**本市場那一國的當地叫法**(2026-08-26)。
