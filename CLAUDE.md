@@ -446,9 +446,9 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
   (2026-08-20 兩個坑:`www.tad.gov.tw` 整批 302 到 `ErrorPage.html` 卻回 200;
   `bndigital.bn.gov.br` 從主機回 403、從 GitHub Actions 回 404。緣由見 `docs/TODO.md`
   §「事故:兩種『狀態碼騙人』的來源」。)
-  現況查法:`node scripts/check-source-urls.mjs`(`--topic <slug>` 只驗一個 Topic)。
-  它分三種判定:`DEAD`=跟完 redirect 落在登入頁/錯誤頁或 4xx **且網域根目錄通**(內容真的沒了,exit 1);
-  `BLOCKED`=根目錄也不通(**本主機被擋,不是來源失效**,不擋 CI,該從別的網路複驗);`THIN`=正文太短的殼頁。
+  現況查法:`node scripts/check-source-urls.mjs`(讀 `data/`,不吃 SQLite,所以 CI 也跑得動)。
+  判準**不是狀態碼**:只有 404/410、以及**跟完 redirect 落在錯誤頁或登入牆**才 ERROR(exit 1);
+  403/412/429/5xx/連線失敗一律 WARN —— 那是對方擋機器人或暫時故障,不該因此擋自己的部署。
   **hourly 的在地資料驗證已照這條紅線改判準**(2026-08-21):`update-local-data.mjs`
   遇到 4xx 會**先打該網域根目錄**——根目錄通才判「內容真的沒了」並擋下輸出;
   根目錄也連不上就只 WARN 放行(是主機被擋,不是來源失效),且不計入傳輸層容忍計數。

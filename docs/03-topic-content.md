@@ -148,15 +148,14 @@ node scripts/generate-topic-cover.mjs --slug <slug> --prompt "……場景描述
 『狀態碼騙人』的來源」(2026-08-20)。改完來源一定要跑:
 
 ```bash
-node scripts/check-source-urls.mjs                 # 全部來源
-node scripts/check-source-urls.mjs --topic <slug>  # 只驗某個 Topic
-node scripts/check-source-urls.mjs --url <url>     # 驗單一網址
+node scripts/check-source-urls.mjs
 ```
 
-判準**不是狀態碼**,是三層:① 跟完 redirect 的落點有沒有掉進登入頁/錯誤頁 ②
-抓得到的正文長度(HTML 去標籤／PDF 走 `pdftotext`)③ 4xx/連不上時**再打網域根目錄複驗** ——
-根目錄通=`DEAD`(內容真的沒了,要換來源);根目錄也不通=`BLOCKED`(本主機被擋,不是來源的錯,
-該從別的網路複驗)。exit 1 只在有 `DEAD` 時發生。
+它讀 `data/`(不吃 SQLite,所以 CI 也跑得動),判準**不是狀態碼**:
+只有 404/410、以及**跟完 redirect 落在錯誤頁或登入牆**才 ERROR 並 exit 1;
+403/412/429/5xx/連線失敗一律 WARN —— 那是對方擋機器人或暫時故障,
+不該因為別人的 WAF 就擋下自己的部署。它**刻意不掛進 hourly-export**
+(那會把別人的網站狀態綁進本站的發佈路徑)。
 
 ### 年度日期(上線排序的權威資料)
 
