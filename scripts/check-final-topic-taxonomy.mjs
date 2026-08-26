@@ -10,6 +10,9 @@ import { isTrendTopic } from "./lib/topics.mjs";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const LOCALES = ['zh-TW', 'en', 'ja', 'zh-CN', 'hi', 'id', 'pt-BR'];
 const FINAL_SLUGS = [
+  // indigenous-and-colonial-memory(2026-08-26 用戶核准):Bing 實測 `columbus day 2026` @us 精準量 26,721、
+  // `indigenous peoples day 2026` 4,165 —— 同一格日曆上兩個名字在爭。
+  'indigenous-and-colonial-memory',
   // halloween(2026-08-26 用戶核准):Bing 實測 `ハロウィン` 裸詞 @jp 精準量 11,047、us 6,893。
   // 原本是 ghosts 的 US rank 1,而 jp 站那頁的 title 是「お盆、節分」,永遠輪不到它。
   'halloween',
