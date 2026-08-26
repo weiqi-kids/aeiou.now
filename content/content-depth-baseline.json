@@ -10,7 +10,7 @@
     "affection-and-reciprocity": {
       "units": 8,
       "countries": 7,
-      "min_chars": 1664
+      "min_chars": 1886
     },
     "ask-the-world": {
       "units": 7,
@@ -21,6 +21,11 @@
       "units": 7,
       "countries": 7,
       "min_chars": 1432
+    },
+    "beer-festivals": {
+      "units": 7,
+      "countries": 7,
+      "min_chars": 2730
     },
     "birthdays-and-blessings": {
       "units": 7,
@@ -87,6 +92,21 @@
       "countries": 7,
       "min_chars": 1812
     },
+    "emancipation-and-abolition": {
+      "units": 8,
+      "countries": 7,
+      "min_chars": 3072
+    },
+    "environment-days": {
+      "units": 10,
+      "countries": 7,
+      "min_chars": 3684
+    },
+    "equinox-and-seasonal-turns": {
+      "units": 12,
+      "countries": 7,
+      "min_chars": 4106
+    },
     "exam-season": {
       "units": 8,
       "countries": 7,
@@ -102,10 +122,15 @@
       "countries": 7,
       "min_chars": 1601
     },
-    "ghosts-ancestors-and-remembrance": {
+    "founders-and-national-leaders": {
       "units": 9,
+      "countries": 7,
+      "min_chars": 3612
+    },
+    "ghosts-ancestors-and-remembrance": {
+      "units": 8,
       "countries": 6,
-      "min_chars": 1269
+      "min_chars": 1114
     },
     "graduation-season": {
       "units": 7,
@@ -127,10 +152,20 @@
       "countries": 7,
       "min_chars": 1346
     },
+    "indigenous-and-colonial-memory": {
+      "units": 9,
+      "countries": 7,
+      "min_chars": 3902
+    },
     "islamic-calendar-days": {
       "units": 10,
       "countries": 7,
       "min_chars": 2668
+    },
+    "jewish-calendar-days": {
+      "units": 10,
+      "countries": 7,
+      "min_chars": 3355
     },
     "labour-day": {
       "units": 7,
@@ -141,6 +176,11 @@
       "units": 11,
       "countries": 7,
       "min_chars": 2033
+    },
+    "long-holiday-weeks": {
+      "units": 8,
+      "countries": 7,
+      "min_chars": 3455
     },
     "mid-autumn-and-moon-viewing": {
       "units": 9,
@@ -211,6 +251,16 @@
       "units": 7,
       "countries": 7,
       "min_chars": 2613
+    },
+    "shopping-festivals": {
+      "units": 8,
+      "countries": 7,
+      "min_chars": 3606
+    },
+    "tanabata-and-qixi": {
+      "units": 10,
+      "countries": 7,
+      "min_chars": 3913
     },
     "teachers-day": {
       "units": 7,

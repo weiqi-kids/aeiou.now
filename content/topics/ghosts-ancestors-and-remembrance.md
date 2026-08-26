@@ -31,13 +31,6 @@
 - source: https://jpsearch.go.jp/gallery/ndl-O6a96jYMq9Q
 - source: https://www.japan.travel/en/see-and-do/festivals-and-events/
 
-## observance JP setsubun
-- local_name: 節分
-- date_rule: 立春前一日左右，日期每年略有差異
-- rank: 2
-- source: https://www.ndl.go.jp/kaleido/entry/21/1.html
-- source: https://www.japan.travel/en/see-and-do/festivals-and-events/
-
 ## observance TW ghost-month
 - local_name: 農曆七月／中元普渡
 - date_rule: 農曆七月，地方普渡日期依社區而異
@@ -65,8 +58,6 @@
 中國中元相關做法可能有祭祖、普渡、焚香和地方儀式。它和鬼月一樣涉及亡者與孤魂，但各地宗教傳統和家庭信仰差異很大。
 ### customs JP obon
 日本盂蘭盆會迎接並送別祖先，墓地整理、返鄉和盆踊り常出現在地方行事裡。實際日期與儀式會隨地區而變。お盆本身不是法定假日，卻是全年最明顯的一次全國性停擺：多數企業在八月中自行安排連休，返鄉的車潮與票價因此有固定的高峰。家門口的迎え火與送り火把整件事框成一趟往返——先點火接回來，幾天後再點火送走，中間的盆踊り是留在人間的那幾天。
-### customs JP setsubun
-日本的節分在立春前一日，日期每年略有不同。國立國會圖書館的專題指出，它的源頭是中國的驅疫儀式「追儺」，傳入日本後成為平安時代的宮廷行事；原本由方相氏驅趕看不見的疫鬼，到平安後期，方相氏本身反而被當成鬼、由朝臣驅逐出去。今天留下的是節分會撒豆驅邪——「鬼は外、福は内」——角色早就換過一輪。
 ### customs TW ghost-month
 台灣農曆七月常見普渡、供桌和避諱，地方也可能有搶孤等大型活動。不同家庭、宗教和社區對哪些事要避開，並沒有同一張清單。
 ### customs TW qingming
@@ -92,10 +83,6 @@ Around the 15th day of the seventh lunar month; practices vary by locality
 Obon is a time to welcome and see off ancestors. Returning home, tending graves, and local Bon odori are connected in some places, while dates and customs differ across Japan. Obon is not a statutory holiday, yet it is the year's most visible national pause: most firms set their own closure in mid-August, so the homeward traffic and the fares have a fixed peak. The welcome fire and the send-off fire at the door frame the whole thing as a round trip — a fire to bring them back, another a few days later to see them off, with the Bon dance filling the days in between.
 ### date_rule JP obon
 In most regions, August 13 to August 16; local dates may vary
-### customs JP setsubun
-Setsubun in Japan falls on the day before the start of spring, and the date shifts slightly year to year. The National Diet Library's feature notes that its source is the Chinese exorcism rite tsuina, which entered Japan and became a Heian-period court event; originally a figure called the hososhi drove out invisible plague demons, but by the late Heian the hososhi himself came to be seen as the demon and was driven out by the courtiers. What survives today is the bean throwing and the call of 'demons out, fortune in' — the roles were swapped long ago.
-### date_rule JP setsubun
-Around the day before Risshun (the first day of spring); the date varies slightly each year
 ### customs TW ghost-month
 Taiwan's Ghost Month includes offerings, household tables, taboos, and in some places large events such as Qianggu. Families, religions, and neighbourhoods do not share one list of things to avoid.
 ### date_rule TW ghost-month
@@ -125,10 +112,6 @@ Around the 15th day after the vernal equinox, with the date varying slightly eac
 日本のお盆では先祖を迎え、送り出す。帰省、墓の手入れ、盆踊りなどが地域の行事と結びつくが、日程と過ごし方には幅がある。お盆それ自体は法定の休日ではないが、一年でもっとも目に見える全国的な停止である。多くの企業が八月半ばに自ら連休を設けるため、帰省の車列も運賃も決まった山をつくる。門口の迎え火と送り火は、この一連を往復として枠づける。火を焚いて迎え、数日後にまた火を焚いて送る。その間の日々を盆踊りが埋める。
 ### date_rule JP obon
 多くの地域で8月13日から8月16日、地域によって日付が異なる場合がある
-### customs JP setsubun
-日本の節分は立春の前日にあたり、日付は年によって少し動く。国立国会図書館の特集は、その源が中国の疫病を祓う儀礼「追儺」にあり、日本に伝わって平安時代の宮廷行事になったと述べる。もとは方相氏が目に見えない疫鬼を追い払う役だったが、平安後期には方相氏自身が鬼とみなされ、公卿たちに追われる側になった。今日まで残ったのは豆まきと「鬼は外、福は内」であり、役はとうに入れ替わっている。
-### date_rule JP setsubun
-立春の前日頃で、日付は毎年若干異なる
 ### customs TW ghost-month
 台湾の鬼月には、普渡、供物、家の前の祭壇、地域の大きな行事がある。何を避けるかは、家庭、宗教、地域によって変わる。
 ### date_rule TW ghost-month
@@ -158,10 +141,6 @@ Around the 15th day after the vernal equinox, with the date varying slightly eac
 日本盂兰盆会迎接并送别祖先，返乡、整理墓地和盆踊等地方活动常常相连。日期和仪式因地区而异。お盆本身不是法定假日，却是全年最明显的一次全国性停摆：多数企业在八月中自行安排连休，返乡的车潮与票价因此有固定的高峰。家门口的迎え火与送り火把整件事框成一趟往返——先点火接回来，几天后再点火送走，中间的盆踊り是留在人间的那几天。
 ### date_rule JP obon
 多数地区为08-13至08-16，地方日期可能不同
-### customs JP setsubun
-日本的节分在立春前一日，日期每年略有不同。国立国会图书馆的专题指出，它的源头是中国的驱疫仪式“追傩”，传入日本后成为平安时代的宫廷行事；原本由方相氏驱赶看不见的疫鬼，到平安后期，方相氏本身反而被当成鬼、由朝臣驱逐出去。今天留下的是撒豆与“鬼は外、福は内”，角色早就换过一轮。
-### date_rule JP setsubun
-立春前一日左右，日期每年略有差异
 ### customs TW ghost-month
 台湾农历七月常见普渡、供桌和避讳，有些地方还会举办抢孤等大型活动。不同家庭、宗教和社区对禁忌的理解并不一样。
 ### date_rule TW ghost-month
@@ -191,10 +170,6 @@ Around the 15th day after the vernal equinox, with the date varying slightly eac
 जापान का Obon पूर्वजों का स्वागत और विदाई करने का समय है। घर लौटना, कब्र की देखभाल और Bon odori अलग-अलग इलाक़ों में अलग रूप लेते हैं। ओबोन स्वयं वैधानिक अवकाश नहीं है, फिर भी यह वर्ष का सबसे स्पष्ट राष्ट्रीय ठहराव है: अधिकांश कंपनियाँ अगस्त के मध्य में अपनी बंदी स्वयं तय करती हैं, इसलिए घर लौटने का यातायात और किराए दोनों का एक निश्चित शिखर बनता है। द्वार पर की स्वागत-अग्नि और विदाई-अग्नि पूरे प्रसंग को एक आवागमन के रूप में बाँधती हैं — एक आग उन्हें लौटा लाने को, कुछ दिन बाद दूसरी उन्हें विदा करने को, और बीच के दिनों को बोन नृत्य भरता है।
 ### date_rule JP obon
 अधिकांश क्षेत्रों में 08-13 से 08-16 तक; स्थानीय तिथियां भिन्न हो सकती हैं
-### customs JP setsubun
-जापान में सेत्सुबुन वसंत के आरंभ से एक दिन पहले पड़ता है, और तारीख़ हर साल थोड़ी खिसकती है। राष्ट्रीय डाइट पुस्तकालय की विशेष प्रस्तुति बताती है कि इसका स्रोत चीनी झाड़-फूँक अनुष्ठान 'त्सुइना' है, जो जापान पहुँचकर हेइआन काल का दरबारी आयोजन बना; आरंभ में होसोशी नामक व्यक्ति अदृश्य महामारी-राक्षसों को भगाता था, पर हेइआन के उत्तरार्ध तक स्वयं होसोशी को ही राक्षस मान लिया गया और दरबारियों ने उसे भगाया। आज जो बचा है वह है सोयाबीन फेंकना और 'राक्षस बाहर, सौभाग्य भीतर' की पुकार — भूमिकाएँ बहुत पहले बदल चुकी हैं।
-### date_rule JP setsubun
-रिस्शुन (वसंत के पहले दिन) से एक दिन पहले के आसपास; तिथि हर साल थोड़ी भिन्न होती है
 ### customs TW ghost-month
 ताइवान के Ghost Month में सामुदायिक भेंट, घर की वेदी, वर्जनाएँ और कुछ जगहों पर बड़े आयोजन होते हैं। किन चीज़ों से बचना है, यह परिवार, धर्म और पड़ोस के अनुसार बदलता है।
 ### date_rule TW ghost-month
@@ -224,10 +199,6 @@ Sekitar tanggal 15 bulan ketujuh penanggalan lunar; praktiknya berbeda-beda di s
 Obon di Jepang menjadi waktu untuk menyambut dan melepas leluhur. Pulang kampung, merawat makam, dan Bon odori hadir dalam bentuk yang berbeda menurut daerah. Obon sendiri bukan hari libur menurut undang-undang, namun ia adalah jeda nasional yang paling kentara sepanjang tahun: kebanyakan perusahaan menetapkan sendiri liburnya pada pertengahan Agustus, sehingga arus pulang dan harga tiket punya puncak yang tetap. Api penyambut dan api pengantar di depan pintu membingkai seluruhnya sebagai perjalanan pulang-pergi — satu api untuk membawa mereka kembali, satu lagi beberapa hari kemudian untuk melepas, dan tarian Bon mengisi hari-hari di antaranya.
 ### date_rule JP obon
 Di sebagian besar wilayah, 13 Agustus hingga 16 Agustus; tanggal lokal dapat berbeda
-### customs JP setsubun
-Setsubun di Jepang jatuh sehari sebelum awal musim semi, dan tanggalnya sedikit bergeser tiap tahun. Sajian khusus Perpustakaan Diet Nasional mencatat bahwa sumbernya adalah ritus pengusiran Tiongkok bernama tsuina, yang masuk ke Jepang dan menjadi acara istana pada zaman Heian; semula sosok bernama hososhi mengusir setan wabah yang tak kasatmata, tetapi menjelang akhir Heian hososhi sendiri justru dipandang sebagai setan dan diusir oleh para bangsawan. Yang bertahan hari ini adalah menaburkan kacang dan seruan 'setan keluar, keberuntungan masuk' — perannya sudah lama bertukar.
-### date_rule JP setsubun
-Sekitar satu hari sebelum Risshun (awal musim semi); tanggalnya sedikit berbeda setiap tahun
 ### customs TW ghost-month
 Ghost Month di Taiwan mencakup persembahan, meja sesaji, pantangan, dan di beberapa tempat acara besar seperti Qianggu. Hal yang dianggap perlu dihindari berbeda menurut keluarga, agama, dan lingkungan.
 ### date_rule TW ghost-month
@@ -257,10 +228,6 @@ Por volta do dia 15 do sétimo mês do calendário lunar; as práticas variam co
 No Japão, o Obon recebe e despede os ancestrais. Voltar para casa, cuidar dos túmulos e participar do Bon odori fazem parte de costumes que variam conforme a região. O Obon em si não é feriado legal, e ainda assim é a pausa nacional mais visível do ano: a maioria das empresas marca o próprio fechamento em meados de agosto, de modo que o trânsito de volta para casa e as tarifas têm um pico fixo. O fogo de acolhida e o fogo de despedida à porta enquadram tudo como uma ida e volta — um fogo para trazê-los de volta, outro dias depois para despedi-los, e a dança Bon preenche os dias no meio.
 ### date_rule JP obon
 Na maioria das regiões, de 13 a 16 de agosto; as datas locais podem variar
-### customs JP setsubun
-O Setsubun japonês cai na véspera do início da primavera, e a data se desloca um pouco a cada ano. O especial da Biblioteca Nacional da Dieta observa que sua origem é o rito chinês de exorcismo tsuina, que entrou no Japão e virou evento de corte no período Heian; originalmente uma figura chamada hososhi expulsava demônios invisíveis da peste, mas no fim do Heian o próprio hososhi passou a ser visto como o demônio e era expulso pelos cortesãos. O que sobrevive hoje é o arremesso de grãos e o brado de 'demônios para fora, sorte para dentro' — os papéis trocaram de lado há muito tempo.
-### date_rule JP setsubun
-Por volta de um dia antes do Risshun (início da primavera); a data varia ligeiramente a cada ano
 ### customs TW ghost-month
 O Mês dos Fantasmas em Taiwan inclui oferendas, mesas de culto, tabus e, em alguns lugares, grandes eventos como o Qianggu. O que deve ser evitado muda conforme a família, a religião e a vizinhança.
 ### date_rule TW ghost-month

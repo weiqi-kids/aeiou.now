@@ -181,32 +181,6 @@
   },
   {
    "topic_slug": "affection-and-reciprocity",
-   "country_code": "TW",
-   "observance_key": "qixi",
-   "occurrence_year": 2026,
-   "starts_on": "2026-08-19",
-   "calendar_system": "chinese-lunisolar",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
-   ]
-  },
-  {
-   "topic_slug": "affection-and-reciprocity",
-   "country_code": "TW",
-   "observance_key": "qixi",
-   "occurrence_year": 2027,
-   "starts_on": "2027-08-08",
-   "calendar_system": "chinese-lunisolar",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf"
-   ]
-  },
-  {
-   "topic_slug": "affection-and-reciprocity",
    "country_code": "US",
    "observance_key": "valentine",
    "occurrence_year": 2026,
@@ -3272,32 +3246,6 @@
   },
   {
    "topic_slug": "protection-and-play",
-   "country_code": "JP",
-   "observance_key": "setsubun",
-   "occurrence_year": 2026,
-   "starts_on": "2026-02-03",
-   "calendar_system": "solar-term",
-   "timezone": "Asia/Tokyo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.nihongo-ews.mext.go.jp/contents_files/download/?cfid=406&content_id=864"
-   ]
-  },
-  {
-   "topic_slug": "protection-and-play",
-   "country_code": "JP",
-   "observance_key": "setsubun",
-   "occurrence_year": 2027,
-   "starts_on": "2027-02-03",
-   "calendar_system": "solar-term",
-   "timezone": "Asia/Tokyo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.nihongo-ews.mext.go.jp/contents_files/download/?cfid=406&content_id=864"
-   ]
-  },
-  {
-   "topic_slug": "protection-and-play",
    "country_code": "TW",
    "observance_key": "ghost-month",
    "occurrence_year": 2026,
@@ -4305,19 +4253,6 @@
    "date_status": "confirmed",
    "source_urls": [
     "https://www.japan.travel/en/us/blog/valentines-day-white-day-in-japan/"
-   ]
-  },
-  {
-   "topic_slug": "affection-and-reciprocity",
-   "country_code": "TW",
-   "observance_key": "qixi",
-   "occurrence_year": 2028,
-   "starts_on": "2028-08-26",
-   "calendar_system": "chinese-lunisolar",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt"
    ]
   },
   {
@@ -5518,19 +5453,6 @@
   },
   {
    "topic_slug": "protection-and-play",
-   "country_code": "JP",
-   "observance_key": "setsubun",
-   "occurrence_year": 2028,
-   "starts_on": "2028-02-03",
-   "calendar_system": "solar-term",
-   "timezone": "Asia/Tokyo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt"
-   ]
-  },
-  {
-   "topic_slug": "protection-and-play",
    "country_code": "TW",
    "observance_key": "ghost-month",
    "occurrence_year": 2028,
@@ -6389,624 +6311,6 @@
    ]
   },
   {
-   "topic_slug": "christian-calendar-days",
-   "country_code": "BR",
-   "observance_key": "corpus-christi",
-   "occurrence_year": 2026,
-   "starts_on": "2026-06-04",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
-    "https://www.ouropreto.mg.gov.br/noticia/5575",
-    "https://www.rondonopolis.mt.gov.br/media/paginas/feriados-municipais/corpus_christi.pdf"
-   ]
-  },
-  {
-   "topic_slug": "christian-calendar-days",
-   "country_code": "BR",
-   "observance_key": "corpus-christi",
-   "occurrence_year": 2027,
-   "starts_on": "2027-05-27",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
-    "https://www.rondonopolis.mt.gov.br/media/paginas/feriados-municipais/corpus_christi.pdf",
-    "https://www.socorro.sp.gov.br/feriados"
-   ]
-  },
-  {
-   "topic_slug": "christian-calendar-days",
-   "country_code": "BR",
-   "observance_key": "corpus-christi",
-   "occurrence_year": 2028,
-   "starts_on": "2028-06-15",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
-    "https://www.rondonopolis.mt.gov.br/media/paginas/feriados-municipais/corpus_christi.pdf",
-    "https://www.socorro.sp.gov.br/feriados"
-   ]
-  },
-  {
-   "topic_slug": "christian-calendar-days",
-   "country_code": "BR",
-   "observance_key": "cinzas",
-   "occurrence_year": 2026,
-   "starts_on": "2026-02-18",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
-    "https://www.socorro.sp.gov.br/feriados"
-   ]
-  },
-  {
-   "topic_slug": "christian-calendar-days",
-   "country_code": "BR",
-   "observance_key": "cinzas",
-   "occurrence_year": 2027,
-   "starts_on": "2027-02-10",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
-    "https://www.socorro.sp.gov.br/feriados"
-   ]
-  },
-  {
-   "topic_slug": "christian-calendar-days",
-   "country_code": "BR",
-   "observance_key": "cinzas",
-   "occurrence_year": 2028,
-   "starts_on": "2028-03-01",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
-    "https://www.socorro.sp.gov.br/feriados"
-   ]
-  },
-  {
-   "topic_slug": "christian-calendar-days",
-   "country_code": "ID",
-   "observance_key": "wafat-yesus-kristus",
-   "occurrence_year": 2026,
-   "starts_on": "2026-04-03",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Jakarta",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
-    "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
-   ]
-  },
-  {
-   "topic_slug": "christian-calendar-days",
-   "country_code": "ID",
-   "observance_key": "wafat-yesus-kristus",
-   "occurrence_year": 2027,
-   "starts_on": "2027-03-26",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Jakarta",
-   "date_status": "estimated",
-   "source_urls": [
-    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
-    "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
-   ]
-  },
-  {
-   "topic_slug": "christian-calendar-days",
-   "country_code": "ID",
-   "observance_key": "wafat-yesus-kristus",
-   "occurrence_year": 2028,
-   "starts_on": "2028-04-14",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Jakarta",
-   "date_status": "estimated",
-   "source_urls": [
-    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
-    "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
-   ]
-  },
-  {
-   "topic_slug": "christian-calendar-days",
-   "country_code": "US",
-   "observance_key": "good-friday",
-   "occurrence_year": 2026,
-   "starts_on": "2026-04-03",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
-    "https://legis.la.gov/Legis/Law.aspx?d=74097",
-    "https://delcode.delaware.gov/title1/c005/index.html"
-   ]
-  },
-  {
-   "topic_slug": "christian-calendar-days",
-   "country_code": "US",
-   "observance_key": "good-friday",
-   "occurrence_year": 2027,
-   "starts_on": "2027-03-26",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
-    "https://legis.la.gov/Legis/Law.aspx?d=74097",
-    "https://delcode.delaware.gov/title1/c005/index.html"
-   ]
-  },
-  {
-   "topic_slug": "christian-calendar-days",
-   "country_code": "US",
-   "observance_key": "good-friday",
-   "occurrence_year": 2028,
-   "starts_on": "2028-04-14",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
-    "https://legis.la.gov/Legis/Law.aspx?d=74097",
-    "https://delcode.delaware.gov/title1/c005/index.html"
-   ]
-  },
-  {
-   "topic_slug": "halloween",
-   "country_code": "US",
-   "observance_key": "halloween",
-   "occurrence_year": 2026,
-   "starts_on": "2026-10-31",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
-    "https://www.covingtonky.gov/news/2025/10/24/halloween-trick-or-treating-in-covington"
-   ]
-  },
-  {
-   "topic_slug": "halloween",
-   "country_code": "US",
-   "observance_key": "halloween",
-   "occurrence_year": 2027,
-   "starts_on": "2027-10-31",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
-    "https://www.covingtonky.gov/news/2025/10/24/halloween-trick-or-treating-in-covington"
-   ]
-  },
-  {
-   "topic_slug": "halloween",
-   "country_code": "US",
-   "observance_key": "halloween",
-   "occurrence_year": 2028,
-   "starts_on": "2028-10-31",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
-    "https://www.covingtonky.gov/news/2025/10/24/halloween-trick-or-treating-in-covington"
-   ]
-  },
-  {
-   "topic_slug": "halloween",
-   "country_code": "JP",
-   "observance_key": "halloween",
-   "occurrence_year": 2026,
-   "starts_on": "2026-10-31",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Tokyo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.city.shinjuku.lg.jp/anzen/kikikanri01_000001_00197.html",
-    "https://www.city.shinjuku.lg.jp/anzen/kikikanri01_000001_00164.html"
-   ]
-  },
-  {
-   "topic_slug": "halloween",
-   "country_code": "JP",
-   "observance_key": "halloween",
-   "occurrence_year": 2027,
-   "starts_on": "2027-10-31",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Tokyo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.city.shinjuku.lg.jp/anzen/kikikanri01_000001_00197.html",
-    "https://www.city.shinjuku.lg.jp/anzen/kikikanri01_000001_00164.html"
-   ]
-  },
-  {
-   "topic_slug": "halloween",
-   "country_code": "JP",
-   "observance_key": "halloween",
-   "occurrence_year": 2028,
-   "starts_on": "2028-10-31",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Tokyo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.city.shinjuku.lg.jp/anzen/kikikanri01_000001_00197.html",
-    "https://www.city.shinjuku.lg.jp/anzen/kikikanri01_000001_00164.html"
-   ]
-  },
-  {
-   "topic_slug": "halloween",
-   "country_code": "TW",
-   "observance_key": "halloween",
-   "occurrence_year": 2026,
-   "starts_on": "2026-10-31",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
-    "https://www.tainan.gov.tw/News_Content.aspx?n=13370&s=8775742"
-   ]
-  },
-  {
-   "topic_slug": "halloween",
-   "country_code": "TW",
-   "observance_key": "halloween",
-   "occurrence_year": 2027,
-   "starts_on": "2027-10-31",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
-    "https://www.tainan.gov.tw/News_Content.aspx?n=13370&s=8775742"
-   ]
-  },
-  {
-   "topic_slug": "halloween",
-   "country_code": "TW",
-   "observance_key": "halloween",
-   "occurrence_year": 2028,
-   "starts_on": "2028-10-31",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
-    "https://www.tainan.gov.tw/News_Content.aspx?n=13370&s=8775742"
-   ]
-  },
-  {
-   "topic_slug": "halloween",
-   "country_code": "BR",
-   "observance_key": "dia-das-bruxas",
-   "occurrence_year": 2026,
-   "starts_on": "2026-10-31",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
-    "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=301007&filename=Avulso+PL+2479/2003"
-   ]
-  },
-  {
-   "topic_slug": "halloween",
-   "country_code": "BR",
-   "observance_key": "dia-das-bruxas",
-   "occurrence_year": 2027,
-   "starts_on": "2027-10-31",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
-    "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=301007&filename=Avulso+PL+2479/2003"
-   ]
-  },
-  {
-   "topic_slug": "halloween",
-   "country_code": "BR",
-   "observance_key": "dia-das-bruxas",
-   "occurrence_year": 2028,
-   "starts_on": "2028-10-31",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
-    "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=301007&filename=Avulso+PL+2479/2003"
-   ]
-  },
-  {
-   "topic_slug": "halloween",
-   "country_code": "BR",
-   "observance_key": "dia-do-saci",
-   "occurrence_year": 2026,
-   "starts_on": "2026-10-31",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.al.sp.gov.br/repositorio/legislacao/lei/2004/lei-11669-13.01.2004.html"
-   ]
-  },
-  {
-   "topic_slug": "halloween",
-   "country_code": "BR",
-   "observance_key": "dia-do-saci",
-   "occurrence_year": 2027,
-   "starts_on": "2027-10-31",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.al.sp.gov.br/repositorio/legislacao/lei/2004/lei-11669-13.01.2004.html"
-   ]
-  },
-  {
-   "topic_slug": "halloween",
-   "country_code": "BR",
-   "observance_key": "dia-do-saci",
-   "occurrence_year": 2028,
-   "starts_on": "2028-10-31",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.al.sp.gov.br/repositorio/legislacao/lei/2004/lei-11669-13.01.2004.html"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "BR",
-   "observance_key": "dia-dos-povos-indigenas",
-   "occurrence_year": 2026,
-   "starts_on": "2026-04-19",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/L14402.htm"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "BR",
-   "observance_key": "dia-dos-povos-indigenas",
-   "occurrence_year": 2027,
-   "starts_on": "2027-04-19",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/L14402.htm"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "BR",
-   "observance_key": "dia-dos-povos-indigenas",
-   "occurrence_year": 2028,
-   "starts_on": "2028-04-19",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/L14402.htm"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "IN",
-   "observance_key": "janjatiya-gaurav-divas",
-   "occurrence_year": 2026,
-   "starts_on": "2026-11-15",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Kolkata",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/nov/doc20241114434501.pdf"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "IN",
-   "observance_key": "janjatiya-gaurav-divas",
-   "occurrence_year": 2027,
-   "starts_on": "2027-11-15",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Kolkata",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/nov/doc20241114434501.pdf"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "IN",
-   "observance_key": "janjatiya-gaurav-divas",
-   "occurrence_year": 2028,
-   "starts_on": "2028-11-15",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Kolkata",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/nov/doc20241114434501.pdf"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "TW",
-   "observance_key": "indigenous-peoples-day",
-   "occurrence_year": 2026,
-   "starts_on": "2026-08-01",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "TW",
-   "observance_key": "indigenous-peoples-day",
-   "occurrence_year": 2027,
-   "starts_on": "2027-08-01",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "TW",
-   "observance_key": "indigenous-peoples-day",
-   "occurrence_year": 2028,
-   "starts_on": "2028-08-01",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "TW",
-   "observance_key": "indigenous-resistance-day",
-   "occurrence_year": 2026,
-   "starts_on": "2026-06-26",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "TW",
-   "observance_key": "indigenous-resistance-day",
-   "occurrence_year": 2027,
-   "starts_on": "2027-06-26",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "TW",
-   "observance_key": "indigenous-resistance-day",
-   "occurrence_year": 2028,
-   "starts_on": "2028-06-26",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "US",
-   "observance_key": "columbus-day",
-   "occurrence_year": 2026,
-   "starts_on": "2026-10-12",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "US",
-   "observance_key": "columbus-day",
-   "occurrence_year": 2027,
-   "starts_on": "2027-10-11",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "US",
-   "observance_key": "columbus-day",
-   "occurrence_year": 2028,
-   "starts_on": "2028-10-09",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "US",
-   "observance_key": "indigenous-peoples-day",
-   "occurrence_year": 2026,
-   "starts_on": "2026-10-12",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://sdlegislature.gov/api/Statutes/1-5-1.html?all=true",
-    "https://legislature.maine.gov/statutes/4/title4sec1051-1.html"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "US",
-   "observance_key": "indigenous-peoples-day",
-   "occurrence_year": 2027,
-   "starts_on": "2027-10-11",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://sdlegislature.gov/api/Statutes/1-5-1.html?all=true",
-    "https://legislature.maine.gov/statutes/4/title4sec1051-1.html"
-   ]
-  },
-  {
-   "topic_slug": "indigenous-and-colonial-memory",
-   "country_code": "US",
-   "observance_key": "indigenous-peoples-day",
-   "occurrence_year": 2028,
-   "starts_on": "2028-10-09",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://sdlegislature.gov/api/Statutes/1-5-1.html?all=true",
-    "https://legislature.maine.gov/statutes/4/title4sec1051-1.html"
-   ]
-  },
-  {
    "topic_slug": "long-holiday-weeks",
    "country_code": "JP",
    "observance_key": "golden-week",
@@ -7342,704 +6646,6 @@
    "date_status": "estimated",
    "source_urls": [
     "https://wb.gov.in/pdf/Holiday-2026.pdf"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "US",
-   "observance_key": "washingtons-birthday",
-   "occurrence_year": 2026,
-   "starts_on": "2026-02-16",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
-    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "US",
-   "observance_key": "washingtons-birthday",
-   "occurrence_year": 2027,
-   "starts_on": "2027-02-15",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
-    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "US",
-   "observance_key": "washingtons-birthday",
-   "occurrence_year": 2028,
-   "starts_on": "2028-02-21",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
-    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "TW",
-   "observance_key": "sun-yat-sen-birthday",
-   "occurrence_year": 2026,
-   "starts_on": "2026-11-12",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "TW",
-   "observance_key": "sun-yat-sen-birthday",
-   "occurrence_year": 2027,
-   "starts_on": "2027-11-12",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "TW",
-   "observance_key": "sun-yat-sen-birthday",
-   "occurrence_year": 2028,
-   "starts_on": "2028-11-12",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "TW",
-   "observance_key": "sun-yat-sen-memorial-day",
-   "occurrence_year": 2026,
-   "starts_on": "2026-03-12",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "TW",
-   "observance_key": "sun-yat-sen-memorial-day",
-   "occurrence_year": 2027,
-   "starts_on": "2027-03-12",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "TW",
-   "observance_key": "sun-yat-sen-memorial-day",
-   "occurrence_year": 2028,
-   "starts_on": "2028-03-12",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "JP",
-   "observance_key": "showa-day",
-   "occurrence_year": 2026,
-   "starts_on": "2026-04-29",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Tokyo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
-    "https://www.gov-online.go.jp/article/202112/entry-9910.html"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "JP",
-   "observance_key": "showa-day",
-   "occurrence_year": 2027,
-   "starts_on": "2027-04-29",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Tokyo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
-    "https://www.gov-online.go.jp/article/202112/entry-9910.html"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "JP",
-   "observance_key": "showa-day",
-   "occurrence_year": 2028,
-   "starts_on": "2028-04-29",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Tokyo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
-    "https://www.gov-online.go.jp/article/202112/entry-9910.html"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "IN",
-   "observance_key": "gandhi-jayanti",
-   "occurrence_year": 2026,
-   "starts_on": "2026-10-02",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Kolkata",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf",
-    "https://www.cgisf.gov.in/page/holidays-2026/"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "IN",
-   "observance_key": "gandhi-jayanti",
-   "occurrence_year": 2027,
-   "starts_on": "2027-10-02",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Kolkata",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf",
-    "https://www.cgisf.gov.in/page/holidays-2026/"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "IN",
-   "observance_key": "gandhi-jayanti",
-   "occurrence_year": 2028,
-   "starts_on": "2028-10-02",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Kolkata",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf",
-    "https://www.cgisf.gov.in/page/holidays-2026/"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "BR",
-   "observance_key": "tiradentes",
-   "occurrence_year": 2026,
-   "starts_on": "2026-04-21",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
-    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "BR",
-   "observance_key": "tiradentes",
-   "occurrence_year": 2027,
-   "starts_on": "2027-04-21",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
-    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "BR",
-   "observance_key": "tiradentes",
-   "occurrence_year": 2028,
-   "starts_on": "2028-04-21",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
-    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "ID",
-   "observance_key": "kartini-day",
-   "occurrence_year": 2026,
-   "starts_on": "2026-04-21",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Jakarta",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://setkab.go.id/adakah-generasi-penerus-r-a-kartini/"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "ID",
-   "observance_key": "kartini-day",
-   "occurrence_year": 2027,
-   "starts_on": "2027-04-21",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Jakarta",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://setkab.go.id/adakah-generasi-penerus-r-a-kartini/"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "ID",
-   "observance_key": "kartini-day",
-   "occurrence_year": 2028,
-   "starts_on": "2028-04-21",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Jakarta",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://setkab.go.id/adakah-generasi-penerus-r-a-kartini/"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "ID",
-   "observance_key": "pancasila-day",
-   "occurrence_year": 2026,
-   "starts_on": "2026-06-01",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Jakarta",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://setkab.go.id/jadi-hari-libur-nasional-inilah-keppres-penetapan-1-juni-sebagai-hari-lahir-pancasila/",
-    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "ID",
-   "observance_key": "pancasila-day",
-   "occurrence_year": 2027,
-   "starts_on": "2027-06-01",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Jakarta",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://setkab.go.id/jadi-hari-libur-nasional-inilah-keppres-penetapan-1-juni-sebagai-hari-lahir-pancasila/",
-    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
-   ]
-  },
-  {
-   "topic_slug": "founders-and-national-leaders",
-   "country_code": "ID",
-   "observance_key": "pancasila-day",
-   "occurrence_year": 2028,
-   "starts_on": "2028-06-01",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Jakarta",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://setkab.go.id/jadi-hari-libur-nasional-inilah-keppres-penetapan-1-juni-sebagai-hari-lahir-pancasila/",
-    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
-   ]
-  },
-  {
-   "topic_slug": "emancipation-and-abolition",
-   "country_code": "US",
-   "observance_key": "juneteenth",
-   "occurrence_year": 2026,
-   "starts_on": "2026-06-19",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
-    "https://www.govinfo.gov/content/pkg/PLAW-117publ17/html/PLAW-117publ17.htm"
-   ]
-  },
-  {
-   "topic_slug": "emancipation-and-abolition",
-   "country_code": "US",
-   "observance_key": "juneteenth",
-   "occurrence_year": 2027,
-   "starts_on": "2027-06-19",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
-    "https://www.govinfo.gov/content/pkg/PLAW-117publ17/html/PLAW-117publ17.htm"
-   ]
-  },
-  {
-   "topic_slug": "emancipation-and-abolition",
-   "country_code": "US",
-   "observance_key": "juneteenth",
-   "occurrence_year": 2028,
-   "starts_on": "2028-06-19",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
-    "https://www.govinfo.gov/content/pkg/PLAW-117publ17/html/PLAW-117publ17.htm"
-   ]
-  },
-  {
-   "topic_slug": "emancipation-and-abolition",
-   "country_code": "US",
-   "observance_key": "mlk-day",
-   "occurrence_year": 2026,
-   "starts_on": "2026-01-19",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm"
-   ]
-  },
-  {
-   "topic_slug": "emancipation-and-abolition",
-   "country_code": "US",
-   "observance_key": "mlk-day",
-   "occurrence_year": 2027,
-   "starts_on": "2027-01-18",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm"
-   ]
-  },
-  {
-   "topic_slug": "emancipation-and-abolition",
-   "country_code": "US",
-   "observance_key": "mlk-day",
-   "occurrence_year": 2028,
-   "starts_on": "2028-01-17",
-   "calendar_system": "gregorian",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm"
-   ]
-  },
-  {
-   "topic_slug": "emancipation-and-abolition",
-   "country_code": "BR",
-   "observance_key": "consciencia-negra",
-   "occurrence_year": 2026,
-   "starts_on": "2026-11-20",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14759.htm",
-    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
-   ]
-  },
-  {
-   "topic_slug": "emancipation-and-abolition",
-   "country_code": "BR",
-   "observance_key": "consciencia-negra",
-   "occurrence_year": 2027,
-   "starts_on": "2027-11-20",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14759.htm",
-    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
-   ]
-  },
-  {
-   "topic_slug": "emancipation-and-abolition",
-   "country_code": "BR",
-   "observance_key": "consciencia-negra",
-   "occurrence_year": 2028,
-   "starts_on": "2028-11-20",
-   "calendar_system": "gregorian",
-   "timezone": "America/Sao_Paulo",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14759.htm",
-    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
-   ]
-  },
-  {
-   "topic_slug": "emancipation-and-abolition",
-   "country_code": "IN",
-   "observance_key": "ambedkar-jayanti",
-   "occurrence_year": 2026,
-   "starts_on": "2026-04-14",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Kolkata",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://cdnbbsr.s3waas.gov.in/s3978d76676f5e7918f81d28e7d092ca0d/uploads/2021/09/2021092040.pdf",
-    "https://cag.gov.in/uploads/media/Circular-on-Declaration-of-Holiday-on-14th-April-2022-06256b3cce56c18-14983523.pdf"
-   ]
-  },
-  {
-   "topic_slug": "emancipation-and-abolition",
-   "country_code": "IN",
-   "observance_key": "ambedkar-jayanti",
-   "occurrence_year": 2027,
-   "starts_on": "2027-04-14",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Kolkata",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://cdnbbsr.s3waas.gov.in/s3978d76676f5e7918f81d28e7d092ca0d/uploads/2021/09/2021092040.pdf",
-    "https://cag.gov.in/uploads/media/Circular-on-Declaration-of-Holiday-on-14th-April-2022-06256b3cce56c18-14983523.pdf"
-   ]
-  },
-  {
-   "topic_slug": "emancipation-and-abolition",
-   "country_code": "IN",
-   "observance_key": "ambedkar-jayanti",
-   "occurrence_year": 2028,
-   "starts_on": "2028-04-14",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Kolkata",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://cdnbbsr.s3waas.gov.in/s3978d76676f5e7918f81d28e7d092ca0d/uploads/2021/09/2021092040.pdf",
-    "https://cag.gov.in/uploads/media/Circular-on-Declaration-of-Holiday-on-14th-April-2022-06256b3cce56c18-14983523.pdf"
-   ]
-  },
-  {
-   "topic_slug": "emancipation-and-abolition",
-   "country_code": "TW",
-   "observance_key": "ethnic-equality",
-   "occurrence_year": 2026,
-   "starts_on": "2026-03-21",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-   ]
-  },
-  {
-   "topic_slug": "emancipation-and-abolition",
-   "country_code": "TW",
-   "observance_key": "ethnic-equality",
-   "occurrence_year": 2027,
-   "starts_on": "2027-03-21",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-   ]
-  },
-  {
-   "topic_slug": "emancipation-and-abolition",
-   "country_code": "TW",
-   "observance_key": "ethnic-equality",
-   "occurrence_year": 2028,
-   "starts_on": "2028-03-21",
-   "calendar_system": "gregorian",
-   "timezone": "Asia/Taipei",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-   ]
-  },
-  {
-   "topic_slug": "jewish-calendar-days",
-   "country_code": "US",
-   "observance_key": "rosh-hashanah",
-   "occurrence_year": 2026,
-   "starts_on": "2026-09-12",
-   "ends_on": "2026-09-13",
-   "calendar_system": "local",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
-   ]
-  },
-  {
-   "topic_slug": "jewish-calendar-days",
-   "country_code": "US",
-   "observance_key": "rosh-hashanah",
-   "occurrence_year": 2027,
-   "starts_on": "2027-10-02",
-   "ends_on": "2027-10-03",
-   "calendar_system": "local",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
-   ]
-  },
-  {
-   "topic_slug": "jewish-calendar-days",
-   "country_code": "US",
-   "observance_key": "rosh-hashanah",
-   "occurrence_year": 2028,
-   "starts_on": "2028-09-21",
-   "ends_on": "2028-09-22",
-   "calendar_system": "local",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
-   ]
-  },
-  {
-   "topic_slug": "jewish-calendar-days",
-   "country_code": "US",
-   "observance_key": "yom-kippur",
-   "occurrence_year": 2026,
-   "starts_on": "2026-09-21",
-   "calendar_system": "local",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf",
-    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
-   ]
-  },
-  {
-   "topic_slug": "jewish-calendar-days",
-   "country_code": "US",
-   "observance_key": "yom-kippur",
-   "occurrence_year": 2027,
-   "starts_on": "2027-10-11",
-   "calendar_system": "local",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
-   ]
-  },
-  {
-   "topic_slug": "jewish-calendar-days",
-   "country_code": "US",
-   "observance_key": "yom-kippur",
-   "occurrence_year": 2028,
-   "starts_on": "2028-09-30",
-   "calendar_system": "local",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
-   ]
-  },
-  {
-   "topic_slug": "jewish-calendar-days",
-   "country_code": "US",
-   "observance_key": "passover",
-   "occurrence_year": 2026,
-   "starts_on": "2026-04-02",
-   "ends_on": "2026-04-09",
-   "calendar_system": "local",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
-   ]
-  },
-  {
-   "topic_slug": "jewish-calendar-days",
-   "country_code": "US",
-   "observance_key": "passover",
-   "occurrence_year": 2027,
-   "starts_on": "2027-04-22",
-   "ends_on": "2027-04-29",
-   "calendar_system": "local",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf",
-    "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
-   ]
-  },
-  {
-   "topic_slug": "jewish-calendar-days",
-   "country_code": "US",
-   "observance_key": "passover",
-   "occurrence_year": 2028,
-   "starts_on": "2028-04-11",
-   "ends_on": "2028-04-18",
-   "calendar_system": "local",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
-   ]
-  },
-  {
-   "topic_slug": "jewish-calendar-days",
-   "country_code": "US",
-   "observance_key": "hanukkah",
-   "occurrence_year": 2026,
-   "starts_on": "2026-12-05",
-   "ends_on": "2026-12-12",
-   "calendar_system": "local",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
-   ]
-  },
-  {
-   "topic_slug": "jewish-calendar-days",
-   "country_code": "US",
-   "observance_key": "hanukkah",
-   "occurrence_year": 2027,
-   "starts_on": "2027-12-25",
-   "ends_on": "2028-01-01",
-   "calendar_system": "local",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
-   ]
-  },
-  {
-   "topic_slug": "jewish-calendar-days",
-   "country_code": "US",
-   "observance_key": "hanukkah",
-   "occurrence_year": 2028,
-   "starts_on": "2028-12-13",
-   "ends_on": "2028-12-20",
-   "calendar_system": "local",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
    ]
   },
   {
@@ -8766,6 +7372,1364 @@
    ]
   },
   {
+   "topic_slug": "affection-and-reciprocity",
+   "country_code": "TW",
+   "observance_key": "valentines",
+   "occurrence_year": 2026,
+   "starts_on": "2026-02-14",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://www.dgpa.gov.tw/information?uid=2&pid=12574"
+   ]
+  },
+  {
+   "topic_slug": "affection-and-reciprocity",
+   "country_code": "TW",
+   "observance_key": "valentines",
+   "occurrence_year": 2027,
+   "starts_on": "2027-02-14",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://www.dgpa.gov.tw/information?uid=2&pid=12574"
+   ]
+  },
+  {
+   "topic_slug": "affection-and-reciprocity",
+   "country_code": "TW",
+   "observance_key": "valentines",
+   "occurrence_year": 2028,
+   "starts_on": "2028-02-14",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://www.dgpa.gov.tw/information?uid=2&pid=12574"
+   ]
+  },
+  {
+   "topic_slug": "christian-calendar-days",
+   "country_code": "BR",
+   "observance_key": "corpus-christi",
+   "occurrence_year": 2026,
+   "starts_on": "2026-06-04",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+    "https://www.ouropreto.mg.gov.br/noticia/5575",
+    "https://www.rondonopolis.mt.gov.br/media/paginas/feriados-municipais/corpus_christi.pdf"
+   ]
+  },
+  {
+   "topic_slug": "christian-calendar-days",
+   "country_code": "BR",
+   "observance_key": "corpus-christi",
+   "occurrence_year": 2027,
+   "starts_on": "2027-05-27",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+    "https://www.rondonopolis.mt.gov.br/media/paginas/feriados-municipais/corpus_christi.pdf",
+    "https://www.socorro.sp.gov.br/feriados"
+   ]
+  },
+  {
+   "topic_slug": "christian-calendar-days",
+   "country_code": "BR",
+   "observance_key": "corpus-christi",
+   "occurrence_year": 2028,
+   "starts_on": "2028-06-15",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+    "https://www.rondonopolis.mt.gov.br/media/paginas/feriados-municipais/corpus_christi.pdf",
+    "https://www.socorro.sp.gov.br/feriados"
+   ]
+  },
+  {
+   "topic_slug": "christian-calendar-days",
+   "country_code": "BR",
+   "observance_key": "cinzas",
+   "occurrence_year": 2026,
+   "starts_on": "2026-02-18",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+    "https://www.socorro.sp.gov.br/feriados"
+   ]
+  },
+  {
+   "topic_slug": "christian-calendar-days",
+   "country_code": "BR",
+   "observance_key": "cinzas",
+   "occurrence_year": 2027,
+   "starts_on": "2027-02-10",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+    "https://www.socorro.sp.gov.br/feriados"
+   ]
+  },
+  {
+   "topic_slug": "christian-calendar-days",
+   "country_code": "BR",
+   "observance_key": "cinzas",
+   "occurrence_year": 2028,
+   "starts_on": "2028-03-01",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+    "https://www.socorro.sp.gov.br/feriados"
+   ]
+  },
+  {
+   "topic_slug": "christian-calendar-days",
+   "country_code": "ID",
+   "observance_key": "wafat-yesus-kristus",
+   "occurrence_year": 2026,
+   "starts_on": "2026-04-03",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Jakarta",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+    "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+   ]
+  },
+  {
+   "topic_slug": "christian-calendar-days",
+   "country_code": "ID",
+   "observance_key": "wafat-yesus-kristus",
+   "occurrence_year": 2027,
+   "starts_on": "2027-03-26",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Jakarta",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+    "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+   ]
+  },
+  {
+   "topic_slug": "christian-calendar-days",
+   "country_code": "ID",
+   "observance_key": "wafat-yesus-kristus",
+   "occurrence_year": 2028,
+   "starts_on": "2028-04-14",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Jakarta",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+    "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+   ]
+  },
+  {
+   "topic_slug": "christian-calendar-days",
+   "country_code": "US",
+   "observance_key": "good-friday",
+   "occurrence_year": 2026,
+   "starts_on": "2026-04-03",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://legis.la.gov/Legis/Law.aspx?d=74097",
+    "https://delcode.delaware.gov/title1/c005/index.html"
+   ]
+  },
+  {
+   "topic_slug": "christian-calendar-days",
+   "country_code": "US",
+   "observance_key": "good-friday",
+   "occurrence_year": 2027,
+   "starts_on": "2027-03-26",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://legis.la.gov/Legis/Law.aspx?d=74097",
+    "https://delcode.delaware.gov/title1/c005/index.html"
+   ]
+  },
+  {
+   "topic_slug": "christian-calendar-days",
+   "country_code": "US",
+   "observance_key": "good-friday",
+   "occurrence_year": 2028,
+   "starts_on": "2028-04-14",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://legis.la.gov/Legis/Law.aspx?d=74097",
+    "https://delcode.delaware.gov/title1/c005/index.html"
+   ]
+  },
+  {
+   "topic_slug": "halloween",
+   "country_code": "US",
+   "observance_key": "halloween",
+   "occurrence_year": 2026,
+   "starts_on": "2026-10-31",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.covingtonky.gov/news/2025/10/24/halloween-trick-or-treating-in-covington"
+   ]
+  },
+  {
+   "topic_slug": "halloween",
+   "country_code": "US",
+   "observance_key": "halloween",
+   "occurrence_year": 2027,
+   "starts_on": "2027-10-31",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.covingtonky.gov/news/2025/10/24/halloween-trick-or-treating-in-covington"
+   ]
+  },
+  {
+   "topic_slug": "halloween",
+   "country_code": "US",
+   "observance_key": "halloween",
+   "occurrence_year": 2028,
+   "starts_on": "2028-10-31",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.covingtonky.gov/news/2025/10/24/halloween-trick-or-treating-in-covington"
+   ]
+  },
+  {
+   "topic_slug": "halloween",
+   "country_code": "JP",
+   "observance_key": "halloween",
+   "occurrence_year": 2026,
+   "starts_on": "2026-10-31",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.city.shinjuku.lg.jp/anzen/kikikanri01_000001_00197.html",
+    "https://www.city.shinjuku.lg.jp/anzen/kikikanri01_000001_00164.html"
+   ]
+  },
+  {
+   "topic_slug": "halloween",
+   "country_code": "JP",
+   "observance_key": "halloween",
+   "occurrence_year": 2027,
+   "starts_on": "2027-10-31",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.city.shinjuku.lg.jp/anzen/kikikanri01_000001_00197.html",
+    "https://www.city.shinjuku.lg.jp/anzen/kikikanri01_000001_00164.html"
+   ]
+  },
+  {
+   "topic_slug": "halloween",
+   "country_code": "JP",
+   "observance_key": "halloween",
+   "occurrence_year": 2028,
+   "starts_on": "2028-10-31",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.city.shinjuku.lg.jp/anzen/kikikanri01_000001_00197.html",
+    "https://www.city.shinjuku.lg.jp/anzen/kikikanri01_000001_00164.html"
+   ]
+  },
+  {
+   "topic_slug": "halloween",
+   "country_code": "TW",
+   "observance_key": "halloween",
+   "occurrence_year": 2026,
+   "starts_on": "2026-10-31",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://www.tainan.gov.tw/News_Content.aspx?n=13370&s=8775742"
+   ]
+  },
+  {
+   "topic_slug": "halloween",
+   "country_code": "TW",
+   "observance_key": "halloween",
+   "occurrence_year": 2027,
+   "starts_on": "2027-10-31",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://www.tainan.gov.tw/News_Content.aspx?n=13370&s=8775742"
+   ]
+  },
+  {
+   "topic_slug": "halloween",
+   "country_code": "TW",
+   "observance_key": "halloween",
+   "occurrence_year": 2028,
+   "starts_on": "2028-10-31",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://www.tainan.gov.tw/News_Content.aspx?n=13370&s=8775742"
+   ]
+  },
+  {
+   "topic_slug": "halloween",
+   "country_code": "BR",
+   "observance_key": "dia-das-bruxas",
+   "occurrence_year": 2026,
+   "starts_on": "2026-10-31",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+    "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=301007&filename=Avulso+PL+2479/2003"
+   ]
+  },
+  {
+   "topic_slug": "halloween",
+   "country_code": "BR",
+   "observance_key": "dia-das-bruxas",
+   "occurrence_year": 2027,
+   "starts_on": "2027-10-31",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+    "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=301007&filename=Avulso+PL+2479/2003"
+   ]
+  },
+  {
+   "topic_slug": "halloween",
+   "country_code": "BR",
+   "observance_key": "dia-das-bruxas",
+   "occurrence_year": 2028,
+   "starts_on": "2028-10-31",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+    "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=301007&filename=Avulso+PL+2479/2003"
+   ]
+  },
+  {
+   "topic_slug": "halloween",
+   "country_code": "BR",
+   "observance_key": "dia-do-saci",
+   "occurrence_year": 2026,
+   "starts_on": "2026-10-31",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.al.sp.gov.br/repositorio/legislacao/lei/2004/lei-11669-13.01.2004.html"
+   ]
+  },
+  {
+   "topic_slug": "halloween",
+   "country_code": "BR",
+   "observance_key": "dia-do-saci",
+   "occurrence_year": 2027,
+   "starts_on": "2027-10-31",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.al.sp.gov.br/repositorio/legislacao/lei/2004/lei-11669-13.01.2004.html"
+   ]
+  },
+  {
+   "topic_slug": "halloween",
+   "country_code": "BR",
+   "observance_key": "dia-do-saci",
+   "occurrence_year": 2028,
+   "starts_on": "2028-10-31",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.al.sp.gov.br/repositorio/legislacao/lei/2004/lei-11669-13.01.2004.html"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "BR",
+   "observance_key": "dia-dos-povos-indigenas",
+   "occurrence_year": 2026,
+   "starts_on": "2026-04-19",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/L14402.htm"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "BR",
+   "observance_key": "dia-dos-povos-indigenas",
+   "occurrence_year": 2027,
+   "starts_on": "2027-04-19",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/L14402.htm"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "BR",
+   "observance_key": "dia-dos-povos-indigenas",
+   "occurrence_year": 2028,
+   "starts_on": "2028-04-19",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/L14402.htm"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "IN",
+   "observance_key": "janjatiya-gaurav-divas",
+   "occurrence_year": 2026,
+   "starts_on": "2026-11-15",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Kolkata",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/nov/doc20241114434501.pdf"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "IN",
+   "observance_key": "janjatiya-gaurav-divas",
+   "occurrence_year": 2027,
+   "starts_on": "2027-11-15",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Kolkata",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/nov/doc20241114434501.pdf"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "IN",
+   "observance_key": "janjatiya-gaurav-divas",
+   "occurrence_year": 2028,
+   "starts_on": "2028-11-15",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Kolkata",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/nov/doc20241114434501.pdf"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "TW",
+   "observance_key": "indigenous-peoples-day",
+   "occurrence_year": 2026,
+   "starts_on": "2026-08-01",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "TW",
+   "observance_key": "indigenous-peoples-day",
+   "occurrence_year": 2027,
+   "starts_on": "2027-08-01",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "TW",
+   "observance_key": "indigenous-peoples-day",
+   "occurrence_year": 2028,
+   "starts_on": "2028-08-01",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "TW",
+   "observance_key": "indigenous-resistance-day",
+   "occurrence_year": 2026,
+   "starts_on": "2026-06-26",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "TW",
+   "observance_key": "indigenous-resistance-day",
+   "occurrence_year": 2027,
+   "starts_on": "2027-06-26",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "TW",
+   "observance_key": "indigenous-resistance-day",
+   "occurrence_year": 2028,
+   "starts_on": "2028-06-26",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "US",
+   "observance_key": "columbus-day",
+   "occurrence_year": 2026,
+   "starts_on": "2026-10-12",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "US",
+   "observance_key": "columbus-day",
+   "occurrence_year": 2027,
+   "starts_on": "2027-10-11",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "US",
+   "observance_key": "columbus-day",
+   "occurrence_year": 2028,
+   "starts_on": "2028-10-09",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "US",
+   "observance_key": "indigenous-peoples-day",
+   "occurrence_year": 2026,
+   "starts_on": "2026-10-12",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://sdlegislature.gov/api/Statutes/1-5-1.html?all=true",
+    "https://legislature.maine.gov/statutes/4/title4sec1051-1.html"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "US",
+   "observance_key": "indigenous-peoples-day",
+   "occurrence_year": 2027,
+   "starts_on": "2027-10-11",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://sdlegislature.gov/api/Statutes/1-5-1.html?all=true",
+    "https://legislature.maine.gov/statutes/4/title4sec1051-1.html"
+   ]
+  },
+  {
+   "topic_slug": "indigenous-and-colonial-memory",
+   "country_code": "US",
+   "observance_key": "indigenous-peoples-day",
+   "occurrence_year": 2028,
+   "starts_on": "2028-10-09",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://sdlegislature.gov/api/Statutes/1-5-1.html?all=true",
+    "https://legislature.maine.gov/statutes/4/title4sec1051-1.html"
+   ]
+  },
+  {
+   "topic_slug": "jewish-calendar-days",
+   "country_code": "US",
+   "observance_key": "rosh-hashanah",
+   "occurrence_year": 2026,
+   "starts_on": "2026-09-12",
+   "ends_on": "2026-09-13",
+   "calendar_system": "local",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+   ]
+  },
+  {
+   "topic_slug": "jewish-calendar-days",
+   "country_code": "US",
+   "observance_key": "rosh-hashanah",
+   "occurrence_year": 2027,
+   "starts_on": "2027-10-02",
+   "ends_on": "2027-10-03",
+   "calendar_system": "local",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+   ]
+  },
+  {
+   "topic_slug": "jewish-calendar-days",
+   "country_code": "US",
+   "observance_key": "rosh-hashanah",
+   "occurrence_year": 2028,
+   "starts_on": "2028-09-21",
+   "ends_on": "2028-09-22",
+   "calendar_system": "local",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+   ]
+  },
+  {
+   "topic_slug": "jewish-calendar-days",
+   "country_code": "US",
+   "observance_key": "yom-kippur",
+   "occurrence_year": 2026,
+   "starts_on": "2026-09-21",
+   "calendar_system": "local",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf",
+    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+   ]
+  },
+  {
+   "topic_slug": "jewish-calendar-days",
+   "country_code": "US",
+   "observance_key": "yom-kippur",
+   "occurrence_year": 2027,
+   "starts_on": "2027-10-11",
+   "calendar_system": "local",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+   ]
+  },
+  {
+   "topic_slug": "jewish-calendar-days",
+   "country_code": "US",
+   "observance_key": "yom-kippur",
+   "occurrence_year": 2028,
+   "starts_on": "2028-09-30",
+   "calendar_system": "local",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+   ]
+  },
+  {
+   "topic_slug": "jewish-calendar-days",
+   "country_code": "US",
+   "observance_key": "passover",
+   "occurrence_year": 2026,
+   "starts_on": "2026-04-02",
+   "ends_on": "2026-04-09",
+   "calendar_system": "local",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+   ]
+  },
+  {
+   "topic_slug": "jewish-calendar-days",
+   "country_code": "US",
+   "observance_key": "passover",
+   "occurrence_year": 2027,
+   "starts_on": "2027-04-22",
+   "ends_on": "2027-04-29",
+   "calendar_system": "local",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf",
+    "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
+   ]
+  },
+  {
+   "topic_slug": "jewish-calendar-days",
+   "country_code": "US",
+   "observance_key": "passover",
+   "occurrence_year": 2028,
+   "starts_on": "2028-04-11",
+   "ends_on": "2028-04-18",
+   "calendar_system": "local",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+   ]
+  },
+  {
+   "topic_slug": "jewish-calendar-days",
+   "country_code": "US",
+   "observance_key": "hanukkah",
+   "occurrence_year": 2026,
+   "starts_on": "2026-12-05",
+   "ends_on": "2026-12-12",
+   "calendar_system": "local",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+   ]
+  },
+  {
+   "topic_slug": "jewish-calendar-days",
+   "country_code": "US",
+   "observance_key": "hanukkah",
+   "occurrence_year": 2027,
+   "starts_on": "2027-12-25",
+   "ends_on": "2028-01-01",
+   "calendar_system": "local",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+   ]
+  },
+  {
+   "topic_slug": "jewish-calendar-days",
+   "country_code": "US",
+   "observance_key": "hanukkah",
+   "occurrence_year": 2028,
+   "starts_on": "2028-12-13",
+   "ends_on": "2028-12-20",
+   "calendar_system": "local",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+   ]
+  },
+  {
+   "topic_slug": "emancipation-and-abolition",
+   "country_code": "US",
+   "observance_key": "juneteenth",
+   "occurrence_year": 2026,
+   "starts_on": "2026-06-19",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.govinfo.gov/content/pkg/PLAW-117publ17/html/PLAW-117publ17.htm"
+   ]
+  },
+  {
+   "topic_slug": "emancipation-and-abolition",
+   "country_code": "US",
+   "observance_key": "juneteenth",
+   "occurrence_year": 2027,
+   "starts_on": "2027-06-19",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.govinfo.gov/content/pkg/PLAW-117publ17/html/PLAW-117publ17.htm"
+   ]
+  },
+  {
+   "topic_slug": "emancipation-and-abolition",
+   "country_code": "US",
+   "observance_key": "juneteenth",
+   "occurrence_year": 2028,
+   "starts_on": "2028-06-19",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.govinfo.gov/content/pkg/PLAW-117publ17/html/PLAW-117publ17.htm"
+   ]
+  },
+  {
+   "topic_slug": "emancipation-and-abolition",
+   "country_code": "US",
+   "observance_key": "mlk-day",
+   "occurrence_year": 2026,
+   "starts_on": "2026-01-19",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm"
+   ]
+  },
+  {
+   "topic_slug": "emancipation-and-abolition",
+   "country_code": "US",
+   "observance_key": "mlk-day",
+   "occurrence_year": 2027,
+   "starts_on": "2027-01-18",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm"
+   ]
+  },
+  {
+   "topic_slug": "emancipation-and-abolition",
+   "country_code": "US",
+   "observance_key": "mlk-day",
+   "occurrence_year": 2028,
+   "starts_on": "2028-01-17",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm"
+   ]
+  },
+  {
+   "topic_slug": "emancipation-and-abolition",
+   "country_code": "BR",
+   "observance_key": "consciencia-negra",
+   "occurrence_year": 2026,
+   "starts_on": "2026-11-20",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14759.htm",
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+   ]
+  },
+  {
+   "topic_slug": "emancipation-and-abolition",
+   "country_code": "BR",
+   "observance_key": "consciencia-negra",
+   "occurrence_year": 2027,
+   "starts_on": "2027-11-20",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14759.htm",
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+   ]
+  },
+  {
+   "topic_slug": "emancipation-and-abolition",
+   "country_code": "BR",
+   "observance_key": "consciencia-negra",
+   "occurrence_year": 2028,
+   "starts_on": "2028-11-20",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14759.htm",
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+   ]
+  },
+  {
+   "topic_slug": "emancipation-and-abolition",
+   "country_code": "IN",
+   "observance_key": "ambedkar-jayanti",
+   "occurrence_year": 2026,
+   "starts_on": "2026-04-14",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Kolkata",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://cdnbbsr.s3waas.gov.in/s3978d76676f5e7918f81d28e7d092ca0d/uploads/2021/09/2021092040.pdf",
+    "https://cag.gov.in/uploads/media/Circular-on-Declaration-of-Holiday-on-14th-April-2022-06256b3cce56c18-14983523.pdf"
+   ]
+  },
+  {
+   "topic_slug": "emancipation-and-abolition",
+   "country_code": "IN",
+   "observance_key": "ambedkar-jayanti",
+   "occurrence_year": 2027,
+   "starts_on": "2027-04-14",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Kolkata",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://cdnbbsr.s3waas.gov.in/s3978d76676f5e7918f81d28e7d092ca0d/uploads/2021/09/2021092040.pdf",
+    "https://cag.gov.in/uploads/media/Circular-on-Declaration-of-Holiday-on-14th-April-2022-06256b3cce56c18-14983523.pdf"
+   ]
+  },
+  {
+   "topic_slug": "emancipation-and-abolition",
+   "country_code": "IN",
+   "observance_key": "ambedkar-jayanti",
+   "occurrence_year": 2028,
+   "starts_on": "2028-04-14",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Kolkata",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://cdnbbsr.s3waas.gov.in/s3978d76676f5e7918f81d28e7d092ca0d/uploads/2021/09/2021092040.pdf",
+    "https://cag.gov.in/uploads/media/Circular-on-Declaration-of-Holiday-on-14th-April-2022-06256b3cce56c18-14983523.pdf"
+   ]
+  },
+  {
+   "topic_slug": "emancipation-and-abolition",
+   "country_code": "TW",
+   "observance_key": "ethnic-equality",
+   "occurrence_year": 2026,
+   "starts_on": "2026-03-21",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "emancipation-and-abolition",
+   "country_code": "TW",
+   "observance_key": "ethnic-equality",
+   "occurrence_year": 2027,
+   "starts_on": "2027-03-21",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "emancipation-and-abolition",
+   "country_code": "TW",
+   "observance_key": "ethnic-equality",
+   "occurrence_year": 2028,
+   "starts_on": "2028-03-21",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "US",
+   "observance_key": "washingtons-birthday",
+   "occurrence_year": 2026,
+   "starts_on": "2026-02-16",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "US",
+   "observance_key": "washingtons-birthday",
+   "occurrence_year": 2027,
+   "starts_on": "2027-02-15",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "US",
+   "observance_key": "washingtons-birthday",
+   "occurrence_year": 2028,
+   "starts_on": "2028-02-21",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "TW",
+   "observance_key": "sun-yat-sen-birthday",
+   "occurrence_year": 2026,
+   "starts_on": "2026-11-12",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "TW",
+   "observance_key": "sun-yat-sen-birthday",
+   "occurrence_year": 2027,
+   "starts_on": "2027-11-12",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "TW",
+   "observance_key": "sun-yat-sen-birthday",
+   "occurrence_year": 2028,
+   "starts_on": "2028-11-12",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "TW",
+   "observance_key": "sun-yat-sen-memorial-day",
+   "occurrence_year": 2026,
+   "starts_on": "2026-03-12",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "TW",
+   "observance_key": "sun-yat-sen-memorial-day",
+   "occurrence_year": 2027,
+   "starts_on": "2027-03-12",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "TW",
+   "observance_key": "sun-yat-sen-memorial-day",
+   "occurrence_year": 2028,
+   "starts_on": "2028-03-12",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "JP",
+   "observance_key": "showa-day",
+   "occurrence_year": 2026,
+   "starts_on": "2026-04-29",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+    "https://www.gov-online.go.jp/article/202112/entry-9910.html"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "JP",
+   "observance_key": "showa-day",
+   "occurrence_year": 2027,
+   "starts_on": "2027-04-29",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+    "https://www.gov-online.go.jp/article/202112/entry-9910.html"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "JP",
+   "observance_key": "showa-day",
+   "occurrence_year": 2028,
+   "starts_on": "2028-04-29",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+    "https://www.gov-online.go.jp/article/202112/entry-9910.html"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "IN",
+   "observance_key": "gandhi-jayanti",
+   "occurrence_year": 2026,
+   "starts_on": "2026-10-02",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Kolkata",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf",
+    "https://www.cgisf.gov.in/page/holidays-2026/"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "IN",
+   "observance_key": "gandhi-jayanti",
+   "occurrence_year": 2027,
+   "starts_on": "2027-10-02",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Kolkata",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf",
+    "https://www.cgisf.gov.in/page/holidays-2026/"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "IN",
+   "observance_key": "gandhi-jayanti",
+   "occurrence_year": 2028,
+   "starts_on": "2028-10-02",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Kolkata",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf",
+    "https://www.cgisf.gov.in/page/holidays-2026/"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "BR",
+   "observance_key": "tiradentes",
+   "occurrence_year": 2026,
+   "starts_on": "2026-04-21",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "BR",
+   "observance_key": "tiradentes",
+   "occurrence_year": 2027,
+   "starts_on": "2027-04-21",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "BR",
+   "observance_key": "tiradentes",
+   "occurrence_year": 2028,
+   "starts_on": "2028-04-21",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "ID",
+   "observance_key": "kartini-day",
+   "occurrence_year": 2026,
+   "starts_on": "2026-04-21",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Jakarta",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://setkab.go.id/adakah-generasi-penerus-r-a-kartini/"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "ID",
+   "observance_key": "kartini-day",
+   "occurrence_year": 2027,
+   "starts_on": "2027-04-21",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Jakarta",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://setkab.go.id/adakah-generasi-penerus-r-a-kartini/"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "ID",
+   "observance_key": "kartini-day",
+   "occurrence_year": 2028,
+   "starts_on": "2028-04-21",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Jakarta",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://setkab.go.id/adakah-generasi-penerus-r-a-kartini/"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "ID",
+   "observance_key": "pancasila-day",
+   "occurrence_year": 2026,
+   "starts_on": "2026-06-01",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Jakarta",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://setkab.go.id/jadi-hari-libur-nasional-inilah-keppres-penetapan-1-juni-sebagai-hari-lahir-pancasila/",
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "ID",
+   "observance_key": "pancasila-day",
+   "occurrence_year": 2027,
+   "starts_on": "2027-06-01",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Jakarta",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://setkab.go.id/jadi-hari-libur-nasional-inilah-keppres-penetapan-1-juni-sebagai-hari-lahir-pancasila/",
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+   ]
+  },
+  {
+   "topic_slug": "founders-and-national-leaders",
+   "country_code": "ID",
+   "observance_key": "pancasila-day",
+   "occurrence_year": 2028,
+   "starts_on": "2028-06-01",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Jakarta",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://setkab.go.id/jadi-hari-libur-nasional-inilah-keppres-penetapan-1-juni-sebagai-hari-lahir-pancasila/",
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
+   ]
+  },
+  {
    "topic_slug": "beer-festivals",
    "country_code": "BR",
    "observance_key": "oktoberfest-blumenau",
@@ -8934,6 +8898,702 @@
    "date_status": "estimated",
    "source_urls": [
     "https://www.welcome.city.yokohama.jp/eventinfo/ev_detail.php?bid=yw9060"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "TW",
+   "observance_key": "qixi",
+   "occurrence_year": 2026,
+   "starts_on": "2026-08-19",
+   "calendar_system": "chinese-lunisolar",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2026c.txt",
+    "https://nit.immigration.gov.tw/Multicultural/Detail/1000013"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "TW",
+   "observance_key": "qixi",
+   "occurrence_year": 2027,
+   "starts_on": "2027-08-08",
+   "calendar_system": "chinese-lunisolar",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2027c.txt",
+    "https://nit.immigration.gov.tw/Multicultural/Detail/1000013"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "TW",
+   "observance_key": "qixi",
+   "occurrence_year": 2028,
+   "starts_on": "2028-08-26",
+   "calendar_system": "chinese-lunisolar",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt",
+    "https://nit.immigration.gov.tw/Multicultural/Detail/1000013"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "TW",
+   "observance_key": "coming-of-sixteen",
+   "occurrence_year": 2026,
+   "starts_on": "2026-08-19",
+   "calendar_system": "chinese-lunisolar",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2026c.txt",
+    "https://www.tainan.gov.tw/News_Content.aspx?n=13370&s=8583182"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "TW",
+   "observance_key": "coming-of-sixteen",
+   "occurrence_year": 2027,
+   "starts_on": "2027-08-08",
+   "calendar_system": "chinese-lunisolar",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2027c.txt",
+    "https://www.tainan.gov.tw/News_Content.aspx?n=13370&s=8583182"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "TW",
+   "observance_key": "coming-of-sixteen",
+   "occurrence_year": 2028,
+   "starts_on": "2028-08-26",
+   "calendar_system": "chinese-lunisolar",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt",
+    "https://www.tainan.gov.tw/News_Content.aspx?n=13370&s=8583182"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "CN",
+   "observance_key": "qixi-jie",
+   "occurrence_year": 2026,
+   "starts_on": "2026-08-19",
+   "calendar_system": "chinese-lunisolar",
+   "timezone": "Asia/Shanghai",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2026c.txt",
+    "https://www.gov.cn/gongbao/content/2006/content_334718.htm"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "CN",
+   "observance_key": "qixi-jie",
+   "occurrence_year": 2027,
+   "starts_on": "2027-08-08",
+   "calendar_system": "chinese-lunisolar",
+   "timezone": "Asia/Shanghai",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2027c.txt",
+    "https://www.gov.cn/gongbao/content/2006/content_334718.htm"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "CN",
+   "observance_key": "qixi-jie",
+   "occurrence_year": 2028,
+   "starts_on": "2028-08-26",
+   "calendar_system": "chinese-lunisolar",
+   "timezone": "Asia/Shanghai",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt",
+    "https://www.gov.cn/gongbao/content/2006/content_334718.htm"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "JP",
+   "observance_key": "tanabata",
+   "occurrence_year": 2026,
+   "starts_on": "2026-07-07",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov-online.go.jp/eng/publicity/book/hlj/html/202208/202208_07_jp.html",
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "JP",
+   "observance_key": "tanabata",
+   "occurrence_year": 2027,
+   "starts_on": "2027-07-07",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov-online.go.jp/eng/publicity/book/hlj/html/202208/202208_07_jp.html",
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "JP",
+   "observance_key": "tanabata",
+   "occurrence_year": 2028,
+   "starts_on": "2028-07-07",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov-online.go.jp/eng/publicity/book/hlj/html/202208/202208_07_jp.html",
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "JP",
+   "observance_key": "sendai-tanabata",
+   "occurrence_year": 2026,
+   "starts_on": "2026-08-06",
+   "ends_on": "2026-08-08",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.city.sendai.jp/shiminkoho/shise/koho/koho/shisedayori/2026-08/documents/2026-08P04.pdf",
+    "https://www.mlit.go.jp/tagengo-db/R3-00002.html"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "JP",
+   "observance_key": "sendai-tanabata",
+   "occurrence_year": 2027,
+   "starts_on": "2027-08-06",
+   "ends_on": "2027-08-08",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.mlit.go.jp/tagengo-db/R3-00002.html"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "JP",
+   "observance_key": "sendai-tanabata",
+   "occurrence_year": 2028,
+   "starts_on": "2028-08-06",
+   "ends_on": "2028-08-08",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.mlit.go.jp/tagengo-db/R3-00002.html"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "JP",
+   "observance_key": "hiratsuka-tanabata",
+   "occurrence_year": 2026,
+   "starts_on": "2026-07-03",
+   "ends_on": "2026-07-05",
+   "calendar_system": "local",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.city.hiratsuka.kanagawa.jp/kanko/page35_00241.html",
+    "https://www.city.hiratsuka.kanagawa.jp/press/page02_e00001_03215.html"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "JP",
+   "observance_key": "hiratsuka-tanabata",
+   "occurrence_year": 2027,
+   "starts_on": "2027-07-02",
+   "ends_on": "2027-07-04",
+   "calendar_system": "local",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.city.hiratsuka.kanagawa.jp/press/page02_e00001_03215.html"
+   ]
+  },
+  {
+   "topic_slug": "tanabata-and-qixi",
+   "country_code": "JP",
+   "observance_key": "hiratsuka-tanabata",
+   "occurrence_year": 2028,
+   "starts_on": "2028-07-07",
+   "ends_on": "2028-07-09",
+   "calendar_system": "local",
+   "timezone": "Asia/Tokyo",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://www.city.hiratsuka.kanagawa.jp/press/page02_e00001_03215.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "shunbun",
+   "occurrence_year": 2026,
+   "starts_on": "2026-03-20",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+    "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou261.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "shunbun",
+   "occurrence_year": 2027,
+   "starts_on": "2027-03-21",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "shunbun",
+   "occurrence_year": 2028,
+   "starts_on": "2028-03-20",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://www.nao.ac.jp/faq/a0301.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "shubun",
+   "occurrence_year": 2026,
+   "starts_on": "2026-09-23",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+    "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou261.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "shubun",
+   "occurrence_year": 2027,
+   "starts_on": "2027-09-23",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "shubun",
+   "occurrence_year": 2028,
+   "starts_on": "2028-09-22",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://www.nao.ac.jp/faq/a0301.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "higan-spring",
+   "occurrence_year": 2026,
+   "starts_on": "2026-03-17",
+   "ends_on": "2026-03-23",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "higan-spring",
+   "occurrence_year": 2027,
+   "starts_on": "2027-03-18",
+   "ends_on": "2027-03-24",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://eco.mtk.nao.ac.jp/koyomi/yoko/2027/rekiyou272.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "higan-spring",
+   "occurrence_year": 2028,
+   "starts_on": "2028-03-17",
+   "ends_on": "2028-03-23",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://www.nao.ac.jp/faq/a0301.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "higan-autumn",
+   "occurrence_year": 2026,
+   "starts_on": "2026-09-20",
+   "ends_on": "2026-09-26",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "higan-autumn",
+   "occurrence_year": 2027,
+   "starts_on": "2027-09-20",
+   "ends_on": "2027-09-26",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://eco.mtk.nao.ac.jp/koyomi/yoko/2027/rekiyou272.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "higan-autumn",
+   "occurrence_year": 2028,
+   "starts_on": "2028-09-19",
+   "ends_on": "2028-09-25",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://www.nao.ac.jp/faq/a0301.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "setsubun",
+   "occurrence_year": 2026,
+   "starts_on": "2026-02-03",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "setsubun",
+   "occurrence_year": 2027,
+   "starts_on": "2027-02-03",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://eco.mtk.nao.ac.jp/koyomi/yoko/2027/rekiyou272.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "setsubun",
+   "occurrence_year": 2028,
+   "starts_on": "2028-02-03",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics2021_2.html",
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "toji",
+   "occurrence_year": 2026,
+   "starts_on": "2026-12-22",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "toji",
+   "occurrence_year": 2027,
+   "starts_on": "2027-12-22",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://eco.mtk.nao.ac.jp/koyomi/yoko/2027/rekiyou272.html"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "JP",
+   "observance_key": "toji",
+   "occurrence_year": 2028,
+   "starts_on": "2028-12-21",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Tokyo",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "CN",
+   "observance_key": "dongzhi",
+   "occurrence_year": 2026,
+   "starts_on": "2026-12-22",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Shanghai",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "CN",
+   "observance_key": "dongzhi",
+   "occurrence_year": 2027,
+   "starts_on": "2027-12-22",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Shanghai",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "CN",
+   "observance_key": "dongzhi",
+   "occurrence_year": 2028,
+   "starts_on": "2028-12-21",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Shanghai",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "TW",
+   "observance_key": "dongzhi",
+   "occurrence_year": 2026,
+   "starts_on": "2026-12-22",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "TW",
+   "observance_key": "dongzhi",
+   "occurrence_year": 2027,
+   "starts_on": "2027-12-22",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "TW",
+   "observance_key": "dongzhi",
+   "occurrence_year": 2028,
+   "starts_on": "2028-12-21",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "IN",
+   "observance_key": "makar-sankranti",
+   "occurrence_year": 2026,
+   "starts_on": "2026-01-14",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Kolkata",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jan/doc2025114485501.pdf"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "IN",
+   "observance_key": "makar-sankranti",
+   "occurrence_year": 2027,
+   "starts_on": "2027-01-14",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Kolkata",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jan/doc2025114485501.pdf"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "IN",
+   "observance_key": "makar-sankranti",
+   "occurrence_year": 2028,
+   "starts_on": "2028-01-15",
+   "calendar_system": "solar-term",
+   "timezone": "Asia/Kolkata",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jan/doc2025114485501.pdf"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "ID",
+   "observance_key": "hari-tanpa-bayangan",
+   "occurrence_year": 2026,
+   "starts_on": "2026-03-05",
+   "calendar_system": "local",
+   "timezone": "Asia/Jakarta",
+   "date_status": "local-variant",
+   "source_urls": [
+    "https://www.bmkg.go.id/tanda-waktu/hari-tanpa-bayangan",
+    "https://content.bmkg.go.id/wp-content/uploads/kulminasi_utama_I_2026.pdf"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "ID",
+   "observance_key": "hari-tanpa-bayangan",
+   "occurrence_year": 2027,
+   "starts_on": "2027-03-05",
+   "calendar_system": "local",
+   "timezone": "Asia/Jakarta",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://www.bmkg.go.id/tanda-waktu/hari-tanpa-bayangan"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "ID",
+   "observance_key": "hari-tanpa-bayangan",
+   "occurrence_year": 2028,
+   "starts_on": "2028-03-04",
+   "calendar_system": "local",
+   "timezone": "Asia/Jakarta",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://www.bmkg.go.id/tanda-waktu/hari-tanpa-bayangan"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "US",
+   "observance_key": "daylight-saving",
+   "occurrence_year": 2026,
+   "starts_on": "2026-03-08",
+   "ends_on": "2026-11-01",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap6-subchapIX-sec260a.htm"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "US",
+   "observance_key": "daylight-saving",
+   "occurrence_year": 2027,
+   "starts_on": "2027-03-14",
+   "ends_on": "2027-11-07",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap6-subchapIX-sec260a.htm"
+   ]
+  },
+  {
+   "topic_slug": "equinox-and-seasonal-turns",
+   "country_code": "US",
+   "observance_key": "daylight-saving",
+   "occurrence_year": 2028,
+   "starts_on": "2028-03-12",
+   "ends_on": "2028-11-05",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap6-subchapIX-sec260a.htm"
    ]
   }
  ]

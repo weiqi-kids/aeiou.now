@@ -215,14 +215,19 @@ for (const topic of contentManagedTopics) {
 const personaFindings = new Map(personas.map(([name]) => [name, []]));
 const personaChecks = [
   ['台灣人格', [
-    ['七夕保留農曆日期', () => /農曆七月初七/.test(contentTextBySlug.get('affection-and-reciprocity') || '')],
+    // 2026-08-26:七夕從 affection-and-reciprocity 搬到 tanabata-and-qixi
+    // (Bing 實測 `七夕` 裸詞 @tw 1,438,掛在情人節頁底下拿不到 title)。斷言意圖不變,跟著搬。
+    ['七夕保留農曆日期', () => /農曆七月初七/.test(contentTextBySlug.get('tanabata-and-qixi') || '')],
     ['鬼月保留地方與家庭差異', () => /農曆七月/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '') && /沒有同一張清單/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '')],
     ['農曆新年保留家庭與地方節奏', () => /農曆新年/.test(contentTextBySlug.get('new-year') || '') && /自己的節奏/.test(contentTextBySlug.get('new-year') || '')],
   ]],
   ['日本人格', [
     ['本命／義理巧克力被分開', () => /本命巧克力.*義理巧克力/.test(contentTextBySlug.get('affection-and-reciprocity') || '')],
     ['白色情人節被寫成回禮日', () => /白色情人節是 3 月 14 日的回禮日/.test(contentTextBySlug.get('affection-and-reciprocity') || '')],
-    ['節分保留撒豆驅邪', () => /節分會撒豆|節分、撒豆/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '')],
+    // 2026-08-26:節分從 ghosts 搬到 equinox-and-seasonal-turns(它是立春的前一天,本來就屬節氣)。
+    // 搬移時新檔只寫了天文面,儀式面會整個從站上消失 —— 已請原作者補齊豆まき/柊鰯/恵方巻
+    // 並附官方來源(京都市文化財保護課、三重県県史、鹿屋市、農林水産省),斷言才跟著搬。
+    ['節分保留撒豆驅邪', () => /節分會撒豆|節分、撒豆/.test(contentTextBySlug.get('equinox-and-seasonal-turns') || '')],
   ]],
   ['中國人格', [
     ['中秋與中元保留中文節名', () => /中秋节|中元節|中元节/.test(contentTextBySlug.get('mid-autumn-and-moon-viewing') || '') && /中元相關|中元相关/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '')],
@@ -274,7 +279,12 @@ const affection = activeTopics.find((topic) => topic.slug === 'affection-and-rec
 const affectionObs = affection ? obsByTopic.get(affection.topic_id) || [] : [];
 if (affectionObs.filter((obs) => obs.country_code === 'JP').length < 2) fail('共通性回歸測試:日本同一 Topic 必須至少有情人節與白色情人節兩筆');
 if (!affectionObs.some((obs) => obs.country_code === 'JP' && obs.observance_key === 'white-day')) fail('共通性回歸測試:缺 JP white-day');
-if (!affectionObs.some((obs) => obs.country_code === 'TW' && obs.date_rule)) fail('共通性回歸測試:TW 七夕必須保留非固定日期規則');
+// 2026-08-26:七夕搬到 tanabata-and-qixi 之後,這條要看新 Topic ——
+// affection 的 TW 那格改成西洋情人節(02-14 固定日),本來就沒有 date_rule,留在原地必然 fail。
+const tanabata = activeTopics.find((topic) => topic.slug === 'tanabata-and-qixi');
+const tanabataObs = tanabata ? obsByTopic.get(tanabata.topic_id) || [] : [];
+if (!tanabataObs.some((obs) => obs.country_code === 'TW' && obs.date_rule)) fail('共通性回歸測試:TW 七夕必須保留非固定日期規則');
+if (!affectionObs.some((obs) => obs.country_code === 'TW')) fail('共通性回歸測試:affection 必須保留一筆 TW observance(七夕搬走後由西洋情人節接手)');
 
 const calendar = JSON.parse(readFileSync(CALENDAR_PATH, 'utf8'));
 if (!Array.isArray(calendar.weeks) || calendar.weeks.length !== 52) fail('年度排程不是 52 週');

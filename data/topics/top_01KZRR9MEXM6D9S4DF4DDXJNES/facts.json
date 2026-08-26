@@ -508,82 +508,94 @@
       }
     },
     {
-      "observance_id": "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_TW_qixi",
-      "observance_key": "qixi",
+      "observance_id": "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_TW_valentines",
+      "observance_key": "valentines",
       "country_code": "TW",
-      "local_name": "七夕情人節",
-      "observed_date": null,
-      "date_rule": "農曆七月初七",
+      "local_name": "西洋情人節",
+      "observed_date": "02-14",
+      "date_rule": null,
       "date_range_end": null,
       "popularity_rank": 1,
       "source_ids": [
-        "src_6615FC37B36E4CC8B9C9F802"
+        "src_F045C3336BEF6186024CF028",
+        "src_A5DA686B2588C31F58E0E6FE",
+        "src_3A4A1F9A3215CAABF44ABF15"
       ],
       "source_urls": [
-        "https://nit.immigration.gov.tw/Multicultural/Detail/1000013"
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+        "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+        "https://www.hcentral.taichung.gov.tw/1517431/1517466/1517474/1566338/post"
       ],
       "occurrences": [
         {
-          "occurrence_id": "occ_obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_TW_qixi_2026_2026-08-19",
+          "occurrence_id": "occ_obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_TW_valentines_2026_2026-02-14",
           "occurrence_year": 2026,
-          "starts_on": "2026-08-19",
+          "starts_on": "2026-02-14",
           "ends_on": null,
-          "calendar_system": "chinese-lunisolar",
+          "calendar_system": "gregorian",
           "timezone": "Asia/Taipei",
           "date_status": "confirmed",
           "source_ids": [
-            "src_E405440D6A7FBA9FBC2398FD"
+            "src_F045C3336BEF6186024CF028",
+            "src_A5DA686B2588C31F58E0E6FE"
           ],
           "source_urls": [
-            "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+            "https://www.dgpa.gov.tw/information?uid=2&pid=12574"
           ]
         },
         {
-          "occurrence_id": "occ_obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_TW_qixi_2027_2027-08-08",
+          "occurrence_id": "occ_obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_TW_valentines_2027_2027-02-14",
           "occurrence_year": 2027,
-          "starts_on": "2027-08-08",
+          "starts_on": "2027-02-14",
           "ends_on": null,
-          "calendar_system": "chinese-lunisolar",
+          "calendar_system": "gregorian",
           "timezone": "Asia/Taipei",
           "date_status": "confirmed",
           "source_ids": [
-            "src_509D6FE3CDE66C39605277AB"
+            "src_F045C3336BEF6186024CF028",
+            "src_A5DA686B2588C31F58E0E6FE"
           ],
           "source_urls": [
-            "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf"
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+            "https://www.dgpa.gov.tw/information?uid=2&pid=12574"
           ]
         },
         {
-          "occurrence_id": "occ_obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_TW_qixi_2028_2028-08-26",
+          "occurrence_id": "occ_obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_TW_valentines_2028_2028-02-14",
           "occurrence_year": 2028,
-          "starts_on": "2028-08-26",
+          "starts_on": "2028-02-14",
           "ends_on": null,
-          "calendar_system": "chinese-lunisolar",
+          "calendar_system": "gregorian",
           "timezone": "Asia/Taipei",
           "date_status": "confirmed",
           "source_ids": [
-            "src_D74CFCA1045D3455A4615E43"
+            "src_F045C3336BEF6186024CF028",
+            "src_A5DA686B2588C31F58E0E6FE"
           ],
           "source_urls": [
-            "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt"
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+            "https://www.dgpa.gov.tw/information?uid=2&pid=12574"
           ]
         }
       ],
       "next_occurrence": {
-        "occurrence_id": "occ_obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_TW_qixi_2027_2027-08-08",
+        "occurrence_id": "occ_obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_TW_valentines_2027_2027-02-14",
         "occurrence_year": 2027,
-        "starts_on": "2027-08-08",
+        "starts_on": "2027-02-14",
         "ends_on": null,
-        "calendar_system": "chinese-lunisolar",
+        "calendar_system": "gregorian",
         "timezone": "Asia/Taipei",
         "date_status": "confirmed",
         "source_ids": [
-          "src_509D6FE3CDE66C39605277AB"
+          "src_F045C3336BEF6186024CF028",
+          "src_A5DA686B2588C31F58E0E6FE"
         ],
         "source_urls": [
-          "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf"
+          "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+          "https://www.dgpa.gov.tw/information?uid=2&pid=12574"
         ],
-        "distance_days": 346
+        "distance_days": 171
       }
     },
     {
@@ -703,7 +715,7 @@
     {
       "country_code": "TW",
       "observance_ids": [
-        "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_TW_qixi"
+        "obs_top_01KZRR9MEXM6D9S4DF4DDXJNES_TW_valentines"
       ]
     },
     {
@@ -718,34 +730,32 @@
     "src_140F35709530AB2BEE135010",
     "src_22199C1201C93256B927C8CD",
     "src_349AAEF81832D0D01AC5B7D3",
+    "src_3A4A1F9A3215CAABF44ABF15",
     "src_3C6F2BD13BBE8890809B25D2",
-    "src_509D6FE3CDE66C39605277AB",
     "src_617A8FE68E97279B823DB82F",
-    "src_6615FC37B36E4CC8B9C9F802",
     "src_8881C7B43193D1F50ED0E47C",
     "src_8CDDEB64F7778CE62869A3EF",
+    "src_A5DA686B2588C31F58E0E6FE",
     "src_C4BAA52048297F2FA1A9F791",
     "src_C4BCAFCEF395471F742E6784",
-    "src_D74CFCA1045D3455A4615E43",
     "src_E30CC8DD2B2DC06E134ADC42",
-    "src_E405440D6A7FBA9FBC2398FD"
+    "src_F045C3336BEF6186024CF028"
   ],
   "source_urls": [
     "https://www.gov.cn/gongbao/content/2006/content_334718.htm",
     "https://www.justica.pr.gov.br/Noticia/Dia-dos-Namorados-Procon-PR-orienta-consumidores-sobre-compras-e-trocas-de-presentes",
     "https://www.census.gov/newsroom/stories/valentines-day.html",
+    "https://www.hcentral.taichung.gov.tw/1517431/1517466/1517474/1566338/post",
     "https://berita.depok.go.id/disdik-depok-keluarkan-se-larangan-rayakan-hari-valentine",
-    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
     "https://kepriprov.go.id/berita/pemprov-kepri/disdik-kepri-imbau-pelajar-tidak-rayakan-valentine-day",
-    "https://nit.immigration.gov.tw/Multicultural/Detail/1000013",
     "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays",
     "https://www.stat.go.jp/data/kakei/tsushin/pdf/29_2.pdf",
+    "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
     "https://www.japan.travel/en/us/blog/valentines-day-white-day-in-japan/",
     "https://www.britannica.com/topic/Valentines-Day",
-    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt",
     "https://www.gov.cn/zhengce/content/202411/content_6986380.htm",
-    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
   ],
-  "content_updated_at": "2026-08-26T17:16:50.165Z",
-  "content_hash": "3779945953aee1720885ab28afd8003aad1e215e55530dbc8a5b6ec2ad9097af"
+  "content_updated_at": "2026-08-26T18:02:20.896Z",
+  "content_hash": "5820374bf7c9077f009959bd0012b37e369d2ce32af2395f6e1aa2209473ab8e"
 }

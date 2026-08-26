@@ -10,6 +10,13 @@ import { isTrendTopic } from "./lib/topics.mjs";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const LOCALES = ['zh-TW', 'en', 'ja', 'zh-CN', 'hi', 'id', 'pt-BR'];
 const FINAL_SLUGS = [
+  // equinox-and-seasonal-turns(2026-08-26 用戶核准):Bing 實測 `お彼岸 2026` @jp 精準量 4,218、
+  // `節分` 裸詞 1,757、`冬至` 1,079、`秋分の日 2026` 500。唯一一類日期由天文計算決定的節日。
+  'equinox-and-seasonal-turns',
+  // tanabata-and-qixi(2026-08-26 用戶核准):Bing 實測 `七夕` 裸詞 @tw 精準量 1,438、@cn 238。
+  // 原本是 affection-and-reciprocity 的 TW qixi / JP tanabata,拿不到自己的 title。
+  // ⚠ 刻意偏離草案:§6/§48 把七夕畫成 Valentine's Day 的分支;但 §58 又把它列為搜尋結果的並列項。
+  'tanabata-and-qixi',
   'beer-festivals',
   'environment-days',
   'shopping-festivals',

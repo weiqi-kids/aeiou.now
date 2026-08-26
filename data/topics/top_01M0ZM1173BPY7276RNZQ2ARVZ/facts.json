@@ -1,0 +1,1041 @@
+{
+  "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+  "slug": "equinox-and-seasonal-turns",
+  "canonical_name": "Equinoxes, Solstices, and the Turning of the Seasons",
+  "commonality": "days whose date is settled by the sun's position rather than chosen by people, and the very different ways states write that astronomy into law",
+  "category": "seasonal",
+  "status": "active",
+  "is_perennial": 0,
+  "updated_at": "2026-08-26T18:06:28.000Z",
+  "access_level": 0,
+  "observances": [
+    {
+      "observance_id": "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_CN_dongzhi",
+      "observance_key": "dongzhi",
+      "country_code": "CN",
+      "local_name": "冬至",
+      "observed_date": null,
+      "date_rule": "太陽黃經達二七○度的那一天，時刻以東八區時間計",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_51E2FAAF9B4A5A5EB4482B01",
+        "src_6DFD76B82DF608B35353178A",
+        "src_1EB9DF86A447787EF0187323"
+      ],
+      "source_urls": [
+        "https://www.mct.gov.cn/whzx/bnsj/dwwhllj/201612/t20161214_773196.html",
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/zhengce/content/202511/content_7047090.htm"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_CN_dongzhi_2026_2026-12-22",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-22",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E405440D6A7FBA9FBC2398FD"
+          ],
+          "source_urls": [
+            "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_CN_dongzhi_2027_2027-12-22",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-22",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_509D6FE3CDE66C39605277AB"
+          ],
+          "source_urls": [
+            "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_CN_dongzhi_2028_2028-12-21",
+          "occurrence_year": 2028,
+          "starts_on": "2028-12-21",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_2CF9048427B77602F98B761B"
+          ],
+          "source_urls": [
+            "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_CN_dongzhi_2026_2026-12-22",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-22",
+        "ends_on": null,
+        "calendar_system": "solar-term",
+        "timezone": "Asia/Shanghai",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_E405440D6A7FBA9FBC2398FD"
+        ],
+        "source_urls": [
+          "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+        ],
+        "distance_days": 117
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_ID_hari-tanpa-bayangan",
+      "observance_key": "hari-tanpa-bayangan",
+      "country_code": "ID",
+      "local_name": "Hari Tanpa Bayangan (Kulminasi Utama)",
+      "observed_date": null,
+      "date_rule": "太陽赤緯與當地緯度相同的那一天，每年兩次；日期逐城不同，由氣象氣候暨地球物理局逐年公布",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_A8EF5FACFD1B743503C7C444",
+        "src_4566BA39D72070A5F74450BC"
+      ],
+      "source_urls": [
+        "https://www.bmkg.go.id/tanda-waktu/hari-tanpa-bayangan",
+        "https://content.bmkg.go.id/wp-content/uploads/kulminasi_utama_I_2026.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_ID_hari-tanpa-bayangan_2026_2026-03-05",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-05",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "Asia/Jakarta",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_A8EF5FACFD1B743503C7C444",
+            "src_4566BA39D72070A5F74450BC"
+          ],
+          "source_urls": [
+            "https://www.bmkg.go.id/tanda-waktu/hari-tanpa-bayangan",
+            "https://content.bmkg.go.id/wp-content/uploads/kulminasi_utama_I_2026.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_ID_hari-tanpa-bayangan_2027_2027-03-05",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-05",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "Asia/Jakarta",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_A8EF5FACFD1B743503C7C444"
+          ],
+          "source_urls": [
+            "https://www.bmkg.go.id/tanda-waktu/hari-tanpa-bayangan"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_ID_hari-tanpa-bayangan_2028_2028-03-04",
+          "occurrence_year": 2028,
+          "starts_on": "2028-03-04",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "Asia/Jakarta",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_A8EF5FACFD1B743503C7C444"
+          ],
+          "source_urls": [
+            "https://www.bmkg.go.id/tanda-waktu/hari-tanpa-bayangan"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_ID_hari-tanpa-bayangan_2027_2027-03-05",
+        "occurrence_year": 2027,
+        "starts_on": "2027-03-05",
+        "ends_on": null,
+        "calendar_system": "local",
+        "timezone": "Asia/Jakarta",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_A8EF5FACFD1B743503C7C444"
+        ],
+        "source_urls": [
+          "https://www.bmkg.go.id/tanda-waktu/hari-tanpa-bayangan"
+        ],
+        "distance_days": 190
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_IN_makar-sankranti",
+      "observance_key": "makar-sankranti",
+      "country_code": "IN",
+      "local_name": "मकर संक्रांति (Makar Sankranti)",
+      "observed_date": null,
+      "date_rule": "太陽進入恆星黃道摩羯宮的那一天；因為以恆星而非以春分點為準，日期會隨歲差逐世紀後移",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_9078F7FEFF2E6E81F1E48B92"
+      ],
+      "source_urls": [
+        "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jan/doc2025114485501.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_IN_makar-sankranti_2026_2026-01-14",
+          "occurrence_year": 2026,
+          "starts_on": "2026-01-14",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_9078F7FEFF2E6E81F1E48B92"
+          ],
+          "source_urls": [
+            "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jan/doc2025114485501.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_IN_makar-sankranti_2027_2027-01-14",
+          "occurrence_year": 2027,
+          "starts_on": "2027-01-14",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_9078F7FEFF2E6E81F1E48B92"
+          ],
+          "source_urls": [
+            "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jan/doc2025114485501.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_IN_makar-sankranti_2028_2028-01-15",
+          "occurrence_year": 2028,
+          "starts_on": "2028-01-15",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_9078F7FEFF2E6E81F1E48B92"
+          ],
+          "source_urls": [
+            "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jan/doc2025114485501.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_IN_makar-sankranti_2027_2027-01-14",
+        "occurrence_year": 2027,
+        "starts_on": "2027-01-14",
+        "ends_on": null,
+        "calendar_system": "solar-term",
+        "timezone": "Asia/Kolkata",
+        "date_status": "estimated",
+        "source_ids": [
+          "src_9078F7FEFF2E6E81F1E48B92"
+        ],
+        "source_urls": [
+          "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jan/doc2025114485501.pdf"
+        ],
+        "distance_days": 141
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_higan-autumn",
+      "observance_key": "higan-autumn",
+      "country_code": "JP",
+      "local_name": "お彼岸（秋彼岸）",
+      "observed_date": null,
+      "date_rule": "以秋分日為中日，前後各三日，合計七日",
+      "date_range_end": null,
+      "popularity_rank": 4,
+      "source_ids": [
+        "src_FD07BD403A78BD45E56075A4",
+        "src_E71F469EB3135AB2F09023F2"
+      ],
+      "source_urls": [
+        "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html",
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_higan-autumn_2026_2026-09-20",
+          "occurrence_year": 2026,
+          "starts_on": "2026-09-20",
+          "ends_on": "2026-09-26",
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_FD07BD403A78BD45E56075A4"
+          ],
+          "source_urls": [
+            "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_higan-autumn_2027_2027-09-20",
+          "occurrence_year": 2027,
+          "starts_on": "2027-09-20",
+          "ends_on": "2027-09-26",
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E433F8CA39F04D2697798136"
+          ],
+          "source_urls": [
+            "https://eco.mtk.nao.ac.jp/koyomi/yoko/2027/rekiyou272.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_higan-autumn_2028_2028-09-19",
+          "occurrence_year": 2028,
+          "starts_on": "2028-09-19",
+          "ends_on": "2028-09-25",
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_0521CE2CBE771B8670DC23E0"
+          ],
+          "source_urls": [
+            "https://www.nao.ac.jp/faq/a0301.html"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_higan-autumn_2026_2026-09-20",
+        "occurrence_year": 2026,
+        "starts_on": "2026-09-20",
+        "ends_on": "2026-09-26",
+        "calendar_system": "solar-term",
+        "timezone": "Asia/Tokyo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_FD07BD403A78BD45E56075A4"
+        ],
+        "source_urls": [
+          "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html"
+        ],
+        "distance_days": 24
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_higan-spring",
+      "observance_key": "higan-spring",
+      "country_code": "JP",
+      "local_name": "お彼岸（春彼岸）",
+      "observed_date": null,
+      "date_rule": "以春分日為中日，前後各三日，合計七日",
+      "date_range_end": null,
+      "popularity_rank": 3,
+      "source_ids": [
+        "src_FD07BD403A78BD45E56075A4",
+        "src_E433F8CA39F04D2697798136"
+      ],
+      "source_urls": [
+        "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html",
+        "https://eco.mtk.nao.ac.jp/koyomi/yoko/2027/rekiyou272.html"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_higan-spring_2026_2026-03-17",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-17",
+          "ends_on": "2026-03-23",
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_FD07BD403A78BD45E56075A4"
+          ],
+          "source_urls": [
+            "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_higan-spring_2027_2027-03-18",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-18",
+          "ends_on": "2027-03-24",
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E433F8CA39F04D2697798136"
+          ],
+          "source_urls": [
+            "https://eco.mtk.nao.ac.jp/koyomi/yoko/2027/rekiyou272.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_higan-spring_2028_2028-03-17",
+          "occurrence_year": 2028,
+          "starts_on": "2028-03-17",
+          "ends_on": "2028-03-23",
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_0521CE2CBE771B8670DC23E0"
+          ],
+          "source_urls": [
+            "https://www.nao.ac.jp/faq/a0301.html"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_higan-spring_2027_2027-03-18",
+        "occurrence_year": 2027,
+        "starts_on": "2027-03-18",
+        "ends_on": "2027-03-24",
+        "calendar_system": "solar-term",
+        "timezone": "Asia/Tokyo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_E433F8CA39F04D2697798136"
+        ],
+        "source_urls": [
+          "https://eco.mtk.nao.ac.jp/koyomi/yoko/2027/rekiyou272.html"
+        ],
+        "distance_days": 203
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_setsubun",
+      "observance_key": "setsubun",
+      "country_code": "JP",
+      "local_name": "節分",
+      "observed_date": null,
+      "date_rule": "立春的前一日；立春是太陽黃經達三一五度的瞬間所在的那一天",
+      "date_range_end": null,
+      "popularity_rank": 5,
+      "source_ids": [
+        "src_4B024E187F849F7E4C5A6ABD",
+        "src_FD07BD403A78BD45E56075A4",
+        "src_A9F412E6B17732B805826D53",
+        "src_2BAE628794746B847CC97C67",
+        "src_575B0410260D08649800F76F",
+        "src_08D02F8A0339FF6C726A82D3",
+        "src_0DE6394F7A0A526876BA181F"
+      ],
+      "source_urls": [
+        "https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics2021_2.html",
+        "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html",
+        "https://kyo-tsunagu.city.kyoto.lg.jp/gyoji/tsunagu300/12-2/setsubun/",
+        "https://www.maff.go.jp/j/keikaku/syokubunka/culture/wagohan/articles/2301/spe13_04.html",
+        "https://www.bunka.pref.mie.lg.jp/rekishi/kenshi/asp/hakken/detail303.html",
+        "https://www.city.kanoya.lg.jp/documents/5116/setubun2.pdf",
+        "https://www.maff.go.jp/j/shokusan/recycle/syoku_loss/kisetsusyokuhin.html"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_setsubun_2026_2026-02-03",
+          "occurrence_year": 2026,
+          "starts_on": "2026-02-03",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_FD07BD403A78BD45E56075A4"
+          ],
+          "source_urls": [
+            "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_setsubun_2027_2027-02-03",
+          "occurrence_year": 2027,
+          "starts_on": "2027-02-03",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E433F8CA39F04D2697798136"
+          ],
+          "source_urls": [
+            "https://eco.mtk.nao.ac.jp/koyomi/yoko/2027/rekiyou272.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_setsubun_2028_2028-02-03",
+          "occurrence_year": 2028,
+          "starts_on": "2028-02-03",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_4B024E187F849F7E4C5A6ABD",
+            "src_2CF9048427B77602F98B761B"
+          ],
+          "source_urls": [
+            "https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics2021_2.html",
+            "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_setsubun_2027_2027-02-03",
+        "occurrence_year": 2027,
+        "starts_on": "2027-02-03",
+        "ends_on": null,
+        "calendar_system": "solar-term",
+        "timezone": "Asia/Tokyo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_E433F8CA39F04D2697798136"
+        ],
+        "source_urls": [
+          "https://eco.mtk.nao.ac.jp/koyomi/yoko/2027/rekiyou272.html"
+        ],
+        "distance_days": 160
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_shubun",
+      "observance_key": "shubun",
+      "country_code": "JP",
+      "local_name": "秋分の日",
+      "observed_date": null,
+      "date_rule": "秋分日（太陽通過秋分點的瞬間所在的那一天）；與春分的日期一樣，要等前一年二月的官報才正式確定",
+      "date_range_end": null,
+      "popularity_rank": 2,
+      "source_ids": [
+        "src_E71F469EB3135AB2F09023F2",
+        "src_0521CE2CBE771B8670DC23E0"
+      ],
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://www.nao.ac.jp/faq/a0301.html"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_shubun_2026_2026-09-23",
+          "occurrence_year": 2026,
+          "starts_on": "2026-09-23",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E71F469EB3135AB2F09023F2",
+            "src_3BD3FE55D351D839A312A4E5"
+          ],
+          "source_urls": [
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou261.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_shubun_2027_2027-09-23",
+          "occurrence_year": 2027,
+          "starts_on": "2027-09-23",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E71F469EB3135AB2F09023F2"
+          ],
+          "source_urls": [
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_shubun_2028_2028-09-22",
+          "occurrence_year": 2028,
+          "starts_on": "2028-09-22",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_0521CE2CBE771B8670DC23E0"
+          ],
+          "source_urls": [
+            "https://www.nao.ac.jp/faq/a0301.html"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_shubun_2026_2026-09-23",
+        "occurrence_year": 2026,
+        "starts_on": "2026-09-23",
+        "ends_on": null,
+        "calendar_system": "solar-term",
+        "timezone": "Asia/Tokyo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_E71F469EB3135AB2F09023F2",
+          "src_3BD3FE55D351D839A312A4E5"
+        ],
+        "source_urls": [
+          "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+          "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou261.html"
+        ],
+        "distance_days": 27
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_shunbun",
+      "observance_key": "shunbun",
+      "country_code": "JP",
+      "local_name": "春分の日",
+      "observed_date": null,
+      "date_rule": "春分日（太陽通過春分點的瞬間所在的那一天）；由國立天文台推算，前一年二月一日刊登於官報的《曆要項》才正式確定",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_E71F469EB3135AB2F09023F2",
+        "src_0521CE2CBE771B8670DC23E0",
+        "src_3BD3FE55D351D839A312A4E5"
+      ],
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://www.nao.ac.jp/faq/a0301.html",
+        "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou261.html"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_shunbun_2026_2026-03-20",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-20",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E71F469EB3135AB2F09023F2",
+            "src_3BD3FE55D351D839A312A4E5"
+          ],
+          "source_urls": [
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+            "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou261.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_shunbun_2027_2027-03-21",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-21",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E71F469EB3135AB2F09023F2"
+          ],
+          "source_urls": [
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_shunbun_2028_2028-03-20",
+          "occurrence_year": 2028,
+          "starts_on": "2028-03-20",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_0521CE2CBE771B8670DC23E0"
+          ],
+          "source_urls": [
+            "https://www.nao.ac.jp/faq/a0301.html"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_shunbun_2027_2027-03-21",
+        "occurrence_year": 2027,
+        "starts_on": "2027-03-21",
+        "ends_on": null,
+        "calendar_system": "solar-term",
+        "timezone": "Asia/Tokyo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_E71F469EB3135AB2F09023F2"
+        ],
+        "source_urls": [
+          "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
+        ],
+        "distance_days": 206
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_toji",
+      "observance_key": "toji",
+      "country_code": "JP",
+      "local_name": "冬至",
+      "observed_date": null,
+      "date_rule": "太陽黃經達二七○度的瞬間所在的那一天",
+      "date_range_end": null,
+      "popularity_rank": 6,
+      "source_ids": [
+        "src_FD07BD403A78BD45E56075A4",
+        "src_D762E2C7D89C343F496CFDAC"
+      ],
+      "source_urls": [
+        "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html",
+        "https://www.maff.go.jp/kyusyu/syokuryou/syokubunka/attach/pdf/net-35.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_toji_2026_2026-12-22",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-22",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_FD07BD403A78BD45E56075A4"
+          ],
+          "source_urls": [
+            "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_toji_2027_2027-12-22",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-22",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E433F8CA39F04D2697798136"
+          ],
+          "source_urls": [
+            "https://eco.mtk.nao.ac.jp/koyomi/yoko/2027/rekiyou272.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_toji_2028_2028-12-21",
+          "occurrence_year": 2028,
+          "starts_on": "2028-12-21",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Tokyo",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_2CF9048427B77602F98B761B"
+          ],
+          "source_urls": [
+            "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_toji_2026_2026-12-22",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-22",
+        "ends_on": null,
+        "calendar_system": "solar-term",
+        "timezone": "Asia/Tokyo",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_FD07BD403A78BD45E56075A4"
+        ],
+        "source_urls": [
+          "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html"
+        ],
+        "distance_days": 117
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_TW_dongzhi",
+      "observance_key": "dongzhi",
+      "country_code": "TW",
+      "local_name": "冬至",
+      "observed_date": null,
+      "date_rule": "太陽視黃經達二七○度的那一天；時刻依中央氣象署《日曆資料表》，以臺灣時（世界時加八小時）計",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_F045C3336BEF6186024CF028",
+        "src_D0BB51F7A5E737A80C3188C8",
+        "src_6FDB1BDD8D85A18A42AA92E7"
+      ],
+      "source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+        "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf",
+        "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_TW_dongzhi_2026_2026-12-22",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-22",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_D0BB51F7A5E737A80C3188C8"
+          ],
+          "source_urls": [
+            "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_TW_dongzhi_2027_2027-12-22",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-22",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_D04C9CFB17E17EB08C514FEA"
+          ],
+          "source_urls": [
+            "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_TW_dongzhi_2028_2028-12-21",
+          "occurrence_year": 2028,
+          "starts_on": "2028-12-21",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_6FDB1BDD8D85A18A42AA92E7"
+          ],
+          "source_urls": [
+            "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_TW_dongzhi_2026_2026-12-22",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-22",
+        "ends_on": null,
+        "calendar_system": "solar-term",
+        "timezone": "Asia/Taipei",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_D0BB51F7A5E737A80C3188C8"
+        ],
+        "source_urls": [
+          "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf"
+        ],
+        "distance_days": 117
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_US_daylight-saving",
+      "observance_key": "daylight-saving",
+      "country_code": "US",
+      "local_name": "Daylight Saving Time",
+      "observed_date": null,
+      "date_rule": "三月第二個星期日凌晨兩點開始，至十一月第一個星期日凌晨兩點結束",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_00D014958A54F8D19CC108ED"
+      ],
+      "source_urls": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap6-subchapIX-sec260a.htm"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_US_daylight-saving_2026_2026-03-08",
+          "occurrence_year": 2026,
+          "starts_on": "2026-03-08",
+          "ends_on": "2026-11-01",
+          "calendar_system": "gregorian",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_00D014958A54F8D19CC108ED"
+          ],
+          "source_urls": [
+            "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap6-subchapIX-sec260a.htm"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_US_daylight-saving_2027_2027-03-14",
+          "occurrence_year": 2027,
+          "starts_on": "2027-03-14",
+          "ends_on": "2027-11-07",
+          "calendar_system": "gregorian",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_00D014958A54F8D19CC108ED"
+          ],
+          "source_urls": [
+            "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap6-subchapIX-sec260a.htm"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_US_daylight-saving_2028_2028-03-12",
+          "occurrence_year": 2028,
+          "starts_on": "2028-03-12",
+          "ends_on": "2028-11-05",
+          "calendar_system": "gregorian",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_00D014958A54F8D19CC108ED"
+          ],
+          "source_urls": [
+            "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap6-subchapIX-sec260a.htm"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_US_daylight-saving_2026_2026-03-08",
+        "occurrence_year": 2026,
+        "starts_on": "2026-03-08",
+        "ends_on": "2026-11-01",
+        "calendar_system": "gregorian",
+        "timezone": "America/New_York",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_00D014958A54F8D19CC108ED"
+        ],
+        "source_urls": [
+          "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap6-subchapIX-sec260a.htm"
+        ],
+        "distance_days": 0
+      }
+    }
+  ],
+  "demand_countries": {},
+  "regional_notes": [
+    {
+      "country_code": "BR",
+      "kind": "absence",
+      "source_urls": [
+        "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d9772.htm"
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "country_code": "CN",
+      "observance_ids": [
+        "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_CN_dongzhi"
+      ]
+    },
+    {
+      "country_code": "ID",
+      "observance_ids": [
+        "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_ID_hari-tanpa-bayangan"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "observance_ids": [
+        "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_IN_makar-sankranti"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "observance_ids": [
+        "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_higan-autumn",
+        "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_higan-spring",
+        "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_setsubun",
+        "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_shubun",
+        "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_shunbun",
+        "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_toji"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "observance_ids": [
+        "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_TW_dongzhi"
+      ]
+    },
+    {
+      "country_code": "US",
+      "observance_ids": [
+        "obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_US_daylight-saving"
+      ]
+    }
+  ],
+  "relations": [],
+  "source_ids": [
+    "src_00D014958A54F8D19CC108ED",
+    "src_0521CE2CBE771B8670DC23E0",
+    "src_08D02F8A0339FF6C726A82D3",
+    "src_0DE6394F7A0A526876BA181F",
+    "src_1EB9DF86A447787EF0187323",
+    "src_2BAE628794746B847CC97C67",
+    "src_2CF9048427B77602F98B761B",
+    "src_3BD3FE55D351D839A312A4E5",
+    "src_4566BA39D72070A5F74450BC",
+    "src_4B024E187F849F7E4C5A6ABD",
+    "src_509D6FE3CDE66C39605277AB",
+    "src_51E2FAAF9B4A5A5EB4482B01",
+    "src_575B0410260D08649800F76F",
+    "src_6DFD76B82DF608B35353178A",
+    "src_6FDB1BDD8D85A18A42AA92E7",
+    "src_9078F7FEFF2E6E81F1E48B92",
+    "src_A8EF5FACFD1B743503C7C444",
+    "src_A9F412E6B17732B805826D53",
+    "src_D04C9CFB17E17EB08C514FEA",
+    "src_D0BB51F7A5E737A80C3188C8",
+    "src_D762E2C7D89C343F496CFDAC",
+    "src_E405440D6A7FBA9FBC2398FD",
+    "src_E433F8CA39F04D2697798136",
+    "src_E71F469EB3135AB2F09023F2",
+    "src_F045C3336BEF6186024CF028",
+    "src_FD07BD403A78BD45E56075A4"
+  ],
+  "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title15/html/USCODE-2023-title15-chap6-subchapIX-sec260a.htm",
+    "https://www.nao.ac.jp/faq/a0301.html",
+    "https://www.city.kanoya.lg.jp/documents/5116/setubun2.pdf",
+    "https://www.maff.go.jp/j/shokusan/recycle/syoku_loss/kisetsusyokuhin.html",
+    "https://www.gov.cn/zhengce/content/202511/content_7047090.htm",
+    "https://www.maff.go.jp/j/keikaku/syokubunka/culture/wagohan/articles/2301/spe13_04.html",
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf",
+    "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou261.html",
+    "https://content.bmkg.go.id/wp-content/uploads/kulminasi_utama_I_2026.pdf",
+    "https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics2021_2.html",
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+    "https://www.mct.gov.cn/whzx/bnsj/dwwhllj/201612/t20161214_773196.html",
+    "https://www.bunka.pref.mie.lg.jp/rekishi/kenshi/asp/hakken/detail303.html",
+    "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+    "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf",
+    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jan/doc2025114485501.pdf",
+    "https://www.bmkg.go.id/tanda-waktu/hari-tanpa-bayangan",
+    "https://kyo-tsunagu.city.kyoto.lg.jp/gyoji/tsunagu300/12-2/setsubun/",
+    "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf",
+    "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf",
+    "https://www.maff.go.jp/kyusyu/syokuryou/syokubunka/attach/pdf/net-35.pdf",
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
+    "https://eco.mtk.nao.ac.jp/koyomi/yoko/2027/rekiyou272.html",
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html",
+    "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
+    "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d9772.htm"
+  ],
+  "content_updated_at": "2026-08-26T18:06:28.866Z",
+  "content_hash": "bb63f2cd06d36b2134c53c56977dbce13ac7dd32abb5999478896d6138b01ec8"
+}

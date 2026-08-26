@@ -64,24 +64,40 @@ writeJson(occPath, doc, 1);
 console.log(`occurrences: ${before} → ${doc.occurrences.length}(本 Topic ${rows.length} 列、${byObs.size} 個 observance)`);
 
 // ── 2. regional notes ─────────────────────────────────────────────────────
+// ⚠ content/topic-regional-notes.json 是**產物**,不是輸入:
+//   scripts/generate-regional-notes.mjs 每小時從自己寫死的 `absences` 表整份重產並覆蓋它,
+//   而 hourly-export.sh 會把結果 commit。所以片段一定要寫進**產生器**,寫進 JSON 會被洗掉。
+//   (2026-08-26 踩過:七個新 Topic 的 regional notes 全部在 18:00 的 hourly 消失,
+//    內容厚度 baseline 因此判它們「退步」。)
 const noteFrag = join(stageDir, `${slug}.notes.json`);
 if (existsSync(noteFrag)) {
   const notes = readJson(noteFrag);
   const n = Object.keys(notes).length;
   if (n) {
-    const LOCALES = ['zh-TW','en','ja','zh-CN','hi','id','pt-BR'];
+    const LOCALES = ['zh-TW', 'en', 'ja', 'zh-CN', 'hi', 'id', 'pt-BR'];
     for (const [cc, row] of Object.entries(notes)) {
       if (!/^[A-Z]{2}$/.test(cc)) errs.push(`notes: ${cc} 不是 ISO2 大寫`);
-      if (row.country_code !== cc) errs.push(`notes.${cc}: country_code 不一致`);
       for (const l of LOCALES) if (!row.text?.[l]?.trim()) errs.push(`notes.${cc}: 缺 ${l}`);
       if (!Array.isArray(row.source_urls) || !row.source_urls.length) errs.push(`notes.${cc}: source_urls 必填`);
     }
     if (errs.length) { console.error(`regional notes 驗證失敗:\n  - ${errs.join('\n  - ')}`); process.exit(1); }
-    const rnPath = join(ROOT, 'content', 'topic-regional-notes.json');
-    const rn = readJson(rnPath);
-    rn.topics[slug] = { source_urls: [], notes };
-    writeJson(rnPath, rn, 1);
-    console.log(`regional notes: ${slug} → ${n} 國`);
+
+    const genPath = join(ROOT, 'scripts', 'generate-regional-notes.mjs');
+    let gen = readFileSync(genPath, 'utf8');
+    if (gen.includes(`\n  '${slug}': {`)) console.log(`regional notes: ${slug} 已在產生器裡,略過`);
+    else {
+      const anchor = 'const absences = {\n';
+      if (!gen.includes(anchor)) { console.error('找不到 absences 錨點'); process.exit(1); }
+      // JS 字面量:單引號字串,只需跳脫反斜線與單引號(內文可能含 don't、l'État)
+      const q = (v) => `'${String(v).replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`;
+      const cs = Object.entries(notes)
+        .map(([cc, row]) => `      ${cc}: [${row.source_urls.map(q).join(', ')}],`).join('\n');
+      const bodies = Object.entries(notes)
+        .map(([cc, row]) => `    ${cc}: text(\n${LOCALES.map((l) => `      ${q(row.text[l])},`).join('\n')}\n    ),`).join('\n');
+      gen = gen.replace(anchor, `${anchor}  '${slug}': {\n    country_sources: {\n${cs}\n    },\n${bodies}\n  },\n`);
+      writeFileSync(genPath, gen);
+      console.log(`regional notes: ${slug} → 寫進 generate-regional-notes.mjs 的 absences(${n} 國)`);
+    }
   } else console.log('regional notes: 片段為空,略過');
 } else console.log('regional notes: 無片段,略過');
 

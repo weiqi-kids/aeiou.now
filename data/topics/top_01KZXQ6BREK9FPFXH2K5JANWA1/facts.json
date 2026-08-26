@@ -328,87 +328,6 @@
       }
     },
     {
-      "observance_id": "obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_JP_setsubun",
-      "observance_key": "setsubun",
-      "country_code": "JP",
-      "local_name": "節分",
-      "observed_date": null,
-      "date_rule": "立春前一日左右，日期每年略有差異",
-      "date_range_end": null,
-      "popularity_rank": 2,
-      "source_ids": [
-        "src_3D0FE84377040F5E0436884B",
-        "src_896FE82C2D1B93867E0BB2D7"
-      ],
-      "source_urls": [
-        "https://www.ndl.go.jp/kaleido/entry/21/1.html",
-        "https://www.japan.travel/en/see-and-do/festivals-and-events/"
-      ],
-      "occurrences": [
-        {
-          "occurrence_id": "occ_obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_JP_setsubun_2026_2026-02-03",
-          "occurrence_year": 2026,
-          "starts_on": "2026-02-03",
-          "ends_on": null,
-          "calendar_system": "solar-term",
-          "timezone": "Asia/Tokyo",
-          "date_status": "confirmed",
-          "source_ids": [
-            "src_D29A6410E0FF602D74F02F04"
-          ],
-          "source_urls": [
-            "https://www.nihongo-ews.mext.go.jp/contents_files/download/?cfid=406&content_id=864"
-          ]
-        },
-        {
-          "occurrence_id": "occ_obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_JP_setsubun_2027_2027-02-03",
-          "occurrence_year": 2027,
-          "starts_on": "2027-02-03",
-          "ends_on": null,
-          "calendar_system": "solar-term",
-          "timezone": "Asia/Tokyo",
-          "date_status": "confirmed",
-          "source_ids": [
-            "src_D29A6410E0FF602D74F02F04"
-          ],
-          "source_urls": [
-            "https://www.nihongo-ews.mext.go.jp/contents_files/download/?cfid=406&content_id=864"
-          ]
-        },
-        {
-          "occurrence_id": "occ_obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_JP_setsubun_2028_2028-02-03",
-          "occurrence_year": 2028,
-          "starts_on": "2028-02-03",
-          "ends_on": null,
-          "calendar_system": "solar-term",
-          "timezone": "Asia/Tokyo",
-          "date_status": "confirmed",
-          "source_ids": [
-            "src_D74CFCA1045D3455A4615E43"
-          ],
-          "source_urls": [
-            "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt"
-          ]
-        }
-      ],
-      "next_occurrence": {
-        "occurrence_id": "occ_obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_JP_setsubun_2027_2027-02-03",
-        "occurrence_year": 2027,
-        "starts_on": "2027-02-03",
-        "ends_on": null,
-        "calendar_system": "solar-term",
-        "timezone": "Asia/Tokyo",
-        "date_status": "confirmed",
-        "source_ids": [
-          "src_D29A6410E0FF602D74F02F04"
-        ],
-        "source_urls": [
-          "https://www.nihongo-ews.mext.go.jp/contents_files/download/?cfid=406&content_id=864"
-        ],
-        "distance_days": 160
-      }
-    },
-    {
       "observance_id": "obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_TW_ghost-month",
       "observance_key": "ghost-month",
       "country_code": "TW",
@@ -605,8 +524,7 @@
     {
       "country_code": "JP",
       "observance_ids": [
-        "obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_JP_obon",
-        "obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_JP_setsubun"
+        "obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_JP_obon"
       ]
     },
     {
@@ -620,24 +538,20 @@
   "relations": [],
   "source_ids": [
     "src_3B6C58E8206153653F7E1BD8",
-    "src_3D0FE84377040F5E0436884B",
     "src_509D6FE3CDE66C39605277AB",
     "src_896FE82C2D1B93867E0BB2D7",
     "src_8ADF07F096907DFC86796ED4",
     "src_BC89514E4D7BF213AE54D2E0",
-    "src_D29A6410E0FF602D74F02F04",
     "src_D74CFCA1045D3455A4615E43",
     "src_E405440D6A7FBA9FBC2398FD",
     "src_F045C3336BEF6186024CF028"
   ],
   "source_urls": [
     "https://jpsearch.go.jp/gallery/ndl-O6a96jYMq9Q",
-    "https://www.ndl.go.jp/kaleido/entry/21/1.html",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
     "https://www.japan.travel/en/see-and-do/festivals-and-events/",
     "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
     "https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/jiedu/tujie/202411/content_6986437.htm",
-    "https://www.nihongo-ews.mext.go.jp/contents_files/download/?cfid=406&content_id=864",
     "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
@@ -648,6 +562,6 @@
     "https://tourism.bihar.gov.in/en/experiences/festivals-and-fairs/festivals/pitrapaksha",
     "https://utsav.gov.in/view-event/pitra-paksha-1"
   ],
-  "content_updated_at": "2026-08-26T17:36:09.632Z",
-  "content_hash": "564aae9140e3d671789a4d6f59cf6c5635df0f617403a1a8e66bfff27f6892eb"
+  "content_updated_at": "2026-08-26T18:06:28.725Z",
+  "content_hash": "1f90e9c6fb87b5b41c3260c8c062c11db17dc5477c17020032b9dc1b15adda9f"
 }
