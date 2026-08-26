@@ -10,6 +10,9 @@ import { isTrendTopic } from "./lib/topics.mjs";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const LOCALES = ['zh-TW', 'en', 'ja', 'zh-CN', 'hi', 'id', 'pt-BR'];
 const FINAL_SLUGS = [
+  // christian-calendar-days(2026-08-26 用戶核准):Bing 實測 `corpus christi 2027` @br 精準量 2,112。
+  // 與 islamic-calendar-days 對稱。刻意不收 ID 的耶穌升天日 —— easter.md 已有同一個 observance。
+  'christian-calendar-days',
   // carnival(2026-08-26 用戶核准新增):Bing 實測 br 市場 \`carnaval 2027\` 精準量 38,488,
   // 是所有量過的字裡最大的一個,而站上原本沒有這個 Topic。
   'carnival',

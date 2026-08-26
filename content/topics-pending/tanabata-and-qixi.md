@@ -1,0 +1,242 @@
+# Tanabata and Qixi
+
+## meta
+- slug: tanabata-and-qixi
+- canonical: Tanabata and Qixi
+- category: festival
+- perennial: no
+- commonality: one story of the weaver and the herdsman, kept on the seventh night of the seventh lunar month in some places and moved onto fixed Gregorian dates in others
+
+## observance TW qixi
+- local_name: 七夕
+- date_rule: 農曆七月初七
+- rank: 1
+- source: https://nit.immigration.gov.tw/Multicultural/Detail/1000013
+- source: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095
+
+## observance TW coming-of-sixteen
+- local_name: 做十六歲
+- date_rule: 農曆七月初七（七娘媽誕辰）
+- rank: 2
+- source: https://www.tainan.gov.tw/News_Content.aspx?n=13370&s=8583182
+- source: https://www.tainan.gov.tw/news_content.aspx?n=13370&s=4146840
+- source: https://tmach-culture.tainan.gov.tw/templemuseums/templepage.asp?mainid=7277D4B5-17DD-43D4-8582-8EEF413826B6
+
+## observance CN qixi-jie
+- local_name: 七夕节
+- date_rule: 農曆七月初七
+- rank: 1
+- source: https://www.gov.cn/gongbao/content/2006/content_334718.htm
+- source: https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html
+- source: https://mzt.guizhou.gov.cn/xwzx/mzyw/202408/t20240809_85366124.html
+
+## observance JP tanabata
+- local_name: 七夕（たなばた）
+- date: 07-07
+- rank: 1
+- source: https://www.ndl.go.jp/koyomi/chapter1/s2.html
+- source: https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
+- source: https://www.gov-online.go.jp/eng/publicity/book/hlj/html/202208/202208_07_jp.html
+
+## observance JP sendai-tanabata
+- local_name: 仙台七夕まつり
+- date: 08-06
+- date_end: 08-08
+- rank: 2
+- source: https://www.city.sendai.jp/shiminkoho/shise/koho/koho/shisedayori/2026-08/documents/2026-08P04.pdf
+- source: https://www.mlit.go.jp/tagengo-db/R3-00002.html
+
+## observance JP hiratsuka-tanabata
+- local_name: 湘南ひらつか七夕まつり
+- date_rule: 七月的第一個星期五起，連辦三天（由實行委員會逐年公告）
+- rank: 3
+- source: https://www.city.hiratsuka.kanagawa.jp/press/page02_e00001_03215.html
+- source: https://www.city.hiratsuka.kanagawa.jp/kanko/page35_00241.html
+
+## locale zh-TW
+### title
+七夕
+### summary
+同一個牛郎織女的故事、同一個農曆七月初七，在三個社會被辦成三種不同的節日。台灣的七夕是情人節，也是七娘媽生——台南的「做十六歲」成年禮就辦在這一天；中國把它列進第一批國家級非物質文化遺產，卻連「明列但不放假」的那份名單都沒進；日本在明治改曆後把它整個搬到國曆七月七日，仙台則往後挪一個月、固定在八月六日到八日。這一頁比較的是同一個日期怎麼在三個地方分岔，以及哪裡放假、哪裡只剩下商業檔期。
+### keywords
+七夕, 七夕情人節, 七娘媽生, 做十六歲, 農曆七月初七, 仙台七夕, 乞巧節
+### customs TW qixi
+台灣的七夕是農曆七月初七——二○二六年落在八月十九日（星期三），二○二七年八月八日（星期日），二○二八年八月二十六日（星期六）。它在制度上的位置很好查：《紀念日及節日實施條例》第五條列出的民俗節日只有春節、元宵節、清明節、端午節、中元節、中秋節、重陽節、除夕與原住民族歲時祭儀九項，**七夕不在其中**；第六條再規定「第一項以外之節日，均不放假」。也就是說七夕連「被列名但不放假」都不是——同一個農曆七月裡，八天之後的中元節（農曆七月十五）有列名，七夕連名字都沒有。主管機關是內政部。內政部移民署的新住民數位資訊e網把它記成「俗稱中國情人節，訂於農曆七月七日」，並保留了它更早的兩個名字：向織女乞求智巧，所以叫乞巧節；參與的多是閨閣婦女，所以又叫女兒節。今天商場與餐廳推的是第一個名字，後兩個只留在文獻裡。
+### customs TW coming-of-sixteen
+同一天在台南是另一件事。七娘媽（七星娘娘）的誕辰是農曆七月七日，民間視為孩子的守護神；孩子從出生到十六歲受祂庇佑，滿十六歲那年在這一天取下古錢紅線，備妥壽金、香燭與「七娘媽亭」等大禮，行「做十六歲」的成年禮。台南市中西區的開隆宮創建於雍正十年（一七三二），主祀七星娘娘，俗稱七星夫人廟，是這個儀式最有名的場所——二○二三年八月二十二日那場，上百位青少年穿傳統服飾或狀元服，行禮祭拜後鑽過七娘媽亭的神案，並在橋上掛許願卡。這套禮俗已由臺南市**登錄為市定民俗**，等於給了它法定身分；臺南市文化資產管理處自民國一○一年（二○一二）起每年辦示範活動，到一○八年（二○一九）已是第八屆，做法是邀示範家庭在自家戶內按傳統科儀行禮，另與臺灣臨濮堂施姓大宗祠、家扶基金會合作，讓弱勢家庭的屆齡少年也走完這一程。所以同一個日期上，一端是約會，另一端是家族把孩子交出去長大，兩件事互不相干卻共用一天。
+### customs CN qixi-jie
+中國的七夕節被國家承認，但承認的方式是「遺產」而不是「假日」。二○○六年國務院公布第一批國家級非物質文化遺產名錄，共五百一十八項，其中民俗類七十項；七夕節排在序號四五二，申報單位是文化部——同一類裡春節是四四九、清明四五○、端午四五一、中秋四五三、重陽四五四。可是打開《全國年節及紀念日放假辦法》（二○二四年國務院令第七九五號修改），全體公民放假的節日只有元旦、春節、清明、勞動節、端午、中秋、國慶七項，部分公民放假的是婦女節、青年節、兒童節與建軍紀念日；第五條另外點名一批「均不放假」的日子——二七、五卅、七七、九三、九一八、教師節、護士節、記者節、植樹節——**七夕連這份「明列但不放假」的名單都沒進去**。它留下的痕跡在別的地方：不少情侶挑七夕辦結婚登記，於是「這天婚姻登記處開不開」變成一個每年要問一次的問題。二○二四年七夕（八月十日）適逢週六，民政部社會事務司在八月五日答覆網友時說，各地民政部門鼓勵婚姻登記機關滿足群眾需求、開展相關業務，但未做具體的強制性規定和要求。也就是說，因為它不是法定節假日，開不開由各地自己決定。二○二七年七夕是星期日、二○二八年是星期六，同一個問題會再問兩次。
+### customs JP tanabata
+日本的七夕不在農曆上。明治政府在明治五年（一八七二）十一月發布改用太陽曆（格里曆），明治六年（一八七三）起以太陽曆取代太陰太陽曆；改曆突然到本來的明治五年十二月三日直接變成明治六年一月一日，國內一度混亂。七夕跟著這次改曆被搬到國曆，於是今天日本全國多半在七月七日過，也有地方在八月七日前後過。它的內容也和台灣、中國分了岔：人們把願望寫在彩色短冊上，掛到竹枝（笹）上向星星許願——牽牛星（天鷹座的阿爾塔）與織女星（天琴座的織女一）一年見一次的傳說仍在，但「乞巧」與「情人」都不是主題，願望本身才是。制度上它同樣沒有地位：《國民の祝日に関する法律》（昭和二十三年法律第一七八號）第二條列出十六個國民の祝日，從元日、成人の日一路到勤労感謝の日，**沒有七夕**。八月辦的七夕祭與迎祖先的盂蘭盆同一個時期，所以兩者常被合在一起辦。
+### customs JP sendai-tanabata
+仙台把日期往後挪了一個月。仙台七夕まつり固定在**每年八月六日至八日**，二○二六年是八月六日（四）、七日（五）、八日（六）——這是新曆的「月遲れ」，等於把原本農曆七月的時序留住，而不是跟著國曆七月七日走。前一晚八月五日先放仙台七夕花火祭，二○二六年是第五十七回、約一萬六千發。規模上，仙台車站前到周邊商店街掛起長度超過十公尺的竹飾，全市三千餘本；它與青森睡魔祭、秋田竿燈祭並列東北三大夏祭。歷史上，七夕在十七世紀初伊達政宗（一五六七—一六三六）築仙台之後在當地扎根，至今四百餘年；期間曾因戰爭中斷，二○二六年那屆是仙台市自己標記的「戰後復活第八十回」。飾りの意匠也自成一套：除了短冊，還有折鶴、着物、巾着與像漁網或編籃的吹き流し，各有寓意——巾着代表富與繁榮，投網狀的飾り代表豐漁與豐收。
+### customs JP hiratsuka-tanabata
+神奈川縣平塚市又是第三個時間。湘南ひらつか七夕まつり辦在**七月上旬**，既不是七月七日，也不是八月：第七十四回是令和八年（二○二六）七月三日（五）至五日（日），前一年（第七十三回）三天湧入一百一十五萬人。平塚市在令和八年四月二十三日的記者發表裡把細節寫得很清楚：湘南スターモール掛八十本（其中市民飾り二十六本）、紅谷パールロード十七本，車站前商店街的大型飾り合計約一百本；初日與第二日的結束時間延後三十分鐘至晚間八點半，最終日到晚間七點；七夕おどり千人パレード的路線因中暑對策而重新規劃，並以「七夕COOL」為名請店家協助降溫、在會場設置噴霧風扇。同一份發表也預告了下一年：令和九年（二○二七）七月二日（五）至四日（日）。三個日期並排就看得出來——日本一個國家內部就有國曆七月七日、八月六至八日、七月上旬三種安排，而沒有任何一個是農曆七月初七。
+
+## locale en
+### title
+Tanabata and Qixi
+### summary
+One legend about a weaver and a herdsman, one date in the seventh lunar month, and three societies that made three different festivals out of it. Taiwan keeps it on the lunar calendar and stacks two things on the same day — a couples' evening and a coming-of-age rite in Tainan. China registered it as national intangible heritage but left it off even the list of days explicitly named as non-holidays. Japan moved it onto 7 July when the country switched calendars in 1873, while Sendai pushed it a month later to 6–8 August. This page compares where the day sits in law, who gets time off, and what each place kept of the story.
+### keywords
+Tanabata, Qixi, Star Festival, Sendai Tanabata, seventh lunar month, coming of age Tainan
+### date_rule TW qixi
+The seventh day of the seventh month of the Chinese lunisolar calendar.
+### customs TW qixi
+Taiwan keeps Qixi on the lunar date: 19 August in 2026 (a Wednesday), 8 August in 2027 (a Sunday), 26 August in 2028 (a Saturday). Its legal position is easy to check and slightly startling. Article 5 of the Act on Commemorative Days and Holidays lists nine folk festivals — Lunar New Year, the Lantern Festival, Qingming, Duanwu, the Zhongyuan Festival, Mid-Autumn, Double Ninth, Lunar New Year's Eve and the indigenous seasonal rites — and **Qixi is not among them**. Article 6 then closes the door: festivals outside the enumerated set carry no day off. So Qixi is not even a named day that happens to be worked; it is unnamed. Eight days later in the same lunar month the Zhongyuan Festival does get named, and still gets no holiday. The National Immigration Agency's portal for new residents records the day as "commonly called the Chinese Valentine's Day, set on the seventh day of the seventh lunar month", and preserves two older names alongside it: the Begging for Skill Festival, from the practice of asking the Weaver Girl for dexterity, and the Daughters' Festival, because those who took part were mostly women of the household. Shops and restaurants sell the first name; the other two survive in the record.
+### date_rule TW coming-of-sixteen
+The seventh day of the seventh month of the Chinese lunisolar calendar, the birthday of the Seven Mothers.
+### customs TW coming-of-sixteen
+The same date carries something else entirely in Tainan. The seventh day of the seventh lunar month is the birthday of the Seven Mothers, Qiniangma, held to guard children from birth until sixteen. In the year a child turns sixteen the family removes the old coin and red thread worn since infancy, prepares spirit money, incense, candles and a paper pavilion called the qiniangma ting, and performs the coming-of-sixteen rite. Kailong Temple in Tainan's West Central District, founded in 1732 under the Yongzheng emperor and dedicated to the Seven Star Ladies, is where it is most visible: on 22 August 2023 more than a hundred teenagers came in traditional dress or scholar's robes, made their offerings, passed beneath the altar table bearing the paper pavilion, and hung wish cards on a bridge. The city of Tainan has **registered the custom as a municipal folk heritage item**, which gives it a legal identity rather than only a customary one, and the city's Cultural Heritage Management Office has run an annual demonstration since 2012 — by 2019 the eighth of them — inviting host families to perform the full sequence inside their own homes, and working with the Shih clan ancestral hall and the Taiwan Fund for Children and Families so that teenagers from low-income households can go through it too. One date, two unrelated things: an evening out at one end, a family walking a child into adulthood at the other.
+### date_rule CN qixi-jie
+The seventh day of the seventh month of the Chinese lunisolar calendar.
+### customs CN qixi-jie
+China recognises Qixi, but as heritage rather than as a holiday. In 2006 the State Council published the first national list of intangible cultural heritage — 518 items, of which seventy fall under folk custom. The Qixi Festival is entry 452, submitted by the Ministry of Culture, sitting among Lunar New Year at 449, Qingming at 450, Duanwu at 451, Mid-Autumn at 453 and Double Ninth at 454. Open the Measures on Holidays for National Annual Festivals and Commemorative Days, as amended by State Council Order No. 795 of 2024, and the picture reverses: the days off for all citizens are New Year's Day, Lunar New Year, Qingming, Labour Day, Duanwu, Mid-Autumn and National Day; partial days go to Women's Day, Youth Day, Children's Day and Army Day; and Article 5 names a further batch — 7 February, 30 May, 7 July, 3 September, 18 September, Teachers' Day, Nurses' Day, Journalists' Day, Arbor Day — as days that carry **no** time off. **Qixi does not appear even on that list of explicitly non-holidays.** The trace it leaves is somewhere else. Couples like to register their marriages on Qixi, which turns "will the registry be open" into an annual question. In 2024 Qixi fell on Saturday 10 August; on 5 August the Ministry of Civil Affairs' social affairs department answered a public query by saying that local civil affairs bureaus are encouraged to meet demand and open, but that no binding requirement had been set. Because the day is not a statutory holiday, the answer is decided locally, one bureau at a time. Qixi falls on a Sunday in 2027 and a Saturday in 2028, so the question comes round twice more.
+### customs JP tanabata
+Japan's Tanabata is no longer on a lunar calendar at all. In November 1872 the Meiji government announced the switch to the solar Gregorian calendar, and from 1873 the solar calendar replaced the lunisolar one. There was almost no preparation: what would have been 3 December 1872 became 1 January 1873 overnight, and the country was thrown into confusion. Tanabata moved with the calendar, which is why most of Japan now keeps it on 7 July, with some regions around 7 August. The content diverged as well. People write wishes on coloured strips of paper, tanzaku, and hang them on bamboo — the legend of Altair and Vega meeting once a year survives, but neither dexterity nor courtship is the theme; the wish itself is. Institutionally the day has no standing: Article 2 of the Act on National Holidays of 1948 enumerates sixteen public holidays, from New Year's Day and Coming of Age Day through to Labour Thanksgiving Day, and **Tanabata is not one of them**. Where it is kept in August it coincides with Obon, when ancestors are welcomed home, so the two are often run together.
+### customs JP sendai-tanabata
+Sendai moved the festival a month later instead. The Sendai Tanabata Festival runs on **6 to 8 August every year** — in 2026 that is Thursday the 6th through Saturday the 8th. This is tsukiokure, "a month behind": rather than following the Gregorian 7 July, the city keeps the seasonal position the old seventh lunar month used to hold. A fireworks display opens the run on the evening of 5 August; the 2026 edition was the 57th, with about 16,000 shells. In scale, bamboo poles over ten metres long are raised from the front of Sendai Station through the surrounding arcades, more than three thousand across the city, and the festival stands with Aomori's Nebuta and Akita's Kantō as one of the three great summer festivals of the Tōhoku region. Historically it took root after Date Masamune (1567–1636) built Sendai at the start of the seventeenth century and promoted it, giving the festival more than four hundred years of history; it was interrupted by war, and the city marks the 2026 edition as the eightieth since the post-war revival. The decorations carry their own vocabulary: alongside tanzaku there are folded cranes, kimono, purses and streamers resembling fishing nets or woven baskets, each standing for something — the purse for wealth and prosperity, the net for a good catch and a good harvest.
+### date_rule JP hiratsuka-tanabata
+Three days from the first Friday in July, fixed each year by the organising committee.
+### customs JP hiratsuka-tanabata
+Hiratsuka in Kanagawa Prefecture supplies a third timing. The Shonan Hiratsuka Tanabata Festival runs in **early July** — neither the 7th nor August: the 74th edition ran 3 to 5 July 2026, a Friday to a Sunday, after the 73rd drew 1.15 million visitors over its three days. The city's press release of 23 April 2026 sets out the detail: eighty decorations along the Shonan Star Mall, twenty-six of them made by residents, seventeen more along Beniya Pearl Road, around a hundred large pieces in the shopping streets by the station; closing time on the first two days extended by thirty minutes to 8.30 p.m., and 7 p.m. on the last day; the thousand-strong Tanabata dance parade rerouted for heat safety, with a "Tanabata COOL" scheme asking shopfront traders to help keep visitors cool and mist fans installed along the decorated streets. The same release announces the following year in advance: 2 to 4 July 2027. Put the three side by side and the point is visible inside a single country — 7 July, 6–8 August, and the first weekend of July, and not one of them is the seventh day of the seventh lunar month.
+
+## locale ja
+### title
+七夕
+### summary
+織姫と彦星という一つの物語、旧暦七月七日という一つの日付から、三つの社会が三つの別の行事を作った。台湾は旧暦のまま残し、同じ日に恋人たちの夜と台南の成人儀礼「做十六歲」を重ねている。中国は国家級無形文化遺産に登録しながら、「休まない日」として名前が挙がる一覧にすら入れていない。日本は明治の改暦で七月七日に移し、仙台は一か月遅らせて八月六日から八日に固定した。このページは、同じ日付が制度上どこに置かれ、どこが休みになり、物語のどの部分が残ったのかを比べる。
+### keywords
+七夕, たなばた, 仙台七夕まつり, 湘南ひらつか七夕まつり, 短冊, 七夕 2026, 旧暦七月七日
+### date_rule TW qixi
+旧暦7月7日。
+### customs TW qixi
+台湾の七夕は旧暦のままである。2026年は8月19日（水）、2027年は8月8日（日）、2028年は8月26日（土）にあたる。制度上の位置は調べればすぐ分かるが、少し意外だ。紀念日及節日実施条例第五条が挙げる民俗節日は、春節・元宵節・清明節・端午節・中元節・中秋節・重陽節・大晦日・原住民族の歳時祭儀の九つで、**七夕は入っていない**。第六条はさらに「第一項以外の節日はいずれも休みとしない」と定める。つまり七夕は「名前はあるが休みではない日」ですらなく、名前そのものがない。同じ旧暦七月の八日後にある中元節（旧暦七月十五日）は名前を持ち、それでも休みにはならない。内政部移民署の新住民向け情報サイトはこの日を「俗に中国のバレンタインと呼ばれ、旧暦七月七日に定められる」と記し、より古い二つの呼び名も残している。織女に手先の器用さを乞うから乞巧節、参加するのが主に家の女性たちだったから女児節。商業が売っているのは最初の名で、あとの二つは記録の中にある。
+### date_rule TW coming-of-sixteen
+旧暦7月7日（七娘媽の誕生日）。
+### customs TW coming-of-sixteen
+同じ日、台南ではまったく別のことが起きる。旧暦七月七日は七娘媽（七星娘娘）の誕生日で、生まれてから十六歳までの子どもを守る神とされる。十六歳になる年、その日に幼時から身に着けてきた古銭と赤い糸を外し、寿金・線香・ろうそく、そして紙製の「七娘媽亭」を供えて成人の儀礼を行う。台南市中西区の開隆宮は雍正十年（1732）の創建で七星娘娘を主祀し、俗に七星夫人廟と呼ばれる。2023年8月22日のその日には、百人を超える少年少女が伝統衣装や状元服をまとって参拝し、供物机に載せた紙の亭の下をくぐり、橋の上に願い札を掛けた。この習俗は台南市によって**市定民俗として登録**されており、慣習ではなく法的な身分を持つ。台南市文化資産管理処は民国101年（2012）から毎年実演を行っており、108年（2019）で第八回。実演では手本となる家族が自宅の中で伝統の次第どおりに行い、施氏の宗祠や家扶基金会と組んで、経済的に厳しい家庭の該当年齢の少年少女も同じ道筋を通れるようにしている。一つの日付の上に、互いに関係のない二つのことが同居している。
+### date_rule CN qixi-jie
+旧暦7月7日。
+### customs CN qixi-jie
+中国は七夕を認めている。ただし休日としてではなく、遺産としてである。2006年、国務院は第一次国家級無形文化遺産名録を公布した。全518項目、そのうち民俗が70項目。七夕節は通し番号452、申請単位は文化部で、同じ分類の中で春節449、清明450、端午451、中秋453、重陽454と並ぶ。ところが「全国年節及び記念日休暇弁法」（2024年国務院令第795号による改正）を開くと構図は逆になる。全国民が休むのは元旦・春節・清明・労働節・端午・中秋・国慶の七つ、一部の国民が休むのは婦女節・青年節・児童節・建軍記念日。第五条はさらに「いずれも休みとしない」日を名指しする——二七、五卅、七七、九三、九一八、教師節、看護師の日、記者節、植樹節。**七夕はその「名前は挙がるが休まない」一覧にすら入っていない。** 痕跡は別のところに残る。結婚登記をこの日にしたい人が多く、「その日、婚姻登記処は開いているのか」が毎年の問いになる。2024年の七夕（8月10日）は土曜だった。民政部社会事務司は8月5日、ネット上の問い合わせに対し、各地の民政部門は住民の需要に応えて業務を行うよう奨励しているが、具体的な強制の規定や要求は設けていない、と答えている。法定の祝日でないから、開けるかどうかは地方ごとに決まる。2027年の七夕は日曜、2028年は土曜で、同じ問いはあと二回巡ってくる。
+### customs JP tanabata
+日本の七夕はもう旧暦の上にない。明治政府は明治5年（1872）11月に太陽暦（グレゴリオ暦）への改暦を発表し、明治6年（1873）から太陰太陽暦に替えて太陽暦を採用した。準備期間はほとんどなく、本来の明治5年12月3日がそのまま明治6年1月1日になったため国内は混乱した。七夕はこの改暦とともに移り、現在は全国の多くで7月7日、地域によっては8月7日ごろに行われる。中身も台湾や中国とは分かれた。色のついた短冊に願い事を書いて笹の枝に飾り、星に願う。天の川を挟んだ牽牛星（わし座のアルタイル）と織女星（こと座のベガ）が年に一度会うという伝説は残っているが、乞巧も恋愛も主題ではなく、願いごとそのものが主題である。制度上の地位も同様にない。国民の祝日に関する法律（昭和二十三年法律第百七十八号）第二条は元日、成人の日から勤労感謝の日まで十六の祝日を挙げるが、**七夕はその中にない**。8月に行う地域では祖先を迎える盆と時期が重なるため、両者は一緒に行われることが多い。
+### customs JP sendai-tanabata
+仙台は日付を一か月後ろにずらした。仙台七夕まつりは**毎年8月6日から8日**に行われ、2026年は8月6日（木）・7日（金）・8日（土）。これは新暦の月遅れで、グレゴリオ暦の7月7日に合わせるのではなく、旧暦七月が持っていた季節上の位置を残す形になっている。前夜の8月5日には仙台七夕花火祭があり、2026年は第57回、約16,000発を打ち上げた。規模としては、仙台駅前から周辺商店街にかけて長さ10メートルを超える笹飾りが立ち、市内で3千本余りになる。青森ねぶた、秋田竿燈と並ぶ東北三大夏祭りの一つでもある。歴史としては、17世紀初頭に伊達政宗（1567–1636）が仙台を築いたのち普及させたのが始まりとされ、400年余りが経つ。戦争などで中断した時期があり、2026年は仙台市自身が「戦後復活80回」と記す記念の回だった。飾りには独自の語彙がある。短冊のほかに折り鶴、着物、巾着、漁網や編み籠を思わせる吹き流しがあり、それぞれ意味を持つ——巾着は富と繁栄、投網のような飾りは豊漁と豊作を表す。
+### date_rule JP hiratsuka-tanabata
+7月の第1金曜日から3日間（実行委員会が毎年決定）。
+### customs JP hiratsuka-tanabata
+神奈川県平塚市は三つ目の時期を提示する。湘南ひらつか七夕まつりは**7月上旬**で、7日でも8月でもない。第74回は令和8年（2026）7月3日（金）から5日（日）まで、前回の第73回は3日間で115万人が来場した。平塚市が令和8年4月23日に出した記者発表は細部まで書いている。湘南スターモールに80本（うち市民飾り26本）、紅谷パールロードに17本、駅前商店街の大型飾りは合計約100本。初日と2日目の終了時間を30分延長して午後8時30分まで、最終日は午後7時まで。七夕おどり千人パレードは熱中症対策のためコースを組み替え、「七夕COOL」と題して店前出店の事業者に暑さ対策への協力を求め、飾りとイベントのエリアにミストファン等を設置する。同じ発表は翌年も先に告げている——令和9年（2027）7月2日（金）から4日（日）まで。三つを並べると、一つの国の中に7月7日、8月6日〜8日、7月上旬という三つの置き方があり、そのどれも旧暦七月七日ではない。
+
+## locale zh-CN
+### title
+七夕节
+### summary
+同一个牛郎织女的故事、同一个农历七月初七，在三个社会被办成了三种不同的节日。中国把七夕节列进第一批国家级非物质文化遗产名录，却连《全国年节及纪念日放假办法》里那份"明列但不放假"的名单都没进去；台湾把它留在农历上，同一天在台南还是"做十六岁"的成年礼；日本在明治改历后整个搬到公历7月7日，仙台则往后挪一个月，固定在8月6日至8日。这一页比较的是同一个日期在制度上被放到哪里、哪里放假，以及故事里剩下了什么。
+### keywords
+七夕节, 七夕, 农历七月初七, 非物质文化遗产, 乞巧节, 仙台七夕, 结婚登记
+### date_rule TW qixi
+农历七月初七。
+### customs TW qixi
+台湾的七夕仍按农历走：2026年落在8月19日（周三），2027年8月8日（周日），2028年8月26日（周六）。它在制度上的位置一查就清楚，也有点出人意料。《纪念日及节日实施条例》第五条列出的民俗节日只有春节、元宵节、清明节、端午节、中元节、中秋节、重阳节、除夕与原住民族岁时祭仪九项，**七夕不在其中**；第六条再补一句"第一项以外之节日，均不放假"。也就是说七夕连"被列名却不放假"都算不上——它根本没有被列名。同一个农历七月里，八天之后的中元节（农历七月十五）被列了名，一样不放假。主管机关是内政部。内政部移民署的新住民数位资讯e网把这一天记成"俗称中国情人节，订于农历七月七日"，并保留了它更早的两个名字：向织女乞求智巧，所以叫乞巧节；参与的多是闺阁妇女，所以又叫女儿节。今天商场推的是第一个名字，后两个只留在文献里。
+### date_rule TW coming-of-sixteen
+农历七月初七（七娘妈诞辰）。
+### customs TW coming-of-sixteen
+同一天在台南是另一件事。农历七月七日是七娘妈（七星娘娘）诞辰，民间视为孩子的守护神，孩子自出生到十六岁受其庇佑。满十六岁那年的这一天，取下自幼佩带的古钱红线，备妥寿金、香烛与纸扎的"七娘妈亭"，行"做十六岁"成年礼。台南市中西区的开隆宫创建于雍正十年（1732），主祀七星娘娘，俗称七星夫人庙，是这个仪式最有名的场所——2023年8月22日那一场，上百位青少年穿传统服饰或状元服，行礼祭拜后钻过七娘妈亭的神案，并在桥上挂许愿卡。这套礼俗已由台南市**登录为市定民俗**，等于给了它法定身分；台南市文化资产管理处自民国101年（2012）起每年办示范活动，到108年（2019）已是第八届，做法是请示范家庭在自家户内按传统科仪行礼，另与台湾临濮堂施姓大宗祠、家扶基金会合作，让弱势家庭的届龄少年也走完同一程。于是同一个日期上并置着两件互不相干的事。
+### date_rule CN qixi-jie
+农历七月初七。
+### customs CN qixi-jie
+国家承认七夕，但承认的方式是"遗产"而不是"假日"。2006年国务院公布第一批国家级非物质文化遗产名录，共518项，其中民俗类70项；七夕节排在序号452，申报单位是文化部，同一类里春节449、清明450、端午451、中秋453、重阳454。可是翻开《全国年节及纪念日放假办法》（2024年国务院令第795号修改），全体公民放假的节日只有元旦、春节、清明节、劳动节、端午节、中秋节、国庆节七项；部分公民放假的是妇女节、青年节、儿童节与建军纪念日；第五条另外点名一批"均不放假"的日子——二七纪念日、五卅纪念日、七七抗战纪念日、九三抗战胜利纪念日、九一八纪念日、教师节、护士节、记者节、植树节——**七夕连这份"明列但不放假"的名单都没进去**。它留下的痕迹在别处：不少情侣挑七夕办结婚登记，于是"这天婚姻登记处开不开"成了每年要问一次的问题。2024年七夕（8月10日）恰逢周六，民政部社会事务司在8月5日答复网友时表示，各地民政部门鼓励婚姻登记机关满足群众需求、开展相关业务，但未做具体的强制性规定和要求。因为它不是法定节假日，开不开由各地自己决定。2027年七夕是周日、2028年是周六，同一个问题还会再问两次。
+### customs JP tanabata
+日本的七夕已经不在农历上。明治政府于明治五年（1872）11月宣布改用太阳历（格里历），明治六年（1873）起以太阳历取代太阴太阳历。改历几乎没有准备期，本该是明治五年十二月三日的那一天直接变成明治六年一月一日，国内一度混乱。七夕随这次改历一起搬家，所以今天日本多数地区在7月7日过，也有地区在8月7日前后过。内容也分了岔：人们把愿望写在彩色短册上，挂到竹枝上向星星许愿——牛郎星（天鹰座河鼓二）与织女星（天琴座织女一）一年一会的传说仍在，但"乞巧"和"情人"都不是主题，愿望本身才是。制度上它同样没有位置：《国民の祝日に関する法律》（昭和二十三年法律第178号）第二条列出十六个法定祝日，从元日、成人之日一路到勤劳感谢之日，**没有七夕**。在8月过七夕的地区，时间与迎祖先的盂兰盆重叠，两者常合在一起办。
+### customs JP sendai-tanabata
+仙台把日期整整往后挪了一个月。仙台七夕祭固定在**每年8月6日至8日**，2026年是8月6日（四）、7日（五）、8日（六）。这是新历的"月迟れ"——不跟着公历7月7日，而是保留农历七月原本的季节位置。前一晚8月5日先办仙台七夕烟花祭，2026年是第57回、约16,000发。规模上，从仙台车站前到周边商店街立起长度超过10米的竹饰，全市3千余本；它与青森睡魔祭、秋田竿灯祭并列东北三大夏祭。历史上，17世纪初伊达政宗（1567—1636）筑仙台后推广，至今四百余年；其间因战争中断过，2026年那一届是仙台市自己标记的"战后复活第80回"。装饰也自成一套语汇：除短册外还有折鹤、和服、荷包与像渔网或编篮的吹流，各有寓意——荷包代表富与繁荣，投网状的饰物代表丰渔与丰收。
+### date_rule JP hiratsuka-tanabata
+七月的第一个星期五起，连办三天（由实行委员会逐年公告）。
+### customs JP hiratsuka-tanabata
+神奈川县平塚市给出第三个时间。湘南平塚七夕祭办在**7月上旬**，既不是7日也不是8月：第74回是令和8年（2026）7月3日（五）至5日（日），上一届（第73回）三天来场115万人。平塚市在令和8年4月23日的记者发表里把细节写得很清楚：湘南Star Mall挂80本（其中市民饰26本）、红谷Pearl Road 17本，车站前商店街的大型饰合计约100本；首日与第二日结束时间延后30分钟至晚8点半，最终日到晚7点；七夕舞千人游行因中暑对策重新规划路线，并以"七夕COOL"为名请店家协助降温、在会场设置喷雾风扇。同一份发表还预告了下一年：令和9年（2027）7月2日（五）至4日（日）。三个日期并排就看得出来——日本一国之内就有公历7月7日、8月6日至8日、7月上旬三种安排，而没有一个是农历七月初七。
+
+## locale hi
+### title
+तनाबाता और छीशी
+### summary
+बुनकर कन्या और ग्वाले की एक ही कथा, चंद्र-सौर पंचांग के सातवें महीने की एक ही तिथि — और उससे बने तीन अलग त्योहार। ताइवान इसे चंद्र तिथि पर रखता है और उसी दिन ताइनान में सोलह वर्ष का संस्कार भी करता है। चीन ने इसे राष्ट्रीय अमूर्त सांस्कृतिक विरासत में दर्ज किया, पर अवकाश-नियमावली की उस सूची में भी नहीं रखा जिसमें "छुट्टी नहीं मिलेगी" वाले दिन नाम लेकर गिनाए गए हैं। जापान ने 1873 के पंचांग-परिवर्तन के साथ इसे 7 जुलाई पर खिसका दिया, जबकि सेंदाई ने इसे एक महीना आगे बढ़ाकर 6–8 अगस्त पर टिका दिया। यह पृष्ठ तुलना करता है कि यह तिथि क़ानून में कहाँ बैठती है, कहाँ छुट्टी मिलती है, और कथा का कौन-सा हिस्सा कहाँ बचा।
+### keywords
+तनाबाता, छीशी, तारों का उत्सव, सेंदाई तनाबाता, चंद्र सातवाँ महीना, ताइनान सोलह वर्ष
+### date_rule TW qixi
+चीनी चंद्र-सौर पंचांग के सातवें महीने का सातवाँ दिन।
+### customs TW qixi
+ताइवान इसे चंद्र तिथि पर ही रखता है: 2026 में 19 अगस्त (बुधवार), 2027 में 8 अगस्त (रविवार), 2028 में 26 अगस्त (शनिवार)। क़ानूनी स्थिति देखने पर बात कुछ चौंकाती है। स्मृति-दिवस एवं अवकाश अधिनियम की धारा 5 नौ लोक-पर्व गिनाती है — चंद्र नववर्ष, लालटेन पर्व, चिंगमिंग, तुआनवू, चोंगयुआन, मध्य-शरद, नवमी-नवमी, चंद्र नववर्ष की पूर्वसंध्या और मूलनिवासी समुदायों के ऋतु-अनुष्ठान — और **छीशी उनमें नहीं है**। धारा 6 फिर साफ़ कर देती है कि गिनाए गए के बाहर के किसी पर्व पर अवकाश नहीं। यानी छीशी "नाम तो है पर छुट्टी नहीं" वाला दिन भी नहीं है; उसका नाम ही नहीं है। उसी चंद्र सातवें महीने में आठ दिन बाद पड़ने वाला चोंगयुआन नाम पाता है, फिर भी छुट्टी नहीं पाता। गृह मंत्रालय के आप्रवासन विभाग का नव-निवासी पोर्टल इस दिन को "जिसे प्रायः चीनी वैलेंटाइन कहते हैं, चंद्र सातवें महीने की सातवीं तिथि पर नियत" के रूप में दर्ज करता है, और उसके दो पुराने नाम भी सहेजता है: बुनकर कन्या से हस्तकौशल माँगने के कारण कौशल-याचना पर्व, और भाग लेने वाली अधिकतर घर की स्त्रियाँ होने के कारण कन्या-पर्व। बाज़ार पहला नाम बेचता है; बाक़ी दो अभिलेख में हैं।
+### date_rule TW coming-of-sixteen
+चीनी चंद्र-सौर पंचांग के सातवें महीने का सातवाँ दिन, सात माताओं का जन्मदिन।
+### customs TW coming-of-sixteen
+ताइनान में उसी तिथि का अर्थ बिलकुल अलग है। चंद्र सातवें महीने की सातवीं तिथि सात माताओं (छिनियांगमा, सात तारा-देवियाँ) का जन्मदिन है, जिन्हें जन्म से सोलह वर्ष तक बच्चों की रक्षक माना जाता है। जिस वर्ष बच्चा सोलह का होता है, उस दिन बचपन से पहनाया गया पुराना सिक्का और लाल धागा उतारा जाता है, और स्वर्ण-कागज़, अगरबत्ती, मोमबत्तियाँ तथा काग़ज़ का मंडप "छिनियांगमा तिंग" चढ़ाकर सोलह वर्ष का संस्कार किया जाता है। ताइनान के मध्य-पश्चिम ज़िले का खाइलोंग मंदिर, जो 1732 में योंगचंग काल में बना और जिसमें सात तारा-देवियाँ मुख्य रूप से पूजित हैं, इसका सबसे प्रसिद्ध स्थल है — 22 अगस्त 2023 को सौ से अधिक किशोर पारंपरिक वस्त्रों या विद्वान-वस्त्र में आए, पूजा के बाद चढ़ावे की मेज़ पर रखे काग़ज़ी मंडप के नीचे से निकले, और पुल पर मनोकामना-पत्र बाँधे। ताइनान नगर ने इस प्रथा को **नगर-स्तरीय लोक-विरासत के रूप में पंजीकृत** किया है, जिससे इसे प्रथा नहीं बल्कि क़ानूनी पहचान मिलती है; नगर का सांस्कृतिक विरासत प्रबंधन कार्यालय 2012 से हर वर्ष प्रदर्शन-आयोजन करता है — 2019 में आठवाँ — जिसमें उदाहरण-परिवार अपने ही घर में पूरा विधान करते हैं, और शिह वंश के पूर्वज-भवन तथा एक बाल-कल्याण संस्था के साथ मिलकर निर्धन परिवारों के किशोर भी वही मार्ग पूरा कर पाते हैं।
+### date_rule CN qixi-jie
+चीनी चंद्र-सौर पंचांग के सातवें महीने का सातवाँ दिन।
+### customs CN qixi-jie
+चीन छीशी को मान्यता देता है, पर अवकाश के रूप में नहीं, विरासत के रूप में। 2006 में राज्य परिषद ने अमूर्त सांस्कृतिक विरासत की पहली राष्ट्रीय सूची प्रकाशित की — कुल 518 मदें, जिनमें 70 लोक-प्रथा श्रेणी की हैं। छीशी पर्व क्रमांक 452 पर है, प्रस्तावक संस्कृति मंत्रालय; उसी श्रेणी में चंद्र नववर्ष 449, चिंगमिंग 450, तुआनवू 451, मध्य-शरद 453 और नवमी-नवमी 454 पर हैं। पर राष्ट्रीय अवकाश एवं स्मृति-दिवस उपाय (2024 के राज्य परिषद आदेश संख्या 795 से संशोधित) खोलिए तो चित्र उलट जाता है: सभी नागरिकों के लिए अवकाश केवल नववर्ष, चंद्र नववर्ष, चिंगमिंग, श्रम दिवस, तुआनवू, मध्य-शरद और राष्ट्रीय दिवस पर है; आंशिक अवकाश महिला दिवस, युवा दिवस, बाल दिवस और सेना दिवस पर; और धारा 5 अलग से कुछ दिन नाम लेकर गिनाती है जिन पर **कोई** अवकाश नहीं — शिक्षक दिवस, नर्स दिवस, पत्रकार दिवस, वृक्षारोपण दिवस और कई स्मृति-दिवस। **छीशी उस "नाम तो है पर छुट्टी नहीं" वाली सूची में भी नहीं है।** उसका निशान कहीं और है। जोड़े इसी दिन विवाह पंजीकरण कराना पसंद करते हैं, इसलिए "उस दिन पंजीकरण कार्यालय खुलेगा या नहीं" हर साल का प्रश्न बन जाता है। 2024 में छीशी शनिवार 10 अगस्त को पड़ा; 5 अगस्त को नागरिक मामलों के मंत्रालय के सामाजिक कार्य विभाग ने एक सार्वजनिक प्रश्न के उत्तर में कहा कि स्थानीय विभागों को माँग पूरी करने के लिए प्रोत्साहित किया जाता है, पर कोई बाध्यकारी नियम तय नहीं किया गया। चूँकि दिन वैधानिक अवकाश नहीं है, उत्तर हर ज़िले में अलग-अलग तय होता है। 2027 में यह रविवार और 2028 में शनिवार पड़ेगा, तो प्रश्न दो बार और लौटेगा।
+### customs JP tanabata
+जापान का तनाबाता अब चंद्र पंचांग पर है ही नहीं। नवंबर 1872 में मेइजी सरकार ने सौर ग्रेगोरियन पंचांग अपनाने की घोषणा की, और 1873 से चंद्र-सौर पंचांग की जगह सौर पंचांग आ गया। तैयारी का समय लगभग नहीं था: जो 3 दिसंबर 1872 होता, वह रातोंरात 1 जनवरी 1873 बन गया और देश में असमंजस फैल गया। तनाबाता पंचांग के साथ ही खिसक गया — इसीलिए आज अधिकांश जापान इसे 7 जुलाई को मनाता है, और कुछ क्षेत्र 7 अगस्त के आसपास। सामग्री भी अलग हो गई। लोग रंगीन काग़ज़ की पट्टियों (तांज़ाकु) पर मनोकामना लिखकर बाँस की टहनियों पर बाँधते हैं और तारों से माँगते हैं; आकाशगंगा के दोनों ओर के अल्टेयर और वेगा के वर्ष में एक बार मिलने की कथा बची है, पर न कौशल-याचना विषय है और न प्रेम — मनोकामना स्वयं विषय है। संस्थागत हैसियत भी नहीं है: राष्ट्रीय अवकाश अधिनियम (1948 का अधिनियम संख्या 178) की धारा 2 सोलह अवकाश गिनाती है, नववर्ष और वयस्कता दिवस से लेकर श्रम-कृतज्ञता दिवस तक, और **तनाबाता उनमें नहीं है**। जहाँ इसे अगस्त में रखा जाता है, वहाँ यह पूर्वजों के स्वागत के ओबोन से टकराता है, इसलिए दोनों प्रायः साथ ही होते हैं।
+### customs JP sendai-tanabata
+सेंदाई ने तिथि को एक महीना आगे सरका दिया। सेंदाई तनाबाता उत्सव **हर वर्ष 6 से 8 अगस्त** तक चलता है — 2026 में गुरुवार 6 से शनिवार 8 अगस्त। यह "त्सुकिओकुरे", यानी एक महीना पीछे चलने की रीति है: ग्रेगोरियन 7 जुलाई के पीछे जाने के बजाय शहर उस ऋतु-स्थान को बनाए रखता है जो पुराने चंद्र सातवें महीने का था। 5 अगस्त की शाम आतिशबाज़ी से शुरुआत होती है; 2026 का आयोजन 57वाँ था, लगभग 16,000 गोले। पैमाने में, सेंदाई स्टेशन के सामने से आसपास की ढँकी बाज़ार-गलियों तक दस मीटर से लंबे बाँस खड़े किए जाते हैं, पूरे शहर में तीन हज़ार से अधिक; यह आओमोरी की नेबूता और अकीता की कांतो के साथ तोहोकु के तीन बड़े ग्रीष्म उत्सवों में गिना जाता है। इतिहास में यह तब जड़ जमाता है जब दाते मासामुने (1567–1636) ने सत्रहवीं सदी के आरंभ में सेंदाई बसाकर इसे बढ़ावा दिया; तब से चार सौ वर्ष से अधिक। युद्ध के कारण यह बीच में रुका था, और शहर 2026 के आयोजन को युद्धोत्तर पुनरारंभ का अस्सीवाँ अंक बताता है। सजावट की अपनी शब्दावली है: तांज़ाकु के अलावा काग़ज़ के सारस, किमोनो, बटुए और मछली-जाल या बुनी टोकरी जैसी लंबी पट्टियाँ — बटुआ धन-समृद्धि का, जाल अच्छी मछली-पकड़ और अच्छी फ़सल का प्रतीक।
+### date_rule JP hiratsuka-tanabata
+जुलाई के पहले शुक्रवार से तीन दिन (आयोजन समिति हर वर्ष तय करती है)।
+### customs JP hiratsuka-tanabata
+कानागावा प्रांत का हिरात्सुका तीसरा समय देता है। शोनान हिरात्सुका तनाबाता उत्सव **जुलाई के आरंभ** में होता है — न 7 तारीख़ को, न अगस्त में: 74वाँ आयोजन 3 से 5 जुलाई 2026, शुक्रवार से रविवार तक चला, और उससे पिछला 73वाँ तीन दिनों में 11.5 लाख आगंतुक ले आया था। नगर की 23 अप्रैल 2026 की प्रेस विज्ञप्ति ब्योरा देती है: शोनान स्टार मॉल पर अस्सी सजावटें, जिनमें छब्बीस नागरिकों की बनाई; बेनिया पर्ल रोड पर सत्रह और; स्टेशन के पास की दुकान-गलियों में लगभग सौ बड़ी रचनाएँ; पहले दो दिन समापन-समय तीस मिनट बढ़ाकर रात 8:30, अंतिम दिन रात 7:00; लू से बचाव के लिए हज़ार लोगों की तनाबाता नृत्य-यात्रा का मार्ग बदला गया, और "तनाबाता COOL" नाम से दुकानदारों से ठंडक में सहयोग माँगा गया तथा सजी गलियों में धुंध-पंखे लगाए गए। वही विज्ञप्ति अगला वर्ष पहले ही घोषित करती है: 2 से 4 जुलाई 2027। तीनों को साथ रखिए और बात एक ही देश के भीतर दिख जाती है — 7 जुलाई, 6–8 अगस्त, और जुलाई का पहला सप्ताहांत, और इनमें से कोई भी चंद्र सातवें महीने की सातवीं तिथि नहीं है।
+
+## locale id
+### title
+Tanabata dan Qixi
+### summary
+Satu legenda tentang gadis penenun dan penggembala, satu tanggal pada hari ketujuh bulan ketujuh penanggalan lunisolar — dan tiga masyarakat yang membuat tiga perayaan berbeda darinya. Taiwan mempertahankannya pada tanggal lunar dan menumpuk dua hal pada hari yang sama: malam bagi pasangan, dan ritus kedewasaan di Tainan. Tiongkok mendaftarkannya sebagai warisan budaya takbenda nasional, tetapi tidak memasukkannya bahkan ke daftar hari yang secara tegas disebut tanpa libur. Jepang memindahkannya ke 7 Juli saat negara itu berganti kalender pada 1873, sedangkan Sendai menggesernya sebulan ke 6–8 Agustus. Halaman ini membandingkan letak hari itu dalam aturan, siapa yang libur, dan bagian mana dari kisahnya yang bertahan.
+### keywords
+Tanabata, Qixi, Festival Bintang, Tanabata Sendai, kalender lunisolar Tionghoa, Tanabata 2026
+### date_rule TW qixi
+Hari ketujuh bulan ketujuh penanggalan lunisolar Tionghoa (Imlek).
+### customs TW qixi
+Taiwan tetap memakai tanggal lunar: 19 Agustus 2026 (Rabu), 8 Agustus 2027 (Minggu), 26 Agustus 2028 (Sabtu). Kedudukan hukumnya mudah diperiksa dan agak mengejutkan. Pasal 5 Undang-Undang tentang Hari Peringatan dan Hari Libur menyebut sembilan perayaan rakyat — Tahun Baru Imlek, Festival Lampion, Qingming, Duanwu, Zhongyuan, Pertengahan Musim Gugur, Sembilan Ganda, malam Tahun Baru Imlek, dan ritus musiman masyarakat adat — dan **Qixi tidak ada di antaranya**. Pasal 6 lalu menutup celahnya: perayaan di luar daftar itu tidak membawa hari libur. Jadi Qixi bahkan bukan hari yang "disebut namanya tetapi tetap bekerja"; namanya memang tidak ada. Delapan hari sesudahnya di bulan lunar yang sama, Zhongyuan (hari kelima belas bulan ketujuh) memang disebut, dan tetap tanpa libur. Portal Direktorat Imigrasi untuk warga pendatang mencatat hari itu sebagai "lazim disebut Hari Valentine Tionghoa, ditetapkan pada hari ketujuh bulan ketujuh Imlek", dan menyimpan dua nama lamanya: Festival Memohon Keterampilan, karena orang memohon kecekatan tangan kepada Gadis Penenun, dan Festival Anak Perempuan, karena yang mengikutinya sebagian besar perempuan di rumah. Yang dijual pusat perbelanjaan adalah nama pertama; dua sisanya tinggal dalam catatan.
+### date_rule TW coming-of-sixteen
+Hari ketujuh bulan ketujuh penanggalan lunisolar Tionghoa, hari lahir Tujuh Bunda.
+### customs TW coming-of-sixteen
+Pada tanggal yang sama, Tainan mengerjakan hal yang sepenuhnya lain. Hari ketujuh bulan ketujuh Imlek adalah hari lahir Tujuh Bunda (Qiniangma), yang dipercaya menjaga anak sejak lahir hingga usia enam belas. Pada tahun anak genap enam belas, di hari itu koin kuno dan benang merah yang dipakainya sejak kecil dilepas, lalu keluarga menyiapkan uang kertas persembahan, dupa, lilin, dan paviliun kertas bernama qiniangma ting untuk menjalankan ritus genap enam belas tahun. Kelenteng Kailong di Distrik Barat Tengah Tainan — didirikan pada 1732 di masa Yongzheng, memuliakan Tujuh Dewi Bintang, dan populer disebut kelenteng Tujuh Nyonya Bintang — adalah tempat paling dikenal untuk itu: pada 22 Agustus 2023 lebih dari seratus remaja datang berbusana tradisional atau jubah sarjana, bersembahyang, melintas di bawah meja sesaji yang memikul paviliun kertas, dan menggantung kartu harapan di jembatan. Pemerintah Kota Tainan telah **mendaftarkannya sebagai warisan adat tingkat kota**, sehingga ia punya kedudukan hukum, bukan sekadar kebiasaan; kantor pengelola warisan budaya kota menggelar peragaan tahunan sejak 2012 — yang kedelapan pada 2019 — dengan mengundang keluarga contoh menjalankan seluruh tata cara di dalam rumah masing-masing, serta bekerja sama dengan balai leluhur marga Shih dan sebuah yayasan kesejahteraan anak agar remaja dari keluarga kurang mampu dapat menempuh jalan yang sama.
+### date_rule CN qixi-jie
+Hari ketujuh bulan ketujuh penanggalan lunisolar Tionghoa (Imlek).
+### customs CN qixi-jie
+Tiongkok mengakui Qixi, tetapi sebagai warisan, bukan sebagai hari libur. Pada 2006 Dewan Negara menerbitkan daftar nasional pertama warisan budaya takbenda: 518 butir, tujuh puluh di antaranya masuk kategori adat rakyat. Perayaan Qixi tercatat pada nomor urut 452, diajukan Kementerian Kebudayaan, berdampingan dengan Tahun Baru Imlek di 449, Qingming 450, Duanwu 451, Pertengahan Musim Gugur 453, dan Sembilan Ganda 454. Namun bukalah Ketentuan tentang Hari Libur dan Hari Peringatan Nasional sebagaimana diubah dengan Keputusan Dewan Negara Nomor 795 Tahun 2024, dan gambarannya terbalik: libur bagi seluruh warga hanya Tahun Baru, Imlek, Qingming, Hari Buruh, Duanwu, Pertengahan Musim Gugur, dan Hari Nasional; libur sebagian untuk Hari Perempuan, Hari Pemuda, Hari Anak, dan Hari Tentara; lalu Pasal 5 menyebut satu kelompok hari lagi yang **tidak** berlibur — Hari Guru, Hari Perawat, Hari Wartawan, Hari Menanam Pohon, dan sejumlah hari peringatan. **Qixi bahkan tidak ada pada daftar "disebut tetapi tanpa libur" itu.** Jejaknya justru di tempat lain. Banyak pasangan ingin mencatatkan perkawinan pada hari Qixi, sehingga "apakah kantor pencatatan buka hari itu" menjadi pertanyaan tahunan. Pada 2024 Qixi jatuh Sabtu 10 Agustus; pada 5 Agustus direktorat urusan sosial Kementerian Urusan Sipil menjawab pertanyaan publik bahwa dinas-dinas daerah dianjurkan memenuhi kebutuhan warga dan tetap melayani, tetapi tidak ada ketentuan yang mewajibkannya. Karena hari itu bukan hari libur resmi, jawabannya ditentukan daerah masing-masing. Qixi jatuh pada Minggu di 2027 dan Sabtu di 2028, jadi pertanyaan yang sama akan kembali dua kali.
+### customs JP tanabata
+Tanabata Jepang sudah tidak berada di kalender lunar sama sekali. Pada November 1872 pemerintah Meiji mengumumkan peralihan ke kalender surya Gregorius, dan sejak 1873 kalender surya menggantikan kalender lunisolar. Nyaris tanpa masa persiapan: hari yang seharusnya 3 Desember 1872 langsung menjadi 1 Januari 1873, dan negeri itu sempat kacau. Tanabata ikut berpindah bersama kalendernya, sehingga sebagian besar Jepang kini merayakannya pada 7 Juli, sementara sejumlah daerah sekitar 7 Agustus. Isinya pun bercabang. Orang menuliskan harapan pada secarik kertas warna bernama tanzaku lalu menggantungnya di ranting bambu dan memintanya kepada bintang; legenda Altair dan Vega yang bertemu setahun sekali masih ada, tetapi baik kecekatan tangan maupun percintaan bukan temanya — harapannya sendirilah temanya. Secara kelembagaan pun ia tak berpijak: Pasal 2 Undang-Undang tentang Hari Libur Nasional 1948 memuat enam belas hari libur, dari Tahun Baru dan Hari Kedewasaan hingga Hari Syukur Kerja, dan **Tanabata tidak termasuk**. Di daerah yang merayakannya pada Agustus, waktunya berimpit dengan Obon, saat arwah leluhur disambut pulang, sehingga keduanya kerap digelar bersamaan.
+### customs JP sendai-tanabata
+Sendai justru memundurkannya sebulan. Festival Tanabata Sendai berlangsung **setiap 6 sampai 8 Agustus** — pada 2026 berarti Kamis tanggal 6 hingga Sabtu tanggal 8. Inilah tsukiokure, "mundur sebulan": alih-alih mengikuti 7 Juli Gregorius, kota itu mempertahankan posisi musim yang dulu dipegang bulan ketujuh Imlek. Pesta kembang api membuka rangkaian pada malam 5 Agustus; edisi 2026 adalah yang ke-57 dengan sekitar 16.000 letusan. Dari segi skala, bambu sepanjang lebih dari sepuluh meter ditegakkan mulai dari depan Stasiun Sendai hingga jalan-jalan pertokoan beratap di sekitarnya, lebih dari tiga ribu batang di seluruh kota; festival ini sejajar dengan Nebuta di Aomori dan Kantō di Akita sebagai tiga festival musim panas besar di wilayah Tōhoku. Secara sejarah ia berakar setelah Date Masamune (1567–1636) membangun Sendai pada awal abad ketujuh belas dan menyebarkannya, sehingga usianya lebih dari empat ratus tahun. Perang pernah memutusnya, dan kota mencatat edisi 2026 sebagai yang kedelapan puluh sejak kebangkitan pascaperang. Hiasannya punya perbendaharaan sendiri: selain tanzaku ada burung bangau lipat, kimono, pundi-pundi, dan untaian panjang menyerupai jala ikan atau keranjang anyaman, masing-masing bermakna — pundi-pundi untuk kekayaan dan kemakmuran, jala untuk tangkapan dan panen yang melimpah.
+### date_rule JP hiratsuka-tanabata
+Tiga hari mulai Jumat pertama bulan Juli (ditetapkan panitia setiap tahun).
+### customs JP hiratsuka-tanabata
+Hiratsuka di Prefektur Kanagawa menyodorkan waktu ketiga. Festival Tanabata Shonan Hiratsuka digelar pada **awal Juli** — bukan tanggal 7, bukan pula Agustus: edisi ke-74 berlangsung 3 sampai 5 Juli 2026, Jumat hingga Minggu, setelah edisi ke-73 menarik 1,15 juta pengunjung dalam tiga hari. Siaran pers kota tertanggal 23 April 2026 memuat rinciannya: delapan puluh hiasan di sepanjang Shonan Star Mall, dua puluh enam di antaranya buatan warga; tujuh belas lagi di Beniya Pearl Road; sekitar seratus hiasan besar di kawasan pertokoan dekat stasiun; jam tutup dua hari pertama diperpanjang tiga puluh menit hingga pukul 20.30, dan pukul 19.00 pada hari terakhir; rute pawai tari Tanabata seribu orang diubah demi mencegah serangan panas, disertai program bernama "Tanabata COOL" yang meminta pedagang membantu mendinginkan pengunjung, dengan kipas kabut dipasang di area hiasan. Siaran pers yang sama sudah mengumumkan tahun berikutnya: 2 sampai 4 Juli 2027. Sandingkan ketiganya dan intinya terlihat di dalam satu negara — 7 Juli, 6–8 Agustus, dan akhir pekan pertama Juli, dan tak satu pun jatuh pada hari ketujuh bulan ketujuh Imlek.
+
+## locale pt-BR
+### title
+Tanabata e Qixi
+### summary
+Uma só lenda, a da tecelã e do boiadeiro, uma só data no sétimo dia do sétimo mês lunissolar — e três sociedades que fizeram dela três festas diferentes. Taiwan a mantém na data lunar e empilha duas coisas no mesmo dia: uma noite de namorados e um rito de maioridade em Tainan. A China a registrou como patrimônio imaterial nacional, mas não a colocou nem na lista dos dias que a norma nomeia justamente para dizer que não dão folga. O Japão a moveu para 7 de julho quando o país trocou de calendário em 1873, enquanto Sendai a empurrou um mês adiante, para 6 a 8 de agosto. Esta página compara onde a data se encaixa nas regras, quem folga e que parte da história sobrou em cada lugar.
+### keywords
+Tanabata, Qixi, Festival das Estrelas, Tanabata Matsuri, calendário lunissolar chinês, Tanabata Sendai
+### date_rule TW qixi
+O sétimo dia do sétimo mês do calendário lunissolar chinês.
+### customs TW qixi
+Taiwan mantém o Qixi na data lunar: 19 de agosto em 2026 (quarta-feira), 8 de agosto em 2027 (domingo), 26 de agosto em 2028 (sábado). A posição legal é fácil de conferir e um pouco surpreendente. O artigo 5º da Lei dos Dias Comemorativos e Feriados lista nove festas populares — Ano-Novo lunar, Festa das Lanternas, Qingming, Duanwu, Zhongyuan, Meio do Outono, Duplo Nove, véspera do Ano-Novo lunar e os ritos sazonais dos povos indígenas — e **o Qixi não está entre elas**. O artigo 6º então fecha a porta: festas fora da lista não dão folga. Ou seja, o Qixi nem sequer é um dia nomeado em que se trabalha; ele não é nomeado. Oito dias depois, no mesmo mês lunar, o Zhongyuan (dia quinze do sétimo mês) aparece na lista — e mesmo assim não dá folga. O portal da Agência Nacional de Imigração para novos residentes registra a data como "comumente chamada de Dia dos Namorados chinês, fixada no sétimo dia do sétimo mês lunar", e guarda dois nomes mais antigos: Festa do Pedido de Destreza, porque se pedia habilidade manual à Tecelã, e Festa das Filhas, porque quem participava eram sobretudo as mulheres da casa. O comércio vende o primeiro nome; os outros dois ficaram no registro.
+### date_rule TW coming-of-sixteen
+O sétimo dia do sétimo mês do calendário lunissolar chinês, aniversário das Sete Mães.
+### customs TW coming-of-sixteen
+A mesma data carrega outra coisa inteiramente em Tainan. O sétimo dia do sétimo mês lunar é o aniversário das Sete Mães, as Qiniangma, tidas como guardiãs das crianças do nascimento até os dezesseis anos. No ano em que a criança completa dezesseis, retira-se nesse dia a moeda antiga com o fio vermelho usada desde pequena, e a família prepara papel-moeda ritual, incenso, velas e um pavilhão de papel chamado qiniangma ting para realizar o rito da maioridade. O templo Kailong, no distrito Centro-Oeste de Tainan, fundado em 1732 no reinado Yongzheng e dedicado às Sete Damas Estelares, é onde isso mais aparece: em 22 de agosto de 2023, mais de cem adolescentes chegaram em trajes tradicionais ou vestes de letrado, fizeram as oferendas, passaram por baixo da mesa de altar que sustenta o pavilhão de papel e penduraram cartões de desejo numa ponte. A prefeitura de Tainan **registrou o costume como patrimônio popular municipal**, o que lhe dá identidade legal e não apenas consuetudinária, e o escritório municipal de gestão do patrimônio cultural realiza uma demonstração anual desde 2012 — a oitava em 2019 —, convidando famílias-modelo a cumprir toda a sequência dentro de casa e trabalhando com o salão ancestral do clã Shih e com uma fundação de assistência à infância para que adolescentes de famílias de baixa renda também percorram o mesmo caminho.
+### date_rule CN qixi-jie
+O sétimo dia do sétimo mês do calendário lunissolar chinês.
+### customs CN qixi-jie
+A China reconhece o Qixi, mas como patrimônio e não como feriado. Em 2006 o Conselho de Estado publicou a primeira lista nacional de patrimônio cultural imaterial — 518 itens, dos quais setenta na categoria de costumes populares. A festa do Qixi é o item de número 452, apresentado pelo Ministério da Cultura, ao lado do Ano-Novo lunar em 449, Qingming em 450, Duanwu em 451, Meio do Outono em 453 e Duplo Nove em 454. Abra, porém, as Medidas sobre Feriados e Datas Comemorativas Nacionais, na redação dada pelo Decreto n.º 795 do Conselho de Estado, de 2024, e o quadro se inverte: folgam todos os cidadãos apenas no Ano-Novo, no Ano-Novo lunar, no Qingming, no Dia do Trabalho, no Duanwu, no Meio do Outono e no Dia Nacional; há folga parcial no Dia da Mulher, no Dia da Juventude, no Dia da Criança e no Dia do Exército; e o artigo 5º nomeia ainda um conjunto de datas que **não** dão folga alguma — Dia do Professor, Dia do Enfermeiro, Dia do Jornalista, Dia da Árvore e várias efemérides. **O Qixi não figura nem nessa lista de dias nomeados sem folga.** O rastro que ele deixa está em outro lugar. Muitos casais querem registrar o casamento no Qixi, o que transforma "o cartório abre nesse dia?" numa pergunta anual. Em 2024 o Qixi caiu no sábado, 10 de agosto; em 5 de agosto o departamento de assuntos sociais do Ministério dos Assuntos Civis respondeu a uma consulta pública dizendo que os órgãos locais são incentivados a atender a demanda e abrir, mas que nenhuma exigência obrigatória foi estabelecida. Como a data não é feriado legal, a resposta é decidida localmente, cartório a cartório. O Qixi cai num domingo em 2027 e num sábado em 2028, então a pergunta volta mais duas vezes.
+### customs JP tanabata
+O Tanabata japonês já não está em calendário lunar nenhum. Em novembro de 1872 o governo Meiji anunciou a adoção do calendário solar gregoriano, e a partir de 1873 o calendário solar substituiu o lunissolar. Quase não houve preparo: o que seria 3 de dezembro de 1872 virou 1º de janeiro de 1873 de um dia para o outro, e o país entrou em confusão. O Tanabata mudou junto com o calendário, e por isso a maior parte do Japão o celebra hoje em 7 de julho, com algumas regiões por volta de 7 de agosto. O conteúdo também se separou. Escrevem-se desejos em tiras de papel colorido, os tanzaku, penduradas em ramos de bambu e dirigidas às estrelas; a lenda de Altair e Vega, que se encontram uma vez por ano, permanece, mas nem a destreza nem o namoro são o tema — o tema é o próprio desejo. Institucionalmente a data não tem lugar: o artigo 2º da Lei dos Feriados Nacionais, de 1948, enumera dezesseis feriados, do Ano-Novo e do Dia da Maioridade até o Dia de Ação de Graças pelo Trabalho, e **o Tanabata não é um deles**. Onde é celebrado em agosto, coincide com o Obon, quando se recebem os antepassados, de modo que os dois costumam acontecer juntos.
+### customs JP sendai-tanabata
+Sendai preferiu adiar a festa em um mês. O Festival Tanabata de Sendai acontece **de 6 a 8 de agosto todos os anos** — em 2026, da quinta-feira dia 6 ao sábado dia 8. Isso é o tsukiokure, "um mês atrasado": em vez de seguir o 7 de julho gregoriano, a cidade preserva a posição sazonal que o antigo sétimo mês lunar ocupava. Uma queima de fogos abre a temporada na noite de 5 de agosto; a edição de 2026 foi a 57ª, com cerca de 16 mil tiros. Em escala, bambus de mais de dez metros são erguidos da frente da Estação de Sendai por todas as galerias comerciais vizinhas, mais de três mil na cidade inteira, e o festival figura ao lado do Nebuta de Aomori e do Kantō de Akita como um dos três grandes festivais de verão da região de Tōhoku. Historicamente criou raízes depois que Date Masamune (1567–1636) fundou Sendai no início do século XVII e o difundiu, o que lhe dá mais de quatrocentos anos. A guerra o interrompeu, e a prefeitura marca a edição de 2026 como a octogésima desde a retomada do pós-guerra. Os enfeites têm vocabulário próprio: além dos tanzaku há tsurus de papel, quimonos, bolsas e serpentinas que lembram redes de pesca ou cestos trançados, cada uma com um sentido — a bolsa para riqueza e prosperidade, a rede para boa pesca e boa colheita.
+### date_rule JP hiratsuka-tanabata
+Três dias a partir da primeira sexta-feira de julho, definidos a cada ano pela comissão organizadora.
+### customs JP hiratsuka-tanabata
+Hiratsuka, na província de Kanagawa, oferece um terceiro tempo. O Festival Tanabata de Shonan Hiratsuka acontece no **início de julho** — nem no dia 7, nem em agosto: a 74ª edição foi de 3 a 5 de julho de 2026, de sexta a domingo, depois de a 73ª ter recebido 1,15 milhão de visitantes em três dias. O comunicado da prefeitura de 23 de abril de 2026 traz o detalhe: oitenta enfeites ao longo do Shonan Star Mall, vinte e seis deles feitos por moradores; mais dezessete na Beniya Pearl Road; cerca de cem peças grandes nas ruas comerciais junto à estação; horário de encerramento dos dois primeiros dias estendido em trinta minutos, até 20h30, e 19h no último dia; o desfile de dança do Tanabata com mil participantes teve o trajeto refeito por causa do risco de insolação, junto de um programa chamado "Tanabata COOL" que pede aos comerciantes ajuda para refrescar o público, com ventiladores de névoa instalados nas ruas enfeitadas. O mesmo comunicado já anuncia o ano seguinte: de 2 a 4 de julho de 2027. Coloque os três lado a lado e o ponto aparece dentro de um único país — 7 de julho, 6 a 8 de agosto e o primeiro fim de semana de julho, e nenhum deles é o sétimo dia do sétimo mês lunar.

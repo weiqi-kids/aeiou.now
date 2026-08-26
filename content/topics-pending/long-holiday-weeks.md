@@ -1,0 +1,328 @@
+# Golden Week, Silver Week, and Cuti Bersama
+
+## meta
+- slug: long-holiday-weeks
+- canonical: Golden Week, Silver Week, and Cuti Bersama
+- category: civic
+- perennial: no
+- commonality: the machinery a state uses to turn scattered public holidays into one continuous run of days off, and who ends up paying for the days that were added
+
+## observance JP golden-week
+- local_name: ゴールデンウィーク
+- date_rule: 四月二十九日昭和之日,加上五月三日憲法紀念日、五月四日綠之日、五月五日兒童節;其中若有祝日落在星期日,再往後補一個振替休日
+- rank: 1
+- source: https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
+
+## observance JP silver-week
+- local_name: シルバーウィーク
+- date_rule: 九月第三個星期一的敬老之日到秋分日的秋分之日;兩者中間只隔一天時,那一天依祝日法第三條第三項自動成為休日
+- rank: 2
+- source: https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
+- source: https://www.nao.ac.jp/faq/a0301.html
+
+## observance CN huangjinzhou
+- local_name: 黄金周
+- date_rule: 十月一日至三日是法定假日,國務院辦公廳每年公告用調休把前後的週末併進來接成七天,再指定兩個週末補上班
+- rank: 1
+- source: https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html
+- source: https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html
+
+## observance TW chunjie-lianjia
+- local_name: 春節連假
+- date_rule: 農曆十二月末日的前一日起到正月初三放假五日;其中逢星期六、星期日者再補假,由人事行政總處在年度辦公日曆表裡公告
+- rank: 1
+- source: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095
+- source: https://www.dgpa.gov.tw/information?uid=30&pid=12573
+- source: https://www.dgpa.gov.tw/information?uid=30&pid=12982
+
+## observance ID cuti-bersama
+- local_name: Cuti Bersama
+- date_rule: 開齋節等節日的前後,由宗教部、勞動部與行政改革部三位部長每年聯合決定公告的共同休假日;伊斯蘭曆節日的日期另由宗教部長以決定訂定
+- rank: 1
+- source: https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026
+- source: https://kemnaker.go.id/news/detail/pemerintah-umumkan-hari-libur-nasional-dan-cuti-bersama-2026-wamenaker-semoga-berjalan-lancar
+- source: https://www.kemenkopmk.go.id/pemerintah-tetapkan-17-hari-libur-nasional-dan-8-hari-cuti-bersama-tahun-2026
+
+## observance BR ponto-facultativo
+- local_name: Ponto facultativo
+- date_rule: 復活節後第六十日的星期四(基督聖體聖血節),以及管理與公共服務創新部另發法令指定、本身沒有名字的橋接日
+- rank: 1
+- source: https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos
+
+## observance US three-day-weekend
+- local_name: Three-Day Weekend
+- date_rule: 五月最後一個星期一的陣亡將士紀念日連同前面的星期六與星期日;假日逢星期六時前一個星期五改為法定公假日,逢星期日則順延到下一個工作日
+- rank: 1
+- source: https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm
+- source: https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/
+- source: https://www.archives.gov/federal-register/codification/executive-order/11582.html
+
+## observance IN durga-puja-chhuti
+- local_name: दुर्गा पूजा की छुट्टियाँ
+- date_rule: 印度曆阿濕縛庾闍月白半月杜爾迦祭的大四日到十日祭,由西孟加拉邦財政廳逐年公告;邦政府另加的「杜爾迦祭增加日」不對應任何祭儀
+- rank: 1
+- source: https://wb.gov.in/pdf/Holiday-2026.pdf
+
+## locale zh-TW
+### title
+連假是怎麼長出來的:自動補上的、跟週末對調的、從自己年假扣的
+### summary
+七個地方都有一串連續假期,把零散假日接成一整串的機器卻完全不同。日本靠祝日法自動補上中間那一天,誰也不必公告;中國靠國務院辦公廳每年發通知調休,把週末挪過來、之後再補上班;印尼由三個部會聯合決定共同休假日,而那幾天要從勞工自己的年休假扣;台灣二〇二五年改法之後只補假、不再借週末;巴西靠部會法令指定沒有名字的橋接日,而且只綁聯邦機關;美國一九六八年把五個假日移到星期一之後就沒再做別的;印度則由各邦依一八八一年的票據法自行公告,最長的一串長在一個邦裡。
+### keywords
+連假, 春節連假, 補班, 彈性放假, 調休, 黃金週, 白銀週, 國定假日, 辦公日曆表, 連續假期
+### customs TW chunjie-lianjia
+台灣的春節連假長度由兩層決定。《紀念日及節日實施條例》第六條寫死「除夕及春節：自農曆十二月末日之前一日至翌年一月三日，放假五日」，第八條再規定放假日逢例假日應予補假、調整放假及補行上班日期由目的事業主管機關調移並公告。二〇二六年除夕是二月十六日，五天的法定假期從二月十五日星期日起算，那一天逢例假日補一天，於是二月十四日星期六到二月二十二日星期日連放九天，中間沒有任何一天要補上班——一百一十五年與一百一十六年的辦公日曆表上都只有「上班日」與「放假日」兩種標記。二〇二七年除夕落在星期五，五天裡有兩天撞上週末，補回來之後是二月四日到十日的七天。同一條法律，兩年差兩天，差別全在除夕落在星期幾。行政院人事行政總處依《政府機關配合紀念日與節日補假及調整放假處理要點》擬訂日曆表，行政院核定，每年六月三十日前公告次年。
+### customs CN huangjinzhou
+中國的連假是算出來的。《全國年節及紀念日放假辦法》(國務院令第七九五號，二〇二五年一月一日施行)第二條只給國慶節三天、十月一日至三日，春節四天、農曆除夕與正月初一至初三；第七條是二〇二四年那次修訂新增的一句話：「全體公民放假的假日，可合理安排統一放假調休，結合落實帶薪年休假等制度，實際形成較長假期。除個別特殊情形外，法定節假日假期前後連續工作一般不超過六天。」把三天變成七天的不是法律，是國務院辦公廳每年十一月發的通知。二〇二六年那份是國辦發明電〔二〇二五〕七號：國慶節十月一日星期四至七日星期三放假調休共七天，九月二十日星期日與十月十日星期六上班；春節二月十五日至二十三日共九天，二月十四日與二月二十八日兩個星期六上班；勞動節五月一日至五日共五天，五月九日上班。連假不是多給的日子，是把週末挪到前面、之後再還回去。
+### customs JP golden-week
+日本的黃金週不需要任何人每年決定。《國民之祝日相關法律》(昭和二十三年法律第一七八號)第二條把四月二十九日昭和之日、五月三日憲法紀念日、五月四日綠之日、五月五日兒童節四個日期直接寫進法條，四天本身就擠在一週之內。第三條第二項再補一句：祝日逢星期日時，其後最近的非祝日之日為休日。二〇二六年五月三日是星期日，內閣府的祝日表上因此多出一行「休日　五月六日　依祝日法第三條第二項」，五月二日星期六到五月六日星期三連休五天。二〇二七年沒有這種情形，就只有四月二十九日星期四，以及五月三日到五日的星期一到星期三。沒有補上班，也沒有哪個機關需要為它發公告——四個日期寫死在法條裡，剩下的由星期幾決定。
+### customs JP silver-week
+白銀週(シルバーウィーク)是黃金週的反面：它不是每年都有。敬老之日是「九月第三個星期一」，會在九月十五日到二十一日之間移動；秋分之日採用天文上的「秋分日」，在九月二十二日到二十四日之間移動。祝日法第三條第三項規定，前後兩天都是祝日、本身不是祝日的那一天為休日——只有敬老之日剛好是二十一日、秋分日剛好是二十三日，中間的二十二日才會自動變成假日。內閣府自己的說明頁把它寫成「數年一度、不定期出現的休日」。二〇二六年正是那樣的一年：九月二十一日敬老之日、二十二日休日、二十三日秋分之日，接上前面的週末共五天。二〇二七年敬老之日是二十日、秋分之日是二十三日，中間隔了兩天，不成立。而秋分之日要等國立天文台的曆象計算在前一年二月一日刊上官報才正式確定；依天文台公布的推算，下一個成立的年份要等到二〇三七年。
+### customs ID cuti-bersama
+印尼把「國定假日」與「共同休假日」分成兩份文件。國定假日依二〇二四年第八號總統決定辦理；cuti bersama 由宗教部長、勞動部長與行政改革部長三人聯合決定逐年公告，二〇二六年那份是第一四九七號、第二號與第五號，二〇二五年九月十九日在人類發展與文化統籌部簽署，訂出十七天國定假日與八天共同休假日，合計二十五天。最能說明制度的一句寫在決定書裡：共同休假日的實施，會扣減員工的年休假權利。也就是說，接起來的那幾天是勞工自己出的。二〇二六年三月十八日共同休假、十九日寧靜日、二十日共同休假、二十一到二十二日開齋節、二十三到二十四日共同休假，連成七天。齋戒月起始日與開齋節、宰牲節的日期本身不寫在這份決定裡，由宗教部長另以決定訂定。決定書同時要求醫院、電力、自來水、消防、治安、銀行與交通等直接對民眾服務的單位在這幾天照常排班。
+### customs BR ponto-facultativo
+巴西的長週末靠一份逐年重發的部會法令。管理與公共服務創新部第一一四六〇號法令(二〇二五年十二月二十九日)訂出二〇二六年的十個國定假日與九個「彈性放假日」(ponto facultativo)，只拘束聯邦直接行政、自治機構與基金會，不影響被認定為必要的服務，民間企業完全不受拘束。名單裡最能說明制度的是兩個沒有名字的日子：四月二十日星期一是彈性放假，接上四月二十一日星期二的蒂拉登特斯日；六月四日星期四的基督聖體聖血節本身也只是彈性放假、不是國定假日，接上六月五日星期五、同樣沒有名字。巴西人把這種做法叫「把假日吊起來」(enforcar o feriado)，而政府把它寫進了公報。狂歡節的星期一與星期二同樣是彈性放假，聖灰星期三則放到下午兩點。同一份公告還註明：若另發補充法令，日曆可隨時變更，不另行通知。
+### customs US three-day-weekend
+美國沒有任何機關可以宣布一個橋接日。連假只有一個來源：《美國法典》第五編第六一〇三條把十一個法定公假日裡的五個寫成「某月的第幾個星期一」——一月第三個星期一、二月第三個星期一、五月最後一個星期一、九月第一個星期一、十月第二個星期一。這是一九六八年六月二十八日第九〇之三六三號公法做的：加進哥倫布日，並把華盛頓誕辰、陣亡將士紀念日與退伍軍人節都移到星期一。其中退伍軍人節在一九七五年被第九四之九七號公法移回十一月十一日，是唯一被推翻的一項。同條第(b)款另規定假日逢星期六時前一個星期五為法定公假日；逢星期日則依一九七一年二月十一日第一一五八二號行政命令順延到下一個工作日。所以二〇二六年七月四日獨立紀念日是星期六，人事管理局的行事曆把它記成七月三日星期五；五月二十五日星期一的陣亡將士紀念日照舊接成三天。沒有補上班，也沒有加出來的日子。
+### customs IN durga-puja-chhuti
+印度的公假不是中央發的。各邦依一八八一年《票據法》第二十五條的但書、配合內政部一九五七年六月八日第20/25/56-Pub(I)號公告，由邦長逐年宣告——也就是說，一個國家的假日制度長在一部十九世紀的票據法上。西孟加拉邦財政廳(審計)二〇二五年十一月二十七日第4188-F(P2)號公告把二〇二六年的日子分成三份清單：清單一是票據法下的公假日，杜爾迦祭的大八日十月十九日、大九日二十日與十日祭二十一日在裡面；清單二是邦政府命令下的休假日，只關邦政府機關的門、銀行不放，其中十月二十二、二十三、二十四日三天的名目就叫「杜爾迦祭增加日」，不對應任何祭儀；清單三是分族群的節日，例如復活節星期六只給基督徒、六月三十日 Hul Diwas 只給桑塔爾原住民。三份清單接起來，十月十五日到二十六日整整十二天，是這七個地方裡最長的一串——而它只在一個邦成立。
+
+## locale en
+### title
+Long holidays: grown by statute, swapped out of weekends, or docked from your own leave
+### summary
+Seven places all end up with a run of consecutive days off, and not one of them builds it the same way. Japan's holiday act fills the gap by itself and nobody has to announce anything. China's State Council issues a notice every November that borrows weekends forward and takes them back afterwards as working Saturdays. Indonesia's joint leave is decided by three ministers together — and it is deducted from the worker's own annual leave. Taiwan rewrote its holiday law in 2025 and now only adds compensatory days, never borrowed ones. Brazil bridges with unnamed days declared by ministerial order that bind federal offices only. The United States moved five holidays to Mondays in 1968 and has done nothing since. India leaves it to the states, under a banking statute from 1881.
+### keywords
+long weekend, three-day weekend, Golden Week, Silver Week, tiaoxiu, cuti bersama, ponto facultativo, bridge holiday, public holidays, federal holidays
+### date_rule TW chunjie-lianjia
+Five days running from the day before Lunar New Year's Eve to the third day of the first lunar month, with compensatory days added for any that fall on a Saturday or Sunday; the exact dates are published each year by the Directorate-General of Personnel Administration in the government office calendar.
+### customs TW chunjie-lianjia
+Two layers decide how long Taiwan's Lunar New Year run is. Article 6 of the Act on Commemorative Days and Holidays fixes it in words: "Lunar New Year's Eve and Spring Festival: five days, from the day before the last day of the twelfth lunar month to the third day of the first lunar month." Article 8 then says any holiday falling on a weekly rest day must be compensated, and that adjusting holidays and designating make-up workdays is for the competent authority to arrange and announce. In 2026 the eve falls on 16 February, so the statutory five days begin on Sunday 15 February; that Sunday earns one compensatory day, and the run becomes Saturday 14 February to Sunday 22 February — nine days, with not one make-up workday anywhere in it. The 2026 and 2027 office calendars carry exactly two categories of day: working day and holiday. In 2027 the eve falls on a Friday, two of the five statutory days land on the weekend, and after compensation the run is 4 to 10 February — seven days. Same statute, two days apart, and the whole difference is which weekday the eve happens to be.
+### date_rule CN huangjinzhou
+1 to 3 October are the statutory days; the State Council General Office announces each year how weekends are swapped in to stretch the run to seven, and names two weekend days that are worked in exchange.
+### customs CN huangjinzhou
+China's long holidays are arithmetic. The Measures on National Annual Festivals and Commemorative Days (State Council Decree No. 795, in force 1 January 2025) grant only three days for National Day, 1 to 3 October, and four for Spring Festival — Lunar New Year's Eve and the first three days of the first lunar month. Article 7, added in the 2024 amendment, is the sentence that matters: holidays for all citizens may be arranged with unified rest and shift-swapping so that a longer break is actually formed, and, save in particular cases, continuous work before or after a statutory holiday shall not generally exceed six days. What turns three days into seven is not the law but a notice the State Council General Office issues each November. The 2026 one is Guobanfamingdian [2025] No. 7: National Day off from Thursday 1 October to Wednesday 7 October, seven days, with Sunday 20 September and Saturday 10 October worked; Spring Festival from 15 to 23 February, nine days, with Saturdays 14 and 28 February worked; Labour Day 1 to 5 May, five days, with 9 May worked. The extra days are not given. They are moved forward and paid back.
+### date_rule JP golden-week
+29 April (Showa Day) plus 3 May (Constitution Memorial Day), 4 May (Greenery Day) and 5 May (Children's Day); if any of those falls on a Sunday, one substitute holiday is added on the following non-holiday.
+### customs JP golden-week
+Nobody has to decide Japan's Golden Week each year. Article 2 of the Act on National Holidays (Act No. 178 of 1948) writes four dates straight into the statute — 29 April Showa Day, 3 May Constitution Memorial Day, 4 May Greenery Day, 5 May Children's Day — and those four are already crammed into a single week. Article 3(2) adds one more rule: when a national holiday falls on a Sunday, the nearest following day that is not itself a holiday becomes a holiday. In 2026, 3 May is a Sunday, so the Cabinet Office holiday table carries an extra line — "Holiday, 6 May, a holiday under Article 3(2)" — and Saturday 2 May through Wednesday 6 May is five days straight. In 2027 nothing of the kind happens: 29 April is a Thursday, and 3 to 5 May run Monday to Wednesday. No make-up work, no ministry announcement. Four dates sit in the statute, and the calendar does the rest.
+### date_rule JP silver-week
+From Respect-for-the-Aged Day, the third Monday of September, to the Autumnal Equinox Day; when exactly one day separates them, that day automatically becomes a holiday under Article 3(3) of the holiday act.
+### customs JP silver-week
+Silver Week is Golden Week's opposite: it does not happen every year. Respect-for-the-Aged Day is "the third Monday of September" and so moves between the 15th and the 21st. Autumnal Equinox Day takes the astronomical equinox day and moves between the 22nd and the 24th. Article 3(3) of the holiday act makes any non-holiday day with holidays on both sides a holiday — which happens only when the Monday lands on the 21st and the equinox on the 23rd, leaving the 22nd in between. The Cabinet Office's own explanatory page describes it as a holiday that appears irregularly, once every several years. 2026 is one of those years: 21 September Respect-for-the-Aged Day, 22 September holiday, 23 September Autumnal Equinox Day, joined to the weekend before for five days. In 2027 the Monday is the 20th and the equinox the 23rd, two days apart, and nothing happens. And the equinox itself only becomes official when the National Astronomical Observatory's almanac is published in the official gazette on 1 February of the preceding year; on the observatory's own published calculations, the next year that works is 2037.
+### date_rule ID cuti-bersama
+Joint leave days placed around Eid al-Fitr and other holidays, announced each year in a joint decision of the ministers of religion, manpower and administrative reform; the Islamic-calendar dates themselves are set separately by decision of the minister of religion.
+### customs ID cuti-bersama
+Indonesia splits the question across two documents. National holidays follow Presidential Decision No. 8 of 2024. Cuti bersama — joint leave — is set annually by a joint decision of the ministers of religion, manpower, and administrative and bureaucratic reform. The 2026 one is Numbers 1497, 2 and 5 of 2025, signed on 19 September 2025 at the coordinating ministry for human development and culture, fixing 17 national holidays and 8 joint leave days, 25 in total. The clause that defines the system is inside the decision itself: taking joint leave reduces the employee's annual leave entitlement. The days that join the run are paid for by the worker. In 2026 that produces 18 March joint leave, 19 March Nyepi, 20 March joint leave, 21 and 22 March Eid al-Fitr, 23 and 24 March joint leave — seven consecutive days. The start of Ramadan and the dates of Eid al-Fitr and Eid al-Adha are not in the decision at all; they come from a separate decision of the minister of religion. The same document tells hospitals, power and water utilities, fire services, police, banks and transport operators to roster staff through it.
+### date_rule BR ponto-facultativo
+The Thursday sixty days after Easter (Corpus Christi), plus whatever unnamed bridging days the ministry of management designates by order.
+### customs BR ponto-facultativo
+Brazil's long weekends rest on a ministerial order reissued every year. Portaria MGI No. 11,460 of 29 December 2025 sets out ten national holidays and nine days of ponto facultativo for 2026. It binds only the direct federal administration, its agencies and foundations, does not touch services deemed essential, and has no hold at all over private employers. The two entries that explain the system are the ones with no name: Monday 20 April is a ponto facultativo attached to Tiradentes Day on Tuesday 21 April, and Corpus Christi on Thursday 4 June — itself only a ponto facultativo, not a national holiday — is followed by Friday 5 June, also nameless. Brazilians call this hanging the holiday, enforcar o feriado, and the government has written the practice into the official gazette. Carnival Monday and Tuesday are handled the same way, with Ash Wednesday running until two in the afternoon. The same notice adds that a complementary order may change the calendar at any time, without prior warning.
+### date_rule US three-day-weekend
+Memorial Day, the last Monday in May, together with the Saturday and Sunday before it; a holiday falling on a Saturday is observed on the preceding Friday, and one falling on a Sunday on the following workday.
+### customs US three-day-weekend
+No American official can declare a bridging day. There is exactly one source of a long weekend: 5 U.S.C. 6103 writes five of the eleven legal public holidays as "the Nth Monday" of a month — the third Monday in January, the third Monday in February, the last Monday in May, the first Monday in September, the second Monday in October. That was the work of Public Law 90-363 of 28 June 1968, the Uniform Monday Holiday Act, which added Columbus Day and moved Washington's Birthday, Memorial Day and Veterans Day onto Mondays. Veterans Day was pushed back to 11 November by Public Law 94-97 in 1975 — the only one of the four ever reversed. Subsection (b) makes the Friday before a legal public holiday when the holiday falls on a Saturday, and Executive Order 11582 of 11 February 1971 pushes a Sunday holiday to the next workday. So Independence Day 2026 falls on Saturday 4 July and the Office of Personnel Management's calendar records it on Friday 3 July, while Memorial Day on Monday 25 May makes its usual three days. Nothing is worked back, and nothing is added.
+### date_rule IN durga-puja-chhuti
+The Durga Puja days from Maha Chaturthi to Dashami in the bright half of the month of Ashvin, notified each year by the West Bengal finance department; the state's own "Additional Day for Durga Puja" entries correspond to no rite at all.
+### customs IN durga-puja-chhuti
+India's public holidays are not issued by the centre. Each state declares them under the explanation to Section 25 of the Negotiable Instruments Act, 1881, read with a Ministry of Home Affairs notification of 8 June 1957 — which means a country's holiday system rests on a nineteenth-century law about cheques. West Bengal's Finance (Audit) Department notification No. 4188-F(P2) of 27 November 2025 divides 2026 into three lists. List I is public holidays under the Act, and it carries Durga Puja Maha Astami on 19 October, Maha Nabami on the 20th and Dasami on the 21st. List II is holidays by order of the state government: state offices shut, banks do not, and three of its entries — 22, 23 and 24 October — are titled simply "Additional Day for Durga Puja" and correspond to no rite. List III is sectional: Easter Saturday for Christians only, Hul Diwas on 30 June for Santhal Adivasis only. Stitched together, 15 to 26 October is twelve consecutive days, the longest run of any of these seven places — and it exists in one state.
+
+## locale ja
+### title
+連休はどう作られるか——法律が自動で埋める国、週末と振り替える国、年休から引く国
+### summary
+七つの土地のいずれにも続けて休める日の並びがあるが、その並びの作り方は一つとして同じでない。日本は祝日法が間の一日を自動的に埋め、誰も何も公告しない。中国は国務院弁公庁が毎年十一月に通知を出し、週末を前に寄せて後で土曜出勤として返させる。インドネシアは三人の大臣が合同で決定し、その日数は労働者自身の年次有給休暇から差し引かれる。台湾は二〇二五年に法を書き換え、以後は振替休日を足すだけで週末を借りない。ブラジルは省令が名前のない橋渡しの日を指定するが、拘束されるのは連邦の役所だけである。合衆国は一九六八年に五つの祝日を月曜へ移して以来、何もしていない。インドは州任せで、根拠は一八八一年の手形法である。
+### keywords
+連休, 大型連休, ゴールデンウィーク, シルバーウィーク, 国民の休日, 振替休日, 祝日法, 調休, 黄金周, 祝日
+### date_rule TW chunjie-lianjia
+旧暦十二月末日の前日から正月三日までの五日間。うち土曜・日曜に当たる日は振替が加わり、実際の日取りは行政院人事行政総処が年度の執務日カレンダーで公告する。
+### customs TW chunjie-lianjia
+台湾の春節連休の長さは二層で決まる。記念日及節日実施条例第六条は「除夕及び春節、旧暦十二月末日の前日から翌年正月三日まで、五日間休む」と日数を条文に書き込み、第八条が、休日が例休日に当たるときは振替を与えること、休日の調整と出勤日の振り替えは所管官庁が調移して公告することを定める。二〇二六年の除夕は二月十六日で、法定の五日は二月十五日の日曜から始まる。その日曜の分が一日振り替えられ、二月十四日の土曜から二十二日の日曜まで九日続く。その九日の中に出勤日は一日もない。一一五年と一一六年の執務日カレンダーの凡例は「出勤日」と「休日」の二種類だけである。二〇二七年は除夕が金曜に落ち、五日のうち二日が週末と重なるので、振替のあと二月四日から十日までの七日になる。同じ条文で二日違う。違いは除夕が何曜日かだけである。
+### date_rule CN huangjinzhou
+十月一日から三日までが法定の休日。国務院弁公庁が毎年、前後の週末を寄せて七日に伸ばす調休を通知し、代わりに出勤する週末の二日を指定する。
+### customs CN huangjinzhou
+中国の連休は計算で作られる。全国年節及紀念日放假辦法（国務院令第七九五号、二〇二五年一月一日施行）第二条が与えるのは国慶節の三日、十月一日から三日まで、そして春節の四日、旧暦の除夕と正月一日から三日までだけである。二〇二四年の改正で加わった第七条にこうある。全国民が休む休日は、統一した休みと振り替えを合理的に按配し、年次有給休暇の制度と結び付けて、実際に長い休暇を形成してよい。個別の特殊な場合を除き、法定祝日の前後の連続勤務は原則として六日を超えない。三日を七日に変えるのは法律ではなく、国務院弁公庁が毎年十一月に出す通知である。二〇二六年分は国弁発明電〔二〇二五〕七号で、国慶節は十月一日木曜から七日水曜まで調休を含め七日、九月二十日日曜と十月十日土曜が出勤日。春節は二月十五日から二十三日まで九日で、二月十四日と二十八日の土曜が出勤日。労働節は五月一日から五日まで五日、五月九日が出勤日。増えた日は与えられたものではない。前に寄せ、あとで返している。
+### date_rule JP golden-week
+四月二十九日の昭和の日に、五月三日の憲法記念日、五月四日のみどりの日、五月五日のこどもの日が続く。いずれかが日曜に当たる年は、その後の最も近い平日が振替休日として一日加わる。
+### customs JP golden-week
+日本のゴールデンウィークは、毎年誰かが決める必要がない。国民の祝日に関する法律（昭和二十三年法律第百七十八号）第二条が、四月二十九日昭和の日、五月三日憲法記念日、五月四日みどりの日、五月五日こどもの日という四つの日付をそのまま条文に書いており、その四日はもともと一週間の中に詰まっている。第三条第二項がもう一つ加える。国民の祝日が日曜日に当たるときは、その日後においてその日に最も近い国民の祝日でない日を休日とする。二〇二六年は五月三日が日曜なので、内閣府の祝日表に「休日　五月六日　祝日法第三条第二項による休日」の一行が増え、五月二日の土曜から六日の水曜まで五日続く。二〇二七年はそれが起きず、四月二十九日の木曜と、五月三日から五日までの月曜から水曜になるだけである。出勤日の振り替えもなく、どの官庁も公告を出さない。四つの日付は条文にあり、あとは曜日が決める。
+### date_rule JP silver-week
+九月第三月曜日の敬老の日から秋分日の秋分の日まで。両者の間が一日だけ空く年は、その一日が祝日法第三条第三項により自動的に休日となる。
+### customs JP silver-week
+シルバーウィークはゴールデンウィークの裏返しで、毎年あるわけではない。敬老の日は「九月の第三月曜日」で九月十五日から二十一日の間を動き、秋分の日は天文上の秋分日を採るので九月二十二日から二十四日の間を動く。祝日法第三条第三項は、前日及び翌日が国民の祝日である日（国民の祝日でない日に限る）を休日とする。つまり敬老の日が二十一日、秋分日が二十三日と揃った年だけ、間の二十二日が自動的に休日になる。内閣府の説明ページ自身が「数年に一度、不定期に現れる休日」と書いている。二〇二六年はその年である。九月二十一日敬老の日、二十二日休日、二十三日秋分の日、前の週末とつながって五日。二〇二七年は敬老の日が二十日、秋分の日が二十三日で二日空くため成立しない。しかも秋分の日は、国立天文台の暦要項が前年の二月一日に官報へ掲載されて初めて正式に決まる。天文台が公表している計算によれば、次に成立するのは二〇三七年である。
+### date_rule ID cuti-bersama
+断食明け大祭などの前後に置かれる共同休暇日。宗教相・労働相・行政改革相の三大臣が毎年合同で決定して公告する。イスラム暦の祭日そのものの日付は宗教相の決定で別に定められる。
+### customs ID cuti-bersama
+インドネシアはこの問いを二つの文書に分けている。国民の祝日は二〇二四年大統領決定第八号による。共同休暇（チュティ・ブルサマ）は宗教相・労働相・行政改革相の三大臣合同決定で毎年定められ、二〇二六年分は二〇二五年第千四百九十七号・第二号・第五号、二〇二五年九月十九日に人間開発文化調整省で署名され、国民の祝日十七日と共同休暇八日、合わせて二十五日とされた。制度を決定づける一文は決定書の中にある。共同休暇の実施は、職員・従業員・労働者の年次休暇の権利を減らす。つなぎ目の日は労働者が自分で払っている。二〇二六年は三月十八日が共同休暇、十九日がニュピ、二十日が共同休暇、二十一日と二十二日が断食明け大祭、二十三日と二十四日が共同休暇で、七日続く。ラマダン開始日と断食明け大祭・犠牲祭の日付はこの決定に書かれておらず、宗教相の別決定で定まる。同じ決定書は、病院、電力、水道、消防、治安、銀行、交通など住民に直接サービスを提供する部署に、この期間の勤務を割り当てるよう求めている。
+### date_rule BR ponto-facultativo
+復活祭から六十日後の木曜日（聖体の祝日）と、管理・公共サービス革新省が別途省令で指定する、それ自体には名前のない橋渡しの日。
+### customs BR ponto-facultativo
+ブラジルの連休は毎年出し直される省令に載っている。管理・公共サービス革新省令第一一四六〇号（二〇二五年十二月二十九日）が二〇二六年の国民の祝日十件と任意休業日（ポント・ファクルタチーヴォ）九件を定める。拘束されるのは連邦の直接行政、独立行政機関、財団だけで、必要と認められる業務は止めず、民間企業には何の効力もない。制度をいちばんよく説明するのは名前のない二つの日である。四月二十日の月曜は任意休業日で、二十一日火曜のチラデンチスの日につながる。六月四日木曜の聖体の祝日はそれ自体が祝日ではなく任意休業日にすぎず、そこに六月五日金曜が、やはり名前なしで続く。ブラジル人はこれを「祝日を吊るす」と呼び、政府はその慣行を官報に書き込んだ。カーニバルの月曜と火曜も同じ扱いで、灰の水曜日は午後二時までとされる。同じ告知には、補足省令が出ればカレンダーは予告なくいつでも変わりうる、と付記されている。
+### date_rule US three-day-weekend
+五月最終月曜日の戦没将兵追悼記念日と、その前の土曜・日曜。祝日が土曜に当たる年は前日の金曜が法定の公休日となり、日曜に当たる年は翌勤務日に繰り延べられる。
+### customs US three-day-weekend
+合衆国では、橋渡しの日を宣言できる官庁が存在しない。連休の源は一つだけである。合衆国法典第五編第六一〇三条は、十一の法定公休日のうち五つを「ある月の第何月曜日」と書く。一月第三月曜、二月第三月曜、五月最終月曜、九月第一月曜、十月第二月曜。これは一九六八年六月二十八日の公法第九〇－三六三号、統一月曜休日法の仕事で、コロンブス・デーを加え、ワシントン誕生日・戦没将兵追悼記念日・復員軍人の日を月曜へ移した。復員軍人の日だけは一九七五年の公法第九四－九七号で十一月十一日へ戻され、四件のうち覆されたのはこれ一つである。同条(b)項は祝日が土曜に当たるとき前日の金曜を法定公休日とし、一九七一年二月十一日の大統領令第一一五八二号は日曜の祝日を翌勤務日へ送る。だから二〇二六年の独立記念日七月四日は土曜で、人事管理局の暦は七月三日金曜と記す。五月二十五日月曜の戦没将兵追悼記念日はいつもどおり三日になる。返す出勤日もなく、足される日もない。
+### date_rule IN durga-puja-chhuti
+インド暦アシュヴィン月白半のドゥルガー・プージャ、マハー・チャトゥルティーからダシャミーまで。西ベンガル州財務局が毎年告示し、州が加える「ドゥルガー・プージャ追加日」はいかなる儀礼にも対応しない。
+### customs IN durga-puja-chhuti
+インドの公休日は中央が出すものではない。各州が一八八一年手形法第二十五条の但書と、一九五七年六月八日付の内務省告示に基づいて州知事名で毎年宣言する。つまり一国の休日制度が、十九世紀の手形に関する法律の上に載っている。西ベンガル州財務局（監査）二〇二五年十一月二十七日付告示第4188-F(P2)号は、二〇二六年の日を三つの一覧に分ける。第一表は手形法上の公休日で、ドゥルガー・プージャのマハー・アシュタミー十月十九日、マハー・ナヴァミー二十日、ダシャミー二十一日が入る。第二表は州政府命令による休日で、州の役所は閉まるが銀行は閉まらない。そのうち十月二十二日・二十三日・二十四日の三日は名称そのものが「ドゥルガー・プージャ追加日」であり、対応する儀礼はない。第三表は共同体別で、イースター・サタデーはキリスト教徒のみ、六月三十日のフル・ディバスはサンタル系先住民のみである。つないでいくと十月十五日から二十六日までの十二日連続で、この七つの土地で最も長い。そしてそれが成立するのは一つの州だけである。
+
+## locale zh-CN
+### title
+连假是怎么长出来的:自动补上的、跟周末对调的、从自己年假扣的
+### summary
+七个地方都会攒出一串连着的休息日，可把零散假日接成一整串的机器没有一台是一样的。日本靠祝日法自动把中间那天填上，谁也不用公告；中国靠国务院办公厅每年十一月发通知调休，把周末挪到前面、之后再补上班；印尼由三位部长联合决定共同休假日，而那几天要从劳动者本人的年休假里扣；台湾二〇二五年改了法，之后只加补假、不再借周末；巴西靠部令指定没有名字的搭桥日，且只管联邦机关；美国一九六八年把五个假日移到星期一之后就没再动过；印度交给各邦自己办，依据是一八八一年的票据法。
+### keywords
+连假, 调休, 黄金周, 补班, 法定节假日, 放假安排, 春节假期, 国庆假期, 黄金周安排, 长假
+### date_rule TW chunjie-lianjia
+自农历十二月末日的前一日起至正月初三，放假五日；其中逢星期六、星期日者另予补假，具体日期由行政院人事行政总处在年度办公日历表中公告。
+### customs TW chunjie-lianjia
+台湾春节连假的长度由两层决定。《纪念日及节日实施条例》第六条把天数写死：除夕及春节，自农历十二月末日之前一日至翌年一月三日，放假五日；第八条再规定放假日逢例假日者应予补假，调整放假及补行上班日期由目的事业主管机关调移并公告。二〇二六年除夕是二月十六日，五天法定假期从二月十五日星期日起算，那个星期日补一天，于是二月十四日星期六到二月二十二日星期日连放九天，其中没有任何一天要补上班——一一五年与一一六年办公日历表的图例都只有「上班日」和「放假日」两种。二〇二七年除夕落在星期五，五天里有两天撞上周末，补完之后是二月四日到十日共七天。同一部法，两年差两天，差别只在除夕是星期几。
+### date_rule CN huangjinzhou
+十月一日至三日为法定假日，国务院办公厅每年通知以调休把前后周末并进来凑成七天，同时指定两个周末补班。
+### customs CN huangjinzhou
+中国的连假是算出来的。《全国年节及纪念日放假办法》（国务院令第七九五号，二〇二五年一月一日起施行）第二条只给国庆节三天，十月一日至三日；春节四天，农历除夕和正月初一至初三。二〇二四年修订新增的第七条才是关键：全体公民放假的假日，可合理安排统一放假调休，结合落实带薪年休假等制度，实际形成较长假期；除个别特殊情形外，法定节假日假期前后连续工作一般不超过六天。把三天变成七天的不是法律，是国务院办公厅每年十一月发的通知。二〇二六年那份是国办发明电〔二〇二五〕七号：国庆节十月一日周四至七日周三放假调休共七天，九月二十日周日、十月十日周六上班；春节二月十五日至二十三日共九天，二月十四日、二十八日两个周六上班；劳动节五月一日至五日共五天，五月九日上班。多出来的日子不是给的，是先挪过来、后还回去。
+### date_rule JP golden-week
+四月二十九日昭和之日，加上五月三日宪法纪念日、五月四日绿之日、五月五日儿童节；其中若有祝日逢星期日，再往后补一个振替休日。
+### customs JP golden-week
+日本的黄金周不需要谁每年拍板。《国民祝日相关法律》（昭和二十三年法律第一七八号）第二条把四月二十九日昭和之日、五月三日宪法纪念日、五月四日绿之日、五月五日儿童节四个日期直接写进条文，这四天本来就挤在一周之内。第三条第二项再补一句：国民祝日逢星期日时，其后最近的非祝日之日为休日。二〇二六年五月三日是星期日，内阁府的祝日表上因此多出一行「休日　五月六日　依祝日法第三条第二项」，五月二日星期六到五月六日星期三连休五天。二〇二七年不出现这种情形，就只有四月二十九日星期四，以及五月三日到五日的星期一至星期三。没有补班，也没有哪个机关要为它发公告——四个日期写在条文里，剩下的由星期几决定。
+### date_rule JP silver-week
+九月第三个星期一的敬老之日到秋分日的秋分之日；两者之间只隔一天时，那一天依祝日法第三条第三项自动成为休日。
+### customs JP silver-week
+白银周是黄金周的反面：它不是每年都有。敬老之日是「九月第三个星期一」，在九月十五日到二十一日之间移动；秋分之日采用天文上的秋分日，在九月二十二日到二十四日之间移动。祝日法第三条第三项规定，前后两天都是国民祝日、本身不是祝日的那一天为休日——只有敬老之日恰好是二十一日、秋分日恰好是二十三日，中间的二十二日才会自动变成假日。内阁府自己的说明页把它写成「数年一度、不定期出现的休日」。二〇二六年正是这样的一年：九月二十一日敬老之日、二十二日休日、二十三日秋分之日，接上前面的周末共五天。二〇二七年敬老之日是二十日、秋分之日是二十三日，中间隔两天，不成立。而秋分之日要等国立天文台的历象计算在前一年二月一日刊上官报才正式确定；按天文台公布的推算，下一个成立的年份要等到二〇三七年。
+### date_rule ID cuti-bersama
+放在开斋节等节日前后的共同休假日，由宗教部长、劳动部长与行政改革部长每年联合决定并公告；伊斯兰历节日本身的日期由宗教部长另行决定。
+### customs ID cuti-bersama
+印尼把这件事拆成两份文件。国定假日依二〇二四年第八号总统决定办理；共同休假（cuti bersama）由宗教部长、劳动部长和行政与官僚改革部长三人联合决定逐年公告。二〇二六年那份是二〇二五年第一四九七号、第二号、第五号，二〇二五年九月十九日在人类发展与文化统筹部签署，定下十七天国定假日和八天共同休假，共二十五天。决定书里有一句话定义了整套制度：共同休假的实施，会扣减职员、员工、劳动者的年休假权利。接起来的那几天，是劳动者自己出的。二〇二六年三月十八日共同休假、十九日宁静日、二十日共同休假、二十一至二十二日开斋节、二十三至二十四日共同休假，连成七天。斋月起始日与开斋节、宰牲节的日期不写在这份决定里，由宗教部长另以决定订定。同一份决定还要求医院、供电、供水、消防、治安、银行、交通等直接面向民众的单位在这几天照常排班。
+### date_rule BR ponto-facultativo
+复活节后第六十日的星期四（基督圣体圣血节），以及管理与公共服务创新部另行发令指定、本身没有名字的搭桥日。
+### customs BR ponto-facultativo
+巴西的长周末写在一份逐年重发的部令里。管理与公共服务创新部第一一四六〇号部令（二〇二五年十二月二十九日）定出二〇二六年的十个国定假日和九个「弹性休假日」（ponto facultativo），只约束联邦直接行政、自治机构和基金会，不影响被认定为必要的服务，对私营企业完全没有效力。名单里最能说明制度的是两个没有名字的日子：四月二十日星期一是弹性休假，接上四月二十一日星期二的蒂拉登特斯日；六月四日星期四的基督圣体圣血节本身也只是弹性休假、不是国定假日，后面再接六月五日星期五，同样没有名字。巴西人把这种做法叫「把假日吊起来」，而政府把这个做法写进了公报。狂欢节的星期一和星期二同样处理，圣灰星期三放到下午两点。同一份公告还注明：若另发补充部令，日历可随时变更，不另行通知。
+### date_rule US three-day-weekend
+五月最后一个星期一的阵亡将士纪念日，连同前面的星期六与星期日；假日逢星期六时前一个星期五改为法定公假日，逢星期日则顺延到下一个工作日。
+### customs US three-day-weekend
+美国没有任何机关能宣布一个搭桥日。连假只有一个来源：《美国法典》第五编第六一〇三条把十一个法定公假日里的五个写成「某月的第几个星期一」——一月第三个星期一、二月第三个星期一、五月最后一个星期一、九月第一个星期一、十月第二个星期一。这是一九六八年六月二十八日第九〇之三六三号公法（统一星期一假日法）做的：加进哥伦布日，并把华盛顿诞辰、阵亡将士纪念日与退伍军人节都移到星期一。其中退伍军人节在一九七五年被第九四之九七号公法移回十一月十一日，是四项里唯一被推翻的。同条第(b)款规定假日逢星期六时前一个星期五为法定公假日；逢星期日则依一九七一年二月十一日第一一五八二号行政命令顺延到下一个工作日。所以二〇二六年七月四日独立纪念日是星期六，人事管理局的行事历把它记在七月三日星期五；五月二十五日星期一的阵亡将士纪念日照旧接成三天。没有补班，也没有加出来的日子。
+### date_rule IN durga-puja-chhuti
+印度历阿湿缚庾阇月白半月杜尔迦祭的大四日至十日祭，由西孟加拉邦财政厅逐年公告；邦政府另加的「杜尔迦祭增加日」不对应任何祭仪。
+### customs IN durga-puja-chhuti
+印度的公假不是中央发的。各邦依一八八一年《票据法》第二十五条的但书、配合内政部一九五七年六月八日的公告，由邦长逐年宣告——一个国家的假日制度，长在一部十九世纪关于票据的法律上。西孟加拉邦财政厅（审计）二〇二五年十一月二十七日第4188-F(P2)号公告把二〇二六年的日子分成三份清单。清单一是票据法下的公假日，杜尔迦祭的大八日十月十九日、大九日二十日、十日祭二十一日在其中。清单二是邦政府命令下的休假日，邦政府机关关门、银行不关，其中十月二十二、二十三、二十四日三天的名目就叫「杜尔迦祭增加日」，不对应任何祭仪。清单三分族群，例如复活节星期六只给基督徒、六月三十日 Hul Diwas 只给桑塔尔原住民。三份清单接起来，十月十五日到二十六日整整十二天，是这七个地方里最长的一串——而它只在一个邦成立。
+
+## locale hi
+### title
+लंबी छुट्टियाँ कैसे बनती हैं — कानून से अपने-आप, सप्ताहांत की अदला-बदली से, या अपनी ही छुट्टी काटकर
+### summary
+सातों जगह लगातार छुट्टियों की एक कड़ी बनती है, पर उसे जोड़ने वाली मशीन कहीं भी एक जैसी नहीं। जापान में अवकाश कानून बीच का दिन खुद भर देता है और किसी को कुछ घोषित नहीं करना पड़ता। चीन में राज्य परिषद कार्यालय हर नवंबर एक अधिसूचना निकालता है जो सप्ताहांत आगे खींच लेती है और बाद में शनिवार को काम कराकर वसूल लेती है। इंडोनेशिया में तीन मंत्री मिलकर सामूहिक अवकाश तय करते हैं, और वे दिन कर्मचारी की अपनी वार्षिक छुट्टी से काटे जाते हैं। ताइवान ने 2025 में कानून बदला और अब सिर्फ़ प्रतिकर अवकाश जोड़ता है, सप्ताहांत उधार नहीं लेता। ब्राज़ील में मंत्रालय के आदेश से बिना नाम वाले पुल-दिन तय होते हैं, जो केवल संघीय दफ़्तरों पर लागू हैं। अमेरिका ने 1968 में पाँच अवकाश सोमवार पर टिका दिए और उसके बाद कुछ नहीं किया। भारत में यह राज्यों पर छोड़ा गया है, और आधार 1881 का परक्राम्य लिखत अधिनियम है।
+### keywords
+लंबा वीकेंड, छुट्टियों की सूची, सार्वजनिक अवकाश, दुर्गा पूजा की छुट्टी, राजपत्रित अवकाश, प्रतिबंधित अवकाश, गोल्डन वीक, अवकाश अधिसूचना, पश्चिम बंगाल छुट्टी, त्योहार अवकाश
+### date_rule TW chunjie-lianjia
+चांद्र बारहवें महीने के अंतिम दिन से एक दिन पहले से पहले महीने की तीसरी तिथि तक पाँच दिन; इनमें जो शनिवार या रविवार पड़े उनके बदले अतिरिक्त दिन जोड़े जाते हैं, और असली तारीख़ें हर साल कार्मिक प्रशासन महानिदेशालय के कार्यालय कैलेंडर में छपती हैं।
+### customs TW chunjie-lianjia
+ताइवान में चांद्र नववर्ष की कड़ी कितनी लंबी होगी, यह दो परतों से तय होता है। स्मृति-दिवस एवं अवकाश अधिनियम की धारा 6 दिन गिनकर लिख देती है — चांद्र नववर्ष की पूर्वसंध्या और वसंत उत्सव, बारहवें चांद्र मास के अंतिम दिन से एक दिन पहले से लेकर अगले वर्ष के पहले मास की तीसरी तिथि तक, पाँच दिन। धारा 8 जोड़ती है कि साप्ताहिक विश्राम दिवस पर पड़ने वाले अवकाश की भरपाई होगी, और अवकाश समायोजन तथा प्रतिकर कार्यदिवस संबंधित प्राधिकारी घोषित करेगा। 2026 में पूर्वसंध्या 16 फ़रवरी को है, इसलिए वैधानिक पाँच दिन रविवार 15 फ़रवरी से शुरू होते हैं; उस रविवार के बदले एक दिन जुड़ता है और कड़ी शनिवार 14 फ़रवरी से रविवार 22 फ़रवरी तक — पूरे नौ दिन — बन जाती है, और उसके भीतर एक भी प्रतिकर कार्यदिवस नहीं है। 2026 और 2027 दोनों के कार्यालय कैलेंडर में दिन की केवल दो श्रेणियाँ हैं: कार्यदिवस और अवकाश। 2027 में पूर्वसंध्या शुक्रवार को पड़ती है, पाँच में से दो दिन सप्ताहांत से टकराते हैं, और भरपाई के बाद कड़ी 4 से 10 फ़रवरी की सात दिन की रह जाती है। एक ही कानून, दो साल में दो दिन का फ़र्क़ — और पूरा फ़र्क़ इस बात का कि पूर्वसंध्या किस वार पड़ी।
+### date_rule CN huangjinzhou
+1 से 3 अक्तूबर वैधानिक अवकाश हैं; राज्य परिषद कार्यालय हर साल घोषित करता है कि आगे-पीछे के सप्ताहांत खींचकर कड़ी को सात दिन कैसे किया जाएगा, और बदले में कौन से दो सप्ताहांत के दिन काम के होंगे।
+### customs CN huangjinzhou
+चीन की लंबी छुट्टी गणित है। राष्ट्रीय पर्वों और स्मृति-दिवसों पर अवकाश संबंधी उपाय (राज्य परिषद आदेश संख्या 795, 1 जनवरी 2025 से प्रभावी) राष्ट्रीय दिवस के लिए केवल तीन दिन देते हैं — 1 से 3 अक्तूबर — और वसंत उत्सव के लिए चार, यानी पूर्वसंध्या और पहले चांद्र मास के पहले तीन दिन। 2024 के संशोधन में जुड़ी धारा 7 ही असली है: सभी नागरिकों के अवकाश को एकीकृत छुट्टी और अदला-बदली के साथ इस तरह व्यवस्थित किया जा सकता है कि वास्तव में एक लंबी छुट्टी बने, और विशेष परिस्थितियों को छोड़कर वैधानिक अवकाश से पहले या बाद लगातार काम आम तौर पर छह दिन से अधिक नहीं होगा। तीन दिन को सात बनाने वाला कानून नहीं, बल्कि राज्य परिषद कार्यालय की हर नवंबर आने वाली अधिसूचना है। 2026 वाली अधिसूचना संख्या 7 (2025) है: राष्ट्रीय दिवस पर गुरुवार 1 अक्तूबर से बुधवार 7 अक्तूबर तक सात दिन, बदले में रविवार 20 सितंबर और शनिवार 10 अक्तूबर को काम; वसंत उत्सव 15 से 23 फ़रवरी तक नौ दिन, बदले में शनिवार 14 और 28 फ़रवरी को काम; श्रम दिवस 1 से 5 मई तक पाँच दिन, बदले में 9 मई को काम। अतिरिक्त दिन दिए नहीं जाते — आगे खिसकाए जाते हैं और बाद में लौटा दिए जाते हैं।
+### date_rule JP golden-week
+29 अप्रैल (शोवा दिवस) के साथ 3 मई (संविधान स्मृति दिवस), 4 मई (हरियाली दिवस) और 5 मई (बाल दिवस); इनमें से कोई रविवार पड़े तो अगले गैर-अवकाश दिन एक प्रतिस्थापन अवकाश और जुड़ जाता है।
+### customs JP golden-week
+जापान के गोल्डन वीक के लिए हर साल किसी को कुछ तय नहीं करना पड़ता। राष्ट्रीय अवकाश अधिनियम (1948 का अधिनियम संख्या 178) की धारा 2 चार तारीख़ें सीधे कानून में लिख देती है — 29 अप्रैल शोवा दिवस, 3 मई संविधान स्मृति दिवस, 4 मई हरियाली दिवस, 5 मई बाल दिवस — और ये चारों वैसे भी एक ही सप्ताह में ठुँसे हुए हैं। धारा 3(2) एक नियम और जोड़ती है: जब कोई राष्ट्रीय अवकाश रविवार को पड़े, तो उसके बाद का निकटतम ऐसा दिन जो स्वयं अवकाश न हो, अवकाश बन जाता है। 2026 में 3 मई रविवार है, इसलिए कैबिनेट कार्यालय की अवकाश तालिका में एक अतिरिक्त पंक्ति है — अवकाश, 6 मई, धारा 3(2) के अंतर्गत — और शनिवार 2 मई से बुधवार 6 मई तक लगातार पाँच दिन बनते हैं। 2027 में ऐसा कुछ नहीं होता: 29 अप्रैल गुरुवार है और 3 से 5 मई सोमवार से बुधवार। न कोई प्रतिकर कार्यदिवस, न किसी मंत्रालय की घोषणा। चार तारीख़ें कानून में बैठी हैं, बाकी काम कैलेंडर कर देता है।
+### date_rule JP silver-week
+सितंबर के तीसरे सोमवार वाले वृद्ध-सम्मान दिवस से शरद विषुव दिवस तक; जिस वर्ष इनके बीच ठीक एक दिन का अंतर हो, वह दिन अवकाश अधिनियम की धारा 3(3) के तहत अपने-आप अवकाश बन जाता है।
+### customs JP silver-week
+सिल्वर वीक गोल्डन वीक का उल्टा है: यह हर साल नहीं होता। वृद्ध-सम्मान दिवस सितंबर का तीसरा सोमवार है, इसलिए 15 से 21 तारीख़ के बीच घूमता है; शरद विषुव दिवस खगोलीय विषुव-दिन लेता है, इसलिए 22 से 24 के बीच घूमता है। अवकाश अधिनियम की धारा 3(3) उस दिन को अवकाश बना देती है जो स्वयं अवकाश न हो पर जिसके दोनों ओर अवकाश हों — और यह तभी होता है जब सोमवार 21 को पड़े और विषुव 23 को, यानी बीच में 22 बचे। कैबिनेट कार्यालय का अपना व्याख्या-पृष्ठ इसे ऐसा अवकाश कहता है जो कुछ वर्षों में एक बार, अनियमित रूप से प्रकट होता है। 2026 उन्हीं वर्षों में से एक है: 21 सितंबर वृद्ध-सम्मान दिवस, 22 सितंबर अवकाश, 23 सितंबर शरद विषुव दिवस, और पिछले सप्ताहांत से जुड़कर पाँच दिन। 2027 में सोमवार 20 को और विषुव 23 को है, दो दिन का अंतर, इसलिए कुछ नहीं होता। और विषुव स्वयं तभी आधिकारिक होता है जब राष्ट्रीय खगोलीय वेधशाला का पंचांग पिछले वर्ष की 1 फ़रवरी को राजपत्र में छपे; वेधशाला की प्रकाशित गणना के अनुसार अगला ऐसा वर्ष 2037 है।
+### date_rule ID cuti-bersama
+ईद-उल-फ़ितर जैसे अवकाशों के आसपास रखे जाने वाले सामूहिक अवकाश दिवस, जिन्हें धर्म, श्रम तथा प्रशासनिक सुधार मंत्री हर साल संयुक्त निर्णय से घोषित करते हैं; इस्लामी तिथियाँ स्वयं धर्म मंत्री के अलग निर्णय से तय होती हैं।
+### customs ID cuti-bersama
+इंडोनेशिया इस सवाल को दो दस्तावेज़ों में बाँट देता है। राष्ट्रीय अवकाश राष्ट्रपति निर्णय संख्या 8, 2024 से चलते हैं। सामूहिक अवकाश (चुती बरसामा) हर साल धर्म मंत्री, श्रम मंत्री और प्रशासनिक एवं नौकरशाही सुधार मंत्री के संयुक्त निर्णय से तय होता है। 2026 वाला निर्णय 2025 की संख्या 1497, 2 और 5 है, जिस पर 19 सितंबर 2025 को मानव विकास एवं संस्कृति समन्वयक मंत्रालय में हस्ताक्षर हुए, और जिसमें 17 राष्ट्रीय अवकाश तथा 8 सामूहिक अवकाश, कुल 25 दिन तय हुए। पूरी व्यवस्था को परिभाषित करने वाला वाक्य निर्णय के भीतर ही है: सामूहिक अवकाश लेने से कर्मचारी की वार्षिक छुट्टी का अधिकार घटता है। जोड़ने वाले दिन कर्मचारी अपनी जेब से देता है। 2026 में इससे बनता है — 18 मार्च सामूहिक अवकाश, 19 मार्च न्येपी, 20 मार्च सामूहिक अवकाश, 21 और 22 मार्च ईद-उल-फ़ितर, 23 और 24 मार्च सामूहिक अवकाश — लगातार सात दिन। रमज़ान की शुरुआत तथा ईद-उल-फ़ितर और ईद-उल-अज़हा की तिथियाँ इस निर्णय में हैं ही नहीं; वे धर्म मंत्री के अलग निर्णय से आती हैं। वही दस्तावेज़ अस्पतालों, बिजली-पानी, दमकल, पुलिस, बैंकों और परिवहन से कहता है कि इन दिनों में ड्यूटी लगाकर काम चलता रखें।
+### date_rule BR ponto-facultativo
+ईस्टर के साठ दिन बाद का गुरुवार (कोर्पुस क्रिस्टी), और उसके साथ वे बिना नाम वाले पुल-दिन जिन्हें प्रबंधन मंत्रालय अपने आदेश से नियत करता है।
+### customs BR ponto-facultativo
+ब्राज़ील की लंबी छुट्टियाँ हर साल दोबारा जारी होने वाले एक मंत्रालयी आदेश पर टिकी हैं। 29 दिसंबर 2025 का पोर्तारिया MGI संख्या 11.460 वर्ष 2026 के लिए दस राष्ट्रीय अवकाश और नौ ऐच्छिक अवकाश (ponto facultativo) के दिन तय करता है। यह केवल प्रत्यक्ष संघीय प्रशासन, उसकी स्वायत्त संस्थाओं और प्रतिष्ठानों पर लागू है, आवश्यक मानी गई सेवाओं को नहीं रोकता, और निजी नियोक्ताओं पर इसका कोई ज़ोर नहीं। व्यवस्था को सबसे अच्छी तरह वे दो प्रविष्टियाँ समझाती हैं जिनका कोई नाम ही नहीं: सोमवार 20 अप्रैल एक ऐच्छिक अवकाश है जो मंगलवार 21 अप्रैल के तिरादेंतिस दिवस से जुड़ता है, और गुरुवार 4 जून का कोर्पुस क्रिस्टी — जो खुद राष्ट्रीय अवकाश नहीं, केवल ऐच्छिक अवकाश है — उसके बाद शुक्रवार 5 जून, वह भी बेनाम। ब्राज़ीली इसे छुट्टी को लटकाना कहते हैं, और सरकार ने इस चलन को राजपत्र में लिख दिया है। कार्निवाल का सोमवार और मंगलवार भी ऐसे ही हैं, और भस्म बुधवार दोपहर दो बजे तक। उसी सूचना में यह भी लिखा है कि पूरक आदेश आने पर कैलेंडर कभी भी, बिना पूर्व चेतावनी के बदल सकता है।
+### date_rule US three-day-weekend
+मई का अंतिम सोमवार यानी मेमोरियल डे, उससे पहले के शनिवार और रविवार के साथ; शनिवार को पड़ने वाला अवकाश पिछले शुक्रवार को और रविवार को पड़ने वाला अगले कार्यदिवस पर मनाया जाता है।
+### customs US three-day-weekend
+अमेरिका में कोई अधिकारी पुल-दिन घोषित नहीं कर सकता। लंबे सप्ताहांत का ठीक एक स्रोत है: संयुक्त राज्य संहिता का शीर्षक 5, धारा 6103 ग्यारह वैधानिक सार्वजनिक अवकाशों में से पाँच को महीने के अमुक सोमवार के रूप में लिखती है — जनवरी का तीसरा सोमवार, फ़रवरी का तीसरा सोमवार, मई का अंतिम सोमवार, सितंबर का पहला सोमवार, अक्तूबर का दूसरा सोमवार। यह 28 जून 1968 के लोक कानून 90-363, यानी एकसमान सोमवार अवकाश अधिनियम का काम है, जिसने कोलंबस दिवस जोड़ा और वाशिंगटन जयंती, मेमोरियल डे तथा वेटरन्स डे को सोमवार पर खिसका दिया। वेटरन्स डे को 1975 में लोक कानून 94-97 ने वापस 11 नवंबर पर भेज दिया — चारों में से केवल यही पलटा गया। उपधारा (b) कहती है कि शनिवार को पड़ने वाले अवकाश के लिए पिछला शुक्रवार वैधानिक सार्वजनिक अवकाश होगा, और 11 फ़रवरी 1971 के कार्यकारी आदेश 11582 के अनुसार रविवार वाला अवकाश अगले कार्यदिवस पर जाता है। इसलिए 2026 में स्वतंत्रता दिवस 4 जुलाई शनिवार को पड़ता है और कार्मिक प्रबंधन कार्यालय का कैलेंडर उसे शुक्रवार 3 जुलाई पर दर्ज करता है, जबकि सोमवार 25 मई का मेमोरियल डे हमेशा की तरह तीन दिन बनाता है। न कुछ लौटाया जाता है, न कुछ जोड़ा जाता है।
+### date_rule IN durga-puja-chhuti
+आश्विन शुक्ल पक्ष में महा चतुर्थी से दशमी तक के दुर्गा पूजा के दिन, जिन्हें पश्चिम बंगाल का वित्त विभाग हर साल अधिसूचित करता है; राज्य की अपनी "दुर्गा पूजा के लिए अतिरिक्त दिन" प्रविष्टियाँ किसी अनुष्ठान से मेल नहीं खातीं।
+### customs IN durga-puja-chhuti
+भारत में सार्वजनिक अवकाश केंद्र से नहीं आते। हर राज्य उन्हें परक्राम्य लिखत अधिनियम, 1881 की धारा 25 के स्पष्टीकरण और गृह मंत्रालय की 8 जून 1957 की अधिसूचना के तहत राज्यपाल के नाम से घोषित करता है — यानी एक देश की अवकाश-व्यवस्था उन्नीसवीं सदी के हुंडी-कानून पर टिकी है। पश्चिम बंगाल वित्त (लेखा) विभाग की 27 नवंबर 2025 की अधिसूचना संख्या 4188-F(P2) 2026 के दिनों को तीन सूचियों में बाँटती है। सूची एक अधिनियम के अंतर्गत सार्वजनिक अवकाश है, जिसमें दुर्गा पूजा की महा अष्टमी 19 अक्तूबर, महा नवमी 20 अक्तूबर और दशमी 21 अक्तूबर हैं। सूची दो राज्य सरकार के आदेश से बंद रहने वाले दिन हैं: राज्य के दफ़्तर बंद, बैंक खुले — और इसकी तीन प्रविष्टियाँ, 22, 23 और 24 अक्तूबर, केवल "दुर्गा पूजा के लिए अतिरिक्त दिन" कहलाती हैं और किसी अनुष्ठान से नहीं जुड़तीं। सूची तीन सांप्रदायिक है: ईस्टर शनिवार केवल ईसाइयों के लिए, 30 जून का हूल दिवस केवल संताल आदिवासियों के लिए। सब जोड़ दें तो 15 से 26 अक्तूबर तक लगातार बारह दिन बनते हैं — इन सात जगहों में सबसे लंबी कड़ी — और वह एक ही राज्य में मौजूद है।
+
+## locale id
+### title
+Bagaimana libur panjang dibuat: tumbuh sendiri dari undang-undang, ditukar dengan akhir pekan, atau dipotong dari cuti sendiri
+### summary
+Tujuh tempat sama-sama punya deretan hari libur yang menyambung, dan tidak satu pun merakitnya dengan cara yang sama. Di Jepang undang-undang hari libur mengisi sendiri hari yang menganga di tengah, tanpa perlu ada yang mengumumkan apa pun. Di Tiongkok Sekretariat Dewan Negara menerbitkan pemberitahuan setiap November yang menarik akhir pekan ke depan lalu menagihnya kembali sebagai hari kerja Sabtu. Di Indonesia cuti bersama diputuskan tiga menteri sekaligus — dan hari-hari itu memotong hak cuti tahunan pekerja sendiri. Taiwan menulis ulang undang-undang hari liburnya pada 2025 dan sejak itu hanya menambah hari pengganti, tidak lagi meminjam akhir pekan. Brasil menyambung dengan hari tanpa nama yang ditetapkan lewat peraturan menteri dan hanya mengikat kantor federal. Amerika Serikat memindahkan lima hari libur ke hari Senin pada 1968 dan sesudah itu tidak melakukan apa-apa lagi. India menyerahkannya kepada provinsi, dengan dasar sebuah undang-undang perbankan dari 1881.
+### keywords
+libur panjang, cuti bersama, SKB 3 menteri, hari libur nasional, libur Lebaran, long weekend, kalender libur, Golden Week, tanggal merah, cuti tahunan
+### date_rule TW chunjie-lianjia
+Lima hari, dari sehari sebelum hari terakhir bulan kedua belas Imlek sampai hari ketiga bulan pertama; hari yang jatuh pada Sabtu atau Minggu diganti dengan hari tambahan, dan tanggal pastinya diumumkan tiap tahun dalam kalender kerja pemerintah.
+### customs TW chunjie-lianjia
+Panjang libur Imlek di Taiwan ditentukan dua lapis. Pasal 6 Undang-Undang tentang Hari Peringatan dan Hari Libur menulis jumlahnya langsung: malam Imlek dan Tahun Baru Imlek, lima hari, dari sehari sebelum hari terakhir bulan kedua belas penanggalan Imlek sampai hari ketiga bulan pertama tahun berikutnya. Pasal 8 menambahkan bahwa hari libur yang jatuh pada hari istirahat mingguan harus diganti, dan bahwa penyesuaian libur serta penetapan hari kerja pengganti dilakukan dan diumumkan oleh instansi yang berwenang. Pada 2026 malam Imlek jatuh 16 Februari, sehingga lima hari menurut undang-undang mulai Minggu 15 Februari; Minggu itu memperoleh satu hari pengganti, dan deretannya menjadi Sabtu 14 Februari sampai Minggu 22 Februari — sembilan hari, tanpa satu pun hari kerja pengganti di dalamnya. Kalender kerja pemerintah untuk 2026 dan 2027 hanya mengenal dua jenis hari: hari kerja dan hari libur. Pada 2027 malam Imlek jatuh Jumat, dua dari lima hari bertabrakan dengan akhir pekan, dan setelah penggantian deretannya menjadi 4 sampai 10 Februari — tujuh hari. Undang-undang yang sama, selisih dua hari, dan seluruh selisih itu hanya soal malam Imlek jatuh pada hari apa.
+### date_rule CN huangjinzhou
+Tanggal 1 sampai 3 Oktober adalah libur menurut undang-undang; Sekretariat Dewan Negara mengumumkan tiap tahun bagaimana akhir pekan ditarik masuk agar deretannya menjadi tujuh hari, dan menyebut dua hari akhir pekan yang harus dikerjakan sebagai gantinya.
+### customs CN huangjinzhou
+Libur panjang di Tiongkok adalah hitungan. Ketentuan tentang Libur Hari Raya dan Hari Peringatan Nasional (Peraturan Dewan Negara Nomor 795, berlaku 1 Januari 2025) hanya memberi tiga hari untuk Hari Nasional, 1 sampai 3 Oktober, dan empat hari untuk Tahun Baru Imlek. Pasal 7, yang ditambahkan dalam perubahan 2024, adalah kalimat yang menentukan: hari libur bagi seluruh warga boleh diatur dengan libur dan penukaran hari secara terpadu sehingga benar-benar terbentuk libur yang lebih panjang, dan kecuali dalam keadaan khusus, kerja berturut-turut sebelum atau sesudah libur resmi pada umumnya tidak melebihi enam hari. Yang mengubah tiga hari menjadi tujuh bukan undang-undang, melainkan pemberitahuan yang dikeluarkan Sekretariat Dewan Negara setiap November. Untuk 2026 nomornya 7 Tahun 2025: Hari Nasional libur dari Kamis 1 Oktober sampai Rabu 7 Oktober, tujuh hari, dengan Minggu 20 September dan Sabtu 10 Oktober tetap bekerja; Tahun Baru Imlek 15 sampai 23 Februari, sembilan hari, dengan Sabtu 14 dan 28 Februari bekerja; Hari Buruh 1 sampai 5 Mei, lima hari, dengan 9 Mei bekerja. Hari tambahan itu bukan pemberian. Ia dimajukan, lalu dibayar kembali.
+### date_rule JP golden-week
+Tanggal 29 April (Hari Showa) ditambah 3 Mei (Hari Peringatan Konstitusi), 4 Mei (Hari Hijau) dan 5 Mei (Hari Anak); bila salah satunya jatuh pada Minggu, satu hari libur pengganti ditambahkan pada hari berikutnya yang bukan hari libur.
+### customs JP golden-week
+Tidak ada yang perlu memutuskan Golden Week Jepang setiap tahun. Pasal 2 Undang-Undang tentang Hari Libur Nasional (Undang-Undang Nomor 178 Tahun 1948) menuliskan empat tanggal langsung ke dalam pasalnya — 29 April Hari Showa, 3 Mei Hari Peringatan Konstitusi, 4 Mei Hari Hijau, 5 Mei Hari Anak — dan keempatnya memang sudah berdesakan dalam satu minggu. Pasal 3 ayat (2) menambahkan satu aturan lagi: bila hari libur nasional jatuh pada Minggu, hari terdekat sesudahnya yang bukan hari libur menjadi hari libur. Pada 2026, 3 Mei jatuh Minggu, sehingga tabel hari libur Kantor Kabinet memuat satu baris tambahan — libur, 6 Mei, berdasarkan Pasal 3 ayat (2) — dan Sabtu 2 Mei sampai Rabu 6 Mei menjadi lima hari beruntun. Pada 2027 hal itu tidak terjadi: 29 April jatuh Kamis, dan 3 sampai 5 Mei jatuh Senin sampai Rabu. Tidak ada hari kerja pengganti, tidak ada pengumuman kementerian. Empat tanggal duduk di dalam undang-undang, dan sisanya diselesaikan kalender.
+### date_rule JP silver-week
+Dari Hari Menghormati Lansia, Senin ketiga bulan September, sampai Hari Ekuinoks Musim Gugur; bila keduanya hanya terpisah satu hari, hari itu otomatis menjadi libur menurut Pasal 3 ayat (3) undang-undang hari libur.
+### customs JP silver-week
+Silver Week adalah kebalikan Golden Week: ia tidak ada setiap tahun. Hari Menghormati Lansia adalah Senin ketiga bulan September, jadi bergerak antara tanggal 15 dan 21. Hari Ekuinoks Musim Gugur mengambil hari ekuinoks astronomis, jadi bergerak antara tanggal 22 dan 24. Pasal 3 ayat (3) undang-undang hari libur menjadikan hari yang bukan libur tetapi diapit hari libur di kedua sisinya sebagai hari libur — dan itu hanya terjadi bila Senin jatuh pada tanggal 21 dan ekuinoks pada tanggal 23, menyisakan tanggal 22 di tengah. Halaman penjelasan Kantor Kabinet sendiri menyebutnya hari libur yang muncul tidak teratur, sekali dalam beberapa tahun. Tahun 2026 adalah salah satunya: 21 September Hari Menghormati Lansia, 22 September libur, 23 September Hari Ekuinoks, tersambung dengan akhir pekan sebelumnya menjadi lima hari. Pada 2027 Senin jatuh tanggal 20 dan ekuinoks tanggal 23, terpaut dua hari, dan tidak terjadi apa-apa. Lagi pula ekuinoks baru resmi ketika almanak Observatorium Astronomi Nasional dimuat dalam lembaran negara pada 1 Februari tahun sebelumnya; menurut perhitungan yang diterbitkan observatorium itu, tahun berikutnya yang memenuhi syarat adalah 2037.
+### date_rule ID cuti-bersama
+Hari cuti bersama yang ditempatkan di sekitar Idulfitri dan hari libur lain, diumumkan tiap tahun lewat keputusan bersama menteri agama, menteri ketenagakerjaan dan menteri pendayagunaan aparatur negara; tanggal hari besar Islamnya sendiri ditetapkan terpisah dengan keputusan menteri agama.
+### customs ID cuti-bersama
+Indonesia memecah persoalan ini ke dalam dua dokumen. Hari libur nasional mengikuti Keputusan Presiden Nomor 8 Tahun 2024 tentang Hari-Hari Libur. Cuti bersama ditetapkan tiap tahun lewat Surat Keputusan Bersama menteri agama, menteri ketenagakerjaan, dan menteri pendayagunaan aparatur negara dan reformasi birokrasi. Yang untuk 2026 adalah Nomor 1497 Tahun 2025, Nomor 2 Tahun 2025 dan Nomor 5 Tahun 2025, ditandatangani 19 September 2025 di kantor Kemenko PMK, dengan 17 hari libur nasional dan 8 hari cuti bersama, total 25 hari. Kalimat yang menentukan seluruh sistem ada di dalam SKB itu sendiri: pelaksanaan cuti bersama mengurangi hak cuti tahunan pegawai, karyawan, atau pekerja. Hari-hari yang menyambungkan deretan itu dibayar oleh pekerjanya sendiri. Pada 2026 hasilnya: 18 Maret cuti bersama, 19 Maret Nyepi, 20 Maret cuti bersama, 21 dan 22 Maret Idulfitri, 23 dan 24 Maret cuti bersama — tujuh hari berturut-turut. Penetapan 1 Ramadan, Idulfitri dan Iduladha justru tidak ada di dalam SKB; itu datang dari keputusan menteri agama yang terpisah. Dokumen yang sama meminta rumah sakit, listrik, air minum, pemadam kebakaran, keamanan, perbankan dan perhubungan mengatur penugasan pegawai selama hari-hari itu.
+### date_rule BR ponto-facultativo
+Kamis pada hari keenam puluh setelah Paskah (Corpus Christi), ditambah hari-hari penyambung tanpa nama yang ditetapkan kementerian melalui peraturan menteri.
+### customs BR ponto-facultativo
+Libur panjang di Brasil bersandar pada satu peraturan menteri yang diterbitkan ulang setiap tahun. Portaria MGI Nomor 11.460 tanggal 29 Desember 2025 menetapkan sepuluh hari libur nasional dan sembilan hari ponto facultativo untuk 2026. Peraturan itu hanya mengikat administrasi publik federal langsung beserta lembaga otonom dan yayasannya, tidak mengganggu layanan yang dianggap esensial, dan sama sekali tidak berlaku bagi perusahaan swasta. Dua butir yang paling menjelaskan sistemnya justru butir yang tidak punya nama: Senin 20 April adalah ponto facultativo yang menempel pada Hari Tiradentes, Selasa 21 April; dan Corpus Christi pada Kamis 4 Juni — yang sendirinya hanya ponto facultativo, bukan libur nasional — disusul Jumat 5 Juni, juga tanpa nama. Orang Brasil menyebut kebiasaan ini menggantung hari libur, enforcar o feriado, dan pemerintah menuliskannya ke dalam lembaran negara. Senin dan Selasa Karnaval diperlakukan sama, sedangkan Rabu Abu hanya sampai pukul dua siang. Pengumuman yang sama menambahkan bahwa peraturan pelengkap dapat mengubah kalender kapan saja, tanpa pemberitahuan sebelumnya.
+### date_rule US three-day-weekend
+Memorial Day, Senin terakhir bulan Mei, bersama Sabtu dan Minggu sebelumnya; hari libur yang jatuh pada Sabtu diperingati pada Jumat sebelumnya, dan yang jatuh pada Minggu pada hari kerja berikutnya.
+### customs US three-day-weekend
+Tidak ada pejabat Amerika yang boleh menetapkan hari penyambung. Libur panjang hanya punya satu sumber: Bab 5 Kitab Undang-Undang Amerika Serikat pasal 6103 menulis lima dari sebelas hari libur publik resmi sebagai Senin keberapa dalam sebuah bulan — Senin ketiga Januari, Senin ketiga Februari, Senin terakhir Mei, Senin pertama September, Senin kedua Oktober. Itu hasil Undang-Undang Publik 90-363 tanggal 28 Juni 1968, Uniform Monday Holiday Act, yang menambahkan Columbus Day dan memindahkan Hari Ulang Tahun Washington, Memorial Day dan Veterans Day ke hari Senin. Veterans Day dikembalikan ke 11 November oleh Undang-Undang Publik 94-97 pada 1975 — satu-satunya dari empat itu yang pernah dibatalkan. Ayat (b) menjadikan Jumat sebelumnya sebagai hari libur resmi bila hari libur jatuh pada Sabtu, dan Keputusan Presiden 11582 tanggal 11 Februari 1971 menggeser hari libur yang jatuh pada Minggu ke hari kerja berikutnya. Karena itu Hari Kemerdekaan 2026 jatuh Sabtu 4 Juli dan kalender Kantor Manajemen Kepegawaian mencatatnya pada Jumat 3 Juli, sementara Memorial Day pada Senin 25 Mei tetap membentuk tiga hari seperti biasa. Tidak ada yang dibayar kembali, dan tidak ada yang ditambahkan.
+### date_rule IN durga-puja-chhuti
+Hari-hari Durga Puja dari Maha Chaturthi sampai Dashami pada paruh terang bulan Ashvin, diumumkan tiap tahun oleh dinas keuangan Benggala Barat; butir "Hari Tambahan untuk Durga Puja" milik negara bagian itu tidak berpasangan dengan ritual mana pun.
+### customs IN durga-puja-chhuti
+Hari libur umum di India tidak dikeluarkan pusat. Setiap negara bagian menetapkannya berdasarkan penjelasan Pasal 25 Negotiable Instruments Act 1881, dibaca bersama pemberitahuan Kementerian Dalam Negeri tanggal 8 Juni 1957 — artinya sistem hari libur sebuah negara bertumpu pada undang-undang surat berharga dari abad kesembilan belas. Pemberitahuan Departemen Keuangan (Audit) Benggala Barat Nomor 4188-F(P2) tanggal 27 November 2025 membagi tahun 2026 ke dalam tiga daftar. Daftar I adalah hari libur umum menurut undang-undang itu, memuat Durga Puja Maha Astami 19 Oktober, Maha Nabami 20 Oktober dan Dasami 21 Oktober. Daftar II adalah hari libur berdasarkan perintah pemerintah negara bagian: kantor negara bagian tutup, bank tidak — dan tiga butirnya, 22, 23 dan 24 Oktober, judulnya memang hanya "Hari Tambahan untuk Durga Puja" dan tidak berpasangan dengan ritual apa pun. Daftar III bersifat golongan: Sabtu Paskah hanya untuk umat Kristen, Hul Diwas 30 Juni hanya untuk masyarakat adat Santhal. Bila dirangkai, 15 sampai 26 Oktober menjadi dua belas hari beruntun, deretan terpanjang di antara tujuh tempat ini — dan ia hanya ada di satu negara bagian.
+
+## locale pt-BR
+### title
+Como se fabrica um feriado prolongado: por lei automática, trocando fins de semana ou descontando das próprias férias
+### summary
+Sete lugares acabam com uma sequência de dias parados, e nenhum a monta do mesmo jeito. No Japão a lei dos feriados preenche sozinha o dia do meio e ninguém precisa anunciar nada. Na China o gabinete do Conselho de Estado publica todo mês de novembro um aviso que puxa fins de semana para a frente e depois os cobra de volta como sábados trabalhados. Na Indonésia a folga coletiva é decidida por três ministros juntos — e sai das férias anuais do próprio trabalhador. Taiwan reescreveu sua lei de feriados em 2025 e desde então só acrescenta dias de compensação, sem tomar fins de semana emprestados. O Brasil emenda com dias sem nome fixados por portaria, que valem apenas para os órgãos federais. Os Estados Unidos passaram cinco feriados para a segunda-feira em 1968 e desde então não fizeram mais nada. A Índia deixa a cargo dos estados, com base numa lei cambial de 1881.
+### keywords
+feriado prolongado, feriadão, ponto facultativo, enforcar o feriado, calendário de feriados, feriados nacionais, Corpus Christi, portaria MGI, dias úteis, Golden Week
+### date_rule TW chunjie-lianjia
+Cinco dias, da véspera do último dia do décimo segundo mês lunar até o terceiro dia do primeiro mês; os que caem em sábado ou domingo geram um dia de compensação, e as datas exatas saem todo ano no calendário oficial de expediente.
+### customs TW chunjie-lianjia
+O tamanho do feriadão do Ano Novo Lunar em Taiwan é decidido em duas camadas. O artigo 6 da Lei dos Dias Comemorativos e Feriados escreve a conta: véspera de Ano Novo Lunar e Festa da Primavera, cinco dias, da véspera do último dia do décimo segundo mês lunar até o terceiro dia do primeiro mês do ano seguinte. O artigo 8 acrescenta que feriado caído em dia de descanso semanal tem de ser compensado, e que ajustar folgas e designar dias de reposição cabe ao órgão competente, que os publica. Em 2026 a véspera cai em 16 de fevereiro, então os cinco dias legais começam no domingo 15; esse domingo rende um dia de compensação e a sequência vai de sábado 14 a domingo 22 de fevereiro — nove dias, sem um único dia de reposição no meio. Os calendários oficiais de expediente de 2026 e 2027 têm exatamente duas categorias de dia: dia útil e feriado. Em 2027 a véspera cai numa sexta, dois dos cinco dias legais batem no fim de semana e, depois da compensação, a sequência fica de 4 a 10 de fevereiro — sete dias. Mesma lei, dois dias de diferença, e a diferença inteira é o dia da semana em que a véspera calhou.
+### date_rule CN huangjinzhou
+De 1 a 3 de outubro são os dias legais; o gabinete do Conselho de Estado anuncia a cada ano como os fins de semana serão puxados para esticar a sequência até sete dias, e indica os dois dias de fim de semana que serão trabalhados em troca.
+### customs CN huangjinzhou
+O feriado longo chinês é aritmética. As Medidas sobre Feriados Anuais e Datas Comemorativas Nacionais (Decreto nº 795 do Conselho de Estado, em vigor desde 1º de janeiro de 2025) concedem apenas três dias ao Dia Nacional, de 1º a 3 de outubro, e quatro à Festa da Primavera. O artigo 7, acrescentado na reforma de 2024, é a frase que importa: os feriados de todos os cidadãos podem ser organizados com folga e troca de dias de modo unificado, para que se forme de fato um descanso mais longo, e, salvo casos particulares, o trabalho contínuo antes ou depois de um feriado legal não deve em geral passar de seis dias. Quem transforma três dias em sete não é a lei, e sim o aviso que o gabinete do Conselho de Estado publica todo novembro. O de 2026 é o nº 7 de 2025: Dia Nacional de quinta 1º de outubro a quarta 7 de outubro, sete dias, com domingo 20 de setembro e sábado 10 de outubro trabalhados; Festa da Primavera de 15 a 23 de fevereiro, nove dias, com os sábados 14 e 28 de fevereiro trabalhados; Dia do Trabalho de 1º a 5 de maio, cinco dias, com 9 de maio trabalhado. Os dias extras não são dados. São adiantados e depois devolvidos.
+### date_rule JP golden-week
+29 de abril (Dia de Showa) mais 3 de maio (Dia da Constituição), 4 de maio (Dia do Verde) e 5 de maio (Dia das Crianças); se algum deles cair num domingo, acrescenta-se um feriado substituto no dia seguinte que não seja feriado.
+### customs JP golden-week
+Ninguém precisa decidir a Golden Week japonesa a cada ano. O artigo 2 da Lei dos Feriados Nacionais (Lei nº 178 de 1948) escreve quatro datas diretamente no texto legal — 29 de abril Dia de Showa, 3 de maio Dia da Constituição, 4 de maio Dia do Verde, 5 de maio Dia das Crianças — e essas quatro já estão espremidas numa única semana. O artigo 3, parágrafo 2, acrescenta outra regra: quando um feriado nacional cai num domingo, o dia mais próximo depois dele que não seja feriado passa a ser feriado. Em 2026, 3 de maio é domingo, e por isso a tabela de feriados do Gabinete do Governo traz uma linha a mais — feriado, 6 de maio, nos termos do artigo 3, parágrafo 2 — e de sábado 2 a quarta 6 de maio são cinco dias seguidos. Em 2027 nada disso acontece: 29 de abril cai numa quinta e 3 a 5 de maio vão de segunda a quarta. Sem reposição de expediente e sem portaria de ministério nenhum. As quatro datas estão na lei, e o resto quem resolve é o calendário.
+### date_rule JP silver-week
+Do Dia do Respeito aos Idosos, terceira segunda-feira de setembro, até o Dia do Equinócio de Outono; quando sobra exatamente um dia entre os dois, esse dia vira feriado automaticamente pelo artigo 3, parágrafo 3, da lei dos feriados.
+### customs JP silver-week
+A Silver Week é o avesso da Golden Week: ela não acontece todo ano. O Dia do Respeito aos Idosos é a terceira segunda-feira de setembro e por isso anda entre os dias 15 e 21. O Dia do Equinócio de Outono adota o dia astronômico do equinócio e anda entre 22 e 24. O artigo 3, parágrafo 3, da lei dos feriados transforma em feriado qualquer dia que não seja feriado mas tenha feriados dos dois lados — o que só ocorre quando a segunda-feira cai no dia 21 e o equinócio no dia 23, deixando o 22 no meio. A própria página explicativa do Gabinete do Governo o descreve como um feriado que aparece de forma irregular, uma vez a cada vários anos. 2026 é um desses anos: 21 de setembro Dia do Respeito aos Idosos, 22 de setembro feriado, 23 de setembro Equinócio, emendados com o fim de semana anterior num bloco de cinco dias. Em 2027 a segunda-feira é dia 20 e o equinócio dia 23, com dois dias entre eles, e não acontece nada. E o próprio equinócio só se torna oficial quando o almanaque do Observatório Astronômico Nacional sai no diário oficial em 1º de fevereiro do ano anterior; pelos cálculos publicados pelo observatório, o próximo ano que fecha a conta é 2037.
+### date_rule ID cuti-bersama
+Dias de folga coletiva colocados em torno do fim do Ramadã e de outros feriados, anunciados a cada ano por decisão conjunta dos ministros da religião, do trabalho e da reforma administrativa; as datas islâmicas em si são fixadas à parte por decisão do ministro da religião.
+### customs ID cuti-bersama
+A Indonésia divide a questão em dois documentos. Os feriados nacionais seguem a Decisão Presidencial nº 8 de 2024. A folga coletiva, cuti bersama, é fixada todo ano por decisão conjunta dos ministros da religião, do trabalho e da reforma administrativa e burocrática. A de 2026 são os números 1497, 2 e 5 de 2025, assinados em 19 de setembro de 2025 no ministério coordenador de desenvolvimento humano e cultura, com 17 feriados nacionais e 8 dias de folga coletiva, 25 no total. A cláusula que define o sistema está dentro da própria decisão: gozar a folga coletiva reduz o direito a férias anuais do servidor, do empregado ou do trabalhador. Os dias que emendam a sequência saem do bolso de quem trabalha. Em 2026 isso produz 18 de março folga coletiva, 19 de março Nyepi, 20 de março folga coletiva, 21 e 22 de março o fim do Ramadã, 23 e 24 de março folga coletiva — sete dias seguidos. O começo do Ramadã e as datas do Idulfitri e do Iduladha não estão na decisão; vêm de uma decisão separada do ministro da religião. O mesmo documento manda hospitais, energia, água, bombeiros, polícia, bancos e transportes escalarem pessoal ao longo desses dias.
+### date_rule BR ponto-facultativo
+A quinta-feira do sexagésimo dia depois da Páscoa (Corpus Christi), mais os dias de emenda sem nome próprio que o Ministério da Gestão designa por portaria.
+### customs BR ponto-facultativo
+Os feriados prolongados brasileiros dependem de uma portaria reeditada todo ano. A Portaria MGI nº 11.460, de 29 de dezembro de 2025, fixa dez feriados nacionais e nove dias de ponto facultativo em 2026. Ela obriga apenas a administração pública federal direta, autárquica e fundacional, não interrompe os serviços considerados essenciais e não alcança de forma alguma o empregador privado. Os dois itens que melhor explicam o sistema são justamente os que não têm nome: segunda-feira 20 de abril é ponto facultativo colado ao Tiradentes de terça 21 de abril, e o Corpus Christi de quinta 4 de junho — que por si só é apenas ponto facultativo, não feriado nacional — vem seguido de sexta 5 de junho, também sem nome. O brasileiro chama isso de enforcar o feriado, e o governo passou a escrever a prática no diário oficial. A segunda e a terça de Carnaval recebem o mesmo tratamento, com a Quarta-Feira de Cinzas até as 14 horas. O mesmo aviso acrescenta que portarias complementares podem alterar o calendário a qualquer momento, sem aviso prévio.
+### date_rule US three-day-weekend
+O Memorial Day, última segunda-feira de maio, com o sábado e o domingo anteriores; feriado que cai num sábado é observado na sexta anterior, e o que cai num domingo, no dia útil seguinte.
+### customs US three-day-weekend
+Nenhuma autoridade americana pode decretar um dia de emenda. O fim de semana longo tem exatamente uma origem: o parágrafo 6103 do título 5 do Código dos Estados Unidos escreve cinco dos onze feriados públicos legais como a enésima segunda-feira de um mês — terceira segunda de janeiro, terceira segunda de fevereiro, última segunda de maio, primeira segunda de setembro, segunda segunda de outubro. Isso é obra da Lei Pública 90-363, de 28 de junho de 1968, o Uniform Monday Holiday Act, que acrescentou o Columbus Day e passou o aniversário de Washington, o Memorial Day e o Veterans Day para segundas-feiras. O Veterans Day voltou para 11 de novembro pela Lei Pública 94-97, de 1975 — o único dos quatro que chegou a ser revertido. A alínea (b) faz da sexta anterior um feriado público legal quando o feriado cai num sábado, e a Ordem Executiva 11582, de 11 de fevereiro de 1971, empurra para o dia útil seguinte o feriado que cai num domingo. Por isso o 4 de julho de 2026 cai num sábado e o calendário do Escritório de Gestão de Pessoal o registra na sexta 3 de julho, enquanto o Memorial Day de segunda 25 de maio forma os três dias de sempre. Nada é reposto e nada é acrescentado.
+### date_rule IN durga-puja-chhuti
+Os dias da Durga Puja, da Maha Chaturthi à Dashami na metade clara do mês de Ashvin, publicados a cada ano pela secretaria de finanças de Bengala Ocidental; as entradas estaduais chamadas "dia adicional de Durga Puja" não correspondem a rito nenhum.
+### customs IN durga-puja-chhuti
+Os feriados públicos indianos não saem do governo central. Cada estado os declara com base na explicação do artigo 25 da Lei de Títulos Negociáveis de 1881, combinada com uma notificação do Ministério do Interior de 8 de junho de 1957 — ou seja, o sistema de feriados de um país inteiro se apoia numa lei cambial do século dezenove. A notificação nº 4188-F(P2), de 27 de novembro de 2025, da Secretaria de Finanças (Auditoria) de Bengala Ocidental divide 2026 em três listas. A Lista I são os feriados públicos previstos naquela lei, e nela estão a Maha Astami da Durga Puja em 19 de outubro, a Maha Nabami no dia 20 e a Dasami no dia 21. A Lista II são as folgas por ordem do governo estadual: repartições do estado fechadas, bancos abertos — e três de seus itens, 22, 23 e 24 de outubro, chamam-se apenas "dia adicional de Durga Puja" e não correspondem a rito nenhum. A Lista III é seccional: sábado de Aleluia só para cristãos, Hul Diwas em 30 de junho só para os adivasis santais. Somando tudo, de 15 a 26 de outubro são doze dias seguidos, a sequência mais longa entre estes sete lugares — e ela existe em um único estado.
