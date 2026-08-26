@@ -171,7 +171,33 @@ for (const row of rows) {
   groups.get(key).set(row.occurrence_year, row);
 }
 const allYears = [...new Set(rows.map((r) => r.occurrence_year))].sort();
-const targetYear = yearArg ?? allYears[allYears.length - 1] + 1;
+const lateSpecEarly = input.late_announcement || {};
+const lateCalEarly = new Set(Array.isArray(lateSpecEarly.calendars) ? lateSpecEarly.calendars : []);
+const lateKeyEarly = new Set(Object.keys(lateSpecEarly.keys || {}));
+const isLateGroup = (byYear) => {
+  const sample = [...byYear.values()][0];
+  return sample ? lateCalEarly.has(sample.calendar_system) : false;
+};
+// 裸執行 = 補「第一個還沒補齊的年度」,補齊了就停,**不是**「最後一年 + 1」。
+// 2026-08-26 踩過:2028 補完之後再跑一次,它自己往 2029 長了 127 筆。
+// 這一支的職責是讓年度閘門過得去,不是無限往後鋪 —— 要往後鋪請明寫 --year。
+// 判「補齊了沒」時不算後公告類(那本來就等公告,永遠不會齊)。
+const firstIncompleteYear = () => {
+  const start = new Date().getUTCFullYear() + 1;
+  for (let y = start; y <= start + 3; y += 1) {
+    for (const [key, byYear] of groups) {
+      if (byYear.has(y)) continue;
+      if (lateKeyEarly.has(key.replaceAll(" ", "/")) || isLateGroup(byYear)) continue;
+      return y;
+    }
+  }
+  return null;
+};
+const targetYear = yearArg ?? firstIncompleteYear();
+if (targetYear === null) {
+  log("[extend-occurrences] 未來三年都補齊了(後公告類不計),沒事可做");
+  process.exit(0);
+}
 const baseYears = allYears.filter((y) => y < targetYear).slice(-2);
 if (baseYears.length < 2) {
   console.error(`需要兩個既有年度當基準,目前只有 ${allYears.join(", ")}`);
@@ -180,9 +206,15 @@ if (baseYears.length < 2) {
 const [yA, yB] = baseYears;
 log(`[extend-occurrences] 目標 ${targetYear} 年,基準 ${yA}/${yB},共 ${groups.size} 組 observance`);
 
+// 後公告清冊(與 import-topic-occurrences.mjs 的豁免同一份資料,不另立第二套判準)。
+const lateSpec = input.late_announcement || {};
+const lateCalendars = new Set(Array.isArray(lateSpec.calendars) ? lateSpec.calendars : []);
+const lateKeys = new Set(Object.keys(lateSpec.keys || {}));
+
 const cache = new Map();
 const generated = [];
 const manual = [];
+const late = [];
 const reasonCount = new Map();
 const bump = (r) => reasonCount.set(r, (reasonCount.get(r) || 0) + 1);
 
@@ -192,6 +224,12 @@ for (const [key, byYear] of groups) {
   const label = key.replaceAll(" ", "/");
   if (byYear.has(targetYear)) { bump("已經有了"); continue; }
   if (!a || !b) { manual.push({ label, why: `缺 ${yA}/${yB} 基準列` }); bump("缺基準"); continue; }
+  // 後公告類:那時候還沒有人知道日期,不是我們漏了。列出來但不擋 coverage_through。
+  if (lateKeys.has(label) || lateCalendars.has(a.calendar_system)) {
+    late.push({ label, why: lateKeys.get?.(label) || lateSpec.keys?.[label] || `${a.calendar_system}:等公告` });
+    bump("後公告(等公告,不算缺口)");
+    continue;
+  }
 
   const sameSource = JSON.stringify([...a.source_urls].sort()) === JSON.stringify([...b.source_urls].sort());
   const status = a.date_status === b.date_status ? a.date_status : "estimated";
@@ -296,13 +334,17 @@ for (const [key, byYear] of groups) {
   bump("公曆規則對不出");
 }
 
-log(`[extend-occurrences] 算得出來 ${generated.length} 筆、要人查 ${manual.length} 筆`);
+log(`[extend-occurrences] 算得出來 ${generated.length} 筆、要人查 ${manual.length} 筆、等公告 ${late.length} 筆`);
 for (const [reason, n] of [...reasonCount].sort((x, y) => y[1] - x[1])) {
   log(`  ${String(n).padStart(3)}  ${reason}`);
 }
 if (manual.length > 0) {
   log(`[extend-occurrences] ── ${targetYear} 年還缺、必須人工查官方公告的 ──`);
   for (const m of manual) log(`  ${m.label}：${m.why}`);
+}
+if (late.length > 0) {
+  log(`[extend-occurrences] ── 後公告類(${targetYear} 年還沒有人公告,閘門已豁免;公告出來要補)──`);
+  for (const m of late) log(`  ${m.label}：${m.why}`);
 }
 
 if (DRY_RUN) {

@@ -1,7 +1,20 @@
 {
  "version": 1,
  "as_of": "2026-08-14",
- "coverage_through": "2027-12-31",
+ "coverage_through": "2028-12-31",
+ "late_announcement": {
+  "note": "日期要到接近該年度才公告的 observance。年度閘門對「當年度」照樣強制,只豁免「下一年度」。calendars 是整類豁免(伊斯蘭曆看月亮、印度曆 Panchang),keys 是逐筆豁免(考試簡章、地方公告)。豁免不是免死金牌:公告出來就要補。",
+  "calendars": [
+   "islamic",
+   "hindu-lunisolar"
+  ],
+  "keys": {
+   "exam-season/TW/gsat": "大考中心學年度簡章,約當年度前一年才公告",
+   "exam-season/TW/ast": "同上",
+   "exam-season/JP/common-test": "大学入試センター逐年公告",
+   "harvest-and-gratitude/IN/pongal": "太陽入摩羯,依印度各邦公告;2027 那筆現在引的是商業曆書站,不是官方網域"
+  }
+ },
  "occurrences": [
   {
    "topic_slug": "affection-and-reciprocity",
@@ -2013,7 +2026,7 @@
    "timezone": "America/New_York",
    "date_status": "confirmed",
    "source_urls": [
-    "https://www.ferc.gov/news-events/events/thanksgiving-day-11252027"
+    "https://piv.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
    ]
   },
   {
@@ -3681,7 +3694,7 @@
    "timezone": "America/New_York",
    "date_status": "confirmed",
    "source_urls": [
-    "https://www.ferc.gov/news-events/events/thanksgiving-day-11252027"
+    "https://piv.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
    ]
   },
   {
@@ -5935,6 +5948,32 @@
    "date_status": "local-variant",
    "source_urls": [
     "https://www.ecfr.gov/current/title-29/section-778.211"
+   ]
+  },
+  {
+   "topic_slug": "harvest-and-shared-meals",
+   "country_code": "US",
+   "observance_key": "thanksgiving",
+   "occurrence_year": 2028,
+   "starts_on": "2028-11-23",
+   "calendar_system": "local",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://piv.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+   ]
+  },
+  {
+   "topic_slug": "reunion-and-homecoming",
+   "country_code": "US",
+   "observance_key": "thanksgiving",
+   "occurrence_year": 2028,
+   "starts_on": "2028-11-23",
+   "calendar_system": "local",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://piv.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
    ]
   }
  ]

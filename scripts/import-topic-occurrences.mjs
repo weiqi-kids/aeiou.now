@@ -66,8 +66,9 @@ if (!Number.isInteger(input.version) || input.version < 1) errors.push('version 
 if (!validDate(input.as_of)) errors.push('as_of 必須是 YYYY-MM-DD');
 if (!validDate(input.coverage_through)) errors.push('coverage_through 必須是 YYYY-MM-DD');
 const currentYear = new Date().getUTCFullYear();
+// coverage_through 描述的是**非後公告類**涵蓋到哪一年(後公告類的缺口由上面的豁免處理)。
 if (validDate(input.coverage_through) && input.coverage_through < `${currentYear + 1}-12-31`) {
-  errors.push(`coverage_through 必須至少涵蓋 ${currentYear + 1} 年`);
+  errors.push(`coverage_through 必須至少涵蓋 ${currentYear + 1} 年(後公告類不計)`);
 }
 if (!rows.length) errors.push('occurrences 不可為空');
 
@@ -135,11 +136,40 @@ for (const [index, row] of rows.entries()) {
 for (const key of byKey.keys()) {
   if (!seenKeys.has(key)) errors.push(`active observance 缺年度 occurrence: ${key.replaceAll('\u0000', '/')}`);
 }
+// 「後公告」豁免(2026-08-26 用戶拍板)。
+//
+// 這個閘門原本一律要求 currentYear 與 currentYear+1 都齊,而它在 hourly-export.sh 是
+// fail-closed。問題:開齋節、宰牲節、Diwali、學測簡章這幾類,**日期本來就要到接近該年度
+// 才會公告**——印尼宗教部的隔年假日 SKB 大約當年下半才出,而閘門在一月一日就開始擋。
+// 也就是說閘門會在「還沒有人知道那一天是幾號」的時候,要求我們填出那一天。
+//
+// 兩條路:(A) 用曆算填成 estimated,(B) 讓閘門承認「還沒公告」。用戶選 B ——
+// A 等於把「還沒有人知道」講成「我們估的」,讀者看不出差別;B 讓閘門說實話。
+//
+// 豁免只對**下一年度**生效,當年度照樣強制:那時候公告一定已經出來了。
+// 清冊在 content/observance-occurrences.json 的 late_announcement(整類 + 逐筆兩種)。
+// 豁免不是免死金牌:公告出來就要補,`extend-occurrences.mjs` 每次都會把它們列出來。
+const lateSpec = input.late_announcement || {};
+const lateCalendars = new Set(Array.isArray(lateSpec.calendars) ? lateSpec.calendars : []);
+const lateKeys = new Set(Object.keys(lateSpec.keys || {}));
+const observanceLabel = (key) => key.replaceAll('\u0000', '/');
+const isLate = (key) => {
+  if (lateKeys.has(observanceLabel(key))) return true;
+  const sample = normalized.find((item) => item.key === key);
+  return sample ? lateCalendars.has(sample.row.calendar_system) : false;
+};
+const lateSkipped = [];
 for (const [key, observance] of byKey.entries()) {
   const years = new Set(normalized.filter((item) => item.key === key).map((item) => item.row.occurrence_year));
   for (const year of [currentYear, currentYear + 1]) {
-    if (!years.has(year)) errors.push(`active observance 缺 ${year} 年 occurrence: ${key.replaceAll('\u0000', '/')}`);
+    if (years.has(year)) continue;
+    if (year > currentYear && isLate(key)) { lateSkipped.push(`${observanceLabel(key)} (${year})`); continue; }
+    errors.push(`active observance 缺 ${year} 年 occurrence: ${observanceLabel(key)}`);
   }
+}
+if (lateSkipped.length > 0) {
+  console.log(`後公告豁免 ${lateSkipped.length} 筆(公告出來就要補):${lateSkipped.slice(0, 6).join('、')}`
+    + (lateSkipped.length > 6 ? ` 等` : ''));
 }
 
 if (errors.length) {

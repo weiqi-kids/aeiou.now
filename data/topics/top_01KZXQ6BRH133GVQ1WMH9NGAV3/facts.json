@@ -453,10 +453,25 @@
           "timezone": "America/New_York",
           "date_status": "confirmed",
           "source_ids": [
-            "src_6B138B3CADB39768D25D5026"
+            "src_2B285153DC83CF193801904A"
           ],
           "source_urls": [
-            "https://www.ferc.gov/news-events/events/thanksgiving-day-11252027"
+            "https://piv.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_US_thanksgiving_2028_2028-11-23",
+          "occurrence_year": 2028,
+          "starts_on": "2028-11-23",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_2B285153DC83CF193801904A"
+          ],
+          "source_urls": [
+            "https://piv.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
           ]
         }
       ],
@@ -533,7 +548,6 @@
     "src_2B285153DC83CF193801904A",
     "src_3430209784872A9336B841CA",
     "src_68EB0BD6E5C51DD082CED1CA",
-    "src_6B138B3CADB39768D25D5026",
     "src_A188F3A2F09C0A4FCCE4F9FF",
     "src_BE0F64A0D2B42E20E4A5D1EC",
     "src_BF1D1C56F02953717935FCC1",
@@ -551,7 +565,6 @@
     "https://piv.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
     "https://www.drikpanchang.com/festivals/pongal/thai-pongal-date-time.html?time-format=24plushour",
     "https://www.gov.br/iphan/pt-br/assuntos/forro-do-mundo/sobre-o-forro",
-    "https://www.ferc.gov/news-events/events/thanksgiving-day-11252027",
     "https://www.gov.br/turismo/pt-br/assuntos/noticias/festejos-juninos-comecam-no-nordeste-cidades-projetam-mais-publico-e-faturamento-maior-em-2026",
     "https://www.sci.gov.in/holiday/makar-sankranti-magh-bihu-pongal-2026/",
     "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku/keii.html",
@@ -566,6 +579,6 @@
     "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
     "https://referensi.data.kemendikdasmen.go.id/budayakita/wbtb/objek/AA001982"
   ],
-  "content_updated_at": "2026-08-26T08:10:47.577Z",
-  "content_hash": "e5109b324cc91e90a2992639587ae1ba6194e4ca81aeda4adf39081ea9447fad"
+  "content_updated_at": "2026-08-26T08:21:52.532Z",
+  "content_hash": "ca547222aadcca63c1787be7966c2ebd04518e23b4f62e8bb0be53e50b33d9ab"
 }
