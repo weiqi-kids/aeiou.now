@@ -1,0 +1,436 @@
+{
+  "topic_id": "top_01M0ZKB110Z03618QR9SKPEEXC",
+  "slug": "jewish-calendar-days",
+  "canonical_name": "Rosh Hashanah, Yom Kippur, Passover, and Hanukkah",
+  "commonality": "the Jewish-calendar days, and what a state offers a religious minority when it will not put those days on the national calendar — a city school closure, a right to an excused absence, or nothing at all",
+  "category": "faith",
+  "status": "active",
+  "is_perennial": 0,
+  "updated_at": "2026-08-26T17:54:26.000Z",
+  "access_level": 0,
+  "observances": [
+    {
+      "observance_id": "obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_hanukkah",
+      "observance_key": "hanukkah",
+      "country_code": "US",
+      "local_name": "Hanukkah",
+      "observed_date": null,
+      "date_rule": "猶太曆基斯流月二十五日起連續八日，跨入提別月",
+      "date_range_end": null,
+      "popularity_rank": 4,
+      "source_ids": [
+        "src_CEDFEA81E0F3F167150E4296",
+        "src_71D52CDB9B833DE2EDE16987"
+      ],
+      "source_urls": [
+        "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf",
+        "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_hanukkah_2026_2026-12-05",
+          "occurrence_year": 2026,
+          "starts_on": "2026-12-05",
+          "ends_on": "2026-12-12",
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_CEDFEA81E0F3F167150E4296"
+          ],
+          "source_urls": [
+            "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_hanukkah_2027_2027-12-25",
+          "occurrence_year": 2027,
+          "starts_on": "2027-12-25",
+          "ends_on": "2028-01-01",
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_CEDFEA81E0F3F167150E4296"
+          ],
+          "source_urls": [
+            "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_hanukkah_2028_2028-12-13",
+          "occurrence_year": 2028,
+          "starts_on": "2028-12-13",
+          "ends_on": "2028-12-20",
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_CEDFEA81E0F3F167150E4296"
+          ],
+          "source_urls": [
+            "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_hanukkah_2026_2026-12-05",
+        "occurrence_year": 2026,
+        "starts_on": "2026-12-05",
+        "ends_on": "2026-12-12",
+        "calendar_system": "local",
+        "timezone": "America/New_York",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_CEDFEA81E0F3F167150E4296"
+        ],
+        "source_urls": [
+          "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+        ],
+        "distance_days": 101
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_passover",
+      "observance_key": "passover",
+      "country_code": "US",
+      "local_name": "Passover (Pesach)",
+      "observed_date": null,
+      "date_rule": "猶太曆尼散月十五日起，以色列境外守八日",
+      "date_range_end": null,
+      "popularity_rank": 3,
+      "source_ids": [
+        "src_CEDFEA81E0F3F167150E4296",
+        "src_71D52CDB9B833DE2EDE16987"
+      ],
+      "source_urls": [
+        "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf",
+        "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_passover_2026_2026-04-02",
+          "occurrence_year": 2026,
+          "starts_on": "2026-04-02",
+          "ends_on": "2026-04-09",
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_CEDFEA81E0F3F167150E4296"
+          ],
+          "source_urls": [
+            "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_passover_2027_2027-04-22",
+          "occurrence_year": 2027,
+          "starts_on": "2027-04-22",
+          "ends_on": "2027-04-29",
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_CEDFEA81E0F3F167150E4296",
+            "src_71D52CDB9B833DE2EDE16987"
+          ],
+          "source_urls": [
+            "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf",
+            "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_passover_2028_2028-04-11",
+          "occurrence_year": 2028,
+          "starts_on": "2028-04-11",
+          "ends_on": "2028-04-18",
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_CEDFEA81E0F3F167150E4296"
+          ],
+          "source_urls": [
+            "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_passover_2027_2027-04-22",
+        "occurrence_year": 2027,
+        "starts_on": "2027-04-22",
+        "ends_on": "2027-04-29",
+        "calendar_system": "local",
+        "timezone": "America/New_York",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_CEDFEA81E0F3F167150E4296",
+          "src_71D52CDB9B833DE2EDE16987"
+        ],
+        "source_urls": [
+          "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf",
+          "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf"
+        ],
+        "distance_days": 239
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_rosh-hashanah",
+      "observance_key": "rosh-hashanah",
+      "country_code": "US",
+      "local_name": "Rosh Hashanah",
+      "observed_date": null,
+      "date_rule": "猶太曆提斯利月一日至二日；提斯利月一日不得落在星期日、星期三或星期五，公曆日期由曆算固定，不靠觀月",
+      "date_range_end": null,
+      "popularity_rank": 1,
+      "source_ids": [
+        "src_71D52CDB9B833DE2EDE16987",
+        "src_CEDFEA81E0F3F167150E4296",
+        "src_E7FE5CD016C2A768C75C1DE9"
+      ],
+      "source_urls": [
+        "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf",
+        "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf",
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_rosh-hashanah_2026_2026-09-12",
+          "occurrence_year": 2026,
+          "starts_on": "2026-09-12",
+          "ends_on": "2026-09-13",
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_CEDFEA81E0F3F167150E4296"
+          ],
+          "source_urls": [
+            "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_rosh-hashanah_2027_2027-10-02",
+          "occurrence_year": 2027,
+          "starts_on": "2027-10-02",
+          "ends_on": "2027-10-03",
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_CEDFEA81E0F3F167150E4296"
+          ],
+          "source_urls": [
+            "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_rosh-hashanah_2028_2028-09-21",
+          "occurrence_year": 2028,
+          "starts_on": "2028-09-21",
+          "ends_on": "2028-09-22",
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_CEDFEA81E0F3F167150E4296"
+          ],
+          "source_urls": [
+            "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_rosh-hashanah_2026_2026-09-12",
+        "occurrence_year": 2026,
+        "starts_on": "2026-09-12",
+        "ends_on": "2026-09-13",
+        "calendar_system": "local",
+        "timezone": "America/New_York",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_CEDFEA81E0F3F167150E4296"
+        ],
+        "source_urls": [
+          "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+        ],
+        "distance_days": 17
+      }
+    },
+    {
+      "observance_id": "obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_yom-kippur",
+      "observance_key": "yom-kippur",
+      "country_code": "US",
+      "local_name": "Yom Kippur",
+      "observed_date": null,
+      "date_rule": "猶太曆提斯利月十日，即猶太新年後第十天",
+      "date_range_end": null,
+      "popularity_rank": 2,
+      "source_ids": [
+        "src_71D52CDB9B833DE2EDE16987",
+        "src_E7FE5CD016C2A768C75C1DE9",
+        "src_7047EA4CBF53A79522427EF7"
+      ],
+      "source_urls": [
+        "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf",
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+        "https://www.eeoc.gov/religious-discrimination"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_yom-kippur_2026_2026-09-21",
+          "occurrence_year": 2026,
+          "starts_on": "2026-09-21",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_71D52CDB9B833DE2EDE16987",
+            "src_CEDFEA81E0F3F167150E4296"
+          ],
+          "source_urls": [
+            "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf",
+            "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_yom-kippur_2027_2027-10-11",
+          "occurrence_year": 2027,
+          "starts_on": "2027-10-11",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_CEDFEA81E0F3F167150E4296"
+          ],
+          "source_urls": [
+            "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_yom-kippur_2028_2028-09-30",
+          "occurrence_year": 2028,
+          "starts_on": "2028-09-30",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_CEDFEA81E0F3F167150E4296"
+          ],
+          "source_urls": [
+            "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_yom-kippur_2026_2026-09-21",
+        "occurrence_year": 2026,
+        "starts_on": "2026-09-21",
+        "ends_on": null,
+        "calendar_system": "local",
+        "timezone": "America/New_York",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_71D52CDB9B833DE2EDE16987",
+          "src_CEDFEA81E0F3F167150E4296"
+        ],
+        "source_urls": [
+          "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf",
+          "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf"
+        ],
+        "distance_days": 26
+      }
+    }
+  ],
+  "demand_countries": {},
+  "regional_notes": [
+    {
+      "country_code": "BR",
+      "kind": "absence",
+      "source_urls": [
+        "https://www.planalto.gov.br/ccivil_03/leis/2002/l10607.htm",
+        "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/L13796.htm",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+      ]
+    },
+    {
+      "country_code": "CN",
+      "kind": "absence",
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/gongbao/content/2017/content_5225861.htm"
+      ]
+    },
+    {
+      "country_code": "ID",
+      "kind": "absence",
+      "source_urls": [
+        "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+      ]
+    },
+    {
+      "country_code": "IN",
+      "kind": "absence",
+      "source_urls": [
+        "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf",
+        "https://www.incredibleindia.gov.in/en/maharashtra/mumbai/magen-david-synagogue"
+      ]
+    },
+    {
+      "country_code": "JP",
+      "kind": "absence",
+      "source_urls": [
+        "https://laws.e-gov.go.jp/law/323AC1000000178",
+        "https://laws.e-gov.go.jp/law/326AC0000000126"
+      ]
+    },
+    {
+      "country_code": "TW",
+      "kind": "absence",
+      "source_urls": [
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+      ]
+    }
+  ],
+  "countries": [
+    {
+      "country_code": "US",
+      "observance_ids": [
+        "obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_hanukkah",
+        "obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_passover",
+        "obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_rosh-hashanah",
+        "obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_yom-kippur"
+      ]
+    }
+  ],
+  "relations": [],
+  "source_ids": [
+    "src_7047EA4CBF53A79522427EF7",
+    "src_71D52CDB9B833DE2EDE16987",
+    "src_CEDFEA81E0F3F167150E4296",
+    "src_E7FE5CD016C2A768C75C1DE9"
+  ],
+  "source_urls": [
+    "https://www.eeoc.gov/religious-discrimination",
+    "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf",
+    "https://www.nj.gov/education/sboe/meetings/agenda/2026/March/public/5c1_Item_C_Religious_Holidays_Calendar_Resolution.pdf",
+    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+    "https://www.planalto.gov.br/ccivil_03/leis/2002/l10607.htm",
+    "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/L13796.htm",
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+    "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+    "https://www.gov.cn/gongbao/content/2017/content_5225861.htm",
+    "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/",
+    "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf",
+    "https://www.incredibleindia.gov.in/en/maharashtra/mumbai/magen-david-synagogue",
+    "https://laws.e-gov.go.jp/law/323AC1000000178",
+    "https://laws.e-gov.go.jp/law/326AC0000000126",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+  ],
+  "content_updated_at": "2026-08-26T17:54:27.560Z",
+  "content_hash": "22cde3c79014a435ca1a5714482c1f6aa7745976ee990330483287d9d1ff6fed"
+}

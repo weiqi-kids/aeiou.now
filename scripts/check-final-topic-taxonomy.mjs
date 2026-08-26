@@ -10,6 +10,12 @@ import { isTrendTopic } from "./lib/topics.mjs";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const LOCALES = ['zh-TW', 'en', 'ja', 'zh-CN', 'hi', 'id', 'pt-BR'];
 const FINAL_SLUGS = [
+  'environment-days',
+  'shopping-festivals',
+  'jewish-calendar-days',
+  'emancipation-and-abolition',
+  'founders-and-national-leaders',
+  'long-holiday-weeks',
   // indigenous-and-colonial-memory(2026-08-26 用戶核准):Bing 實測 `columbus day 2026` @us 精準量 26,721、
   // `indigenous peoples day 2026` 4,165 —— 同一格日曆上兩個名字在爭。
   'indigenous-and-colonial-memory',
