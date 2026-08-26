@@ -19,7 +19,7 @@
 - source: https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/jiedu/tujie/202411/content_6986437.htm
 
 ## observance CN zhongyuan
-- local_name: 中元節
+- local_name: 中元节
 - date_rule: 農曆七月十五前後，地方做法不同
 - rank: 1
 - source: https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/jiedu/tujie/202411/content_6986437.htm
@@ -34,7 +34,7 @@
 ## observance JP setsubun
 - local_name: 節分
 - date_rule: 立春前一日左右，日期每年略有差異
-- rank: 1
+- rank: 2
 - source: https://www.ndl.go.jp/kaleido/entry/21/1.html
 - source: https://www.japan.travel/en/see-and-do/festivals-and-events/
 

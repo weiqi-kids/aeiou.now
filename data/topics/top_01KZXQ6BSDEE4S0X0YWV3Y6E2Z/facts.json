@@ -147,12 +147,12 @@
       "date_range_end": null,
       "popularity_rank": 1,
       "source_ids": [
-        "src_94FFB000B0BB8ADEC36AD1BA",
-        "src_39A688A39492D687A8C1581D"
+        "src_D9B6EF3BF518AA89DD461DDC",
+        "src_2CCB9840E911C41E9DE25EF4"
       ],
       "source_urls": [
-        "https://kemenag.go.id/en/pers-rilis/pemerintah-tetapkan-1-ramadan-1447-h-jatuh-pada-19-februari-2026-ELDWq",
-        "https://kemenag.go.id/en/nasional/kenapa-perlu-sidang-isbat-awal-ramadan-syawal-dan-zulhijjah-ini-penjelasan-kemenag-7x8Mb"
+        "https://kemenag.go.id/pers-rilis/pemerintah-tetapkan-1-ramadan-1447-h-jatuh-pada-19-februari-2026-ELDWq",
+        "https://kemenag.go.id/nasional/kenapa-perlu-sidang-isbat-awal-ramadan-syawal-dan-zulhijjah-ini-penjelasan-kemenag-7x8Mb"
       ],
       "occurrences": [
         {
@@ -277,7 +277,7 @@
       "observance_id": "obs_top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z_TW_eid-al-fitr",
       "observance_key": "eid-al-fitr",
       "country_code": "TW",
-      "local_name": "開齋節（非法定假日）",
+      "local_name": "開齋節",
       "observed_date": null,
       "date_rule": "伊斯蘭曆 Shawwal 月初一；台灣不放假，集體禮拜多依雇主同意安排",
       "date_range_end": null,
@@ -457,26 +457,30 @@
   ],
   "relations": [],
   "source_ids": [
+    "src_2CCB9840E911C41E9DE25EF4",
     "src_39A688A39492D687A8C1581D",
     "src_71D52CDB9B833DE2EDE16987",
     "src_8881C7B43193D1F50ED0E47C",
     "src_9157B47CDBE6F3ACE4ED9D72",
     "src_94FFB000B0BB8ADEC36AD1BA",
     "src_CAEA7E7ACF0B1F47F0C4F0C9",
+    "src_D9B6EF3BF518AA89DD461DDC",
     "src_FF4B224E905CC2C8CF8EAF05"
   ],
   "source_urls": [
+    "https://kemenag.go.id/nasional/kenapa-perlu-sidang-isbat-awal-ramadan-syawal-dan-zulhijjah-ini-penjelasan-kemenag-7x8Mb",
     "https://kemenag.go.id/en/nasional/kenapa-perlu-sidang-isbat-awal-ramadan-syawal-dan-zulhijjah-ini-penjelasan-kemenag-7x8Mb",
     "https://www.schools.nyc.gov/docs/default-source/sections/calendar/2026-27-school-year-calendar.pdf",
     "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays",
     "https://www.wda.gov.tw/News_Content.aspx?n=31&s=3599",
     "https://kemenag.go.id/en/pers-rilis/pemerintah-tetapkan-1-ramadan-1447-h-jatuh-pada-19-februari-2026-ELDWq",
     "https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html",
+    "https://kemenag.go.id/pers-rilis/pemerintah-tetapkan-1-ramadan-1447-h-jatuh-pada-19-februari-2026-ELDWq",
     "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
     "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-norma-pl.html",
     "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1518158",
     "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
   ],
-  "content_updated_at": "2026-08-26T04:00:41.219Z",
-  "content_hash": "d0f325e3a43f1d2f77a80acef3508448f179e5275db2b4e84577efd24030ff80"
+  "content_updated_at": "2026-08-26T06:49:26.251Z",
+  "content_hash": "6ce5a4b2617dfb22996a8d92cdbcfe59cb7057eccc7cc68314c7a1c32055d8a2"
 }

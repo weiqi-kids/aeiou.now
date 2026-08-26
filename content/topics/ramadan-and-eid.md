@@ -11,8 +11,8 @@
 - date_rule: 伊斯蘭曆 Ramadan 月初一至月末；起始日由宗教部在前一晚的 sidang isbat 公告
 - date_end_rule: Shawwal 月初一的前一日
 - rank: 1
-- source: https://kemenag.go.id/en/pers-rilis/pemerintah-tetapkan-1-ramadan-1447-h-jatuh-pada-19-februari-2026-ELDWq
-- source: https://kemenag.go.id/en/nasional/kenapa-perlu-sidang-isbat-awal-ramadan-syawal-dan-zulhijjah-ini-penjelasan-kemenag-7x8Mb
+- source: https://kemenag.go.id/pers-rilis/pemerintah-tetapkan-1-ramadan-1447-h-jatuh-pada-19-februari-2026-ELDWq
+- source: https://kemenag.go.id/nasional/kenapa-perlu-sidang-isbat-awal-ramadan-syawal-dan-zulhijjah-ini-penjelasan-kemenag-7x8Mb
 
 ## observance ID eid-al-fitr
 - local_name: Idulfitri
@@ -27,7 +27,7 @@
 - source: https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays
 
 ## observance TW eid-al-fitr
-- local_name: 開齋節（非法定假日）
+- local_name: 開齋節
 - date_rule: 伊斯蘭曆 Shawwal 月初一；台灣不放假，集體禮拜多依雇主同意安排
 - rank: 4
 - source: https://www.wda.gov.tw/News_Content.aspx?n=31&s=3599

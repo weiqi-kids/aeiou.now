@@ -37,7 +37,7 @@
 - source: https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays
 
 ## observance JP golden-week
-- local_name: 五月一日（非祝日）／ゴールデンウィーク
+- local_name: ゴールデンウィーク
 - date_rule: 5 月 1 日不是祝日；前後的 4/29、5/3、5/4、5/5 才是
 - rank: 6
 - source: https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html

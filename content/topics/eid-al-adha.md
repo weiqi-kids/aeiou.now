@@ -37,7 +37,7 @@
 - source: https://www.nx.gov.cn/zwgk/qzfwj/202512/t20251216_5110308.html
 
 ## observance TW eid-al-adha
-- local_name: 宰牲節／古爾邦節（非法定假日）
+- local_name: 宰牲節／古爾邦節
 - date_rule: 伊斯蘭曆 Dhu al-Hijjah 月十日；《紀念日及節日實施條例》未列入，集體禮拜多依雇主同意安排
 - rank: 6
 - source: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095

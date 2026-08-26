@@ -115,6 +115,17 @@ async function main() {
       `${origin}/topics/nearby/`,
       `${origin}/topics/events/`,
       `${origin}/questions/`,
+      // 排行榜六個時窗(2026-08-26 補)。它們的內容跟著 Topic 分數每小時變,
+      // 符合上面那條「有 Topic 變動時列表頁也跟著變」的理由,卻從來沒被提交過。
+      // 起因:`seo-health.mjs` ② 層查到 `/rankings/3m/` 是全站唯一
+      // 「Discovered - currently not indexed」,而且 `lastCrawlTime` 是 never。
+      // 逐頁比對六個時窗:24h/72h/7d/1m/1y 都已索引、referringUrls 1–4 個,只有 3m 是 0 個。
+      // 三項檢查裡它只缺這一項 —— 在 sitemap(有)、有站內連結(六頁互連,markup 與其他五頁一樣)、
+      // 被 indexnow 提交(**沒有**)。48 筆 = 43 個 Topic + 5 個固定頁,sitemap 是 55 筆。
+      // ⚠ Google 不吃 IndexNow(見檔頭),所以這一條直接受益的是 Bing/ChatGPT/Copilot;
+      // 對 Google 那一半仍然靠 sitemap 的 lastmod。
+      // /about/ 不加:它不隨 Topic 變動,不符合上面那條理由。
+      ...["24h", "72h", "7d", "1m", "3m", "1y"].map((w) => `${origin}/rankings/${w}/`),
     );
     await submit(origin, urlList);
   }

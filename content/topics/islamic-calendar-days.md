@@ -18,7 +18,7 @@
 - date_rule: 伊斯蘭曆 Muharram 月一日；公曆日期由三部長聯合決定書逐年公告
 - rank: 1
 - source: https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026
-- source: https://kemenag.go.id/en/nasional/pemerintah-tetapkan-17-hari-libur-nasional-dan-8-cuti-bersama-2026-cAwAy
+- source: https://kemenag.go.id/nasional/pemerintah-tetapkan-17-hari-libur-nasional-dan-8-cuti-bersama-2026-cAwAy
 
 ## observance ID maulid-nabi
 - local_name: Maulid Nabi Muhammad saw.
