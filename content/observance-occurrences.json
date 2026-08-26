@@ -3,7 +3,7 @@
  "as_of": "2026-08-14",
  "coverage_through": "2028-12-31",
  "late_announcement": {
-  "note": "日期要到接近該年度才公告的 observance。年度閘門對「當年度」照樣強制,只豁免「下一年度」。calendars 是整類豁免(伊斯蘭曆看月亮、印度曆 Panchang),keys 是逐筆豁免(考試簡章、地方公告)。豁免不是免死金牌:公告出來就要補。",
+  "note": "日期要到接近該年度才公告的 observance。年度閘門對「當年度」照樣強制,只豁免「下一年度」。calendars 是整類豁免(伊斯蘭曆看月亮、印度曆 Panchang),keys 是逐筆豁免(考試簡章、地方公告)。豁免不是免死金牌:公告出來就要補。 keys 用的是「檔案裡的 topic_slug」，被合併過的 Topic 會有別名，兩個都要列。",
   "calendars": [
    "islamic",
    "hindu-lunisolar"
@@ -12,7 +12,8 @@
    "exam-season/TW/gsat": "大考中心學年度簡章,約當年度前一年才公告",
    "exam-season/TW/ast": "同上",
    "exam-season/JP/common-test": "大学入試センター逐年公告",
-   "harvest-and-gratitude/IN/pongal": "太陽入摩羯,依印度各邦公告;2027 那筆現在引的是商業曆書站,不是官方網域"
+   "harvest-and-gratitude/IN/pongal": "太陽入摩羯,依印度各邦公告;2027 那筆現在引的是商業曆書站,不是官方網域",
+   "harvest-and-shared-meals/IN/pongal": "太陽入摩羯,依印度各邦公告;2027 那筆現在引的是商業曆書站,不是官方網域（別名 slug：occurrences 檔用 harvest-and-shared-meals，主機庫合併後的正典是 harvest-and-gratitude，兩支腳本各認一個，所以兩個都要列）"
   }
  },
  "occurrences": [
@@ -6077,6 +6078,60 @@
    "observance_key": "asakusa-samba",
    "occurrence_year": 2027,
    "starts_on": "2027-08-28",
+   "calendar_system": "local",
+   "timezone": "Asia/Tokyo",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://www.city.taito.lg.jp/event/kanko/asakusa-sanba.html"
+   ]
+  },
+  {
+   "topic_slug": "carnival",
+   "country_code": "BR",
+   "observance_key": "carnaval",
+   "occurrence_year": 2028,
+   "starts_on": "2028-02-28",
+   "ends_on": "2028-02-29",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+   ]
+  },
+  {
+   "topic_slug": "carnival",
+   "country_code": "US",
+   "observance_key": "mardi-gras",
+   "occurrence_year": 2028,
+   "starts_on": "2028-02-29",
+   "calendar_system": "gregorian",
+   "timezone": "America/Chicago",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://legis.la.gov/Legis/Law.aspx?d=74097"
+   ]
+  },
+  {
+   "topic_slug": "carnival",
+   "country_code": "IN",
+   "observance_key": "goa-carnaval",
+   "occurrence_year": 2028,
+   "starts_on": "2028-02-26",
+   "ends_on": "2028-02-29",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Kolkata",
+   "date_status": "estimated",
+   "source_urls": [
+    "https://goatourism.gov.in/events-calendar/"
+   ]
+  },
+  {
+   "topic_slug": "carnival",
+   "country_code": "JP",
+   "observance_key": "asakusa-samba",
+   "occurrence_year": 2028,
+   "starts_on": "2028-08-26",
    "calendar_system": "local",
    "timezone": "Asia/Tokyo",
    "date_status": "estimated",

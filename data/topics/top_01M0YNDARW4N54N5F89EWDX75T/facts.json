@@ -56,6 +56,21 @@
           "source_urls": [
             "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
           ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_BR_carnaval_2028_2028-02-28",
+          "occurrence_year": 2028,
+          "starts_on": "2028-02-28",
+          "ends_on": "2028-02-29",
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_E7CD104399E6A4F964C2C4D8"
+          ],
+          "source_urls": [
+            "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+          ]
         }
       ],
       "next_occurrence": {
@@ -113,6 +128,21 @@
           "occurrence_year": 2027,
           "starts_on": "2027-02-06",
           "ends_on": "2027-02-09",
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_D8578735418EC731A995A4EF"
+          ],
+          "source_urls": [
+            "https://goatourism.gov.in/events-calendar/"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_IN_goa-carnaval_2028_2028-02-26",
+          "occurrence_year": 2028,
+          "starts_on": "2028-02-26",
+          "ends_on": "2028-02-29",
           "calendar_system": "gregorian",
           "timezone": "Asia/Kolkata",
           "date_status": "estimated",
@@ -186,6 +216,21 @@
           "source_urls": [
             "https://www.city.taito.lg.jp/event/kanko/asakusa-sanba.html"
           ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_JP_asakusa-samba_2028_2028-08-26",
+          "occurrence_year": 2028,
+          "starts_on": "2028-08-26",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "Asia/Tokyo",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_3E5FF914ED7B451624E5BD73"
+          ],
+          "source_urls": [
+            "https://www.city.taito.lg.jp/event/kanko/asakusa-sanba.html"
+          ]
         }
       ],
       "next_occurrence": {
@@ -240,6 +285,21 @@
           "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_US_mardi-gras_2027_2027-02-09",
           "occurrence_year": 2027,
           "starts_on": "2027-02-09",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Chicago",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_C1793383A3C04440C051CB9B"
+          ],
+          "source_urls": [
+            "https://legis.la.gov/Legis/Law.aspx?d=74097"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0YNDARW4N54N5F89EWDX75T_US_mardi-gras_2028_2028-02-29",
+          "occurrence_year": 2028,
+          "starts_on": "2028-02-29",
           "ends_on": null,
           "calendar_system": "gregorian",
           "timezone": "America/Chicago",
@@ -342,6 +402,6 @@
     "https://kemenag.go.id/nasional/pemerintah-tetapkan-17-hari-libur-nasional-dan-8-cuti-bersama-2026-cAwAy",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
   ],
-  "content_updated_at": "2026-08-26T09:16:41.012Z",
-  "content_hash": "a3665dde4a9ecc676cb39447310f1f91928a9e6c8f2d8ff102571954d866a292"
+  "content_updated_at": "2026-08-26T09:35:02.378Z",
+  "content_hash": "eea281cb499dfddc03dd5787bf14776b2c834ae84d5720805249416d6d4b1b25"
 }
