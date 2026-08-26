@@ -13,6 +13,9 @@ const FINAL_SLUGS = [
   // carnival(2026-08-26 用戶核准新增):Bing 實測 br 市場 \`carnaval 2027\` 精準量 38,488,
   // 是所有量過的字裡最大的一個,而站上原本沒有這個 Topic。
   'carnival',
+  // war-dead-and-veterans(2026-08-26 用戶核准):Bing 實測 `memorial day 2027` @us 精準量 51,340、
+  // `veterans day 2026` 27,169;Memorial Day 原本埋在 ghosts 的 US rank 2,拿不到自己的 title。
+  'war-dead-and-veterans',
   'new-year', 'lantern-festival', 'diwali', 'ramadan-and-eid', 'eid-al-adha', 'affection-and-reciprocity',
   'easter', 'dragon-boat-festival', 'ghosts-ancestors-and-remembrance', 'mid-autumn-and-moon-viewing',
   'harvest-and-gratitude', 'christmas', 'national-days', 'labour-day', 'mothers-day', 'fathers-day',

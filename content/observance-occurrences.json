@@ -338,32 +338,6 @@
    ]
   },
   {
-   "topic_slug": "ancestors-and-remembrance",
-   "country_code": "US",
-   "observance_key": "memorial-day",
-   "occurrence_year": 2026,
-   "starts_on": "2026-05-25",
-   "calendar_system": "local",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.defense.gov/Spotlights/Memorial-Day/"
-   ]
-  },
-  {
-   "topic_slug": "ancestors-and-remembrance",
-   "country_code": "US",
-   "observance_key": "memorial-day",
-   "occurrence_year": 2027,
-   "starts_on": "2027-05-31",
-   "calendar_system": "local",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.defense.gov/Spotlights/Memorial-Day/"
-   ]
-  },
-  {
    "topic_slug": "childrens-day",
    "country_code": "BR",
    "observance_key": "dia-das-criancas",
@@ -4439,19 +4413,6 @@
    ]
   },
   {
-   "topic_slug": "ancestors-and-remembrance",
-   "country_code": "US",
-   "observance_key": "memorial-day",
-   "occurrence_year": 2028,
-   "starts_on": "2028-05-29",
-   "calendar_system": "local",
-   "timezone": "America/New_York",
-   "date_status": "confirmed",
-   "source_urls": [
-    "https://www.defense.gov/Spotlights/Memorial-Day/"
-   ]
-  },
-  {
    "topic_slug": "childrens-day",
    "country_code": "BR",
    "observance_key": "dia-das-criancas",
@@ -6137,6 +6098,333 @@
    "date_status": "estimated",
    "source_urls": [
     "https://www.city.taito.lg.jp/event/kanko/asakusa-sanba.html"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "US",
+   "observance_key": "memorial-day",
+   "occurrence_year": 2026,
+   "starts_on": "2026-05-25",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "US",
+   "observance_key": "memorial-day",
+   "occurrence_year": 2027,
+   "starts_on": "2027-05-31",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "US",
+   "observance_key": "memorial-day",
+   "occurrence_year": 2028,
+   "starts_on": "2028-05-29",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "US",
+   "observance_key": "veterans-day",
+   "occurrence_year": 2026,
+   "starts_on": "2026-11-11",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "US",
+   "observance_key": "veterans-day",
+   "occurrence_year": 2027,
+   "starts_on": "2027-11-11",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "US",
+   "observance_key": "veterans-day",
+   "occurrence_year": 2028,
+   "starts_on": "2028-11-11",
+   "calendar_system": "gregorian",
+   "timezone": "America/New_York",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "TW",
+   "observance_key": "military-day",
+   "occurrence_year": 2026,
+   "starts_on": "2026-09-03",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "TW",
+   "observance_key": "military-day",
+   "occurrence_year": 2027,
+   "starts_on": "2027-09-03",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "TW",
+   "observance_key": "military-day",
+   "occurrence_year": 2028,
+   "starts_on": "2028-09-03",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Taipei",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "JP",
+   "observance_key": "war-dead-day",
+   "occurrence_year": 2026,
+   "starts_on": "2026-08-15",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hokabunya/senbotsusha/seido01/index.html"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "JP",
+   "observance_key": "war-dead-day",
+   "occurrence_year": 2027,
+   "starts_on": "2027-08-15",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hokabunya/senbotsusha/seido01/index.html"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "JP",
+   "observance_key": "war-dead-day",
+   "occurrence_year": 2028,
+   "starts_on": "2028-08-15",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Tokyo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hokabunya/senbotsusha/seido01/index.html"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "CN",
+   "observance_key": "martyrs-day",
+   "occurrence_year": 2026,
+   "starts_on": "2026-09-30",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Shanghai",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov.cn/zhengce/2014-09/27/content_2757588.htm",
+    "http://www.npc.gov.cn/zgrdw/npc/xinwen/2014-02/28/content_1832812.htm"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "CN",
+   "observance_key": "martyrs-day",
+   "occurrence_year": 2027,
+   "starts_on": "2027-09-30",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Shanghai",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov.cn/zhengce/2014-09/27/content_2757588.htm",
+    "http://www.npc.gov.cn/zgrdw/npc/xinwen/2014-02/28/content_1832812.htm"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "CN",
+   "observance_key": "martyrs-day",
+   "occurrence_year": 2028,
+   "starts_on": "2028-09-30",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Shanghai",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov.cn/zhengce/2014-09/27/content_2757588.htm",
+    "http://www.npc.gov.cn/zgrdw/npc/xinwen/2014-02/28/content_1832812.htm"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "BR",
+   "observance_key": "dia-do-soldado",
+   "occurrence_year": 2026,
+   "starts_on": "2026-08-25",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov.br/defesa/pt-br/arquivos/2012/Pronunciamentos/comandantes/discursoa_comandantea_exercitoa_diaa_soldadoa_2011.pdf",
+    "https://www.gov.br/mj/pt-br/assuntos/noticias-1/dia-do-soldado-e-celebrado-com-solenidade-e-participacao-de-autoridades-em-brasilia"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "BR",
+   "observance_key": "dia-do-soldado",
+   "occurrence_year": 2027,
+   "starts_on": "2027-08-25",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov.br/defesa/pt-br/arquivos/2012/Pronunciamentos/comandantes/discursoa_comandantea_exercitoa_diaa_soldadoa_2011.pdf",
+    "https://www.gov.br/mj/pt-br/assuntos/noticias-1/dia-do-soldado-e-celebrado-com-solenidade-e-participacao-de-autoridades-em-brasilia"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "BR",
+   "observance_key": "dia-do-soldado",
+   "occurrence_year": 2028,
+   "starts_on": "2028-08-25",
+   "calendar_system": "gregorian",
+   "timezone": "America/Sao_Paulo",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://www.gov.br/defesa/pt-br/arquivos/2012/Pronunciamentos/comandantes/discursoa_comandantea_exercitoa_diaa_soldadoa_2011.pdf",
+    "https://www.gov.br/mj/pt-br/assuntos/noticias-1/dia-do-soldado-e-celebrado-com-solenidade-e-participacao-de-autoridades-em-brasilia"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "IN",
+   "observance_key": "kargil-vijay-diwas",
+   "occurrence_year": 2026,
+   "starts_on": "2026-07-26",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Kolkata",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jul/doc2025725592401.pdf",
+    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2022/dec/doc2022127141401.pdf"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "IN",
+   "observance_key": "kargil-vijay-diwas",
+   "occurrence_year": 2027,
+   "starts_on": "2027-07-26",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Kolkata",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jul/doc2025725592401.pdf",
+    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2022/dec/doc2022127141401.pdf"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "IN",
+   "observance_key": "kargil-vijay-diwas",
+   "occurrence_year": 2028,
+   "starts_on": "2028-07-26",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Kolkata",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jul/doc2025725592401.pdf",
+    "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2022/dec/doc2022127141401.pdf"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "ID",
+   "observance_key": "hari-pahlawan",
+   "occurrence_year": 2026,
+   "starts_on": "2026-11-10",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Jakarta",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://setkab.go.id/presiden-pimpin-upacara-ziarah-nasional-hari-pahlawan-tahun-2021/"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "ID",
+   "observance_key": "hari-pahlawan",
+   "occurrence_year": 2027,
+   "starts_on": "2027-11-10",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Jakarta",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://setkab.go.id/presiden-pimpin-upacara-ziarah-nasional-hari-pahlawan-tahun-2021/"
+   ]
+  },
+  {
+   "topic_slug": "war-dead-and-veterans",
+   "country_code": "ID",
+   "observance_key": "hari-pahlawan",
+   "occurrence_year": 2028,
+   "starts_on": "2028-11-10",
+   "calendar_system": "gregorian",
+   "timezone": "Asia/Jakarta",
+   "date_status": "confirmed",
+   "source_urls": [
+    "https://setkab.go.id/presiden-pimpin-upacara-ziarah-nasional-hari-pahlawan-tahun-2021/"
    ]
   }
  ]

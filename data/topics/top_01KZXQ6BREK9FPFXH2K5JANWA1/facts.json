@@ -567,85 +567,6 @@
       }
     },
     {
-      "observance_id": "obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_US_memorial-day",
-      "observance_key": "memorial-day",
-      "country_code": "US",
-      "local_name": "Memorial Day",
-      "observed_date": null,
-      "date_rule": "5 月最後一個星期一",
-      "date_range_end": null,
-      "popularity_rank": 2,
-      "source_ids": [
-        "src_F936765E8EFFBF4BDCD32B47"
-      ],
-      "source_urls": [
-        "https://www.usa.gov/holidays"
-      ],
-      "occurrences": [
-        {
-          "occurrence_id": "occ_obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_US_memorial-day_2026_2026-05-25",
-          "occurrence_year": 2026,
-          "starts_on": "2026-05-25",
-          "ends_on": null,
-          "calendar_system": "local",
-          "timezone": "America/New_York",
-          "date_status": "confirmed",
-          "source_ids": [
-            "src_46B33E47395CC32FCD22E7D0"
-          ],
-          "source_urls": [
-            "https://www.defense.gov/Spotlights/Memorial-Day/"
-          ]
-        },
-        {
-          "occurrence_id": "occ_obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_US_memorial-day_2027_2027-05-31",
-          "occurrence_year": 2027,
-          "starts_on": "2027-05-31",
-          "ends_on": null,
-          "calendar_system": "local",
-          "timezone": "America/New_York",
-          "date_status": "confirmed",
-          "source_ids": [
-            "src_46B33E47395CC32FCD22E7D0"
-          ],
-          "source_urls": [
-            "https://www.defense.gov/Spotlights/Memorial-Day/"
-          ]
-        },
-        {
-          "occurrence_id": "occ_obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_US_memorial-day_2028_2028-05-29",
-          "occurrence_year": 2028,
-          "starts_on": "2028-05-29",
-          "ends_on": null,
-          "calendar_system": "local",
-          "timezone": "America/New_York",
-          "date_status": "confirmed",
-          "source_ids": [
-            "src_46B33E47395CC32FCD22E7D0"
-          ],
-          "source_urls": [
-            "https://www.defense.gov/Spotlights/Memorial-Day/"
-          ]
-        }
-      ],
-      "next_occurrence": {
-        "occurrence_id": "occ_obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_US_memorial-day_2027_2027-05-31",
-        "occurrence_year": 2027,
-        "starts_on": "2027-05-31",
-        "ends_on": null,
-        "calendar_system": "local",
-        "timezone": "America/New_York",
-        "date_status": "confirmed",
-        "source_ids": [
-          "src_46B33E47395CC32FCD22E7D0"
-        ],
-        "source_urls": [
-          "https://www.defense.gov/Spotlights/Memorial-Day/"
-        ],
-        "distance_days": 278
-      }
-    },
-    {
       "observance_id": "obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_US_halloween",
       "observance_key": "halloween",
       "country_code": "US",
@@ -777,7 +698,6 @@
     {
       "country_code": "US",
       "observance_ids": [
-        "obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_US_memorial-day",
         "obs_top_01KZXQ6BREK9FPFXH2K5JANWA1_US_halloween"
       ]
     }
@@ -786,7 +706,6 @@
   "source_ids": [
     "src_3B6C58E8206153653F7E1BD8",
     "src_3D0FE84377040F5E0436884B",
-    "src_46B33E47395CC32FCD22E7D0",
     "src_509D6FE3CDE66C39605277AB",
     "src_896FE82C2D1B93867E0BB2D7",
     "src_8ADF07F096907DFC86796ED4",
@@ -800,7 +719,6 @@
   "source_urls": [
     "https://jpsearch.go.jp/gallery/ndl-O6a96jYMq9Q",
     "https://www.ndl.go.jp/kaleido/entry/21/1.html",
-    "https://www.defense.gov/Spotlights/Memorial-Day/",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
     "https://www.japan.travel/en/see-and-do/festivals-and-events/",
     "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
@@ -817,6 +735,6 @@
     "https://tourism.bihar.gov.in/en/experiences/festivals-and-fairs/festivals/pitrapaksha",
     "https://utsav.gov.in/view-event/pitra-paksha-1"
   ],
-  "content_updated_at": "2026-08-26T16:03:00.832Z",
-  "content_hash": "fd541c23dd6b224124b2ec0943d685bd974e07956d3cbeab0d83df29d6091704"
+  "content_updated_at": "2026-08-26T16:46:58.102Z",
+  "content_hash": "e34e3678a5571dae3ce5c5b07807de351bad31101e2117815da8e2b55a6744ca"
 }

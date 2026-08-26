@@ -50,12 +50,6 @@
 - rank: 2
 - source: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095
 
-## observance US memorial-day
-- local_name: Memorial Day
-- date_rule: 5 月最後一個星期一
-- rank: 2
-- source: https://www.usa.gov/holidays
-
 ## observance US halloween
 - local_name: Halloween
 - date: 10-31
@@ -83,8 +77,6 @@
 台灣農曆七月常見普渡、供桌和避諱，地方也可能有搶孤等大型活動。不同家庭、宗教和社區對哪些事要避開，並沒有同一張清單。
 ### customs TW qingming
 台灣清明節常見掃墓、整理墓地和家族祭祀。有人提早返鄉，也有人因都市生活、家族安排或個人信念選擇不同做法。
-### customs US memorial-day
-美國 Memorial Day 紀念在服役中死亡的軍人；墓園插旗、公共典禮與家庭休閒可能同時出現。它不是紀念所有逝者的節日。日期本身是行政效率的產物：一九六八年的統一星期一假日法把它從五月三十日改成五月最後一個星期一，自一九七一年起實施，理由是給聯邦僱員一個穩定的三日連假。這個改法讓紀念日同時變成夏季的起點，也讓「這一天到底在紀念什麼」需要被重新提醒——二○○○年的全國追思時刻法因此規定，當天下午三時全國默哀一分鐘。
 ### customs US halloween
 美國的萬聖夜在十月三十一日，不是聯邦假日。它的內容是小孩挨家挨戶要糖、住家布置南瓜燈與裝飾、成人辦變裝派對。因為不放假，活動全部發生在傍晚以後；學校可能辦變裝日，但那是校方決定。它與同一頁上其他六個祭祀祖先的日子最大的差別是：它面向的不是自己的親人，而是整條街的鄰居。
 
@@ -121,10 +113,6 @@ In the seventh lunar month; the date of local Pudu (Ghost Festival) rites varies
 In Taiwan, Qingming brings grave visits, cleaning, and family rites. Some people travel home early; others adapt the day to city life, family schedules, or personal belief.
 ### date_rule TW qingming
 Around the 15th day after the vernal equinox, with the date varying slightly each year
-### customs US memorial-day
-Memorial Day honours service members who died in military service. Flags at cemeteries, public ceremonies, and leisure can share the same weekend; it is not a festival for every deceased person. The date itself is a product of administrative efficiency: the Uniform Monday Holiday Act of 1968 moved it from 30 May to the last Monday in May, effective 1971, so that federal employees would have a dependable three-day weekend. That change also turned Memorial Day into the opening of summer, and made what the day is for something that has to be recalled deliberately — hence the National Moment of Remembrance Act of 2000, which sets a minute of silence at three in the afternoon.
-### date_rule US memorial-day
-The last Monday of May
 ### customs US halloween
 Halloween in the United States is 31 October and is not a federal holiday. Its content is children going door to door for sweets, houses set out with carved pumpkins and decorations, and costume parties for adults. Because there is no day off, all of it happens after dusk; schools may hold a costume day, but that is a school's own decision. Its sharpest difference from the other six days on this page is that it faces not one's own dead but the whole street of neighbours.
 
@@ -161,10 +149,6 @@ Halloween in the United States is 31 October and is not a federal holiday. Its c
 台湾の清明節では、墓参り、墓の手入れ、家族の祭祀が行われる。帰省する人もいれば、都市での暮らしや家族の予定に合わせて別の方法を選ぶ人もいる。
 ### date_rule TW qingming
 春分の日から15日目前後で、日付は毎年若干異なる
-### customs US memorial-day
-米国のメモリアルデーは、軍務中に亡くなった兵士を追悼する日だ。墓地の旗や式典が行われる一方、連休の余暇として過ごす人もいる。日付そのものが行政上の効率の産物である。一九六八年の統一月曜休日法により、五月三十日から五月最終月曜へ移され、一九七一年から施行された。連邦職員に安定した三連休を与えるためである。この変更は同時に、戦没者追悼の日を夏の始まりに変え、「この日が何のためのものか」をあらためて思い起こす必要を生んだ。二〇〇〇年の全国追悼の時法が、午後三時に一分間の黙祷を定めたのはそのためである。
-### date_rule US memorial-day
-5月の最終月曜日
 ### customs US halloween
 米国のハロウィンは10月31日で、連邦の祝日ではない。中身は子どもたちが家々を回ってお菓子をもらうこと、家の前にくり抜いたカボチャや飾りを並べること、大人の仮装パーティーである。休日ではないため、すべては日が暮れてから起きる。学校が仮装の日を設けることもあるが、それは学校の判断だ。このページの他の六つの日との最大の違いは、向き合う相手が自分の身内ではなく、通り一本ぶんの隣人であることだ。
 
@@ -201,10 +185,6 @@ Halloween in the United States is 31 October and is not a federal holiday. Its c
 台湾清明节常见扫墓、整理墓地和家族祭祀。有人提前返乡，也有人按照城市生活、家庭安排或个人信念改变做法。
 ### date_rule TW qingming
 春分后第十五日左右，日期每年略有差异
-### customs US memorial-day
-美国 Memorial Day 主要纪念服役期间死亡的军人。墓地插旗、公共典礼和家庭休闲可能同时存在，它不是纪念所有逝者的节日。日期本身是行政效率的产物：一九六八年的统一星期一假日法把它从五月三十日改成五月最后一个星期一，自一九七一年起实施，理由是给联邦雇员一个稳定的三日连假。这个改法让纪念日同时变成夏季的起点，也让“这一天到底在纪念什么”需要被重新提醒——二〇〇〇年的全国追思时刻法因此规定，当天下午三时全国默哀一分钟。
-### date_rule US memorial-day
-5月最后一个星期一
 ### customs US halloween
 美国的万圣夜在10月31日，不是联邦假日。它的内容是小孩挨家挨户要糖、住家布置南瓜灯与装饰、成人办变装派对。因为不放假，活动全部发生在傍晚以后；学校可能办变装日，但那是校方决定。它与同一页上其他六个祭祀祖先的日子最大的差别是：它面向的不是自己的亲人，而是整条街的邻居。
 
@@ -241,10 +221,6 @@ Halloween in the United States is 31 October and is not a federal holiday. Its c
 ताइवान में Qingming पर कब्रों की सफ़ाई, कब्रिस्तान जाना और पारिवारिक पूजा आम है। परिवार अपनी यात्रा, शहर की ज़िंदगी और निजी विश्वास के अनुसार तरीका बदल सकते हैं।
 ### date_rule TW qingming
 वसंत विषुव के लगभग पंद्रहवें दिन, तिथि हर वर्ष थोड़ी भिन्न होती है
-### customs US memorial-day
-अमेरिका का Memorial Day सैन्य सेवा में मारे गए लोगों को याद करता है। कब्रिस्तानों में झंडे और सार्वजनिक समारोह होते हैं, लेकिन यह हर मृत व्यक्ति का त्योहार नहीं है। तिथि स्वयं प्रशासनिक दक्षता की उपज है: 1968 के एकसमान सोमवार अवकाश अधिनियम ने इसे 30 मई से हटाकर मई के अंतिम सोमवार पर रखा, जो 1971 से प्रभावी हुआ, ताकि संघीय कर्मचारियों को भरोसेमंद तीन-दिनी सप्ताहांत मिले। उस बदलाव ने स्मृति दिवस को गर्मियों की शुरुआत भी बना दिया, और यह कि दिन किसलिए है, उसे जानबूझकर याद दिलाना पड़ने लगा — इसीलिए 2000 का राष्ट्रीय स्मरण-क्षण अधिनियम दोपहर तीन बजे एक मिनट का मौन नियत करता है।
-### date_rule US memorial-day
-मई का अंतिम सोमवार
 ### customs US halloween
 अमेरिका में हैलोवीन 31 अक्टूबर को है और यह संघीय अवकाश नहीं है। इसकी सामग्री है बच्चों का घर-घर जाकर मिठाई माँगना, घरों के आगे तराशे कद्दू और सजावट, और वयस्कों की वेशभूषा पार्टियाँ। छुट्टी न होने के कारण सब कुछ सूरज ढलने के बाद होता है; विद्यालय वेशभूषा दिवस रख सकते हैं, पर वह विद्यालय का अपना निर्णय है। इस पृष्ठ के बाक़ी छह दिनों से इसका सबसे तीखा अंतर यह है कि यह अपने पुरखों की ओर नहीं, पूरी गली के पड़ोसियों की ओर मुड़ा है।
 
@@ -281,10 +257,6 @@ Pada bulan ketujuh penanggalan lunar; tanggal upacara Pudu (Festival Hantu) sete
 Di Taiwan, Qingming sering diisi dengan ziarah makam, membersihkan makam, dan ritual keluarga. Jadwal kerja, kehidupan kota, serta keyakinan pribadi ikut menentukan caranya.
 ### date_rule TW qingming
 Sekitar hari kelima belas setelah ekuinoks musim semi, tanggalnya sedikit berbeda setiap tahun
-### customs US memorial-day
-Memorial Day di Amerika Serikat mengenang anggota militer yang meninggal saat bertugas. Bendera di makam dan upacara publik dapat berdampingan dengan kegiatan liburan; ini bukan hari untuk semua orang yang wafat. Tanggalnya sendiri adalah produk efisiensi administratif: Undang-Undang Hari Libur Senin Seragam 1968 memindahkannya dari 30 Mei ke Senin terakhir bulan Mei, berlaku sejak 1971, agar pegawai federal memperoleh akhir pekan tiga hari yang bisa diandalkan. Perubahan itu sekaligus mengubah Memorial Day menjadi pembuka musim panas, dan membuat untuk apa hari itu ada menjadi sesuatu yang harus diingatkan dengan sengaja — karenanya Undang-Undang Saat Peringatan Nasional 2000 menetapkan hening sejenak selama satu menit pada pukul tiga sore.
-### date_rule US memorial-day
-Senin terakhir bulan Mei
 ### customs US halloween
 Halloween di Amerika Serikat jatuh 31 Oktober dan bukan hari libur federal. Isinya anak-anak berkeliling dari pintu ke pintu meminta permen, rumah-rumah dihias labu ukir dan pernik, serta pesta kostum untuk orang dewasa. Karena tidak ada hari libur, semuanya berlangsung setelah senja; sekolah boleh menggelar hari berkostum, tetapi itu keputusan sekolah sendiri. Perbedaannya yang paling tajam dari enam hari lain di halaman ini: ia tidak menghadap leluhur sendiri, melainkan seluruh tetangga satu jalan.
 
@@ -321,9 +293,5 @@ No sétimo mês do calendário lunar; a data dos ritos locais de Pudu (Festival 
 Em Taiwan, o Qingming costuma envolver visita ao túmulo, limpeza e ritos familiares. A vida urbana, os horários da família e a crença de cada pessoa mudam a forma de participar.
 ### date_rule TW qingming
 Por volta do décimo quinto dia após o equinócio de primavera, com a data variando um pouco a cada ano
-### customs US memorial-day
-Nos Estados Unidos, o Memorial Day homenageia militares que morreram em serviço. Bandeiras nos cemitérios e cerimônias públicas convivem com o feriado prolongado; não é um dia dedicado a todos os mortos. A própria data é produto de eficiência administrativa: a Lei Uniforme dos Feriados de Segunda-feira, de 1968, mudou-a de 30 de maio para a última segunda-feira de maio, em vigor desde 1971, para que os servidores federais tivessem um fim de semana prolongado previsível. Essa mudança também transformou o Memorial Day na abertura do verão e fez com que para que serve o dia precisasse ser lembrado de propósito — daí a Lei do Momento Nacional de Lembrança, de 2000, que fixa um minuto de silêncio às três da tarde.
-### date_rule US memorial-day
-Última segunda-feira de maio
 ### customs US halloween
 O Halloween nos Estados Unidos é 31 de outubro e não é feriado federal. Seu conteúdo é as crianças indo de porta em porta pedir doces, as casas com abóboras entalhadas e enfeites, e festas à fantasia para adultos. Como não há folga, tudo acontece depois do anoitecer; escolas podem fazer um dia de fantasia, mas isso é decisão delas. Sua diferença mais nítida em relação aos outros seis dias desta página é que ele se volta não para os próprios mortos, e sim para a rua inteira de vizinhos.

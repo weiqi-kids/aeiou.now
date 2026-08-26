@@ -1,0 +1,243 @@
+# Memorial Days, Veterans Days, and the War Dead
+
+## meta
+- slug: war-dead-and-veterans
+- canonical: Memorial Days, Veterans Days, and the War Dead
+- category: remembrance
+- perennial: no
+- commonality: comparing whom a state sets aside a day for — the dead, the surviving veteran, or the date a war ended — and whether that day is actually a day off
+
+## observance US memorial-day
+- local_name: Memorial Day
+- date_rule: 五月的最後一個星期一
+- rank: 1
+- source: https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm
+- source: https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/
+
+## observance US veterans-day
+- local_name: Veterans Day
+- date: 11-11
+- rank: 2
+- source: https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm
+- source: https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/
+
+## observance TW military-day
+- local_name: 軍人節
+- date: 09-03
+- rank: 1
+- source: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095
+- source: https://www.mnd.gov.tw/
+
+## observance JP war-dead-day
+- local_name: 戦没者を追悼し平和を祈念する日
+- date: 08-15
+- rank: 1
+- source: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hokabunya/senbotsusha/seido01/index.html
+
+## observance CN martyrs-day
+- local_name: 烈士纪念日
+- date: 09-30
+- rank: 1
+- source: https://www.gov.cn/zhengce/2014-09/27/content_2757588.htm
+- source: http://www.npc.gov.cn/zgrdw/npc/xinwen/2014-02/28/content_1832812.htm
+
+## observance BR dia-do-soldado
+- local_name: Dia do Soldado
+- date: 08-25
+- rank: 1
+- source: https://www.gov.br/defesa/pt-br/arquivos/2012/Pronunciamentos/comandantes/discursoa_comandantea_exercitoa_diaa_soldadoa_2011.pdf
+- source: https://www.gov.br/mj/pt-br/assuntos/noticias-1/dia-do-soldado-e-celebrado-com-solenidade-e-participacao-de-autoridades-em-brasilia
+
+## observance IN kargil-vijay-diwas
+- local_name: Kargil Vijay Diwas
+- date: 07-26
+- rank: 1
+- source: https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/jul/doc2025725592401.pdf
+- source: https://static.pib.gov.in/WriteReadData/specificdocs/documents/2022/dec/doc2022127141401.pdf
+
+## observance ID hari-pahlawan
+- local_name: Hari Pahlawan
+- date: 11-10
+- rank: 1
+- source: https://setkab.go.id/presiden-pimpin-upacara-ziarah-nasional-hari-pahlawan-tahun-2021/
+
+## locale zh-TW
+### title
+戰歿者與退伍軍人
+### summary
+美國把「死者」與「生還者」拆成兩個聯邦假日：五月的陣亡將士紀念日給戰死的人，十一月十一日的退伍軍人節給活著回來的人。其他六個國家幾乎都只設了一天，而且多半不放假——台灣的軍人節放不放由國防部自己決定，日本的八月十五日連法律都沒有、只是一紙內閣會議決定，印尼的英雄節在總統令裡被明文歸類為「不是假日的國定日」。
+### keywords
+陣亡將士紀念日, 退伍軍人節, 軍人節, 戰歿者追悼, 烈士紀念日, 英雄節, Memorial Day, Veterans Day
+### date_rule US memorial-day
+### customs US memorial-day
+美國是這七個國家裡唯一把「悼念死者」與「感謝生還者」分成兩天的。陣亡將士紀念日固定在**五月的最後一個星期一**，寫在美國法典第五編第六一〇三條的聯邦法定假日清單裡，聯邦機關與多數州政府在這一天不上班。它原本是五月三十日的固定日期，一九六八年的《統一星期一假日法》把它連同其他幾個假日一起移到星期一，於是它同時變成夏季開始的長週末——這一點在美國本地是長年爭論的題目：把追悼日排成長週末，究竟是讓更多人回得了墓園，還是把它變成烤肉與換季特賣。國家層級的儀式在阿靈頓國家公墓，上午十一點全國默哀一分鐘。
+### customs US veterans-day
+退伍軍人節是給**活著的人**的。它固定在**十一月十一日**——一九一八年第一次世界大戰停戰的那個時刻，上午十一點——原名 Armistice Day，一九五四年改成 Veterans Day，紀念對象從「一戰的停戰」擴大為所有服過役的人。它的日期還有一段來回：一九六八年的星期一假日法曾經把它移到十月的第四個星期一，但這一天的意義綁在停戰的那個鐘點上，各州反彈，一九七五年的第九四—九七號公法把它移回十一月十一日。美國人自己常搞混這兩天，退伍軍人團體每年都要重講一次：對還活著的退伍軍人說「謝謝你的服役」是這一天，對戰死者默哀是五月那一天。
+### customs TW military-day
+台灣的軍人節在**九月三日**，寫在《紀念日及節日實施條例》第五條的節日清單裡。特別的是放假規定：同法第六條寫的是「依國防部規定放假」——也就是說它不是全民的假日，而是由國防部決定國軍官兵當天放不放，一般民眾照常上班上課。日期選在九月三日，與對日抗戰勝利的紀念脈絡有關；同一部條例的第三條另外列了八月十五日的「終戰紀念日」，那是紀念日而不是節日，同樣不放假。所以台灣在這個題目上有兩個日子、兩種法律位置，而兩個都不是全民假期。
+### customs JP war-dead-day
+日本的八月十五日**沒有法律**。它的正式名稱是「戦没者を追悼し平和を祈念する日」，根據是一九八二年四月十三日的一紙**內閣會議決定**，不是《關於國民祝日的法律》裡的祝日——也就是說它不放假，超市照開、公司照上班。政府在這一天於日本武道館舉行「全國戰歿者追悼式」，天皇與首相出席，遺族代表從全國各地前來，正午全國默哀一分鐘。追悼式從一九六三年開始舉行，一九八二年的閣議決定把日期固定下來。一個國家最重要的追悼日不寫進法律、而以行政決定支撐，這在七個國家裡是唯一的例子。
+### customs CN martyrs-day
+中國的烈士紀念日在**九月三十日**，由全國人民代表大會常務委員會在二〇一四年八月三十一日以決定的形式設立，日期刻意選在國慶日的前一天。當天上午在天安門廣場人民英雄紀念碑前舉行向人民英雄敬獻花籃儀式，黨和國家領導人出席。它不是放假的節日。同一年二月二十七日，全國人大常委會另外以決定確定九月三日為「中國人民抗日戰爭勝利紀念日」——同一個常委會在同一年設了兩個相關的日子，一個追悼犧牲者、一個紀念戰爭結束，兩個都不放假。
+### customs BR dia-do-soldado
+巴西的軍人節紀念的是**一個人的生日**。八月二十五日是卡希亞斯公爵路易斯·阿爾維斯·德利馬-席爾瓦的誕辰（一八〇三年），他是巴西陸軍的主保人（patrono），這一天因此成為 Dia do Soldado。它由國防部與陸軍主辦儀式，不是法定假日，一般人照常上班。巴西另外在**五月八日**有 Dia da Vitória，紀念一九四五年歐洲戰場結束、巴西遠征軍（FEB）參戰的那段歷史——巴西是拉丁美洲唯一派地面部隊赴歐作戰的國家。也就是說巴西把「軍人」掛在一位十九世紀將領的生日上，把「勝利」另外掛在二戰的日期上。
+### customs IN kargil-vijay-diwas
+印度的紀念日綁在**一場具體的戰爭**上。七月二十六日的卡吉爾勝利日紀念一九九九年卡吉爾衝突的結束——那場戰事從三月打到七月二十六日，印度軍方以「勝利行動」（Operation Vijay）奪回卡吉爾-德拉斯一帶的高地。主要儀式在德拉斯的卡吉爾戰爭紀念館舉行，各軍區另有自己的場次。它不是假日。印度另外在**十二月七日**有武裝部隊旗幟日，自一九四九年起實施，做法很不一樣：發放小旗給民眾、回收捐款，用於傷殘退伍軍人、戰爭遺孀與烈士子女的福利——那是一個募款日，不只是一個追悼日。
+### customs ID hari-pahlawan
+印尼的英雄節在**十一月十日**，紀念一九四五年泗水戰役。它的法律位置寫得非常清楚：一九五九年第三一六號總統令把它列在「**不是假日的國定日**」（hari-hari nasional yang bukan hari libur）那一類——印尼的法制把「國定日」與「假日」明白分成兩件事，英雄節屬於前者。當天各級政府與學校舉行升旗典禮，總統率領國家級的掃墓儀式（ziarah nasional），到加拉橫國家英雄公墓獻花。所以印尼不是「忘了放假」，是制度上就寫明這一天要紀念、但不停止運作。
+
+## locale en
+### title
+War dead and veterans
+### summary
+The United States splits the dead from the survivors into two separate federal holidays: Memorial Day in May for those killed, Veterans Day on 11 November for those who came home. The other six countries mostly set aside a single day, and mostly do not give it off — Taiwan lets the defence ministry decide who gets the day, Japan's 15 August rests on a cabinet decision rather than any statute, and Indonesia's Heroes' Day is filed by presidential decree under "national days that are not holidays".
+### keywords
+Memorial Day, Veterans Day, war dead, remembrance, Kargil Vijay Diwas, Hari Pahlawan, Martyrs' Day, Dia do Soldado
+### customs US memorial-day
+The United States is the only one of these seven countries that separates mourning the dead from thanking the living. Memorial Day falls on the **last Monday in May**, written into the list of legal public holidays at 5 U.S.C. § 6103; federal offices and most state governments close. It was a fixed 30 May until the Uniform Monday Holiday Act of 1968 moved it, along with several others, onto a Monday — which also turned it into the long weekend that opens the American summer. That is an argument the country has never settled: does a three-day weekend get more people to the cemetery, or does it turn a day of mourning into barbecues and mattress sales? The national ceremony is at Arlington National Cemetery, with a minute of silence at 11 a.m.
+### date_rule US memorial-day
+The last Monday in May.
+### customs US veterans-day
+Veterans Day is for **the living**. It is fixed to **11 November** — the hour the First World War guns stopped in 1918, at eleven in the morning — and was called Armistice Day until 1954, when the object of the day widened from one war's ceasefire to everyone who has served. Its date has a history of its own: the 1968 Monday holiday law moved it to the fourth Monday in October, but the meaning of this day is tied to that particular hour, states objected, and Public Law 94-97 put it back on 11 November in 1975. Americans mix the two days up constantly, and veterans' organisations spend every November explaining the difference: you thank a living veteran for their service today; you stand in silence for the dead in May.
+### customs TW military-day
+Taiwan's Armed Forces Day falls on **3 September**, listed among the festivals in Article 5 of the Act on Commemorative Days and Holidays. What makes it unusual is the leave rule: Article 6 of the same act says the day off is "as the Ministry of National Defence provides" — so it is not a public holiday at all but a day the defence ministry may grant to serving personnel, while everyone else works and goes to school as normal. The 3 September date belongs to the commemoration of victory in the war against Japan; Article 3 of the same act separately lists 15 August as War's End Commemoration Day, a commemorative day rather than a festival, and also without leave. Taiwan therefore has two dates and two legal positions here, and neither is a day off for the public.
+### customs JP war-dead-day
+Japan's 15 August has **no statute behind it**. Its formal name is the Day to Mourn the War Dead and Pray for Peace, and its basis is a **cabinet decision of 13 April 1982** — not the Act on National Holidays. It is therefore not a day off: shops open, offices work. The government holds the National Memorial Ceremony for the War Dead at the Nippon Budokan, attended by the Emperor and the Prime Minister, with representatives of bereaved families from every prefecture and a minute of silence at noon. The ceremony has been held since 1963; the 1982 cabinet decision fixed the date. A country's central day of mourning resting on an administrative decision rather than a law is unique among these seven.
+### customs CN martyrs-day
+China's Martyrs' Day falls on **30 September**, established by a decision of the Standing Committee of the National People's Congress on 31 August 2014, with the date deliberately placed the day before National Day. On the morning itself, flower baskets are laid at the Monument to the People's Heroes in Tiananmen Square, with the party and state leadership present. It is not a day off. Earlier the same year, on 27 February 2014, the same Standing Committee separately designated 3 September as Victory Day of the Chinese People's War of Resistance Against Japanese Aggression — one body, one year, two related days: one for those who died, one for the war ending. Neither carries leave.
+### customs BR dia-do-soldado
+Brazil's soldiers' day commemorates **one man's birthday**. 25 August is the birth date of Luís Alves de Lima e Silva, Duke of Caxias, born in 1803 and patron of the Brazilian Army, and that is why the day exists. The Ministry of Defence and the Army run the ceremonies; it is not a public holiday and the country works. Brazil marks victory separately, on **8 May** — Dia da Vitória, for the end of the war in Europe in 1945 and the Brazilian Expeditionary Force that fought in Italy, Brazil being the only Latin American country to send ground troops to Europe. So the soldier is commemorated through a nineteenth-century general's birthday, and the war through the date it ended.
+### customs IN kargil-vijay-diwas
+India's day is tied to **one specific war**. Kargil Vijay Diwas on 26 July marks the end of the 1999 Kargil conflict, fought from March to 26 July, when the army retook the heights of the Kargil–Drass sector in Operation Vijay. The main ceremony is at the Kargil War Memorial at Drass, with separate observances by each command. It is not a holiday. India also keeps **7 December** as Armed Forces Flag Day, observed since 1949 and working quite differently: small flags are distributed to the public and donations collected in return, funding welfare for disabled ex-servicemen, war widows and the children of the fallen. It is a fundraising day as much as a day of remembrance.
+### customs ID hari-pahlawan
+Indonesia's Heroes' Day falls on **10 November**, for the Battle of Surabaya in 1945. Its legal position is stated with unusual precision: Presidential Decree 316 of 1959 places it among the **national days that are not holidays** (hari-hari nasional yang bukan hari libur) — Indonesian law keeps "national day" and "public holiday" as two distinct categories, and Heroes' Day belongs to the first. Government offices and schools hold flag ceremonies; the President leads the national grave pilgrimage, laying flowers at the Kalibata Heroes' Cemetery. Indonesia has not forgotten to give the day off; the rule says in so many words that the day is to be marked without stopping.
+
+## locale ja
+### title
+戦没者と退役軍人
+### summary
+アメリカだけが「死者」と「生還者」を二つの連邦祝日に分けている。五月の戦没将兵追悼記念日は戦死者のため、十一月十一日の復員軍人の日は帰ってきた人のためのものだ。残る六か国はおおむね一日しか設けず、しかも休日にしない。台湾の軍人節は休むかどうかを国防部が決め、日本の八月十五日には法律すらなく閣議決定が一枚あるだけで、インドネシアの英雄の日は大統領令で「休日ではない国の日」と明記されている。
+### keywords
+戦没者追悼, 復員軍人の日, 軍人節, 烈士紀念日, 英雄の日, メモリアルデー, ベテランズデー, 全国戦没者追悼式
+### date_rule US memorial-day
+五月の最後の月曜日。
+### customs US memorial-day
+七か国のうち、死者を悼む日と生還者に感謝する日を分けているのはアメリカだけである。戦没将兵追悼記念日は**五月の最後の月曜日**で、合衆国法典第五編六一〇三条の法定連邦祝日の一覧に書かれており、連邦機関と多くの州政府が休む。もとは五月三十日の固定日だったが、一九六八年の統一月曜日休日法がいくつかの祝日とともに月曜へ移し、その結果この日はアメリカの夏の始まりを告げる三連休にもなった。これは今も決着のつかない論争の種で、連休にすれば墓参に行ける人が増えるのか、それとも追悼の日がバーベキューと季節のセールに変わってしまうのか、と問われ続けている。国家儀式はアーリントン国立墓地で行われ、午前十一時に全国が一分間黙祷する。
+### customs US veterans-day
+復員軍人の日は**生きている人**のための日である。**十一月十一日**に固定されている——一九一八年、第一次世界大戦の砲声が止んだ午前十一時にちなむ——もとの名は休戦記念日で、一九五四年に Veterans Day と改称され、対象は一つの戦争の休戦から、兵役に就いたすべての人へと広がった。日付そのものにも往復がある。一九六八年の月曜日休日法はこの日を十月の第四月曜へ移したが、この日の意味はあの時刻に結びついており、各州が反発して、一九七五年の第九四—九七号公法が十一月十一日へ戻した。アメリカ人自身がこの二日をよく取り違えるため、退役軍人団体は毎年説明を繰り返す。生きている退役軍人に「ご奉仕をありがとう」と言うのは今日で、戦死者に黙祷するのは五月の方だ、と。
+### customs TW military-day
+台湾の軍人節は**九月三日**で、紀念日及節日実施条例第五条の節日一覧に載っている。特徴的なのは休暇の規定である。同条例第六条は「国防部の定めるところにより休む」と書く——つまり全国民の祝日ではなく、現役将兵が休むかどうかを国防部が決める日であり、一般の人は平常どおり出勤し登校する。九月三日という日付は対日戦争の勝利を記念する文脈に属する。同じ条例の第三条は別に八月十五日を「終戦紀念日」として挙げており、こちらは節日ではなく紀念日で、やはり休みにはならない。台湾はこの主題に二つの日付と二つの法的位置を持ち、そのどちらも国民の休日ではない。
+### customs JP war-dead-day
+日本の八月十五日には**法律がない**。正式名称は「戦没者を追悼し平和を祈念する日」で、根拠は一九八二年四月十三日の**閣議決定**であって、国民の祝日に関する法律の祝日ではない。したがって休日ではなく、店は開き、会社は動く。政府はこの日、日本武道館で全国戦没者追悼式を行い、天皇と内閣総理大臣が出席し、全国から遺族代表が参列し、正午に一分間の黙祷が捧げられる。追悼式は一九六三年から続き、一九八二年の閣議決定が日付を定めた。国の中心となる追悼の日が法律ではなく行政の決定に支えられているのは、七か国のなかでここだけである。
+### customs CN martyrs-day
+中国の烈士紀念日は**九月三十日**で、二〇一四年八月三十一日、全国人民代表大会常務委員会の決定によって設けられた。日付は国慶節の前日に意図的に置かれている。当日の午前、天安門広場の人民英雄記念碑の前で献花の儀式が行われ、党と国家の指導者が出席する。休日ではない。同じ年の二月二十七日、同じ常務委員会は別に九月三日を「中国人民抗日戦争勝利記念日」と定めた。一つの機関が同じ年に二つの関連する日を設けたことになる——一つは犠牲者を悼む日、もう一つは戦争が終わった日で、どちらも休みにはならない。
+### customs BR dia-do-soldado
+ブラジルの軍人の日が記念しているのは**一人の人物の誕生日**である。八月二十五日はカシアス公ルイス・アルヴェス・デ・リマ・エ・シルヴァの生誕日（一八〇三年）で、彼はブラジル陸軍の守護者（パトロノ）であり、それがこの日の由来だ。国防省と陸軍が式典を行うが法定休日ではなく、国は平常どおり動く。ブラジルは勝利を別の日に置いている。**五月八日**の Dia da Vitória は、一九四五年のヨーロッパ戦線の終結と、イタリアで戦ったブラジル遠征軍を記念する日である——ラテンアメリカで地上部隊をヨーロッパへ送ったのはブラジルだけだった。軍人は十九世紀の将軍の誕生日を通じて、戦争は終結の日付を通じて記念される。
+### customs IN kargil-vijay-diwas
+インドの記念日は**特定の一つの戦争**に結びついている。七月二十六日のカルギル勝利の日は、一九九九年のカルギル紛争の終結を記す。戦闘は三月から七月二十六日まで続き、インド軍は「ヴィジャイ作戦」でカルギル・ドラス地区の高地を奪回した。主たる式典はドラスのカルギル戦争記念館で行われ、各方面軍も独自に催す。休日ではない。インドはさらに**十二月七日**を軍旗記念日としており、一九四九年から続くこの日は仕組みがまるで違う。小さな旗を市民に配り、その返礼として寄付を集め、傷痍軍人・戦争未亡人・戦没者の子どもの福祉に充てる——追悼の日であると同時に募金の日なのである。
+### customs ID hari-pahlawan
+インドネシアの英雄の日は**十一月十日**、一九四五年のスラバヤの戦いにちなむ。その法的位置はきわめて明確に書かれている。一九五九年大統領決定第三一六号は、これを「**休日ではない国の日**」（hari-hari nasional yang bukan hari libur）の類に置いた——インドネシアの法制は「国の日」と「公休日」を別の範疇として保っており、英雄の日は前者に属する。官庁と学校では国旗掲揚式が行われ、大統領は国家墓参（ziarah nasional）を率いてカリバタ英雄墓地に献花する。インドネシアは休みにするのを忘れたのではない。この日は運転を止めずに記念する、と規則がはっきり述べているのである。
+
+## locale zh-CN
+### title
+战殁者与退伍军人
+### summary
+美国把"死者"与"生还者"拆成两个联邦假日：五月的阵亡将士纪念日给战死的人，十一月十一日的退伍军人节给活着回来的人。其余六个国家几乎都只设一天，而且多半不放假——台湾的军人节放不放由防务部门自己决定，日本的八月十五日连法律都没有、只是一纸内阁会议决定，印尼的英雄节在总统令里被明文归入"不是假日的国定日"。
+### keywords
+阵亡将士纪念日, 退伍军人节, 军人节, 烈士纪念日, 英雄节, 战殁者追悼, Memorial Day, Veterans Day
+### date_rule US memorial-day
+五月的最后一个星期一。
+### customs US memorial-day
+美国是这七个国家里唯一把"悼念死者"与"感谢生还者"分成两天的。阵亡将士纪念日固定在**五月的最后一个星期一**，写在《美国法典》第五编第六一〇三条的联邦法定假日清单里，联邦机关与多数州政府当天不上班。它原本是五月三十日的固定日期，一九六八年的《统一星期一假日法》把它连同其他几个假日一起移到星期一，于是它同时变成夏季开始的长周末——这一点在美国是长年争论的题目：把追悼日排成长周末，究竟是让更多人回得了墓园，还是把它变成烤肉与换季特卖。国家层级的仪式在阿灵顿国家公墓，上午十一点全国默哀一分钟。
+### customs US veterans-day
+退伍军人节是给**活着的人**的。它固定在**十一月十一日**——一九一八年第一次世界大战停战的那个时刻，上午十一点——原名 Armistice Day，一九五四年改称 Veterans Day，纪念对象从"一战的停战"扩大为所有服过役的人。它的日期还有一段来回：一九六八年的星期一假日法曾把它移到十月的第四个星期一，但这一天的意义绑在停战的那个钟点上，各州反弹，一九七五年的第九四—九七号公法把它移回十一月十一日。美国人自己常搞混这两天，退伍军人团体每年都要重讲一次：对还活着的退伍军人说"谢谢你的服役"是这一天，对战死者默哀是五月那一天。
+### customs TW military-day
+台湾的军人节在**九月三日**，写在《纪念日及节日实施条例》第五条的节日清单里。特别的是放假规定：同法第六条写的是"依防务部门规定放假"——也就是说它不是全民的假日，而是由防务主管部门决定当天官兵放不放，一般民众照常上班上课。日期选在九月三日，与对日抗战胜利的纪念脉络有关；同一部条例的第三条另外列了八月十五日的"终战纪念日"，那是纪念日而不是节日，同样不放假。所以台湾在这个题目上有两个日子、两种法律位置，而两个都不是全民假期。
+### customs JP war-dead-day
+日本的八月十五日**没有法律**。它的正式名称是"战殁者追悼与祈念和平之日"，依据是一九八二年四月十三日的一纸**内阁会议决定**，而不是《关于国民祝日的法律》里的祝日——也就是说它不放假，超市照开、公司照上班。政府在这一天于日本武道馆举行"全国战殁者追悼式"，天皇与首相出席，遗族代表从全国各地前来，正午全国默哀一分钟。追悼式从一九六三年开始举行，一九八二年的阁议决定把日期固定下来。一个国家最重要的追悼日不写进法律、而以行政决定支撑，这在七个国家里是唯一的例子。
+### customs CN martyrs-day
+中国的烈士纪念日在**九月三十日**，由全国人民代表大会常务委员会在二〇一四年八月三十一日以决定的形式设立，日期刻意选在国庆日的前一天。当天上午在天安门广场人民英雄纪念碑前举行向人民英雄敬献花篮仪式，党和国家领导人出席。它不是放假的节日。同一年二月二十七日，全国人大常委会另外以决定确定九月三日为"中国人民抗日战争胜利纪念日"——同一个常委会在同一年设了两个相关的日子，一个追悼牺牲者、一个纪念战争结束，两个都不放假。
+### customs BR dia-do-soldado
+巴西的军人节纪念的是**一个人的生日**。八月二十五日是卡希亚斯公爵路易斯·阿尔维斯·德利马-席尔瓦的诞辰（一八〇三年），他是巴西陆军的主保人（patrono），这一天因此成为 Dia do Soldado。它由国防部与陆军主办仪式，不是法定假日，一般人照常上班。巴西另外在**五月八日**有 Dia da Vitória，纪念一九四五年欧洲战场结束、巴西远征军（FEB）参战的那段历史——巴西是拉丁美洲唯一派地面部队赴欧作战的国家。也就是说巴西把"军人"挂在一位十九世纪将领的生日上，把"胜利"另外挂在二战的日期上。
+### customs IN kargil-vijay-diwas
+印度的纪念日绑在**一场具体的战争**上。七月二十六日的卡吉尔胜利日纪念一九九九年卡吉尔冲突的结束——那场战事从三月打到七月二十六日，印度军方以"胜利行动"（Operation Vijay）夺回卡吉尔-德拉斯一带的高地。主要仪式在德拉斯的卡吉尔战争纪念馆举行，各军区另有自己的场次。它不是假日。印度另外在**十二月七日**有武装部队旗帜日，自一九四九年起实施，做法很不一样：发放小旗给民众、回收捐款，用于伤残退伍军人、战争遗孀与烈士子女的福利——那是一个募款日，不只是一个追悼日。
+### customs ID hari-pahlawan
+印尼的英雄节在**十一月十日**，纪念一九四五年泗水战役。它的法律位置写得非常清楚：一九五九年第三一六号总统令把它列在"**不是假日的国定日**"（hari-hari nasional yang bukan hari libur）那一类——印尼的法制把"国定日"与"假日"明白分成两件事，英雄节属于前者。当天各级政府与学校举行升旗典礼，总统率领国家级的扫墓仪式（ziarah nasional），到加里巴达国家英雄公墓献花。所以印尼不是"忘了放假"，是制度上就写明这一天要纪念、但不停止运作。
+
+## locale hi
+### title
+युद्ध में मारे गए और पूर्व सैनिक
+### summary
+अमेरिका ही अकेला देश है जिसने मृतकों और जीवित बचे लोगों के लिए दो अलग संघीय अवकाश रखे हैं — मई का मेमोरियल डे उनके लिए जो मारे गए, और 11 नवंबर का वेटरन्स डे उनके लिए जो लौट आए। बाकी छह देश ज़्यादातर एक ही दिन रखते हैं, और वह दिन प्रायः छुट्टी का नहीं होता — ताइवान में छुट्टी देने का फ़ैसला रक्षा मंत्रालय करता है, जापान की 15 अगस्त के पीछे कोई क़ानून नहीं बल्कि एक मंत्रिमंडलीय निर्णय है, और इंडोनेशिया का वीर दिवस राष्ट्रपति के आदेश में स्पष्ट रूप से "ऐसे राष्ट्रीय दिवस जो छुट्टी नहीं हैं" की श्रेणी में रखा गया है।
+### keywords
+कारगिल विजय दिवस, सशस्त्र सेना झंडा दिवस, मेमोरियल डे, वेटरन्स डे, शहीद दिवस, हरि पहलावान, युद्ध स्मरण
+### date_rule US memorial-day
+मई का अंतिम सोमवार।
+### customs US memorial-day
+इन सात देशों में अमेरिका अकेला है जो मृतकों के शोक और जीवितों के प्रति आभार को दो अलग दिनों में बाँटता है। मेमोरियल डे **मई के अंतिम सोमवार** को पड़ता है और यह 5 U.S.C. § 6103 की संघीय अवकाश-सूची में दर्ज है; संघीय कार्यालय और अधिकांश राज्य सरकारें बंद रहती हैं। पहले यह 30 मई की निश्चित तारीख़ थी, पर 1968 के यूनिफ़ॉर्म मंडे हॉलिडे ऐक्ट ने इसे कुछ और अवकाशों के साथ सोमवार पर सरका दिया — और इसी से यह अमेरिकी गर्मियों को खोलने वाला तीन दिन का सप्ताहांत भी बन गया। यह बहस आज तक तय नहीं हुई: क्या लंबा सप्ताहांत ज़्यादा लोगों को क़ब्रिस्तान तक पहुँचाता है, या शोक के दिन को बारबेक्यू और मौसमी सेल में बदल देता है? राष्ट्रीय समारोह आर्लिंग्टन राष्ट्रीय क़ब्रिस्तान में होता है और सुबह 11 बजे पूरे देश में एक मिनट का मौन रखा जाता है।
+### customs US veterans-day
+वेटरन्स डे **जीवित लोगों** के लिए है। यह **11 नवंबर** पर स्थिर है — 1918 में पहले विश्व युद्ध की तोपें जिस घड़ी थमी थीं, सुबह ग्यारह बजे — और 1954 तक इसका नाम आर्मिस्टिस डे था, जब इसका दायरा एक युद्ध के संघर्ष-विराम से बढ़ाकर हर उस व्यक्ति तक कर दिया गया जिसने सेवा दी है। इसकी तारीख़ का अपना इतिहास है: 1968 के सोमवार-अवकाश क़ानून ने इसे अक्टूबर के चौथे सोमवार पर भेज दिया था, पर इस दिन का अर्थ उसी घड़ी से बँधा है, राज्यों ने आपत्ति की, और 1975 में पब्लिक लॉ 94-97 ने इसे वापस 11 नवंबर पर रख दिया। अमेरिकी ख़ुद इन दो दिनों को लगातार गड्डमड्ड करते हैं, इसलिए पूर्व सैनिक संगठन हर नवंबर यह अंतर दोहराते हैं: जीवित पूर्व सैनिक को "आपकी सेवा के लिए धन्यवाद" आज कहा जाता है; मृतकों के लिए मौन मई में रखा जाता है।
+### customs TW military-day
+ताइवान का सशस्त्र सेना दिवस **3 सितंबर** को पड़ता है और स्मृति-दिवस एवं अवकाश अधिनियम की धारा 5 की पर्व-सूची में दर्ज है। असामान्य बात छुट्टी का नियम है: उसी अधिनियम की धारा 6 कहती है कि छुट्टी "राष्ट्रीय रक्षा मंत्रालय के प्रावधान के अनुसार" होगी — यानी यह सार्वजनिक अवकाश है ही नहीं, बल्कि एक ऐसा दिन है जो मंत्रालय सेवारत कर्मियों को दे सकता है, जबकि बाक़ी सब सामान्य रूप से काम और पढ़ाई पर जाते हैं। 3 सितंबर की तारीख़ जापान के विरुद्ध युद्ध की विजय की स्मृति से जुड़ी है; उसी अधिनियम की धारा 3 अलग से 15 अगस्त को युद्ध-समाप्ति स्मृति दिवस के रूप में सूचीबद्ध करती है, जो पर्व नहीं बल्कि स्मृति-दिवस है और उसमें भी छुट्टी नहीं। इस विषय पर ताइवान के पास दो तारीख़ें और दो क़ानूनी स्थितियाँ हैं, और दोनों में से कोई भी जनता के लिए छुट्टी नहीं।
+### customs JP war-dead-day
+जापान की 15 अगस्त के पीछे **कोई क़ानून नहीं** है। इसका औपचारिक नाम है "युद्ध में मारे गए लोगों के शोक और शांति की प्रार्थना का दिन", और इसका आधार **13 अप्रैल 1982 का मंत्रिमंडलीय निर्णय** है — राष्ट्रीय अवकाश अधिनियम नहीं। इसलिए यह छुट्टी का दिन नहीं: दुकानें खुलती हैं, दफ़्तर चलते हैं। सरकार निप्पॉन बुडोकान में राष्ट्रीय युद्ध-मृतक स्मृति समारोह आयोजित करती है, जिसमें सम्राट और प्रधानमंत्री उपस्थित होते हैं, हर प्रान्त से शोकसंतप्त परिवारों के प्रतिनिधि आते हैं, और दोपहर बारह बजे एक मिनट का मौन रखा जाता है। यह समारोह 1963 से हो रहा है; 1982 के निर्णय ने तारीख़ तय की। किसी देश का केंद्रीय शोक-दिवस क़ानून के बजाय प्रशासनिक निर्णय पर टिका हो — इन सात में यह अकेला उदाहरण है।
+### customs CN martyrs-day
+चीन का शहीद दिवस **30 सितंबर** को पड़ता है, जिसे 31 अगस्त 2014 को राष्ट्रीय जन कांग्रेस की स्थायी समिति के निर्णय द्वारा स्थापित किया गया, और तारीख़ जानबूझकर राष्ट्रीय दिवस से ठीक एक दिन पहले रखी गई। उस सुबह तियानआनमेन चौक पर जन-नायक स्मारक के सामने पुष्प-टोकरियाँ अर्पित की जाती हैं और पार्टी तथा राज्य का नेतृत्व उपस्थित रहता है। यह छुट्टी का दिन नहीं है। उसी वर्ष 27 फ़रवरी को उसी स्थायी समिति ने अलग से 3 सितंबर को जापानी आक्रमण के विरुद्ध चीनी जन-प्रतिरोध युद्ध का विजय दिवस घोषित किया — एक ही निकाय, एक ही वर्ष, दो संबंधित दिन: एक मरने वालों के लिए, एक युद्ध के समाप्त होने के लिए। दोनों में छुट्टी नहीं।
+### customs BR dia-do-soldado
+ब्राज़ील का सैनिक दिवस **एक व्यक्ति के जन्मदिन** की स्मृति है। 25 अगस्त 1803 को लुईस आल्वेस दे लीमा ए सिल्वा, ड्यूक ऑफ़ काशियास का जन्म हुआ था; वे ब्राज़ीलियाई थलसेना के संरक्षक (patrono) हैं, और इसी से यह दिन बना। रक्षा मंत्रालय और सेना समारोह करते हैं; यह सार्वजनिक अवकाश नहीं है और देश काम करता है। विजय के लिए ब्राज़ील की अलग तारीख़ है — **8 मई**, Dia da Vitória, 1945 में यूरोप में युद्ध की समाप्ति और इटली में लड़ी ब्राज़ीलियाई अभियान सेना के लिए; लैटिन अमेरिका से यूरोप में थल सेना भेजने वाला ब्राज़ील अकेला देश था। यानी सैनिक को उन्नीसवीं सदी के एक सेनापति के जन्मदिन से याद किया जाता है, और युद्ध को उसके समाप्त होने की तारीख़ से।
+### customs IN kargil-vijay-diwas
+भारत का दिवस **एक विशिष्ट युद्ध** से बँधा है। 26 जुलाई का कारगिल विजय दिवस 1999 के कारगिल संघर्ष की समाप्ति को चिह्नित करता है, जो मार्च से 26 जुलाई तक चला और जिसमें सेना ने ऑपरेशन विजय के तहत कारगिल–द्रास क्षेत्र की चोटियाँ वापस लीं। मुख्य समारोह द्रास स्थित कारगिल युद्ध स्मारक पर होता है, और हर कमान अपने अलग आयोजन करती है। यह छुट्टी का दिन नहीं है। भारत **7 दिसंबर** को सशस्त्र सेना झंडा दिवस भी रखता है, जो 1949 से मनाया जाता है और जिसका ढंग बिलकुल अलग है: जनता को छोटे झंडे दिए जाते हैं और बदले में चंदा एकत्र होता है, जो दिव्यांग पूर्व सैनिकों, युद्ध-विधवाओं और शहीदों के बच्चों के कल्याण में लगता है। यह स्मरण जितना ही धन-संग्रह का दिन है।
+### customs ID hari-pahlawan
+इंडोनेशिया का वीर दिवस **10 नवंबर** को पड़ता है, 1945 के सुराबाया युद्ध के लिए। इसकी क़ानूनी स्थिति असामान्य स्पष्टता से लिखी गई है: 1959 का राष्ट्रपति आदेश संख्या 316 इसे **"ऐसे राष्ट्रीय दिवस जो छुट्टी नहीं हैं"** (hari-hari nasional yang bukan hari libur) की श्रेणी में रखता है — इंडोनेशियाई क़ानून "राष्ट्रीय दिवस" और "सार्वजनिक अवकाश" को दो अलग कोटियों में रखता है, और वीर दिवस पहली में आता है। सरकारी दफ़्तरों और स्कूलों में ध्वजारोहण होता है; राष्ट्रपति राष्ट्रीय क़ब्र-यात्रा (ziarah nasional) का नेतृत्व करते हुए कालीबाता वीर क़ब्रिस्तान में पुष्प अर्पित करते हैं। इंडोनेशिया छुट्टी देना भूला नहीं है; नियम साफ़ शब्दों में कहता है कि इस दिन को काम रोके बिना मनाया जाए।
+
+## locale id
+### title
+Gugur dalam perang dan para veteran
+### summary
+Amerika Serikat memisahkan yang gugur dari yang selamat menjadi dua hari libur federal: Memorial Day pada bulan Mei untuk mereka yang tewas, dan Veterans Day pada 11 November untuk mereka yang pulang. Enam negara lainnya umumnya hanya menetapkan satu hari, dan hari itu umumnya bukan hari libur — di Taiwan kementerian pertahanan yang memutuskan siapa yang libur, 15 Agustus di Jepang bersandar pada keputusan kabinet dan bukan undang-undang, sedangkan Hari Pahlawan Indonesia justru dimasukkan keputusan presiden ke dalam golongan "hari nasional yang bukan hari libur".
+### keywords
+Hari Pahlawan, hari nasional bukan hari libur, Memorial Day, Veterans Day, Kargil Vijay Diwas, hari berkabung, ziarah nasional
+### date_rule US memorial-day
+Senin terakhir bulan Mei.
+### customs US memorial-day
+Dari tujuh negara ini, hanya Amerika Serikat yang memisahkan hari berkabung untuk yang gugur dari hari berterima kasih kepada yang masih hidup. Memorial Day jatuh pada **Senin terakhir bulan Mei**, tercantum dalam daftar hari libur federal pada 5 U.S.C. § 6103; kantor federal dan sebagian besar pemerintah negara bagian tutup. Semula tanggalnya tetap 30 Mei, sampai Uniform Monday Holiday Act 1968 menggesernya — bersama beberapa hari libur lain — ke hari Senin, yang sekaligus mengubahnya menjadi akhir pekan panjang pembuka musim panas Amerika. Perdebatannya belum pernah selesai: apakah akhir pekan tiga hari membuat lebih banyak orang sempat berziarah, atau justru mengubah hari berkabung menjadi barbekyu dan obral pergantian musim? Upacara nasional digelar di Pemakaman Nasional Arlington, dengan hening cipta satu menit pukul sebelas pagi.
+### customs US veterans-day
+Veterans Day adalah hari bagi **mereka yang masih hidup**. Tanggalnya tetap **11 November** — jam ketika meriam Perang Dunia I berhenti pada 1918, pukul sebelas pagi — dan namanya Armistice Day sampai 1954, ketika cakupannya diperluas dari gencatan senjata satu perang menjadi semua orang yang pernah bertugas. Tanggalnya sendiri punya riwayat: undang-undang hari libur Senin tahun 1968 sempat memindahkannya ke Senin keempat bulan Oktober, tetapi makna hari ini terikat pada jam tersebut, negara-negara bagian menolak, dan Public Law 94-97 mengembalikannya ke 11 November pada 1975. Orang Amerika sendiri kerap tertukar, sehingga organisasi veteran mengulang penjelasannya setiap November: ucapan "terima kasih atas pengabdian Anda" kepada veteran yang masih hidup adalah hari ini; hening cipta bagi yang gugur adalah hari di bulan Mei.
+### customs TW military-day
+Hari Angkatan Bersenjata Taiwan jatuh pada **3 September**, tercantum di antara hari-hari perayaan dalam Pasal 5 Undang-Undang tentang Hari Peringatan dan Hari Libur. Yang tidak biasa adalah aturan liburnya: Pasal 6 undang-undang yang sama menyebut libur diberikan "sesuai ketentuan Kementerian Pertahanan Nasional" — jadi ini sama sekali bukan hari libur umum, melainkan hari yang boleh diberikan kementerian kepada prajurit aktif, sementara semua orang lain tetap bekerja dan bersekolah. Tanggal 3 September berkaitan dengan peringatan kemenangan dalam perang melawan Jepang; Pasal 3 undang-undang yang sama secara terpisah mencantumkan 15 Agustus sebagai Hari Peringatan Berakhirnya Perang, yang berstatus hari peringatan, bukan perayaan, dan juga tanpa libur. Taiwan punya dua tanggal dan dua kedudukan hukum di sini, dan tak satu pun berarti libur bagi publik.
+### customs JP war-dead-day
+Tanggal 15 Agustus di Jepang **tidak punya undang-undang** di belakangnya. Nama resminya adalah Hari Mengenang Korban Perang dan Mendoakan Perdamaian, dan dasarnya adalah **keputusan kabinet 13 April 1982** — bukan Undang-Undang Hari Libur Nasional. Karena itu hari ini bukan hari libur: toko buka, kantor bekerja. Pemerintah menggelar Upacara Peringatan Nasional bagi Korban Perang di Nippon Budokan, dihadiri Kaisar dan Perdana Menteri, dengan wakil keluarga korban dari seluruh prefektur dan hening cipta satu menit pada tengah hari. Upacara ini berlangsung sejak 1963; keputusan kabinet 1982 yang menetapkan tanggalnya. Hari berkabung utama sebuah negara yang bertumpu pada keputusan administratif alih-alih undang-undang adalah satu-satunya di antara tujuh negara ini.
+### customs CN martyrs-day
+Hari Pahlawan Gugur Tiongkok jatuh pada **30 September**, ditetapkan melalui keputusan Komite Tetap Kongres Rakyat Nasional pada 31 Agustus 2014, dengan tanggal yang sengaja diletakkan sehari sebelum Hari Nasional. Pagi harinya, keranjang bunga diletakkan di depan Monumen Pahlawan Rakyat di Lapangan Tiananmen, dihadiri pimpinan partai dan negara. Ini bukan hari libur. Pada 27 Februari tahun yang sama, komite tetap yang sama secara terpisah menetapkan 3 September sebagai Hari Kemenangan Perang Perlawanan Rakyat Tiongkok terhadap Agresi Jepang — satu lembaga, satu tahun, dua hari yang berkaitan: satu untuk yang gugur, satu untuk berakhirnya perang. Keduanya tanpa libur.
+### customs BR dia-do-soldado
+Hari Prajurit Brasil memperingati **hari lahir satu orang**. Tanggal 25 Agustus adalah kelahiran Luís Alves de Lima e Silva, Duke of Caxias, lahir 1803 dan pelindung (patrono) Angkatan Darat Brasil, dan dari situlah hari ini berasal. Kementerian Pertahanan dan Angkatan Darat menggelar upacaranya; ini bukan hari libur umum dan negara tetap bekerja. Brasil menandai kemenangan pada hari yang lain, **8 Mei** — Dia da Vitória, untuk berakhirnya perang di Eropa pada 1945 dan bagi Pasukan Ekspedisi Brasil yang bertempur di Italia; Brasil satu-satunya negara Amerika Latin yang mengirim pasukan darat ke Eropa. Jadi prajurit dikenang lewat hari lahir seorang jenderal abad kesembilan belas, dan perang lewat tanggal berakhirnya.
+### customs IN kargil-vijay-diwas
+Hari peringatan India terikat pada **satu perang tertentu**. Kargil Vijay Diwas pada 26 Juli menandai berakhirnya konflik Kargil 1999, yang berlangsung dari Maret hingga 26 Juli, ketika angkatan darat merebut kembali ketinggian di sektor Kargil–Drass lewat Operasi Vijay. Upacara utamanya di Tugu Perang Kargil di Drass, dan setiap komando menggelar acaranya sendiri. Ini bukan hari libur. India juga menetapkan **7 Desember** sebagai Armed Forces Flag Day, dijalankan sejak 1949 dengan cara yang sama sekali berbeda: bendera-bendera kecil dibagikan kepada masyarakat dan sumbangan dikumpulkan sebagai gantinya, untuk kesejahteraan veteran penyandang disabilitas, janda perang, dan anak-anak yang gugur. Hari itu sama banyaknya tentang penggalangan dana seperti tentang mengenang.
+### customs ID hari-pahlawan
+Hari Pahlawan jatuh pada **10 November**, untuk Pertempuran Surabaya 1945. Kedudukan hukumnya dinyatakan dengan ketelitian yang tidak biasa: Keputusan Presiden Nomor 316 Tahun 1959 menempatkannya di antara **hari-hari nasional yang bukan hari libur** — hukum Indonesia memang memisahkan "hari nasional" dan "hari libur" sebagai dua kategori berbeda, dan Hari Pahlawan masuk kategori pertama. Kantor pemerintah dan sekolah menggelar upacara bendera; Presiden memimpin ziarah nasional dan menaburkan bunga di Taman Makam Pahlawan Kalibata. Indonesia bukan lupa meliburkan hari ini; aturannya justru menyatakan dengan jelas bahwa hari ini diperingati tanpa menghentikan kegiatan.
+
+## locale pt-BR
+### title
+Mortos em guerra e veteranos
+### summary
+Os Estados Unidos separam os mortos dos sobreviventes em dois feriados federais distintos: o Memorial Day, em maio, para os que tombaram, e o Veterans Day, em 11 de novembro, para os que voltaram. Os outros seis países costumam reservar um único dia — e quase sempre sem folga: em Taiwan é o Ministério da Defesa que decide quem descansa, o 15 de agosto japonês se apoia numa decisão de gabinete e não numa lei, e o Dia dos Heróis da Indonésia foi enquadrado por decreto presidencial entre os "dias nacionais que não são feriados".
+### keywords
+Dia do Soldado, Dia da Vitória, Duque de Caxias, Memorial Day, Veterans Day, Kargil Vijay Diwas, Hari Pahlawan, mortos em guerra
+### date_rule US memorial-day
+A última segunda-feira de maio.
+### customs US memorial-day
+Dos sete países, só os Estados Unidos separam o luto pelos mortos do agradecimento aos vivos. O Memorial Day cai na **última segunda-feira de maio** e está inscrito na lista de feriados federais do 5 U.S.C. § 6103; repartições federais e a maioria dos governos estaduais fecham. Era uma data fixa, 30 de maio, até que a Uniform Monday Holiday Act de 1968 o transferiu — junto com outros feriados — para a segunda-feira, transformando-o também no fim de semana prolongado que abre o verão americano. É uma discussão que o país nunca encerrou: um feriadão leva mais gente ao cemitério ou converte o dia de luto em churrasco e liquidação de estação? A cerimônia nacional acontece no Cemitério Nacional de Arlington, com um minuto de silêncio às onze da manhã.
+### customs US veterans-day
+O Veterans Day é para **os vivos**. Está fixado em **11 de novembro** — a hora em que os canhões da Primeira Guerra silenciaram em 1918, às onze da manhã — e chamava-se Armistice Day até 1954, quando seu alcance passou do armistício de uma guerra para todos os que serviram. A data tem história própria: a lei dos feriados de segunda-feira, de 1968, chegou a deslocá-lo para a quarta segunda-feira de outubro, mas o sentido do dia está preso àquela hora, os estados reagiram e a Public Law 94-97 devolveu-o ao 11 de novembro em 1975. Os próprios americanos confundem os dois dias o tempo todo, e as organizações de veteranos repetem a distinção todo mês de novembro: agradece-se ao veterano vivo pelo serviço prestado hoje; guarda-se silêncio pelos mortos em maio.
+### customs TW military-day
+O Dia das Forças Armadas de Taiwan cai em **3 de setembro** e figura entre as festividades do artigo 5.º da Lei dos Dias Comemorativos e Feriados. O peculiar é a regra da folga: o artigo 6.º da mesma lei diz que o descanso se dá "conforme dispuser o Ministério da Defesa Nacional" — ou seja, não é feriado público algum, mas um dia que o ministério pode conceder aos militares na ativa, enquanto todos os demais trabalham e estudam normalmente. A data de 3 de setembro pertence à memória da vitória na guerra contra o Japão; o artigo 3.º da mesma lei lista separadamente o 15 de agosto como Dia da Memória do Fim da Guerra, que é dia comemorativo e não festividade, também sem folga. Taiwan tem aqui duas datas e duas posições jurídicas, e nenhuma delas é feriado para o público.
+### customs JP war-dead-day
+O 15 de agosto japonês **não tem lei alguma** por trás. Seu nome oficial é Dia de Luto pelos Mortos na Guerra e de Prece pela Paz, e sua base é uma **decisão de gabinete de 13 de abril de 1982** — não a Lei dos Feriados Nacionais. Por isso não é folga: as lojas abrem, os escritórios funcionam. O governo realiza a Cerimônia Nacional em Memória dos Mortos na Guerra no Nippon Budokan, com a presença do Imperador e do primeiro-ministro, representantes de famílias enlutadas de todas as províncias e um minuto de silêncio ao meio-dia. A cerimônia existe desde 1963; a decisão de 1982 fixou a data. Um país cujo principal dia de luto se sustenta numa decisão administrativa, e não numa lei, é caso único entre estes sete.
+### customs CN martyrs-day
+O Dia dos Mártires da China cai em **30 de setembro**, estabelecido por decisão do Comitê Permanente da Assembleia Popular Nacional em 31 de agosto de 2014, com a data deliberadamente colocada na véspera do Dia Nacional. Na manhã do dia, cestas de flores são depositadas diante do Monumento aos Heróis do Povo, na Praça Tiananmen, com a presença da cúpula do partido e do Estado. Não é folga. Em 27 de fevereiro do mesmo ano, o mesmo Comitê Permanente designou separadamente o 3 de setembro como Dia da Vitória da Guerra de Resistência do Povo Chinês contra a Agressão Japonesa — um só órgão, um só ano, dois dias correlatos: um para os que morreram, outro para o fim da guerra. Nenhum dos dois dá folga.
+### customs BR dia-do-soldado
+O Dia do Soldado comemora **o aniversário de uma pessoa**. 25 de agosto é a data de nascimento de Luís Alves de Lima e Silva, o Duque de Caxias, nascido em 1803 e patrono do Exército Brasileiro — daí vem o dia. As solenidades ficam a cargo do Ministério da Defesa e do Exército; não é feriado nacional e o país trabalha. A vitória o Brasil marca em outra data, **8 de maio**, o Dia da Vitória, pelo fim da guerra na Europa em 1945 e pela Força Expedicionária Brasileira que combateu na Itália — o Brasil foi o único país latino-americano a enviar tropas terrestres à Europa. O soldado, portanto, é lembrado pelo aniversário de um general do século XIX, e a guerra, pela data em que terminou.
+### customs IN kargil-vijay-diwas
+O dia indiano está preso a **uma guerra específica**. O Kargil Vijay Diwas, em 26 de julho, marca o fim do conflito de Kargil de 1999, travado de março a 26 de julho, quando o exército retomou as alturas do setor Kargil–Drass na Operação Vijay. A cerimônia principal ocorre no Memorial da Guerra de Kargil, em Drass, e cada comando militar realiza a sua. Não é feriado. A Índia mantém ainda o **7 de dezembro** como Dia da Bandeira das Forças Armadas, observado desde 1949 e de funcionamento bem diferente: distribuem-se bandeirinhas à população e recolhem-se doações em troca, destinadas ao amparo de ex-combatentes com deficiência, viúvas de guerra e filhos dos mortos. É tanto um dia de arrecadação quanto de memória.
+### customs ID hari-pahlawan
+O Dia dos Heróis da Indonésia cai em **10 de novembro**, pela Batalha de Surabaia de 1945. Sua posição jurídica está escrita com precisão incomum: o Decreto Presidencial n.º 316, de 1959, coloca-o entre os **dias nacionais que não são feriados** (hari-hari nasional yang bukan hari libur) — a legislação indonésia mantém "dia nacional" e "feriado" como categorias distintas, e o Dia dos Heróis pertence à primeira. Repartições e escolas fazem cerimônia de hasteamento da bandeira; o presidente conduz a romaria nacional (ziarah nasional) e deposita flores no Cemitério dos Heróis de Kalibata. A Indonésia não se esqueceu de dar folga: a norma diz, com todas as letras, que o dia deve ser marcado sem parar o país.
