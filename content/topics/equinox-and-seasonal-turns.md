@@ -10,7 +10,7 @@
 ## observance JP shunbun
 - local_name: 春分の日
 - date_rule: 春分日（太陽通過春分點的瞬間所在的那一天）；由國立天文台推算，前一年二月一日刊登於官報的《曆要項》才正式確定
-- rank: 1
+- rank: 3
 - source: https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
 - source: https://www.nao.ac.jp/faq/a0301.html
 - source: https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou261.html
@@ -18,28 +18,28 @@
 ## observance JP shubun
 - local_name: 秋分の日
 - date_rule: 秋分日（太陽通過秋分點的瞬間所在的那一天）；與春分的日期一樣，要等前一年二月的官報才正式確定
-- rank: 2
+- rank: 5
 - source: https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
 - source: https://www.nao.ac.jp/faq/a0301.html
 
 ## observance JP higan-spring
 - local_name: お彼岸（春彼岸）
 - date_rule: 以春分日為中日，前後各三日，合計七日
-- rank: 3
+- rank: 1
 - source: https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html
 - source: https://eco.mtk.nao.ac.jp/koyomi/yoko/2027/rekiyou272.html
 
 ## observance JP higan-autumn
 - local_name: お彼岸（秋彼岸）
 - date_rule: 以秋分日為中日，前後各三日，合計七日
-- rank: 4
+- rank: 6
 - source: https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html
 - source: https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html
 
 ## observance JP setsubun
 - local_name: 節分
 - date_rule: 立春的前一日；立春是太陽黃經達三一五度的瞬間所在的那一天
-- rank: 5
+- rank: 2
 - source: https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics2021_2.html
 - source: https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html
 - source: https://kyo-tsunagu.city.kyoto.lg.jp/gyoji/tsunagu300/12-2/setsubun/
@@ -51,7 +51,7 @@
 ## observance JP toji
 - local_name: 冬至
 - date_rule: 太陽黃經達二七○度的瞬間所在的那一天
-- rank: 6
+- rank: 4
 - source: https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou262.html
 - source: https://www.maff.go.jp/kyusyu/syokuryou/syokubunka/attach/pdf/net-35.pdf
 
@@ -122,7 +122,7 @@
 
 ## locale en
 ### title
-Equinoxes, Solstices, and Public Holidays
+Equinoxes and Solstices
 ### summary
 These are the only holidays whose date nobody chose. The sun reaches a point on the ecliptic and that is the day. What differs is how each state writes that fact into law. Japan made the spring and autumn equinoxes statutory holidays without naming a date, leaves the calculation to its national observatory, and only fixes each year's dates in an official gazette the previous February. Taiwan's holiday act dates exactly two days by solar term and never mentions the winter solstice. In China only one statutory holiday, Qingming, is dated by the sun. India's Makar Sankranti has drifted three weeks away from the solstice it once marked. The United States skipped astronomy altogether and legislated "the second Sunday of March."
 ### keywords
@@ -174,7 +174,7 @@ The United States takes no holiday for a solstice but moves its clocks twice a y
 
 ## locale ja
 ### title
-二十四節気と春分・秋分の日
+季節の変わり目
 ### summary
 日付を人が決めていない祝日は、これだけである。太陽が黄道上の一点に来た日がその日になる。違うのは、その天文の事実を国がどう法律に受け止めるかだ。日本は春分の日と秋分の日を法律に置きながら月日を書かず、計算を国立天文台に委ね、前年二月の官報で初めて確定させる。台湾の条例で節気に日付を委ねているのは清明と立春の二日だけで、冬至は一度も出てこない。中国で節気が日付を決める祝日は清明節ひとつ。インドのマカル・サンクランティは、かつて標していた至点から三週間以上ずれてしまった。アメリカは天文をやめて「三月の第二日曜日」と条文に書いた。
 ### keywords

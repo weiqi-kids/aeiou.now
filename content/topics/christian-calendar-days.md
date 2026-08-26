@@ -57,7 +57,7 @@ Corpus Christi, 基督聖體聖血節, 聖灰星期三, 耶穌升天日, 五旬�
 
 ## locale en
 ### title
-The other days of the Christian calendar
+The Christian calendar’s other days
 ### summary
 Beyond Christmas and Easter, the same Easter computus produces a whole series of days: Ash Wednesday, Good Friday, Ascension, Pentecost, Corpus Christi. How far a national calendar follows that series varies enormously. Indonesia, with the largest Muslim population in the world, makes both Good Friday and Ascension statutory national holidays and adds a collective leave day after Ascension. Brazil, the largest Catholic country, treats Corpus Christi at federal level as an optional working day, not a statutory holiday — it becomes a real holiday only where a city council has legislated one. The United States federal list of eleven holidays contains exactly one Christian day, Christmas. Pentecost appears nowhere: it always falls on a Sunday.
 ### keywords
