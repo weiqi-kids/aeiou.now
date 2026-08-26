@@ -349,6 +349,9 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
   ——其餘是沒有 observance 的 Topic,本來就沒有日期可帶,**行為與改版前完全一樣**。
   實作在 `site/src/pages/topic/[slug].astro` 的 `withLeadDate`;句末標點要自己判斷
   (拉丁語系的 `U.S.`、`Lei nº 6.791` 裡都有句點,印地文的句號是 `।`),判準寫在該函式註解。
+  **首句比讀者看得到的長度還長時要退到分句邊界**——只按句末標點插入時,CJK 有 25 頁的日期
+  落在可見範圍外(含站上最大的 0 點擊叢集),等於沒改。可見長度 = `SEO_COPY.descVisible`
+  (CJK 45 全形字、拉丁 155 字元)。改完:CJK 三站 100% 可見,拉丁四站只有 en 兩頁落在 156。
   括號是標點不是文案,七語各自定義在 `SEO_COPY.parenOpen/parenClose`。
   🔴 **這不是回到 2026-08-19 的「日期擺第一」,不要據此改回去。**
   ⚠ **title 的兩項改動**(2026-08-26 用戶核准,起因見 `docs/TODO.md` §「26 個 Topic 零曝光」):

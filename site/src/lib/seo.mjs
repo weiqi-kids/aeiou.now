@@ -66,6 +66,10 @@ export const SEO_COPY = {
     // 用途:把 lead 那一國的下一次日期塞進 description 第一句裡 —— 制度答案仍排最前面,
     // 日期跟著它一起進讀者看得到的那 150 字。緣由見 pages/topic/[slug].astro 的註解。
     parenOpen: '（', parenClose: '）',
+    // 搜尋結果實際看得到的長度(全形字/字元)。CJK 摘要大約 45 個全形字就被截斷,
+    // 拉丁語系約 155 字元。日期塞在這個位置之後 = 等於沒塞(2026-08-26 實測:
+    // 只按句末標點插入時,CJK 有 25 頁的日期落在可見範圍外)。
+    descVisible: 45,
   },
   en: {
     answers: 'Quick answers', what: 'What is this topic?', when: 'When is it?', where: 'How do places mark it?', differences: 'What differs by place?',
@@ -79,6 +83,7 @@ export const SEO_COPY = {
     colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '.', titleSep: ' | ',
     parenOpen: " (", parenClose: ')',
+    descVisible: 155,
   },
   ja: {
     answers: '要点', what: 'このテーマは何？', when: 'いつ？', where: '各地ではどう過ごす？', differences: '地域ごとに何が違う？',
@@ -92,6 +97,7 @@ export const SEO_COPY = {
     colon: '：',
     listSep: '、', itemSep: '／', endMark: '。', titleSep: '｜',
     parenOpen: '（', parenClose: '）',
+    descVisible: 45,
   },
   'zh-CN': {
     answers: '快速回答', what: '这个主题是什么？', when: '什么时候？', where: '各地怎么过？', differences: '各地有什么不同？',
@@ -105,6 +111,7 @@ export const SEO_COPY = {
     colon: '：',
     listSep: '、', itemSep: '；', endMark: '。', titleSep: '｜',
     parenOpen: '（', parenClose: '）',
+    descVisible: 45,
   },
   hi: {
     answers: 'त्वरित उत्तर', what: 'यह विषय क्या है?', when: 'यह कब होता है?', where: 'अलग जगहों पर इसे कैसे मनाते हैं?', differences: 'अलग जगहों पर क्या अलग है?',
@@ -118,6 +125,7 @@ export const SEO_COPY = {
     colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '।', titleSep: ' | ',
     parenOpen: " (", parenClose: ')',
+    descVisible: 155,
   },
   id: {
     answers: 'Jawaban singkat', what: 'Apa tema ini?', when: 'Kapan?', where: 'Bagaimana tempat berbeda menjalaninya?', differences: 'Apa yang berbeda di tiap tempat?',
@@ -131,6 +139,7 @@ export const SEO_COPY = {
     colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '.', titleSep: ' | ',
     parenOpen: " (", parenClose: ')',
+    descVisible: 155,
   },
   'pt-BR': {
     answers: 'Respostas rápidas', what: 'O que é este tema?', when: 'Quando acontece?', where: 'Como lugares diferentes o vivenciam?', differences: 'O que muda de um lugar para outro?',
@@ -144,6 +153,7 @@ export const SEO_COPY = {
     colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '.', titleSep: ' | ',
     parenOpen: " (", parenClose: ')',
+    descVisible: 155,
   },
 };
 

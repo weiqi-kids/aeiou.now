@@ -385,12 +385,24 @@ const occurrenceDateText = (entry) => {
 // 不合就往後找下一個。都找不到就接在整句最後(那時本來就是一句話)。
 const insertBeforeSentenceEnd = (sentence, insertion) => {
   // `।`(danda)是印地文的句號 —— 漏掉它,hi 站 51 頁一個都插不進去(2026-08-26 實測)。
-  const re = /[。！？।॥]|[.!?](?=\s|$)/g;
-  let m;
-  while ((m = re.exec(sentence)) !== null) {
-    if (m.index + 1 < 12) continue;
-    return `${sentence.slice(0, m.index)}${insertion}${sentence.slice(m.index)}`;
-  }
+  // 首句至少 12 字元才算數:拉丁語系的 `U.S.` 會被切成 4 字元的「首句」。
+  const firstAt = (re) => {
+    let m;
+    while ((m = re.exec(sentence)) !== null) {
+      if (m.index + 1 >= 12) return m.index;
+    }
+    return -1;
+  };
+  const splice = (i) => `${sentence.slice(0, i)}${insertion}${sentence.slice(i)}`;
+  const limit = copy.descVisible;
+  const end = firstAt(/[。！？।॥]|[.!?](?=\s|$)/g);
+  if (end >= 0 && end <= limit) return splice(end);
+  // 首句比讀者在搜尋結果看得到的長度還長 → 退到第一個**分句**邊界,否則日期塞了也看不到。
+  // 2026-08-26 實測:只按句末標點插入時,CJK 有 25 頁的日期落在可見範圍外,其中包含
+  // 站上單一最大的 0 點擊叢集(`2027印尼齋戒月時間`,41 曝光,首句長 110 字元)。
+  const clause = firstAt(/[，、；：,;:]/g);
+  if (clause >= 0 && clause <= limit) return splice(clause);
+  if (end >= 0) return splice(end);
   return `${sentence}${insertion}`;
 };
 const withLeadDate = (sentence, dateText) => {
