@@ -126,9 +126,25 @@ try {
                               content_hash, quality_score, trust_score, status, updated_at)
          VALUES (?, ?, ?, ?, ?, ?, ?, NULL, NULL, NULL, ?, ?, NULL, NULL, NULL, 'new', ?)`,
       );
+      // ⚠ next_crawl_at 也要拉回來(2026-08-26 修)。
+      // 同一個網址可能**先**被別的匯入器登記過:import-topic-occurrences.mjs 用
+      // source_type='calendar'、crawl_freq_s=31536000、next_crawl_at=now+365 天 登記日曆來源,
+      // import-topics.mjs 用 'manual' 做同樣的事 —— 那對「人工引用的佐證」是對的,
+      // 它們本來就不該被爬(兩個 type 都不在八類裡)。
+      // 但這一支的清冊匯入只改 source_type 與 crawl_freq_s,**不動 next_crawl_at**,
+      // 於是那個網址變成了八類之一、卻仍然排在一年後 → 永遠選不到。
+      // 2026-08-26 實查:event_website 15/15、official_website 136/190 就是這樣卡住的,
+      // 全部 crawled_at IS NULL,next_crawl_at 落在 2027-08。
+      // 用 MIN() 而不是直接覆寫:已經照自己節奏排好的來源不該被匯入打亂,
+      // 只把「排得比自己的週期還遠」的拉回來。
       const upd = db.prepare(
         `UPDATE sources SET source_type = ?, language = ?, country_code = ?, city_code = ?,
-                            crawl_freq_s = ?, updated_at = ?
+                            crawl_freq_s = ?,
+                            -- 從沒抓過的直接到期(它本來就欠一次);抓過的退回一個週期,
+                            -- 避免匯入變成「每次都重抓一輪」。
+                            next_crawl_at = MIN(next_crawl_at,
+                              CASE WHEN crawled_at IS NULL THEN ? ELSE ? + ? END),
+                            updated_at = ?
           WHERE source_id = ?`,
       );
       for (const s of list) {
@@ -139,7 +155,8 @@ try {
         try { host = new URL(s.url).hostname.toLowerCase(); } catch { continue; }
         const hit = find.get(s.url);
         if (hit) {
-          upd.run(s.type, s.language ?? null, s.country_code ?? null, s.city_code ?? null, freq, now, hit.source_id);
+          upd.run(s.type, s.language ?? null, s.country_code ?? null, s.city_code ?? null, freq,
+            now, now, freq, now, hit.source_id);
         } else {
           ins.run(`src_${randomUUID().replace(/-/g, "").slice(0, 26)}`, s.url, host, s.type,
             s.language ?? null, s.country_code ?? null, s.city_code ?? null, now, freq, now);
