@@ -45,7 +45,19 @@ export const SEO_COPY = {
     related: '相關主題', updated: '更新於', noDate: '目前沒有可驗證的固定日期；時間會依地區、家庭或個人選擇而不同。',
     sourceLink: '查看來源', home: '首頁', topic: '主題',
     metaSuffix: '日期、習俗與各地差異', coveragePrefix: '涵蓋', sourceMeta: '附日期與來源。',
+    // 後綴分三種,依**資料**選,不是依人工分類(2026-08-26):
+    //   compareSuffix  有 observance 的 Topic —— 有節日才談得上「哪裡放假」。
+    //   ruleSuffix     沒有 observance 且 category='civic' —— 兵役、義務教育、官方語言、
+    //                  育嬰假、政教關係、投票:讀者問的是「規定是什麼」。
+    //   practiceSuffix 其餘沒有 observance 的 Topic —— 婚俗、喪葬、成年禮、寵物、搬家。
+    // 緣由:2026-08-26 查「26 個 Topic 零曝光」,這 19 頁的 title 一律掛「N 國怎麼過、
+    // 哪裡放假」,而它們沒有任何節日、也沒有年份。同一份 GSC 資料顯示,站上唯一排得進
+    // 前 15 名的查詢型態是「專有名詞 + 年份」(33 個查詢、245 曝光、平均名次 12.3),
+    // 不含年份的 98 個查詢平均名次 63.1。對兵役頁宣告「哪裡放假」既答錯問題,也拿不到
+    // 任何它有優勢的查詢。
     compareSuffix: '{count} 國怎麼過、哪裡放假',
+    ruleSuffix: '{count} 國怎麼規定、差在哪',
+    practiceSuffix: '{count} 國怎麼做、差在哪',
     // 標點是語系的一部分:英文站不該印出「、」「。」「｜」。
     colon: '：',
     listSep: '、', itemSep: '；', endMark: '。', titleSep: '｜',
@@ -57,6 +69,8 @@ export const SEO_COPY = {
     sourceLink: 'View source', home: 'Home', topic: 'Topic',
     metaSuffix: 'Dates, customs, and local differences', coveragePrefix: 'Covers', sourceMeta: 'Includes dates and sources.',
     compareSuffix: 'How {count} countries mark it',
+    ruleSuffix: 'What {count} countries require',
+    practiceSuffix: 'How {count} countries do it',
     colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '.', titleSep: ' | ',
   },
@@ -67,6 +81,8 @@ export const SEO_COPY = {
     sourceLink: '出典を見る', home: 'ホーム', topic: 'テーマ',
     metaSuffix: '日付・習慣・地域差', coveragePrefix: '対象地域', sourceMeta: '日付と出典を掲載。',
     compareSuffix: '{count}か国の過ごし方と祝日の有無',
+    ruleSuffix: '{count}か国の制度と違い',
+    practiceSuffix: '{count}か国のやり方と違い',
     colon: '：',
     listSep: '、', itemSep: '／', endMark: '。', titleSep: '｜',
   },
@@ -77,6 +93,8 @@ export const SEO_COPY = {
     sourceLink: '查看来源', home: '首页', topic: '主题',
     metaSuffix: '日期、习俗与地区差异', coveragePrefix: '涵盖', sourceMeta: '附有日期和来源。',
     compareSuffix: '{count} 国怎么过、哪里放假',
+    ruleSuffix: '{count} 国怎么规定、差在哪',
+    practiceSuffix: '{count} 国怎么做、差在哪',
     colon: '：',
     listSep: '、', itemSep: '；', endMark: '。', titleSep: '｜',
   },
@@ -87,6 +105,8 @@ export const SEO_COPY = {
     sourceLink: 'स्रोत देखें', home: 'होम', topic: 'विषय',
     metaSuffix: 'तारीख़, रीति और स्थानीय अंतर', coveragePrefix: 'क्षेत्र', sourceMeta: 'तारीख़ों और स्रोतों सहित।',
     compareSuffix: '{count} देशों में इसे कैसे मनाया जाता है',
+    ruleSuffix: '{count} देशों के नियम और अंतर',
+    practiceSuffix: '{count} देशों में यह कैसे होता है',
     colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '।', titleSep: ' | ',
   },
@@ -97,6 +117,8 @@ export const SEO_COPY = {
     sourceLink: 'Lihat sumber', home: 'Beranda', topic: 'topik',
     metaSuffix: 'Tanggal, kebiasaan, dan perbedaan setempat', coveragePrefix: 'Mencakup', sourceMeta: 'Dilengkapi tanggal dan sumber.',
     compareSuffix: 'Bagaimana {count} negara menjalaninya',
+    ruleSuffix: 'Aturan di {count} negara dan bedanya',
+    practiceSuffix: 'Bagaimana {count} negara melakukannya',
     colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '.', titleSep: ' | ',
   },
@@ -107,6 +129,8 @@ export const SEO_COPY = {
     sourceLink: 'Ver fonte', home: 'Início', topic: 'tema',
     metaSuffix: 'Datas, costumes e diferenças locais', coveragePrefix: 'Abrange', sourceMeta: 'Com datas e fontes.',
     compareSuffix: 'Como {count} países vivenciam',
+    ruleSuffix: 'O que {count} países exigem',
+    practiceSuffix: 'Como {count} países fazem',
     colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '.', titleSep: ' | ',
   },

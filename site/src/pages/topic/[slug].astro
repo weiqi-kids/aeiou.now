@@ -164,6 +164,9 @@ const countryQuestion = (countryCode, isAbsence = false) => fillTemplate(
   t(isAbsence ? 'topic.q_country_has' : 'topic.q_how_country'),
   { country: countryName(countryCode), topic: title },
 );
+// 本站市場的那一國。宣告放在這裡(而不是 metaCoverage 旁邊)是因為 h3 的當地叫法規則
+// 與 description 的排序規則都用它,兩處都在下面。
+const HOME_COUNTRY = MARKET_COUNTRY[LOCALE] || null;
 // 同一國在同一個 Topic 底下有兩筆(日本的バレンタインデー與ホワイトデー、印尼的
 // Ramadan 與 Idulfitri)時,光靠問句兩個 h3 會一字不差 —— check-rendered-depth 的 D3
 // (同一頁不得有重複長段落)會擋,而它擋得對:讀者也分不出那兩段在講什麼。
@@ -174,8 +177,12 @@ const observanceCountBy = observances.reduce((acc, observance) => {
   acc[observance.country_code] = (acc[observance.country_code] || 0) + 1;
   return acc;
 }, {});
-const needsLocalName = (observance) => observanceCountBy[observance.country_code] > 1
-  && Boolean(observance.local_name);
+// 本市場那一國**一律**把當地叫法帶進 h3(2026-08-26):那正是本站讀者會打的字,
+// 而它原本只活在內文(中元節 12 次、農民節 16 次、學測 24 次,h1–h3 皆 0)。
+// 其餘國家維持原規則(同一國有兩筆才帶,用來分辨),理由見下方註解 ——
+// 外國的當地叫法對本站讀者是看不懂的字,不無條件塞進標題層。
+const needsLocalName = (observance) => Boolean(observance.local_name)
+  && (observance.country_code === HOME_COUNTRY || observanceCountBy[observance.country_code] > 1);
 const observanceHeading = (observance) => (needsLocalName(observance)
   ? `${countryQuestion(observance.country_code)} · ${observance.local_name}`
   : countryQuestion(observance.country_code));
@@ -199,7 +206,6 @@ const whatAnswer = plainText(loc.summary || facts?.commonality || copy.noDate);
 // 2026-08-20 實測:id 站的 affection-and-reciprocity 摘要開頭是「印度、中國」,
 // 印尼自己沒進前兩筆;而落在那一頁的查詢正是 `kapan hari valentine 2027`。
 // 讀者問的是自己國家,搜尋結果卻先給他別人的日期。排序不是文案,是資訊架構。
-const HOME_COUNTRY = MARKET_COUNTRY[LOCALE] || null;
 const homeFirst = (list) => [
   ...list.filter((x) => x.country_code === HOME_COUNTRY),
   ...list.filter((x) => x.country_code !== HOME_COUNTRY),
@@ -241,13 +247,80 @@ const nextStart = countries
   .filter(Boolean)
   .sort()[0] || null;
 const titleYear = nextStart ? nextStart.slice(0, 4) : null;
-// 沒有任何國家資料的 Topic(長青的 ask-the-world 等)沒有「N 國」可講,退回原本的後綴。
+
+// <title> 開頭放**本市場那一國的當地叫法**(2026-08-26)。
+//
+// 2026-08-26 查「26 個 Topic 連曝光都沒有」:26 個全部 `Submitted and indexed`、
+// robots ALLOWED、sitemap 也齊(43/43),所以不是收錄問題,是收錄了卻從沒排進任何人
+// 看得到的位置。把全站 180 列 GSC 查詢按「有沒有年份」切開:
+//   含年份   33 個查詢、245 曝光、曝光加權平均名次 **12.3**
+//   不含年份 98 個查詢、134 曝光、平均名次 **63.1**
+// 站上唯一贏得了的查詢型態是「專有名詞 + 年份」。而這幾頁的 Topic 名是自創的上位詞,
+// 專有名詞只活在內文:鬼節、祭祖與追思頁的「中元節」內文出現 12 次、title 0 次、h1–h3 0 次;
+// 收成與感恩的「農民節」16 次同樣進不了標題層;大考季的「學測」24 次亦然。
+// 中元節就是隔天(08-27),那一頁在旺季當中仍然 0 曝光 —— 不是季節問題,是名字問題。
+//
+// 只取**本市場那一國**的 local_name:它按定義就是本站語系的說法,不會重演
+// 「Japão: como vivenciam バレンタインデー?」那種讀者看不懂的字進標題(見上方 countryQuestion
+// 的註解)。外國的當地叫法對本站讀者沒有搜尋價值 —— 台灣人搜的是「印尼齋戒月」不是「Ramadan」。
+// Topic 名照樣留在 title 裡(只是退到第二段)、h1 與麵包屑完全不動。
+// 本市場沒有 observance 的 Topic(zh-TW 站的 islamic-calendar-days 等)行為與過去一模一樣。
+// 取材要用 **observances**(全部)而不是 countries(每國只留一筆):元宵節頁的台灣有四筆
+// (元宵節（上元節）、鹽水蜂炮、平溪天燈節、臺東炮炸寒單爺),countries 只留下 popularity_rank
+// 第一的「鹽水蜂炮」—— 用它去比對就看不到「元宵節」三個字本來就在 Topic 名裡,
+// 於是拿一個地方活動蓋掉節日本名。判斷「講過了沒」必須看得到同一國的全部叫法。
+const homeLocalNamesAll = [...new Set(observances
+  .filter((observance) => observance.country_code === HOME_COUNTRY && observance.local_name)
+  .sort((a, b) => (a.popularity_rank ?? 99) - (b.popularity_rank ?? 99))
+  .map((observance) => String(observance.local_name).trim()))];
+// 比對要逐「段」做,不能拿整串比。local_name 的實際長相是複合的:
+// 「元宵節（上元節）」「學科能力測驗（學測）」「農曆七月／中元普渡」「開齋節（非法定假日）」
+// 「Réveillon / Ano-Novo」「Holiday / year-end bonus」「五月一日（非祝日）／ゴールデンウィーク」
+// —— 括號裡有時是別名、有時是狀態註記,斜線兩邊則常常是兩個都成立的叫法。
+// 整串比對會因為多了括號就誤判成「Topic 名沒提過這個字」。
+const nameSegments = (name) => name
+  .split(/[／/｜|(（)）]/)
+  .map((part) => part.trim().toLowerCase())
+  .filter((part) => part.length > 1);
+// **Topic 名只要已經提到本市場任一個當地叫法(或反過來被它包住),就完全不前置。**
+// 這一條擋掉三種實測誤傷(2026-08-26 逐語系看過七份 build):
+//   ① 元宵節頁的 popularity_rank 第一名是「鹽水蜂炮」—— 不設這條會變成
+//      「鹽水蜂炮｜元宵節 2027」,拿一個地方活動蓋掉節日本名。
+//   ② 聖誕節頁的台灣 local_name 是「行憲紀念日（同日為聖誕節）」,括號裡已經是 Topic 名。
+//   ③ 年終獎金頁的美國 local_name 是「Holiday / year-end bonus」,斜線後半就是 Topic 名本身,
+//      前置等於把同一個詞講兩次,還把一個不是專有名詞的字擺到最前面。
+const titleLower = title.toLowerCase();
+const titleAlreadyNamesIt = homeLocalNamesAll.some((name) => nameSegments(name)
+  .some((seg) => titleLower.includes(seg) || seg.includes(titleLower)));
+// 近義的第二筆不再列一次:日本的年終獎金有「冬のボーナス(期末手当)」與
+// 「夏のボーナス(期末手当)」兩筆,只差冬/夏,兩個一起前置只是把標題撐長。
+// 判準是「有沒有共用同一段」——共用就當成同一個叫法的變體。
+const distinctNames = [];
+for (const name of homeLocalNamesAll) {
+  const segs = nameSegments(name);
+  if (distinctNames.some((kept) => nameSegments(kept).some((seg) => segs.includes(seg)))) continue;
+  distinctNames.push(name);
+  if (distinctNames.length >= 2) break;
+}
+const homeLocalNames = titleAlreadyNamesIt ? [] : distinctNames;
+const searchTitle = homeLocalNames.length > 0
+  ? `${homeLocalNames.join(copy.listSep)}${copy.titleSep}${title}`
+  : title;
+
+// 後綴依**資料**選,不是依人工分類(2026-08-26,字串與立法理由見 lib/seo.mjs)。
+// 「哪裡放假」只有在這個 Topic 真的有節日時才成立;沒有任何 observance 的 19 個 Topic
+// (兵役、義務教育、官方語言、婚俗、喪葬、寵物…)掛著它,是對 Google 宣告了一個
+// 這頁答不出來、也沒人這樣問的主題。
+// 沒有任何國家資料的 Topic 連「N 國」都沒有,退回原本的後綴。
+const suffixTemplate = countries.length > 0
+  ? copy.compareSuffix
+  : (facts?.category === 'civic' ? copy.ruleSuffix : copy.practiceSuffix);
 const titleSuffix = worldCountries.length > 0
-  ? fillTemplate(copy.compareSuffix, { count: worldCountries.length })
+  ? fillTemplate(suffixTemplate, { count: worldCountries.length })
   : copy.metaSuffix;
 const pageTitle = titleYear
-  ? `${title} ${titleYear}${copy.titleSep}${titleSuffix}${copy.titleSep}${SITE_NAME}`
-  : `${title}${copy.titleSep}${titleSuffix}${copy.titleSep}${SITE_NAME}`;
+  ? `${searchTitle} ${titleYear}${copy.titleSep}${titleSuffix}${copy.titleSep}${SITE_NAME}`
+  : `${searchTitle}${copy.titleSep}${titleSuffix}${copy.titleSep}${SITE_NAME}`;
 
 // description 的第一句是**這個站的讀者搜這個 Topic 時、問的那一國**的制度答案。
 //

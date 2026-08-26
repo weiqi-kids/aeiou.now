@@ -845,3 +845,86 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
 - Safari ITP 擋第三方 cookie → anon_id 不穩定(驗證一律用 Chromium)
 - cn 市場:GA4 被牆(瀏覽數低估)、OAuth 三家皆不通
 - 熱度級距門檻是暫定值(`site/src/lib/heat.mjs` 檔頭),真實 HotScore 上線後要重新校準
+
+## 26 個 Topic 零曝光(2026-08-26 查證;title 兩項已改,其餘列為缺口)
+
+起因:用戶問「為什麼 26 個 Topic 連曝光都沒有」。43 個 active Topic 裡只有 17 個
+在 `topic_search_metrics` 有任何曝光。
+
+**先排除的三件事(都實測,不是推論)**
+
+| 檢查 | 做法 | 結果 |
+|---|---|---|
+| 收錄狀態 | GSC URL Inspection 逐一查 26 個 | 26/26 `Submitted and indexed`、robots `ALLOWED`、fetch `SUCCESSFUL` |
+| sitemap | `curl sitemap.xml` 比對 active slug | 43/43 都在;`<loc>` 與 `<lastmod>` 數相等 |
+| 累積管線 | `jobs` 表查 `gsc-topic-metrics` | 08-23/24/25 皆 success;資料只到 08-22 是 GSC 自己的 3 天延遲 |
+
+⚠ **`lastCrawlTime` 不能拿來推「第一次被爬是什麼時候」** —— 它是最後一次。
+對照組(17 個有曝光的)裡 `womens-day`、`moving-home` 的 lastCrawl 也在 08-25。
+要判「這頁存在多久」用 `topics.created_at`,不要用 lastCrawlTime。
+
+**真正的原因:站上只贏得了一種查詢型態**
+
+`gsc_query_metrics` 全部 180 列按「查詢裡有沒有年份」切開:
+
+| 型態 | 查詢數 | 曝光 | 曝光加權平均名次 |
+|---|---|---|---|
+| 含年份(`2026年祖父母節是哪一天`、`dia da mulher 2027`) | 33 | 245 | **12.3** |
+| 不含年份(`劳动节`、`diwali とは`、`labor day date`) | 98 | 134 | **63.1** |
+
+頭部大詞的實測名次是 60 幾名。能進前 15 的只有「專有名詞 + 年份」這種低競爭長尾。
+26 個零曝光頁各自因為不同理由打不到它:
+
+1. **19 頁沒有任何 observance** → title 生不出年份,後綴還掛著「N 國怎麼過、哪裡放假」
+   (兵役、義務教育、官方語言、婚俗、喪葬、寵物…)。**已改**:後綴依資料三選一。
+2. **5 頁有節日但 title 用自創上位詞**。專有名詞只活在內文:
+   `中元節` 內文 12 次 / title 0 / h1–h3 0;`農民節` 16 / 0 / 0;`學測` 24 / 0 / 0;
+   `春運` 6 / 0 / 0(連 description 都沒有)。中元節就是隔天(08-27),那頁旺季中仍 0 曝光
+   —— 不是季節問題。**已改**:title 前置本市場當地叫法,🌎 的 h3 一律帶當地叫法。
+3. **5 頁名稱對但撞頭部大詞 + 淡季**(聖誕節、春節、元宵節、端午節、中秋)。**未解**,
+   這一類要贏得靠長尾角度,不是靠改標題。
+4. 9 頁建立於 08-21~08-23,而資料窗只到 08-22。**這是附註不是主因**:
+   `elders-day` 建於 08-21 16:01,08-22 單日就拿到 105 曝光、名次 10.6;
+   `year-end-bonus` 晚它 21 分鐘建立,0 曝光。年齡不是免死金牌。
+
+**這一輪改了什麼**(`site/src/lib/seo.mjs` + `site/src/pages/topic/[slug].astro`)
+
+- `compareSuffix` / `ruleSuffix` / `practiceSuffix` 三選一,判準取自
+  `countries.length` 與 `facts.category`,七語系字串齊。
+- title 開頭前置本市場那一國的 `local_name`(Topic 名退第二段,h1/麵包屑不動)。
+  只取本市場那一國;Topic 名已經提到任一個當地叫法就完全不前置。
+- 🌎 的 h3:本市場那一國一律帶當地叫法(其餘國家維持「同一國有兩筆才帶」)。
+
+實作時踩到的四個坑(規則就是為了擋它們才長成現在這樣,不要簡化掉):
+
+| 誤傷 | 現象 | 擋法 |
+|---|---|---|
+| 拿地方活動蓋掉節日本名 | 元宵節頁變成「鹽水蜂炮｜元宵節 2027」 | 判斷「講過了沒」要看**同一國全部** observance,不能用每國只留一筆的 `countries` |
+| 括號裡就是 Topic 名 | 聖誕節頁前置「行憲紀念日（同日為聖誕節）」 | 逐「段」比對(拆 `／/｜|（）()`),不拿整串比 |
+| 斜線後半就是 Topic 名 | 年終獎金頁前置「Holiday / year-end bonus」 | 同上,逐段雙向包含 |
+| 近義的第二筆重複 | 「冬のボーナス(期末手当)、夏のボーナス(期末手当)」 | 共用同一段就視為同一叫法的變體,只留一個 |
+
+**同一輪查出、還沒解的缺口**
+
+- 🔴 **制度型 Topic 的 h3 問句是壞的**:`topic.q_how_country` 是「{country}怎麼過{topic}？」,
+  套到沒有節日的 Topic 就變成「巴西怎麼過兵役:被叫去的、只要登記的、和寫在憲法裡沒人叫的？」。
+  這跟剛修掉的「哪裡放假」是同一種病,只是在 h3 那一層。要修需要新增一組問句字串
+  (制度型用「X 國的兵役怎麼規定？」),七語系各一份 —— 屬文案,等用戶拍板。
+- **在地資料是種子量**:`places` 20 筆(每市場 3 筆)、`events` 8 筆(每市場 1 筆),
+  43 個 active Topic 裡只有 8 個掛得到 place、6 個掛得到 event。導覽有「附近訊息」
+  「活動資訊」兩個入口,點進去幾乎是空的。查:
+  `sqlite3 db/aeiou.sqlite "SELECT city_code,COUNT(*) FROM places GROUP BY city_code"`。
+- **活動即將見底**:未來場次只剩個位數,taipei 下一場是 08-29。
+- **題庫見底日**:`SELECT kind,COUNT(*),MAX(qdate) FROM questions GROUP BY kind`。
+- **UGC 幾乎是空的**:posts 15、comments 0。討論串是這個產品存在的理由。
+- **local_name 欄位混進了狀態與字體錯置**(4 筆,查法見下),它們現在會被前置到 title:
+  - `ghosts-ancestors-and-remembrance/CN` 寫「中元節」(繁體)出現在簡體站
+  - `eid-al-adha/TW`「宰牲節／古爾邦節（非法定假日）」、`ramadan-and-eid/TW`
+    「開齋節（非法定假日）」、`labour-day/JP`「五月一日（非祝日）／ゴールデンウィーク」
+    —— 名字欄裡寫了「是不是假日」,那是 `date_status` 的事。
+- **`popularity_rank` 排錯**:ja 的 `ghosts-ancestors-and-remembrance` 讓「節分」排在
+  「お盆」前面,於是 title 前置的是節分。
+- **來源仍偏英文版路徑**:`check-content-depth.mjs` 有 9 筆 WARN,其中 7 筆 IN 全部指向
+  同一個 `incredibleindia.gov.in/en/...` 頁。
+- **trend 與 event_website 來源從沒抓過**:`source-refresh.mjs --report` 顯示
+  trend 303 筆「抓過 0」、event_website 15 筆「抓過 0」。

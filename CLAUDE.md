@@ -327,7 +327,7 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
   查法:`for p in / /topics/today/ /questions/ /about/; do curl -s "https://aeiou.now$p" \
   | grep -o '<meta name="description" content="[^"]*"'; done` — 出現「只有幾個字」的就是漏網。
 - **Topic 頁對外宣告的主題 = 站上唯一有優勢的內容,不是通用查詢**(2026-08-21 用戶拍板)——
-  title 後綴用「N 國怎麼過、哪裡放假」(`SEO_COPY.compareSuffix`),description **第一句是本市場
+  title 後綴依**資料**三選一(2026-08-26 起,見下方 ⚠),description **第一句是本市場
   那一國的制度答案**(不是日期),🌎 底下每一國的 h3 是問句(`topic.q_how_country` /
   `topic.q_country_has`)。緣由:同一份 GSC 資料按意圖分兩類後,日期/名稱型排 32.7 名、
   跨國/制度型排 67.6 名,兩類點擊都是 0;日期型在名次 4–9 累積 41 次曝光仍 0 點擊
@@ -339,6 +339,19 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
   只抓顯式多國詞、**抓不到「節日＋國名」**的二分類器,而「本市場的人問外國的事」才是
   站上真正排得上去的查詢。改成四分類重算後,「國家×節日」是全站名次最好的一類。
   分類器已修進 `scripts/seo-health.mjs` ③ 層,現況一律跑它,**不要改回二分類**。
+  ⚠ **title 的兩項改動**(2026-08-26 用戶核准,起因見 `docs/TODO.md` §「26 個 Topic 零曝光」):
+  ① **後綴不再一律是「N 國怎麼過、哪裡放假」**——有 observance 才用 `compareSuffix`;
+  沒有 observance 且 `category='civic'` 用 `ruleSuffix`(「N 國怎麼規定、差在哪」),
+  其餘沒有 observance 的用 `practiceSuffix`(「N 國怎麼做、差在哪」)。沒有節日的 Topic
+  (兵役、義務教育、官方語言、婚俗、喪葬、寵物…)掛「哪裡放假」是對 Google 宣告一個
+  這頁答不出來的主題。判準取自資料(`countries.length` 與 `facts.category`),不是人工清單。
+  ② **title 開頭前置本市場那一國的 `local_name`**,Topic 名退到第二段(h1/麵包屑不動)。
+  只取本市場那一國 —— 它按定義是本站語系的說法;外國叫法對本站讀者沒有搜尋價值,而且
+  會重演「Japão: como vivenciam バレンタインデー?」。Topic 名已經提到任一個當地叫法就完全不前置。
+  同一組資料也進了 🌎 的 h3(本市場那一國一律帶當地叫法)。
+  查法:`for L in zh-TW en ja zh-CN hi id pt-BR; do (cd site && LOCALE=$L pnpm build >/dev/null) \
+  && grep -o '<title>[^<]*' site/dist/topic/harvest-and-gratitude/index.html; done` —— 七語各自的
+  當地叫法應排在最前面(zh-TW 農民節、ja 勤労感謝の日、pt-BR Festas Juninas)。
   ⚠ **「description 第一句 = 本市場那一國」已改成「= 需求主題國」**(2026-08-25 用戶核准)——
   `seo-health.mjs` 的「摘要答對國家了嗎」那一層顯示,排進前 15 名的帶國名查詢**全部**是
   「本市場的人問外國的事」且 0 點擊,問本國的一個都沒進前 15;那條規則正好答錯了每一個
