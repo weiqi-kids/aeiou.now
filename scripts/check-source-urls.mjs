@@ -1,164 +1,141 @@
 #!/usr/bin/env node
-// ═══════════════════════════════════════════════════════════════════════════
-// gate：頁面上印出來的來源連結還活著嗎。
-// ═══════════════════════════════════════════════════════════════════════════
+// check-source-urls.mjs — 驗 Topic 來源連結是不是還活著、而且還在講那件事
 //
-// 立法緣由（2026-08-19）：內容厚度診斷順手驗了一次 data/ 裡的全部來源網址，
-// 當場抓到兩個 404 —— 而它們已經在線上頁面的「來源與日期」區塊印了好幾天：
-//   ・comunicacao.pr.gov.br/noticias/aen/185ca999…（christmas / new-year 等多個 Topic 的 BR 來源）
-//   ・prefeitura.sp.gov.br/…dia-das-criancas…（childrens-day 的 BR 來源）
-// 本站的內容承諾是「每條文化事實都能點回原始來源」。指向 404 的來源比沒有來源更糟：
-// 它讓讀者與 Google 都以為有佐證。
+// 為什麼存在(2026-08-26):docs/03-topic-content.md 與 CLAUDE.md 兩處都叫人跑這一支,
+// 但檔案一直不存在(文件漂移)。而它守的是一條真紅線:
 //
-// ── 狀態碼怎麼判（這段是重點，別簡化成「非 200 就紅」）──────────────────
-//   404 / 410           → ERROR。頁面真的不在了。**判死前一定複驗一次**:同一個網址
-//                         從不同網路可能拿到不同狀態碼(2026-08-20 實測 bndigital.bn.gov.br
-//                         本機 403、GitHub Actions 404),單次判死會讓 CI 間歇性紅燈。
-//   403 / 412 / 429     → WARN。是**對方擋機器人**，不是連結死掉。
-//                         實測會落在這裡的：britannica.com、oecd.org、timeanddate.com、
-//                         defense.gov、justica.pr.gov.br、nhc.gov.cn。
-//                         把這些判成錯誤，等於因為別人的 WAF 而擋自己的部署。
-//   5xx / 連線失敗       → WARN。對方暫時掛掉或網路抖動，不該變成我們的紅燈。
-//   2xx / 3xx           → OK……除非**跟完 redirect 落在錯誤頁**（見下）。
-//   2xx 但最終網址是錯誤頁 → ERROR。2026-08-20 抓到:www.tad.gov.tw（觀光局舊網域）
-//                         的十個來源全部 302 到 eng.taiwan.net.tw/ErrorPage.html，
-//                         HTTP 狀態是 200。只看狀態碼會判成「活著」,實際上讀者點過去
-//                         看到的是錯誤頁 —— 比 404 更難發現,因為它連紅燈都不亮。
+//   **驗來源不能只看狀態碼** —— 要看跟完 redirect 之後落在哪裡,而且判死前要複驗。
+//   兩個踩過的坑(2026-08-20):
+//     www.tad.gov.tw       整批 302 到 ErrorPage.html 卻回 200
+//     bndigital.bn.gov.br  從主機回 403、從 GitHub Actions 回 404
+//   再加一個(2026-08-26):
+//     www.gov.br/defesa 的新聞頁回 200,但跟完 redirect 落在 acl_users/.../require_login
 //
-// ── 為什麼不掛進 hourly-export ─────────────────────────────────────────────
-// 🔴 刻意不進每小時管線：那會把「別人的網站有沒有掛」綁進本站的發佈路徑，
-//    一次網路抖動就停掉資料匯出（folk.tw check-source-refs ④ 的同一條教訓）。
-//    這支跑在 CI 與人工檢查，紅了就修來源，不影響當下的內容上線。
+// 所以本支的判準**不是狀態碼**,而是三層:
+//   ① 落點      跟完 redirect 後的最終網址是不是還在原網域、有沒有掉進登入頁/錯誤頁
+//   ② 內容      抓得到的正文長度(HTML 去標籤 / PDF 用 pdftotext)是不是還像一篇東西
+//   ③ 複驗      4xx/5xx/連不上時,**再打該網域的根目錄**:
+//                 根目錄通 → 判「這一頁真的沒了」(DEAD)
+//                 根目錄也不通 → 判「本主機被擋」(BLOCKED,不是來源的錯,exit code 不算它)
 //
-// 用法：
-//   node scripts/check-source-urls.mjs              全部驗；只有 404/410 會 exit 1
-//   node scripts/check-source-urls.mjs --warn-only   永遠 exit 0（只看報表）
-//   node scripts/check-source-urls.mjs --timeout 30  逐一請求的秒數上限（預設 25）
-
-import { readFileSync, readdirSync, existsSync } from 'node:fs';
+// 401/403 一律當「不准抓」:不換 UA、不重試、不繞路(草案 §12 爬蟲守則)。
+//
+// 用法:
+//   node scripts/check-source-urls.mjs                 全部(來自 db 的 sources 表)
+//   node scripts/check-source-urls.mjs --topic <slug>  只驗某個 Topic 的來源
+//   node scripts/check-source-urls.mjs --url <url>     驗單一網址
+//   node scripts/check-source-urls.mjs --json <path>   另外輸出 JSON 報告
+//   選項:--concurrency <n>(預設 6)  --timeout <秒>(預設 25)
+//
+// exit 1 = 有 DEAD(內容真的沒了);BLOCKED 與 THIN 只警告不擋,因為那不是來源的錯。
+import { DatabaseSync } from 'node:sqlite';
+import { execFileSync } from 'node:child_process';
+import { writeFileSync, mkdtempSync, mkdirSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const args = process.argv.slice(2);
-const warnOnly = args.includes('--warn-only');
-const timeoutMs = (Number(args[args.indexOf('--timeout') + 1]) || 25) * 1000;
-const CONCURRENCY = 8;
-const UA = 'Mozilla/5.0 (compatible; aeiou-source-check; +https://aeiou.now/about/)';
+const DB_PATH = join(ROOT, 'db', 'aeiou.sqlite');
+const UA = 'Mozilla/5.0 (compatible; aeiou-now/1.0; +https://aeiou.now)';
+const arg = (n, d = null) => { const i = process.argv.indexOf(`--${n}`); return i > -1 && process.argv[i + 1] ? process.argv[i + 1] : d; };
+const TIMEOUT = Number(arg('timeout', 25));
+const CONC = Number(arg('concurrency', 6));
+// 落在這些路徑片段 = 掉進登入頁/錯誤頁,即使回 200 也不算活著
+const TRAP = [/require_login/i, /\/login/i, /errorpage/i, /\/error\b/i, /accessdenied/i, /session[_-]?expired/i];
+const MIN_TEXT = 400;   // 正文少於這個字元數 = 疑似殼頁
 
-// ── 收集所有會印在頁面上的來源網址 ───────────────────────────────────────
-const topicsDir = join(ROOT, 'data', 'topics');
-if (!existsSync(topicsDir)) { console.error('✗ 缺 data/topics/——先跑 export-data.mjs'); process.exit(1); }
-
-const usedBy = new Map();  // url → Set<'slug/位置'>
-const note = (url, where) => {
-  if (typeof url !== 'string' || !/^https?:\/\//i.test(url)) return;
-  if (!usedBy.has(url)) usedBy.set(url, new Set());
-  usedBy.get(url).add(where);
+// os.tmpdir() 不一定存在(某些沙箱沒有 /tmp),失敗就退到 repo 內的暫存目錄。
+// 這不是小事:寫檔失敗時 curl 會非零離開,整批會被誤判成「連不上」(2026-08-26 踩過)。
+const mkWork = () => {
+  for (const base of [process.env.TMPDIR, tmpdir(), join(ROOT, '.tmp')]) {
+    if (!base) continue;
+    try { mkdirSync(base, { recursive: true }); return mkdtempSync(join(base, 'aeiou-srcchk-')); }
+    catch { /* 換下一個 */ }
+  }
+  throw new Error('找不到可寫的暫存目錄');
+};
+const work = mkWork();
+const curl = (url, out) => {
+  try {
+    const r = execFileSync('curl', ['-sL', '--max-time', String(TIMEOUT), '-A', UA,
+      '-o', out, '-w', '%{http_code}\t%{url_effective}\t%{content_type}', url], { encoding: 'utf8' });
+    const [code, eff, ctype] = r.split('\t');
+    return { code: Number(code), eff, ctype: ctype || '' };
+  } catch (e) {
+    // curl 非零離開:連不上、逾時、或**寫檔失敗**。後者是環境問題不是來源問題,要看得出來。
+    return { code: 0, eff: url, ctype: '', err: String(e.stderr || e.message || e).trim().slice(0, 200) };
+  }
+};
+const bodyText = (file, ctype) => {
+  try {
+    if (/pdf/i.test(ctype) || file.endsWith('.pdf')) {
+      try { return execFileSync('pdftotext', ['-layout', file, '-'], { encoding: 'utf8', maxBuffer: 32e6 }); }
+      catch { return ''; }
+    }
+    const raw = execFileSync('cat', [file], { encoding: 'utf8', maxBuffer: 32e6 });
+    return raw.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ')
+      .replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim();
+  } catch { return ''; }
 };
 
-for (const entry of readdirSync(topicsDir)) {
-  if (!entry.startsWith('top_')) continue;
-  const factsPath = join(topicsDir, entry, 'facts.json');
-  if (!existsSync(factsPath)) continue;
-  const f = JSON.parse(readFileSync(factsPath, 'utf8'));
-  if (f.status !== 'active' || String(f.slug || '').startsWith('trend-')) continue;
-  for (const u of f.source_urls || []) note(u, `${f.slug}（Topic 層）`);
-  for (const o of f.observances || []) for (const u of o.source_urls || []) note(u, `${f.slug}/${o.country_code}`);
-  for (const n of f.regional_notes || []) for (const u of n.source_urls || []) note(u, `${f.slug}/${n.country_code}`);
-}
-
-// ── 在地資料來源（2026-08-21 加）──────────────────────────────────────────
-// 為什麼要一起收：hourly-export 的 update-local-data.mjs 會驗這批，但它跑在**主機**上，
-// 而主機會被某些網站的 WAF 擋（2026-08-21 實測 www.jakarta.go.id 從主機連根目錄都 403/000，
-// 從別的網路卻正常）。那支已經改成「被擋就只 WARN 不擋輸出」——代價是那一輪等於沒驗。
-// 這支跑在 GitHub Actions，是現成的**第二個網路出口**：主機驗不到的，由這裡補驗。
-// 兩邊判準不同也是刻意的：主機那邊要決定「要不要擋住本站發佈」，這邊只要回答
-// 「這個連結到底還活著嗎」。
-const localSourcesPath = join(ROOT, 'content', 'local-data-sources.json');
-if (existsSync(localSourcesPath)) {
-  const local = JSON.parse(readFileSync(localSourcesPath, 'utf8'));
-  for (const source of local.sources || []) {
-    note(source.url, `在地/${source.market || '?'}/${source.kind || '?'}`);
+async function check(url, i) {
+  const out = join(work, `p${i}${/\.pdf(\?|$)/i.test(url) ? '.pdf' : ''}`);
+  const { code, eff, ctype } = curl(url, out);
+  const trapped = TRAP.some((re) => re.test(eff));
+  if (code >= 200 && code < 300 && !trapped) {
+    const text = bodyText(out, ctype);
+    return text.length < MIN_TEXT
+      ? { url, verdict: 'THIN', code, eff, chars: text.length }
+      : { url, verdict: 'OK', code, eff, chars: text.length };
   }
+  // ── 複驗:打網域根目錄,分辨「這一頁沒了」與「本主機被擋」 ──
+  let root = '';
+  try { root = new URL(eff || url).origin; } catch { root = ''; }
+  const rootRes = root ? curl(root, join(work, `r${i}`)) : { code: 0 };
+  const rootAlive = rootRes.code >= 200 && rootRes.code < 400;
+  const why = trapped ? `落在陷阱頁 ${eff}` : `HTTP ${code || '連不上'}`;
+  return rootAlive
+    ? { url, verdict: 'DEAD', code, eff, why: `${why}(根目錄 ${rootRes.code} 通 → 內容真的沒了)` }
+    : { url, verdict: 'BLOCKED', code, eff, why: `${why}(根目錄也不通 → 本主機被擋,不是來源失效)` };
 }
 
-const urls = [...usedBy.keys()].sort();
-if (urls.length === 0) { console.error('✗ 一個來源都沒收到——收集邏輯可能壞了'); process.exit(1); }
-
-// ── 逐一請求（先 HEAD，被拒再 GET；很多政府站不支援 HEAD） ──────────────
-async function probe(url) {
-  for (const method of ['HEAD', 'GET']) {
-    const ac = new AbortController();
-    const timer = setTimeout(() => ac.abort(), timeoutMs);
-    try {
-      const res = await fetch(url, { method, redirect: 'follow', signal: ac.signal, headers: { 'User-Agent': UA } });
-      clearTimeout(timer);
-      // HEAD 回 404/410 也要用 GET 複核 —— 不少站(實測:tangerangkota.go.id、
-      // referensi.data.kemendikdasmen.go.id)對 HEAD 回 404、對 GET 回 200。
-      // 只信 HEAD 會把活著的頁面判死。405/501 是明講「不支援 HEAD」,同樣往下走。
-      if (method === 'HEAD' && [404, 405, 410, 501].includes(res.status)) continue;
-      return { status: res.status, finalUrl: res.url || url };
-    } catch (e) {
-      clearTimeout(timer);
-      if (method === 'GET') return { status: 0, error: e.name === 'AbortError' ? 'timeout' : e.message };
-    }
-  }
-  return { status: 0, error: 'unreachable' };
+// ── 取要驗的網址 ──────────────────────────────────────────────────────────
+let urls = [];
+const one = arg('url');
+const topic = arg('topic');
+if (one) urls = [one];
+else {
+  const db = new DatabaseSync(DB_PATH, { readOnly: true });
+  urls = topic
+    ? db.prepare(`SELECT DISTINCT s.url FROM sources s
+         JOIN topic_observances o ON instr(o.source_ids_json, s.source_id) > 0
+         JOIN topics t ON t.topic_id = o.topic_id
+         WHERE t.slug = ? ORDER BY s.url`).all(topic).map((r) => r.url)
+    : db.prepare("SELECT url FROM sources WHERE status != 'ignored' ORDER BY url").all().map((r) => r.url);
+  db.close();
 }
+if (!urls.length) { console.error(topic ? `找不到 ${topic} 的來源` : '沒有要驗的網址'); process.exit(2); }
+console.log(`驗 ${urls.length} 個來源(並行 ${CONC}、逾時 ${TIMEOUT}s)……\n`);
 
-// 跟完 redirect 之後落在錯誤頁 —— 狀態碼是 200,但讀者點過去看到的是「找不到」。
-// 只認路徑上的明確標記,不做語意猜測(不抓網頁內文,那會誤判正常的錯誤處理說明頁)。
-const ERROR_PATH = /(^|\/)(errorpage|error|404|notfound|not-found|nopage)(\.\w+)?(\/|$)/i;
-function landsOnErrorPage(url, finalUrl) {
-  if (!finalUrl || finalUrl === url) return false;
-  let a, b;
-  try { a = new URL(url); b = new URL(finalUrl); } catch { return false; }
-  if (!ERROR_PATH.test(b.pathname)) return false;
-  return ERROR_PATH.test(b.pathname) && !ERROR_PATH.test(a.pathname);
+const results = [];
+for (let i = 0; i < urls.length; i += CONC) {
+  results.push(...await Promise.all(urls.slice(i, i + CONC).map((u, j) => check(u, i + j))));
+  process.stderr.write(`\r  ${Math.min(i + CONC, urls.length)}/${urls.length}`);
 }
+process.stderr.write('\r');
+rmSync(work, { recursive: true, force: true });
 
-const dead = [];
-const blocked = [];
-const ok = [];
-let cursor = 0;
-await Promise.all(Array.from({ length: CONCURRENCY }, async () => {
-  while (cursor < urls.length) {
-    const url = urls[cursor++];
-    let { status, error, finalUrl } = await probe(url);
-    const where = [...usedBy.get(url)].join(', ');
-    // 判死之前一定複驗一次 —— 2026-08-20:bndigital.bn.gov.br 從本主機回 403(WAF),
-    // 從 GitHub Actions 的網路回 404,同一個網址依來源網路給不同狀態碼。
-    // 只驗一次會讓 CI 因為對方 WAF 的地域差異而間歇性紅燈。
-    if (status === 404 || status === 410 || (status >= 200 && status < 400 && landsOnErrorPage(url, finalUrl))) {
-      await new Promise((r) => setTimeout(r, 1500));
-      ({ status, error, finalUrl } = await probe(url));
-    }
-    if (status === 404 || status === 410) dead.push({ url, status, where });
-    else if (status >= 200 && status < 400 && landsOnErrorPage(url, finalUrl)) {
-      dead.push({ url, status: `${status}→錯誤頁`, where, finalUrl });
-    }
-    else if (status >= 200 && status < 400) ok.push(url);
-    else blocked.push({ url, status: status || error, where });
-  }
-}));
-
-console.log(`來源網址 ${urls.length} 個：可達 ${ok.length}、被擋/暫時失敗 ${blocked.length}、失效 ${dead.length}`);
-if (blocked.length) {
-  console.log('\n⚠️ 被擋或暫時失敗（不擋部署——這是對方的 WAF 或短暫故障，不是連結死掉）：');
-  for (const b of blocked.sort((a, c) => String(a.status).localeCompare(String(c.status)))) {
-    console.log(`   ${String(b.status).padEnd(9)} ${b.url}\n             用於 ${b.where}`);
-  }
+const by = (v) => results.filter((r) => r.verdict === v);
+for (const v of ['DEAD', 'BLOCKED', 'THIN']) {
+  const rows = by(v);
+  if (!rows.length) continue;
+  const label = { DEAD: '❌ 內容真的沒了(要換來源)', BLOCKED: '⚠️ 本主機被擋(該從別的網路複驗,不是來源的錯)', THIN: '⚠️ 正文太短(疑似殼頁,人工看一眼)' }[v];
+  console.log(`${label} —— ${rows.length} 筆`);
+  for (const r of rows) console.log(`  ${r.url}\n     ${r.why || `正文 ${r.chars} 字元`}`);
+  console.log('');
 }
-if (dead.length) {
-  console.error('\n✗ 失效來源（404/410 或跟完 redirect 落在錯誤頁）——這些網址正印在線上頁面的「來源與日期」區塊：');
-  for (const d of dead) {
-    console.error(`   ${d.status} ${d.url}`);
-    if (d.finalUrl) console.error(`       → ${d.finalUrl}`);
-    console.error(`       用於 ${d.where}`);
-  }
-  console.error('\n修法：改 content/topics/<slug>.md 或 scripts/generate-regional-notes.mjs 的 source，'
-    + '再跑 import-topics.mjs + export-data.mjs。');
-  if (!warnOnly) process.exit(1);
-}
-process.exit(0);
+console.log(`✓ OK ${by('OK').length}／DEAD ${by('DEAD').length}／BLOCKED ${by('BLOCKED').length}／THIN ${by('THIN').length}(共 ${results.length})`);
+const jsonOut = arg('json');
+if (jsonOut) { writeFileSync(jsonOut, `${JSON.stringify(results, null, 1)}\n`); console.log(`報告:${jsonOut}`); }
+process.exit(by('DEAD').length ? 1 : 0);
