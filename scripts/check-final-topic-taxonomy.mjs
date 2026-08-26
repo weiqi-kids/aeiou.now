@@ -10,6 +10,9 @@ import { isTrendTopic } from "./lib/topics.mjs";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const LOCALES = ['zh-TW', 'en', 'ja', 'zh-CN', 'hi', 'id', 'pt-BR'];
 const FINAL_SLUGS = [
+  // halloween(2026-08-26 用戶核准):Bing 實測 `ハロウィン` 裸詞 @jp 精準量 11,047、us 6,893。
+  // 原本是 ghosts 的 US rank 1,而 jp 站那頁的 title 是「お盆、節分」,永遠輪不到它。
+  'halloween',
   // christian-calendar-days(2026-08-26 用戶核准):Bing 實測 `corpus christi 2027` @br 精準量 2,112。
   // 與 islamic-calendar-days 對稱。刻意不收 ID 的耶穌升天日 —— easter.md 已有同一個 observance。
   'christian-calendar-days',

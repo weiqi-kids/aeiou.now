@@ -254,7 +254,9 @@ const personaChecks = [
       return /Memorial Day/.test(t) && /Veterans Day|退伍軍人節|復員軍人の日/.test(t)
         && /活著回來的人|those who came home|生きている人|para os que voltaram|masih hidup|जीवित/.test(t);
     }],
-    ['Halloween 寫出裝扮與要糖', () => /萬聖節|Halloween/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '') && /要糖|trick-or-treat|討糖/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '')],
+    // 2026-08-26:Halloween 從 ghosts 搬到自己的 Topic(Bing 實測 ハロウィン 裸詞 @jp 11,047,
+    // 而 jp 站 ghosts 的 title 是「お盆、節分」,永遠輪不到它)。斷言意圖不變,跟著搬。
+    ['Halloween 寫出裝扮與要糖', () => /萬聖節|Halloween|ハロウィン/.test(contentTextBySlug.get('halloween') || '') && /要糖|trick-or-treat|討糖|仮装/.test(contentTextBySlug.get('halloween') || '')],
     ['New Year 保留聯邦假日界線', () => /聯邦假日|federal holiday|feriado federal/.test(contentTextBySlug.get('new-year') || '')],
   ]],
 ];

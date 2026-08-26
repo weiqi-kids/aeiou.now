@@ -50,12 +50,6 @@
 - rank: 2
 - source: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095
 
-## observance US halloween
-- local_name: Halloween
-- date: 10-31
-- rank: 1
-- source: https://www.usa.gov/holidays
-
 ## locale zh-TW
 ### title
 鬼節、祭祖與追思
@@ -77,9 +71,6 @@
 台灣農曆七月常見普渡、供桌和避諱，地方也可能有搶孤等大型活動。不同家庭、宗教和社區對哪些事要避開，並沒有同一張清單。
 ### customs TW qingming
 台灣清明節常見掃墓、整理墓地和家族祭祀。有人提早返鄉，也有人因都市生活、家族安排或個人信念選擇不同做法。
-### customs US halloween
-美國的萬聖夜在十月三十一日，不是聯邦假日。它的內容是小孩挨家挨戶要糖、住家布置南瓜燈與裝飾、成人辦變裝派對。因為不放假，活動全部發生在傍晚以後；學校可能辦變裝日，但那是校方決定。它與同一頁上其他六個祭祀祖先的日子最大的差別是：它面向的不是自己的親人，而是整條街的鄰居。
-
 ## locale en
 ### title
 Ghosts, Ancestors, and Remembrance
@@ -113,9 +104,6 @@ In the seventh lunar month; the date of local Pudu (Ghost Festival) rites varies
 In Taiwan, Qingming brings grave visits, cleaning, and family rites. Some people travel home early; others adapt the day to city life, family schedules, or personal belief.
 ### date_rule TW qingming
 Around the 15th day after the vernal equinox, with the date varying slightly each year
-### customs US halloween
-Halloween in the United States is 31 October and is not a federal holiday. Its content is children going door to door for sweets, houses set out with carved pumpkins and decorations, and costume parties for adults. Because there is no day off, all of it happens after dusk; schools may hold a costume day, but that is a school's own decision. Its sharpest difference from the other six days on this page is that it faces not one's own dead but the whole street of neighbours.
-
 ## locale ja
 ### title
 鬼・先祖・追悼
@@ -149,9 +137,6 @@ Halloween in the United States is 31 October and is not a federal holiday. Its c
 台湾の清明節では、墓参り、墓の手入れ、家族の祭祀が行われる。帰省する人もいれば、都市での暮らしや家族の予定に合わせて別の方法を選ぶ人もいる。
 ### date_rule TW qingming
 春分の日から15日目前後で、日付は毎年若干異なる
-### customs US halloween
-米国のハロウィンは10月31日で、連邦の祝日ではない。中身は子どもたちが家々を回ってお菓子をもらうこと、家の前にくり抜いたカボチャや飾りを並べること、大人の仮装パーティーである。休日ではないため、すべては日が暮れてから起きる。学校が仮装の日を設けることもあるが、それは学校の判断だ。このページの他の六つの日との最大の違いは、向き合う相手が自分の身内ではなく、通り一本ぶんの隣人であることだ。
-
 ## locale zh-CN
 ### title
 鬼节、祭祖与追思
@@ -185,9 +170,6 @@ Halloween in the United States is 31 October and is not a federal holiday. Its c
 台湾清明节常见扫墓、整理墓地和家族祭祀。有人提前返乡，也有人按照城市生活、家庭安排或个人信念改变做法。
 ### date_rule TW qingming
 春分后第十五日左右，日期每年略有差异
-### customs US halloween
-美国的万圣夜在10月31日，不是联邦假日。它的内容是小孩挨家挨户要糖、住家布置南瓜灯与装饰、成人办变装派对。因为不放假，活动全部发生在傍晚以后；学校可能办变装日，但那是校方决定。它与同一页上其他六个祭祀祖先的日子最大的差别是：它面向的不是自己的亲人，而是整条街的邻居。
-
 ## locale hi
 ### title
 भूत, पूर्वज और स्मरण
@@ -221,9 +203,6 @@ Halloween in the United States is 31 October and is not a federal holiday. Its c
 ताइवान में Qingming पर कब्रों की सफ़ाई, कब्रिस्तान जाना और पारिवारिक पूजा आम है। परिवार अपनी यात्रा, शहर की ज़िंदगी और निजी विश्वास के अनुसार तरीका बदल सकते हैं।
 ### date_rule TW qingming
 वसंत विषुव के लगभग पंद्रहवें दिन, तिथि हर वर्ष थोड़ी भिन्न होती है
-### customs US halloween
-अमेरिका में हैलोवीन 31 अक्टूबर को है और यह संघीय अवकाश नहीं है। इसकी सामग्री है बच्चों का घर-घर जाकर मिठाई माँगना, घरों के आगे तराशे कद्दू और सजावट, और वयस्कों की वेशभूषा पार्टियाँ। छुट्टी न होने के कारण सब कुछ सूरज ढलने के बाद होता है; विद्यालय वेशभूषा दिवस रख सकते हैं, पर वह विद्यालय का अपना निर्णय है। इस पृष्ठ के बाक़ी छह दिनों से इसका सबसे तीखा अंतर यह है कि यह अपने पुरखों की ओर नहीं, पूरी गली के पड़ोसियों की ओर मुड़ा है।
-
 ## locale id
 ### title
 Hantu, Leluhur, dan Kenangan
@@ -257,9 +236,6 @@ Pada bulan ketujuh penanggalan lunar; tanggal upacara Pudu (Festival Hantu) sete
 Di Taiwan, Qingming sering diisi dengan ziarah makam, membersihkan makam, dan ritual keluarga. Jadwal kerja, kehidupan kota, serta keyakinan pribadi ikut menentukan caranya.
 ### date_rule TW qingming
 Sekitar hari kelima belas setelah ekuinoks musim semi, tanggalnya sedikit berbeda setiap tahun
-### customs US halloween
-Halloween di Amerika Serikat jatuh 31 Oktober dan bukan hari libur federal. Isinya anak-anak berkeliling dari pintu ke pintu meminta permen, rumah-rumah dihias labu ukir dan pernik, serta pesta kostum untuk orang dewasa. Karena tidak ada hari libur, semuanya berlangsung setelah senja; sekolah boleh menggelar hari berkostum, tetapi itu keputusan sekolah sendiri. Perbedaannya yang paling tajam dari enam hari lain di halaman ini: ia tidak menghadap leluhur sendiri, melainkan seluruh tetangga satu jalan.
-
 ## locale pt-BR
 ### title
 Fantasmas, ancestrais e memória
@@ -293,5 +269,3 @@ No sétimo mês do calendário lunar; a data dos ritos locais de Pudu (Festival 
 Em Taiwan, o Qingming costuma envolver visita ao túmulo, limpeza e ritos familiares. A vida urbana, os horários da família e a crença de cada pessoa mudam a forma de participar.
 ### date_rule TW qingming
 Por volta do décimo quinto dia após o equinócio de primavera, com a data variando um pouco a cada ano
-### customs US halloween
-O Halloween nos Estados Unidos é 31 de outubro e não é feriado federal. Seu conteúdo é as crianças indo de porta em porta pedir doces, as casas com abóboras entalhadas e enfeites, e festas à fantasia para adultos. Como não há folga, tudo acontece depois do anoitecer; escolas podem fazer um dia de fantasia, mas isso é decisão delas. Sua diferença mais nítida em relação aos outros seis dias desta página é que ele se volta não para os próprios mortos, e sim para a rua inteira de vizinhos.
