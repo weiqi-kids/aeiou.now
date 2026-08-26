@@ -358,6 +358,45 @@ const countrySentence = (entry) => {
   const label = countryName(entry.country_code);
   return answer.startsWith(label) ? answer : `${label}${copy.colon}${answer}`;
 };
+// lead 那一句要**在句子裡**帶到日期(2026-08-26 用戶核准)。
+//
+// 起因:2026-08-26 對 152 個「查詢×頁面」組合套位置 CTR 曲線,期望點擊 8.9、實際 1,
+// P(點擊<=1 | 期望 8.9) ≈ 0.14% —— 不是樣本小。favicon 三種齊全、名次也夠前,
+// 差在摘要本身:**每一個進得來的查詢都在問日期,而第一句多半既沒有日期也沒有答案**。
+//   `2027印尼齋戒月時間`   名次 5.2/41 曝光 → 「印尼的齋戒月起始日不是查表得來的…」
+//   `dia da mulher 2027`  名次 9.2/26 曝光 → 「這是最近才變的那一欄。第 6.791 號法律…」
+//   `when is teachers day` 名次 1.0        → 「United States has no national Teachers' Day…」
+// 七語系全掃:51 頁裡第一句含日期的只有 10–22 頁。問「時間」的人看到「不是查表得來的」,
+// 不點是理性的。
+//
+// **這不是回到 2026-08-19 的「日期擺第一」**(那一版已被 08-21 推翻,不要改回去):
+// 制度答案仍然排在最前面,日期以括號附在同一句裡,跟著它一起進讀者看得到的那 150 字。
+// description 的 max 是 170 字元,而 lead 首句長度中位數 43 字元(實測 zh-TW 51 頁),
+// 所以塞在首句句末的日期絕大多數會落在可見範圍內;塞在整段最後則看不到。
+const occurrenceDateText = (entry) => {
+  const occ = entry?.next_occurrence;
+  if (!occ) return null;
+  const end = occ.ends_on ? `–${calendarDate(occ.ends_on)}` : '';
+  return `${calendarDate(occ.starts_on)}${end}`;
+};
+// 句末標點的位置由**我們自己**判斷,不能天真地切第一個句點:
+// 拉丁語系的 `U.S.`、`Lei nº 6.791` 裡都有句點。所以 ① 句點後面必須是空白或字串結尾
+// (`6.791` 後面接數字,自然不算),② 切出來的首句至少 12 個字元(擋掉 `U.S.`),
+// 不合就往後找下一個。都找不到就接在整句最後(那時本來就是一句話)。
+const insertBeforeSentenceEnd = (sentence, insertion) => {
+  // `।`(danda)是印地文的句號 —— 漏掉它,hi 站 51 頁一個都插不進去(2026-08-26 實測)。
+  const re = /[。！？।॥]|[.!?](?=\s|$)/g;
+  let m;
+  while ((m = re.exec(sentence)) !== null) {
+    if (m.index + 1 < 12) continue;
+    return `${sentence.slice(0, m.index)}${insertion}${sentence.slice(m.index)}`;
+  }
+  return `${sentence}${insertion}`;
+};
+const withLeadDate = (sentence, dateText) => {
+  if (!sentence || !dateText || sentence.includes(dateText)) return sentence;
+  return insertBeforeSentenceEnd(sentence, `${copy.parenOpen}${dateText}${copy.parenClose}`);
+};
 const leadCountryEntry = worldCountries.find((country) => country.country_code === leadCountryCode) || null;
 const homeCountryEntry = leadCountryCode === HOME_COUNTRY
   ? null
@@ -366,7 +405,10 @@ const dateSentence = dateAnswer.length > 0
   ? `${dateAnswer.slice(0, 2).join(copy.listSep)}${copy.endMark}`
   : null;
 // lead 那一格沒有敘述時才退回日期開頭(舊行為),不讓守門條件落空。
-const homeLead = countrySentence(leadCountryEntry) || dateSentence;
+// 沒有 next_occurrence 的 Topic(長青型、制度型)拿不到日期 → withLeadDate 原樣回傳,
+// 行為與 2026-08-25 完全一樣。**沒資料時的行為必須是舊行為。**
+const homeLead = withLeadDate(countrySentence(leadCountryEntry), occurrenceDateText(leadCountryEntry))
+  || dateSentence;
 const metaDescription = compactDescription([
   homeLead,
   countrySentence(homeCountryEntry),

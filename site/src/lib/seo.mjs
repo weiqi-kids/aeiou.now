@@ -61,6 +61,11 @@ export const SEO_COPY = {
     // 標點是語系的一部分:英文站不該印出「、」「。」「｜」。
     colon: '：',
     listSep: '、', itemSep: '；', endMark: '。', titleSep: '｜',
+    // 括號也是標點(2026-08-26,與上面 colon／listSep 同一類,不是文案):
+    // CJK 用全形（）,拉丁語系用半形 ( ) 且前面帶一個空格。
+    // 用途:把 lead 那一國的下一次日期塞進 description 第一句裡 —— 制度答案仍排最前面,
+    // 日期跟著它一起進讀者看得到的那 150 字。緣由見 pages/topic/[slug].astro 的註解。
+    parenOpen: '（', parenClose: '）',
   },
   en: {
     answers: 'Quick answers', what: 'What is this topic?', when: 'When is it?', where: 'How do places mark it?', differences: 'What differs by place?',
@@ -73,6 +78,7 @@ export const SEO_COPY = {
     practiceSuffix: 'How {count} countries do it',
     colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '.', titleSep: ' | ',
+    parenOpen: " (", parenClose: ')',
   },
   ja: {
     answers: '要点', what: 'このテーマは何？', when: 'いつ？', where: '各地ではどう過ごす？', differences: '地域ごとに何が違う？',
@@ -85,6 +91,7 @@ export const SEO_COPY = {
     practiceSuffix: '{count}か国のやり方と違い',
     colon: '：',
     listSep: '、', itemSep: '／', endMark: '。', titleSep: '｜',
+    parenOpen: '（', parenClose: '）',
   },
   'zh-CN': {
     answers: '快速回答', what: '这个主题是什么？', when: '什么时候？', where: '各地怎么过？', differences: '各地有什么不同？',
@@ -97,6 +104,7 @@ export const SEO_COPY = {
     practiceSuffix: '{count} 国怎么做、差在哪',
     colon: '：',
     listSep: '、', itemSep: '；', endMark: '。', titleSep: '｜',
+    parenOpen: '（', parenClose: '）',
   },
   hi: {
     answers: 'त्वरित उत्तर', what: 'यह विषय क्या है?', when: 'यह कब होता है?', where: 'अलग जगहों पर इसे कैसे मनाते हैं?', differences: 'अलग जगहों पर क्या अलग है?',
@@ -109,6 +117,7 @@ export const SEO_COPY = {
     practiceSuffix: '{count} देशों में यह कैसे होता है',
     colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '।', titleSep: ' | ',
+    parenOpen: " (", parenClose: ')',
   },
   id: {
     answers: 'Jawaban singkat', what: 'Apa tema ini?', when: 'Kapan?', where: 'Bagaimana tempat berbeda menjalaninya?', differences: 'Apa yang berbeda di tiap tempat?',
@@ -121,6 +130,7 @@ export const SEO_COPY = {
     practiceSuffix: 'Bagaimana {count} negara melakukannya',
     colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '.', titleSep: ' | ',
+    parenOpen: " (", parenClose: ')',
   },
   'pt-BR': {
     answers: 'Respostas rápidas', what: 'O que é este tema?', when: 'Quando acontece?', where: 'Como lugares diferentes o vivenciam?', differences: 'O que muda de um lugar para outro?',
@@ -133,6 +143,7 @@ export const SEO_COPY = {
     practiceSuffix: 'Como {count} países fazem',
     colon: ': ',
     listSep: ', ', itemSep: '; ', endMark: '.', titleSep: ' | ',
+    parenOpen: " (", parenClose: ')',
   },
 };
 
