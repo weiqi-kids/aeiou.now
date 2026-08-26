@@ -928,3 +928,42 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
   同一個 `incredibleindia.gov.in/en/...` 頁。
 - **trend 與 event_website 來源從沒抓過**:`source-refresh.mjs --report` 顯示
   trend 303 筆「抓過 0」、event_website 15 筆「抓過 0」。
+
+## 印度來源換成當地語言版 —— ⛔ 這台主機做不到(2026-08-26 查證)
+
+`check-content-depth.mjs` 的 9 筆 WARN,其中 7 筆是 IN,全部指向同一個網址:
+`https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays`
+(labour-day、christmas、national-days、easter、eid-al-adha、affection-and-reciprocity、ramadan-and-eid)。
+
+**為什麼沒換掉:印度政府網域從這台主機與 WebFetch 兩條網路都進不去。**
+逐一實測根目錄(判準是根目錄通不通,不是狀態碼幾號 —— 見 CLAUDE.md 該條紅線):
+
+| 網域 | 本機 curl | WebFetch |
+|---|---|---|
+| `incredibleindia.gov.in` | 200 | — |
+| `india.gov.in` | 403 | 403 |
+| `mha.gov.in` | 403 | — |
+| `pib.gov.in` / `www.pib.gov.in` | 403 | — |
+| `labour.gov.in` | 403 | — |
+| `education.gov.in` | 403 | — |
+| `knowindia.india.gov.in` | 403 | — |
+| `dopt.gov.in` | 000(連不上) | ECONNRESET |
+| `persmin.gov.in` | 000(連不上) | — |
+
+403 一律當「不准抓」,**不換 UA、不重試、不繞路**(紅線)。已從第二條網路複驗過,結果相同。
+`incredibleindia.gov.in` 是唯一進得去的 .gov.in,而它**沒有印地文版**:
+`/hi/plan-your-trip/public-holidays` 回 404,`/en/` 那頁的 title 是 `Public holidays`、
+देवनागरी 字元數 0。所以「回頭找同一站的當地語言版」在這一站不存在。
+
+**解鎖條件**:從另一條出口網路(用戶自己的機器、或別的 egress)驗證後,把
+DoPT 的年度假日 O.M.(`dopt.gov.in`)或 india.gov.in 的印地文行事曆換進去。
+
+⚠ **順便查到一個更嚴重的**:`affection-and-reciprocity/IN/valentine-week` 的來源也是那個
+「公眾假日」頁,但 Valentine Week **不是印度的公眾假日** —— 這一筆的來源根本撐不住它的主張,
+不是語言問題。要換的是內容不是路徑,屬文案/查證工作。
+
+**印尼那兩筆已解**:`kemenag.go.id` 去掉 `/en/` 同網址可用(200 + `lang="id"`),三處已換。
+剩 `fathers-day/ID` 的 `pa-tulungagung.go.id/en/…` —— 那站的 Joomla 會把 `/id/`、
+`index.php/` 全部導回 `/en/`(實測),文章本文是印尼文,只有樣板語言是 en。
+候選替代 `kemenpppa.go.id` 的新聞稿**整站在維護中**(根目錄 title 也是「Pemeliharaan Sistem」),
+不是文章沒了 —— 之後複驗再換。
