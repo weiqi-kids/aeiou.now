@@ -10,6 +10,7 @@ import { isTrendTopic } from "./lib/topics.mjs";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const LOCALES = ['zh-TW', 'en', 'ja', 'zh-CN', 'hi', 'id', 'pt-BR'];
 const FINAL_SLUGS = [
+  'beer-festivals',
   'environment-days',
   'shopping-festivals',
   'jewish-calendar-days',

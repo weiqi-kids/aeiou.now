@@ -65,7 +65,7 @@
 
 ## locale zh-TW
 ### title
-連假是怎麼長出來的:自動補上的、跟週末對調的、從自己年假扣的
+連假
 ### summary
 七個地方都有一串連續假期,把零散假日接成一整串的機器卻完全不同。日本靠祝日法自動補上中間那一天,誰也不必公告;中國靠國務院辦公廳每年發通知調休,把週末挪過來、之後再補上班;印尼由三個部會聯合決定共同休假日,而那幾天要從勞工自己的年休假扣;台灣二〇二五年改法之後只補假、不再借週末;巴西靠部會法令指定沒有名字的橋接日,而且只綁聯邦機關;美國一九六八年把五個假日移到星期一之後就沒再做別的;印度則由各邦依一八八一年的票據法自行公告,最長的一串長在一個邦裡。
 ### keywords
@@ -89,7 +89,7 @@
 
 ## locale en
 ### title
-Long holidays: grown by statute, swapped out of weekends, or docked from your own leave
+Long Holiday Weeks
 ### summary
 Seven places all end up with a run of consecutive days off, and not one of them builds it the same way. Japan's holiday act fills the gap by itself and nobody has to announce anything. China's State Council issues a notice every November that borrows weekends forward and takes them back afterwards as working Saturdays. Indonesia's joint leave is decided by three ministers together — and it is deducted from the worker's own annual leave. Taiwan rewrote its holiday law in 2025 and now only adds compensatory days, never borrowed ones. Brazil bridges with unnamed days declared by ministerial order that bind federal offices only. The United States moved five holidays to Mondays in 1968 and has done nothing since. India leaves it to the states, under a banking statute from 1881.
 ### keywords
@@ -129,7 +129,7 @@ India's public holidays are not issued by the centre. Each state declares them u
 
 ## locale ja
 ### title
-連休はどう作られるか——法律が自動で埋める国、週末と振り替える国、年休から引く国
+大型連休
 ### summary
 七つの土地のいずれにも続けて休める日の並びがあるが、その並びの作り方は一つとして同じでない。日本は祝日法が間の一日を自動的に埋め、誰も何も公告しない。中国は国務院弁公庁が毎年十一月に通知を出し、週末を前に寄せて後で土曜出勤として返させる。インドネシアは三人の大臣が合同で決定し、その日数は労働者自身の年次有給休暇から差し引かれる。台湾は二〇二五年に法を書き換え、以後は振替休日を足すだけで週末を借りない。ブラジルは省令が名前のない橋渡しの日を指定するが、拘束されるのは連邦の役所だけである。合衆国は一九六八年に五つの祝日を月曜へ移して以来、何もしていない。インドは州任せで、根拠は一八八一年の手形法である。
 ### keywords
@@ -169,7 +169,7 @@ India's public holidays are not issued by the centre. Each state declares them u
 
 ## locale zh-CN
 ### title
-连假是怎么长出来的:自动补上的、跟周末对调的、从自己年假扣的
+连假
 ### summary
 七个地方都会攒出一串连着的休息日，可把零散假日接成一整串的机器没有一台是一样的。日本靠祝日法自动把中间那天填上，谁也不用公告；中国靠国务院办公厅每年十一月发通知调休，把周末挪到前面、之后再补上班；印尼由三位部长联合决定共同休假日，而那几天要从劳动者本人的年休假里扣；台湾二〇二五年改了法，之后只加补假、不再借周末；巴西靠部令指定没有名字的搭桥日，且只管联邦机关；美国一九六八年把五个假日移到星期一之后就没再动过；印度交给各邦自己办，依据是一八八一年的票据法。
 ### keywords
@@ -209,7 +209,7 @@ India's public holidays are not issued by the centre. Each state declares them u
 
 ## locale hi
 ### title
-लंबी छुट्टियाँ कैसे बनती हैं — कानून से अपने-आप, सप्ताहांत की अदला-बदली से, या अपनी ही छुट्टी काटकर
+लंबी छुट्टियाँ
 ### summary
 सातों जगह लगातार छुट्टियों की एक कड़ी बनती है, पर उसे जोड़ने वाली मशीन कहीं भी एक जैसी नहीं। जापान में अवकाश कानून बीच का दिन खुद भर देता है और किसी को कुछ घोषित नहीं करना पड़ता। चीन में राज्य परिषद कार्यालय हर नवंबर एक अधिसूचना निकालता है जो सप्ताहांत आगे खींच लेती है और बाद में शनिवार को काम कराकर वसूल लेती है। इंडोनेशिया में तीन मंत्री मिलकर सामूहिक अवकाश तय करते हैं, और वे दिन कर्मचारी की अपनी वार्षिक छुट्टी से काटे जाते हैं। ताइवान ने 2025 में कानून बदला और अब सिर्फ़ प्रतिकर अवकाश जोड़ता है, सप्ताहांत उधार नहीं लेता। ब्राज़ील में मंत्रालय के आदेश से बिना नाम वाले पुल-दिन तय होते हैं, जो केवल संघीय दफ़्तरों पर लागू हैं। अमेरिका ने 1968 में पाँच अवकाश सोमवार पर टिका दिए और उसके बाद कुछ नहीं किया। भारत में यह राज्यों पर छोड़ा गया है, और आधार 1881 का परक्राम्य लिखत अधिनियम है।
 ### keywords
@@ -249,7 +249,7 @@ India's public holidays are not issued by the centre. Each state declares them u
 
 ## locale id
 ### title
-Bagaimana libur panjang dibuat: tumbuh sendiri dari undang-undang, ditukar dengan akhir pekan, atau dipotong dari cuti sendiri
+Libur Panjang
 ### summary
 Tujuh tempat sama-sama punya deretan hari libur yang menyambung, dan tidak satu pun merakitnya dengan cara yang sama. Di Jepang undang-undang hari libur mengisi sendiri hari yang menganga di tengah, tanpa perlu ada yang mengumumkan apa pun. Di Tiongkok Sekretariat Dewan Negara menerbitkan pemberitahuan setiap November yang menarik akhir pekan ke depan lalu menagihnya kembali sebagai hari kerja Sabtu. Di Indonesia cuti bersama diputuskan tiga menteri sekaligus — dan hari-hari itu memotong hak cuti tahunan pekerja sendiri. Taiwan menulis ulang undang-undang hari liburnya pada 2025 dan sejak itu hanya menambah hari pengganti, tidak lagi meminjam akhir pekan. Brasil menyambung dengan hari tanpa nama yang ditetapkan lewat peraturan menteri dan hanya mengikat kantor federal. Amerika Serikat memindahkan lima hari libur ke hari Senin pada 1968 dan sesudah itu tidak melakukan apa-apa lagi. India menyerahkannya kepada provinsi, dengan dasar sebuah undang-undang perbankan dari 1881.
 ### keywords
@@ -289,7 +289,7 @@ Hari libur umum di India tidak dikeluarkan pusat. Setiap negara bagian menetapka
 
 ## locale pt-BR
 ### title
-Como se fabrica um feriado prolongado: por lei automática, trocando fins de semana ou descontando das próprias férias
+Feriados Prolongados
 ### summary
 Sete lugares acabam com uma sequência de dias parados, e nenhum a monta do mesmo jeito. No Japão a lei dos feriados preenche sozinha o dia do meio e ninguém precisa anunciar nada. Na China o gabinete do Conselho de Estado publica todo mês de novembro um aviso que puxa fins de semana para a frente e depois os cobra de volta como sábados trabalhados. Na Indonésia a folga coletiva é decidida por três ministros juntos — e sai das férias anuais do próprio trabalhador. Taiwan reescreveu sua lei de feriados em 2025 e desde então só acrescenta dias de compensação, sem tomar fins de semana emprestados. O Brasil emenda com dias sem nome fixados por portaria, que valem apenas para os órgãos federais. Os Estados Unidos passaram cinco feriados para a segunda-feira em 1968 e desde então não fizeram mais nada. A Índia deixa a cargo dos estados, com base numa lei cambial de 1881.
 ### keywords
