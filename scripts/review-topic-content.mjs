@@ -244,7 +244,16 @@ const personaChecks = [
     ['獨立日被寫成公共歷史節日', () => /獨立日|Independence Day|Independência/.test(contentTextBySlug.get('national-days') || '')],
   ]],
   ['美國人格', [
-    ['Memorial Day 限定為軍人紀念', () => /服役中死亡的軍人|service members who died|軍務中に亡くなった兵士|militares que morreram em serviço/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '')],
+    // 2026-08-26:Memorial Day 從 ghosts 搬到 war-dead-and-veterans(Bing 實測
+    // `memorial day 2027` 51,340,埋在「鬼節、祭祖與追思」底下拿不到 title)。
+    // 斷言的**意圖不變**:Memorial Day 必須限定為軍人紀念,不得寫成泛指亡者的日子;
+    // 而搬家後它同頁還有 Veterans Day,所以再加一條:死者與生還者必須被分開講。
+    ['Memorial Day 限定為軍人紀念', () => /服役中死亡的軍人|service members who died|軍務中に亡くなった兵士|militares que morreram em serviço|戰死的人|those killed|戦死者|os que tombaram/.test(contentTextBySlug.get('war-dead-and-veterans') || '')],
+    ['Memorial Day 與 Veterans Day 不混為一談', () => {
+      const t = contentTextBySlug.get('war-dead-and-veterans') || '';
+      return /Memorial Day/.test(t) && /Veterans Day|退伍軍人節|復員軍人の日/.test(t)
+        && /活著回來的人|those who came home|生きている人|para os que voltaram|masih hidup|जीवित/.test(t);
+    }],
     ['Halloween 寫出裝扮與要糖', () => /萬聖節|Halloween/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '') && /要糖|trick-or-treat|討糖/.test(contentTextBySlug.get('ghosts-ancestors-and-remembrance') || '')],
     ['New Year 保留聯邦假日界線', () => /聯邦假日|federal holiday|feriado federal/.test(contentTextBySlug.get('new-year') || '')],
   ]],
