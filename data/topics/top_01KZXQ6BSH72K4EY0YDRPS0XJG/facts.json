@@ -54,6 +54,21 @@
           "source_urls": [
             "https://www.planalto.gov.br/ccivil_03/decreto/1950-1969/D52682.htm"
           ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_BR_dia-dos-professores_2028_2028-10-15",
+          "occurrence_year": 2028,
+          "starts_on": "2028-10-15",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_02CD0D07C0794AD1A54CADB6"
+          ],
+          "source_urls": [
+            "https://www.planalto.gov.br/ccivil_03/decreto/1950-1969/D52682.htm"
+          ]
         }
       ],
       "next_occurrence": {
@@ -118,6 +133,21 @@
           "source_urls": [
             "http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s3580/moe_2390/moe_2391/tnull_38105.html"
           ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_CN_teachers-day_2028_2028-09-10",
+          "occurrence_year": 2028,
+          "starts_on": "2028-09-10",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_D841A1BDECBC57CA74A2E277"
+          ],
+          "source_urls": [
+            "http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s3580/moe_2390/moe_2391/tnull_38105.html"
+          ]
         }
       ],
       "next_occurrence": {
@@ -172,6 +202,21 @@
           "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_ID_hari-guru_2027_2027-11-25",
           "occurrence_year": 2027,
           "starts_on": "2027-11-25",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_26935C7ABD6FCA6BF551F543"
+          ],
+          "source_urls": [
+            "https://ppid.inhilkab.go.id/berita/detail/hari-guru-nasional-diperingati-setiap-25-november"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_ID_hari-guru_2028_2028-11-25",
+          "occurrence_year": 2028,
+          "starts_on": "2028-11-25",
           "ends_on": null,
           "calendar_system": "gregorian",
           "timezone": "Asia/Jakarta",
@@ -252,6 +297,23 @@
             "https://www.presidentofindia.gov.in/",
             "https://www.education.gov.in/"
           ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_IN_teachers-day_2028_2028-09-05",
+          "occurrence_year": 2028,
+          "starts_on": "2028-09-05",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_E3B2DDEE40886EF7733709EE",
+            "src_9B84ABAFACB03ECC94ED650A"
+          ],
+          "source_urls": [
+            "https://www.presidentofindia.gov.in/",
+            "https://www.education.gov.in/"
+          ]
         }
       ],
       "next_occurrence": {
@@ -308,6 +370,21 @@
           "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_TW_teachers-day_2027_2027-09-28",
           "occurrence_year": 2027,
           "starts_on": "2027-09-28",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_F045C3336BEF6186024CF028"
+          ],
+          "source_urls": [
+            "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_TW_teachers-day_2028_2028-09-28",
+          "occurrence_year": 2028,
+          "starts_on": "2028-09-28",
           "ends_on": null,
           "calendar_system": "gregorian",
           "timezone": "Asia/Taipei",
@@ -377,6 +454,23 @@
           "occurrence_year": 2027,
           "starts_on": "2027-05-03",
           "ends_on": "2027-05-07",
+          "calendar_system": "local",
+          "timezone": "America/New_York",
+          "date_status": "local-variant",
+          "source_ids": [
+            "src_07F374EE64FFF1100ED74220",
+            "src_DF3F8681DFB3B654018AA81B"
+          ],
+          "source_urls": [
+            "https://www.ed.gov/",
+            "https://www.unesco.org/en/days/teachers?hub=66705"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_US_teacher-appreciation_2028_2028-05-01",
+          "occurrence_year": 2028,
+          "starts_on": "2028-05-01",
+          "ends_on": "2028-05-05",
           "calendar_system": "local",
           "timezone": "America/New_York",
           "date_status": "local-variant",
@@ -480,6 +574,6 @@
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
     "https://www.mext.go.jp/a_menu/shougai/kyoiku-bunka/detail/1297836.htm"
   ],
-  "content_updated_at": "2026-08-26T04:00:41.224Z",
-  "content_hash": "a1fd595fed69eb1034f3e30e0d73505bb2484431f69398f3f77ea560bf34a6ce"
+  "content_updated_at": "2026-08-26T08:10:47.650Z",
+  "content_hash": "f1a31e335340a9e9cb06a5c526a313bc9ea3e8d537c7617cf052a4dcc8b6a79d"
 }

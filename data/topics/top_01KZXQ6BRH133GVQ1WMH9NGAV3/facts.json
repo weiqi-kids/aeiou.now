@@ -56,6 +56,21 @@
           "source_urls": [
             "https://www.gov.br/iphan/pt-br/assuntos/forro-do-mundo/sobre-o-forro"
           ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_BR_festa-junina_2028_2028-06-24",
+          "occurrence_year": 2028,
+          "starts_on": "2028-06-24",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_68EB0BD6E5C51DD082CED1CA"
+          ],
+          "source_urls": [
+            "https://www.gov.br/iphan/pt-br/assuntos/forro-do-mundo/sobre-o-forro"
+          ]
         }
       ],
       "next_occurrence": {
@@ -125,6 +140,21 @@
           "source_urls": [
             "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5444575.htm",
             "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_CN_farmers-harvest-festival_2028_2028-09-22",
+          "occurrence_year": 2028,
+          "starts_on": "2028-09-22",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_D74CFCA1045D3455A4615E43"
+          ],
+          "source_urls": [
+            "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt"
           ]
         }
       ],
@@ -260,6 +290,21 @@
           "source_urls": [
             "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html"
           ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_JP_kinro-kansha_2028_2028-11-23",
+          "occurrence_year": 2028,
+          "starts_on": "2028-11-23",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_1A80A58B5E867818100E7776"
+          ],
+          "source_urls": [
+            "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html"
+          ]
         }
       ],
       "next_occurrence": {
@@ -331,6 +376,21 @@
           "source_urls": [
             "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
             "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BRH133GVQ1WMH9NGAV3_TW_farmers-day_2028_2028-02-04",
+          "occurrence_year": 2028,
+          "starts_on": "2028-02-04",
+          "ends_on": null,
+          "calendar_system": "solar-term",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_D74CFCA1045D3455A4615E43"
+          ],
+          "source_urls": [
+            "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt"
           ]
         }
       ],
@@ -480,6 +540,7 @@
     "src_D04C9CFB17E17EB08C514FEA",
     "src_D0BB51F7A5E737A80C3188C8",
     "src_D0FD9DC03437F523B16F8FEA",
+    "src_D74CFCA1045D3455A4615E43",
     "src_DF8DE78424784A70528F1F50",
     "src_E405440D6A7FBA9FBC2398FD",
     "src_F045C3336BEF6186024CF028",
@@ -497,6 +558,7 @@
     "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf",
     "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf",
     "https://www.gov.cn/zhengce/zhengceku/2018-12/31/content_5444575.htm",
+    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt",
     "https://www.incredibleindia.gov.in/en/colours-of-india",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
@@ -504,6 +566,6 @@
     "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
     "https://referensi.data.kemendikdasmen.go.id/budayakita/wbtb/objek/AA001982"
   ],
-  "content_updated_at": "2026-08-26T04:00:41.184Z",
-  "content_hash": "4d64775b0e071ca0c8729a922f74cfeec53c715ecff8644e4fcace2a84dc7d36"
+  "content_updated_at": "2026-08-26T08:10:47.577Z",
+  "content_hash": "e5109b324cc91e90a2992639587ae1ba6194e4ca81aeda4adf39081ea9447fad"
 }

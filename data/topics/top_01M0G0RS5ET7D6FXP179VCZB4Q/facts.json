@@ -54,6 +54,21 @@
           "source_urls": [
             "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem"
           ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS5ET7D6FXP179VCZB4Q_BR_enem_2028_2028-11-12",
+          "occurrence_year": 2028,
+          "starts_on": "2028-11-12",
+          "ends_on": "2028-11-19",
+          "calendar_system": "gregorian",
+          "timezone": "America/Sao_Paulo",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_6A22EBEA77D9E19668C22E63"
+          ],
+          "source_urls": [
+            "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem"
+          ]
         }
       ],
       "next_occurrence": {
@@ -109,6 +124,21 @@
           "occurrence_year": 2027,
           "starts_on": "2027-06-07",
           "ends_on": "2027-06-08",
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Shanghai",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_974E47AB1C6B5C39773B38F5"
+          ],
+          "source_urls": [
+            "http://www.moe.gov.cn/srcsite/A15/moe_776/s3258/202601/t20260121_1427110.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS5ET7D6FXP179VCZB4Q_CN_gaokao_2028_2028-06-07",
+          "occurrence_year": 2028,
+          "starts_on": "2028-06-07",
+          "ends_on": "2028-06-08",
           "calendar_system": "gregorian",
           "timezone": "Asia/Shanghai",
           "date_status": "estimated",
@@ -182,6 +212,21 @@
           "source_urls": [
             "https://portalbpsdm.jambiprov.go.id/artikel/pekerjaan-pendidikan/daftar-utbk-2026-kapan-dibuka-simak-jadwal-lengkap-dan-syarat-terbaru/"
           ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS5ET7D6FXP179VCZB4Q_ID_utbk-snbt_2028_2028-04-21",
+          "occurrence_year": 2028,
+          "starts_on": "2028-04-21",
+          "ends_on": "2028-04-30",
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Jakarta",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_AA9D445ABB2A43C09F56537A"
+          ],
+          "source_urls": [
+            "https://portalbpsdm.jambiprov.go.id/artikel/pekerjaan-pendidikan/daftar-utbk-2026-kapan-dibuka-simak-jadwal-lengkap-dan-syarat-terbaru/"
+          ]
         }
       ],
       "next_occurrence": {
@@ -237,6 +282,21 @@
           "occurrence_year": 2027,
           "starts_on": "2027-02-17",
           "ends_on": "2027-04-10",
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Kolkata",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_B85602AF1EB8A102B0F31340"
+          ],
+          "source_urls": [
+            "https://www.cbse.gov.in/cbsenew/documents/Revised_Class_XII_Date_Sheet_31122025.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01M0G0RS5ET7D6FXP179VCZB4Q_IN_cbse-board_2028_2028-02-17",
+          "occurrence_year": 2028,
+          "starts_on": "2028-02-17",
+          "ends_on": "2028-04-09",
           "calendar_system": "gregorian",
           "timezone": "Asia/Kolkata",
           "date_status": "estimated",
@@ -533,6 +593,6 @@
     "https://nces.ed.gov/nationsreportcard/",
     "https://www.ed.gov/"
   ],
-  "content_updated_at": "2026-08-26T03:01:21.134Z",
-  "content_hash": "cb36bc95372dc04e2db466edfede1412f06867a438d7546b27a274b901405b8f"
+  "content_updated_at": "2026-08-26T08:10:47.659Z",
+  "content_hash": "e43cedfb1a6306ec7f20392f82a023ee6cd00cb55d49198f67df0854d79b2401"
 }

@@ -58,6 +58,21 @@
           "source_urls": [
             "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf"
           ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_duanwu_2028_2028-05-28",
+          "occurrence_year": 2028,
+          "starts_on": "2028-05-28",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Shanghai",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_D74CFCA1045D3455A4615E43"
+          ],
+          "source_urls": [
+            "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt"
+          ]
         }
       ],
       "next_occurrence": {
@@ -122,6 +137,21 @@
           "source_urls": [
             "https://www.ihchina.cn/project_details/20209.html"
           ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_jiangcun-dragon-boat_2028_2028-05-28",
+          "occurrence_year": 2028,
+          "starts_on": "2028-05-28",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Shanghai",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_D74CFCA1045D3455A4615E43"
+          ],
+          "source_urls": [
+            "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt"
+          ]
         }
       ],
       "next_occurrence": {
@@ -185,6 +215,21 @@
           ],
           "source_urls": [
             "https://www.ihchina.cn/project_details/20208.html"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_CN_luodian-dragon-boat_2028_2028-05-28",
+          "occurrence_year": 2028,
+          "starts_on": "2028-05-28",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Shanghai",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_D74CFCA1045D3455A4615E43"
+          ],
+          "source_urls": [
+            "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt"
           ]
         }
       ],
@@ -256,6 +301,21 @@
             "https://www.tangerangkota.go.id/berita/detail/66084/semarak-festival-budaya-petjoen-kota-tangerang-tradisi-khas-cina-benteng-mandikan-perahu-leluhur",
             "https://smartcity.tangerangkota.go.id/dimensi/kategori/detail/mengenal-tujuh-warisan-budaya-takbenda-di-kota-tangerang"
           ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_ID_peh-cun_2028_2028-05-28",
+          "occurrence_year": 2028,
+          "starts_on": "2028-05-28",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Jakarta",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_D74CFCA1045D3455A4615E43"
+          ],
+          "source_urls": [
+            "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt"
+          ]
         }
       ],
       "next_occurrence": {
@@ -314,6 +374,21 @@
           "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_JP_tango-no-sekku_2027_2027-05-05",
           "occurrence_year": 2027,
           "starts_on": "2027-05-05",
+          "ends_on": null,
+          "calendar_system": "gregorian",
+          "timezone": "Asia/Tokyo",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_896FE82C2D1B93867E0BB2D7"
+          ],
+          "source_urls": [
+            "https://www.japan.travel/en/see-and-do/festivals-and-events/"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_JP_tango-no-sekku_2028_2028-05-05",
+          "occurrence_year": 2028,
+          "starts_on": "2028-05-05",
           "ends_on": null,
           "calendar_system": "gregorian",
           "timezone": "Asia/Tokyo",
@@ -389,6 +464,21 @@
           ],
           "source_urls": [
             "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BR8KM720981PCZBPYFQ_TW_duanwu_2028_2028-05-28",
+          "occurrence_year": 2028,
+          "starts_on": "2028-05-28",
+          "ends_on": null,
+          "calendar_system": "chinese-lunisolar",
+          "timezone": "Asia/Taipei",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_D74CFCA1045D3455A4615E43"
+          ],
+          "source_urls": [
+            "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt"
           ]
         }
       ],
@@ -477,6 +567,7 @@
     "src_896FE82C2D1B93867E0BB2D7",
     "src_8EF16E69C09D169D7895BA08",
     "src_91B17C6EC708CB746374DF9C",
+    "src_D74CFCA1045D3455A4615E43",
     "src_E405440D6A7FBA9FBC2398FD",
     "src_F045C3336BEF6186024CF028"
   ],
@@ -491,6 +582,7 @@
     "https://www.japan.travel/en/see-and-do/festivals-and-events/",
     "https://www.mhlw.go.jp/file/04-Houdouhappyou-11906000-Koyoukintoujidoukateikyoku-Ikuseikankyouka/0000082035.pdf",
     "https://www.tangerangkota.go.id/berita/detail/66084/semarak-festival-budaya-petjoen-kota-tangerang-tradisi-khas-cina-benteng-mandikan-perahu-leluhur",
+    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt",
     "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
     "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-norma-pl.html",
@@ -500,6 +592,6 @@
     "https://www.utsav.gov.in/view-event/nehru-trophy-boat-race",
     "https://www.usa.gov/holidays"
   ],
-  "content_updated_at": "2026-08-25T18:39:35.608Z",
-  "content_hash": "d7b6d1b7c82d91a015f0fe9397694a70edf6f9273b0e53180f410059a238d316"
+  "content_updated_at": "2026-08-26T08:10:47.531Z",
+  "content_hash": "1f7b652a88ab47dacaf565b485c9c688b99ee69d357b53572c0bb7c4642acacd"
 }
