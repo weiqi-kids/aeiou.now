@@ -1,7 +1,7 @@
 {
   "scope": "country:PH",
   "window": "7d",
-  "thin": true,
+  "thin": false,
   "items": [
     {
       "rank": 1,
@@ -17,12 +17,18 @@
     },
     {
       "rank": 3,
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "slug": "diwali",
+      "tier": "hot"
+    },
+    {
+      "rank": 4,
       "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
       "slug": "ramadan-and-eid",
       "tier": "hot"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
       "slug": "mothers-day",
       "tier": "hot"
