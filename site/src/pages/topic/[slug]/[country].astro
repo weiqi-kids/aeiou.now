@@ -1,0 +1,244 @@
+---
+// 逐國頁 `/topic/<slug>/<country>/`(2026-08-26 用戶核准的實驗)
+//
+// -- 為什麼有這一層 --------------------------------------------------------
+// 站上排得上去的查詢只有一種形狀:**專有名詞 + 年份**(GSC 實測:含年份 33 個查詢、
+// 245 曝光、曝光加權平均名次 12.3;不含年份 98 個查詢、134 曝光、名次 63.1)。
+// 而排進前 15 的帶國名查詢**全部**是「本市場的人問外國的事」——
+// `2027印尼齋戒月時間`、`dia dos namorados japão`、`children's day china`。
+// 也就是說:真正的排名單位是 (Topic × 國家 × 年份) 這一格,不是 Topic。
+// 那 154 格的散文、日期與來源本來就寫好了,只是全部擠在 43 個網址裡當錨點。
+//
+// -- 這一層**不是**把 Topic 頁拆開 ----------------------------------------
+// Topic 頁一個字都沒少(草案 §5:Local Research → Topic Engine → Global Topic,
+// 逐國素材匯流成一個 Topic 頁是刻意的)。這一層是**額外**的入口,canonical 指向自己,
+// 但每一頁都把 Topic 頁當麵包屑的父層、並在「其他國家」列出兄弟頁。
+//
+// -- 薄頁不出 --------------------------------------------------------------
+// `check-rendered-depth` 的下限是 320 個唯一字元,而逐國散文中位數只有 180 字。
+// 所以 getStaticPaths **先估過內容量才決定要不要生這一頁** —— 撐不起來的格子
+// 根本不產出,不是產出了再讓守門擋(那會讓整個 build 掛掉)。
+// 估的是「這一頁會有的所有本地文字」:逐國散文 + 日期規則 + Topic 摘要 + 該國全部
+// observance 的當地叫法。門檻設 360(比守門的 320 多一點餘裕,免得渲染後差幾個字)。
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { t } from '../../../lib/i18n.mjs';
+import { LOCALE, MARKET_COUNTRY } from '../../../lib/config.mjs';
+import { calendarDate, countryFlag } from '../../../lib/format.mjs';
+import { withBase } from '../../../lib/paths.mjs';
+import { compactDescription, fillTemplate, seoCopy, sourceLabel, SITE_NAME } from '../../../lib/seo.mjs';
+import { plainText, emphasisParts } from '../../../lib/emphasis.mjs';
+import {
+  listTopicIds, getTopicBundle, countryName,
+  observancesForFacts, customsText, dateRuleText, regionalNotesForFacts, regionalNoteText,
+  coverPath,
+} from '../../../lib/data.mjs';
+import { countryCellsFor } from '../../../lib/country-cells.mjs';
+
+export function getStaticPaths() {
+  const out = [];
+  for (const topicId of listTopicIds()) {
+    const bundle = getTopicBundle(topicId);
+    const facts = bundle?.facts;
+    if (!facts?.slug) continue;
+    for (const code of countryCellsFor(facts, bundle?.i18n)) {
+      out.push({ params: { slug: facts.slug, country: code.toLowerCase() }, props: { topicId, code } });
+    }
+  }
+  return out;
+}
+
+const { topicId, code } = Astro.props;
+const { facts, i18n } = getTopicBundle(topicId);
+const copy = seoCopy();
+const loc = i18n?.locales?.[LOCALE] || {};
+const topicTitle = loc.title || facts?.canonical_name || facts?.slug;
+const label = countryName(code);
+
+const allObservances = observancesForFacts(facts);
+const observances = allObservances.filter((o) => o.country_code === code);
+const note = regionalNotesForFacts(facts).find((n) => n.country_code === code) || null;
+const isAbsence = observances.length === 0 && note?.kind === 'absence';
+
+// 兄弟格:同一個 Topic 的其他國家。只列**這一輪真的有產出頁的**那些,
+// 否則會連到 404 —— getStaticPaths 用同一個門檻,所以這裡重算一次。
+const siblings = countryCellsFor(facts, i18n).filter((c) => c !== code);
+
+const heading = fillTemplate(t(isAbsence ? 'topic.q_country_has' : 'topic.q_how_country'), {
+  country: label, topic: topicTitle,
+});
+
+// title 就是那個查詢的形狀。但**當地叫法只在這一國就是本站市場時才用** ——
+// 我第一版寫成一律用,結果 D5 當場擋下來:pt-BR/en/hi/id 站的
+// `/topic/christmas/tw/` 標題變成「行憲紀念日（同日為聖誕節）」,
+// 既是讀者看不懂的字、又把 CJK 全形括號帶進拉丁語系的 title
+// (CLAUDE.md 紅線:只有一種語言看得懂的欄位不准上畫面)。
+//
+// 非本市場那一國用「國名:Topic 名」—— 而那正好就是這一頁要接的查詢形狀:
+// zh-TW 站的 /id/ 頁 →「印尼:齋戒月與開齋節 2027」,對上 `2027印尼齋戒月`;
+// pt-BR 站的 /jp/ 頁 →「Japão: Dia dos Namorados 2027」,對上 `dia dos namorados japão`。
+const nextStart = observances.map((o) => o.next_occurrence?.starts_on).filter(Boolean).sort()[0] || null;
+const year = nextStart ? nextStart.slice(0, 4) : null;
+const isHomeMarket = code === (MARKET_COUNTRY[LOCALE] || null);
+const localNames = isHomeMarket
+  ? [...new Set(observances.map((o) => (o.local_name || '').trim()).filter(Boolean))].slice(0, 2)
+  : [];
+const countryTopic = `${label}${copy.colon}${topicTitle}`;
+const lead = localNames.length > 0 ? localNames.join(copy.listSep) : countryTopic;
+const pageTitle = [
+  year ? `${lead} ${year}` : lead,
+  ...(lead === countryTopic ? [] : [countryTopic]),
+  SITE_NAME,
+].join(copy.titleSep);
+
+const dateLine = (observance) => {
+  const occ = observance.next_occurrence;
+  if (!occ) return null;
+  const end = occ.ends_on && occ.ends_on !== occ.starts_on ? `–${calendarDate(occ.ends_on)}` : '';
+  return `${calendarDate(occ.starts_on)}${end}`;
+};
+const answer = observances.map((o) => customsText(i18n, o)).find(Boolean)
+  || (note ? regionalNoteText(i18n, note) : null)
+  || loc.summary
+  || copy.noDate;
+const firstDate = observances.map(dateLine).find(Boolean);
+// description **先答問題再講制度**,順序刻意與 Topic 頁相反。
+// 兩個理由:① 這一頁的讀者是搜「這個國家這個節日幾號」進來的,日期就是他要的;
+// ② check-rendered-depth 的 D1 不准兩個可索引頁共用同一段 description ——
+// 本市場那一格的散文與 Topic 頁的 lead 是同一段(實測 11 頁撞號),不換開頭就撞。
+// 沒有日期的格子(制度型、regional note)改用 h1 的問句當開頭,同樣不會與 Topic 頁重複。
+const metaDescription = compactDescription([
+  firstDate ? `${lead}${copy.colon}${firstDate}${copy.endMark}` : heading,
+  plainText(answer),
+].join(' '));
+
+const sourceUrls = [...new Set([
+  ...observances.flatMap((o) => o.source_urls || []),
+  ...observances.flatMap((o) => o.next_occurrence?.source_urls || []),
+  ...(note?.source_urls || []),
+])].filter((url) => /^https?:\/\//.test(url));
+
+const topicPath = withBase(`topic/${facts.slug}/`);
+const coverSrc = coverPath(facts?.slug);
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: heading,
+      acceptedAnswer: { '@type': 'Answer', text: plainText(answer) } },
+    ...(firstDate ? [{ '@type': 'Question', name: `${lead}${copy.colon}${copy.when}`,
+      acceptedAnswer: { '@type': 'Answer', text: `${lead}${copy.colon}${firstDate}${copy.endMark}` } }] : []),
+  ],
+};
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={metaDescription}
+  image={coverSrc}
+  imageAlt={topicTitle}
+  pageType="WebPage"
+  structuredData={schema}
+  breadcrumbs={[
+    { name: copy.home, url: withBase('') },
+    { name: topicTitle, url: topicPath },
+    { name: label, url: null },
+  ]}
+>
+  <article class="country-page">
+    <header>
+      <p class="crumb">
+        <a href={topicPath}>{copy.topic}{copy.colon}{topicTitle}</a>
+      </p>
+      <h1><span class="flag" aria-hidden="true">{countryFlag(code)}</span>{heading}</h1>
+    </header>
+
+    {observances.map((observance) => (
+      <section class="observance">
+        <h2>{observance.local_name || topicTitle}</h2>
+        <dl class="facts">
+          <div>
+            <dt>{t('topic.local_date')}</dt>
+            <dd>{dateLine(observance) || t('topic.date_unavailable')}</dd>
+          </div>
+          {dateRuleText(i18n, observance) && (
+            <div>
+              <dt>{copy.when}</dt>
+              <dd>{dateRuleText(i18n, observance)}</dd>
+            </div>
+          )}
+        </dl>
+        {customsText(i18n, observance) && (
+          <p>{emphasisParts(customsText(i18n, observance)).map((part) => (
+            part.strong ? <strong>{part.text}</strong> : <Fragment>{part.text}</Fragment>
+          ))}</p>
+        )}
+      </section>
+    ))}
+
+    {note && regionalNoteText(i18n, note) && (
+      <section class="observance">
+        <h2>{note.kind === 'absence' ? t('topic.no_local_observance') : t('topic.perennial')}</h2>
+        <p>{emphasisParts(regionalNoteText(i18n, note)).map((part) => (
+          part.strong ? <strong>{part.text}</strong> : <Fragment>{part.text}</Fragment>
+        ))}</p>
+      </section>
+    )}
+
+    {loc.summary && (
+      <section class="context">
+        <h2>{copy.what}</h2>
+        <p>{plainText(loc.summary)}</p>
+      </section>
+    )}
+
+    {siblings.length > 0 && (
+      <nav class="siblings" aria-labelledby="siblings-h">
+        <h2 id="siblings-h">{copy.where}</h2>
+        <ul>
+          {siblings.map((c) => (
+            <li>
+              <a href={withBase(`topic/${facts.slug}/${c.toLowerCase()}/`)}>
+                <span class="flag" aria-hidden="true">{countryFlag(c)}</span>{countryName(c)}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    )}
+
+    {sourceUrls.length > 0 && (
+      <section class="sources">
+        <h2>{copy.sources}</h2>
+        <ul>
+          {sourceUrls.slice(0, 6).map((url) => (
+            <li><a href={url} rel="noopener noreferrer" target="_blank">{sourceLabel(url)} ↗</a></li>
+          ))}
+        </ul>
+        <p class="note">{copy.sourceNote}</p>
+      </section>
+    )}
+  </article>
+</BaseLayout>
+
+<style>
+  .country-page { display: flex; flex-direction: column; gap: var(--space-l); }
+  .crumb { font-size: var(--text-sm); }
+  .crumb a { color: var(--color-link); }
+  h1 { font-size: var(--text-2xl); line-height: 1.25; }
+  .flag { margin-inline-end: 0.4em; }
+  .observance, .context, .siblings, .sources {
+    border-block-start: 1px solid var(--color-border);
+    padding-block-start: var(--space-m);
+  }
+  h2 { font-size: var(--text-lg); margin-block-end: var(--space-xs); }
+  .facts { display: flex; flex-wrap: wrap; gap: var(--space-m); margin-block-end: var(--space-s); }
+  .facts div { display: flex; flex-direction: column; gap: 0.15em; }
+  dt { font-size: var(--text-sm); color: var(--color-text-muted); }
+  dd { font-size: var(--text-base); }
+  p { font-size: var(--text-base); line-height: 1.7; }
+  .siblings ul { display: flex; flex-wrap: wrap; gap: var(--space-s); list-style: none; padding: 0; }
+  .siblings a { font-size: var(--text-base); color: var(--color-link); }
+  .sources ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.3em; }
+  .sources a { font-size: var(--text-base); color: var(--color-link); word-break: break-word; }
+  .note { font-size: var(--text-sm); color: var(--color-text-muted); }
+</style>

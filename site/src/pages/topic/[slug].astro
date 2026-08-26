@@ -45,6 +45,7 @@ import { calendarLinks, icsFileName } from '../../lib/calendar.mjs';
 import { plainText, emphasisParts } from '../../lib/emphasis.mjs';
 import { summaryLead } from '../../lib/summary.mjs';
 import { isTrendTopic } from '../../lib/topic-status.mjs';
+import { countryCellsFor } from '../../lib/country-cells.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
   observancesForFacts, customsText, dateRuleText, regionalNotesForFacts, regionalNoteText,
@@ -192,6 +193,8 @@ const marketCity = MARKET_CITY[LOCALE] || null;
 const places = placesForTopic(topicId, marketCity);
 const events = eventsForTopic(topicId, marketCity);
 const copy = seoCopy();
+// 哪些國家撐得起自己的頁(2026-08-26)。判準只有一份,見 lib/country-cells.mjs。
+const countryCells = countryCellsFor(facts, i18n);
 const sourceUrls = [...new Set([
   ...(facts?.source_urls || []),
   ...observances.flatMap((observance) => observance.source_urls || []),
@@ -858,7 +861,11 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
               <div class="country-body">
                 <h3 class="country-name">
                   <span class="country-flag" aria-hidden="true">{countryFlag(c.country_code)}</span>
-                  {observanceHeading(c)}
+                  {/* 逐國頁(2026-08-26):h3 本身就是那一頁的標題,連結掛在它身上。
+                      撐不起獨立頁的格子不長連結(判準見 lib/country-cells.mjs),不會連到 404。 */}
+                  {countryCells.includes(c.country_code)
+                    ? <a href={withBase(`topic/${facts.slug}/${c.country_code.toLowerCase()}/`)}>{observanceHeading(c)}</a>
+                    : observanceHeading(c)}
                   {!needsLocalName(c) && <span class="local-name">{c.local_name}</span>}
                 </h3>
                 {customsText(i18n, c) && (
@@ -920,7 +927,9 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
               <div class="country-body">
                 <h3 class="country-name">
                   <span class="country-flag" aria-hidden="true">{countryFlag(note.country_code)}</span>
-                  {countryQuestion(note.country_code, note.kind === 'absence')}
+                  {countryCells.includes(note.country_code)
+                    ? <a href={withBase(`topic/${facts.slug}/${note.country_code.toLowerCase()}/`)}>{countryQuestion(note.country_code, note.kind === 'absence')}</a>
+                    : countryQuestion(note.country_code, note.kind === 'absence')}
                 </h3>
                 {regionalNoteText(i18n, note) && (
                   <p class="country-customs">

@@ -159,7 +159,12 @@ for (const path of htmlFiles) {
   const rel = relative(DIST, path);
   const noindex = /name=["'](?:robots|googlebot)["'][^>]*content=["'][^"']*noindex/i.test(html);
   const title = (html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || '').trim();
-  const desc = html.match(/<meta\s+name=["']description["']\s+content=["']([\s\S]*?)["']/i)?.[1] || '';
+  // ⚠ 結束引號必須與開頭那一個相同(反向參照),不能寫成 `["']` ——
+  // Astro 在雙引號屬性裡會直接印出撇號(`content="Father's Day: …"`,合法 HTML),
+  // 用字元類別會在第一個 `'` 就截斷,desc 只剩 "Father"。
+  // 2026-08-26 逐國頁上線時才炸出來:兩頁各自被截成 "Father" 於是 D1 誤報重複。
+  // 反過來說,在此之前**所有含撇號的英文/葡文描述都只有前幾個字在被比對**,D1 一直漏檢。
+  const desc = html.match(/<meta\s+name=["']description["']\s+content=(["'])([\s\S]*?)\1/i)?.[2] || '';
   const lines = visibleLines(html);
   const total = lines.join('').length;
   const unique = [...new Set(lines)].join('').length;

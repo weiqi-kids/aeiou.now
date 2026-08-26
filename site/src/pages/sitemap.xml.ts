@@ -1,5 +1,6 @@
 import { WINDOWS } from '../lib/config.mjs';
 import { coverPath, getGlobalRanking, getTopicBundle, listTopicIds, readJson } from '../lib/data.mjs';
+import { countryCellsFor } from '../lib/country-cells.mjs';
 import { withBase } from '../lib/paths.mjs';
 
 export const prerender = true;
@@ -85,6 +86,17 @@ export function GET({ site }) {
       image: cover ? new URL(withBase(cover), origin).toString() : undefined,
       imageTitle: facts.canonical_name,
     });
+    // 逐國頁(2026-08-26)。lastmod 與母頁同一份指紋 —— 它的內容就是母頁那一格,
+    // 沒有自己的資料來源;priority 低一階,母頁仍然是這個 Topic 的主入口。
+    // 只列**真的有產出的**格子(countryCellsFor 與 getStaticPaths 同一支判準),
+    // 否則 sitemap 會指向 404。
+    for (const code of countryCellsFor(facts, getTopicBundle(topicId).i18n)) {
+      add(`topic/${facts.slug}/${code.toLowerCase()}/`, {
+        lastmod: freshest(facts.content_updated_at || facts.updated_at, RENDER_AT),
+        changefreq: facts.is_perennial ? 'monthly' : 'weekly',
+        priority: '0.6',
+      });
+    }
   }
 
   const body = [...entries.values()].map((entry) => [

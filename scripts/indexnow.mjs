@@ -95,6 +95,28 @@ async function submit(origin, urlList) {
   return false;
 }
 
+/**
+ * 逐國頁的路徑。直接讀**剛 build 出來的 sitemap**,而不是自己重算一次門檻 ——
+ * 判準只有一份(site/src/lib/country-cells.mjs),重算就會有第二份、遲早不一致,
+ * 而不一致的後果是把 404 送給搜尋引擎。找不到 sitemap 就回空陣列(不擋提交)。
+ */
+function sitemapCountryPaths(slugs, origin) {
+  const candidates = ["site/dist/sitemap.xml", "dist/sitemap.xml"];
+  const file = candidates.map((p) => join(ROOT, p)).find((p) => existsSync(p));
+  if (!file) return [];
+  const xml = readFileSync(file, "utf8");
+  const want = new Set(slugs);
+  const out = [];
+  for (const m of xml.matchAll(/<loc>([^<]*?)(\/topic\/([^/<]+)\/([a-z]{2})\/)<\/loc>/g)) {
+    // ⚠ dist/ 只有**最後一個 build 的語系**。七個站的逐國頁集合不一樣
+    // (厚度門檻逐語系算,zh-TW 141 頁、en 301 頁),拿同一份 sitemap 送給七個 origin
+    // 等於主動把 404 餵給搜尋引擎。所以只認 sitemap 自己那個 origin。
+    if (m[1] !== origin) continue;
+    if (want.has(m[3])) out.push(m[2]);
+  }
+  return [...new Set(out)];
+}
+
 async function main() {
   const slugs = changedSlugs();
   if (slugs.length === 0) {
@@ -126,6 +148,11 @@ async function main() {
       // 對 Google 那一半仍然靠 sitemap 的 lastmod。
       // /about/ 不加:它不隨 Topic 變動,不符合上面那條理由。
       ...["24h", "72h", "7d", "1m", "3m", "1y"].map((w) => `${origin}/rankings/${w}/`),
+      // 逐國頁(2026-08-26)。它的內容就是母 Topic 那一格,母頁變了它就變。
+      // 清單來自 data/topics/<id>/facts.json,判準與 site 端的 countryCellsFor 一致:
+      // 這裡只用「有沒有那一國的資料」判斷,厚度門檻由 build 決定 ——
+      // 送了但沒產出的網址會 404,所以只送 sitemap 裡真的有的那些。
+      ...sitemapCountryPaths(slugs, origin).map((path) => `${origin}${path}`),
     );
     await submit(origin, urlList);
   }
