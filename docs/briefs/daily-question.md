@@ -31,6 +31,68 @@
 - `kind=guess` 必填 `answer`(= options 之一的 id)與七語 `explain`;`kind=poll` 兩者必為 null。
 - option `id` 在題內唯一;guess 題的 option id 慣例用社群 locale 代碼。
 
+**檔案格式是人工編輯的格式,寫回時不准改**:縮排 2、排序 `date` ASC 且同日 **poll 在 guess 前**
+(與 §5 匯出順序一致)。任何工具寫回這個檔都照這個格式輸出 —— 換成別的縮排會製造一萬行假 diff,
+真正新增的那幾天全被埋掉。
+
+### 1.1 補題:`scripts/generate-questions.mjs`(2026-08-26 新增)
+
+題庫每天吃掉兩題,**它會反覆見底**;而一題 guess 要七語 explain,單題七語共約八千字,手寫不是答案。
+
+```bash
+node scripts/generate-questions.mjs --until 2027-01-14   # 補到某一天(含)
+node scripts/generate-questions.mjs                      # 裸執行=從最後一題往後補 90 天
+node scripts/generate-questions.mjs --days 8 --concurrency 8
+node scripts/generate-questions.mjs --dry-run            # 只印不寫檔
+node scripts/import-questions.mjs                        # ← 產完一定要跑這支(權威閘門)
+```
+
+| 旗標 | 預設 | 作用 |
+|---|---|---|
+| `--until YYYY-MM-DD` | — | 補到那一天為止(含);與 `--days` 擇一 |
+| `--days N` | 90 | 從起點往後補幾天 |
+| `--from YYYY-MM-DD` | 最後一題的隔天 | 起點 |
+| `--concurrency N` | 4 | 同時開幾個 `claude -p` |
+| `--attempts N` | 2 | 單日重試次數 |
+| `--dry-run` | — | 不寫檔 |
+
+**三個性質(這支能不能放心重跑,全靠這三個)**
+
+1. **冪等**:啟動時讀現有題庫,**已經有題目的日期直接跳過**,只補缺的。
+   中斷了不必算補到哪、也不必挑日期,**原指令再跑一次**就只補缺的那幾天。
+2. **增量寫回**:每完成一天就把整份題庫重寫回檔(寫 tmp 再 `rename`,rename 是原子的),
+   所以任何時候被殺,已完成的天數都已經在檔案裡。序列版是整批跑完才寫,中途被殺全部消失。
+3. **決定性**:選題在派工**之前**一次排定。並行之下若在 worker 裡挑 Topic,
+   「同一個 Topic 不連續兩天」會變成「看誰先跑完」,同一份輸入跑兩次結果不同。
+
+**並行度先量再調**:`claude` CLI 是訂閱版,開太高只會排隊或被限流,不會更快。
+本支結束時會印「實測吞吐」那一行 —— 調之前先看它。
+2026-08-26 實測(同一台主機、同一份素材):
+
+| 並行 | 牆鐘 | 換算 | 單次呼叫 latency |
+|---|---|---|---|
+| 4 | 56.4 s/天 | 63.8 天/小時 | 132–168s |
+| 8 | 27.6 s/天 | 130.5 天/小時 | 142–221s |
+
+8 的 per-call latency 只有尾端略被拉長、沒有觸發限流,所以吞吐接近翻倍;**再往上沒有實測過**。
+
+**紅線(兩條都不是這支自己的規矩,緣由見 `scripts/translate-posts.mjs` 檔頭)**
+
+- `claude -p` 一律在 **/root 之外的空目錄**跑(cwd 在 repo 會把 `CLAUDE.md` 拖進 context,
+  每次白花約 12,200 tokens,而且產出會被手冊內容影響)。
+- `claude -p` 一律明寫 `--model`,本專案 pin `claude-sonnet-5`,不吃 CLI 預設。
+
+**最重要的一條:事實只能來自餵進去的素材。** prompt 會把該 Topic 已經寫好、
+且每一條都掛過官方來源的七語內容(summary、observance customs、regional note)整份餵進去,
+並要求「不得引入任何段落裡沒有的日期、法條、數字或機構名」。
+這條是這支腳本存在的前提,**不准放寬** —— explain 讀起來就是一段帶法條的敘述,
+模型自由發揮等於在題庫裡種下沒有來源的斷言(`docs/03-topic-content.md` 硬規則 2)。
+抽驗方式:從新產出的 explain 裡挑最 specific 的字串(法條號、人名、地名),
+`grep -rl` 回 `data/topics/*/i18n.json` 應該找得到。
+
+**有天數被放棄時**:結束時會列出是哪幾天,exit code 為 1。因為是冪等的,
+**直接重跑同一條指令**就只補那幾天,不要整批重來。
+
 ## 2. 主機 SQLite(加進 `db/schema-host.sql`;另寫 `scripts/migrate-questions.mjs` 供舊庫補表)
 
 ```sql

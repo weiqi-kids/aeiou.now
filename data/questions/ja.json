@@ -4152,6 +4152,5946 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20261017-elders-respect",
+      "date": "2026-10-17",
+      "kind": "poll",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなた自身の文化や家庭では、年長者への敬意はどんな形で表されることが多いですか。",
+      "options": [
+        {
+          "id": "day-off-reunion",
+          "emoji": "🏠",
+          "label": "休みを使って帰省し団らんする"
+        },
+        {
+          "id": "visit-elders",
+          "emoji": "🚶",
+          "label": "わざわざ訪ねて一緒に過ごす"
+        },
+        {
+          "id": "awards-benefits",
+          "emoji": "🏅",
+          "label": "政府や団体による表彰・手当・福祉"
+        },
+        {
+          "id": "daily-gesture",
+          "emoji": "🙏",
+          "label": "日々の挨拶やお辞儀といった所作"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261017-elders-day-origin",
+      "date": "2026-10-17",
+      "kind": "guess",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうち、建国準備のための最初の会議を年長者が主宰したことを記念して敬老の日の日付が選ばれたのはどこか。",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261018-full-moon-habit",
+      "date": "2026-10-18",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "満月の前後、あなたはふだんどう過ごしますか？",
+      "options": [
+        {
+          "id": "moon-gazing",
+          "emoji": "🌕",
+          "label": "月を見上げる"
+        },
+        {
+          "id": "bbq",
+          "emoji": "🍖",
+          "label": "焼肉をする"
+        },
+        {
+          "id": "mooncake",
+          "emoji": "🥮",
+          "label": "月餅を食べる"
+        },
+        {
+          "id": "nothing-special",
+          "emoji": "🤷",
+          "label": "特に何もしない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261018-two-moons",
+      "date": "2026-10-18",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "同じ満月の前後で、月見は二度見て初めて揃うとされ、片方だけを片見月と呼んで縁起が悪いとする国はどこでしょう？",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261019-remembrance-poll",
+      "date": "2026-10-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "鬼・先祖・追悼というテーマで、あなた自身(または家族)がいちばん近いのはどれですか。",
+      "options": [
+        {
+          "id": "sweep-grave",
+          "emoji": "🧹",
+          "label": "墓参り・墓の手入れ(清明スタイル)"
+        },
+        {
+          "id": "offerings-and-incense",
+          "emoji": "🍊",
+          "label": "供物を用意し線香をあげる(中元・普渡スタイル)"
+        },
+        {
+          "id": "welcome-and-send-off",
+          "emoji": "🏮",
+          "label": "火を焚いて先祖を迎え、また送る(お盆スタイル)"
+        },
+        {
+          "id": "none-just-costumes",
+          "emoji": "🎃",
+          "label": "どれもしない。せいぜい仮装してお菓子をもらう程度(ハロウィンスタイル)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261019-pitru-paksha-guess",
+      "date": "2026-10-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある祖先の伝統は満月から新月まで十六日間続き、水と食を供えるのは自分の祖先だけで、無縁の霊には向けられない。ある町がそのために毎年大勢の参拝者を集める。これはどこの国か。",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261020-moon-viewing-poll",
+      "date": "2026-10-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この満月の前後、あなたの時間は主に何に使われますか？",
+      "options": [
+        {
+          "id": "moon-gazing",
+          "emoji": "🌕",
+          "label": "空を見上げて月を眺める"
+        },
+        {
+          "id": "grilling-gathering",
+          "emoji": "🍖",
+          "label": "バーベキューや食事会"
+        },
+        {
+          "id": "traveling-home",
+          "emoji": "🚗",
+          "label": "帰省や集まりへの移動中"
+        },
+        {
+          "id": "ordinary-night",
+          "emoji": "🌙",
+          "label": "いつもの夜と変わらない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261020-moon-viewing-guess",
+      "date": "2026-10-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "自国の収穫祭がそもそも別の季節にあるため、「中秋」という名前自体が季節と合わない国はどこか？",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261021-midautumn-habit",
+      "date": "2026-10-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この満月の前後、あなたは普段どう過ごしますか?",
+      "options": [
+        {
+          "id": "moon-twice",
+          "emoji": "🌕",
+          "label": "月を見上げる(一度だけでなく)"
+        },
+        {
+          "id": "mooncake-reunion",
+          "emoji": "🥮",
+          "label": "月餅を食べ、家族と集まる"
+        },
+        {
+          "id": "bbq",
+          "emoji": "🍖",
+          "label": "焼肉(バーベキュー)"
+        },
+        {
+          "id": "grave-sweep",
+          "emoji": "🪦",
+          "label": "墓参りと先祖供養"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261021-midautumn-guess-country",
+      "date": "2026-10-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "同じ満月の前後で、休日にせずこの夜を天文と季節の出来事として扱い、「名月は必ずしも満月ではない」とはっきり述べ、しかも二度見て初めて月見が揃うとされる国はどこか?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261022-remembrance-practices",
+      "date": "2026-10-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの家庭やよく知る文化では、先祖や亡くなった人をどのように偲びますか?",
+      "options": [
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "墓参りや墓の手入れ"
+        },
+        {
+          "id": "offerings-altar",
+          "emoji": "🕯️",
+          "label": "自宅や祭壇でお供えや線香をあげる"
+        },
+        {
+          "id": "family-meal",
+          "emoji": "🍲",
+          "label": "家族で食事や集まりをして偲ぶ"
+        },
+        {
+          "id": "not-much",
+          "emoji": "🤷",
+          "label": "特に決まった習わしはない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261022-which-country-nov2",
+      "date": "2026-10-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この国の追悼の日は11月にあり、法律で定められた国の祝日です。家族は墓地に行って花を供え、ろうそくを灯し、墓を整え、教会では追悼のミサが行われます。諸聖人の日の翌日にあたり、南半球のこの国では晩春にあたります。どの国でしょうか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261023-moon-viewing-style",
+      "date": "2026-10-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "自分の家の月見や中秋の過ごし方に一番近いのはどれ？",
+      "options": [
+        {
+          "id": "bbq-first",
+          "emoji": "🍖",
+          "label": "月より焼肉のにおいで秋を感じる"
+        },
+        {
+          "id": "moon-twice",
+          "emoji": "🎑",
+          "label": "月見は一度では物足りない"
+        },
+        {
+          "id": "grave-first",
+          "emoji": "🪦",
+          "label": "まず墓参りから一日が始まる"
+        },
+        {
+          "id": "night-vigil",
+          "emoji": "🕯️",
+          "label": "夜通し起きて、供え物を月明かりに置いておく"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261023-who-stays-up-for-moon",
+      "date": "2026-10-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "同じ満月なのに、中秋節はなく、夜通し起きて神に祈り、甘味を月明かりに置いて翌日分け合う場所がある——どこだろうか。",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261024-ancestor-remembrance-timing",
+      "date": "2026-10-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もしご家族に墓参りや先祖供養の習慣があるなら、それはどんなタイミングで行われますか?",
+      "options": [
+        {
+          "id": "fixed-day",
+          "emoji": "📅",
+          "label": "毎年決まった日(清明節やハロウィンのように)"
+        },
+        {
+          "id": "month-aligned",
+          "emoji": "🌙",
+          "label": "特定の日ではなく、月に合わせて"
+        },
+        {
+          "id": "extended-period",
+          "emoji": "⏳",
+          "label": "ある程度の期間をかけて行う"
+        },
+        {
+          "id": "no-fixed-plan",
+          "emoji": "🤷",
+          "label": "特に決まりはなく、その時々で"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261024-setsubun-role-reversal",
+      "date": "2026-10-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある行事の源は中国の疫病祓いの儀礼で、伝わった先で宮廷行事になった。最初はある役が目に見えない疫鬼を追い払っていたが、のちにその役自身が鬼とみなされ、追い出されるようになった。これは今、どの国の行事だろうか。",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261025-diwali-bhai-dooj-poll",
+      "date": "2026-10-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ディワリ最終日のバーイー・ドゥージでは、姉妹が兄弟にティカを施して長寿を祈り、兄弟は贈り物を返す。あなた自身の文化に、兄弟姉妹が互いに祝福や贈り物をし合うような祭りや習慣はあるだろうか。",
+      "options": [
+        {
+          "id": "yes-regularly",
+          "emoji": "🎁",
+          "label": "ある。毎年行っている"
+        },
+        {
+          "id": "yes-occasionally",
+          "emoji": "🕯️",
+          "label": "あるが、毎年きちんと祝うわけではない"
+        },
+        {
+          "id": "no-similar",
+          "emoji": "🤷",
+          "label": "そのような祭りや習慣は聞いたことがない"
+        },
+        {
+          "id": "no-siblings",
+          "emoji": "👤",
+          "label": "兄弟姉妹がいないので、そうした経験はない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261025-diwali-hindu-holiday-guess",
+      "date": "2026-10-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "文中では、ある宗教を公認宗教の一つに数え、全国の祝日まで与えている国が出てくる——ただしその日はディワリではなく、現地の信者自身の新年である。どの国か。",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261026-remembrance-check-in",
+      "date": "2026-10-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "今年、お墓参りや先祖への供養、あるいは別のかたちで亡くなった人を偲んだことはありますか?",
+      "options": [
+        {
+          "id": "yes-ritual",
+          "emoji": "🕯️",
+          "label": "はい、わりと形式ばったやり方で(墓参り、供養など)"
+        },
+        {
+          "id": "yes-personal",
+          "emoji": "💭",
+          "label": "はい、でも個人的な形で(思い出す、写真を見る、心の中で語りかける)"
+        },
+        {
+          "id": "not-yet",
+          "emoji": "📅",
+          "label": "まだだけど、今年中にするつもり"
+        },
+        {
+          "id": "not-my-practice",
+          "emoji": "🤷",
+          "label": "うちや地元ではそういうことをしない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261026-guess-nyadran-country",
+      "date": "2026-10-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある墓参りの習わしは、特定の日付にではなく「来月から断食が始まる」ことに合わせて行われる。儀式の名はサンスクリットの「信」に由来し、最後は皆で一つの食事を共にして締めくくる。さて、これはどこの国の習わしか。",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261027-diwali-days",
+      "date": "2026-10-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ディワリの五日間はそれぞれ違うことに重きを置く——ダンテラスでは金を買い、中心日では灯りをともし、ゴーヴァルダン・プージャでは食べ物を山のように積み、バーイー・ドゥージでは兄弟姉妹が贈り物を交わす。あなたが体験してみたいのはどの日だろうか。",
+      "options": [
+        {
+          "id": "dhanteras",
+          "emoji": "💰",
+          "label": "金を買う(ダンテラス)"
+        },
+        {
+          "id": "main-day",
+          "emoji": "🪔",
+          "label": "灯りをともす(中心日)"
+        },
+        {
+          "id": "govardhan",
+          "emoji": "🍛",
+          "label": "食べ物の山を供える(ゴーヴァルダン・プージャ)"
+        },
+        {
+          "id": "bhai-dooj",
+          "emoji": "👫",
+          "label": "兄弟姉妹の贈り物交換(バーイー・ドゥージ)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261027-diwali-guess",
+      "date": "2026-10-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "インドネシア、台湾、中国、ブラジルはいずれもディワリを国民の祝日としていない。しかしそのうち一つは、ヒンドゥー教そのものを公認宗教として認め、全国の祝日を一日与えている——ただしその日はディワリではない。どこだろうか。",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261028-remembrance-practice",
+      "date": "2026-10-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "このページに挙がった追悼の作法のうち、あなた自身の家庭や育った土地の習慣に一番近いのはどれですか。",
+      "options": [
+        {
+          "id": "grave-tending",
+          "emoji": "🪦",
+          "label": "墓参りと墓の手入れ"
+        },
+        {
+          "id": "spirit-offerings",
+          "emoji": "🙏",
+          "label": "普渡、無縁仏と祖先への供養"
+        },
+        {
+          "id": "welcome-and-send-off",
+          "emoji": "🔥",
+          "label": "祖先を迎えて送る(往復のような行事)"
+        },
+        {
+          "id": "facing-neighbors",
+          "emoji": "🎃",
+          "label": "自分の先祖ではなく近所へ向かう"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261028-pitru-paksha-guess",
+      "date": "2026-10-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある追悼の伝統は陰暦で十六日間続き、ある月の満月から翌月の新月(マハーラヤと呼ばれる)まで、水と食を供えて祖先に赦しを乞う。ある土地では毎年これを目的に大規模な祭祖の集まりができる。これはどの国の伝統か?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261029-ancestor-practice",
+      "date": "2026-10-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの育った環境で、先祖や亡くなった人を偲ぶときいちばん身近だったのはどれですか?",
+      "options": [
+        {
+          "id": "sweep-grave",
+          "emoji": "🧹",
+          "label": "墓参りと墓の手入れ"
+        },
+        {
+          "id": "altar-incense",
+          "emoji": "🙏",
+          "label": "家の祭壇で線香を上げ、供え物をする"
+        },
+        {
+          "id": "candle-fire",
+          "emoji": "🕯️",
+          "label": "ろうそくや迎え火・送り火をたく"
+        },
+        {
+          "id": "shared-meal",
+          "emoji": "🍲",
+          "label": "家族や仲間で一緒に食事をする"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261029-which-country-two-fires",
+      "date": "2026-10-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この先祖を偲ぶ行事は法定の休日ではないのに、一年でもっとも目立つ全国的な停止を生み出す。門口でまず迎え火をたいて先祖を迎え、数日後に送り火で見送り、その間を盆踊りが埋める。これはどの国の行事か?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261030-diwali-pick-a-day",
+      "date": "2026-10-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ディワリの五日間のうち、一日だけ過ごせるとしたら、どの日を選びますか?",
+      "options": [
+        {
+          "id": "dhanteras",
+          "emoji": "🪙",
+          "label": "ダンテラス——金の装飾品や新しい器を買う日"
+        },
+        {
+          "id": "main-day",
+          "emoji": "🪔",
+          "label": "中心日——灯りをともしガネーシャとラクシュミーを祀る"
+        },
+        {
+          "id": "govardhan",
+          "emoji": "⛰️",
+          "label": "ゴーヴァルダン・プージャ——食べ物を山のように積む供養"
+        },
+        {
+          "id": "bhai-dooj",
+          "emoji": "👫",
+          "label": "バーイー・ドゥージ——姉妹のティカと兄弟の贈り物"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261030-diwali-school-closure-guess",
+      "date": "2026-10-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうちどこでは、ディワリが国全体の宗教的祝日ではないのに、都市が法律で公立学校を休校にしたか?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261031-family-remembrance",
+      "date": "2026-10-31",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの生活の中で、家族はこうした死者や先祖にまつわる日をふだんどう過ごしますか?",
+      "options": [
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "墓参りと墓の手入れ"
+        },
+        {
+          "id": "offerings-incense",
+          "emoji": "🕯️",
+          "label": "線香をあげ、供物を供える"
+        },
+        {
+          "id": "costume-treats",
+          "emoji": "🎃",
+          "label": "仮装をして家々を回りお菓子をもらう"
+        },
+        {
+          "id": "none-of-these",
+          "emoji": "🤷",
+          "label": "特にどれも行っていない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261031-guess-southern-spring",
+      "date": "2026-10-31",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "南半球の晩春にあたるため、墓参りが北半球のような寂寥とした季節感を伴わない追悼の日は、どの国のものか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261101-diwali-calendar-experience",
+      "date": "2026-11-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住む都市や学校は、地元の多数派ではない宗教の祝日のために予定を変更したことがありますか?",
+      "options": [
+        {
+          "id": "yes-personal",
+          "emoji": "🏫",
+          "label": "はい、自分自身で経験しました"
+        },
+        {
+          "id": "heard-elsewhere",
+          "emoji": "👂",
+          "label": "聞いたことはあるが、自分の地域ではない"
+        },
+        {
+          "id": "never-heard",
+          "emoji": "🤷",
+          "label": "いいえ、そのような話は聞いたことがない"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "わからない、特に気にしたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261101-diwali-guess-country",
+      "date": "2026-11-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次の四つの国のうち、ディワリを全国的な祝日とし、五日間の儀礼として扱っているのはどこか。",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261102-ancestor-remembrance-poll",
+      "date": "2026-11-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたやご家族は、お墓参りや先祖供養、それに近いことをしますか。",
+      "options": [
+        {
+          "id": "every-year",
+          "emoji": "🪦",
+          "label": "毎年欠かさずする"
+        },
+        {
+          "id": "sometimes",
+          "emoji": "🕯️",
+          "label": "たまにする程度"
+        },
+        {
+          "id": "not-my-practice",
+          "emoji": "🚫",
+          "label": "そういう習慣はない"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤷",
+          "label": "人や年によって違う"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261102-guess-obon-country",
+      "date": "2026-11-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この行事そのものは法定の祝日ではないが、その土地では一年でもっとも目に見える全国的な休止となる。多くの企業がその時期に自ら連休を設定するため、帰省の車列と運賃には決まった山ができる。門口では迎え火で先祖を迎え、数日後に送り火で送り出し、その間を踊りが埋める。これはどこのことか。",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261103-diwali-favorite-day",
+      "date": "2026-11-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ディワリの五日間はそれぞれ焦点が異なる。あなたが知る祭りの雰囲気に一番近いのはどの日か。",
+      "options": [
+        {
+          "id": "dhanteras",
+          "emoji": "🪙",
+          "label": "金を買う初日"
+        },
+        {
+          "id": "main-day",
+          "emoji": "🪔",
+          "label": "灯りをともす中心日"
+        },
+        {
+          "id": "govardhan-puja",
+          "emoji": "⛰️",
+          "label": "食べ物を山に積む共同体の日"
+        },
+        {
+          "id": "bhai-dooj",
+          "emoji": "👫",
+          "label": "姉妹がティカを施す最終日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261103-diwali-holiday-country",
+      "date": "2026-11-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうち、ヒンドゥー教の祭りを国民の祝日にしているが、その日はディワリではない国はどこか。",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261104-exam-style",
+      "date": "2026-11-04",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "十八歳のときに受けた進学試験（または自分の国のやり方）を振り返ると、次のうちどれに一番近いですか。",
+      "options": [
+        {
+          "id": "one-shot",
+          "emoji": "🎯",
+          "label": "一発勝負の大きな試験がほぼすべてを決めた"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🪜",
+          "label": "まず全国共通の試験、その後各校独自の選考"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "📅",
+          "label": "数週間、あるいは数か月かけて試験が続いた"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📂",
+          "label": "全国的な入試はなく、在学中の成績や出願書類で判断された"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261104-gaokao-city",
+      "date": "2026-11-04",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうちどこで、全国的な大学入試の期間に都市がその試験に合わせて動きを変える――試験場周辺での警笛禁止、工事の停止、交通の専用車線、地域によっては勤務時間の調整まで――のでしょうか。",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261105-diwali-relation",
+      "date": "2026-11-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ディワリの五日間はそれぞれ違う関係に向き合う——富を迎える、灯りをともす、共同体を支える、兄弟姉妹を祝う。あなたが最も共感するのはどれか?",
+      "options": [
+        {
+          "id": "wealth",
+          "emoji": "💰",
+          "label": "富を迎える(ダンテラスのように)"
+        },
+        {
+          "id": "lamps",
+          "emoji": "🪔",
+          "label": "灯りをともして祈る(中心日)"
+        },
+        {
+          "id": "community",
+          "emoji": "🐄",
+          "label": "共同体と家畜への配慮(ゴーヴァルダン・プージャ)"
+        },
+        {
+          "id": "siblings",
+          "emoji": "👫",
+          "label": "兄弟姉妹の間の祝福(バーイー・ドゥージ)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261105-diwali-which-country",
+      "date": "2026-11-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある国はヒンドゥー教を公認宗教の一つに数え、全国の祝日を一日与えている——だがその日はディワリではない。その国のヒンドゥー教徒が集中する地域の別の新年で、島全体が沈黙する日である。どの国か?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261106-diwali-day-pick",
+      "date": "2026-11-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ディワリの五日間の習わしのうち、一つに参加できるなら、どの日を選びますか?",
+      "options": [
+        {
+          "id": "dhanteras",
+          "emoji": "🪙",
+          "label": "金や金属を買う"
+        },
+        {
+          "id": "main-day",
+          "emoji": "🪔",
+          "label": "灯りをともし豊かさを祈る"
+        },
+        {
+          "id": "govardhan",
+          "emoji": "🍛",
+          "label": "食べ物を山型に積む"
+        },
+        {
+          "id": "bhai-dooj",
+          "emoji": "🎁",
+          "label": "姉妹のティカと兄弟の贈り物"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261106-diwali-guess-country",
+      "date": "2026-11-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ヒンドゥー教を公認宗教の一つに数え、全国の祝日まで与えている国はどこか。ただしその祝日はディワリではない。",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261107-exam-measure-preference",
+      "date": "2026-11-07",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もし選び直せるなら、十八歳のときの進学評価はどの方式がよいですか?",
+      "options": [
+        {
+          "id": "one-shot",
+          "emoji": "🎯",
+          "label": "高考のように、一、二日で決まる"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "📅",
+          "label": "インドの試験のように、二か月近くに分けて行う"
+        },
+        {
+          "id": "no-exam",
+          "emoji": "📁",
+          "label": "アメリカのように、統一試験はなく在学成績と出願書類で見る"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🧩",
+          "label": "台湾や日本のように、まず全国試験、その後各大学の選考"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261107-gaokao-city-lockdown",
+      "date": "2026-11-07",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "試験期間中、都市が警笛を禁止し、工事を止め、交通警察が専用車線まで設けるのはどこか?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261108-diwali-day-pick",
+      "date": "2026-11-08",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ディワリは実は五日間で、それぞれ違う相手に向いている。もし一日だけ参加できるなら、どの日を選ぶ?",
+      "options": [
+        {
+          "id": "dhanteras",
+          "emoji": "🪙",
+          "label": "金を買うダンテラス"
+        },
+        {
+          "id": "main-day",
+          "emoji": "🪔",
+          "label": "灯明を灯す中心日"
+        },
+        {
+          "id": "govardhan-puja",
+          "emoji": "⛰️",
+          "label": "食べ物を山に積むゴーヴァルダン・プージャ"
+        },
+        {
+          "id": "bhai-dooj",
+          "emoji": "🎁",
+          "label": "兄弟姉妹が贈り物を交わすバーイー・ドゥージ"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261108-diwali-guess-country",
+      "date": "2026-11-08",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある国はヒンドゥー教を公認宗教の一つに数え、全国の祝日まで与えている——ただしその日はディワリではない。どの国か?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261109-fathersday-poll",
+      "date": "2026-11-09",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたは普段どの日に父の日を祝いますか？",
+      "options": [
+        {
+          "id": "on-the-day",
+          "emoji": "📅",
+          "label": "8月8日当日"
+        },
+        {
+          "id": "nearest-weekend",
+          "emoji": "🎉",
+          "label": "一番近い週末"
+        },
+        {
+          "id": "june-third-sunday",
+          "emoji": "🗓️",
+          "label": "6月第三日曜日"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "決まった日はない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261109-fathersday-guess",
+      "date": "2026-11-09",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうち、広告人であり記者でもある人物が商戦の空白を埋めるために考案した父の日はどこか？",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261110-diwali-custom",
+      "date": "2026-11-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ディワリの五日間で、自分や家族が実際にしたことがあるのはどれですか。",
+      "options": [
+        {
+          "id": "buy-metal",
+          "emoji": "🛍️",
+          "label": "ダンテラスのように金の装飾品や新しい鍋を買った"
+        },
+        {
+          "id": "light-lamps",
+          "emoji": "🪔",
+          "label": "家で灯りをともして祈った"
+        },
+        {
+          "id": "sibling-day",
+          "emoji": "🎁",
+          "label": "バーイー・ドゥージのように兄弟姉妹と贈り物を交わした"
+        },
+        {
+          "id": "none-of-above",
+          "emoji": "🙅",
+          "label": "どれもない。これらの習慣を知ったのは今回が初めて"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261110-diwali-country",
+      "date": "2026-11-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうち、ディワリを国民の祝日にしていないが、別のヒンドゥー教の祭りに国民の祝日を与えている国はどこか。",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261111-fathers-day-celebrate",
+      "date": "2026-11-11",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "父の日が平日に当たったら、あなたの家ではどう祝いますか?",
+      "options": [
+        {
+          "id": "weekend-shift",
+          "emoji": "📅",
+          "label": "直近の週末に移して集まる"
+        },
+        {
+          "id": "after-work",
+          "emoji": "🌙",
+          "label": "仕事のあとに簡単に祝う"
+        },
+        {
+          "id": "card-message",
+          "emoji": "✉️",
+          "label": "カードかメッセージだけ送る"
+        },
+        {
+          "id": "no-fuss",
+          "emoji": "🤷",
+          "label": "特に何もしない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261111-fathers-day-origin",
+      "date": "2026-11-11",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの地域の父の日が、商戦の空白を埋めるために広告マンによって考案されたものか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261112-childrens-day-memory",
+      "date": "2026-11-12",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたは(子どものころ、あるいは今)こどもの日をどう過ごしていた/いますか?",
+      "options": [
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "プレゼントをもらった"
+        },
+        {
+          "id": "school-event",
+          "emoji": "🏫",
+          "label": "学校で行事や発表があった"
+        },
+        {
+          "id": "day-off",
+          "emoji": "🎡",
+          "label": "休みで出かけた"
+        },
+        {
+          "id": "nothing-special",
+          "emoji": "🤷",
+          "label": "特に何もしなかった"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261112-childrens-day-guess-saint",
+      "date": "2026-11-12",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうち、こどもの日がその国のカトリックの守護聖人の日と同じ日付になっているのはどこか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261113-harvest-priority",
+      "date": "2026-11-13",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの暮らす場所に収穫や感謝に関わる日があるなら、何を一番大切にしていますか。",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "家族で食卓を囲むこと"
+        },
+        {
+          "id": "giving-thanks",
+          "emoji": "🙏",
+          "label": "土地や神、先祖に感謝を捧げること"
+        },
+        {
+          "id": "community-event",
+          "emoji": "🎉",
+          "label": "地域や町をあげての祭り"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "私の住む場所にはそうした日がない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261113-farmers-day-lichun",
+      "date": "2026-11-13",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの地域の農民の日は、日付が固定されておらず天文によって決まるため、毎年気象当局の資料表で確認する必要があり、しかも休日ではないか。",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261114-childrens-day-poll",
+      "date": "2026-11-14",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの記憶にあるこどもの日は、どのタイプに近いですか?",
+      "options": [
+        {
+          "id": "family-holiday",
+          "emoji": "🏖️",
+          "label": "家族みんなが休みだった"
+        },
+        {
+          "id": "kids-only-off",
+          "emoji": "🧒",
+          "label": "子どもだけ休みで、大人は普段通り仕事"
+        },
+        {
+          "id": "school-event",
+          "emoji": "🏫",
+          "label": "休みではなく、学校で行事があった"
+        },
+        {
+          "id": "no-dedicated-day",
+          "emoji": "❓",
+          "label": "そもそも専用のこどもの日はなかった"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261114-childrens-day-guess",
+      "date": "2026-11-14",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "こどもの日の日付が、国の守護聖人の日と重なっているのはどこ?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261115-pick-a-harvest-day",
+      "date": "2026-11-15",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "「収穫への感謝」の日を自分で決めるとしたら、どう選ぶ?",
+      "options": [
+        {
+          "id": "by-astronomy",
+          "emoji": "🌱",
+          "label": "節気や天文に合わせる(立春や秋分のように)"
+        },
+        {
+          "id": "by-weekday",
+          "emoji": "📆",
+          "label": "特定の曜日に固定する(感謝祭のように)"
+        },
+        {
+          "id": "by-dish-ritual",
+          "emoji": "🍚",
+          "label": "一品の料理や儀式そのものを祝日にする(ポンガルの鍋のように)"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🏘️",
+          "label": "特別には定めず、既存の暦と地域の習わしに委ねる(西ジャワのスレン・タウンのように)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261115-guess-lichun-farmers-day",
+      "date": "2026-11-15",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "農民の日を秋ではなく立春に置き、しかもその日は休みではない、そんな場所はどこ?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261116-teachers-day-poll",
+      "date": "2026-11-16",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "教師の日、あなたの知っている学校では普段どう過ごしますか？",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🏖️",
+          "label": "休みになる"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎉",
+          "label": "学校で表彰や集会が行われる"
+        },
+        {
+          "id": "role-swap",
+          "emoji": "🔄",
+          "label": "生徒が授業を代わりに行う"
+        },
+        {
+          "id": "normal-day",
+          "emoji": "📚",
+          "label": "普段通り授業、特別な行事はない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261116-teachers-day-guess",
+      "date": "2026-11-16",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この六つの地域のうち、教師の日が全国民の祝日になっているのはどこか？",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261117-harvest-timing",
+      "date": "2026-11-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住んでいる場所に「収穫」にまつわる祝日があるとしたら、それは普段いつ頃ですか。",
+      "options": [
+        {
+          "id": "before-planting",
+          "emoji": "🌱",
+          "label": "農作業が始まる前"
+        },
+        {
+          "id": "after-harvest",
+          "emoji": "🍽️",
+          "label": "収穫が終わったあと"
+        },
+        {
+          "id": "monthlong",
+          "emoji": "🎉",
+          "label": "一か月がかりのお祝い"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "そういう祝日はない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261117-harvest-before-or-after",
+      "date": "2026-11-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "上で挙げた地域のうち、「農民・収穫」の祝日が収穫のあとではなく、田畑の仕事が始まる前に置かれているのはどこか。",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261118-teachers-day-experience",
+      "date": "2026-11-18",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住んでいる場所では、教師の日(またはそれに近い日)は普段どのように過ごされますか。",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "一日休みになる"
+        },
+        {
+          "id": "school-ceremony",
+          "emoji": "🏫",
+          "label": "学校で式典があるが授業は通常通り"
+        },
+        {
+          "id": "role-swap",
+          "emoji": "🔄",
+          "label": "生徒が授業を受け持ち役割を入れ替える"
+        },
+        {
+          "id": "no-special-day",
+          "emoji": "🤷",
+          "label": "国レベルの日はなく、それぞれで感謝の催しをする"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261118-teachers-day-guess",
+      "date": "2026-11-18",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "六つの地域の教師の日のうち、当時の大統領本人が学生の誕生日祝いを辞退し、代わりに全国の教師を讃えるよう提案したことでその日付が決まった場所はどこか。",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261119-harvest-poll",
+      "date": "2026-11-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もし収穫の祝日を自分でデザインするなら、いつ祝いたいですか?",
+      "options": [
+        {
+          "id": "after-harvest",
+          "emoji": "🌾",
+          "label": "収穫を終えたあと、手に入れたものに感謝する——感謝祭のように"
+        },
+        {
+          "id": "before-harvest",
+          "emoji": "🌱",
+          "label": "農作業が始まる前、これから畑に出ることを祝う——台湾の立春のように"
+        },
+        {
+          "id": "month-long",
+          "emoji": "🎉",
+          "label": "丸一か月続く祭りに、ブラジルの六月祭のようにいくつもの祝日を巡って"
+        },
+        {
+          "id": "dish-is-ritual",
+          "emoji": "🍚",
+          "label": "一皿の料理ができあがること自体を儀礼に、インドのポンガルの溢れる鍋のように"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261119-harvest-guess",
+      "date": "2026-11-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国・地域の収穫祭が、国民全体の休日ではなく、政府の承認で作られ、テーマを毎年省庁が定めているものか?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261120-teachers-day-experience",
+      "date": "2026-11-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが経験した教師の日、あるいはそれに近い行事は、次のうちどれに近いですか。",
+      "options": [
+        {
+          "id": "day-off-and-ceremony",
+          "emoji": "🎉",
+          "label": "休みになり、学校でお祝いの行事もある"
+        },
+        {
+          "id": "school-day-with-event",
+          "emoji": "📣",
+          "label": "授業は普段通りだが、学校で表彰行事がある"
+        },
+        {
+          "id": "students-swap-roles",
+          "emoji": "🔄",
+          "label": "上級生が一日だけ授業を受け持ち、役割を入れ替える"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🚫",
+          "label": "そのような日はなく、ただの普通の一日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261120-teachers-day-origin",
+      "date": "2026-11-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "教師の日が実際に記念しているのは「国が学校教育を始めた日」であって、特定の教師ではない――それはどこか。",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261121-harvest-gratitude-poll",
+      "date": "2026-11-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もしあなたの暮らす場所にも収穫や感謝にまつわる日があるとしたら、その日で一番大事なのは何ですか?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "家族で食卓を囲むこと"
+        },
+        {
+          "id": "give-thanks-ritual",
+          "emoji": "🙏",
+          "label": "儀式や祈りで天や自然に感謝すること"
+        },
+        {
+          "id": "community-festival",
+          "emoji": "🎉",
+          "label": "近所や地域の人たちと賑やかに祝うこと"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "正直、そういう日は特にない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261121-harvest-gratitude-guess",
+      "date": "2026-11-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある場所の「農民の日」は、すでに収穫したものを祝うのではなく、春が始まり、これから田に出るという日に置かれている。日付は天文で決まるため、その年が2月3日か4日か5日かは毎年暦を調べないとわからず、しかもこの日は休みではない。どこの話か?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261122-teachers-day-poll",
+      "date": "2026-11-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの経験では、教師の日に学校でよく見られるのはどれですか?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "休みになり、授業がない"
+        },
+        {
+          "id": "school-ceremony",
+          "emoji": "🏫",
+          "label": "学校で表彰や感謝の式典"
+        },
+        {
+          "id": "role-swap",
+          "emoji": "🔄",
+          "label": "上級生が授業を受け持ち役割交代"
+        },
+        {
+          "id": "no-celebration",
+          "emoji": "📚",
+          "label": "特に何もなく、通常通り授業"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261122-teachers-day-guess",
+      "date": "2026-11-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "本人が誕生日を祝おうとした学生を辞退し、代わりに全国の教師を讃えるよう求めたことから始まった教師の日はどこか?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261123-harvest-experience",
+      "date": "2026-11-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなた自身の生活の中で、「収穫・感謝」の瞬間に一番近いのはどれ?",
+      "options": [
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "家族みんなで囲む食事"
+        },
+        {
+          "id": "ritual-dish",
+          "emoji": "🍚",
+          "label": "特定の料理や所作そのものが祝いになる"
+        },
+        {
+          "id": "community-festival",
+          "emoji": "🎉",
+          "label": "地域やコミュニティぐるみで続くお祭り"
+        },
+        {
+          "id": "thanks-for-labor",
+          "emoji": "🙏",
+          "label": "収穫そのものより、互いの労働に感謝する日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261123-harvest-before-or-after",
+      "date": "2026-11-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "収穫・農民のための祝日が、収穫の後ではなく、田仕事が始まる前に置かれているのはどこ?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261124-teachers-day-experience",
+      "date": "2026-11-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "学生時代を振り返って、教師の日(またはそれに近い日)によくあった光景は?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "学校が休みになった"
+        },
+        {
+          "id": "school-event",
+          "emoji": "🏫",
+          "label": "授業は普段どおりで、表彰や感謝の行事があった"
+        },
+        {
+          "id": "role-swap",
+          "emoji": "🔄",
+          "label": "上級生が授業を受け持ち、役割が入れ替わった"
+        },
+        {
+          "id": "no-event",
+          "emoji": "📚",
+          "label": "特に何もなく、いつもと同じ一日だった"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261124-teachers-day-origin",
+      "date": "2026-11-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "六つの地域の教師の日には、それぞれ異なる由来がある。ある場所の教師の日は、特定の教師や人物ではなく、「国家が学校教育を始めた日」を記念している。それはどこか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261125-harvest-picture",
+      "date": "2026-11-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "「収穫と感謝」と聞いて、あなたの心に一番近い光景はどれですか。",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "家族で食卓を囲む"
+        },
+        {
+          "id": "thank-labor",
+          "emoji": "🙏",
+          "label": "一年の労をたたえ合う"
+        },
+        {
+          "id": "before-the-work",
+          "emoji": "🌱",
+          "label": "収穫の前に、これから始まる仕事のための儀式"
+        },
+        {
+          "id": "month-long-festivity",
+          "emoji": "🎉",
+          "label": "一か月続く賑やかな祭り"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261125-harvest-before-or-after",
+      "date": "2026-11-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "感謝祭も中国の農民豊収節も勤労感謝の日も収穫の後に置かれている。では、農作業が始まる前に「農民の日」を置いている場所はどこか。",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261126-year-end-bonus-poll",
+      "date": "2026-11-26",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたがこれまでにもらった年末の一時金は、次のうちどれに近いですか?",
+      "options": [
+        {
+          "id": "legal-penalty",
+          "emoji": "⚖️",
+          "label": "法律で支給が定められ、遅れれば罰金もある"
+        },
+        {
+          "id": "profit-condition",
+          "emoji": "📊",
+          "label": "その年に会社が利益を出したかどうかで決まる"
+        },
+        {
+          "id": "employer-discretion",
+          "emoji": "🎲",
+          "label": "完全に雇用主の裁量で、金額も有無も不確か"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "年に二回もらえ、年央と年末に分かれている"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261126-year-end-bonus-guess",
+      "date": "2026-11-26",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "年末の支給が賞与ではなく賃金の一部とされ、二回払い——第一回は十一月三十日まで、第二回は十二月二十日まで——で、遅延には罰則があり、労働者が訴えることもできる国はどこでしょう?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261127-mothers-day-poll",
+      "date": "2026-11-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの家では、母の日はふだんどう過ごしますか？",
+      "options": [
+        {
+          "id": "dine-out",
+          "emoji": "🍽️",
+          "label": "家族で外食、事前に予約"
+        },
+        {
+          "id": "flowers-gift",
+          "emoji": "💐",
+          "label": "花やカード、ちょっとした贈り物"
+        },
+        {
+          "id": "phone-call",
+          "emoji": "📞",
+          "label": "電話やメッセージで済ませる"
+        },
+        {
+          "id": "no-fuss",
+          "emoji": "🤷",
+          "label": "特に何もしない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261127-mothers-day-guess",
+      "date": "2026-11-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある地域の「母の日」は12月22日で、公式には母への感謝の日ではなく、女性運動の始まりを記念する日とされている。どこの国か?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261128-year-end-bonus-poll",
+      "date": "2026-11-28",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "年末ボーナスのルールを自分で決められるなら、どれを選ぶか。",
+      "options": [
+        {
+          "id": "profit-based",
+          "emoji": "📈",
+          "label": "会社が黒字のときだけ支給され、金額は会社が決める"
+        },
+        {
+          "id": "law-mandated",
+          "emoji": "⚖️",
+          "label": "金額も期限も法律で決まっていて、遅れると罰金"
+        },
+        {
+          "id": "employer-discretion",
+          "emoji": "🎲",
+          "label": "雇用主が土壇場まで決めず、事前の約束もない"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "年に二回、夏と冬に分けて支給される"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261128-year-end-bonus-guess",
+      "date": "2026-11-28",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この市場では、年末の一時金は宗教上の祝日の七日前までに全額を、分割なしで支払わねばならず、遅れれば五パーセントの罰金が科される。しかも日付は断食明け大祭に従うため毎年前へずれていく。どの市場か。",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261129-mothers-day-express",
+      "date": "2026-11-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母の日には、あなたはどう気持ちを表しますか？",
+      "options": [
+        {
+          "id": "flowers",
+          "emoji": "💐",
+          "label": "花を贈る"
+        },
+        {
+          "id": "dining",
+          "emoji": "🍽️",
+          "label": "レストランを予約して食事する"
+        },
+        {
+          "id": "flag",
+          "emoji": "🚩",
+          "label": "旗を掲げるなど儀式的なことをする"
+        },
+        {
+          "id": "family",
+          "emoji": "👨‍👩‍👧",
+          "label": "ミサに行く、家族で食事する"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261129-mothers-day-guess",
+      "date": "2026-11-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある場所では、母の日は5月ではなく12月22日にある。この日が記念しているのは女性団体の会議であって、「母に感謝する」ことそのものではない。どこだろうか？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261130-bonus-poll",
+      "date": "2026-11-30",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もし選べるなら、勤め先にはどんな年末賞与の仕組みを採用してほしいですか?",
+      "options": [
+        {
+          "id": "profit-only",
+          "emoji": "📉",
+          "label": "会社が利益を出した年だけ支給され、金額は会社次第"
+        },
+        {
+          "id": "guaranteed-law",
+          "emoji": "⚖️",
+          "label": "法律で支給が義務づけられ、遅れれば罰則がある"
+        },
+        {
+          "id": "loss-proof-min",
+          "emoji": "🛡️",
+          "label": "会社が赤字でも法定の最低額が保障される"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "夏と冬の年二回に分けて支給される"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261130-bonus-guess",
+      "date": "2026-11-30",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国の法定ボーナスは、会社がその年に赤字でも最低割合の支払いが義務づけられていますか?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261201-mothers-day-ritual",
+      "date": "2026-12-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母の日、あなたは普段どう過ごしますか。",
+      "options": [
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "家族での食事"
+        },
+        {
+          "id": "flowers-gift",
+          "emoji": "💐",
+          "label": "花や贈り物"
+        },
+        {
+          "id": "phone-call",
+          "emoji": "📞",
+          "label": "電話やメッセージ"
+        },
+        {
+          "id": "no-activity",
+          "emoji": "🚫",
+          "label": "特に何もしない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261201-mothers-day-country",
+      "date": "2026-12-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "四つの地域は母の日を五月第二日曜に置くが、一国だけ十二月二十二日に定め、母性ではなく1928年の女性会議を記念している。どの国か。",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261202-bonus-style",
+      "date": "2026-12-02",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もし自分の年末賞与制度を作り直せるなら、どれがいい?",
+      "options": [
+        {
+          "id": "law-guarantee",
+          "emoji": "⚖️",
+          "label": "ブラジルのように、法律で決まっていて遅れたら罰金"
+        },
+        {
+          "id": "profit-based",
+          "emoji": "📈",
+          "label": "台湾のように、会社が黒字のときだけ、金額は決まっていない"
+        },
+        {
+          "id": "before-holiday",
+          "emoji": "🕌",
+          "label": "インドネシアのように、祝日の前に必ず全額振り込まれる"
+        },
+        {
+          "id": "twice-year",
+          "emoji": "🌸",
+          "label": "日本のように、年に二回に分けてもらう"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261202-bonus-guess",
+      "date": "2026-12-02",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国では、会社が赤字でも法定ボーナスの最低額を支払わなければならない?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261203-mothers-day-dayoff",
+      "date": "2026-12-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住む場所では、母の日は休みになりますか？",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "📅",
+          "label": "はい、休みです"
+        },
+        {
+          "id": "no-day-off-but-celebrate",
+          "emoji": "🎉",
+          "label": "休みではないが、お祝いはする"
+        },
+        {
+          "id": "no-official-status",
+          "emoji": "🚫",
+          "label": "そもそも公式な祝日ではない"
+        },
+        {
+          "id": "always-sunday",
+          "emoji": "📆",
+          "label": "どうせ日曜日なので関係ない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261203-mothers-day-december",
+      "date": "2026-12-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母の日が12月にあり、実際には母性ではなく女性運動を記念しているのはどの国?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261204-bonus-poll",
+      "date": "2026-12-04",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが知っている年末のボーナスは、次のどれに近いですか?",
+      "options": [
+        {
+          "id": "boss-mood",
+          "emoji": "🎲",
+          "label": "会社の気分次第で、保証はない"
+        },
+        {
+          "id": "law-fine",
+          "emoji": "⚖️",
+          "label": "法律に明記されていて、遅れれば罰金"
+        },
+        {
+          "id": "part-of-wage",
+          "emoji": "💰",
+          "label": "実際は賃金の一部で、退職時にも精算される"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "年に二回もらえて、夏にも支給がある"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261204-bonus-guess",
+      "date": "2026-12-04",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この国の年末手当の規定では、宗教上の祝日の七日前までに全額を支払わねばならず、分割は禁止で、遅れれば五パーセントの罰金です。どの国のことでしょう?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261205-mothers-day-poll",
+      "date": "2026-12-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたにとって、母の日でいちばん大事なのは何ですか？",
+      "options": [
+        {
+          "id": "meal-together",
+          "emoji": "🍽️",
+          "label": "家族そろっての食事"
+        },
+        {
+          "id": "gift-flowers",
+          "emoji": "💐",
+          "label": "花や贈り物"
+        },
+        {
+          "id": "call-or-card",
+          "emoji": "📞",
+          "label": "電話や手紙・カード"
+        },
+        {
+          "id": "no-special",
+          "emoji": "🤷",
+          "label": "特に何もしない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261205-mothers-day-guess",
+      "date": "2026-12-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうち、「母の日」が実は母への感謝ではなく、女性運動の出発点を記念している国はどこ？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261206-year-end-bonus-poll",
+      "date": "2026-12-06",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなた(または身近な人)の年末賞与は、どれに一番近いですか?",
+      "options": [
+        {
+          "id": "profit-based",
+          "emoji": "📉",
+          "label": "会社が利益を出したかどうか次第で、毎年もらえるとは限らない"
+        },
+        {
+          "id": "fixed-amount",
+          "emoji": "🎁",
+          "label": "毎年決まってあり、だいたい給料一か月分くらい"
+        },
+        {
+          "id": "last-minute",
+          "emoji": "⏳",
+          "label": "祝日や年末の直前になるまで金額が分からない"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "自分の働き方にはそもそもこういうものがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261206-year-end-bonus-guess",
+      "date": "2026-12-06",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある市場では、法定ボーナスの下限は賃金の八・三三パーセント、上限は二十パーセントで、下限は会社が利益を出したかどうかに左右されない——赤字の年でも最低額を支払わねばならない。支払期限は会計年度終了から八か月以内だが、多くの企業は一年で最大の買い物シーズンに間に合うよう、意図的に前倒しで支給する。これはどの市場か?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261207-mothers-day-ritual",
+      "date": "2026-12-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが暮らす地域で、母の日に最もよく見られる過ごし方はどれですか？",
+      "options": [
+        {
+          "id": "flowers",
+          "emoji": "🌸",
+          "label": "カーネーションと花束"
+        },
+        {
+          "id": "dinner",
+          "emoji": "🍽️",
+          "label": "家族での外食予約"
+        },
+        {
+          "id": "flag",
+          "emoji": "🚩",
+          "label": "国旗を掲げる"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "特に何もしない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261207-mothers-day-guess",
+      "date": "2026-12-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうち、母の日を五月ではなく、しかも母性のためではなく1928年に開かれた女性会議のために祝う国はどこか？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261208-bonus-poll",
+      "date": "2026-12-08",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "制度を自分で決められるとしたら、どのタイプの賞与がいいですか?",
+      "options": [
+        {
+          "id": "guaranteed-law",
+          "emoji": "⚖️",
+          "label": "法的権利で、遅れたら罰金がある(ブラジルやインドネシアのように)"
+        },
+        {
+          "id": "profit-based",
+          "emoji": "📈",
+          "label": "会社が利益を出した時だけ、義務ではない(台湾のように)"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "年に二回に分けてもらう(日本のように)"
+        },
+        {
+          "id": "tax-optimized",
+          "emoji": "🧾",
+          "label": "税金の計算方法を自分で有利なほうに選べる(中国のように)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261208-bonus-guess",
+      "date": "2026-12-08",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "法定ボーナスの下限は賃金の8.33パーセント、上限は20パーセントで、下限は会社が利益を出しているかどうかに関係ありません。赤字の年でも最低額を支払う義務があります。支給期限は会計年度終了から八か月以内で、多くの企業は一年で最大の買い物シーズンに間に合うようあえて前倒しで支払います。これはどの市場の規定でしょうか?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261209-mothers-day-day-off",
+      "date": "2026-12-09",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住む場所では、母の日は休みになりますか?",
+      "options": [
+        {
+          "id": "official-holiday",
+          "emoji": "🏛️",
+          "label": "はい、公式の休日です"
+        },
+        {
+          "id": "sunday-as-usual",
+          "emoji": "🌸",
+          "label": "いいえ、でも日曜日なので普通にお祝いします"
+        },
+        {
+          "id": "workday-no-holiday",
+          "emoji": "💐",
+          "label": "いいえ、普通に仕事や学校がある日です"
+        },
+        {
+          "id": "not-celebrated",
+          "emoji": "🤷",
+          "label": "私のところでは母の日を特に祝いません"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261209-mothers-day-womens-movement",
+      "date": "2026-12-09",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下のうち、母の日が母性ではなく女性運動の出発点を記念しているのはどの国?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261210-year-end-bonus-poll",
+      "date": "2026-12-10",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "年末に賞与や特別手当を受け取ったことがあるなら、それはどれに近いですか?",
+      "options": [
+        {
+          "id": "legal-fixed",
+          "emoji": "📜",
+          "label": "法律で定められ、金額も時期も決まっている"
+        },
+        {
+          "id": "profit-linked",
+          "emoji": "📊",
+          "label": "会社が利益を出したかどうかで決まる"
+        },
+        {
+          "id": "custom-not-right",
+          "emoji": "🎁",
+          "label": "会社の慣例や気持ち次第で、保証はない"
+        },
+        {
+          "id": "never-got-one",
+          "emoji": "🚫",
+          "label": "自分の仕事にはそもそもそういう制度がない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261210-year-end-bonus-guess",
+      "date": "2026-12-10",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "法定ボーナスの下限が会社の利益の有無と関係なく、赤字の年でも最低額の支払い義務が残るのはどの国?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261211-mothers-day-vibe",
+      "date": "2026-12-11",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母の日、あなたの実感に一番近いのはどれか。",
+      "options": [
+        {
+          "id": "flowers",
+          "emoji": "🌸",
+          "label": "花や贈り物が中心"
+        },
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "家族で食事、レストランは予約でいっぱい"
+        },
+        {
+          "id": "workday",
+          "emoji": "🏢",
+          "label": "普段通り学校や仕事、特別な空気はない"
+        },
+        {
+          "id": "not-marked",
+          "emoji": "🤷",
+          "label": "自分のいる場所ではほとんど意識されない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261211-mothers-day-country",
+      "date": "2026-12-11",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある国の母の日は5月ではなく12月にあり、母性ではなく1928年のある女性会議を記念している。どの国か?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261212-bonus-poll",
+      "date": "2026-12-12",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが今(または以前)受け取っている「年末に上乗せされるお金」は、次のどれに近いですか?",
+      "options": [
+        {
+          "id": "guaranteed-by-law",
+          "emoji": "⚖️",
+          "label": "法律で保証されていて、日付も固定"
+        },
+        {
+          "id": "custom-before-holiday",
+          "emoji": "🧧",
+          "label": "法律の強制はないが、慣例として祝日前に支給"
+        },
+        {
+          "id": "boss-discretion",
+          "emoji": "🎲",
+          "label": "完全に会社・上司次第で、出るかどうかも金額も直前までわからない"
+        },
+        {
+          "id": "no-bonus",
+          "emoji": "🚫",
+          "label": "自分の仕事にはそもそもそういう年末の上乗せがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261212-bonus-guess",
+      "date": "2026-12-12",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この国の法定ボーナスには法律で定められた下限があり、その下限は会社が利益を出したかどうかに左右されません。赤字の年でも最低額を支払う義務があり、これは台湾の「利益が出た場合」とは正反対です。支払期限は会計年度終了から八か月以内ですが、多くの雇用主は一年で最大の買い物シーズンに間に合うよう前倒しで支給します。どの国でしょうか?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261213-mothers-day-poll",
+      "date": "2026-12-13",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母の日、あなたの住む場所ではふだんどんな一日ですか？",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "📅",
+          "label": "祝日で、みんな休みになる"
+        },
+        {
+          "id": "no-day-off-but-busy",
+          "emoji": "🌸",
+          "label": "休みではないが、花屋やレストランは書き入れ時になる"
+        },
+        {
+          "id": "different-season",
+          "emoji": "🗓️",
+          "label": "母性を祝う方法は五月ではなく、別の季節にある"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "🤷",
+          "label": "特に祝わない、ふつうの一日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261213-mothers-day-guess",
+      "date": "2026-12-13",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次の手がかりから場所を当ててください：この日は五月第二日曜ではなく、母に感謝する日でもない。1928年に開かれたある女性会議を記念する政治的な日で、大統領令により「休みではない国民の日」として定められた。どこか？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261214-bonus-type",
+      "date": "2026-12-14",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが受け取る年末賞与は、次のうちどれに近いですか?",
+      "options": [
+        {
+          "id": "guaranteed",
+          "emoji": "📜",
+          "label": "法律や制度で保障されていて、必ずもらえる"
+        },
+        {
+          "id": "custom",
+          "emoji": "🤝",
+          "label": "会社の慣例で、たいてい出るが保証はない"
+        },
+        {
+          "id": "boss-mood",
+          "emoji": "🎲",
+          "label": "完全に会社や上司の気分次第で、毎年変わる"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "自分の仕事には年末賞与というもの自体がない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261214-bonus-country",
+      "date": "2026-12-14",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "年末賞与の実際の支給日が、宗教上の祝日に合わせて毎年前倒しになる国はどこか?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261215-mothers-day-family",
+      "date": "2026-12-15",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母の日、あなたの家ではどう過ごしていますか？",
+      "options": [
+        {
+          "id": "dine-out",
+          "emoji": "🍽️",
+          "label": "家族で外食する"
+        },
+        {
+          "id": "flowers-gifts",
+          "emoji": "💐",
+          "label": "花や贈り物を贈る"
+        },
+        {
+          "id": "quiet-day",
+          "emoji": "🏠",
+          "label": "特に何もせず、いつも通り"
+        },
+        {
+          "id": "not-observed",
+          "emoji": "🤷",
+          "label": "私の故郷にはそもそもこの日がない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261215-mothers-day-december",
+      "date": "2026-12-15",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "四つの地域は母の日を五月第二日曜に置くが、一つだけ十二月に置き、そこで記念されているのは母性そのものではなく、ある女性運動の出発点である。どこか？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261216-bonus-experience",
+      "date": "2026-12-16",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなた自身や身近な人の経験では、年末のこの「上乗せ」はどれに近いですか?",
+      "options": [
+        {
+          "id": "legal-strict",
+          "emoji": "⚖️",
+          "label": "法律で定められた義務で、遅れれば罰金がある"
+        },
+        {
+          "id": "profit-conditional",
+          "emoji": "📉",
+          "label": "会社が利益を出したかどうか次第で、保証はなく慣行頼み"
+        },
+        {
+          "id": "tax-topic",
+          "emoji": "🧾",
+          "label": "話題になるのは有無より、どう申告すれば得かということ"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "そもそもそんな制度はなく、すべて会社の裁量"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261216-bonus-country-guess",
+      "date": "2026-12-16",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある国では、法定ボーナスの下限は賃金の8.33パーセント、上限は20パーセントで、下限は利益の有無に関係なく、赤字の年でも支払われます。支払期限は会計年度終了から八か月以内ですが、多くの企業は一年最大の買い物シーズンに間に合うよう前倒しで支給します。さて、どこの国でしょうか?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261217-mothers-day-poll",
+      "date": "2026-12-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母の日が休みではなく、もともとある週末に頼るしかないとき、あなたはどうしていますか?",
+      "options": [
+        {
+          "id": "reserve-early",
+          "emoji": "📅",
+          "label": "早めに予約・計画する"
+        },
+        {
+          "id": "no-special",
+          "emoji": "🤷",
+          "label": "特に何もしない"
+        },
+        {
+          "id": "weekday-fill",
+          "emoji": "💐",
+          "label": "別の平日に埋め合わせる"
+        },
+        {
+          "id": "mood-depends",
+          "emoji": "🌀",
+          "label": "その日の気分次第"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261217-mothers-day-guess",
+      "date": "2026-12-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この四つの地域のうち三つは母の日を五月第二日曜に置くが、一つだけ十二月にあり、しかも母性ではない何かを記念している。どこか?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261218-year-end-bonus-poll",
+      "date": "2026-12-18",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたにとって、年末のあの一時金はどれに近いですか?",
+      "options": [
+        {
+          "id": "legal-right",
+          "emoji": "⚖️",
+          "label": "法律上の権利——遅れれば訴えられる"
+        },
+        {
+          "id": "company-custom",
+          "emoji": "📋",
+          "label": "会社の慣例——だいたいの額は読める"
+        },
+        {
+          "id": "boss-mood",
+          "emoji": "🎲",
+          "label": "上司の気分次第——毎年サプライズ"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "そもそも受け取ったことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261218-year-end-bonus-guess",
+      "date": "2026-12-18",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この市場では、年末の一時金は賞与ではなく賃金の一部です。満一年働けば一か月分、一年未満は月割りで、退職時にも精算されます。第一回は十一月三十日まで、第二回は十二月二十日までに支払われ、遅れれば罰則があり、労働者は訴訟も起こせます。どの市場でしょうか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261219-mothers-day-routine",
+      "date": "2026-12-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母の日、あなたはふだんどう過ごしますか?",
+      "options": [
+        {
+          "id": "flowers",
+          "emoji": "💐",
+          "label": "花や贈り物を贈る"
+        },
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "家族で食事をする"
+        },
+        {
+          "id": "normal-day",
+          "emoji": "📅",
+          "label": "特に何もせず、いつもどおり"
+        },
+        {
+          "id": "day-off",
+          "emoji": "🛌",
+          "label": "たまたま休みで、ゆっくり休める"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261219-mothers-day-which-country",
+      "date": "2026-12-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうちどこの「母の日」が、母に感謝する日ではなく、1928年の政治的な女性会議を記念する日か?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261220-bonus-experience",
+      "date": "2026-12-20",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが実際に受け取っている年末のボーナス(またはそれに類するもの)は、どのタイプに近いですか?",
+      "options": [
+        {
+          "id": "profit-based",
+          "emoji": "📊",
+          "label": "会社が利益を出した年だけ出る"
+        },
+        {
+          "id": "guaranteed",
+          "emoji": "📜",
+          "label": "利益の有無に関係なく、契約や法律で保証されている"
+        },
+        {
+          "id": "discretionary",
+          "emoji": "🎲",
+          "label": "その年の会社の気分次第で決まる"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "自分のところにはそもそもそんな制度がない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261220-bonus-twice-year",
+      "date": "2026-12-20",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この四か国のうち、年末のボーナス(またはそれに相当するもの)が年に一度ではなく二度支給されるのはどこか?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261221-mothersday-poll",
+      "date": "2026-12-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母の日、あなたの家はどれに近い?",
+      "options": [
+        {
+          "id": "book-ahead",
+          "emoji": "🍽️",
+          "label": "前もってレストランを予約する"
+        },
+        {
+          "id": "just-flowers",
+          "emoji": "💐",
+          "label": "花やカードだけ贈る"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "📅",
+          "label": "いつもの日曜日と変わらない"
+        },
+        {
+          "id": "forget-date",
+          "emoji": "🤷",
+          "label": "正確な日をよく忘れる"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261221-mothersday-guess",
+      "date": "2026-12-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この四つの母の日のうち、実は「母への感謝」とは関係なく、女性運動を記念する政治的な日はどれか?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261222-christmas-day",
+      "date": "2026-12-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "12月25日はあなたにとってどんな一日ですか?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "休みの日"
+        },
+        {
+          "id": "workday",
+          "emoji": "💼",
+          "label": "通常の仕事や学校の日"
+        },
+        {
+          "id": "festive-no-holiday",
+          "emoji": "🎄",
+          "label": "祝う雰囲気はあるが休みではない"
+        },
+        {
+          "id": "no-observe",
+          "emoji": "🤷",
+          "label": "特に何も感じない、いつも通り"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261222-christmas-country",
+      "date": "2026-12-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある地域では12月25日は休日ではなく、26日も通常の勤務日・登校日です。この日は恋人や友人と過ごす日に近く、家庭のケーキ支出は25日ではなく24日にピークがあり、12月全体もその年で家計支出が最も多い月になります。それはどこでしょうか?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261223-new-year-poll",
+      "date": "2026-12-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "大晦日や元日は、いつもどう過ごしていますか。",
+      "options": [
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "家族で年越しの食事をする"
+        },
+        {
+          "id": "countdown-fireworks",
+          "emoji": "🎆",
+          "label": "カウントダウンをして花火を見る"
+        },
+        {
+          "id": "beach-white-clothes",
+          "emoji": "🏖️",
+          "label": "白い服を着て海辺で迎える"
+        },
+        {
+          "id": "first-shrine-visit",
+          "emoji": "⛩️",
+          "label": "初詣に行く"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261223-new-year-guess",
+      "date": "2026-12-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "国の祝日一覧に一月一日がまったく含まれず、新年が三月か四月にずれ込む国はどこか。",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261224-christmas-day-experience",
+      "date": "2026-12-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住んでいる場所では、12月25日を多くの人はどう過ごしますか？",
+      "options": [
+        {
+          "id": "work-as-usual",
+          "emoji": "💼",
+          "label": "いつも通り仕事や学校"
+        },
+        {
+          "id": "family-gathering",
+          "emoji": "🎄",
+          "label": "家族の集まりや礼拝"
+        },
+        {
+          "id": "shopping-lights",
+          "emoji": "🎂",
+          "label": "街の灯りを見たり、ケーキや贈り物を買う"
+        },
+        {
+          "id": "no-observance",
+          "emoji": "🤷",
+          "label": "特に何もしない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261224-japan-spending-peak",
+      "date": "2026-12-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "家計の年間支出が12月に最も高くなり、ケーキへの支出が24日にピークを迎えるのはどの国か？",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261225-new-year-ritual",
+      "date": "2026-12-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの家の新年の迎え方は、次のどれに近いですか?",
+      "options": [
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "大晦日の団らんの食事"
+        },
+        {
+          "id": "countdown-party",
+          "emoji": "🎉",
+          "label": "カウントダウンと花火"
+        },
+        {
+          "id": "beach-white",
+          "emoji": "🌊",
+          "label": "白い服で浜辺の波を跳ぶ"
+        },
+        {
+          "id": "first-shrine-visit",
+          "emoji": "⛩️",
+          "label": "元日の初詣"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261225-no-jan-first",
+      "date": "2026-12-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "これらの国・地域のうち、国の祝日一覧に一月一日がまったく無いのはどこ?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261226-islamic-calendar-poll",
+      "date": "2026-12-26",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ラマダーンと二つのイードのほかにも、イスラム暦には預言者生誕祭やイスラム暦新年といった日がある。あなたの住む場所ではこれらの日はどう扱われているだろうか。",
+      "options": [
+        {
+          "id": "official-holiday",
+          "emoji": "📅",
+          "label": "公式に祝日になっている"
+        },
+        {
+          "id": "appeal-not-holiday",
+          "emoji": "📢",
+          "label": "政府が柔軟な対応を呼びかけているが、法定の祝日ではない"
+        },
+        {
+          "id": "community-only",
+          "emoji": "🕌",
+          "label": "モスクやコミュニティが独自に手配していて、国の暦とは関係ない"
+        },
+        {
+          "id": "not-noticed",
+          "emoji": "🤔",
+          "label": "特に気にしたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261226-islamic-calendar-guess",
+      "date": "2026-12-26",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国の公式祝日一覧で、「ムハッラム」という名の祝日が、実は月初めの新年ではなく、その月の十日目であるアーシューラーを指しているか。",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261227-newyear-eve",
+      "date": "2026-12-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなた自身は大晦日をどう過ごしますか?",
+      "options": [
+        {
+          "id": "family-dinner",
+          "emoji": "🍲",
+          "label": "家族で食事をする"
+        },
+        {
+          "id": "countdown-fireworks",
+          "emoji": "🎆",
+          "label": "カウントダウンと花火を見る"
+        },
+        {
+          "id": "quiet-night",
+          "emoji": "😴",
+          "label": "早めに寝る、特に何もしない"
+        },
+        {
+          "id": "pray-temple",
+          "emoji": "🙏",
+          "label": "神社や寺にお参りする"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261227-newyear-brazil",
+      "date": "2026-12-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "白い服、浜辺の花火、七つの波を跳び越えること、海の女神への献花が並び立つのはどこの大晦日か?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261228-islamic-days-awareness",
+      "date": "2026-12-28",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ラマダーンと二つのイードのほかにも、イスラム暦には新年、預言者生誕祭、アーシューラー、夜の旅と昇天がある。あなたが暮らす場所で、これらの日は公式または学校のカレンダーに載っているだろうか。",
+      "options": [
+        {
+          "id": "all-appear",
+          "emoji": "📅",
+          "label": "すべて載っている"
+        },
+        {
+          "id": "eids-only",
+          "emoji": "🕌",
+          "label": "二つのイードだけ"
+        },
+        {
+          "id": "none-appear",
+          "emoji": "🔍",
+          "label": "まったく載っていない、自分で調べるしかない"
+        },
+        {
+          "id": "never-noticed",
+          "emoji": "🤷",
+          "label": "特に気にしたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261228-five-in-one-decree",
+      "date": "2026-12-28",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "夜の旅と昇天、断食明け、犠牲祭、イスラム暦新年、預言者生誕祭という五つの日をすべて国民の祝日とし、毎年同じ三大臣共同決定書で公告しているのはどこか。",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261229-new-year-personal",
+      "date": "2026-12-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなた自身の「新年」の迎え方は、次のどれに近いですか?",
+      "options": [
+        {
+          "id": "lunar-reunion",
+          "emoji": "🧧",
+          "label": "旧正月、大晦日の団らんの食事から始まる"
+        },
+        {
+          "id": "jan1-countdown",
+          "emoji": "🎆",
+          "label": "新暦一月一日、前夜のカウントダウンと花火"
+        },
+        {
+          "id": "regional-spring",
+          "emoji": "🌱",
+          "label": "三月か四月の地域の新年、住む地域によって異なる"
+        },
+        {
+          "id": "no-particular",
+          "emoji": "🤷",
+          "label": "特にどの日を祝うわけでもない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261229-new-year-multi-calendar",
+      "date": "2026-12-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国の国民の祝日一覧に、同じ年のうちに複数の暦の「新年」が並んでいるか?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261230-islamic-extra-day",
+      "date": "2026-12-30",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "断食明けと犠牲祭のほかに、次のうちどのイスラム暦の日がもっと多くの地域で公式の祝日として認められるべきだと思いますか?",
+      "options": [
+        {
+          "id": "isra-miraj",
+          "emoji": "🌙",
+          "label": "夜の旅と昇天(イスラー・ミウラージュ)"
+        },
+        {
+          "id": "islamic-new-year",
+          "emoji": "🗓️",
+          "label": "イスラム暦新年"
+        },
+        {
+          "id": "mawlid",
+          "emoji": "📖",
+          "label": "預言者生誕祭"
+        },
+        {
+          "id": "ashura",
+          "emoji": "🕌",
+          "label": "アーシューラー"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261230-five-in-one-decree",
+      "date": "2026-12-30",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "夜の旅と昇天、断食明け、犠牲祭、イスラム暦新年、預言者生誕祭という五つの記念日すべてを、同じ三大臣共同決定書で毎年祝日として公告しているのはどこの国か。",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261231-new-year-eve-style",
+      "date": "2026-12-31",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの大晦日・新年前夜に一番近いのはどれ?",
+      "options": [
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "大晦日に家族で囲む食事"
+        },
+        {
+          "id": "beach-fireworks",
+          "emoji": "🎆",
+          "label": "浜辺で花火を見て波を跳ぶ"
+        },
+        {
+          "id": "shrine-visit",
+          "emoji": "⛩️",
+          "label": "初詣とおせち料理"
+        },
+        {
+          "id": "countdown-party",
+          "emoji": "🥂",
+          "label": "カウントダウンパーティー、翌日は休息と試合観戦"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261231-jan1-missing",
+      "date": "2026-12-31",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この七つの市場のうち、全国祝日一覧に一月一日がまったく無いのはどの国か?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270101-islamic-days-poll",
+      "date": "2027-01-01",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが暮らす場所で、イスラム暦の記念日（新年、預言者生誕祭、アーシューラーなど。ラマダーンそのものや二つのイードは除く）は今どう扱われているか。",
+      "options": [
+        {
+          "id": "national-holiday",
+          "emoji": "🗓️",
+          "label": "これらの日そのものが公的な祝日になっている"
+        },
+        {
+          "id": "eids-only",
+          "emoji": "🕌",
+          "label": "休みになるのは二つのイードだけで、他は休みにならない"
+        },
+        {
+          "id": "community-only",
+          "emoji": "🏘️",
+          "label": "休みは一切なく、すべてモスクやコミュニティが独自に行う"
+        },
+        {
+          "id": "admin-appeal",
+          "emoji": "📢",
+          "label": "政府は雇用主に休みを認めるよう呼びかけるだけで、正式な祝日ではない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270101-muharram-guess",
+      "date": "2027-01-01",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうちどの国で、公式カレンダー上「ムハッラム」という名の祝日が、月の一日ではなく十日目のアーシューラーを指しているか。",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270102-gathering-day",
+      "date": "2027-01-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "一年に一度、家族が集まろうとする日があるなら、その日取りは普段どう決まっていますか?",
+      "options": [
+        {
+          "id": "fixed-weekday",
+          "emoji": "📅",
+          "label": "決まった曜日(毎年同じ月の第何曜日)"
+        },
+        {
+          "id": "lunar-or-solar-calendar",
+          "emoji": "🌙",
+          "label": "旧暦や節気、天文計算で決まり、毎年日付が変わる"
+        },
+        {
+          "id": "local-custom",
+          "emoji": "🏘️",
+          "label": "家族や地域が独自に決めており、公式な日付はない"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "決まった日はなく、都合が合うときに集まる"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270102-farmers-day-timing",
+      "date": "2027-01-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "「農民節」を立春に定め、すでに収穫したものではなく、これから始まる農作業を祝っているのはどこか?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270103-islamic-holidays-recognition",
+      "date": "2027-01-03",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが暮らす,または働く場所では,イスラム暦の祝祭日はどこまで公式に認められていますか?",
+      "options": [
+        {
+          "id": "full-calendar",
+          "emoji": "📅",
+          "label": "インドネシアのように,夜の旅と昇天や新年,生誕祭まで祝日になっている"
+        },
+        {
+          "id": "two-eids-only",
+          "emoji": "🕌",
+          "label": "ニューヨークや寧夏のように,二つのイードしか認められていない"
+        },
+        {
+          "id": "appeal-only",
+          "emoji": "📢",
+          "label": "台湾のように,行政の呼びかけだけで正式な祝日ではない"
+        },
+        {
+          "id": "no-recognition",
+          "emoji": "🚫",
+          "label": "日本やブラジルのように,国の暦には一切なく,コミュニティの内側だけで祝われている"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270103-two-eids-only-guess",
+      "date": "2027-01-03",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある場所ではイスラム暦の新年も生誕祭も公式の暦には載っていないが,認めているイスラム教の祭日の範囲は中国の寧夏とちょうど同じ,二つのイードだけである。ただしその仕組みは国の立法ではなく,最大都市の公立学校の年間暦による。どこか?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270104-harvest-custom",
+      "date": "2027-01-04",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住む場所では、収穫や感謝の日は主に何を中心に過ごしますか?",
+      "options": [
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "家族の食卓や団らん"
+        },
+        {
+          "id": "food-ritual",
+          "emoji": "🍚",
+          "label": "特定の儀礼的な料理(特定の粥やご飯、甘味など)"
+        },
+        {
+          "id": "labor-thanks",
+          "emoji": "🙏",
+          "label": "互いの仕事や労働に感謝すること"
+        },
+        {
+          "id": "no-specific-day",
+          "emoji": "🤷",
+          "label": "このようなテーマに特化した日は特にない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270104-harvest-guess",
+      "date": "2027-01-04",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある国の国民の祝日は、その名前よりもずっと古い日付を持っている——もとは天皇が新穀を神に捧げる皇室の祭典で、戦後になって勤労に感謝する国民の祝日へと書き換えられた。どの国か?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270105-islamic-days-poll",
+      "date": "2027-01-05",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが暮らす場所では、イスラム暦の新年や預言者生誕祭のような日は、どのように扱われていますか？",
+      "options": [
+        {
+          "id": "official-holiday",
+          "emoji": "🗓️",
+          "label": "公式の祝日で、皆休みになる"
+        },
+        {
+          "id": "community-only",
+          "emoji": "🕌",
+          "label": "休みではないが、モスクやコミュニティが独自に行事を行う"
+        },
+        {
+          "id": "only-two-eids",
+          "emoji": "🌙",
+          "label": "断食明けと犠牲祭しか知らず、他のイスラムの日は聞いたことがない"
+        },
+        {
+          "id": "never-heard",
+          "emoji": "🤷",
+          "label": "この話題に触れたことがなく、よく分からない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270105-islamic-days-guess",
+      "date": "2027-01-05",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "夜の旅と昇天、断食明け、犠牲祭、イスラム暦新年、預言者生誕祭という五つの日すべてを国民の祝日に入れ、毎年同じ三大臣共同決定書で公告している国はどこか？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270106-harvest-poll",
+      "date": "2027-01-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "「収穫への感謝」の日を自分で決められるとしたら、どの方式に惹かれますか?",
+      "options": [
+        {
+          "id": "fixed-date",
+          "emoji": "📅",
+          "label": "固定の暦日——感謝祭が11月第4木曜日に置かれているように"
+        },
+        {
+          "id": "solar-term",
+          "emoji": "🌾",
+          "label": "節気・天文で決める——立春や秋分のように"
+        },
+        {
+          "id": "religious-calendar",
+          "emoji": "⛪",
+          "label": "宗教暦で決める——ブラジルが聖人の日に結びつけているように"
+        },
+        {
+          "id": "village-ritual",
+          "emoji": "🏮",
+          "label": "地域・村の儀礼暦で決める——西ジャワの収穫儀礼のように"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270106-harvest-guess",
+      "date": "2027-01-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "戦前の皇室の新穀の祭典が、戦後に国民が互いの労働に感謝する祝日へ書き換えられた——日付は一日も動いていない。どの国か?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270107-exam-style",
+      "date": "2027-01-07",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もし選べるとしたら、十八歳のときの自分をどう測ってほしいか。",
+      "options": [
+        {
+          "id": "one-shot",
+          "emoji": "⚡",
+          "label": "一、二日で全てが決まる"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🎯",
+          "label": "まず一度の適性検査、その後は各校の選考"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "🗓️",
+          "label": "数週間かけて、科目ごとにゆっくり"
+        },
+        {
+          "id": "no-exam",
+          "emoji": "📁",
+          "label": "統一試験に頼らず、在学中の記録と出願書類で"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270107-two-sundays",
+      "date": "2027-01-07",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "国全体の大学入学試験を、あえて一週間隔てた二つの日曜日に分けて実施しているのはどこか。",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270108-harvest-style",
+      "date": "2027-01-08",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなた自身が収穫を祝うなら、次のうちどれに近いですか?",
+      "options": [
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "家族全員で食卓を囲む"
+        },
+        {
+          "id": "special-dish",
+          "emoji": "🍚",
+          "label": "特別な意味を持つ料理をつくって食べる"
+        },
+        {
+          "id": "community-festival",
+          "emoji": "🔥",
+          "label": "地域の焚き火や踊りといった祭りに参加する"
+        },
+        {
+          "id": "give-thanks-work",
+          "emoji": "🙏",
+          "label": "食事や祭りでなくても、仕事や土地への感謝を何らかの形で示す"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270108-seven-day-rite",
+      "date": "2027-01-08",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある収穫の儀礼は国民の祝日ではなく、日取りは独自の暦で決まり、七日間続けて行われ、儀式には「千灯」と共同での籾搗きが含まれる。どこの地域か?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270109-exam-format-choice",
+      "date": "2027-01-09",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "十八歳の進路を決める試験を作り直せるとしたら、どの形式を選びますか？",
+      "options": [
+        {
+          "id": "single-spike",
+          "emoji": "😰",
+          "label": "一発勝負、二日で終わる"
+        },
+        {
+          "id": "long-plateau",
+          "emoji": "😮‍💨",
+          "label": "数週間から数か月に引き延ばす"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🎯",
+          "label": "まず能力テスト、その後各校の選考"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📚",
+          "label": "全国統一試験なし、在学記録と出願書類で判断"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270109-guess-city-shutdown",
+      "date": "2027-01-09",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの地域の大学入試期間中に、都市は工事を止め、試験場周辺で警笛を禁止し、交通警察が専用通路を設けるのか？",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270110-harvest-image",
+      "date": "2027-01-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "収穫や豊作と聞いて、あなたにいちばん近いのはどれですか。",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "家族みんなで一つの食卓を囲む"
+        },
+        {
+          "id": "special-dish",
+          "emoji": "🍚",
+          "label": "特別な料理を一つ煮て、みんなで分け合う"
+        },
+        {
+          "id": "month-long-festivity",
+          "emoji": "🎆",
+          "label": "祝いが一日では終わらず、長く続く"
+        },
+        {
+          "id": "no-particular-day",
+          "emoji": "🤷",
+          "label": "正直、「収穫」を特に意識する日はない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270110-harvest-policy-origin",
+      "date": "2027-01-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次の四つの地域のうち、収穫の祝日が2018年に国の最高行政機関の承認によって初めて設けられたのはどこか。民間の習俗や宗教暦から生まれたものではない。",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270111-exam-pressure-shape",
+      "date": "2027-01-11",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "進学を左右する試験を経験したことがあるなら、自分が感じた重圧はどの形に近かっただろうか。",
+      "options": [
+        {
+          "id": "sharp-spike",
+          "emoji": "⚡",
+          "label": "一日か二日に凝縮された、鋭い山"
+        },
+        {
+          "id": "long-plateau",
+          "emoji": "🏔️",
+          "label": "数週間から数か月続く、長い台地のような重圧"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🔁",
+          "label": "二段階:まず一つの試験、その後各校独自の選考"
+        },
+        {
+          "id": "no-single-exam",
+          "emoji": "📋",
+          "label": "単一の大試験はなく、長期の成績と出願書類の積み重ね"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270111-exam-indonesia-dual-track",
+      "date": "2027-01-11",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在学成績と学校の実績だけで進学できる無試験の経路と、年に一度だけ行われるコンピュータ方式の統一試験、この二つを並行して持つのはどこか。",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270112-harvest-poll",
+      "date": "2027-01-12",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが育った土地では、収穫や感謝はどれに一番近い形で祝われていますか?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "家族全員で食卓を囲む"
+        },
+        {
+          "id": "before-planting",
+          "emoji": "🌱",
+          "label": "収穫の後ではなく、田畑に出る前に祝う"
+        },
+        {
+          "id": "month-long-festival",
+          "emoji": "🎉",
+          "label": "一日ではなく、一か月続く地域の祭り"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "そもそも全国的な祝日はない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270112-harvest-guess",
+      "date": "2027-01-12",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "2018年に政府の承認で新しい祝いが作られ、旧暦にも曜日にもよらず、二十四節気の一つに意図的に日付を合わせたのはどの国か?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270113-exam-structure-pref",
+      "date": "2027-01-13",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もし選べるなら、自分の受験制度はどんな形がいいですか？",
+      "options": [
+        {
+          "id": "one-shot-days",
+          "emoji": "⚡",
+          "label": "一発勝負、一、二日で決着"
+        },
+        {
+          "id": "spread-months",
+          "emoji": "📅",
+          "label": "長期戦、科目ごとに二か月に分散"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🔁",
+          "label": "二段階：全国共通テストの後、各校の選考"
+        },
+        {
+          "id": "no-exam",
+          "emoji": "📂",
+          "label": "全国統一試験なし、在学記録と出願書類で判断"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270113-exam-city-lockdown",
+      "date": "2027-01-13",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの地域で、試験期間中に都市が試験に合わせて動きを変える（警笛禁止、工事停止、専用車線）のか？",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270114-harvest-poll",
+      "date": "2027-01-14",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの文化や家庭では、収穫後の感謝はどれに近いですか。",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "感謝祭のように、家族が一つの食卓に集まることが中心"
+        },
+        {
+          "id": "ritual-food",
+          "emoji": "🍚",
+          "label": "ポンガルのように、儀礼そのものである特定の料理がある"
+        },
+        {
+          "id": "month-of-festivities",
+          "emoji": "🔥",
+          "label": "ブラジルの六月祭りのように、一か月続く地域の祝祭"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "決まった収穫の日はない、あるいはもう気にしなくなった"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270114-harvest-guess",
+      "date": "2027-01-14",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "五つの地域のうち、2018年に国務院の批復によって農民のための祝日が定められ、日付は毎年の秋分に置かれ、国家レベルで農民のために作られた最初の祝日となったのはどこか。",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

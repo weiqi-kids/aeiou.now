@@ -4152,6 +4152,5946 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20261017-elders-respect",
+      "date": "2026-10-17",
+      "kind": "poll",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In your own culture or family, what's the most common way of showing respect to elders?",
+      "options": [
+        {
+          "id": "day-off-reunion",
+          "emoji": "🏠",
+          "label": "A holiday that brings the family together"
+        },
+        {
+          "id": "visit-elders",
+          "emoji": "🚶",
+          "label": "Making a special visit to spend time with elders"
+        },
+        {
+          "id": "awards-benefits",
+          "emoji": "🏅",
+          "label": "Government or institutional honours, allowances, and benefits"
+        },
+        {
+          "id": "daily-gesture",
+          "emoji": "🙏",
+          "label": "An everyday gesture of respect, like a greeting or bow"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261017-elders-day-origin",
+      "date": "2026-10-17",
+      "kind": "guess",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these places set its elders' day on a date commemorating an elderly figure who chaired the first meeting preparing for the nation's independence?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261018-full-moon-habit",
+      "date": "2026-10-18",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Around this full moon, what do you usually do?",
+      "options": [
+        {
+          "id": "moon-gazing",
+          "emoji": "🌕",
+          "label": "Look up and watch the moon"
+        },
+        {
+          "id": "bbq",
+          "emoji": "🍖",
+          "label": "Barbecue with others"
+        },
+        {
+          "id": "mooncake",
+          "emoji": "🥮",
+          "label": "Eat mooncakes"
+        },
+        {
+          "id": "nothing-special",
+          "emoji": "🤷",
+          "label": "Nothing special"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261018-two-moons",
+      "date": "2026-10-18",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Around the same full moon, in which country is moon viewing only considered complete if done twice — seeing just one night is called a 'one-sided moon' and considered unlucky?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261019-remembrance-poll",
+      "date": "2026-10-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "When it comes to ghosts, ancestors, and remembrance, which of these is closest to what you (or your family) actually do?",
+      "options": [
+        {
+          "id": "sweep-grave",
+          "emoji": "🧹",
+          "label": "Tending the grave (Qingming-style)"
+        },
+        {
+          "id": "offerings-and-incense",
+          "emoji": "🍊",
+          "label": "Setting out offerings and incense (Zhongyuan/Ghost Month-style)"
+        },
+        {
+          "id": "welcome-and-send-off",
+          "emoji": "🏮",
+          "label": "Lighting a fire to welcome, then see off ancestors (Obon-style)"
+        },
+        {
+          "id": "none-just-costumes",
+          "emoji": "🎃",
+          "label": "None of these — at most costumes and candy (Halloween-style)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261019-pitru-paksha-guess",
+      "date": "2026-10-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "One ancestor tradition runs for sixteen days, from a full moon to a new moon, offering water and food only to one's own forebears rather than wandering spirits; a particular town draws a large annual gathering because of it. Which country is this?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261020-moon-viewing-poll",
+      "date": "2026-10-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Around this full moon, where does your time actually go?",
+      "options": [
+        {
+          "id": "moon-gazing",
+          "emoji": "🌕",
+          "label": "Looking up at the moon"
+        },
+        {
+          "id": "grilling-gathering",
+          "emoji": "🍖",
+          "label": "Grilling or gathering for a meal"
+        },
+        {
+          "id": "traveling-home",
+          "emoji": "🚗",
+          "label": "Stuck traveling home or to a gathering"
+        },
+        {
+          "id": "ordinary-night",
+          "emoji": "🌙",
+          "label": "Just an ordinary night, nothing special"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261020-moon-viewing-guess",
+      "date": "2026-10-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which country's own harvest festival falls in a different season, so the name 'mid-autumn' doesn't even match the season there?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261021-midautumn-habit",
+      "date": "2026-10-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Around this full moon, what do you usually do?",
+      "options": [
+        {
+          "id": "moon-twice",
+          "emoji": "🌕",
+          "label": "Look up at the moon (more than once)"
+        },
+        {
+          "id": "mooncake-reunion",
+          "emoji": "🥮",
+          "label": "Eat mooncakes, gather with family"
+        },
+        {
+          "id": "bbq",
+          "emoji": "🍖",
+          "label": "Barbecue"
+        },
+        {
+          "id": "grave-sweep",
+          "emoji": "🪦",
+          "label": "Sweep tombs, honor ancestors"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261021-midautumn-guess-country",
+      "date": "2026-10-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Around the same full moon, which country does not take the day off, treats the night as an astronomical and seasonal event, states outright that the 'harvest moon' isn't necessarily the full moon, and only counts moon viewing as complete after seeing it twice?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261022-remembrance-practices",
+      "date": "2026-10-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In your family or culture, how do people usually remember ancestors or those who have died?",
+      "options": [
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "Visiting and tidying graves"
+        },
+        {
+          "id": "offerings-altar",
+          "emoji": "🕯️",
+          "label": "Making offerings or lighting incense at home"
+        },
+        {
+          "id": "family-meal",
+          "emoji": "🍲",
+          "label": "A family meal or gathering in remembrance"
+        },
+        {
+          "id": "not-much",
+          "emoji": "🤷",
+          "label": "No particular ritual or practice"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261022-which-country-nov2",
+      "date": "2026-10-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "This country's remembrance day falls in November and is a national holiday set by law. Families visit the cemetery to lay flowers, light candles and tidy the grave, and churches hold memorial Masses. It follows on from All Saints' Day, but the day off is the one after, and locally it's late spring south of the equator. Which country is it?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261023-moon-viewing-style",
+      "date": "2026-10-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these comes closest to how your own family marks this full moon?",
+      "options": [
+        {
+          "id": "bbq-first",
+          "emoji": "🍖",
+          "label": "Moon-gazing means firing up the grill"
+        },
+        {
+          "id": "moon-twice",
+          "emoji": "🎑",
+          "label": "One night of moon-viewing never feels complete"
+        },
+        {
+          "id": "grave-first",
+          "emoji": "🪦",
+          "label": "The day starts at the family grave, not the table"
+        },
+        {
+          "id": "night-vigil",
+          "emoji": "🕯️",
+          "label": "Staying up all night with a sweet left in the moonlight"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261023-who-stays-up-for-moon",
+      "date": "2026-10-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Around the same full moon, one place has no Mid-Autumn Festival at all, yet keeps a night-long vigil in prayer, leaves a sweet out under the moonlight, and shares it the next day — where is this?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261024-ancestor-remembrance-timing",
+      "date": "2026-10-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If your family visits graves or honours ancestors, how is it usually timed?",
+      "options": [
+        {
+          "id": "fixed-day",
+          "emoji": "📅",
+          "label": "A fixed date every year (like Qingming or Halloween)"
+        },
+        {
+          "id": "month-aligned",
+          "emoji": "🌙",
+          "label": "Tied to a month, not one exact date"
+        },
+        {
+          "id": "extended-period",
+          "emoji": "⏳",
+          "label": "Spread across a longer stretch of days"
+        },
+        {
+          "id": "no-fixed-plan",
+          "emoji": "🤷",
+          "label": "No set pattern, it depends"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261024-setsubun-role-reversal",
+      "date": "2026-10-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "One festival traces back to a Chinese exorcism rite that became a court event elsewhere; a figure who once drove out invisible plague demons was later treated as a demon himself and driven out. Which country holds this festival today?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261025-diwali-bhai-dooj-poll",
+      "date": "2026-10-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "On the last day of Diwali, Bhai Dooj, sisters perform the Tika ceremony and pray for their brothers' long life, and brothers give gifts in return. In your own culture, is there a festival or custom where siblings bless or give gifts to each other like this?",
+      "options": [
+        {
+          "id": "yes-regularly",
+          "emoji": "🎁",
+          "label": "Yes, we do it every year"
+        },
+        {
+          "id": "yes-occasionally",
+          "emoji": "🕯️",
+          "label": "Yes, but we don't mark it every year"
+        },
+        {
+          "id": "no-similar",
+          "emoji": "🤷",
+          "label": "I haven't heard of anything like it"
+        },
+        {
+          "id": "no-siblings",
+          "emoji": "👤",
+          "label": "I have no siblings, so I have no experience with this"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261025-diwali-hindu-holiday-guess",
+      "date": "2026-10-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "The passage says one country lists a certain religion among its officially recognised faiths and gives it a national holiday — but that day is not Diwali, it's the local believers' own new year. Which country?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261026-remembrance-check-in",
+      "date": "2026-10-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Have you visited a grave, made an offering, or otherwise remembered someone who died this year?",
+      "options": [
+        {
+          "id": "yes-ritual",
+          "emoji": "🕯️",
+          "label": "Yes, in a fairly formal way (grave visit, offerings)"
+        },
+        {
+          "id": "yes-personal",
+          "emoji": "💭",
+          "label": "Yes, but privately (thinking of them, looking at photos, talking to them)"
+        },
+        {
+          "id": "not-yet",
+          "emoji": "📅",
+          "label": "Not yet, but I plan to this year"
+        },
+        {
+          "id": "not-my-practice",
+          "emoji": "🤷",
+          "label": "It's not something my family or community does"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261026-guess-nyadran-country",
+      "date": "2026-10-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "One grave-tending custom isn't tied to a fixed date but to the fact that fasting starts the following month; the ritual's name comes from the Sanskrit word for faith, and it ends with everyone sharing a single meal together. Which country is this?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261027-diwali-days",
+      "date": "2026-10-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Diwali's five days each centre on something different: buying gold on Dhanteras, lighting lamps on the main day, heaping food offerings on Govardhan Puja, or exchanging gifts between siblings on Bhai Dooj. Which day would you most want to experience?",
+      "options": [
+        {
+          "id": "dhanteras",
+          "emoji": "💰",
+          "label": "Buying gold (Dhanteras)"
+        },
+        {
+          "id": "main-day",
+          "emoji": "🪔",
+          "label": "Lighting lamps (main day)"
+        },
+        {
+          "id": "govardhan",
+          "emoji": "🍛",
+          "label": "Food-mountain offering (Govardhan Puja)"
+        },
+        {
+          "id": "bhai-dooj",
+          "emoji": "👫",
+          "label": "Sibling gift exchange (Bhai Dooj)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261027-diwali-guess",
+      "date": "2026-10-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Indonesia, Taiwan, China, and Brazil all lack Diwali as a national holiday — but one of them officially recognises Hinduism and gives it a national holiday of its own, just not on the day of Diwali. Which one?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261028-remembrance-practice",
+      "date": "2026-10-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Among the remembrance practices on this page, which comes closest to something in your own family or the place you grew up?",
+      "options": [
+        {
+          "id": "grave-tending",
+          "emoji": "🪦",
+          "label": "Tending and cleaning the grave"
+        },
+        {
+          "id": "spirit-offerings",
+          "emoji": "🙏",
+          "label": "Offerings to wandering spirits and ancestors"
+        },
+        {
+          "id": "welcome-and-send-off",
+          "emoji": "🔥",
+          "label": "Welcoming and seeing off ancestors (a round trip)"
+        },
+        {
+          "id": "facing-neighbors",
+          "emoji": "🎃",
+          "label": "Facing neighbours rather than one's own ancestors"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261028-pitru-paksha-guess",
+      "date": "2026-10-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "One remembrance tradition runs for sixteen lunar days, from a full moon to the new moon of the following month (called Mahalaya), during which people offer water and food and ask their ancestors' forgiveness — and one place draws a large annual gathering for exactly this. Which country does this belong to?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261029-ancestor-practice",
+      "date": "2026-10-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Growing up, what was the most common way your family honored ancestors or the dead?",
+      "options": [
+        {
+          "id": "sweep-grave",
+          "emoji": "🧹",
+          "label": "Visiting and tidying the grave"
+        },
+        {
+          "id": "altar-incense",
+          "emoji": "🙏",
+          "label": "Offering incense and food at a home altar"
+        },
+        {
+          "id": "candle-fire",
+          "emoji": "🕯️",
+          "label": "Lighting a candle or fire to welcome or send off the dead"
+        },
+        {
+          "id": "shared-meal",
+          "emoji": "🍲",
+          "label": "Sharing a meal together as a family"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261029-which-country-two-fires",
+      "date": "2026-10-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "This ancestor-remembrance day is not a statutory holiday, yet it produces the year's most visible national pause. A fire at the door welcomes the ancestors back, another fire a few days later sends them off, and a folk dance fills the days between. Which country's observance is this?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261030-diwali-pick-a-day",
+      "date": "2026-10-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If you could only observe one day of the five-day Diwali season, which would you pick?",
+      "options": [
+        {
+          "id": "dhanteras",
+          "emoji": "🪙",
+          "label": "Dhanteras — buying gold and new utensils"
+        },
+        {
+          "id": "main-day",
+          "emoji": "🪔",
+          "label": "The main day — lighting lamps for Ganesha and Lakshmi"
+        },
+        {
+          "id": "govardhan",
+          "emoji": "⛰️",
+          "label": "Govardhan Puja — the food piled like a mountain"
+        },
+        {
+          "id": "bhai-dooj",
+          "emoji": "👫",
+          "label": "Bhai Dooj — sisters' Tika, brothers' gifts"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261030-diwali-school-closure-guess",
+      "date": "2026-10-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In which of these places is Diwali not a national religious holiday, yet a city passed a law closing public schools on the day?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261031-family-remembrance",
+      "date": "2026-10-31",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In your own life, how does your family usually mark these days connected to the dead and to ancestors?",
+      "options": [
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "Visiting and tidying the grave"
+        },
+        {
+          "id": "offerings-incense",
+          "emoji": "🕯️",
+          "label": "Offering incense and food at an altar"
+        },
+        {
+          "id": "costume-treats",
+          "emoji": "🎃",
+          "label": "Trick-or-treating and costumes"
+        },
+        {
+          "id": "none-of-these",
+          "emoji": "🤷",
+          "label": "None of these in particular"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261031-guess-southern-spring",
+      "date": "2026-10-31",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which country's remembrance day falls in late spring south of the equator, so tending graves doesn't carry the bleak seasonal feeling seen in the northern hemisphere?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261101-diwali-calendar-experience",
+      "date": "2026-11-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Has your city or school ever adjusted its calendar for a religious holiday outside the local majority faith?",
+      "options": [
+        {
+          "id": "yes-personal",
+          "emoji": "🏫",
+          "label": "Yes, I've experienced it myself"
+        },
+        {
+          "id": "heard-elsewhere",
+          "emoji": "👂",
+          "label": "I've heard of it, but not where I live"
+        },
+        {
+          "id": "never-heard",
+          "emoji": "🤷",
+          "label": "No, I've never heard of this happening"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "Not sure, never paid attention"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261101-diwali-guess-country",
+      "date": "2026-11-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Among these four countries, which one lists Diwali as a nationwide holiday observed through its five-day ritual sequence?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261102-ancestor-remembrance-poll",
+      "date": "2026-11-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Do you or your family visit graves, honor ancestors, or do something like this?",
+      "options": [
+        {
+          "id": "every-year",
+          "emoji": "🪦",
+          "label": "Yes, every year"
+        },
+        {
+          "id": "sometimes",
+          "emoji": "🕯️",
+          "label": "Sometimes, not every year"
+        },
+        {
+          "id": "not-my-practice",
+          "emoji": "🚫",
+          "label": "No, not something I do"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤷",
+          "label": "It depends on the year or the person"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261102-guess-obon-country",
+      "date": "2026-11-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "This observance isn't a statutory holiday, yet it's the most visible nationwide pause of the year in that place. Most companies set their own closure around it, so homebound traffic and fares peak on a fixed schedule. A fire at the door welcomes ancestors back, another fire days later sees them off, and a dance fills the days between. Where is this?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261103-diwali-favorite-day",
+      "date": "2026-11-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Diwali's five days each carry a different focus — which one feels closest to the festive mood you know?",
+      "options": [
+        {
+          "id": "dhanteras",
+          "emoji": "🪙",
+          "label": "Opening day of buying gold"
+        },
+        {
+          "id": "main-day",
+          "emoji": "🪔",
+          "label": "Main day of lighting lamps"
+        },
+        {
+          "id": "govardhan-puja",
+          "emoji": "⛰️",
+          "label": "Community day of food piled like a hill"
+        },
+        {
+          "id": "bhai-dooj",
+          "emoji": "👫",
+          "label": "Closing day of sisters marking Tika"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261103-diwali-holiday-country",
+      "date": "2026-11-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these countries gives a Hindu festival a national holiday — but the day is not Diwali?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261104-exam-style",
+      "date": "2026-11-04",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Thinking back to how you were assessed at eighteen (or how it works where you're from), which of these comes closest?",
+      "options": [
+        {
+          "id": "one-shot",
+          "emoji": "🎯",
+          "label": "One big exam decided almost everything"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🪜",
+          "label": "A national test first, then each school's own selection"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "📅",
+          "label": "Spread across weeks or even months"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📂",
+          "label": "No national exam at all — school record and application materials mattered instead"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261104-gaokao-city",
+      "date": "2026-11-04",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In which of these places does a city reorganise itself around the national exam — horns banned near test centres, construction halted, dedicated traffic lanes, and in some places even shifted working hours?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261105-diwali-relation",
+      "date": "2026-11-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Diwali's five days each address a different relationship — acquiring wealth, lighting lamps, community and livestock, and siblings. Which of these resonates with you the most?",
+      "options": [
+        {
+          "id": "wealth",
+          "emoji": "💰",
+          "label": "Acquiring wealth (like Dhanteras)"
+        },
+        {
+          "id": "lamps",
+          "emoji": "🪔",
+          "label": "Lighting lamps for prosperity (main day)"
+        },
+        {
+          "id": "community",
+          "emoji": "🐄",
+          "label": "Caring for community and livestock (Govardhan Puja)"
+        },
+        {
+          "id": "siblings",
+          "emoji": "👫",
+          "label": "Blessings between siblings (Bhai Dooj)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261105-diwali-which-country",
+      "date": "2026-11-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "One country counts Hinduism among its officially recognised religions and gives it a national holiday — but that day is not Diwali. It is another new year kept by the region where the country's Hindu population is concentrated, and the whole island falls silent. Which country is it?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261106-diwali-day-pick",
+      "date": "2026-11-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If you could take part in one custom from Diwali's five-day season, which day would you choose?",
+      "options": [
+        {
+          "id": "dhanteras",
+          "emoji": "🪙",
+          "label": "Buying gold or metal"
+        },
+        {
+          "id": "main-day",
+          "emoji": "🪔",
+          "label": "Lighting lamps for prosperity"
+        },
+        {
+          "id": "govardhan",
+          "emoji": "🍛",
+          "label": "Heaping food into a hill"
+        },
+        {
+          "id": "bhai-dooj",
+          "emoji": "🎁",
+          "label": "Sisters' Tika, brothers' gifts"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261106-diwali-guess-country",
+      "date": "2026-11-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which country counts Hinduism among its officially recognised religions and gives it a national holiday — but that day is not actually Diwali?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261107-exam-measure-preference",
+      "date": "2026-11-07",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If you could choose again, which way would you want your own admission to be measured at eighteen?",
+      "options": [
+        {
+          "id": "one-shot",
+          "emoji": "🎯",
+          "label": "Like the gaokao — settled in a day or two"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "📅",
+          "label": "Like India's board exam — spread across nearly two months"
+        },
+        {
+          "id": "no-exam",
+          "emoji": "📁",
+          "label": "Like the US — no national exam, judged on record and application"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🧩",
+          "label": "Like Taiwan or Japan — a national test first, then each university's own screening"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261107-gaokao-city-lockdown",
+      "date": "2026-11-07",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "During exam days, cities ban car horns near test centres, halt construction, and set up dedicated traffic lanes — which place is this?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261108-diwali-day-pick",
+      "date": "2026-11-08",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Diwali is really five days, each addressing something different. If you could only join one, which would you pick?",
+      "options": [
+        {
+          "id": "dhanteras",
+          "emoji": "🪙",
+          "label": "Dhanteras — buying gold"
+        },
+        {
+          "id": "main-day",
+          "emoji": "🪔",
+          "label": "The main day — lamps and prayers"
+        },
+        {
+          "id": "govardhan-puja",
+          "emoji": "⛰️",
+          "label": "Govardhan Puja — a mountain of food"
+        },
+        {
+          "id": "bhai-dooj",
+          "emoji": "🎁",
+          "label": "Bhai Dooj — gifts between siblings"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261108-diwali-guess-country",
+      "date": "2026-11-08",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "One country counts Hinduism among its officially recognised religions and gives it a national holiday — but that day is not actually Diwali. Which country?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261109-fathersday-poll",
+      "date": "2026-11-09",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which day do you usually celebrate Father's Day on?",
+      "options": [
+        {
+          "id": "on-the-day",
+          "emoji": "📅",
+          "label": "On 8 August itself"
+        },
+        {
+          "id": "nearest-weekend",
+          "emoji": "🎉",
+          "label": "The nearest weekend"
+        },
+        {
+          "id": "june-third-sunday",
+          "emoji": "🗓️",
+          "label": "Third Sunday of June"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "No fixed day"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261109-fathersday-guess",
+      "date": "2026-11-09",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these places had its Father's Day invented by an advertising man and journalist to fill a gap in the retail calendar?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261110-diwali-custom",
+      "date": "2026-11-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these have you or your family actually done during the five days of Diwali?",
+      "options": [
+        {
+          "id": "buy-metal",
+          "emoji": "🛍️",
+          "label": "Bought gold or new metal utensils, like on Dhanteras"
+        },
+        {
+          "id": "light-lamps",
+          "emoji": "🪔",
+          "label": "Lit lamps and prayed at home"
+        },
+        {
+          "id": "sibling-day",
+          "emoji": "🎁",
+          "label": "Exchanged gifts with siblings, like on Bhai Dooj"
+        },
+        {
+          "id": "none-of-above",
+          "emoji": "🙅",
+          "label": "None of these — this is the first time I've heard of these customs"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261110-diwali-country",
+      "date": "2026-11-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these countries does not treat Diwali as a national holiday, yet gives national-holiday status to a different Hindu festival?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261111-fathers-day-celebrate",
+      "date": "2026-11-11",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If Father's Day falls on a workday where you are, how does your family usually mark it?",
+      "options": [
+        {
+          "id": "weekend-shift",
+          "emoji": "📅",
+          "label": "Move it to the nearest weekend gathering"
+        },
+        {
+          "id": "after-work",
+          "emoji": "🌙",
+          "label": "Celebrate simply after work"
+        },
+        {
+          "id": "card-message",
+          "emoji": "✉️",
+          "label": "Just a card or a message"
+        },
+        {
+          "id": "no-fuss",
+          "emoji": "🤷",
+          "label": "We don't really mark it"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261111-fathers-day-origin",
+      "date": "2026-11-11",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which place's Father's Day was invented by an advertising man to fill a gap in the retail calendar?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261112-childrens-day-memory",
+      "date": "2026-11-12",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "How did you (or do you now) spend Children's Day?",
+      "options": [
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "Got presents"
+        },
+        {
+          "id": "school-event",
+          "emoji": "🏫",
+          "label": "School put on events or performances"
+        },
+        {
+          "id": "day-off",
+          "emoji": "🎡",
+          "label": "Had the day off and went out"
+        },
+        {
+          "id": "nothing-special",
+          "emoji": "🤷",
+          "label": "Nothing in particular"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261112-childrens-day-guess-saint",
+      "date": "2026-11-12",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these places has its Children's Day fall on the same date as the country's Catholic patron saint's day?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261113-harvest-priority",
+      "date": "2026-11-13",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If where you live has a harvest or thanksgiving-related day, what matters most to you about it?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "Family gathering around a meal"
+        },
+        {
+          "id": "giving-thanks",
+          "emoji": "🙏",
+          "label": "Giving thanks to the land, a deity, or ancestors"
+        },
+        {
+          "id": "community-event",
+          "emoji": "🎉",
+          "label": "A community or town-wide celebration"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "Where I live, there isn't a day like this"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261113-farmers-day-lichun",
+      "date": "2026-11-13",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which place's farmers' day is fixed by astronomy rather than a set date, so the exact day has to be looked up each year in the weather authority's tables — and it isn't a day off?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261114-childrens-day-poll",
+      "date": "2026-11-14",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Growing up, what did Children's Day look like for you?",
+      "options": [
+        {
+          "id": "family-holiday",
+          "emoji": "🏖️",
+          "label": "Everyone in the family got the day off"
+        },
+        {
+          "id": "kids-only-off",
+          "emoji": "🧒",
+          "label": "Only kids got the day off, adults still worked"
+        },
+        {
+          "id": "school-event",
+          "emoji": "🏫",
+          "label": "No day off — school held events instead"
+        },
+        {
+          "id": "no-dedicated-day",
+          "emoji": "❓",
+          "label": "There was no dedicated Children's Day at all"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261114-childrens-day-guess",
+      "date": "2026-11-14",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which place's Children's Day coincides with the country's Catholic patron saint's day?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261115-pick-a-harvest-day",
+      "date": "2026-11-15",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If you had to set a day for giving thanks for the harvest, how would you pick it?",
+      "options": [
+        {
+          "id": "by-astronomy",
+          "emoji": "🌱",
+          "label": "Follow a solar/astronomical marker (like the start of spring or the equinox)"
+        },
+        {
+          "id": "by-weekday",
+          "emoji": "📆",
+          "label": "Fix it on a particular weekday (like Thanksgiving's fourth Thursday)"
+        },
+        {
+          "id": "by-dish-ritual",
+          "emoji": "🍚",
+          "label": "Let a dish or a ritual be the holiday itself (like Pongal's overflowing pot)"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🏘️",
+          "label": "Don't set one specially — let an existing calendar and local custom carry it (like West Java's Seren Taun)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261115-guess-lichun-farmers-day",
+      "date": "2026-11-15",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which place puts its Farmers' Day not in autumn but at the start of spring — and doesn't give the day off?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261116-teachers-day-poll",
+      "date": "2026-11-16",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "On Teachers' Day, what usually happens at the school you know best?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🏖️",
+          "label": "A day off"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎉",
+          "label": "School holds a ceremony or awards"
+        },
+        {
+          "id": "role-swap",
+          "emoji": "🔄",
+          "label": "Students take over teaching"
+        },
+        {
+          "id": "normal-day",
+          "emoji": "📚",
+          "label": "Classes as usual, nothing special"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261116-teachers-day-guess",
+      "date": "2026-11-16",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Among these six places, which one makes Teachers' Day a national public holiday for everyone?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261117-harvest-timing",
+      "date": "2026-11-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Where you live, if there's a holiday tied to the harvest, when does it usually fall?",
+      "options": [
+        {
+          "id": "before-planting",
+          "emoji": "🌱",
+          "label": "Before the work in the field begins"
+        },
+        {
+          "id": "after-harvest",
+          "emoji": "🍽️",
+          "label": "After the harvest is in"
+        },
+        {
+          "id": "monthlong",
+          "emoji": "🎉",
+          "label": "A celebration that stretches across a whole month"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "No such holiday where I live"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261117-harvest-before-or-after",
+      "date": "2026-11-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Among the places mentioned above, whose farmers'/harvest holiday falls before the work of planting begins, rather than after the harvest is in?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261118-teachers-day-experience",
+      "date": "2026-11-18",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Where you live, how is Teachers' Day (or something like it) usually marked?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "A day off"
+        },
+        {
+          "id": "school-ceremony",
+          "emoji": "🏫",
+          "label": "School holds a ceremony, classes go on"
+        },
+        {
+          "id": "role-swap",
+          "emoji": "🔄",
+          "label": "Students take over classes for the day"
+        },
+        {
+          "id": "no-special-day",
+          "emoji": "🤷",
+          "label": "No national day — appreciation is organized locally"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261118-teachers-day-guess",
+      "date": "2026-11-18",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Among the six places, one Teachers' Day date exists because the president himself turned down students' offer to celebrate his birthday and suggested honouring the country's teachers instead. Which one?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261119-harvest-poll",
+      "date": "2026-11-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If you got to design a harvest festival, when would you want it to fall?",
+      "options": [
+        {
+          "id": "after-harvest",
+          "emoji": "🌾",
+          "label": "After the harvest is in, giving thanks for what's already gathered — like Thanksgiving"
+        },
+        {
+          "id": "before-harvest",
+          "emoji": "🌱",
+          "label": "Before the work starts, marking the return to the field — like Taiwan's Lichun"
+        },
+        {
+          "id": "month-long",
+          "emoji": "🎉",
+          "label": "Stretched into a whole month of celebration, like Brazil's June festivals around several saints' days"
+        },
+        {
+          "id": "dish-is-ritual",
+          "emoji": "🍚",
+          "label": "Let cooking one dish be the ritual itself, like the overflowing pot in India's Pongal"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261119-harvest-guess",
+      "date": "2026-11-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which place's harvest festival is not a day off for everyone, but one approved by the government with a theme set annually by a ministry?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261120-teachers-day-experience",
+      "date": "2026-11-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "The Teachers' Day (or similar day) you've experienced is closest to which of these?",
+      "options": [
+        {
+          "id": "day-off-and-ceremony",
+          "emoji": "🎉",
+          "label": "A day off, with a school celebration too"
+        },
+        {
+          "id": "school-day-with-event",
+          "emoji": "📣",
+          "label": "A normal school day, with a school event honouring teachers"
+        },
+        {
+          "id": "students-swap-roles",
+          "emoji": "🔄",
+          "label": "Senior students take over teaching for the day, roles swapped"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🚫",
+          "label": "No such day at all — just an ordinary day"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261120-teachers-day-origin",
+      "date": "2026-11-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which place's Teachers' Day actually commemorates the day the state began providing schooling, rather than a particular teacher?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261121-harvest-gratitude-poll",
+      "date": "2026-11-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If where you live has a day tied to harvest or giving thanks, what matters to you most about it?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "Gathering the family for a meal"
+        },
+        {
+          "id": "give-thanks-ritual",
+          "emoji": "🙏",
+          "label": "A ritual or prayer of thanks to the divine or nature"
+        },
+        {
+          "id": "community-festival",
+          "emoji": "🎉",
+          "label": "Celebrating together with neighbours or the community"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "Honestly, I don't really have a day like that"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261121-harvest-gratitude-guess",
+      "date": "2026-11-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "One place's 'Farmers' Day' doesn't celebrate a harvest already in — it's set on the day spring begins, just before the fields are worked again; the date is fixed by astronomy, so each year you have to check the calendar to know if it falls on 3, 4 or 5 February, and it isn't a day off. Where is this?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261122-teachers-day-poll",
+      "date": "2026-11-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In your experience, what's the most common way Teachers' Day is marked at school?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "A day off, no classes"
+        },
+        {
+          "id": "school-ceremony",
+          "emoji": "🏫",
+          "label": "A school ceremony or awards event"
+        },
+        {
+          "id": "role-swap",
+          "emoji": "🔄",
+          "label": "Senior students take over teaching for the day"
+        },
+        {
+          "id": "no-celebration",
+          "emoji": "📚",
+          "label": "No special observance, classes as usual"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261122-teachers-day-guess",
+      "date": "2026-11-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which place's Teachers' Day began when the honoree turned down a birthday celebration and asked students to honor the country's teachers instead?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261123-harvest-experience",
+      "date": "2026-11-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In your own life, which of these comes closest to a 'harvest' or 'thanksgiving' moment?",
+      "options": [
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "A big family meal everyone gathers for"
+        },
+        {
+          "id": "ritual-dish",
+          "emoji": "🍚",
+          "label": "A specific dish or ritual that is the celebration itself"
+        },
+        {
+          "id": "community-festival",
+          "emoji": "🎉",
+          "label": "A whole community festival that stretches over days or weeks"
+        },
+        {
+          "id": "thanks-for-labor",
+          "emoji": "🙏",
+          "label": "A day for thanking each other's work rather than the harvest itself"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261123-harvest-before-or-after",
+      "date": "2026-11-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which place's harvest/farmers' day comes before the planting season starts, not after the crop is in?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261124-teachers-day-experience",
+      "date": "2026-11-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Thinking back to your school days, on Teachers' Day (or a similar local day), what did you usually experience?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "A day off from school"
+        },
+        {
+          "id": "school-event",
+          "emoji": "🏫",
+          "label": "Classes as usual, with an awards or appreciation event"
+        },
+        {
+          "id": "role-swap",
+          "emoji": "🔄",
+          "label": "Senior students taught the classes, roles swapped"
+        },
+        {
+          "id": "no-event",
+          "emoji": "📚",
+          "label": "Nothing special — just a regular day"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261124-teachers-day-origin",
+      "date": "2026-11-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Each of the six Teachers' Days has a different reason behind its date. Which place's Teachers' Day commemorates the day the state began providing schooling, rather than a particular teacher or person?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261125-harvest-picture",
+      "date": "2026-11-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If you had to pick one scene that best captures what harvest and gratitude mean to you, which would it be?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "Family gathered around the table"
+        },
+        {
+          "id": "thank-labor",
+          "emoji": "🙏",
+          "label": "Thanking one another for a year's hard work"
+        },
+        {
+          "id": "before-the-work",
+          "emoji": "🌱",
+          "label": "A ritual before the season even starts, not after"
+        },
+        {
+          "id": "month-long-festivity",
+          "emoji": "🎉",
+          "label": "A whole month of communal celebration"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261125-harvest-before-or-after",
+      "date": "2026-11-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Thanksgiving, the farmers' harvest festival, and Labour Thanksgiving Day all fall after the harvest is in — which place puts its Farmers' Day before the fieldwork even starts?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261126-year-end-bonus-poll",
+      "date": "2026-11-26",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "The year-end money you've received in your own work — which of these does it most resemble?",
+      "options": [
+        {
+          "id": "legal-penalty",
+          "emoji": "⚖️",
+          "label": "Required by law, with fines for paying late"
+        },
+        {
+          "id": "profit-condition",
+          "emoji": "📊",
+          "label": "Only paid if the company actually turned a profit that year"
+        },
+        {
+          "id": "employer-discretion",
+          "emoji": "🎲",
+          "label": "Entirely up to the employer — amount and existence both uncertain"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "Comes twice a year, split between midyear and year-end"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261126-year-end-bonus-guess",
+      "date": "2026-11-26",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In which country is the year-end payment part of the wage rather than a bonus, split into two instalments — the first due by 30 November, the second by 20 December — with fines for lateness and workers able to take it to court?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261127-mothers-day-poll",
+      "date": "2026-11-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In your family, how is Mother's Day usually spent?",
+      "options": [
+        {
+          "id": "dine-out",
+          "emoji": "🍽️",
+          "label": "Family dinner out, booked in advance"
+        },
+        {
+          "id": "flowers-gift",
+          "emoji": "💐",
+          "label": "Flowers, a card, or a small gift"
+        },
+        {
+          "id": "phone-call",
+          "emoji": "📞",
+          "label": "Just a phone call or message"
+        },
+        {
+          "id": "no-fuss",
+          "emoji": "🤷",
+          "label": "Nothing special planned"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261127-mothers-day-guess",
+      "date": "2026-11-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In one place, \"Mother's Day\" falls on December 22, and it is officially defined as commemorating the start of a women's movement — not a day to thank mothers. Which country is it?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261128-year-end-bonus-poll",
+      "date": "2026-11-28",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If you could set the rule for a year-end bonus, which would you choose?",
+      "options": [
+        {
+          "id": "profit-based",
+          "emoji": "📈",
+          "label": "Only pays out if the company turns a profit, and the amount is the company's call"
+        },
+        {
+          "id": "law-mandated",
+          "emoji": "⚖️",
+          "label": "Amount and deadline set by law, with fines for being late"
+        },
+        {
+          "id": "employer-discretion",
+          "emoji": "🎲",
+          "label": "Employer decides at the last minute, with nothing promised in advance"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "Paid twice a year, once at midyear and once at year-end"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261128-year-end-bonus-guess",
+      "date": "2026-11-28",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In this market, the year-end payment must be paid in full seven days before the religious holiday, never in instalments, with a 5 per cent fine for being late — and the date moves earlier every year because it follows Eid. Which market is this?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261129-mothers-day-express",
+      "date": "2026-11-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "On Mother's Day, how do you usually show it?",
+      "options": [
+        {
+          "id": "flowers",
+          "emoji": "💐",
+          "label": "Give flowers"
+        },
+        {
+          "id": "dining",
+          "emoji": "🍽️",
+          "label": "Book a restaurant, share a meal"
+        },
+        {
+          "id": "flag",
+          "emoji": "🚩",
+          "label": "Fly a flag or do something ceremonial"
+        },
+        {
+          "id": "family",
+          "emoji": "👨‍👩‍👧",
+          "label": "Go to Mass, family lunch"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261129-mothers-day-guess",
+      "date": "2026-11-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In one place, Mother's Day isn't in May at all — it falls on 22 December, commemorating a congress of women's organizations rather than a day for thanking mothers. Which place is it?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261130-bonus-poll",
+      "date": "2026-11-30",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If you could choose, which year-end bonus logic would you want your employer to follow?",
+      "options": [
+        {
+          "id": "profit-only",
+          "emoji": "📉",
+          "label": "Only paid in a profitable year, amount is up to the company"
+        },
+        {
+          "id": "guaranteed-law",
+          "emoji": "⚖️",
+          "label": "Required by law, with fines if paid late"
+        },
+        {
+          "id": "loss-proof-min",
+          "emoji": "🛡️",
+          "label": "A statutory minimum even in a loss-making year"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "Paid twice a year, once mid-year and once at year-end"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261130-bonus-guess",
+      "date": "2026-11-30",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In which country must the statutory bonus be paid at its minimum rate even in a loss-making year?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261201-mothers-day-ritual",
+      "date": "2026-12-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "On Mother's Day, what do you usually do?",
+      "options": [
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "Family meal"
+        },
+        {
+          "id": "flowers-gift",
+          "emoji": "💐",
+          "label": "Flowers or a gift"
+        },
+        {
+          "id": "phone-call",
+          "emoji": "📞",
+          "label": "A phone call or message"
+        },
+        {
+          "id": "no-activity",
+          "emoji": "🚫",
+          "label": "Nothing in particular"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261201-mothers-day-country",
+      "date": "2026-12-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Four places keep Mother's Day on the second Sunday of May; only one sets it on 22 December, commemorating not motherhood but a 1928 women's congress. Which country?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261202-bonus-style",
+      "date": "2026-12-02",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If you could redesign your own year-end bonus system, which would you want?",
+      "options": [
+        {
+          "id": "law-guarantee",
+          "emoji": "⚖️",
+          "label": "Like Brazil — a legal right, with fines for being late"
+        },
+        {
+          "id": "profit-based",
+          "emoji": "📈",
+          "label": "Like Taiwan — only if the company profits, amount not fixed"
+        },
+        {
+          "id": "before-holiday",
+          "emoji": "🕌",
+          "label": "Like Indonesia — paid in full right before a set holiday"
+        },
+        {
+          "id": "twice-year",
+          "emoji": "🌸",
+          "label": "Like Japan — split into two payments a year"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261202-bonus-guess",
+      "date": "2026-12-02",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In which country must the statutory bonus be paid at a minimum floor even in a loss-making year?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261203-mothers-day-dayoff",
+      "date": "2026-12-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Where you live, is Mother's Day actually a day off?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "📅",
+          "label": "Yes, it's a day off"
+        },
+        {
+          "id": "no-day-off-but-celebrate",
+          "emoji": "🎉",
+          "label": "No day off, but we still celebrate"
+        },
+        {
+          "id": "no-official-status",
+          "emoji": "🚫",
+          "label": "It has no official status at all"
+        },
+        {
+          "id": "always-sunday",
+          "emoji": "📆",
+          "label": "It always lands on a Sunday anyway, so it doesn't matter"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261203-mothers-day-december",
+      "date": "2026-12-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which country's Mother's Day falls in December and actually commemorates a women's movement, not motherhood?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261204-bonus-poll",
+      "date": "2026-12-04",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these best matches the year-end bonus you're familiar with?",
+      "options": [
+        {
+          "id": "boss-mood",
+          "emoji": "🎲",
+          "label": "Entirely up to the boss, no guarantee"
+        },
+        {
+          "id": "law-fine",
+          "emoji": "⚖️",
+          "label": "Written into law, with fines for being late"
+        },
+        {
+          "id": "part-of-wage",
+          "emoji": "💰",
+          "label": "Really part of the wage, settled even if you quit"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "Paid twice a year, with a summer one too"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261204-bonus-guess",
+      "date": "2026-12-04",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "This country's year-end allowance law requires full payment seven days before a religious holiday, bans instalments, and fines 5 per cent for lateness. Which country is it?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261205-mothers-day-poll",
+      "date": "2026-12-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "For you, what matters most about Mother's Day?",
+      "options": [
+        {
+          "id": "meal-together",
+          "emoji": "🍽️",
+          "label": "A family meal together"
+        },
+        {
+          "id": "gift-flowers",
+          "emoji": "💐",
+          "label": "Flowers or a gift"
+        },
+        {
+          "id": "call-or-card",
+          "emoji": "📞",
+          "label": "A phone call or a card"
+        },
+        {
+          "id": "no-special",
+          "emoji": "🤷",
+          "label": "Nothing special, really"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261205-mothers-day-guess",
+      "date": "2026-12-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these countries' \"Mother's Day\" isn't really about thanking mothers at all — it commemorates the start of a women's movement?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261206-year-end-bonus-poll",
+      "date": "2026-12-06",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these is closest to how your own year-end bonus (or one you know) actually works?",
+      "options": [
+        {
+          "id": "profit-based",
+          "emoji": "📉",
+          "label": "Depends on whether the company made a profit — not guaranteed every year"
+        },
+        {
+          "id": "fixed-amount",
+          "emoji": "🎁",
+          "label": "It's a fixed thing, roughly an extra month's pay"
+        },
+        {
+          "id": "last-minute",
+          "emoji": "⏳",
+          "label": "I only find out the amount right before the holiday or year-end"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "My kind of work doesn't have anything like this"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261206-year-end-bonus-guess",
+      "date": "2026-12-06",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In one market, the statutory bonus floor is 8.33 per cent of wages and the ceiling is 20 per cent, and the floor does not depend on whether the company made a profit — a loss-making year still owes the minimum. Payment is due within eight months of the close of the accounting year, but most employers deliberately pay earlier so the money arrives before the year's biggest shopping season. Which market is this?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261207-mothers-day-ritual",
+      "date": "2026-12-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Where you live, which of these is the most common way to mark Mother's Day?",
+      "options": [
+        {
+          "id": "flowers",
+          "emoji": "🌸",
+          "label": "Carnations and flowers"
+        },
+        {
+          "id": "dinner",
+          "emoji": "🍽️",
+          "label": "Family dinner reservation"
+        },
+        {
+          "id": "flag",
+          "emoji": "🚩",
+          "label": "Flying a flag"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "No particular ritual"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261207-mothers-day-guess",
+      "date": "2026-12-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these countries marks its 'Mother's Day' not in May and not for motherhood at all, but for a women's congress held in 1928?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261208-bonus-poll",
+      "date": "2026-12-08",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If you could design the rule, which version of a year-end bonus would you want?",
+      "options": [
+        {
+          "id": "guaranteed-law",
+          "emoji": "⚖️",
+          "label": "A legal right, with a fine for late payment (like Brazil or Indonesia)"
+        },
+        {
+          "id": "profit-based",
+          "emoji": "📈",
+          "label": "Only if the company turns a profit, no obligation (like Taiwan)"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "Split into two payments a year (like Japan)"
+        },
+        {
+          "id": "tax-optimized",
+          "emoji": "🧾",
+          "label": "Free to pick whichever tax method costs less (like China)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261208-bonus-guess",
+      "date": "2026-12-08",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "A statutory bonus has a floor of 8.33 per cent of wages and a ceiling of 20 per cent, and the floor does not depend on the company making a profit — even a loss-making year still owes the minimum. Payment is due within eight months of the close of the accounting year, and most employers pay early so the money arrives before the year's biggest shopping season. Which market is this?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261209-mothers-day-day-off",
+      "date": "2026-12-09",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Where you live, is Mother's Day actually a day off?",
+      "options": [
+        {
+          "id": "official-holiday",
+          "emoji": "🏛️",
+          "label": "Yes, it's an official day off"
+        },
+        {
+          "id": "sunday-as-usual",
+          "emoji": "🌸",
+          "label": "No, but it lands on a Sunday so we celebrate anyway"
+        },
+        {
+          "id": "workday-no-holiday",
+          "emoji": "💐",
+          "label": "No, it's a regular working day"
+        },
+        {
+          "id": "not-celebrated",
+          "emoji": "🤷",
+          "label": "We don't really observe Mother's Day where I'm from"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261209-mothers-day-womens-movement",
+      "date": "2026-12-09",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which country's Mother's Day actually commemorates the start of a women's movement, not motherhood itself?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261210-year-end-bonus-poll",
+      "date": "2026-12-10",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If you've ever received a year-end bonus, which of these best describes it?",
+      "options": [
+        {
+          "id": "legal-fixed",
+          "emoji": "📜",
+          "label": "Set by law, with a fixed amount and date"
+        },
+        {
+          "id": "profit-linked",
+          "emoji": "📊",
+          "label": "Depends on whether the company actually made a profit"
+        },
+        {
+          "id": "custom-not-right",
+          "emoji": "🎁",
+          "label": "Purely custom or the employer's goodwill, never guaranteed"
+        },
+        {
+          "id": "never-got-one",
+          "emoji": "🚫",
+          "label": "My job has never had anything like this"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261210-year-end-bonus-guess",
+      "date": "2026-12-10",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In which country is the statutory bonus floor unrelated to whether the company made a profit — even a loss-making year still owes the minimum?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261211-mothers-day-vibe",
+      "date": "2026-12-11",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "On Mother's Day where you are, which comes closest to your experience?",
+      "options": [
+        {
+          "id": "flowers",
+          "emoji": "🌸",
+          "label": "Flowers or gifts are the main thing"
+        },
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "A family meal, restaurants booked solid"
+        },
+        {
+          "id": "workday",
+          "emoji": "🏢",
+          "label": "Work and school go on as usual, nothing special in the air"
+        },
+        {
+          "id": "not-marked",
+          "emoji": "🤷",
+          "label": "Where I am, this day barely gets marked at all"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261211-mothers-day-country",
+      "date": "2026-12-11",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "One country's Mother's Day falls not in May but in December, and it commemorates not motherhood but a 1928 women's congress. Which country?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261212-bonus-poll",
+      "date": "2026-12-12",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "The extra pay you get (or used to get) at year's end — which of these comes closest?",
+      "options": [
+        {
+          "id": "guaranteed-by-law",
+          "emoji": "⚖️",
+          "label": "Guaranteed by law, on a fixed date"
+        },
+        {
+          "id": "custom-before-holiday",
+          "emoji": "🧧",
+          "label": "No legal mandate, but company custom pays it before the holiday"
+        },
+        {
+          "id": "boss-discretion",
+          "emoji": "🎲",
+          "label": "Entirely up to the boss — whether and how much stays unknown until the last moment"
+        },
+        {
+          "id": "no-bonus",
+          "emoji": "🚫",
+          "label": "My job has no such year-end extra pay at all"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261212-bonus-guess",
+      "date": "2026-12-12",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "This country's statutory bonus has a legal floor that applies regardless of whether the company made a profit — even a loss-making year still owes the minimum, the exact opposite of Taiwan's surplus condition. Payment is due within eight months of the accounting year's close, but most employers pay early so it lands before the year's biggest shopping season. Which country?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261213-mothers-day-poll",
+      "date": "2026-12-13",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "On Mother's Day, what does it usually look like where you live?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "📅",
+          "label": "It's a public holiday — everyone gets the day off"
+        },
+        {
+          "id": "no-day-off-but-busy",
+          "emoji": "🌸",
+          "label": "No day off, but flower shops and restaurants are still packed"
+        },
+        {
+          "id": "different-season",
+          "emoji": "🗓️",
+          "label": "The way we mark motherhood isn't in May — it's a different season"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "🤷",
+          "label": "Not really marked — just an ordinary day"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261213-mothers-day-guess",
+      "date": "2026-12-13",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Guess the place from this clue: this day is not the second Sunday of May, and it isn't about thanking mothers — it's a political commemoration of a women's congress held in 1928, established by presidential decree as a national day with no time off. Which place is it?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261214-bonus-type",
+      "date": "2026-12-14",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these best describes the year-end bonus you actually get?",
+      "options": [
+        {
+          "id": "guaranteed",
+          "emoji": "📜",
+          "label": "Guaranteed by law or rule — I know it's coming"
+        },
+        {
+          "id": "custom",
+          "emoji": "🤝",
+          "label": "Company custom — usually happens, but not guaranteed"
+        },
+        {
+          "id": "boss-mood",
+          "emoji": "🎲",
+          "label": "Entirely up to the company's mood — different every year"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "My job has no such thing as a year-end bonus"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261214-bonus-country",
+      "date": "2026-12-14",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In which country does the year-end bonus date shift earlier every year because it follows a religious holiday?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261215-mothers-day-family",
+      "date": "2026-12-15",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "How does your family usually mark Mother's Day?",
+      "options": [
+        {
+          "id": "dine-out",
+          "emoji": "🍽️",
+          "label": "Go out for a family meal"
+        },
+        {
+          "id": "flowers-gifts",
+          "emoji": "💐",
+          "label": "Give flowers or a gift"
+        },
+        {
+          "id": "quiet-day",
+          "emoji": "🏠",
+          "label": "No special plans, just a regular day"
+        },
+        {
+          "id": "not-observed",
+          "emoji": "🤷",
+          "label": "My hometown doesn't observe this day at all"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261215-mothers-day-december",
+      "date": "2026-12-15",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Four places keep Mother's Day on the second Sunday of May. One keeps it in December, and it commemorates the start of a women's movement rather than motherhood itself. Which one?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261216-bonus-experience",
+      "date": "2026-12-16",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Based on your own experience, which of these best describes a year-end bonus where you are?",
+      "options": [
+        {
+          "id": "legal-strict",
+          "emoji": "⚖️",
+          "label": "A binding legal duty — late payment gets fined"
+        },
+        {
+          "id": "profit-conditional",
+          "emoji": "📉",
+          "label": "Depends on whether the company made a profit — no guarantee, just custom"
+        },
+        {
+          "id": "tax-topic",
+          "emoji": "🧾",
+          "label": "The real debate is which tax filing saves more, not whether it arrives"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "No such system exists — entirely up to the employer"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261216-bonus-country-guess",
+      "date": "2026-12-16",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In one country, the statutory bonus floor is 8.33 per cent of wages and the ceiling 20 per cent, and the floor holds even in a loss-making year — profit has nothing to do with it. Payment is due within eight months of the close of the accounting year, though most employers pay early so the money lands before the year's biggest shopping season. Which country is this?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261217-mothers-day-poll",
+      "date": "2026-12-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If Mother's Day isn't an actual day off and you're relying on the weekend you'd already have, what do you usually do?",
+      "options": [
+        {
+          "id": "reserve-early",
+          "emoji": "📅",
+          "label": "Book ahead / plan early"
+        },
+        {
+          "id": "no-special",
+          "emoji": "🤷",
+          "label": "Nothing special planned"
+        },
+        {
+          "id": "weekday-fill",
+          "emoji": "💐",
+          "label": "Celebrate on a weekday instead"
+        },
+        {
+          "id": "mood-depends",
+          "emoji": "🌀",
+          "label": "Depends on the mood that day"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261217-mothers-day-guess",
+      "date": "2026-12-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Among these four places, three keep Mother's Day on the second Sunday of May, but one falls in December and commemorates something other than motherhood. Which one?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261218-year-end-bonus-poll",
+      "date": "2026-12-18",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "For you, that end-of-year money is which of these?",
+      "options": [
+        {
+          "id": "legal-right",
+          "emoji": "⚖️",
+          "label": "A legal right — late payment, you can sue"
+        },
+        {
+          "id": "company-custom",
+          "emoji": "📋",
+          "label": "Company custom — the amount is roughly predictable"
+        },
+        {
+          "id": "boss-mood",
+          "emoji": "🎲",
+          "label": "Up to the boss's mood — a surprise every year"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "I've never received money like this"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261218-year-end-bonus-guess",
+      "date": "2026-12-18",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In this market, the year-end payment isn't a bonus at all — it's part of the wage: a full year of work earns a month's pay, less than a year is prorated, and it must be settled on dismissal. The first instalment is due by 30 November, the second by 20 December, with fines for lateness, and workers can take it to court. Which market is this?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261219-mothers-day-routine",
+      "date": "2026-12-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "How do you usually spend Mother's Day?",
+      "options": [
+        {
+          "id": "flowers",
+          "emoji": "💐",
+          "label": "Give flowers or a gift"
+        },
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "Have a family meal"
+        },
+        {
+          "id": "normal-day",
+          "emoji": "📅",
+          "label": "Just an ordinary day, nothing special"
+        },
+        {
+          "id": "day-off",
+          "emoji": "🛌",
+          "label": "It happens to be a day off, time to rest"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261219-mothers-day-which-country",
+      "date": "2026-12-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In which of these places is 'Mother's Day' not about thanking mothers at all, but a political commemoration of a 1928 women's congress?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261220-bonus-experience",
+      "date": "2026-12-20",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which best describes the year-end bonus (or equivalent) you actually get?",
+      "options": [
+        {
+          "id": "profit-based",
+          "emoji": "📊",
+          "label": "Only if the company turns a profit"
+        },
+        {
+          "id": "guaranteed",
+          "emoji": "📜",
+          "label": "Guaranteed by contract or law, profit or not"
+        },
+        {
+          "id": "discretionary",
+          "emoji": "🎲",
+          "label": "Purely up to the employer's mood that year"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "There's no such thing where I am"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261220-bonus-twice-year",
+      "date": "2026-12-20",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Of these four countries, in which one is the year-end bonus (or its equivalent) paid twice a year rather than once?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261221-mothersday-poll",
+      "date": "2026-12-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "On Mother's Day, which one sounds like your family?",
+      "options": [
+        {
+          "id": "book-ahead",
+          "emoji": "🍽️",
+          "label": "Booked a restaurant table in advance"
+        },
+        {
+          "id": "just-flowers",
+          "emoji": "💐",
+          "label": "Just flowers or a card"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "📅",
+          "label": "Just a regular Sunday"
+        },
+        {
+          "id": "forget-date",
+          "emoji": "🤷",
+          "label": "Often forget the exact date"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261221-mothersday-guess",
+      "date": "2026-12-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Among these four Mother's Days, which one actually has nothing to do with thanking mothers — it's a political commemoration of a women's movement?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261222-christmas-day",
+      "date": "2026-12-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "What does December 25 actually look like for you?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "A day off"
+        },
+        {
+          "id": "workday",
+          "emoji": "💼",
+          "label": "A normal work or school day"
+        },
+        {
+          "id": "festive-no-holiday",
+          "emoji": "🎄",
+          "label": "Festive mood, but no day off"
+        },
+        {
+          "id": "no-observe",
+          "emoji": "🤷",
+          "label": "Doesn't feel special either way"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261222-christmas-country",
+      "date": "2026-12-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In one place, December 25 is not a holiday, and the 26th is an ordinary working day. The date reads more like an occasion for couples and friends, household cake spending peaks on the 24th rather than the 25th, and December as a whole is that year's highest-spending month for households. Where is this?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261223-new-year-poll",
+      "date": "2026-12-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "How do you usually spend New Year's Eve or New Year's Day?",
+      "options": [
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "A family reunion dinner"
+        },
+        {
+          "id": "countdown-fireworks",
+          "emoji": "🎆",
+          "label": "Countdown and watch fireworks"
+        },
+        {
+          "id": "beach-white-clothes",
+          "emoji": "🏖️",
+          "label": "Head to the beach in white clothing"
+        },
+        {
+          "id": "first-shrine-visit",
+          "emoji": "⛩️",
+          "label": "Make a first shrine or temple visit"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261223-new-year-guess",
+      "date": "2026-12-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which country's national holiday list contains no 1 January at all, with the new year arriving only in March or April?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261224-christmas-day-experience",
+      "date": "2026-12-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Where you live, how do most people spend December 25?",
+      "options": [
+        {
+          "id": "work-as-usual",
+          "emoji": "💼",
+          "label": "Work or school as usual"
+        },
+        {
+          "id": "family-gathering",
+          "emoji": "🎄",
+          "label": "Family gathering or religious service"
+        },
+        {
+          "id": "shopping-lights",
+          "emoji": "🎂",
+          "label": "Shopping, lights, cake or gifts"
+        },
+        {
+          "id": "no-observance",
+          "emoji": "🤷",
+          "label": "Not observed at all"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261224-japan-spending-peak",
+      "date": "2026-12-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In which country is December the highest-spending month of the year for households, with cake spending peaking on the 24th?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261225-new-year-ritual",
+      "date": "2026-12-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these comes closest to how your household marks the new year?",
+      "options": [
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "A reunion dinner on New Year's Eve"
+        },
+        {
+          "id": "countdown-party",
+          "emoji": "🎉",
+          "label": "Countdown and fireworks"
+        },
+        {
+          "id": "beach-white",
+          "emoji": "🌊",
+          "label": "White clothes and jumping waves at the beach"
+        },
+        {
+          "id": "first-shrine-visit",
+          "emoji": "⛩️",
+          "label": "A first shrine or temple visit on New Year's Day"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261225-no-jan-first",
+      "date": "2026-12-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Among these places, which one's national holiday list contains no 1 January at all?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261226-islamic-calendar-poll",
+      "date": "2026-12-26",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Beyond Ramadan and the two Eids, the Islamic calendar has days like the Prophet's birthday and the Islamic New Year. How are these treated where you live?",
+      "options": [
+        {
+          "id": "official-holiday",
+          "emoji": "📅",
+          "label": "Officially a public holiday"
+        },
+        {
+          "id": "appeal-not-holiday",
+          "emoji": "📢",
+          "label": "Government urges flexibility, but it isn't a legal holiday"
+        },
+        {
+          "id": "community-only",
+          "emoji": "🕌",
+          "label": "Entirely arranged by mosques and communities, with no link to the national calendar"
+        },
+        {
+          "id": "not-noticed",
+          "emoji": "🤔",
+          "label": "I haven't really noticed"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261226-islamic-calendar-guess",
+      "date": "2026-12-26",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In which country's official holiday list does a holiday called \"Muharram\" actually mark the tenth day of the month, Ashura, rather than the first-day New Year?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261227-newyear-eve",
+      "date": "2026-12-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "How do you spend New Year's Eve yourself?",
+      "options": [
+        {
+          "id": "family-dinner",
+          "emoji": "🍲",
+          "label": "Have a reunion dinner with family"
+        },
+        {
+          "id": "countdown-fireworks",
+          "emoji": "🎆",
+          "label": "Watch the countdown and fireworks"
+        },
+        {
+          "id": "quiet-night",
+          "emoji": "😴",
+          "label": "Sleep early, no particular ritual"
+        },
+        {
+          "id": "pray-temple",
+          "emoji": "🙏",
+          "label": "Visit a temple or shrine to pray"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261227-newyear-brazil",
+      "date": "2026-12-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In which place does New Year's Eve mix white clothing, beach fireworks, jumping seven waves, and offering flowers to a sea deity?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261228-islamic-days-awareness",
+      "date": "2026-12-28",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Beyond Ramadan and the two Eids, the Islamic calendar also marks the New Year, the Prophet's birthday, Ashura, and Isra Mi'raj. Where you live, do any of these show up on an official or school calendar you actually see?",
+      "options": [
+        {
+          "id": "all-appear",
+          "emoji": "📅",
+          "label": "All of them appear"
+        },
+        {
+          "id": "eids-only",
+          "emoji": "🕌",
+          "label": "Only the two Eids"
+        },
+        {
+          "id": "none-appear",
+          "emoji": "🔍",
+          "label": "None at all — I'd have to look it up myself"
+        },
+        {
+          "id": "never-noticed",
+          "emoji": "🤷",
+          "label": "Never paid attention"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261228-five-in-one-decree",
+      "date": "2026-12-28",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these places lists Isra Mi'raj, Eid al-Fitr, Eid al-Adha, the Islamic New Year, and the Prophet's birthday — all five — as national holidays, announced every year in the same joint decree of three ministers?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261229-new-year-personal",
+      "date": "2026-12-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these comes closest to how you personally mark the 'new year'?",
+      "options": [
+        {
+          "id": "lunar-reunion",
+          "emoji": "🧧",
+          "label": "Lunar New Year, starting with the reunion dinner on the eve"
+        },
+        {
+          "id": "jan1-countdown",
+          "emoji": "🎆",
+          "label": "1 January, countdown and fireworks the night before"
+        },
+        {
+          "id": "regional-spring",
+          "emoji": "🌱",
+          "label": "A regional new year in March or April, depending on where I am"
+        },
+        {
+          "id": "no-particular",
+          "emoji": "🤷",
+          "label": "I don't particularly mark any single day"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261229-new-year-multi-calendar",
+      "date": "2026-12-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In which country's national holiday list does more than one calendar's 'new year' appear in the same year?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261230-islamic-extra-day",
+      "date": "2026-12-30",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Beyond the two Eids, which of these Islamic calendar days do you think most deserves wider recognition as an official holiday?",
+      "options": [
+        {
+          "id": "isra-miraj",
+          "emoji": "🌙",
+          "label": "Isra Mi'raj"
+        },
+        {
+          "id": "islamic-new-year",
+          "emoji": "🗓️",
+          "label": "Islamic New Year"
+        },
+        {
+          "id": "mawlid",
+          "emoji": "📖",
+          "label": "The Prophet's Birthday"
+        },
+        {
+          "id": "ashura",
+          "emoji": "🕌",
+          "label": "Ashura"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261230-five-in-one-decree",
+      "date": "2026-12-30",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Isra Mi'raj, Eid al-Fitr, Eid al-Adha, the Islamic New Year and the Prophet's birthday — all five are announced as holidays each year in the same joint decree of three ministers. Which country does this?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261231-new-year-eve-style",
+      "date": "2026-12-31",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these comes closest to your own New Year's Eve?",
+      "options": [
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "A reunion dinner on New Year's Eve"
+        },
+        {
+          "id": "beach-fireworks",
+          "emoji": "🎆",
+          "label": "Fireworks and jumping waves at the beach"
+        },
+        {
+          "id": "shrine-visit",
+          "emoji": "⛩️",
+          "label": "A first shrine visit and osechi food"
+        },
+        {
+          "id": "countdown-party",
+          "emoji": "🥂",
+          "label": "A countdown party, then resting and watching games the next day"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261231-jan1-missing",
+      "date": "2026-12-31",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Among these seven markets, which country's national holiday list contains no 1 January at all?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270101-islamic-days-poll",
+      "date": "2027-01-01",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Where you live, how are Islamic-calendar days like the New Year, the Prophet's birthday or Ashura treated (not Ramadan itself or the two Eids)?",
+      "options": [
+        {
+          "id": "national-holiday",
+          "emoji": "🗓️",
+          "label": "One of these days itself is an official public holiday"
+        },
+        {
+          "id": "eids-only",
+          "emoji": "🕌",
+          "label": "Only the two Eids get time off; none of the others do"
+        },
+        {
+          "id": "community-only",
+          "emoji": "🏘️",
+          "label": "No time off at all — entirely organized by mosques or the community"
+        },
+        {
+          "id": "admin-appeal",
+          "emoji": "📢",
+          "label": "The government only appeals to employers to allow time off — not a formal holiday"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270101-muharram-guess",
+      "date": "2027-01-01",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In which of these places does the gazetted holiday called \"Muharram\" actually mark the tenth day, Ashura, rather than the first day of the month?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270102-gathering-day",
+      "date": "2027-01-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If your family has an annual day when everyone tries to be together, how is that date usually fixed?",
+      "options": [
+        {
+          "id": "fixed-weekday",
+          "emoji": "📅",
+          "label": "A fixed weekday (like the same ordinal weekday every year)"
+        },
+        {
+          "id": "lunar-or-solar-calendar",
+          "emoji": "🌙",
+          "label": "Worked out from a lunar calendar, a solar term, or astronomy, so the date shifts each year"
+        },
+        {
+          "id": "local-custom",
+          "emoji": "🏘️",
+          "label": "Set by the family, community, or locality itself, with no official date"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "There's no fixed day — people gather whenever they can"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270102-farmers-day-timing",
+      "date": "2027-01-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which place fixes its \"Farmers' Day\" on the first day of spring, marking work about to begin rather than a harvest already in hand?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270103-islamic-holidays-recognition",
+      "date": "2027-01-03",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In the place where you live or work, how far do Islamic calendar holidays get formally recognized?",
+      "options": [
+        {
+          "id": "full-calendar",
+          "emoji": "📅",
+          "label": "Like Indonesia — even Isra Mi'raj, New Year and Mawlid are official holidays"
+        },
+        {
+          "id": "two-eids-only",
+          "emoji": "🕌",
+          "label": "Like New York City or Ningxia — only the two Eids are recognized"
+        },
+        {
+          "id": "appeal-only",
+          "emoji": "📢",
+          "label": "Like Taiwan — just an administrative appeal, not an official holiday"
+        },
+        {
+          "id": "no-recognition",
+          "emoji": "🚫",
+          "label": "Like Japan or Brazil — no place on the national calendar, marked only within the community"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270103-two-eids-only-guess",
+      "date": "2027-01-03",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In one place, neither the Islamic New Year nor Mawlid appears on any official calendar; the range of Islamic holidays it recognizes turns out to match Ningxia's exactly — the two Eids, nothing more — but the mechanism isn't national legislation, it's the public school calendar of its largest city. Where is this?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270104-harvest-custom",
+      "date": "2027-01-04",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Where you live, what does a harvest or thanksgiving day usually center on?",
+      "options": [
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "A family meal or reunion"
+        },
+        {
+          "id": "food-ritual",
+          "emoji": "🍚",
+          "label": "A specific ritual dish (a particular porridge, rice or sweet)"
+        },
+        {
+          "id": "labor-thanks",
+          "emoji": "🙏",
+          "label": "Thanking one another for work or labour"
+        },
+        {
+          "id": "no-specific-day",
+          "emoji": "🤷",
+          "label": "There isn't really a day built around this"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270104-harvest-guess",
+      "date": "2027-01-04",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "One country's national holiday has a date far older than its name — the day was originally an imperial rite in which the emperor offered new grain to the gods, and only after the war was it rewritten into a national day of thanks for labour. Which country?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270105-islamic-days-poll",
+      "date": "2027-01-05",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Where you live, how are days like the Islamic New Year or the Prophet's birthday typically treated?",
+      "options": [
+        {
+          "id": "official-holiday",
+          "emoji": "🗓️",
+          "label": "Officially a holiday — everyone gets the day off"
+        },
+        {
+          "id": "community-only",
+          "emoji": "🕌",
+          "label": "Not a day off, but mosques or the community mark it on their own"
+        },
+        {
+          "id": "only-two-eids",
+          "emoji": "🌙",
+          "label": "I've only heard of the two Eids — not the other Islamic days"
+        },
+        {
+          "id": "never-heard",
+          "emoji": "🤷",
+          "label": "I've never really encountered this topic at all"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270105-islamic-days-guess",
+      "date": "2027-01-05",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which country puts all five Islamic-calendar days — Isra Mi'raj, Eid al-Fitr, Eid al-Adha, the Islamic New Year and the Prophet's birthday — on its national holiday list, all announced yearly in a single joint decree of three ministers?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270106-harvest-poll",
+      "date": "2027-01-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If you got to decide when a 'harvest thanks' day falls, which way would you lean?",
+      "options": [
+        {
+          "id": "fixed-date",
+          "emoji": "📅",
+          "label": "A fixed calendar date, like Thanksgiving on the fourth Thursday of November"
+        },
+        {
+          "id": "solar-term",
+          "emoji": "🌾",
+          "label": "A solar/astronomical marker, like Lichun or the autumn equinox"
+        },
+        {
+          "id": "religious-calendar",
+          "emoji": "⛪",
+          "label": "A religious calendar, like Brazil's saints' days"
+        },
+        {
+          "id": "village-ritual",
+          "emoji": "🏮",
+          "label": "A local village ritual calendar, like West Java's harvest rite"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270106-harvest-guess",
+      "date": "2027-01-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "A prewar imperial new-grain rite was rewritten after the war into a day when the whole population thanks one another for their work — the date didn't move by a day. Which country?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270107-exam-style",
+      "date": "2027-01-07",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If it were up to you, how would you want your eighteen-year-old self to have been measured for university?",
+      "options": [
+        {
+          "id": "one-shot",
+          "emoji": "⚡",
+          "label": "One or two days, and that's the whole verdict"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🎯",
+          "label": "One ability test first, then each school decides"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "🗓️",
+          "label": "Stretched over weeks, one subject at a time"
+        },
+        {
+          "id": "no-exam",
+          "emoji": "📁",
+          "label": "No standardized exam — school record and application materials instead"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270107-two-sundays",
+      "date": "2027-01-07",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which place holds its national university entrance exam on two Sundays a week apart, by design?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270108-harvest-style",
+      "date": "2027-01-08",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which of these comes closest to how you personally mark a harvest?",
+      "options": [
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "Gathering the whole family for a meal"
+        },
+        {
+          "id": "special-dish",
+          "emoji": "🍚",
+          "label": "Cooking a dish that carries its own meaning"
+        },
+        {
+          "id": "community-festival",
+          "emoji": "🔥",
+          "label": "Joining a community celebration with bonfires or dancing"
+        },
+        {
+          "id": "give-thanks-work",
+          "emoji": "🙏",
+          "label": "Simply finding a way to give thanks for the work or the land, without a meal or festival"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270108-seven-day-rite",
+      "date": "2027-01-08",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "One harvest rite is not a national holiday: its date comes from a local calendar, it runs seven days straight, and the sequence includes a 'thousand lamps' and pounding grain together. Which place?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270109-exam-format-choice",
+      "date": "2027-01-09",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If you could redesign the exam that decided your future at eighteen, which format would you choose?",
+      "options": [
+        {
+          "id": "single-spike",
+          "emoji": "😰",
+          "label": "One shot, over in two days"
+        },
+        {
+          "id": "long-plateau",
+          "emoji": "😮‍💨",
+          "label": "Stretched over weeks or months"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🎯",
+          "label": "One ability test, then each school's own screening"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📚",
+          "label": "No national exam, judged on record and application materials"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270109-guess-city-shutdown",
+      "date": "2027-01-09",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In which place does the city reorganize around exam day — halting construction, banning horns near test centres, and setting up dedicated traffic lanes?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270110-harvest-image",
+      "date": "2027-01-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "When you think of a harvest or a bountiful year, which image feels closest to your own experience?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "The whole family gathered around one table"
+        },
+        {
+          "id": "special-dish",
+          "emoji": "🍚",
+          "label": "Cooking one special dish that everyone shares"
+        },
+        {
+          "id": "month-long-festivity",
+          "emoji": "🎆",
+          "label": "Celebrations that stretch on for far longer than one day"
+        },
+        {
+          "id": "no-particular-day",
+          "emoji": "🤷",
+          "label": "Honestly, no particular day makes me think of 'harvest'"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270110-harvest-policy-origin",
+      "date": "2027-01-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Among these four places, in which one was the harvest festival created only in 2018 by approval from the national government, rather than growing out of folk custom or a religious calendar?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270111-exam-pressure-shape",
+      "date": "2027-01-11",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If you've been through an exam that decided your path to higher education, which pressure shape feels closest to your own experience?",
+      "options": [
+        {
+          "id": "sharp-spike",
+          "emoji": "⚡",
+          "label": "A sharp spike — everything riding on a day or two"
+        },
+        {
+          "id": "long-plateau",
+          "emoji": "🏔️",
+          "label": "A long plateau — weeks or months of steady pressure"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🔁",
+          "label": "Two stages — one national test, then each school's own selection"
+        },
+        {
+          "id": "no-single-exam",
+          "emoji": "📋",
+          "label": "No single exam — it built up from years of record and application materials"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270111-exam-indonesia-dual-track",
+      "date": "2027-01-11",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which place runs two parallel routes into university — one entirely test-free, based on school grades and standing, and the other a single annual computer-based common test?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270112-harvest-poll",
+      "date": "2027-01-12",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Where you grew up, which of these comes closest to how harvest or gratitude gets marked?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "The whole family around one table"
+        },
+        {
+          "id": "before-planting",
+          "emoji": "🌱",
+          "label": "Celebrated before the work in the fields starts, not after the harvest"
+        },
+        {
+          "id": "month-long-festival",
+          "emoji": "🎉",
+          "label": "A whole month of local festivities, not a single day"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "There's no nationwide day for this at all"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270112-harvest-guess",
+      "date": "2027-01-12",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Which country had its government approve a brand-new festival in 2018, deliberately timed to a solar term rather than the lunar calendar or the week?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270113-exam-structure-pref",
+      "date": "2027-01-13",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "If you could choose, what kind of exam-season structure would you want for yourself?",
+      "options": [
+        {
+          "id": "one-shot-days",
+          "emoji": "⚡",
+          "label": "One shot, decided in a day or two"
+        },
+        {
+          "id": "spread-months",
+          "emoji": "📅",
+          "label": "Drawn out, subjects spread across two months"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🔁",
+          "label": "Two stages: a national test, then each school's own review"
+        },
+        {
+          "id": "no-exam",
+          "emoji": "📂",
+          "label": "No national exam at all, judged by school record and applications"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270113-exam-city-lockdown",
+      "date": "2027-01-13",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In which place does the city reorganize around the exam — horns banned, construction halted, dedicated traffic lanes?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brazil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270114-harvest-poll",
+      "date": "2027-01-14",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "In your culture or family, which of these is closest to how thanks after harvest actually happens?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "Like Thanksgiving — the point is family gathered around one meal"
+        },
+        {
+          "id": "ritual-food",
+          "emoji": "🍚",
+          "label": "Like Pongal — there's one dish that IS the ritual"
+        },
+        {
+          "id": "month-of-festivities",
+          "emoji": "🔥",
+          "label": "Like Brazil's June festivals — a whole month of community celebration"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "No fixed harvest day, or it stopped mattering long ago"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270114-harvest-guess",
+      "date": "2027-01-14",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Among the five places described, which one had its farmers' festival approved by the State Council in 2018, fixed on the autumn equinox, as the first national-level festival created specifically for farmers?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Mainland China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "United States"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

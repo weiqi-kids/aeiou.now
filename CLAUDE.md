@@ -280,6 +280,16 @@ node scripts/init-db.mjs --host-only            # 建/補主機庫
 node scripts/init-db.mjs --host-only --seed     # 順便灌 db/seed/*.sql
 node scripts/export-data.mjs                    # 匯出靜態 JSON(hash 沒變不寫檔)
 
+# ── 題庫(每日世界一問;規格 docs/briefs/daily-question.md) ──
+node scripts/generate-questions.mjs --until 2027-01-14   # 補到某一天(含);裸執行=往後補 90 天
+node scripts/generate-questions.mjs --concurrency 8      # 同時開幾個 claude(預設 4)
+node scripts/import-questions.mjs               # 權威閘門:題庫 → 主機 SQLite(冪等)
+#   generate 是**冪等**的:已經有題目的日期自動跳過,只補缺的 → 中斷了原指令再跑一次就好。
+#   每完成一天就寫回 content/questions.json(tmp+rename),所以被殺不會整批消失。
+#   並行度**先量再調**:結束時會印「實測吞吐」。2026-08-26 實測 4→56.4s/天、8→27.6s/天
+#   (per-call latency 沒被拉長,沒觸發限流);再往上沒實測過。
+#   產出後一定要跑 import-questions.mjs —— 腳本自驗只是先擋一層,那支才是閘門。
+
 # ── 管線(cron 自動跑,手動可重現) ──
 node scripts/sync-topics-to-d1.mjs              # 主機 → D1 Topic 副本
 node scripts/sync-reactions-from-d1.mjs         # D1 reaction 計數 → 主機(整批覆蓋;掛在 hourly)

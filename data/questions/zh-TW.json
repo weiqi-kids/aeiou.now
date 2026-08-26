@@ -4152,6 +4152,5946 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20261017-elders-respect",
+      "date": "2026-10-17",
+      "kind": "poll",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你自己的文化或家庭裡,對長輩表達敬意最常見的方式是什麼?",
+      "options": [
+        {
+          "id": "day-off-reunion",
+          "emoji": "🏠",
+          "label": "放假返鄉團聚"
+        },
+        {
+          "id": "visit-elders",
+          "emoji": "🚶",
+          "label": "特地去探視、陪伴長輩"
+        },
+        {
+          "id": "awards-benefits",
+          "emoji": "🏅",
+          "label": "政府或機構的表揚、津貼與福利"
+        },
+        {
+          "id": "daily-gesture",
+          "emoji": "🙏",
+          "label": "日常裡的禮節動作(如問候、行禮)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261017-elders-day-origin",
+      "date": "2026-10-17",
+      "kind": "guess",
+      "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
+      "topic_slug": "elders-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪一個地方的敬老紀念日,日期是為了紀念一位年長者主持了建國準備的第一次會議?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261018-full-moon-habit",
+      "date": "2026-10-18",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "滿月前後，你通常怎麼過？",
+      "options": [
+        {
+          "id": "moon-gazing",
+          "emoji": "🌕",
+          "label": "抬頭賞月"
+        },
+        {
+          "id": "bbq",
+          "emoji": "🍖",
+          "label": "烤肉聚會"
+        },
+        {
+          "id": "mooncake",
+          "emoji": "🥮",
+          "label": "吃月餅、文旦"
+        },
+        {
+          "id": "nothing-special",
+          "emoji": "🤷",
+          "label": "沒特別過"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261018-two-moons",
+      "date": "2026-10-18",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "同一輪滿月前後，哪一個國家認為賞月要看兩次才算數，只看一次叫「片見月」，被視為不吉利？",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261019-remembrance-poll",
+      "date": "2026-10-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在鬼節、祭祖與追思這件事上,你自己(或家裡)比較接近哪一種?",
+      "options": [
+        {
+          "id": "sweep-grave",
+          "emoji": "🧹",
+          "label": "掃墓、整理墓地(清明式)"
+        },
+        {
+          "id": "offerings-and-incense",
+          "emoji": "🍊",
+          "label": "準備供品、上香(中元/普渡式)"
+        },
+        {
+          "id": "welcome-and-send-off",
+          "emoji": "🏮",
+          "label": "點火迎接、再送別祖先(盂蘭盆式)"
+        },
+        {
+          "id": "none-just-costumes",
+          "emoji": "🎃",
+          "label": "都不做,頂多應景變裝要糖(萬聖夜式)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261019-pitru-paksha-guess",
+      "date": "2026-10-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一種祭祖傳統長達十六天,從滿月到朔日,供水供食、只獻給自家祖先,而不是普渡孤魂;某地一座城市因此每年迎來大規模的祭祖人潮。這是哪一國?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261020-moon-viewing-poll",
+      "date": "2026-10-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這次滿月前後，你的時間最可能花在哪裡？",
+      "options": [
+        {
+          "id": "moon-gazing",
+          "emoji": "🌕",
+          "label": "抬頭看月亮"
+        },
+        {
+          "id": "grilling-gathering",
+          "emoji": "🍖",
+          "label": "烤肉或聚餐"
+        },
+        {
+          "id": "traveling-home",
+          "emoji": "🚗",
+          "label": "塞在返鄉或聚會的路上"
+        },
+        {
+          "id": "ordinary-night",
+          "emoji": "🌙",
+          "label": "跟平常的夜晚沒兩樣"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261020-moon-viewing-guess",
+      "date": "2026-10-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪個國家的收成節慶本來就落在另一個季節，讓「中秋」這個名字連季節都對不上？",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261021-midautumn-habit",
+      "date": "2026-10-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這一輪滿月前後,你通常怎麼過?",
+      "options": [
+        {
+          "id": "moon-twice",
+          "emoji": "🌕",
+          "label": "抬頭賞月(而且不只看一次)"
+        },
+        {
+          "id": "mooncake-reunion",
+          "emoji": "🥮",
+          "label": "吃月餅、家人團聚"
+        },
+        {
+          "id": "bbq",
+          "emoji": "🍖",
+          "label": "烤肉"
+        },
+        {
+          "id": "grave-sweep",
+          "emoji": "🪦",
+          "label": "掃墓祭祖"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261021-midautumn-guess-country",
+      "date": "2026-10-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "同一輪滿月前後,哪個國家不放假,把這一夜當成天文與季節現象,還明講「名月不一定是滿月」,而且要看兩次才算賞月完整?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261022-remembrance-practices",
+      "date": "2026-10-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你家或你熟悉的文化,通常怎麼紀念祖先或已逝的人?",
+      "options": [
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "掃墓、整理墓地"
+        },
+        {
+          "id": "offerings-altar",
+          "emoji": "🕯️",
+          "label": "在家中或供桌上獻供、上香"
+        },
+        {
+          "id": "family-meal",
+          "emoji": "🍲",
+          "label": "家族聚餐或聚會追思"
+        },
+        {
+          "id": "not-much",
+          "emoji": "🤷",
+          "label": "沒有特別的儀式或做法"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261022-which-country-nov2",
+      "date": "2026-10-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這個國家的追思節日在十一月,是依法律明定的全國假日;家人到墓園獻花、點蠟燭、整理墓地,教堂也辦追思彌撒。這一天接在諸聖節之後,但放假的是隔一天,而且當地正值南半球的晚春。你覺得是哪一國?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261023-moon-viewing-style",
+      "date": "2026-10-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果要形容自己家過中秋的方式,下面哪一種最像你？",
+      "options": [
+        {
+          "id": "bbq-first",
+          "emoji": "🍖",
+          "label": "賞月配烤肉,烤肉味比月亮更明顯"
+        },
+        {
+          "id": "moon-twice",
+          "emoji": "🎑",
+          "label": "覺得月亮要看兩次才算圓滿"
+        },
+        {
+          "id": "grave-first",
+          "emoji": "🪦",
+          "label": "節日先從掃墓祭祖開始"
+        },
+        {
+          "id": "night-vigil",
+          "emoji": "🕯️",
+          "label": "整夜不睡,把甜點留給月光"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261023-who-stays-up-for-moon",
+      "date": "2026-10-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRWDTA2HD9C6H8XV4JH",
+      "topic_slug": "mid-autumn-and-moon-viewing",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "同一輪滿月,有個地方沒有中秋節,卻要整夜不睡向神明祈禱,把甜點放在月光下,隔天再分食——這是哪裡？",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261024-ancestor-remembrance-timing",
+      "date": "2026-10-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果你家有掃墓或祭祖的習慣,通常會安排在什麼樣的時間?",
+      "options": [
+        {
+          "id": "fixed-day",
+          "emoji": "📅",
+          "label": "固定在某一天(像清明、萬聖夜)"
+        },
+        {
+          "id": "month-aligned",
+          "emoji": "🌙",
+          "label": "跟著月份走,不對齊特定日期"
+        },
+        {
+          "id": "extended-period",
+          "emoji": "⏳",
+          "label": "拉成一整段時間慢慢進行"
+        },
+        {
+          "id": "no-fixed-plan",
+          "emoji": "🤷",
+          "label": "沒有固定安排,看情況"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261024-setsubun-role-reversal",
+      "date": "2026-10-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一個節日的源頭是中國的驅疫儀式「追儺」,傳入之後成為宮廷行事;一開始由某個角色負責驅趕看不見的疫鬼,到後期這個角色本身反而被當成鬼、被趕走。這是哪一國現在的節日?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261025-diwali-bhai-dooj-poll",
+      "date": "2026-10-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "排燈節最後一天 Bhai Dooj,姊妹為兄弟點 Tika 祈願長壽,兄弟回贈禮物。你自己的文化裡,兄弟姊妹之間有沒有類似「互相祝福、送禮」的節日或習俗?",
+      "options": [
+        {
+          "id": "yes-regularly",
+          "emoji": "🎁",
+          "label": "有,而且每年都做"
+        },
+        {
+          "id": "yes-occasionally",
+          "emoji": "🕯️",
+          "label": "有,但不是每年都特別慶祝"
+        },
+        {
+          "id": "no-similar",
+          "emoji": "🤷",
+          "label": "沒聽過類似的節日或習俗"
+        },
+        {
+          "id": "no-siblings",
+          "emoji": "👤",
+          "label": "我沒有兄弟姊妹,沒有這種經驗"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261025-diwali-hindu-holiday-guess",
+      "date": "2026-10-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "上文提到,有一個國家把某個宗教列為官方承認的宗教之一,還給了它一天全國假日——但那天不是排燈節,而是當地信眾自己的新年。是哪一國?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261026-remembrance-check-in",
+      "date": "2026-10-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "今年你有沒有掃墓、祭祖,或用其他方式想念過世的親人?",
+      "options": [
+        {
+          "id": "yes-ritual",
+          "emoji": "🕯️",
+          "label": "有,用比較正式的方式(掃墓、供奉等)"
+        },
+        {
+          "id": "yes-personal",
+          "emoji": "💭",
+          "label": "有,但比較私人的方式(想起他們、看照片、自己說說話)"
+        },
+        {
+          "id": "not-yet",
+          "emoji": "📅",
+          "label": "還沒有,但今年會去或打算去"
+        },
+        {
+          "id": "not-my-practice",
+          "emoji": "🤷",
+          "label": "這不是我家或我這邊會做的事"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261026-guess-nyadran-country",
+      "date": "2026-10-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一種掃墓的作法,不是對齊某一天,而是對齊「下個月要開始齋戒」這件事;儀式的名字來自梵語的「信」,最後以大家一起吃一頓飯收尾。這是哪個國家的作法?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261027-diwali-days",
+      "date": "2026-10-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "排燈節五天各有不同的重點：Dhanteras 買金飾迎財、主日點燈祭拜、Govardhan Puja 堆食物供養、Bhai Dooj 手足互贈禮物。如果要你選一天親身體驗，你會選哪一天？",
+      "options": [
+        {
+          "id": "dhanteras",
+          "emoji": "💰",
+          "label": "買金飾迎財(Dhanteras)"
+        },
+        {
+          "id": "main-day",
+          "emoji": "🪔",
+          "label": "點燈祭拜(主日)"
+        },
+        {
+          "id": "govardhan",
+          "emoji": "🍛",
+          "label": "堆食物供養(Govardhan Puja)"
+        },
+        {
+          "id": "bhai-dooj",
+          "emoji": "👫",
+          "label": "手足互贈禮物(Bhai Dooj)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261027-diwali-guess",
+      "date": "2026-10-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "印尼、台灣、中國、巴西都沒有把排燈節列為國定假日，但其中一個地方把印度教本身列為官方承認的宗教，還給了它一天國定假日——只是那一天不是排燈節。是哪一個？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261028-remembrance-practice",
+      "date": "2026-10-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這一頁列出的追思做法裡,哪一種最接近你自己家裡或成長環境的做法?",
+      "options": [
+        {
+          "id": "grave-tending",
+          "emoji": "🪦",
+          "label": "掃墓、整理墓地"
+        },
+        {
+          "id": "spirit-offerings",
+          "emoji": "🙏",
+          "label": "普渡、祭拜孤魂與祖先"
+        },
+        {
+          "id": "welcome-and-send-off",
+          "emoji": "🔥",
+          "label": "迎接、送別祖先(像往返的旅程)"
+        },
+        {
+          "id": "facing-neighbors",
+          "emoji": "🎃",
+          "label": "面向鄰居而非自家祖先"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261028-pitru-paksha-guess",
+      "date": "2026-10-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一種追思傳統以陰曆十六天為單位,從某月滿月一路到下個月朔日(稱為 Mahalaya),期間要供水供食、祈求祖先寬恕,某地每年因此吸引大規模的祭祖集會。這是哪一個國家的傳統?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261029-ancestor-practice",
+      "date": "2026-10-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你成長過程中,家裡追念祖先或逝者最常見的做法是哪一種?",
+      "options": [
+        {
+          "id": "sweep-grave",
+          "emoji": "🧹",
+          "label": "掃墓、整理墓地"
+        },
+        {
+          "id": "altar-incense",
+          "emoji": "🙏",
+          "label": "在家中供桌上香、擺供品"
+        },
+        {
+          "id": "candle-fire",
+          "emoji": "🕯️",
+          "label": "點蠟燭或火,迎送逝者"
+        },
+        {
+          "id": "shared-meal",
+          "emoji": "🍲",
+          "label": "全家一起吃一頓飯"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261029-which-country-two-fires",
+      "date": "2026-10-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這個祭祖節日並不是法定假日,卻造就了全年最明顯的一次全國性停擺;家門口先點迎え火接祖先回來,幾天後再點送り火送走,中間夾著盆踊り。這是哪個國家的節日?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261030-diwali-pick-a-day",
+      "date": "2026-10-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "排燈節五天節期,如果只能過一天,你會選哪一天?",
+      "options": [
+        {
+          "id": "dhanteras",
+          "emoji": "🪙",
+          "label": "Dhanteras——買金飾、添器皿"
+        },
+        {
+          "id": "main-day",
+          "emoji": "🪔",
+          "label": "主日——點燈祭拜象頭神與財富女神"
+        },
+        {
+          "id": "govardhan",
+          "emoji": "⛰️",
+          "label": "Govardhan Puja——堆食物如山的供養"
+        },
+        {
+          "id": "bhai-dooj",
+          "emoji": "👫",
+          "label": "Bhai Dooj——姊妹點Tika、兄弟回贈禮物"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261030-diwali-school-closure-guess",
+      "date": "2026-10-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪一個地方,排燈節不是全國性宗教假日,卻由「城市」立法讓公立學校在當天停課?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261031-family-remembrance",
+      "date": "2026-10-31",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你的生活裡,家人通常怎麼面對這類與亡者、祖先有關的日子?",
+      "options": [
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "掃墓、整理墓地"
+        },
+        {
+          "id": "offerings-incense",
+          "emoji": "🕯️",
+          "label": "上香、擺供桌祭拜"
+        },
+        {
+          "id": "costume-treats",
+          "emoji": "🎃",
+          "label": "挨家挨戶要糖、變裝"
+        },
+        {
+          "id": "none-of-these",
+          "emoji": "🤷",
+          "label": "都沒有特別參與"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261031-guess-southern-spring",
+      "date": "2026-10-31",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "根據以上內容,哪個國家的追思日子落在南半球的晚春,因此掃墓不像北半球那樣帶著蕭瑟的季節感?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261101-diwali-calendar-experience",
+      "date": "2026-11-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你所在的城市或學校,是否曾因為某個非本地多數信仰的宗教節日而調整行事曆?",
+      "options": [
+        {
+          "id": "yes-personal",
+          "emoji": "🏫",
+          "label": "有,我親身經歷過"
+        },
+        {
+          "id": "heard-elsewhere",
+          "emoji": "👂",
+          "label": "聽說過,但不是在我這裡"
+        },
+        {
+          "id": "never-heard",
+          "emoji": "🤷",
+          "label": "沒有,從沒聽過這種安排"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "不確定,沒特別注意過"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261101-diwali-guess-country",
+      "date": "2026-11-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下四個國家中,哪一個把排燈節列為全國性的假日,並依五天儀式安排節期?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261102-ancestor-remembrance-poll",
+      "date": "2026-11-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你自己或家人,有沒有掃墓、祭祖或類似的追思行動?",
+      "options": [
+        {
+          "id": "every-year",
+          "emoji": "🪦",
+          "label": "每年固定會去"
+        },
+        {
+          "id": "sometimes",
+          "emoji": "🕯️",
+          "label": "偶爾才會"
+        },
+        {
+          "id": "not-my-practice",
+          "emoji": "🚫",
+          "label": "沒有這樣的習慣"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤷",
+          "label": "因人、因年而異"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261102-guess-obon-country",
+      "date": "2026-11-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這個節日本身不是法定假期,卻是當地一年裡最明顯的一次全國性停擺;多數企業自行安排連休,返鄉車潮與票價因此有固定的高峰,家門口以迎火接回祖先、送火送走,中間幾天有盆踊。這說的是哪裡?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261103-diwali-favorite-day",
+      "date": "2026-11-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "排燈節五天各有不同重心，你覺得哪一天的意義最貼近你認識的節慶氣氛？",
+      "options": [
+        {
+          "id": "dhanteras",
+          "emoji": "🪙",
+          "label": "添購金器的開場日"
+        },
+        {
+          "id": "main-day",
+          "emoji": "🪔",
+          "label": "點燈祭財神的主日"
+        },
+        {
+          "id": "govardhan-puja",
+          "emoji": "⛰️",
+          "label": "堆食物如山的社群日"
+        },
+        {
+          "id": "bhai-dooj",
+          "emoji": "👫",
+          "label": "姊妹點Tika祈福的收尾日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261103-diwali-holiday-country",
+      "date": "2026-11-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪個國家把印度教節日排進全國假日，但那一天並不是排燈節？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261104-exam-style",
+      "date": "2026-11-04",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "回想你十八歲那年參加的升學考試（或是你所在制度的做法），最接近下面哪一種？",
+      "options": [
+        {
+          "id": "one-shot",
+          "emoji": "🎯",
+          "label": "一次大考幾乎決定一切"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🪜",
+          "label": "先考全國測驗，再由學校自辦甄試"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "📅",
+          "label": "分好幾週甚至好幾個月才考完"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📂",
+          "label": "沒有全國性入學考，靠在校表現與申請資料"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261104-gaokao-city",
+      "date": "2026-11-04",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在下面哪個地方，全國大考期間城市會圍繞考試重新調整運作——考點周邊禁鳴喇叭、工地停工、交通警察設專用通道，部分地方甚至調整上班時間？",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261105-diwali-relation",
+      "date": "2026-11-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "排燈節的五天各自對應不同的關係——添置財富、點燈祈福、社群互助、手足情誼。如果要你選一個最有共鳴的主題,會是哪一個?",
+      "options": [
+        {
+          "id": "wealth",
+          "emoji": "💰",
+          "label": "添置財富(如 Dhanteras)"
+        },
+        {
+          "id": "lamps",
+          "emoji": "🪔",
+          "label": "點燈祈福(主日)"
+        },
+        {
+          "id": "community",
+          "emoji": "🐄",
+          "label": "社群與牲畜的照應(Govardhan Puja)"
+        },
+        {
+          "id": "siblings",
+          "emoji": "👫",
+          "label": "手足之間的祝福(Bhai Dooj)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261105-diwali-which-country",
+      "date": "2026-11-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一個國家把印度教列為官方承認的宗教之一,也給了它一天全國假日——但那一天不是排燈節,而是當地印度教人口集中地區的另一個新年,全島當天靜默。這是哪一個國家?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261106-diwali-day-pick",
+      "date": "2026-11-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果要你參與排燈節五天節期裡的一項習俗,你會想加入哪一天?",
+      "options": [
+        {
+          "id": "dhanteras",
+          "emoji": "🪙",
+          "label": "採買金飾器皿"
+        },
+        {
+          "id": "main-day",
+          "emoji": "🪔",
+          "label": "點燈祭拜求豐足"
+        },
+        {
+          "id": "govardhan",
+          "emoji": "🍛",
+          "label": "堆糧供養山景"
+        },
+        {
+          "id": "bhai-dooj",
+          "emoji": "🎁",
+          "label": "姊妹點Tika、兄弟送禮"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261106-diwali-guess-country",
+      "date": "2026-11-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪個國家把印度教列為官方承認宗教之一、還給了它一天全國假日,但那天其實不是排燈節?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261107-exam-measure-preference",
+      "date": "2026-11-07",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果可以重新選,你希望自己十八歲那年的升學評量方式是哪一種?",
+      "options": [
+        {
+          "id": "one-shot",
+          "emoji": "🎯",
+          "label": "像高考一樣,一兩天內就定生死"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "📅",
+          "label": "像印度會考一樣,拆成近兩個月的多次考試"
+        },
+        {
+          "id": "no-exam",
+          "emoji": "📁",
+          "label": "像美國一樣,沒有統一考試,看在校成績與申請文件"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🧩",
+          "label": "像台灣、日本一樣,先全國測驗、再各校甄選面試"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261107-gaokao-city-lockdown",
+      "date": "2026-11-07",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "大考期間,城市會為它禁鳴喇叭、工地停工、交通警察還設專用通道——這是哪一個地方?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261108-diwali-day-pick",
+      "date": "2026-11-08",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "排燈節其實是五天,每一天各自呼應不同的對象。如果只能選一天參加,你會想過哪一天?",
+      "options": [
+        {
+          "id": "dhanteras",
+          "emoji": "🪙",
+          "label": "添購金飾的 Dhanteras"
+        },
+        {
+          "id": "main-day",
+          "emoji": "🪔",
+          "label": "點燈祭拜的排燈節主日"
+        },
+        {
+          "id": "govardhan-puja",
+          "emoji": "⛰️",
+          "label": "堆食物成山的 Govardhan Puja"
+        },
+        {
+          "id": "bhai-dooj",
+          "emoji": "🎁",
+          "label": "手足互贈禮物的 Bhai Dooj"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261108-diwali-guess-country",
+      "date": "2026-11-08",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一個國家把印度教列為官方承認的宗教,還給了它一天全國假日——但那一天其實不是排燈節。是哪一國?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261109-fathersday-poll",
+      "date": "2026-11-09",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你通常在哪一天替爸爸慶祝父親節？",
+      "options": [
+        {
+          "id": "on-the-day",
+          "emoji": "📅",
+          "label": "8月8日當天"
+        },
+        {
+          "id": "nearest-weekend",
+          "emoji": "🎉",
+          "label": "最接近的週末"
+        },
+        {
+          "id": "june-third-sunday",
+          "emoji": "🗓️",
+          "label": "6月第三個星期日"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "沒有固定哪一天"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261109-fathersday-guess",
+      "date": "2026-11-09",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪一個地方的父親節，是由一位廣告人兼記者為了填補商業檔期而發明的？",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261110-diwali-custom",
+      "date": "2026-11-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "排燈節五天裡,你自己或家人做過下面哪一件?",
+      "options": [
+        {
+          "id": "buy-metal",
+          "emoji": "🛍️",
+          "label": "像 Dhanteras 一樣買金飾或新鍋具"
+        },
+        {
+          "id": "light-lamps",
+          "emoji": "🪔",
+          "label": "在家點燈祭拜"
+        },
+        {
+          "id": "sibling-day",
+          "emoji": "🎁",
+          "label": "像 Bhai Dooj 一樣跟手足互贈禮物"
+        },
+        {
+          "id": "none-of-above",
+          "emoji": "🙅",
+          "label": "都沒有,這是我第一次認識這些習俗"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261110-diwali-country",
+      "date": "2026-11-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
+      "topic_slug": "diwali",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪個國家沒有把排燈節列為全國假日,卻把國定假日給了另一個印度教節慶?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261111-fathers-day-celebrate",
+      "date": "2026-11-11",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果父親節那天要上班,你家通常怎麼慶祝?",
+      "options": [
+        {
+          "id": "weekend-shift",
+          "emoji": "📅",
+          "label": "挪到最近的週末聚餐"
+        },
+        {
+          "id": "after-work",
+          "emoji": "🌙",
+          "label": "下班後簡單慶祝"
+        },
+        {
+          "id": "card-message",
+          "emoji": "✉️",
+          "label": "送張卡片或傳個訊息就好"
+        },
+        {
+          "id": "no-fuss",
+          "emoji": "🤷",
+          "label": "沒有特別慶祝"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261111-fathers-day-origin",
+      "date": "2026-11-11",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "topic_slug": "fathers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個地方的父親節,是廣告人為了填補商業檔期而發明的?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261112-childrens-day-memory",
+      "date": "2026-11-12",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你小時候(或現在)都怎麼過兒童節?",
+      "options": [
+        {
+          "id": "gift",
+          "emoji": "🎁",
+          "label": "收到禮物"
+        },
+        {
+          "id": "school-event",
+          "emoji": "🏫",
+          "label": "學校辦活動或表演"
+        },
+        {
+          "id": "day-off",
+          "emoji": "🎡",
+          "label": "放假出去玩"
+        },
+        {
+          "id": "nothing-special",
+          "emoji": "🤷",
+          "label": "沒什麼特別的"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261112-childrens-day-guess-saint",
+      "date": "2026-11-12",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪一個地方的兒童節,日期剛好和該國天主教主保聖人的節日撞在一起?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261113-harvest-priority",
+      "date": "2026-11-13",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果你生活的地方有收成或感謝相關的日子,你最在意的是哪一種?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "家人聚在一起吃飯"
+        },
+        {
+          "id": "giving-thanks",
+          "emoji": "🙏",
+          "label": "向土地、神明或祖先表達感謝"
+        },
+        {
+          "id": "community-event",
+          "emoji": "🎉",
+          "label": "社區或城裡一起辦的慶典"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "我住的地方沒有這種節日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261113-farmers-day-lichun",
+      "date": "2026-11-13",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪個地方的農民相關節日,日期由天文決定、每年得查氣象機關的資料表才知道是哪一天,而且這天不放假?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261114-childrens-day-poll",
+      "date": "2026-11-14",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你印象中的兒童節,比較像哪一種?",
+      "options": [
+        {
+          "id": "family-holiday",
+          "emoji": "🏖️",
+          "label": "全家一起放假"
+        },
+        {
+          "id": "kids-only-off",
+          "emoji": "🧒",
+          "label": "只有小孩放假,大人照常上班"
+        },
+        {
+          "id": "school-event",
+          "emoji": "🏫",
+          "label": "不放假,學校辦活動慶祝"
+        },
+        {
+          "id": "no-dedicated-day",
+          "emoji": "❓",
+          "label": "沒有專屬的兒童節"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261114-childrens-day-guess",
+      "date": "2026-11-14",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個地方的兒童節,日期正好和天主教主保聖人節撞期?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261115-pick-a-harvest-day",
+      "date": "2026-11-15",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果要幫「感謝收成」訂一個日子,你會怎麼選?",
+      "options": [
+        {
+          "id": "by-astronomy",
+          "emoji": "🌱",
+          "label": "跟著節氣或天文走(像立春、秋分)"
+        },
+        {
+          "id": "by-weekday",
+          "emoji": "📆",
+          "label": "固定在某個星期幾(像感恩節那樣)"
+        },
+        {
+          "id": "by-dish-ritual",
+          "emoji": "🍚",
+          "label": "用一道菜或一個儀式當節日本身(像 Pongal 那鍋粥)"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🏘️",
+          "label": "不特別訂,靠原有的曆法與地方習俗就好(像西爪哇 Seren Taun)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261115-guess-lichun-farmers-day",
+      "date": "2026-11-15",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪個地方的農民節不放在秋天,而是放在立春,而且這一天不放假?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261116-teachers-day-poll",
+      "date": "2026-11-16",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "教師節這天，你印象中學校通常怎麼進行？",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🏖️",
+          "label": "放假一天"
+        },
+        {
+          "id": "ceremony",
+          "emoji": "🎉",
+          "label": "學校辦表揚或集會"
+        },
+        {
+          "id": "role-swap",
+          "emoji": "🔄",
+          "label": "學生代課，角色互換"
+        },
+        {
+          "id": "normal-day",
+          "emoji": "📚",
+          "label": "照常上課，沒有特別安排"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261116-teachers-day-guess",
+      "date": "2026-11-16",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這六個地方中，哪一個的教師節是全民放假的國定假日？",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261117-harvest-timing",
+      "date": "2026-11-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方,如果有「收成」相關的節日,通常落在什麼時候?",
+      "options": [
+        {
+          "id": "before-planting",
+          "emoji": "🌱",
+          "label": "開始耕作之前"
+        },
+        {
+          "id": "after-harvest",
+          "emoji": "🍽️",
+          "label": "收成到手之後"
+        },
+        {
+          "id": "monthlong",
+          "emoji": "🎉",
+          "label": "拖成一整個月的慶典"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "沒有這種節日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261117-harvest-before-or-after",
+      "date": "2026-11-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "上文提到的地方裡,哪一個的「農民/收成」節日排在開始下田耕作之前,而不是收成之後?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261118-teachers-day-experience",
+      "date": "2026-11-18",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方,教師節(或類似的日子)通常怎麼過?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "放假一天"
+        },
+        {
+          "id": "school-ceremony",
+          "emoji": "🏫",
+          "label": "學校辦表揚活動,照常上課"
+        },
+        {
+          "id": "role-swap",
+          "emoji": "🔄",
+          "label": "學生代課,師生角色互換"
+        },
+        {
+          "id": "no-special-day",
+          "emoji": "🤷",
+          "label": "沒有全國性的日子,各自安排感謝活動"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261118-teachers-day-guess",
+      "date": "2026-11-18",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "六地教師節裡,有一個地方的日期,是因為當時的總統本人婉拒學生幫他慶生,建議改成紀念全國教師才訂下來的。是哪一個?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261119-harvest-poll",
+      "date": "2026-11-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果收成的節日由你來設計,你會想放在什麼時候慶祝?",
+      "options": [
+        {
+          "id": "after-harvest",
+          "emoji": "🌾",
+          "label": "收成入庫之後,像感恩節那樣感謝已經到手的東西"
+        },
+        {
+          "id": "before-harvest",
+          "emoji": "🌱",
+          "label": "下田開始之前,像台灣立春那樣慶祝即將展開的農事"
+        },
+        {
+          "id": "month-long",
+          "emoji": "🎉",
+          "label": "拉長成一整個月的慶典,像巴西六月節那樣繞著好幾個節日辦"
+        },
+        {
+          "id": "dish-is-ritual",
+          "emoji": "🍚",
+          "label": "讓一道菜的完成就是儀式本身,像印度 Pongal 那鍋溢出來的粥"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261119-harvest-guess",
+      "date": "2026-11-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個地方的收成節不是全民放假日,而是由政府批復設立、主題逐年由部會制定?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261120-teachers-day-experience",
+      "date": "2026-11-20",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你曾經歷過的教師節或類似節日,比較接近下面哪一種?",
+      "options": [
+        {
+          "id": "day-off-and-ceremony",
+          "emoji": "🎉",
+          "label": "放假一天,學校也有慶祝活動"
+        },
+        {
+          "id": "school-day-with-event",
+          "emoji": "📣",
+          "label": "照常上課,但學校辦表揚活動"
+        },
+        {
+          "id": "students-swap-roles",
+          "emoji": "🔄",
+          "label": "由高年級學生代課,角色互換一天"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🚫",
+          "label": "沒有這樣的節日,只是普通的一天"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261120-teachers-day-origin",
+      "date": "2026-11-20",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個地方的教師節,紀念的其實是「國家開始辦學」的那一天,而不是某一位老師?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261121-harvest-gratitude-poll",
+      "date": "2026-11-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果你生活的地方也有一個跟收成或感謝有關的日子,對你來說,那天最重要的部分是什麼?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "全家聚在一起吃頓飯"
+        },
+        {
+          "id": "give-thanks-ritual",
+          "emoji": "🙏",
+          "label": "用儀式或祈禱感謝上天/自然"
+        },
+        {
+          "id": "community-festival",
+          "emoji": "🎉",
+          "label": "跟鄰里或社群一起熱鬧慶祝"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "老實說,我沒有這樣的日子"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261121-harvest-gratitude-guess",
+      "date": "2026-11-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一個地方的「農民節」不是慶祝已經收成的東西,而是訂在春天剛要開始、準備下田的那一天;日期由天文決定,每年要查曆書才知道是二月三日、四日還是五日,而且這一天不放假。這是哪裡?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261122-teachers-day-poll",
+      "date": "2026-11-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你的經驗裡,教師節這天學校最常見的安排是什麼?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "放假一天,不用上課"
+        },
+        {
+          "id": "school-ceremony",
+          "emoji": "🏫",
+          "label": "學校辦表彰或感謝典禮"
+        },
+        {
+          "id": "role-swap",
+          "emoji": "🔄",
+          "label": "由高年級學生代課,角色互換"
+        },
+        {
+          "id": "no-celebration",
+          "emoji": "📚",
+          "label": "沒有特別慶祝,照常上課"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261122-teachers-day-guess",
+      "date": "2026-11-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個地方的教師節,起源是當事人婉拒學生要幫他慶生,轉而請大家紀念全國教師?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261123-harvest-experience",
+      "date": "2026-11-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你自己的生活裡,最接近「收成/感謝」的時刻,通常是哪一種?",
+      "options": [
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "全家人聚在一起吃一頓大餐"
+        },
+        {
+          "id": "ritual-dish",
+          "emoji": "🍚",
+          "label": "有一道菜或一個儀式,本身就是慶祝"
+        },
+        {
+          "id": "community-festival",
+          "emoji": "🎉",
+          "label": "整個社區或村莊一起辦的長時間慶典"
+        },
+        {
+          "id": "thanks-for-labor",
+          "emoji": "🙏",
+          "label": "一個感謝彼此辛勞、而不是感謝收成本身的日子"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261123-harvest-before-or-after",
+      "date": "2026-11-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個地方的「收成/農民」節日,是排在春耕開始之前,而不是收成之後?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261124-teachers-day-experience",
+      "date": "2026-11-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "回想求學時期,教師節(或當地類似的日子)那天,你最常遇到的情況是?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "放假一天,不用上課"
+        },
+        {
+          "id": "school-event",
+          "emoji": "🏫",
+          "label": "照常上課,但有表揚或敬師活動"
+        },
+        {
+          "id": "role-swap",
+          "emoji": "🔄",
+          "label": "由高年級學生代課,角色互換"
+        },
+        {
+          "id": "no-event",
+          "emoji": "📚",
+          "label": "跟平常一樣,沒有特別活動"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261124-teachers-day-origin",
+      "date": "2026-11-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+      "topic_slug": "teachers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "六個地方的教師節各有不同的理由,哪一個地方紀念的是「國家開始辦學」這件事,而不是某位教師或某個人?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261125-harvest-picture",
+      "date": "2026-11-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果要選一個畫面代表你心裡的「豐收與感謝」,你會選哪一種?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "一家人圍在餐桌前"
+        },
+        {
+          "id": "thank-labor",
+          "emoji": "🙏",
+          "label": "彼此感謝這一年的辛勞"
+        },
+        {
+          "id": "before-the-work",
+          "emoji": "🌱",
+          "label": "還沒收成,先為即將開始的農事做個儀式"
+        },
+        {
+          "id": "month-long-festivity",
+          "emoji": "🎉",
+          "label": "整整一個月的慶典與熱鬧"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261125-harvest-before-or-after",
+      "date": "2026-11-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "感恩節、農民豐收節、勤勞感謝日都排在收成之後,哪一個地方的「農民節」反而排在春耕開始之前?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261126-year-end-bonus-poll",
+      "date": "2026-11-26",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你領過的年底獎金,比較接近以下哪一種?",
+      "options": [
+        {
+          "id": "legal-penalty",
+          "emoji": "⚖️",
+          "label": "法律明定要發,遲發還會被罰款"
+        },
+        {
+          "id": "profit-condition",
+          "emoji": "📊",
+          "label": "要看公司那一年有沒有賺錢才決定發不發"
+        },
+        {
+          "id": "employer-discretion",
+          "emoji": "🎲",
+          "label": "完全看雇主心情,金額和有沒有都不一定"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "一年會拿到兩次,分散在年中和年底"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261126-year-end-bonus-guess",
+      "date": "2026-11-26",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪個國家的年終給付是「工資的一部分」而非獎金,一年分兩期給付——第一期最晚十一月三十日、第二期最晚十二月二十日,遲發要受罰,勞工還能因此提告?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261127-mothers-day-poll",
+      "date": "2026-11-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你家，母親節通常怎麼過？",
+      "options": [
+        {
+          "id": "dine-out",
+          "emoji": "🍽️",
+          "label": "全家出去吃飯、提前訂位"
+        },
+        {
+          "id": "flowers-gift",
+          "emoji": "💐",
+          "label": "送花、卡片或小禮物"
+        },
+        {
+          "id": "phone-call",
+          "emoji": "📞",
+          "label": "打電話或傳訊息問候"
+        },
+        {
+          "id": "no-fuss",
+          "emoji": "🤷",
+          "label": "沒有特別安排"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261127-mothers-day-guess",
+      "date": "2026-11-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一個地方的「母親節」落在十二月二十二日，且官方定義它是紀念一場婦女運動的起點，而不是感謝母親的日子。是哪一個地方？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261128-year-end-bonus-poll",
+      "date": "2026-11-28",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果年終獎金的規則由你來訂,你會選哪一種?",
+      "options": [
+        {
+          "id": "profit-based",
+          "emoji": "📈",
+          "label": "有賺錢才發,金額公司自己定"
+        },
+        {
+          "id": "law-mandated",
+          "emoji": "⚖️",
+          "label": "法律訂金額和期限,遲發要罰"
+        },
+        {
+          "id": "employer-discretion",
+          "emoji": "🎲",
+          "label": "老闆到最後一刻才決定,事前不講"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "一年分兩次,年中年末各發一次"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261128-year-end-bonus-guess",
+      "date": "2026-11-28",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這個市場規定,年底那筆錢必須在宗教節日前七天全額付清、不准分期,遲付要罰百分之五,而且日期每年都因為跟著開齋節而往前移。這是哪一個市場?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261129-mothers-day-express",
+      "date": "2026-11-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母親節這天，你通常怎麼表達心意？",
+      "options": [
+        {
+          "id": "flowers",
+          "emoji": "💐",
+          "label": "送花"
+        },
+        {
+          "id": "dining",
+          "emoji": "🍽️",
+          "label": "訂餐廳、一起吃飯"
+        },
+        {
+          "id": "flag",
+          "emoji": "🚩",
+          "label": "掛旗或做點儀式性的事"
+        },
+        {
+          "id": "family",
+          "emoji": "👨‍👩‍👧",
+          "label": "去做禮拜、家庭聚餐"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261129-mothers-day-guess",
+      "date": "2026-11-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一個地方，母親節不在五月，而是在十二月二十二日；這一天紀念的是一場婦女團體的大會，而不是「感謝媽媽」這件事本身。是哪一個地方？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261130-bonus-poll",
+      "date": "2026-11-30",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果可以自己選,你會希望公司採用哪一種年終獎金邏輯?",
+      "options": [
+        {
+          "id": "profit-only",
+          "emoji": "📉",
+          "label": "只有公司賺錢那年才有,金額由公司決定"
+        },
+        {
+          "id": "guaranteed-law",
+          "emoji": "⚖️",
+          "label": "法律規定一定要發,遲了會被罰"
+        },
+        {
+          "id": "loss-proof-min",
+          "emoji": "🛡️",
+          "label": "就算公司虧損,也有法定最低保障"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "一年分兩次領,年中和年末各一次"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261130-bonus-guess",
+      "date": "2026-11-30",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個國家的法定紅利,就算公司當年度虧損,也必須按最低比例支付?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261201-mothers-day-ritual",
+      "date": "2026-12-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母親節這天,你通常怎麼度過?",
+      "options": [
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "全家聚餐"
+        },
+        {
+          "id": "flowers-gift",
+          "emoji": "💐",
+          "label": "送花或禮物"
+        },
+        {
+          "id": "phone-call",
+          "emoji": "📞",
+          "label": "打電話或傳訊息"
+        },
+        {
+          "id": "no-activity",
+          "emoji": "🚫",
+          "label": "沒有特別安排"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261201-mothers-day-country",
+      "date": "2026-12-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "四個地方的母親節都落在五月第二個星期日,只有一國訂在十二月二十二日,而且紀念的不是母職,是一場一九二八年的婦女大會。這是哪一國?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261202-bonus-style",
+      "date": "2026-12-02",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果可以重新設計自己的年終獎金制度,你會想要哪一種?",
+      "options": [
+        {
+          "id": "law-guarantee",
+          "emoji": "⚖️",
+          "label": "像巴西一樣,法律規定、遲發要罰"
+        },
+        {
+          "id": "profit-based",
+          "emoji": "📈",
+          "label": "像台灣一樣,公司有賺才發,金額不固定"
+        },
+        {
+          "id": "before-holiday",
+          "emoji": "🕌",
+          "label": "像印尼一樣,節日前一定全額到帳"
+        },
+        {
+          "id": "twice-year",
+          "emoji": "🌸",
+          "label": "像日本一樣,一年分兩次領"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261202-bonus-guess",
+      "date": "2026-12-02",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個國家的法定紅利,即使公司虧損也要發最低額度?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261203-mothers-day-dayoff",
+      "date": "2026-12-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方，母親節這天算不算放假？",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "📅",
+          "label": "是，放假"
+        },
+        {
+          "id": "no-day-off-but-celebrate",
+          "emoji": "🎉",
+          "label": "沒放假，但照樣慶祝"
+        },
+        {
+          "id": "no-official-status",
+          "emoji": "🚫",
+          "label": "根本不是官方認定的節日"
+        },
+        {
+          "id": "always-sunday",
+          "emoji": "📆",
+          "label": "剛好都落在星期日，沒差"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261203-mothers-day-december",
+      "date": "2026-12-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪個國家的母親節落在十二月，紀念的其實是一場婦女運動，而不是母職？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261204-bonus-poll",
+      "date": "2026-12-04",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你熟悉的年终奖金,比较接近下面哪一种?",
+      "options": [
+        {
+          "id": "boss-mood",
+          "emoji": "🎲",
+          "label": "全看公司心情,没保证"
+        },
+        {
+          "id": "law-fine",
+          "emoji": "⚖️",
+          "label": "白纸黑字写进法律,晚发要罚钱"
+        },
+        {
+          "id": "part-of-wage",
+          "emoji": "💰",
+          "label": "其实算薪水的一部分,离职也要结清"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "一年领两次,夏天也有一笔"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261204-bonus-guess",
+      "date": "2026-12-04",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这个国家的年底津贴规定,必须在宗教节日前七天付清,不准分期,晚付要罚百分之五。说的是哪一国?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261205-mothers-day-poll",
+      "date": "2026-12-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "對你來說，母親節最重要的部分是什麼？",
+      "options": [
+        {
+          "id": "meal-together",
+          "emoji": "🍽️",
+          "label": "全家聚餐一起吃飯"
+        },
+        {
+          "id": "gift-flowers",
+          "emoji": "💐",
+          "label": "送花或禮物"
+        },
+        {
+          "id": "call-or-card",
+          "emoji": "📞",
+          "label": "打通電話或寫張卡片"
+        },
+        {
+          "id": "no-special",
+          "emoji": "🤷",
+          "label": "其實沒特別慶祝"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261205-mothers-day-guess",
+      "date": "2026-12-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "下列哪一個國家的「母親節」其實不是為了感謝母親，而是在紀念一場婦女運動的起點？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261206-year-end-bonus-poll",
+      "date": "2026-12-06",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你(或你認識的人)的年終獎金,比較接近哪一種?",
+      "options": [
+        {
+          "id": "profit-based",
+          "emoji": "📉",
+          "label": "看公司有沒有賺錢,今年不一定有"
+        },
+        {
+          "id": "fixed-amount",
+          "emoji": "🎁",
+          "label": "固定會有,大概是多一個月的薪水"
+        },
+        {
+          "id": "last-minute",
+          "emoji": "⏳",
+          "label": "要等到很接近節日或年底才知道金額"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "我的工作型態沒有這種東西"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261206-year-end-bonus-guess",
+      "date": "2026-12-06",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "某個市場的法定紅利下限是薪資的百分之八點三三、上限百分之二十,而且下限與公司有沒有賺錢無關——虧損的年度也要發最低額。給付期限是該國會計年度結束後八個月內,但多數企業會刻意提早發放,好讓這筆錢趕上一年裡最大的採買季。這是哪一個市場?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261207-mothers-day-ritual",
+      "date": "2026-12-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方，母親節這天最常見的慶祝方式是哪一種？",
+      "options": [
+        {
+          "id": "flowers",
+          "emoji": "🌸",
+          "label": "康乃馨與花束"
+        },
+        {
+          "id": "dinner",
+          "emoji": "🍽️",
+          "label": "全家聚餐訂位"
+        },
+        {
+          "id": "flag",
+          "emoji": "🚩",
+          "label": "升旗或掛國旗"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "沒有特別儀式"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261207-mothers-day-guess",
+      "date": "2026-12-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪一個國家的母親節，日期不在五月，紀念的也不是母職，而是一場一九二八年召開的婦女大會？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261208-bonus-poll",
+      "date": "2026-12-08",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果制度由你決定,你會希望年終獎金更接近哪一種?",
+      "options": [
+        {
+          "id": "guaranteed-law",
+          "emoji": "⚖️",
+          "label": "法定義務,遲發要罰(像巴西、印尼)"
+        },
+        {
+          "id": "profit-based",
+          "emoji": "📈",
+          "label": "公司有賺才發,沒有強制(像台灣)"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "一年兩次分開領(像日本)"
+        },
+        {
+          "id": "tax-optimized",
+          "emoji": "🧾",
+          "label": "自己選稅怎麼繳最划算(像中國)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261208-bonus-guess",
+      "date": "2026-12-08",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "法定紅利下限是薪資的百分之八點三三、上限百分之二十,而且下限與公司有沒有賺錢無關——就算虧損的年度也要發最低額。給付要在會計年度結束後八個月內完成,而多數企業會刻意提早,讓錢趕上一年裡最大的採買季。這是哪一個市場的規定?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261209-mothers-day-day-off",
+      "date": "2026-12-09",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方,母親節那天算不算放假?",
+      "options": [
+        {
+          "id": "official-holiday",
+          "emoji": "🏛️",
+          "label": "算,是官方放假日"
+        },
+        {
+          "id": "sunday-as-usual",
+          "emoji": "🌸",
+          "label": "不算,但剛好是星期日,照常聚餐慶祝"
+        },
+        {
+          "id": "workday-no-holiday",
+          "emoji": "💐",
+          "label": "不算,那天照樣要上班上課"
+        },
+        {
+          "id": "not-celebrated",
+          "emoji": "🤷",
+          "label": "我們那裡不特別過母親節"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261209-mothers-day-womens-movement",
+      "date": "2026-12-09",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪一個國家的母親節,紀念的其實不是母職,而是一場婦女運動的起點?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261210-year-end-bonus-poll",
+      "date": "2026-12-10",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果你有領過年終獎金或年底額外的一筆錢,它比較像哪一種?",
+      "options": [
+        {
+          "id": "legal-fixed",
+          "emoji": "📜",
+          "label": "法律規定、金額和日期都固定"
+        },
+        {
+          "id": "profit-linked",
+          "emoji": "📊",
+          "label": "要看公司有沒有賺錢才決定要不要發"
+        },
+        {
+          "id": "custom-not-right",
+          "emoji": "🎁",
+          "label": "全憑公司慣例或心意,沒有人保證一定有"
+        },
+        {
+          "id": "never-got-one",
+          "emoji": "🚫",
+          "label": "我的工作從來沒有這種東西"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261210-year-end-bonus-guess",
+      "date": "2026-12-10",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個國家的法定紅利,規定下限跟公司有沒有賺錢無關——就算虧損那一年,也要發最低額?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261211-mothers-day-vibe",
+      "date": "2026-12-11",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母親節這天,對你來說最貼近的是哪一種?",
+      "options": [
+        {
+          "id": "flowers",
+          "emoji": "🌸",
+          "label": "送花、送禮物是重點"
+        },
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "全家聚餐,餐廳一位難求"
+        },
+        {
+          "id": "workday",
+          "emoji": "🏢",
+          "label": "照常上班上課,氣氛不特別濃"
+        },
+        {
+          "id": "not-marked",
+          "emoji": "🤷",
+          "label": "我所在的地方幾乎不特別過這天"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261211-mothers-day-country",
+      "date": "2026-12-11",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一個國家的母親節不落在五月,而是十二月,而且它紀念的不是母職,是一場一九二八年的婦女大會。是哪一國?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261212-bonus-poll",
+      "date": "2026-12-12",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你目前(或曾經)領到的「年底加發的錢」,比較接近下面哪一種?",
+      "options": [
+        {
+          "id": "guaranteed-by-law",
+          "emoji": "⚖️",
+          "label": "法律白紙黑字保證,日期固定"
+        },
+        {
+          "id": "custom-before-holiday",
+          "emoji": "🧧",
+          "label": "沒有法律強制,但公司慣例都在節日前發"
+        },
+        {
+          "id": "boss-discretion",
+          "emoji": "🎲",
+          "label": "完全看公司/老闆心情,發不發、發多少事前都不知道"
+        },
+        {
+          "id": "no-bonus",
+          "emoji": "🚫",
+          "label": "我的工作根本沒有這種年底加發的錢"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261212-bonus-guess",
+      "date": "2026-12-12",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這個國家的法定紅利有法律明訂的下限,而且下限跟公司有沒有賺錢無關——虧損的年度也要發最低額,正好和台灣「有盈餘才分配」相反。給付期限落在會計年度結束後八個月內,但多數雇主會提早發,讓錢趕上一年最大的採買季。是哪一國?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261213-mothers-day-poll",
+      "date": "2026-12-13",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母親節這天，在你生活的地方通常是什麼樣子？",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "📅",
+          "label": "是國定假日,大家放假"
+        },
+        {
+          "id": "no-day-off-but-busy",
+          "emoji": "🌸",
+          "label": "不放假,但花店和餐廳照樣是旺季"
+        },
+        {
+          "id": "different-season",
+          "emoji": "🗓️",
+          "label": "我們慶祝母性的方式不在五月,是另一個節期"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "🤷",
+          "label": "沒有特別慶祝,就是平常的一天"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261213-mothers-day-guess",
+      "date": "2026-12-13",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "根據以下線索猜一個地方：這天不在五月第二個星期日，不是感謝母親的日子，而是紀念一九二八年一場婦女大會的政治性紀念日，由總統命令訂為不放假的國家紀念日。是哪一個地方？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261214-bonus-type",
+      "date": "2026-12-14",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你領到的年終獎金,比較接近下面哪一種?",
+      "options": [
+        {
+          "id": "guaranteed",
+          "emoji": "📜",
+          "label": "有法律或制度保障,確定會拿到"
+        },
+        {
+          "id": "custom",
+          "emoji": "🤝",
+          "label": "公司慣例,通常會有但沒有保證"
+        },
+        {
+          "id": "boss-mood",
+          "emoji": "🎲",
+          "label": "完全看公司或老闆心情,每年不一定"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "我的工作沒有年終獎金這種東西"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261214-bonus-country",
+      "date": "2026-12-14",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個國家的年終獎金,實際發放日期每年都會往前移,因為跟著宗教節日走?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261215-mothers-day-family",
+      "date": "2026-12-15",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母親節這天，你家通常怎麼過？",
+      "options": [
+        {
+          "id": "dine-out",
+          "emoji": "🍽️",
+          "label": "全家聚餐或訂位餐廳"
+        },
+        {
+          "id": "flowers-gifts",
+          "emoji": "💐",
+          "label": "送花或禮物"
+        },
+        {
+          "id": "quiet-day",
+          "emoji": "🏠",
+          "label": "沒有特別安排，跟平常一樣"
+        },
+        {
+          "id": "not-observed",
+          "emoji": "🤷",
+          "label": "我家鄉根本沒有這個節日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261215-mothers-day-december",
+      "date": "2026-12-15",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "四個地方的母親節都在五月第二個星期日，只有一個地方在十二月，而且紀念的是一場婦女運動的起點，不是母職本身。是哪一個？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261216-bonus-experience",
+      "date": "2026-12-16",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以你自己或身邊人的經驗來說,年底這類「多一筆錢」比較像下面哪一種情況?",
+      "options": [
+        {
+          "id": "legal-strict",
+          "emoji": "⚖️",
+          "label": "白紙黑字的法定義務,遲發還要罰款"
+        },
+        {
+          "id": "profit-conditional",
+          "emoji": "📉",
+          "label": "看公司有沒有賺錢,沒有保證,靠慣例"
+        },
+        {
+          "id": "tax-topic",
+          "emoji": "🧾",
+          "label": "大家在意的是怎麼報稅比較划算,不是有沒有發"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "根本沒有這種制度,全憑公司自由決定"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261216-bonus-country-guess",
+      "date": "2026-12-16",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "某個國家的法定紅利下限是薪資的8.33%,上限20%,而且下限跟公司賺不賺錢完全無關——虧損的年度也要發最低額。支付期限是會計年度結束後八個月內,但多數企業會提前發,好趕上一年裡最大的採買節慶。這是哪一國?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261217-mothers-day-poll",
+      "date": "2026-12-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果母親節那天不是放假日,只能靠原本就有的週末,你通常會怎麼安排?",
+      "options": [
+        {
+          "id": "reserve-early",
+          "emoji": "📅",
+          "label": "提前訂位或安排"
+        },
+        {
+          "id": "no-special",
+          "emoji": "🤷",
+          "label": "沒有特別安排"
+        },
+        {
+          "id": "weekday-fill",
+          "emoji": "💐",
+          "label": "另外找平日補過"
+        },
+        {
+          "id": "mood-depends",
+          "emoji": "🌀",
+          "label": "看當天心情與狀況"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261217-mothers-day-guess",
+      "date": "2026-12-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "上面四個地方裡,有三個母親節都落在五月第二個星期日,只有一個落在十二月,而且紀念的不是母職而是別的事。是哪一個?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261218-year-end-bonus-poll",
+      "date": "2026-12-18",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "對你來說,年底那筆錢屬於哪一種?",
+      "options": [
+        {
+          "id": "legal-right",
+          "emoji": "⚖️",
+          "label": "白紙黑字的權利,遲了可以告"
+        },
+        {
+          "id": "company-custom",
+          "emoji": "📋",
+          "label": "公司慣例,金額大致抓得到"
+        },
+        {
+          "id": "boss-mood",
+          "emoji": "🎲",
+          "label": "看老闆心情,每年都是驚喜"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "從來沒領過這種錢"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261218-year-end-bonus-guess",
+      "date": "2026-12-18",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這個市場把『年終』當成薪資本身,不是獎金:工作滿一年領一個月薪,不滿一年按比例,離職時也要結清;第一期最遲十一月三十日、第二期十二月二十日,遲發要罰,勞工可以直接告到法院。是哪一個市場?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261219-mothers-day-routine",
+      "date": "2026-12-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母親節這天,你通常怎麼過?",
+      "options": [
+        {
+          "id": "flowers",
+          "emoji": "💐",
+          "label": "送花或禮物"
+        },
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "全家聚餐"
+        },
+        {
+          "id": "normal-day",
+          "emoji": "📅",
+          "label": "跟平常一樣,沒特別安排"
+        },
+        {
+          "id": "day-off",
+          "emoji": "🛌",
+          "label": "剛好放假,可以好好休息"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261219-mothers-day-which-country",
+      "date": "2026-12-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪一個地方的「母親節」,不是為了感謝媽媽,而是紀念一九二八年一場政治性的婦女大會?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261220-bonus-experience",
+      "date": "2026-12-20",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你領到的年終獎金(或類似獎金),比較像哪一種?",
+      "options": [
+        {
+          "id": "profit-based",
+          "emoji": "📊",
+          "label": "看公司有沒有賺錢才發"
+        },
+        {
+          "id": "guaranteed",
+          "emoji": "📜",
+          "label": "不管賺不賺,合約或法規保證會發"
+        },
+        {
+          "id": "discretionary",
+          "emoji": "🎲",
+          "label": "完全看老闆那年心情跟決定"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "我這裡根本沒有這種東西"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261220-bonus-twice-year",
+      "date": "2026-12-20",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下四個國家中,哪一個的年終獎金(或同類制度)是一年發兩次,而不是一次?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261221-mothersday-poll",
+      "date": "2026-12-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "母親節那天,你家通常是哪一種?",
+      "options": [
+        {
+          "id": "book-ahead",
+          "emoji": "🍽️",
+          "label": "提前訂餐廳位子"
+        },
+        {
+          "id": "just-flowers",
+          "emoji": "💐",
+          "label": "送花或卡片就好"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "📅",
+          "label": "跟平常星期天沒兩樣"
+        },
+        {
+          "id": "forget-date",
+          "emoji": "🤷",
+          "label": "常常記不清是哪一天"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261221-mothersday-guess",
+      "date": "2026-12-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRXFSZZXPEEE4M24VKW",
+      "topic_slug": "mothers-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這四個母親節裡,哪一個其實跟「感謝媽媽」無關,是政治性的婦女運動紀念日?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261222-christmas-day",
+      "date": "2026-12-22",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "十二月二十五日對你來說是什麼樣的一天?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "放假的一天"
+        },
+        {
+          "id": "workday",
+          "emoji": "💼",
+          "label": "照常上班或上課"
+        },
+        {
+          "id": "festive-no-holiday",
+          "emoji": "🎄",
+          "label": "有過節氣氛,但不放假"
+        },
+        {
+          "id": "no-observe",
+          "emoji": "🤷",
+          "label": "沒有特別感覺,平常心看待"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261222-christmas-country",
+      "date": "2026-12-22",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在某個地方,十二月二十五日不是假日,隔天二十六日照常上班上課。這一天更像情侶和朋友的節日,家庭的蛋糕支出高峰落在二十四日而不是二十五日,整個十二月也是那一年家庭消費支出最高的月份。這是哪裡?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261223-new-year-poll",
+      "date": "2026-12-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "跨年夜或新年當天,你通常怎麼過?",
+      "options": [
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "圍爐吃團圓飯"
+        },
+        {
+          "id": "countdown-fireworks",
+          "emoji": "🎆",
+          "label": "跨年倒數看煙火"
+        },
+        {
+          "id": "beach-white-clothes",
+          "emoji": "🏖️",
+          "label": "到海邊穿白衣迎接新年"
+        },
+        {
+          "id": "first-shrine-visit",
+          "emoji": "⛩️",
+          "label": "新年參拜寺廟或神社"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261223-new-year-guess",
+      "date": "2026-12-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個國家的全國假日清單裡根本沒有一月一日,新年要等到三、四月才到?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261224-christmas-day-experience",
+      "date": "2026-12-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方，十二月二十五日大多數人怎麼過？",
+      "options": [
+        {
+          "id": "work-as-usual",
+          "emoji": "💼",
+          "label": "照常上班上課"
+        },
+        {
+          "id": "family-gathering",
+          "emoji": "🎄",
+          "label": "家庭聚會或宗教禮拜"
+        },
+        {
+          "id": "shopping-lights",
+          "emoji": "🎂",
+          "label": "逛街看燈飾、買蛋糕或禮物"
+        },
+        {
+          "id": "no-observance",
+          "emoji": "🤷",
+          "label": "沒有特別過節"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261224-japan-spending-peak",
+      "date": "2026-12-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+      "topic_slug": "christmas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個國家的十二月是全年家計支出最高的月份，而且蛋糕支出在二十四日達到高峰？",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261225-new-year-ritual",
+      "date": "2026-12-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你家迎接新年的方式,比較接近下面哪一種?",
+      "options": [
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "除夕圍爐吃團圓飯"
+        },
+        {
+          "id": "countdown-party",
+          "emoji": "🎉",
+          "label": "跨年倒數、看煙火"
+        },
+        {
+          "id": "beach-white",
+          "emoji": "🌊",
+          "label": "到海邊穿白衣、跳浪"
+        },
+        {
+          "id": "first-shrine-visit",
+          "emoji": "⛩️",
+          "label": "新年第一天去廟裡／神社走春"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261225-no-jan-first",
+      "date": "2026-12-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這七個地方裡,哪一個的全國假日清單完全沒有一月一日?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261226-islamic-calendar-poll",
+      "date": "2026-12-26",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "除了齋戒月與開齋節,伊斯蘭曆還有先知誕辰、伊斯蘭新年這些日子。你生活的地方怎麼對待這些日子?",
+      "options": [
+        {
+          "id": "official-holiday",
+          "emoji": "📅",
+          "label": "官方列入放假"
+        },
+        {
+          "id": "appeal-not-holiday",
+          "emoji": "📢",
+          "label": "政府呼籲雇主彈性放假,但不是法定假日"
+        },
+        {
+          "id": "community-only",
+          "emoji": "🕌",
+          "label": "完全由清真寺與社群自行安排,與國家行事曆無關"
+        },
+        {
+          "id": "not-noticed",
+          "emoji": "🤔",
+          "label": "沒特別注意過,不確定"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261226-islamic-calendar-guess",
+      "date": "2026-12-26",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個國家的官方假日清單裡,名叫「Muharram」的假日其實指的是伊斯蘭曆該月第十天的阿舒拉,而不是月初一的新年?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261227-newyear-eve",
+      "date": "2026-12-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你自己會怎麼過跨年這一夜?",
+      "options": [
+        {
+          "id": "family-dinner",
+          "emoji": "🍲",
+          "label": "和家人團聚吃飯"
+        },
+        {
+          "id": "countdown-fireworks",
+          "emoji": "🎆",
+          "label": "倒數看煙火"
+        },
+        {
+          "id": "quiet-night",
+          "emoji": "😴",
+          "label": "早睡,沒有特別儀式"
+        },
+        {
+          "id": "pray-temple",
+          "emoji": "🙏",
+          "label": "拜拜或走春祈福"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261227-newyear-brazil",
+      "date": "2026-12-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個地方的跨年夜,穿白衣、海灘煙火、對浪跳七次浪、獻花給海洋女神等做法並存?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印度尼西亞"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261228-islamic-days-awareness",
+      "date": "2026-12-28",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "除了齋戒月和兩個開齋節,伊斯蘭曆還有新年、先知誕辰、阿舒拉、夜行登霄等日子。在你生活的地方,這些日子有沒有出現在你看得到的官方或學校行事曆上?",
+      "options": [
+        {
+          "id": "all-appear",
+          "emoji": "📅",
+          "label": "都有出現"
+        },
+        {
+          "id": "eids-only",
+          "emoji": "🕌",
+          "label": "只有開齋節/宰牲節這類"
+        },
+        {
+          "id": "none-appear",
+          "emoji": "🔍",
+          "label": "完全沒有,得自己找"
+        },
+        {
+          "id": "never-noticed",
+          "emoji": "🤷",
+          "label": "沒特別留意過"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261228-five-in-one-decree",
+      "date": "2026-12-28",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "把夜行登霄、開齋節、宰牲節、伊斯蘭新年、先知誕辰這五個伊斯蘭曆日子全部列為國定假日,而且每年由同一份三部長聯合決定書公告的,是哪一個地方?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261229-new-year-personal",
+      "date": "2026-12-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你自己過的「新年」比較接近哪一種?",
+      "options": [
+        {
+          "id": "lunar-reunion",
+          "emoji": "🧧",
+          "label": "農曆新年,除夕圍爐開始"
+        },
+        {
+          "id": "jan1-countdown",
+          "emoji": "🎆",
+          "label": "公曆一月一日,跨年倒數與煙火"
+        },
+        {
+          "id": "regional-spring",
+          "emoji": "🌱",
+          "label": "三、四月的地方新年,依所在地區而定"
+        },
+        {
+          "id": "no-particular",
+          "emoji": "🤷",
+          "label": "沒有特別慶祝哪一天"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261229-new-year-multi-calendar",
+      "date": "2026-12-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個國家的國定假日清單裡,同一年會列出好幾種不同曆法的「新年」?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261230-islamic-extra-day",
+      "date": "2026-12-30",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "除了開齋節與宰牲節之外,你覺得下面哪一個伊斯蘭曆的日子最值得被更多地方列入正式假日?",
+      "options": [
+        {
+          "id": "isra-miraj",
+          "emoji": "🌙",
+          "label": "夜行登霄"
+        },
+        {
+          "id": "islamic-new-year",
+          "emoji": "🗓️",
+          "label": "伊斯蘭新年"
+        },
+        {
+          "id": "mawlid",
+          "emoji": "📖",
+          "label": "先知誕辰"
+        },
+        {
+          "id": "ashura",
+          "emoji": "🕌",
+          "label": "阿舒拉"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261230-five-in-one-decree",
+      "date": "2026-12-30",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "伊斯蘭曆的夜行登霄、開齋節、宰牲節、伊斯蘭新年、先知誕辰五個節日,全部由同一份三部會聯合決定書逐年公告放假,這是哪一國的做法?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20261231-new-year-eve-style",
+      "date": "2026-12-31",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果要你形容自己的跨年夜,比較接近哪一種?",
+      "options": [
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "除夕圍爐吃團圓飯"
+        },
+        {
+          "id": "beach-fireworks",
+          "emoji": "🎆",
+          "label": "到海邊看煙火、跳浪"
+        },
+        {
+          "id": "shrine-visit",
+          "emoji": "⛩️",
+          "label": "初詣參拜、吃御節料理"
+        },
+        {
+          "id": "countdown-party",
+          "emoji": "🥂",
+          "label": "跨年倒數、隔天休息看比賽"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20261231-jan1-missing",
+      "date": "2026-12-31",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這七個市場裡,哪一個國家的全國假日清單完全沒有1月1日?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270101-islamic-days-poll",
+      "date": "2027-01-01",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方，伊斯蘭曆的節日（像新年、先知誕辰、阿舒拉這類，不是齋戒月本身或兩個開齋節）目前是怎麼被對待的？",
+      "options": [
+        {
+          "id": "national-holiday",
+          "emoji": "🗓️",
+          "label": "這類節日本身就有列入國定/公定假日"
+        },
+        {
+          "id": "eids-only",
+          "emoji": "🕌",
+          "label": "只有兩個開齋節被放假，其他都沒有"
+        },
+        {
+          "id": "community-only",
+          "emoji": "🏘️",
+          "label": "完全沒有放假，都是清真寺/社群自己辦"
+        },
+        {
+          "id": "admin-appeal",
+          "emoji": "📢",
+          "label": "政府只用行政呼籲的方式請雇主放行，不是正式假期"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270101-muharram-guess",
+      "date": "2027-01-01",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在下列哪一個地方，行事曆上名為「Muharram」的假日，指的其實是伊斯蘭曆十日的阿舒拉，而不是月初的新年？",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270102-gathering-day",
+      "date": "2027-01-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你家如果有一年一度、大家想辦法聚在一起的日子,那天通常是怎麼定下來的?",
+      "options": [
+        {
+          "id": "fixed-weekday",
+          "emoji": "📅",
+          "label": "固定的星期幾(像每年某月第幾個星期幾)"
+        },
+        {
+          "id": "lunar-or-solar-calendar",
+          "emoji": "🌙",
+          "label": "靠農曆、節氣或天文換算,每年日期不同"
+        },
+        {
+          "id": "local-custom",
+          "emoji": "🏘️",
+          "label": "由家族、社群或地方自己約定,沒有官方日期"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "沒有固定日子,大家有空才聚"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270102-farmers-day-timing",
+      "date": "2027-01-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪個地方的「農民節」訂在立春,慶祝的是即將開始的農事,而不是已經到手的收成?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270103-islamic-holidays-recognition",
+      "date": "2027-01-03",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活或工作的地方,伊斯蘭曆的節日在行事曆上被承認到什麼程度?",
+      "options": [
+        {
+          "id": "full-calendar",
+          "emoji": "📅",
+          "label": "像印尼一樣,連夜行登霄、新年、聖紀節都放假"
+        },
+        {
+          "id": "two-eids-only",
+          "emoji": "🕌",
+          "label": "像紐約或寧夏一樣,只有兩個開齋節/宰牲節被承認"
+        },
+        {
+          "id": "appeal-only",
+          "emoji": "📢",
+          "label": "像台灣一樣,只有行政呼籲,不是正式假期"
+        },
+        {
+          "id": "no-recognition",
+          "emoji": "🚫",
+          "label": "像日本或巴西一樣,國家行事曆完全沒有,只在社群內部紀念"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270103-two-eids-only-guess",
+      "date": "2027-01-03",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一個地方,伊斯蘭新年與聖紀節都不在官方行事曆上;它承認伊斯蘭節日的範圍,剛好與中國寧夏一樣只到兩個開齋節/宰牲節,但承認的機制不是中央立法,而是最大城市的公立學校行事曆。這是哪裡?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270104-harvest-custom",
+      "date": "2027-01-04",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你所在的地方,收成或感謝的日子通常圍繞什麼進行?",
+      "options": [
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "家庭聚餐團圓"
+        },
+        {
+          "id": "food-ritual",
+          "emoji": "🍚",
+          "label": "特定的儀式性食物(像特定的粥、飯或甜點)"
+        },
+        {
+          "id": "labor-thanks",
+          "emoji": "🙏",
+          "label": "彼此感謝工作或勞動的付出"
+        },
+        {
+          "id": "no-specific-day",
+          "emoji": "🤷",
+          "label": "沒有特別對應這種主題的日子"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270104-harvest-guess",
+      "date": "2027-01-04",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一個國家的國定假日,日期其實比假日的名字古老得多——這天原本是天皇獻新穀給神明的皇室祭典,戰後才被改寫成感謝勞動的國民假日。是哪一個國家?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270105-islamic-days-poll",
+      "date": "2027-01-05",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方，伊斯蘭新年、先知誕辰這類日子，通常是怎麼被看待的？",
+      "options": [
+        {
+          "id": "official-holiday",
+          "emoji": "🗓️",
+          "label": "官方訂為假日，大家都放假"
+        },
+        {
+          "id": "community-only",
+          "emoji": "🕌",
+          "label": "不放假，但清真寺或社群自己有活動"
+        },
+        {
+          "id": "only-two-eids",
+          "emoji": "🌙",
+          "label": "只聽過開齋節與宰牲節，其他伊斯蘭日子沒聽過"
+        },
+        {
+          "id": "never-heard",
+          "emoji": "🤷",
+          "label": "完全沒接觸過這類話題，不清楚"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270105-islamic-days-guess",
+      "date": "2027-01-05",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "topic_slug": "islamic-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個國家把夜行登霄、開齋節、宰牲節、伊斯蘭新年、先知誕辰五個伊斯蘭曆日子全部排進國定假日，而且都在同一份三部長聯合決定書裡逐年公告？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270106-harvest-poll",
+      "date": "2027-01-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果由你來決定「感謝收成」要定在哪一天,你會比較想用哪一種方式?",
+      "options": [
+        {
+          "id": "fixed-date",
+          "emoji": "📅",
+          "label": "固定月曆日期,像感恩節排在十一月第四個星期四"
+        },
+        {
+          "id": "solar-term",
+          "emoji": "🌾",
+          "label": "跟著節氣走,像立春或秋分那樣由天文決定"
+        },
+        {
+          "id": "religious-calendar",
+          "emoji": "⛪",
+          "label": "跟著宗教曆走,像巴西綁在聖人日"
+        },
+        {
+          "id": "village-ritual",
+          "emoji": "🏮",
+          "label": "跟著地方村莊的儀式曆走,像西爪哇的收成祭"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270106-harvest-guess",
+      "date": "2027-01-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "戰前的皇室新穀祭典,在戰後改寫成全體國民互相感謝勞動的節日,日期一天沒動——這是哪一個國家?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270107-exam-style",
+      "date": "2027-01-07",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果決定權在你,你希望十八歲那年的升學被怎麼衡量?",
+      "options": [
+        {
+          "id": "one-shot",
+          "emoji": "⚡",
+          "label": "一兩天內一次定生死"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🎯",
+          "label": "先測一次能力,再由各校甄試決定"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "🗓️",
+          "label": "拉長成好幾週,逐科慢慢考"
+        },
+        {
+          "id": "no-exam",
+          "emoji": "📁",
+          "label": "不靠統一考試,看在校表現與申請資料"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270107-two-sundays",
+      "date": "2027-01-07",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個地方的全國性升學考試,刻意分成兩個星期日進行,中間隔開整整一週?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270108-harvest-style",
+      "date": "2027-01-08",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你自己慶祝收成的方式,比較接近以下哪一種?",
+      "options": [
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "全家聚在一起吃一頓飯"
+        },
+        {
+          "id": "special-dish",
+          "emoji": "🍚",
+          "label": "煮一道有特別意義的料理來吃"
+        },
+        {
+          "id": "community-festival",
+          "emoji": "🔥",
+          "label": "參加社區或廣場上的營火、跳舞這類慶典"
+        },
+        {
+          "id": "give-thanks-work",
+          "emoji": "🙏",
+          "label": "只是找個方式表達對這份工作或土地的感謝,不一定聚餐或慶典"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270108-seven-day-rite",
+      "date": "2027-01-08",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一個收成慶典不是全國假日,日期由曆法定,連辦七天,儀式裡有「千燈」與共同舂米。是哪一個地方?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270109-exam-format-choice",
+      "date": "2027-01-09",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果要重新設計你十八歲那年的升學考試，你會想選哪一種安排？",
+      "options": [
+        {
+          "id": "single-spike",
+          "emoji": "😰",
+          "label": "一次定生死，兩天內考完"
+        },
+        {
+          "id": "long-plateau",
+          "emoji": "😮‍💨",
+          "label": "拉長成數週甚至數月"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🎯",
+          "label": "先測能力，再靠校方二階甄試"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📚",
+          "label": "不考統一大考，看在校表現與申請文件"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270109-guess-city-shutdown",
+      "date": "2027-01-09",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪個地方的大考期間，城市會為考試暫停施工、考場周邊禁鳴喇叭、交通警察設專用通道？",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270110-harvest-image",
+      "date": "2027-01-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "收成或豐收,對你來說最接近哪一種畫面?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "全家圍在一張餐桌前"
+        },
+        {
+          "id": "special-dish",
+          "emoji": "🍚",
+          "label": "煮一鍋特別的食物,大家一起吃"
+        },
+        {
+          "id": "month-long-festivity",
+          "emoji": "🎆",
+          "label": "熱鬧慶祝拖得比一天長,像整整一個月"
+        },
+        {
+          "id": "no-particular-day",
+          "emoji": "🤷",
+          "label": "老實說,沒有哪一天讓我特別想到「收成」"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270110-harvest-policy-origin",
+      "date": "2027-01-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下四個地方之中,哪一個的收成節日是在二〇一八年由國家最高行政機關批准後才新設立,而不是從民間習俗或宗教曆法演變而來?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270111-exam-pressure-shape",
+      "date": "2027-01-11",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果你也經歷過決定升學的考試,你會覺得自己承受的壓力比較像哪一種形狀?",
+      "options": [
+        {
+          "id": "sharp-spike",
+          "emoji": "⚡",
+          "label": "尖銳的一兩天,一次定生死"
+        },
+        {
+          "id": "long-plateau",
+          "emoji": "🏔️",
+          "label": "拉長成數週甚至數月,天天都是壓力"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🔁",
+          "label": "分兩段:先一場測驗,再各校自辦甄選"
+        },
+        {
+          "id": "no-single-exam",
+          "emoji": "📋",
+          "label": "沒有單一大考,靠長期累積的成績與申請資料"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270111-exam-indonesia-dual-track",
+      "date": "2027-01-11",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個地方的全國性升學管道有兩條並行的路——一條完全不用考試,靠在校成績與學校排名推薦,另一條是電腦化的統一測驗、一年只考一個梯次?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270112-harvest-poll",
+      "date": "2027-01-12",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你成長的地方,收成或感恩最接近下面哪一種?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "全家圍坐餐桌"
+        },
+        {
+          "id": "before-planting",
+          "emoji": "🌱",
+          "label": "在下田前先慶祝,而不是收成後"
+        },
+        {
+          "id": "month-long-festival",
+          "emoji": "🎉",
+          "label": "整個月的地方慶典,不是單一一天"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "沒有這種全國性的節日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270112-harvest-guess",
+      "date": "2027-01-12",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個國家在二○一八年由官方批准設立一個新節日,日期特意選在既不跟農曆、也不跟星期走的節氣上?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270113-exam-structure-pref",
+      "date": "2027-01-13",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果可以重新選擇，你希望自己的大考制度長什麼樣子？",
+      "options": [
+        {
+          "id": "one-shot-days",
+          "emoji": "⚡",
+          "label": "一次考完，一兩天定生死"
+        },
+        {
+          "id": "spread-months",
+          "emoji": "📅",
+          "label": "拉長戰線，科目分散考兩個月"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🔁",
+          "label": "兩段式：先考統一測驗，再由學校甄試"
+        },
+        {
+          "id": "no-exam",
+          "emoji": "📂",
+          "label": "沒有統一大考，靠在校成績與申請文件"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270113-exam-city-lockdown",
+      "date": "2027-01-13",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪個地方的大考期間，城市會禁鳴喇叭、工地停工、交警開闢專用通道？",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270114-harvest-poll",
+      "date": "2027-01-14",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你的文化或家庭裡,收成後的感謝比較接近哪一種?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "像感恩節,重點是家人團聚吃一頓飯"
+        },
+        {
+          "id": "ritual-food",
+          "emoji": "🍚",
+          "label": "像 Pongal,有一道非吃不可的儀式性食物"
+        },
+        {
+          "id": "month-of-festivities",
+          "emoji": "🔥",
+          "label": "像巴西六月節,是一整個月的社區慶典"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "沒有固定的收成節,或早就不太在意"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270114-harvest-guess",
+      "date": "2027-01-14",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "五個地方裡,哪一個在2018年由國務院批復,把每年秋分定為專屬農民的節日,是全國層級第一個專為農民設立的節日?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }
