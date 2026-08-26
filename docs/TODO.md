@@ -983,3 +983,94 @@ DoPT 的年度假日 O.M.(`dopt.gov.in`)或 india.gov.in 的印地文行事曆�
 
 要根治只有一條路:**把那六個 Topic 的 title 改成名詞片語**(七語各一份)。
 那是產品文案,屬用戶。字串手術在這裡是死路,不要再試。
+
+---
+
+## 零曝光的真因是「需求在裸詞、我們只贏年份詞」(2026-08-26 第二輪,Bing 實測)
+
+起因:用戶再問一次「為什麼這些 Topic 連曝光都沒有?除了這些之外沒有別的 Topic 可以做了嗎?」
+
+**先對數字**:當下 active 44、有曝光 19、零曝光 **25**(page 面 `topic_search_metrics`
+與 query 面 `gsc_query_metrics` 兩種算法同為 25)。上一節寫 26 是那一刻的數(當時 active 43)。
+查法:見 CLAUDE.md;不要引用這裡的數字。
+
+### 量測工具(這一輪第一次用在本專案上)
+
+`node /root/seo-ops/bin/keyword-demand.mjs --file <字表> --country <cc> --language <ll-CC>`
+—— Bing Webmaster `GetKeyword`,是本主機唯一能在伺服器端直接量到絕對搜尋需求的來源。
+
+- **對照組已驗**:`carnaval 2027` @ br/pt-BR 回 exact 38,488,與 `fecb9ab` 當時的數字一致。
+- ⚠ **參數坑(實測)**:印尼的 `language` 用 `id-ID` / `id` / `in-ID` **全部**回
+  `argument was out of the range of valid values`,**只有 `en-ID` 可用**。
+  其餘六站:tw↔zh-TW、us↔en-US、jp↔ja-JP、cn↔zh-CN、in↔hi-IN、br↔pt-BR。
+- ⚠ 連續打會回 `ThrottleUser`;一輪 20~30 字、市場之間並行沒事,再多要分批。
+- ⚠ 判讀邊界照 `connections.md`:這是 **Bing** 的量,只能判「是不是 0」與相對大小,
+  不能當絕對流量預估;**有量 ≠ 打得贏**。
+
+### 這一輪推翻的假設:不是「季節沒到」,也不是「沒有需求」
+
+同一個詞量「裸詞」與「加年份」兩種形狀,結論很硬:
+
+| 市場 | 裸詞 exact | 加年份 exact |
+|---|---|---|
+| 端午節(tw) | **5,251** | 端午節 2027 = **0** |
+| 中秋節(tw) | 2,902 | 中秋節 2026 = 1,426 |
+| 中元節(tw) | 1,122 | 中元節 2026 = 619 |
+| 元宵節(tw) | 105 | 元宵節 2027 = **0** |
+| 學測(tw) | 790 | 學測 2027 = **0** |
+| お盆(jp) | **63,888** | お盆 2026 = 46,413 |
+| 十五夜(jp) | 2,991 | —— |
+
+站上唯一贏得下來的查詢形狀是「專有名詞 + 年份」(上一節實測:含年份 12.3 名、
+不含年份 63.1 名)。而**需求的大宗在裸詞**,加年份那一支往往等於 0。
+所以「零曝光」不是季節、不是沒人搜 —— 是**我們只在需求最細的那一條縫裡排得上去**。
+
+### 25 個零曝光的五種真因(互斥,各有實測)
+
+| 類 | 幾個 | 是什麼 | 證據 |
+|---|---|---|---|
+| A 構不成年份查詢 | 14 | 沒有任何 observance,主題本身不接年份(兵役/義務教育/官方語言/投票/育嬰假/寵物/喪葬/婚俗/成年/滿月/長照/畢業/ask-the-world) | 官方語言・投票年齡・喪禮・婚禮習俗・養寵物 @tw **全 0**;育嬰假 1,732、畢業典禮 322、兵役 235 有量但都是裸詞,且第一名是勞動部那種機關頁 |
+| B 需求在裸詞、當令、我們仍 0 | 5 | mid-autumn / ghosts / lantern / dragon-boat / exam-season | 見上表。中元節就是隔天、中秋不到一個月,需求量得到,曝光是 0 |
+| C 年份型需求 = 0,裸詞是頭部大詞 | 4 | christmas / new-year / year-end-bonus / islamic-calendar-days | 聖誕節 2026=0、クリスマス 2026 exact=0、正月 2027=0、ano novo 2027=0、tahun baru 2027=0、年終獎金 2027=0、maulid nabi・isra miraj・tahun baru islam 2027 **全 0** |
+| D 主題名對的市場沒需求 | 1 | harvest-and-gratitude | 農民節 @tw = **0**(連 Bing 都沒人搜);同一個 Topic 的 Thanksgiving 2026 @us = **143,357**、勤労感謝の日 @jp = 1,400 |
+| E 太新,量不到 | 1 | carnival | 08-26 建立,GSC 窗只到 08-23 |
+
+🔴 **B 與 D 的補救(title 前置當地叫法、後綴依資料三選一)全部在 08-26 04:11~13:08 才上線,
+而 GSC 資料窗到 08-23 —— 也就是那批修正一次都還沒被量測過。** 現在論斷它有沒有效都是推論。
+線上已驗:jp ghosts = `お盆、節分｜…`、tw mid-autumn = `中秋節｜…`、
+en harvest = `Thanksgiving Day | …`、逐國頁 = `Memorial Day, Halloween 2026 | United States: …`。
+
+### 「沒有別的 Topic 可以做了嗎?」—— 相反,最大的幾個都還沒做
+
+本輪量到、**站上沒有對應 Topic**(或只當成別的 Topic 的第二順位 observance 埋著)的字:
+
+| 市場 | 字 | exact / 3 個月 | 站上現況 |
+|---|---|---|---|
+| us | `memorial day 2027` | **51,340** | 埋在 ghosts 的 US rank 2 |
+| us | `veterans day 2026` | 27,169 | 無 |
+| us | `columbus day 2026` | 26,721 | 無 |
+| us | `rosh hashanah 2026` + `yom kippur 2026` + `passover 2027` + `hanukkah 2026` | 26,640 + 18,388 + 6,434 + 5,012 = **56,474** | 無 —— 缺一個與 `islamic-calendar-days` 對稱的猶太曆 Topic |
+| us | `presidents day 2027` | 19,260 | 無 |
+| jp | `シルバーウィーク 2026` | 13,816 | 無 |
+| jp | `ハロウィン`(裸) | 11,047 | 只在 ghosts 的 US 那格 |
+| br | `feriados 2027` | **14,940** | 無 —— 這是「某國某年假日總表」型態,逐國頁是 Topic×國家,缺的是國家×年份 |
+| us | `juneteenth 2027` | 5,034 | 無 |
+| us / br | `oktoberfest 2026` | 4,452 / 1,041 | 無 |
+| jp | `お彼岸 2026` | 4,218 | 無 |
+| jp | `ゴールデンウィーク`(裸) | 3,022 | 無 |
+| us / br / tw | `black friday` 系 | 2,814 / 1,741 / 138 | 無 |
+| br | `corpus christi 2027` | 2,112 | 無 |
+| us | `earth day 2027` | 1,982 | 無 |
+| tw | `七夕`(裸) | 1,438 | 無(affection 只有情人節) |
+| tw | `萬聖節`(裸) | 330 | ghosts 的 TW 那格沒有萬聖節 |
+| tw | `感恩節`(裸) | 211 | harvest 的 TW 那格是農民節(0 需求) |
+
+**同一輪量到的零需求字**(寫了等於白工,記下來免得下次又想做):
+`festa junina 2027`、`dia dos namorados 2027`、`dia de acao de gracas 2026`、
+`sao joao 2027`、`tiradentes 2027`、`finados 2026`、`sete de setembro 2026`、
+`農民節`、`春運`、`韓國中秋`、`日本黃金週`(從 tw 問)、`侯麗節`、
+`hari guru/ibu/ayah/anak 2026`、`hari kartini/buruh 2027`、`waisak 2027`、
+`法定节假日 2027`、`放假安排 2027`、`bank holidays 2027`、`april fools day 2027`。
+
+⚠ id 與 in 兩個市場整體量值都很小(idul fitri 2027 = 24、diwali 2026 @in = 82),
+那是 **Bing 在這兩國市佔低**,不是沒需求 —— 這兩站只能判「是不是 0」,不能拿數字跨市場比大小。
