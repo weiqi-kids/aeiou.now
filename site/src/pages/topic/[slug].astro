@@ -161,8 +161,25 @@ const askCountries = worldCountries.map((country) => ({
   name: countryName(country.country_code),
 }));
 
+// 問句分四種(2026-08-26 用戶核准),判準與 title 後綴同一套資料:
+//   absence                「{country}有沒有{topic}？」    查證過「這裡沒有這個節日」
+//   有 observance           「{country}怎麼過{topic}？」    有節日才談得上「怎麼過」
+//   沒有 observance + civic 「{country}怎麼規定？」
+//   其餘沒有 observance     「{country}怎麼做？」
+//
+// 後兩種**刻意不嵌 Topic 名**。原本一律用 q_how_country,於是 19 個沒有節日的 Topic
+// 印出「巴西怎麼過兵役:被叫去的、只要登記的、和寫在憲法裡沒人叫的？」——
+// 2026-08-26 開了逐國頁之後,這句話還從 h3 升格成 h1 與 title,影響 133+ 頁。
+// 試過抽「冒號前的短名」,但六個 civic Topic 的標題是**句子**而不是名詞片語,
+// 而且冒號在各語系不一致(military-service 的英文標題根本沒有冒號)。
+// 與其做跨七語的字串手術,不如讓問句不重複主題 —— 頁面的 h1 與麵包屑本來就講了是哪個主題。
+const questionKey = (isAbsence) => {
+  if (isAbsence) return 'topic.q_country_has';
+  if (countries.length > 0) return 'topic.q_how_country';
+  return facts?.category === 'civic' ? 'topic.q_rule_country' : 'topic.q_practice_country';
+};
 const countryQuestion = (countryCode, isAbsence = false) => fillTemplate(
-  t(isAbsence ? 'topic.q_country_has' : 'topic.q_how_country'),
+  t(questionKey(isAbsence)),
   { country: countryName(countryCode), topic: title },
 );
 // 本站市場的那一國。宣告放在這裡(而不是 metaCoverage 旁邊)是因為 h3 的當地叫法規則

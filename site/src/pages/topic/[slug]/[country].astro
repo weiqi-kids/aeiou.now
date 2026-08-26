@@ -63,9 +63,15 @@ const isAbsence = observances.length === 0 && note?.kind === 'absence';
 // 否則會連到 404 —— getStaticPaths 用同一個門檻,所以這裡重算一次。
 const siblings = countryCellsFor(facts, i18n).filter((c) => c !== code);
 
-const heading = fillTemplate(t(isAbsence ? 'topic.q_country_has' : 'topic.q_how_country'), {
-  country: label, topic: topicTitle,
-});
+// 問句四分,判準與 Topic 頁完全相同(見該檔註解)。沒有節日的 Topic 不把主題名嵌進問句 ——
+// 這一頁的 title 與麵包屑已經講了是哪個主題,重複只會印出
+// 「巴西怎麼過兵役:被叫去的、只要登記的、和寫在憲法裡沒人叫的？」。
+const questionKey = isAbsence
+  ? 'topic.q_country_has'
+  : (observances.length > 0
+    ? 'topic.q_how_country'
+    : (facts?.category === 'civic' ? 'topic.q_rule_country' : 'topic.q_practice_country'));
+const heading = fillTemplate(t(questionKey), { country: label, topic: topicTitle });
 
 // title 就是那個查詢的形狀。但**當地叫法只在這一國就是本站市場時才用** ——
 // 我第一版寫成一律用,結果 D5 當場擋下來:pt-BR/en/hi/id 站的
@@ -82,7 +88,12 @@ const isHomeMarket = code === (MARKET_COUNTRY[LOCALE] || null);
 const localNames = isHomeMarket
   ? [...new Set(observances.map((o) => (o.local_name || '').trim()).filter(Boolean))].slice(0, 2)
   : [];
-const countryTopic = `${label}${copy.colon}${topicTitle}`;
+// title 裡的主題名取「第一個冒號之前」——否則會印出
+// 「巴西：兵役:被叫去的、只要登記的、和寫在憲法裡沒人叫的」,一個標題裡兩個冒號。
+// 沒有冒號的標題原樣使用(六個 civic Topic 裡有兩個是沒有冒號的句子,那是 md 標題本身
+// 的問題,不在這裡用字串手術修 —— 已列進 docs/TODO.md)。
+const shortTopic = topicTitle.split(/[:：]/)[0].trim() || topicTitle;
+const countryTopic = `${label}${copy.colon}${shortTopic}`;
 const lead = localNames.length > 0 ? localNames.join(copy.listSep) : countryTopic;
 const pageTitle = [
   year ? `${lead} ${year}` : lead,

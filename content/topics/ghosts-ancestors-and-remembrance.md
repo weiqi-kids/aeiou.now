@@ -15,7 +15,7 @@
 ## observance CN qingming
 - local_name: 清明节
 - date_rule: 公曆 04-04 至 04-06 前後
-- rank: 1
+- rank: 2
 - source: https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/jiedu/tujie/202411/content_6986437.htm
 
 ## observance CN zhongyuan
@@ -47,13 +47,13 @@
 ## observance TW qingming
 - local_name: 清明節
 - date_rule: 春分後第十五日左右，日期每年略有差異
-- rank: 1
+- rank: 2
 - source: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095
 
 ## observance US memorial-day
 - local_name: Memorial Day
 - date_rule: 5 月最後一個星期一
-- rank: 1
+- rank: 2
 - source: https://www.usa.gov/holidays
 
 ## observance US halloween

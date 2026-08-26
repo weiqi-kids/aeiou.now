@@ -967,3 +967,19 @@ DoPT 的年度假日 O.M.(`dopt.gov.in`)或 india.gov.in 的印地文行事曆�
 `index.php/` 全部導回 `/en/`(實測),文章本文是印尼文,只有樣板語言是 en。
 候選替代 `kemenpppa.go.id` 的新聞稿**整站在維護中**(根目錄 title 也是「Pemeliharaan Sistem」),
 不是文章沒了 —— 之後複驗再換。
+
+## 六個 civic Topic 的標題是句子不是名詞片語(2026-08-26 記錄,未解)
+
+`compulsory-education`、`military-service`、`official-languages`、`parental-leave`、
+`religion-and-the-state`、`voting-and-elections` 的 title 在部分語系是**整句話**:
+「兵役:被叫去的、只要登記的、和寫在憲法裡沒人叫的」「生了小孩之後,法律給你多少天」
+「Conscripted, registered, or merely obliged on paper」。
+
+後果:逐國頁的 title 會印成「巴西：兵役:被叫去的、只要登記的、和寫在憲法裡沒人叫的」。
+已經做的緩解是取「第一個冒號之前」,但**冒號在各語系不一致**——
+`military-service` 的 en/pt-BR/hi 標題根本沒有冒號,所以那三語仍然是整句。
+問句那一層已經改成不嵌主題名(見 `topic.q_rule_country` / `q_practice_country`),
+所以 h1 與 h3 沒問題,剩下的只有 title。
+
+要根治只有一條路:**把那六個 Topic 的 title 改成名詞片語**(七語各一份)。
+那是產品文案,屬用戶。字串手術在這裡是死路,不要再試。
