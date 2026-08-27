@@ -30,7 +30,9 @@ export const MIN_HOLIDAY_TEXT = 260;
 export function holidayTextLength(code, year, locale) {
   const rows = holidaysFor(code, year);
   const undated = undatedFor(code, year);
+  const note = holidaySystemNote(code)?.text?.[locale] || '';
   const parts = [
+    note,
     ...rows.map((r) => r.name?.[locale] || ''),
     ...undated.map((r) => r.name?.[locale] || ''),
     // 每一列還會印日期、狀態標籤與可能的旗標;這些是重複的樣板字,
