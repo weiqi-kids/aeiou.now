@@ -843,6 +843,23 @@ const citiesOut = {};
 for (const code of cityCodes) citiesOut[code] = titleCase(code);
 emit(join("meta", "cities.json"), citiesOut);
 
+// ---------- holidays/<cc>.json(國家×年份假日總表;2026-08-27 用戶核准) ----------
+// 這一份的來源**不是 SQLite**,是人工維護的 content/national-holiday-calendars.json
+// (逐國權威公告抄錄)。理由見 docs/briefs/holidays-index.md:Topic 覆蓋不等於一國的
+// 法定假日清單,從 Topic 反推會產出漏掉國慶日的假日表。這裡只做「搬到 data/ 讓站台讀」
+// 這一件事,維持「站台只讀 data/」的不變量;缺這份檔不算錯(頁型自己會不產出)。
+const holidaysPath = join(ROOT, "content", "national-holiday-calendars.json");
+if (existsSync(holidaysPath)) {
+  const cal = JSON.parse(readFileSync(holidaysPath, "utf8"));
+  const codes = Object.keys(cal.countries || {}).sort();
+  for (const cc of codes) emit(join("holidays", `${cc}.json`), cal.countries[cc]);
+  emit(join("holidays", "index.json"), { as_of: cal.as_of || null, countries: codes });
+  // 各國的假日制度說明(七語)。表格答不出「這一國的假日是誰決定的」,而那才是讀者要的。
+  const notesPath = join(ROOT, "content", "holiday-system-notes.json");
+  if (existsSync(notesPath)) emit(join("holidays", "notes.json"), JSON.parse(readFileSync(notesPath, "utf8")));
+  stampFor("holidays", codes.map((cc) => JSON.stringify(cal.countries[cc])).join("|"));
+}
+
 // ---------- meta/stamps.json(sitemap 的 lastmod 用;見上方 stampFor 的說明) ----------
 stampFor("render", renderFingerprint());
 // 首頁與三個清單頁列的是 Topic,所以它們的內容時間戳 = 所有 Topic 裡最新的那一個。

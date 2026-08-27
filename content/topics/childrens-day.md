@@ -35,7 +35,8 @@
 - local_name: Dia das Crianças
 - date: 10-12
 - rank: 5
-- source: https://www.gov.br/arquivonacional/pt-br/canais_atendimento/imprensa/copy_of_noticias/dia-da-crianca
+- source: https://www.lexml.gov.br/urn/urn:lex:br:federal:decreto:1924-11-05;4867
+- source: https://www2.camara.leg.br/legin/fed/decret/1920-1929/decreto-4867-5-novembro-1924-566474-publicacaooriginal-90038-pl.html
 
 ## observance IN childrens-day
 - local_name: बाल दिवस (Children's Day)

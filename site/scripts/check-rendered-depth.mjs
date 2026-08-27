@@ -141,6 +141,20 @@ function answerTableCells(html) {
     const text = m[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
     if (text) cells.add(text);
   }
+  // 假日總表 /holidays/<cc>/<年>/ 的表格欄位(2026-08-27)。同一個理由的第三次:
+  //   ・狀態欄「法定假日」在一頁裡本來就會出現十幾次 —— 那一國就是有十幾天法定假日。
+  //   ・「尚未公告,依規則推算」是逐列的資格說明;印尼 2027 有 11 天還沒公告,就該印 11 次。
+  //   ・印尼的 cuti bersama 被拆成兩筆(20 日與 23–24 日不連續),官方名稱**本來就同一個**。
+  // 這些都是資料格,不是散文。與 answer-basis 一樣仍計入 total/unique 字元數,
+  // 只是不進「重複段落」那份計數 —— 所以散文複印照樣擋得到。
+  for (const m of html.matchAll(/<td\b[^>]*class="[^"]*\bhol-(?:date|name|status)\b[^"]*"[^>]*>([\s\S]*?)<\/td>/gi)) {
+    const text = m[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    if (text) cells.add(text);
+  }
+  for (const m of html.matchAll(/<span\b[^>]*class="[^"]*\bhol-flag\b[^"]*"[^>]*>([\s\S]*?)<\/span>/gi)) {
+    const text = m[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    if (text) cells.add(text);
+  }
   return cells;
 }
 

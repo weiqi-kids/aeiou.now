@@ -1,0 +1,418 @@
+{
+  "country_code": "US",
+  "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/holidays.ics"
+  ],
+  "notes": "Authority: 5 U.S.C. 6103(a) lists exactly 11 legal public holidays; nothing outside that section is included. `dates` holds the OBSERVED day from the OPM federal holiday schedule (Saturday -> preceding Friday per 5 U.S.C. 6103(b)(1); Sunday -> following Monday per E.O. 11582 sec. 3(a)); `nominal_dates` holds the statutory day. WARNING for a per-calendar-year page: the 2028 New Year's Day is observed on 2027-12-31, so calendar year 2028 contains no New Year's Day observance and calendar year 2027 contains two (2027-01-01 and 2027-12-31). Group by the year KEY, not by the year inside `dates`. Inauguration Day (5 U.S.C. 6103(c)) is deliberately omitted: it is a holiday only in the Washington DC commuting area and the next one is 2029-01-20, outside this range.",
+  "holidays": [
+    {
+      "key": "new-years-day",
+      "name": {
+        "zh-TW": "元旦",
+        "en": "New Year's Day",
+        "ja": "元日",
+        "zh-CN": "元旦",
+        "hi": "नववर्ष दिवस",
+        "id": "Tahun Baru",
+        "pt-BR": "Ano Novo"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-01-01",
+        "2027": "2027-01-01",
+        "2028": "2027-12-31"
+      },
+      "nominal_dates": {
+        "2026": "2026-01-01",
+        "2027": "2027-01-01",
+        "2028": "2028-01-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+      ]
+    },
+    {
+      "key": "martin-luther-king-jr-day",
+      "name": {
+        "zh-TW": "馬丁·路德·金恩紀念日",
+        "en": "Birthday of Martin Luther King, Jr.",
+        "ja": "マーティン・ルーサー・キング・ジュニア牧師記念日",
+        "zh-CN": "马丁·路德·金诞辰纪念日",
+        "hi": "मार्टिन लूथर किंग जूनियर जयंती",
+        "id": "Hari Kelahiran Martin Luther King Jr.",
+        "pt-BR": "Aniversário de Martin Luther King Jr."
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-01-19",
+        "2027": "2027-01-18",
+        "2028": "2028-01-17"
+      },
+      "nominal_dates": {
+        "2026": "2026-01-19",
+        "2027": "2027-01-18",
+        "2028": "2028-01-17"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+      ]
+    },
+    {
+      "key": "washingtons-birthday",
+      "name": {
+        "zh-TW": "華盛頓誕辰紀念日",
+        "en": "Washington's Birthday",
+        "ja": "ワシントン誕生日",
+        "zh-CN": "华盛顿诞辰纪念日",
+        "hi": "वाशिंगटन जयंती",
+        "id": "Hari Kelahiran Washington",
+        "pt-BR": "Aniversário de Washington"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-02-16",
+        "2027": "2027-02-15",
+        "2028": "2028-02-21"
+      },
+      "nominal_dates": {
+        "2026": "2026-02-16",
+        "2027": "2027-02-15",
+        "2028": "2028-02-21"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+      ]
+    },
+    {
+      "key": "memorial-day",
+      "name": {
+        "zh-TW": "陣亡將士紀念日",
+        "en": "Memorial Day",
+        "ja": "戦没将兵追悼記念日",
+        "zh-CN": "阵亡将士纪念日",
+        "hi": "स्मृति दिवस",
+        "id": "Hari Peringatan Pahlawan Gugur",
+        "pt-BR": "Dia da Memória"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-25",
+        "2027": "2027-05-31",
+        "2028": "2028-05-29"
+      },
+      "nominal_dates": {
+        "2026": "2026-05-25",
+        "2027": "2027-05-31",
+        "2028": "2028-05-29"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+      ]
+    },
+    {
+      "key": "juneteenth",
+      "name": {
+        "zh-TW": "六月節全國獨立紀念日",
+        "en": "Juneteenth National Independence Day",
+        "ja": "ジューンティーンス奴隷解放記念日",
+        "zh-CN": "六月节全国独立纪念日",
+        "hi": "जूनटीन्थ राष्ट्रीय स्वतंत्रता दिवस",
+        "id": "Juneteenth, Hari Kemerdekaan Nasional",
+        "pt-BR": "Juneteenth, Dia Nacional da Independência"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-06-19",
+        "2027": "2027-06-18",
+        "2028": "2028-06-19"
+      },
+      "nominal_dates": {
+        "2026": "2026-06-19",
+        "2027": "2027-06-19",
+        "2028": "2028-06-19"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+      ]
+    },
+    {
+      "key": "independence-day",
+      "name": {
+        "zh-TW": "獨立紀念日",
+        "en": "Independence Day",
+        "ja": "独立記念日",
+        "zh-CN": "独立纪念日",
+        "hi": "स्वतंत्रता दिवस",
+        "id": "Hari Kemerdekaan",
+        "pt-BR": "Dia da Independência"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-07-03",
+        "2027": "2027-07-05",
+        "2028": "2028-07-04"
+      },
+      "nominal_dates": {
+        "2026": "2026-07-04",
+        "2027": "2027-07-04",
+        "2028": "2028-07-04"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+      ]
+    },
+    {
+      "key": "labor-day",
+      "name": {
+        "zh-TW": "勞動節",
+        "en": "Labor Day",
+        "ja": "レイバーデー",
+        "zh-CN": "劳动节",
+        "hi": "श्रम दिवस",
+        "id": "Hari Buruh",
+        "pt-BR": "Dia do Trabalho"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-09-07",
+        "2027": "2027-09-06",
+        "2028": "2028-09-04"
+      },
+      "nominal_dates": {
+        "2026": "2026-09-07",
+        "2027": "2027-09-06",
+        "2028": "2028-09-04"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+      ]
+    },
+    {
+      "key": "columbus-day",
+      "name": {
+        "zh-TW": "哥倫布日",
+        "en": "Columbus Day",
+        "ja": "コロンブス・デー",
+        "zh-CN": "哥伦布日",
+        "hi": "कोलंबस दिवस",
+        "id": "Hari Columbus",
+        "pt-BR": "Dia de Colombo"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-10-12",
+        "2027": "2027-10-11",
+        "2028": "2028-10-09"
+      },
+      "nominal_dates": {
+        "2026": "2026-10-12",
+        "2027": "2027-10-11",
+        "2028": "2028-10-09"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+      ]
+    },
+    {
+      "key": "veterans-day",
+      "name": {
+        "zh-TW": "退伍軍人節",
+        "en": "Veterans Day",
+        "ja": "復員軍人の日",
+        "zh-CN": "退伍军人节",
+        "hi": "भूतपूर्व सैनिक दिवस",
+        "id": "Hari Veteran",
+        "pt-BR": "Dia dos Veteranos"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-11-11",
+        "2027": "2027-11-11",
+        "2028": "2028-11-10"
+      },
+      "nominal_dates": {
+        "2026": "2026-11-11",
+        "2027": "2027-11-11",
+        "2028": "2028-11-11"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+      ]
+    },
+    {
+      "key": "thanksgiving-day",
+      "name": {
+        "zh-TW": "感恩節",
+        "en": "Thanksgiving Day",
+        "ja": "感謝祭",
+        "zh-CN": "感恩节",
+        "hi": "थैंक्सगिविंग डे",
+        "id": "Hari Pengucapan Syukur",
+        "pt-BR": "Dia de Ação de Graças"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-11-26",
+        "2027": "2027-11-25",
+        "2028": "2028-11-23"
+      },
+      "nominal_dates": {
+        "2026": "2026-11-26",
+        "2027": "2027-11-25",
+        "2028": "2028-11-23"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+      ]
+    },
+    {
+      "key": "christmas-day",
+      "name": {
+        "zh-TW": "聖誕節",
+        "en": "Christmas Day",
+        "ja": "クリスマス",
+        "zh-CN": "圣诞节",
+        "hi": "क्रिसमस",
+        "id": "Hari Natal",
+        "pt-BR": "Natal"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-12-25",
+        "2027": "2027-12-24",
+        "2028": "2028-12-25"
+      },
+      "nominal_dates": {
+        "2026": "2026-12-25",
+        "2027": "2027-12-25",
+        "2028": "2028-12-25"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+      ]
+    }
+  ]
+}

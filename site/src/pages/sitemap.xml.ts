@@ -1,6 +1,7 @@
 import { WINDOWS } from '../lib/config.mjs';
 import { coverPath, getGlobalRanking, getTopicBundle, listTopicIds, readJson } from '../lib/data.mjs';
 import { countryCellsFor } from '../lib/country-cells.mjs';
+import { holidayCountries, holidayCellsFor } from '../lib/holidays.mjs';
 import { withBase } from '../lib/paths.mjs';
 
 export const prerender = true;
@@ -48,6 +49,18 @@ export function GET({ site }) {
   for (const sort of ['today', 'nearby', 'events']) {
     add(`topics/${sort}/`, { lastmod: freshest(topicsAt, RENDER_AT), changefreq: 'daily', priority: '0.8' });
   }
+  // 假日總表 /holidays/<cc>/<年>/(2026-08-27)。判準與 getStaticPaths **共用同一支**
+  // holidayCellsFor() —— 這是刻意的:逐國頁那次的教訓是,薄頁判準只要有兩份就會漂,
+  // sitemap 於是指向不存在的網址。時間戳走 holidays 這份資料自己的指紋。
+  const holidaysAt = stampAt('holidays');
+  for (const code of holidayCountries()) {
+    for (const year of holidayCellsFor(code)) {
+      add(`holidays/${code.toLowerCase()}/${year}/`, {
+        lastmod: freshest(holidaysAt, RENDER_AT), changefreq: 'monthly', priority: '0.6',
+      });
+    }
+  }
+
   // 排行頁只在「筆數夠」時才進 sitemap。thin 旗標由 export-data.mjs 依
   // scripts/lib/content-depth.mjs 的門檻標記。2026-08-19:六個時窗各只有一筆,
   // 送進 sitemap 等於主動要求 Google 索引六個內容相同的空頁(實測已被拒兩頁)。

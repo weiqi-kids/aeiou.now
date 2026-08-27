@@ -12,7 +12,7 @@
 - date_rule: 復活節前第 48 至第 47 日（四旬期首日「聖灰星期三」的前兩天）
 - rank: 1
 - source: https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos
-- source: https://www.gov.br/gestao/pt-br/assuntos/noticias/2025/dezembro/confira-o-calendario-oficial-de-feriados-nacionais-e-pontos-facultativos-em-2026
+- source: https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025
 
 ## observance US mardi-gras
 - local_name: Mardi Gras

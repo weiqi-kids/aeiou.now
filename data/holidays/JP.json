@@ -1,0 +1,656 @@
+{
+  "country_code": "JP",
+  "source_urls": [
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+    "https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv",
+    "https://laws.e-gov.go.jp/law/323AC1000000178",
+    "https://www.nao.ac.jp/faq/a0301.html",
+    "https://laws.e-gov.go.jp/law/363AC0000000091"
+  ],
+  "notes": "內閣府「国民の祝日について」只公告到令和9年(2027);令和10年(2028)於2027年2月才公告。2028 的日期由祝日法第2條(固定日與第N月曜日)與國立天文台推算的春分日/秋分日推得,春分の日・秋分の日標 estimated。同一套規則重算 2026/2027 與內閣府公告逐日相符。2028 全年沒有祝日落在星期日、也沒有被兩個祝日夾住的平日,故無振替休日(第3條第2項)與国民の休日(第3條第3項),不是資料缺漏。12月29日〜1月3日的年末年始已收錄為 `nenmatsu-nenshi`,status=`discretionary`——它是「行政機関の休日に関する法律」(昭和63年法律第91號)第1條第3號的行政機關休日,不是国民の祝日,民間企業不受拘束;收它是為了讓「哪幾天不上班」在七國之間可比(對齊巴西 ponto facultativo、印尼 cuti bersama、中國調休、台灣補假那一層)。該筆跨年,年份依 year key 分組(`\"2026\"`=2026 年年底那一次),且與元日在 1/1〜1/3 重疊,細節見該筆的 `notes`。",
+  "holidays": [
+    {
+      "key": "ganjitsu",
+      "name": {
+        "ja": "元日",
+        "en": "New Year's Day",
+        "zh-TW": "元旦",
+        "zh-CN": "元旦",
+        "hi": "नव वर्ष दिवस",
+        "id": "Tahun Baru",
+        "pt-BR": "Ano Novo"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-01-01",
+        "2027": "2027-01-01",
+        "2028": "2028-01-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "seijin-no-hi",
+      "name": {
+        "ja": "成人の日",
+        "en": "Coming of Age Day",
+        "zh-TW": "成人之日",
+        "zh-CN": "成人之日",
+        "hi": "वयस्कता दिवस",
+        "id": "Hari Kedewasaan",
+        "pt-BR": "Dia da Maioridade"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-01-12",
+        "2027": "2027-01-11",
+        "2028": "2028-01-10"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "kenkoku-kinen-no-hi",
+      "name": {
+        "ja": "建国記念の日",
+        "en": "National Foundation Day",
+        "zh-TW": "建國紀念之日",
+        "zh-CN": "建国纪念日",
+        "hi": "राष्ट्र स्थापना दिवस",
+        "id": "Hari Pendirian Negara",
+        "pt-BR": "Dia da Fundação Nacional"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-02-11",
+        "2027": "2027-02-11",
+        "2028": "2028-02-11"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178",
+        "https://laws.e-gov.go.jp/law/341CO0000000376"
+      ]
+    },
+    {
+      "key": "tenno-tanjobi",
+      "name": {
+        "ja": "天皇誕生日",
+        "en": "The Emperor's Birthday",
+        "zh-TW": "天皇誕生日",
+        "zh-CN": "天皇诞生日",
+        "hi": "सम्राट का जन्मदिन",
+        "id": "Hari Ulang Tahun Kaisar",
+        "pt-BR": "Aniversário do Imperador"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-02-23",
+        "2027": "2027-02-23",
+        "2028": "2028-02-23"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "shunbun-no-hi",
+      "name": {
+        "ja": "春分の日",
+        "en": "Vernal Equinox Day",
+        "zh-TW": "春分之日",
+        "zh-CN": "春分之日",
+        "hi": "वसंत विषुव दिवस",
+        "id": "Hari Ekuinoks Musim Semi",
+        "pt-BR": "Dia do Equinócio de Primavera"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-03-20",
+        "2027": "2027-03-21",
+        "2028": "2028-03-20"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178",
+        "https://www.nao.ac.jp/faq/a0301.html"
+      ]
+    },
+    {
+      "key": "showa-no-hi",
+      "name": {
+        "ja": "昭和の日",
+        "en": "Shōwa Day",
+        "zh-TW": "昭和之日",
+        "zh-CN": "昭和之日",
+        "hi": "शोवा दिवस",
+        "id": "Hari Shōwa",
+        "pt-BR": "Dia de Shōwa"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-04-29",
+        "2027": "2027-04-29",
+        "2028": "2028-04-29"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "kenpo-kinenbi",
+      "name": {
+        "ja": "憲法記念日",
+        "en": "Constitution Memorial Day",
+        "zh-TW": "憲法紀念日",
+        "zh-CN": "宪法纪念日",
+        "hi": "संविधान स्मृति दिवस",
+        "id": "Hari Peringatan Konstitusi",
+        "pt-BR": "Dia da Constituição"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-03",
+        "2027": "2027-05-03",
+        "2028": "2028-05-03"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "midori-no-hi",
+      "name": {
+        "ja": "みどりの日",
+        "en": "Greenery Day",
+        "zh-TW": "綠之日",
+        "zh-CN": "绿之日",
+        "hi": "हरियाली दिवस",
+        "id": "Hari Hijau",
+        "pt-BR": "Dia do Verde"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-04",
+        "2027": "2027-05-04",
+        "2028": "2028-05-04"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "kodomo-no-hi",
+      "name": {
+        "ja": "こどもの日",
+        "en": "Children's Day",
+        "zh-TW": "兒童節",
+        "zh-CN": "儿童节",
+        "hi": "बाल दिवस",
+        "id": "Hari Anak",
+        "pt-BR": "Dia das Crianças"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-05",
+        "2027": "2027-05-05",
+        "2028": "2028-05-05"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "umi-no-hi",
+      "name": {
+        "ja": "海の日",
+        "en": "Marine Day",
+        "zh-TW": "海之日",
+        "zh-CN": "海之日",
+        "hi": "समुद्र दिवस",
+        "id": "Hari Laut",
+        "pt-BR": "Dia do Mar"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-07-20",
+        "2027": "2027-07-19",
+        "2028": "2028-07-17"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "yama-no-hi",
+      "name": {
+        "ja": "山の日",
+        "en": "Mountain Day",
+        "zh-TW": "山之日",
+        "zh-CN": "山之日",
+        "hi": "पर्वत दिवस",
+        "id": "Hari Gunung",
+        "pt-BR": "Dia da Montanha"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-08-11",
+        "2027": "2027-08-11",
+        "2028": "2028-08-11"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "keiro-no-hi",
+      "name": {
+        "ja": "敬老の日",
+        "en": "Respect for the Aged Day",
+        "zh-TW": "敬老之日",
+        "zh-CN": "敬老之日",
+        "hi": "वृद्धजन सम्मान दिवस",
+        "id": "Hari Menghormati Lansia",
+        "pt-BR": "Dia do Respeito aos Idosos"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-09-21",
+        "2027": "2027-09-20",
+        "2028": "2028-09-18"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "shubun-no-hi",
+      "name": {
+        "ja": "秋分の日",
+        "en": "Autumnal Equinox Day",
+        "zh-TW": "秋分之日",
+        "zh-CN": "秋分之日",
+        "hi": "शरद विषुव दिवस",
+        "id": "Hari Ekuinoks Musim Gugur",
+        "pt-BR": "Dia do Equinócio de Outono"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-09-23",
+        "2027": "2027-09-23",
+        "2028": "2028-09-22"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178",
+        "https://www.nao.ac.jp/faq/a0301.html"
+      ]
+    },
+    {
+      "key": "sports-no-hi",
+      "name": {
+        "ja": "スポーツの日",
+        "en": "Sports Day",
+        "zh-TW": "運動之日",
+        "zh-CN": "体育之日",
+        "hi": "खेल दिवस",
+        "id": "Hari Olahraga",
+        "pt-BR": "Dia do Esporte"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-10-12",
+        "2027": "2027-10-11",
+        "2028": "2028-10-09"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "bunka-no-hi",
+      "name": {
+        "ja": "文化の日",
+        "en": "Culture Day",
+        "zh-TW": "文化之日",
+        "zh-CN": "文化之日",
+        "hi": "संस्कृति दिवस",
+        "id": "Hari Kebudayaan",
+        "pt-BR": "Dia da Cultura"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-11-03",
+        "2027": "2027-11-03",
+        "2028": "2028-11-03"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "kinro-kansha-no-hi",
+      "name": {
+        "ja": "勤労感謝の日",
+        "en": "Labor Thanksgiving Day",
+        "zh-TW": "勤勞感謝之日",
+        "zh-CN": "勤劳感谢日",
+        "hi": "श्रम आभार दिवस",
+        "id": "Hari Syukur Buruh",
+        "pt-BR": "Dia de Ação de Graças pelo Trabalho"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-11-23",
+        "2027": "2027-11-23",
+        "2028": "2028-11-23"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "furikae-2026-05-06",
+      "name": {
+        "ja": "振替休日",
+        "en": "Substitute Holiday",
+        "zh-TW": "補假（振替休日）",
+        "zh-CN": "补假（振替休日）",
+        "hi": "प्रतिस्थापन अवकाश",
+        "id": "Hari Libur Pengganti",
+        "pt-BR": "Feriado Substitutivo"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-06",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": null,
+        "2028": null
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "kokumin-no-kyujitsu-2026-09-22",
+      "name": {
+        "ja": "国民の休日",
+        "en": "Citizens' Holiday",
+        "zh-TW": "國民假日",
+        "zh-CN": "国民假日",
+        "hi": "नागरिक अवकाश",
+        "id": "Hari Libur Rakyat",
+        "pt-BR": "Feriado dos Cidadãos"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-09-22",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": null,
+        "2028": null
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "furikae-2027-03-22",
+      "name": {
+        "ja": "振替休日",
+        "en": "Substitute Holiday",
+        "zh-TW": "補假（振替休日）",
+        "zh-CN": "补假（振替休日）",
+        "hi": "प्रतिस्थापन अवकाश",
+        "id": "Hari Libur Pengganti",
+        "pt-BR": "Feriado Substitutivo"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-03-22",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": null,
+        "2027": "confirmed",
+        "2028": null
+      },
+      "source_urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://laws.e-gov.go.jp/law/323AC1000000178"
+      ]
+    },
+    {
+      "key": "nenmatsu-nenshi",
+      "name": {
+        "ja": "年末年始",
+        "en": "Year-End and New Year Holidays",
+        "zh-TW": "年末年初假期",
+        "zh-CN": "年末年初假期",
+        "hi": "वर्षांत एवं नववर्ष अवकाश",
+        "id": "Libur Akhir Tahun dan Tahun Baru",
+        "pt-BR": "Recesso de Fim de Ano"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-12-29",
+        "2027": "2027-12-29",
+        "2028": "2028-12-29"
+      },
+      "ends_on": {
+        "2026": "2027-01-03",
+        "2027": "2028-01-03",
+        "2028": "2029-01-03"
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://laws.e-gov.go.jp/law/363AC0000000091"
+      ],
+      "notes": "這**不是国民の祝日**,而是《行政機関の休日に関する法律》(昭和63年法律第91號)第1條第3號訂的「行政機關休日」——條文只拘束國家行政機關(各府省廳與會計檢查院),**民間企業不受此拘束**,民間是否放假、放幾天由各公司自訂,常見做法與此期間相近但非法定。日期由法條寫死(12月29日〜翌年1月3日),不逐年公告,故三年皆 confirmed。⚠ 年份歸屬依 year key 分組,不依日期字串的年份:`\"2026\"` 這一筆指「2026 年年底那一次」,起 2026-12-29、迄 2027-01-03。⚠ 與元日(1月1日)**刻意重疊**:1月1日〜1月3日同時被本筆與 `ganjitsu` 涵蓋,元日是祝日、這幾天同時是行政機關休日,兩筆並存不是資料重複,下游頁型請自行決定同一天怎麼併列。"
+    }
+  ]
+}

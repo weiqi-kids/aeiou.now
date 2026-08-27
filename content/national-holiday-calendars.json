@@ -1,0 +1,6886 @@
+{
+ "version": 1,
+ "as_of": "2026-08-27",
+ "note": "國家×年份的法定假日母表。逐國權威公告抄錄,不從 Topic 反推。",
+ "countries": {
+  "BR": {
+   "country_code": "BR",
+   "source_urls": [
+    "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+    "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+    "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html",
+    "https://www2.camara.leg.br/legin/fed/lei/1980-1987/lei-6802-30-junho-1980-357065-publicacaooriginal-1-pl.html",
+    "https://www2.camara.leg.br/legin/fed/lei/2023/lei-14759-21-dezembro-2023-795091-publicacaooriginal-170522-pl.html",
+    "https://www2.camara.leg.br/legin/fed/lei/1995/lei-9093-12-setembro-1995-348594-publicacaooriginal-1-pl.html",
+    "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+   ],
+   "holidays": [
+    {
+     "key": "confraternizacao-universal",
+     "name": {
+      "zh-TW": "元旦",
+      "en": "New Year's Day",
+      "ja": "元日",
+      "zh-CN": "元旦",
+      "hi": "नववर्ष दिवस",
+      "id": "Tahun Baru",
+      "pt-BR": "Confraternização Universal"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-01-01",
+      "2027": "2027-01-01",
+      "2028": "2028-01-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+      "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+      "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html"
+     ]
+    },
+    {
+     "key": "carnaval-segunda-feira",
+     "name": {
+      "zh-TW": "嘉年華（星期一）",
+      "en": "Carnival (Monday)",
+      "ja": "カーニバル（月曜日）",
+      "zh-CN": "狂欢节（星期一）",
+      "hi": "कार्निवल (सोमवार)",
+      "id": "Karnaval (Senin)",
+      "pt-BR": "Carnaval (segunda-feira)"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-02-16",
+      "2027": "2027-02-08",
+      "2028": "2028-02-28"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+     ]
+    },
+    {
+     "key": "carnaval-terca-feira",
+     "name": {
+      "zh-TW": "嘉年華（星期二）",
+      "en": "Carnival (Tuesday)",
+      "ja": "カーニバル（火曜日）",
+      "zh-CN": "狂欢节（星期二）",
+      "hi": "कार्निवल (मंगलवार)",
+      "id": "Karnaval (Selasa)",
+      "pt-BR": "Carnaval (terça-feira)"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-02-17",
+      "2027": "2027-02-09",
+      "2028": "2028-02-29"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+     ]
+    },
+    {
+     "key": "quarta-feira-de-cinzas",
+     "name": {
+      "zh-TW": "聖灰星期三",
+      "en": "Ash Wednesday",
+      "ja": "灰の水曜日",
+      "zh-CN": "圣灰星期三",
+      "hi": "भस्म बुधवार",
+      "id": "Rabu Abu",
+      "pt-BR": "Quarta-Feira de Cinzas"
+     },
+     "status": "discretionary",
+     "partial_day": "until-1400",
+     "dates": {
+      "2026": "2026-02-18",
+      "2027": "2027-02-10",
+      "2028": "2028-03-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+     ]
+    },
+    {
+     "key": "paixao-de-cristo",
+     "name": {
+      "zh-TW": "耶穌受難日",
+      "en": "Good Friday",
+      "ja": "聖金曜日",
+      "zh-CN": "耶稣受难日",
+      "hi": "गुड फ़्राइडे",
+      "id": "Jumat Agung",
+      "pt-BR": "Paixão de Cristo"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-04-03",
+      "2027": "2027-03-26",
+      "2028": "2028-04-14"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+      "https://www2.camara.leg.br/legin/fed/lei/1995/lei-9093-12-setembro-1995-348594-publicacaooriginal-1-pl.html"
+     ]
+    },
+    {
+     "key": "ponto-facultativo-20-de-abril",
+     "name": {
+      "zh-TW": "彈性放假日（無官方名稱）",
+      "en": "Optional holiday (no official name)",
+      "ja": "臨時休務日（名称なし）",
+      "zh-CN": "弹性放假日（无官方名称）",
+      "hi": "वैकल्पिक अवकाश (नाम रहित)",
+      "id": "Hari libur opsional (tanpa nama resmi)",
+      "pt-BR": "Ponto facultativo (sem denominação)"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-04-20",
+      "2027": null,
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+     ]
+    },
+    {
+     "key": "tiradentes",
+     "name": {
+      "zh-TW": "蒂拉登特斯紀念日",
+      "en": "Tiradentes Day",
+      "ja": "チラデンテスの日",
+      "zh-CN": "蒂拉登特斯纪念日",
+      "hi": "तिरादेंतिस दिवस",
+      "id": "Hari Tiradentes",
+      "pt-BR": "Tiradentes"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-04-21",
+      "2027": "2027-04-21",
+      "2028": "2028-04-21"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+      "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+      "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html"
+     ]
+    },
+    {
+     "key": "dia-mundial-do-trabalho",
+     "name": {
+      "zh-TW": "勞動節",
+      "en": "International Workers' Day",
+      "ja": "メーデー",
+      "zh-CN": "劳动节",
+      "hi": "मज़दूर दिवस",
+      "id": "Hari Buruh",
+      "pt-BR": "Dia Mundial do Trabalho"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-05-01",
+      "2027": "2027-05-01",
+      "2028": "2028-05-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+      "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+      "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html"
+     ]
+    },
+    {
+     "key": "corpus-christi",
+     "name": {
+      "zh-TW": "基督聖體聖血節",
+      "en": "Corpus Christi",
+      "ja": "聖体の祝日",
+      "zh-CN": "基督圣体圣血节",
+      "hi": "कॉर्पस क्रिस्टी",
+      "id": "Hari Raya Tubuh dan Darah Kristus",
+      "pt-BR": "Corpus Christi"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-06-04",
+      "2027": "2027-05-27",
+      "2028": "2028-06-15"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+     ]
+    },
+    {
+     "key": "ponto-facultativo-5-de-junho",
+     "name": {
+      "zh-TW": "彈性放假日（無官方名稱）",
+      "en": "Optional holiday (no official name)",
+      "ja": "臨時休務日（名称なし）",
+      "zh-CN": "弹性放假日（无官方名称）",
+      "hi": "वैकल्पिक अवकाश (नाम रहित)",
+      "id": "Hari libur opsional (tanpa nama resmi)",
+      "pt-BR": "Ponto facultativo (sem denominação)"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-06-05",
+      "2027": null,
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+     ]
+    },
+    {
+     "key": "independencia-do-brasil",
+     "name": {
+      "zh-TW": "巴西獨立紀念日",
+      "en": "Brazilian Independence Day",
+      "ja": "ブラジル独立記念日",
+      "zh-CN": "巴西独立日",
+      "hi": "ब्राज़ील स्वतंत्रता दिवस",
+      "id": "Hari Kemerdekaan Brasil",
+      "pt-BR": "Independência do Brasil"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-09-07",
+      "2027": "2027-09-07",
+      "2028": "2028-09-07"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+      "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+      "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html"
+     ]
+    },
+    {
+     "key": "nossa-senhora-aparecida",
+     "name": {
+      "zh-TW": "阿帕雷西達聖母節",
+      "en": "Our Lady of Aparecida",
+      "ja": "アパレシーダの聖母の日",
+      "zh-CN": "阿帕雷西达圣母节",
+      "hi": "आवर लेडी ऑफ़ अपारेसिदा",
+      "id": "Hari Bunda Maria dari Aparecida",
+      "pt-BR": "Nossa Senhora Aparecida"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-10-12",
+      "2027": "2027-10-12",
+      "2028": "2028-10-12"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+      "https://www2.camara.leg.br/legin/fed/lei/1980-1987/lei-6802-30-junho-1980-357065-publicacaooriginal-1-pl.html"
+     ]
+    },
+    {
+     "key": "dia-do-servidor-publico",
+     "name": {
+      "zh-TW": "公務人員節",
+      "en": "Public Service Day",
+      "ja": "公務員の日",
+      "zh-CN": "公务员日",
+      "hi": "लोक सेवक दिवस",
+      "id": "Hari Pegawai Negeri",
+      "pt-BR": "Dia do Servidor Público federal"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-10-28",
+      "2027": "2027-10-28",
+      "2028": "2028-10-28"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+      "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+     ]
+    },
+    {
+     "key": "finados",
+     "name": {
+      "zh-TW": "諸靈節",
+      "en": "All Souls' Day",
+      "ja": "死者の日",
+      "zh-CN": "万灵节",
+      "hi": "सर्व आत्मा दिवस",
+      "id": "Hari Arwah",
+      "pt-BR": "Finados"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-11-02",
+      "2027": "2027-11-02",
+      "2028": "2028-11-02"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+      "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+      "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html"
+     ]
+    },
+    {
+     "key": "proclamacao-da-republica",
+     "name": {
+      "zh-TW": "共和國宣告日",
+      "en": "Proclamation of the Republic",
+      "ja": "共和国宣言記念日",
+      "zh-CN": "共和国宣告日",
+      "hi": "गणतंत्र घोषणा दिवस",
+      "id": "Hari Proklamasi Republik",
+      "pt-BR": "Proclamação da República"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-11-15",
+      "2027": "2027-11-15",
+      "2028": "2028-11-15"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+      "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+      "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html"
+     ]
+    },
+    {
+     "key": "consciencia-negra",
+     "name": {
+      "zh-TW": "黑人意識日",
+      "en": "National Day of Zumbi and Black Consciousness",
+      "ja": "黒人意識の日",
+      "zh-CN": "黑人意识日",
+      "hi": "अश्वेत चेतना दिवस",
+      "id": "Hari Kesadaran Kulit Hitam",
+      "pt-BR": "Dia Nacional de Zumbi e da Consciência Negra"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-11-20",
+      "2027": "2027-11-20",
+      "2028": "2028-11-20"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+      "https://www2.camara.leg.br/legin/fed/lei/2023/lei-14759-21-dezembro-2023-795091-publicacaooriginal-170522-pl.html"
+     ]
+    },
+    {
+     "key": "vespera-do-natal",
+     "name": {
+      "zh-TW": "平安夜",
+      "en": "Christmas Eve",
+      "ja": "クリスマス・イブ",
+      "zh-CN": "平安夜",
+      "hi": "क्रिसमस की पूर्व संध्या",
+      "id": "Malam Natal",
+      "pt-BR": "Véspera do Natal"
+     },
+     "status": "discretionary",
+     "partial_day": "from-1300",
+     "dates": {
+      "2026": "2026-12-24",
+      "2027": "2027-12-24",
+      "2028": "2028-12-24"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+     ]
+    },
+    {
+     "key": "natal",
+     "name": {
+      "zh-TW": "聖誕節",
+      "en": "Christmas Day",
+      "ja": "クリスマス",
+      "zh-CN": "圣诞节",
+      "hi": "क्रिसमस",
+      "id": "Hari Natal",
+      "pt-BR": "Natal"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-12-25",
+      "2027": "2027-12-25",
+      "2028": "2028-12-25"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+      "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+      "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html"
+     ]
+    },
+    {
+     "key": "vespera-do-ano-novo",
+     "name": {
+      "zh-TW": "新年前夕",
+      "en": "New Year's Eve",
+      "ja": "大晦日",
+      "zh-CN": "新年前夜",
+      "hi": "नववर्ष की पूर्व संध्या",
+      "id": "Malam Tahun Baru",
+      "pt-BR": "Véspera do Ano Novo"
+     },
+     "status": "discretionary",
+     "partial_day": "from-1300",
+     "dates": {
+      "2026": "2026-12-31",
+      "2027": "2027-12-31",
+      "2028": "2028-12-31"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+      "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+     ]
+    }
+   ]
+  },
+  "ID": {
+   "country_code": "ID",
+   "source_urls": [
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+    "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf",
+    "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+   ],
+   "holidays": [
+    {
+     "key": "tahun-baru-masehi",
+     "name": {
+      "zh-TW": "元旦",
+      "en": "New Year's Day",
+      "ja": "元日",
+      "zh-CN": "元旦",
+      "hi": "नववर्ष दिवस",
+      "id": "Tahun Baru Masehi",
+      "pt-BR": "Ano Novo"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-01-01",
+      "2027": "2027-01-01",
+      "2028": "2028-01-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf",
+      "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+     ]
+    },
+    {
+     "key": "isra-mikraj",
+     "name": {
+      "zh-TW": "登霄節",
+      "en": "Isra and Mi'raj",
+      "ja": "ムハンマド昇天祭",
+      "zh-CN": "登霄节",
+      "hi": "शब-ए-मेराज",
+      "id": "Isra Mikraj Nabi Muhammad saw.",
+      "pt-BR": "Isra e Miraj"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-01-16",
+      "2027": "2027-01-05",
+      "2028": "2028-12-14"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "cuti-bersama-tahun-baru-imlek",
+     "name": {
+      "zh-TW": "農曆新年共同假日",
+      "en": "Joint Leave (Cuti Bersama) for Lunar New Year",
+      "ja": "旧正月の一斉休暇",
+      "zh-CN": "农历新年共同假日",
+      "hi": "चीनी नववर्ष सामूहिक अवकाश",
+      "id": "Cuti Bersama Tahun Baru Imlek",
+      "pt-BR": "Folga coletiva do Ano-Novo Lunar"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-02-16",
+      "2027": null,
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": null,
+      "2028": null
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "tahun-baru-imlek",
+     "name": {
+      "zh-TW": "農曆新年",
+      "en": "Lunar New Year",
+      "ja": "旧正月",
+      "zh-CN": "农历新年",
+      "hi": "चीनी नववर्ष",
+      "id": "Tahun Baru Imlek",
+      "pt-BR": "Ano-Novo Lunar"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-02-17",
+      "2027": "2027-02-06",
+      "2028": "2028-01-26"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "cuti-bersama-hari-suci-nyepi",
+     "name": {
+      "zh-TW": "安寧日共同假日",
+      "en": "Joint Leave (Cuti Bersama) for Nyepi",
+      "ja": "ニュピの一斉休暇",
+      "zh-CN": "安宁日共同假日",
+      "hi": "न्येपी सामूहिक अवकाश",
+      "id": "Cuti Bersama Hari Suci Nyepi",
+      "pt-BR": "Folga coletiva do Nyepi"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-03-18",
+      "2027": null,
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": null,
+      "2028": null
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "hari-suci-nyepi",
+     "name": {
+      "zh-TW": "安寧日（薩卡曆新年）",
+      "en": "Nyepi (Day of Silence, Saka New Year)",
+      "ja": "ニュピ（サカ暦新年）",
+      "zh-CN": "安宁日（萨卡历新年）",
+      "hi": "न्येपी (शक नववर्ष)",
+      "id": "Hari Suci Nyepi (Tahun Baru Saka)",
+      "pt-BR": "Nyepi (Ano-Novo Saka)"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-03-19",
+      "2027": "2027-03-09",
+      "2028": "2028-03-26"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "cuti-bersama-idulfitri-1",
+     "name": {
+      "zh-TW": "開齋節共同假日",
+      "en": "Joint Leave (Cuti Bersama) for Eid al-Fitr",
+      "ja": "イード・アル＝フィトルの一斉休暇",
+      "zh-CN": "开斋节共同假日",
+      "hi": "ईद-उल-फ़ितर सामूहिक अवकाश",
+      "id": "Cuti Bersama Hari Raya Idulfitri",
+      "pt-BR": "Folga coletiva do Eid al-Fitr"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-03-20",
+      "2027": null,
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": null,
+      "2028": null
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "hari-raya-idulfitri",
+     "name": {
+      "zh-TW": "開齋節",
+      "en": "Eid al-Fitr",
+      "ja": "イード・アル＝フィトル",
+      "zh-CN": "开斋节",
+      "hi": "ईद-उल-फ़ितर",
+      "id": "Hari Raya Idulfitri",
+      "pt-BR": "Eid al-Fitr"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-03-21",
+      "2027": "2027-03-09",
+      "2028": "2028-02-26"
+     },
+     "ends_on": {
+      "2026": "2026-03-22",
+      "2027": "2027-03-10",
+      "2028": "2028-02-27"
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "cuti-bersama-idulfitri-2",
+     "name": {
+      "zh-TW": "開齋節共同假日",
+      "en": "Joint Leave (Cuti Bersama) for Eid al-Fitr",
+      "ja": "イード・アル＝フィトルの一斉休暇",
+      "zh-CN": "开斋节共同假日",
+      "hi": "ईद-उल-फ़ितर सामूहिक अवकाश",
+      "id": "Cuti Bersama Hari Raya Idulfitri",
+      "pt-BR": "Folga coletiva do Eid al-Fitr"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-03-23",
+      "2027": null,
+      "2028": null
+     },
+     "ends_on": {
+      "2026": "2026-03-24",
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": null,
+      "2028": null
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "wafat-yesus-kristus",
+     "name": {
+      "zh-TW": "耶穌受難日",
+      "en": "Good Friday",
+      "ja": "聖金曜日",
+      "zh-CN": "耶稣受难日",
+      "hi": "गुड फ़्राइडे",
+      "id": "Wafat Yesus Kristus",
+      "pt-BR": "Sexta-feira Santa"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-04-03",
+      "2027": "2027-03-26",
+      "2028": "2028-04-14"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "kebangkitan-yesus-kristus",
+     "name": {
+      "zh-TW": "復活節",
+      "en": "Easter Sunday",
+      "ja": "復活祭（イースター）",
+      "zh-CN": "复活节",
+      "hi": "ईस्टर",
+      "id": "Kebangkitan Yesus Kristus (Paskah)",
+      "pt-BR": "Páscoa"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-04-05",
+      "2027": "2027-03-28",
+      "2028": "2028-04-16"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "hari-buruh-internasional",
+     "name": {
+      "zh-TW": "國際勞動節",
+      "en": "International Labour Day",
+      "ja": "国際労働者の日（メーデー）",
+      "zh-CN": "国际劳动节",
+      "hi": "अंतर्राष्ट्रीय श्रमिक दिवस",
+      "id": "Hari Buruh Internasional",
+      "pt-BR": "Dia do Trabalho"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-05-01",
+      "2027": "2027-05-01",
+      "2028": "2028-05-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf",
+      "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+     ]
+    },
+    {
+     "key": "kenaikan-yesus-kristus",
+     "name": {
+      "zh-TW": "耶穌升天節",
+      "en": "Ascension of Jesus Christ",
+      "ja": "キリスト昇天祭",
+      "zh-CN": "耶稣升天节",
+      "hi": "प्रभु यीशु का स्वर्गारोहण",
+      "id": "Kenaikan Yesus Kristus",
+      "pt-BR": "Ascensão de Jesus Cristo"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-05-14",
+      "2027": "2027-05-06",
+      "2028": "2028-05-25"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "cuti-bersama-kenaikan-yesus-kristus",
+     "name": {
+      "zh-TW": "耶穌升天節共同假日",
+      "en": "Joint Leave (Cuti Bersama) for Ascension",
+      "ja": "キリスト昇天祭の一斉休暇",
+      "zh-CN": "耶稣升天节共同假日",
+      "hi": "स्वर्गारोहण सामूहिक अवकाश",
+      "id": "Cuti Bersama Kenaikan Yesus Kristus",
+      "pt-BR": "Folga coletiva da Ascensão"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-05-15",
+      "2027": null,
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": null,
+      "2028": null
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "hari-raya-iduladha",
+     "name": {
+      "zh-TW": "宰牲節",
+      "en": "Eid al-Adha",
+      "ja": "イード・アル＝アドハー",
+      "zh-CN": "宰牲节",
+      "hi": "ईद-उल-अज़हा",
+      "id": "Hari Raya Iduladha",
+      "pt-BR": "Eid al-Adha"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-05-27",
+      "2027": "2027-05-16",
+      "2028": "2028-05-05"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "cuti-bersama-iduladha",
+     "name": {
+      "zh-TW": "宰牲節共同假日",
+      "en": "Joint Leave (Cuti Bersama) for Eid al-Adha",
+      "ja": "イード・アル＝アドハーの一斉休暇",
+      "zh-CN": "宰牲节共同假日",
+      "hi": "ईद-उल-अज़हा सामूहिक अवकाश",
+      "id": "Cuti Bersama Hari Raya Iduladha",
+      "pt-BR": "Folga coletiva do Eid al-Adha"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-05-28",
+      "2027": null,
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": null,
+      "2028": null
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "hari-raya-waisak",
+     "name": {
+      "zh-TW": "衛塞節",
+      "en": "Vesak Day",
+      "ja": "ウェーサーカ祭",
+      "zh-CN": "卫塞节",
+      "hi": "बुद्ध पूर्णिमा (वेसाक)",
+      "id": "Hari Raya Waisak",
+      "pt-BR": "Dia de Vesak"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-05-31",
+      "2027": "2027-05-20",
+      "2028": "2028-05-09"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "hari-lahir-pancasila",
+     "name": {
+      "zh-TW": "潘查希拉日（建國五原則）",
+      "en": "Pancasila Day",
+      "ja": "パンチャシラの日",
+      "zh-CN": "潘查希拉日（建国五项原则）",
+      "hi": "पंचशील दिवस",
+      "id": "Hari Lahir Pancasila",
+      "pt-BR": "Dia da Pancasila"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-06-01",
+      "2027": "2027-06-01",
+      "2028": "2028-06-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf",
+      "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+     ]
+    },
+    {
+     "key": "tahun-baru-islam",
+     "name": {
+      "zh-TW": "伊斯蘭曆新年",
+      "en": "Islamic New Year (1 Muharram)",
+      "ja": "イスラム暦新年",
+      "zh-CN": "伊斯兰历新年",
+      "hi": "इस्लामी नववर्ष",
+      "id": "1 Muharam Tahun Baru Islam",
+      "pt-BR": "Ano-Novo Islâmico"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-06-16",
+      "2027": "2027-06-06",
+      "2028": "2028-05-25"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "proklamasi-kemerdekaan",
+     "name": {
+      "zh-TW": "獨立宣言紀念日",
+      "en": "Independence Day",
+      "ja": "独立記念日",
+      "zh-CN": "独立宣言纪念日",
+      "hi": "स्वतंत्रता दिवस",
+      "id": "Proklamasi Kemerdekaan",
+      "pt-BR": "Dia da Independência"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-08-17",
+      "2027": "2027-08-17",
+      "2028": "2028-08-17"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf",
+      "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+     ]
+    },
+    {
+     "key": "maulid-nabi-muhammad",
+     "name": {
+      "zh-TW": "聖紀節",
+      "en": "Birthday of the Prophet Muhammad",
+      "ja": "マウリド（預言者生誕祭）",
+      "zh-CN": "圣纪节",
+      "hi": "ईद-ए-मिलाद-उन-नबी",
+      "id": "Maulid Nabi Muhammad saw.",
+      "pt-BR": "Maulid (Nascimento do Profeta Muhammad)"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-08-25",
+      "2027": "2027-08-14",
+      "2028": "2028-08-03"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "cuti-bersama-kelahiran-yesus-kristus",
+     "name": {
+      "zh-TW": "聖誕節共同假日",
+      "en": "Joint Leave (Cuti Bersama) for Christmas",
+      "ja": "クリスマスの一斉休暇",
+      "zh-CN": "圣诞节共同假日",
+      "hi": "क्रिसमस सामूहिक अवकाश",
+      "id": "Cuti Bersama Kelahiran Yesus Kristus",
+      "pt-BR": "Folga coletiva do Natal"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-12-24",
+      "2027": null,
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": null,
+      "2028": null
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+     ]
+    },
+    {
+     "key": "kelahiran-yesus-kristus",
+     "name": {
+      "zh-TW": "聖誕節",
+      "en": "Christmas Day",
+      "ja": "クリスマス",
+      "zh-CN": "圣诞节",
+      "hi": "क्रिसमस",
+      "id": "Kelahiran Yesus Kristus",
+      "pt-BR": "Natal"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-12-25",
+      "2027": "2027-12-25",
+      "2028": "2028-12-25"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+      "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf",
+      "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+     ]
+    }
+   ]
+  },
+  "JP": {
+   "country_code": "JP",
+   "source_urls": [
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+    "https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv",
+    "https://laws.e-gov.go.jp/law/323AC1000000178",
+    "https://www.nao.ac.jp/faq/a0301.html",
+    "https://laws.e-gov.go.jp/law/363AC0000000091"
+   ],
+   "notes": "內閣府「国民の祝日について」只公告到令和9年(2027);令和10年(2028)於2027年2月才公告。2028 的日期由祝日法第2條(固定日與第N月曜日)與國立天文台推算的春分日/秋分日推得,春分の日・秋分の日標 estimated。同一套規則重算 2026/2027 與內閣府公告逐日相符。2028 全年沒有祝日落在星期日、也沒有被兩個祝日夾住的平日,故無振替休日(第3條第2項)與国民の休日(第3條第3項),不是資料缺漏。12月29日〜1月3日的年末年始已收錄為 `nenmatsu-nenshi`,status=`discretionary`——它是「行政機関の休日に関する法律」(昭和63年法律第91號)第1條第3號的行政機關休日,不是国民の祝日,民間企業不受拘束;收它是為了讓「哪幾天不上班」在七國之間可比(對齊巴西 ponto facultativo、印尼 cuti bersama、中國調休、台灣補假那一層)。該筆跨年,年份依 year key 分組(`\"2026\"`=2026 年年底那一次),且與元日在 1/1〜1/3 重疊,細節見該筆的 `notes`。",
+   "holidays": [
+    {
+     "key": "ganjitsu",
+     "name": {
+      "ja": "元日",
+      "en": "New Year's Day",
+      "zh-TW": "元旦",
+      "zh-CN": "元旦",
+      "hi": "नव वर्ष दिवस",
+      "id": "Tahun Baru",
+      "pt-BR": "Ano Novo"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-01-01",
+      "2027": "2027-01-01",
+      "2028": "2028-01-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "seijin-no-hi",
+     "name": {
+      "ja": "成人の日",
+      "en": "Coming of Age Day",
+      "zh-TW": "成人之日",
+      "zh-CN": "成人之日",
+      "hi": "वयस्कता दिवस",
+      "id": "Hari Kedewasaan",
+      "pt-BR": "Dia da Maioridade"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-01-12",
+      "2027": "2027-01-11",
+      "2028": "2028-01-10"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "kenkoku-kinen-no-hi",
+     "name": {
+      "ja": "建国記念の日",
+      "en": "National Foundation Day",
+      "zh-TW": "建國紀念之日",
+      "zh-CN": "建国纪念日",
+      "hi": "राष्ट्र स्थापना दिवस",
+      "id": "Hari Pendirian Negara",
+      "pt-BR": "Dia da Fundação Nacional"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-02-11",
+      "2027": "2027-02-11",
+      "2028": "2028-02-11"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178",
+      "https://laws.e-gov.go.jp/law/341CO0000000376"
+     ]
+    },
+    {
+     "key": "tenno-tanjobi",
+     "name": {
+      "ja": "天皇誕生日",
+      "en": "The Emperor's Birthday",
+      "zh-TW": "天皇誕生日",
+      "zh-CN": "天皇诞生日",
+      "hi": "सम्राट का जन्मदिन",
+      "id": "Hari Ulang Tahun Kaisar",
+      "pt-BR": "Aniversário do Imperador"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-02-23",
+      "2027": "2027-02-23",
+      "2028": "2028-02-23"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "shunbun-no-hi",
+     "name": {
+      "ja": "春分の日",
+      "en": "Vernal Equinox Day",
+      "zh-TW": "春分之日",
+      "zh-CN": "春分之日",
+      "hi": "वसंत विषुव दिवस",
+      "id": "Hari Ekuinoks Musim Semi",
+      "pt-BR": "Dia do Equinócio de Primavera"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-03-20",
+      "2027": "2027-03-21",
+      "2028": "2028-03-20"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178",
+      "https://www.nao.ac.jp/faq/a0301.html"
+     ]
+    },
+    {
+     "key": "showa-no-hi",
+     "name": {
+      "ja": "昭和の日",
+      "en": "Shōwa Day",
+      "zh-TW": "昭和之日",
+      "zh-CN": "昭和之日",
+      "hi": "शोवा दिवस",
+      "id": "Hari Shōwa",
+      "pt-BR": "Dia de Shōwa"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-04-29",
+      "2027": "2027-04-29",
+      "2028": "2028-04-29"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "kenpo-kinenbi",
+     "name": {
+      "ja": "憲法記念日",
+      "en": "Constitution Memorial Day",
+      "zh-TW": "憲法紀念日",
+      "zh-CN": "宪法纪念日",
+      "hi": "संविधान स्मृति दिवस",
+      "id": "Hari Peringatan Konstitusi",
+      "pt-BR": "Dia da Constituição"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-05-03",
+      "2027": "2027-05-03",
+      "2028": "2028-05-03"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "midori-no-hi",
+     "name": {
+      "ja": "みどりの日",
+      "en": "Greenery Day",
+      "zh-TW": "綠之日",
+      "zh-CN": "绿之日",
+      "hi": "हरियाली दिवस",
+      "id": "Hari Hijau",
+      "pt-BR": "Dia do Verde"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-05-04",
+      "2027": "2027-05-04",
+      "2028": "2028-05-04"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "kodomo-no-hi",
+     "name": {
+      "ja": "こどもの日",
+      "en": "Children's Day",
+      "zh-TW": "兒童節",
+      "zh-CN": "儿童节",
+      "hi": "बाल दिवस",
+      "id": "Hari Anak",
+      "pt-BR": "Dia das Crianças"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-05-05",
+      "2027": "2027-05-05",
+      "2028": "2028-05-05"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "umi-no-hi",
+     "name": {
+      "ja": "海の日",
+      "en": "Marine Day",
+      "zh-TW": "海之日",
+      "zh-CN": "海之日",
+      "hi": "समुद्र दिवस",
+      "id": "Hari Laut",
+      "pt-BR": "Dia do Mar"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-07-20",
+      "2027": "2027-07-19",
+      "2028": "2028-07-17"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "yama-no-hi",
+     "name": {
+      "ja": "山の日",
+      "en": "Mountain Day",
+      "zh-TW": "山之日",
+      "zh-CN": "山之日",
+      "hi": "पर्वत दिवस",
+      "id": "Hari Gunung",
+      "pt-BR": "Dia da Montanha"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-08-11",
+      "2027": "2027-08-11",
+      "2028": "2028-08-11"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "keiro-no-hi",
+     "name": {
+      "ja": "敬老の日",
+      "en": "Respect for the Aged Day",
+      "zh-TW": "敬老之日",
+      "zh-CN": "敬老之日",
+      "hi": "वृद्धजन सम्मान दिवस",
+      "id": "Hari Menghormati Lansia",
+      "pt-BR": "Dia do Respeito aos Idosos"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-09-21",
+      "2027": "2027-09-20",
+      "2028": "2028-09-18"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "shubun-no-hi",
+     "name": {
+      "ja": "秋分の日",
+      "en": "Autumnal Equinox Day",
+      "zh-TW": "秋分之日",
+      "zh-CN": "秋分之日",
+      "hi": "शरद विषुव दिवस",
+      "id": "Hari Ekuinoks Musim Gugur",
+      "pt-BR": "Dia do Equinócio de Outono"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-09-23",
+      "2027": "2027-09-23",
+      "2028": "2028-09-22"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178",
+      "https://www.nao.ac.jp/faq/a0301.html"
+     ]
+    },
+    {
+     "key": "sports-no-hi",
+     "name": {
+      "ja": "スポーツの日",
+      "en": "Sports Day",
+      "zh-TW": "運動之日",
+      "zh-CN": "体育之日",
+      "hi": "खेल दिवस",
+      "id": "Hari Olahraga",
+      "pt-BR": "Dia do Esporte"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-10-12",
+      "2027": "2027-10-11",
+      "2028": "2028-10-09"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "bunka-no-hi",
+     "name": {
+      "ja": "文化の日",
+      "en": "Culture Day",
+      "zh-TW": "文化之日",
+      "zh-CN": "文化之日",
+      "hi": "संस्कृति दिवस",
+      "id": "Hari Kebudayaan",
+      "pt-BR": "Dia da Cultura"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-11-03",
+      "2027": "2027-11-03",
+      "2028": "2028-11-03"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "kinro-kansha-no-hi",
+     "name": {
+      "ja": "勤労感謝の日",
+      "en": "Labor Thanksgiving Day",
+      "zh-TW": "勤勞感謝之日",
+      "zh-CN": "勤劳感谢日",
+      "hi": "श्रम आभार दिवस",
+      "id": "Hari Syukur Buruh",
+      "pt-BR": "Dia de Ação de Graças pelo Trabalho"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-11-23",
+      "2027": "2027-11-23",
+      "2028": "2028-11-23"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "furikae-2026-05-06",
+     "name": {
+      "ja": "振替休日",
+      "en": "Substitute Holiday",
+      "zh-TW": "補假（振替休日）",
+      "zh-CN": "补假（振替休日）",
+      "hi": "प्रतिस्थापन अवकाश",
+      "id": "Hari Libur Pengganti",
+      "pt-BR": "Feriado Substitutivo"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-05-06",
+      "2027": null,
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": null,
+      "2028": null
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "kokumin-no-kyujitsu-2026-09-22",
+     "name": {
+      "ja": "国民の休日",
+      "en": "Citizens' Holiday",
+      "zh-TW": "國民假日",
+      "zh-CN": "国民假日",
+      "hi": "नागरिक अवकाश",
+      "id": "Hari Libur Rakyat",
+      "pt-BR": "Feriado dos Cidadãos"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-09-22",
+      "2027": null,
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": null,
+      "2028": null
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "furikae-2027-03-22",
+     "name": {
+      "ja": "振替休日",
+      "en": "Substitute Holiday",
+      "zh-TW": "補假（振替休日）",
+      "zh-CN": "补假（振替休日）",
+      "hi": "प्रतिस्थापन अवकाश",
+      "id": "Hari Libur Pengganti",
+      "pt-BR": "Feriado Substitutivo"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": null,
+      "2027": "2027-03-22",
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": null,
+      "2027": "confirmed",
+      "2028": null
+     },
+     "source_urls": [
+      "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+      "https://laws.e-gov.go.jp/law/323AC1000000178"
+     ]
+    },
+    {
+     "key": "nenmatsu-nenshi",
+     "name": {
+      "ja": "年末年始",
+      "en": "Year-End and New Year Holidays",
+      "zh-TW": "年末年初假期",
+      "zh-CN": "年末年初假期",
+      "hi": "वर्षांत एवं नववर्ष अवकाश",
+      "id": "Libur Akhir Tahun dan Tahun Baru",
+      "pt-BR": "Recesso de Fim de Ano"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-12-29",
+      "2027": "2027-12-29",
+      "2028": "2028-12-29"
+     },
+     "ends_on": {
+      "2026": "2027-01-03",
+      "2027": "2028-01-03",
+      "2028": "2029-01-03"
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://laws.e-gov.go.jp/law/363AC0000000091"
+     ],
+     "notes": "這**不是国民の祝日**,而是《行政機関の休日に関する法律》(昭和63年法律第91號)第1條第3號訂的「行政機關休日」——條文只拘束國家行政機關(各府省廳與會計檢查院),**民間企業不受此拘束**,民間是否放假、放幾天由各公司自訂,常見做法與此期間相近但非法定。日期由法條寫死(12月29日〜翌年1月3日),不逐年公告,故三年皆 confirmed。⚠ 年份歸屬依 year key 分組,不依日期字串的年份:`\"2026\"` 這一筆指「2026 年年底那一次」,起 2026-12-29、迄 2027-01-03。⚠ 與元日(1月1日)**刻意重疊**:1月1日〜1月3日同時被本筆與 `ganjitsu` 涵蓋,元日是祝日、這幾天同時是行政機關休日,兩筆並存不是資料重複,下游頁型請自行決定同一天怎麼併列。"
+    }
+   ]
+  },
+  "US": {
+   "country_code": "US",
+   "source_urls": [
+    "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+    "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/holidays.ics"
+   ],
+   "notes": "Authority: 5 U.S.C. 6103(a) lists exactly 11 legal public holidays; nothing outside that section is included. `dates` holds the OBSERVED day from the OPM federal holiday schedule (Saturday -> preceding Friday per 5 U.S.C. 6103(b)(1); Sunday -> following Monday per E.O. 11582 sec. 3(a)); `nominal_dates` holds the statutory day. WARNING for a per-calendar-year page: the 2028 New Year's Day is observed on 2027-12-31, so calendar year 2028 contains no New Year's Day observance and calendar year 2027 contains two (2027-01-01 and 2027-12-31). Group by the year KEY, not by the year inside `dates`. Inauguration Day (5 U.S.C. 6103(c)) is deliberately omitted: it is a holiday only in the Washington DC commuting area and the next one is 2029-01-20, outside this range.",
+   "holidays": [
+    {
+     "key": "new-years-day",
+     "name": {
+      "zh-TW": "元旦",
+      "en": "New Year's Day",
+      "ja": "元日",
+      "zh-CN": "元旦",
+      "hi": "नववर्ष दिवस",
+      "id": "Tahun Baru",
+      "pt-BR": "Ano Novo"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-01-01",
+      "2027": "2027-01-01",
+      "2028": "2027-12-31"
+     },
+     "nominal_dates": {
+      "2026": "2026-01-01",
+      "2027": "2027-01-01",
+      "2028": "2028-01-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+      "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+     ]
+    },
+    {
+     "key": "martin-luther-king-jr-day",
+     "name": {
+      "zh-TW": "馬丁·路德·金恩紀念日",
+      "en": "Birthday of Martin Luther King, Jr.",
+      "ja": "マーティン・ルーサー・キング・ジュニア牧師記念日",
+      "zh-CN": "马丁·路德·金诞辰纪念日",
+      "hi": "मार्टिन लूथर किंग जूनियर जयंती",
+      "id": "Hari Kelahiran Martin Luther King Jr.",
+      "pt-BR": "Aniversário de Martin Luther King Jr."
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-01-19",
+      "2027": "2027-01-18",
+      "2028": "2028-01-17"
+     },
+     "nominal_dates": {
+      "2026": "2026-01-19",
+      "2027": "2027-01-18",
+      "2028": "2028-01-17"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+      "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+     ]
+    },
+    {
+     "key": "washingtons-birthday",
+     "name": {
+      "zh-TW": "華盛頓誕辰紀念日",
+      "en": "Washington's Birthday",
+      "ja": "ワシントン誕生日",
+      "zh-CN": "华盛顿诞辰纪念日",
+      "hi": "वाशिंगटन जयंती",
+      "id": "Hari Kelahiran Washington",
+      "pt-BR": "Aniversário de Washington"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-02-16",
+      "2027": "2027-02-15",
+      "2028": "2028-02-21"
+     },
+     "nominal_dates": {
+      "2026": "2026-02-16",
+      "2027": "2027-02-15",
+      "2028": "2028-02-21"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+      "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+     ]
+    },
+    {
+     "key": "memorial-day",
+     "name": {
+      "zh-TW": "陣亡將士紀念日",
+      "en": "Memorial Day",
+      "ja": "戦没将兵追悼記念日",
+      "zh-CN": "阵亡将士纪念日",
+      "hi": "स्मृति दिवस",
+      "id": "Hari Peringatan Pahlawan Gugur",
+      "pt-BR": "Dia da Memória"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-05-25",
+      "2027": "2027-05-31",
+      "2028": "2028-05-29"
+     },
+     "nominal_dates": {
+      "2026": "2026-05-25",
+      "2027": "2027-05-31",
+      "2028": "2028-05-29"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+      "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+     ]
+    },
+    {
+     "key": "juneteenth",
+     "name": {
+      "zh-TW": "六月節全國獨立紀念日",
+      "en": "Juneteenth National Independence Day",
+      "ja": "ジューンティーンス奴隷解放記念日",
+      "zh-CN": "六月节全国独立纪念日",
+      "hi": "जूनटीन्थ राष्ट्रीय स्वतंत्रता दिवस",
+      "id": "Juneteenth, Hari Kemerdekaan Nasional",
+      "pt-BR": "Juneteenth, Dia Nacional da Independência"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-06-19",
+      "2027": "2027-06-18",
+      "2028": "2028-06-19"
+     },
+     "nominal_dates": {
+      "2026": "2026-06-19",
+      "2027": "2027-06-19",
+      "2028": "2028-06-19"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+      "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+     ]
+    },
+    {
+     "key": "independence-day",
+     "name": {
+      "zh-TW": "獨立紀念日",
+      "en": "Independence Day",
+      "ja": "独立記念日",
+      "zh-CN": "独立纪念日",
+      "hi": "स्वतंत्रता दिवस",
+      "id": "Hari Kemerdekaan",
+      "pt-BR": "Dia da Independência"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-07-03",
+      "2027": "2027-07-05",
+      "2028": "2028-07-04"
+     },
+     "nominal_dates": {
+      "2026": "2026-07-04",
+      "2027": "2027-07-04",
+      "2028": "2028-07-04"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+      "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+     ]
+    },
+    {
+     "key": "labor-day",
+     "name": {
+      "zh-TW": "勞動節",
+      "en": "Labor Day",
+      "ja": "レイバーデー",
+      "zh-CN": "劳动节",
+      "hi": "श्रम दिवस",
+      "id": "Hari Buruh",
+      "pt-BR": "Dia do Trabalho"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-09-07",
+      "2027": "2027-09-06",
+      "2028": "2028-09-04"
+     },
+     "nominal_dates": {
+      "2026": "2026-09-07",
+      "2027": "2027-09-06",
+      "2028": "2028-09-04"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+      "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+     ]
+    },
+    {
+     "key": "columbus-day",
+     "name": {
+      "zh-TW": "哥倫布日",
+      "en": "Columbus Day",
+      "ja": "コロンブス・デー",
+      "zh-CN": "哥伦布日",
+      "hi": "कोलंबस दिवस",
+      "id": "Hari Columbus",
+      "pt-BR": "Dia de Colombo"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-10-12",
+      "2027": "2027-10-11",
+      "2028": "2028-10-09"
+     },
+     "nominal_dates": {
+      "2026": "2026-10-12",
+      "2027": "2027-10-11",
+      "2028": "2028-10-09"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+      "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+     ]
+    },
+    {
+     "key": "veterans-day",
+     "name": {
+      "zh-TW": "退伍軍人節",
+      "en": "Veterans Day",
+      "ja": "復員軍人の日",
+      "zh-CN": "退伍军人节",
+      "hi": "भूतपूर्व सैनिक दिवस",
+      "id": "Hari Veteran",
+      "pt-BR": "Dia dos Veteranos"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-11-11",
+      "2027": "2027-11-11",
+      "2028": "2028-11-10"
+     },
+     "nominal_dates": {
+      "2026": "2026-11-11",
+      "2027": "2027-11-11",
+      "2028": "2028-11-11"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+      "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+     ]
+    },
+    {
+     "key": "thanksgiving-day",
+     "name": {
+      "zh-TW": "感恩節",
+      "en": "Thanksgiving Day",
+      "ja": "感謝祭",
+      "zh-CN": "感恩节",
+      "hi": "थैंक्सगिविंग डे",
+      "id": "Hari Pengucapan Syukur",
+      "pt-BR": "Dia de Ação de Graças"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-11-26",
+      "2027": "2027-11-25",
+      "2028": "2028-11-23"
+     },
+     "nominal_dates": {
+      "2026": "2026-11-26",
+      "2027": "2027-11-25",
+      "2028": "2028-11-23"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+      "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+     ]
+    },
+    {
+     "key": "christmas-day",
+     "name": {
+      "zh-TW": "聖誕節",
+      "en": "Christmas Day",
+      "ja": "クリスマス",
+      "zh-CN": "圣诞节",
+      "hi": "क्रिसमस",
+      "id": "Hari Natal",
+      "pt-BR": "Natal"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-12-25",
+      "2027": "2027-12-24",
+      "2028": "2028-12-25"
+     },
+     "nominal_dates": {
+      "2026": "2026-12-25",
+      "2027": "2027-12-25",
+      "2028": "2028-12-25"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm",
+      "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/"
+     ]
+    }
+   ]
+  },
+  "CN": {
+   "country_code": "CN",
+   "source_urls": [
+    "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+    "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html",
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+   ],
+   "holidays": [
+    {
+     "key": "yuandan",
+     "name": {
+      "zh-TW": "元旦",
+      "en": "New Year's Day",
+      "ja": "元旦",
+      "zh-CN": "元旦",
+      "hi": "नववर्ष दिवस",
+      "id": "Tahun Baru",
+      "pt-BR": "Ano-Novo"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-01-01",
+      "2027": "2027-01-01",
+      "2028": "2028-01-01"
+     },
+     "ends_on": {
+      "2026": "2026-01-03",
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "makeup_workdays": {
+      "2026": [
+       "2026-01-04"
+      ]
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+      "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html"
+     ]
+    },
+    {
+     "key": "chunjie",
+     "name": {
+      "zh-TW": "春節",
+      "en": "Chinese New Year",
+      "ja": "春節",
+      "zh-CN": "春节",
+      "hi": "चीनी नववर्ष",
+      "id": "Tahun Baru Imlek",
+      "pt-BR": "Ano-Novo Chinês"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-02-15",
+      "2027": "2027-02-05",
+      "2028": "2028-01-25"
+     },
+     "ends_on": {
+      "2026": "2026-02-23",
+      "2027": "2027-02-08",
+      "2028": "2028-01-28"
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "makeup_workdays": {
+      "2026": [
+       "2026-02-14",
+       "2026-02-28"
+      ]
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+      "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html",
+      "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+      "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+     ]
+    },
+    {
+     "key": "qingmingjie",
+     "name": {
+      "zh-TW": "清明節",
+      "en": "Qingming Festival",
+      "ja": "清明節",
+      "zh-CN": "清明节",
+      "hi": "छिंगमिंग उत्सव",
+      "id": "Festival Qingming",
+      "pt-BR": "Festival Qingming"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-04-04",
+      "2027": "2027-04-05",
+      "2028": "2028-04-04"
+     },
+     "ends_on": {
+      "2026": "2026-04-06",
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "makeup_workdays": {
+      "2026": []
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+      "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html",
+      "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+      "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+     ]
+    },
+    {
+     "key": "laodongjie",
+     "name": {
+      "zh-TW": "勞動節",
+      "en": "Labour Day",
+      "ja": "労働節",
+      "zh-CN": "劳动节",
+      "hi": "श्रम दिवस",
+      "id": "Hari Buruh",
+      "pt-BR": "Dia do Trabalho"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-05-01",
+      "2027": "2027-05-01",
+      "2028": "2028-05-01"
+     },
+     "ends_on": {
+      "2026": "2026-05-05",
+      "2027": "2027-05-02",
+      "2028": "2028-05-02"
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "makeup_workdays": {
+      "2026": [
+       "2026-05-09"
+      ]
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+      "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html"
+     ]
+    },
+    {
+     "key": "duanwujie",
+     "name": {
+      "zh-TW": "端午節",
+      "en": "Dragon Boat Festival",
+      "ja": "端午節",
+      "zh-CN": "端午节",
+      "hi": "ड्रैगन बोट उत्सव",
+      "id": "Festival Perahu Naga",
+      "pt-BR": "Festival do Barco-Dragão"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-06-19",
+      "2027": "2027-06-09",
+      "2028": "2028-05-28"
+     },
+     "ends_on": {
+      "2026": "2026-06-21",
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "makeup_workdays": {
+      "2026": []
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+      "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html",
+      "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+      "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+     ]
+    },
+    {
+     "key": "zhongqiujie",
+     "name": {
+      "zh-TW": "中秋節",
+      "en": "Mid-Autumn Festival",
+      "ja": "中秋節",
+      "zh-CN": "中秋节",
+      "hi": "मध्य-शरद उत्सव",
+      "id": "Festival Pertengahan Musim Gugur",
+      "pt-BR": "Festival do Meio-Outono"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-09-25",
+      "2027": "2027-09-15",
+      "2028": "2028-10-03"
+     },
+     "ends_on": {
+      "2026": "2026-09-27",
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "makeup_workdays": {
+      "2026": []
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+      "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html",
+      "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+      "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+     ]
+    },
+    {
+     "key": "guoqingjie",
+     "name": {
+      "zh-TW": "國慶節",
+      "en": "National Day",
+      "ja": "国慶節",
+      "zh-CN": "国庆节",
+      "hi": "राष्ट्रीय दिवस",
+      "id": "Hari Nasional",
+      "pt-BR": "Dia Nacional"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-10-01",
+      "2027": "2027-10-01",
+      "2028": "2028-10-01"
+     },
+     "ends_on": {
+      "2026": "2026-10-07",
+      "2027": "2027-10-03",
+      "2028": "2028-10-03"
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "makeup_workdays": {
+      "2026": [
+       "2026-09-20",
+       "2026-10-10"
+      ]
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+      "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html"
+     ]
+    },
+    {
+     "key": "funvjie",
+     "name": {
+      "zh-TW": "婦女節",
+      "en": "International Women's Day",
+      "ja": "国際女性デー",
+      "zh-CN": "妇女节",
+      "hi": "अंतर्राष्ट्रीय महिला दिवस",
+      "id": "Hari Perempuan Internasional",
+      "pt-BR": "Dia Internacional da Mulher"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-03-08",
+      "2027": "2027-03-08",
+      "2028": "2028-03-08"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+     ]
+    },
+    {
+     "key": "qingnianjie",
+     "name": {
+      "zh-TW": "青年節",
+      "en": "Youth Day",
+      "ja": "青年節",
+      "zh-CN": "青年节",
+      "hi": "युवा दिवस",
+      "id": "Hari Pemuda",
+      "pt-BR": "Dia da Juventude"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-05-04",
+      "2027": "2027-05-04",
+      "2028": "2028-05-04"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+     ]
+    },
+    {
+     "key": "ertongjie",
+     "name": {
+      "zh-TW": "兒童節",
+      "en": "Children's Day",
+      "ja": "児童節",
+      "zh-CN": "儿童节",
+      "hi": "बाल दिवस",
+      "id": "Hari Anak",
+      "pt-BR": "Dia das Crianças"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-06-01",
+      "2027": "2027-06-01",
+      "2028": "2028-06-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+     ]
+    },
+    {
+     "key": "jianjunjie",
+     "name": {
+      "zh-TW": "中國人民解放軍建軍紀念日",
+      "en": "Army Day",
+      "ja": "建軍記念日",
+      "zh-CN": "中国人民解放军建军纪念日",
+      "hi": "सेना दिवस",
+      "id": "Hari Tentara",
+      "pt-BR": "Dia do Exército"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-08-01",
+      "2027": "2027-08-01",
+      "2028": "2028-08-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+     ]
+    },
+    {
+     "key": "erqi-jinianri",
+     "name": {
+      "zh-TW": "二七紀念日",
+      "en": "February 7th Memorial Day",
+      "ja": "二・七記念日",
+      "zh-CN": "二七纪念日",
+      "hi": "7 फरवरी स्मृति दिवस",
+      "id": "Hari Peringatan 7 Februari",
+      "pt-BR": "Dia da Memória de 7 de Fevereiro"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-02-07",
+      "2027": "2027-02-07",
+      "2028": "2028-02-07"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+     ]
+    },
+    {
+     "key": "zhishujie",
+     "name": {
+      "zh-TW": "植樹節",
+      "en": "Arbor Day",
+      "ja": "植樹節",
+      "zh-CN": "植树节",
+      "hi": "वृक्षारोपण दिवस",
+      "id": "Hari Menanam Pohon",
+      "pt-BR": "Dia da Árvore"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-03-12",
+      "2027": "2027-03-12",
+      "2028": "2028-03-12"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+      "https://www.gov.cn/zhengce/2019-12/28/content_5464840.htm"
+     ]
+    },
+    {
+     "key": "hushijie",
+     "name": {
+      "zh-TW": "護士節",
+      "en": "International Nurses Day",
+      "ja": "国際看護師の日",
+      "zh-CN": "护士节",
+      "hi": "अंतर्राष्ट्रीय नर्स दिवस",
+      "id": "Hari Perawat Internasional",
+      "pt-BR": "Dia Internacional da Enfermagem"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-05-12",
+      "2027": "2027-05-12",
+      "2028": "2028-05-12"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+      "https://www.gov.cn/zhengce/zhengceku/2020-05/26/content_5515100.htm"
+     ]
+    },
+    {
+     "key": "wusa-jinianri",
+     "name": {
+      "zh-TW": "五卅紀念日",
+      "en": "May Thirtieth Memorial Day",
+      "ja": "五・三〇記念日",
+      "zh-CN": "五卅纪念日",
+      "hi": "30 मई स्मृति दिवस",
+      "id": "Hari Peringatan 30 Mei",
+      "pt-BR": "Dia da Memória de 30 de Maio"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-05-30",
+      "2027": "2027-05-30",
+      "2028": "2028-05-30"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+     ]
+    },
+    {
+     "key": "qiqi-kangzhan-jinianri",
+     "name": {
+      "zh-TW": "七七抗戰紀念日",
+      "en": "July 7th War of Resistance Memorial Day",
+      "ja": "七・七抗日戦争記念日",
+      "zh-CN": "七七抗战纪念日",
+      "hi": "7 जुलाई प्रतिरोध युद्ध स्मृति दिवस",
+      "id": "Hari Peringatan Perang Perlawanan 7 Juli",
+      "pt-BR": "Dia da Memória da Guerra de Resistência de 7 de Julho"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-07-07",
+      "2027": "2027-07-07",
+      "2028": "2028-07-07"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+      "https://www.gov.cn/yaowen/liebiao/202506/content_7029238.htm"
+     ]
+    },
+    {
+     "key": "kangzhan-shengli-jinianri",
+     "name": {
+      "zh-TW": "中國人民抗日戰爭勝利紀念日",
+      "en": "Victory Day of the Chinese People's War of Resistance Against Japanese Aggression",
+      "ja": "中国人民抗日戦争勝利記念日",
+      "zh-CN": "中国人民抗日战争胜利纪念日",
+      "hi": "चीनी जन प्रतिरोध युद्ध विजय दिवस",
+      "id": "Hari Kemenangan Perang Perlawanan Rakyat Tiongkok",
+      "pt-BR": "Dia da Vitória da Guerra de Resistência do Povo Chinês"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-09-03",
+      "2027": "2027-09-03",
+      "2028": "2028-09-03"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+      "https://www.gov.cn/yaowen/liebiao/202506/content_7029238.htm"
+     ]
+    },
+    {
+     "key": "jiaoshijie",
+     "name": {
+      "zh-TW": "教師節",
+      "en": "Teachers' Day",
+      "ja": "教師節",
+      "zh-CN": "教师节",
+      "hi": "शिक्षक दिवस",
+      "id": "Hari Guru",
+      "pt-BR": "Dia do Professor"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-09-10",
+      "2027": "2027-09-10",
+      "2028": "2028-09-10"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+      "https://www.gov.cn/zhengce/zhengceku/202508/content_7038098.htm"
+     ]
+    },
+    {
+     "key": "jiuyiba-jinianri",
+     "name": {
+      "zh-TW": "九一八紀念日",
+      "en": "September 18th Memorial Day",
+      "ja": "九・一八記念日",
+      "zh-CN": "九一八纪念日",
+      "hi": "18 सितंबर स्मृति दिवस",
+      "id": "Hari Peringatan 18 September",
+      "pt-BR": "Dia da Memória de 18 de Setembro"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-09-18",
+      "2027": "2027-09-18",
+      "2028": "2028-09-18"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+      "https://www.gov.cn/yaowen/liebiao/202506/content_7029238.htm"
+     ]
+    },
+    {
+     "key": "lieshi-jinianri",
+     "name": {
+      "zh-TW": "烈士紀念日",
+      "en": "Martyrs' Day",
+      "ja": "烈士記念日",
+      "zh-CN": "烈士纪念日",
+      "hi": "शहीद दिवस",
+      "id": "Hari Pahlawan Martir",
+      "pt-BR": "Dia dos Mártires"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-09-30",
+      "2027": "2027-09-30",
+      "2028": "2028-09-30"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.gov.cn/yaowen/liebiao/202309/content_6907102.htm"
+     ]
+    },
+    {
+     "key": "guojia-gongjiri",
+     "name": {
+      "zh-TW": "南京大屠殺死難者國家公祭日",
+      "en": "National Memorial Day for Nanjing Massacre Victims",
+      "ja": "南京大虐殺犠牲者国家追悼日",
+      "zh-CN": "南京大屠杀死难者国家公祭日",
+      "hi": "नानजिंग नरसंहार पीड़ित राष्ट्रीय स्मृति दिवस",
+      "id": "Hari Peringatan Nasional Korban Pembantaian Nanjing",
+      "pt-BR": "Dia Nacional de Memória às Vítimas do Massacre de Nanquim"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-12-13",
+      "2027": "2027-12-13",
+      "2028": "2028-12-13"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://www.gov.cn/yaowen/liebiao/202412/content_6992401.htm"
+     ]
+    }
+   ]
+  },
+  "IN": {
+   "country_code": "IN",
+   "source_urls": [
+    "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+    "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+    "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf",
+    "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+   ],
+   "holidays": [
+    {
+     "key": "new-years-day",
+     "name": {
+      "zh-TW": "元旦",
+      "en": "New Year's Day",
+      "ja": "元日",
+      "zh-CN": "元旦",
+      "hi": "नव वर्ष दिवस",
+      "id": "Tahun Baru",
+      "pt-BR": "Ano Novo"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-01-01",
+      "2027": "2027-01-01",
+      "2028": "2028-01-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "hazrat-ali-birthday",
+     "name": {
+      "zh-TW": "阿里誕辰",
+      "en": "Hazarat Ali's Birthday",
+      "ja": "ハズラト・アリー生誕日",
+      "zh-CN": "阿里诞辰",
+      "hi": "हजरत अली का जन्म दिवस",
+      "id": "Hari Kelahiran Hazrat Ali",
+      "pt-BR": "Nascimento de Hazrat Ali"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-01-03",
+      "2027": "2027-12-12",
+      "2028": "2028-12-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "magha-bihu-pongal",
+     "name": {
+      "zh-TW": "馬格比胡節／龐加爾豐收節",
+      "en": "Magha Bihu / Pongal",
+      "ja": "マーグ・ビフー／ポンガル",
+      "zh-CN": "马格比胡节／庞加尔丰收节",
+      "hi": "माघ बिहू / पोंगल",
+      "id": "Magh Bihu / Pongal",
+      "pt-BR": "Magh Bihu / Pongal"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-01-14",
+      "2027": "2027-01-15",
+      "2028": "2028-01-15"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "makar-sankranti",
+     "name": {
+      "zh-TW": "摩羯轉宮節",
+      "en": "Makar Sankranti",
+      "ja": "マカラ・サンクラーンティ",
+      "zh-CN": "摩羯转宫节",
+      "hi": "मकर संक्रांति",
+      "id": "Makar Sankranti",
+      "pt-BR": "Makar Sankranti"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-01-14",
+      "2027": "2027-01-15",
+      "2028": "2028-01-15"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "basant-panchami",
+     "name": {
+      "zh-TW": "春之五日節",
+      "en": "Sri Panchami, Basant Panchami",
+      "ja": "バサント・パンチャミー",
+      "zh-CN": "春之五日节",
+      "hi": "श्री पंचमी / बसंत पंचमी",
+      "id": "Basant Panchami",
+      "pt-BR": "Basant Panchami"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-01-23",
+      "2027": "2027-02-11",
+      "2028": "2028-02-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "republic-day",
+     "name": {
+      "zh-TW": "印度共和國日",
+      "en": "Republic Day",
+      "ja": "インド共和国記念日",
+      "zh-CN": "印度共和国日",
+      "hi": "गणतंत्र दिवस",
+      "id": "Hari Republik India",
+      "pt-BR": "Dia da República da Índia"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-01-26",
+      "2027": "2027-01-26",
+      "2028": "2028-01-26"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ],
+     "nationwide": true
+    },
+    {
+     "key": "guru-ravidas-jayanti",
+     "name": {
+      "zh-TW": "拉維達斯祖師誕辰",
+      "en": "Guru Ravi Das's Birthday",
+      "ja": "グル・ラヴィダース生誕日",
+      "zh-CN": "拉维达斯祖师诞辰",
+      "hi": "गुरु रविदास जयंती",
+      "id": "Hari Kelahiran Guru Ravidas",
+      "pt-BR": "Nascimento de Guru Ravidas"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-02-01",
+      "2027": "2027-02-20",
+      "2028": "2028-02-10"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "swami-dayananda-saraswati-jayanti",
+     "name": {
+      "zh-TW": "達耶難陀·薩拉斯瓦提誕辰",
+      "en": "Birthday of Swami Dayananda Saraswati",
+      "ja": "スワミ・ダヤーナンダ・サラスワティー生誕日",
+      "zh-CN": "达耶难陀·萨拉斯瓦蒂诞辰",
+      "hi": "स्वामी दयानंद सरस्वती जयंती",
+      "id": "Hari Kelahiran Swami Dayananda Saraswati",
+      "pt-BR": "Nascimento de Swami Dayananda Saraswati"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-02-12",
+      "2027": "2027-03-02",
+      "2028": "2028-02-19"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "maha-shivratri",
+     "name": {
+      "zh-TW": "濕婆大神節",
+      "en": "Maha Shivratri",
+      "ja": "マハー・シヴァラートリー",
+      "zh-CN": "湿婆大神节",
+      "hi": "महाशिवरात्रि",
+      "id": "Maha Shivratri",
+      "pt-BR": "Maha Shivratri"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-02-15",
+      "2027": "2027-03-06",
+      "2028": "2028-02-23"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "shivaji-jayanti",
+     "name": {
+      "zh-TW": "希瓦吉誕辰",
+      "en": "Shivaji Jayanti",
+      "ja": "シヴァージー生誕日",
+      "zh-CN": "希瓦吉诞辰",
+      "hi": "शिवाजी जयंती",
+      "id": "Hari Kelahiran Shivaji",
+      "pt-BR": "Nascimento de Shivaji"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-02-19",
+      "2027": "2027-02-19",
+      "2028": "2028-02-19"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "dolyatra",
+     "name": {
+      "zh-TW": "多爾亞特拉（孟加拉灑紅節）",
+      "en": "Dolyatra",
+      "ja": "ドール・ジャットラ",
+      "zh-CN": "多尔亚特拉（孟加拉洒红节）",
+      "hi": "डोलयात्रा",
+      "id": "Dolyatra",
+      "pt-BR": "Dolyatra"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-03-03",
+      "2027": "2027-03-22",
+      "2028": "2028-03-11"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "holika-dahan",
+     "name": {
+      "zh-TW": "霍利卡焚燒夜",
+      "en": "Holika Dahan",
+      "ja": "ホーリカー・ダハン",
+      "zh-CN": "霍利卡焚烧夜",
+      "hi": "होलिका दहन",
+      "id": "Holika Dahan",
+      "pt-BR": "Holika Dahan"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-03-03",
+      "2027": "2027-03-22",
+      "2028": "2028-03-11"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "holi",
+     "name": {
+      "zh-TW": "胡里節（灑紅節）",
+      "en": "Holi",
+      "ja": "ホーリー",
+      "zh-CN": "胡里节（洒红节）",
+      "hi": "होली",
+      "id": "Holi",
+      "pt-BR": "Holi"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-03-04",
+      "2027": "2027-03-23",
+      "2028": "2028-03-12"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ]
+    },
+    {
+     "key": "chaitra-sukladi",
+     "name": {
+      "zh-TW": "印度新年首日（烏加迪／古蒂帕德瓦）",
+      "en": "Chaitra Sukladi / Gudi Padava / Ugadi / Cheti Chand",
+      "ja": "チャイトラ・シュクラーディ（ウガーディ／グディ・パードワ）",
+      "zh-CN": "印度新年首日（乌加迪／古蒂帕德瓦）",
+      "hi": "चैत्र शुक्लादि / गुड़ी पड़वा / उगादी / चेटी चंड",
+      "id": "Chaitra Sukladi / Gudi Padwa / Ugadi / Cheti Chand",
+      "pt-BR": "Chaitra Sukladi / Gudi Padwa / Ugadi / Cheti Chand"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-03-19",
+      "2027": "2027-04-07",
+      "2028": "2028-03-26"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "jamat-ul-vida",
+     "name": {
+      "zh-TW": "齋月末星期五",
+      "en": "Jamat-Ul-Vida",
+      "ja": "ジュムア・トゥル・ウィダー（ラマダーン最後の金曜）",
+      "zh-CN": "斋月末星期五",
+      "hi": "जमात-उल-विदा",
+      "id": "Jumat Terakhir Ramadan",
+      "pt-BR": "Última Sexta-feira do Ramadã"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-03-20",
+      "2027": "2027-03-05",
+      "2028": "2028-02-25"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "id-ul-fitr",
+     "name": {
+      "zh-TW": "開齋節",
+      "en": "Id-ul-Fitr",
+      "ja": "イード・アル＝フィトル（断食明け大祭）",
+      "zh-CN": "开斋节",
+      "hi": "ईद-उल-फितर",
+      "id": "Idulfitri",
+      "pt-BR": "Eid al-Fitr"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-03-21",
+      "2027": "2027-03-10",
+      "2028": "2028-02-27"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ]
+    },
+    {
+     "key": "ram-navami",
+     "name": {
+      "zh-TW": "羅摩誕辰節",
+      "en": "Ram Navami",
+      "ja": "ラーマ・ナヴァミー",
+      "zh-CN": "罗摩诞辰节",
+      "hi": "राम नवमी",
+      "id": "Rama Navami",
+      "pt-BR": "Rama Navami"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-03-26",
+      "2027": "2027-04-15",
+      "2028": "2028-04-03"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ]
+    },
+    {
+     "key": "mahavir-jayanti",
+     "name": {
+      "zh-TW": "大雄誕辰節",
+      "en": "Mahavir Jayanti",
+      "ja": "マハーヴィーラ生誕祭",
+      "zh-CN": "大雄诞辰节",
+      "hi": "महावीर जयंती",
+      "id": "Mahavir Jayanti",
+      "pt-BR": "Mahavir Jayanti"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-03-31",
+      "2027": "2027-04-19",
+      "2028": "2028-04-07"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ]
+    },
+    {
+     "key": "good-friday",
+     "name": {
+      "zh-TW": "受難日",
+      "en": "Good Friday",
+      "ja": "聖金曜日",
+      "zh-CN": "耶穌受難日",
+      "hi": "गुड फ्राइडे",
+      "id": "Jumat Agung",
+      "pt-BR": "Sexta-feira Santa"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-04-03",
+      "2027": "2027-03-26",
+      "2028": "2028-04-14"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ]
+    },
+    {
+     "key": "easter-sunday",
+     "name": {
+      "zh-TW": "復活節主日",
+      "en": "Easter Sunday",
+      "ja": "復活祭",
+      "zh-CN": "复活节主日",
+      "hi": "ईस्टर संडे",
+      "id": "Minggu Paskah",
+      "pt-BR": "Domingo de Páscoa"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-04-05",
+      "2027": "2027-03-28",
+      "2028": "2028-04-16"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "vaisakhi",
+     "name": {
+      "zh-TW": "拜薩基節／泰米爾新年",
+      "en": "Vaisakhi / Vishu / Meshadi (Tamil New Year's Day)",
+      "ja": "バイサキ／ヴィシュ（タミル新年）",
+      "zh-CN": "拜萨基节／泰米尔新年",
+      "hi": "वैसाखी / विशु / मेषादि (तमिल नववर्ष)",
+      "id": "Vaisakhi / Vishu / Tahun Baru Tamil",
+      "pt-BR": "Vaisakhi / Vishu / Ano-Novo Tâmil"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-04-14",
+      "2027": "2027-04-15",
+      "2028": "2028-04-14"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "bengali-new-year",
+     "name": {
+      "zh-TW": "孟加拉新年／巴哈格比胡節",
+      "en": "Vaisakhadi (Bengal) / Bahag Bihu (Assam)",
+      "ja": "ベンガル新年／バハグ・ビフー",
+      "zh-CN": "孟加拉新年／巴哈格比胡节",
+      "hi": "वैशाखादि (बंगाल) / बहाग बिहू (असम)",
+      "id": "Tahun Baru Bengali / Bahag Bihu",
+      "pt-BR": "Ano-Novo Bengali / Bahag Bihu"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-04-15",
+      "2027": "2027-04-16",
+      "2028": "2028-04-15"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "budha-purnima",
+     "name": {
+      "zh-TW": "佛陀誕辰日",
+      "en": "Budha Purnima",
+      "ja": "釈迦生誕祭（ブッダ・プールニマー）",
+      "zh-CN": "佛陀诞辰日",
+      "hi": "बुद्ध पूर्णिमा",
+      "id": "Waisak",
+      "pt-BR": "Buda Purnima"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-05-01",
+      "2027": "2027-05-20",
+      "2028": "2028-05-08"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ]
+    },
+    {
+     "key": "rabindranath-tagore-birthday",
+     "name": {
+      "zh-TW": "泰戈爾誕辰",
+      "en": "Birthday of Guru Rabindranath Tagore",
+      "ja": "タゴール生誕日",
+      "zh-CN": "泰戈尔诞辰",
+      "hi": "गुरुदेव रवींद्रनाथ टैगोर जयंती",
+      "id": "Hari Kelahiran Rabindranath Tagore",
+      "pt-BR": "Nascimento de Rabindranath Tagore"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-05-09",
+      "2027": "2027-05-10",
+      "2028": "2028-05-09"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "id-ul-zuha",
+     "name": {
+      "zh-TW": "宰牲節",
+      "en": "Id-ul-Zuha (Bakrid)",
+      "ja": "イード・アル＝アドハー（犠牲祭）",
+      "zh-CN": "宰牲节",
+      "hi": "ईद-उल-जुहा (बकरीद)",
+      "id": "Iduladha",
+      "pt-BR": "Eid al-Adha"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-05-27",
+      "2027": "2027-05-17",
+      "2028": "2028-05-06"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ]
+    },
+    {
+     "key": "muharram",
+     "name": {
+      "zh-TW": "穆哈蘭姆月（阿舒拉節）",
+      "en": "Muharram",
+      "ja": "ムハッラム（アーシューラー）",
+      "zh-CN": "穆哈兰姆月（阿舒拉节）",
+      "hi": "मुहर्रम",
+      "id": "Muharram (Asyura)",
+      "pt-BR": "Muharram (Ashura)"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-06-26",
+      "2027": "2027-06-16",
+      "2028": "2028-06-04"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ]
+    },
+    {
+     "key": "rath-yatra",
+     "name": {
+      "zh-TW": "神車節",
+      "en": "Rath Yatra",
+      "ja": "ラタ・ヤートラー（山車祭）",
+      "zh-CN": "神车节",
+      "hi": "रथ यात्रा",
+      "id": "Rath Yatra",
+      "pt-BR": "Rath Yatra"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-07-16",
+      "2027": "2027-07-05",
+      "2028": "2028-06-24"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "independence-day",
+     "name": {
+      "zh-TW": "印度獨立紀念日",
+      "en": "Independence Day",
+      "ja": "インド独立記念日",
+      "zh-CN": "印度独立日",
+      "hi": "स्वतंत्रता दिवस",
+      "id": "Hari Kemerdekaan India",
+      "pt-BR": "Dia da Independência da Índia"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-08-15",
+      "2027": "2027-08-15",
+      "2028": "2028-08-15"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ],
+     "nationwide": true
+    },
+    {
+     "key": "parsi-new-year",
+     "name": {
+      "zh-TW": "帕西新年（諾魯茲）",
+      "en": "Parsi New Year's Day / Nauraj",
+      "ja": "パールシー新年（ナウルーズ）",
+      "zh-CN": "帕西新年（诺鲁孜）",
+      "hi": "पारसी नववर्ष दिवस / नौरोज",
+      "id": "Tahun Baru Parsi / Nauroz",
+      "pt-BR": "Ano-Novo Parse / Nauroz"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-08-15",
+      "2027": "2027-08-15",
+      "2028": "2028-08-14"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "milad-un-nabi",
+     "name": {
+      "zh-TW": "聖紀節（先知誕辰）",
+      "en": "Milad-un-Nabi or Id-e-Milad (Birthday of Prophet Mohammad)",
+      "ja": "預言者生誕祭（マウリド）",
+      "zh-CN": "圣纪节（先知诞辰）",
+      "hi": "मिलाद-उन-नबी या ईद-ए-मिलाद",
+      "id": "Maulid Nabi",
+      "pt-BR": "Mawlid (Nascimento do Profeta)"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-08-26",
+      "2027": "2027-08-15",
+      "2028": "2028-08-04"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ]
+    },
+    {
+     "key": "onam",
+     "name": {
+      "zh-TW": "歐南節",
+      "en": "Onam or Thiru Onam Day",
+      "ja": "オーナム",
+      "zh-CN": "欧南节",
+      "hi": "ओणम या थिरु ओणम",
+      "id": "Onam",
+      "pt-BR": "Onam"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-08-26",
+      "2027": "2027-09-13",
+      "2028": "2028-09-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "raksha-bandhan",
+     "name": {
+      "zh-TW": "兄妹繫線節",
+      "en": "Raksha Bandhan",
+      "ja": "ラクシャー・バンダン",
+      "zh-CN": "兄妹系线节",
+      "hi": "रक्षा बंधन",
+      "id": "Raksha Bandhan",
+      "pt-BR": "Raksha Bandhan"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-08-28",
+      "2027": "2027-08-17",
+      "2028": "2028-08-05"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "janmashtami",
+     "name": {
+      "zh-TW": "黑天誕辰節",
+      "en": "Janmashtami",
+      "ja": "クリシュナ生誕祭（ジャンマーシュタミー）",
+      "zh-CN": "黑天诞辰节",
+      "hi": "जन्माष्टमी",
+      "id": "Janmashtami",
+      "pt-BR": "Janmashtami"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-09-04",
+      "2027": "2027-08-24",
+      "2028": "2028-08-13"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ]
+    },
+    {
+     "key": "ganesh-chaturthi",
+     "name": {
+      "zh-TW": "象頭神誕辰節",
+      "en": "Ganesh Chaturthi / Vinayaka Chaturthi",
+      "ja": "ガネーシャ生誕祭",
+      "zh-CN": "象头神诞辰节",
+      "hi": "गणेश चतुर्थी / विनायक चतुर्थी",
+      "id": "Ganesh Chaturthi",
+      "pt-BR": "Ganesh Chaturthi"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-09-14",
+      "2027": "2027-09-04",
+      "2028": "2028-08-23"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "gandhi-jayanti",
+     "name": {
+      "zh-TW": "甘地誕辰紀念日",
+      "en": "Mahatma Gandhi's Birthday",
+      "ja": "ガンディー生誕記念日",
+      "zh-CN": "甘地诞辰纪念日",
+      "hi": "महात्मा गांधी का जन्म दिवस",
+      "id": "Hari Kelahiran Mahatma Gandhi",
+      "pt-BR": "Aniversário de Mahatma Gandhi"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-10-02",
+      "2027": "2027-10-02",
+      "2028": "2028-10-02"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ],
+     "nationwide": true
+    },
+    {
+     "key": "dussehra-saptami",
+     "name": {
+      "zh-TW": "十勝節第七日",
+      "en": "Dussehra (Saptami)",
+      "ja": "ダシャラー（サプタミー）",
+      "zh-CN": "十胜节第七日",
+      "hi": "दशहरा (सप्तमी)",
+      "id": "Dasara (Saptami)",
+      "pt-BR": "Dussehra (Saptami)"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-10-18",
+      "2027": "2027-10-06",
+      "2028": "2028-09-25"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "dussehra-mahashtami",
+     "name": {
+      "zh-TW": "十勝節第八日",
+      "en": "Dussehra (Mahashtami)",
+      "ja": "ダシャラー（マハーアシュタミー）",
+      "zh-CN": "十胜节第八日",
+      "hi": "दशहरा (महाष्टमी)",
+      "id": "Dasara (Mahaastami)",
+      "pt-BR": "Dussehra (Mahashtami)"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-10-19",
+      "2027": "2027-10-08",
+      "2028": "2028-09-26"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "dussehra",
+     "name": {
+      "zh-TW": "十勝節（勝利十日節）",
+      "en": "Dussehra",
+      "ja": "ダシャラー",
+      "zh-CN": "十胜节（胜利十日节）",
+      "hi": "दशहरा",
+      "id": "Dasara",
+      "pt-BR": "Dussehra"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-10-20",
+      "2027": "2027-10-09",
+      "2028": "2028-09-27"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ]
+    },
+    {
+     "key": "dussehra-mahanavami",
+     "name": {
+      "zh-TW": "十勝節第九日",
+      "en": "Dussehra (Mahanavmi)",
+      "ja": "ダシャラー（マハーナヴァミー）",
+      "zh-CN": "十胜节第九日",
+      "hi": "दशहरा (महानवमी)",
+      "id": "Dasara (Mahanavami)",
+      "pt-BR": "Dussehra (Mahanavami)"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-10-20",
+      "2027": "2027-10-09",
+      "2028": "2028-09-27"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "valmiki-jayanti",
+     "name": {
+      "zh-TW": "蟻垤仙人誕辰",
+      "en": "Maharishi Valmiki's Birthday",
+      "ja": "ヴァールミーキ生誕日",
+      "zh-CN": "蚁垤仙人诞辰",
+      "hi": "महर्षि वाल्मीकि जयंती",
+      "id": "Hari Kelahiran Maharishi Valmiki",
+      "pt-BR": "Nascimento de Maharishi Valmiki"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-10-26",
+      "2027": "2027-10-15",
+      "2028": "2028-10-03"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "karwa-chauth",
+     "name": {
+      "zh-TW": "卡爾瓦喬特（妻子齋戒日）",
+      "en": "Karaka Chaturthi (Karwa Chouth)",
+      "ja": "カルワー・チョウト",
+      "zh-CN": "卡尔瓦乔特（妻子斋戒日）",
+      "hi": "करक चतुर्थी (करवा चौथ)",
+      "id": "Karwa Chauth",
+      "pt-BR": "Karwa Chauth"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-10-29",
+      "2027": "2027-10-19",
+      "2028": "2028-10-07"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "diwali",
+     "name": {
+      "zh-TW": "排燈節",
+      "en": "Diwali (Deepavali)",
+      "ja": "ディワリ（灯明祭）",
+      "zh-CN": "排灯节",
+      "hi": "दीवाली (दीपावली)",
+      "id": "Diwali",
+      "pt-BR": "Diwali"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-11-08",
+      "2027": "2027-10-29",
+      "2028": "2028-10-17"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ]
+    },
+    {
+     "key": "naraka-chaturdashi",
+     "name": {
+      "zh-TW": "小排燈節（那羅迦十四日）",
+      "en": "Naraka Chaturdasi",
+      "ja": "ナラカ・チャトゥルダシー",
+      "zh-CN": "小排灯节（那罗迦十四日）",
+      "hi": "नरक चतुर्दशी",
+      "id": "Naraka Chaturdasi",
+      "pt-BR": "Naraka Chaturdasi"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-11-08",
+      "2027": "2027-10-28",
+      "2028": "2028-10-17"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "govardhan-puja",
+     "name": {
+      "zh-TW": "戈瓦爾丹山祭",
+      "en": "Govardhan Puja",
+      "ja": "ゴーヴァルダン・プージャー",
+      "zh-CN": "戈瓦尔丹山祭",
+      "hi": "गोवर्धन पूजा",
+      "id": "Govardhan Puja",
+      "pt-BR": "Govardhan Puja"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-11-09",
+      "2027": "2027-10-30",
+      "2028": "2028-10-18"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "bhai-duj",
+     "name": {
+      "zh-TW": "兄弟節",
+      "en": "Bhai Duj",
+      "ja": "バイ・ドゥージ",
+      "zh-CN": "兄弟节",
+      "hi": "भाई दूज",
+      "id": "Bhai Duj",
+      "pt-BR": "Bhai Duj"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-11-11",
+      "2027": "2027-10-31",
+      "2028": "2028-10-19"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "chhath-puja",
+     "name": {
+      "zh-TW": "太陽神六日祭（恰特節）",
+      "en": "Pratihar Shashthi or Surya Shashthi (Chhat Puja)",
+      "ja": "チャト・プージャー（太陽神祭）",
+      "zh-CN": "太阳神六日祭（恰特节）",
+      "hi": "प्रतिहार षष्ठी या सूर्य षष्ठी (छठ पूजा)",
+      "id": "Chhath Puja",
+      "pt-BR": "Chhath Puja"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-11-15",
+      "2027": "2027-11-04",
+      "2028": "2028-10-23"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "guru-nanak-jayanti",
+     "name": {
+      "zh-TW": "那納克祖師誕辰",
+      "en": "Guru Nanak's Birthday",
+      "ja": "グル・ナーナク生誕祭",
+      "zh-CN": "那纳克祖师诞辰",
+      "hi": "गुरु नानक देव जी का जन्म दिवस",
+      "id": "Hari Kelahiran Guru Nanak",
+      "pt-BR": "Nascimento de Guru Nanak"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-11-24",
+      "2027": "2027-11-14",
+      "2028": "2028-11-02"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "estimated",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ]
+    },
+    {
+     "key": "guru-teg-bahadur-martyrdom-day",
+     "name": {
+      "zh-TW": "特格·巴哈杜爾殉道日",
+      "en": "Guru Teg Bahadur's Martyrdom Day",
+      "ja": "グル・テーグ・バハードゥル殉教日",
+      "zh-CN": "特格·巴哈杜尔殉道日",
+      "hi": "गुरु तेग बहादुर का शहीदी दिवस",
+      "id": "Hari Kesyahidan Guru Teg Bahadur",
+      "pt-BR": "Martírio de Guru Teg Bahadur"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-11-24",
+      "2027": "2027-11-24",
+      "2028": "2028-11-24"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "christmas-eve",
+     "name": {
+      "zh-TW": "平安夜",
+      "en": "Christmas Eve",
+      "ja": "クリスマス・イブ",
+      "zh-CN": "平安夜",
+      "hi": "क्रिसमस की पूर्व संध्या",
+      "id": "Malam Natal",
+      "pt-BR": "Véspera de Natal"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-12-24",
+      "2027": "2027-12-24",
+      "2028": "2028-12-24"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf"
+     ]
+    },
+    {
+     "key": "christmas-day",
+     "name": {
+      "zh-TW": "聖誕節",
+      "en": "Christmas Day",
+      "ja": "クリスマス",
+      "zh-CN": "圣诞节",
+      "hi": "क्रिसमस",
+      "id": "Hari Natal",
+      "pt-BR": "Natal"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-12-25",
+      "2027": "2027-12-25",
+      "2028": "2028-12-25"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+      "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+      "https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf"
+     ]
+    }
+   ]
+  },
+  "TW": {
+   "country_code": "TW",
+   "source_urls": [
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+    "https://www.dgpa.gov.tw/information?uid=82&pid=12983",
+    "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf",
+    "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf",
+    "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf",
+    "https://www.cip.gov.tw/zh-tw/news/data-list/0991B05985DBFF77/C782A9E0C4FE437EDAFFA5ED88C834AE-info.html"
+   ],
+   "holidays": [
+    {
+     "key": "founding-day",
+     "name": {
+      "zh-TW": "中華民國開國紀念日",
+      "en": "Founding Day of the Republic of China",
+      "ja": "中華民国開国記念日",
+      "zh-CN": "中华民国开国纪念日",
+      "hi": "गणतंत्र चीन स्थापना दिवस",
+      "id": "Hari Berdirinya Republik Tiongkok",
+      "pt-BR": "Dia da Fundação da República da China"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-01-01",
+      "2027": "2027-01-01",
+      "2028": "2028-01-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983"
+     ]
+    },
+    {
+     "key": "peace-memorial-day",
+     "name": {
+      "zh-TW": "和平紀念日",
+      "en": "Peace Memorial Day",
+      "ja": "和平記念日",
+      "zh-CN": "和平纪念日",
+      "hi": "शांति स्मृति दिवस",
+      "id": "Hari Peringatan Perdamaian",
+      "pt-BR": "Dia Memorial da Paz"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-02-28",
+      "2027": "2027-02-28",
+      "2028": "2028-02-28"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983"
+     ]
+    },
+    {
+     "key": "sun-yat-sen-death-anniversary",
+     "name": {
+      "zh-TW": "國父逝世紀念日",
+      "en": "Dr. Sun Yat-sen Memorial Day",
+      "ja": "孫文逝去記念日",
+      "zh-CN": "国父逝世纪念日",
+      "hi": "सुन यात-सेन पुण्यतिथि",
+      "id": "Hari Wafatnya Sun Yat-sen",
+      "pt-BR": "Aniversário da Morte de Sun Yat-sen"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-03-12",
+      "2027": "2027-03-12",
+      "2028": "2028-03-12"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "anti-aggression-day",
+     "name": {
+      "zh-TW": "反侵略日",
+      "en": "Anti-Aggression Day",
+      "ja": "反侵略の日",
+      "zh-CN": "反侵略日",
+      "hi": "आक्रमण-विरोध दिवस",
+      "id": "Hari Anti-Agresi",
+      "pt-BR": "Dia Contra a Agressão"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-03-14",
+      "2027": "2027-03-14",
+      "2028": "2028-03-14"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "ethnic-equality-day",
+     "name": {
+      "zh-TW": "民族平等紀念日",
+      "en": "Ethnic Equality Memorial Day",
+      "ja": "民族平等記念日",
+      "zh-CN": "民族平等纪念日",
+      "hi": "जातीय समानता स्मृति दिवस",
+      "id": "Hari Peringatan Kesetaraan Etnis",
+      "pt-BR": "Dia da Igualdade Étnica"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-03-21",
+      "2027": "2027-03-21",
+      "2028": "2028-03-21"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "revolutionary-martyrs-day",
+     "name": {
+      "zh-TW": "革命先烈紀念日",
+      "en": "Revolutionary Martyrs Memorial Day",
+      "ja": "革命先烈記念日",
+      "zh-CN": "革命先烈纪念日",
+      "hi": "क्रांतिकारी शहीद स्मृति दिवस",
+      "id": "Hari Peringatan Pahlawan Revolusi",
+      "pt-BR": "Dia dos Mártires da Revolução"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-03-29",
+      "2027": "2027-03-29",
+      "2028": "2028-03-29"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "freedom-of-speech-day",
+     "name": {
+      "zh-TW": "言論自由日",
+      "en": "Freedom of Speech Day",
+      "ja": "言論自由の日",
+      "zh-CN": "言论自由日",
+      "hi": "अभिव्यक्ति स्वतंत्रता दिवस",
+      "id": "Hari Kebebasan Berbicara",
+      "pt-BR": "Dia da Liberdade de Expressão"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-04-07",
+      "2027": "2027-04-07",
+      "2028": "2028-04-07"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "indigenous-resistance-day",
+     "name": {
+      "zh-TW": "原住民族抵抗日",
+      "en": "Indigenous Peoples' Resistance Day",
+      "ja": "原住民族抵抗の日",
+      "zh-CN": "原住民族抵抗日",
+      "hi": "मूलनिवासी प्रतिरोध दिवस",
+      "id": "Hari Perlawanan Masyarakat Adat",
+      "pt-BR": "Dia da Resistência Indígena"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-06-26",
+      "2027": "2027-06-26",
+      "2028": "2028-06-26"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "martial-law-lifting-day",
+     "name": {
+      "zh-TW": "解嚴紀念日",
+      "en": "Martial Law Lifting Memorial Day",
+      "ja": "戒厳令解除記念日",
+      "zh-CN": "解严纪念日",
+      "hi": "मार्शल लॉ समाप्ति स्मृति दिवस",
+      "id": "Hari Peringatan Pencabutan Darurat Militer",
+      "pt-BR": "Dia do Fim da Lei Marcial"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-07-15",
+      "2027": "2027-07-15",
+      "2028": "2028-07-15"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "indigenous-peoples-day",
+     "name": {
+      "zh-TW": "原住民族日",
+      "en": "Indigenous Peoples' Day",
+      "ja": "原住民族の日",
+      "zh-CN": "原住民族日",
+      "hi": "मूलनिवासी दिवस",
+      "id": "Hari Masyarakat Adat",
+      "pt-BR": "Dia dos Povos Indígenas"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-08-01",
+      "2027": "2027-08-01",
+      "2028": "2028-08-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "end-of-war-day",
+     "name": {
+      "zh-TW": "終戰紀念日",
+      "en": "End of War Memorial Day",
+      "ja": "終戦記念日",
+      "zh-CN": "终战纪念日",
+      "hi": "युद्ध समाप्ति स्मृति दिवस",
+      "id": "Hari Peringatan Berakhirnya Perang",
+      "pt-BR": "Dia do Fim da Guerra"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-08-15",
+      "2027": "2027-08-15",
+      "2028": "2028-08-15"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "august-23-memorial-day",
+     "name": {
+      "zh-TW": "八二三紀念日",
+      "en": "August 23 Memorial Day",
+      "ja": "八二三記念日",
+      "zh-CN": "八二三纪念日",
+      "hi": "23 अगस्त स्मृति दिवस",
+      "id": "Hari Peringatan 23 Agustus",
+      "pt-BR": "Dia 23 de Agosto"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-08-23",
+      "2027": "2027-08-23",
+      "2028": "2028-08-23"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "national-disaster-prevention-day",
+     "name": {
+      "zh-TW": "國家防災日",
+      "en": "National Disaster Prevention Day",
+      "ja": "国家防災の日",
+      "zh-CN": "国家防灾日",
+      "hi": "राष्ट्रीय आपदा रोकथाम दिवस",
+      "id": "Hari Penanggulangan Bencana Nasional",
+      "pt-BR": "Dia Nacional de Prevenção de Desastres"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-09-21",
+      "2027": "2027-09-21",
+      "2028": "2028-09-21"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "confucius-birthday-teachers-day",
+     "name": {
+      "zh-TW": "孔子誕辰紀念日／教師節",
+      "en": "Confucius' Birthday / Teachers' Day",
+      "ja": "孔子生誕記念日／教師の日",
+      "zh-CN": "孔子诞辰纪念日／教师节",
+      "hi": "कन्फ्यूशियस जयंती / शिक्षक दिवस",
+      "id": "Hari Lahir Konfusius / Hari Guru",
+      "pt-BR": "Aniversário de Confúcio / Dia dos Professores"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-09-28",
+      "2027": "2027-09-28",
+      "2028": "2028-09-28"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983"
+     ]
+    },
+    {
+     "key": "national-day",
+     "name": {
+      "zh-TW": "國慶日",
+      "en": "National Day",
+      "ja": "国慶日",
+      "zh-CN": "国庆日",
+      "hi": "राष्ट्रीय दिवस",
+      "id": "Hari Nasional",
+      "pt-BR": "Dia Nacional"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-10-10",
+      "2027": "2027-10-10",
+      "2028": "2028-10-10"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983"
+     ]
+    },
+    {
+     "key": "taiwan-united-nations-day",
+     "name": {
+      "zh-TW": "臺灣聯合國日",
+      "en": "Taiwan United Nations Day",
+      "ja": "台湾国連の日",
+      "zh-CN": "台湾联合国日",
+      "hi": "ताइवान संयुक्त राष्ट्र दिवस",
+      "id": "Hari PBB Taiwan",
+      "pt-BR": "Dia das Nações Unidas de Taiwan"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-10-24",
+      "2027": "2027-10-24",
+      "2028": "2028-10-24"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "retrocession-and-guningtou-victory-day",
+     "name": {
+      "zh-TW": "臺灣光復暨金門古寧頭大捷紀念日",
+      "en": "Taiwan Retrocession and Guningtou Victory Memorial Day",
+      "ja": "台湾光復及び金門古寧頭大捷記念日",
+      "zh-CN": "台湾光复暨金门古宁头大捷纪念日",
+      "hi": "ताइवान पुनर्प्राप्ति एवं गुनिंगतोउ विजय स्मृति दिवस",
+      "id": "Hari Peringatan Pengembalian Taiwan dan Kemenangan Guningtou",
+      "pt-BR": "Dia da Retrocessão de Taiwan e da Vitória de Guningtou"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-10-25",
+      "2027": "2027-10-25",
+      "2028": "2028-10-25"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983"
+     ]
+    },
+    {
+     "key": "sun-yat-sen-birthday",
+     "name": {
+      "zh-TW": "國父誕辰紀念日",
+      "en": "Dr. Sun Yat-sen's Birthday",
+      "ja": "孫文生誕記念日",
+      "zh-CN": "国父诞辰纪念日",
+      "hi": "सुन यात-सेन जयंती",
+      "id": "Hari Kelahiran Sun Yat-sen",
+      "pt-BR": "Aniversário de Nascimento de Sun Yat-sen"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-11-12",
+      "2027": "2027-11-12",
+      "2028": "2028-11-12"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "constitution-day",
+     "name": {
+      "zh-TW": "行憲紀念日",
+      "en": "Constitution Day",
+      "ja": "行憲記念日",
+      "zh-CN": "行宪纪念日",
+      "hi": "संविधान दिवस",
+      "id": "Hari Konstitusi",
+      "pt-BR": "Dia da Constituição"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-12-25",
+      "2027": "2027-12-25",
+      "2028": "2028-12-25"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983"
+     ]
+    },
+    {
+     "key": "national-hakka-day",
+     "name": {
+      "zh-TW": "全國客家日",
+      "en": "National Hakka Day",
+      "ja": "全国客家の日",
+      "zh-CN": "全国客家日",
+      "hi": "राष्ट्रीय हक्का दिवस",
+      "id": "Hari Hakka Nasional",
+      "pt-BR": "Dia Nacional Hakka"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-12-28",
+      "2027": "2027-12-28",
+      "2028": "2028-12-28"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "lunar-new-years-eve-eve",
+     "name": {
+      "zh-TW": "除夕前一日（小年夜）",
+      "en": "Day before Lunar New Year's Eve",
+      "ja": "除夕前日（小年夜）",
+      "zh-CN": "除夕前一日（小年夜）",
+      "hi": "चंद्र नववर्ष की पूर्व संध्या से एक दिन पूर्व",
+      "id": "Sehari sebelum Malam Tahun Baru Imlek",
+      "pt-BR": "Antevéspera do Ano-Novo Lunar"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-02-15",
+      "2027": "2027-02-04",
+      "2028": "2028-01-24"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983",
+      "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf"
+     ]
+    },
+    {
+     "key": "lunar-new-years-eve",
+     "name": {
+      "zh-TW": "除夕",
+      "en": "Lunar New Year's Eve",
+      "ja": "除夕（旧暦大晦日）",
+      "zh-CN": "除夕",
+      "hi": "चंद्र नववर्ष की पूर्व संध्या",
+      "id": "Malam Tahun Baru Imlek",
+      "pt-BR": "Véspera do Ano-Novo Lunar"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-02-16",
+      "2027": "2027-02-05",
+      "2028": "2028-01-25"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983",
+      "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf"
+     ]
+    },
+    {
+     "key": "lunar-new-year",
+     "name": {
+      "zh-TW": "春節",
+      "en": "Lunar New Year",
+      "ja": "春節",
+      "zh-CN": "春节",
+      "hi": "चंद्र नववर्ष",
+      "id": "Tahun Baru Imlek",
+      "pt-BR": "Ano-Novo Lunar"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-02-17",
+      "2027": "2027-02-06",
+      "2028": "2028-01-26"
+     },
+     "ends_on": {
+      "2026": "2026-02-19",
+      "2027": "2027-02-08",
+      "2028": "2028-01-28"
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983",
+      "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf"
+     ]
+    },
+    {
+     "key": "lantern-festival",
+     "name": {
+      "zh-TW": "元宵節",
+      "en": "Lantern Festival",
+      "ja": "元宵節",
+      "zh-CN": "元宵节",
+      "hi": "लालटेन उत्सव",
+      "id": "Cap Go Meh",
+      "pt-BR": "Festival das Lanternas"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-03-03",
+      "2027": "2027-02-20",
+      "2028": "2028-02-09"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf",
+      "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf",
+      "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf"
+     ]
+    },
+    {
+     "key": "tomb-sweeping-day",
+     "name": {
+      "zh-TW": "清明節",
+      "en": "Tomb-Sweeping Day",
+      "ja": "清明節",
+      "zh-CN": "清明节",
+      "hi": "चिंगमिंग (कब्र-सफाई दिवस)",
+      "id": "Ceng Beng",
+      "pt-BR": "Dia de Limpeza dos Túmulos (Qingming)"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-04-05",
+      "2027": "2027-04-05",
+      "2028": "2028-04-04"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983",
+      "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf"
+     ]
+    },
+    {
+     "key": "dragon-boat-festival",
+     "name": {
+      "zh-TW": "端午節",
+      "en": "Dragon Boat Festival",
+      "ja": "端午節",
+      "zh-CN": "端午节",
+      "hi": "ड्रैगन बोट महोत्सव",
+      "id": "Festival Perahu Naga (Peh Cun)",
+      "pt-BR": "Festival do Barco-Dragão"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-06-19",
+      "2027": "2027-06-09",
+      "2028": "2028-05-28"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983",
+      "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf"
+     ]
+    },
+    {
+     "key": "ghost-festival",
+     "name": {
+      "zh-TW": "中元節",
+      "en": "Ghost Festival (Zhongyuan)",
+      "ja": "中元節",
+      "zh-CN": "中元节",
+      "hi": "भूत उत्सव (चोंगयुआन)",
+      "id": "Festival Hantu (Cioko)",
+      "pt-BR": "Festival dos Fantasmas (Zhongyuan)"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-08-27",
+      "2027": "2027-08-16",
+      "2028": "2028-09-03"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf",
+      "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf",
+      "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf"
+     ]
+    },
+    {
+     "key": "mid-autumn-festival",
+     "name": {
+      "zh-TW": "中秋節",
+      "en": "Mid-Autumn Festival",
+      "ja": "中秋節",
+      "zh-CN": "中秋节",
+      "hi": "मध्य-शरद उत्सव",
+      "id": "Festival Kue Bulan",
+      "pt-BR": "Festival do Meio-Outono"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-09-25",
+      "2027": "2027-09-15",
+      "2028": "2028-10-03"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983",
+      "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf"
+     ]
+    },
+    {
+     "key": "double-ninth-festival",
+     "name": {
+      "zh-TW": "重陽節",
+      "en": "Double Ninth Festival",
+      "ja": "重陽節",
+      "zh-CN": "重阳节",
+      "hi": "दोहरा नवम् उत्सव",
+      "id": "Festival Ganda Sembilan",
+      "pt-BR": "Festival do Duplo Nono"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-10-18",
+      "2027": "2027-10-08",
+      "2028": "2028-10-26"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf",
+      "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf",
+      "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf"
+     ]
+    },
+    {
+     "key": "indigenous-ritual-leave",
+     "name": {
+      "zh-TW": "原住民族歲時祭儀",
+      "en": "Indigenous Peoples' Annual Ritual Leave",
+      "ja": "原住民族歳時祭儀",
+      "zh-CN": "原住民族岁时祭仪",
+      "hi": "मूलनिवासी वार्षिक अनुष्ठान अवकाश",
+      "id": "Ritual Adat Tahunan Masyarakat Adat",
+      "pt-BR": "Rituais Sazonais dos Povos Indígenas"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "local-variant",
+      "2027": "local-variant",
+      "2028": "local-variant"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.cip.gov.tw/zh-tw/news/data-list/0991B05985DBFF77/C782A9E0C4FE437EDAFFA5ED88C834AE-info.html"
+     ]
+    },
+    {
+     "key": "taoism-day",
+     "name": {
+      "zh-TW": "道教節",
+      "en": "Taoism Day",
+      "ja": "道教節",
+      "zh-CN": "道教节",
+      "hi": "ताओ धर्म दिवस",
+      "id": "Hari Taoisme",
+      "pt-BR": "Dia do Taoismo"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-02-17",
+      "2027": "2027-02-06",
+      "2028": "2028-01-26"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983",
+      "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf"
+     ]
+    },
+    {
+     "key": "firefighters-day",
+     "name": {
+      "zh-TW": "消防節",
+      "en": "Firefighters' Day",
+      "ja": "消防の日",
+      "zh-CN": "消防节",
+      "hi": "अग्निशमन दिवस",
+      "id": "Hari Pemadam Kebakaran",
+      "pt-BR": "Dia dos Bombeiros"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-01-19",
+      "2027": "2027-01-19",
+      "2028": "2028-01-19"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "farmers-day",
+     "name": {
+      "zh-TW": "農民節",
+      "en": "Farmers' Day",
+      "ja": "農民の日",
+      "zh-CN": "农民节",
+      "hi": "किसान दिवस",
+      "id": "Hari Petani",
+      "pt-BR": "Dia do Agricultor"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-02-04",
+      "2027": "2027-02-04",
+      "2028": "2028-02-04"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf",
+      "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf",
+      "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf"
+     ]
+    },
+    {
+     "key": "womens-day",
+     "name": {
+      "zh-TW": "婦女節",
+      "en": "Women's Day",
+      "ja": "女性の日",
+      "zh-CN": "妇女节",
+      "hi": "महिला दिवस",
+      "id": "Hari Perempuan",
+      "pt-BR": "Dia da Mulher"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-03-08",
+      "2027": "2027-03-08",
+      "2028": "2028-03-08"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "arbor-day",
+     "name": {
+      "zh-TW": "植樹節",
+      "en": "Arbor Day",
+      "ja": "植樹節",
+      "zh-CN": "植树节",
+      "hi": "वृक्षारोपण दिवस",
+      "id": "Hari Menanam Pohon",
+      "pt-BR": "Dia da Árvore"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-03-12",
+      "2027": "2027-03-12",
+      "2028": "2028-03-12"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "youth-day",
+     "name": {
+      "zh-TW": "青年節",
+      "en": "Youth Day",
+      "ja": "青年節",
+      "zh-CN": "青年节",
+      "hi": "युवा दिवस",
+      "id": "Hari Pemuda",
+      "pt-BR": "Dia da Juventude"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-03-29",
+      "2027": "2027-03-29",
+      "2028": "2028-03-29"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "international-doctors-day",
+     "name": {
+      "zh-TW": "國際醫師節",
+      "en": "International Doctors' Day",
+      "ja": "国際医師デー",
+      "zh-CN": "国际医师节",
+      "hi": "अंतर्राष्ट्रीय चिकित्सक दिवस",
+      "id": "Hari Dokter Internasional",
+      "pt-BR": "Dia Internacional do Médico"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-03-30",
+      "2027": "2027-03-30",
+      "2028": "2028-03-30"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "childrens-day",
+     "name": {
+      "zh-TW": "兒童節",
+      "en": "Children's Day",
+      "ja": "こどもの日",
+      "zh-CN": "儿童节",
+      "hi": "बाल दिवस",
+      "id": "Hari Anak",
+      "pt-BR": "Dia das Crianças"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-04-04",
+      "2027": "2027-04-04",
+      "2028": "2028-04-04"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983"
+     ]
+    },
+    {
+     "key": "buddha-birthday",
+     "name": {
+      "zh-TW": "佛陀誕辰日",
+      "en": "Buddha's Birthday",
+      "ja": "釈迦誕生日",
+      "zh-CN": "佛陀诞辰日",
+      "hi": "बुद्ध जयंती",
+      "id": "Hari Kelahiran Buddha",
+      "pt-BR": "Nascimento de Buda"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-05-24",
+      "2027": "2027-05-13",
+      "2028": "2028-05-02"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.cwa.gov.tw/Data/astronomy/2026cal.pdf",
+      "https://www.cwa.gov.tw/Data/astronomy/2027cal.pdf",
+      "https://www.cwa.gov.tw/Data/astronomy/2028cal.pdf"
+     ]
+    },
+    {
+     "key": "labour-day",
+     "name": {
+      "zh-TW": "勞動節",
+      "en": "Labour Day",
+      "ja": "労働節",
+      "zh-CN": "劳动节",
+      "hi": "श्रमिक दिवस",
+      "id": "Hari Buruh",
+      "pt-BR": "Dia do Trabalhador"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-05-01",
+      "2027": "2027-05-01",
+      "2028": "2028-05-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983"
+     ]
+    },
+    {
+     "key": "international-nurses-day",
+     "name": {
+      "zh-TW": "國際護理師節",
+      "en": "International Nurses Day",
+      "ja": "国際看護師の日",
+      "zh-CN": "国际护士节",
+      "hi": "अंतर्राष्ट्रीय नर्स दिवस",
+      "id": "Hari Perawat Internasional",
+      "pt-BR": "Dia Internacional da Enfermagem"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-05-12",
+      "2027": "2027-05-12",
+      "2028": "2028-05-12"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "mothers-day",
+     "name": {
+      "zh-TW": "母親節",
+      "en": "Mother's Day",
+      "ja": "母の日",
+      "zh-CN": "母亲节",
+      "hi": "मातृ दिवस",
+      "id": "Hari Ibu",
+      "pt-BR": "Dia das Mães"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-05-10",
+      "2027": "2027-05-09",
+      "2028": "2028-05-14"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "environment-day",
+     "name": {
+      "zh-TW": "環境日",
+      "en": "Environment Day",
+      "ja": "環境の日",
+      "zh-CN": "环境日",
+      "hi": "पर्यावरण दिवस",
+      "id": "Hari Lingkungan Hidup",
+      "pt-BR": "Dia do Meio Ambiente"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-06-05",
+      "2027": "2027-06-05",
+      "2028": "2028-06-05"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "national-ocean-day",
+     "name": {
+      "zh-TW": "國家海洋日",
+      "en": "National Ocean Day",
+      "ja": "国家海洋の日",
+      "zh-CN": "国家海洋日",
+      "hi": "राष्ट्रीय महासागर दिवस",
+      "id": "Hari Laut Nasional",
+      "pt-BR": "Dia Nacional do Oceano"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-06-08",
+      "2027": "2027-06-08",
+      "2028": "2028-06-08"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "police-day",
+     "name": {
+      "zh-TW": "警察節",
+      "en": "Police Day",
+      "ja": "警察節",
+      "zh-CN": "警察节",
+      "hi": "पुलिस दिवस",
+      "id": "Hari Polisi",
+      "pt-BR": "Dia da Polícia"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-06-15",
+      "2027": "2027-06-15",
+      "2028": "2028-06-15"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "fishermens-day",
+     "name": {
+      "zh-TW": "漁民節",
+      "en": "Fishermen's Day",
+      "ja": "漁民節",
+      "zh-CN": "渔民节",
+      "hi": "मछुआरा दिवस",
+      "id": "Hari Nelayan",
+      "pt-BR": "Dia do Pescador"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-07-01",
+      "2027": "2027-07-01",
+      "2028": "2028-07-01"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "fathers-day",
+     "name": {
+      "zh-TW": "父親節",
+      "en": "Father's Day",
+      "ja": "父の日",
+      "zh-CN": "父亲节",
+      "hi": "पितृ दिवस",
+      "id": "Hari Ayah",
+      "pt-BR": "Dia dos Pais"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-08-08",
+      "2027": "2027-08-08",
+      "2028": "2028-08-08"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "grandparents-day",
+     "name": {
+      "zh-TW": "祖父母節",
+      "en": "Grandparents' Day",
+      "ja": "祖父母の日",
+      "zh-CN": "祖父母节",
+      "hi": "दादा-दादी दिवस",
+      "id": "Hari Kakek-Nenek",
+      "pt-BR": "Dia dos Avós"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-08-23",
+      "2027": "2027-08-22",
+      "2028": "2028-08-27"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "armed-forces-day",
+     "name": {
+      "zh-TW": "軍人節",
+      "en": "Armed Forces Day",
+      "ja": "軍人節",
+      "zh-CN": "军人节",
+      "hi": "सैन्य दिवस",
+      "id": "Hari Angkatan Bersenjata",
+      "pt-BR": "Dia das Forças Armadas"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-09-03",
+      "2027": "2027-09-03",
+      "2028": "2028-09-03"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "national-sports-day",
+     "name": {
+      "zh-TW": "國民體育日",
+      "en": "National Sports Day",
+      "ja": "国民体育の日",
+      "zh-CN": "国民体育日",
+      "hi": "राष्ट्रीय खेल दिवस",
+      "id": "Hari Olahraga Nasional",
+      "pt-BR": "Dia Nacional do Esporte"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-09-09",
+      "2027": "2027-09-09",
+      "2028": "2028-09-09"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "coast-guard-day",
+     "name": {
+      "zh-TW": "海巡節",
+      "en": "Coast Guard Day",
+      "ja": "海巡節",
+      "zh-CN": "海巡节",
+      "hi": "तटरक्षक दिवस",
+      "id": "Hari Penjaga Pantai",
+      "pt-BR": "Dia da Guarda Costeira"
+     },
+     "status": "discretionary",
+     "dates": {
+      "2026": "2026-11-08",
+      "2027": "2027-11-08",
+      "2028": "2028-11-08"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "chinese-cultural-renaissance-day",
+     "name": {
+      "zh-TW": "中華文化復興節",
+      "en": "Chinese Cultural Renaissance Day",
+      "ja": "中華文化復興節",
+      "zh-CN": "中华文化复兴节",
+      "hi": "चीनी सांस्कृतिक पुनर्जागरण दिवस",
+      "id": "Hari Kebangkitan Budaya Tionghoa",
+      "pt-BR": "Dia do Renascimento Cultural Chinês"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-11-12",
+      "2027": "2027-11-12",
+      "2028": "2028-11-12"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "disabled-persons-day",
+     "name": {
+      "zh-TW": "身心障礙者日",
+      "en": "Day of Persons with Disabilities",
+      "ja": "障害者の日",
+      "zh-CN": "身心障碍者日",
+      "hi": "दिव्यांगजन दिवस",
+      "id": "Hari Penyandang Disabilitas",
+      "pt-BR": "Dia das Pessoas com Deficiência"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-12-03",
+      "2027": "2027-12-03",
+      "2028": "2028-12-03"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "human-rights-day",
+     "name": {
+      "zh-TW": "人權日",
+      "en": "Human Rights Day",
+      "ja": "人権の日",
+      "zh-CN": "人权日",
+      "hi": "मानवाधिकार दिवस",
+      "id": "Hari Hak Asasi Manusia",
+      "pt-BR": "Dia dos Direitos Humanos"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-12-10",
+      "2027": "2027-12-10",
+      "2028": "2028-12-10"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "immigrants-day",
+     "name": {
+      "zh-TW": "移民日",
+      "en": "Immigrants' Day",
+      "ja": "移民の日",
+      "zh-CN": "移民日",
+      "hi": "प्रवासी दिवस",
+      "id": "Hari Migran",
+      "pt-BR": "Dia do Migrante"
+     },
+     "status": "commemorative",
+     "dates": {
+      "2026": "2026-12-18",
+      "2027": "2027-12-18",
+      "2028": "2028-12-18"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "confirmed"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
+     ]
+    },
+    {
+     "key": "lunar-new-year-makeup",
+     "name": {
+      "zh-TW": "除夕及春節補假",
+      "en": "Lunar New Year holidays (substitute day off)",
+      "ja": "除夕・春節の振替休日",
+      "zh-CN": "除夕及春节补假",
+      "hi": "चंद्र नववर्ष अवकाश का प्रतिपूरक दिवस",
+      "id": "Cuti pengganti libur Tahun Baru Imlek",
+      "pt-BR": "Feriado substituto do Ano-Novo Lunar"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-02-20",
+      "2027": "2027-02-09",
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": "2027-02-10",
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": null
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983"
+     ]
+    },
+    {
+     "key": "peace-memorial-day-makeup",
+     "name": {
+      "zh-TW": "和平紀念日補假",
+      "en": "Peace Memorial Day (substitute day off)",
+      "ja": "和平記念日の振替休日",
+      "zh-CN": "和平纪念日补假",
+      "hi": "शांति स्मृति दिवस का प्रतिपूरक अवकाश",
+      "id": "Cuti pengganti Hari Peringatan Perdamaian",
+      "pt-BR": "Feriado substituto do Dia Memorial da Paz"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-02-27",
+      "2027": "2027-03-01",
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": null
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983"
+     ]
+    },
+    {
+     "key": "childrens-day-makeup",
+     "name": {
+      "zh-TW": "兒童節補假",
+      "en": "Children's Day (substitute day off)",
+      "ja": "こどもの日の振替休日",
+      "zh-CN": "儿童节补假",
+      "hi": "बाल दिवस का प्रतिपूरक अवकाश",
+      "id": "Cuti pengganti Hari Anak",
+      "pt-BR": "Feriado substituto do Dia das Crianças"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-04-03",
+      "2027": "2027-04-06",
+      "2028": "2028-04-03"
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": "estimated"
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983"
+     ]
+    },
+    {
+     "key": "tomb-sweeping-day-makeup",
+     "name": {
+      "zh-TW": "清明節補假",
+      "en": "Tomb-Sweeping Day (substitute day off)",
+      "ja": "清明節の振替休日",
+      "zh-CN": "清明节补假",
+      "hi": "चिंगमिंग का प्रतिपूरक अवकाश",
+      "id": "Cuti pengganti Ceng Beng",
+      "pt-BR": "Feriado substituto do Dia de Limpeza dos Túmulos"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-04-06",
+      "2027": null,
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": null,
+      "2028": null
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574"
+     ]
+    },
+    {
+     "key": "labour-day-makeup",
+     "name": {
+      "zh-TW": "勞動節補假",
+      "en": "Labour Day (substitute day off)",
+      "ja": "労働節の振替休日",
+      "zh-CN": "劳动节补假",
+      "hi": "श्रमिक दिवस का प्रतिपूरक अवकाश",
+      "id": "Cuti pengganti Hari Buruh",
+      "pt-BR": "Feriado substituto do Dia do Trabalhador"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": null,
+      "2027": "2027-04-30",
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": null,
+      "2027": "confirmed",
+      "2028": null
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983"
+     ]
+    },
+    {
+     "key": "national-day-makeup",
+     "name": {
+      "zh-TW": "國慶日補假",
+      "en": "National Day (substitute day off)",
+      "ja": "国慶日の振替休日",
+      "zh-CN": "国庆日补假",
+      "hi": "राष्ट्रीय दिवस का प्रतिपूरक अवकाश",
+      "id": "Cuti pengganti Hari Nasional",
+      "pt-BR": "Feriado substituto do Dia Nacional"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-10-09",
+      "2027": "2027-10-11",
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": "confirmed",
+      "2028": null
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983"
+     ]
+    },
+    {
+     "key": "retrocession-and-guningtou-victory-day-makeup",
+     "name": {
+      "zh-TW": "臺灣光復暨金門古寧頭大捷紀念日補假",
+      "en": "Taiwan Retrocession and Guningtou Victory Memorial Day (substitute day off)",
+      "ja": "台湾光復及び金門古寧頭大捷記念日の振替休日",
+      "zh-CN": "台湾光复暨金门古宁头大捷纪念日补假",
+      "hi": "ताइवान पुनर्प्राप्ति स्मृति दिवस का प्रतिपूरक अवकाश",
+      "id": "Cuti pengganti Hari Peringatan Pengembalian Taiwan",
+      "pt-BR": "Feriado substituto do Dia da Retrocessão de Taiwan"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": "2026-10-26",
+      "2027": null,
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": "confirmed",
+      "2027": null,
+      "2028": null
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=2&pid=12574"
+     ]
+    },
+    {
+     "key": "constitution-day-makeup",
+     "name": {
+      "zh-TW": "行憲紀念日補假",
+      "en": "Constitution Day (substitute day off)",
+      "ja": "行憲記念日の振替休日",
+      "zh-CN": "行宪纪念日补假",
+      "hi": "संविधान दिवस का प्रतिपूरक अवकाश",
+      "id": "Cuti pengganti Hari Konstitusi",
+      "pt-BR": "Feriado substituto do Dia da Constituição"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": null,
+      "2027": "2027-12-24",
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": null,
+      "2027": "confirmed",
+      "2028": null
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983"
+     ]
+    },
+    {
+     "key": "founding-day-makeup",
+     "name": {
+      "zh-TW": "中華民國開國紀念日補假",
+      "en": "Founding Day of the Republic of China (substitute day off)",
+      "ja": "中華民国開国記念日の振替休日",
+      "zh-CN": "中华民国开国纪念日补假",
+      "hi": "गणतंत्र चीन स्थापना दिवस का प्रतिपूरक अवकाश",
+      "id": "Cuti pengganti Hari Berdirinya Republik Tiongkok",
+      "pt-BR": "Feriado substituto do Dia da Fundação da República da China"
+     },
+     "status": "statutory",
+     "dates": {
+      "2026": null,
+      "2027": "2027-12-31",
+      "2028": null
+     },
+     "ends_on": {
+      "2026": null,
+      "2027": null,
+      "2028": null
+     },
+     "date_status": {
+      "2026": null,
+      "2027": "confirmed",
+      "2028": null
+     },
+     "source_urls": [
+      "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+      "https://www.dgpa.gov.tw/information?uid=82&pid=12983"
+     ]
+    }
+   ]
+  }
+ }
+}

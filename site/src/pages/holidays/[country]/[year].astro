@@ -1,0 +1,242 @@
+---
+// 國家 × 年份的假日總表 `/holidays/<國碼>/<年>/`(2026-08-27 用戶核准)
+//
+// -- 為什麼有這一頁 --------------------------------------------------------
+// Bing 實測 `feriados 2027` @br 精準量 **14,940** —— 是 br 市場量到第二大的字
+// (僅次於 `carnaval 2027` 的 38,488),而站上沒有任何頁面能回答它。
+// 同型的字:`祝日 2027` @jp 351、`public holidays 2027` @us 116、`libur nasional 2027` @id 9。
+// 這是「專有名詞 + 年份」那個唯一贏得下來的查詢形狀的另一個變種:國名(隱含)+ 年份。
+//
+// -- 草案裡沒有這一層 ------------------------------------------------------
+// 已讀產品草案本體:§30 的 sitemap 只列 topics/posts/places/events,§44/§46/§47/§54 都不是這個。
+// 最接近的鉤子只有 §57 把 `Country` 列為搜尋結果型別之一,但沒定義頁長什麼樣。
+// 所以這與 2026-08-26 新增逐國頁同一種性質:**刻意偏離草案的新增**,經用戶核准。
+//
+// -- 它不是「把 Topic 換個軸再列一次」--------------------------------------
+// 資料來自 content/national-holiday-calendars.json(逐國權威公告抄錄),**不從 Topic 反推**。
+// 逐國頁是「一個 Topic 在一個國家」;這一頁是「一個國家在一年裡的全部假日,依日期排」。
+// 軸不同,而且只有在資料真的完整時才成立 —— 所以薄頁不產出(見 lib/holidays.mjs 的門檻)。
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { t } from '../../../lib/i18n.mjs';
+import { LOCALE } from '../../../lib/config.mjs';
+import { countryName } from '../../../lib/data.mjs';
+import { countryFlag, calendarDate } from '../../../lib/format.mjs';
+import { withBase } from '../../../lib/paths.mjs';
+import { seoCopy, fillTemplate, compactDescription, sourceLabel, SITE_OVERVIEW_IMAGE_PATH } from '../../../lib/seo.mjs';
+import { holidayCountries, holidayCellsFor, holidaysFor, undatedFor, holidaySystemNote, topicsByDate, YEARS } from '../../../lib/holidays.mjs';
+
+export function getStaticPaths() {
+  const out = [];
+  for (const code of holidayCountries()) {
+    for (const year of holidayCellsFor(code)) {
+      out.push({ params: { country: code.toLowerCase(), year }, props: { code, year } });
+    }
+  }
+  return out;
+}
+
+const { code, year } = Astro.props;
+const copy = seoCopy();
+const label = countryName(code);
+const rows = holidaysFor(code, year);
+const byDate = topicsByDate(code, year);
+
+// 重疊要說出來,不能讓同一天在表上出現兩列而沒有交代。
+// 實例:2028 年的中秋(10/03)落在中國國慶法定假期(10/01–10/03)之內 —— 那是農曆算出來的
+// 真實碰撞。歷年遇到這種重疊,國務院辦公廳會在年度通知裡合併安排,但公告未出之前
+// 兩筆各自獨立存在。合併呈現會是我們替官方做決定;標示重疊才是誠實的做法。
+const endOf = (r) => r.ends_on || r.starts_on;
+const overlapKeys = new Set();
+{
+  const sorted = holidaysFor(code, year);
+  for (let i = 1; i < sorted.length; i += 1) {
+    if (sorted[i].starts_on <= endOf(sorted[i - 1])) overlapKeys.add(sorted[i].key);
+  }
+}
+
+const undated = undatedFor(code, year);
+const statutory = rows.filter((r) => r.status === 'statutory').length;
+// 可計算的摘要 —— 搜「feriados 2027」的人真正要知道的是「幾天、有沒有被週末吃掉、最長連幾天」。
+// 全部由資料算出,沒有一句是編的。
+const dayList = (r) => {
+  const out = [];
+  for (let d = new Date(`${r.starts_on}T00:00:00Z`); d.toISOString().slice(0, 10) <= (r.ends_on || r.starts_on); d.setUTCDate(d.getUTCDate() + 1)) {
+    out.push(d.toISOString().slice(0, 10));
+  }
+  return out;
+};
+const offDays = new Set(rows.filter((r) => r.status !== 'commemorative').flatMap(dayList));
+const weekendHits = [...offDays].filter((d) => [0, 6].includes(new Date(`${d}T00:00:00Z`).getUTCDay())).length;
+// 最長連續假期:把放假日與週末合起來算,連號最長的一段(這才是讀者感覺到的「連假」)。
+let longestRun = 0;
+{
+  const start = new Date(`${year}-01-01T00:00:00Z`);
+  let run = 0;
+  for (let i = 0; i < 366; i += 1) {
+    const iso = start.toISOString().slice(0, 10);
+    if (iso.slice(0, 4) === year) {
+      const off = offDays.has(iso) || [0, 6].includes(start.getUTCDay());
+      run = off ? run + 1 : 0;
+      if (run > longestRun) longestRun = run;
+    }
+    start.setUTCDate(start.getUTCDate() + 1);
+  }
+}
+const discretionary = rows.filter((r) => r.status === 'discretionary').length;
+const systemNote = holidaySystemNote(code);
+
+const lead = [
+  fillTemplate(t('holidays.lead'), { year, country: label, statutory: String(statutory) }),
+  weekendHits > 0 ? fillTemplate(t('holidays.weekend_note'), { n: String(weekendHits) }) : null,
+  longestRun > 2 ? fillTemplate(t('holidays.longest_run'), { n: String(longestRun) }) : null,
+  discretionary > 0 ? fillTemplate(t('holidays.discretionary_note'), { n: String(discretionary) }) : null,
+].filter(Boolean).join(' ');
+const heading = fillTemplate(t('holidays.heading'), { year, country: label });
+
+// description 第一句要給答案(2026-08-26 紅線:description 不得等於 title,且第一句要說出這頁有什麼)。
+const description = compactDescription([
+  fillTemplate(t('holidays.lead'), { year, country: label, statutory: String(statutory) }),
+  rows.slice(0, 3).map((r) => r.name[LOCALE]).filter(Boolean).join(copy.listSep),
+].filter(Boolean).join(' '));
+
+const statusLabel = (s) => t(`holidays.status_${s}`);
+// 半天假要說出來:巴西的聖灰星期三「到下午兩點」、聖誕夜「下午一點後」、中國的婦女節半天。
+// 不印這一段,頁面就把半天講成整天。
+const partialLabel = (v) => {
+  if (!v) return null;
+  const [kind, hhmm] = v.split('-');
+  const time = `${hhmm.slice(0, 2)}:${hhmm.slice(2)}`;
+  return fillTemplate(t(kind === 'until' ? 'holidays.partial_until' : 'holidays.partial_from'), { time });
+};
+const siblings = holidayCellsFor(code).filter((y) => y !== year);
+const otherCountries = holidayCountries().filter((c) => c !== code && holidayCellsFor(c).includes(year));
+const allSources = [...new Set(rows.flatMap((r) => r.source_urls))];
+---
+
+<BaseLayout
+  title={heading}
+  description={description}
+  pageType="CollectionPage"
+  image={withBase(SITE_OVERVIEW_IMAGE_PATH)}
+  imageAlt={heading}
+>
+  <header class="hol-head">
+    <h1>{countryFlag(code)} {heading}</h1>
+    <p class="hol-lead">{lead}</p>
+  </header>
+
+  {systemNote?.text?.[LOCALE] && (
+    <section class="hol-system">
+      <h2>{t('holidays.system_title')}</h2>
+      <p>{systemNote.text[LOCALE]}</p>
+    </section>
+  )}
+
+  <div class="hol-wrap">
+    <table class="hol-table">
+      <thead>
+        <tr>
+          <th scope="col">{t('holidays.col_date')}</th>
+          <th scope="col">{t('holidays.col_name')}</th>
+          <th scope="col">{t('holidays.col_status')}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row) => {
+          const topic = byDate.get(row.starts_on);
+          return (
+            <tr>
+              <td class="hol-date">
+                {row.ends_on ? `${calendarDate(row.starts_on)} – ${calendarDate(row.ends_on)}` : calendarDate(row.starts_on)}
+                {overlapKeys.has(row.key) && <span class="hol-flag"> · {t('holidays.overlaps')}</span>}
+                {row.partial_day && <span class="hol-flag"> · {partialLabel(row.partial_day)}</span>}
+                {row.date_status === 'estimated' && <span class="hol-flag"> · {t('holidays.estimated')}</span>}
+                {row.date_status === 'local-variant' && <span class="hol-flag"> · {t('holidays.local_variant')}</span>}
+              </td>
+              <td class="hol-name">
+                {row.name[LOCALE]}
+                {topic && (
+                  <a class="hol-topic" href={withBase(`topic/${topic.slug}/`)}>{t('holidays.see_topic')}</a>
+                )}
+              </td>
+              <td class="hol-status">{statusLabel(row.status)}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+
+  {undated.length > 0 && (
+    <section class="hol-undated">
+      <h2>{t('holidays.no_fixed_date')}</h2>
+      <ul>
+        {undated.map((u) => (
+          <li><span class="hol-name">{u.name[LOCALE]}</span> · {statusLabel(u.status)}</li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  {siblings.length > 0 && (
+    <nav class="hol-nav" aria-label={t('holidays.other_years')}>
+      <p class="hol-nav-label">{t('holidays.other_years')}</p>
+      <ul>
+        {siblings.map((y) => (
+          <li><a href={withBase(`holidays/${code.toLowerCase()}/${y}/`)}>{fillTemplate(t('holidays.heading'), { year: y, country: label })}</a></li>
+        ))}
+      </ul>
+    </nav>
+  )}
+
+  {otherCountries.length > 0 && (
+    <nav class="hol-nav" aria-label={t('holidays.other_countries')}>
+      <p class="hol-nav-label">{t('holidays.other_countries')}</p>
+      <ul>
+        {otherCountries.map((c) => (
+          <li><a href={withBase(`holidays/${c.toLowerCase()}/${year}/`)}>{countryFlag(c)} {countryName(c)}</a></li>
+        ))}
+      </ul>
+    </nav>
+  )}
+
+  {allSources.length > 0 && (
+    <section class="hol-sources">
+      <h2>{copy.sources}</h2>
+      <ul>
+        {allSources.map((u) => <li><a href={u} rel="nofollow noopener">{sourceLabel(u)}</a></li>)}
+      </ul>
+    </section>
+  )}
+</BaseLayout>
+
+<style>
+  .hol-head { margin-block-end: var(--space-6); }
+  .hol-head h1 { font-size: var(--text-2xl); }
+  .hol-lead { color: var(--color-ink-muted); }
+  /* 寬內容自己捲,頁面本體不得橫向捲動 */
+  .hol-wrap { overflow-x: auto; }
+  .hol-table { width: 100%; border-collapse: collapse; font-size: var(--text-base); }
+  .hol-table th, .hol-table td {
+    text-align: start;
+    padding: var(--space-2) var(--space-3);
+    border-block-end: 0.0625rem solid var(--color-line);
+    vertical-align: baseline;
+  }
+  .hol-table th { color: var(--color-ink-muted); font-weight: 600; }
+  .hol-date { white-space: nowrap; }
+  /* 級距不得只靠顏色區分:狀態欄印的是文字本身,不是色塊 */
+  .hol-flag { color: var(--color-ink-muted); }
+  .hol-topic { margin-inline-start: var(--space-2); }
+  .hol-nav { margin-block-start: var(--space-6); }
+  .hol-nav-label { color: var(--color-ink-muted); margin-block-end: var(--space-2); }
+  .hol-nav ul, .hol-sources ul { list-style: none; padding: 0; margin: 0; }
+  .hol-nav li { display: inline-block; margin-inline-end: var(--space-3); }
+  .hol-system { margin-block-end: var(--space-6); }
+  .hol-system h2 { font-size: var(--text-lg); }
+  .hol-undated { margin-block-start: var(--space-6); }
+  .hol-undated h2 { font-size: var(--text-lg); }
+  .hol-undated ul { list-style: none; padding: 0; margin: 0; }
+  .hol-sources { margin-block-start: var(--space-6); }
+  .hol-sources h2 { font-size: var(--text-lg); }
+</style>

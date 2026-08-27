@@ -1,0 +1,644 @@
+{
+  "country_code": "BR",
+  "source_urls": [
+    "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+    "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+    "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+    "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html",
+    "https://www2.camara.leg.br/legin/fed/lei/1980-1987/lei-6802-30-junho-1980-357065-publicacaooriginal-1-pl.html",
+    "https://www2.camara.leg.br/legin/fed/lei/2023/lei-14759-21-dezembro-2023-795091-publicacaooriginal-170522-pl.html",
+    "https://www2.camara.leg.br/legin/fed/lei/1995/lei-9093-12-setembro-1995-348594-publicacaooriginal-1-pl.html",
+    "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+  ],
+  "holidays": [
+    {
+      "key": "confraternizacao-universal",
+      "name": {
+        "zh-TW": "元旦",
+        "en": "New Year's Day",
+        "ja": "元日",
+        "zh-CN": "元旦",
+        "hi": "नववर्ष दिवस",
+        "id": "Tahun Baru",
+        "pt-BR": "Confraternização Universal"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-01-01",
+        "2027": "2027-01-01",
+        "2028": "2028-01-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+        "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+        "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html"
+      ]
+    },
+    {
+      "key": "carnaval-segunda-feira",
+      "name": {
+        "zh-TW": "嘉年華（星期一）",
+        "en": "Carnival (Monday)",
+        "ja": "カーニバル（月曜日）",
+        "zh-CN": "狂欢节（星期一）",
+        "hi": "कार्निवल (सोमवार)",
+        "id": "Karnaval (Senin)",
+        "pt-BR": "Carnaval (segunda-feira)"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-02-16",
+        "2027": "2027-02-08",
+        "2028": "2028-02-28"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+      ]
+    },
+    {
+      "key": "carnaval-terca-feira",
+      "name": {
+        "zh-TW": "嘉年華（星期二）",
+        "en": "Carnival (Tuesday)",
+        "ja": "カーニバル（火曜日）",
+        "zh-CN": "狂欢节（星期二）",
+        "hi": "कार्निवल (मंगलवार)",
+        "id": "Karnaval (Selasa)",
+        "pt-BR": "Carnaval (terça-feira)"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-02-17",
+        "2027": "2027-02-09",
+        "2028": "2028-02-29"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+      ]
+    },
+    {
+      "key": "quarta-feira-de-cinzas",
+      "name": {
+        "zh-TW": "聖灰星期三",
+        "en": "Ash Wednesday",
+        "ja": "灰の水曜日",
+        "zh-CN": "圣灰星期三",
+        "hi": "भस्म बुधवार",
+        "id": "Rabu Abu",
+        "pt-BR": "Quarta-Feira de Cinzas"
+      },
+      "status": "discretionary",
+      "partial_day": "until-1400",
+      "dates": {
+        "2026": "2026-02-18",
+        "2027": "2027-02-10",
+        "2028": "2028-03-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+      ]
+    },
+    {
+      "key": "paixao-de-cristo",
+      "name": {
+        "zh-TW": "耶穌受難日",
+        "en": "Good Friday",
+        "ja": "聖金曜日",
+        "zh-CN": "耶稣受难日",
+        "hi": "गुड फ़्राइडे",
+        "id": "Jumat Agung",
+        "pt-BR": "Paixão de Cristo"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-04-03",
+        "2027": "2027-03-26",
+        "2028": "2028-04-14"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+        "https://www2.camara.leg.br/legin/fed/lei/1995/lei-9093-12-setembro-1995-348594-publicacaooriginal-1-pl.html"
+      ]
+    },
+    {
+      "key": "ponto-facultativo-20-de-abril",
+      "name": {
+        "zh-TW": "彈性放假日（無官方名稱）",
+        "en": "Optional holiday (no official name)",
+        "ja": "臨時休務日（名称なし）",
+        "zh-CN": "弹性放假日（无官方名称）",
+        "hi": "वैकल्पिक अवकाश (नाम रहित)",
+        "id": "Hari libur opsional (tanpa nama resmi)",
+        "pt-BR": "Ponto facultativo (sem denominação)"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-04-20",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+      ]
+    },
+    {
+      "key": "tiradentes",
+      "name": {
+        "zh-TW": "蒂拉登特斯紀念日",
+        "en": "Tiradentes Day",
+        "ja": "チラデンテスの日",
+        "zh-CN": "蒂拉登特斯纪念日",
+        "hi": "तिरादेंतिस दिवस",
+        "id": "Hari Tiradentes",
+        "pt-BR": "Tiradentes"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-04-21",
+        "2027": "2027-04-21",
+        "2028": "2028-04-21"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+        "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+        "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html"
+      ]
+    },
+    {
+      "key": "dia-mundial-do-trabalho",
+      "name": {
+        "zh-TW": "勞動節",
+        "en": "International Workers' Day",
+        "ja": "メーデー",
+        "zh-CN": "劳动节",
+        "hi": "मज़दूर दिवस",
+        "id": "Hari Buruh",
+        "pt-BR": "Dia Mundial do Trabalho"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-01",
+        "2027": "2027-05-01",
+        "2028": "2028-05-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+        "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+        "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html"
+      ]
+    },
+    {
+      "key": "corpus-christi",
+      "name": {
+        "zh-TW": "基督聖體聖血節",
+        "en": "Corpus Christi",
+        "ja": "聖体の祝日",
+        "zh-CN": "基督圣体圣血节",
+        "hi": "कॉर्पस क्रिस्टी",
+        "id": "Hari Raya Tubuh dan Darah Kristus",
+        "pt-BR": "Corpus Christi"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-06-04",
+        "2027": "2027-05-27",
+        "2028": "2028-06-15"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+      ]
+    },
+    {
+      "key": "ponto-facultativo-5-de-junho",
+      "name": {
+        "zh-TW": "彈性放假日（無官方名稱）",
+        "en": "Optional holiday (no official name)",
+        "ja": "臨時休務日（名称なし）",
+        "zh-CN": "弹性放假日（无官方名称）",
+        "hi": "वैकल्पिक अवकाश (नाम रहित)",
+        "id": "Hari libur opsional (tanpa nama resmi)",
+        "pt-BR": "Ponto facultativo (sem denominação)"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-06-05",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+      ]
+    },
+    {
+      "key": "independencia-do-brasil",
+      "name": {
+        "zh-TW": "巴西獨立紀念日",
+        "en": "Brazilian Independence Day",
+        "ja": "ブラジル独立記念日",
+        "zh-CN": "巴西独立日",
+        "hi": "ब्राज़ील स्वतंत्रता दिवस",
+        "id": "Hari Kemerdekaan Brasil",
+        "pt-BR": "Independência do Brasil"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-09-07",
+        "2027": "2027-09-07",
+        "2028": "2028-09-07"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+        "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+        "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html"
+      ]
+    },
+    {
+      "key": "nossa-senhora-aparecida",
+      "name": {
+        "zh-TW": "阿帕雷西達聖母節",
+        "en": "Our Lady of Aparecida",
+        "ja": "アパレシーダの聖母の日",
+        "zh-CN": "阿帕雷西达圣母节",
+        "hi": "आवर लेडी ऑफ़ अपारेसिदा",
+        "id": "Hari Bunda Maria dari Aparecida",
+        "pt-BR": "Nossa Senhora Aparecida"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-10-12",
+        "2027": "2027-10-12",
+        "2028": "2028-10-12"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+        "https://www2.camara.leg.br/legin/fed/lei/1980-1987/lei-6802-30-junho-1980-357065-publicacaooriginal-1-pl.html"
+      ]
+    },
+    {
+      "key": "dia-do-servidor-publico",
+      "name": {
+        "zh-TW": "公務人員節",
+        "en": "Public Service Day",
+        "ja": "公務員の日",
+        "zh-CN": "公务员日",
+        "hi": "लोक सेवक दिवस",
+        "id": "Hari Pegawai Negeri",
+        "pt-BR": "Dia do Servidor Público federal"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-10-28",
+        "2027": "2027-10-28",
+        "2028": "2028-10-28"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+        "https://www2.camara.leg.br/legin/fed/lei/1990/lei-8112-11-dezembro-1990-322161-normaatualizada-pl.html"
+      ]
+    },
+    {
+      "key": "finados",
+      "name": {
+        "zh-TW": "諸靈節",
+        "en": "All Souls' Day",
+        "ja": "死者の日",
+        "zh-CN": "万灵节",
+        "hi": "सर्व आत्मा दिवस",
+        "id": "Hari Arwah",
+        "pt-BR": "Finados"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-11-02",
+        "2027": "2027-11-02",
+        "2028": "2028-11-02"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+        "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+        "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html"
+      ]
+    },
+    {
+      "key": "proclamacao-da-republica",
+      "name": {
+        "zh-TW": "共和國宣告日",
+        "en": "Proclamation of the Republic",
+        "ja": "共和国宣言記念日",
+        "zh-CN": "共和国宣告日",
+        "hi": "गणतंत्र घोषणा दिवस",
+        "id": "Hari Proklamasi Republik",
+        "pt-BR": "Proclamação da República"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-11-15",
+        "2027": "2027-11-15",
+        "2028": "2028-11-15"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+        "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+        "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html"
+      ]
+    },
+    {
+      "key": "consciencia-negra",
+      "name": {
+        "zh-TW": "黑人意識日",
+        "en": "National Day of Zumbi and Black Consciousness",
+        "ja": "黒人意識の日",
+        "zh-CN": "黑人意识日",
+        "hi": "अश्वेत चेतना दिवस",
+        "id": "Hari Kesadaran Kulit Hitam",
+        "pt-BR": "Dia Nacional de Zumbi e da Consciência Negra"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-11-20",
+        "2027": "2027-11-20",
+        "2028": "2028-11-20"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+        "https://www2.camara.leg.br/legin/fed/lei/2023/lei-14759-21-dezembro-2023-795091-publicacaooriginal-170522-pl.html"
+      ]
+    },
+    {
+      "key": "vespera-do-natal",
+      "name": {
+        "zh-TW": "平安夜",
+        "en": "Christmas Eve",
+        "ja": "クリスマス・イブ",
+        "zh-CN": "平安夜",
+        "hi": "क्रिसमस की पूर्व संध्या",
+        "id": "Malam Natal",
+        "pt-BR": "Véspera do Natal"
+      },
+      "status": "discretionary",
+      "partial_day": "from-1300",
+      "dates": {
+        "2026": "2026-12-24",
+        "2027": "2027-12-24",
+        "2028": "2028-12-24"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+      ]
+    },
+    {
+      "key": "natal",
+      "name": {
+        "zh-TW": "聖誕節",
+        "en": "Christmas Day",
+        "ja": "クリスマス",
+        "zh-CN": "圣诞节",
+        "hi": "क्रिसमस",
+        "id": "Hari Natal",
+        "pt-BR": "Natal"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-12-25",
+        "2027": "2027-12-25",
+        "2028": "2028-12-25"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos",
+        "https://www2.camara.leg.br/legin/fed/lei/1940-1949/lei-662-6-abril-1949-347136-normaatualizada-pl.html",
+        "https://www2.camara.leg.br/legin/fed/lei/2002/lei-10607-19-dezembro-2002-473572-publicacaooriginal-1-pl.html"
+      ]
+    },
+    {
+      "key": "vespera-do-ano-novo",
+      "name": {
+        "zh-TW": "新年前夕",
+        "en": "New Year's Eve",
+        "ja": "大晦日",
+        "zh-CN": "新年前夜",
+        "hi": "नववर्ष की पूर्व संध्या",
+        "id": "Malam Tahun Baru",
+        "pt-BR": "Véspera do Ano Novo"
+      },
+      "status": "discretionary",
+      "partial_day": "from-1300",
+      "dates": {
+        "2026": "2026-12-31",
+        "2027": "2027-12-31",
+        "2028": "2028-12-31"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://legis.sigepe.gov.br/sigepe-bgp-ws-legis/legis-service/download/?id=0026440285-ALPDF%2F2025",
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,715 @@
+{
+  "country_code": "CN",
+  "source_urls": [
+    "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+    "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html",
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2026.pdf",
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+    "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+  ],
+  "holidays": [
+    {
+      "key": "yuandan",
+      "name": {
+        "zh-TW": "元旦",
+        "en": "New Year's Day",
+        "ja": "元旦",
+        "zh-CN": "元旦",
+        "hi": "नववर्ष दिवस",
+        "id": "Tahun Baru",
+        "pt-BR": "Ano-Novo"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-01-01",
+        "2027": "2027-01-01",
+        "2028": "2028-01-01"
+      },
+      "ends_on": {
+        "2026": "2026-01-03",
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "makeup_workdays": {
+        "2026": [
+          "2026-01-04"
+        ]
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html"
+      ]
+    },
+    {
+      "key": "chunjie",
+      "name": {
+        "zh-TW": "春節",
+        "en": "Chinese New Year",
+        "ja": "春節",
+        "zh-CN": "春节",
+        "hi": "चीनी नववर्ष",
+        "id": "Tahun Baru Imlek",
+        "pt-BR": "Ano-Novo Chinês"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-02-15",
+        "2027": "2027-02-05",
+        "2028": "2028-01-25"
+      },
+      "ends_on": {
+        "2026": "2026-02-23",
+        "2027": "2027-02-08",
+        "2028": "2028-01-28"
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "makeup_workdays": {
+        "2026": [
+          "2026-02-14",
+          "2026-02-28"
+        ]
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+      ]
+    },
+    {
+      "key": "qingmingjie",
+      "name": {
+        "zh-TW": "清明節",
+        "en": "Qingming Festival",
+        "ja": "清明節",
+        "zh-CN": "清明节",
+        "hi": "छिंगमिंग उत्सव",
+        "id": "Festival Qingming",
+        "pt-BR": "Festival Qingming"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-04-04",
+        "2027": "2027-04-05",
+        "2028": "2028-04-04"
+      },
+      "ends_on": {
+        "2026": "2026-04-06",
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "makeup_workdays": {
+        "2026": []
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+      ]
+    },
+    {
+      "key": "laodongjie",
+      "name": {
+        "zh-TW": "勞動節",
+        "en": "Labour Day",
+        "ja": "労働節",
+        "zh-CN": "劳动节",
+        "hi": "श्रम दिवस",
+        "id": "Hari Buruh",
+        "pt-BR": "Dia do Trabalho"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-01",
+        "2027": "2027-05-01",
+        "2028": "2028-05-01"
+      },
+      "ends_on": {
+        "2026": "2026-05-05",
+        "2027": "2027-05-02",
+        "2028": "2028-05-02"
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "makeup_workdays": {
+        "2026": [
+          "2026-05-09"
+        ]
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html"
+      ]
+    },
+    {
+      "key": "duanwujie",
+      "name": {
+        "zh-TW": "端午節",
+        "en": "Dragon Boat Festival",
+        "ja": "端午節",
+        "zh-CN": "端午节",
+        "hi": "ड्रैगन बोट उत्सव",
+        "id": "Festival Perahu Naga",
+        "pt-BR": "Festival do Barco-Dragão"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-06-19",
+        "2027": "2027-06-09",
+        "2028": "2028-05-28"
+      },
+      "ends_on": {
+        "2026": "2026-06-21",
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "makeup_workdays": {
+        "2026": []
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+      ]
+    },
+    {
+      "key": "zhongqiujie",
+      "name": {
+        "zh-TW": "中秋節",
+        "en": "Mid-Autumn Festival",
+        "ja": "中秋節",
+        "zh-CN": "中秋节",
+        "hi": "मध्य-शरद उत्सव",
+        "id": "Festival Pertengahan Musim Gugur",
+        "pt-BR": "Festival do Meio-Outono"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-09-25",
+        "2027": "2027-09-15",
+        "2028": "2028-10-03"
+      },
+      "ends_on": {
+        "2026": "2026-09-27",
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "makeup_workdays": {
+        "2026": []
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2027.pdf",
+        "https://www.hko.gov.hk/tc/gts/time/calendar/pdf/files/2028.pdf"
+      ]
+    },
+    {
+      "key": "guoqingjie",
+      "name": {
+        "zh-TW": "國慶節",
+        "en": "National Day",
+        "ja": "国慶節",
+        "zh-CN": "国庆节",
+        "hi": "राष्ट्रीय दिवस",
+        "id": "Hari Nasional",
+        "pt-BR": "Dia Nacional"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-10-01",
+        "2027": "2027-10-01",
+        "2028": "2028-10-01"
+      },
+      "ends_on": {
+        "2026": "2026-10-07",
+        "2027": "2027-10-03",
+        "2028": "2028-10-03"
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "makeup_workdays": {
+        "2026": [
+          "2026-09-20",
+          "2026-10-10"
+        ]
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/gongbao/2025/issue_12406/202511/content_7048922.html"
+      ]
+    },
+    {
+      "key": "funvjie",
+      "name": {
+        "zh-TW": "婦女節",
+        "en": "International Women's Day",
+        "ja": "国際女性デー",
+        "zh-CN": "妇女节",
+        "hi": "अंतर्राष्ट्रीय महिला दिवस",
+        "id": "Hari Perempuan Internasional",
+        "pt-BR": "Dia Internacional da Mulher"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-03-08",
+        "2027": "2027-03-08",
+        "2028": "2028-03-08"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+      ]
+    },
+    {
+      "key": "qingnianjie",
+      "name": {
+        "zh-TW": "青年節",
+        "en": "Youth Day",
+        "ja": "青年節",
+        "zh-CN": "青年节",
+        "hi": "युवा दिवस",
+        "id": "Hari Pemuda",
+        "pt-BR": "Dia da Juventude"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-05-04",
+        "2027": "2027-05-04",
+        "2028": "2028-05-04"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+      ]
+    },
+    {
+      "key": "ertongjie",
+      "name": {
+        "zh-TW": "兒童節",
+        "en": "Children's Day",
+        "ja": "児童節",
+        "zh-CN": "儿童节",
+        "hi": "बाल दिवस",
+        "id": "Hari Anak",
+        "pt-BR": "Dia das Crianças"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-06-01",
+        "2027": "2027-06-01",
+        "2028": "2028-06-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+      ]
+    },
+    {
+      "key": "jianjunjie",
+      "name": {
+        "zh-TW": "中國人民解放軍建軍紀念日",
+        "en": "Army Day",
+        "ja": "建軍記念日",
+        "zh-CN": "中国人民解放军建军纪念日",
+        "hi": "सेना दिवस",
+        "id": "Hari Tentara",
+        "pt-BR": "Dia do Exército"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-08-01",
+        "2027": "2027-08-01",
+        "2028": "2028-08-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+      ]
+    },
+    {
+      "key": "erqi-jinianri",
+      "name": {
+        "zh-TW": "二七紀念日",
+        "en": "February 7th Memorial Day",
+        "ja": "二・七記念日",
+        "zh-CN": "二七纪念日",
+        "hi": "7 फरवरी स्मृति दिवस",
+        "id": "Hari Peringatan 7 Februari",
+        "pt-BR": "Dia da Memória de 7 de Fevereiro"
+      },
+      "status": "commemorative",
+      "dates": {
+        "2026": "2026-02-07",
+        "2027": "2027-02-07",
+        "2028": "2028-02-07"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+      ]
+    },
+    {
+      "key": "zhishujie",
+      "name": {
+        "zh-TW": "植樹節",
+        "en": "Arbor Day",
+        "ja": "植樹節",
+        "zh-CN": "植树节",
+        "hi": "वृक्षारोपण दिवस",
+        "id": "Hari Menanam Pohon",
+        "pt-BR": "Dia da Árvore"
+      },
+      "status": "commemorative",
+      "dates": {
+        "2026": "2026-03-12",
+        "2027": "2027-03-12",
+        "2028": "2028-03-12"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/zhengce/2019-12/28/content_5464840.htm"
+      ]
+    },
+    {
+      "key": "hushijie",
+      "name": {
+        "zh-TW": "護士節",
+        "en": "International Nurses Day",
+        "ja": "国際看護師の日",
+        "zh-CN": "护士节",
+        "hi": "अंतर्राष्ट्रीय नर्स दिवस",
+        "id": "Hari Perawat Internasional",
+        "pt-BR": "Dia Internacional da Enfermagem"
+      },
+      "status": "commemorative",
+      "dates": {
+        "2026": "2026-05-12",
+        "2027": "2027-05-12",
+        "2028": "2028-05-12"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/zhengce/zhengceku/2020-05/26/content_5515100.htm"
+      ]
+    },
+    {
+      "key": "wusa-jinianri",
+      "name": {
+        "zh-TW": "五卅紀念日",
+        "en": "May Thirtieth Memorial Day",
+        "ja": "五・三〇記念日",
+        "zh-CN": "五卅纪念日",
+        "hi": "30 मई स्मृति दिवस",
+        "id": "Hari Peringatan 30 Mei",
+        "pt-BR": "Dia da Memória de 30 de Maio"
+      },
+      "status": "commemorative",
+      "dates": {
+        "2026": "2026-05-30",
+        "2027": "2027-05-30",
+        "2028": "2028-05-30"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
+      ]
+    },
+    {
+      "key": "qiqi-kangzhan-jinianri",
+      "name": {
+        "zh-TW": "七七抗戰紀念日",
+        "en": "July 7th War of Resistance Memorial Day",
+        "ja": "七・七抗日戦争記念日",
+        "zh-CN": "七七抗战纪念日",
+        "hi": "7 जुलाई प्रतिरोध युद्ध स्मृति दिवस",
+        "id": "Hari Peringatan Perang Perlawanan 7 Juli",
+        "pt-BR": "Dia da Memória da Guerra de Resistência de 7 de Julho"
+      },
+      "status": "commemorative",
+      "dates": {
+        "2026": "2026-07-07",
+        "2027": "2027-07-07",
+        "2028": "2028-07-07"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/yaowen/liebiao/202506/content_7029238.htm"
+      ]
+    },
+    {
+      "key": "kangzhan-shengli-jinianri",
+      "name": {
+        "zh-TW": "中國人民抗日戰爭勝利紀念日",
+        "en": "Victory Day of the Chinese People's War of Resistance Against Japanese Aggression",
+        "ja": "中国人民抗日戦争勝利記念日",
+        "zh-CN": "中国人民抗日战争胜利纪念日",
+        "hi": "चीनी जन प्रतिरोध युद्ध विजय दिवस",
+        "id": "Hari Kemenangan Perang Perlawanan Rakyat Tiongkok",
+        "pt-BR": "Dia da Vitória da Guerra de Resistência do Povo Chinês"
+      },
+      "status": "commemorative",
+      "dates": {
+        "2026": "2026-09-03",
+        "2027": "2027-09-03",
+        "2028": "2028-09-03"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/yaowen/liebiao/202506/content_7029238.htm"
+      ]
+    },
+    {
+      "key": "jiaoshijie",
+      "name": {
+        "zh-TW": "教師節",
+        "en": "Teachers' Day",
+        "ja": "教師節",
+        "zh-CN": "教师节",
+        "hi": "शिक्षक दिवस",
+        "id": "Hari Guru",
+        "pt-BR": "Dia do Professor"
+      },
+      "status": "commemorative",
+      "dates": {
+        "2026": "2026-09-10",
+        "2027": "2027-09-10",
+        "2028": "2028-09-10"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/zhengce/zhengceku/202508/content_7038098.htm"
+      ]
+    },
+    {
+      "key": "jiuyiba-jinianri",
+      "name": {
+        "zh-TW": "九一八紀念日",
+        "en": "September 18th Memorial Day",
+        "ja": "九・一八記念日",
+        "zh-CN": "九一八纪念日",
+        "hi": "18 सितंबर स्मृति दिवस",
+        "id": "Hari Peringatan 18 September",
+        "pt-BR": "Dia da Memória de 18 de Setembro"
+      },
+      "status": "commemorative",
+      "dates": {
+        "2026": "2026-09-18",
+        "2027": "2027-09-18",
+        "2028": "2028-09-18"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+        "https://www.gov.cn/yaowen/liebiao/202506/content_7029238.htm"
+      ]
+    },
+    {
+      "key": "lieshi-jinianri",
+      "name": {
+        "zh-TW": "烈士紀念日",
+        "en": "Martyrs' Day",
+        "ja": "烈士記念日",
+        "zh-CN": "烈士纪念日",
+        "hi": "शहीद दिवस",
+        "id": "Hari Pahlawan Martir",
+        "pt-BR": "Dia dos Mártires"
+      },
+      "status": "commemorative",
+      "dates": {
+        "2026": "2026-09-30",
+        "2027": "2027-09-30",
+        "2028": "2028-09-30"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.gov.cn/yaowen/liebiao/202309/content_6907102.htm"
+      ]
+    },
+    {
+      "key": "guojia-gongjiri",
+      "name": {
+        "zh-TW": "南京大屠殺死難者國家公祭日",
+        "en": "National Memorial Day for Nanjing Massacre Victims",
+        "ja": "南京大虐殺犠牲者国家追悼日",
+        "zh-CN": "南京大屠杀死难者国家公祭日",
+        "hi": "नानजिंग नरसंहार पीड़ित राष्ट्रीय स्मृति दिवस",
+        "id": "Hari Peringatan Nasional Korban Pembantaian Nanjing",
+        "pt-BR": "Dia Nacional de Memória às Vítimas do Massacre de Nanquim"
+      },
+      "status": "commemorative",
+      "dates": {
+        "2026": "2026-12-13",
+        "2027": "2027-12-13",
+        "2028": "2028-12-13"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.gov.cn/yaowen/liebiao/202412/content_6992401.htm"
+      ]
+    }
+  ]
+}

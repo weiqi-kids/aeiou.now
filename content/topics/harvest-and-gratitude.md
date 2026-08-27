@@ -24,7 +24,6 @@
 - date_rule: 六月，聖安東尼／聖若翰／聖伯多祿三個聖人日前後
 - rank: 3
 - source: https://www.gov.br/iphan/pt-br/assuntos/forro-do-mundo/sobre-o-forro
-- source: https://www.gov.br/turismo/pt-br/assuntos/noticias/festejos-juninos-comecam-no-nordeste-cidades-projetam-mais-publico-e-faturamento-maior-em-2026
 
 ## observance CN farmers-harvest-festival
 - local_name: 中国农民丰收节

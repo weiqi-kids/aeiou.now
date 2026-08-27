@@ -1,0 +1,751 @@
+{
+  "country_code": "ID",
+  "source_urls": [
+    "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+    "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf",
+    "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+  ],
+  "holidays": [
+    {
+      "key": "tahun-baru-masehi",
+      "name": {
+        "zh-TW": "元旦",
+        "en": "New Year's Day",
+        "ja": "元日",
+        "zh-CN": "元旦",
+        "hi": "नववर्ष दिवस",
+        "id": "Tahun Baru Masehi",
+        "pt-BR": "Ano Novo"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-01-01",
+        "2027": "2027-01-01",
+        "2028": "2028-01-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf",
+        "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+      ]
+    },
+    {
+      "key": "isra-mikraj",
+      "name": {
+        "zh-TW": "登霄節",
+        "en": "Isra and Mi'raj",
+        "ja": "ムハンマド昇天祭",
+        "zh-CN": "登霄节",
+        "hi": "शब-ए-मेराज",
+        "id": "Isra Mikraj Nabi Muhammad saw.",
+        "pt-BR": "Isra e Miraj"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-01-16",
+        "2027": "2027-01-05",
+        "2028": "2028-12-14"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "cuti-bersama-tahun-baru-imlek",
+      "name": {
+        "zh-TW": "農曆新年共同假日",
+        "en": "Joint Leave (Cuti Bersama) for Lunar New Year",
+        "ja": "旧正月の一斉休暇",
+        "zh-CN": "农历新年共同假日",
+        "hi": "चीनी नववर्ष सामूहिक अवकाश",
+        "id": "Cuti Bersama Tahun Baru Imlek",
+        "pt-BR": "Folga coletiva do Ano-Novo Lunar"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-02-16",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": null,
+        "2028": null
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "tahun-baru-imlek",
+      "name": {
+        "zh-TW": "農曆新年",
+        "en": "Lunar New Year",
+        "ja": "旧正月",
+        "zh-CN": "农历新年",
+        "hi": "चीनी नववर्ष",
+        "id": "Tahun Baru Imlek",
+        "pt-BR": "Ano-Novo Lunar"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-02-17",
+        "2027": "2027-02-06",
+        "2028": "2028-01-26"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "cuti-bersama-hari-suci-nyepi",
+      "name": {
+        "zh-TW": "安寧日共同假日",
+        "en": "Joint Leave (Cuti Bersama) for Nyepi",
+        "ja": "ニュピの一斉休暇",
+        "zh-CN": "安宁日共同假日",
+        "hi": "न्येपी सामूहिक अवकाश",
+        "id": "Cuti Bersama Hari Suci Nyepi",
+        "pt-BR": "Folga coletiva do Nyepi"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-03-18",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": null,
+        "2028": null
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "hari-suci-nyepi",
+      "name": {
+        "zh-TW": "安寧日（薩卡曆新年）",
+        "en": "Nyepi (Day of Silence, Saka New Year)",
+        "ja": "ニュピ（サカ暦新年）",
+        "zh-CN": "安宁日（萨卡历新年）",
+        "hi": "न्येपी (शक नववर्ष)",
+        "id": "Hari Suci Nyepi (Tahun Baru Saka)",
+        "pt-BR": "Nyepi (Ano-Novo Saka)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-03-19",
+        "2027": "2027-03-09",
+        "2028": "2028-03-26"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "cuti-bersama-idulfitri-1",
+      "name": {
+        "zh-TW": "開齋節共同假日",
+        "en": "Joint Leave (Cuti Bersama) for Eid al-Fitr",
+        "ja": "イード・アル＝フィトルの一斉休暇",
+        "zh-CN": "开斋节共同假日",
+        "hi": "ईद-उल-फ़ितर सामूहिक अवकाश",
+        "id": "Cuti Bersama Hari Raya Idulfitri",
+        "pt-BR": "Folga coletiva do Eid al-Fitr"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-03-20",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": null,
+        "2028": null
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "hari-raya-idulfitri",
+      "name": {
+        "zh-TW": "開齋節",
+        "en": "Eid al-Fitr",
+        "ja": "イード・アル＝フィトル",
+        "zh-CN": "开斋节",
+        "hi": "ईद-उल-फ़ितर",
+        "id": "Hari Raya Idulfitri",
+        "pt-BR": "Eid al-Fitr"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-03-21",
+        "2027": "2027-03-09",
+        "2028": "2028-02-26"
+      },
+      "ends_on": {
+        "2026": "2026-03-22",
+        "2027": "2027-03-10",
+        "2028": "2028-02-27"
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "cuti-bersama-idulfitri-2",
+      "name": {
+        "zh-TW": "開齋節共同假日",
+        "en": "Joint Leave (Cuti Bersama) for Eid al-Fitr",
+        "ja": "イード・アル＝フィトルの一斉休暇",
+        "zh-CN": "开斋节共同假日",
+        "hi": "ईद-उल-फ़ितर सामूहिक अवकाश",
+        "id": "Cuti Bersama Hari Raya Idulfitri",
+        "pt-BR": "Folga coletiva do Eid al-Fitr"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-03-23",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": "2026-03-24",
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": null,
+        "2028": null
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "wafat-yesus-kristus",
+      "name": {
+        "zh-TW": "耶穌受難日",
+        "en": "Good Friday",
+        "ja": "聖金曜日",
+        "zh-CN": "耶稣受难日",
+        "hi": "गुड फ़्राइडे",
+        "id": "Wafat Yesus Kristus",
+        "pt-BR": "Sexta-feira Santa"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-04-03",
+        "2027": "2027-03-26",
+        "2028": "2028-04-14"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "kebangkitan-yesus-kristus",
+      "name": {
+        "zh-TW": "復活節",
+        "en": "Easter Sunday",
+        "ja": "復活祭（イースター）",
+        "zh-CN": "复活节",
+        "hi": "ईस्टर",
+        "id": "Kebangkitan Yesus Kristus (Paskah)",
+        "pt-BR": "Páscoa"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-04-05",
+        "2027": "2027-03-28",
+        "2028": "2028-04-16"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "hari-buruh-internasional",
+      "name": {
+        "zh-TW": "國際勞動節",
+        "en": "International Labour Day",
+        "ja": "国際労働者の日（メーデー）",
+        "zh-CN": "国际劳动节",
+        "hi": "अंतर्राष्ट्रीय श्रमिक दिवस",
+        "id": "Hari Buruh Internasional",
+        "pt-BR": "Dia do Trabalho"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-01",
+        "2027": "2027-05-01",
+        "2028": "2028-05-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf",
+        "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+      ]
+    },
+    {
+      "key": "kenaikan-yesus-kristus",
+      "name": {
+        "zh-TW": "耶穌升天節",
+        "en": "Ascension of Jesus Christ",
+        "ja": "キリスト昇天祭",
+        "zh-CN": "耶稣升天节",
+        "hi": "प्रभु यीशु का स्वर्गारोहण",
+        "id": "Kenaikan Yesus Kristus",
+        "pt-BR": "Ascensão de Jesus Cristo"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-14",
+        "2027": "2027-05-06",
+        "2028": "2028-05-25"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "cuti-bersama-kenaikan-yesus-kristus",
+      "name": {
+        "zh-TW": "耶穌升天節共同假日",
+        "en": "Joint Leave (Cuti Bersama) for Ascension",
+        "ja": "キリスト昇天祭の一斉休暇",
+        "zh-CN": "耶稣升天节共同假日",
+        "hi": "स्वर्गारोहण सामूहिक अवकाश",
+        "id": "Cuti Bersama Kenaikan Yesus Kristus",
+        "pt-BR": "Folga coletiva da Ascensão"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-05-15",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": null,
+        "2028": null
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "hari-raya-iduladha",
+      "name": {
+        "zh-TW": "宰牲節",
+        "en": "Eid al-Adha",
+        "ja": "イード・アル＝アドハー",
+        "zh-CN": "宰牲节",
+        "hi": "ईद-उल-अज़हा",
+        "id": "Hari Raya Iduladha",
+        "pt-BR": "Eid al-Adha"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-27",
+        "2027": "2027-05-16",
+        "2028": "2028-05-05"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "cuti-bersama-iduladha",
+      "name": {
+        "zh-TW": "宰牲節共同假日",
+        "en": "Joint Leave (Cuti Bersama) for Eid al-Adha",
+        "ja": "イード・アル＝アドハーの一斉休暇",
+        "zh-CN": "宰牲节共同假日",
+        "hi": "ईद-उल-अज़हा सामूहिक अवकाश",
+        "id": "Cuti Bersama Hari Raya Iduladha",
+        "pt-BR": "Folga coletiva do Eid al-Adha"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-05-28",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": null,
+        "2028": null
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "hari-raya-waisak",
+      "name": {
+        "zh-TW": "衛塞節",
+        "en": "Vesak Day",
+        "ja": "ウェーサーカ祭",
+        "zh-CN": "卫塞节",
+        "hi": "बुद्ध पूर्णिमा (वेसाक)",
+        "id": "Hari Raya Waisak",
+        "pt-BR": "Dia de Vesak"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-31",
+        "2027": "2027-05-20",
+        "2028": "2028-05-09"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "hari-lahir-pancasila",
+      "name": {
+        "zh-TW": "潘查希拉日（建國五原則）",
+        "en": "Pancasila Day",
+        "ja": "パンチャシラの日",
+        "zh-CN": "潘查希拉日（建国五项原则）",
+        "hi": "पंचशील दिवस",
+        "id": "Hari Lahir Pancasila",
+        "pt-BR": "Dia da Pancasila"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-06-01",
+        "2027": "2027-06-01",
+        "2028": "2028-06-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf",
+        "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+      ]
+    },
+    {
+      "key": "tahun-baru-islam",
+      "name": {
+        "zh-TW": "伊斯蘭曆新年",
+        "en": "Islamic New Year (1 Muharram)",
+        "ja": "イスラム暦新年",
+        "zh-CN": "伊斯兰历新年",
+        "hi": "इस्लामी नववर्ष",
+        "id": "1 Muharam Tahun Baru Islam",
+        "pt-BR": "Ano-Novo Islâmico"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-06-16",
+        "2027": "2027-06-06",
+        "2028": "2028-05-25"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "proklamasi-kemerdekaan",
+      "name": {
+        "zh-TW": "獨立宣言紀念日",
+        "en": "Independence Day",
+        "ja": "独立記念日",
+        "zh-CN": "独立宣言纪念日",
+        "hi": "स्वतंत्रता दिवस",
+        "id": "Proklamasi Kemerdekaan",
+        "pt-BR": "Dia da Independência"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-08-17",
+        "2027": "2027-08-17",
+        "2028": "2028-08-17"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf",
+        "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+      ]
+    },
+    {
+      "key": "maulid-nabi-muhammad",
+      "name": {
+        "zh-TW": "聖紀節",
+        "en": "Birthday of the Prophet Muhammad",
+        "ja": "マウリド（預言者生誕祭）",
+        "zh-CN": "圣纪节",
+        "hi": "ईद-ए-मिलाद-उन-नबी",
+        "id": "Maulid Nabi Muhammad saw.",
+        "pt-BR": "Maulid (Nascimento do Profeta Muhammad)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-08-25",
+        "2027": "2027-08-14",
+        "2028": "2028-08-03"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "cuti-bersama-kelahiran-yesus-kristus",
+      "name": {
+        "zh-TW": "聖誕節共同假日",
+        "en": "Joint Leave (Cuti Bersama) for Christmas",
+        "ja": "クリスマスの一斉休暇",
+        "zh-CN": "圣诞节共同假日",
+        "hi": "क्रिसमस सामूहिक अवकाश",
+        "id": "Cuti Bersama Kelahiran Yesus Kristus",
+        "pt-BR": "Folga coletiva do Natal"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-12-24",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": null,
+        "2028": null
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf"
+      ]
+    },
+    {
+      "key": "kelahiran-yesus-kristus",
+      "name": {
+        "zh-TW": "聖誕節",
+        "en": "Christmas Day",
+        "ja": "クリスマス",
+        "zh-CN": "圣诞节",
+        "hi": "क्रिसमस",
+        "id": "Kelahiran Yesus Kristus",
+        "pt-BR": "Natal"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-12-25",
+        "2027": "2027-12-25",
+        "2028": "2028-12-25"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2025-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202026.pdf",
+        "https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/"
+      ]
+    }
+  ]
+}

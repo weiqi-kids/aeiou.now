@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-26",
+  "as_of": "2026-08-27",
   "note": "存量內容厚度水位。只能升不能降；補完資料後重跑 --update-baseline 鎖住新水位。 目標值見 scripts/lib/content-depth.mjs 的 THRESHOLDS。",
   "thresholds_target": {
     "units": 5,
@@ -25,7 +25,7 @@
     "beer-festivals": {
       "units": 7,
       "countries": 7,
-      "min_chars": 2730
+      "min_chars": 2733
     },
     "birthdays-and-blessings": {
       "units": 7,
@@ -128,9 +128,9 @@
       "min_chars": 3612
     },
     "ghosts-ancestors-and-remembrance": {
-      "units": 8,
-      "countries": 6,
-      "min_chars": 1114
+      "units": 9,
+      "countries": 7,
+      "min_chars": 1321
     },
     "graduation-season": {
       "units": 7,
