@@ -20,6 +20,49 @@
       腳本改成**原地刷新**(一題一列,淡出時把 created_at 推到現在,不重翻、不長新列),
       被留言或 reaction 碰過的那一列不再刷新。詳見下方「Ask the World 保鮮」。
 
+## 版型巡檢(2026-08-27;用 headless 實際渲染,不是讀碼)
+
+做法:`site/dist` 起本機 server → playwright 開 1280 與 390 兩個寬度 → 逐頁量
+`scrollWidth`／`scrollHeight`／每一列的高度,再截全頁圖看。**只讀 .astro 看不出這些**——
+底下每一條都是量出來的,不是推論。
+
+已修(見同一輪 commit):
+- [x] 手機整站橫向溢出:`.row-flags` 七面國旗 `white-space: nowrap`,390px 視窗量到
+      那一個 span 就 356px,首頁與三個清單頁的 `scrollWidth` 都是 554px。改成國名後 390。
+- [x] 國旗 emoji 在 Linux 變虛線字母方框:字型堆疊末端的 `FreeSans` 收了 regional
+      indicator 的**單字元**字形,Chromium 挑中它之後兩個 code point 就併不成旗。
+      實測三面旗 154.6px(六個方框)vs 113.9px(三面旗)。emoji 家族已插到 FreeSans 前面。
+      ⚠ **Windows 沒有國旗字形,那邊仍是字母方框**(這台機器驗不到,是已知平台限制)——
+      所以每一面國旗旁邊都要有國名,不能拿國旗當唯一的國家標示。
+- [x] 手機沒有左右水溝:`main { padding-inline: 0 }` 是 2026-08-11 對著**桌機截圖**下的指示,
+      桌機有 `.container` 的 72rem 置中所以看不出來;390px 量到四個頁型的 h1 `left = 0`,
+      正文整段貼著螢幕邊緣。已在 `< 640px` 補回 1rem,**≥640px 行為完全沒動**。
+- [x] 假日總表在手機一行一個字:`.hol-date` 是 nowrap,390px 下日期欄自己吃掉 421px,
+      「名稱」只剩 68px。61 列疊成 16,947px。已改成窄螢幕堆疊,10,134px。
+- [x] 排行榜 57 列零配圖(桌機 13,280px 的灰階條紋)。封面圖本來就有,只是這頁沒用。
+- [x] Topic 頁底部來源清單:16 個項目一行一個、其中三個網域各出現兩次而**畫面上一模一樣**
+      (`sourceLabel()` 只印 hostname)。改成橫向流排 + `sourceLabels()` 保證同頁唯一。
+- [x] 逐國頁四個 CSS token 根本不存在(`--color-border`／`--color-text-muted`／`--color-link`),
+      整頁的分隔線與弱化文字**靜靜失效**。守門腳本抓不到「用了沒定義的 var()」。
+- [x] `/questions/` 第一屏是十一行只有日期的空列:QuestionCard 在 `unavailable` 態
+      `root.hidden = true`,而日期是外層 `.archive-item` 印的,卡片消失日期不會跟著消失。
+
+還沒動,要用戶拍板的三件:
+- [ ] **53/65 個 Topic 頁的「你附近」與「相關活動」兩區都是「目前沒有資料。」**
+      查法(先 `cd site && LOCALE=zh-TW pnpm build`,⚠ 每個站只看得到自己市場那一城):
+      `python3 -c "import glob;h=[open(f,encoding='utf-8').read() for f in glob.glob('site/dist/topic/*/index.html')];print(sum(1 for x in h if '目前沒有資料' in x.split('id=\"nearby\"')[1][:1200] and '目前沒有資料' in x.split('id=\"events\"')[1][:1200]),'/',len(h))"`
+      版面是 2026-08-11 定版的左 50% / 右 50%,所以八成的 Topic 頁有半版是兩行空話,
+      而右邊的討論室被壓在 50% 裡。**改比例等於改定版,不自己動**。
+      可能的做法:兩區都空時左欄收成一行、討論室吃滿寬;或維持現狀等在地資料補上來。
+- [ ] **TopicPosts / Participation 的「暫時無法載入」訊息是死碼**:兩支都在 `unavailable`
+      態 `root.hidden = true`,底下 `.posts-closed-title` / `.posts-closed-hint` 永遠印不出來。
+      DiscussionRoom 只是**碰巧**沒事 —— 它的 `[data-room-state='unavailable']` 設了
+      `display: flex`,把 `[hidden]` 蓋掉了。三支要一致,但「API 掛掉時首頁十列各印一次
+      故障」是產品決定(2026-08-20 那次事故的教訓正好在這條線上),不自己動。
+- [ ] 首頁 hero「一件事,到了不同地/方,做法可能完全不同」在「地方」中間斷行。
+      CSS 無解:`text-wrap: balance` 與 `word-break: auto-phrase` 實測對中文都不改變斷點
+      (auto-phrase 目前只對日文有效)。要修只能在文案裡放斷行提示,**那是用戶的東西**。
+
 # 待辦(2026-08-11 M1 收尾時整理;完成一項劃掉一項)
 
 > 現況不要信本檔——逐項用附的指令查,查完再動手。

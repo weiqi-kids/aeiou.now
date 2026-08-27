@@ -109,8 +109,13 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
     </div>
     <p class="q-closed-note" hidden>{t('q.closed')}</p>
   </div>
+  {/* 沒有 JS 的讀者:卡片**留著**,只把「目前沒有即時回答」那一行打開。
+      2026-08-27 改:原本這裡是 `.q-card { display: none }`,與上面那段註解
+      (「選項本身是內容,爬蟲與無 JS 讀者都該看到」)自相矛盾,而且在 /questions/
+      上會留下一整排只有日期、底下什麼都沒有的空列 —— 日期是外層 archive-item 印的,
+      卡片消失了日期不會跟著消失。 */}
   <noscript>
-    <style>.q-card { display: none; }</style>
+    <style>.q-card .q-closed-note[hidden] { display: block; }</style>
   </noscript>
 
   <div class="q-live" hidden></div>
@@ -136,7 +141,11 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
     if (loadingNote) loadingNote.hidden = state !== 'loading';
     if (closedNote) closedNote.hidden = state !== 'unavailable';
     if (live) live.hidden = state !== 'open';
-    root.hidden = state === 'unavailable';
+    // 2026-08-27:原本這裡是 `root.hidden = state === 'unavailable'`,整張卡直接消失。
+    // ① 它讓 .q-closed-note 永遠印不出來(上面那行才剛把它打開),
+    // ② /questions/ 的日期是外層 <section class="archive-item"> 印的,卡片消失了
+    //    日期還在 —— API 一掛,那一頁的第一屏就是十一行只有日期的空列(實測)。
+    // 四態模型要的是「顯示 unavailable」,不是「把它藏起來」。
     root.dataset.qState = state;
   }
 

@@ -8,7 +8,7 @@ import { emphasisParts } from '../../lib/emphasis.mjs';
 import HeatMeter from '../../components/HeatMeter.astro';
 import { t, tOr } from '../../lib/i18n.mjs';
 import { WINDOWS } from '../../lib/config.mjs';
-import { getGlobalRanking, getTopicsIndex, countryName, coverPath } from '../../lib/data.mjs';
+import { getGlobalRanking, getTopicsIndex, countryName, coverPath, coverThumbPath } from '../../lib/data.mjs';
 import { withBase } from '../../lib/paths.mjs';
 import { siteDescription, SITE_OVERVIEW_IMAGE_PATH } from '../../lib/seo.mjs';
 
@@ -67,6 +67,26 @@ const representativeCover = representativeTopic ? coverPath(representativeTopic.
         <li class:list={['ranking-item', { top: item.rank <= 3 }]}>
           <a class="ranking-row" href={withBase(`topic/${topic.slug || item.slug}/`)}>
             <span class="rank" aria-hidden="true">{item.rank}</span>
+            {/* 封面縮圖(2026-08-27):這一頁原本 57 列全是文字,桌機量到 13,280px 高、
+                零張圖 —— 同一種灰階條紋滾五十七次,掃不到任何落點。
+                圖的來源與清單頁的 TopicRow 完全一樣(同一個 Topic 的 cover),
+                所以不是新資產,只是這一頁沒有拿來用。前三列不 lazy(首屏)。 */}
+            {coverPath(topic.slug) && (
+              <span class="rank-cover" aria-hidden="true">
+                <picture>
+                  {coverThumbPath(topic.slug) && <source srcset={withBase(coverThumbPath(topic.slug))} type="image/webp" />}
+                  <img
+                    src={withBase(coverPath(topic.slug))}
+                    alt=""
+                    width="480"
+                    height="270"
+                    sizes="(max-width: 767px) 88px, 128px"
+                    loading={item.rank <= 3 ? 'eager' : 'lazy'}
+                    decoding="async"
+                  />
+                </picture>
+              </span>
+            )}
             <span class="rank-main">
               <span class="rank-title">{topic.title || item.slug}</span>
               {topic.summary && (
@@ -158,13 +178,25 @@ const representativeCover = representativeTopic ? coverPath(representativeTopic.
   }
   .ranking-row {
     display: grid;
-    grid-template-columns: 3rem minmax(0, 1fr);
+    grid-template-columns: 2.5rem clamp(3.5rem, 20%, 5.5rem) minmax(0, 1fr);
     gap: 0.75rem 1rem;
-    align-items: baseline;
+    align-items: start;
     padding-block: 1.25rem;
     text-decoration: none;
     color: var(--color-text);
   }
+  /* 沒有封面的 Topic 不留空欄,那一列讓文字補上去 */
+  .rank-cover {
+    display: block;
+    aspect-ratio: 1200 / 675;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    background: var(--color-primary-soft);
+  }
+  .rank-cover picture { display: block; width: 100%; height: 100%; }
+  .rank-cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .rank-main { grid-column: 3; }
+  .ranking-row:not(:has(.rank-cover)) .rank-main { grid-column: 2 / -1; }
   .ranking-row:hover .rank-title {
     color: var(--color-accent-dark);
     text-decoration: underline;
@@ -220,7 +252,7 @@ const representativeCover = representativeTopic ? coverPath(representativeTopic.
 
   @media (min-width: 768px) {
     .ranking-row {
-      grid-template-columns: 5rem minmax(0, 1fr);
+      grid-template-columns: 5rem 8rem minmax(0, 1fr);
       padding-block: 1.75rem;
     }
     .rank {

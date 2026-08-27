@@ -21,8 +21,9 @@ import { t } from '../../../lib/i18n.mjs';
 import { LOCALE } from '../../../lib/config.mjs';
 import { countryName } from '../../../lib/data.mjs';
 import { countryFlag, calendarDate } from '../../../lib/format.mjs';
+import { paragraphs } from '../../../lib/prose.mjs';
 import { withBase } from '../../../lib/paths.mjs';
-import { seoCopy, fillTemplate, compactDescription, sourceLabel, SITE_OVERVIEW_IMAGE_PATH } from '../../../lib/seo.mjs';
+import { seoCopy, fillTemplate, compactDescription, sourceLabel, sourceLabels, SITE_OVERVIEW_IMAGE_PATH } from '../../../lib/seo.mjs';
 import { holidayCountries, holidayCellsFor, holidaysFor, undatedFor, holidaySystemNote, holidayYearNote, topicsByDate, YEARS } from '../../../lib/holidays.mjs';
 
 export function getStaticPaths() {
@@ -113,6 +114,8 @@ const partialLabel = (v) => {
 const siblings = holidayCellsFor(code).filter((y) => y !== year);
 const otherCountries = holidayCountries().filter((c) => c !== code && holidayCellsFor(c).includes(year));
 const allSources = [...new Set(rows.flatMap((r) => r.source_urls))];
+// 同網域的不同公告要分得出來(緣由見 seo.mjs);來源清單一條都不能少
+const holidaySourceLabels = sourceLabels(allSources);
 ---
 
 <BaseLayout
@@ -131,10 +134,12 @@ const allSources = [...new Set(rows.flatMap((r) => r.source_urls))];
     <p class="hol-yearnote">{yearNote[LOCALE]}</p>
   )}
 
+  {/* 制度說明分段(2026-08-27):原本整段塞一個 <p>,zh-TW 在桌機是整幅寬跑滿六行的字牆。
+      paragraphs() 只在句子邊界換氣,**一個字都沒改** —— 文案是用戶的東西。 */}
   {systemNote?.text?.[LOCALE] && (
     <section class="hol-system">
       <h2>{t('holidays.system_title')}</h2>
-      <p>{systemNote.text[LOCALE]}</p>
+      {paragraphs(systemNote.text[LOCALE]).map((para) => <p>{para}</p>)}
     </section>
   )}
 
@@ -148,10 +153,13 @@ const allSources = [...new Set(rows.flatMap((r) => r.source_urls))];
         </tr>
       </thead>
       <tbody>
-        {rows.map((row) => {
+        {rows.map((row, i) => {
           const topic = byDate.get(row.starts_on);
+          // 六十幾列連著排沒有換氣點。月份換了就給那一列一條粗一點的上框線,
+          // 讓讀者一眼掃得到「幾月有哪些」——不加文字、不動列數,只是視覺節奏。
+          const monthStart = i > 0 && String(rows[i - 1].starts_on).slice(0, 7) !== String(row.starts_on).slice(0, 7);
           return (
-            <tr>
+            <tr class:list={{ 'hol-month-start': monthStart }}>
               <td class="hol-date">
                 {row.ends_on ? `${calendarDate(row.starts_on)} – ${calendarDate(row.ends_on)}` : calendarDate(row.starts_on)}
                 {overlapKeys.has(row.key) && <span class="hol-flag"> · {t('holidays.overlaps')}</span>}
@@ -210,7 +218,7 @@ const allSources = [...new Set(rows.flatMap((r) => r.source_urls))];
     <section class="hol-sources">
       <h2>{copy.sources}</h2>
       <ul>
-        {allSources.map((u) => <li><a href={u} rel="nofollow noopener">{sourceLabel(u)}</a></li>)}
+        {allSources.map((u) => <li><a href={u} rel="nofollow noopener" title={u}>{holidaySourceLabels.get(u) || sourceLabel(u)}</a></li>)}
       </ul>
     </section>
   )}
@@ -239,6 +247,40 @@ const allSources = [...new Set(rows.flatMap((r) => r.source_urls))];
   }
   .hol-table th { color: var(--color-ink-muted); font-weight: 600; }
   .hol-date { white-space: nowrap; }
+  /* 月份換氣點:只是一條粗一點的線,沒有新增任何文字 */
+  .hol-month-start > td { border-block-start: 0.125rem solid var(--color-line-strong); }
+  .hol-name { font-weight: 600; }
+
+  /* 窄螢幕改成堆疊(2026-08-27)。
+     為什麼不能只靠 .hol-wrap 橫捲:`.hol-date` 是 nowrap,在 390px 視窗量到日期欄
+     自己就吃掉 421px,剩下的寬度分給「名稱」68px、「法律位置」53px —— 中文變成
+     一行一個字,六十一列疊起來 16,947px。橫捲救不了「一個字一行」。
+     所以窄螢幕整列改成上下堆疊:日期在上、名稱粗體、狀態在下。
+     表頭改用視覺隱藏(不是 display:none),讀屏仍讀得到欄位名。 */
+  @media (max-width: 47.99em) {
+    .hol-wrap { overflow-x: visible; }
+    .hol-table, .hol-table tbody, .hol-table tr, .hol-table td { display: block; width: auto; }
+    .hol-table thead {
+      position: absolute;
+      width: 0.0625rem;
+      height: 0.0625rem;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+    .hol-table tr {
+      padding-block: 0.75rem;
+      border-block-end: 0.0625rem solid var(--color-line);
+    }
+    .hol-table td {
+      padding: 0;
+      border-block-end: 0;
+    }
+    .hol-month-start > td { border-block-start: 0; }
+    .hol-table tr.hol-month-start { border-block-start: 0.125rem solid var(--color-line-strong); }
+    .hol-date { white-space: normal; font-size: var(--text-sm); color: var(--color-ink-muted); }
+    .hol-status { font-size: var(--text-xs); color: var(--color-ink-muted); }
+  }
   /* 級距不得只靠顏色區分:狀態欄印的是文字本身,不是色塊 */
   .hol-flag { color: var(--color-ink-muted); }
   .hol-topic { margin-inline-start: 0.5rem; }
@@ -246,6 +288,9 @@ const allSources = [...new Set(rows.flatMap((r) => r.source_urls))];
   .hol-nav-label { color: var(--color-ink-muted); margin-block-end: 0.5rem; }
   .hol-nav ul, .hol-sources ul { list-style: none; padding: 0; margin: 0; }
   .hol-nav li { display: inline-block; margin-inline-end: 0.75rem; }
+  /* 來源橫向流排,不是一條佔一整行的縱向清單 */
+  .hol-sources ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+  .hol-sources li { max-width: 100%; overflow-wrap: anywhere; }
   .hol-system { margin-block-end: 1.5rem; }
   .hol-system h2 { font-size: var(--text-lg); }
   .hol-undated { margin-block-start: 1.5rem; }

@@ -12,7 +12,7 @@
 //   │        ← 左:主題介紹           │ 右:該 Topic 最高三篇│
 //   └──────────────────────────────┴────────────────────┘
 //
-//   · 左欄 = 主題介紹:名次 → 國旗 → 標題 → 分類/長青徽章 → 一行摘要 → 熱度級距。
+//   · 左欄 = 主題介紹:名次 → 封面 → 標題 → 分類/長青徽章 + 涵蓋國家 → 一行摘要 → 熱度級距。
 //     名次來自 rankings/global/<win>.json;熱度只給級距,原始分數不上畫面(見 src/lib/heat.mjs)。
 //   · 右欄 = 該 Topic 熱度最高的三篇(TopicPosts,sort=hot)。Topic 底下本來就掛著該議題的
 //     討論串(World → Topic → Post → Comment),所以每一列都要看得到它。
@@ -21,8 +21,7 @@
 // 貼文區塊放在整列連結**之外**(a 裡不能再包 a),仍在同一個 <li> 裡,階層才對得上。
 import { t, tOr } from '../lib/i18n.mjs';
 import { withBase } from '../lib/paths.mjs';
-import { countryFlag } from '../lib/format.mjs';
-import { coverPath, coverThumbPath } from '../lib/data.mjs';
+import { coverPath, coverThumbPath, countryName } from '../lib/data.mjs';
 import { isTrendTopic } from '../lib/topic-status.mjs';
 import { emphasisParts } from '../lib/emphasis.mjs';
 import { summaryLead } from '../lib/summary.mjs';
@@ -68,9 +67,6 @@ const withPosts = !!topic.topic_id;
       )}
       <span class="row-copy">
         <span class="row-head">
-          {codes.length > 0 && (
-            <span class="row-flags" aria-hidden="true">{codes.map(countryFlag).join(' ')}</span>
-          )}
           <span class="row-title">{topic.title}</span>
         </span>
         <span class="row-badges">
@@ -95,6 +91,12 @@ const withPosts = !!topic.topic_id;
               <span class="row-tag-value">{tag.value}</span>
             </span>
           ))}
+          {codes.length > 0 && (
+            <span class="row-countries">
+              {codes.slice(0, 3).map((code) => countryName(code)).join(' · ')}
+              {codes.length > 3 ? ` +${codes.length - 3}` : ''}
+            </span>
+          )}
         </span>
         {note && <span class="row-note">{note}</span>}
         {teaser && (
@@ -151,7 +153,11 @@ const withPosts = !!topic.topic_id;
   }
   .row-main {
     display: grid;
-    grid-template-columns: minmax(7rem, 12rem) minmax(0, 1fr);
+    /* 封面欄用比例而不是固定下限(2026-08-27):原本 minmax(7rem, 12rem) 的意思是
+       「能長就長到 12rem」,於是 390px 螢幕上封面吃掉 192px,文字欄只剩 165px ——
+       標題一律折兩行、摘要縮成兩行細長條。改成 28% 之後窄螢幕約 100px、
+       桌機仍然頂到 12rem,兩邊都不變形。 */
+    grid-template-columns: clamp(5rem, 28%, 12rem) minmax(0, 1fr);
     gap: 0.35rem;
     min-width: 0;
     align-items: start;
@@ -186,20 +192,20 @@ const withPosts = !!topic.topic_id;
     align-items: baseline;
     gap: 0.25rem 0.6rem;
   }
-  /* 國旗列:字元本身就是內容,給它比內文大一階,才看得出「這個議題涵蓋哪些國家」 */
-  /* 一面國旗一個 <span> 時,清單頁光是這一列就佔掉全頁元素的一成多(七面 × 每張卡),
-     而它整段是 aria-hidden 的純裝飾 —— 爬蟲與螢幕閱讀器都看不到,拆成元素只是白付
-     排版成本。改成一個 span 裝一串 emoji,間距用字元空白撐(**不能用 letter-spacing**:
-     國旗是兩個 regional indicator 組成的,字距會插進中間把旗子拆散)。
-     `nowrap` 是為了保留原本 inline-flex 不換行的行為。 */
-  .row-flags {
-    display: inline-block;
-    white-space: nowrap;
-    /* 空白字元本身約 0.25em,比原本的 gap 0.15em 寬一點,用 word-spacing 收回來。
-       只影響空白字元,不會像 letter-spacing 那樣插進國旗的兩個 code point 中間。 */
-    word-spacing: -0.1em;
-    font-size: var(--text-lg);
-    line-height: 1;
+  /* 涵蓋國家:國名,不是國旗(2026-08-27)。
+     原本這裡是一串國旗 emoji,踩到兩個坑,都是實測出來的:
+     ① **國旗 emoji 不是每個平台都畫得出來**。字型堆疊末端的 FreeSans 收了
+        regional indicator 的單字元字形,於是 Chromium 先挑中它、兩個 code point
+        再也併不成一面旗,整列變成 `B R  C N  I D …` 的虛線方框。
+        實測:同一份堆疊拿掉 FreeSans 後三面旗 113.9px、留著 154.6px(= 六個方框)。
+        Windows 本身就沒有國旗字形,那邊看到的也是字母方框。
+     ② **`white-space: nowrap` 的七面旗在窄螢幕撐破版面**:390px 視窗量到這一個
+        span 就 356px 寬,整頁 scrollWidth 554px —— 首頁與三個清單頁都能左右拉。
+     國名是文字,七語系各自有譯名,兩個坑一起消失,也跟 rankings/[window].astro
+     的 .rank-countries 對齊(同一種「前三個 · 再 +N」的寫法)。 */
+  .row-countries {
+    font-size: var(--text-xs);
+    color: var(--color-ink-muted);
   }
   .row-title {
     font-family: var(--font-display);

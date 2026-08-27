@@ -190,6 +190,72 @@ export function sourceLabel(url) {
   }
 }
 
+/**
+ * 一整份來源清單的標籤,同網域的會被區分開來(2026-08-27)。
+ *
+ * 為什麼要有這支:Topic 頁底部的來源清單直接用 sourceLabel(),於是同一個官方網域的
+ * 不同公告全部顯示成同一行字 —— 收成與感恩那一頁排出 `www8.cao.go.jp`、`cwa.gov.tw`、
+ * `hko.gov.hk` 各兩次,十六個項目肉眼看只有十三種,讀者無從分辨哪一條是哪一條。
+ * 這裡在網域重複時補上路徑裡最像「這是什麼」的一段(檔名或最後一層目錄),
+ * **不丟掉任何一條網址** —— 來源清單是給人查證用的,少一條比醜還嚴重。
+ */
+export function sourceLabels(urls) {
+  const list = [...new Set(Array.isArray(urls) ? urls : [])];
+  // 每個網址先算出「由粗到細」的候選標籤:只有網域 → 網域 + 最後一層 → 再往前一層…
+  // 最後一階連 query 都帶上。取第一個在這份清單裡**唯一**的候選。
+  const candidates = new Map();
+  for (const url of list) {
+    const host = sourceLabel(url);
+    const options = [host];
+    try {
+      const u = new URL(url);
+      const segments = u.pathname.split('/').filter(Boolean);
+      for (let take = 1; take <= segments.length; take += 1) {
+        options.push(`${host}/${segments.slice(-take).join('/')}`);
+      }
+      if (u.search) options.push(`${host}${u.pathname}${u.search}`);
+    } catch { /* 不是合法網址就只有網域可用 */ }
+    candidates.set(url, options);
+  }
+  const depth = Math.max(0, ...[...candidates.values()].map((o) => o.length));
+  const out = new Map();
+  const taken = new Set();
+  for (let level = 0; level < depth; level += 1) {
+    const seen = new Map();
+    for (const url of list) {
+      if (out.has(url)) continue;
+      const options = candidates.get(url);
+      const label = options[Math.min(level, options.length - 1)];
+      seen.set(label, (seen.get(label) || 0) + 1);
+    }
+    for (const url of list) {
+      if (out.has(url)) continue;
+      const options = candidates.get(url);
+      const label = options[Math.min(level, options.length - 1)];
+      if (seen.get(label) === 1 && !taken.has(label)) {
+        out.set(url, label);
+        taken.add(label);
+      }
+    }
+  }
+  // 候選用完還是撞在一起(只有這一種:兩條網址除了大小寫之外一模一樣)→ 退回完整網址。
+  for (const url of list) if (!out.has(url)) out.set(url, url.replace(/^https?:\/\//, ''));
+  // 太長的標籤從**結尾**省略(前半段才是「這是哪一份公告」的線索)。
+  // 但省略不能把剛剛辛苦分出來的差異又切掉 —— 切完撞在一起的就退回完整標籤。
+  const MAX = 40;
+  const shortened = new Map();
+  for (const [url, label] of out) {
+    shortened.set(url, label.length > MAX ? `${label.slice(0, MAX - 1)}…` : label);
+  }
+  const collisions = new Set();
+  const seenShort = new Map();
+  for (const [, label] of shortened) seenShort.set(label, (seenShort.get(label) || 0) + 1);
+  for (const [url, label] of shortened) if (seenShort.get(label) > 1) collisions.add(url);
+  for (const [url, label] of shortened) if (!collisions.has(url)) out.set(url, label);
+  return out;
+}
+
+
 export function localeRoutePath(pathname, currentBase) {
   const base = String(currentBase || '').replace(/\/$/, '');
   const path = String(pathname || '/');

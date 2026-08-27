@@ -429,6 +429,19 @@ const jumpTopics = hotTopics(2).filter((topic) => topic && topic.slug);
     padding-inline: 0;
   }
 
+  /* 窄螢幕留一條最小水溝(2026-08-27)。
+     上面那條歸零是對著**桌機截圖**下的:桌機有 .container 的 max-width 72rem 置中,
+     1280px 視窗兩邊各留 64px,看不出少了內距。窄螢幕沒有那份留白 ——
+     390px 實測 h1 的 left = 0,假日總表/排行榜/世界問題集/關於四個頁型的正文
+     整段貼著螢幕邊緣,兩側都沒有喘息。
+     所以只在 .container 撐滿視窗(< 72rem + 兩倍水溝)時補回來,
+     ≥640px 的行為與 2026-08-11 那條指示完全一樣。 */
+  @media (max-width: 39.99em) {
+    main {
+      padding-inline: 1rem;
+    }
+  }
+
   .site-footer {
     background: var(--color-primary-deep);
     color: var(--color-primary-line);

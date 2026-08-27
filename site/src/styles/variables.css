@@ -79,19 +79,33 @@
 
   /* ── 字型（系統堆疊，不載外部字型） ──
    * 排序原則：拉丁字面先行（en/id/pt-BR 用系統 UI 字），CJK 與天城文靠逐字 fallback 接手，
-   * 所以七語系共用同一組堆疊也不會爆版。*/
+   * 所以七語系共用同一組堆疊也不會爆版。
+   *
+   * ⚠ emoji 家族必須排在 FreeSans/FreeSerif **前面**（2026-08-27 實測）：
+   *   國旗 emoji 是兩個 regional indicator 併成的。FreeSans 收了這兩個 code point
+   *   的**單字元**字形（就是那個虛線方框裡放一個字母），Chromium 一挑中它，
+   *   兩個 code point 就再也併不成一面旗，整列變成 `B R  C N  I D …`。
+   *   同一份堆疊三面國旗量到 154.6px（＝六個方框），把 FreeSans 挪到 emoji 後面
+   *   量到 113.9px（＝三面旗）。放在末端是刻意的：拉丁／CJK／天城文都已經被
+   *   前面的字面接走，emoji 家族只會接到真的沒人認領的 emoji code point。
+   *   ⚠ 這解決不了 Windows —— 那邊系統本來就沒有國旗字形，看到的仍是字母方框，
+   *   所以版面上每一面國旗旁邊都要有國名，不能拿國旗當唯一的國家標示。*/
   --font-sans:
     system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', 'Noto Sans',
     'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei',
     'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic',
     'Noto Sans Devanagari', 'Nirmala UI', 'Kohinoor Devanagari',
-    'Noto Sans CJK TC', 'Noto Sans CJK JP', 'FreeSans', sans-serif;
+    'Noto Sans CJK TC', 'Noto Sans CJK JP',
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji',
+    'FreeSans', sans-serif;
   --font-display:
     Georgia, 'Times New Roman', 'Noto Serif',
     'Noto Serif TC', 'Songti TC', 'PMingLiU',
     'Hiragino Mincho ProN', 'Noto Serif JP', 'Yu Mincho',
     'Noto Serif Devanagari',
-    'Noto Serif CJK TC', 'Noto Serif CJK JP', 'FreeSerif', serif;
+    'Noto Serif CJK TC', 'Noto Serif CJK JP',
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji',
+    'FreeSerif', serif;
   --font-serif: var(--font-display);
 
   /* ── 圓角（編輯感 = 直角為主，卡片只給一點點） ── */
