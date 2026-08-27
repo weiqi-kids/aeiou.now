@@ -1015,10 +1015,12 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
       </section>
     )}
 
+    {/* 用 <p> 不是 <nav>:check-local-scope.mjs 的 assertWorldNavPlacement 規定
+        article 內唯一的 <nav> 只能是 #world 的國家導覽(版面 2026-08-11 定版)。 */}
     {hasQuestionCell && (
-      <nav class="topic-questions-link">
+      <p class="topic-questions-link">
         <a href={withBase(`questions/${facts.slug}/`)}>{t('q.topic_questions')}</a>
-      </nav>
+      </p>
     )}
 
     {related.length > 0 && (

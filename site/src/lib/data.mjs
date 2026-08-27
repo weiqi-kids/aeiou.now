@@ -58,9 +58,10 @@ export {
   getQuestions,
   questionsForDate,
   pastQuestions,
+  allQuestions,
   questionsByTopic,
   questionTopicCells,
-  MIN_TOPIC_QUESTION_TEXT,
+  MIN_TOPIC_QUESTIONS,
 } from './questions-data.mjs';
 
 export { todayWorld } from './today-world.mjs';

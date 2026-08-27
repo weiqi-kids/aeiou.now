@@ -155,6 +155,16 @@ function answerTableCells(html) {
     const text = m[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
     if (text) cells.add(text);
   }
+  // 每日一問的選項標籤(2026-08-27)。同一個理由的第四次:選項是**按鈕上的字**不是段落。
+  // /questions/<topic>/ 一頁列同一個主題的二十幾題,兩題共用一個選項
+  // (「Adjusted a clock for daylight saving time」「一定會」)本來就會發生,而且合理。
+  // 又是同一種語系不對稱:中文選項短於 D3 的 40 字門檻從沒觸發,翻成英文/葡文過線就被判重複
+  // —— zh-TW / zh-CN / ja 全綠,en / hi / id / pt-BR 各 27–31 項。
+  // 一樣**仍然計入 total/unique 字元數**,只是不進「重複段落」那份計數。
+  for (const m of html.matchAll(/<span\b[^>]*class="[^"]*\bq-option-label\b[^"]*"[^>]*>([\s\S]*?)<\/span>/gi)) {
+    const text = m[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    if (text) cells.add(text);
+  }
   return cells;
 }
 

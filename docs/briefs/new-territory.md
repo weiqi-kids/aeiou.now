@@ -67,44 +67,35 @@ python3 -c "import glob;h=[open(f,encoding='utf-8').read() for f in glob.glob('s
 
 ---
 
-## C. 逐主題題集 `/questions/<topic-slug>/` —— 機器已上線,**今天產出 0 頁**
+## C. 逐主題題集 `/questions/<topic-slug>/` —— ✅ 已上線,七站各 24 頁
 
-**先更正一件事**:先前說「486 題 × 7 語被浪費在一個 URL」是錯的。
-題庫 486 題裡**只有 26 題已發布**(2026-08-15 起一天兩題,排到 2027-04-14),其餘是排程中的未來內容。
+**2026-08-27 用戶拍板「提前把存量放出來」。** 做法是:
+**首頁維持每天一題的儀式(`questionsForDate()` 照樣依日期挑),題集改成吃整份題庫(`allQuestions()`)。**
+`date` 是每日一問的**排程**,不是內容的發布狀態。投票不會壞 —— `sync-questions-to-d1.mjs`
+本來就把整份題庫推進 D1(沒有日期過濾),Worker 驗得到每一題。
 
-```bash
-python3 -c "import json,datetime;d=json.load(open('data/questions/zh-TW.json'))['questions'];t=datetime.date.today().isoformat();print('總數',len(d),'已發布',len([q for q in d if q['date']<=t]),'最後一題',max(q['date'] for q in d))"
-```
+結果:sitemap 469 → 493,七站各 24 個新的可索引頁,渲染厚度最薄 357(守門下限 320)、
+拉丁語系最薄 1135。
 
-**做了什麼**:`site/src/pages/questions/[topic].astro` + `questionTopicCells()`(判準一份,
-getStaticPaths / sitemap / Topic 頁入口三處共用)+ `/questions/` 與 Topic 頁的雙向站內入口。
+**門檻走過三版,兩次都量錯,記在這裡免得再犯**(判準一份:`questionTopicCells()`,
+getStaticPaths / sitemap / Topic 頁入口三處共用):
 
-**門檻怎麼定的(實測,不是猜)**:第一版寫「題數 >= 4」,建出七頁、四頁沒過守門的 320 唯一字元。
-攤開看才發現**題數不相關**:
+| 版本 | 判準 | 為什麼錯 |
+|---|---|---|
+| 一 | 題數 >= 4 | 當時只有 26 題已發布,每頁 2–4 題,厚度幾乎全靠**借來的 Topic 摘要**。實測 `moving-home` 2 題 → 334 過、`ask-the-world` 4 題 → 291 沒過,**題數不相關** |
+| 二 | 題目自己的唯一字數 >= 320 | **唯一字數跟著書寫系統走**。拉丁字母就那二十幾個,再多題也堆不出 320 個不同字元 → CJK 三站各開 27–28 頁,en/hi/id/pt-BR **各只開 1 頁**。與 `country-cells.mjs` 那條「字元門檻對 CJK 天生比較嚴」同一個坑,方向相反 |
+| 三 ✅ | 題數 >= 5 | 存量放出來之後每頁 5–50 題,厚度由題目主導。zh-TW(字元密度最高 = 最壞情況)5 題 → 402,取 5 是為了在 320 之上留約 80 字餘裕 |
 
-```
-moving-home     2 題 → 334 ✅      ask-the-world   4 題 → 291 ❌
-back-to-school  2 題 → 343 ✅      mid-autumn      2 題 → 286 ❌
-```
+**不會變成 CI 炸彈**:題庫只增不減(`generate-questions.mjs` 往檔尾加),頁面只會愈來愈厚。
 
-決定厚度的是**借來的 Topic 摘要**長短。靠題數開頁 = 開出一批內容主要來自母頁的近似重複頁,
-正是逐國頁那個坑。所以改成量「題目自己的唯一字數 >= 320」——
-不管外框借到多少字,產出的頁一定過得了守門,也不會變成幾週後才引爆的 CI 失敗。
+**順帶修掉的兩件**(都是同一種語系不對稱,中文短於門檻所以從沒觸發):
+- 守門 D3 把**選項標籤**當成重複段落。選項是按鈕上的字不是散文,同一主題兩題共用一個選項
+  (`Adjusted a clock for daylight saving time`)本來就會發生。已加進 `answerTableCells()`
+  的排除清單(第四次同型修正,前三次是 answer-basis / q-asked / hol-*)。
+- 題庫裡兩題在中文明明不同、翻成英文收斂成同一句 → 讀取層按問句去重。
 
-**什麼時候會開始長**:
-
-```bash
-cd site && LOCALE=zh-TW node --input-type=module -e "
-const {questionsByTopic,questionTextWeight,MIN_TOPIC_QUESTION_TEXT}=await import('./src/lib/questions-data.mjs');
-const rows=[...questionsByTopic().entries()].map(([s,l])=>[s,l.length,questionTextWeight(l)]).sort((a,b)=>b[2]-a[2]);
-console.log('門檻',MIN_TOPIC_QUESTION_TEXT);for(const r of rows.slice(0,8))console.log(r[0].padEnd(34),r[1],'題',r[2],'唯一字');"
-```
-
-**要用戶決定的**:題庫是**一天兩題的儀式**,還是可以提前把存量放出來?
-維持儀式 → 這一塊要幾個月才長得出頁;提前放 → 這一塊馬上有內容,但每日一問就不是每日的了。
-**這是產品決定,不是我能改的。**
-
----
+**還沒做的**:`q.topic_questions` 這個 i18n key 只有 zh-TW 是定稿,其餘六語是 `[TODO] ` 佔位
+(`grep -l '\[TODO\]' site/src/i18n/*.json`)。文案是用戶的東西,等定版一次補。
 
 ## D. 趨勢與年度變化(草案 §7 的 トレンド／tendências)
 
@@ -126,7 +117,7 @@ console.log('門檻',MIN_TOPIC_QUESTION_TEXT);for(const r of rows.slice(0,8))con
 
 1. **A**(機器齊、卡在資料量)—— 唯一帶商業意圖、且 Google 不吃的類別
 2. **D**(資料齊、只要算)—— 把既有假日總表從「被拒收」變成「答得出連假」
-3. **C**(機器已上線,等題目累積)—— 或由用戶決定提前放題
+3. ~~**C**~~ ✅ 已完成(2026-08-27 存量已放出,七站各 24 頁)
 4. **B**(要人寫七語內容,且主題清單是用戶的)
 
 ⚠ 四塊都要守同一條:**別再大量產出薄頁**。379 個逐國頁的下場是 186 頁不進索引,
