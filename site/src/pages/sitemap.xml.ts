@@ -1,6 +1,7 @@
 import { WINDOWS } from '../lib/config.mjs';
 import { coverPath, getGlobalRanking, getTopicBundle, listTopicIds, readJson } from '../lib/data.mjs';
 import { countryCellsFor } from '../lib/country-cells.mjs';
+import { questionTopicCells } from '../lib/questions-data.mjs';
 import { holidayCountries, holidayCellsFor } from '../lib/holidays.mjs';
 import { withBase } from '../lib/paths.mjs';
 
@@ -56,6 +57,14 @@ export function GET({ site }) {
   // 關於頁沒有資料來源，只會因為模板或文案改動而變。
   add('about/', { lastmod: RENDER_AT, changefreq: 'monthly', priority: '0.3' });
   add('questions/', { lastmod: stampAt('questions'), changefreq: 'daily', priority: '0.5' });
+  // 逐主題題集 /questions/<topic-slug>/(2026-08-27)。判準與 getStaticPaths **共用同一支**
+  // questionTopicCells() —— 逐國頁那次的教訓:判準有兩份就會漂,sitemap 於是指向 404。
+  // 時間戳走題庫自己的指紋(題目變了才推新)。
+  for (const topicSlug of questionTopicCells()) {
+    add(`questions/${topicSlug}/`, {
+      lastmod: stampAt('questions'), changefreq: 'weekly', priority: '0.6',
+    });
+  }
   for (const sort of ['today', 'nearby', 'events']) {
     add(`topics/${sort}/`, { lastmod: topicsAt, changefreq: 'daily', priority: '0.8' });
   }

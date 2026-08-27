@@ -4,12 +4,21 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import QuestionCard from '../../components/QuestionCard.astro';
 import { t } from '../../lib/i18n.mjs';
-import { coverPath, pastQuestions } from '../../lib/data.mjs';
+import { coverPath, pastQuestions, questionsByTopic, questionTopicCells, getTopicsIndex } from '../../lib/data.mjs';
 import { calendarDate } from '../../lib/format.mjs';
 import { withBase } from '../../lib/paths.mjs';
 import { siteDescription, SITE_OVERVIEW_IMAGE_PATH } from '../../lib/seo.mjs';
 
 const questions = pastQuestions(new Date());
+// 逐主題題集的入口(2026-08-27)。沒有站內入口的頁面等於不存在 —— /rankings/3m/ 與
+// 假日總表都是上線當天 URL Inspection 抽驗全是「unknown to Google」、referringUrls 0。
+const byTopic = questionsByTopic(new Date());
+const topicTitles = new Map(getTopicsIndex().map((row) => [row.slug, row.title]));
+const topicCells = questionTopicCells(new Date()).map((slug) => ({
+  slug,
+  title: topicTitles.get(slug) || slug,
+  count: (byTopic.get(slug) || []).length,
+})).sort((a, b) => b.count - a.count);
 const representativeQuestion = questions.find((question) => coverPath(question.topic_slug));
 const representativeCover = representativeQuestion ? coverPath(representativeQuestion.topic_slug) : null;
 ---
@@ -29,6 +38,20 @@ const representativeCover = representativeQuestion ? coverPath(representativeQue
     <header class="archive-head">
       <h1>{t('q.archive_title')}</h1>
     </header>
+
+    {topicCells.length > 0 && (
+      <nav class="archive-topics" aria-label={t('q.archive_title')}>
+        <ul>
+          {topicCells.map((cell) => (
+            <li>
+              <a href={withBase(`questions/${cell.slug}/`)}>
+                {cell.title}<span class="archive-count" aria-hidden="true">{cell.count}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    )}
 
     {questions.length === 0 ? (
       <p class="archive-empty">{t('common.empty')}</p>
@@ -57,6 +80,27 @@ const representativeCover = representativeQuestion ? coverPath(representativeQue
   .archive-empty {
     font-size: var(--text-sm);
     color: var(--color-ink-muted);
+  }
+  .archive-topics {
+    margin-block-end: clamp(2rem, 5vw, 3rem);
+    padding-block-end: 1.5rem;
+    border-block-end: 0.0625rem solid var(--color-line);
+  }
+  .archive-topics ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .archive-topics a {
+    font-size: var(--text-sm);
+  }
+  .archive-count {
+    margin-inline-start: 0.35rem;
+    color: var(--color-ink-muted);
+    font-variant-numeric: tabular-nums;
   }
   .archive-list {
     display: grid;

@@ -1,0 +1,108 @@
+---
+// /questions/<topic-slug>/ 逐主題題集(2026-08-27 用戶核准「開拓新的區塊」)。
+//
+// 為什麼開這一頁:486 題 × 七語系原本全部只掛在 /questions/ **一個** URL,
+// 而 379 個自動生成的逐國頁各有一個。近 28 天 GSC 的 159 個查詢**全部**是「哪一天」,
+// 那是 Google 答案框的標準品(排第 5 名也 0 點擊);題目問的是
+// 「日本人真的每天泡澡嗎」這種沒有答案框的東西,是站上唯一能拿到點擊的內容類別。
+//
+// 🔴 **不是一題一頁**:486 × 7 = 3,402 個薄頁會重演逐國頁(全站 186 頁
+//    Discovered - currently not indexed)。一個 Topic 一頁,厚度來自題數。
+// 判準只有一份:questions-data.mjs 的 questionTopicCells()(getStaticPaths、
+//    sitemap、Topic 頁的入口三處都吃它),所以不會連到 404。
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuestionCard from '../../components/QuestionCard.astro';
+import { t } from '../../lib/i18n.mjs';
+import { coverPath, questionsByTopic, questionTopicCells, getTopicsIndex } from '../../lib/data.mjs';
+import { withBase } from '../../lib/paths.mjs';
+import { siteDescription, SITE_OVERVIEW_IMAGE_PATH } from '../../lib/seo.mjs';
+import { summaryLead } from '../../lib/summary.mjs';
+
+export function getStaticPaths() {
+  return questionTopicCells().map((topic) => ({ params: { topic } }));
+}
+
+const { topic: slug } = Astro.params;
+const questions = questionsByTopic().get(slug) || [];
+const topic = getTopicsIndex().find((row) => row.slug === slug) || null;
+const topicTitle = topic?.title || slug;
+const cover = coverPath(slug);
+const topicPath = withBase(`topic/${slug}/`);
+
+// description 不得等於 title(2026-08-20 紅線):這裡說出「這一頁有什麼」——
+// 該主題的問題數 + 主題本身的導語,不另造文案。
+const heading = `${topicTitle} · ${t('q.archive_title')}`;
+const lead = topic?.summary ? summaryLead(topic.summary) : '';
+const description = [`${t('q.archive_title')}｜${topicTitle}`, lead || siteDescription()]
+  .filter(Boolean)
+  .join(' — ');
+---
+
+<BaseLayout
+  title={heading}
+  description={description}
+  pageType="CollectionPage"
+  image={withBase(cover || SITE_OVERVIEW_IMAGE_PATH)}
+  imageAlt={topicTitle}
+  breadcrumbs={[
+    { name: t('nav.home'), url: withBase('') },
+    { name: t('q.archive_title'), url: withBase('questions/') },
+    { name: topicTitle, url: null },
+  ]}
+>
+  <article class="tq">
+    <header class="tq-head">
+      <p class="crumb"><a href={topicPath}>{topicTitle}</a></p>
+      <h1>{heading}</h1>
+      {lead && <p class="tq-lead">{lead}</p>}
+    </header>
+
+    <div class="tq-list">
+      {questions.map((question) => (
+        <section class="tq-item">
+          <QuestionCard question={question} />
+        </section>
+      ))}
+    </div>
+
+    {/* 站內入口是雙向的:沒有入口的頁面等於不存在(CLAUDE.md 紅線,/rankings/3m/ 與
+        假日總表都踩過)。這一條把讀者送回母題,母題那一頁也有一條連過來。 */}
+    <nav class="tq-back">
+      <a href={topicPath}>{topicTitle}</a>
+      <a href={withBase('questions/')}>{t('q.all_questions')}</a>
+    </nav>
+  </article>
+</BaseLayout>
+
+<style>
+  .tq-head {
+    padding-block-end: 1.25rem;
+    margin-block-end: clamp(1.5rem, 4vw, 2.5rem);
+    border-block-end: 0.0625rem solid var(--color-line);
+  }
+  .tq-head h1 {
+    margin: 0.25rem 0 0;
+  }
+  .crumb {
+    margin: 0;
+    font-size: var(--text-sm);
+  }
+  .tq-lead {
+    margin: 0.75rem 0 0;
+    color: var(--color-ink-soft);
+    line-height: 1.7;
+  }
+  .tq-list {
+    display: grid;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  .tq-back {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-block-start: clamp(2rem, 5vw, 3rem);
+    padding-block-start: 1.25rem;
+    border-block-start: 0.0625rem solid var(--color-line);
+    font-size: var(--text-sm);
+  }
+</style>

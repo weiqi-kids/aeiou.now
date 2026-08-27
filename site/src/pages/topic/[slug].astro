@@ -46,6 +46,7 @@ import { plainText, emphasisParts } from '../../lib/emphasis.mjs';
 import { summaryLead } from '../../lib/summary.mjs';
 import { isTrendTopic } from '../../lib/topic-status.mjs';
 import { countryCellsFor } from '../../lib/country-cells.mjs';
+import { questionTopicCells } from '../../lib/questions-data.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
   observancesForFacts, customsText, dateRuleText, regionalNotesForFacts, regionalNoteText,
@@ -220,6 +221,9 @@ const sourceUrls = [...new Set([
 ])].filter((url) => /^https?:\/\//.test(url));
 // 底部來源清單的標籤:同一個官方網域的不同公告在畫面上必須分得出來(緣由見 seo.mjs)
 const sourceLabelMap = sourceLabels(sourceUrls);
+// 這個 Topic 有沒有自己的題集頁(2026-08-27)。判準同一支 questionTopicCells() ——
+// 沒有站內入口的頁面等於不存在(/rankings/3m/ 與假日總表都是這樣被 Google 漏掉的)。
+const hasQuestionCell = questionTopicCells().includes(facts.slug);
 // FAQPage / JSON-LD / meta 一律純文字:`**強調**` 的星號進了結構化資料就是雜訊,
 // 而 Google 抓到的正是這一份(2026-08-21 實測 42 頁的 JSON-LD 帶著星號)。
 // 畫面上的那一份走 emphasisParts,兩者刻意分開。
@@ -1011,6 +1015,12 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
       </section>
     )}
 
+    {hasQuestionCell && (
+      <nav class="topic-questions-link">
+        <a href={withBase(`questions/${facts.slug}/`)}>{t('q.topic_questions')}</a>
+      </nav>
+    )}
+
     {related.length > 0 && (
       <section class="topic-related" id="related">
         <div class="section-head">
@@ -1161,6 +1171,10 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     font-size: var(--text-sm);
   }
   .topic-answers,
+  .topic-questions-link {
+    margin-block-start: 1.5rem;
+    font-size: var(--text-sm);
+  }
   .topic-sources,
   .topic-related {
     margin-block-end: clamp(2.5rem, 6vw, 4rem);
