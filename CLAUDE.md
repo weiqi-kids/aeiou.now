@@ -42,7 +42,9 @@
 | 靜態 JSON 產出了什麼 | `find data -type f -name '*.json' \| sort` |
 | **假日總表產得出幾格**(七站門檻各自算,別引用寫死數字) | `curl -s https://<站網域>/sitemap.xml \| grep -c '/holidays/'`;本機逐格看 `(cd site && LOCALE=zh-TW pnpm build) && ls site/dist/holidays/*/` |
 | **某個新頁型 Google 到底來過沒有**(判「上線了但沒效果」的第一步) | `inspectUrl` 看 `coverageState` 與 `lastCrawlTime`;`referringUrls` 是 0 就是**沒有站內入口**,那是自己的問題不是 Google 的 |
-| **sitemap 的 lastmod 有沒有漏頁** | `curl -s https://aeiou.now/sitemap.xml \| grep -c '<lastmod>'` 與 `\| grep -c '<loc>'` —— 兩個數字**必須相等**;時間戳來自 `data/meta/stamps.json`(含 `render` = `site/src` 指紋,所以純模板改版也會推新) |
+| **sitemap 的 lastmod 有沒有漏頁** | `curl -s https://aeiou.now/sitemap.xml \| grep -c '<lastmod>'` 與 `\| grep -c '<loc>'` —— 兩個數字**必須相等** |
+| **lastmod 有沒有再變成「每頁都是今天」** | `curl -s https://aeiou.now/sitemap.xml \| grep -o '<lastmod>[^<]*' \| cut -c10-19 \| sort \| uniq -c \| sort -rn \| head` —— 出現「一個日期佔掉全部」就是 2026-08-27 修掉的那個坑又回來了 |
+| **Google 看過新版標題／摘要了沒**(調文案之前的必查) | `node scripts/crawl-freshness.mjs`(配額吃緊加 `--sample 20`)—— 重爬比例沒到 70% 就**不要調文案**,GSC 的曝光/點擊還混著舊摘要 |
 | **Google 上次來爬是什麼時候**(判「改版看不到效果」是不是因為它還沒來) | 用 `inspectUrl` 看 `lastCrawlTime`;GSC 資料本身固定落後 2–3 天,改版當天查一定看不到 |
 | repo 有哪些站 | `gh repo list weiqi-kids --limit 100 \| grep aeiou` |
 | 有沒有殘留的背景 server | `pgrep -af '[a]stro (dev\|preview)'; pgrep -af '[h]ttp\.server'` |
@@ -392,6 +394,17 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
   tokens,1M 檔次還加成)。翻譯與趨勢寫稿是機械任務,吃不到 Opus 的推理力,且預設值會隨 CLI
   版本漂移=管線成本不受碼庫控制。本專案 pin `claude-sonnet-5`,與 seo-ops 全機隊一致
   (查:`grep -n CLAUDE_MODEL scripts/*.mjs`;seo-ops 側查 `/root/seo-ops/sites/*.json` 的 brain.model)。
+- **sitemap 的 lastmod 必須逐頁誠實**(2026-08-27)——`site/scripts/sitemap-lastmod.mjs` 在
+  build 之後逐頁比對**算出來的 HTML** 指紋(正規化掉 `_astro/<hash>`、`data-astro-cid`、
+  行內 `<style>`),真的變了才蓋新時間戳;上一版指紋存在 publish repo 的 `.page-stamps.json`。
+  緣由:原本每頁都取 `max(內容指紋, RENDER_AT)`,而 RENDER_AT 是整包 `site/src` 的指紋、
+  一天變好幾次 → **469 個 URL 的 lastmod 全部都是今天,而且天天如此**。
+  後果實測:19 個 Topic 主頁最後抓取日中位數停在 08-19,而標題/摘要在 08-21/25/26 改過三次
+  —— Google 一次都沒看過,「523 曝光 1 點擊」量到的是舊摘要。
+  🔴 **不要為了「讓 Google 知道我改版了」把整站時間戳一起推新** —— 那正是這個坑。
+  改標題會推(實測 46 頁)、純換 CSS 不會(實測 0 頁),這才是 2026-08-21 規則②的原意。
+- **改文案之前先確認 Google 重爬過**(2026-08-27)——`node scripts/crawl-freshness.mjs`,
+  重爬比例 <70% 就不要動文案。2026-08-19/21/25/26 已經據著沒被看過的摘要改了三次方向。
 - **`description` 不得等於 `title`**(2026-08-20)——`/questions/` 原本把 description 寫成
   `t('q.archive_title')`,七站皆然;GSC 抽驗 36 頁,唯一沒進索引的就是它
   (Discovered - currently not indexed)。新增頁面時 description 要說出這頁有什麼,

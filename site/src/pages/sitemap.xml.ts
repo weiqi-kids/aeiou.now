@@ -20,17 +20,27 @@ const escapeXml = (value) => String(value)
 //    訊號。當天實測四個 Topic 頁的最後抓取是 08-15/16，而改版是 08-21 上線。
 //
 // ② **模板改動也要算進 lastmod。** 原本只取 content_updated_at（資料的指紋），
-//    所以改標題、改版面對 Google 是隱形的。現在每一頁都取
-//    max(自己的內容時間戳, render 時間戳)，render = site/src 的指紋（排除資料鏡像）。
+//    所以改標題、改版面對 Google 是隱形的。
+//
+//    ⚠ 2026-08-27 改了**做法**（規則②本身沒有被推翻，是實作方式錯了）：
+//    原本每一頁都取 max(自己的內容時間戳, RENDER_AT)，而 RENDER_AT 是整包 site/src
+//    的指紋。site/src 一天改好幾次（08-26 一天七次），於是 469 個 URL 的 lastmod
+//    全部都是今天、而且天天如此 —— 正是下面那句「狼來了」。
+//    當天實測後果：19 個 Topic 主頁的最後抓取日中位數停在 08-19，而 08-21/25/26
+//    改過三次標題與摘要，Google 一次都沒看過。
+//
+//    現在由 `site/scripts/sitemap-lastmod.mjs` 在 build 之後逐頁比對**算出來的 HTML**
+//    指紋，真的變了才蓋新時間戳。改標題 → 只推那幾頁（實測 46 頁）；純換 CSS → 0 頁。
+//    這一支產生的值只是**第一次部署的起點**，之後一律由那支說了算。
 //
 // 時間戳全部由 export-data.mjs 寫進 data/meta/stamps.json，規則同 content_updated_at：
 // hash 沒變就沿用舊時間戳。**「狼來了」有害，少報同樣有害** —— 這裡兩邊都要守：
 // 不因為資料每小時重算就宣告頁面變了，也不因為只改了模板就裝作沒變。
 const stamps = readJson('meta/stamps.json', {});
 const stampAt = (key) => stamps?.[key]?.updated_at || undefined;
+// RENDER_AT 只剩下 about/ 在用 —— 那一頁沒有任何資料來源,只會因為文案/模板改動而變,
+// 沒有別的時間戳可取。其餘頁面一律只用自己的內容指紋(見上面的 ⚠)。
 const RENDER_AT = stampAt('render');
-/** 頁面內容時間戳與模板時間戳取較新的那個（ISO-8601 UTC，字串比較即可） */
-const freshest = (...values) => values.filter(Boolean).sort().pop();
 
 export function GET({ site }) {
   const origin = site || new URL(process.env.SITE_URL || 'https://weiqi-kids.github.io');
@@ -42,12 +52,12 @@ export function GET({ site }) {
 
   // 首頁與三個清單頁列的都是 Topic，所以內容時間戳 = 所有 Topic 裡最新的那一個。
   const topicsAt = stampAt('topics_latest');
-  add('', { lastmod: freshest(topicsAt, RENDER_AT), changefreq: 'daily', priority: '1.0' });
+  add('', { lastmod: topicsAt, changefreq: 'daily', priority: '1.0' });
   // 關於頁沒有資料來源，只會因為模板或文案改動而變。
   add('about/', { lastmod: RENDER_AT, changefreq: 'monthly', priority: '0.3' });
-  add('questions/', { lastmod: freshest(stampAt('questions'), RENDER_AT), changefreq: 'daily', priority: '0.5' });
+  add('questions/', { lastmod: stampAt('questions'), changefreq: 'daily', priority: '0.5' });
   for (const sort of ['today', 'nearby', 'events']) {
-    add(`topics/${sort}/`, { lastmod: freshest(topicsAt, RENDER_AT), changefreq: 'daily', priority: '0.8' });
+    add(`topics/${sort}/`, { lastmod: topicsAt, changefreq: 'daily', priority: '0.8' });
   }
   // 假日總表 /holidays/<cc>/<年>/(2026-08-27)。判準與 getStaticPaths **共用同一支**
   // holidayCellsFor() —— 這是刻意的:逐國頁那次的教訓是,薄頁判準只要有兩份就會漂,
@@ -56,7 +66,7 @@ export function GET({ site }) {
   for (const code of holidayCountries()) {
     for (const year of holidayCellsFor(code)) {
       add(`holidays/${code.toLowerCase()}/${year}/`, {
-        lastmod: freshest(holidaysAt, RENDER_AT), changefreq: 'monthly', priority: '0.6',
+        lastmod: holidaysAt, changefreq: 'monthly', priority: '0.6',
       });
     }
   }
@@ -72,7 +82,7 @@ export function GET({ site }) {
     // （舊註解說「它的內容由 topic_scores 驅動，不在那份 hash 裡，給了就是假的」——
     //  那是對的，所以 export-data 給了它自己的 stamp，見 stampFor('ranking:<window>')）。
     add(`rankings/${window}/`, {
-      lastmod: freshest(stampAt(`ranking:${window}`), RENDER_AT),
+      lastmod: stampAt(`ranking:${window}`),
       changefreq: 'daily',
       priority: '0.6',
     });
@@ -92,8 +102,7 @@ export function GET({ site }) {
       // 「狼來了」有害,少報同樣有害 —— 前者讓 Google 忽略 lastmod,後者讓它不來重爬。
       // 舊值留作 fallback(舊資料尚未帶 content_updated_at 時)。
       // 排行頁不借用這份 hash(它的內容由 topic_scores 驅動,不在這裡面);它有自己的 stamp。
-      // 2026-08-21 起再與 render 時間戳取較新者 —— 純模板改版之前不會反映在這裡。
-      lastmod: freshest(facts.content_updated_at || facts.updated_at, RENDER_AT),
+      lastmod: facts.content_updated_at || facts.updated_at,
       changefreq: facts.is_perennial ? 'monthly' : 'weekly',
       priority: '0.8',
       image: cover ? new URL(withBase(cover), origin).toString() : undefined,
@@ -105,7 +114,7 @@ export function GET({ site }) {
     // 否則 sitemap 會指向 404。
     for (const code of countryCellsFor(facts, getTopicBundle(topicId).i18n)) {
       add(`topic/${facts.slug}/${code.toLowerCase()}/`, {
-        lastmod: freshest(facts.content_updated_at || facts.updated_at, RENDER_AT),
+        lastmod: facts.content_updated_at || facts.updated_at,
         changefreq: facts.is_perennial ? 'monthly' : 'weekly',
         priority: '0.6',
       });

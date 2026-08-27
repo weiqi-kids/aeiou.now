@@ -202,6 +202,16 @@ jobs:
           }
           retry "clone ${{ matrix.repo }}" 3 clone_publish
 
+          # sitemap 的 lastmod:逐頁比對「算出來的 HTML」指紋,真的變了才蓋新時間戳。
+          # 上一版的指紋存在 publish repo 的 .page-stamps.json —— publish repo 本來就是
+          # 「上一次部署長什麼樣」的權威副本,所以不必回寫原始碼庫(七個語系平行跑,回寫必打架)。
+          # 第一次跑(檔案還不存在)= 全部視為新頁,與加這段之前的行為一樣。
+          # 緣由與實測數字見 site/scripts/sitemap-lastmod.mjs 檔頭。
+          PREV_STAMPS="$RUNNER_TEMP/prev-page-stamps.json"
+          git -C "$PUB_DIR" show HEAD:.page-stamps.json > "$PREV_STAMPS" 2>/dev/null \
+            || echo '{}' > "$PREV_STAMPS"
+          node site/scripts/sitemap-lastmod.mjs --dist site/dist --prev "$PREV_STAMPS"
+
           git -C "$PUB_DIR" config user.name  "aeiou-ci"
           git -C "$PUB_DIR" config user.email "lightman.chang@gmail.com"
 
