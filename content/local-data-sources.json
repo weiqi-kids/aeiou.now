@@ -463,6 +463,26 @@
     "凱達格蘭文化館",
     "中山路3-1號"
    ]
+  },
+  {
+   "url": "https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&sms=72544237BBE4C5F6&s=27202DDC4D583062",
+   "market": "zh-TW",
+   "kind": "place",
+   "discovery_query": "gov.taipei 市府新聞稿 建國啤酒廠 啤酒產業文化園區 市定古蹟",
+   "markers": [
+    "建國啤酒廠",
+    "啤酒產業文化園區"
+   ]
+  },
+  {
+   "url": "https://event.ttl.com.tw/tp/",
+   "market": "zh-TW",
+   "kind": "place",
+   "discovery_query": "臺灣菸酒公司 台北啤酒工場 官方頁 地址 開放時間(來源事實由搜尋結果取得,本站不抓這一頁)",
+   "markers": [
+    "台北啤酒工場"
+   ],
+   "note": "event.ttl.com.tw 的 robots.txt 是 Disallow: / 加白名單,/tp/ 不在白名單內 —— 這個網址只給讀者點,本站的更新器會依 robots 跳過,永遠不會抓它。"
   }
  ]
 }

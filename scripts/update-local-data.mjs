@@ -18,6 +18,9 @@
 //       三次重試全落空的機率仍有約 12.5%,等於每天還會停 3 次全站更新。
 //       判準用「24 小時內」而不是「上一輪」:中間若有輪次被擋掉或跳過,
 //       「上一輪」會誤判成「從來沒驗過」而立刻擋。
+//   robots 層（robots.txt 不允許我們抓那個路徑）——2026-08-27 補
+//     → 不是壞掉的來源,是我們不該去敲。**只 SKIP,永不擋輸出**,也不計入任何容忍計數,
+//       但會吵出來:那個來源這一輪等於沒被核對過,不能假裝驗過了。
 //   封鎖層（4xx **且該網域的根目錄也連不上**）——2026-08-21 用戶拍板新增
 //     → 是這台主機被對方整站擋掉，不是那一頁失效。**只 WARN，永不擋輸出**，
 //       也不計入傳輸層的容忍計數（等再久都不會變，擋下去只是懲罰七個站）。
@@ -215,6 +218,55 @@ async function fetchSource(url) {
   throw transient;
 }
 
+// ── robots.txt(2026-08-27 補)────────────────────────────────────────────────
+// 🔴 專案紅線「爬蟲守則不是選項」(草案 §12)要求遵守 robots.txt。source-refresh.mjs 與
+//    check-source-urls.mjs 都照做了,**這一支沒有** —— 而它是唯一每小時都跑的抓取器。
+//    實測後果:`https://www.facebook.com/chocoholic.taipei/` 的 robots 對我們是 Disallow,
+//    source-refresh 每輪把它標成 ignored,這一支卻照樣每小時抓一次。
+//
+// 被 robots 擋下的來源**不是壞掉的來源**,只是我們不該去敲:
+//   ・永不擋輸出(與封鎖層同一種處理),
+//   ・但要吵出來 —— 它等於「這一輪沒有被核對過」,不能假裝驗過了。
+// 判準與 source-refresh.mjs 的 robotsFor() 一致:只讀套用到我們的段落(`User-agent: *`
+// 與指名 aeiou-now-bot 的那一段),最長前綴相符者勝,Allow 平手時優先;
+// robots.txt 取不到一律視為允許(RFC 9309 的預設)。
+const robotsCache = new Map();
+async function robotsAllows(url) {
+  const target = new URL(url);
+  const host = target.host;
+  if (!robotsCache.has(host)) {
+    const rules = { disallow: [], allow: [] };
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), DEFAULT_TIMEOUT_MS);
+    try {
+      const res = await fetch(`${target.protocol}//${host}/robots.txt`, {
+        redirect: "follow",
+        signal: controller.signal,
+        headers: { "user-agent": "aeiou.now-local-data-updater/1.0 (+https://github.com/weiqi-kids/aeiou.now)" },
+      });
+      if (res.ok) {
+        let applies = false;
+        for (const raw of (await res.text()).split(/\r?\n/)) {
+          const line = raw.replace(/#.*$/, "").trim();
+          const m = line.match(/^([A-Za-z-]+)\s*:\s*(.*)$/);
+          if (!m) continue;
+          const key = m[1].toLowerCase();
+          const val = m[2].trim();
+          if (key === "user-agent") applies = val === "*" || val.toLowerCase().includes("aeiou-now-bot");
+          else if (applies && (key === "disallow" || key === "allow") && val) rules[key].push(val);
+        }
+      }
+    } catch { /* 取不到 robots = 沒有規則 = 允許 */ } finally { clearTimeout(timer); }
+    robotsCache.set(host, rules);
+  }
+  const rules = robotsCache.get(host);
+  const path = `${target.pathname}${target.search}`;
+  const longest = (list) => list.filter((p) => path.startsWith(p)).sort((a, b) => b.length - a.length)[0] || "";
+  const d = longest(rules.disallow);
+  const a = longest(rules.allow);
+  return !d || a.length >= d.length;
+}
+
 // 該網域現在對「這台主機」通不通。4xx 與傳輸層失敗之後都會問一次,一個 origin 一輪只探一次。
 // 不重試:探測本身失敗就是「連不上」,那正是我們要判的事。
 const originReachable = new Map();
@@ -254,6 +306,9 @@ const withinTrustWindow = (lastOkAt) => {
 
 async function verifySource(url, source, event, lastOkAt = null) {
   if (offline) return { url, skipped: true, matched: [] };
+  if (!(await robotsAllows(url))) {
+    return { url, robotsBlocked: true, matched: [], message: "robots.txt 不允許本站抓取,本輪未核對(不是來源失效)" };
+  }
   let response, rawBody;
   try {
     ({ response, rawBody } = await fetchSource(url));
@@ -354,12 +409,19 @@ async function main() {
   const health = existsSync(HEALTH_PATH) ? readJson(HEALTH_PATH) : {};
   const blocking = [];
   const blockedByOrigin = [];
+  const robotsSkipped = [];
   const checks = [];
   for (const url of urlsToVerify) {
     const event = verifiableEvents.find((candidate) => candidate.source_url === url);
     const result = await verifySource(url, catalogByUrl.get(url), event, health[url]?.ok_at || null);
     checks.push(result);
     if (result.skipped) console.log(`  skip ${url}`);
+    else if (result.robotsBlocked) {
+      // 與封鎖層同一種處理:永不擋輸出,但要留痕 —— 這一輪它沒有被核對過。
+      health[url] = { robots_disallowed_since: health[url]?.robots_disallowed_since || asOf, ok_at: health[url]?.ok_at || null, last_message: result.message };
+      robotsSkipped.push(`${url}：${result.message}`);
+      console.log(`  SKIP ${url} ${result.message}`);
+    }
     else if (result.blocked) {
       // 封鎖層:永不擋輸出。記進健康檔只是為了讓它看得見(維護時查得到、也不會被
       // 下一次成功悄悄抹掉之前無人知曉),不參與 TRANSIENT_TOLERANCE 的計數。
@@ -392,6 +454,11 @@ async function main() {
   const verifying = new Set(urlsToVerify);
   for (const url of Object.keys(health)) if (!verifying.has(url)) delete health[url];
   writeFileSync(HEALTH_PATH, `${JSON.stringify(health, null, 2)}\n`);
+  if (robotsSkipped.length) {
+    console.log(`⚠ ${robotsSkipped.length} 個來源被 robots.txt 擋下(本輪未核對,已放行):`);
+    for (const line of robotsSkipped) console.log(`   - ${line}`);
+    console.log("   這不是壞連結,是我們不該敲。要換一個可抓的官方來源,或接受它長期不被核對。");
+  }
   if (blockedByOrigin.length) {
     // 不擋輸出,但一定要吵 —— 被擋的來源等於沒被核對過,人要知道有這回事。
     console.log(`⚠ ${blockedByOrigin.length} 個來源所在網域對本主機關門(本輪未能核對,已放行):`);

@@ -53,7 +53,19 @@ const recentIds = new Set(recent.map((topic) => topic.topic_id));
 const remaining = topicsByHeat(HOME_WINDOW).filter(
   (topic) => isPubliclyVisible(topic) && !recentIds.has(topic.topic_id)
 );
-const rows = [...recent, ...remaining].map((topic) => ({ topic, note: seasonNote(topic) }));
+// 同一個 Topic 不同時出現在兩個區塊(2026-08-27 用戶拍板)。
+// 「今天的世界」在版面上排在前面,而且它印的是**那一天的名字與日期**(local_name),
+// 底下的清單印的是 Topic 標題 —— 兩邊指向同一個 Topic 時,同一批資料在同一頁出現兩次,
+// 正是手冊那條「同一批資料在同一頁出現兩次,就是階層沒分清楚」。
+// ⚠ 方向是「上面出現過的,下面不再列」,不是反過來:底下的清單是**全站 Topic 清單**
+//    (recent + remaining = 所有公開 Topic),拿它去排除「今天的世界」會把那一區清空,
+//    而草案 §55 明訂首頁必須有「現在」。刪掉一個規格要求的區塊不是去重,是砍版面。
+const todayWorldTopicIds = new Set(
+  todayWorldCountries.flatMap((country) => country.items.map((item) => item.topic_id)),
+);
+const rows = [...recent, ...remaining]
+  .filter((topic) => !todayWorldTopicIds.has(topic.topic_id))
+  .map((topic) => ({ topic, note: seasonNote(topic) }));
 const representativeTopic = rows
   .map(({ topic }) => topic)
   .find((topic) => coverPath(topic?.slug));

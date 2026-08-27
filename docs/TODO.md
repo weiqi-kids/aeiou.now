@@ -862,15 +862,21 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
       Anhembi → carnival、台北 凱達格蘭文化館 → indigenous-and-colonial-memory),
       掛得到地點的 Topic 從 8 變 12。**其餘新 Topic 仍然沒有**,活動一個都沒新增。
       現況查法:`sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT topic_id) FROM place_topics"`(events 同理)。
-      ⚠ 台北啤酒工場沒有收:`event.ttl.com.tw` 的 robots 是 `Disallow: /` 加白名單,`/tp/` 不在裡面。
+      ⚠ 台北啤酒工場**已經收了**(2026-08-27 用戶指正我把界線劃錯):robots 管的是我們去抓,
+      不是那一頁能不能被引用。做法是同一個地點掛兩個來源 —— 讀者點的
+      `event.ttl.com.tw/tp/`(更新器依 robots 跳過,永遠不抓)與守門核對用的
+      `gov.taipei` 新聞稿(地址與開放時間的事實從搜尋結果取得,不是我們爬來的)。
+      同一輪順手補上 `update-local-data.mjs` 的 robots 遵守 —— 它是唯一每小時跑的抓取器,
+      卻是三支抓取器裡唯一沒守 robots 的,實際上每小時都在抓一個 Disallow 的網址。
       在地資料的市場城市是固定的七個(taipei/tokyo/shanghai/loveland/pune/jakarta/sao-paulo),
       所以「布盧梅瑙十月啤酒節」這種不在市場城市的活動掛不進來 —— 要嘛擴市場,要嘛只當 Topic 內容寫。
 - [ ] **活動快見底**:未來場次剩幾場用指令查
       `sqlite3 db/aeiou.sqlite "SELECT COUNT(*) FROM events WHERE start_at > strftime('%s','now')"`。
       補活動的門檻比補地點高:`update-local-data.mjs` 對活動要求 `date_markers`(頁面上要真的印著那個日期),
       而且**活動會過期**,地點不會。
-- [ ] **首頁同一個 Topic 仍會出現在兩個區塊**。08-26 只改了 TodayWorld 印什麼字(解掉重複文字),
-      沒有動版面。「要不要讓同一個 Topic 不同時出現在兩區」屬草案權威 + 用戶決定,不自行改。
+- [x] **首頁同一個 Topic 出現在兩個區塊** —— 2026-08-27 用戶拍板:上面「今天的世界」出現過的,
+      底下的清單不再列。實測 zh-TW:7 + 50 = 57,交集 0,**沒有 Topic 因此從首頁消失**。
+      ⚠ 方向不可反過來(底下那份是全站清單,拿它排除上面會把「現在」那一區清空,違反草案 §55)。
 - [ ] **七夕拆出獨立 Topic 偏離草案 §6/§48**(把七夕畫成 Valentine's Day 的分支),
       理由與 §58「把它列為搜尋結果的並列項」對衝。當時用戶核准了拆分,這裡只記錄這個偏離
       本身沒有回頭處理;要收回就是把 `tanabata-and-qixi` 併回 `affection-and-reciprocity`。
