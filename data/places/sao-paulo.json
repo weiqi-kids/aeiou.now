@@ -2,6 +2,76 @@
   "city_code": "sao-paulo",
   "places": [
     {
+      "place_id": "plc_0F8EE3C9FCD5F3AB467DB92D75",
+      "name": "Catedral da Sé",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "BR",
+      "address": "Praça da Sé, s/nº — São Paulo, SP",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20da%20S%C3%A9%20Pra%C3%A7a%20da%20S%C3%A9%20S%C3%A3o%20Paulo",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Catedral%20da%20S%C3%A9%20Pra%C3%A7a%20da%20S%C3%A9%20S%C3%A3o%20Paulo",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Catedral%20da%20S%C3%A9%20Pra%C3%A7a%20da%20S%C3%A9%20S%C3%A3o%20Paulo",
+        "amap": "https://uri.amap.com/search?keyword=Catedral%20da%20S%C3%A9%20Pra%C3%A7a%20da%20S%C3%A9%20S%C3%A3o%20Paulo"
+      },
+      "source_urls": [
+        "https://prefeitura.sp.gov.br/web/se/w/noticias/57326"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "聖保羅市政府的官方頁面列出這座主教座堂在 Sé 廣場，1954 年 1 月 25 日完工，由建築師 Maximilian Hehl 設計；地下墓室早在 1919 年就啟用。它是聖保羅總教區的主教座堂，聖週與基督聖體聖血節的禮儀都在這裡。",
+        "en": "São Paulo's city page lists the cathedral on Praça da Sé, completed on 25 January 1954 to a design by Maximilian Hehl; its crypt opened in 1919, decades earlier. It is the seat of the archdiocese, where Holy Week and Corpus Christi liturgies are held.",
+        "ja": "サンパウロ市の公式ページは、この大聖堂をセー広場に位置づけ、マクシミリアン・ヘールの設計で一九五四年一月二五日に完成したと記す。地下聖堂はそれより早く一九一九年に開かれた。大司教区の司教座聖堂であり、聖週間や聖体の祝日の典礼が行われる。",
+        "zh-CN": "圣保罗市政府的官方页面列出这座主教座堂在 Sé 广场，1954 年 1 月 25 日完工，由建筑师 Maximilian Hehl 设计；地下墓室早在 1919 年就启用。它是圣保罗总教区的主教座堂，圣周与基督圣体圣血节的礼仪都在这里。",
+        "hi": "साओ पाउलो के नगर पृष्ठ के अनुसार यह कैथेड्रल प्राका दा से पर है, जो मैक्सिमिलियन हेल के डिज़ाइन पर 25 जनवरी 1954 को पूरा हुआ; इसका तहख़ाना उससे भी पहले 1919 में खुल गया था। यह महाधर्मप्रांत का मुख्य गिरजाघर है, जहाँ पवित्र सप्ताह और कोरपुस क्रिस्टी की धर्मविधियाँ होती हैं।",
+        "id": "Halaman resmi kota São Paulo mencantumkan katedral ini di Praça da Sé, rampung pada 25 Januari 1954 menurut rancangan Maximilian Hehl; kriptanya sudah dibuka lebih dulu pada 1919. Inilah katedral keuskupan agung, tempat liturgi Pekan Suci dan Corpus Christi digelar.",
+        "pt-BR": "A página da prefeitura lista a catedral na Praça da Sé, concluída em 25 de janeiro de 1954, com projeto de Maximilian Hehl; a cripta foi inaugurada em 1919, décadas antes. É a sé da arquidiocese, onde acontecem as liturgias da Semana Santa e de Corpus Christi."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_3715AE762FA0C702B2D9D0DE7E",
+      "name": "Museu Afro Brasil",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "BR",
+      "address": "Av. Pedro Álvares Cabral, Parque Ibirapuera, Portão 10 — 04094-050 São Paulo, SP",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Museu%20Afro%20Brasil%20Parque%20Ibirapuera%20S%C3%A3o%20Paulo",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Museu%20Afro%20Brasil%20Parque%20Ibirapuera%20S%C3%A3o%20Paulo",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Museu%20Afro%20Brasil%20Parque%20Ibirapuera%20S%C3%A3o%20Paulo",
+        "amap": "https://uri.amap.com/search?keyword=Museu%20Afro%20Brasil%20Parque%20Ibirapuera%20S%C3%A3o%20Paulo"
+      },
+      "source_urls": [
+        "https://museuafrobrasil.org.br/"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "官網列出館址在伊比拉普埃拉公園十號門、佩德羅・阿爾瓦雷斯・卡布拉爾大道旁。館藏以非洲與非裔巴西人的歷史、奴隸制與廢奴、藝術與宗教為主軸。",
+        "en": "The official site gives the address as Av. Pedro Álvares Cabral, Ibirapuera Park, Gate 10. Its collection centres on African and Afro-Brazilian history, slavery and abolition, art and religion.",
+        "ja": "公式サイトは所在地をイビラプエラ公園10番ゲート、ペドロ・アルヴァレス・カブラル大通り沿いとしている。所蔵はアフリカおよびアフロ・ブラジルの歴史、奴隷制と廃止、美術と宗教が柱。",
+        "zh-CN": "官网列出馆址在伊比拉普埃拉公园十号门、佩德罗·阿尔瓦雷斯·卡布拉尔大道旁。馆藏以非洲与非裔巴西人的历史、奴隶制与废奴、艺术与宗教为主轴。",
+        "hi": "आधिकारिक साइट पता एवेनिडा पेड्रो अल्वारेस कैब्राल, इबिरापुएरा पार्क, गेट 10 बताती है। संग्रह का केंद्र अफ़्रीकी और अफ़्रो-ब्राज़ीली इतिहास, दासता और उसका उन्मूलन, कला तथा धर्म है।",
+        "id": "Situs resminya mencantumkan alamat Av. Pedro Álvares Cabral, Taman Ibirapuera, Gerbang 10. Koleksinya berpusat pada sejarah Afrika dan Afro-Brasil, perbudakan dan penghapusannya, seni, serta agama.",
+        "pt-BR": "O site oficial informa o endereço na Av. Pedro Álvares Cabral, Parque Ibirapuera, Portão 10. O acervo trata da história africana e afro-brasileira, da escravidão e da abolição, da arte e da religião."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
       "place_id": "plc_3D1B8F0CC898DEFFFEBB0E22D6",
       "name": "Fábrica de Dengo",
       "place_type": "permanent",

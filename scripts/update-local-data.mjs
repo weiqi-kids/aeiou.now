@@ -370,6 +370,48 @@ async function verifySource(url, source, event, lastOkAt = null) {
   return { url, status: response.status, finalUrl: response.url, matched, matchedDates };
 }
 
+/**
+ * 活動存量的低水位警告(2026-08-27)。
+ *
+ * 為什麼要有:活動**只會過期,不會自己長出來**。這支每小時都在刪掉結束的場次,
+ * 卻從來沒有在「快沒了」的時候說一句話 —— 於是「未來只剩 7 場、下一場在後天」
+ * 這件事是人在做別的事時順手查出來的,不是系統講的。
+ *
+ * 判準刻意用**兩個**數字,因為它們會壞在不同的地方:
+ *   ・場次總數:全站的活動頁與「活動資訊」清單會空掉。
+ *   ・最近一場還有幾天:總數還夠、但全部擠在半年後,首頁一樣沒有「現在」。
+ * 只 WARN,永不擋輸出 —— 沒有活動不是錯誤,是要有人去補內容。
+ */
+const EVENT_RUNWAY_MIN_COUNT = Number(process.env.AEIOU_EVENT_RUNWAY_MIN || 10);
+const EVENT_RUNWAY_MIN_DAYS = Number(process.env.AEIOU_EVENT_RUNWAY_DAYS || 14);
+function reportEventRunway(activeEvents) {
+  const today = asOf;
+  const future = activeEvents
+    .filter((event) => event.start_at.slice(0, 10) >= today)
+    .sort((a, b) => (a.start_at < b.start_at ? -1 : 1));
+  const nextAt = future[0]?.start_at?.slice(0, 10) || null;
+  const daysToNext = nextAt
+    ? Math.round((Date.parse(`${nextAt}T00:00:00Z`) - Date.parse(`${today}T00:00:00Z`)) / 86400000)
+    : null;
+  const byCity = new Map();
+  for (const event of future) byCity.set(event.city_code, (byCity.get(event.city_code) || 0) + 1);
+  const emptyCities = (sample.markets || [])
+    .map((market) => market.city_code)
+    .filter((city) => !byCity.has(city));
+  console.log(`活動存量:未來 ${future.length} 場;最近一場 ${nextAt || "(無)"}`
+    + `${daysToNext == null ? "" : `(${daysToNext} 天後)`};沒有未來場次的市場:`
+    + `${emptyCities.length ? emptyCities.join("、") : "無"}`);
+  if (future.length < EVENT_RUNWAY_MIN_COUNT) {
+    console.log(`⚠ 活動快見底:未來只剩 ${future.length} 場(低於 ${EVENT_RUNWAY_MIN_COUNT})。`
+      + "補法見 docs/TODO.md「活動快見底」—— 要官方頁面上真的印著日期(date_markers)才收得進來。");
+  }
+  if (daysToNext != null && daysToNext > EVENT_RUNWAY_MIN_DAYS) {
+    console.log(`⚠ 最近一場活動在 ${daysToNext} 天後(超過 ${EVENT_RUNWAY_MIN_DAYS} 天):`
+      + "清單還有東西,但讀者這兩週看不到任何『正在發生』的場次。");
+  }
+  if (future.length === 0) console.log("⚠ 未來一場活動都沒有:活動資訊那一頁會整片空白。");
+}
+
 const lastDayOf = (event) => (event.end_at || event.start_at).slice(0, 10);
 
 /** 仍要發布的活動:結束日還沒過。今天正在辦的當然要留著顯示。 */
@@ -473,6 +515,7 @@ async function main() {
   if (removedEvents.length) {
     console.log(`將移除 ${removedEvents.length} 個已過期活動：${removedEvents.map((event) => event.name).join("、")}`);
   }
+  reportEventRunway(activeEvents);
   if (checkOnly) {
     console.log(`檢查完成：${activeEvents.length} 個有效活動、${managedEventUrls.length} 個受管理活動來源`);
     return;

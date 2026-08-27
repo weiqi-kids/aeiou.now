@@ -483,6 +483,131 @@
     "台北啤酒工場"
    ],
    "note": "event.ttl.com.tw 的 robots.txt 是 Disallow: / 加白名單,/tp/ 不在白名單內 —— 這個網址只給讀者點,本站的更新器會依 robots 跳過,永遠不會抓它。"
+  },
+  {
+   "url": "https://www.nao.ac.jp/about-naoj/organization/facilities/mitaka/access.html",
+   "market": "ja",
+   "kind": "place",
+   "discovery_query": "国立天文台 三鷹キャンパス アクセス 公式 所在地",
+   "markers": [
+    "国立天文台",
+    "三鷹市大沢2-21-1"
+   ]
+  },
+  {
+   "url": "https://english.shanghai.gov.cn/en-MuseumsGalleries/20231226/760c2fc185754169bbda2e197147fdc5.html",
+   "market": "zh-CN",
+   "kind": "place",
+   "discovery_query": "上海市政府 官方 Museums & Galleries 上海犹太难民纪念馆 长阳路",
+   "markers": [
+    "Shanghai Jewish Refugees Museum",
+    "Changyang Road"
+   ]
+  },
+  {
+   "url": "https://www.yatsen.gov.tw/",
+   "market": "zh-TW",
+   "kind": "place",
+   "discovery_query": "國立國父紀念館 官網 地址 仁愛路四段505號",
+   "markers": [
+    "國立國父紀念館",
+    "仁愛路四段505號"
+   ]
+  },
+  {
+   "url": "https://museuafrobrasil.org.br/",
+   "market": "pt-BR",
+   "kind": "place",
+   "discovery_query": "Museu Afro Brasil site oficial endereço Parque Ibirapuera Portão 10",
+   "markers": [
+    "Museu Afro Brasil",
+    "Pedro Álvares Cabral"
+   ]
+  },
+  {
+   "url": "https://www.zoo.gov.taipei/",
+   "market": "zh-TW",
+   "kind": "place",
+   "discovery_query": "臺北市立動物園 官網 地址 新光路二段30號",
+   "markers": [
+    "臺北市立動物園",
+    "新光路二段30號"
+   ]
+  },
+  {
+   "url": "https://www.tcap.taipei/",
+   "market": "zh-TW",
+   "kind": "place",
+   "discovery_query": "兒童新樂園 官網 地址 承德路5段55號",
+   "markers": [
+    "兒童新樂園",
+    "承德路5段55號"
+   ]
+  },
+  {
+   "url": "https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&s=6FB2B15DC057F8B6",
+   "market": "zh-TW",
+   "kind": "place",
+   "discovery_query": "gov.taipei 市府新聞稿 兒童新樂園 萬聖 變裝",
+   "markers": [
+    "兒童新樂園",
+    "萬聖"
+   ]
+  },
+  {
+   "url": "https://tct.gov.taipei/",
+   "market": "zh-TW",
+   "kind": "place",
+   "discovery_query": "臺北市孔廟管理委員會 官網 地址 大龍街275號 考生祈福",
+   "markers": [
+    "臺北市孔廟",
+    "大龍街275號"
+   ]
+  },
+  {
+   "url": "https://english.shanghai.gov.cn/en-ScenicSpots/20231226/45172d56a204477195888159d4698ac8.html",
+   "market": "zh-CN",
+   "kind": "place",
+   "discovery_query": "上海市政府 官方 Scenic Spots Nanjing Road Pedestrian Street",
+   "markers": [
+    "Nanjing Road Pedestrian Street",
+    "shhuangpu.gov.cn"
+   ]
+  },
+  {
+   "url": "https://english.shanghai.gov.cn/en-ScenicSpots/20240319/cf9030a00a2441e1a846bfd438c1b5e8.html",
+   "market": "zh-CN",
+   "kind": "place",
+   "discovery_query": "上海市政府 官方 Scenic Spots Soong Ching Ling Memorial Residence 淮海中路1843",
+   "markers": [
+    "Soong Ching Ling Memorial Residence",
+    "Middle Huaihai Road"
+   ]
+  },
+  {
+   "url": "https://prefeitura.sp.gov.br/web/se/w/noticias/57326",
+   "market": "pt-BR",
+   "kind": "place",
+   "discovery_query": "prefeitura.sp.gov.br Subprefeitura Sé Visite a Catedral da Sé endereço",
+   "markers": [
+    "Catedral da Sé",
+    "Praça da Sé"
+   ]
+  },
+  {
+   "url": "https://ligasp.com.br/desfiles/",
+   "market": "pt-BR",
+   "kind": "event",
+   "discovery_query": "Liga-SP desfiles ordem oficial Carnaval 2027 Grupo Especial datas",
+   "markers": [
+    "Desfiles das Escolas de Samba de São Paulo",
+    "Grupo Especial"
+   ],
+   "date_markers": [
+    "05 de fevereiro",
+    "06 de fevereiro",
+    "2027"
+   ]
   }
  ]
 }
