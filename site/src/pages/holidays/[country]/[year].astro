@@ -23,7 +23,7 @@ import { countryName } from '../../../lib/data.mjs';
 import { countryFlag, calendarDate } from '../../../lib/format.mjs';
 import { withBase } from '../../../lib/paths.mjs';
 import { seoCopy, fillTemplate, compactDescription, sourceLabel, SITE_OVERVIEW_IMAGE_PATH } from '../../../lib/seo.mjs';
-import { holidayCountries, holidayCellsFor, holidaysFor, undatedFor, holidaySystemNote, topicsByDate, YEARS } from '../../../lib/holidays.mjs';
+import { holidayCountries, holidayCellsFor, holidaysFor, undatedFor, holidaySystemNote, holidayYearNote, topicsByDate, YEARS } from '../../../lib/holidays.mjs';
 
 export function getStaticPaths() {
   const out = [];
@@ -84,6 +84,8 @@ let longestRun = 0;
 }
 const discretionary = rows.filter((r) => r.status === 'discretionary').length;
 const systemNote = holidaySystemNote(code);
+// 這一年的日期語意與其他年不同時要當面說(見 lib/holidays.mjs 的 holidayYearNote)。
+const yearNote = holidayYearNote(code, year);
 
 const lead = [
   fillTemplate(t('holidays.lead'), { year, country: label, statutory: String(statutory) }),
@@ -124,6 +126,10 @@ const allSources = [...new Set(rows.flatMap((r) => r.source_urls))];
     <h1>{countryFlag(code)} {heading}</h1>
     <p class="hol-lead">{lead}</p>
   </header>
+
+  {yearNote?.[LOCALE] && (
+    <p class="hol-yearnote">{yearNote[LOCALE]}</p>
+  )}
 
   {systemNote?.text?.[LOCALE] && (
     <section class="hol-system">
@@ -211,15 +217,23 @@ const allSources = [...new Set(rows.flatMap((r) => r.source_urls))];
 </BaseLayout>
 
 <style>
-  .hol-head { margin-block-end: var(--space-6); }
+  .hol-head { margin-block-end: 1.5rem; }
   .hol-head h1 { font-size: var(--text-2xl); }
   .hol-lead { color: var(--color-ink-muted); }
+  /* 逐年的語意差異:與內文同級距,不做成只有顏色差別的警示條(級距不得只靠顏色) */
+  .hol-yearnote {
+    margin-block-end: 1.5rem;
+    padding: 0.75rem 1rem;
+    border-inline-start: 0.1875rem solid var(--color-accent);
+    background: var(--color-accent-soft);
+    font-size: var(--text-base);
+  }
   /* 寬內容自己捲,頁面本體不得橫向捲動 */
   .hol-wrap { overflow-x: auto; }
   .hol-table { width: 100%; border-collapse: collapse; font-size: var(--text-base); }
   .hol-table th, .hol-table td {
     text-align: start;
-    padding: var(--space-2) var(--space-3);
+    padding: 0.5rem 0.75rem;
     border-block-end: 0.0625rem solid var(--color-line);
     vertical-align: baseline;
   }
@@ -227,16 +241,16 @@ const allSources = [...new Set(rows.flatMap((r) => r.source_urls))];
   .hol-date { white-space: nowrap; }
   /* 級距不得只靠顏色區分:狀態欄印的是文字本身,不是色塊 */
   .hol-flag { color: var(--color-ink-muted); }
-  .hol-topic { margin-inline-start: var(--space-2); }
-  .hol-nav { margin-block-start: var(--space-6); }
-  .hol-nav-label { color: var(--color-ink-muted); margin-block-end: var(--space-2); }
+  .hol-topic { margin-inline-start: 0.5rem; }
+  .hol-nav { margin-block-start: 1.5rem; }
+  .hol-nav-label { color: var(--color-ink-muted); margin-block-end: 0.5rem; }
   .hol-nav ul, .hol-sources ul { list-style: none; padding: 0; margin: 0; }
-  .hol-nav li { display: inline-block; margin-inline-end: var(--space-3); }
-  .hol-system { margin-block-end: var(--space-6); }
+  .hol-nav li { display: inline-block; margin-inline-end: 0.75rem; }
+  .hol-system { margin-block-end: 1.5rem; }
   .hol-system h2 { font-size: var(--text-lg); }
-  .hol-undated { margin-block-start: var(--space-6); }
+  .hol-undated { margin-block-start: 1.5rem; }
   .hol-undated h2 { font-size: var(--text-lg); }
   .hol-undated ul { list-style: none; padding: 0; margin: 0; }
-  .hol-sources { margin-block-start: var(--space-6); }
+  .hol-sources { margin-block-start: 1.5rem; }
   .hol-sources h2 { font-size: var(--text-lg); }
 </style>

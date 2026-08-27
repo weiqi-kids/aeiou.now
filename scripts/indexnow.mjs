@@ -96,65 +96,109 @@ async function submit(origin, urlList) {
 }
 
 /**
- * 逐國頁的路徑。直接讀**剛 build 出來的 sitemap**,而不是自己重算一次門檻 ——
- * 判準只有一份(site/src/lib/country-cells.mjs),重算就會有第二份、遲早不一致,
- * 而不一致的後果是把 404 送給搜尋引擎。找不到 sitemap 就回空陣列(不擋提交)。
+ * 某個站**線上那一份** sitemap 的路徑清單。
+ *
+ * 為什麼是線上抓、不是讀本地 dist(2026-08-27 修正):這支在 CI 是獨立 job
+ * (`needs: build-deploy`),只做 checkout、不 build —— `site/dist/` 根本不存在,
+ * 於是逐國頁那一段從上線以來**一次都沒有真的送出過**,而且靜靜地送 0 筆。
+ * 本地跑時 dist 又只有最後一個 build 的語系,拿它餵七個 origin 會送出 404。
+ *
+ * 線上 sitemap 剛好同時解掉這兩件事:它逐 origin 各自一份、而且就是**真的上線了的**
+ * 那一份,判準仍然只有一份(site/src/lib/{country-cells,holidays}.mjs 產出的那份)。
+ * 抓不到就退回本地 dist(只認 origin 相符的那一份),再抓不到就回空陣列 —— 不擋提交。
  */
-function sitemapCountryPaths(slugs, origin) {
-  const candidates = ["site/dist/sitemap.xml", "dist/sitemap.xml"];
-  const file = candidates.map((p) => join(ROOT, p)).find((p) => existsSync(p));
-  if (!file) return [];
-  const xml = readFileSync(file, "utf8");
-  const want = new Set(slugs);
+async function sitemapPaths(origin) {
+  let xml = null;
+  try {
+    const res = await fetch(`${origin}/sitemap.xml`, { headers: { "User-Agent": "aeiou.now indexnow" } });
+    if (res.ok) xml = await res.text();
+    else console.warn(`[indexnow] ${origin}/sitemap.xml HTTP ${res.status},改讀本地 dist`);
+  } catch (e) {
+    console.warn(`[indexnow] ${origin}/sitemap.xml 抓取失敗(${e.message}),改讀本地 dist`);
+  }
+  if (xml == null) {
+    const file = ["site/dist/sitemap.xml", "dist/sitemap.xml"].map((p) => join(ROOT, p)).find((p) => existsSync(p));
+    if (!file) return [];
+    xml = readFileSync(file, "utf8");
+  }
   const out = [];
-  for (const m of xml.matchAll(/<loc>([^<]*?)(\/topic\/([^/<]+)\/([a-z]{2})\/)<\/loc>/g)) {
-    // ⚠ dist/ 只有**最後一個 build 的語系**。七個站的逐國頁集合不一樣
-    // (厚度門檻逐語系算,zh-TW 141 頁、en 301 頁),拿同一份 sitemap 送給七個 origin
-    // 等於主動把 404 餵給搜尋引擎。所以只認 sitemap 自己那個 origin。
-    if (m[1] !== origin) continue;
-    if (want.has(m[3])) out.push(m[2]);
+  for (const m of xml.matchAll(/<loc>([^<]*)<\/loc>/g)) {
+    // ⚠ 只認 sitemap 自己那個 origin:七站的逐國頁與假日頁集合不一樣(厚度門檻逐語系算),
+    // 拿同一份清單送給七個 origin 等於主動把 404 餵給搜尋引擎。
+    if (!m[1].startsWith(`${origin}/`)) continue;
+    out.push(m[1].slice(origin.length));
   }
   return [...new Set(out)];
 }
 
+/** 假日總表(/holidays/<cc>/<年>/)近期變過嗎。它有自己的資料指紋,與 Topic 無關。 */
+function holidaysChanged() {
+  const stampPath = join(DATA, "meta", "stamps.json");
+  if (!existsSync(stampPath)) return false;
+  try {
+    const stamps = JSON.parse(readFileSync(stampPath, "utf8"));
+    const at = Date.parse(stamps?.holidays?.updated_at || "");
+    return Number.isFinite(at) && at >= Date.now() - WINDOW_HOURS * 3600 * 1000;
+  } catch { return false; }
+}
+
 async function main() {
   const slugs = changedSlugs();
-  if (slugs.length === 0) {
-    console.log(`[indexnow] 近 ${WINDOW_HOURS}h 沒有變動的 Topic,略過提交。`);
+  const holidays = holidaysChanged();
+  if (slugs.length === 0 && !holidays) {
+    console.log(`[indexnow] 近 ${WINDOW_HOURS}h 沒有變動的 Topic 或假日總表,略過提交。`);
     return;
   }
-  console.log(`[indexnow] 近 ${WINDOW_HOURS}h 變動 ${slugs.length} 個 Topic:${slugs.join(", ")}`);
+  if (slugs.length > 0) {
+    console.log(`[indexnow] 近 ${WINDOW_HOURS}h 變動 ${slugs.length} 個 Topic:${slugs.join(", ")}`);
+  }
+  if (holidays) console.log(`[indexnow] 近 ${WINDOW_HOURS}h 假日總表變動,一併提交 /holidays/ 全部格子。`);
 
   for (const [locale, origin] of Object.entries(ORIGINS)) {
-    const urlList = slugs.map((slug) => `${origin}/topic/${slug}/`);
-    // 有 Topic 變動時列表頁的內容也跟著變,一併請重爬。
-    // /questions/ 每天換題,而且是唯一沒有其他入口的頁面 —— 2026-08-20 用 URL Inspection
-    // 逐頁驗過:sitemap 上 36 頁只有它是「URL is unknown to Google」,其餘 35 頁都已索引。
-    // 它一直沒被提交,是因為這份清單原本只推 Topic 頁與 today 列表。
-    urlList.push(
-      `${origin}/`,
-      `${origin}/topics/today/`,
-      `${origin}/topics/nearby/`,
-      `${origin}/topics/events/`,
-      `${origin}/questions/`,
-      // 排行榜六個時窗(2026-08-26 補)。它們的內容跟著 Topic 分數每小時變,
-      // 符合上面那條「有 Topic 變動時列表頁也跟著變」的理由,卻從來沒被提交過。
-      // 起因:`seo-health.mjs` ② 層查到 `/rankings/3m/` 是全站唯一
-      // 「Discovered - currently not indexed」,而且 `lastCrawlTime` 是 never。
-      // 逐頁比對六個時窗:24h/72h/7d/1m/1y 都已索引、referringUrls 1–4 個,只有 3m 是 0 個。
-      // 三項檢查裡它只缺這一項 —— 在 sitemap(有)、有站內連結(六頁互連,markup 與其他五頁一樣)、
-      // 被 indexnow 提交(**沒有**)。48 筆 = 43 個 Topic + 5 個固定頁,sitemap 是 55 筆。
-      // ⚠ Google 不吃 IndexNow(見檔頭),所以這一條直接受益的是 Bing/ChatGPT/Copilot;
-      // 對 Google 那一半仍然靠 sitemap 的 lastmod。
-      // /about/ 不加:它不隨 Topic 變動,不符合上面那條理由。
-      ...["24h", "72h", "7d", "1m", "3m", "1y"].map((w) => `${origin}/rankings/${w}/`),
-      // 逐國頁(2026-08-26)。它的內容就是母 Topic 那一格,母頁變了它就變。
-      // 清單來自 data/topics/<id>/facts.json,判準與 site 端的 countryCellsFor 一致:
-      // 這裡只用「有沒有那一國的資料」判斷,厚度門檻由 build 決定 ——
-      // 送了但沒產出的網址會 404,所以只送 sitemap 裡真的有的那些。
-      ...sitemapCountryPaths(slugs, origin).map((path) => `${origin}${path}`),
-    );
-    await submit(origin, urlList);
+    const paths = await sitemapPaths(origin);
+    const urlList = [];
+    if (slugs.length > 0) {
+      urlList.push(...slugs.map((slug) => `${origin}/topic/${slug}/`));
+      // 有 Topic 變動時列表頁的內容也跟著變,一併請重爬。
+      // /questions/ 每天換題,而且是唯一沒有其他入口的頁面 —— 2026-08-20 用 URL Inspection
+      // 逐頁驗過:sitemap 上 36 頁只有它是「URL is unknown to Google」,其餘 35 頁都已索引。
+      // 它一直沒被提交,是因為這份清單原本只推 Topic 頁與 today 列表。
+      urlList.push(
+        `${origin}/`,
+        `${origin}/topics/today/`,
+        `${origin}/topics/nearby/`,
+        `${origin}/topics/events/`,
+        `${origin}/questions/`,
+        // 排行榜六個時窗(2026-08-26 補)。它們的內容跟著 Topic 分數每小時變,
+        // 符合上面那條「有 Topic 變動時列表頁也跟著變」的理由,卻從來沒被提交過。
+        // 起因:`seo-health.mjs` ② 層查到 `/rankings/3m/` 是全站唯一
+        // 「Discovered - currently not indexed」,而且 `lastCrawlTime` 是 never。
+        // 逐頁比對六個時窗:24h/72h/7d/1m/1y 都已索引、referringUrls 1–4 個,只有 3m 是 0 個。
+        // 三項檢查裡它只缺這一項 —— 在 sitemap(有)、有站內連結(六頁互連,markup 與其他五頁一樣)、
+        // 被 indexnow 提交(**沒有**)。
+        // ⚠ Google 不吃 IndexNow(見檔頭),所以這一條直接受益的是 Bing/ChatGPT/Copilot;
+        // 對 Google 那一半仍然靠 sitemap 的 lastmod。
+        // /about/ 不加:它不隨 Topic 變動,不符合上面那條理由。
+        ...["24h", "72h", "7d", "1m", "3m", "1y"].map((w) => `${origin}/rankings/${w}/`),
+        // 逐國頁(2026-08-26)。它的內容就是母 Topic 那一格,母頁變了它就變。
+        // 清單來自線上 sitemap(見 sitemapPaths),所以送的一定是真的產出了的那些格子。
+        ...paths.filter((path) => slugs.some((slug) => path.startsWith(`/topic/${slug}/`)) && /^\/topic\/[^/]+\/[a-z]{2}\/$/.test(path))
+          .map((path) => `${origin}${path}`),
+      );
+    }
+    // 假日總表(2026-08-27 補)。它有自己的資料指紋,不隨 Topic 變 ——
+    // 上線當天 147 個新網址一個都沒被提交過,因為這份清單原本只認 Topic 變動。
+    // 它也是站上唯一沒有站內入口的頁型(見 [year].astro 的說明),對 Bing 而言
+    // sitemap 與 IndexNow 是僅有的兩條發現路徑。
+    if (holidays) {
+      urlList.push(...paths.filter((path) => /^\/holidays\/[a-z]{2}\/\d{4}\/$/.test(path)).map((path) => `${origin}${path}`));
+    }
+    const unique = [...new Set(urlList)];
+    if (unique.length === 0) {
+      console.warn(`[indexnow] ${new URL(origin).host}:沒有可提交的網址(sitemap 讀不到?),略過。`);
+      continue;
+    }
+    await submit(origin, unique);
   }
 }
 

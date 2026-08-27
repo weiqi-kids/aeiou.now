@@ -33,6 +33,7 @@ import {
   coverPath,
 } from '../../../lib/data.mjs';
 import { countryCellsFor } from '../../../lib/country-cells.mjs';
+import { holidayCellsFor } from '../../../lib/holidays.mjs';
 
 export function getStaticPaths() {
   const out = [];
@@ -53,6 +54,14 @@ const copy = seoCopy();
 const loc = i18n?.locales?.[LOCALE] || {};
 const topicTitle = loc.title || facts?.canonical_name || facts?.slug;
 const label = countryName(code);
+
+// 假日總表的入口(2026-08-27)。/holidays/<cc>/<年>/ 這個頁型上線時**站內一個連結都沒有**,
+// 只靠 sitemap 被發現 —— 而站上已經有一次同型的教訓:/rankings/3m/ 三項檢查裡只缺
+// 「有站內連結」那一項,就成了全站唯一的 Discovered - currently not indexed。
+// 08-27 用 URL Inspection 逐頁驗過:抽驗的四個假日頁全部是 `URL is unknown to Google`、
+// referringUrls 0。逐國頁是最貼切的入口 —— 同一個國家軸,而且它自己已經被索引。
+// 判準仍然只有一份:holidayCellsFor()(薄頁不產出的那支),所以不會連到 404。
+const holidayYears = holidayCellsFor(code);
 
 const allObservances = observancesForFacts(facts);
 const observances = allObservances.filter((o) => o.country_code === code);
@@ -217,6 +226,21 @@ const schema = {
       </nav>
     )}
 
+    {holidayYears.length > 0 && (
+      <nav class="holidays-link" aria-labelledby="holidays-h">
+        <h2 id="holidays-h">{fillTemplate(t('holidays.all_of_country'), { country: label })}</h2>
+        <ul>
+          {holidayYears.map((y) => (
+            <li>
+              <a href={withBase(`holidays/${code.toLowerCase()}/${y}/`)}>
+                {fillTemplate(t('holidays.heading'), { year: y, country: label })}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    )}
+
     {sourceUrls.length > 0 && (
       <section class="sources">
         <h2>{copy.sources}</h2>
@@ -232,22 +256,25 @@ const schema = {
 </BaseLayout>
 
 <style>
-  .country-page { display: flex; flex-direction: column; gap: var(--space-l); }
+  .country-page { display: flex; flex-direction: column; gap: 1.5rem; }
+  .holidays-link h2 { font-size: var(--text-lg); }
+  .holidays-link ul { list-style: none; padding: 0; margin: 0; }
+  .holidays-link li { display: inline-block; margin-inline-end: 0.75rem; }
   .crumb { font-size: var(--text-sm); }
   .crumb a { color: var(--color-link); }
   h1 { font-size: var(--text-2xl); line-height: 1.25; }
   .flag { margin-inline-end: 0.4em; }
   .observance, .context, .siblings, .sources {
     border-block-start: 1px solid var(--color-border);
-    padding-block-start: var(--space-m);
+    padding-block-start: 0.75rem;
   }
-  h2 { font-size: var(--text-lg); margin-block-end: var(--space-xs); }
-  .facts { display: flex; flex-wrap: wrap; gap: var(--space-m); margin-block-end: var(--space-s); }
+  h2 { font-size: var(--text-lg); margin-block-end: 0.25rem; }
+  .facts { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-block-end: 0.5rem; }
   .facts div { display: flex; flex-direction: column; gap: 0.15em; }
   dt { font-size: var(--text-sm); color: var(--color-text-muted); }
   dd { font-size: var(--text-base); }
   p { font-size: var(--text-base); line-height: 1.7; }
-  .siblings ul { display: flex; flex-wrap: wrap; gap: var(--space-s); list-style: none; padding: 0; }
+  .siblings ul { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; }
   .siblings a { font-size: var(--text-base); color: var(--color-link); }
   .sources ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.3em; }
   .sources a { font-size: var(--text-base); color: var(--color-link); word-break: break-word; }

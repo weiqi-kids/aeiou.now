@@ -53,6 +53,19 @@ export function holidaySystemNote(code) {
   return all?.[String(code).toUpperCase()] || null;
 }
 
+/**
+ * 某一國**某一年**的補充說明(七語)。沒有就回 null。
+ *
+ * 為什麼需要這一層(2026-08-27):同一張表的日期語意可能逐年不同 —— 中國 2026 年的起迄是
+ * 國務院辦公廳公告過的**實際放假**(含調休併進來的週末),2027/2028 沒有年度通知,
+ * 列的是《放假辦法》的**法定天數區間**。只靠一個 `date_status: estimated` 標籤,
+ * 讀者會把兩年的天數直接相比而得到錯的結論。**語意不同就要說出來**,不能只標「推算」。
+ */
+export function holidayYearNote(code, year) {
+  const note = holidaySystemNote(code);
+  return note?.year_notes?.[String(year)] || null;
+}
+
 export function holidayCalendar(code) {
   return readJson(`holidays/${String(code).toUpperCase()}.json`, null);
 }
