@@ -857,8 +857,18 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
 - [x] **中國 2027/2028 的日期語意**:2026 是含調休的實際放假起迄,2027/2028 是法定天數區間。
       只靠 `date_status: estimated` 說不出這件事 → 新增 `year_notes`(七語)印在表格上方。
 - [x] **印度來源換掉觀光英文頁**(推翻 08-26 的「這台主機做不到」,見下一節)。
-- [ ] **13 個新 Topic 沒有任何 places / events**。全站掛得到地點/活動的 Topic 數用指令查:
-      `sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT topic_id) FROM place_topics"`(events 同理)。
+- [~] **新 Topic 的 places / events**:2026-08-27 補了四個地點(東京 YEBISU BREWERY TOKYO →
+      beer-festivals、東京 千鳥ケ淵戦没者墓苑 → war-dead-and-veterans、聖保羅 Sambódromo do
+      Anhembi → carnival、台北 凱達格蘭文化館 → indigenous-and-colonial-memory),
+      掛得到地點的 Topic 從 8 變 12。**其餘新 Topic 仍然沒有**,活動一個都沒新增。
+      現況查法:`sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT topic_id) FROM place_topics"`(events 同理)。
+      ⚠ 台北啤酒工場沒有收:`event.ttl.com.tw` 的 robots 是 `Disallow: /` 加白名單,`/tp/` 不在裡面。
+      在地資料的市場城市是固定的七個(taipei/tokyo/shanghai/loveland/pune/jakarta/sao-paulo),
+      所以「布盧梅瑙十月啤酒節」這種不在市場城市的活動掛不進來 —— 要嘛擴市場,要嘛只當 Topic 內容寫。
+- [ ] **活動快見底**:未來場次剩幾場用指令查
+      `sqlite3 db/aeiou.sqlite "SELECT COUNT(*) FROM events WHERE start_at > strftime('%s','now')"`。
+      補活動的門檻比補地點高:`update-local-data.mjs` 對活動要求 `date_markers`(頁面上要真的印著那個日期),
+      而且**活動會過期**,地點不會。
 - [ ] **首頁同一個 Topic 仍會出現在兩個區塊**。08-26 只改了 TodayWorld 印什麼字(解掉重複文字),
       沒有動版面。「要不要讓同一個 Topic 不同時出現在兩區」屬草案權威 + 用戶決定,不自行改。
 - [ ] **七夕拆出獨立 Topic 偏離草案 §6/§48**(把七夕畫成 Valentine's Day 的分支),
@@ -892,6 +902,18 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
 - **`beer-festivals` 兩個青島來源仍是 `http://`**:伺服器只送 leaf、不送中介憑證,
   瀏覽器走 AIA 補得回來,Node 的 fetch 不會 → 守門永遠 `fetch failed`。
   解鎖條件:青島市政府補送中介憑證,或守門支援 AIA。
+  2026-08-27 把整條鏈追出來了(可據此實作,也可據此判斷值不值得):
+  leaf 的 AIA → `http://ica.wt.trustasia.com/TrustAsiaDVTLSRSACA2024.crt`,
+  該中介的 AIA →`…/TrustAsiaTLSRSARootCA.crt`,而那張根憑證是由 **Certum Trusted Network CA
+  交叉簽發**的 —— Certum 在系統信任庫裡。實測:
+  `openssl verify -CAfile /etc/ssl/certs/ca-certificates.crt -untrusted <兩張> leaf.pem` → OK。
+  也就是說**要追兩跳**才接得回信任根;只補第一張中介會變成「把中介當信任錨」,那是降低驗證強度,不要那樣做。
+  ⚠ 順帶量過:目前其他 `fetch failed` 的來源(utsav.gov.in、unesco.org、npm.edu.tw)
+  TLS 都是 `Verify return code: 0 (ok)` —— 失敗原因不是憑證鏈,所以實作 AIA 只會救到青島這兩筆。
+- **`www.npm.edu.tw` 整站從本機連不上**(2026-08-27):連根目錄都 `fetch failed`,
+  WebFetch 那條網路也是 ECONNRESET。它是 zh-TW 的一個 place 來源,
+  原本會被算成三輪傳輸層失敗然後**擋掉整條 hourly-export** —— 已改判為封鎖層(只 WARN)。
+  要確認那一頁是否真的還在,得從別的網路打一次。
 - **74 個來源從未被驗證**:46 個被擋/暫時失敗(403/5xx)+ 28 個 robots `Disallow: /`
   (主要 `law.moj.gov.tw`)。前者要從別的網路出口複驗,後者只能人工開。
   🔴 403 一律當「不准抓」,不換 UA、不重試、不繞路。
