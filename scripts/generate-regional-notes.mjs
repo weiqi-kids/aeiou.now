@@ -5,7 +5,7 @@
 // 兩者不能混用：regional note 不會被當成節日、也不會進入日期排序。
 // 文字是編輯資料，不是由頁面在 build 時拼湊出來；每筆都保留來源 URL，
 // 讓 Topic 的 GEO/AEO 答案可以回到可查證的公共資料入口。
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -792,6 +792,23 @@ const output = {
 // 那是頁面上看得見的事實錯誤，也是 E-E-A-T 上最不該犯的一種（湊數引用）。
 // 通用來源（britannica／unesco／who…）留在 topic 層的「來源與日期」，不進逐國區塊。
 // 機械層防線＝scripts/check-content-depth.mjs 的 R3。
+// ── 外部片段:content/regional-notes/<slug>.json ──────────────────────────────
+// 形狀與上面那個 `notes` 物件的一筆**完全一樣**({ country_sources, TW: {七語}, JP: {…}, … }),
+// 驗證也走底下同一條迴圈,所以不是第二套規則。
+//
+// 為什麼不直接寫進上面那個物件(2026-08-27):一個長青 Topic 是七國 × 七語 = 49 段敘述。
+// 2026-08-27 一次加六個新 Topic 就是 294 段,全部內嵌會把這支從 1,396 行推到六千行以上,
+// 而那些是**內容**不是程式 —— 內容放檔案、程式放這裡。既有的十幾筆留在原地不動
+// (搬動它們會製造一個沒有人要 review 的巨大 diff)。
+const FRAGMENT_DIR = join(ROOT, 'content', 'regional-notes');
+if (existsSync(FRAGMENT_DIR)) {
+  for (const file of readdirSync(FRAGMENT_DIR).filter((f) => f.endsWith('.json')).sort()) {
+    const slug = file.replace(/\.json$/, '');
+    if (notes[slug]) throw new Error(`${slug} 同時寫在 notes 物件與 ${file},擇一`);
+    notes[slug] = JSON.parse(readFileSync(join(FRAGMENT_DIR, file), 'utf8'));
+  }
+}
+
 for (const [slug, topic] of Object.entries(notes)) {
   output.topics[slug] = {
     source_urls: [...new Set(topic.sources || [])],

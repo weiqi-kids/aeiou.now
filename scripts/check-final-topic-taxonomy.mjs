@@ -47,6 +47,25 @@ const FINAL_SLUGS = [
   'farewells-and-funerals', 'moving-home', 'homecoming-and-reunion', 'caregiving-across-generations',
   'pets-and-family', 'pet-preparedness', 'ask-the-world', 'womens-day', 'exam-season', 'islamic-calendar-days', 'elders-day', 'year-end-bonus',
   'voting-and-elections', 'parental-leave', 'military-service', 'official-languages', 'compulsory-education', 'religion-and-the-state',
+  // ── 2026-08-27「開拓新的區塊」六個(用戶拍板)。挑題與命名都由 Bing 實測需求決定,
+  //    工具 /root/seo-ops/bin/keyword-demand.mjs,量測區間 2026-05-29 ~ 2026-08-26(exact 比對)。
+  //    共同特徵:七國全部有量,而且頭部字都是**制度的專有名稱**——正好是站上排 63 名
+  //    的那一類(跨國/比較/制度規則),因為在此之前根本沒有頁面在答。
+  // 健保 @tw 5,256、health insurance @us 22,875、健康保険 @jp 9,408、医保 @cn 15,010、SUS @br 12,745
+  'health-coverage',
+  // 特休 @tw 5,352、有給休暇 @jp 16,085、年假 @cn 13,732、férias @br 4,386、残業 @jp 3,353
+  'paid-leave-and-overtime',
+  // 租房 @cn 42,701、賃貸 @jp 38,003、aluguel @br 5,153、租屋 @tw 3,743、敷金 @jp 2,125
+  'renting-a-home',
+  // visa @us 26,071、在留カード @jp 18,957、签证 @cn 6,752、visto @br 3,351、居留證 @tw 2,359
+  'residency-and-visas',
+  // ⚠ 原本要做「生活成本」,量出來才知道詞選錯了:生活費 @tw 21、生活成本 @cn 76、
+  //    custo de vida @br 17。改成制度切面就有量:最低賃金 @jp 29,677、minimum wage @us 14,273、
+  //    salário mínimo @br 3,532、最低工資 @tw 1,082。
+  'minimum-wage',
+  // ⚠ 原本要做「學制與升學」,學制與升學 @tw 都是 0;高考 @cn 382,207 是整份量測最大的字,
+  //    vestibular @br 1,628。軸是升學考試不是學制,而學制那一半已經有 compulsory-education。
+  'entrance-exams',
 ].sort();
 const FINAL = new Set(FINAL_SLUGS);
 const errors = [];
