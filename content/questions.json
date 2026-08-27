@@ -32787,6 +32787,314 @@
         "id": "Jawabannya Brasil. 20 November menempuh dua puluh tahun dan tiga undang-undang: Undang-Undang 10.639 tahun 2003 hanya memasukkannya ke kalender sekolah (Pasal 79-B undang-undang dasar pendidikan); Undang-Undang 12.519 tahun 2011 menaikkannya menjadi hari peringatan nasional, dengan teks yang menyebut itu hari wafatnya pemimpin kulit hitam Zumbi dos Palmares, namun tetap tanpa libur; baru pada 21 Desember 2023, Pasal 1 Undang-Undang 14.759 menyatakannya sebagai hari libur nasional. Sebagai perbandingan, Juneteenth di AS menempuh jalan berbeda: Texas sudah menjadikannya hari libur negara bagian pada 1980, sedangkan langkah federal baru terjadi 17 Juni 2021 — Senat meloloskan 15 Juni, DPR 16 Juni, ditandatangani 17 Juni, tiga hari dari ujung ke ujung, menyisipkan satu baris ke 5 U.S.C. §6103(a) lewat Public Law 117-17. Hari Peringatan Kesetaraan Antaretnis Taiwan pada 21 Maret tertulis dalam undang-undang tetapi tegas tidak memberi libur. Ambedkar Jayanti India pada 14 April bahkan tidak ada dalam daftar libur tahunan pemerintah pusat, dan hanya diberikan lewat surat perintah baru setiap tahun.",
         "pt-BR": "A resposta é o Brasil. O 20 de novembro levou vinte anos e três leis: a Lei nº 10.639, de 2003, só o incluiu no calendário escolar (art. 79-B da lei de diretrizes da educação); a Lei nº 12.519, de 2011, o elevou a data comemorativa nacional, registrando no texto que é o dia da morte do líder negro Zumbi dos Palmares, ainda sem folga; só em 21 de dezembro de 2023 a Lei nº 14.759, no art. 1º, o declarou feriado nacional. Em contraste, o Juneteenth americano seguiu outro caminho: o Texas já o tornara feriado estadual em 1980, enquanto o passo federal só veio em 17 de junho de 2021 — Senado em 15, Câmara em 16, sanção em 17, três dias de ponta a ponta, inserindo uma linha no 5 U.S.C. §6103(a) pela Public Law 117-17. O Dia da Igualdade entre os Povos de Taiwan, 21 de março, está em lei mas expressamente não dá folga. O Ambedkar Jayanti indiano, 14 de abril, nem consta da lista anual de feriados do governo central e só é concedido por uma nova ordem a cada ano."
       }
+    },
+    {
+      "id": "q-20270319-emancipation-poll",
+      "date": "2027-03-19",
+      "kind": "poll",
+      "topic": "emancipation-and-abolition",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "你所在的國家或地區,行事曆上有沒有一天是專門紀念奴隸制或身分制度廢除,而且真的放假?",
+        "en": "Does your country's calendar include a day off specifically commemorating the abolition of slavery or a caste/status system?",
+        "ja": "あなたの国や地域のカレンダーには、奴隷制や身分制度の廃止を記念して実際に休みになる日がありますか?",
+        "zh-CN": "你所在的国家或地区,日历上有没有一天是专门纪念奴隶制或身份制度废除,并且真的放假?",
+        "hi": "आपके देश या क्षेत्र के कैलेंडर में क्या दासता या जाति/स्थिति-व्यवस्था के उन्मूलन की याद में कोई दिन है जिस दिन वाक़ई छुट्टी होती है?",
+        "id": "Apakah kalender di negara atau wilayah Anda memiliki hari libur yang khusus memperingati penghapusan perbudakan atau sistem kasta/status?",
+        "pt-BR": "No calendário do seu país ou região, existe algum dia de folga dedicado especificamente a lembrar a abolição da escravidão ou de um sistema de castas/status?"
+      },
+      "options": [
+        {
+          "id": "yes-day-off",
+          "emoji": "🎉",
+          "label": {
+            "zh-TW": "有,而且真的放假",
+            "en": "Yes, and it's a day off",
+            "ja": "ある、実際に休みになる",
+            "zh-CN": "有,而且真的放假",
+            "hi": "हाँ, और उस दिन छुट्टी भी होती है",
+            "id": "Ada, dan benar-benar libur",
+            "pt-BR": "Sim, e é feriado de verdade"
+          }
+        },
+        {
+          "id": "yes-no-day-off",
+          "emoji": "📅",
+          "label": {
+            "zh-TW": "有紀念日,但不放假",
+            "en": "There's a commemorative day, but no day off",
+            "ja": "記念日はあるが、休みにはならない",
+            "zh-CN": "有纪念日,但不放假",
+            "hi": "स्मृति-दिवस है, पर छुट्टी नहीं मिलती",
+            "id": "Ada hari peringatan, tapi tidak libur",
+            "pt-BR": "Existe data comemorativa, mas sem folga"
+          }
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🚫",
+          "label": {
+            "zh-TW": "沒有這樣的日子",
+            "en": "No such day exists",
+            "ja": "そのような日はない",
+            "zh-CN": "没有这样的日子",
+            "hi": "ऐसा कोई दिन नहीं है",
+            "id": "Tidak ada hari semacam itu",
+            "pt-BR": "Não existe um dia assim"
+          }
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "不確定",
+            "en": "Not sure",
+            "ja": "わからない",
+            "zh-CN": "不确定",
+            "hi": "पता नहीं",
+            "id": "Tidak yakin",
+            "pt-BR": "Não tenho certeza"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270319-emancipation-guess",
+      "date": "2027-03-19",
+      "kind": "guess",
+      "topic": "emancipation-and-abolition",
+      "asker": null,
+      "target": null,
+      "answer": "pt-BR",
+      "text": {
+        "zh-TW": "哪個國家的一個紀念日,先是只寫進學校行事曆,二十年後才升格為全國紀念日,又過了十二年才在二〇二三年變成真正放假的法定假日,前後共經過三部法律?",
+        "en": "Which country's commemorative day started out written into the school calendar only, was elevated to a national commemorative date twenty years later, and only twelve years after that — in 2023 — finally became a paid public holiday, across three separate laws?",
+        "ja": "ある国のある記念日は、まず学校暦にだけ書き込まれ、二十年後に国の記念日に格上げされ、そのさらに十二年後の二〇二三年になってようやく休みになる法定祝日となった。三本の法律を経てのことである。この国はどこか?",
+        "zh-CN": "哪个国家的一个纪念日,先是只写进学校历,二十年后才升格为全国纪念日,又过了十二年才在2023年变成真正放假的法定假日,前后共经过三部法律?",
+        "hi": "किस देश का एक स्मृति-दिवस पहले केवल स्कूली कैलेंडर में दर्ज था, बीस साल बाद राष्ट्रीय स्मृति-दिवस बना, और उसके बारह साल बाद, यानी 2023 में, आख़िरकार असली छुट्टी वाला अवकाश बना — कुल तीन अलग-अलग क़ानूनों के ज़रिए?",
+        "id": "Hari peringatan negara mana yang mula-mula hanya tertulis di kalender sekolah, dua puluh tahun kemudian dinaikkan menjadi hari peringatan nasional, dan dua belas tahun sesudahnya lagi — pada 2023 — akhirnya menjadi hari libur resmi berbayar, melalui tiga undang-undang berturut-turut?",
+        "pt-BR": "A data comemorativa de qual país foi primeiro inscrita só no calendário escolar, vinte anos depois virou data comemorativa nacional, e somente doze anos depois disso — em 2023 — finalmente se tornou feriado de verdade, passando por três leis diferentes?"
+      },
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ合衆国",
+            "zh-CN": "美国",
+            "hi": "संयुक्त राज्य अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是巴西。巴西的十一月二十日走了二十年、三部法律:二〇〇三年第10.639號法只把它寫進學校行事曆的《教育基準法》第79-B條;二〇一一年第12.519號法把它升格為全國紀念日,條文寫明是黑人領袖Zumbi dos Palmares的逝世日,但仍不放假;直到二〇二三年十二月二十一日第14.759號法第一條才宣告十一月二十日為全國假日。相較之下,一八八八年五月十三日的《黃金法》雖然真正廢除了奴隸制,卻沒有被選為紀念日,至今不在聯邦假日清單上。美國的路徑類似但更早也更快:德州一九八〇年先把六月十九日訂為州假日,聯邦則在二〇二一年只花三天完成三讀與簽署。台灣三月二十一日的民族平等紀念日與印度四月十四日的安貝卡誕辰,則都停留在紀念日或年年重發公文的層次,始終沒有變成真正放假的法定假日。",
+        "en": "The answer is Brazil. Brazil's 20 November took twenty years and three statutes: Law 10.639 of 2003 only wrote it into the school calendar via article 79-B of the education framework law; Law 12.519 of 2011 raised it to a national commemorative date, naming it as the death day of Black leader Zumbi dos Palmares, still with no day off; only on 21 December 2023 did Law 14.759's article 1 declare 20 November a national holiday. By contrast, the Lei Áurea of 13 May 1888, which actually ended slavery in law, was never chosen as the holiday and is absent from the federal holiday list today. The United States took a similar but faster path: Texas made 19 June a state holiday back in 1980, while the federal statute passed in just three days in June 2021. Taiwan's Memorial Day for Ethnic Equality on 21 March and India's Ambedkar Jayanti on 14 April both remain at the level of a commemorative date or an annually reissued order, never becoming an actual paid holiday.",
+        "ja": "答えはブラジルである。ブラジルの十一月二十日は二十年と三本の法律を要した。二〇〇三年の法律一〇六三九号は教育基本法第七九-B条に、学校暦に記載するとだけ書き込んだ。二〇一一年の法律一二五一九号はこれを国の記念日に格上げし、黒人指導者ズンビ・ドス・パルマーレスの没日と明記したが、休みにはならなかった。休日になったのは二〇二三年十二月二十一日の法律一四七五九号第一条によってである。対照的に、実際に奴隷制を終わらせた一八八八年五月十三日の黄金法は記念日に選ばれず、今も連邦の祝日一覧にない。アメリカも似た経路をたどったがより速かった。テキサス州は一九八〇年にすでに六月十九日を州の祝日にしており、連邦法はわずか三日で成立した(二〇二一年六月)。台湾の三月二十一日・民族平等記念日とインドの四月十四日・アンベードカル生誕日は、どちらも記念日、あるいは毎年出し直される通達の段階にとどまり、実際の有給休日にはなっていない。",
+        "zh-CN": "答案是巴西。巴西的11月20日走了二十年、经过三部法律:2003年第10.639号法只把它写进《教育基准法》第79-B条的学校历里;2011年第12.519号法把它升格为全国纪念日,条文明确写出是黑人领袖赞比·多斯·帕尔马雷斯的逝世日,但仍不放假;直到2023年12月21日,第14.759号法第一条才宣告11月20日为全国假日。相比之下,1888年5月13日真正废除奴隶制的《黄金法》却没有被选为纪念日,至今不在联邦假日清单上。美国走的路径类似但更早也更快:得克萨斯州1980年就把6月19日定为州假日,联邦层面则在2021年6月三天内完成参众两院通过与签署。台湾3月21日的民族平等纪念日与印度4月14日的安贝德卡尔诞辰,则都停留在纪念日或年年重发的公文层面,始终没有变成真正放假的法定假日。",
+        "hi": "उत्तर ब्राज़ील है। ब्राज़ील के 20 नवंबर को यहाँ तक पहुँचने में बीस साल और तीन क़ानून लगे: 2003 के क़ानून 10.639 ने इसे केवल शिक्षा के आधार-क़ानून के अनुच्छेद 79-B के ज़रिए स्कूली कैलेंडर में दर्ज किया; 2011 के क़ानून 12.519 ने इसे राष्ट्रीय स्मृति-दिवस बनाया और स्पष्ट लिखा कि यह अश्वेत नेता ज़ुम्बी दोस पाल्मारिस की मृत्यु का दिन है, फिर भी छुट्टी नहीं मिली; केवल 21 दिसंबर 2023 को क़ानून 14.759 के अनुच्छेद 1 ने 20 नवंबर को राष्ट्रीय अवकाश घोषित किया। इसके विपरीत, दासता को वाक़ई समाप्त करने वाला 13 मई 1888 का लेई आउरिया कभी स्मृति-दिवस के रूप में नहीं चुना गया और आज भी संघीय अवकाश सूची में नहीं है। संयुक्त राज्य ने मिलता-जुलता पर तेज़ रास्ता अपनाया: टेक्सस ने 1980 में ही 19 जून को राज्य अवकाश बना दिया था, जबकि संघीय क़ानून 2021 में मात्र तीन दिनों में पारित हुआ। ताइवान का 21 मार्च और भारत का 14 अप्रैल दोनों ही स्मृति-दिवस या हर साल दोबारा जारी होने वाले आदेश के स्तर पर ही रह गए, कभी वास्तविक सवेतन अवकाश नहीं बने।",
+        "id": "Jawabannya adalah Brasil. Tanggal 20 November di Brasil menempuh dua puluh tahun dan tiga undang-undang: Undang-Undang 10.639 tahun 2003 hanya memasukkannya ke kalender sekolah lewat Pasal 79-B undang-undang dasar pendidikan; Undang-Undang 12.519 tahun 2011 menaikkannya menjadi hari peringatan nasional, menyebutnya sebagai hari wafat pemimpin kulit hitam Zumbi dos Palmares, namun tetap tanpa libur; baru pada 21 Desember 2023, Pasal 1 Undang-Undang 14.759 menyatakan 20 November sebagai hari libur nasional. Sebagai perbandingan, Lei Áurea tanggal 13 Mei 1888 yang benar-benar mengakhiri perbudakan tidak pernah dipilih sebagai hari peringatan dan sampai sekarang tidak ada dalam daftar libur federal. Amerika Serikat menempuh jalan serupa tetapi lebih cepat: Texas sudah menjadikan 19 Juni hari libur negara bagian sejak 1980, sementara undang-undang federalnya disahkan hanya dalam tiga hari pada 2021. Hari Peringatan Kesetaraan Antaretnis Taiwan pada 21 Maret dan Ambedkar Jayanti India pada 14 April sama-sama tetap berada di tingkat hari peringatan atau surat yang diterbitkan ulang setiap tahun, tidak pernah menjadi hari libur berbayar yang sesungguhnya.",
+        "pt-BR": "A resposta é o Brasil. O 20 de novembro brasileiro levou vinte anos e três leis: a Lei nº 10.639, de 2003, só o inscreveu no calendário escolar pelo art. 79-B da LDB; a Lei nº 12.519, de 2011, o elevou a data comemorativa nacional, registrando-o como o dia da morte do líder negro Zumbi dos Palmares, ainda sem folga; só em 21 de dezembro de 2023 o art. 1º da Lei nº 14.759 declarou feriado nacional o 20 de novembro. Em contraste, a Lei Áurea de 13 de maio de 1888, que de fato extinguiu a escravidão, nunca foi escolhida como a data comemorativa e não consta da lista federal de feriados até hoje. Os Estados Unidos seguiram um caminho parecido, porém mais rápido: o Texas já fizera de 19 de junho feriado estadual em 1980, e a lei federal foi sancionada em apenas três dias, em 2021. O Dia da Igualdade entre os Povos de Taiwan, em 21 de março, e o Ambedkar Jayanti da Índia, em 14 de abril, permanecem no nível de data comemorativa ou de portaria reeditada todo ano, sem nunca terem se tornado feriado remunerado de fato."
+      }
+    },
+    {
+      "id": "q-20270320-season-marker",
+      "date": "2027-03-20",
+      "kind": "poll",
+      "topic": "equinox-and-seasonal-turns",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "在你生活的地方,人們怎麼標記分點或至點這一天?",
+        "en": "Where you live, how do people mark the day of an equinox or solstice?",
+        "ja": "あなたの住んでいる場所では、春分・秋分や夏至・冬至の日をどんなふうに意識しますか?",
+        "zh-CN": "在你生活的地方,人们怎么标记分点或至点这一天?",
+        "hi": "जहाँ आप रहते हैं, वहाँ विषुव या संक्रांति के दिन को लोग कैसे चिह्नित करते हैं?",
+        "id": "Di tempat kamu tinggal, bagaimana orang-orang menandai hari ekuinoks atau solstis?",
+        "pt-BR": "No lugar onde você mora, como as pessoas marcam o dia de um equinócio ou solstício?"
+      },
+      "options": [
+        {
+          "id": "legal-holiday",
+          "emoji": "🎌",
+          "label": {
+            "zh-TW": "有法定假日,大家真的放假",
+            "en": "There's an official public holiday, and people actually get the day off",
+            "ja": "法定の祝日があり、実際に休みになる",
+            "zh-CN": "有法定假日,大家真的放假",
+            "hi": "आधिकारिक अवकाश है और लोग सचमुच छुट्टी मनाते हैं",
+            "id": "Ada hari libur resmi dan orang-orang benar-benar libur",
+            "pt-BR": "Existe feriado oficial e as pessoas realmente folgam"
+          }
+        },
+        {
+          "id": "folk-custom",
+          "emoji": "🌾",
+          "label": {
+            "zh-TW": "有民俗或宗教活動,但不放假",
+            "en": "There's a folk or religious observance, but no day off",
+            "ja": "民間行事や宗教行事はあるが、休みにはならない",
+            "zh-CN": "有民俗或宗教活动,但不放假",
+            "hi": "लोक या धार्मिक रिवाज़ हैं, पर छुट्टी नहीं मिलती",
+            "id": "Ada tradisi rakyat atau keagamaan, tapi bukan hari libur",
+            "pt-BR": "Há uma tradição popular ou religiosa, mas não é feriado"
+          }
+        },
+        {
+          "id": "clock-change",
+          "emoji": "🕑",
+          "label": {
+            "zh-TW": "跟著調整時鐘,不是慶祝節日",
+            "en": "Clocks get adjusted around that time, not a celebration",
+            "ja": "祝うわけではなく、時計を調整するだけ",
+            "zh-CN": "跟着调整时钟,不是庆祝节日",
+            "hi": "घड़ियाँ बदल जाती हैं, कोई उत्सव नहीं मनाया जाता",
+            "id": "Jam disesuaikan sekitar waktu itu, bukan perayaan",
+            "pt-BR": "Os relógios são ajustados por essa época, sem nenhuma celebração"
+          }
+        },
+        {
+          "id": "nothing-special",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "完全沒有特別的節日或儀式",
+            "en": "Nothing special happens at all",
+            "ja": "特に何も行われない",
+            "zh-CN": "完全没有特别的节日或仪式",
+            "hi": "कुछ भी ख़ास नहीं होता",
+            "id": "Sama sekali tidak ada perayaan atau ritual khusus",
+            "pt-BR": "Não acontece absolutamente nada de especial"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270320-shadowless-day",
+      "date": "2027-03-20",
+      "kind": "guess",
+      "topic": "equinox-and-seasonal-turns",
+      "asker": null,
+      "target": null,
+      "answer": "id",
+      "text": {
+        "zh-TW": "哪一國的氣象機構每年公布各城市不同的『無影日』——正午時直立物體的影子會與物體重疊而看似消失?",
+        "en": "Which country's weather agency publishes a different \"day without shadows\" for every city each year — the day a vertical object's noon shadow disappears beneath it?",
+        "ja": "毎年、都市ごとに異なる『影のない日』——正午に垂直な物体の影が真下に消える日——を発表している気象機関があるのはどこの国?",
+        "zh-CN": "哪一国的气象机构每年公布各城市不同的『无影日』——正午时直立物体的影子会与物体重叠而看似消失?",
+        "hi": "किस देश की मौसम एजेंसी हर साल हर शहर के लिए अलग 'बिना छाया का दिन' प्रकाशित करती है — जब दोपहर में खड़ी वस्तु की छाया उसी के नीचे सिमटकर लुप्त हो जाती है?",
+        "id": "Badan cuaca negara mana yang setiap tahun mengumumkan 'Hari Tanpa Bayangan' yang berbeda untuk tiap kota — hari ketika bayangan benda tegak pada tengah hari menghilang di bawahnya?",
+        "pt-BR": "O órgão de meteorologia de qual país publica todo ano um 'dia sem sombra' diferente para cada cidade — o dia em que a sombra de um objeto vertical ao meio-dia desaparece sob ele?"
+      },
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是印尼。印尼氣象氣候暨地球物理局(BMKG)每年公布 Hari Tanpa Bayangan(無影日):太陽赤緯與當地緯度相同的那一天,正午直立物體的影子會與物體重疊而看似消失。各城市緯度不同,日期也不同——二〇二六年第一輪從二月二十一日的東努沙登加拉 Baa 排到四月五日的亞齊 Sabang,雅加達是三月五日與十月九日;剛好坐在赤道上的坤甸則落在三月二十日與九月二十三日,正是分點當天。這和其他國家的做法很不一樣:印度的摩羯宮入座日已經比十二月至點晚了三個多星期,原因是曆算把黃道十二宮釘在恆星而非分點上;日本把春分與秋分寫成法定假日,日期由國立天文台推算、前一年二月才公告;中國的法定假日裡只有清明節的日期由節氣決定。印尼則完全沒有以季節轉換為由的假日——赤道橫貫國土,一年只分雨季與旱季,公布的反而是這個因緯度而異的天文現象。",
+        "en": "The answer is Indonesia. Its meteorological, climatological and geophysical agency (BMKG) publishes Hari Tanpa Bayangan, the day without shadows, every year: the day the sun's declination matches a place's latitude, so a vertical object's noon shadow folds beneath it and seems to vanish. Every city has its own date — in 2026 the first round runs from 21 February at Baa in East Nusa Tenggara to 5 April at Sabang in Aceh, with Jakarta getting 5 March and 9 October; Pontianak, sitting right on the equator, falls on 20 March and 23 September, the equinoxes themselves. Other countries handle the sun differently: India's Makar Sankranti has drifted more than three weeks past the December solstice because its reckoning ties the zodiac to fixed stars rather than the equinox; Japan makes the equinoxes statutory holidays whose dates the national observatory computes and gazettes only the previous February; China dates only one statutory holiday, Qingming, by a solar term. Indonesia has no holiday for a change of season at all — the equator runs through the country, the year splits into rainy and dry seasons, and what gets published instead is this latitude-specific astronomical event.",
+        "ja": "答えはインドネシア。気象気候地球物理庁(BMKG)は毎年「影のない日」(Hari Tanpa Bayangan)を発表する。太陽の赤緯がその土地の緯度と一致する日で、正午に垂直な物体の影が真下に畳まれて消えて見える。都市ごとに緯度が違うので日付も異なり、二〇二六年の一巡目は東ヌサ・トゥンガラのバアの二月二十一日からアチェのサバンの四月五日まで、ジャカルタは三月五日と十月九日。赤道上のポンティアナックは三月二十日と九月二十三日、つまり分点そのものにあたる。ほかの国とはやり方が違う。インドのマカル・サンクランティは十二月の至点から三週間以上ずれているが、これは黄道十二宮を春分点ではなく恒星に固定しているため。日本は春分・秋分を法定の祝日にしながら日付を書かず、国立天文台が計算し前年二月に官報で公告する。中国で節気が日付を決める法定祝日は清明節だけである。インドネシアには季節の変わり目を理由にした祝日がなく、赤道が国を横切り一年は雨季と乾季に分かれるため、代わりに緯度ごとに違うこの天文現象が発表される。",
+        "zh-CN": "答案是印尼。印尼气象气候和地球物理局(BMKG)每年公布 Hari Tanpa Bayangan(无影日):太阳赤纬与当地纬度相同的那一天,正午直立物体的影子会与物体重叠而看似消失。各城市纬度不同,日期也不同——二〇二六年第一轮从二月二十一日的东努沙登加拉巴阿排到四月五日的亚齐沙璜,雅加达是三月五日与十月九日;正坐在赤道上的坤甸则落在三月二十日与九月二十三日,正是分点当天。这和其他国家很不一样:印度的摩羯宫入宫日已经比十二月至点晚了三个多星期,原因是历算把黄道十二宫钉在恒星而非春分点上;日本把春分和秋分定为法定假日,日期由国立天文台推算、前一年二月才公告;中国的法定假日里只有清明节的日期由节气决定。印尼则完全没有以季节转换为由的假日——赤道横穿国土,一年只分雨季与旱季,公布的反而是这个因纬度而异的天文现象。",
+        "hi": "उत्तर इंडोनेशिया है। इंडोनेशिया की मौसम, जलवायु एवं भूभौतिकी एजेंसी (BMKG) हर साल Hari Tanpa Bayangan, यानी 'बिना छाया का दिन' प्रकाशित करती है — वह दिन जब सूर्य का क्रांति-कोण किसी जगह के अक्षांश के बराबर हो जाता है और दोपहर में खड़ी वस्तु की छाया उसी के नीचे सिमटकर लुप्त दिखती है। हर शहर का अक्षांश अलग है इसलिए तारीख़ भी अलग है — 2026 में पहला दौर पूर्वी नुसा तेंगारा के बा में 21 फ़रवरी से आचेह के सबांग में 5 अप्रैल तक चलता है, जकार्ता को 5 मार्च और 9 अक्तूबर मिलते हैं; भूमध्य रेखा पर बसा पोंटियानाक ठीक विषुव के दिन, 20 मार्च और 23 सितंबर पर पड़ता है। दूसरे देशों का तरीक़ा अलग है: भारत की मकर संक्रांति दिसंबर की संक्रांति से तीन हफ़्ते से अधिक खिसक चुकी है क्योंकि गणना राशियों को विषुव बिंदु से नहीं, स्थिर नक्षत्रों से बाँधती है; जापान विषुव को राजपत्रित अवकाश बनाता है पर तारीख़ नहीं लिखता, वेधशाला हर साल फ़रवरी में तय करती है; चीन में सिर्फ़ चिंगमिंग की तारीख़ सौर पद से तय क़ानूनी अवकाश है। इंडोनेशिया में मौसम-परिवर्तन का कोई अवकाश नहीं है — भूमध्य रेखा देश से गुज़रती है, वर्ष सिर्फ़ बरसात और सूखे मौसम में बँटता है, इसलिए इसके बदले यह अक्षांश-आधारित खगोलीय घटना प्रकाशित होती है।",
+        "id": "Jawabannya Indonesia. Badan Meteorologi, Klimatologi, dan Geofisika (BMKG) setiap tahun mengumumkan Hari Tanpa Bayangan: hari ketika deklinasi matahari sama dengan lintang suatu tempat, sehingga bayangan benda tegak pada tengah hari terlipat di bawahnya dan tampak menghilang. Tiap kota punya lintang berbeda sehingga tanggalnya pun berbeda — pada 2026 putaran pertama berlangsung dari 21 Februari di Baa, Nusa Tenggara Timur, sampai 5 April di Sabang, Aceh, dengan Jakarta kebagian 5 Maret dan 9 Oktober; Pontianak yang duduk tepat di khatulistiwa jatuh pada 20 Maret dan 23 September, persis hari ekuinoks. Negara lain punya cara berbeda: Makar Sankranti India sudah bergeser lebih dari tiga pekan dari solstis Desember karena perhitungannya mengikat zodiak pada bintang tetap, bukan titik ekuinoks; Jepang menjadikan ekuinoks hari libur resmi tanpa menulis tanggal, diserahkan ke observatorium yang mengumumkannya setiap Februari tahun sebelumnya; di Tiongkok hanya Qingming yang tanggal hari liburnya ditentukan penanda matahari. Indonesia sendiri tidak punya hari libur untuk pergantian musim — khatulistiwa membelah negeri ini dan tahun hanya terbagi musim hujan dan kemarau, sehingga yang diumumkan justru fenomena astronomi yang berbeda menurut lintang ini.",
+        "pt-BR": "A resposta é Indonésia. A agência de meteorologia, climatologia e geofísica (BMKG) publica todo ano o Hari Tanpa Bayangan, o dia sem sombra: o dia em que a declinação do sol coincide com a latitude de um lugar, fazendo a sombra de um objeto vertical ao meio-dia se dobrar sob ele e parecer sumir. Cada cidade tem sua própria data — em 2026 a primeira rodada vai de 21 de fevereiro em Baa, em Nusa Tenggara Oriental, até 5 de abril em Sabang, no Aceh, com Jacarta ficando com 5 de março e 9 de outubro; Pontianak, bem sobre o equador, cai em 20 de março e 23 de setembro, os próprios equinócios. Outros países fazem diferente: o Makar Sankranti indiano já se afastou mais de três semanas do solstício de dezembro porque sua contagem prende os signos às estrelas fixas, não ao ponto do equinócio; o Japão transforma os equinócios em feriados legais sem escrever a data, deixando o observatório calculá-la e publicá-la em fevereiro do ano anterior; na China só o Qingming tem data de feriado definida por um marco solar. Já a Indonésia não tem feriado nenhum ligado à mudança de estação — o equador atravessa o país e o ano só se divide em chuvoso e seco, por isso o que se publica é justamente esse fenômeno astronômico que varia conforme a latitude."
+      }
     }
   ]
 }

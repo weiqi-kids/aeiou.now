@@ -857,30 +857,33 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
 - [x] **中國 2027/2028 的日期語意**:2026 是含調休的實際放假起迄,2027/2028 是法定天數區間。
       只靠 `date_status: estimated` 說不出這件事 → 新增 `year_notes`(七語)印在表格上方。
 - [x] **印度來源換掉觀光英文頁**(推翻 08-26 的「這台主機做不到」,見下一節)。
-- [~] **新 Topic 的 places / events**:2026-08-27 補了四個地點(東京 YEBISU BREWERY TOKYO →
-      beer-festivals、東京 千鳥ケ淵戦没者墓苑 → war-dead-and-veterans、聖保羅 Sambódromo do
-      Anhembi → carnival、台北 凱達格蘭文化館 → indigenous-and-colonial-memory),
-      掛得到地點的 Topic 從 8 變 12。**其餘新 Topic 仍然沒有**,活動一個都沒新增。
-      現況查法:`sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT topic_id) FROM place_topics"`(events 同理)。
-      ⚠ 台北啤酒工場**已經收了**(2026-08-27 用戶指正我把界線劃錯):robots 管的是我們去抓,
-      不是那一頁能不能被引用。做法是同一個地點掛兩個來源 —— 讀者點的
-      `event.ttl.com.tw/tp/`(更新器依 robots 跳過,永遠不抓)與守門核對用的
-      `gov.taipei` 新聞稿(地址與開放時間的事實從搜尋結果取得,不是我們爬來的)。
-      同一輪順手補上 `update-local-data.mjs` 的 robots 遵守 —— 它是唯一每小時跑的抓取器,
-      卻是三支抓取器裡唯一沒守 robots 的,實際上每小時都在抓一個 Disallow 的網址。
-      在地資料的市場城市是固定的七個(taipei/tokyo/shanghai/loveland/pune/jakarta/sao-paulo),
-      所以「布盧梅瑙十月啤酒節」這種不在市場城市的活動掛不進來 —— 要嘛擴市場,要嘛只當 Topic 內容寫。
-- [ ] **活動快見底**:未來場次剩幾場用指令查
-      `sqlite3 db/aeiou.sqlite "SELECT COUNT(*) FROM events WHERE start_at > strftime('%s','now')"`。
-      補活動的門檻比補地點高:`update-local-data.mjs` 對活動要求 `date_markers`(頁面上要真的印著那個日期),
-      而且**活動會過期**,地點不會。
-- [x] **首頁同一個 Topic 出現在兩個區塊** —— 2026-08-27 用戶拍板:上面「今天的世界」出現過的,
-      底下的清單不再列。實測 zh-TW:7 + 50 = 57,交集 0,**沒有 Topic 因此從首頁消失**。
-      ⚠ 方向不可反過來(底下那份是全站清單,拿它排除上面會把「現在」那一區清空,違反草案 §55)。
-- [ ] **七夕拆出獨立 Topic 偏離草案 §6/§48**(把七夕畫成 Valentine's Day 的分支),
-      理由與 §58「把它列為搜尋結果的並列項」對衝。當時用戶核准了拆分,這裡只記錄這個偏離
-      本身沒有回頭處理;要收回就是把 `tanabata-and-qixi` 併回 `affection-and-reciprocity`。
-
+- [x] **新 Topic 的在地資料**(2026-08-27 補完十個地點):掛得到地點的 Topic 12 → 23。
+      東京 国立天文台三鷹キャンパス(equinox)、上海猶太難民紀念館(jewish)、南京路步行街(shopping)、
+      宋慶齡故居(womens-day)、台北國父紀念館(founders)、孔廟(exam-season)、市立動物園(environment)、
+      兒童新樂園(halloween)、聖保羅 Museu Afro Brasil(emancipation)、Catedral da Sé(christian),
+      雅加達 Istiqlal 補掛 islamic-calendar-days。每一個都逐頁驗過 marker,來源全是官方頁。
+      **仍然沒有地點的兩個**:`tanabata-and-qixi`(台北霞海城隍廟官網從本機連不上;東京大神宮的頁面
+      沒有七夕字樣,掛上去等於用一個頁面沒說的事當來源)、`long-holiday-weeks`(連假不對應任何一個
+      可造訪的地點,硬掛會是為了填格子而填)。現況查法:
+      `sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT topic_id) FROM place_topics"`。
+      ⚠ 在地資料的市場城市固定七個(taipei/tokyo/shanghai/loveland/pune/jakarta/sao-paulo),
+      而且**每個站只看得到自己市場那一城** —— 所以上海的地點在 zh-TW 站上是看不到的,
+      驗收要在該語系的 build 裡查(實測:zh-CN build 才看得到宋慶齡故居)。
+- [~] **活動快見底** —— 這一輪只補得到一場,**不是沒找,是公告還沒出來**:
+      | 找過的 | 結果 |
+      |---|---|
+      | Liga-SP 2027 出場順序 | ✅ 已收:Grupo Especial 2027-02-05～06,Sambódromo do Anhembi |
+      | Loveland Winter Wonderlights 2026 | 官網寫著這一季不辦 |
+      | 聖保羅 Natal Iluminado 2026 | 只有 2025 檔期的頁面,2026 未公告 |
+      | Dagdusheth Ganeshotsav 2026 | 官方頁面的時程表仍停在 2025 場次 |
+      | 臺北天文館 9 月活動 | 那則新聞的網址已下架(404) |
+      八月底找十月以後的活動,多數主辦單位還沒公告 —— 這是季節性的,不是搜尋方法的問題。
+      所以改成**讓系統自己講**:`update-local-data.mjs` 每輪印「活動存量」,
+      未來場次 < 10、最近一場 > 14 天、或某個市場一場都沒有,就 WARN(永不擋輸出)。
+      門檻可用 `AEIOU_EVENT_RUNWAY_MIN` / `AEIOU_EVENT_RUNWAY_DAYS` 調。
+      查:`node scripts/update-local-data.mjs --check-only | grep 活動存量`。
+      🔴 補活動的硬條件:官方頁面上要**真的印著那個日期**(`date_markers`),否則收不進來 ——
+      這道門是刻意的,它擋掉「我記得大概是十月」這種資料。
 ### 假日母表的資料品質(都已標註,尚未解)
 
 - **中國**:記者節(11/8)整筆沒收(所有可達的 `.gov.cn` 頁都驗不到日期);

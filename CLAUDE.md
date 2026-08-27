@@ -27,6 +27,8 @@
 | cron 排程現況 | `cat /etc/cron.d/aeiou` |
 | **hourly-export 連續失敗了嗎** | `sqlite3 db/aeiou.sqlite "SELECT status,datetime(scheduled_at,'unixepoch') FROM jobs WHERE job_name='hourly-export' ORDER BY scheduled_at DESC LIMIT 5"` |
 | **審核工作檯有東西等人看嗎** | `node scripts/moderation-queue.mjs --report`(pending 那一行) |
+| **活動還夠不夠**(活動只會過期,不會自己長出來) | `node scripts/update-local-data.mjs --check-only \| grep 活動存量` —— 未來場次 < 10、最近一場 > 14 天、或某個市場掛零都會 WARN(門檻 `AEIOU_EVENT_RUNWAY_MIN` / `AEIOU_EVENT_RUNWAY_DAYS`) |
+| **哪些 Topic 掛得到地點/活動** | `sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT topic_id) FROM place_topics"`(events 換成 `event_topics`)。⚠ **每個站只看得到自己市場那一城**,所以驗收要在該語系的 build 裡查 |
 | 內容品質標籤現在長怎樣 | `node scripts/quality-check.mjs --report` |
 | 來源清冊抓到哪了 | `node scripts/source-refresh.mjs --report` |
 | 排名快照存了多久 | `node scripts/ranking-snapshot.mjs --report` |
