@@ -40,8 +40,14 @@ const { countries, heading } = Astro.props;
           <ul class="tw-items">
             {country.items.map((item) => (
               <li class="tw-item">
-                <a href={withBase(`topic/${item.slug}/`)}>{item.title}</a>
-                {item.local_name && <span class="tw-local-name"> · {item.local_name}</span>}
+                {/* 連結文字用**那一天的名字**(local_name),不是 Topic 標題。
+                    2026-08-27:首頁同時有這個「今天的世界」區塊與底下的 Topic 清單,
+                    兩邊都印 Topic 標題 = 同一段文字在同一頁出現兩次,en build 被
+                    check-rendered-depth 的 D3 擋下(門檻 40 字元,短的 CJK 標題一直躲過)。
+                    修法不是砍區塊(版面的權威是產品草案,§55 明訂首頁必須有「現在」),
+                    而是讓這一區印它本來就該印的東西:今天正在發生的**那個日子**。
+                    沒有 local_name 時才退回 Topic 標題。 */}
+                <a href={withBase(`topic/${item.slug}/`)}>{item.local_name || item.title}</a>
                 <span class="tw-date">
                   {' · '}
                   {item.ends_on ? `${calendarDate(item.starts_on)} – ${calendarDate(item.ends_on)}` : calendarDate(item.starts_on)}
@@ -105,7 +111,6 @@ const { countries, heading } = Astro.props;
   .tw-item a:hover {
     text-decoration: underline;
   }
-  .tw-local-name,
   .tw-date {
     color: var(--color-ink-muted);
   }

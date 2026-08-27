@@ -132,6 +132,15 @@ function answerTableCells(html) {
     const text = m[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
     if (text) cells.add(text);
   }
+  // 每日一問卡片的社群署名(2026-08-27)。`.q-asked` 印的是「這題由哪個語言社群提出/問誰」,
+  // 那是一個**標籤**不是段落 —— /questions/ 一頁列很多題,兩題來自同一個社群時本來就該印同一行,
+  // 那正是這個欄位要說的事。與 answer-basis 同型:中文原文短於 40 字門檻從沒觸發,
+  // 翻成英文「Asked by the 🇮🇩 Bahasa Indonesia community」過線就被判成重複段落。
+  // 一樣**仍然計入 total/unique 字元數**,只是不進「重複段落」那份計數。
+  for (const m of html.matchAll(/<p\b[^>]*class="[^"]*\bq-asked\b[^"]*"[^>]*>([\s\S]*?)<\/p>/gi)) {
+    const text = m[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    if (text) cells.add(text);
+  }
   return cells;
 }
 
