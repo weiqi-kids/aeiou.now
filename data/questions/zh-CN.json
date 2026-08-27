@@ -10092,6 +10092,5946 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20270115-family-table",
+      "date": "2027-01-15",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你家有没有一天,是全家人会想办法凑在一起吃饭的?",
+      "options": [
+        {
+          "id": "always-gather",
+          "emoji": "🍽️",
+          "label": "有,几乎每年都到齐"
+        },
+        {
+          "id": "sometimes-miss",
+          "emoji": "🧳",
+          "label": "有,但常常有人到不了"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "没有这种固定聚会的日子"
+        },
+        {
+          "id": "video-call",
+          "emoji": "📱",
+          "label": "人到不齐,靠视频或电话联系"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270115-farmers-day-timing",
+      "date": "2027-01-15",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个地方的农民节,定在春天开始那一天,而不是排在收成之后?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陆"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270116-exam-rhythm",
+      "date": "2027-01-16",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "回想你自己经历过的升学考试(或未来会经历的),哪一种节奏最接近你的经验?",
+      "options": [
+        {
+          "id": "one-shot-sprint",
+          "emoji": "🎯",
+          "label": "一次定生死的一两天冲刺"
+        },
+        {
+          "id": "long-stretch",
+          "emoji": "🗓️",
+          "label": "拉长成好几周、天天都可能考试的长期程"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🔁",
+          "label": "先考一次全国测验,再由学校自办第二关"
+        },
+        {
+          "id": "no-single-exam",
+          "emoji": "📁",
+          "label": "没有单一大考,靠平时表现与申请文件慢慢累积"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270116-guess-exam-country",
+      "date": "2027-01-16",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一个地方的高中毕业会考从二月中旬一路考到四月上旬,近两个月,每天可能只考一到两科,而不是集中在一两天。这是哪里?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270117-recognize-history",
+      "date": "2027-01-17",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果由你决定,一个社会要正式承认历史上的压迫与解放,你会先从哪一步开始?",
+      "options": [
+        {
+          "id": "education-first",
+          "emoji": "📚",
+          "label": "教育优先,进课本比放假重要"
+        },
+        {
+          "id": "mark-no-holiday",
+          "emoji": "📅",
+          "label": "先设纪念日,不必马上放假"
+        },
+        {
+          "id": "legal-holiday",
+          "emoji": "🎉",
+          "label": "直接立法定为国定假日"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🤷",
+          "label": "无所谓,这类日子没必要"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270117-abolition-holiday-path",
+      "date": "2027-01-17",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个国家的废奴纪念日,先进入学校历、再成为全国纪念日、最后才变成法定假日,整个过程走了二十年、三部法律?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270118-exam-design-pref",
+      "date": "2027-01-18",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果由你决定，你会希望自己十八岁那年的升学考试是哪一种设计？",
+      "options": [
+        {
+          "id": "one-shot",
+          "emoji": "🎯",
+          "label": "压缩成一两天定生死"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "🗓️",
+          "label": "分散在数周甚至两个月内逐科考"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🪜",
+          "label": "先考一次全国测验，再由各校甄试或自办考试"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📚",
+          "label": "没有全国考试，看三年在校表现与各校申请审查"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270118-guess-lockdown-exam",
+      "date": "2027-01-18",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这场考试固定在两天之内举行，几乎是升学的唯一门槛；考试期间，考场周边禁鸣喇叭、工地停工、交警设专用通道，甚至有地方调整上班时间避开接送高峰。这是哪个地方的做法？",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270119-seasonal-turn-custom",
+      "date": "2027-01-19",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "分点或至点那天,你所在的地方通常怎么过?",
+      "options": [
+        {
+          "id": "seasonal-food",
+          "emoji": "🍲",
+          "label": "吃应景食物(南瓜、汤圆、饺子之类)"
+        },
+        {
+          "id": "grave-visit",
+          "emoji": "🪦",
+          "label": "扫墓或祭拜祖先"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "🕑",
+          "label": "按法律调时钟(夏令时之类)"
+        },
+        {
+          "id": "no-observance",
+          "emoji": "🤷",
+          "label": "没有相关假日或习俗,照常过"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270119-seasonal-turn-drift",
+      "date": "2027-01-19",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个国家的传统节日,本来是用来标志太阳转向北半球,如今却已经比实际的至点晚了三个多星期?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270120-exam-format",
+      "date": "2027-01-20",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "回想你自己经历过的升学考试,比较接近下面哪一种?",
+      "options": [
+        {
+          "id": "compressed-1-2-days",
+          "emoji": "📅",
+          "label": "一次考试定生死,压缩在一两天内"
+        },
+        {
+          "id": "spread-weeks",
+          "emoji": "🗓️",
+          "label": "拉长成好几个星期甚至两个月慢慢考"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🎯",
+          "label": "两阶段:先一场全国考,再由学校自己加考"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📁",
+          "label": "没有统一考试,靠在校成绩与申请文件"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270120-exam-city-lockdown",
+      "date": "2027-01-20",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个地方的大考期间,城市会禁鸣喇叭、工地停工、交警开辟专用通道?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270121-equinox-habits",
+      "date": "2027-01-21",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "分点或至点这种由太阳位置决定、日期会前后移动的日子,你平时通常怎么过?",
+      "options": [
+        {
+          "id": "adjust-clock",
+          "emoji": "🕑",
+          "label": "调时钟(想到夏令时之类的制度)"
+        },
+        {
+          "id": "seasonal-food",
+          "emoji": "🍡",
+          "label": "吃应景食物(汤圆、饺子、南瓜之类)"
+        },
+        {
+          "id": "check-almanac",
+          "emoji": "📅",
+          "label": "查天文台或日历公告确认实际日期"
+        },
+        {
+          "id": "no-effect",
+          "emoji": "🤷",
+          "label": "没什么特别感觉,跟平常日子一样"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270121-equinox-guess-ohagi",
+      "date": "2027-01-21",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个国家,同一种红豆糯米点心会依春秋两季换用不同名字来供奉祖先?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270122-exam-rhythm",
+      "date": "2027-01-22",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果十八岁那年由你决定要怎么被评量,你会希望是哪一种节奏?",
+      "options": [
+        {
+          "id": "two-day-crunch",
+          "emoji": "🎯",
+          "label": "两天定生死的集中考试"
+        },
+        {
+          "id": "two-sundays",
+          "emoji": "📅",
+          "label": "分两次、相隔一周的考试"
+        },
+        {
+          "id": "two-month-spread",
+          "emoji": "🗓️",
+          "label": "逐科分散、拉长近两个月"
+        },
+        {
+          "id": "no-single-exam",
+          "emoji": "📚",
+          "label": "没有单一大考,靠长期在校表现与各校判断"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270122-exam-guess-country",
+      "date": "2027-01-22",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "同一件「决定升学的考试」，在某个地方被拆成逐科目的考试，天天可能有一科，前后长达将近两个月。你觉得是哪里？",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270123-season-custom",
+      "date": "2027-01-23",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪一项和季节转换有关的习俗,你曾经做过?",
+      "options": [
+        {
+          "id": "solstice-food",
+          "emoji": "🥟",
+          "label": "冬至吃汤圆或饺子"
+        },
+        {
+          "id": "mamemaki",
+          "emoji": "🫘",
+          "label": "节分撒豆喊“鬼出去,福进来”"
+        },
+        {
+          "id": "ohigan-grave",
+          "emoji": "🙏",
+          "label": "在春分或秋分前后扫墓、供牡丹饼/御萩"
+        },
+        {
+          "id": "dst-clock",
+          "emoji": "🕐",
+          "label": "因夏令时调过时钟"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270123-qingming-country",
+      "date": "2027-01-23",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一个国家的法定假日里,唯一由节气决定日期的节日在条文里写成“农历清明当日”,但清明其实是太阳黄经十五度的节气,与农历无关;每年实际放几天假还要另外等年度通知才确定。这是哪个国家?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270124-harvest-what-matters",
+      "date": "2027-01-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果要为自己定义一个「收成节」,你会最在意哪件事?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "全家人一起吃顿饭"
+        },
+        {
+          "id": "ritual-food",
+          "emoji": "🍚",
+          "label": "一起煮一道有意义的食物"
+        },
+        {
+          "id": "thank-labor",
+          "emoji": "🙏",
+          "label": "借这天感谢彼此的辛劳"
+        },
+        {
+          "id": "community-festival",
+          "emoji": "🔥",
+          "label": "社区一起办活动、点篝火庆祝"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270124-harvest-policy-festival",
+      "date": "2027-01-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这个收成节是2018年由国务院批复才设立的,专为农民而设,定在每年农历秋分,但不是全民放假日,主题由农业农村部逐年订定,各省过法也不一样。这是哪里的节日?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陆"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270125-seasonal-customs",
+      "date": "2027-01-25",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这些跟着太阳走到某个定点而定出的日子,常常伴随特定习俗。下面哪一种你自己做过,或家人做过?",
+      "options": [
+        {
+          "id": "tangyuan-dumplings",
+          "emoji": "🥟",
+          "label": "冬至吃汤圆或饺子"
+        },
+        {
+          "id": "pumpkin-yuzu-bath",
+          "emoji": "🎃",
+          "label": "冬至吃南瓜、泡柚子汤"
+        },
+        {
+          "id": "kite-flying",
+          "emoji": "🪁",
+          "label": "摩羯宫入宫日放风筝"
+        },
+        {
+          "id": "bean-throwing",
+          "emoji": "🫘",
+          "label": "节分撒豆喊“鬼出去、福进来”"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270125-equinox-law-country",
+      "date": "2027-01-25",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个国家的春分、秋分假日在法律里不写月日,只写“春分日”三个字,交给天文台推算,前一年二月才在官报上正式公布确切日期?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270126-harvest-focus",
+      "date": "2027-01-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你家如果有类似“收成”或“感谢”的日子,重心通常放在哪里?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "全家聚在一起吃一顿饭"
+        },
+        {
+          "id": "dish-is-ritual",
+          "emoji": "🍚",
+          "label": "有一道特定的菜,煮的过程就是仪式"
+        },
+        {
+          "id": "give-thanks-to",
+          "emoji": "🙏",
+          "label": "感谢一个具体的对象,像是神明、劳动或耕牛"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🚫",
+          "label": "没有特别在过这类日子"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270126-policy-harvest",
+      "date": "2027-01-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下四个地方里,哪一个的收获节日是2018年才由政府新设立、而且不是全民放假日?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陆"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270127-seasonal-turn-habit",
+      "date": "2027-01-27",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你居住的地方,春分、秋分或冬至前后,你通常会做什么?",
+      "options": [
+        {
+          "id": "ancestors",
+          "emoji": "🙏",
+          "label": "扫墓祭祖"
+        },
+        {
+          "id": "food",
+          "emoji": "🥟",
+          "label": "吃应景食物(汤圆、南瓜等)"
+        },
+        {
+          "id": "clocks",
+          "emoji": "🕑",
+          "label": "调整时钟(夏令时)"
+        },
+        {
+          "id": "nothing",
+          "emoji": "🤷",
+          "label": "没有特别活动"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270127-solar-term-holiday-country",
+      "date": "2027-01-27",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这个国家的法定假日办法里,七个放假的节日中只有一个的日期由节气决定,而且冬至完全不放假。是哪一国?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270128-harvest-day-form",
+      "date": "2027-01-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你家如果有庆祝收成或感谢劳动的日子,最接近下面哪一种?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "家庭聚餐"
+        },
+        {
+          "id": "labor-thanks",
+          "emoji": "🙏",
+          "label": "感谢辛劳工作"
+        },
+        {
+          "id": "community-ritual",
+          "emoji": "🕯️",
+          "label": "社群或宗教仪式"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "没有这样的日子"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270128-farmers-day-before-harvest",
+      "date": "2027-01-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个地方的“农民节”定在立春,排在下田之前而不是收成之后?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陆"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270129-seasonal-custom-experience",
+      "date": "2027-01-29",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下这些跟分至、节气有关的习俗,你自己做过哪一个?",
+      "options": [
+        {
+          "id": "mamemaki",
+          "emoji": "🫘",
+          "label": "节分撒豆"
+        },
+        {
+          "id": "tangyuan",
+          "emoji": "🍡",
+          "label": "冬至吃汤圆"
+        },
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "彼岸扫墓"
+        },
+        {
+          "id": "kite-flying",
+          "emoji": "🪁",
+          "label": "摩羯宫入宫日放风筝"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270129-equinox-dst-country",
+      "date": "2027-01-29",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个国家从不为分至点放假,却用法律规定一年拨两次时钟,日期写死在“三月第二个星期日”这种条文里?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270130-harvest-habit",
+      "date": "2027-01-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方,如果有一天是用来感谢收成或辛劳的,你通常怎么过?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "全家围在餐桌前吃一顿饭"
+        },
+        {
+          "id": "special-dish",
+          "emoji": "🍚",
+          "label": "煮一道跟收成有关的特别料理"
+        },
+        {
+          "id": "community-gathering",
+          "emoji": "🔥",
+          "label": "跟邻里或社群一起办活动"
+        },
+        {
+          "id": "no-special-day",
+          "emoji": "📅",
+          "label": "没有这样的一天,日子照常过"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270130-farmers-day-timing",
+      "date": "2027-01-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "五个地方里,有一个“农民的节日”不是排在收成之后,而是排在春耕开始之前。是哪一个?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陆"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270131-seasonal-custom",
+      "date": "2027-01-31",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "下列与季节转换相关的习俗里,你自己或家人实际做过哪一种?",
+      "options": [
+        {
+          "id": "mamemaki",
+          "emoji": "🫘",
+          "label": "节分撒豆,口喊鬼出去福进来"
+        },
+        {
+          "id": "ohigan-visit",
+          "emoji": "🪦",
+          "label": "彼岸期间扫墓,供牡丹饼或御萩"
+        },
+        {
+          "id": "tangyuan",
+          "emoji": "🍡",
+          "label": "冬至吃汤圆或南瓜等应景食物"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "🕑",
+          "label": "配合夏令时调过时钟"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270131-no-shadow-day",
+      "date": "2027-01-31",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个国家的气象气候和地球物理机构,每年逐城市公布正午直立物体影子消失的无影日?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印度尼西亚"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270201-harvest-poll",
+      "date": "2027-02-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "对你来说,「感谢收成」最接近哪一种画面?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "一桌人到齐的家庭聚餐"
+        },
+        {
+          "id": "the-dish-itself",
+          "emoji": "🍲",
+          "label": "一道非煮不可的料理,煮的过程就是仪式"
+        },
+        {
+          "id": "month-of-festivity",
+          "emoji": "🎉",
+          "label": "整整一个月的篝火与庆典气氛"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🌾",
+          "label": "没有固定的一天,靠自己记得感谢"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270201-farmers-day-guess",
+      "date": "2027-02-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪一个地方的「农民节」,是排在春天开始耕作之前,而不是收成之后?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陆"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270202-seasonal-custom-poll",
+      "date": "2027-02-02",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你自己或家人做过以下哪一种跟着太阳节气走的习俗?",
+      "options": [
+        {
+          "id": "grave-sweeping",
+          "emoji": "🧹",
+          "label": "彼岸扫墓、供牡丹饼或御萩"
+        },
+        {
+          "id": "winter-solstice-food",
+          "emoji": "🥣",
+          "label": "冬至吃汤圆或饺子、泡柚子汤"
+        },
+        {
+          "id": "bean-throwing",
+          "emoji": "🫘",
+          "label": "节分撒豆喊“鬼出去、福进来”"
+        },
+        {
+          "id": "none-of-these",
+          "emoji": "🤷",
+          "label": "都没有,我的国家不过这种节气习俗"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270202-solar-term-holiday-guess",
+      "date": "2027-02-02",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪个国家的法定假日里,只有一个节日的日期由节气决定,实际放假天数还要每年另外由政府公告?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270203-harvest-timing",
+      "date": "2027-02-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果要给「感谢收成」订一个日子,你觉得放在哪个时间点最合理?",
+      "options": [
+        {
+          "id": "after-harvest",
+          "emoji": "🌾",
+          "label": "收成之后,像感恩节那样"
+        },
+        {
+          "id": "before-planting",
+          "emoji": "🌱",
+          "label": "开始耕作之前,像立春那样"
+        },
+        {
+          "id": "religious-calendar",
+          "emoji": "🕯️",
+          "label": "跟着宗教历走,像六月圣人节那样"
+        },
+        {
+          "id": "family-gathering",
+          "emoji": "🍽️",
+          "label": "日子其次,能全家聚在一起吃饭最重要"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270203-guess-farmers-festival",
+      "date": "2027-02-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个地方的收成节日,是2018年由国务院批复设立、日期定在秋分,而不是由民间习俗慢慢长出来的?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陆"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270204-holiday-experience",
+      "date": "2027-02-04",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你的连休经验,比较接近哪一种?",
+      "options": [
+        {
+          "id": "makeup-workday",
+          "emoji": "🧾",
+          "label": "为了连休更长,曾经另外挑周末补班"
+        },
+        {
+          "id": "deducted-leave",
+          "emoji": "🏖️",
+          "label": "曾经因为「共同休假」之类的安排,被扣掉自己的年假"
+        },
+        {
+          "id": "sunday-bump",
+          "emoji": "📅",
+          "label": "曾经因为假日刚好卡在星期天,意外多放一天"
+        },
+        {
+          "id": "no-particular-feel",
+          "emoji": "🤷",
+          "label": "没特别注意过,连假怎么排我很少去想"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270204-bridge-holiday-country",
+      "date": "2027-02-04",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一个地方的连休,靠一份「每年都重新发布」的部令,把没有名字的日子接在正式假日旁边,当地人把这种做法叫做「把假日吊起来」。这份部令只约束联邦机关,对民营企业完全没有拘束力。这是哪里?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270205-new-year-habit",
+      "date": "2027-02-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "跨年夜或新年当天，你通常怎么过？",
+      "options": [
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "除夕围炉，一家人吃团圆饭"
+        },
+        {
+          "id": "shrine-visit",
+          "emoji": "⛩️",
+          "label": "到寺庙走春、参拜"
+        },
+        {
+          "id": "beach-fireworks",
+          "emoji": "🎆",
+          "label": "到海边看烟火、跳浪迎接新年"
+        },
+        {
+          "id": "countdown-party",
+          "emoji": "🥳",
+          "label": "跨年倒数、开派对，隔天休息看比赛"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270205-no-jan-first",
+      "date": "2027-02-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这个国家的全国假日清单里完全没有1月1日，新年落在三、四月，而且各邦的名称都不一样。是哪一国？",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印度尼西亚"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270206-carnival-parade-experience",
+      "date": "2027-02-06",
+      "kind": "poll",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你参加过类似“狂欢节”的游行活动吗?",
+      "options": [
+        {
+          "id": "marched",
+          "emoji": "💃",
+          "label": "参加过,还化妆或穿了服装"
+        },
+        {
+          "id": "watched",
+          "emoji": "👀",
+          "label": "去现场看过,没有参加"
+        },
+        {
+          "id": "online",
+          "emoji": "📱",
+          "label": "只在网络或电视上看过"
+        },
+        {
+          "id": "never",
+          "emoji": "🤷",
+          "label": "从来没有接触过这类活动"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270206-carnival-samba-country",
+      "date": "2027-02-06",
+      "kind": "guess",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这是北半球数一数二的桑巴狂欢节,固定在八月的最后一个星期六举行,跟四旬期完全没有关系,二〇二六年是第四十一届。这场狂欢节办在哪个国家?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270207-affection-habit",
+      "date": "2027-02-07",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "2月14日这天,你或你身边的人最常见的做法是什么?",
+      "options": [
+        {
+          "id": "give-chocolate",
+          "emoji": "🍫",
+          "label": "送巧克力"
+        },
+        {
+          "id": "send-card-flowers",
+          "emoji": "💐",
+          "label": "送卡片或花"
+        },
+        {
+          "id": "dine-out",
+          "emoji": "🍽️",
+          "label": "外出用餐"
+        },
+        {
+          "id": "no-celebrate",
+          "emoji": "🙅",
+          "label": "不特别庆祝"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270207-guess-brazil-date",
+      "date": "2027-02-07",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪一个地方的“情人节”落在6月12日,而不是2月14日?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270208-carnival-status",
+      "date": "2027-02-08",
+      "kind": "poll",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方,「狂欢节」或类似的节庆游行,实际上是什么身份?",
+      "options": [
+        {
+          "id": "legal-holiday",
+          "emoji": "📅",
+          "label": "写进法律的正式假日"
+        },
+        {
+          "id": "discretionary-holiday",
+          "emoji": "🗓️",
+          "label": "机关或雇主自行决定要不要放的弹性假"
+        },
+        {
+          "id": "tourism-event",
+          "emoji": "🎪",
+          "label": "由旅游或观光单位主办的节庆活动,不是假日"
+        },
+        {
+          "id": "borrowed-name",
+          "emoji": "🏷️",
+          "label": "只是借用「嘉年华」这个名字的市集或观光活动"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270208-carnival-country",
+      "date": "2027-02-08",
+      "kind": "guess",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个国家的狂欢节在法律上不是法定假日,而是每年由政府重新发布政令指定的「弹性放假日」?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270209-easter-days-off",
+      "date": "2027-02-09",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "圣诞节之外，你所在的地方在复活节前后（圣灰星期三、受难日、复活节、升天日）通常还放几天假？",
+      "options": [
+        {
+          "id": "zero",
+          "emoji": "🚫",
+          "label": "一天都没有"
+        },
+        {
+          "id": "one-day",
+          "emoji": "1️⃣",
+          "label": "只有一天（多半是受难日）"
+        },
+        {
+          "id": "several-days",
+          "emoji": "📅",
+          "label": "好几天都放"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "没注意过／不确定"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270209-guess-easter-country",
+      "date": "2027-02-09",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个国家把耶稣受难日与耶稣升天日都列为全国法定假日，还在升天日之后多放一天全国共同休假？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印度尼西亚"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270210-national-day-poll",
+      "date": "2027-02-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果能亲自到现场,你最想参加上面提到的哪一种国庆活动?",
+      "options": [
+        {
+          "id": "street-games",
+          "emoji": "🎪",
+          "label": "印度尼西亚社区的 lomba 17-an 街头竞赛"
+        },
+        {
+          "id": "day-night-taiwan",
+          "emoji": "🎆",
+          "label": "台湾白天升旗典礼、晚上烟火的国庆日"
+        },
+        {
+          "id": "red-fort-india",
+          "emoji": "🚩",
+          "label": "印度总理在红堡升旗并发表演说的独立日"
+        },
+        {
+          "id": "parade-bbq-us",
+          "emoji": "🍖",
+          "label": "美国有烟火、游行与烤肉的独立纪念日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270210-national-day-guess",
+      "date": "2027-02-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "七个国庆/建国纪念日里,有一个纪念的不是有记载日期的历史事件,而是传说中的即位日。是哪一个国家?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陆"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270211-womens-day-half-day",
+      "date": "2027-02-11",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果三月八日在你这里也能比照中国放假半天,你会怎么安排这半天?",
+      "options": [
+        {
+          "id": "rest-alone",
+          "emoji": "🛌",
+          "label": "自己休息充电"
+        },
+        {
+          "id": "family-time",
+          "emoji": "👪",
+          "label": "陪家人朋友"
+        },
+        {
+          "id": "still-work",
+          "emoji": "💼",
+          "label": "照常上班,没差"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🤷",
+          "label": "不需要这种假,维持现状就好"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270211-womens-day-brazil-date",
+      "date": "2027-02-11",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在这七个地方里,哪一个的「国定妇女节」到2025年为止都还订在四月三十日,是那一年才用新法律改到三月八日的?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270212-valentine-format",
+      "date": "2027-02-12",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活或成长的地方，情人节通常怎么进行？",
+      "options": [
+        {
+          "id": "single-day",
+          "emoji": "💌",
+          "label": "单向送礼，只有一天"
+        },
+        {
+          "id": "reciprocal",
+          "emoji": "🔁",
+          "label": "有来有往，隔月回礼"
+        },
+        {
+          "id": "week-long",
+          "emoji": "📅",
+          "label": "拉长成一整周"
+        },
+        {
+          "id": "dual-dates",
+          "emoji": "🗓️",
+          "label": "同时存在两个日子"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270212-guess-discourage-country",
+      "date": "2027-02-12",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在这七个地方里，哪一个地方的地方政府教育局，每年情人节前后会发出通函，要求辖内学校劝阻学生庆祝？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270213-womens-day-poll",
+      "date": "2027-02-13",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方,三月八日通常是什么样子?",
+      "options": [
+        {
+          "id": "half-day-off",
+          "emoji": "🕐",
+          "label": "会放假(哪怕只有半天)"
+        },
+        {
+          "id": "events-no-holiday",
+          "emoji": "🎤",
+          "label": "有讲座、表扬或促销活动,但不放假"
+        },
+        {
+          "id": "whole-month",
+          "emoji": "📅",
+          "label": "重点是整个月份的活动,不是特定一天"
+        },
+        {
+          "id": "no-observance",
+          "emoji": "🤷",
+          "label": "几乎没有感觉,跟平常的一天没什么不同"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270213-womens-day-guess",
+      "date": "2027-02-13",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个地方的国定妇女节,直到二〇二五年才透过新法律从四月三十日改到三月八日?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270214-reciprocity-habit",
+      "date": "2027-02-14",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果你收到情人节这类礼物，你通常会怎么回礼？",
+      "options": [
+        {
+          "id": "always-reciprocate",
+          "emoji": "🎁",
+          "label": "一定会回礼，而且尽快"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤔",
+          "label": "看关系亲疏再决定"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🙅",
+          "label": "不觉得一定要回礼"
+        },
+        {
+          "id": "no-concept",
+          "emoji": "❓",
+          "label": "我这边没有「回礼」这种习惯"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270214-guess-discourage-country",
+      "date": "2027-02-14",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这一页提到的七个地方里，哪一个地方的官方文件会在情人节前后提醒学校劝阻学生庆祝？",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270215-holiday-namesake-poll",
+      "date": "2027-02-15",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方,有没有一个用某个人名字命名、但实际上不放假的纪念日?",
+      "options": [
+        {
+          "id": "yes-know-who",
+          "emoji": "🧠",
+          "label": "有,而且我知道纪念谁"
+        },
+        {
+          "id": "yes-dont-know",
+          "emoji": "🤷",
+          "label": "有,但不确定纪念谁"
+        },
+        {
+          "id": "no-all-holidays",
+          "emoji": "📅",
+          "label": "没有,纪念个人的日子都放假"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "💭",
+          "label": "没特别想过"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270215-founder-two-dates",
+      "date": "2027-02-15",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有个国家的法律让国父的生日与忌日各占一天,两天都不放假;唯一以个人命名又真的放假的,反而是两千五百年前的一位思想家。这是哪个国家?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270216-exam-format-preference",
+      "date": "2027-02-16",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果是你自己要面对升学考试,你会比较想用哪一种时间安排?",
+      "options": [
+        {
+          "id": "single-day",
+          "emoji": "⏱️",
+          "label": "压缩在一两天内决定"
+        },
+        {
+          "id": "two-sundays",
+          "emoji": "📅",
+          "label": "分成两个星期天,中间留口气"
+        },
+        {
+          "id": "two-months",
+          "emoji": "📆",
+          "label": "拉长成近两个月,一科一科考"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📄",
+          "label": "没有统一考试,看在校表现与申请材料"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270216-guess-two-month-exam",
+      "date": "2027-02-16",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下四个地方里,哪一个把高中毕业考试逐科分散在近两个月,而不是压缩成一两天?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270217-lantern-experience",
+      "date": "2027-02-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "元宵节这天,你通常怎么过?",
+      "options": [
+        {
+          "id": "tangyuan-lanterns",
+          "emoji": "🍡",
+          "label": "吃汤圆、看灯会"
+        },
+        {
+          "id": "sky-lantern",
+          "emoji": "🏮",
+          "label": "放天灯许愿"
+        },
+        {
+          "id": "beehive-fireworks",
+          "emoji": "🎆",
+          "label": "到蜂炮现场感受火花"
+        },
+        {
+          "id": "work-as-usual",
+          "emoji": "💼",
+          "label": "元宵不放假,照常上班上学"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270217-tatung-guess",
+      "date": "2027-02-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "元宵节同一个十五夜,某地的游行核心不是灯笼,而是被信众抬着游街、声称受祖灵附身、以利器贯穿却不见血的人。这是哪里?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陆"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270218-womens-day-poll",
+      "date": "2027-02-18",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方,三月八日通常是什么样子?",
+      "options": [
+        {
+          "id": "usual-day",
+          "emoji": "🗓️",
+          "label": "跟平常一样上班上课,没有特别安排"
+        },
+        {
+          "id": "org-event",
+          "emoji": "🎤",
+          "label": "公司或学校会办活动、讲座或表扬"
+        },
+        {
+          "id": "shopping-promo",
+          "emoji": "🛍️",
+          "label": "我印象最深的是商场的促销档期"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "老实说,我常常搞不清楚这天算什么日子"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270218-womens-day-guess",
+      "date": "2027-02-18",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "本站比较的七个地方里,哪一个的国定妇女节日期在二〇二五年才用新法从四月三十日改到三月八日?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270219-lantern-poll",
+      "date": "2027-02-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "元宵节这天,你通常怎么过?",
+      "options": [
+        {
+          "id": "tangyuan-lanterns",
+          "emoji": "🥣",
+          "label": "吃汤圆、逛灯会"
+        },
+        {
+          "id": "sky-lantern",
+          "emoji": "🏮",
+          "label": "到平溪那样的地方放天灯许愿"
+        },
+        {
+          "id": "fireworks",
+          "emoji": "🎆",
+          "label": "钻进蜂炮或炮阵里"
+        },
+        {
+          "id": "no-festival",
+          "emoji": "🌙",
+          "label": "我住的地方没这个节,照常上班上学"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270219-lantern-guess",
+      "date": "2027-02-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "同一个农历十五,某地把它过成三种完全不同的场面:一边吃汤圆逛灯会,一边到山里放天灯,一边钻进满天乱飞的蜂炮。这是哪里?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陆"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270220-womens-day-experience",
+      "date": "2027-02-20",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方,三月八日通常怎么度过?",
+      "options": [
+        {
+          "id": "paid-day-off",
+          "emoji": "🏖️",
+          "label": "放假或带薪假"
+        },
+        {
+          "id": "marked-not-off",
+          "emoji": "🎗️",
+          "label": "有纪念活动,但不放假"
+        },
+        {
+          "id": "not-marked",
+          "emoji": "🤷",
+          "label": "没有特别对待,跟平常一样"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "❓",
+          "label": "不确定,没特别注意过"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270220-womens-day-brazil",
+      "date": "2027-02-20",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "根据以上资料,哪一个国家的国定妇女节原本订在四月三十日,直到二〇二五年的新法律才改到三月八日?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270221-bonus-habit",
+      "date": "2027-02-21",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果你所在的地方有“年底多一笔钱”的传统,你通常怎么处理这笔钱?",
+      "options": [
+        {
+          "id": "save",
+          "emoji": "💰",
+          "label": "存起来"
+        },
+        {
+          "id": "travel",
+          "emoji": "✈️",
+          "label": "犒赏自己去旅行"
+        },
+        {
+          "id": "bills",
+          "emoji": "🏠",
+          "label": "拿去还贷款或账单"
+        },
+        {
+          "id": "no-tradition",
+          "emoji": "🤷",
+          "label": "我这里没有这种传统"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270221-bonus-thr",
+      "date": "2027-02-21",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个国家规定,这笔年底多的钱必须在宗教节日前七天付清、不准分期,迟付要罚百分之五?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270222-womens-day-poll",
+      "date": "2027-02-22",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你工作或就读的地方,三月八日通常是什么样子?",
+      "options": [
+        {
+          "id": "normal-day",
+          "emoji": "😐",
+          "label": "照常上班上课"
+        },
+        {
+          "id": "time-off",
+          "emoji": "🕒",
+          "label": "有放假或弹性调整"
+        },
+        {
+          "id": "event",
+          "emoji": "🎤",
+          "label": "有讲座或表扬活动"
+        },
+        {
+          "id": "promotion",
+          "emoji": "🛍️",
+          "label": "只是商家促销档期"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270222-womens-day-guess",
+      "date": "2027-02-22",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个地方的法律明文规定妇女节放半天有薪假?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270223-bonus-experience",
+      "date": "2027-02-23",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "回想你领过的年终奖,比较接近下面哪种情况?",
+      "options": [
+        {
+          "id": "boss-call",
+          "emoji": "🎲",
+          "label": "看老板心情,金额每年不同,甚至可能没有"
+        },
+        {
+          "id": "law-deadline",
+          "emoji": "📜",
+          "label": "白纸黑字写进法律,几号前必须发,迟了要罚"
+        },
+        {
+          "id": "twice-year",
+          "emoji": "🔁",
+          "label": "一年领两次,年中年末各一笔"
+        },
+        {
+          "id": "tax-choice",
+          "emoji": "🧮",
+          "label": "有没有不一定,但报税方式自己选"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270223-guess-country",
+      "date": "2027-02-23",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一个国家规定,某项年末津贴必须在宗教节日前七天全额付清,不能分期,迟发要罚一定比例的钱;而且因为那个节日跟着伊斯兰历走,日期比公历每年提前约十一天。这是哪一国?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270224-womens-day-experience",
+      "date": "2027-02-24",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方，三月八日是什么样的一天？",
+      "options": [
+        {
+          "id": "paid-day-off",
+          "emoji": "🎉",
+          "label": "放假（全天或半天）"
+        },
+        {
+          "id": "events-no-holiday",
+          "emoji": "🎤",
+          "label": "有活动或谈话，但不放假"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "😐",
+          "label": "跟平常一样，没什么特别"
+        },
+        {
+          "id": "shopping-sale",
+          "emoji": "🛍️",
+          "label": "主要是商场促销档期"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270224-womens-day-half-day-leave",
+      "date": "2027-02-24",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "七个地方之中，哪一个由法律明文规定妇女节放半天有薪假？",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270225-bonus-experience",
+      "date": "2027-02-25",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你自己领过年终奖、第十三个月工资或类似的年底奖金吗?",
+      "options": [
+        {
+          "id": "guaranteed-by-law",
+          "emoji": "⚖️",
+          "label": "有,金额和时间都受法律保障"
+        },
+        {
+          "id": "up-to-employer",
+          "emoji": "🎲",
+          "label": "有,但发不发、发多少全看公司"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "没有,我这里没有这种制度"
+        },
+        {
+          "id": "tax-headache",
+          "emoji": "🧾",
+          "label": "有,但更让我头疼的是怎么报税更划算"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270225-bonus-profit-floor",
+      "date": "2027-02-25",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪一国的法定红利下限跟公司有没有赚钱无关——亏损的年度也要发最低额?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270226-march8-poll",
+      "date": "2027-02-26",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方，三月八日通常是什么样子？",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "有放假（全天或半天）"
+        },
+        {
+          "id": "event-no-leave",
+          "emoji": "📢",
+          "label": "有活动或谈话，但不放假"
+        },
+        {
+          "id": "normal-workday",
+          "emoji": "💼",
+          "label": "就是普通上班上课日"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "没特别留意过"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270226-march8-guess",
+      "date": "2027-02-26",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下四个地方里，哪一个的「国定妇女节」日期是二〇二五年才从四月三十日改到三月八日的？",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270227-year-end-bonus-poll",
+      "date": "2027-02-27",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你心目中，年底那笔额外收入比较接近下面哪一种？",
+      "options": [
+        {
+          "id": "surplus-custom",
+          "emoji": "🎁",
+          "label": "公司赚钱才有，靠惯例不是权利"
+        },
+        {
+          "id": "wage-part",
+          "emoji": "💰",
+          "label": "算工资的一部分，迟发就该被罚"
+        },
+        {
+          "id": "tax-strategy",
+          "emoji": "🧮",
+          "label": "有没有发不是重点，怎么报税才是"
+        },
+        {
+          "id": "holiday-timed",
+          "emoji": "🌙",
+          "label": "跟着节日走，日期每年都不一样"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270227-year-end-bonus-guess",
+      "date": "2027-02-27",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个国家的年底这笔钱在法律上就是“工资的一部分”——工作满一年领一个月薪、迟发要罚、劳工可以直接告雇主?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270228-womens-day-observance",
+      "date": "2027-02-28",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方,三月八日通常是什么样子?",
+      "options": [
+        {
+          "id": "half-day-off",
+          "emoji": "🌓",
+          "label": "会放假,哪怕只有半天"
+        },
+        {
+          "id": "official-message",
+          "emoji": "🎤",
+          "label": "官方会发致词或办表扬活动,但不放假"
+        },
+        {
+          "id": "month-long",
+          "emoji": "🗓️",
+          "label": "相关活动拉长成一整个月,不是单独一天"
+        },
+        {
+          "id": "no-observance",
+          "emoji": "🤷",
+          "label": "跟平常没两样,没有特别安排"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270228-womens-day-date-change",
+      "date": "2027-02-28",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "七个地方里,哪一个直到二〇二五年才立法把国定妇女节从四月三十日改到三月八日?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270301-bonus-experience",
+      "date": "2027-03-01",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果你领过年终奖或类似的年底奖金,它比较接近下面哪一种情况?",
+      "options": [
+        {
+          "id": "profit-conditioned",
+          "emoji": "📊",
+          "label": "看公司赚不赚钱,今年不一定有"
+        },
+        {
+          "id": "guaranteed-regardless",
+          "emoji": "⚖️",
+          "label": "不管赚不赚,依法或依约一定会拿到"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "一年会领两次"
+        },
+        {
+          "id": "no-such-thing",
+          "emoji": "🚫",
+          "label": "没有这种东西,工资就是工资"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270301-bonus-guess",
+      "date": "2027-03-01",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一个国家规定,这笔钱必须在某个宗教节日前七天内全额付清,不准分期,迟付要罚一定比例;而且因为那个节日跟着伊斯兰历走,每年的实际日期都比前一年提早。这是哪一国?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270302-seasonal-rituals",
+      "date": "2027-03-02",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "换季前后,你自己更可能做哪一件事?",
+      "options": [
+        {
+          "id": "eat-tangyuan",
+          "emoji": "🥣",
+          "label": "冬至吃汤圆或饺子"
+        },
+        {
+          "id": "throw-beans",
+          "emoji": "🫘",
+          "label": "节分撒豆喊“鬼出去、福进来”"
+        },
+        {
+          "id": "sweep-graves",
+          "emoji": "🪦",
+          "label": "彼岸期间扫墓祭祖"
+        },
+        {
+          "id": "change-clock",
+          "emoji": "⏰",
+          "label": "调整时钟配合夏令时"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270302-no-shadow-day",
+      "date": "2027-03-02",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个国家的气象机构每年公布“无影日”,因为国土跨赤道、一年只分雨季与旱季?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270303-bonus-experience",
+      "date": "2027-03-03",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你工作的地方,年终或年底奖金是怎么运作的?",
+      "options": [
+        {
+          "id": "surplus-based",
+          "emoji": "📈",
+          "label": "公司赚钱才发,金额不固定"
+        },
+        {
+          "id": "law-fixed",
+          "emoji": "⚖️",
+          "label": "法律规定,金额和期限都固定"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "一年领两次"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "没有这种制度"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270303-bonus-guess-country",
+      "date": "2027-03-03",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "资料里提到,哪个国家的法定红利,即使公司当年度亏损,雇主仍要依最低比例(工资的百分之八点三三)支付?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270304-seasonal-habits",
+      "date": "2027-03-04",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "分至点或节气前后,你做过下面哪一件事?",
+      "options": [
+        {
+          "id": "solstice-food",
+          "emoji": "🍲",
+          "label": "冬至吃汤圆、饺子或南瓜"
+        },
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "在彼岸或清明前后扫墓、祭祖"
+        },
+        {
+          "id": "kite-flying",
+          "emoji": "🪁",
+          "label": "为了摩羯宫入宫日(如丰收节)放风筝"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "⏰",
+          "label": "因为夏令时间调过时钟"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270304-brazil-no-season-law",
+      "date": "2027-03-04",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个国家的法律唯一一次跟着季节调整,是后来被废止的夏令时间?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270305-march8-experience",
+      "date": "2027-03-05",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方,三月八日通常是什么样子?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🏖️",
+          "label": "整天或半天放假"
+        },
+        {
+          "id": "talks-and-awards",
+          "emoji": "🎤",
+          "label": "机关学校办讲座或表彰活动,但不放假"
+        },
+        {
+          "id": "sales-season",
+          "emoji": "🛍️",
+          "label": "变成商场促销档期"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "🤷",
+          "label": "跟平常一天没什么不同"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270305-brazil-womens-day-move",
+      "date": "2027-03-05",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个地方的「国定妇女节」原本订在四月三十日,直到二〇二五年才修法改到三月八日?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270306-homecoming-poll",
+      "date": "2027-03-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你自己返乡的经验更接近哪一种?",
+      "options": [
+        {
+          "id": "fixed-peak",
+          "emoji": "🚗",
+          "label": "集中在同一个大节日,跟大家一起堵在路上"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "🗓️",
+          "label": "看自己的节日或日程,时间点跟别人不一样"
+        },
+        {
+          "id": "stay-home",
+          "emoji": "🏠",
+          "label": "不特别返乡,留在原地"
+        },
+        {
+          "id": "go-to-festival",
+          "emoji": "🎉",
+          "label": "会出远门,但目的地是节庆现场,不是老家"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270306-homecoming-guess",
+      "date": "2027-03-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这里的返乡高峰分两段:一段紧接在元旦之后,另一段落在盛夏。比较重的那一段其实不是法定假日,而是企业各自安排的习俗性假期,所以确切日期年年不同;但它让全国高铁与高速公路一起堵到极限的程度,不输给任何一个法定假日。这是哪里?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陆"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270307-womens-day-poll",
+      "date": "2027-03-07",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方,三月八日通常是什么样的一天?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🏖️",
+          "label": "放假或有特别假期"
+        },
+        {
+          "id": "official-event",
+          "emoji": "🎤",
+          "label": "机关学校办活动,但不放假"
+        },
+        {
+          "id": "sales-season",
+          "emoji": "🛍️",
+          "label": "只是购物促销档期"
+        },
+        {
+          "id": "no-particular-notice",
+          "emoji": "😐",
+          "label": "没什么特别感觉,跟平常一样"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270307-womens-day-guess",
+      "date": "2027-03-07",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个国家的国定妇女节,原本订在四月三十日,直到二〇二五年新法才改到三月八日?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270308-homecoming-mode",
+      "date": "2027-03-08",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一种返乡方式最贴近你(或你家人)的返乡经验?",
+      "options": [
+        {
+          "id": "road-highway",
+          "emoji": "🚗",
+          "label": "开车走公路(常堵车)"
+        },
+        {
+          "id": "train-rail",
+          "emoji": "🚆",
+          "label": "坐火车"
+        },
+        {
+          "id": "flight",
+          "emoji": "✈️",
+          "label": "坐飞机"
+        },
+        {
+          "id": "stay-put",
+          "emoji": "🏠",
+          "label": "选择留在原地,不返乡"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270308-homecoming-guess",
+      "date": "2027-03-08",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个国家最重的返乡季节依法并没有放假,全靠企业自己安排休假才让全国一起停下来?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陆"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270309-holiday-stretch",
+      "date": "2027-03-09",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你今年经历过的最长连假,连续放了几天?",
+      "options": [
+        {
+          "id": "1-3-days",
+          "emoji": "🌤️",
+          "label": "一到三天"
+        },
+        {
+          "id": "4-6-days",
+          "emoji": "🏖️",
+          "label": "四到六天"
+        },
+        {
+          "id": "7-9-days",
+          "emoji": "🧳",
+          "label": "七到九天"
+        },
+        {
+          "id": "10-plus-days",
+          "emoji": "✈️",
+          "label": "十天以上"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270309-leave-deducted",
+      "date": "2027-03-09",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个地方连假里接起来的那几天,是从劳动者自己的年休假里扣出来的?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印度尼西亚"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270310-eid-night-notice",
+      "date": "2027-03-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果明天要不要上班上学，得等到前一晚才公布，你会怎么看待这件事？",
+      "options": [
+        {
+          "id": "want-advance-notice",
+          "emoji": "📅",
+          "label": "希望提前很多天知道"
+        },
+        {
+          "id": "fine-with-short-notice",
+          "emoji": "🌙",
+          "label": "前一晚才公布也没差"
+        },
+        {
+          "id": "hard-to-plan",
+          "emoji": "😥",
+          "label": "临时公布会让人很难安排"
+        },
+        {
+          "id": "adds-anticipation",
+          "emoji": "🌘",
+          "label": "反而觉得多了一份期待感"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270310-eid-employer-consent",
+      "date": "2027-03-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在这四个地方里，能不能过开斋节，取决于雇主是否同意，而不是法律赋予的权利——是哪一个？",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270311-env-day-experience",
+      "date": "2027-03-11",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZFVVJ0KNDJH484VEFD",
+      "topic_slug": "environment-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "植树节、环境日、地球日这类日子,你今年是怎么度过的?",
+      "options": [
+        {
+          "id": "planted-tree",
+          "emoji": "🌳",
+          "label": "实际去种了树或参加了环保活动"
+        },
+        {
+          "id": "saw-online",
+          "emoji": "📱",
+          "label": "在新闻或社交媒体上看到,但没特别行动"
+        },
+        {
+          "id": "first-time-hearing",
+          "emoji": "🤔",
+          "label": "今天才第一次注意到有这个日子"
+        },
+        {
+          "id": "ordinary-workday",
+          "emoji": "🗓️",
+          "label": "对我来说就是普通上班上课的一天"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270311-env-day-holiday-guess",
+      "date": "2027-03-11",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZFVVJ0KNDJH484VEFD",
+      "topic_slug": "environment-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这四个国家里,哪一国的环境相关纪念日是唯一真正放假的法定假日?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270312-commemorate-choice",
+      "date": "2027-03-12",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果由你决定,你会怎么纪念一位对国家有重大贡献的人物?",
+      "options": [
+        {
+          "id": "paid-holiday",
+          "emoji": "🎉",
+          "label": "定为全国假日,全民放假"
+        },
+        {
+          "id": "name-no-holiday",
+          "emoji": "📅",
+          "label": "保留纪念日之名,但照常上班上课"
+        },
+        {
+          "id": "idea-not-name",
+          "emoji": "💡",
+          "label": "用他倡议的理念命名纪念日,而非直接用姓名"
+        },
+        {
+          "id": "no-personal-day",
+          "emoji": "🚫",
+          "label": "不特别以个人名义设立纪念日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270312-hidden-name-law",
+      "date": "2027-03-12",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个国家的法定假日现行条文完全没有出现那位民族英雄的名字,名字反而写在其他时期的法律里?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270313-love-day-style",
+      "date": "2027-03-13",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "回想你自己的经验，表达爱意的方式比较接近下面哪一种？",
+      "options": [
+        {
+          "id": "single-day-no-return",
+          "emoji": "🎁",
+          "label": "送礼就是送礼，没有规定要在之后回礼"
+        },
+        {
+          "id": "return-gift-month-later",
+          "emoji": "🔁",
+          "label": "这个月收礼，下个月要回礼"
+        },
+        {
+          "id": "week-long",
+          "emoji": "📅",
+          "label": "拉成一整周，每天有不同主题"
+        },
+        {
+          "id": "no-official-celebration",
+          "emoji": "🚫",
+          "label": "在我这里没有特别过，也没有官方地位"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270313-heritage-vs-commerce",
+      "date": "2027-03-13",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在下面四个地方里，哪一个地方的情况是：商业声量最大的2月14日没有制度身份，另一个日子反而被国家列入非物质文化遗产名录？",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印度尼西亚"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270314-equinox-poll",
+      "date": "2027-03-14",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在春分、秋分、冬至这几天,你通常会做什么?",
+      "options": [
+        {
+          "id": "visit-graves",
+          "emoji": "🪦",
+          "label": "扫墓、祭拜祖先"
+        },
+        {
+          "id": "eat-seasonal-food",
+          "emoji": "🍡",
+          "label": "吃应景食物(如汤圆、南瓜、牡丹饼)"
+        },
+        {
+          "id": "watch-daylight",
+          "emoji": "🌗",
+          "label": "特别留意日出日落或昼夜长短的变化"
+        },
+        {
+          "id": "no-idea",
+          "emoji": "🤷",
+          "label": "完全没注意到,就是普通的一天"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270314-equinox-guess",
+      "date": "2027-03-14",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一份官方文件把某个节日说成“标志太阳转向北半球”,但天文学上真正的转折点——冬至——其实早了三个多星期,原因是这个国家的历法把十二宫钉在恒星上,而不是春分点。这是哪一个国家?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270315-holiday-experience",
+      "date": "2027-03-15",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你自己的社会里,有没有一个重要的历史纪念日,至今仍不是法定假日?",
+      "options": [
+        {
+          "id": "know-exact-date",
+          "emoji": "📅",
+          "label": "有,而且我知道确切日期"
+        },
+        {
+          "id": "vague-memory",
+          "emoji": "🤔",
+          "label": "有印象,但说不出确切日期"
+        },
+        {
+          "id": "none-comes-to-mind",
+          "emoji": "🤷",
+          "label": "想不到有这样的日子"
+        },
+        {
+          "id": "never-thought-about-it",
+          "emoji": "💭",
+          "label": "没想过这个问题"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270315-guess-country",
+      "date": "2027-03-15",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这个国家的废奴纪念日走了二十年、经过三部法律:先进入学校历,2011年升格为全国纪念日但仍不放假,直到2023年12月才明文订为全国假日。至于当年宣告奴隶制废除的那部法律,全文只有两条,没有补偿、没有土地、没有公民权利规定,它的日期至今不在官方公布的全国假日清单上。这是哪一个国家?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270316-seasonal-customs",
+      "date": "2027-03-16",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下这些和分至点有关的习俗，你亲身做过哪一个？",
+      "options": [
+        {
+          "id": "tangyuan-winter-solstice",
+          "emoji": "🍡",
+          "label": "冬至吃汤圆"
+        },
+        {
+          "id": "setsubun-mamemaki",
+          "emoji": "🫘",
+          "label": "节分撒豆"
+        },
+        {
+          "id": "makar-sankranti-kite",
+          "emoji": "🪁",
+          "label": "摩羯宫入宫日放风筝"
+        },
+        {
+          "id": "higan-grave-sweeping",
+          "emoji": "🙏",
+          "label": "彼岸扫墓"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270316-seven-holidays-country",
+      "date": "2027-03-16",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一个国家的全国性法定假日一共只有七个，没有一个的日期由太阳位置决定；这个国家唯一一次用法律追赶季节——也就是夏令时——后来被废止了；它也位于南半球，十二月的至点在当地是夏天的开始，不是冬天。这是哪个国家？",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270317-abolition-holiday-poll",
+      "date": "2027-03-17",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方,跟废除奴隶制或争取平等相关的纪念日,实际上是怎么过的?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "放假一天,像过节一样"
+        },
+        {
+          "id": "marked-no-holiday",
+          "emoji": "🏫",
+          "label": "学校或机关会提一下,但不放假"
+        },
+        {
+          "id": "never-heard",
+          "emoji": "❓",
+          "label": "没听过这一类纪念日"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "不确定,没特别注意过"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270317-abolition-holiday-guess",
+      "date": "2027-03-17",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个国家的全国性纪念日从进入学校历到成为法定假日,足足走了二十年、经过三部法律?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270318-seasonal-habit",
+      "date": "2027-03-18",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "文章提到的这些做法里,你自己有过哪一种经验?",
+      "options": [
+        {
+          "id": "clock-shift",
+          "emoji": "🕐",
+          "label": "跟着调过时钟(夏令时)"
+        },
+        {
+          "id": "seasonal-food",
+          "emoji": "🍲",
+          "label": "吃过应景食物(汤圆、南瓜、饺子等)"
+        },
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "扫墓祭祖"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "📅",
+          "label": "对我来说只是普通的一天"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270318-sidereal-drift-guess",
+      "date": "2027-03-18",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一个国家的传统历法把黄道十二宫钉在恒星上,而不是钉在春分点上;地球自转轴的岁差让一个原本标示至点的节日,一千多年来已经往后漂移了三个多星期。这是哪一个国家?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270319-emancipation-poll",
+      "date": "2027-03-19",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你所在的国家或地区,日历上有没有一天是专门纪念奴隶制或身份制度废除,并且真的放假?",
+      "options": [
+        {
+          "id": "yes-day-off",
+          "emoji": "🎉",
+          "label": "有,而且真的放假"
+        },
+        {
+          "id": "yes-no-day-off",
+          "emoji": "📅",
+          "label": "有纪念日,但不放假"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🚫",
+          "label": "没有这样的日子"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "不确定"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270319-emancipation-guess",
+      "date": "2027-03-19",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个国家的一个纪念日,先是只写进学校历,二十年后才升格为全国纪念日,又过了十二年才在2023年变成真正放假的法定假日,前后共经过三部法律?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270320-season-marker",
+      "date": "2027-03-20",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方,人们怎么标记分点或至点这一天?",
+      "options": [
+        {
+          "id": "legal-holiday",
+          "emoji": "🎌",
+          "label": "有法定假日,大家真的放假"
+        },
+        {
+          "id": "folk-custom",
+          "emoji": "🌾",
+          "label": "有民俗或宗教活动,但不放假"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "🕑",
+          "label": "跟着调整时钟,不是庆祝节日"
+        },
+        {
+          "id": "nothing-special",
+          "emoji": "🤷",
+          "label": "完全没有特别的节日或仪式"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270320-shadowless-day",
+      "date": "2027-03-20",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一国的气象机构每年公布各城市不同的『无影日』——正午时直立物体的影子会与物体重叠而看似消失?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270321-holiday-in-name-only",
+      "date": "2027-03-21",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你所在的地方,有没有一个大家常挂在嘴边、但其实从来不放假的纪念日?",
+      "options": [
+        {
+          "id": "know-the-day",
+          "emoji": "🗓️",
+          "label": "有,我甚至能说出具体日期"
+        },
+        {
+          "id": "vague-memory",
+          "emoji": "🤔",
+          "label": "有印象,但记不清确切日期"
+        },
+        {
+          "id": "all-holidays",
+          "emoji": "🎉",
+          "label": "没有,我们的纪念日基本都会放假"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "💭",
+          "label": "没想过这个问题"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270321-guess-abolition-holiday",
+      "date": "2027-03-21",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个国家的纪念日先进入学校历,再成为全国纪念日,又过了二十年才变成法定假日?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270322-christian-days-poll",
+      "date": "2027-03-22",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "圣灰星期三、耶稣受难日、耶稣升天日、五旬节、基督圣体圣血节,这几个日子在你自己的生活里,实际情况最接近哪一种?",
+      "options": [
+        {
+          "id": "ordinary-workday",
+          "emoji": "😐",
+          "label": "这几天对我来说都是普通上班日,没有任何不同"
+        },
+        {
+          "id": "church-not-holiday",
+          "emoji": "⛪",
+          "label": "我的教会或社群会过这些日子,但不影响我上班"
+        },
+        {
+          "id": "actual-day-off",
+          "emoji": "📅",
+          "label": "我住的地方,至少有一天是真的官方放假日"
+        },
+        {
+          "id": "only-know-christmas-easter",
+          "emoji": "🎄",
+          "label": "我只听过圣诞节和复活节,其他名称很陌生"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270322-christian-days-guess",
+      "date": "2027-03-22",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个国家的总统令,把一个基督宗教假日的名称,从伊斯兰语境的称呼正式改成基督宗教的称呼?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270323-easter-poll",
+      "date": "2027-03-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方,复活节前的那个星期五(受难日)算不算放假日?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎉",
+          "label": "算,是放假的"
+        },
+        {
+          "id": "workday",
+          "emoji": "💼",
+          "label": "不算,照常上班"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤷",
+          "label": "看地区或公司,不一定"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "❓",
+          "label": "没特别注意过"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270323-easter-guess",
+      "date": "2027-03-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这四个地方里,哪一个把受难日、复活节、升天节、圣诞节四个基督教节日全部列为国定假日?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印度尼西亚"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270324-christian-calendar-overlap-poll",
+      "date": "2027-03-24",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你自己所在地的节日表里,有没有哪一天「刚好跟某个宗教节日同一天,但放假的理由其实是别的」?",
+      "options": [
+        {
+          "id": "know-reason",
+          "emoji": "🧐",
+          "label": "有,而且我知道背后原因"
+        },
+        {
+          "id": "suspect",
+          "emoji": "🤔",
+          "label": "有,但我没深究过原因"
+        },
+        {
+          "id": "none",
+          "emoji": "🙅",
+          "label": "没有,我这边很单纯"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "💭",
+          "label": "没想过这件事"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270324-christian-calendar-guess",
+      "date": "2027-03-24",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪个国家,十二月二十五日放假的理由跟耶稣诞生完全没有法律关系,只是刚好同一天?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270325-easter-personal-meaning",
+      "date": "2027-03-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "对你来说,复活节这一天最重要的是什么?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🛌",
+          "label": "有没有放假"
+        },
+        {
+          "id": "faith",
+          "emoji": "✝️",
+          "label": "宗教意义(受难与复活)"
+        },
+        {
+          "id": "traditions",
+          "emoji": "🥚",
+          "label": "应景活动(彩蛋、家庭聚餐)"
+        },
+        {
+          "id": "no-feeling",
+          "emoji": "🤷",
+          "label": "对我来说没有特别感觉"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270325-easter-holiday-guess",
+      "date": "2027-03-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下哪个国家,尽管人口以穆斯林为多数,却把受难日、复活节、升天节、圣诞节四个基督教节日全部列为国定假日?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印度尼西亚"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270326-christian-days-poll",
+      "date": "2027-03-26",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你生活的地方，这一整串复活节推算出的日子——圣灰星期三、受难日、升天日、五旬节、Corpus Christi——里面，哪些被排进法定放假表？",
+      "options": [
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "一个都没有"
+        },
+        {
+          "id": "good-friday-only",
+          "emoji": "✝️",
+          "label": "只有受难日算"
+        },
+        {
+          "id": "extra-days",
+          "emoji": "📅",
+          "label": "不只受难日，还有其他一两天"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "没特别留意过"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270326-christian-days-guess",
+      "date": "2027-03-26",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "上面提到的国家里，哪一个把 Corpus Christi 在联邦层级只当成弹性放假日，要靠市议会自己立法才算真正的法定假日？",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270327-easter-weekend-poll",
+      "date": "2027-03-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "复活节这天,你通常会做什么?",
+      "options": [
+        {
+          "id": "church",
+          "emoji": "⛪",
+          "label": "去教堂做礼拜"
+        },
+        {
+          "id": "eggs",
+          "emoji": "🥚",
+          "label": "找彩蛋、画彩蛋"
+        },
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "和家人一起吃顿饭"
+        },
+        {
+          "id": "normal-weekend",
+          "emoji": "📅",
+          "label": "跟平常周末没两样"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270327-easter-holiday-guess",
+      "date": "2027-03-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "受难日、复活节、升天节、圣诞节——把这四个基督教节日全部列为国定假日的,是哪一个国家?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印度尼西亚"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270328-childrens-day-poll",
+      "date": "2027-03-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你印象中的儿童节,是怎么放(或不放)假的?",
+      "options": [
+        {
+          "id": "family-off",
+          "emoji": "🏖️",
+          "label": "全家一起放假"
+        },
+        {
+          "id": "kids-only-off",
+          "emoji": "🧒",
+          "label": "只有孩子放假,大人照常上班"
+        },
+        {
+          "id": "school-event-no-off",
+          "emoji": "🏫",
+          "label": "没放假,学校办活动庆祝"
+        },
+        {
+          "id": "tied-to-other-holiday",
+          "emoji": "🎉",
+          "label": "跟别的节日/假日重叠在一起"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270328-childrens-day-guess",
+      "date": "2027-03-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个地方的儿童节,法定的设立目的里还写了“感谢母亲”?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270329-remembrance-style",
+      "date": "2027-03-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你成长的家庭或文化里,追思祖先的做法比较接近下面哪一种?",
+      "options": [
+        {
+          "id": "fixed-day",
+          "emoji": "🗓️",
+          "label": "固定的一天(像清明或亡者节)"
+        },
+        {
+          "id": "stretch-of-days",
+          "emoji": "🕯️",
+          "label": "一段连续的日子(像盂兰盆或十六天的祖先时段)"
+        },
+        {
+          "id": "community-decided",
+          "emoji": "🤝",
+          "label": "由社群或个人自行决定的时机,而非固定日期"
+        },
+        {
+          "id": "no-such-practice",
+          "emoji": "🤷",
+          "label": "没有这样的做法或日子"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270329-guess-ancestor-country",
+      "date": "2027-03-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "祖先的时段不是一天,而是连续十六天;起点是某个月份的满月,终点是另一个月份的朔日,那个朔日有自己的专属名称。这段期间人们向亡者献水献食、并且求宽恕,某个邦的一座城市因此每年吸引大批人潮聚集。这是哪一个国家的做法?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270330-childrens-day-poll",
+      "date": "2027-03-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你们家过儿童节时,通常是谁跟着放假?",
+      "options": [
+        {
+          "id": "everyone-off",
+          "emoji": "🎏",
+          "label": "全家都放假"
+        },
+        {
+          "id": "kids-only",
+          "emoji": "🧒",
+          "label": "只有孩子放假"
+        },
+        {
+          "id": "school-event",
+          "emoji": "🏫",
+          "label": "不放假,学校办活动庆祝"
+        },
+        {
+          "id": "no-tradition",
+          "emoji": "🤷",
+          "label": "我们没有过儿童节的习惯"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270330-childrens-day-guess",
+      "date": "2027-03-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个国家的儿童节,刚好和天主教主保圣人的全国假日同一天?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印度尼西亚"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270331-ancestor-remembrance-poll",
+      "date": "2027-03-31",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你的家庭或所在的社区里,祭祖或扫墓通常是什么样子?",
+      "options": [
+        {
+          "id": "fixed-date",
+          "emoji": "📅",
+          "label": "每年有固定的日子,像扫墓或祭祖那样按时进行"
+        },
+        {
+          "id": "varies",
+          "emoji": "🔄",
+          "label": "有这样的习惯,但日期或做法每年、每个家庭都不太一样"
+        },
+        {
+          "id": "place-no-day",
+          "emoji": "📍",
+          "label": "有纪念祖先的地方或方式,但没有特定的哪一天"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "我的家庭或社区没有这类固定的习俗"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270331-ancestor-remembrance-guess",
+      "date": "2027-03-31",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一个地方的扫墓仪式不对齐某个特定日期,而是对齐「下个月斋戒即将开始」这件事;流程固定为先扫墓、再共同祈祷,最后大家一起吃一顿饭收尾。这是哪里的做法?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270401-childrens-day-poll",
+      "date": "2027-04-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这六个地方的儿童节,「谁放假」差别很大:有的全民放假,有的只有孩子放假,有的完全不放假、只在学校办活动。如果是你,你会希望儿童节怎么放?",
+      "options": [
+        {
+          "id": "everyone-off",
+          "emoji": "🎉",
+          "label": "全民放假一天"
+        },
+        {
+          "id": "kids-only-off",
+          "emoji": "🧒",
+          "label": "只有孩子放假,大人照常上班"
+        },
+        {
+          "id": "school-event-no-holiday",
+          "emoji": "🏫",
+          "label": "不放假,改在学校办活动庆祝"
+        },
+        {
+          "id": "movable-by-decree",
+          "emoji": "📅",
+          "label": "日期不固定,由政府每年重新决定"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270401-childrens-day-guess",
+      "date": "2027-04-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这六个地方里,哪一个的儿童节「法定趣旨」明文写了要感谢母亲?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陆"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270402-remembrance-practice",
+      "date": "2027-04-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你自己或家里，通常怎么参与追思祖先或逝者的日子?",
+      "options": [
+        {
+          "id": "fixed-visit",
+          "emoji": "🧹",
+          "label": "每年固定扫墓或祭拜"
+        },
+        {
+          "id": "family-led",
+          "emoji": "👴",
+          "label": "跟着长辈安排，自己较少主导"
+        },
+        {
+          "id": "personal-remember",
+          "emoji": "🕯️",
+          "label": "没有固定仪式，但会私下想起"
+        },
+        {
+          "id": "not-practice",
+          "emoji": "🚫",
+          "label": "家里没有这类习惯"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270402-nyadran-country",
+      "date": "2027-04-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个国家的追思传统，不是对齐某个固定日期，而是对齐\"下个月要开始斋戒\"这件事?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270403-childrens-day-poll-type",
+      "date": "2027-04-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你自己过的儿童节，比较接近下面哪一种？",
+      "options": [
+        {
+          "id": "day-off-everyone",
+          "emoji": "🏖️",
+          "label": "全民放假一天，大家都不用上班上学"
+        },
+        {
+          "id": "kids-only-off",
+          "emoji": "🧒",
+          "label": "只有孩子放假，大人照常上班"
+        },
+        {
+          "id": "school-event-no-holiday",
+          "emoji": "🏫",
+          "label": "不放假，但学校会办表演或活动"
+        },
+        {
+          "id": "shared-with-other-holiday",
+          "emoji": "🎊",
+          "label": "跟另一个节日或假日同一天一起过"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270403-childrens-day-guess-mother",
+      "date": "2027-04-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个国家的儿童节，法定的节日目的里连“感谢母亲”都写进去？",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270404-ancestor-practice-poll",
+      "date": "2027-04-04",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果你家有追思祖先或逝者的习惯,比较接近哪一种?",
+      "options": [
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "扫墓、献花、整理墓地"
+        },
+        {
+          "id": "communal-offering",
+          "emoji": "🙏",
+          "label": "祭祖、普渡、焚香一类的仪式"
+        },
+        {
+          "id": "welcome-farewell-fire",
+          "emoji": "🔥",
+          "label": "点火迎接、再点火送别祖先"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "没有固定的日子,各家自己安排"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270404-nyadran-guess",
+      "date": "2027-04-04",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一种扫墓习俗不对齐固定的公历日期,而是对齐「下个月要开始斋戒」这件事;流程是先清理墓地,再一起祈祷,最后大家吃同一顿饭收尾。这是哪个地方?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270405-new-year-custom",
+      "date": "2027-04-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你自己的生活里,新年最贴近下面哪一种画面?",
+      "options": [
+        {
+          "id": "countdown-fireworks",
+          "emoji": "🎉",
+          "label": "跨年夜倒数、烟火与派对"
+        },
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "除夕围炉、全家团圆吃饭"
+        },
+        {
+          "id": "shrine-visit",
+          "emoji": "⛩️",
+          "label": "初诣走一趟神社、吃御节料理"
+        },
+        {
+          "id": "beach-white",
+          "emoji": "🏖️",
+          "label": "到海边穿白衣、看烟火"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270405-new-year-no-jan1",
+      "date": "2027-04-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这七个地方里,哪一个国家的全国假日清单里根本没有1月1日?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印度尼西亚"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270406-holiday-off-poll",
+      "date": "2027-04-06",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你觉得一个纪念不义历史的日子，有没有被排进'放假清单'重要吗?",
+      "options": [
+        {
+          "id": "matters-a-lot",
+          "emoji": "✅",
+          "label": "重要，放假才算真正被国家承认"
+        },
+        {
+          "id": "activities-enough",
+          "emoji": "📚",
+          "label": "不重要，有纪念活动与教育就够了"
+        },
+        {
+          "id": "depends-on-topic",
+          "emoji": "🤔",
+          "label": "要看主题，不是每个纪念日都该放假"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "🤷",
+          "label": "没特别想过这个问题"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270406-ambedkar-guess",
+      "date": "2027-04-06",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一个国家，最接近'废奴'主题的纪念日甚至不在中央政府的年度假日清单上，而是每年都要靠另外一纸公文才放假。是哪一国?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270407-new-year-poll",
+      "date": "2027-04-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你自己的新年,比较像下面哪一种?",
+      "options": [
+        {
+          "id": "reunion-eve",
+          "emoji": "🥟",
+          "label": "除夕围炉,在家吃团圆饭"
+        },
+        {
+          "id": "countdown-fireworks",
+          "emoji": "🎆",
+          "label": "跨年倒数,看烟火"
+        },
+        {
+          "id": "beach-white",
+          "emoji": "🏖️",
+          "label": "到海边穿白衣、看烟火"
+        },
+        {
+          "id": "no-holiday",
+          "emoji": "📅",
+          "label": "那天照常上班上学,没有特别放假"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270407-new-year-guess",
+      "date": "2027-04-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在下面这四个地方里,哪一个的全国假日清单根本没有1月1日?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印度尼西亚"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270408-abolition-holiday-poll",
+      "date": "2027-04-08",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你所在的地方,有没有纪念废除奴隶制或身份制度的纪念日或假日?",
+      "options": [
+        {
+          "id": "holiday-yes",
+          "emoji": "🎉",
+          "label": "有,而且放假"
+        },
+        {
+          "id": "commemorate-no-holiday",
+          "emoji": "📅",
+          "label": "有纪念日,但不放假"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "没有这类纪念日"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "不确定/不知道"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270408-abolition-holiday-guess",
+      "date": "2027-04-08",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个国家的「全国黑人意识日」先进入学校历,经过三部法律、二十年后才变成法定假日?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270409-memorial-holiday",
+      "date": "2027-04-09",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果国家把某段历史伤痕定为“纪念日”,你会希望它同时是放假日吗?",
+      "options": [
+        {
+          "id": "day-off-matters",
+          "emoji": "🏖️",
+          "label": "放假才算真正被重视"
+        },
+        {
+          "id": "symbolism-enough",
+          "emoji": "📜",
+          "label": "有纪念、写进法律就够了,不一定要放假"
+        },
+        {
+          "id": "depends-who",
+          "emoji": "🤔",
+          "label": "要看这个纪念日是谁主导、为谁而设"
+        },
+        {
+          "id": "no-strong-view",
+          "emoji": "🤷",
+          "label": "没有特别想法,不会特别在意"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270409-brazil-veto-rename",
+      "date": "2027-04-09",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个国家把原住民纪念日的名称换掉,法案先被总统全案否决,又被国会推翻通过,连主管机构也一起改了名字?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270410-commemorative-no-holiday",
+      "date": "2027-04-10",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你所在的国家或地区,有没有一个被官方定为纪念日、却明文规定不放假的日子?",
+      "options": [
+        {
+          "id": "yes-know",
+          "emoji": "🗓️",
+          "label": "有,而且我知道那天要做什么"
+        },
+        {
+          "id": "yes-vague",
+          "emoji": "🤔",
+          "label": "有,但没什么印象"
+        },
+        {
+          "id": "no",
+          "emoji": "🚫",
+          "label": "没有这种纪念日"
+        },
+        {
+          "id": "unsure",
+          "emoji": "❓",
+          "label": "不确定,没想过"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270410-law-says-no-holiday",
+      "date": "2027-04-10",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一国的相关纪念日,法律本身白纸黑字写着\"不放假\"?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270411-holiday-or-not",
+      "date": "2027-04-11",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你所在的国家或地区,有没有纪念原住民族或殖民历史的日子?那一天算不算法定假日?",
+      "options": [
+        {
+          "id": "paid-holiday",
+          "emoji": "🎉",
+          "label": "有,而且放假"
+        },
+        {
+          "id": "no-holiday",
+          "emoji": "📅",
+          "label": "有,但不放假"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "没有这样的日子"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "不确定/没想过"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270411-guess-country",
+      "date": "2027-04-11",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "有一个国家把纪念这一天的名称换掉了,但新法能生效,是因为总统动用全部否决权之后被国会推翻;旧法令同天被废止,新名称写进法律,那一天却至今没有排进法定假日清单。是哪一国?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270412-abolition-holiday-poll",
+      "date": "2027-04-12",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你所在的国家或地区,有没有一个纪念废除奴隶制或类似压迫制度的假日?",
+      "options": [
+        {
+          "id": "yes-holiday",
+          "emoji": "🎉",
+          "label": "有,而且放假"
+        },
+        {
+          "id": "yes-no-day-off",
+          "emoji": "📅",
+          "label": "有纪念日,但不放假"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "没有这样的日子"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "❓",
+          "label": "不确定"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270412-abolition-holiday-guess",
+      "date": "2027-04-12",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪个国家的这类假日,是在2021年由国会用三天走完——参议院通过、众议院通过、总统签署——插进联邦假日清单里,位置紧接在阵亡将士纪念日之后?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270413-holiday-priority",
+      "date": "2027-04-13",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你觉得纪念废除奴役或歧视制度的日子,最重要的是哪一件事?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🏖️",
+          "label": "真正放假一天"
+        },
+        {
+          "id": "law-text",
+          "emoji": "📜",
+          "label": "写进法律或教材,不一定要放假"
+        },
+        {
+          "id": "grassroots",
+          "emoji": "🤝",
+          "label": "由民间自发纪念,不靠政府规定"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "没想过这个问题"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270413-annual-reissue-holiday",
+      "date": "2027-04-13",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一个国家,纪念废除某种歧视制度的假日不列在中央政府的年度假日清单上,而是靠每年另外发一份公文才生效?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270414-abolition-poll",
+      "date": "2027-04-14",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "从主题内容看,不少国家的纪念日都是先在民间或地方扎根,才慢慢变成国家法定假日。如果你的家乡要新增一个历史纪念日,你觉得最理想的起点是?",
+      "options": [
+        {
+          "id": "school-calendar",
+          "emoji": "📚",
+          "label": "先放进学校行事历"
+        },
+        {
+          "id": "local-law",
+          "emoji": "🏛️",
+          "label": "先变成地方(州/邦/市)的假日"
+        },
+        {
+          "id": "civil-society",
+          "emoji": "✊",
+          "label": "先靠民间纪念活动慢慢扩大"
+        },
+        {
+          "id": "national-law",
+          "emoji": "📜",
+          "label": "直接由中央立法订定"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270414-abolition-guess",
+      "date": "2027-04-14",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "这一天是某国制宪起草委员会主席的诞辰,该国宪法也有专门条文废除了一种身份歧视。但中央政府从未把这一天正式列入年度法定假日清单,机关是否放假要靠每年另外重新发一次的行政公文。这是哪一国?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

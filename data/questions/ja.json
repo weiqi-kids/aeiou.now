@@ -10092,6 +10092,5946 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20270115-family-table",
+      "date": "2027-01-15",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの家では、家族がなんとか集まろうとする日が一年のうちにありますか。",
+      "options": [
+        {
+          "id": "always-gather",
+          "emoji": "🍽️",
+          "label": "ある、ほぼ毎年全員そろう"
+        },
+        {
+          "id": "sometimes-miss",
+          "emoji": "🧳",
+          "label": "ある、でも誰かは来られないことが多い"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "そういう決まった日はない"
+        },
+        {
+          "id": "video-call",
+          "emoji": "📱",
+          "label": "集まれない分はビデオ通話や電話で済ませる"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270115-farmers-day-timing",
+      "date": "2027-01-15",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "農民のための祝日を、収穫の後ではなく春の始まりに置いているのはどこか。",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270116-exam-rhythm",
+      "date": "2027-01-16",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "自分が経験した(あるいはこれから経験する)受験シーズンを思い浮かべると、どのリズムが一番近いですか?",
+      "options": [
+        {
+          "id": "one-shot-sprint",
+          "emoji": "🎯",
+          "label": "一、二日で決まる一発勝負"
+        },
+        {
+          "id": "long-stretch",
+          "emoji": "🗓️",
+          "label": "何週間も続き、どの日にも試験がありうる長丁場"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🔁",
+          "label": "全国共通試験のあと、各校が二段階目を課す"
+        },
+        {
+          "id": "no-single-exam",
+          "emoji": "📁",
+          "label": "単一の大試験はなく、日頃の成績や出願書類で積み重ねて判断される"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270116-guess-exam-country",
+      "date": "2027-01-16",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある地域の高校修了試験は二月中旬から四月上旬までおよそ二か月続き、一日に一、二科目しか課されない。一、二日に圧縮されてはいない。どこだろうか?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270117-recognize-history",
+      "date": "2027-01-17",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もしあなたが決めるとしたら、社会が過去の抑圧と解放を公式に認めるとき、最初に何をすべきだと思いますか。",
+      "options": [
+        {
+          "id": "education-first",
+          "emoji": "📚",
+          "label": "まず教育を優先し、休みより教科書に載せる方が大事"
+        },
+        {
+          "id": "mark-no-holiday",
+          "emoji": "📅",
+          "label": "まず記念日にする、休みは急がなくていい"
+        },
+        {
+          "id": "legal-holiday",
+          "emoji": "🎉",
+          "label": "すぐに法定の祝日にする"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🤷",
+          "label": "どちらでもいい、このような日は必要ない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270117-abolition-holiday-path",
+      "date": "2027-01-17",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国の奴隷制廃止に関する記念日が、学校暦から国の記念日へ、そして法定祝日へと進み、その道のりに二十年と三本の法律を要したか。",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ合衆国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270118-exam-design-pref",
+      "date": "2027-01-18",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もし自分で決められるなら、十八歳のときの進学試験はどの形がいいと思うか？",
+      "options": [
+        {
+          "id": "one-shot",
+          "emoji": "🎯",
+          "label": "一、二日に凝縮して一発勝負"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "🗓️",
+          "label": "数週間から二か月にわたり科目ごとに分散"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🪜",
+          "label": "まず全国共通テスト、その後各大学の個別試験"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📚",
+          "label": "全国試験自体がなく、在学中の記録と各校の審査で決まる"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270118-guess-lockdown-exam",
+      "date": "2027-01-18",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この試験はわずか二日間に固定されており、大学進学へのほぼ唯一の入口となっている。試験期間中は試験場周辺で警笛が禁止され、工事が止まり、交通警察が専用通路を設け、地域によっては勤務時間まで調整される。これはどこの国のやり方か？",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270119-seasonal-turn-custom",
+      "date": "2027-01-19",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "分点や至点の日、あなたの住む場所ではふだん何をしますか。",
+      "options": [
+        {
+          "id": "seasonal-food",
+          "emoji": "🍲",
+          "label": "南瓜や湯圓、餃子などの行事食を食べる"
+        },
+        {
+          "id": "grave-visit",
+          "emoji": "🪦",
+          "label": "お墓参りや先祖供養をする"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "🕑",
+          "label": "法律で時計を調整する(サマータイムなど)"
+        },
+        {
+          "id": "no-observance",
+          "emoji": "🤷",
+          "label": "関連する祝日も習慣もなく、普段どおり"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270119-seasonal-turn-drift",
+      "date": "2027-01-19",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "北半球への太陽の転回を示す伝統行事でありながら、実際の至点から三週間以上遅れてしまった国はどこか。",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270120-exam-format",
+      "date": "2027-01-20",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "自分が経験した入試を思い出すと、次のどれに近いですか?",
+      "options": [
+        {
+          "id": "compressed-1-2-days",
+          "emoji": "📅",
+          "label": "一発勝負で一日か二日に凝縮された試験"
+        },
+        {
+          "id": "spread-weeks",
+          "emoji": "🗓️",
+          "label": "数週間、時には二か月近くに分けて行われた"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🎯",
+          "label": "二段階:まず全国共通試験、その後各校が個別に実施"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📁",
+          "label": "統一試験はなく、在学中の成績と出願書類で決まった"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270120-exam-city-lockdown",
+      "date": "2027-01-20",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "試験期間中、都市が警笛禁止、工事停止、交通専用レーンなどで対応するのはどこか?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270121-equinox-habits",
+      "date": "2027-01-21",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "春分・秋分や冬至のように、太陽の位置で日付が動くこの手の日を、あなたは普段どう過ごしていますか。",
+      "options": [
+        {
+          "id": "adjust-clock",
+          "emoji": "🕑",
+          "label": "時計を調整する(サマータイムのような制度を連想する)"
+        },
+        {
+          "id": "seasonal-food",
+          "emoji": "🍡",
+          "label": "行事食を食べる(おはぎや南瓜など)"
+        },
+        {
+          "id": "check-almanac",
+          "emoji": "📅",
+          "label": "天文台や暦の発表で実際の日付を確認する"
+        },
+        {
+          "id": "no-effect",
+          "emoji": "🤷",
+          "label": "特に何も感じない、いつもの日と同じ"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270121-equinox-guess-ohagi",
+      "date": "2027-01-21",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "同じ小豆の餅菓子を、春と秋で呼び名を変えて先祖に供える国はどこでしょう。",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270122-exam-rhythm",
+      "date": "2027-01-22",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もし十八歳のときにどう測られるかを自分で選べるとしたら、どのリズムを選びますか。",
+      "options": [
+        {
+          "id": "two-day-crunch",
+          "emoji": "🎯",
+          "label": "二日間に集中し、それで全てが決まる試験"
+        },
+        {
+          "id": "two-sundays",
+          "emoji": "📅",
+          "label": "一週間隔てて二回に分ける試験"
+        },
+        {
+          "id": "two-month-spread",
+          "emoji": "🗓️",
+          "label": "科目ごとに分け、ほぼ二か月に引き延ばす"
+        },
+        {
+          "id": "no-single-exam",
+          "emoji": "📚",
+          "label": "単一の大試験はなく、在学中の記録と各校の判断による"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270122-exam-guess-country",
+      "date": "2027-01-22",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "進学を左右する試験が、科目ごとに分かれてほぼ二か月にわたって行われ、ほとんど毎日どれかの科目の試験がある地域はどこでしょうか。",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270123-season-custom",
+      "date": "2027-01-23",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "季節の変わり目にまつわる習慣のうち、あなたが実際にしたことがあるのはどれですか。",
+      "options": [
+        {
+          "id": "solstice-food",
+          "emoji": "🥟",
+          "label": "冬至にお団子や餃子を食べた"
+        },
+        {
+          "id": "mamemaki",
+          "emoji": "🫘",
+          "label": "節分に「鬼は外、福は内」と豆をまいた"
+        },
+        {
+          "id": "ohigan-grave",
+          "emoji": "🙏",
+          "label": "彼岸に墓参りをしてぼたもち・おはぎを供えた"
+        },
+        {
+          "id": "dst-clock",
+          "emoji": "🕐",
+          "label": "サマータイムのために時計を調整した"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270123-qingming-country",
+      "date": "2027-01-23",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある国では、節気で日付が決まる法定祝日はただひとつで、条文には「旧暦清明の当日」のように書かれているが、清明は実際には太陽黄経十五度の節気であって旧暦とは無関係。実際に何日休むかは毎年別の通知でようやく確定する。どこの国か。",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270124-harvest-what-matters",
+      "date": "2027-01-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もし自分なりの「収穫の日」を決めるとしたら、いちばん大事にしたいのはどれですか。",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "家族そろって食卓を囲む"
+        },
+        {
+          "id": "ritual-food",
+          "emoji": "🍚",
+          "label": "意味のある一皿を一緒に作る"
+        },
+        {
+          "id": "thank-labor",
+          "emoji": "🙏",
+          "label": "互いの労をねぎらう日"
+        },
+        {
+          "id": "community-festival",
+          "emoji": "🔥",
+          "label": "地域みんなでかがり火を囲む祭り"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270124-harvest-policy-festival",
+      "date": "2027-01-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この収穫の祭りは2018年に国務院の批復でできたばかりで、農民のために設けられ、旧暦の秋分に定められている。だが全国民の休日ではなく、テーマは農業農村部が毎年決め、祝い方も省ごとに違う。これはどこの祭りか。",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270125-seasonal-customs",
+      "date": "2027-01-25",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "これらの日付は太陽がある地点に達することで決まり、それぞれに固有の習わしがある。次のうち、自分や家族が実際にしたことがあるのはどれか。",
+      "options": [
+        {
+          "id": "tangyuan-dumplings",
+          "emoji": "🥟",
+          "label": "冬至に湯円(タンユエン)や餃子を食べる"
+        },
+        {
+          "id": "pumpkin-yuzu-bath",
+          "emoji": "🎃",
+          "label": "冬至にかぼちゃを食べて柚子湯に入る"
+        },
+        {
+          "id": "kite-flying",
+          "emoji": "🪁",
+          "label": "太陽が磨羯宮に入る日に凧を揚げる"
+        },
+        {
+          "id": "bean-throwing",
+          "emoji": "🫘",
+          "label": "節分に豆をまいて「鬼は外、福は内」と言う"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270125-equinox-law-country",
+      "date": "2027-01-25",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "春分・秋分の祝日について、法律に月日ではなく「春分日」の三文字だけが書かれ、実際の日付は国立天文台が推算し、前年二月の官報でようやく確定する国はどこか。",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270126-harvest-focus",
+      "date": "2027-01-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの家に「収穫」や「感謝」に近い行事があるとしたら、その中心はどこにありますか?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "家族そろって食卓を囲むこと"
+        },
+        {
+          "id": "dish-is-ritual",
+          "emoji": "🍚",
+          "label": "ある特定の料理を作る過程そのものが儀式になっている"
+        },
+        {
+          "id": "give-thanks-to",
+          "emoji": "🙏",
+          "label": "神様や労働、耕作を助ける牛など、具体的な対象に感謝すること"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🚫",
+          "label": "特にそのような日を祝ってはいない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270126-policy-harvest",
+      "date": "2027-01-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次の四つの地域のうち、政府によって2018年に新設され、しかも国民全体の休日ではない収穫の祝いはどこか。",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270127-seasonal-turn-habit",
+      "date": "2027-01-27",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住む場所では、春分・秋分や冬至の前後に、いつも何をしますか。",
+      "options": [
+        {
+          "id": "ancestors",
+          "emoji": "🙏",
+          "label": "墓参りをする"
+        },
+        {
+          "id": "food",
+          "emoji": "🥟",
+          "label": "季節の食べ物を食べる(南瓜など)"
+        },
+        {
+          "id": "clocks",
+          "emoji": "🕑",
+          "label": "時計を調整する(サマータイム)"
+        },
+        {
+          "id": "nothing",
+          "emoji": "🤷",
+          "label": "特に何もしない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270127-solar-term-holiday-country",
+      "date": "2027-01-27",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この国の祝日規則では、休みになる七つの祝日のうち日付が節気で決まるのはひとつだけで、冬至は一切休みにならない。どの国か。",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270128-harvest-day-form",
+      "date": "2027-01-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの家に収穫や労働への感謝を祝う日があるとしたら、次のどれに一番近いですか?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "家族の食卓"
+        },
+        {
+          "id": "labor-thanks",
+          "emoji": "🙏",
+          "label": "労働への感謝"
+        },
+        {
+          "id": "community-ritual",
+          "emoji": "🕯️",
+          "label": "地域や宗教の儀礼"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "そのような日はない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270128-farmers-day-before-harvest",
+      "date": "2027-01-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "「農民の日」を、収穫のあとではなく立春という耕作前に置いている場所はどこか?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270129-seasonal-custom-experience",
+      "date": "2027-01-29",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "分至や節気にまつわるこれらの風習のうち、自分で実際にやったことがあるのはどれか。",
+      "options": [
+        {
+          "id": "mamemaki",
+          "emoji": "🫘",
+          "label": "節分の豆まき"
+        },
+        {
+          "id": "tangyuan",
+          "emoji": "🍡",
+          "label": "冬至に湯圓を食べる"
+        },
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "お彼岸の墓参り"
+        },
+        {
+          "id": "kite-flying",
+          "emoji": "🪁",
+          "label": "マカル・サンクランティの凧あげ"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270129-equinox-dst-country",
+      "date": "2027-01-29",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "分至点で休むことは一切ないのに、法律で年に二度時計を動かし、「三月の第二日曜日」とまで条文に書き込んでいる国はどこか。",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270130-harvest-habit",
+      "date": "2027-01-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの暮らす場所で、収穫や労働に感謝する日があるとしたら、ふだんどう過ごしますか。",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "家族で食卓を囲んで食事をする"
+        },
+        {
+          "id": "special-dish",
+          "emoji": "🍚",
+          "label": "収穫にちなんだ特別な料理を作る"
+        },
+        {
+          "id": "community-gathering",
+          "emoji": "🔥",
+          "label": "近所や地域の人たちと集まって行事をする"
+        },
+        {
+          "id": "no-special-day",
+          "emoji": "📅",
+          "label": "そういう日はなく、いつも通り過ごす"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270130-farmers-day-timing",
+      "date": "2027-01-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ここに挙げた地域の中で、「農民の日」が収穫の後ではなく、春の農作業が始まる前に置かれているのはどこか。",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270131-seasonal-custom",
+      "date": "2027-01-31",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "季節の変わり目にまつわる習わしのうち、自分や家族が実際に行ったことがあるのはどれですか。",
+      "options": [
+        {
+          "id": "mamemaki",
+          "emoji": "🫘",
+          "label": "節分に豆まきをして、鬼は外、福は内と唱えた"
+        },
+        {
+          "id": "ohigan-visit",
+          "emoji": "🪦",
+          "label": "お彼岸に墓参りをし、ぼたもちやおはぎを供えた"
+        },
+        {
+          "id": "tangyuan",
+          "emoji": "🍡",
+          "label": "冬至にかぼちゃや白玉団子のような行事食を食べた"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "🕑",
+          "label": "サマータイムに合わせて時計を進めたり戻したりした"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270131-no-shadow-day",
+      "date": "2027-01-31",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国の気象・気候・地球物理機関が、都市ごとに正午の影が消える影のない日を毎年発表しているか。",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270201-harvest-poll",
+      "date": "2027-02-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたにとって「収穫に感謝する」に一番近いのはどれですか?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "家族全員が集まる食卓"
+        },
+        {
+          "id": "the-dish-itself",
+          "emoji": "🍲",
+          "label": "作ること自体が儀式になる、決まった料理"
+        },
+        {
+          "id": "month-of-festivity",
+          "emoji": "🎉",
+          "label": "一か月続くかがり火とお祭りの空気"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🌾",
+          "label": "決まった日はなく、感謝は自分で覚えておくもの"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270201-farmers-day-guess",
+      "date": "2027-02-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうち、「農民の日」が収穫のあとではなく、春の農作業が始まる前に置かれているのはどこですか?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270202-seasonal-custom-poll",
+      "date": "2027-02-02",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "太陽の巡りに合わせたこれらの習わしのうち、自分や家族が実際にしたことがあるのはどれ?",
+      "options": [
+        {
+          "id": "grave-sweeping",
+          "emoji": "🧹",
+          "label": "彼岸の墓参りと、ぼたもち・おはぎのお供え"
+        },
+        {
+          "id": "winter-solstice-food",
+          "emoji": "🥣",
+          "label": "冬至に南瓜や柚子湯、あるいは餃子・湯圓を楽しむ"
+        },
+        {
+          "id": "bean-throwing",
+          "emoji": "🫘",
+          "label": "節分に「鬼は外、福は内」と豆をまく"
+        },
+        {
+          "id": "none-of-these",
+          "emoji": "🤷",
+          "label": "どれもない、自分の国にはこうした習わしがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270202-solar-term-holiday-guess",
+      "date": "2027-02-02",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうち、法定祝日の中で節気によって日付が決まるのがひとつだけで、実際の休日日数は毎年別に政府が発表する国はどこか?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270203-harvest-timing",
+      "date": "2027-02-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "『収穫への感謝』を祝う日を決めるなら、いつが一番しっくりくると思いますか?",
+      "options": [
+        {
+          "id": "after-harvest",
+          "emoji": "🌾",
+          "label": "収穫が終わったあと、感謝祭のように"
+        },
+        {
+          "id": "before-planting",
+          "emoji": "🌱",
+          "label": "農作業が始まる前、立春のように"
+        },
+        {
+          "id": "religious-calendar",
+          "emoji": "🕯️",
+          "label": "宗教暦に沿って、六月の聖人の日のように"
+        },
+        {
+          "id": "family-gathering",
+          "emoji": "🍽️",
+          "label": "日付よりも、家族全員がそろって食卓を囲めることが大事"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270203-guess-farmers-festival",
+      "date": "2027-02-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "2018年に国務院の批復によって設けられ、日付が秋分に固定された収穫の祝いはどこか。民間の習俗から自然に育ったものではない。",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270204-holiday-experience",
+      "date": "2027-02-04",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなた自身の連休の経験は、どれに近いですか?",
+      "options": [
+        {
+          "id": "makeup-workday",
+          "emoji": "🧾",
+          "label": "連休のために、休日出勤で埋め合わせをしたことがある"
+        },
+        {
+          "id": "deducted-leave",
+          "emoji": "🏖️",
+          "label": "「一斉休暇」のような制度で、自分の有給休暇が差し引かれたことがある"
+        },
+        {
+          "id": "sunday-bump",
+          "emoji": "📅",
+          "label": "祝日がたまたま日曜日と重なって、思いがけず休みが増えたことがある"
+        },
+        {
+          "id": "no-particular-feel",
+          "emoji": "🤷",
+          "label": "特に気にしたことはない、連休の組み方はあまり考えたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270204-bridge-holiday-country",
+      "date": "2027-02-04",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある土地では、毎年出し直される省令が、名前のない日を正式な祝日の隣にくっつけて連休を作る。現地の人はこれを「祝日を吊るす」と呼ぶ。この命令は連邦の役所だけを縛り、民間企業には何の効力もない。ここはどこか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270205-new-year-habit",
+      "date": "2027-02-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "大晦日や元日、あなたはふだんどう過ごしますか？",
+      "options": [
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "大晦日に家族で団らんの食事をする"
+        },
+        {
+          "id": "shrine-visit",
+          "emoji": "⛩️",
+          "label": "初詣で神社やお寺にお参りする"
+        },
+        {
+          "id": "beach-fireworks",
+          "emoji": "🎆",
+          "label": "浜辺で花火を見たり、波を跳び越えたりする"
+        },
+        {
+          "id": "countdown-party",
+          "emoji": "🥳",
+          "label": "カウントダウンパーティーをして、翌日は休んで試合観戦"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270205-no-jan-first",
+      "date": "2027-02-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この国の全国祝日一覧には一月一日がまったく載っていない。新年は三月か四月にあり、州ごとに名前が異なる。どこの国？",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270206-carnival-parade-experience",
+      "date": "2027-02-06",
+      "kind": "poll",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "カーニバル風のパレードに参加したことがありますか?",
+      "options": [
+        {
+          "id": "marched",
+          "emoji": "💃",
+          "label": "参加した(衣装やメイクあり)"
+        },
+        {
+          "id": "watched",
+          "emoji": "👀",
+          "label": "現地で見たが参加はしていない"
+        },
+        {
+          "id": "online",
+          "emoji": "📱",
+          "label": "ネットやテレビで見ただけ"
+        },
+        {
+          "id": "never",
+          "emoji": "🤷",
+          "label": "そういう催しに触れたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270206-carnival-samba-country",
+      "date": "2027-02-06",
+      "kind": "guess",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "北半球でも最大級とされるサンバカーニバルで、毎年八月の最終土曜日に開催され、四旬節とはまったく関係がない。二〇二六年で四十一回目を迎える。この祭りはどこの国で行われているか?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270207-affection-habit",
+      "date": "2027-02-07",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "2月14日、あなたや身近な人はどうすることが多いですか?",
+      "options": [
+        {
+          "id": "give-chocolate",
+          "emoji": "🍫",
+          "label": "チョコレートを贈る"
+        },
+        {
+          "id": "send-card-flowers",
+          "emoji": "💐",
+          "label": "カードや花を贈る"
+        },
+        {
+          "id": "dine-out",
+          "emoji": "🍽️",
+          "label": "外食する"
+        },
+        {
+          "id": "no-celebrate",
+          "emoji": "🙅",
+          "label": "特に何もしない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270207-guess-brazil-date",
+      "date": "2027-02-07",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうち、恋人の日が2月14日ではなく6月12日にあるのはどこか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270208-carnival-status",
+      "date": "2027-02-08",
+      "kind": "poll",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住んでいる場所で、「カーニバル」やそれに似た祭りのパレードは実際どんな位置づけか?",
+      "options": [
+        {
+          "id": "legal-holiday",
+          "emoji": "📅",
+          "label": "法律に明記された正式な祝日"
+        },
+        {
+          "id": "discretionary-holiday",
+          "emoji": "🗓️",
+          "label": "各機関や雇用主が自分で決める任意の休み"
+        },
+        {
+          "id": "tourism-event",
+          "emoji": "🎪",
+          "label": "観光当局が主催する祭りのイベントで、祝日ではない"
+        },
+        {
+          "id": "borrowed-name",
+          "emoji": "🏷️",
+          "label": "「カーニバル」という言葉を借りただけの市や観光イベント"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270208-carnival-country",
+      "date": "2027-02-08",
+      "kind": "guess",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国のカーニバルが、法律上は祝日ではなく、政府が毎年出し直す政令によって指定される「任意休業日」にすぎないか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270209-easter-days-off",
+      "date": "2027-02-09",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "クリスマス以外に、あなたの国では復活祭前後（灰の水曜日、聖金曜日、復活祭、昇天日）に休みが何日くらいありますか？",
+      "options": [
+        {
+          "id": "zero",
+          "emoji": "🚫",
+          "label": "ゼロ"
+        },
+        {
+          "id": "one-day",
+          "emoji": "1️⃣",
+          "label": "一日だけ（たいてい聖金曜日）"
+        },
+        {
+          "id": "several-days",
+          "emoji": "📅",
+          "label": "何日もある"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "気にしたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270209-guess-easter-country",
+      "date": "2027-02-09",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "聖金曜日と昇天日をともに法定の国民の祝日とし、昇天日の翌日にはさらに全国一斉の休暇日を加えている国はどこか？",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ合衆国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270210-national-day-poll",
+      "date": "2027-02-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "上で紹介した建国・独立の祝い方のうち、実際に参加できるとしたらどれを選びますか?",
+      "options": [
+        {
+          "id": "street-games",
+          "emoji": "🎪",
+          "label": "インドネシアの町内lomba 17-an(街頭競技)"
+        },
+        {
+          "id": "day-night-taiwan",
+          "emoji": "🎆",
+          "label": "台湾の国慶日、朝の国旗掲揚式と夜の花火"
+        },
+        {
+          "id": "red-fort-india",
+          "emoji": "🚩",
+          "label": "インドの独立記念日、首相がレッドフォートで国旗を掲げる式典"
+        },
+        {
+          "id": "parade-bbq-us",
+          "emoji": "🍖",
+          "label": "米国の独立記念日、花火とパレードとバーベキュー"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270210-national-day-guess",
+      "date": "2027-02-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "七つの建国・独立記念日のうち、日付の記録がある歴史上の出来事ではなく、伝説の即位を記念しているのはどの国?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270211-womens-day-half-day",
+      "date": "2027-02-11",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もし三月八日にあなたの地域でも中国のように半日休みがもらえるとしたら、その半日をどう過ごしますか。",
+      "options": [
+        {
+          "id": "rest-alone",
+          "emoji": "🛌",
+          "label": "自分のために休む"
+        },
+        {
+          "id": "family-time",
+          "emoji": "👪",
+          "label": "家族や友人と過ごす"
+        },
+        {
+          "id": "still-work",
+          "emoji": "💼",
+          "label": "いつも通り仕事をする"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🤷",
+          "label": "そんな休みは不要、今のままでいい"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270211-womens-day-brazil-date",
+      "date": "2027-02-11",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この七つの地域のうち、二〇二五年に新法が施行されるまで「国の女性の日」が四月三十日のままだったのはどこか。",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270212-valentine-format",
+      "date": "2027-02-12",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが暮らす、または育った場所では、バレンタインデーは普段どのように行われますか？",
+      "options": [
+        {
+          "id": "single-day",
+          "emoji": "💌",
+          "label": "一方通行の贈り物、たった一日"
+        },
+        {
+          "id": "reciprocal",
+          "emoji": "🔁",
+          "label": "贈って翌月にお返しする"
+        },
+        {
+          "id": "week-long",
+          "emoji": "📅",
+          "label": "一週間に引き延ばされる"
+        },
+        {
+          "id": "dual-dates",
+          "emoji": "🗓️",
+          "label": "二つの日付が同時に存在する"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270212-guess-discourage-country",
+      "date": "2027-02-12",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この七つの地域のうち、毎年バレンタインデー前後に地方政府の教育局が通達を出し、管内の学校に生徒への祝賀自粛を求めるのはどこか。",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270213-womens-day-poll",
+      "date": "2027-02-13",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住んでいる場所では、三月八日は普段どのように過ごされますか?",
+      "options": [
+        {
+          "id": "half-day-off",
+          "emoji": "🕐",
+          "label": "休みになる(半日でも)"
+        },
+        {
+          "id": "events-no-holiday",
+          "emoji": "🎤",
+          "label": "講演や表彰、セールはあるが休みにはならない"
+        },
+        {
+          "id": "whole-month",
+          "emoji": "📅",
+          "label": "特定の一日ではなく一か月全体に力点が置かれている"
+        },
+        {
+          "id": "no-observance",
+          "emoji": "🤷",
+          "label": "ほとんど意識されず、普段の一日と変わらない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270213-womens-day-guess",
+      "date": "2027-02-13",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの地域の国の女性の日が、二〇二五年の新法によってようやく四月三十日から三月八日へ移されたか?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270214-reciprocity-habit",
+      "date": "2027-02-14",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "バレンタインのような日に贈り物をもらったら、あなたは普段どう返しますか？",
+      "options": [
+        {
+          "id": "always-reciprocate",
+          "emoji": "🎁",
+          "label": "必ず、しかもすぐに返す"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤔",
+          "label": "相手との関係次第で決める"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🙅",
+          "label": "必ず返すべきだとは思わない"
+        },
+        {
+          "id": "no-concept",
+          "emoji": "❓",
+          "label": "私のところには「お返し」という習慣自体がない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270214-guess-discourage-country",
+      "date": "2027-02-14",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "このページで比べている七つの地域のうち、バレンタインの前後に公文書が学校に生徒への自粛を求めるのはどこか。",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270215-holiday-namesake-poll",
+      "date": "2027-02-15",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが暮らす場所に、特定の人物の名前がついているのに、実際には休みにならない記念日はありますか?",
+      "options": [
+        {
+          "id": "yes-know-who",
+          "emoji": "🧠",
+          "label": "ある、誰を記念しているか知っている"
+        },
+        {
+          "id": "yes-dont-know",
+          "emoji": "🤷",
+          "label": "あるが、誰かは分からない"
+        },
+        {
+          "id": "no-all-holidays",
+          "emoji": "📅",
+          "label": "ない、個人を記念する日はすべて休み"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "💭",
+          "label": "特に考えたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270215-founder-two-dates",
+      "date": "2027-02-15",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある国の法律では、建国の父の誕生日と命日がそれぞれ一日ずつ設けられているが、どちらも休みではない。個人名を冠して実際に休みになる唯一の祝日は、二千五百年前の思想家を記念するものだ。どの国か?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270216-exam-format-preference",
+      "date": "2027-02-16",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もし自分がその試験を受けるとしたら、どの日程がいいと思う?",
+      "options": [
+        {
+          "id": "single-day",
+          "emoji": "⏱️",
+          "label": "一日か二日に凝縮"
+        },
+        {
+          "id": "two-sundays",
+          "emoji": "📅",
+          "label": "一週間空けた二つの日曜に分ける"
+        },
+        {
+          "id": "two-months",
+          "emoji": "📆",
+          "label": "二か月近くに分けて科目ごとに"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📄",
+          "label": "全国試験はなく、在学記録と出願書類で判断"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270216-guess-two-month-exam",
+      "date": "2027-02-16",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この四つの中で、高校卒業試験を一日か二日に凝縮せず、科目ごとに二か月近く分散させているのはどこ?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270217-lantern-experience",
+      "date": "2027-02-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "元宵節の日、あなたは普段どう過ごしますか?",
+      "options": [
+        {
+          "id": "tangyuan-lanterns",
+          "emoji": "🍡",
+          "label": "湯圓を食べてランタン展を見る"
+        },
+        {
+          "id": "sky-lantern",
+          "emoji": "🏮",
+          "label": "天灯に願いを書いて上げる"
+        },
+        {
+          "id": "beehive-fireworks",
+          "emoji": "🎆",
+          "label": "蜂炮の現場で火花を浴びる"
+        },
+        {
+          "id": "work-as-usual",
+          "emoji": "💼",
+          "label": "祝日ではないので通常通り仕事や学校"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270217-tatung-guess",
+      "date": "2027-02-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "同じ十五夜なのに、ある土地の祭りの主役は灯籠ではなく、祖霊が憑いたとされる人が担がれて練り歩き、刃物で貫かれても血を流さないという光景だ。これはどこか?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270218-womens-day-poll",
+      "date": "2027-02-18",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住んでいる場所では、三月八日は普段どんな一日ですか？",
+      "options": [
+        {
+          "id": "usual-day",
+          "emoji": "🗓️",
+          "label": "いつも通り仕事や学校がある、特別なことはない日"
+        },
+        {
+          "id": "org-event",
+          "emoji": "🎤",
+          "label": "職場や学校で講演や表彰などの催しがある"
+        },
+        {
+          "id": "shopping-promo",
+          "emoji": "🛍️",
+          "label": "一番目に付くのは商業施設のセール"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "正直、この日が何の日かよく分かっていない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270218-womens-day-guess",
+      "date": "2027-02-18",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ここで比較する七つの地域のうち、国の女性の日を二〇二五年の新法で四月三十日から三月八日へ移したのはどこか。",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270219-lantern-poll",
+      "date": "2027-02-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "元宵節、あなたは普段どう過ごしますか?",
+      "options": [
+        {
+          "id": "tangyuan-lanterns",
+          "emoji": "🥣",
+          "label": "湯圓を食べてランタン展を見る"
+        },
+        {
+          "id": "sky-lantern",
+          "emoji": "🏮",
+          "label": "天灯に願いを書いて空へ上げる"
+        },
+        {
+          "id": "fireworks",
+          "emoji": "🎆",
+          "label": "爆竹の渦の中に飛び込む"
+        },
+        {
+          "id": "no-festival",
+          "emoji": "🌙",
+          "label": "住んでいる場所にはこの行事がなく、普通に仕事や学校"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270219-lantern-guess",
+      "date": "2027-02-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "同じ旧暦十五日なのに、ある土地ではまったく違う三つの光景が同時に起きる——湯圓を食べてランタン展を歩く、山あいで天灯を空へ放つ、そして四方に飛び交う蜂炮の中に立つ。さて、どこの話か?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270220-womens-day-experience",
+      "date": "2027-02-20",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住んでいる場所では、三月八日はふだんどう扱われていますか?",
+      "options": [
+        {
+          "id": "paid-day-off",
+          "emoji": "🏖️",
+          "label": "有給の休みになる"
+        },
+        {
+          "id": "marked-not-off",
+          "emoji": "🎗️",
+          "label": "記念行事はあるが休みにはならない"
+        },
+        {
+          "id": "not-marked",
+          "emoji": "🤷",
+          "label": "特に何もなく、普段どおり"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "❓",
+          "label": "よくわからない、気にしたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270220-womens-day-brazil",
+      "date": "2027-02-20",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "上の事実によると、国の女性の日がもともと四月三十日にあり、二〇二五年の新法でようやく三月八日に移されたのはどこか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270221-bonus-habit",
+      "date": "2027-02-21",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの地域に『年末に一時金が出る』慣行があるなら,ふだんそのお金をどうしていますか?",
+      "options": [
+        {
+          "id": "save",
+          "emoji": "💰",
+          "label": "貯金する"
+        },
+        {
+          "id": "travel",
+          "emoji": "✈️",
+          "label": "旅行など自分へのご褒美にする"
+        },
+        {
+          "id": "bills",
+          "emoji": "🏠",
+          "label": "ローンや支払いに充てる"
+        },
+        {
+          "id": "no-tradition",
+          "emoji": "🤷",
+          "label": "自分のところにはそうした慣行がない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270221-bonus-thr",
+      "date": "2027-02-21",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この『年末の上乗せ』を宗教上の祝日の七日前までに全額支払わねばならず、分割は認められず、遅延には五パーセントの罰金が科されるのはどの国か?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270222-womens-day-poll",
+      "date": "2027-02-22",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの職場や学校では、三月八日は普段どんな一日ですか?",
+      "options": [
+        {
+          "id": "normal-day",
+          "emoji": "😐",
+          "label": "いつも通りの一日"
+        },
+        {
+          "id": "time-off",
+          "emoji": "🕒",
+          "label": "休みや柔軟な対応がある"
+        },
+        {
+          "id": "event",
+          "emoji": "🎤",
+          "label": "講演や表彰イベントがある"
+        },
+        {
+          "id": "promotion",
+          "emoji": "🛍️",
+          "label": "単なる販促セールの時期"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270222-womens-day-guess",
+      "date": "2027-02-22",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "婦女節に有給の半日休暇を与えると法律で明記しているのはどこか?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270223-bonus-experience",
+      "date": "2027-02-23",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが実際に受け取ったことのある賞与は、次のどれに近いですか?",
+      "options": [
+        {
+          "id": "boss-call",
+          "emoji": "🎲",
+          "label": "上司の気分次第で金額は毎年変わり、出ない年もある"
+        },
+        {
+          "id": "law-deadline",
+          "emoji": "📜",
+          "label": "法律に期限まで書かれていて、遅れれば罰金"
+        },
+        {
+          "id": "twice-year",
+          "emoji": "🔁",
+          "label": "年に二回、夏と冬に分けて受け取る"
+        },
+        {
+          "id": "tax-choice",
+          "emoji": "🧮",
+          "label": "出るかどうかは分からないが、申告方法は自分で選べる"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270223-guess-country",
+      "date": "2027-02-23",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある国では、年末の手当を宗教上の祝日の七日前までに全額支払わねばならず、分割は認められず、遅れれば一定割合の罰金が科されます。しかもその祝日はイスラム暦に従うため、日付は毎年グレゴリオ暦より約十一日早まっていきます。さて、どの国でしょうか?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270224-womens-day-experience",
+      "date": "2027-02-24",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが暮らす場所で、三月八日はどんな一日か。",
+      "options": [
+        {
+          "id": "paid-day-off",
+          "emoji": "🎉",
+          "label": "休暇がある（全日または半日）"
+        },
+        {
+          "id": "events-no-holiday",
+          "emoji": "🎤",
+          "label": "行事や談話はあるが休みではない"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "😐",
+          "label": "いつもと変わらない一日"
+        },
+        {
+          "id": "shopping-sale",
+          "emoji": "🛍️",
+          "label": "主に販促セールの時期"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270224-womens-day-half-day-leave",
+      "date": "2027-02-24",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ここで比較した七つの地域のうち、法律で女性の日に有給の半休を明記しているのはどこか。",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270225-bonus-experience",
+      "date": "2027-02-25",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなた自身は、年末賞与や十三か月目の給与のようなものを受け取ったことがありますか?",
+      "options": [
+        {
+          "id": "guaranteed-by-law",
+          "emoji": "⚖️",
+          "label": "もらったことがある、金額も時期も法律で保障されている"
+        },
+        {
+          "id": "up-to-employer",
+          "emoji": "🎲",
+          "label": "もらったことがある、でも出るかどうかも金額も会社次第"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "もらったことがない、そもそもそういう制度がない"
+        },
+        {
+          "id": "tax-headache",
+          "emoji": "🧾",
+          "label": "もらったことがある、でも悩みは税金の申告方法のほう"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270225-bonus-profit-floor",
+      "date": "2027-02-25",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうちどの国の法定ボーナスは、会社が利益を出したかどうかに関係なく下限が決まっていて、赤字の年でも最低額を支払わねばならないでしょうか?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270226-march8-poll",
+      "date": "2027-02-26",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住む地域では、三月八日は普段どんな一日ですか？",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "休みになる（全日または半日）"
+        },
+        {
+          "id": "event-no-leave",
+          "emoji": "📢",
+          "label": "行事や談話はあるが休みではない"
+        },
+        {
+          "id": "normal-workday",
+          "emoji": "💼",
+          "label": "普通の仕事や学校の日"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "特に気にしたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270226-march8-guess",
+      "date": "2027-02-26",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次の四つの地域のうち、国の女性の日を二〇二五年になってようやく四月三十日から三月八日へ移したのはどこか。",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270227-year-end-bonus-poll",
+      "date": "2027-02-27",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたにとって年末の追加収入は次のうちどれに近いですか?",
+      "options": [
+        {
+          "id": "surplus-custom",
+          "emoji": "🎁",
+          "label": "会社が儲かった時だけ、権利ではなく慣行"
+        },
+        {
+          "id": "wage-part",
+          "emoji": "💰",
+          "label": "賃金の一部だから、遅延は罰せられるべき"
+        },
+        {
+          "id": "tax-strategy",
+          "emoji": "🧮",
+          "label": "出るかどうかより、どう申告するかが重要"
+        },
+        {
+          "id": "holiday-timed",
+          "emoji": "🌙",
+          "label": "祝日に合わせて、日付が毎年変わる"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270227-year-end-bonus-guess",
+      "date": "2027-02-27",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "年末のこの金銭が法律上「賃金の一部」とされ、満一年働けば一か月分、遅延には罰があり、労働者が訴えられる国はどこでしょう?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270228-womens-day-observance",
+      "date": "2027-02-28",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが住んでいる場所では、3月8日は普段どんな一日ですか？",
+      "options": [
+        {
+          "id": "half-day-off",
+          "emoji": "🌓",
+          "label": "半日だけでも休みになる"
+        },
+        {
+          "id": "official-message",
+          "emoji": "🎤",
+          "label": "政府がメッセージや表彰式を行うが、休みにはならない"
+        },
+        {
+          "id": "month-long",
+          "emoji": "🗓️",
+          "label": "行事は一日だけでなく一か月にわたって行われる"
+        },
+        {
+          "id": "no-observance",
+          "emoji": "🤷",
+          "label": "特に何もない、いつも通りの一日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270228-womens-day-date-change",
+      "date": "2027-02-28",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "比較した七つの地域のうち、二〇二五年の法改正でようやく国の女性の日を四月三十日から三月八日に移したのはどこか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270301-bonus-experience",
+      "date": "2027-03-01",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ボーナスや年末の一時金をもらったことがあるなら、次のうちどれに近いですか?",
+      "options": [
+        {
+          "id": "profit-conditioned",
+          "emoji": "📊",
+          "label": "会社が儲かったかどうかで決まる"
+        },
+        {
+          "id": "guaranteed-regardless",
+          "emoji": "⚖️",
+          "label": "儲けに関係なく法律や契約で必ずもらえる"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "年に二回もらえる"
+        },
+        {
+          "id": "no-such-thing",
+          "emoji": "🚫",
+          "label": "そんなものはない、給料は給料だけ"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270301-bonus-guess",
+      "date": "2027-03-01",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある国では、この一時金を宗教上の祝日の七日前までに全額支払わねばならず、分割は認められず、遅れれば一定割合の罰金が科されます。しかもその祝日はイスラム暦に従うため、実際の日付は毎年前へずれていきます。どの国でしょうか?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270302-seasonal-rituals",
+      "date": "2027-03-02",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "季節の変わり目に、自分ならどれをする?",
+      "options": [
+        {
+          "id": "eat-tangyuan",
+          "emoji": "🥣",
+          "label": "冬至に湯円や餃子を食べる"
+        },
+        {
+          "id": "throw-beans",
+          "emoji": "🫘",
+          "label": "節分に豆をまいて「鬼は外、福は内」と言う"
+        },
+        {
+          "id": "sweep-graves",
+          "emoji": "🪦",
+          "label": "お彼岸に墓参りをする"
+        },
+        {
+          "id": "change-clock",
+          "emoji": "⏰",
+          "label": "サマータイムに合わせて時計を調整する"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270302-no-shadow-day",
+      "date": "2027-03-02",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国の気象機関が、赤道が国土を貫き雨季と乾季しかないために、毎年「影のない日」を発表しているか?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270303-bonus-experience",
+      "date": "2027-03-03",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの職場では、年末のボーナスはどう運用されていますか?",
+      "options": [
+        {
+          "id": "surplus-based",
+          "emoji": "📈",
+          "label": "会社が儲かった時だけ、金額は不定"
+        },
+        {
+          "id": "law-fixed",
+          "emoji": "⚖️",
+          "label": "法律で金額も期限も決まっている"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "年に二回もらえる"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "そもそも制度がない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270303-bonus-guess-country",
+      "date": "2027-03-03",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "資料によると、会社がその年度に赤字でも、雇用主が最低比率(賃金の八・三三パーセント)を支払わねばならない法定ボーナスがあるのはどの国か?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270304-seasonal-habits",
+      "date": "2027-03-04",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "分至点や節気の前後に、次のうちどれをしたことがありますか?",
+      "options": [
+        {
+          "id": "solstice-food",
+          "emoji": "🍲",
+          "label": "冬至に湯円や餃子、かぼちゃを食べた"
+        },
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "彼岸や清明の前後に墓参りや先祖供養をした"
+        },
+        {
+          "id": "kite-flying",
+          "emoji": "🪁",
+          "label": "マカル・サンクランティのような収穫祭で凧を揚げた"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "⏰",
+          "label": "サマータイムのために時計を調整した"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270304-brazil-no-season-law",
+      "date": "2027-03-04",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "季節に合わせて法律を変えた唯一の例が、後に廃止されたサマータイムだった国はどこ?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270305-march8-experience",
+      "date": "2027-03-05",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住んでいる場所では、三月八日は普段どんな一日ですか?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🏖️",
+          "label": "一日または半日の休み"
+        },
+        {
+          "id": "talks-and-awards",
+          "emoji": "🎤",
+          "label": "職場や学校で講演や表彰があるが休みはない"
+        },
+        {
+          "id": "sales-season",
+          "emoji": "🛍️",
+          "label": "商業施設のセール期間になる"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "🤷",
+          "label": "普段の日とあまり変わらない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270305-brazil-womens-day-move",
+      "date": "2027-03-05",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どこの「国の女性の日」はもともと四月三十日にあり、二〇二五年の法改正でようやく三月八日に移されたか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270306-homecoming-poll",
+      "date": "2027-03-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなた自身の帰省はどのパターンに近いですか?",
+      "options": [
+        {
+          "id": "fixed-peak",
+          "emoji": "🚗",
+          "label": "同じ大型連休に集中して、みんなと一緒に渋滞にはまる"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "🗓️",
+          "label": "自分の祭りや予定に合わせて、みんなとは時期がずれる"
+        },
+        {
+          "id": "stay-home",
+          "emoji": "🏠",
+          "label": "特に帰省せず、今いる場所にとどまる"
+        },
+        {
+          "id": "go-to-festival",
+          "emoji": "🎉",
+          "label": "移動はするが、行き先は祭りの現場で「実家」とは限らない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270306-homecoming-guess",
+      "date": "2027-03-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "帰省のピークは年に二回。ひとつは元日の直後、もうひとつは真夏に来る。重いほうは実は国民の祝日ではなく、企業がそれぞれ休みを設定するので実際の日付は年によってずれる。それでも新幹線と高速道路を全国一斉に渋滞させる力は、どの法定休日にも劣らない。ここはどこ?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270307-womens-day-poll",
+      "date": "2027-03-07",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの暮らす地域では、三月八日は普段どんな一日ですか?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🏖️",
+          "label": "休みや特別休暇がある"
+        },
+        {
+          "id": "official-event",
+          "emoji": "🎤",
+          "label": "職場や学校で行事はあるが休みはない"
+        },
+        {
+          "id": "sales-season",
+          "emoji": "🛍️",
+          "label": "主に買い物のセール期間"
+        },
+        {
+          "id": "no-particular-notice",
+          "emoji": "😐",
+          "label": "特に何も感じない、普段どおりの一日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270307-womens-day-guess",
+      "date": "2027-03-07",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国の「国の女性の日」は、もともと四月三十日にあり、二〇二五年の新法でようやく三月八日へ移されたか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270308-homecoming-mode",
+      "date": "2027-03-08",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなた自身(またはご家族)の帰省の形に一番近いのはどれですか?",
+      "options": [
+        {
+          "id": "road-highway",
+          "emoji": "🚗",
+          "label": "高速道路を車で(渋滞つき)"
+        },
+        {
+          "id": "train-rail",
+          "emoji": "🚆",
+          "label": "鉄道で"
+        },
+        {
+          "id": "flight",
+          "emoji": "✈️",
+          "label": "飛行機で"
+        },
+        {
+          "id": "stay-put",
+          "emoji": "🏠",
+          "label": "帰省せずその場に留まる"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270308-homecoming-guess",
+      "date": "2027-03-08",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "帰省が最も集中する時期が法律上の祝日ではなく、企業がそれぞれ休みを合わせることで国全体が止まる国はどこ?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270309-holiday-stretch",
+      "date": "2027-03-09",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "今年、あなたが経験した最長の連休は何日間でしたか?",
+      "options": [
+        {
+          "id": "1-3-days",
+          "emoji": "🌤️",
+          "label": "1〜3日"
+        },
+        {
+          "id": "4-6-days",
+          "emoji": "🏖️",
+          "label": "4〜6日"
+        },
+        {
+          "id": "7-9-days",
+          "emoji": "🧳",
+          "label": "7〜9日"
+        },
+        {
+          "id": "10-plus-days",
+          "emoji": "✈️",
+          "label": "10日以上"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270309-leave-deducted",
+      "date": "2027-03-09",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "連休をつなぐ日が、労働者自身の年次有給休暇から差し引かれるのはどこか?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270310-eid-night-notice",
+      "date": "2027-03-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "明日仕事や学校が休みかどうかが前夜にならないとわからないとしたら、あなたはどう感じるか。",
+      "options": [
+        {
+          "id": "want-advance-notice",
+          "emoji": "📅",
+          "label": "何日も前に知りたい"
+        },
+        {
+          "id": "fine-with-short-notice",
+          "emoji": "🌙",
+          "label": "前夜にわかっても構わない"
+        },
+        {
+          "id": "hard-to-plan",
+          "emoji": "😥",
+          "label": "直前の発表では予定が立てにくい"
+        },
+        {
+          "id": "adds-anticipation",
+          "emoji": "🌘",
+          "label": "むしろ待ち遠しさが増える気がする"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270310-eid-employer-consent",
+      "date": "2027-03-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この四つの地域のうち、イードを祝えるかどうかが法律上の権利ではなく雇用主の同意次第なのはどこか。",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270311-env-day-experience",
+      "date": "2027-03-11",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZFVVJ0KNDJH484VEFD",
+      "topic_slug": "environment-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "植樹の日や環境の日、アースデイのような日を、今年はどう過ごしましたか。",
+      "options": [
+        {
+          "id": "planted-tree",
+          "emoji": "🌳",
+          "label": "実際に木を植えたり環境活動に参加した"
+        },
+        {
+          "id": "saw-online",
+          "emoji": "📱",
+          "label": "ニュースやSNSで見かけたが特に何もしなかった"
+        },
+        {
+          "id": "first-time-hearing",
+          "emoji": "🤔",
+          "label": "今日はじめてこの日の存在に気づいた"
+        },
+        {
+          "id": "ordinary-workday",
+          "emoji": "🗓️",
+          "label": "自分にとっては普通の仕事や学校の一日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270311-env-day-holiday-guess",
+      "date": "2027-03-11",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZFVVJ0KNDJH484VEFD",
+      "topic_slug": "environment-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この四か国のうち、環境に関する記念日が唯一本当に休日になっているのはどこか。",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270312-commemorate-choice",
+      "date": "2027-03-12",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もしあなたが決めるとしたら、国に大きく貢献した人物をどう記念しますか?",
+      "options": [
+        {
+          "id": "paid-holiday",
+          "emoji": "🎉",
+          "label": "国民の祝日にして休みにする"
+        },
+        {
+          "id": "name-no-holiday",
+          "emoji": "📅",
+          "label": "記念日として名前は残すが、休みにはしない"
+        },
+        {
+          "id": "idea-not-name",
+          "emoji": "💡",
+          "label": "本人の名前ではなく、その人が唱えた理念にちなんで名づける"
+        },
+        {
+          "id": "no-personal-day",
+          "emoji": "🚫",
+          "label": "そもそも個人名の記念日は設けない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270312-hidden-name-law",
+      "date": "2027-03-12",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "現行の祝日法に、その民族的英雄の名前がまったく出てこず、名前は別の時代の法律にだけ残っている国はどこか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270313-love-day-style",
+      "date": "2027-03-13",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "自分の経験を振り返って、愛情を伝える日の過ごし方は次のどれに近いですか。",
+      "options": [
+        {
+          "id": "single-day-no-return",
+          "emoji": "🎁",
+          "label": "贈るだけで、後で返す決まりはない"
+        },
+        {
+          "id": "return-gift-month-later",
+          "emoji": "🔁",
+          "label": "今月贈られ、来月お返しする"
+        },
+        {
+          "id": "week-long",
+          "emoji": "📅",
+          "label": "一週間に引き延ばされ、日ごとにテーマが違う"
+        },
+        {
+          "id": "no-official-celebration",
+          "emoji": "🚫",
+          "label": "自分のところでは特に祝わず、公的な位置づけもない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270313-heritage-vs-commerce",
+      "date": "2027-03-13",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次の四つの地域のうち、商業的な声がもっとも大きい2月14日には制度上の身分がなく、代わりに別の日が国家の無形文化遺産名録に登録されているのはどこか。",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270314-equinox-poll",
+      "date": "2027-03-14",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "春分・秋分・冬至の日、あなたは普段どう過ごしますか?",
+      "options": [
+        {
+          "id": "visit-graves",
+          "emoji": "🪦",
+          "label": "墓参りや先祖供養をする"
+        },
+        {
+          "id": "eat-seasonal-food",
+          "emoji": "🍡",
+          "label": "行事食を食べる(湯圓・かぼちゃ・ぼたもちなど)"
+        },
+        {
+          "id": "watch-daylight",
+          "emoji": "🌗",
+          "label": "日の出・日の入りや昼夜の長さを気にする"
+        },
+        {
+          "id": "no-idea",
+          "emoji": "🤷",
+          "label": "特に気にしない、普通の一日として過ごす"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270314-equinox-guess",
+      "date": "2027-03-14",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある祝祭を「太陽が北半球へ転じる日」と説明する公式資料があるが、実際の天文学上の転回点である冬至は、それより三週間以上も前に起きている。この差は、黄道十二宮を春分点ではなく恒星に固定する暦法に由来する。どの国のことか?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270315-holiday-experience",
+      "date": "2027-03-15",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの社会には、今も祝日になっていない重要な歴史的記念日がありますか。",
+      "options": [
+        {
+          "id": "know-exact-date",
+          "emoji": "📅",
+          "label": "ある。正確な日付も知っている"
+        },
+        {
+          "id": "vague-memory",
+          "emoji": "🤔",
+          "label": "なんとなく覚えているが、正確な日付は分からない"
+        },
+        {
+          "id": "none-comes-to-mind",
+          "emoji": "🤷",
+          "label": "思い当たらない"
+        },
+        {
+          "id": "never-thought-about-it",
+          "emoji": "💭",
+          "label": "考えたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270315-guess-country",
+      "date": "2027-03-15",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この国の廃止記念日は二十年と三本の法律を要した。最初は学校暦の中だけに存在し、二〇一一年に国の記念日となったがまだ休みはつかず、二〇二三年十二月になってようやく法律で国民の祝日と定められた。かつて奴隷制の廃止を宣言した法律はわずか二条しかなく、補償も土地も市民的権利の規定もなかった。その日付は今も公式の全国祝日一覧に載っていない。さて、どこの国か。",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ合衆国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270316-seasonal-customs",
+      "date": "2027-03-16",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "分至点にまつわる次の習慣のうち、あなたが実際にやったことがあるのはどれですか？",
+      "options": [
+        {
+          "id": "tangyuan-winter-solstice",
+          "emoji": "🍡",
+          "label": "冬至に白玉団子を食べる"
+        },
+        {
+          "id": "setsubun-mamemaki",
+          "emoji": "🫘",
+          "label": "節分の豆まき"
+        },
+        {
+          "id": "makar-sankranti-kite",
+          "emoji": "🪁",
+          "label": "マカル・サンクランティで凧を揚げる"
+        },
+        {
+          "id": "higan-grave-sweeping",
+          "emoji": "🙏",
+          "label": "お彼岸の墓参り"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270316-seven-holidays-country",
+      "date": "2027-03-16",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある国の国民の祝日はちょうど七つで、そのどれも太陽の位置で日付が決まっていない。この国が唯一、法律で季節を追いかけた例——夏時間——は既に廃止されており、その国は南半球にあるため十二月の至点は冬ではなく夏の始まりを意味する。さて、どの国か。",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270317-abolition-holiday-poll",
+      "date": "2027-03-17",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの暮らす場所では、奴隷制の廃止や平等をめぐる記念日を実際どう過ごしていますか?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "休みになり、祝日のように祝う"
+        },
+        {
+          "id": "marked-no-holiday",
+          "emoji": "🏫",
+          "label": "学校や役所で触れられるが、休みにはならない"
+        },
+        {
+          "id": "never-heard",
+          "emoji": "❓",
+          "label": "そのような記念日を聞いたことがない"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "よくわからない、特に気にしたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270317-abolition-holiday-guess",
+      "date": "2027-03-17",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "学校暦に加わってから法定祝日になるまで、二十年と三つの法律を要したのはどの国か?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ合衆国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270318-seasonal-habit",
+      "date": "2027-03-18",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この記事に出てきた習慣のうち、あなた自身に近いのはどれですか。",
+      "options": [
+        {
+          "id": "clock-shift",
+          "emoji": "🕐",
+          "label": "サマータイムで時計を調整した"
+        },
+        {
+          "id": "seasonal-food",
+          "emoji": "🍲",
+          "label": "季節の行事食を食べた(南瓜や餃子など)"
+        },
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "墓参りをして先祖を敬った"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "📅",
+          "label": "自分にとってはただの普通の日"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270318-sidereal-drift-guess",
+      "date": "2027-03-18",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある国の伝統暦は、十二宮を春分点ではなく恒星に固定している。地球の歳差運動によって、かつて至点を示していた祭りは、千年余りのあいだに三週間以上も後ろへずれてしまった。それはどこの国か。",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270319-emancipation-poll",
+      "date": "2027-03-19",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの国や地域のカレンダーには、奴隷制や身分制度の廃止を記念して実際に休みになる日がありますか?",
+      "options": [
+        {
+          "id": "yes-day-off",
+          "emoji": "🎉",
+          "label": "ある、実際に休みになる"
+        },
+        {
+          "id": "yes-no-day-off",
+          "emoji": "📅",
+          "label": "記念日はあるが、休みにはならない"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🚫",
+          "label": "そのような日はない"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "わからない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270319-emancipation-guess",
+      "date": "2027-03-19",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある国のある記念日は、まず学校暦にだけ書き込まれ、二十年後に国の記念日に格上げされ、そのさらに十二年後の二〇二三年になってようやく休みになる法定祝日となった。三本の法律を経てのことである。この国はどこか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ合衆国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270320-season-marker",
+      "date": "2027-03-20",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住んでいる場所では、春分・秋分や夏至・冬至の日をどんなふうに意識しますか?",
+      "options": [
+        {
+          "id": "legal-holiday",
+          "emoji": "🎌",
+          "label": "法定の祝日があり、実際に休みになる"
+        },
+        {
+          "id": "folk-custom",
+          "emoji": "🌾",
+          "label": "民間行事や宗教行事はあるが、休みにはならない"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "🕑",
+          "label": "祝うわけではなく、時計を調整するだけ"
+        },
+        {
+          "id": "nothing-special",
+          "emoji": "🤷",
+          "label": "特に何も行われない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270320-shadowless-day",
+      "date": "2027-03-20",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "毎年、都市ごとに異なる『影のない日』——正午に垂直な物体の影が真下に消える日——を発表している気象機関があるのはどこの国?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270321-holiday-in-name-only",
+      "date": "2027-03-21",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住んでいる場所に、よく話題になるのに実は休みにならない記念日はありますか?",
+      "options": [
+        {
+          "id": "know-the-day",
+          "emoji": "🗓️",
+          "label": "ある、日付まで言える"
+        },
+        {
+          "id": "vague-memory",
+          "emoji": "🤔",
+          "label": "あるのは知っているが、正確な日付は覚えていない"
+        },
+        {
+          "id": "all-holidays",
+          "emoji": "🎉",
+          "label": "ない、うちの記念日はだいたい休みになる"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "💭",
+          "label": "考えたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270321-guess-abolition-holiday",
+      "date": "2027-03-21",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "学校暦に入り、次に国の記念日となり、そこから二十年かかってようやく法定祝日になった記念日は、どの国のものか?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ合衆国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270322-christian-days-poll",
+      "date": "2027-03-22",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "灰の水曜日、聖金曜日、昇天日、聖霊降臨祭、聖体の祝日。これらの日について、あなた自身の実感に一番近いのはどれですか。",
+      "options": [
+        {
+          "id": "ordinary-workday",
+          "emoji": "😐",
+          "label": "私にとってはどれもふつうの仕事日で、何の違いもない"
+        },
+        {
+          "id": "church-not-holiday",
+          "emoji": "⛪",
+          "label": "教会や地域ではこれらの日を守っているが、仕事には影響しない"
+        },
+        {
+          "id": "actual-day-off",
+          "emoji": "📅",
+          "label": "私が住んでいる地域では、少なくとも一日は本当の公式な休日になっている"
+        },
+        {
+          "id": "only-know-christmas-easter",
+          "emoji": "🎄",
+          "label": "知っているのはクリスマスと復活祭だけで、ほかの名前は聞いたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270322-christian-days-guess",
+      "date": "2027-03-22",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国の大統領令が、あるキリスト教の祝日の名称を、イスラム的な呼び方から正式にキリスト教的な呼び方へと改めたか。",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ合衆国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270323-easter-poll",
+      "date": "2027-03-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住んでいる場所では、復活祭前の金曜日(聖金曜日)は休みになりますか?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎉",
+          "label": "休みになる"
+        },
+        {
+          "id": "workday",
+          "emoji": "💼",
+          "label": "休みではなく、普通の勤務日"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤷",
+          "label": "地域や勤め先によって違う"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "❓",
+          "label": "特に気にしたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270323-easter-guess",
+      "date": "2027-03-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この四つの地域のうち、受難日・復活祭・昇天日・降誕祭という四つのキリスト教の日をすべて国の祝日としているのはどこか?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270324-christian-calendar-overlap-poll",
+      "date": "2027-03-24",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住んでいる地域の祝日表に、「たまたま宗教的な祝祭日と同じ日だが、休みになる理由は別のもの」という日はあるか。",
+      "options": [
+        {
+          "id": "know-reason",
+          "emoji": "🧐",
+          "label": "ある、そしてその理由も知っている"
+        },
+        {
+          "id": "suspect",
+          "emoji": "🤔",
+          "label": "あるが、理由を詳しく調べたことはない"
+        },
+        {
+          "id": "none",
+          "emoji": "🙅",
+          "label": "ない、シンプルな暦だ"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "💭",
+          "label": "考えたこともない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270324-christian-calendar-guess",
+      "date": "2027-03-24",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "十二月二十五日が休日になる理由がクリスマスと法的に無関係で、単なる日付の偶然にすぎない国はどこか。",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270325-easter-personal-meaning",
+      "date": "2027-03-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたにとって、復活祭の日で一番大事なことは何ですか?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🛌",
+          "label": "休みになるかどうか"
+        },
+        {
+          "id": "faith",
+          "emoji": "✝️",
+          "label": "宗教的な意味(受難と復活)"
+        },
+        {
+          "id": "traditions",
+          "emoji": "🥚",
+          "label": "季節の行事(卵、家族の食事)"
+        },
+        {
+          "id": "no-feeling",
+          "emoji": "🤷",
+          "label": "自分にとって特に何も感じない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270325-easter-holiday-guess",
+      "date": "2027-03-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうちどの国が、ムスリムが多数を占めるにもかかわらず、受難日・復活祭・昇天日・降誕祭という四つのキリスト教の祝日すべてを国の祝日としているか?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270326-christian-days-poll",
+      "date": "2027-03-26",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの暮らす土地で、復活祭の算定から生まれるこの一連の日──灰の水曜日、聖金曜日、昇天日、聖霊降臨祭、聖体の祝日──のうち、法定の休日表に入っているのはどれですか。",
+      "options": [
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "どれも入っていない"
+        },
+        {
+          "id": "good-friday-only",
+          "emoji": "✝️",
+          "label": "聖金曜日だけ"
+        },
+        {
+          "id": "extra-days",
+          "emoji": "📅",
+          "label": "聖金曜日だけでなく、もう一日か二日ある"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "特に気にしたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270326-christian-days-guess",
+      "date": "2027-03-26",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "上に挙げた国のうち、聖体の祝日（Corpus Christi）を連邦レベルでは単なる任意休業日として扱い、市議会が条例を作った土地でしか本物の法定休日にならない国はどこか。",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270327-easter-weekend-poll",
+      "date": "2027-03-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "復活祭の日、あなたは普段何をしますか?",
+      "options": [
+        {
+          "id": "church",
+          "emoji": "⛪",
+          "label": "教会の礼拝に行く"
+        },
+        {
+          "id": "eggs",
+          "emoji": "🥚",
+          "label": "卵探しや卵の色付け"
+        },
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "家族での食事"
+        },
+        {
+          "id": "normal-weekend",
+          "emoji": "📅",
+          "label": "いつもの週末と変わらない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270327-easter-holiday-guess",
+      "date": "2027-03-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "受難日・復活祭・昇天日・降誕祭、この四つすべてを国の祝日としているのはどの国か?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270328-childrens-day-poll",
+      "date": "2027-03-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの経験では、こどもの日の休みはどうでしたか?",
+      "options": [
+        {
+          "id": "family-off",
+          "emoji": "🏖️",
+          "label": "家族みんなで休みだった"
+        },
+        {
+          "id": "kids-only-off",
+          "emoji": "🧒",
+          "label": "子どもだけ休みで、大人は仕事だった"
+        },
+        {
+          "id": "school-event-no-off",
+          "emoji": "🏫",
+          "label": "休みではなく、学校で行事があった"
+        },
+        {
+          "id": "tied-to-other-holiday",
+          "emoji": "🎉",
+          "label": "他の祝日と重なっていた"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270328-childrens-day-guess",
+      "date": "2027-03-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国・地域のこどもの日が、法定の趣旨に「母への感謝」まで書き込んでいる?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270329-remembrance-style",
+      "date": "2027-03-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが育った家庭や文化では、祖先を偲ぶやり方は次のどれに近いですか?",
+      "options": [
+        {
+          "id": "fixed-day",
+          "emoji": "🗓️",
+          "label": "決まった一日(清明や死者の日のように)"
+        },
+        {
+          "id": "stretch-of-days",
+          "emoji": "🕯️",
+          "label": "何日か続く期間(お盆や十六日間の祖先の期間のように)"
+        },
+        {
+          "id": "community-decided",
+          "emoji": "🤝",
+          "label": "特定の日付ではなく、地域や個人が決める時期"
+        },
+        {
+          "id": "no-such-practice",
+          "emoji": "🤷",
+          "label": "そうした習慣や日はない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270329-guess-ancestor-country",
+      "date": "2027-03-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "祖先のための期間は一日ではなく、十六の月日が連なる。ある月の満月から始まり、別の月の新月で終わる——その新月には固有の名がある。この間、人々は亡き者へ水と食を供え、赦しを乞う。ある州の一つの都市には、まさにこのために毎年大勢が集まる。これはどの国の営みか?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270330-childrens-day-poll",
+      "date": "2027-03-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "こどもの日、あなたの家では誰が休みになりますか。",
+      "options": [
+        {
+          "id": "everyone-off",
+          "emoji": "🎏",
+          "label": "家族全員が休みになる"
+        },
+        {
+          "id": "kids-only",
+          "emoji": "🧒",
+          "label": "子どもだけが休みになる"
+        },
+        {
+          "id": "school-event",
+          "emoji": "🏫",
+          "label": "休みはなく、学校で行事が行われる"
+        },
+        {
+          "id": "no-tradition",
+          "emoji": "🤷",
+          "label": "うちにはこどもの日を祝う習慣がない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270330-childrens-day-guess",
+      "date": "2027-03-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国のこどもの日が、カトリックの守護聖人の国の祝日と同じ日にあたるでしょう。",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270331-ancestor-remembrance-poll",
+      "date": "2027-03-31",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの家庭や地域では、祖先を偲ぶことや墓参りは普段どのような形ですか。",
+      "options": [
+        {
+          "id": "fixed-date",
+          "emoji": "📅",
+          "label": "毎年決まった日があり、墓参りや供養を定期的に行う"
+        },
+        {
+          "id": "varies",
+          "emoji": "🔄",
+          "label": "そうした習慣はあるが、日程ややり方は年や家庭によって変わる"
+        },
+        {
+          "id": "place-no-day",
+          "emoji": "📍",
+          "label": "偲ぶための場所ややり方はあるが、決まった日はない"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "自分の家庭や地域には、そうした決まった習わしはない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270331-ancestor-remembrance-guess",
+      "date": "2027-03-31",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある土地の墓参りは、特定の日付ではなく「来月から断食が始まる」という事実に合わせて行われる。次第は決まっていて、まず墓を清め、次に皆で祈り、最後に皆で一つの食事を共にして締めくくる。これはどこの習わしか。",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270401-childrens-day-poll",
+      "date": "2027-04-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "六つの地域のこどもの日では「誰が休むか」が大きく違う——全員が休む所、子どもだけが休む所、誰も休まず学校行事だけで終わる所もある。あなたならどうしてほしい?",
+      "options": [
+        {
+          "id": "everyone-off",
+          "emoji": "🎉",
+          "label": "全員が一日休みになる"
+        },
+        {
+          "id": "kids-only-off",
+          "emoji": "🧒",
+          "label": "子どもだけ休みで、大人は仕事のまま"
+        },
+        {
+          "id": "school-event-no-holiday",
+          "emoji": "🏫",
+          "label": "休みにはせず、学校で行事を行う"
+        },
+        {
+          "id": "movable-by-decree",
+          "emoji": "📅",
+          "label": "日付を固定せず、政府が毎年改めて決める"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270401-childrens-day-guess",
+      "date": "2027-04-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この六つの地域のうち、こどもの日の法定の趣旨に「母に感謝する」と明記しているのはどこ?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270402-remembrance-practice",
+      "date": "2027-04-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたやご家族は、先祖や亡くなった人を偲ぶ日にふだんどう関わっていますか?",
+      "options": [
+        {
+          "id": "fixed-visit",
+          "emoji": "🧹",
+          "label": "毎年欠かさず墓参りやお参りをする"
+        },
+        {
+          "id": "family-led",
+          "emoji": "👴",
+          "label": "年長者の段取りに従うことが多く、自分から動くことは少ない"
+        },
+        {
+          "id": "personal-remember",
+          "emoji": "🕯️",
+          "label": "決まった儀式はないが、個人的に思い出す"
+        },
+        {
+          "id": "not-practice",
+          "emoji": "🚫",
+          "label": "我が家にはそうした習慣がない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270402-nyadran-country",
+      "date": "2027-04-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "追悼の伝統が、特定の日付ではなく「来月から断食が始まる」という事実に合わせられている国はどこか?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270403-childrens-day-poll-type",
+      "date": "2027-04-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたが実際に過ごしたこどもの日は、次のうちどれに近いですか？",
+      "options": [
+        {
+          "id": "day-off-everyone",
+          "emoji": "🏖️",
+          "label": "みんなが休みになる、仕事も学校もない一日"
+        },
+        {
+          "id": "kids-only-off",
+          "emoji": "🧒",
+          "label": "休むのは子どもだけ、大人はいつも通り仕事"
+        },
+        {
+          "id": "school-event-no-holiday",
+          "emoji": "🏫",
+          "label": "休みはないが、学校で発表会や催しがある"
+        },
+        {
+          "id": "shared-with-other-holiday",
+          "emoji": "🎊",
+          "label": "別の祝日や行事と同じ日に重なって過ごす"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270403-childrens-day-guess-mother",
+      "date": "2027-04-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国のこどもの日は、法定の趣旨に「母への感謝」まで書き込んでいる？",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270404-ancestor-practice-poll",
+      "date": "2027-04-04",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "先祖や亡くなった人を偲ぶ習慣が家にあるなら、どれに近いですか?",
+      "options": [
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "墓参りと墓の手入れ、花を供える"
+        },
+        {
+          "id": "communal-offering",
+          "emoji": "🙏",
+          "label": "祖先への供え物や焼香などの儀礼"
+        },
+        {
+          "id": "welcome-farewell-fire",
+          "emoji": "🔥",
+          "label": "火を焚いて祖先を迎え、また火を焚いて送る"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "決まった日はなく、各家庭がそれぞれ行う"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270404-nyadran-guess",
+      "date": "2027-04-04",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある墓参りの習わしは、決まった暦の日付ではなく「来月から断食が始まる」ことに合わせて行われる。手順は決まっていて、まず墓を清め、次に共に祈り、最後に皆で一つの食事を分け合って締めくくる。これはどこか?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270405-new-year-custom",
+      "date": "2027-04-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "自分の暮らしの中で、新年といえば次のどれに一番近い?",
+      "options": [
+        {
+          "id": "countdown-fireworks",
+          "emoji": "🎉",
+          "label": "前夜のカウントダウンと花火、パーティー"
+        },
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "大晦日の家族の団らんの食事"
+        },
+        {
+          "id": "shrine-visit",
+          "emoji": "⛩️",
+          "label": "初詣に出かけ、おせちを食べる"
+        },
+        {
+          "id": "beach-white",
+          "emoji": "🏖️",
+          "label": "白い服を着て海辺で花火を見る"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270405-new-year-no-jan1",
+      "date": "2027-04-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この七つの地域のうち、全国祝日一覧に一月一日がまったく存在しない国はどこ?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270406-holiday-off-poll",
+      "date": "2027-04-06",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "不正義の歴史を記念する日が、実際に休みになるかどうかは、あなたにとって重要ですか?",
+      "options": [
+        {
+          "id": "matters-a-lot",
+          "emoji": "✅",
+          "label": "重要 — 休みになって初めて国に認められたと言える"
+        },
+        {
+          "id": "activities-enough",
+          "emoji": "📚",
+          "label": "重要ではない — 記念行事と教育があれば十分"
+        },
+        {
+          "id": "depends-on-topic",
+          "emoji": "🤔",
+          "label": "テーマによる — すべての記念日が休みになるべきとは思わない"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "🤷",
+          "label": "特に考えたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270406-ambedkar-guess",
+      "date": "2027-04-06",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある国では、廃止をテーマに最も近い記念日が中央政府の年間祝日一覧にすら載っておらず、毎年別の通達が出て初めて休みになる。どの国か?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ合衆国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270407-new-year-poll",
+      "date": "2027-04-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなた自身の新年は、次のどれに近いですか?",
+      "options": [
+        {
+          "id": "reunion-eve",
+          "emoji": "🥟",
+          "label": "大晦日に家で団らんの食事をする"
+        },
+        {
+          "id": "countdown-fireworks",
+          "emoji": "🎆",
+          "label": "カウントダウンをして花火を見る"
+        },
+        {
+          "id": "beach-white",
+          "emoji": "🏖️",
+          "label": "白い服を着て浜辺で花火を見る"
+        },
+        {
+          "id": "no-holiday",
+          "emoji": "📅",
+          "label": "その日も普段通り仕事や学校がある"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270407-new-year-guess",
+      "date": "2027-04-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次の四つの国・地域のうち、全国祝日一覧に一月一日がまったく無いのはどこか?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270408-abolition-holiday-poll",
+      "date": "2027-04-08",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住む地域には、奴隷制度や身分制度の廃止を記念する祝日・記念日がありますか?",
+      "options": [
+        {
+          "id": "holiday-yes",
+          "emoji": "🎉",
+          "label": "ある、しかも休みになる"
+        },
+        {
+          "id": "commemorate-no-holiday",
+          "emoji": "📅",
+          "label": "ある、でも休みにはならない"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "そのような記念日はない"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "わからない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270408-abolition-holiday-guess",
+      "date": "2027-04-08",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "『全国黒人意識の日』が最初に学校暦に入り、三本の法律と二十年を経てようやく法定祝日になったのはどの国か?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ合衆国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270409-memorial-holiday",
+      "date": "2027-04-09",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "国が歴史的な傷を「記念日」に定めるなら、それは休日でもあってほしいと思いますか。",
+      "options": [
+        {
+          "id": "day-off-matters",
+          "emoji": "🏖️",
+          "label": "休みになってこそ本当に大事にされている証拠"
+        },
+        {
+          "id": "symbolism-enough",
+          "emoji": "📜",
+          "label": "法律に書かれているだけで十分、休みは要らない"
+        },
+        {
+          "id": "depends-who",
+          "emoji": "🤔",
+          "label": "誰が定め、誰のための日かによる"
+        },
+        {
+          "id": "no-strong-view",
+          "emoji": "🤷",
+          "label": "特に強い意見はない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270409-brazil-veto-rename",
+      "date": "2027-04-09",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "先住民の日の名称を変えた法律が、大統領の全部拒否を議会が覆して成立し、所管機関の名前まで変わった国はどこか。",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270410-commemorative-no-holiday",
+      "date": "2027-04-10",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの国や地域には、公式の記念日として定められているのに、休みにはならないと明記されている日がありますか。",
+      "options": [
+        {
+          "id": "yes-know",
+          "emoji": "🗓️",
+          "label": "ある、しかも何を記念する日か知っている"
+        },
+        {
+          "id": "yes-vague",
+          "emoji": "🤔",
+          "label": "あるが、詳しいことはよく知らない"
+        },
+        {
+          "id": "no",
+          "emoji": "🚫",
+          "label": "そのような記念日はない"
+        },
+        {
+          "id": "unsure",
+          "emoji": "❓",
+          "label": "わからない、考えたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270410-law-says-no-holiday",
+      "date": "2027-04-10",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "関連する記念日について、法律そのものが「休みにはしない」と明記しているのはどの国か。",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270411-holiday-or-not",
+      "date": "2027-04-11",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの国や地域には、先住民族や植民地の歴史を記念する日はありますか。その日は法定の休日ですか。",
+      "options": [
+        {
+          "id": "paid-holiday",
+          "emoji": "🎉",
+          "label": "ある、しかも休日になる"
+        },
+        {
+          "id": "no-holiday",
+          "emoji": "📅",
+          "label": "あるが、休みにはならない"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "そのような日はない"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "わからない/考えたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270411-guess-country",
+      "date": "2027-04-11",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある国は記念日の名称を変えたが、新法が成立したのは大統領の全部拒否を議会が覆したからだった。旧来の法令は同じ日に廃止され、新しい名称が法律に書き込まれたが、その日は今も祝日一覧には入っていない。どの国か。",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ合衆国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270412-abolition-holiday-poll",
+      "date": "2027-04-12",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの国や地域には、奴隷制など同様の抑圧制度の廃止を記念する祝日がありますか。",
+      "options": [
+        {
+          "id": "yes-holiday",
+          "emoji": "🎉",
+          "label": "ある、しかも休日になる"
+        },
+        {
+          "id": "yes-no-day-off",
+          "emoji": "📅",
+          "label": "ある、ただし休みにはならない"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "そのような日はない"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "❓",
+          "label": "わからない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270412-abolition-holiday-guess",
+      "date": "2027-04-12",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この種の祝日が二〇二一年、上院可決・下院可決・署名という三日間で連邦の祝日一覧に加えられ、戦没将兵追悼記念日のすぐ後ろに置かれた国はどこか。",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ合衆国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270413-holiday-priority",
+      "date": "2027-04-13",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "奴隷制や差別の終わりを記念する日にとって、最も大切なのはどれだと思いますか?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🏖️",
+          "label": "実際に仕事が休みになること"
+        },
+        {
+          "id": "law-text",
+          "emoji": "📜",
+          "label": "休みでなくても、法律や教材に書き込まれていること"
+        },
+        {
+          "id": "grassroots",
+          "emoji": "🤝",
+          "label": "政府の規定に頼らない、民間主導の追悼"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "考えたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270413-annual-reissue-holiday",
+      "date": "2027-04-13",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ある差別制度の廃止を記念する祝日が、中央政府の年間祝日一覧には載らず、毎年別に発行される通達によってのみ有効になる国はどこか?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ合衆国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270414-abolition-poll",
+      "date": "2027-04-14",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この話題に出てきた記念日の多くは、まず民間や地域に根づいてから、時間をかけて国の祝日になった。もしあなたの地元で新しく歴史的な記念日をつくるとしたら、どこから始めるのが理想だと思うか。",
+      "options": [
+        {
+          "id": "school-calendar",
+          "emoji": "📚",
+          "label": "まず学校の年間行事に入れる"
+        },
+        {
+          "id": "local-law",
+          "emoji": "🏛️",
+          "label": "まず地方(州・県・市)の祝日にする"
+        },
+        {
+          "id": "civil-society",
+          "emoji": "✊",
+          "label": "まず民間の記念活動から少しずつ広げる"
+        },
+        {
+          "id": "national-law",
+          "emoji": "📜",
+          "label": "最初から中央政府が法律で定める"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270414-abolition-guess",
+      "date": "2027-04-14",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "その日は、ある国の憲法起草委員会委員長の誕生日にあたり、憲法自体にも身分差別の一形態を廃止する条文がある。しかし中央政府はこの日を年間の公定祝日一覧に一度も載せたことがなく、官庁が休むかどうかは毎年新たに出し直される行政命令次第である。これはどの国か。",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ合衆国"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

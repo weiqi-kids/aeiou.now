@@ -10092,6 +10092,5946 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20270115-family-table",
+      "date": "2027-01-15",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "क्या आपके घर में साल में कोई ऐसा दिन होता है जब परिवार किसी तरह एक मेज़ पर इकट्ठा होने की कोशिश करता है?",
+      "options": [
+        {
+          "id": "always-gather",
+          "emoji": "🍽️",
+          "label": "हाँ, लगभग हर साल सब पहुँच जाते हैं"
+        },
+        {
+          "id": "sometimes-miss",
+          "emoji": "🧳",
+          "label": "हाँ, पर अक्सर कोई न कोई नहीं आ पाता"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "हमारे यहाँ ऐसा कोई तय दिन नहीं है"
+        },
+        {
+          "id": "video-call",
+          "emoji": "📱",
+          "label": "सब इकट्ठा नहीं हो पाते, वीडियो कॉल से काम चलाते हैं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270115-farmers-day-timing",
+      "date": "2027-01-15",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस जगह का किसान दिवस फ़सल आने के बाद नहीं, बल्कि वसंत के आरंभ में रखा गया है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "मुख्यभूमि चीन"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270116-exam-rhythm",
+      "date": "2027-01-16",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अपने या भविष्य के परीक्षा-मौसम के बारे में सोचें — कौन-सी लय आपके अनुभव से सबसे मिलती-जुलती है?",
+      "options": [
+        {
+          "id": "one-shot-sprint",
+          "emoji": "🎯",
+          "label": "एक-दो दिन में सब कुछ तय होने वाला दौर"
+        },
+        {
+          "id": "long-stretch",
+          "emoji": "🗓️",
+          "label": "हफ़्तों तक फैला दौर जिसमें किसी भी दिन परीक्षा हो सकती है"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🔁",
+          "label": "पहले एक राष्ट्रीय परीक्षा, फिर हर स्कूल का अपना दूसरा दौर"
+        },
+        {
+          "id": "no-single-exam",
+          "emoji": "📁",
+          "label": "कोई एक बड़ी परीक्षा नहीं, बल्कि समय के साथ रिकॉर्ड और आवेदन सामग्री से आंका जाना"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270116-guess-exam-country",
+      "date": "2027-01-16",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "एक जगह हाई स्कूल की समापन परीक्षा फ़रवरी के मध्य से अप्रैल की शुरुआत तक — लगभग दो महीने — चलती है, और किसी भी दिन बस एक या दो पर्चे होते हैं, एक-दो दिन में सिमटी नहीं होती। यह कहाँ है?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270117-recognize-history",
+      "date": "2027-01-17",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर यह आप पर निर्भर हो, तो किसी समाज द्वारा अपने अतीत के उत्पीड़न और मुक्ति को औपचारिक रूप से स्वीकार करने में सबसे पहले क्या होना चाहिए?",
+      "options": [
+        {
+          "id": "education-first",
+          "emoji": "📚",
+          "label": "पहले शिक्षा — पाठ्यक्रम में शामिल करना छुट्टी से ज़्यादा ज़रूरी है"
+        },
+        {
+          "id": "mark-no-holiday",
+          "emoji": "📅",
+          "label": "पहले इसे स्मृति-दिवस बनाएं, छुट्टी की जल्दी नहीं"
+        },
+        {
+          "id": "legal-holiday",
+          "emoji": "🎉",
+          "label": "इसे सीधे कानूनी सार्वजनिक अवकाश बना दें"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🤷",
+          "label": "कोई फ़र्क़ नहीं पड़ता, ऐसा दिन ज़रूरी नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270117-abolition-holiday-path",
+      "date": "2027-01-17",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में उन्मूलन से जुड़ा स्मृति-दिवस पहले स्कूली कैलेंडर में, फिर राष्ट्रीय स्मृति-दिवस के रूप में, और अंत में जाकर कानूनी अवकाश बना — यह पूरी प्रक्रिया बीस साल और तीन क़ानूनों तक चली?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "संयुक्त राज्य अमेरिका"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270118-exam-design-pref",
+      "date": "2027-01-18",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर यह आप पर निर्भर होता, तो आप अठारह वर्ष की उम्र में अपने मूल्यांकन के लिए किस तरह की परीक्षा चाहते?",
+      "options": [
+        {
+          "id": "one-shot",
+          "emoji": "🎯",
+          "label": "एक-दो दिनों में सिमटा हुआ, एक ही मौका"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "🗓️",
+          "label": "कई सप्ताहों या दो महीनों में विषयवार फैला हुआ"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🪜",
+          "label": "पहले एक राष्ट्रीय परीक्षा, फिर हर विश्वविद्यालय की अपनी चयन प्रक्रिया"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📚",
+          "label": "कोई राष्ट्रीय परीक्षा नहीं, वर्षों का विद्यालय अभिलेख और हर संस्थान की अपनी समीक्षा"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270118-guess-lockdown-exam",
+      "date": "2027-01-18",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "यह परीक्षा केवल दो दिनों तक सीमित है और विश्वविद्यालय प्रवेश का लगभग एकमात्र द्वार है; परीक्षा के दौरान केंद्रों के पास हॉर्न बजाना वर्जित होता है, निर्माण कार्य रुक जाता है, यातायात पुलिस समर्पित गलियाँ बनाती है, और कहीं-कहीं कार्यसमय भी बदल दिया जाता है। यह किस देश की व्यवस्था है?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270119-seasonal-turn-custom",
+      "date": "2027-01-19",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "विषुव या संक्रांति के दिन, आपके यहाँ आम तौर पर क्या होता है?",
+      "options": [
+        {
+          "id": "seasonal-food",
+          "emoji": "🍲",
+          "label": "मौसमी पकवान खाना (कद्दू, तांगयुआन, पकौड़े वगैरह)"
+        },
+        {
+          "id": "grave-visit",
+          "emoji": "🪦",
+          "label": "क़ब्रिस्तान जाना या पूर्वजों का स्मरण करना"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "🕑",
+          "label": "क़ानून के तहत घड़ियाँ आगे-पीछे करना (डेलाइट सेविंग जैसा)"
+        },
+        {
+          "id": "no-observance",
+          "emoji": "🤷",
+          "label": "कोई संबंधित अवकाश या रिवाज़ नहीं, आम दिन जैसा"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270119-seasonal-turn-drift",
+      "date": "2027-01-19",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश का पारंपरिक पर्व कभी सूर्य के उत्तर की ओर मुड़ने का प्रतीक था, पर अब असली संक्रांति से तीन हफ़्ते से भी अधिक पीछे खिसक चुका है?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270120-exam-format",
+      "date": "2027-01-20",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अपनी प्रवेश परीक्षा के अनुभव को याद करें — यह नीचे दिए गए किस रूप के सबसे करीब था?",
+      "options": [
+        {
+          "id": "compressed-1-2-days",
+          "emoji": "📅",
+          "label": "एक ही परीक्षा जिसने सब तय किया, एक-दो दिन में सिमटी हुई"
+        },
+        {
+          "id": "spread-weeks",
+          "emoji": "🗓️",
+          "label": "कई हफ्तों, यहां तक कि लगभग दो महीनों तक फैली हुई"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🎯",
+          "label": "दो चरण: पहले एक राष्ट्रीय परीक्षा, फिर हर स्कूल की अपनी परीक्षा"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📁",
+          "label": "कोई एकीकृत परीक्षा नहीं थी, बल्कि स्कूल के रिकॉर्ड और आवेदन दस्तावेज़ों पर निर्भर"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270120-exam-city-lockdown",
+      "date": "2027-01-20",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस जगह परीक्षा के दौरान शहर हॉर्न पर रोक, निर्माण कार्य ठप और यातायात की समर्पित गलियों जैसे उपाय करता है?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270121-equinox-habits",
+      "date": "2027-01-21",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "विषुव या संक्रांति जैसे दिन, जिनकी तारीख़ सूर्य की स्थिति से तय होकर आगे-पीछे खिसकती है, उस दिन आप आमतौर पर क्या करते हैं?",
+      "options": [
+        {
+          "id": "adjust-clock",
+          "emoji": "🕑",
+          "label": "घड़ी सेट करना (डेलाइट सेविंग जैसे नियम याद आते हैं)"
+        },
+        {
+          "id": "seasonal-food",
+          "emoji": "🍡",
+          "label": "मौसमी पकवान खाना (तांगयुआन, पकौड़े, कद्दू जैसा कुछ)"
+        },
+        {
+          "id": "check-almanac",
+          "emoji": "📅",
+          "label": "सही तारीख़ जानने के लिए वेधशाला या पंचांग की घोषणा देखना"
+        },
+        {
+          "id": "no-effect",
+          "emoji": "🤷",
+          "label": "कोई खास एहसास नहीं, आम दिन जैसा ही"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270121-equinox-guess-ohagi",
+      "date": "2027-01-21",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में एक ही लाल-सेम चावल की मिठाई को वसंत और शरद ऋतु में अलग-अलग नाम देकर पूर्वजों को चढ़ाया जाता है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270122-exam-rhythm",
+      "date": "2027-01-22",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर अठारह की उम्र में आप खुद तय कर पाते कि आपको कैसे आँका जाए, तो आप कौन-सी लय चुनते?",
+      "options": [
+        {
+          "id": "two-day-crunch",
+          "emoji": "🎯",
+          "label": "दो दिनों की सघन परीक्षा जो सब कुछ तय कर दे"
+        },
+        {
+          "id": "two-sundays",
+          "emoji": "📅",
+          "label": "एक सप्ताह के अंतर पर दो बार होने वाली परीक्षा"
+        },
+        {
+          "id": "two-month-spread",
+          "emoji": "🗓️",
+          "label": "विषय दर विषय, लगभग दो महीनों में फैली हुई"
+        },
+        {
+          "id": "no-single-exam",
+          "emoji": "📚",
+          "label": "कोई एक बड़ी परीक्षा नहीं — बरसों के विद्यालय अभिलेख और हर संस्थान के अपने निर्णय पर निर्भर"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270122-exam-guess-country",
+      "date": "2027-01-22",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "जिस जगह प्रवेश तय करने वाली परीक्षा एक दिन में नहीं बल्कि विषय दर विषय लगभग दो महीनों में फैली होती है, और लगभग हर दिन कोई न कोई पर्चा हो सकता है — वह कौन सी जगह है?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270123-season-custom",
+      "date": "2027-01-23",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "मौसम परिवर्तन से जुड़ी इनमें से कौन-सी रस्म आपने कभी निभाई है?",
+      "options": [
+        {
+          "id": "solstice-food",
+          "emoji": "🥟",
+          "label": "शीत संक्रांति पर तांगयुआन या पकौड़े खाए"
+        },
+        {
+          "id": "mamemaki",
+          "emoji": "🫘",
+          "label": "सेत्सुबुन पर \"राक्षस बाहर, सौभाग्य भीतर\" कहकर सेम फेंकी"
+        },
+        {
+          "id": "ohigan-grave",
+          "emoji": "🙏",
+          "label": "विषुव के आसपास हिगन में क़ब्रिस्तान जाकर बोतामोची/ओहागी चढ़ाई"
+        },
+        {
+          "id": "dst-clock",
+          "emoji": "🕐",
+          "label": "डेलाइट सेविंग टाइम के लिए घड़ी बदली"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270123-qingming-country",
+      "date": "2027-01-23",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "एक देश में सौर पद से तय होने वाला इकलौता सार्वजनिक अवकाश क़ानून में 'चिंगमिंग के दिन' के रूप में लिखा है, जबकि चिंगमिंग असल में सूर्य के 15 अंश देशांतर का पद है, चंद्र तिथि नहीं; असल में कौन-से दिन छुट्टी होगी यह हर साल अलग अधिसूचना से तय होता है। यह कौन-सा देश है?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270124-harvest-what-matters",
+      "date": "2027-01-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर आपको अपने लिए एक 'फ़सल दिवस' गढ़ना हो, तो आपके लिए सबसे ज़्यादा मायने क्या रखेगा?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "पूरे परिवार का एक साथ मेज़ पर बैठना"
+        },
+        {
+          "id": "ritual-food",
+          "emoji": "🍚",
+          "label": "कोई एक सार्थक पकवान साथ मिलकर बनाना"
+        },
+        {
+          "id": "thank-labor",
+          "emoji": "🙏",
+          "label": "इस दिन एक-दूसरे के श्रम के प्रति आभार जताना"
+        },
+        {
+          "id": "community-festival",
+          "emoji": "🔥",
+          "label": "पूरे मोहल्ले का साथ मिलकर अलाव और उत्सव मनाना"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270124-harvest-policy-festival",
+      "date": "2027-01-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "यह फ़सल पर्व 2018 में राज्य परिषद की स्वीकृति से ही बना, विशेष रूप से किसानों के लिए, और हर साल चंद्र पंचांग के शरद विषुव पर तय होता है — फिर भी यह सबके लिए छुट्टी नहीं है, इसकी थीम हर साल कृषि व ग्रामीण मामलों का मंत्रालय तय करता है, और मनाने का ढंग हर प्रांत में अलग है। यह कहाँ का पर्व है?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "मुख्यभूमि चीन"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270125-seasonal-customs",
+      "date": "2027-01-25",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ये तारीख़ें सूर्य के किसी बिंदु पर पहुँचने से तय होती हैं, और हर एक के साथ अपनी रीति जुड़ी है। इनमें से कौन-सी आपने या आपके परिवार ने वाक़ई की है?",
+      "options": [
+        {
+          "id": "tangyuan-dumplings",
+          "emoji": "🥟",
+          "label": "शीत संक्रांति पर तांगयुआन या पकौड़े खाना"
+        },
+        {
+          "id": "pumpkin-yuzu-bath",
+          "emoji": "🎃",
+          "label": "शीत संक्रांति पर कद्दू खाना और युज़ु स्नान करना"
+        },
+        {
+          "id": "kite-flying",
+          "emoji": "🪁",
+          "label": "मकर संक्रांति पर पतंग उड़ाना"
+        },
+        {
+          "id": "bean-throwing",
+          "emoji": "🫘",
+          "label": "सेत्सुबुन पर सेम फेंककर \"राक्षस बाहर, सौभाग्य भीतर\" कहना"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270125-equinox-law-country",
+      "date": "2027-01-25",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में वसंत और शरद विषुव के अवकाशों की तारीख़ क़ानून में महीना-दिन लिखकर नहीं, बल्कि केवल \"विषुव का दिन\" लिखकर दी जाती है, और असल तारीख़ राष्ट्रीय वेधशाला तय करती है, जो अगले वर्ष के लिए पिछले फ़रवरी के राजपत्र में ही पक्की होती है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270126-harvest-focus",
+      "date": "2027-01-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर आपके घर में फ़सल या आभार से जुड़ा कोई दिन मनाया जाता है, तो उसका केंद्र आमतौर पर क्या होता है?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "पूरे परिवार का साथ मिलकर भोजन करना"
+        },
+        {
+          "id": "dish-is-ritual",
+          "emoji": "🍚",
+          "label": "कोई ख़ास पकवान, जिसे बनाना ही रस्म है"
+        },
+        {
+          "id": "give-thanks-to",
+          "emoji": "🙏",
+          "label": "किसी ठोस चीज़ के प्रति आभार — देवता, श्रम या हल खींचने वाले बैल"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🚫",
+          "label": "हम ऐसा कोई दिन ख़ास तौर पर नहीं मनाते"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270126-policy-harvest",
+      "date": "2027-01-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन चार जगहों में से किसका फ़सल पर्व 2018 में ही सरकार द्वारा नया बनाया गया, और जो सबके लिए छुट्टी का दिन नहीं है?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "मुख्यभूमि चीन"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270127-seasonal-turn-habit",
+      "date": "2027-01-27",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप जहाँ रहते हैं, वहाँ विषुव या संक्रांति के आसपास आप आमतौर पर क्या करते हैं?",
+      "options": [
+        {
+          "id": "ancestors",
+          "emoji": "🙏",
+          "label": "पूर्वजों की समाधि पर जाना"
+        },
+        {
+          "id": "food",
+          "emoji": "🥟",
+          "label": "मौसमी भोजन खाना (कद्दू आदि)"
+        },
+        {
+          "id": "clocks",
+          "emoji": "🕑",
+          "label": "घड़ियाँ बदलना (डेलाइट सेविंग)"
+        },
+        {
+          "id": "nothing",
+          "emoji": "🤷",
+          "label": "कुछ खास नहीं करते"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270127-solar-term-holiday-country",
+      "date": "2027-01-27",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इस देश के अवकाश नियमों में, सात सार्वजनिक अवकाशों में से केवल एक की तारीख़ सौर पद से तय होती है, और शीत संक्रांति पर बिलकुल छुट्टी नहीं मिलती। कौन-सा देश?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270128-harvest-day-form",
+      "date": "2027-01-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर आपके घर में फ़सल या श्रम-आभार का कोई दिन मनाया जाता है, तो वह इनमें से किससे सबसे मिलता-जुलता है?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "पारिवारिक भोज"
+        },
+        {
+          "id": "labor-thanks",
+          "emoji": "🙏",
+          "label": "मेहनत के लिए आभार"
+        },
+        {
+          "id": "community-ritual",
+          "emoji": "🕯️",
+          "label": "सामुदायिक या धार्मिक अनुष्ठान"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "ऐसा कोई दिन नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270128-farmers-day-before-harvest",
+      "date": "2027-01-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस जगह का 'किसान दिवस' फ़सल के बाद नहीं बल्कि वसंत के आरंभ यानी काम शुरू होने से पहले पड़ता है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "मुख्यभूमि चीन"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270129-seasonal-custom-experience",
+      "date": "2027-01-29",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "विषुव या संक्रांति से जुड़ी इन रस्मों में से आपने ख़ुद कौन-सी निभाई है?",
+      "options": [
+        {
+          "id": "mamemaki",
+          "emoji": "🫘",
+          "label": "सेत्सुबुन में सेम फेंकना"
+        },
+        {
+          "id": "tangyuan",
+          "emoji": "🍡",
+          "label": "शीत संक्रांति पर तांगयुआन खाना"
+        },
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "ओहिगन में क़ब्रिस्तान जाना"
+        },
+        {
+          "id": "kite-flying",
+          "emoji": "🪁",
+          "label": "मकर संक्रांति पर पतंग उड़ाना"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270129-equinox-dst-country",
+      "date": "2027-01-29",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "कौन-सा देश विषुव या संक्रांति पर कभी छुट्टी नहीं देता, फिर भी क़ानून से साल में दो बार घड़ियाँ सरकाता है, और तारीख़ को \"मार्च का दूसरा रविवार\" जैसे शब्दों में क़ानून में ही लिख देता है?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270130-harvest-habit",
+      "date": "2027-01-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके यहाँ अगर कोई दिन फ़सल या मेहनत के प्रति आभार के लिए तय है, तो आप आमतौर पर उसे कैसे मनाते हैं?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "पूरा परिवार मेज़ पर इकट्ठा होकर खाना खाता है"
+        },
+        {
+          "id": "special-dish",
+          "emoji": "🍚",
+          "label": "फ़सल से जुड़ा कोई ख़ास पकवान बनाते हैं"
+        },
+        {
+          "id": "community-gathering",
+          "emoji": "🔥",
+          "label": "पड़ोसियों या समुदाय के साथ मिलकर कोई आयोजन करते हैं"
+        },
+        {
+          "id": "no-special-day",
+          "emoji": "📅",
+          "label": "ऐसा कोई दिन नहीं है, सब कुछ सामान्य रहता है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270130-farmers-day-timing",
+      "date": "2027-01-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "यहाँ बताई गई जगहों में से एक का 'किसान दिवस' फ़सल कटने के बाद नहीं, बल्कि वसंत की खेती शुरू होने से पहले रखा गया है। कौन-सा?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "मुख्यभूमि चीन"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270131-seasonal-custom",
+      "date": "2027-01-31",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "मौसम के बदलाव से जुड़ी इन रस्मों में से कौन-सी आपने या आपके परिवार ने सचमुच निभाई है?",
+      "options": [
+        {
+          "id": "mamemaki",
+          "emoji": "🫘",
+          "label": "सेत्सुबुन में भुनी सोयाबीन फेंकी और राक्षस बाहर, सौभाग्य भीतर पुकारा"
+        },
+        {
+          "id": "ohigan-visit",
+          "emoji": "🪦",
+          "label": "हिगन के दौरान क़ब्रिस्तान गए और बोतामोची या ओहागी चढ़ाई"
+        },
+        {
+          "id": "tangyuan",
+          "emoji": "🍡",
+          "label": "शीत संक्रांति पर तांगयुआन या कद्दू जैसा मौसमी भोजन खाया"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "🕑",
+          "label": "डेलाइट सेविंग के लिए घड़ी आगे या पीछे की"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270131-no-shadow-day",
+      "date": "2027-01-31",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश की मौसम, जलवायु एवं भूभौतिकी एजेंसी हर साल शहर दर शहर वह दिन बताती है जब दोपहर में खड़ी वस्तु की छाया ग़ायब हो जाती है?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270201-harvest-poll",
+      "date": "2027-02-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके लिए 'फ़सल के लिए आभार' किस तस्वीर के सबसे क़रीब है?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "पूरे परिवार का साथ बैठकर खाना"
+        },
+        {
+          "id": "the-dish-itself",
+          "emoji": "🍲",
+          "label": "वह पकवान जिसे बनाना ही रस्म है"
+        },
+        {
+          "id": "month-of-festivity",
+          "emoji": "🎉",
+          "label": "पूरे एक महीने अलाव और उत्सव का माहौल"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🌾",
+          "label": "कोई तय दिन नहीं, आभार याद रखना अपने ज़िम्मे है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270201-farmers-day-guess",
+      "date": "2027-02-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इनमें से किस जगह का 'किसान दिवस' फ़सल कटने के बाद नहीं बल्कि वसंत में खेती शुरू होने से पहले पड़ता है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "मुख्यभूमि चीन"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270202-seasonal-custom-poll",
+      "date": "2027-02-02",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "सूर्य की गति से बंधी इन रीतियों में से कौन-सी आपने या आपके परिवार ने कभी निभाई है?",
+      "options": [
+        {
+          "id": "grave-sweeping",
+          "emoji": "🧹",
+          "label": "हिगन में क़ब्रिस्तान जाना और बोतामोची या ओहागी चढ़ाना"
+        },
+        {
+          "id": "winter-solstice-food",
+          "emoji": "🥣",
+          "label": "शीत संक्रांति पर तांगयुआन या पकौड़े खाना, युज़ु स्नान करना"
+        },
+        {
+          "id": "bean-throwing",
+          "emoji": "🫘",
+          "label": "सेत्सुबुन पर \"राक्षस बाहर, सौभाग्य भीतर\" कहकर सेम फेंकना"
+        },
+        {
+          "id": "none-of-these",
+          "emoji": "🤷",
+          "label": "इनमें से कोई नहीं — मेरे देश में सूर्य-आधारित ऐसी कोई रीति नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270202-solar-term-holiday-guess",
+      "date": "2027-02-02",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इनमें से किस देश के क़ानूनी अवकाशों में केवल एक पर्व की तारीख़ सौर पद से तय होती है, और असल में कितने दिन छुट्टी होगी यह हर साल अलग से सरकार घोषित करती है?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270203-harvest-timing",
+      "date": "2027-02-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर 'फ़सल के लिए धन्यवाद' का दिन तय करना हो, तो आपको कौन-सा समय सबसे उचित लगता है?",
+      "options": [
+        {
+          "id": "after-harvest",
+          "emoji": "🌾",
+          "label": "फ़सल आ जाने के बाद, थैंक्सगिविंग की तरह"
+        },
+        {
+          "id": "before-planting",
+          "emoji": "🌱",
+          "label": "काम शुरू होने से पहले, लिचुन के दिन की तरह"
+        },
+        {
+          "id": "religious-calendar",
+          "emoji": "🕯️",
+          "label": "धार्मिक पंचांग के साथ, जून के संतों के दिनों की तरह"
+        },
+        {
+          "id": "family-gathering",
+          "emoji": "🍽️",
+          "label": "तारीख़ से ज़्यादा मायने रखता है सबका एक साथ मेज़ पर होना"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270203-guess-farmers-festival",
+      "date": "2027-02-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इनमें से किस जगह का फ़सल पर्व 2018 में राज्य परिषद की स्वीकृति से बना और शरद विषुव पर तय हुआ, न कि लोक-रिवाज से धीरे-धीरे विकसित हुआ?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "मुख्यभूमि चीन"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270204-holiday-experience",
+      "date": "2027-02-04",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "लंबी छुट्टियों को लेकर आपका अपना अनुभव किससे मिलता-जुलता है?",
+      "options": [
+        {
+          "id": "makeup-workday",
+          "emoji": "🧾",
+          "label": "लंबी छुट्टी के लिए कभी शनिवार-रविवार को काम करके भरपाई की है"
+        },
+        {
+          "id": "deducted-leave",
+          "emoji": "🏖️",
+          "label": "सामूहिक अवकाश जैसी व्यवस्था में मेरी अपनी सालाना छुट्टी कट चुकी है"
+        },
+        {
+          "id": "sunday-bump",
+          "emoji": "📅",
+          "label": "कभी छुट्टी रविवार को पड़ने से एक अतिरिक्त दिन मिल गया"
+        },
+        {
+          "id": "no-particular-feel",
+          "emoji": "🤷",
+          "label": "कभी ध्यान नहीं दिया, छुट्टियाँ कैसे तय होती हैं इस पर शायद ही सोचा हो"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270204-bridge-holiday-country",
+      "date": "2027-02-04",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "एक जगह लंबी छुट्टियाँ हर साल दोबारा जारी होने वाले एक मंत्रालयी आदेश पर टिकी हैं, जो बेनाम दिनों को असली छुट्टियों से जोड़ देता है — स्थानीय लोग इसे \"छुट्टी को लटकाना\" कहते हैं। यह आदेश केवल संघीय दफ़्तरों पर लागू होता है, निजी कंपनियों पर नहीं। यह जगह कौन-सी है?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270205-new-year-habit",
+      "date": "2027-02-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "नए साल की पूर्वसंध्या या नए साल के दिन आप आमतौर पर क्या करते हैं？",
+      "options": [
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "नए साल की पूर्वसंध्या पर परिवार के साथ भोज"
+        },
+        {
+          "id": "shrine-visit",
+          "emoji": "⛩️",
+          "label": "मंदिर या तीर्थस्थल की पहली यात्रा पर जाना"
+        },
+        {
+          "id": "beach-fireworks",
+          "emoji": "🎆",
+          "label": "समुद्र तट पर आतिशबाज़ी देखना और लहरें फलाँगना"
+        },
+        {
+          "id": "countdown-party",
+          "emoji": "🥳",
+          "label": "उलटी गिनती की पार्टी करना, फिर अगले दिन आराम और खेल देखना"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270205-no-jan-first",
+      "date": "2027-02-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इस देश की राष्ट्रीय अवकाश सूची में 1 जनवरी बिल्कुल नहीं है — यहाँ नया साल मार्च या अप्रैल में आता है, और हर राज्य में नाम अलग है। कौन सा देश?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270206-carnival-parade-experience",
+      "date": "2027-02-06",
+      "kind": "poll",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "क्या आपने कभी कार्निवल जैसी परेड में हिस्सा लिया है?",
+      "options": [
+        {
+          "id": "marched",
+          "emoji": "💃",
+          "label": "हाँ, वेशभूषा या मेकअप के साथ"
+        },
+        {
+          "id": "watched",
+          "emoji": "👀",
+          "label": "मौके पर देखा, हिस्सा नहीं लिया"
+        },
+        {
+          "id": "online",
+          "emoji": "📱",
+          "label": "सिर्फ़ ऑनलाइन या टीवी पर देखा"
+        },
+        {
+          "id": "never",
+          "emoji": "🤷",
+          "label": "ऐसी किसी चीज़ से कभी सामना नहीं हुआ"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270206-carnival-samba-country",
+      "date": "2027-02-06",
+      "kind": "guess",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "यह उत्तरी गोलार्ध के सबसे बड़े साम्बा कार्निवलों में से एक है, जो हर साल अगस्त के आख़िरी शनिवार को होता है और लेंट से इसका कोई संबंध नहीं। 2026 में यह इकतालीसवाँ आयोजन होगा। यह किस देश में होता है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270207-affection-habit",
+      "date": "2027-02-07",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "14 फ़रवरी को आप या आपके आस-पास के लोग सबसे ज़्यादा क्या करते हैं?",
+      "options": [
+        {
+          "id": "give-chocolate",
+          "emoji": "🍫",
+          "label": "चॉकलेट देना"
+        },
+        {
+          "id": "send-card-flowers",
+          "emoji": "💐",
+          "label": "कार्ड या फूल देना"
+        },
+        {
+          "id": "dine-out",
+          "emoji": "🍽️",
+          "label": "बाहर खाना खाना"
+        },
+        {
+          "id": "no-celebrate",
+          "emoji": "🙅",
+          "label": "ख़ास कुछ न करना"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270207-guess-brazil-date",
+      "date": "2027-02-07",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इनमें से किस जगह का प्रेमी दिवस 14 फ़रवरी नहीं, 12 जून को पड़ता है?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270208-carnival-status",
+      "date": "2027-02-08",
+      "kind": "poll",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप जहाँ रहते हैं, वहाँ 'कार्निवल' या उससे मिलती-जुलती परेड की असल हैसियत क्या है?",
+      "options": [
+        {
+          "id": "legal-holiday",
+          "emoji": "📅",
+          "label": "क़ानून में दर्ज पक्का अवकाश"
+        },
+        {
+          "id": "discretionary-holiday",
+          "emoji": "🗓️",
+          "label": "वह छुट्टी जिसे हर दफ़्तर या नियोक्ता ख़ुद तय करता है"
+        },
+        {
+          "id": "tourism-event",
+          "emoji": "🎪",
+          "label": "पर्यटन विभाग द्वारा आयोजित उत्सव, अवकाश नहीं"
+        },
+        {
+          "id": "borrowed-name",
+          "emoji": "🏷️",
+          "label": "सिर्फ़ \"कार्निवल\" शब्द उधार लिया हुआ मेला या पर्यटन आयोजन"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270208-carnival-country",
+      "date": "2027-02-08",
+      "kind": "guess",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश का कार्निवल क़ानूनन सार्वजनिक अवकाश नहीं है, बल्कि हर साल सरकार द्वारा दोबारा जारी किए जाने वाले आदेश पर निर्भर एक विवेकाधीन छुट्टी है?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270209-easter-days-off",
+      "date": "2027-02-09",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "क्रिसमस के अलावा, आपके देश में ईस्टर के आसपास (ऐश वेडनेसडे, गुड फ़्राइडे, ईस्टर, स्वर्गारोहण) कितने दिन की छुट्टी मिलती है?",
+      "options": [
+        {
+          "id": "zero",
+          "emoji": "🚫",
+          "label": "एक भी नहीं"
+        },
+        {
+          "id": "one-day",
+          "emoji": "1️⃣",
+          "label": "सिर्फ़ एक दिन (आमतौर पर गुड फ़्राइडे)"
+        },
+        {
+          "id": "several-days",
+          "emoji": "📅",
+          "label": "कई दिन मिलते हैं"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "पता नहीं, कभी ध्यान नहीं दिया"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270209-guess-easter-country",
+      "date": "2027-02-09",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "कौन-सा देश गुड फ़्राइडे और स्वर्गारोहण दोनों को वैधानिक राष्ट्रीय अवकाश बनाता है, और स्वर्गारोहण के ठीक अगले दिन एक राष्ट्रव्यापी सामूहिक छुट्टी भी जोड़ता है?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270210-national-day-poll",
+      "date": "2027-02-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर आप ऊपर बताए गए किसी भी राष्ट्रीय दिवस समारोह में खुद शामिल हो सकें, तो कौन सा चुनेंगे?",
+      "options": [
+        {
+          "id": "street-games",
+          "emoji": "🎪",
+          "label": "इंडोनेशिया के मोहल्ले की lomba 17-an गली-प्रतियोगिताएँ"
+        },
+        {
+          "id": "day-night-taiwan",
+          "emoji": "🎆",
+          "label": "ताइवान का राष्ट्रीय दिवस, सुबह ध्वजारोहण और शाम को आतिशबाज़ी"
+        },
+        {
+          "id": "red-fort-india",
+          "emoji": "🚩",
+          "label": "भारत का स्वतंत्रता दिवस, प्रधानमंत्री का लाल क़िले पर ध्वजारोहण"
+        },
+        {
+          "id": "parade-bbq-us",
+          "emoji": "🍖",
+          "label": "अमेरिका का स्वतंत्रता दिवस, आतिशबाज़ी, परेड और बारबेक्यू के साथ"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270210-national-day-guess",
+      "date": "2027-02-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "सात राष्ट्रीय दिवसों में से एक तिथि-अंकित ऐतिहासिक घटना को नहीं, बल्कि एक पौराणिक राज्याभिषेक को स्मरण करता है। वह कौन-सा देश है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "मुख्यभूमि चीन"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270211-womens-day-half-day",
+      "date": "2027-02-11",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर आपके यहाँ भी 8 मार्च को चीन की तरह आधे दिन का अवकाश मिले, तो आप उसे कैसे बिताएँगी/बिताएँगे?",
+      "options": [
+        {
+          "id": "rest-alone",
+          "emoji": "🛌",
+          "label": "खुद के लिए आराम करूँगी/करूँगा"
+        },
+        {
+          "id": "family-time",
+          "emoji": "👪",
+          "label": "परिवार या दोस्तों के साथ बिताऊँगी/बिताऊँगा"
+        },
+        {
+          "id": "still-work",
+          "emoji": "💼",
+          "label": "हमेशा की तरह काम करूँगी/करूँगा"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🤷",
+          "label": "ऐसी छुट्टी की ज़रूरत नहीं, जैसा है वैसा ठीक है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270211-womens-day-brazil-date",
+      "date": "2027-02-11",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन सातों जगहों में से किसका राष्ट्रीय महिला दिवस 2025 तक 30 अप्रैल को था, जिसे उस वर्ष के नए क़ानून ने 8 मार्च पर स्थानांतरित किया?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270212-valentine-format",
+      "date": "2027-02-12",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप जहाँ रहते हैं या जहाँ पले-बढ़े, वहाँ वैलेंटाइन डे आमतौर पर कैसे मनाया जाता है?",
+      "options": [
+        {
+          "id": "single-day",
+          "emoji": "💌",
+          "label": "एकतरफ़ा उपहार, बस एक दिन"
+        },
+        {
+          "id": "reciprocal",
+          "emoji": "🔁",
+          "label": "आना-जाना, एक महीने बाद जवाबी उपहार"
+        },
+        {
+          "id": "week-long",
+          "emoji": "📅",
+          "label": "पूरे एक सप्ताह में फैला हुआ"
+        },
+        {
+          "id": "dual-dates",
+          "emoji": "🗓️",
+          "label": "एक साथ दो अलग-अलग तारीख़ें"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270212-guess-discourage-country",
+      "date": "2027-02-12",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन सात जगहों में से किस जगह के स्थानीय शिक्षा कार्यालय हर वर्ष वैलेंटाइन डे के आसपास परिपत्र जारी करके स्कूलों से विद्यार्थियों को उसे मनाने से रोकने को कहते हैं?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270213-womens-day-poll",
+      "date": "2027-02-13",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप जहाँ रहते हैं, वहाँ 8 मार्च आम तौर पर कैसा होता है?",
+      "options": [
+        {
+          "id": "half-day-off",
+          "emoji": "🕐",
+          "label": "छुट्टी होती है (आधे दिन भी)"
+        },
+        {
+          "id": "events-no-holiday",
+          "emoji": "🎤",
+          "label": "व्याख्यान, सम्मान या बिक्री होती है, पर छुट्टी नहीं"
+        },
+        {
+          "id": "whole-month",
+          "emoji": "📅",
+          "label": "ज़ोर पूरे महीने की गतिविधियों पर होता है, किसी एक दिन पर नहीं"
+        },
+        {
+          "id": "no-observance",
+          "emoji": "🤷",
+          "label": "लगभग महसूस ही नहीं होता, आम दिन जैसा ही रहता है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270213-womens-day-guess",
+      "date": "2027-02-13",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इनमें से किस जगह का राष्ट्रीय महिला दिवस 2025 के नए क़ानून से ही 30 अप्रैल से 8 मार्च पर स्थानांतरित हुआ?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270214-reciprocity-habit",
+      "date": "2027-02-14",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर आपको वैलेंटाइन जैसे दिन उपहार मिले, तो आप आमतौर पर कैसे जवाब देते हैं?",
+      "options": [
+        {
+          "id": "always-reciprocate",
+          "emoji": "🎁",
+          "label": "मैं हमेशा जल्द ही जवाबी उपहार देता/देती हूँ"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤔",
+          "label": "यह इस पर निर्भर करता है कि रिश्ता कितना क़रीबी है"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🙅",
+          "label": "मुझे नहीं लगता कि जवाबी उपहार ज़रूरी है"
+        },
+        {
+          "id": "no-concept",
+          "emoji": "❓",
+          "label": "मेरी जगह पर 'जवाबी उपहार' जैसा कोई रिवाज़ ही नहीं है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270214-guess-discourage-country",
+      "date": "2027-02-14",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इस पृष्ठ पर बताई गई सात जगहों में से, किस जगह में वैलेंटाइन डे के आसपास सरकारी काग़ज़ात स्कूलों से विद्यार्थियों को इसे मनाने से रोकने के लिए कहते हैं?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270215-holiday-namesake-poll",
+      "date": "2027-02-15",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप जहाँ रहते हैं, क्या वहाँ किसी व्यक्ति के नाम पर कोई ऐसा दिन है जो असल में छुट्टी नहीं होता?",
+      "options": [
+        {
+          "id": "yes-know-who",
+          "emoji": "🧠",
+          "label": "हाँ, और मुझे पता है कि किसकी याद में"
+        },
+        {
+          "id": "yes-dont-know",
+          "emoji": "🤷",
+          "label": "हाँ, पर पता नहीं किसकी याद में"
+        },
+        {
+          "id": "no-all-holidays",
+          "emoji": "📅",
+          "label": "नहीं, हमारे यहाँ हर ऐसा दिन छुट्टी ही होता है"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "💭",
+          "label": "कभी ध्यान नहीं दिया"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270215-founder-two-dates",
+      "date": "2027-02-15",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "एक देश के कानून में राष्ट्रपिता के लिए जन्मदिन और पुण्यतिथि, दोनों अलग-अलग दिन तय हैं, पर दोनों में छुट्टी नहीं। वहाँ किसी व्यक्ति के नाम पर जो एकमात्र दिन सचमुच छुट्टी होता है, वह ढाई हज़ार साल पुराने एक दार्शनिक की याद में है। यह कौन सा देश है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270216-exam-format-preference",
+      "date": "2027-02-16",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर यह परीक्षा आपको खुद देनी हो, तो आप किस समय-निर्धारण को पसंद करेंगे?",
+      "options": [
+        {
+          "id": "single-day",
+          "emoji": "⏱️",
+          "label": "एक-दो दिन में सिमटा हुआ फैसला"
+        },
+        {
+          "id": "two-sundays",
+          "emoji": "📅",
+          "label": "एक सप्ताह के अंतर वाले दो रविवारों में बँटा"
+        },
+        {
+          "id": "two-months",
+          "emoji": "📆",
+          "label": "लगभग दो महीनों तक विषयवार फैला हुआ"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📄",
+          "label": "कोई राष्ट्रीय परीक्षा नहीं, स्कूल रिकॉर्ड और आवेदन पर निर्भर"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270216-guess-two-month-exam",
+      "date": "2027-02-16",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन चार में से किसकी हाई स्कूल परीक्षा एक-दो दिन में सिमटने के बजाय विषयवार लगभग दो महीनों तक फैली रहती है?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270217-lantern-experience",
+      "date": "2027-02-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "लालटेन पर्व के दिन आप आमतौर पर क्या करते हैं?",
+      "options": [
+        {
+          "id": "tangyuan-lanterns",
+          "emoji": "🍡",
+          "label": "तांगयुआन खाना और लालटेन प्रदर्शनी देखना"
+        },
+        {
+          "id": "sky-lantern",
+          "emoji": "🏮",
+          "label": "मनोकामना लिखकर आकाश-दीप छोड़ना"
+        },
+        {
+          "id": "beehive-fireworks",
+          "emoji": "🎆",
+          "label": "मधुमक्खी पटाखों के बीच खड़े होना"
+        },
+        {
+          "id": "work-as-usual",
+          "emoji": "💼",
+          "label": "छुट्टी नहीं है, सामान्य रूप से काम/पढ़ाई"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270217-tatung-guess",
+      "date": "2027-02-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "उसी पंद्रहवीं रात, किसी जगह के जुलूस का केंद्र लालटेन नहीं बल्कि वे लोग हैं जिन्हें पूर्वजों की आत्मा से ग्रस्त माना जाता है, जिन्हें गलियों में उठाकर घुमाया जाता है और धारदार हथियारों से बींधने पर भी खून नहीं बहता। यह कहाँ है?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "मुख्यभूमि चीन"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270218-womens-day-poll",
+      "date": "2027-02-18",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "जहाँ आप रहते हैं, वहाँ 8 मार्च आम तौर पर कैसा होता है?",
+      "options": [
+        {
+          "id": "usual-day",
+          "emoji": "🗓️",
+          "label": "बाकी दिनों जैसा ही काम या पढ़ाई वाला दिन, कुछ खास नहीं"
+        },
+        {
+          "id": "org-event",
+          "emoji": "🎤",
+          "label": "दफ़्तर या स्कूल में भाषण या सम्मान समारोह होता है"
+        },
+        {
+          "id": "shopping-promo",
+          "emoji": "🛍️",
+          "label": "सबसे ज़्यादा ध्यान दुकानों की सेल पर जाता है"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "सच कहूँ तो मुझे अक्सर पता ही नहीं होता कि यह दिन क्या है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270218-womens-day-guess",
+      "date": "2027-02-18",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "यहाँ तुलना किए गए सातों स्थानों में से किसने 2025 के नए क़ानून से अपने राष्ट्रीय महिला दिवस को 30 अप्रैल से 8 मार्च पर स्थानांतरित किया?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270219-lantern-poll",
+      "date": "2027-02-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "लालटेन पर्व पर आप आमतौर पर क्या करते हैं?",
+      "options": [
+        {
+          "id": "tangyuan-lanterns",
+          "emoji": "🥣",
+          "label": "तांगयुआन खाना और लालटेन प्रदर्शनी देखना"
+        },
+        {
+          "id": "sky-lantern",
+          "emoji": "🏮",
+          "label": "आकाश-दीप पर मनोकामना लिखकर छोड़ना"
+        },
+        {
+          "id": "fireworks",
+          "emoji": "🎆",
+          "label": "फूटते पटाखों के बीच खड़े होना"
+        },
+        {
+          "id": "no-festival",
+          "emoji": "🌙",
+          "label": "मेरे यहाँ ऐसा कोई पर्व नहीं, सामान्य कार्यदिवस होता है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270219-lantern-guess",
+      "date": "2027-02-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "एक ही चंद्र पंद्रहवीं तिथि पर, कोई जगह इसे तीन बिल्कुल अलग नज़ारों में बदल देती है — तांगयुआन खाना और लालटेन प्रदर्शनी देखना, पहाड़ों में आकाश-दीप छोड़ना, और चारों ओर फूटते मधुमक्खी-पटाखों के बीच खड़ा होना। यह कहाँ की बात है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "मुख्यभूमि चीन"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270220-womens-day-experience",
+      "date": "2027-02-20",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप जहाँ रहते हैं, वहाँ 8 मार्च को आम तौर पर कैसे मनाया जाता है?",
+      "options": [
+        {
+          "id": "paid-day-off",
+          "emoji": "🏖️",
+          "label": "सवेतन अवकाश मिलता है"
+        },
+        {
+          "id": "marked-not-off",
+          "emoji": "🎗️",
+          "label": "कार्यक्रम होते हैं, पर छुट्टी नहीं"
+        },
+        {
+          "id": "not-marked",
+          "emoji": "🤷",
+          "label": "कोई विशेष व्यवहार नहीं, आम दिन जैसा"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "❓",
+          "label": "पता नहीं, कभी ध्यान नहीं दिया"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270220-womens-day-brazil",
+      "date": "2027-02-20",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ऊपर दिए गए तथ्यों के अनुसार, किस देश का राष्ट्रीय महिला दिवस मूल रूप से 30 अप्रैल को था, और 2025 के नए क़ानून से ही 8 मार्च पर स्थानांतरित हुआ?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270221-bonus-habit",
+      "date": "2027-02-21",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर आपके यहां 'साल के अंत में अतिरिक्त पैसा' मिलने की परंपरा है, तो आप आमतौर पर उस पैसे का क्या करते हैं?",
+      "options": [
+        {
+          "id": "save",
+          "emoji": "💰",
+          "label": "बचाकर रखता/रखती हूं"
+        },
+        {
+          "id": "travel",
+          "emoji": "✈️",
+          "label": "यात्रा पर खुद को ट्रीट देता/देती हूं"
+        },
+        {
+          "id": "bills",
+          "emoji": "🏠",
+          "label": "ऋण या बिल चुकाने में लगाता/लगाती हूं"
+        },
+        {
+          "id": "no-tradition",
+          "emoji": "🤷",
+          "label": "मेरे यहां ऐसी कोई परंपरा नहीं है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270221-bonus-thr",
+      "date": "2027-02-21",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में यह नियम है कि यह वर्षांत भुगतान धार्मिक त्योहार से सात दिन पहले पूरा चुकाना अनिवार्य है, किश्तों में नहीं, और देरी पर 5 प्रतिशत जुर्माना लगता है?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270222-womens-day-poll",
+      "date": "2027-02-22",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके कार्यस्थल या स्कूल में 8 मार्च आमतौर पर कैसा होता है?",
+      "options": [
+        {
+          "id": "normal-day",
+          "emoji": "😐",
+          "label": "सामान्य कामकाजी या स्कूल का दिन"
+        },
+        {
+          "id": "time-off",
+          "emoji": "🕒",
+          "label": "कुछ छुट्टी या लचीलापन मिलता है"
+        },
+        {
+          "id": "event",
+          "emoji": "🎤",
+          "label": "व्याख्यान या सम्मान कार्यक्रम होते हैं"
+        },
+        {
+          "id": "promotion",
+          "emoji": "🛍️",
+          "label": "यह ज़्यादातर सिर्फ दुकानों की सेल का मौका है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270222-womens-day-guess",
+      "date": "2027-02-22",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस जगह के क़ानून में महिला दिवस पर सवेतन आधे दिन के अवकाश का स्पष्ट प्रावधान है?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270223-bonus-experience",
+      "date": "2027-02-23",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपको जो बोनस असल में मिला है, वह इनमें से किससे सबसे मिलता-जुलता है?",
+      "options": [
+        {
+          "id": "boss-call",
+          "emoji": "🎲",
+          "label": "बॉस के मूड पर निर्भर, राशि हर साल बदलती है, कभी मिलता ही नहीं"
+        },
+        {
+          "id": "law-deadline",
+          "emoji": "📜",
+          "label": "क़ानून में समय-सीमा तक लिखा है, देर हुई तो जुर्माना"
+        },
+        {
+          "id": "twice-year",
+          "emoji": "🔁",
+          "label": "साल में दो बार मिलता है, आधे साल पर और साल के अंत में"
+        },
+        {
+          "id": "tax-choice",
+          "emoji": "🧮",
+          "label": "मिलेगा या नहीं पक्का नहीं, पर टैक्स भरने का तरीक़ा खुद चुन सकता हूँ"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270223-guess-country",
+      "date": "2027-02-23",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "एक देश में यह क़ानून है कि साल के अंत का एक भत्ता धार्मिक त्योहार से सात दिन पहले पूरा चुकाना होता है, किश्तों में नहीं, और देर होने पर एक तय प्रतिशत जुर्माना लगता है — और वह त्योहार इस्लामी पंचांग के अनुसार होने के कारण, तारीख़ हर साल ग्रेगोरियन से लगभग ग्यारह दिन पहले खिसक जाती है। यह कौन-सा देश है?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270224-womens-day-experience",
+      "date": "2027-02-24",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके यहाँ 8 मार्च कैसा दिन होता है?",
+      "options": [
+        {
+          "id": "paid-day-off",
+          "emoji": "🎉",
+          "label": "छुट्टी होती है (पूरा या आधा दिन)"
+        },
+        {
+          "id": "events-no-holiday",
+          "emoji": "🎤",
+          "label": "कार्यक्रम या भाषण होते हैं, पर छुट्टी नहीं"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "😐",
+          "label": "सामान्य दिन जैसा ही होता है"
+        },
+        {
+          "id": "shopping-sale",
+          "emoji": "🛍️",
+          "label": "मुख्य रूप से खरीदारी सेल का मौका"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270224-womens-day-half-day-leave",
+      "date": "2027-02-24",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "यहाँ तुलना किए गए सात स्थानों में से किसका क़ानून महिला दिवस पर आधे दिन के सवेतन अवकाश का स्पष्ट प्रावधान करता है?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270225-bonus-experience",
+      "date": "2027-02-25",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "क्या आपको कभी वर्षांत बोनस, तेरहवाँ वेतन या ऐसा कुछ मिला है?",
+      "options": [
+        {
+          "id": "guaranteed-by-law",
+          "emoji": "⚖️",
+          "label": "हाँ, राशि और समय दोनों क़ानून से सुनिश्चित हैं"
+        },
+        {
+          "id": "up-to-employer",
+          "emoji": "🎲",
+          "label": "हाँ, पर मिलेगा या नहीं और कितना — यह पूरी तरह कंपनी पर निर्भर है"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "नहीं, हमारे यहाँ ऐसी कोई व्यवस्था नहीं है"
+        },
+        {
+          "id": "tax-headache",
+          "emoji": "🧾",
+          "label": "हाँ, पर असली उलझन यह है कि टैक्स कैसे भरें"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270225-bonus-profit-floor",
+      "date": "2027-02-25",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इनमें से किस देश में वैधानिक बोनस की न्यूनतम राशि इस पर निर्भर नहीं करती कि कंपनी को लाभ हुआ या नहीं — घाटे के वर्ष में भी न्यूनतम देना पड़ता है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270226-march8-poll",
+      "date": "2027-02-26",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप जहाँ रहते हैं, वहाँ 8 मार्च आमतौर पर कैसा होता है？",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "छुट्टी होती है (पूरा या आधा दिन)"
+        },
+        {
+          "id": "event-no-leave",
+          "emoji": "📢",
+          "label": "कार्यक्रम या भाषण होते हैं, पर छुट्टी नहीं"
+        },
+        {
+          "id": "normal-workday",
+          "emoji": "💼",
+          "label": "यह एक सामान्य कामकाजी या स्कूल का दिन है"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "मैंने कभी ध्यान नहीं दिया"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270226-march8-guess",
+      "date": "2027-02-26",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन चार जगहों में से किसने अपना राष्ट्रीय महिला दिवस 2025 में ही 30 अप्रैल से 8 मार्च पर स्थानांतरित किया？",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270227-year-end-bonus-poll",
+      "date": "2027-02-27",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपकी नज़र में वर्षांत की अतिरिक्त आय इनमें से किसके सबसे क़रीब है?",
+      "options": [
+        {
+          "id": "surplus-custom",
+          "emoji": "🎁",
+          "label": "कंपनी को मुनाफ़ा हो तभी — अधिकार नहीं, रिवाज़"
+        },
+        {
+          "id": "wage-part",
+          "emoji": "💰",
+          "label": "वेतन का हिस्सा है, देरी पर दंड मिलना चाहिए"
+        },
+        {
+          "id": "tax-strategy",
+          "emoji": "🧮",
+          "label": "मिलेगा या नहीं उससे ज़्यादा, टैक्स कैसे भरें यह मायने रखता है"
+        },
+        {
+          "id": "holiday-timed",
+          "emoji": "🌙",
+          "label": "त्योहार से जुड़ा है, तारीख़ हर साल बदलती है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270227-year-end-bonus-guess",
+      "date": "2027-02-27",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में वर्षांत की यह राशि क़ानूनन 'वेतन का हिस्सा' मानी जाती है — पूरे साल के काम पर एक महीने का वेतन, देरी पर दंड, और कर्मचारी अदालत जा सकता है?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270228-womens-day-observance",
+      "date": "2027-02-28",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप जहाँ रहते हैं, वहाँ 8 मार्च आमतौर पर कैसा होता है?",
+      "options": [
+        {
+          "id": "half-day-off",
+          "emoji": "🌓",
+          "label": "छुट्टी मिलती है, भले ही आधे दिन की हो"
+        },
+        {
+          "id": "official-message",
+          "emoji": "🎤",
+          "label": "अधिकारी संदेश या समारोह करते हैं, पर छुट्टी नहीं मिलती"
+        },
+        {
+          "id": "month-long",
+          "emoji": "🗓️",
+          "label": "गतिविधियाँ एक पूरे महीने में फैली होती हैं, सिर्फ़ एक दिन नहीं"
+        },
+        {
+          "id": "no-observance",
+          "emoji": "🤷",
+          "label": "आम दिन जैसा ही है, कुछ ख़ास नहीं होता"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270228-womens-day-date-change",
+      "date": "2027-02-28",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "तुलना किए गए सात स्थानों में से किसने केवल 2025 में क़ानून बनाकर अपने राष्ट्रीय महिला दिवस को 30 अप्रैल से 8 मार्च पर स्थानांतरित किया?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270301-bonus-experience",
+      "date": "2027-03-01",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर आपको कभी वर्षांत बोनस या उस जैसा कुछ मिला है, तो यह नीचे दिए विकल्पों में से किससे सबसे मिलता-जुलता है?",
+      "options": [
+        {
+          "id": "profit-conditioned",
+          "emoji": "📊",
+          "label": "कंपनी को मुनाफ़ा हुआ या नहीं, उस पर निर्भर"
+        },
+        {
+          "id": "guaranteed-regardless",
+          "emoji": "⚖️",
+          "label": "मुनाफ़े से बेपरवाह, क़ानून या अनुबंध से तय मिलता है"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "साल में दो बार मिलता है"
+        },
+        {
+          "id": "no-such-thing",
+          "emoji": "🚫",
+          "label": "ऐसा कुछ नहीं, वेतन बस वेतन है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270301-bonus-guess",
+      "date": "2027-03-01",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "एक देश में यह पैसा किसी धार्मिक त्योहार से सात दिन पहले पूरा चुकाना अनिवार्य है, किश्तों में नहीं, और देरी पर एक तय प्रतिशत जुर्माना लगता है; और चूँकि वह त्योहार इस्लामी पंचांग के अनुसार तय होता है, असली तारीख़ हर साल पहले खिसक जाती है। यह कौन-सा देश है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270302-seasonal-rituals",
+      "date": "2027-03-02",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "मौसम बदलने के आसपास, आप खुद इनमें से क्या करते हैं?",
+      "options": [
+        {
+          "id": "eat-tangyuan",
+          "emoji": "🥣",
+          "label": "शीत संक्रांति पर तांगयुआन या पकौड़े खाना"
+        },
+        {
+          "id": "throw-beans",
+          "emoji": "🫘",
+          "label": "सेत्सुबुन पर भुनी सेम फेंकना"
+        },
+        {
+          "id": "sweep-graves",
+          "emoji": "🪦",
+          "label": "हिगन के दौरान क़ब्रिस्तान जाना"
+        },
+        {
+          "id": "change-clock",
+          "emoji": "⏰",
+          "label": "डेलाइट सेविंग के लिए घड़ी बदलना"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270302-no-shadow-day",
+      "date": "2027-03-02",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश की मौसम एजेंसी हर साल 'बिना छाया का दिन' प्रकाशित करती है, क्योंकि भूमध्य रेखा उसके बीच से गुज़रती है और वहाँ चार नहीं, सिर्फ़ दो मौसम होते हैं?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270303-bonus-experience",
+      "date": "2027-03-03",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "जहाँ आप काम करते हैं, वहाँ वर्षांत बोनस असल में कैसे काम करता है?",
+      "options": [
+        {
+          "id": "surplus-based",
+          "emoji": "📈",
+          "label": "कंपनी मुनाफ़े में हो तभी, राशि तय नहीं"
+        },
+        {
+          "id": "law-fixed",
+          "emoji": "⚖️",
+          "label": "क़ानून से तय — राशि और समय-सीमा दोनों निश्चित"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "साल में दो बार मिलता है"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "मेरे यहाँ ऐसा कुछ नहीं है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270303-bonus-guess-country",
+      "date": "2027-03-03",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "सामग्री के अनुसार, किस देश का वैधानिक बोनस, कंपनी के घाटे के वर्ष में भी, नियोक्ता को न्यूनतम प्रतिशत (वेतन का 8.33 प्रतिशत) चुकाने के लिए बाध्य करता है?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270304-seasonal-habits",
+      "date": "2027-03-04",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "विषुव, संक्रांति या सौर पद के आसपास आपने इनमें से क्या किया है?",
+      "options": [
+        {
+          "id": "solstice-food",
+          "emoji": "🍲",
+          "label": "शीत संक्रांति पर तांगयुआन, पकौड़े या कद्दू खाया"
+        },
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "हिगन या चिंगमिंग के आसपास कब्रिस्तान जाकर पूर्वजों का सम्मान किया"
+        },
+        {
+          "id": "kite-flying",
+          "emoji": "🪁",
+          "label": "मकर संक्रांति जैसे त्योहार पर पतंग उड़ाई"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "⏰",
+          "label": "डेलाइट सेविंग के लिए घड़ी बदली"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270304-brazil-no-season-law",
+      "date": "2027-03-04",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश के क़ानून ने मौसम के अनुसार कभी सिर्फ़ एक बार बदलाव किया — डेलाइट सेविंग के रूप में — और वह भी बाद में समाप्त कर दिया गया?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270305-march8-experience",
+      "date": "2027-03-05",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप जहाँ रहते हैं, वहाँ 8 मार्च आमतौर पर कैसा होता है?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🏖️",
+          "label": "पूरे या आधे दिन की छुट्टी"
+        },
+        {
+          "id": "talks-and-awards",
+          "emoji": "🎤",
+          "label": "कार्यालय या स्कूल में व्याख्यान या सम्मान समारोह, पर छुट्टी नहीं"
+        },
+        {
+          "id": "sales-season",
+          "emoji": "🛍️",
+          "label": "यह दुकानों के लिए बिक्री का मौसम बन जाता है"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "🤷",
+          "label": "किसी सामान्य दिन जैसा ही, ज़्यादा अलग नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270305-brazil-womens-day-move",
+      "date": "2027-03-05",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस स्थान का 'राष्ट्रीय महिला दिवस' मूलतः 30 अप्रैल को था, जिसे केवल 2025 के क़ानून ने 8 मार्च पर स्थानांतरित किया?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270306-homecoming-poll",
+      "date": "2027-03-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपकी अपनी घर वापसी किस तरह के पैटर्न से सबसे मिलती-जुलती है?",
+      "options": [
+        {
+          "id": "fixed-peak",
+          "emoji": "🚗",
+          "label": "एक ही बड़े त्योहार पर सबके साथ जाम में फँसना"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "🗓️",
+          "label": "अपने त्योहार या कैलेंडर के अनुसार, बाकियों से अलग समय पर"
+        },
+        {
+          "id": "stay-home",
+          "emoji": "🏠",
+          "label": "मैं खास तौर पर घर नहीं जाता/जाती — जहाँ हूँ वहीं रहता/रहती हूँ"
+        },
+        {
+          "id": "go-to-festival",
+          "emoji": "🎉",
+          "label": "यात्रा तो करता/करती हूँ, पर मंज़िल उत्सव होती है, ज़रूरी नहीं 'घर'"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270306-homecoming-guess",
+      "date": "2027-03-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "यहाँ घर वापसी की भीड़ साल में दो बार होती है — एक नए साल के तुरंत बाद, दूसरी गर्मियों के बीचोंबीच। इनमें से भारी वाली छुट्टी असल में क़ानूनी अवकाश नहीं है — हर कंपनी अपनी बंदी अलग से तय करती है, इसलिए सही तारीख़ें साल-दर-साल बदलती हैं। फिर भी यह शिंकानसेन और एक्सप्रेसवे को देशभर में उतनी ही बुरी तरह जाम कर देती है जितना कोई भी वैधानिक अवकाश। यह जगह कौन-सी है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270307-womens-day-poll",
+      "date": "2027-03-07",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप जहाँ रहते हैं, वहाँ 8 मार्च आमतौर पर कैसा दिन होता है?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🏖️",
+          "label": "छुट्टी या विशेष अवकाश मिलता है"
+        },
+        {
+          "id": "official-event",
+          "emoji": "🎤",
+          "label": "कार्यालय या स्कूल में कार्यक्रम होता है, पर छुट्टी नहीं"
+        },
+        {
+          "id": "sales-season",
+          "emoji": "🛍️",
+          "label": "मुख्यतः खरीदारी की सेल का समय"
+        },
+        {
+          "id": "no-particular-notice",
+          "emoji": "😐",
+          "label": "कुछ खास महसूस नहीं होता, सामान्य दिन जैसा"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270307-womens-day-guess",
+      "date": "2027-03-07",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश का राष्ट्रीय महिला दिवस मूलतः 30 अप्रैल को था, और 2025 के नए क़ानून से ही 8 मार्च पर स्थानांतरित हुआ?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270308-homecoming-mode",
+      "date": "2027-03-08",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इनमें से कौन सा तरीका आपकी (या आपके परिवार की) घर वापसी के अनुभव से सबसे मिलता-जुलता है?",
+      "options": [
+        {
+          "id": "road-highway",
+          "emoji": "🚗",
+          "label": "सड़क मार्ग से कार से (अक्सर जाम)"
+        },
+        {
+          "id": "train-rail",
+          "emoji": "🚆",
+          "label": "ट्रेन से"
+        },
+        {
+          "id": "flight",
+          "emoji": "✈️",
+          "label": "हवाई जहाज़ से"
+        },
+        {
+          "id": "stay-put",
+          "emoji": "🏠",
+          "label": "जहाँ हूँ वहीं रुकना, यात्रा न करना"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270308-homecoming-guess",
+      "date": "2027-03-08",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में सबसे भारी घर-वापसी का मौसम कानूनी अवकाश नहीं है — यह केवल कंपनियों द्वारा एक ही सप्ताह छुट्टी तय करने से घटित होता है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270309-holiday-stretch",
+      "date": "2027-03-09",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इस साल आपकी सबसे लंबी लगातार छुट्टी कितने दिन की रही?",
+      "options": [
+        {
+          "id": "1-3-days",
+          "emoji": "🌤️",
+          "label": "1–3 दिन"
+        },
+        {
+          "id": "4-6-days",
+          "emoji": "🏖️",
+          "label": "4–6 दिन"
+        },
+        {
+          "id": "7-9-days",
+          "emoji": "🧳",
+          "label": "7–9 दिन"
+        },
+        {
+          "id": "10-plus-days",
+          "emoji": "✈️",
+          "label": "10+ दिन"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270309-leave-deducted",
+      "date": "2027-03-09",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस जगह लंबी छुट्टी को जोड़ने वाले दिन कर्मचारी की अपनी वार्षिक छुट्टी से काटे जाते हैं?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270310-eid-night-notice",
+      "date": "2027-03-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर कल छुट्टी है या नहीं, यह सिर्फ़ आज रात को पता चले, तो आपको कैसा लगेगा?",
+      "options": [
+        {
+          "id": "want-advance-notice",
+          "emoji": "📅",
+          "label": "मैं कई दिन पहले जानना चाहूँगा/चाहूँगी"
+        },
+        {
+          "id": "fine-with-short-notice",
+          "emoji": "🌙",
+          "label": "एक रात पहले पता चलना भी ठीक है"
+        },
+        {
+          "id": "hard-to-plan",
+          "emoji": "😥",
+          "label": "आख़िरी समय की सूचना से योजना बनाना मुश्किल हो जाता है"
+        },
+        {
+          "id": "adds-anticipation",
+          "emoji": "🌘",
+          "label": "इससे उलटे इंतज़ार का मज़ा बढ़ जाता है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270310-eid-employer-consent",
+      "date": "2027-03-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन चार जगहों में से किस जगह ईद मनाना, कानूनी अधिकार नहीं बल्कि नियोक्ता की सहमति पर निर्भर करता है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270311-env-day-experience",
+      "date": "2027-03-11",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZFVVJ0KNDJH484VEFD",
+      "topic_slug": "environment-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "वृक्षारोपण दिवस, पर्यावरण दिवस, अर्थ डे जैसे दिन — इस साल आपने ऐसा कोई दिन असल में कैसे बिताया?",
+      "options": [
+        {
+          "id": "planted-tree",
+          "emoji": "🌳",
+          "label": "असल में पेड़ लगाया या पर्यावरण गतिविधि में शामिल हुआ"
+        },
+        {
+          "id": "saw-online",
+          "emoji": "📱",
+          "label": "ख़बर या सोशल मीडिया पर देखा, पर कुछ ख़ास नहीं किया"
+        },
+        {
+          "id": "first-time-hearing",
+          "emoji": "🤔",
+          "label": "अभी पहली बार पता चला कि ऐसा कोई दिन है"
+        },
+        {
+          "id": "ordinary-workday",
+          "emoji": "🗓️",
+          "label": "मेरे लिए तो यह बस एक सामान्य काम/स्कूल का दिन है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270311-env-day-holiday-guess",
+      "date": "2027-03-11",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZFVVJ0KNDJH484VEFD",
+      "topic_slug": "environment-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन चार देशों में से किसका पर्यावरण-संबंधी दिन ही एकमात्र ऐसा है जिस पर वाक़ई छुट्टी होती है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270312-commemorate-choice",
+      "date": "2027-03-12",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर फ़ैसला आपके हाथ में हो, तो आप देश के लिए बड़ा योगदान देने वाले किसी व्यक्ति को कैसे याद करेंगे?",
+      "options": [
+        {
+          "id": "paid-holiday",
+          "emoji": "🎉",
+          "label": "इसे राष्ट्रीय अवकाश बनाकर सबको छुट्टी दें"
+        },
+        {
+          "id": "name-no-holiday",
+          "emoji": "📅",
+          "label": "नाम से स्मृति-दिवस रखें, पर छुट्टी न दें"
+        },
+        {
+          "id": "idea-not-name",
+          "emoji": "💡",
+          "label": "छुट्टी का नाम उनके नाम पर नहीं, बल्कि उनके विचार पर रखें"
+        },
+        {
+          "id": "no-personal-day",
+          "emoji": "🚫",
+          "label": "किसी व्यक्ति के नाम पर अलग से कोई दिन न बनाएं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270312-hidden-name-law",
+      "date": "2027-03-12",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश के मौजूदा अवकाश-कानून में राष्ट्रीय नायक का नाम कहीं नहीं आता, और उनका नाम सिर्फ़ दूसरे युगों के कानूनों में बचा है?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270313-love-day-style",
+      "date": "2027-03-13",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अपने अनुभव को याद करें — स्नेह जताने का दिन आपके लिए नीचे दिए किस ढंग के सबसे क़रीब रहा है?",
+      "options": [
+        {
+          "id": "single-day-no-return",
+          "emoji": "🎁",
+          "label": "बस एक दिन उपहार देना — बाद में लौटाने का कोई नियम नहीं"
+        },
+        {
+          "id": "return-gift-month-later",
+          "emoji": "🔁",
+          "label": "इस महीने उपहार मिलता है, अगले महीने लौटाना पड़ता है"
+        },
+        {
+          "id": "week-long",
+          "emoji": "📅",
+          "label": "पूरे सप्ताह में फैला हुआ, हर दिन का अलग नाम"
+        },
+        {
+          "id": "no-official-celebration",
+          "emoji": "🚫",
+          "label": "मेरी जगह इसे ख़ास तौर पर नहीं मनाया जाता, कोई सरकारी हैसियत भी नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270313-heritage-vs-commerce",
+      "date": "2027-03-13",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन चार जगहों में से किस जगह पर सबसे ऊँची व्यापारिक आवाज़ वाले 14 फ़रवरी की कोई सरकारी हैसियत नहीं, जबकि एक अलग दिन को राज्य ने अमूर्त सांस्कृतिक विरासत सूची में दर्ज कर रखा है?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270314-equinox-poll",
+      "date": "2027-03-14",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "विषुव या संक्रांति के दिन आप आमतौर पर क्या करते हैं?",
+      "options": [
+        {
+          "id": "visit-graves",
+          "emoji": "🪦",
+          "label": "कब्रिस्तान जाना या पूर्वजों का सम्मान करना"
+        },
+        {
+          "id": "eat-seasonal-food",
+          "emoji": "🍡",
+          "label": "मौसमी भोजन खाना (जैसे तांगयुआन, कद्दू या चावल की मिठाई)"
+        },
+        {
+          "id": "watch-daylight",
+          "emoji": "🌗",
+          "label": "सूर्योदय, सूर्यास्त या दिन की लंबाई पर ध्यान देना"
+        },
+        {
+          "id": "no-idea",
+          "emoji": "🤷",
+          "label": "बिल्कुल ध्यान नहीं देना — बस एक सामान्य दिन"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270314-equinox-guess",
+      "date": "2027-03-14",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "एक सरकारी विज्ञप्ति एक पर्व को \"सूर्य के उत्तर की ओर मुड़ने\" का प्रतीक बताती है, जबकि असली खगोलीय मोड़ — दिसंबर की संक्रांति — इससे तीन हफ़्ते से भी पहले हो चुकी होती है। यह अंतर इसलिए है क्योंकि यहाँ का पंचांग राशियों को विषुव बिंदु के बजाय स्थिर नक्षत्रों से बाँधता है। यह कौन-सा देश है?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270315-holiday-experience",
+      "date": "2027-03-15",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके अपने समाज में क्या कोई ऐसा महत्वपूर्ण ऐतिहासिक स्मृति-दिवस है जो आज भी सार्वजनिक अवकाश नहीं है?",
+      "options": [
+        {
+          "id": "know-exact-date",
+          "emoji": "📅",
+          "label": "हाँ, और मुझे सही तारीख़ पता है"
+        },
+        {
+          "id": "vague-memory",
+          "emoji": "🤔",
+          "label": "याद तो है, पर सही तारीख़ नहीं पता"
+        },
+        {
+          "id": "none-comes-to-mind",
+          "emoji": "🤷",
+          "label": "मुझे ऐसा कोई दिन याद नहीं आता"
+        },
+        {
+          "id": "never-thought-about-it",
+          "emoji": "💭",
+          "label": "मैंने इस बारे में कभी नहीं सोचा"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270315-guess-country",
+      "date": "2027-03-15",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इस देश का उन्मूलन-अवकाश बीस साल और तीन क़ानूनों के बाद बना: पहले यह केवल स्कूली कैलेंडर में था, फिर 2011 में राष्ट्रीय स्मृति-दिवस बना पर छुट्टी तब भी नहीं मिली, और दिसंबर 2023 में जाकर क़ानून में राष्ट्रीय अवकाश घोषित हुआ। जिस क़ानून ने दासता के अंत की घोषणा की थी, उसमें केवल दो अनुच्छेद थे — न मुआवज़ा, न भूमि, न कोई नागरिक अधिकार प्रावधान — और उसकी तारीख़ आज भी आधिकारिक राष्ट्रीय अवकाश सूची में नहीं है। यह कौन सा देश है?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "संयुक्त राज्य अमेरिका"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270316-seasonal-customs",
+      "date": "2027-03-16",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "विषुव या संक्रांति से जुड़े इन रिवाज़ों में से आपने ख़ुद कौन-सा निभाया है?",
+      "options": [
+        {
+          "id": "tangyuan-winter-solstice",
+          "emoji": "🍡",
+          "label": "शीत संक्रांति पर तांगयुआन खाना"
+        },
+        {
+          "id": "setsubun-mamemaki",
+          "emoji": "🫘",
+          "label": "सेत्सुबुन पर सेम फेंकना"
+        },
+        {
+          "id": "makar-sankranti-kite",
+          "emoji": "🪁",
+          "label": "मकर संक्रांति पर पतंग उड़ाना"
+        },
+        {
+          "id": "higan-grave-sweeping",
+          "emoji": "🙏",
+          "label": "हिगन पर क़ब्रिस्तान की सफ़ाई"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270316-seven-holidays-country",
+      "date": "2027-03-16",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "एक देश में राष्ट्रीय अवकाश ठीक सात हैं, और उनमें से किसी की तारीख़ सूर्य की स्थिति से तय नहीं होती। इस देश ने क़ानून से मौसम का पीछा सिर्फ़ एक बार किया — डेलाइट सेविंग टाइम — और उसे बाद में समाप्त कर दिया गया; यह दक्षिणी गोलार्ध में है, इसलिए दिसंबर की संक्रांति वहाँ सर्दी नहीं, गर्मी की शुरुआत करती है। यह कौन-सा देश है?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270317-abolition-holiday-poll",
+      "date": "2027-03-17",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप जहाँ रहते हैं, वहाँ दासता के उन्मूलन या समानता से जुड़ा कोई दिन असल में कैसे मनाया जाता है?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "छुट्टी मिलती है, त्योहार जैसा मनाया जाता है"
+        },
+        {
+          "id": "marked-no-holiday",
+          "emoji": "🏫",
+          "label": "स्कूल या दफ़्तर में ज़िक्र होता है, पर छुट्टी नहीं मिलती"
+        },
+        {
+          "id": "never-heard",
+          "emoji": "❓",
+          "label": "ऐसे किसी दिन के बारे में कभी नहीं सुना"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "पक्का नहीं, कभी ध्यान नहीं दिया"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270317-abolition-holiday-guess",
+      "date": "2027-03-17",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में यह स्मृति-दिवस स्कूली कैलेंडर से लेकर वैधानिक अवकाश बनने तक पूरे बीस साल और तीन क़ानूनों से गुज़रा?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "संयुक्त राज्य अमेरिका"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270318-seasonal-habit",
+      "date": "2027-03-18",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "लेख में बताई गई इन आदतों में से आपका अपना अनुभव किससे मिलता है?",
+      "options": [
+        {
+          "id": "clock-shift",
+          "emoji": "🕐",
+          "label": "डेलाइट सेविंग के लिए घड़ी बदली"
+        },
+        {
+          "id": "seasonal-food",
+          "emoji": "🍲",
+          "label": "मौसम के मौक़े का खाना खाया (तांगयुआन, कद्दू, पकौड़े वगैरह)"
+        },
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "पूर्वजों की याद में क़ब्र पर गया/गई"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "📅",
+          "label": "मेरे लिए यह बस एक आम दिन है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270318-sidereal-drift-guess",
+      "date": "2027-03-18",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "एक देश का पारंपरिक कैलेंडर बारह राशियों को विषुव बिंदु से नहीं, बल्कि स्थिर नक्षत्रों से बाँधता है। पृथ्वी की धुरी के अयन-चलन ने एक ऐसे पर्व को, जो कभी संक्रांति दर्शाता था, एक हज़ार साल से अधिक में तीन हफ़्ते से भी ज़्यादा पीछे खिसका दिया है। यह कौन-सा देश है?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270319-emancipation-poll",
+      "date": "2027-03-19",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके देश या क्षेत्र के कैलेंडर में क्या दासता या जाति/स्थिति-व्यवस्था के उन्मूलन की याद में कोई दिन है जिस दिन वाक़ई छुट्टी होती है?",
+      "options": [
+        {
+          "id": "yes-day-off",
+          "emoji": "🎉",
+          "label": "हाँ, और उस दिन छुट्टी भी होती है"
+        },
+        {
+          "id": "yes-no-day-off",
+          "emoji": "📅",
+          "label": "स्मृति-दिवस है, पर छुट्टी नहीं मिलती"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🚫",
+          "label": "ऐसा कोई दिन नहीं है"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "पता नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270319-emancipation-guess",
+      "date": "2027-03-19",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश का एक स्मृति-दिवस पहले केवल स्कूली कैलेंडर में दर्ज था, बीस साल बाद राष्ट्रीय स्मृति-दिवस बना, और उसके बारह साल बाद, यानी 2023 में, आख़िरकार असली छुट्टी वाला अवकाश बना — कुल तीन अलग-अलग क़ानूनों के ज़रिए?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "संयुक्त राज्य अमेरिका"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270320-season-marker",
+      "date": "2027-03-20",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "जहाँ आप रहते हैं, वहाँ विषुव या संक्रांति के दिन को लोग कैसे चिह्नित करते हैं?",
+      "options": [
+        {
+          "id": "legal-holiday",
+          "emoji": "🎌",
+          "label": "आधिकारिक अवकाश है और लोग सचमुच छुट्टी मनाते हैं"
+        },
+        {
+          "id": "folk-custom",
+          "emoji": "🌾",
+          "label": "लोक या धार्मिक रिवाज़ हैं, पर छुट्टी नहीं मिलती"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "🕑",
+          "label": "घड़ियाँ बदल जाती हैं, कोई उत्सव नहीं मनाया जाता"
+        },
+        {
+          "id": "nothing-special",
+          "emoji": "🤷",
+          "label": "कुछ भी ख़ास नहीं होता"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270320-shadowless-day",
+      "date": "2027-03-20",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश की मौसम एजेंसी हर साल हर शहर के लिए अलग 'बिना छाया का दिन' प्रकाशित करती है — जब दोपहर में खड़ी वस्तु की छाया उसी के नीचे सिमटकर लुप्त हो जाती है?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270321-holiday-in-name-only",
+      "date": "2027-03-21",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "जहाँ आप रहते हैं, वहाँ कोई ऐसा स्मृति-दिवस है जिसकी बात तो सब करते हैं पर असल में कभी छुट्टी नहीं मिलती?",
+      "options": [
+        {
+          "id": "know-the-day",
+          "emoji": "🗓️",
+          "label": "हाँ, मुझे तारीख़ भी याद है"
+        },
+        {
+          "id": "vague-memory",
+          "emoji": "🤔",
+          "label": "पता है कि है, पर सही तारीख़ याद नहीं"
+        },
+        {
+          "id": "all-holidays",
+          "emoji": "🎉",
+          "label": "नहीं, हमारे यहाँ लगभग हर स्मृति-दिवस पर छुट्टी होती है"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "💭",
+          "label": "कभी इस बारे में सोचा ही नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270321-guess-abolition-holiday",
+      "date": "2027-03-21",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश की स्मृति-तारीख़ पहले स्कूली कैलेंडर में आई, फिर राष्ट्रीय स्मृति-दिवस बनी, और उसके बीस साल बाद जाकर क़ानूनी अवकाश बनी?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "संयुक्त राज्य अमेरिका"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270322-christian-days-poll",
+      "date": "2027-03-22",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ऐश वेडनेसडे, गुड फ़्राइडे, स्वर्गारोहण, पेन्तिकोस्त, कोर्पुस क्रिस्ती — इनमें से कौन-सी स्थिति आपके अपने अनुभव के सबसे क़रीब है?",
+      "options": [
+        {
+          "id": "ordinary-workday",
+          "emoji": "😐",
+          "label": "मेरे लिए ये सब आम कार्यदिवस हैं, कोई फ़र्क़ नहीं पड़ता"
+        },
+        {
+          "id": "church-not-holiday",
+          "emoji": "⛪",
+          "label": "मेरा गिरजाघर या समुदाय इन्हें मनाता है, पर काम पर इसका कोई असर नहीं पड़ता"
+        },
+        {
+          "id": "actual-day-off",
+          "emoji": "📅",
+          "label": "जहाँ मैं रहता/रहती हूँ, इनमें से कम से कम एक दिन सचमुच सरकारी छुट्टी है"
+        },
+        {
+          "id": "only-know-christmas-easter",
+          "emoji": "🎄",
+          "label": "मैंने बस क्रिसमस और ईस्टर के बारे में सुना है, बाक़ी नाम अनजान हैं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270322-christian-days-guess",
+      "date": "2027-03-22",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश के राष्ट्रपति आदेश ने एक ईसाई पर्व का नाम इस्लामी संदर्भ वाले रूप से बदलकर आधिकारिक रूप से ईसाई रूप कर दिया?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "संयुक्त राज्य अमेरिका"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270323-easter-poll",
+      "date": "2027-03-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप जहां रहते हैं, वहां ईस्टर से पहले वाला शुक्रवार (गुड फ़्राइडे) क्या छुट्टी का दिन है?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎉",
+          "label": "हां, छुट्टी होती है"
+        },
+        {
+          "id": "workday",
+          "emoji": "💼",
+          "label": "नहीं, सामान्य कार्यदिवस होता है"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤷",
+          "label": "क्षेत्र या नियोक्ता पर निर्भर करता है"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "❓",
+          "label": "कभी ध्यान नहीं दिया"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270323-easter-guess",
+      "date": "2027-03-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन चार जगहों में से किसने गुड फ़्राइडे, ईस्टर, स्वर्गारोहण और क्रिसमस — चारों ईसाई तिथियों को राष्ट्रीय अवकाश माना है?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270324-christian-calendar-overlap-poll",
+      "date": "2027-03-24",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके अपने स्थानीय अवकाश-कैलेंडर में क्या कोई ऐसा दिन है जो किसी धार्मिक पर्व से संयोगवश मिलता है, पर छुट्टी होने की असली वजह कुछ और है?",
+      "options": [
+        {
+          "id": "know-reason",
+          "emoji": "🧐",
+          "label": "हाँ, और मुझे इसका कारण पता है"
+        },
+        {
+          "id": "suspect",
+          "emoji": "🤔",
+          "label": "हाँ, पर मैंने कभी वजह नहीं खोजी"
+        },
+        {
+          "id": "none",
+          "emoji": "🙅",
+          "label": "नहीं, हमारा कैलेंडर सीधा-सादा है"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "💭",
+          "label": "कभी इस बारे में सोचा ही नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270324-christian-calendar-guess",
+      "date": "2027-03-24",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में 25 दिसंबर को छुट्टी होने का कारण क्रिसमस से क़ानूनी रूप से कोई संबंध नहीं रखता — यह महज़ पंचांग का संयोग है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270325-easter-personal-meaning",
+      "date": "2027-03-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके लिए, ईस्टर के दिन में सबसे ज़्यादा मायने क्या रखता है?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🛌",
+          "label": "छुट्टी है या नहीं"
+        },
+        {
+          "id": "faith",
+          "emoji": "✝️",
+          "label": "धार्मिक अर्थ (पीड़ा और पुनरुत्थान)"
+        },
+        {
+          "id": "traditions",
+          "emoji": "🥚",
+          "label": "रिवाज़ी गतिविधियाँ (अंडे, पारिवारिक भोज)"
+        },
+        {
+          "id": "no-feeling",
+          "emoji": "🤷",
+          "label": "मेरे लिए इसमें कुछ खास नहीं है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270325-easter-holiday-guess",
+      "date": "2027-03-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इनमें से किस देश ने, मुस्लिम-बहुल आबादी होने के बावजूद, गुड फ़्राइडे, ईस्टर, स्वर्गारोहण और क्रिसमस — चारों ईसाई तिथियों को राष्ट्रीय अवकाश बनाया है?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270326-christian-days-poll",
+      "date": "2027-03-26",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप जहाँ रहते हैं वहाँ ईस्टर-गणना से बनने वाली इस पूरी शृंखला — ऐश वेडनेसडे, गुड फ़्राइडे, स्वर्गारोहण, पेन्तिकोस्त, कोर्पुस क्रिस्ती — में से कौन-सा दिन वैधानिक अवकाश तालिका में है?",
+      "options": [
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "कोई नहीं"
+        },
+        {
+          "id": "good-friday-only",
+          "emoji": "✝️",
+          "label": "केवल गुड फ़्राइडे"
+        },
+        {
+          "id": "extra-days",
+          "emoji": "📅",
+          "label": "सिर्फ़ गुड फ़्राइडे नहीं, एक-दो दिन और भी"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "कभी ध्यान नहीं दिया"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270326-christian-days-guess",
+      "date": "2027-03-26",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ऊपर बताए गए देशों में से कौन-सा देश कोर्पुस क्रिस्ती को संघीय स्तर पर केवल वैकल्पिक कार्यदिवस मानता है, और वह असली वैधानिक अवकाश केवल वहीं बनता है जहाँ नगर परिषद ने क़ानून बनाया हो?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270327-easter-weekend-poll",
+      "date": "2027-03-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ईस्टर के दिन आप आमतौर पर क्या करते हैं?",
+      "options": [
+        {
+          "id": "church",
+          "emoji": "⛪",
+          "label": "गिरजाघर की प्रार्थना में जाना"
+        },
+        {
+          "id": "eggs",
+          "emoji": "🥚",
+          "label": "अंडे ढूंढना या रंगना"
+        },
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "परिवार के साथ भोजन"
+        },
+        {
+          "id": "normal-weekend",
+          "emoji": "📅",
+          "label": "सामान्य सप्ताहांत जैसा ही"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270327-easter-holiday-guess",
+      "date": "2027-03-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "गुड फ़्राइडे, ईस्टर, स्वर्गारोहण और क्रिसमस — इन चारों को राष्ट्रीय अवकाश मानने वाला देश कौन-सा है?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270328-childrens-day-poll",
+      "date": "2027-03-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके अनुभव में, बाल दिवस पर छुट्टी को लेकर क्या होता था?",
+      "options": [
+        {
+          "id": "family-off",
+          "emoji": "🏖️",
+          "label": "पूरे परिवार को छुट्टी मिलती थी"
+        },
+        {
+          "id": "kids-only-off",
+          "emoji": "🧒",
+          "label": "सिर्फ़ बच्चों को छुट्टी, बड़े काम पर जाते थे"
+        },
+        {
+          "id": "school-event-no-off",
+          "emoji": "🏫",
+          "label": "छुट्टी नहीं, बस स्कूल में कार्यक्रम होता था"
+        },
+        {
+          "id": "tied-to-other-holiday",
+          "emoji": "🎉",
+          "label": "किसी और छुट्टी के साथ मिल जाता था"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270328-childrens-day-guess",
+      "date": "2027-03-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस जगह के बाल दिवस के क़ानूनी उद्देश्य में 'माँ के प्रति आभार' भी लिखा है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270329-remembrance-style",
+      "date": "2027-03-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके परिवार या संस्कृति में, पूर्वजों को याद करने का तरीका इनमें से किसके सबसे क़रीब है?",
+      "options": [
+        {
+          "id": "fixed-day",
+          "emoji": "🗓️",
+          "label": "एक तय दिन (जैसे छिंगमिंग या मृतक-दिवस)"
+        },
+        {
+          "id": "stretch-of-days",
+          "emoji": "🕯️",
+          "label": "कई दिनों तक चलने वाला दौर (Obon या सोलह दिनों के पितृ-काल जैसा)"
+        },
+        {
+          "id": "community-decided",
+          "emoji": "🤝",
+          "label": "कोई तय तारीख़ नहीं, बल्कि समुदाय या व्यक्ति द्वारा तय समय"
+        },
+        {
+          "id": "no-such-practice",
+          "emoji": "🤷",
+          "label": "ऐसी कोई प्रथा या दिन नहीं है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270329-guess-ancestor-country",
+      "date": "2027-03-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "यहाँ पूर्वजों के लिए समय एक दिन नहीं, बल्कि लगातार सोलह चांद्र दिन है। यह एक महीने की पूर्णिमा से शुरू होकर दूसरे महीने की अमावस्या पर समाप्त होता है — जिस अमावस्या का अपना नाम है। इस अवधि में लोग दिवंगतों को जल और अन्न अर्पित करते हैं और क्षमा माँगते हैं, और किसी एक राज्य का एक शहर हर वर्ष ठीक इसी के लिए बड़ी भीड़ खींचता है। यह किस देश की रीति है?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270330-childrens-day-poll",
+      "date": "2027-03-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके घर में बाल दिवस पर असल में छुट्टी किसे मिलती है?",
+      "options": [
+        {
+          "id": "everyone-off",
+          "emoji": "🎏",
+          "label": "पूरा परिवार छुट्टी लेता है"
+        },
+        {
+          "id": "kids-only",
+          "emoji": "🧒",
+          "label": "सिर्फ़ बच्चों को छुट्टी मिलती है"
+        },
+        {
+          "id": "school-event",
+          "emoji": "🏫",
+          "label": "छुट्टी नहीं, स्कूल में आयोजन होता है"
+        },
+        {
+          "id": "no-tradition",
+          "emoji": "🤷",
+          "label": "हमारे यहाँ बाल दिवस मनाने की परंपरा नहीं है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270330-childrens-day-guess",
+      "date": "2027-03-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश का बाल दिवस उसके कैथोलिक संरक्षक संत के राष्ट्रीय अवकाश के साथ एक ही तारीख़ पर पड़ता है?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270331-ancestor-remembrance-poll",
+      "date": "2027-03-31",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके परिवार या समुदाय में, पूर्वजों को याद करना या क़ब्रों पर जाना आमतौर पर कैसा होता है?",
+      "options": [
+        {
+          "id": "fixed-date",
+          "emoji": "📅",
+          "label": "हर साल एक तय तारीख़ होती है, जैसे क़ब्र पर जाना या भेंट चढ़ाना"
+        },
+        {
+          "id": "varies",
+          "emoji": "🔄",
+          "label": "यह होता तो है, पर तारीख़ या तरीका साल-दर-साल या परिवार के अनुसार बदलता है"
+        },
+        {
+          "id": "place-no-day",
+          "emoji": "📍",
+          "label": "याद करने की जगह या तरीका तो है, पर कोई ख़ास दिन नहीं है"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "मेरे परिवार या समुदाय में ऐसी कोई तय रीति नहीं है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270331-ancestor-remembrance-guess",
+      "date": "2027-03-31",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "एक जगह क़ब्रों की सफ़ाई किसी तय तारीख़ से नहीं, बल्कि इस तथ्य से जुड़ी है कि अगले महीने रोज़े शुरू होने वाले हैं। क्रम तय है: पहले क़ब्रें साफ़ करना, फिर साथ मिलकर प्रार्थना, और अंत में सब मिलकर एक भोजन करना। यह कहाँ की रीति है?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270401-childrens-day-poll",
+      "date": "2027-04-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन छह जगहों में बाल दिवस पर 'किसे छुट्टी मिलती है' बहुत अलग है — कहीं सबको, कहीं सिर्फ़ बच्चों को, कहीं किसी को नहीं और केवल स्कूल में आयोजन होता है। अगर तय आपके हाथ में हो, तो आप क्या चाहेंगे?",
+      "options": [
+        {
+          "id": "everyone-off",
+          "emoji": "🎉",
+          "label": "सबको एक दिन की छुट्टी मिले"
+        },
+        {
+          "id": "kids-only-off",
+          "emoji": "🧒",
+          "label": "सिर्फ़ बच्चों को छुट्टी, बड़े काम पर ही रहें"
+        },
+        {
+          "id": "school-event-no-holiday",
+          "emoji": "🏫",
+          "label": "छुट्टी नहीं, बस स्कूल में उत्सव हो"
+        },
+        {
+          "id": "movable-by-decree",
+          "emoji": "📅",
+          "label": "तारीख़ तय न हो, सरकार हर साल नए सिरे से तय करे"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270401-childrens-day-guess",
+      "date": "2027-04-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन छह जगहों में से किसके बाल दिवस के क़ानूनी उद्देश्य में साफ़ तौर पर 'माँ के प्रति आभार' लिखा है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "मुख्यभूमि चीन"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270402-remembrance-practice",
+      "date": "2027-04-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप या आपका परिवार पूर्वजों या मृतकों को याद करने के दिनों में आमतौर पर किस तरह शामिल होते हैं?",
+      "options": [
+        {
+          "id": "fixed-visit",
+          "emoji": "🧹",
+          "label": "हर साल नियमित रूप से क़ब्र/समाधि पर जाना या पूजा करना"
+        },
+        {
+          "id": "family-led",
+          "emoji": "👴",
+          "label": "बड़ों की व्यवस्था के अनुसार चलते हैं, ख़ुद कम पहल करते हैं"
+        },
+        {
+          "id": "personal-remember",
+          "emoji": "🕯️",
+          "label": "कोई तय रस्म नहीं, पर निजी तौर पर याद ज़रूर करते हैं"
+        },
+        {
+          "id": "not-practice",
+          "emoji": "🚫",
+          "label": "हमारे घर में ऐसी कोई प्रथा नहीं है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270402-nyadran-country",
+      "date": "2027-04-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश की स्मरण-परंपरा किसी तय तारीख़ से नहीं, बल्कि इस बात से जुड़ी है कि \"अगले महीने रोज़े शुरू होने वाले हैं\"?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270403-childrens-day-poll-type",
+      "date": "2027-04-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपने बाल दिवस जिस तरह मनाया, वह नीचे किससे सबसे मिलता-जुलता है?",
+      "options": [
+        {
+          "id": "day-off-everyone",
+          "emoji": "🏖️",
+          "label": "सबकी छुट्टी होती है, न काम न स्कूल"
+        },
+        {
+          "id": "kids-only-off",
+          "emoji": "🧒",
+          "label": "सिर्फ़ बच्चों की छुट्टी होती है, बड़े काम पर जाते हैं"
+        },
+        {
+          "id": "school-event-no-holiday",
+          "emoji": "🏫",
+          "label": "छुट्टी नहीं होती, पर स्कूल में प्रस्तुति या आयोजन होता है"
+        },
+        {
+          "id": "shared-with-other-holiday",
+          "emoji": "🎊",
+          "label": "यह किसी और त्योहार या छुट्टी वाले दिन के साथ ही पड़ता है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270403-childrens-day-guess-mother",
+      "date": "2027-04-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश के बाल दिवस के क़ानूनी उद्देश्य में 'माँ के प्रति आभार' तक लिखा है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "संयुक्त राज्य अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270404-ancestor-practice-poll",
+      "date": "2027-04-04",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर आपके घर में पूर्वजों या मृतकों को याद करने की कोई रीति है, तो वह किससे मिलती-जुलती है?",
+      "options": [
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "क़ब्र/समाधि जाना, फूल चढ़ाना, सफ़ाई करना"
+        },
+        {
+          "id": "communal-offering",
+          "emoji": "🙏",
+          "label": "पूर्वजों को भेंट, सामुदायिक पूजा, अगरबत्ती जैसी रस्में"
+        },
+        {
+          "id": "welcome-farewell-fire",
+          "emoji": "🔥",
+          "label": "आग जलाकर पूर्वजों का स्वागत, फिर आग जलाकर विदाई"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "कोई तय दिन नहीं, हर परिवार अपने ढंग से करता है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270404-nyadran-guess",
+      "date": "2027-04-04",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "एक क़ब्र-सफ़ाई की रीति किसी तय कैलेंडर तारीख़ से नहीं, बल्कि इस बात से जुड़ी है कि अगले महीने रोज़े शुरू हो रहे हैं; क्रम तय है — पहले क़ब्रें साफ़ करना, फिर साथ प्रार्थना, और अंत में सब मिलकर एक ही भोजन करना। यह कहाँ की रीति है?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270405-new-year-custom",
+      "date": "2027-04-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके अपने जीवन में, नया साल इनमें से किस दृश्य के सबसे क़रीब है?",
+      "options": [
+        {
+          "id": "countdown-fireworks",
+          "emoji": "🎉",
+          "label": "पिछली रात उलटी गिनती, आतिशबाज़ी और पार्टी"
+        },
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "नववर्ष की पूर्वसंध्या पर पारिवारिक भोज"
+        },
+        {
+          "id": "shrine-visit",
+          "emoji": "⛩️",
+          "label": "मंदिर की पहली यात्रा और ओसेची भोजन"
+        },
+        {
+          "id": "beach-white",
+          "emoji": "🏖️",
+          "label": "समुद्र तट पर सफ़ेद कपड़े पहनकर आतिशबाज़ी देखना"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270405-new-year-no-jan1",
+      "date": "2027-04-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन सात जगहों में से किस देश की राष्ट्रीय अवकाश सूची में 1 जनवरी बिल्कुल नहीं है?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270406-holiday-off-poll",
+      "date": "2027-04-06",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "क्या आपके लिए यह मायने रखता है कि किसी ऐतिहासिक अन्याय की याद वाला दिन असल में छुट्टी का दिन हो या न हो?",
+      "options": [
+        {
+          "id": "matters-a-lot",
+          "emoji": "✅",
+          "label": "हाँ — छुट्टी मिलना ही असली संस्थागत मान्यता है"
+        },
+        {
+          "id": "activities-enough",
+          "emoji": "📚",
+          "label": "नहीं — स्मृति-कार्यक्रम और शिक्षा ही काफ़ी है"
+        },
+        {
+          "id": "depends-on-topic",
+          "emoji": "🤔",
+          "label": "विषय पर निर्भर — हर स्मृति-दिवस को छुट्टी नहीं बनना चाहिए"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "🤷",
+          "label": "इस बारे में कभी ख़ास नहीं सोचा"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270406-ambedkar-guess",
+      "date": "2027-04-06",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "एक देश में, उन्मूलन से सबसे निकट जुड़ी तारीख़ केंद्र सरकार की वार्षिक अवकाश सूची में तक नहीं है — छुट्टी सिर्फ़ इसलिए मिलती है क्योंकि हर साल एक नया आदेश जारी होता है। कौन-सा देश?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "संयुक्त राज्य अमेरिका"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270407-new-year-poll",
+      "date": "2027-04-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपका अपना नया साल इनमें से किससे सबसे मिलता-जुलता है?",
+      "options": [
+        {
+          "id": "reunion-eve",
+          "emoji": "🥟",
+          "label": "नववर्ष की पूर्वसंध्या पर घर में पारिवारिक भोज"
+        },
+        {
+          "id": "countdown-fireworks",
+          "emoji": "🎆",
+          "label": "उलटी गिनती करके आतिशबाज़ी देखना"
+        },
+        {
+          "id": "beach-white",
+          "emoji": "🏖️",
+          "label": "सफ़ेद कपड़े पहनकर समुद्र तट पर आतिशबाज़ी देखना"
+        },
+        {
+          "id": "no-holiday",
+          "emoji": "📅",
+          "label": "उस दिन सामान्य की तरह काम या स्कूल जाना"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270407-new-year-guess",
+      "date": "2027-04-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन चार जगहों में से किसकी राष्ट्रीय अवकाश सूची में 1 जनवरी है ही नहीं?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270408-abolition-holiday-poll",
+      "date": "2027-04-08",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आप जहाँ रहते हैं, वहाँ दासता या जाति/स्थिति-व्यवस्था के उन्मूलन की याद में कोई अवकाश या स्मृति-दिवस है?",
+      "options": [
+        {
+          "id": "holiday-yes",
+          "emoji": "🎉",
+          "label": "हाँ, और उस दिन छुट्टी भी होती है"
+        },
+        {
+          "id": "commemorate-no-holiday",
+          "emoji": "📅",
+          "label": "है, पर छुट्टी नहीं मिलती"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "ऐसा कोई दिन नहीं है"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "पता नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270408-abolition-holiday-guess",
+      "date": "2027-04-08",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में 'राष्ट्रीय अश्वेत चेतना दिवस' पहले स्कूली कैलेंडर में शामिल हुआ और तीन क़ानूनों तथा बीस वर्षों बाद ही क़ानूनी अवकाश बना?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "संयुक्त राज्य अमेरिका"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270409-memorial-holiday",
+      "date": "2027-04-09",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर कोई देश किसी ऐतिहासिक अन्याय को स्मृति-दिवस घोषित करे, तो क्या आप चाहेंगे कि उसके साथ छुट्टी भी मिले?",
+      "options": [
+        {
+          "id": "day-off-matters",
+          "emoji": "🏖️",
+          "label": "छुट्टी मिलना ही असली अहमियत दिखाता है"
+        },
+        {
+          "id": "symbolism-enough",
+          "emoji": "📜",
+          "label": "क़ानून में दर्ज होना ही काफ़ी है, छुट्टी ज़रूरी नहीं"
+        },
+        {
+          "id": "depends-who",
+          "emoji": "🤔",
+          "label": "यह इस पर निर्भर है कि दिन किसने और किसके लिए तय किया"
+        },
+        {
+          "id": "no-strong-view",
+          "emoji": "🤷",
+          "label": "कोई ख़ास राय नहीं है"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270409-brazil-veto-rename",
+      "date": "2027-04-09",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश ने आदिवासी दिवस का नाम बदला, जिस विधेयक को राष्ट्रपति ने पूर्ण वीटो किया पर कांग्रेस ने वीटो पलट दिया — और साथ ही ज़िम्मेदार एजेंसी का नाम भी बदल गया?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270410-commemorative-no-holiday",
+      "date": "2027-04-10",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "क्या आपके देश या क्षेत्र में कोई ऐसा आधिकारिक स्मृति-दिवस है जिसे स्पष्ट रूप से अवकाश नहीं घोषित किया गया?",
+      "options": [
+        {
+          "id": "yes-know",
+          "emoji": "🗓️",
+          "label": "हाँ, और मुझे पता है वह दिन किस लिए है"
+        },
+        {
+          "id": "yes-vague",
+          "emoji": "🤔",
+          "label": "हाँ, पर मुझे ठीक से याद नहीं"
+        },
+        {
+          "id": "no",
+          "emoji": "🚫",
+          "label": "ऐसा कोई दिन नहीं है"
+        },
+        {
+          "id": "unsure",
+          "emoji": "❓",
+          "label": "पता नहीं, कभी सोचा नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270410-law-says-no-holiday",
+      "date": "2027-04-10",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में इस विषय से जुड़े स्मृति-दिवस के बारे में क़ानून स्वयं स्पष्ट रूप से लिखता है कि वह अवकाश नहीं है?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270411-holiday-or-not",
+      "date": "2027-04-11",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "क्या आपके देश या क्षेत्र में आदिवासी जनों या औपनिवेशिक इतिहास को याद करने का कोई दिन है? क्या वह दिन वास्तव में सवेतन अवकाश है?",
+      "options": [
+        {
+          "id": "paid-holiday",
+          "emoji": "🎉",
+          "label": "है, और उस दिन छुट्टी भी मिलती है"
+        },
+        {
+          "id": "no-holiday",
+          "emoji": "📅",
+          "label": "है, पर छुट्टी नहीं मिलती"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "ऐसा कोई दिन नहीं है"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "पता नहीं / कभी सोचा नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270411-guess-country",
+      "date": "2027-04-11",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "एक देश ने स्मृति के इस दिन का नाम बदला, पर नया क़ानून तभी लागू हुआ जब कांग्रेस ने राष्ट्रपति के पूर्ण वीटो को पलट दिया; पुराना फ़रमान उसी दिन निरस्त हुआ और नया नाम क़ानून में दर्ज हो गया, फिर भी वह तारीख़ आज तक राष्ट्रीय अवकाश सूची में नहीं आई। कौन सा देश?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "संयुक्त राज्य अमेरिका"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270412-abolition-holiday-poll",
+      "date": "2027-04-12",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "क्या आपके देश या क्षेत्र में दासता या इसी तरह की उत्पीड़न-व्यवस्था के उन्मूलन की याद में कोई अवकाश है?",
+      "options": [
+        {
+          "id": "yes-holiday",
+          "emoji": "🎉",
+          "label": "हाँ, और उस दिन छुट्टी होती है"
+        },
+        {
+          "id": "yes-no-day-off",
+          "emoji": "📅",
+          "label": "हाँ, स्मृति-दिवस है, पर छुट्टी नहीं होती"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "ऐसा कोई दिन नहीं है"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "❓",
+          "label": "पता नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270412-abolition-holiday-guess",
+      "date": "2027-04-12",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में इस तरह का अवकाश 2021 में केवल तीन दिन में — सीनेट से पारित, प्रतिनिधि सभा से पारित, और हस्ताक्षरित — संघीय अवकाश सूची में जोड़ा गया, ठीक मेमोरियल डे के बाद?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "संयुक्त राज्य अमेरिका"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270413-holiday-priority",
+      "date": "2027-04-13",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "दासता या भेदभाव के अंत की याद दिलाने वाले दिन में आपके विचार से सबसे ज़रूरी क्या है?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🏖️",
+          "label": "वास्तव में काम से छुट्टी मिलना"
+        },
+        {
+          "id": "law-text",
+          "emoji": "📜",
+          "label": "क़ानून या पाठ्यक्रम में दर्ज होना, भले ही छुट्टी न मिले"
+        },
+        {
+          "id": "grassroots",
+          "emoji": "🤝",
+          "label": "सरकारी आदेश पर निर्भर हुए बिना, समुदाय की अपनी पहल से याद करना"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "इस बारे में कभी सोचा नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270413-annual-reissue-holiday",
+      "date": "2027-04-13",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में, किसी भेदभावपूर्ण व्यवस्था के अंत की याद दिलाने वाला अवकाश केंद्र सरकार की वार्षिक अवकाश सूची में नहीं है, बल्कि हर साल अलग से जारी एक आदेश से ही लागू होता है?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "संयुक्त राज्य अमेरिका"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270414-abolition-poll",
+      "date": "2027-04-14",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इस विषय में शामिल कई तारीख़ें पहले स्थानीय स्तर पर या अनौपचारिक रूप से जड़ें जमाती हैं, तब जाकर राष्ट्रीय अवकाश बनती हैं। अगर आपके अपने इलाक़े में कोई नया ऐतिहासिक स्मृति-दिवस जोड़ा जाए, तो आपको लगता है कि उसकी शुरुआत कहाँ से होनी चाहिए?",
+      "options": [
+        {
+          "id": "school-calendar",
+          "emoji": "📚",
+          "label": "पहले स्कूली कैलेंडर में रखें"
+        },
+        {
+          "id": "local-law",
+          "emoji": "🏛️",
+          "label": "पहले स्थानीय (राज्य/शहर) अवकाश बनाएँ"
+        },
+        {
+          "id": "civil-society",
+          "emoji": "✊",
+          "label": "पहले जन-सामान्य के स्मृति-आयोजनों से धीरे-धीरे बढ़ने दें"
+        },
+        {
+          "id": "national-law",
+          "emoji": "📜",
+          "label": "सीधे केंद्र सरकार क़ानून बनाए"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270414-abolition-guess",
+      "date": "2027-04-14",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "यह दिन किसी देश की संविधान प्रारूप समिति के अध्यक्ष का जन्मदिन है, और उसी देश के संविधान में एक विशेष अनुच्छेद है जो एक तरह के सामाजिक भेदभाव को समाप्त करता है। फिर भी केंद्र सरकार ने इस तारीख़ को कभी अपनी वार्षिक राजपत्रित अवकाश सूची में शामिल नहीं किया — कार्यालय बंद होंगे या नहीं, यह हर साल नए सिरे से जारी होने वाले प्रशासनिक आदेश पर निर्भर करता है। यह कौन सा देश है?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "संयुक्त राज्य अमेरिका"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

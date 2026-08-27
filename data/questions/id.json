@@ -10092,6 +10092,5946 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20270115-family-table",
+      "date": "2027-01-15",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Apakah di keluargamu ada satu hari dalam setahun ketika semua orang berusaha berkumpul di meja yang sama?",
+      "options": [
+        {
+          "id": "always-gather",
+          "emoji": "🍽️",
+          "label": "Ada, hampir tiap tahun semua hadir"
+        },
+        {
+          "id": "sometimes-miss",
+          "emoji": "🧳",
+          "label": "Ada, tapi sering ada yang tidak bisa datang"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "Tidak ada hari tetap seperti itu"
+        },
+        {
+          "id": "video-call",
+          "emoji": "📱",
+          "label": "Tidak bisa kumpul, jadi cukup lewat video call"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270115-farmers-day-timing",
+      "date": "2027-01-15",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di mana Hari Tani ditetapkan pada awal musim semi, bukan setelah panen selesai?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok daratan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270116-exam-rhythm",
+      "date": "2027-01-16",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Kalau memikirkan musim ujian yang pernah (atau akan) kamu jalani, ritme mana yang paling mendekati pengalamanmu?",
+      "options": [
+        {
+          "id": "one-shot-sprint",
+          "emoji": "🎯",
+          "label": "Sprint satu-dua hari yang menentukan segalanya"
+        },
+        {
+          "id": "long-stretch",
+          "emoji": "🗓️",
+          "label": "Rentang berminggu-minggu yang setiap harinya bisa ada ujian"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🔁",
+          "label": "Ujian nasional dulu, lalu babak kedua oleh masing-masing sekolah"
+        },
+        {
+          "id": "no-single-exam",
+          "emoji": "📁",
+          "label": "Tidak ada satu ujian besar, dinilai dari rekam jejak dan berkas lamaran seiring waktu"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270116-guess-exam-country",
+      "date": "2027-01-16",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di satu tempat, ujian akhir sekolah menengah berlangsung dari pertengahan Februari sampai awal April — hampir dua bulan — dengan hanya satu atau dua naskah pada hari tertentu, bukan dipadatkan jadi satu-dua hari. Di manakah ini?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270117-recognize-history",
+      "date": "2027-01-17",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika keputusan ada di tangan Anda, langkah apa yang paling dulu diambil agar suatu masyarakat secara resmi mengakui sejarah penindasan dan pembebasannya?",
+      "options": [
+        {
+          "id": "education-first",
+          "emoji": "📚",
+          "label": "Utamakan pendidikan — masuk kurikulum lebih penting daripada libur"
+        },
+        {
+          "id": "mark-no-holiday",
+          "emoji": "📅",
+          "label": "Jadikan hari peringatan dulu, libur belum perlu"
+        },
+        {
+          "id": "legal-holiday",
+          "emoji": "🎉",
+          "label": "Langsung jadikan hari libur resmi lewat undang-undang"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🤷",
+          "label": "Tidak masalah, hari semacam ini tidak perlu"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270117-abolition-holiday-path",
+      "date": "2027-01-17",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Hari peringatan penghapusan perbudakan di negara mana yang berpindah dari kalender sekolah, menjadi hari peringatan nasional, lalu menjadi hari libur resmi — proses yang memakan waktu dua puluh tahun dan tiga undang-undang?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270118-exam-design-pref",
+      "date": "2027-01-18",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika keputusan ada di tanganmu, desain ujian seperti apa yang kamu inginkan untuk mengukur dirimu di usia delapan belas tahun?",
+      "options": [
+        {
+          "id": "one-shot",
+          "emoji": "🎯",
+          "label": "Dipadatkan jadi satu-dua hari, sekali kesempatan"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "🗓️",
+          "label": "Tersebar dalam beberapa minggu atau dua bulan, per mata pelajaran"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🪜",
+          "label": "Satu ujian nasional dulu, lalu seleksi masing-masing universitas"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📚",
+          "label": "Tidak ada ujian nasional sama sekali, hanya rekam sekolah bertahun-tahun dan penilaian tiap sekolah"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270118-guess-lockdown-exam",
+      "date": "2027-01-18",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Ujian ini dipadatkan hanya dalam dua hari dan menjadi hampir satu-satunya gerbang masuk universitas; selama ujian, klakson dilarang dekat lokasi ujian, pekerjaan konstruksi dihentikan, polisi lalu lintas membuka jalur khusus, dan di beberapa tempat jam kerja bahkan digeser. Ini kebiasaan negara mana?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270119-seasonal-turn-custom",
+      "date": "2027-01-19",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Pada hari ekuinoks atau solstis, biasanya seperti apa di tempatmu?",
+      "options": [
+        {
+          "id": "seasonal-food",
+          "emoji": "🍲",
+          "label": "Makan makanan musiman (labu, tangyuan, pangsit...)"
+        },
+        {
+          "id": "grave-visit",
+          "emoji": "🪦",
+          "label": "Berziarah ke makam atau menghormati leluhur"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "🕑",
+          "label": "Menggeser jam sesuai undang-undang (semacam waktu musim panas)"
+        },
+        {
+          "id": "no-observance",
+          "emoji": "🤷",
+          "label": "Tidak ada libur atau kebiasaan terkait, hari biasa saja"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270119-seasonal-turn-drift",
+      "date": "2027-01-19",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Perayaan tradisional negara mana yang dulunya menandai perpindahan matahari ke belahan utara, tetapi kini sudah bergeser lebih dari tiga pekan dari solstis sesungguhnya?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270120-exam-format",
+      "date": "2027-01-20",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Mengingat ujian masuk yang pernah kamu jalani sendiri, mana yang paling mendekati?",
+      "options": [
+        {
+          "id": "compressed-1-2-days",
+          "emoji": "📅",
+          "label": "Satu ujian yang menentukan segalanya, dipadatkan dalam satu-dua hari"
+        },
+        {
+          "id": "spread-weeks",
+          "emoji": "🗓️",
+          "label": "Dibentangkan selama berminggu-minggu, bahkan hampir dua bulan"
+        },
+        {
+          "id": "two-stage",
+          "emoji": "🎯",
+          "label": "Dua tahap: satu ujian nasional dulu, lalu ujian masing-masing sekolah"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📁",
+          "label": "Tidak ada ujian terpadu, hanya nilai sekolah dan berkas pendaftaran"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270120-exam-city-lockdown",
+      "date": "2027-01-20",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat mana kota-kota menata ulang diri selama ujian — larangan klakson, konstruksi dihentikan, jalur lalu lintas khusus?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270121-equinox-habits",
+      "date": "2027-01-21",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Untuk hari seperti ekuinoks atau solstis yang tanggalnya bergeser karena ditentukan posisi matahari, apa yang biasanya Anda lakukan?",
+      "options": [
+        {
+          "id": "adjust-clock",
+          "emoji": "🕑",
+          "label": "Menyetel jam (teringat aturan seperti waktu musim panas)"
+        },
+        {
+          "id": "seasonal-food",
+          "emoji": "🍡",
+          "label": "Makan makanan musiman (tangyuan, pangsit, labu, semacam itu)"
+        },
+        {
+          "id": "check-almanac",
+          "emoji": "📅",
+          "label": "Memeriksa pengumuman observatorium atau kalender untuk tanggal pastinya"
+        },
+        {
+          "id": "no-effect",
+          "emoji": "🤷",
+          "label": "Tidak merasa istimewa, sama seperti hari biasa"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270121-equinox-guess-ohagi",
+      "date": "2027-01-21",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di negara mana kue beras kacang merah yang sama dipersembahkan kepada leluhur dengan nama berbeda pada musim semi dan musim gugur?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270122-exam-rhythm",
+      "date": "2027-01-22",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika Anda bisa memilih bagaimana Anda diukur pada usia delapan belas tahun, ritme mana yang Anda inginkan?",
+      "options": [
+        {
+          "id": "two-day-crunch",
+          "emoji": "🎯",
+          "label": "Ujian terpusat dua hari yang menentukan segalanya"
+        },
+        {
+          "id": "two-sundays",
+          "emoji": "📅",
+          "label": "Dua sesi ujian berjarak sepekan"
+        },
+        {
+          "id": "two-month-spread",
+          "emoji": "🗓️",
+          "label": "Mata pelajaran demi mata pelajaran, tersebar hampir dua bulan"
+        },
+        {
+          "id": "no-single-exam",
+          "emoji": "📚",
+          "label": "Tidak ada satu ujian besar — dinilai dari rekam jejak sekolah bertahun-tahun dan penilaian tiap institusi"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270122-exam-guess-country",
+      "date": "2027-01-22",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di satu tempat, ujian yang menentukan penerimaan universitas bukan sekali duduk, melainkan tersebar mata pelajaran demi mata pelajaran hampir dua bulan, dengan naskah hampir tiap hari. Tempat mana itu?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270123-season-custom",
+      "date": "2027-01-23",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Kebiasaan terkait pergantian musim mana yang pernah Anda lakukan?",
+      "options": [
+        {
+          "id": "solstice-food",
+          "emoji": "🥟",
+          "label": "Makan tangyuan atau pangsit saat solstis Desember"
+        },
+        {
+          "id": "mamemaki",
+          "emoji": "🫘",
+          "label": "Menyebar kedelai sangrai saat setsubun sambil berseru \"setan keluar, keberuntungan masuk\""
+        },
+        {
+          "id": "ohigan-grave",
+          "emoji": "🙏",
+          "label": "Berziarah ke makam dan menyajikan botamochi/ohagi sekitar ekuinoks (higan)"
+        },
+        {
+          "id": "dst-clock",
+          "emoji": "🕐",
+          "label": "Menyetel jam karena waktu musim panas (DST)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270123-qingming-country",
+      "date": "2027-01-23",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di satu negara, satu-satunya hari libur resmi yang bertanggal menurut penanda matahari disebut dalam undang-undang jatuh 'pada hari Qingming itu sendiri', padahal Qingming sebenarnya titik pada bujur ekliptika 15 derajat, bukan tanggal bulan; hari mana yang benar-benar diliburkan baru dipastikan lewat edaran tahunan terpisah. Negara mana ini?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270124-harvest-what-matters",
+      "date": "2027-01-24",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika kamu harus mendefinisikan 'hari panen' versimu sendiri, apa yang paling penting bagimu?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "Seluruh keluarga berkumpul di satu meja"
+        },
+        {
+          "id": "ritual-food",
+          "emoji": "🍚",
+          "label": "Memasak satu hidangan yang punya makna bersama-sama"
+        },
+        {
+          "id": "thank-labor",
+          "emoji": "🙏",
+          "label": "Hari untuk saling berterima kasih atas kerja keras"
+        },
+        {
+          "id": "community-festival",
+          "emoji": "🔥",
+          "label": "Warga berkumpul merayakan dengan api unggun dan tarian"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270124-harvest-policy-festival",
+      "date": "2027-01-24",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Hari panen ini baru dibentuk pada 2018 lewat persetujuan Dewan Negara, khusus untuk petani, dan ditetapkan pada ekuinoks musim gugur menurut kalender lunar — tapi bukan hari libur bagi semua orang, temanya ditentukan tiap tahun oleh Kementerian Pertanian dan Urusan Pedesaan, dan cara merayakannya berbeda-beda antarprovinsi. Ini hari raya di mana?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok Daratan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270125-seasonal-customs",
+      "date": "2027-01-25",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tanggal-tanggal ini ditentukan oleh matahari yang mencapai satu titik tertentu, dan masing-masing punya kebiasaannya sendiri. Mana dari berikut ini yang pernah benar-benar Anda atau keluarga lakukan?",
+      "options": [
+        {
+          "id": "tangyuan-dumplings",
+          "emoji": "🥟",
+          "label": "Makan tangyuan atau pangsit saat solstis Desember"
+        },
+        {
+          "id": "pumpkin-yuzu-bath",
+          "emoji": "🎃",
+          "label": "Makan labu dan berendam air jeruk yuzu saat solstis"
+        },
+        {
+          "id": "kite-flying",
+          "emoji": "🪁",
+          "label": "Menerbangkan layang-layang saat Makar Sankranti"
+        },
+        {
+          "id": "bean-throwing",
+          "emoji": "🫘",
+          "label": "Menebar kedelai sambil berseru \"setan keluar, keberuntungan masuk\" saat setsubun"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270125-equinox-law-country",
+      "date": "2027-01-25",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di negara mana hari libur ekuinoks Maret dan September dalam undang-undang tidak ditulis dengan bulan dan tanggal, melainkan hanya \"hari ekuinoks\", dan tanggal pastinya dihitung observatorium nasional lalu baru ditetapkan di lembaran negara pada Februari tahun sebelumnya?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270126-harvest-focus",
+      "date": "2027-01-26",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika keluarga Anda merayakan hari yang berkaitan dengan panen atau rasa syukur, biasanya pusat perhatiannya di mana?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "Seluruh keluarga berkumpul untuk makan bersama"
+        },
+        {
+          "id": "dish-is-ritual",
+          "emoji": "🍚",
+          "label": "Ada satu masakan khusus, dan proses memasaknya itu sendiri adalah ritualnya"
+        },
+        {
+          "id": "give-thanks-to",
+          "emoji": "🙏",
+          "label": "Berterima kasih kepada sesuatu yang konkret — dewa, kerja, atau hewan penarik bajak"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🚫",
+          "label": "Keluarga kami tidak benar-benar merayakan hari semacam ini"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270126-policy-harvest",
+      "date": "2027-01-26",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara empat tempat berikut, hari panen mana yang baru dibuat pemerintah pada 2018 dan bukan hari libur bagi semua orang?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok daratan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270127-seasonal-turn-habit",
+      "date": "2027-01-27",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat tinggal Anda, apa yang biasanya Anda lakukan menjelang ekuinoks atau solstis?",
+      "options": [
+        {
+          "id": "ancestors",
+          "emoji": "🙏",
+          "label": "Berziarah ke makam leluhur"
+        },
+        {
+          "id": "food",
+          "emoji": "🥟",
+          "label": "Makan makanan musiman (labu, dll.)"
+        },
+        {
+          "id": "clocks",
+          "emoji": "🕑",
+          "label": "Mengubah jam (waktu musim panas)"
+        },
+        {
+          "id": "nothing",
+          "emoji": "🤷",
+          "label": "Tidak ada kegiatan khusus"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270127-solar-term-holiday-country",
+      "date": "2027-01-27",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Dalam peraturan hari libur negara ini, hanya satu dari tujuh hari libur nasional yang tanggalnya ditentukan penanda matahari, dan solstis Desember sama sekali bukan hari libur. Negara mana?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270128-harvest-day-form",
+      "date": "2027-01-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika keluarga Anda merayakan hari panen atau ucapan terima kasih atas kerja, mana yang paling mendekati?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "Makan bersama keluarga"
+        },
+        {
+          "id": "labor-thanks",
+          "emoji": "🙏",
+          "label": "Berterima kasih atas kerja keras"
+        },
+        {
+          "id": "community-ritual",
+          "emoji": "🕯️",
+          "label": "Ritual komunitas atau keagamaan"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "Tidak ada hari seperti itu"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270128-farmers-day-before-harvest",
+      "date": "2027-01-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat mana Hari Tani ditetapkan pada awal musim semi, sebelum pekerjaan dimulai, bukan setelah panen?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok daratan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270129-seasonal-custom-experience",
+      "date": "2027-01-29",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Dari tradisi yang terkait ekuinoks atau titik balik matahari ini, mana yang pernah kamu lakukan sendiri?",
+      "options": [
+        {
+          "id": "mamemaki",
+          "emoji": "🫘",
+          "label": "Menebar kedelai Setsubun"
+        },
+        {
+          "id": "tangyuan",
+          "emoji": "🍡",
+          "label": "Makan tangyuan saat solstis Desember"
+        },
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "Ziarah makam saat higan"
+        },
+        {
+          "id": "kite-flying",
+          "emoji": "🪁",
+          "label": "Menerbangkan layang-layang saat Makar Sankranti"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270129-equinox-dst-country",
+      "date": "2027-01-29",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Negara mana yang tidak pernah meliburkan ekuinoks atau solstis, tetapi menggeser jamnya dua kali setahun lewat undang-undang, dengan tanggal yang dipatok setegas \"hari Minggu kedua bulan Maret\"?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270130-harvest-habit",
+      "date": "2027-01-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat Anda tinggal, jika ada hari yang disisihkan untuk bersyukur atas panen atau kerja keras, biasanya Anda merayakannya seperti apa?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "Seluruh keluarga berkumpul di meja makan"
+        },
+        {
+          "id": "special-dish",
+          "emoji": "🍚",
+          "label": "Memasak hidangan khusus yang terkait panen"
+        },
+        {
+          "id": "community-gathering",
+          "emoji": "🔥",
+          "label": "Berkumpul dengan tetangga atau komunitas untuk acara bersama"
+        },
+        {
+          "id": "no-special-day",
+          "emoji": "📅",
+          "label": "Tidak ada hari semacam itu — hari biasa saja"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270130-farmers-day-timing",
+      "date": "2027-01-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara tempat-tempat ini, satu 'Hari Tani' tidak diletakkan setelah panen, melainkan sebelum musim tanam musim semi dimulai. Yang mana?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok daratan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270131-seasonal-custom",
+      "date": "2027-01-31",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Dari kebiasaan terkait pergantian musim berikut, mana yang pernah Anda atau keluarga lakukan sendiri?",
+      "options": [
+        {
+          "id": "mamemaki",
+          "emoji": "🫘",
+          "label": "Melempar kedelai sangrai saat Setsubun sambil berseru setan keluar, keberuntungan masuk"
+        },
+        {
+          "id": "ohigan-visit",
+          "emoji": "🪦",
+          "label": "Berziarah ke makam saat higan dan mempersembahkan botamochi atau ohagi"
+        },
+        {
+          "id": "tangyuan",
+          "emoji": "🍡",
+          "label": "Makan tangyuan atau labu saat solstis Desember"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "🕑",
+          "label": "Menyetel jam maju atau mundur untuk waktu musim panas"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270131-no-shadow-day",
+      "date": "2027-01-31",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Badan meteorologi, klimatologi, dan geofisika negara mana yang tiap tahun mengumumkan Hari Tanpa Bayangan untuk tiap kota?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270201-harvest-poll",
+      "date": "2027-02-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Bagi Anda, gambaran mana yang paling dekat dengan 'bersyukur atas panen'?",
+      "options": [
+        {
+          "id": "family-table",
+          "emoji": "🍽️",
+          "label": "Makan bersama saat seluruh keluarga berkumpul"
+        },
+        {
+          "id": "the-dish-itself",
+          "emoji": "🍲",
+          "label": "Masakan yang wajib dibuat — proses memasaknya adalah ritualnya"
+        },
+        {
+          "id": "month-of-festivity",
+          "emoji": "🎉",
+          "label": "Suasana pesta dan api unggun selama sebulan penuh"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🌾",
+          "label": "Tidak ada hari tetap — bersyukur jadi urusan sendiri untuk diingat"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270201-farmers-day-guess",
+      "date": "2027-02-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara tempat-tempat berikut, mana yang menetapkan 'Hari Tani'-nya sebelum musim tanam dimulai, bukan setelah panen selesai?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok Daratan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270202-seasonal-custom-poll",
+      "date": "2027-02-02",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Kebiasaan musiman yang mengikuti matahari ini, mana yang pernah Anda atau keluarga Anda lakukan?",
+      "options": [
+        {
+          "id": "grave-sweeping",
+          "emoji": "🧹",
+          "label": "Berziarah ke makam saat higan dan menyajikan botamochi atau ohagi"
+        },
+        {
+          "id": "winter-solstice-food",
+          "emoji": "🥣",
+          "label": "Makan tangyuan atau pangsit saat solstis Desember, berendam air jeruk yuzu"
+        },
+        {
+          "id": "bean-throwing",
+          "emoji": "🫘",
+          "label": "Menebar kedelai saat setsubun sambil berseru \"setan keluar, keberuntungan masuk\""
+        },
+        {
+          "id": "none-of-these",
+          "emoji": "🤷",
+          "label": "Tidak satu pun — negara saya tidak merayakan pergantian musim seperti ini"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270202-solar-term-holiday-guess",
+      "date": "2027-02-02",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara berikut, negara mana yang hanya satu hari liburnya bertanggal menurut penanda matahari, sementara jumlah hari liburnya benar-benar baru diumumkan pemerintah setiap tahun secara terpisah?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270203-harvest-timing",
+      "date": "2027-02-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Kalau harus menentukan kapan hari 'berterima kasih atas panen' itu jatuh, menurutmu waktu mana yang paling masuk akal?",
+      "options": [
+        {
+          "id": "after-harvest",
+          "emoji": "🌾",
+          "label": "Setelah panen selesai, seperti Thanksgiving"
+        },
+        {
+          "id": "before-planting",
+          "emoji": "🌱",
+          "label": "Sebelum masa tanam dimulai, seperti hari Lichun"
+        },
+        {
+          "id": "religious-calendar",
+          "emoji": "🕯️",
+          "label": "Mengikuti kalender keagamaan, seperti hari-hari santo di bulan Juni"
+        },
+        {
+          "id": "family-gathering",
+          "emoji": "🍽️",
+          "label": "Tanggalnya nomor dua, yang penting semua keluarga bisa berkumpul di meja makan"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270203-guess-farmers-festival",
+      "date": "2027-02-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRH133GVQ1WMH9NGAV3",
+      "topic_slug": "harvest-and-gratitude",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Hari panen dari tempat mana yang dibentuk pada 2018 lewat persetujuan Dewan Negara dan ditetapkan pada ekuinoks musim gugur, bukan tumbuh perlahan dari adat rakyat?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok daratan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270204-holiday-experience",
+      "date": "2027-02-04",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Pengalamanmu soal libur panjang lebih dekat ke yang mana?",
+      "options": [
+        {
+          "id": "makeup-workday",
+          "emoji": "🧾",
+          "label": "Pernah kerja di akhir pekan sebagai ganti libur panjang"
+        },
+        {
+          "id": "deducted-leave",
+          "emoji": "🏖️",
+          "label": "Pernah cuti tahunan saya terpotong karena cuti bersama"
+        },
+        {
+          "id": "sunday-bump",
+          "emoji": "📅",
+          "label": "Pernah dapat hari libur tambahan karena hari libur jatuh pas hari Minggu"
+        },
+        {
+          "id": "no-particular-feel",
+          "emoji": "🤷",
+          "label": "Tidak terlalu memperhatikan, jarang mikir soal cara libur disusun"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270204-bridge-holiday-country",
+      "date": "2027-02-04",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di satu tempat, libur panjang bersandar pada peraturan menteri yang diterbitkan ulang setiap tahun, yang menempelkan hari tanpa nama di samping hari libur resmi — orang setempat menyebutnya \"menggantung hari libur\". Peraturan itu hanya mengikat kantor federal, tidak berlaku bagi perusahaan swasta. Di manakah ini?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270205-new-year-habit",
+      "date": "2027-02-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Bagaimana biasanya Anda menghabiskan malam tahun baru atau hari tahun baru?",
+      "options": [
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "Makan malam berkumpul bersama keluarga di malam tahun baru"
+        },
+        {
+          "id": "shrine-visit",
+          "emoji": "⛩️",
+          "label": "Mengunjungi kuil atau tempat ibadah untuk pertama kali"
+        },
+        {
+          "id": "beach-fireworks",
+          "emoji": "🎆",
+          "label": "Menonton kembang api di pantai dan melompati ombak"
+        },
+        {
+          "id": "countdown-party",
+          "emoji": "🥳",
+          "label": "Pesta hitung mundur, lalu istirahat dan menonton pertandingan keesokan harinya"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270205-no-jan-first",
+      "date": "2027-02-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Daftar hari libur nasional negara ini sama sekali tidak memuat 1 Januari — tahun barunya jatuh pada Maret atau April, dengan nama berbeda di tiap negara bagian. Negara mana?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270206-carnival-parade-experience",
+      "date": "2027-02-06",
+      "kind": "poll",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Pernahkah kamu ikut serta dalam pawai bergaya karnaval?",
+      "options": [
+        {
+          "id": "marched",
+          "emoji": "💃",
+          "label": "Pernah, dengan kostum atau riasan"
+        },
+        {
+          "id": "watched",
+          "emoji": "👀",
+          "label": "Menonton langsung, tapi tidak ikut"
+        },
+        {
+          "id": "online",
+          "emoji": "📱",
+          "label": "Hanya melihat secara daring atau di TV"
+        },
+        {
+          "id": "never",
+          "emoji": "🤷",
+          "label": "Belum pernah menemui acara semacam itu"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270206-carnival-samba-country",
+      "date": "2027-02-06",
+      "kind": "guess",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Ini salah satu karnaval samba terbesar di belahan bumi utara, digelar setiap tahun pada Sabtu terakhir bulan Agustus, dan sama sekali tidak berkaitan dengan Prapaskah. Edisi 2026 adalah yang keempat puluh satu. Di negara mana acara ini berlangsung?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270207-affection-habit",
+      "date": "2027-02-07",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Pada 14 Februari, apa yang paling sering kamu atau orang di sekitarmu lakukan?",
+      "options": [
+        {
+          "id": "give-chocolate",
+          "emoji": "🍫",
+          "label": "Memberi cokelat"
+        },
+        {
+          "id": "send-card-flowers",
+          "emoji": "💐",
+          "label": "Memberi kartu atau bunga"
+        },
+        {
+          "id": "dine-out",
+          "emoji": "🍽️",
+          "label": "Makan di luar"
+        },
+        {
+          "id": "no-celebrate",
+          "emoji": "🙅",
+          "label": "Tidak merayakan secara khusus"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270207-guess-brazil-date",
+      "date": "2027-02-07",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara tempat berikut, mana yang merayakan hari kasih sayang pada 12 Juni, bukan 14 Februari?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270208-carnival-status",
+      "date": "2027-02-08",
+      "kind": "poll",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat kamu tinggal, apa status sebenarnya dari 'Karnaval' atau pawai perayaan yang mirip?",
+      "options": [
+        {
+          "id": "legal-holiday",
+          "emoji": "📅",
+          "label": "Hari libur yang tertulis dalam undang-undang"
+        },
+        {
+          "id": "discretionary-holiday",
+          "emoji": "🗓️",
+          "label": "Libur pilihan yang diputuskan sendiri oleh kantor atau pemberi kerja"
+        },
+        {
+          "id": "tourism-event",
+          "emoji": "🎪",
+          "label": "Acara festival yang diselenggarakan dinas pariwisata, bukan hari libur"
+        },
+        {
+          "id": "borrowed-name",
+          "emoji": "🏷️",
+          "label": "Sekadar pasar atau acara wisata yang meminjam kata \"karnaval\""
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270208-carnival-country",
+      "date": "2027-02-08",
+      "kind": "guess",
+      "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
+      "topic_slug": "carnival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Negara mana yang Karnavalnya tidak berstatus hari libur resmi menurut hukum, melainkan bergantung pada keputusan yang diterbitkan ulang pemerintah setiap tahun sebagai hari libur pilihan?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270209-easter-days-off",
+      "date": "2027-02-09",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Selain Natal, berapa hari libur tambahan yang diberikan negaramu di sekitar Paskah (Rabu Abu, Jumat Agung, Paskah, Kenaikan)?",
+      "options": [
+        {
+          "id": "zero",
+          "emoji": "🚫",
+          "label": "Tidak ada sama sekali"
+        },
+        {
+          "id": "one-day",
+          "emoji": "1️⃣",
+          "label": "Cuma satu hari (biasanya Jumat Agung)"
+        },
+        {
+          "id": "several-days",
+          "emoji": "📅",
+          "label": "Beberapa hari sekaligus"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "Enggak pernah merhatiin"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270209-guess-easter-country",
+      "date": "2027-02-09",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Negara mana yang menjadikan Jumat Agung dan Kenaikan sebagai hari libur nasional resmi, dan masih menambah satu hari cuti bersama nasional persis sesudah Kenaikan?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270210-national-day-poll",
+      "date": "2027-02-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika kamu bisa hadir langsung di salah satu perayaan hari nasional yang disebutkan di atas, mana yang paling ingin kamu ikuti?",
+      "options": [
+        {
+          "id": "street-games",
+          "emoji": "🎪",
+          "label": "Lomba 17-an di kampung, Indonesia"
+        },
+        {
+          "id": "day-night-taiwan",
+          "emoji": "🎆",
+          "label": "Hari Nasional Taiwan, upacara bendera pagi dan kembang api malam"
+        },
+        {
+          "id": "red-fort-india",
+          "emoji": "🚩",
+          "label": "Hari Kemerdekaan India, PM mengibarkan bendera di Benteng Merah"
+        },
+        {
+          "id": "parade-bbq-us",
+          "emoji": "🍖",
+          "label": "Hari Kemerdekaan Amerika Serikat, dengan kembang api, pawai, dan barbeku"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270210-national-day-guess",
+      "date": "2027-02-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS2DYM5TH4YM5Q9TA9G",
+      "topic_slug": "national-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara tujuh hari nasional, satu di antaranya tidak memperingati peristiwa sejarah bertanggal, melainkan penobatan legendaris. Negara mana itu?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok daratan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270211-womens-day-half-day",
+      "date": "2027-02-11",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika 8 Maret di tempatmu juga diberi cuti setengah hari seperti di Tiongkok, bagaimana kamu akan menghabiskannya?",
+      "options": [
+        {
+          "id": "rest-alone",
+          "emoji": "🛌",
+          "label": "Istirahat untuk diri sendiri"
+        },
+        {
+          "id": "family-time",
+          "emoji": "👪",
+          "label": "Menghabiskan waktu dengan keluarga atau teman"
+        },
+        {
+          "id": "still-work",
+          "emoji": "💼",
+          "label": "Tetap bekerja seperti biasa"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🤷",
+          "label": "Tidak perlu, biarkan seperti sekarang saja"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270211-womens-day-brazil-date",
+      "date": "2027-02-11",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara tujuh tempat ini, hari perempuan nasional yang mana yang masih berada di 30 April sampai undang-undang baru 2025 memindahkannya ke 8 Maret?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270212-valentine-format",
+      "date": "2027-02-12",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat kamu tinggal atau tumbuh besar, bagaimana biasanya Hari Valentine dijalani?",
+      "options": [
+        {
+          "id": "single-day",
+          "emoji": "💌",
+          "label": "Hadiah satu arah, hanya satu hari"
+        },
+        {
+          "id": "reciprocal",
+          "emoji": "🔁",
+          "label": "Bertimbal balik, dibalas sebulan kemudian"
+        },
+        {
+          "id": "week-long",
+          "emoji": "📅",
+          "label": "Direntangkan jadi sepekan penuh"
+        },
+        {
+          "id": "dual-dates",
+          "emoji": "🗓️",
+          "label": "Ada dua tanggal yang berlaku bersamaan"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270212-guess-discourage-country",
+      "date": "2027-02-12",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara tujuh tempat ini, di mana dinas pendidikan pemerintah daerah setiap tahun menerbitkan surat edaran menjelang Hari Valentine yang meminta sekolah mengimbau siswa agar tidak merayakannya?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270213-womens-day-poll",
+      "date": "2027-02-13",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat Anda tinggal, biasanya seperti apa tanggal 8 Maret?",
+      "options": [
+        {
+          "id": "half-day-off",
+          "emoji": "🕐",
+          "label": "Ada libur (meski setengah hari)"
+        },
+        {
+          "id": "events-no-holiday",
+          "emoji": "🎤",
+          "label": "Ada ceramah, penghargaan, atau promosi, tapi bukan hari libur"
+        },
+        {
+          "id": "whole-month",
+          "emoji": "📅",
+          "label": "Fokusnya kegiatan sepanjang bulan, bukan satu tanggal tertentu"
+        },
+        {
+          "id": "no-observance",
+          "emoji": "🤷",
+          "label": "Hampir tidak terasa, seperti hari biasa saja"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270213-womens-day-guess",
+      "date": "2027-02-13",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tempat mana yang hari perempuan nasionalnya baru dipindah dari 30 April ke 8 Maret lewat undang-undang 2025?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270214-reciprocity-habit",
+      "date": "2027-02-14",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika kamu menerima hadiah pada hari seperti Valentine, biasanya bagaimana kamu membalasnya?",
+      "options": [
+        {
+          "id": "always-reciprocate",
+          "emoji": "🎁",
+          "label": "Saya selalu membalas, dan secepatnya"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤔",
+          "label": "Tergantung seberapa dekat hubungannya"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🙅",
+          "label": "Saya tidak merasa wajib membalas"
+        },
+        {
+          "id": "no-concept",
+          "emoji": "❓",
+          "label": "Di tempat saya tidak ada kebiasaan 'membalas hadiah' semacam itu"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270214-guess-discourage-country",
+      "date": "2027-02-14",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara tujuh tempat pada halaman ini, di manakah dokumen resmi beredar menjelang Hari Valentine yang meminta sekolah mencegah siswa merayakannya?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270215-holiday-namesake-poll",
+      "date": "2027-02-15",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat Anda tinggal, apakah ada hari yang dinamai menurut seseorang tetapi sebenarnya bukan hari libur?",
+      "options": [
+        {
+          "id": "yes-know-who",
+          "emoji": "🧠",
+          "label": "Ada, dan saya tahu untuk siapa"
+        },
+        {
+          "id": "yes-dont-know",
+          "emoji": "🤷",
+          "label": "Ada, tapi tidak yakin untuk siapa"
+        },
+        {
+          "id": "no-all-holidays",
+          "emoji": "📅",
+          "label": "Tidak, semua hari untuk tokoh tertentu adalah libur"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "💭",
+          "label": "Belum pernah memikirkannya"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270215-founder-two-dates",
+      "date": "2027-02-15",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di satu negara, undang-undangnya memberi Bapak Bangsa dua tanggal — hari lahir dan hari wafat — dan keduanya bukan hari libur. Satu-satunya hari libur bernama orang yang benar-benar meliburkan justru memperingati seorang pemikir dari dua setengah milenium lalu. Negara mana ini?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270216-exam-format-preference",
+      "date": "2027-02-16",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika kamu sendiri yang harus menjalani ujian ini, jadwal mana yang lebih kamu inginkan?",
+      "options": [
+        {
+          "id": "single-day",
+          "emoji": "⏱️",
+          "label": "Dipadatkan dalam satu-dua hari"
+        },
+        {
+          "id": "two-sundays",
+          "emoji": "📅",
+          "label": "Dibagi dua hari Minggu berjarak sepekan"
+        },
+        {
+          "id": "two-months",
+          "emoji": "📆",
+          "label": "Dibentangkan hampir dua bulan, mapel demi mapel"
+        },
+        {
+          "id": "no-national-exam",
+          "emoji": "📄",
+          "label": "Tanpa ujian nasional, mengandalkan rapor dan berkas lamaran"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270216-guess-two-month-exam",
+      "date": "2027-02-16",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+      "topic_slug": "exam-season",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara keempat ini, mana yang menyebar ujian kelulusan SMA-nya mata pelajaran demi mata pelajaran hampir dua bulan, bukan memadatkannya dalam satu-dua hari?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270217-lantern-experience",
+      "date": "2027-02-17",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Bagaimana biasanya Anda menghabiskan hari Festival Lampion?",
+      "options": [
+        {
+          "id": "tangyuan-lanterns",
+          "emoji": "🍡",
+          "label": "Makan tangyuan dan menonton pameran lampion"
+        },
+        {
+          "id": "sky-lantern",
+          "emoji": "🏮",
+          "label": "Menerbangkan lampion langit dengan harapan"
+        },
+        {
+          "id": "beehive-fireworks",
+          "emoji": "🎆",
+          "label": "Berdiri di tengah kembang api sarang lebah"
+        },
+        {
+          "id": "work-as-usual",
+          "emoji": "💼",
+          "label": "Bukan hari libur, tetap bekerja/sekolah seperti biasa"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270217-tatung-guess",
+      "date": "2027-02-17",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Pada malam kelima belas yang sama, di satu tempat pusat pawainya bukan lampion, melainkan orang-orang yang diyakini dirasuki arwah leluhur, diarak keliling jalan dan ditembus benda tajam tanpa mengeluarkan darah. Di manakah ini?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok daratan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270218-womens-day-poll",
+      "date": "2027-02-18",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat kamu tinggal, biasanya seperti apa tanggal 8 Maret?",
+      "options": [
+        {
+          "id": "usual-day",
+          "emoji": "🗓️",
+          "label": "Hari biasa saja, tetap kerja atau sekolah seperti biasanya"
+        },
+        {
+          "id": "org-event",
+          "emoji": "🎤",
+          "label": "Kantor atau sekolah mengadakan ceramah atau acara penghargaan"
+        },
+        {
+          "id": "shopping-promo",
+          "emoji": "🛍️",
+          "label": "Yang paling terasa justru promo dan diskon di toko"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "Sejujurnya saya sering tidak yakin hari ini sebenarnya apa"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270218-womens-day-guess",
+      "date": "2027-02-18",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara tujuh tempat yang dibandingkan di sini, mana yang baru memindahkan hari perempuan nasionalnya dari 30 April ke 8 Maret lewat undang-undang 2025?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270219-lantern-poll",
+      "date": "2027-02-19",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Bagaimana biasanya kamu merayakan Festival Lampion?",
+      "options": [
+        {
+          "id": "tangyuan-lanterns",
+          "emoji": "🥣",
+          "label": "Makan tangyuan dan menonton pameran lampion"
+        },
+        {
+          "id": "sky-lantern",
+          "emoji": "🏮",
+          "label": "Menerbangkan lampion langit sambil menulis harapan"
+        },
+        {
+          "id": "fireworks",
+          "emoji": "🎆",
+          "label": "Berdiri di tengah kembang api yang meledak"
+        },
+        {
+          "id": "no-festival",
+          "emoji": "🌙",
+          "label": "Di tempat saya tidak ada festival ini, hari biasa saja"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270219-lantern-guess",
+      "date": "2027-02-19",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "topic_slug": "lantern-festival",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Pada tanggal lunar kelima belas yang sama, satu tempat menjadikannya tiga pemandangan yang sama sekali berbeda — makan tangyuan sambil menonton pameran lampion, menerbangkan lampion langit di pegunungan, dan berdiri di tengah kembang api sarang lebah yang meledak ke segala arah. Di mana ini terjadi?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok Daratan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270220-womens-day-experience",
+      "date": "2027-02-20",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat Anda tinggal, bagaimana biasanya 8 Maret diperingati?",
+      "options": [
+        {
+          "id": "paid-day-off",
+          "emoji": "🏖️",
+          "label": "Libur berbayar"
+        },
+        {
+          "id": "marked-not-off",
+          "emoji": "🎗️",
+          "label": "Ada acara peringatan, tapi tidak libur"
+        },
+        {
+          "id": "not-marked",
+          "emoji": "🤷",
+          "label": "Tidak ada perlakuan khusus, seperti hari biasa"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "❓",
+          "label": "Tidak yakin, tidak pernah memperhatikan"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270220-womens-day-brazil",
+      "date": "2027-02-20",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Berdasarkan fakta di atas, negara mana yang hari perempuan nasionalnya semula ditetapkan pada 30 April, dan baru dipindahkan ke 8 Maret melalui undang-undang 2025?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270221-bonus-habit",
+      "date": "2027-02-21",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Kalau di tempatmu ada tradisi 'uang tambahan di akhir tahun', biasanya kamu apakan uang itu?",
+      "options": [
+        {
+          "id": "save",
+          "emoji": "💰",
+          "label": "Menabungkannya"
+        },
+        {
+          "id": "travel",
+          "emoji": "✈️",
+          "label": "Menghadiahi diri dengan jalan-jalan"
+        },
+        {
+          "id": "bills",
+          "emoji": "🏠",
+          "label": "Untuk membayar cicilan atau tagihan"
+        },
+        {
+          "id": "no-tradition",
+          "emoji": "🤷",
+          "label": "Di tempat saya tidak ada tradisi seperti itu"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270221-bonus-thr",
+      "date": "2027-02-21",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Negara mana yang mewajibkan uang tambahan akhir tahun ini dibayar penuh tujuh hari sebelum hari raya keagamaan, tidak boleh dicicil, dengan denda 5 persen bila telat?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270222-womens-day-poll",
+      "date": "2027-02-22",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat kerja atau sekolahmu, seperti apa biasanya 8 Maret?",
+      "options": [
+        {
+          "id": "normal-day",
+          "emoji": "😐",
+          "label": "Hari kerja atau sekolah biasa saja"
+        },
+        {
+          "id": "time-off",
+          "emoji": "🕒",
+          "label": "Ada libur atau keluwesan waktu"
+        },
+        {
+          "id": "event",
+          "emoji": "🎤",
+          "label": "Ada ceramah atau acara penghargaan"
+        },
+        {
+          "id": "promotion",
+          "emoji": "🛍️",
+          "label": "Cuma jadi musim diskon toko"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270222-womens-day-guess",
+      "date": "2027-02-22",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tempat mana yang undang-undangnya secara eksplisit memberi cuti setengah hari berbayar untuk Hari Perempuan?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270223-bonus-experience",
+      "date": "2027-02-23",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Bonus yang pernah kamu terima, paling mirip yang mana di bawah ini?",
+      "options": [
+        {
+          "id": "boss-call",
+          "emoji": "🎲",
+          "label": "Tergantung mood atasan, jumlahnya beda tiap tahun, kadang tidak ada"
+        },
+        {
+          "id": "law-deadline",
+          "emoji": "📜",
+          "label": "Tertulis jelas di undang-undang dengan tenggat, telat kena denda"
+        },
+        {
+          "id": "twice-year",
+          "emoji": "🔁",
+          "label": "Diterima dua kali setahun, pertengahan dan akhir tahun"
+        },
+        {
+          "id": "tax-choice",
+          "emoji": "🧮",
+          "label": "Dapat atau tidaknya tidak pasti, tapi cara pajaknya bisa saya pilih sendiri"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270223-guess-country",
+      "date": "2027-02-23",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di satu negara, sebuah tunjangan akhir tahun wajib dibayar penuh tujuh hari sebelum hari raya keagamaan, tidak boleh dicicil, dan keterlambatan dikenai denda dengan persentase tertentu — dan karena hari raya itu mengikuti kalender Hijriah, tanggalnya maju sekitar sebelas hari setiap tahun dibanding kalender Masehi. Negara mana ini?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270224-womens-day-experience",
+      "date": "2027-02-24",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat Anda tinggal, hari seperti apa 8 Maret itu?",
+      "options": [
+        {
+          "id": "paid-day-off",
+          "emoji": "🎉",
+          "label": "Hari libur (penuh atau setengah hari)"
+        },
+        {
+          "id": "events-no-holiday",
+          "emoji": "🎤",
+          "label": "Ada acara atau pidato, tapi bukan hari libur"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "😐",
+          "label": "Hari yang biasa saja"
+        },
+        {
+          "id": "shopping-sale",
+          "emoji": "🛍️",
+          "label": "Terutama menjadi musim promosi belanja"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270224-womens-day-half-day-leave",
+      "date": "2027-02-24",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara tujuh tempat yang dibandingkan di sini, yang mana yang diatur undang-undang secara eksplisit memberi cuti setengah hari berbayar pada Hari Perempuan?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270225-bonus-experience",
+      "date": "2027-02-25",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Apakah Anda pernah menerima bonus akhir tahun, gaji ketiga belas, atau semacamnya?",
+      "options": [
+        {
+          "id": "guaranteed-by-law",
+          "emoji": "⚖️",
+          "label": "Ya, jumlah dan waktunya dijamin undang-undang"
+        },
+        {
+          "id": "up-to-employer",
+          "emoji": "🎲",
+          "label": "Ya, tapi ada-tidaknya dan besarannya sepenuhnya tergantung perusahaan"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "Tidak, di tempat saya tidak ada hal semacam itu"
+        },
+        {
+          "id": "tax-headache",
+          "emoji": "🧾",
+          "label": "Ya, tapi yang lebih merepotkan adalah cara melaporkan pajaknya"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270225-bonus-profit-floor",
+      "date": "2027-02-25",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara negara berikut, di mana batas bawah bonus wajib tidak bergantung pada untung-ruginya perusahaan — tahun rugi pun tetap wajib membayar minimum?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270226-march8-poll",
+      "date": "2027-02-26",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat Anda tinggal, biasanya seperti apa tanggal 8 Maret?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "Libur (sehari penuh atau setengah hari)"
+        },
+        {
+          "id": "event-no-leave",
+          "emoji": "📢",
+          "label": "Ada acara atau pidato, tapi tidak libur"
+        },
+        {
+          "id": "normal-workday",
+          "emoji": "💼",
+          "label": "Hanya hari kerja atau sekolah biasa"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "Belum pernah memperhatikan"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270226-march8-guess",
+      "date": "2027-02-26",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara empat tempat berikut, mana yang baru memindahkan hari perempuan nasionalnya dari 30 April ke 8 Maret pada tahun 2025?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270227-year-end-bonus-poll",
+      "date": "2027-02-27",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Menurut Anda, uang tambahan akhir tahun paling mendekati yang mana di bawah ini?",
+      "options": [
+        {
+          "id": "surplus-custom",
+          "emoji": "🎁",
+          "label": "Ada hanya kalau perusahaan untung — kebiasaan, bukan hak"
+        },
+        {
+          "id": "wage-part",
+          "emoji": "💰",
+          "label": "Dianggap bagian dari upah, telat seharusnya kena denda"
+        },
+        {
+          "id": "tax-strategy",
+          "emoji": "🧮",
+          "label": "Yang penting bukan cair atau tidak, tapi cara melaporkan pajaknya"
+        },
+        {
+          "id": "holiday-timed",
+          "emoji": "🌙",
+          "label": "Mengikuti hari raya, tanggalnya berubah tiap tahun"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270227-year-end-bonus-guess",
+      "date": "2027-02-27",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di negara mana uang akhir tahun ini secara hukum adalah 'bagian dari upah' — kerja setahun penuh dapat satu bulan gaji, telat kena denda, dan pekerja bisa menuntut ke pengadilan?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270228-womens-day-observance",
+      "date": "2027-02-28",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat kamu tinggal, biasanya seperti apa tanggal 8 Maret?",
+      "options": [
+        {
+          "id": "half-day-off",
+          "emoji": "🌓",
+          "label": "Ada libur, meskipun cuma setengah hari"
+        },
+        {
+          "id": "official-message",
+          "emoji": "🎤",
+          "label": "Pejabat menyampaikan pesan atau acara penghargaan, tapi tidak libur"
+        },
+        {
+          "id": "month-long",
+          "emoji": "🗓️",
+          "label": "Kegiatannya berlangsung sepanjang bulan, bukan cuma satu hari"
+        },
+        {
+          "id": "no-observance",
+          "emoji": "🤷",
+          "label": "Sama seperti hari biasa, tidak ada yang khusus"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270228-womens-day-date-change",
+      "date": "2027-02-28",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara tujuh tempat yang dibandingkan, mana yang baru memindahkan hari perempuan nasionalnya dari 30 April ke 8 Maret lewat undang-undang pada 2025?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270301-bonus-experience",
+      "date": "2027-03-01",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika Anda pernah menerima bonus akhir tahun atau semacamnya, mana yang paling mendekati pengalaman Anda?",
+      "options": [
+        {
+          "id": "profit-conditioned",
+          "emoji": "📊",
+          "label": "Tergantung perusahaan untung atau tidak tahun ini"
+        },
+        {
+          "id": "guaranteed-regardless",
+          "emoji": "⚖️",
+          "label": "Dijamin hukum atau kontrak, terlepas dari untung-rugi"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "Saya menerimanya dua kali setahun"
+        },
+        {
+          "id": "no-such-thing",
+          "emoji": "🚫",
+          "label": "Tidak ada hal semacam itu, gaji ya gaji saja"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270301-bonus-guess",
+      "date": "2027-03-01",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di satu negara, uang ini wajib dibayar penuh tujuh hari sebelum hari raya keagamaan, tidak boleh dicicil, dan ada denda dengan persentase tertentu bila terlambat; karena hari raya itu mengikuti penanggalan Hijriah, tanggal sebenarnya bergeser lebih awal setiap tahun. Negara mana ini?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270302-seasonal-rituals",
+      "date": "2027-03-02",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Menjelang pergantian musim, mana yang biasanya kamu lakukan sendiri?",
+      "options": [
+        {
+          "id": "eat-tangyuan",
+          "emoji": "🥣",
+          "label": "Makan tangyuan atau pangsit saat solstis Desember"
+        },
+        {
+          "id": "throw-beans",
+          "emoji": "🫘",
+          "label": "Menyebar kedelai sangrai saat setsubun"
+        },
+        {
+          "id": "sweep-graves",
+          "emoji": "🪦",
+          "label": "Berziarah ke makam saat higan"
+        },
+        {
+          "id": "change-clock",
+          "emoji": "⏰",
+          "label": "Mengubah jam untuk waktu musim panas"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270302-no-shadow-day",
+      "date": "2027-03-02",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Badan meteorologi negara mana yang setiap tahun mengumumkan 'Hari Tanpa Bayangan', karena khatulistiwa membelah negaranya dan setahun hanya terbagi musim hujan dan kemarau?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270303-bonus-experience",
+      "date": "2027-03-03",
+      "kind": "poll",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat kerjamu, bagaimana sebenarnya bonus akhir tahun berjalan?",
+      "options": [
+        {
+          "id": "surplus-based",
+          "emoji": "📈",
+          "label": "Hanya jika perusahaan untung, jumlahnya tidak pasti"
+        },
+        {
+          "id": "law-fixed",
+          "emoji": "⚖️",
+          "label": "Ditetapkan undang-undang — jumlah dan tenggat pasti"
+        },
+        {
+          "id": "twice-a-year",
+          "emoji": "🔁",
+          "label": "Dibayar dua kali setahun"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "Di tempat saya tidak ada hal seperti itu"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270303-bonus-guess-country",
+      "date": "2027-03-03",
+      "kind": "guess",
+      "topic_id": "top_01M0JJ2KKB72WVYHYH1RK3KH91",
+      "topic_slug": "year-end-bonus",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Menurut materi ini, di negara mana bonus wajibnya mengharuskan pemberi kerja tetap membayar persentase minimum (8,33 persen dari upah) bahkan pada tahun perusahaan merugi?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270304-seasonal-habits",
+      "date": "2027-03-04",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di sekitar ekuinoks, solstis, atau penanda matahari, mana dari berikut yang pernah kamu lakukan?",
+      "options": [
+        {
+          "id": "solstice-food",
+          "emoji": "🍲",
+          "label": "Makan tangyuan, pangsit, atau labu saat solstis Desember"
+        },
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "Berziarah ke makam atau menghormati leluhur sekitar higan atau Qingming"
+        },
+        {
+          "id": "kite-flying",
+          "emoji": "🪁",
+          "label": "Menerbangkan layang-layang untuk perayaan seperti Makar Sankranti"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "⏰",
+          "label": "Menyetel jam karena waktu musim panas (DST)"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270304-brazil-no-season-law",
+      "date": "2027-03-04",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di negara mana satu-satunya kali hukum pernah mengejar pergantian musim adalah aturan waktu musim panas yang kini sudah dihapus?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270305-march8-experience",
+      "date": "2027-03-05",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat Anda tinggal, biasanya seperti apa tanggal 8 Maret?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🏖️",
+          "label": "Libur sehari penuh atau setengah hari"
+        },
+        {
+          "id": "talks-and-awards",
+          "emoji": "🎤",
+          "label": "Ceramah atau penghargaan di kantor/sekolah, tapi tidak libur"
+        },
+        {
+          "id": "sales-season",
+          "emoji": "🛍️",
+          "label": "Menjadi musim diskon di pusat perbelanjaan"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "🤷",
+          "label": "Tidak jauh berbeda dari hari biasa"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270305-brazil-womens-day-move",
+      "date": "2027-03-05",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat mana hari perempuan nasional awalnya jatuh pada 30 April, dan baru dipindahkan ke 8 Maret oleh undang-undang 2025?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270306-homecoming-poll",
+      "date": "2027-03-06",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Pola mana yang paling mendekati pengalaman pulang kampungmu sendiri?",
+      "options": [
+        {
+          "id": "fixed-peak",
+          "emoji": "🚗",
+          "label": "Terkonsentrasi di satu hari raya besar, ikut macet bersama semua orang"
+        },
+        {
+          "id": "spread-out",
+          "emoji": "🗓️",
+          "label": "Mengikuti hari raya atau jadwal sendiri, waktunya beda dari orang lain"
+        },
+        {
+          "id": "stay-home",
+          "emoji": "🏠",
+          "label": "Tidak benar-benar pulang kampung — tetap di tempat"
+        },
+        {
+          "id": "go-to-festival",
+          "emoji": "🎉",
+          "label": "Tetap bepergian, tapi tujuannya perayaan, bukan selalu 'rumah'"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270306-homecoming-guess",
+      "date": "2027-03-06",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Puncak pulang kampung di sini datang dua kali — satu tepat setelah Tahun Baru, satu lagi di pertengahan musim panas. Yang lebih berat justru bukan hari libur resmi — tiap perusahaan menetapkan liburnya sendiri-sendiri, sehingga tanggal pastinya berubah tiap tahun. Meski begitu, ia tetap membuat shinkansen dan jalan tol macet total di seluruh negeri, tak kalah dari hari libur resmi mana pun. Ini di mana?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270307-womens-day-poll",
+      "date": "2027-03-07",
+      "kind": "poll",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat kamu tinggal, biasanya seperti apa 8 Maret itu?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🏖️",
+          "label": "Hari libur atau cuti khusus"
+        },
+        {
+          "id": "official-event",
+          "emoji": "🎤",
+          "label": "Kantor atau sekolah mengadakan acara, tapi tidak libur"
+        },
+        {
+          "id": "sales-season",
+          "emoji": "🛍️",
+          "label": "Sekadar musim diskon belanja"
+        },
+        {
+          "id": "no-particular-notice",
+          "emoji": "😐",
+          "label": "Tidak terasa istimewa, sama seperti hari biasa"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270307-womens-day-guess",
+      "date": "2027-03-07",
+      "kind": "guess",
+      "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+      "topic_slug": "womens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Hari perempuan nasional negara mana yang awalnya jatuh pada 30 April, dan baru dipindahkan ke 8 Maret oleh undang-undang 2025?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270308-homecoming-mode",
+      "date": "2027-03-08",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Cara mana yang paling mendekati pengalaman pulang kampungmu (atau keluargamu)?",
+      "options": [
+        {
+          "id": "road-highway",
+          "emoji": "🚗",
+          "label": "Naik mobil lewat jalan tol (sering macet)"
+        },
+        {
+          "id": "train-rail",
+          "emoji": "🚆",
+          "label": "Naik kereta"
+        },
+        {
+          "id": "flight",
+          "emoji": "✈️",
+          "label": "Naik pesawat"
+        },
+        {
+          "id": "stay-put",
+          "emoji": "🏠",
+          "label": "Memilih tetap di tempat, tidak pulang"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270308-homecoming-guess",
+      "date": "2027-03-08",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+      "topic_slug": "homecoming-and-reunion",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di negara mana musim pulang kampung terberat justru bukan hari libur menurut undang-undang — itu terjadi karena perusahaan-perusahaan menaruh cutinya sendiri di pekan yang sama?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270309-holiday-stretch",
+      "date": "2027-03-09",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Berapa hari libur berturut-turut terpanjang yang kamu alami tahun ini?",
+      "options": [
+        {
+          "id": "1-3-days",
+          "emoji": "🌤️",
+          "label": "1–3 hari"
+        },
+        {
+          "id": "4-6-days",
+          "emoji": "🏖️",
+          "label": "4–6 hari"
+        },
+        {
+          "id": "7-9-days",
+          "emoji": "🧳",
+          "label": "7–9 hari"
+        },
+        {
+          "id": "10-plus-days",
+          "emoji": "✈️",
+          "label": "10+ hari"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270309-leave-deducted",
+      "date": "2027-03-09",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB11BW3GWDC3KB5JR7T7J",
+      "topic_slug": "long-holiday-weeks",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat mana hari-hari yang menyambung libur panjang dipotong dari cuti tahunan pekerja sendiri?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270310-eid-night-notice",
+      "date": "2027-03-10",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika besok libur atau tidak baru diumumkan malam ini, bagaimana perasaanmu soal itu?",
+      "options": [
+        {
+          "id": "want-advance-notice",
+          "emoji": "📅",
+          "label": "Saya ingin tahu jauh-jauh hari"
+        },
+        {
+          "id": "fine-with-short-notice",
+          "emoji": "🌙",
+          "label": "Diumumkan semalam sebelumnya juga tidak masalah"
+        },
+        {
+          "id": "hard-to-plan",
+          "emoji": "😥",
+          "label": "Pengumuman mendadak membuat sulit merencanakan sesuatu"
+        },
+        {
+          "id": "adds-anticipation",
+          "emoji": "🌘",
+          "label": "Justru menambah rasa penasaran menunggu"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270310-eid-employer-consent",
+      "date": "2027-03-10",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSDEE4S0X0YWV3Y6E2Z",
+      "topic_slug": "ramadan-and-eid",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara empat tempat ini, di mana bisa tidaknya merayakan Idulfitri bergantung pada persetujuan pemberi kerja, bukan hak hukum?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270311-env-day-experience",
+      "date": "2027-03-11",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZFVVJ0KNDJH484VEFD",
+      "topic_slug": "environment-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Hari Menanam Pohon, Hari Lingkungan, Earth Day — bagaimana kamu benar-benar menjalani salah satu hari itu tahun ini?",
+      "options": [
+        {
+          "id": "planted-tree",
+          "emoji": "🌳",
+          "label": "Benar-benar menanam pohon atau ikut kegiatan lingkungan"
+        },
+        {
+          "id": "saw-online",
+          "emoji": "📱",
+          "label": "Melihatnya di berita atau media sosial, tapi tidak melakukan apa-apa"
+        },
+        {
+          "id": "first-time-hearing",
+          "emoji": "🤔",
+          "label": "Baru sekarang tahu ada hari seperti ini"
+        },
+        {
+          "id": "ordinary-workday",
+          "emoji": "🗓️",
+          "label": "Bagi saya cuma hari kerja/sekolah biasa"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270311-env-day-holiday-guess",
+      "date": "2027-03-11",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZFVVJ0KNDJH484VEFD",
+      "topic_slug": "environment-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara empat negara ini, hari lingkungan negara mana yang satu-satunya benar-benar menjadi hari libur resmi?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270312-commemorate-choice",
+      "date": "2027-03-12",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika keputusan ada di tangan Anda, bagaimana Anda akan memperingati seseorang yang berjasa besar bagi negara?",
+      "options": [
+        {
+          "id": "paid-holiday",
+          "emoji": "🎉",
+          "label": "Menjadikannya hari libur nasional"
+        },
+        {
+          "id": "name-no-holiday",
+          "emoji": "📅",
+          "label": "Tetap menjadi hari peringatan bernama, tanpa libur"
+        },
+        {
+          "id": "idea-not-name",
+          "emoji": "💡",
+          "label": "Menamai hari liburnya menurut gagasan yang ia perjuangkan, bukan namanya"
+        },
+        {
+          "id": "no-personal-day",
+          "emoji": "🚫",
+          "label": "Tidak membuat hari peringatan atas nama perorangan sama sekali"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270312-hidden-name-law",
+      "date": "2027-03-12",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "topic_slug": "founders-and-national-leaders",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di negara mana undang-undang hari libur yang berlaku sekarang sama sekali tidak menyebut nama pahlawan nasionalnya, dan namanya hanya bertahan di undang-undang dari zaman lain?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270313-love-day-style",
+      "date": "2027-03-13",
+      "kind": "poll",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Mengingat pengalamanmu sendiri, cara mana di bawah ini yang paling mendekati caramu merayakan hari kasih sayang?",
+      "options": [
+        {
+          "id": "single-day-no-return",
+          "emoji": "🎁",
+          "label": "Cukup satu hari memberi hadiah, tanpa kewajiban membalas kemudian"
+        },
+        {
+          "id": "return-gift-month-later",
+          "emoji": "🔁",
+          "label": "Menerima hadiah bulan ini, membalas bulan berikutnya"
+        },
+        {
+          "id": "week-long",
+          "emoji": "📅",
+          "label": "Direntang jadi sepekan penuh, tiap hari punya tema sendiri"
+        },
+        {
+          "id": "no-official-celebration",
+          "emoji": "🚫",
+          "label": "Di tempat saya tidak benar-benar dirayakan, dan tak berstatus resmi"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270313-heritage-vs-commerce",
+      "date": "2027-03-13",
+      "kind": "guess",
+      "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+      "topic_slug": "affection-and-reciprocity",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara empat tempat berikut, di manakah hari dengan suara niaga paling nyaring (14 Februari) tidak berstatus resmi, sementara hari lain justru terdaftar oleh negara sebagai warisan budaya takbenda?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270314-equinox-poll",
+      "date": "2027-03-14",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Pada hari ekuinoks atau solstis, apa yang biasanya Anda lakukan?",
+      "options": [
+        {
+          "id": "visit-graves",
+          "emoji": "🪦",
+          "label": "Berziarah ke makam atau menghormati leluhur"
+        },
+        {
+          "id": "eat-seasonal-food",
+          "emoji": "🍡",
+          "label": "Makan makanan musiman (seperti tangyuan, labu, atau kue beras)"
+        },
+        {
+          "id": "watch-daylight",
+          "emoji": "🌗",
+          "label": "Memperhatikan waktu matahari terbit, terbenam, atau panjang siang"
+        },
+        {
+          "id": "no-idea",
+          "emoji": "🤷",
+          "label": "Tidak memperhatikan sama sekali — hari biasa saja"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270314-equinox-guess",
+      "date": "2027-03-14",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Sebuah rilis resmi menyebut satu perayaan sebagai penanda matahari berbalik ke belahan bumi utara — padahal titik balik astronomis sesungguhnya, solstis Desember, sudah terjadi lebih dari tiga pekan sebelumnya. Selisih ini muncul karena kalender negara itu mengikat zodiak pada bintang tetap, bukan pada titik ekuinoks. Negara mana ini?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270315-holiday-experience",
+      "date": "2027-03-15",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Apakah di masyarakat Anda ada hari peringatan bersejarah penting yang sampai sekarang belum menjadi hari libur resmi?",
+      "options": [
+        {
+          "id": "know-exact-date",
+          "emoji": "📅",
+          "label": "Ada, dan saya tahu tanggal pastinya"
+        },
+        {
+          "id": "vague-memory",
+          "emoji": "🤔",
+          "label": "Ada bayangannya, tapi tidak tahu tanggal pastinya"
+        },
+        {
+          "id": "none-comes-to-mind",
+          "emoji": "🤷",
+          "label": "Saya tidak bisa memikirkan satu pun"
+        },
+        {
+          "id": "never-thought-about-it",
+          "emoji": "💭",
+          "label": "Saya belum pernah memikirkan hal ini"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270315-guess-country",
+      "date": "2027-03-15",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Hari libur penghapusan perbudakan di negara ini memakan waktu dua puluh tahun dan tiga undang-undang: mula-mula hanya ada di kalender sekolah, lalu pada 2011 menjadi hari peringatan nasional tapi masih tanpa libur, dan baru pada Desember 2023 ditetapkan dalam undang-undang sebagai hari libur nasional. Adapun undang-undang yang dulu menyatakan perbudakan dihapuskan hanya terdiri dari dua pasal — tanpa ganti rugi, tanpa tanah, tanpa ketentuan hak sipil — dan tanggalnya sampai sekarang tidak ada dalam daftar resmi hari libur nasional. Negara manakah ini?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270316-seasonal-customs",
+      "date": "2027-03-16",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Dari kebiasaan yang terkait ekuinoks atau solstis berikut, mana yang pernah kamu lakukan sendiri?",
+      "options": [
+        {
+          "id": "tangyuan-winter-solstice",
+          "emoji": "🍡",
+          "label": "Makan tangyuan saat solstis Desember"
+        },
+        {
+          "id": "setsubun-mamemaki",
+          "emoji": "🫘",
+          "label": "Menyebar kedelai saat setsubun"
+        },
+        {
+          "id": "makar-sankranti-kite",
+          "emoji": "🪁",
+          "label": "Menerbangkan layang-layang saat Makar Sankranti"
+        },
+        {
+          "id": "higan-grave-sweeping",
+          "emoji": "🙏",
+          "label": "Berziarah ke makam saat higan"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270316-seven-holidays-country",
+      "date": "2027-03-16",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Ada satu negara dengan tujuh hari libur nasional, dan tak satu pun tanggalnya ditentukan posisi matahari. Satu-satunya kali negara ini mengejar musim lewat undang-undang — waktu musim panas — kini sudah dihapus; negara ini berada di belahan bumi selatan, sehingga solstis Desember di sana membuka musim panas, bukan musim dingin. Negara manakah ini?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270317-abolition-holiday-poll",
+      "date": "2027-03-17",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat tinggalmu, bagaimana hari yang berkaitan dengan penghapusan perbudakan atau perjuangan kesetaraan benar-benar diperingati?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🎉",
+          "label": "Libur sehari, dirayakan seperti hari raya"
+        },
+        {
+          "id": "marked-no-holiday",
+          "emoji": "🏫",
+          "label": "Disebut di sekolah atau kantor, tapi tidak libur"
+        },
+        {
+          "id": "never-heard",
+          "emoji": "❓",
+          "label": "Belum pernah dengar hari semacam ini"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "Tidak yakin, belum pernah memperhatikan"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270317-abolition-holiday-guess",
+      "date": "2027-03-17",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Negara mana yang harinya butuh dua puluh tahun dan tiga undang-undang untuk berubah dari catatan di kalender sekolah menjadi hari libur resmi?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270318-seasonal-habit",
+      "date": "2027-03-18",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Dari kebiasaan yang disebut dalam artikel ini, mana yang paling dekat dengan pengalamanmu sendiri?",
+      "options": [
+        {
+          "id": "clock-shift",
+          "emoji": "🕐",
+          "label": "Pernah mengubah jam karena waktu musim panas"
+        },
+        {
+          "id": "seasonal-food",
+          "emoji": "🍲",
+          "label": "Pernah makan makanan musiman (tangyuan, labu, pangsit, dll)"
+        },
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "Berziarah ke makam menghormati leluhur"
+        },
+        {
+          "id": "ordinary-day",
+          "emoji": "📅",
+          "label": "Bagi saya ini hanya hari biasa"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270318-sidereal-drift-guess",
+      "date": "2027-03-18",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Kalender tradisional satu negara mengikat dua belas zodiak pada bintang tetap, bukan pada titik ekuinoks. Goyangan sumbu Bumi telah mendorong sebuah perayaan yang dulu menandai solstis bergeser lebih dari tiga pekan selama lebih dari seribu tahun. Negara mana ini?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270319-emancipation-poll",
+      "date": "2027-03-19",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Apakah kalender di negara atau wilayah Anda memiliki hari libur yang khusus memperingati penghapusan perbudakan atau sistem kasta/status?",
+      "options": [
+        {
+          "id": "yes-day-off",
+          "emoji": "🎉",
+          "label": "Ada, dan benar-benar libur"
+        },
+        {
+          "id": "yes-no-day-off",
+          "emoji": "📅",
+          "label": "Ada hari peringatan, tapi tidak libur"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🚫",
+          "label": "Tidak ada hari semacam itu"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "Tidak yakin"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270319-emancipation-guess",
+      "date": "2027-03-19",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Hari peringatan negara mana yang mula-mula hanya tertulis di kalender sekolah, dua puluh tahun kemudian dinaikkan menjadi hari peringatan nasional, dan dua belas tahun sesudahnya lagi — pada 2023 — akhirnya menjadi hari libur resmi berbayar, melalui tiga undang-undang berturut-turut?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270320-season-marker",
+      "date": "2027-03-20",
+      "kind": "poll",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat kamu tinggal, bagaimana orang-orang menandai hari ekuinoks atau solstis?",
+      "options": [
+        {
+          "id": "legal-holiday",
+          "emoji": "🎌",
+          "label": "Ada hari libur resmi dan orang-orang benar-benar libur"
+        },
+        {
+          "id": "folk-custom",
+          "emoji": "🌾",
+          "label": "Ada tradisi rakyat atau keagamaan, tapi bukan hari libur"
+        },
+        {
+          "id": "clock-change",
+          "emoji": "🕑",
+          "label": "Jam disesuaikan sekitar waktu itu, bukan perayaan"
+        },
+        {
+          "id": "nothing-special",
+          "emoji": "🤷",
+          "label": "Sama sekali tidak ada perayaan atau ritual khusus"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270320-shadowless-day",
+      "date": "2027-03-20",
+      "kind": "guess",
+      "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
+      "topic_slug": "equinox-and-seasonal-turns",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Badan cuaca negara mana yang setiap tahun mengumumkan 'Hari Tanpa Bayangan' yang berbeda untuk tiap kota — hari ketika bayangan benda tegak pada tengah hari menghilang di bawahnya?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270321-holiday-in-name-only",
+      "date": "2027-03-21",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Apakah di tempat Anda ada hari peringatan yang sering dibicarakan orang tapi sebenarnya tidak pernah jadi hari libur?",
+      "options": [
+        {
+          "id": "know-the-day",
+          "emoji": "🗓️",
+          "label": "Ada, saya bahkan tahu tanggal pastinya"
+        },
+        {
+          "id": "vague-memory",
+          "emoji": "🤔",
+          "label": "Tahu ada, tapi lupa tanggal pastinya"
+        },
+        {
+          "id": "all-holidays",
+          "emoji": "🎉",
+          "label": "Tidak ada, hari peringatan di tempat kami hampir semuanya libur"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "💭",
+          "label": "Belum pernah kepikiran soal ini"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270321-guess-abolition-holiday",
+      "date": "2027-03-21",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tanggal peringatan negara mana yang lebih dulu masuk kalender sekolah, lalu menjadi hari peringatan nasional, dan baru dua puluh tahun kemudian menjadi hari libur resmi?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270322-christian-days-poll",
+      "date": "2027-03-22",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Rabu Abu, Jumat Agung, Kenaikan, Pentakosta, Corpus Christi — mana yang paling menggambarkan pengalaman sehari-harimu sendiri?",
+      "options": [
+        {
+          "id": "ordinary-workday",
+          "emoji": "😐",
+          "label": "Bagi saya semua hari itu sama saja seperti hari kerja biasa"
+        },
+        {
+          "id": "church-not-holiday",
+          "emoji": "⛪",
+          "label": "Gereja atau komunitas saya merayakannya, tapi tidak memengaruhi jadwal kerja saya"
+        },
+        {
+          "id": "actual-day-off",
+          "emoji": "📅",
+          "label": "Di tempat saya tinggal, setidaknya satu di antaranya benar-benar hari libur resmi"
+        },
+        {
+          "id": "only-know-christmas-easter",
+          "emoji": "🎄",
+          "label": "Saya hanya pernah dengar Natal dan Paskah, nama-nama lainnya asing bagi saya"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270322-christian-days-guess",
+      "date": "2027-03-22",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Keputusan presiden negara mana yang secara resmi mengubah nama sebuah hari libur Kristen dari sebutan bernuansa Islam menjadi sebutan Kristen?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270323-easter-poll",
+      "date": "2027-03-23",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat Anda tinggal, apakah hari Jumat sebelum Paskah (Jumat Agung) adalah hari libur?",
+      "options": [
+        {
+          "id": "holiday",
+          "emoji": "🎉",
+          "label": "Ya, libur"
+        },
+        {
+          "id": "workday",
+          "emoji": "💼",
+          "label": "Tidak, hari kerja biasa"
+        },
+        {
+          "id": "depends",
+          "emoji": "🤷",
+          "label": "Tergantung daerah atau tempat kerja"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "❓",
+          "label": "Belum pernah memperhatikan"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270323-easter-guess",
+      "date": "2027-03-23",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara empat tempat ini, mana yang menetapkan keempat peringatan Kristen — Jumat Agung, Paskah, Kenaikan, dan Natal — sebagai hari libur nasional?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270324-christian-calendar-overlap-poll",
+      "date": "2027-03-24",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Dalam kalender libur di tempat tinggalmu, adakah hari yang kebetulan berimpit dengan hari raya keagamaan tetapi alasan liburnya sebenarnya sesuatu yang lain?",
+      "options": [
+        {
+          "id": "know-reason",
+          "emoji": "🧐",
+          "label": "Ada, dan aku tahu alasannya"
+        },
+        {
+          "id": "suspect",
+          "emoji": "🤔",
+          "label": "Ada, tapi aku belum pernah menyelidiki alasannya"
+        },
+        {
+          "id": "none",
+          "emoji": "🙅",
+          "label": "Tidak ada, kalenderku sederhana saja"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "💭",
+          "label": "Belum pernah kepikiran soal ini"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270324-christian-calendar-guess",
+      "date": "2027-03-24",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Negara mana yang meliburkan 25 Desember karena alasan yang sama sekali tidak berkaitan secara hukum dengan Natal — hanya kebetulan kalender?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270325-easter-personal-meaning",
+      "date": "2027-03-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Bagi Anda, apa yang paling penting dari hari Paskah?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🛌",
+          "label": "Ada tidaknya hari libur"
+        },
+        {
+          "id": "faith",
+          "emoji": "✝️",
+          "label": "Makna keagamaannya (sengsara dan kebangkitan)"
+        },
+        {
+          "id": "traditions",
+          "emoji": "🥚",
+          "label": "Kegiatan khasnya (telur, makan siang keluarga)"
+        },
+        {
+          "id": "no-feeling",
+          "emoji": "🤷",
+          "label": "Bagi saya tidak terasa istimewa"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270325-easter-holiday-guess",
+      "date": "2027-03-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara negara-negara berikut, negara mana yang meskipun berpenduduk mayoritas Muslim justru menetapkan keempat peringatan Kristen — Jumat Agung, Paskah, Kenaikan, dan Natal — sebagai hari libur nasional?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270326-christian-days-poll",
+      "date": "2027-03-26",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat Anda tinggal, dari rangkaian hari yang dihitung dari Paskah ini — Rabu Abu, Jumat Agung, Kenaikan, Pentakosta, Corpus Christi — mana saja yang benar-benar masuk daftar hari libur resmi?",
+      "options": [
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "Tidak satu pun"
+        },
+        {
+          "id": "good-friday-only",
+          "emoji": "✝️",
+          "label": "Hanya Jumat Agung"
+        },
+        {
+          "id": "extra-days",
+          "emoji": "📅",
+          "label": "Bukan cuma Jumat Agung, ada satu-dua hari lagi"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "Belum pernah memperhatikan"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270326-christian-days-guess",
+      "date": "2027-03-26",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ467DJ9GBF4ZQ4T1Y69MV",
+      "topic_slug": "christian-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara negara-negara yang disebut di atas, negara mana yang memperlakukan Corpus Christi di tingkat federal hanya sebagai hari kerja opsional, yang baru menjadi hari libur resmi sungguhan bila dewan kotanya membuat peraturan sendiri?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270327-easter-weekend-poll",
+      "date": "2027-03-27",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Biasanya apa yang kamu lakukan saat Paskah?",
+      "options": [
+        {
+          "id": "church",
+          "emoji": "⛪",
+          "label": "Pergi ke ibadah gereja"
+        },
+        {
+          "id": "eggs",
+          "emoji": "🥚",
+          "label": "Berburu atau menghias telur"
+        },
+        {
+          "id": "family-meal",
+          "emoji": "🍽️",
+          "label": "Makan bersama keluarga"
+        },
+        {
+          "id": "normal-weekend",
+          "emoji": "📅",
+          "label": "Sama seperti akhir pekan biasa"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270327-easter-holiday-guess",
+      "date": "2027-03-27",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "topic_slug": "easter",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jumat Agung, Paskah, Kenaikan, dan Natal — negara mana yang menetapkan keempatnya sebagai hari libur nasional?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270328-childrens-day-poll",
+      "date": "2027-03-28",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Menurut pengalamanmu, bagaimana soal libur di Hari Anak?",
+      "options": [
+        {
+          "id": "family-off",
+          "emoji": "🏖️",
+          "label": "Seluruh keluarga libur"
+        },
+        {
+          "id": "kids-only-off",
+          "emoji": "🧒",
+          "label": "Cuma anak-anak yang libur, orang tua tetap kerja"
+        },
+        {
+          "id": "school-event-no-off",
+          "emoji": "🏫",
+          "label": "Tidak libur, cuma ada acara di sekolah"
+        },
+        {
+          "id": "tied-to-other-holiday",
+          "emoji": "🎉",
+          "label": "Berbarengan dengan hari libur lain"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270328-childrens-day-guess",
+      "date": "2027-03-28",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat mana Hari Anak menuliskan 'berterima kasih kepada ibu' ke dalam tujuan hukumnya?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270329-remembrance-style",
+      "date": "2027-03-29",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Dalam keluarga atau budaya tempat Anda dibesarkan, cara mengenang leluhur paling dekat dengan yang mana?",
+      "options": [
+        {
+          "id": "fixed-day",
+          "emoji": "🗓️",
+          "label": "Satu hari tetap (seperti Qingming atau Hari Arwah)"
+        },
+        {
+          "id": "stretch-of-days",
+          "emoji": "🕯️",
+          "label": "Rentang beberapa hari (seperti Obon atau masa leluhur enam belas hari)"
+        },
+        {
+          "id": "community-decided",
+          "emoji": "🤝",
+          "label": "Waktu yang ditentukan komunitas atau pribadi, bukan tanggal tetap"
+        },
+        {
+          "id": "no-such-practice",
+          "emoji": "🤷",
+          "label": "Tidak ada praktik atau hari semacam itu"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270329-guess-ancestor-country",
+      "date": "2027-03-29",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di sini, masa untuk leluhur bukan satu hari, melainkan enam belas hari lunar berturut-turut. Dimulai dari bulan purnama satu bulan dan berakhir pada bulan mati bulan lain — bulan mati yang punya nama sendiri. Selama masa itu orang mempersembahkan air dan makanan bagi yang telah tiada, serta memohon maaf, dan sebuah kota di satu negara bagian menarik kerumunan besar setiap tahun justru untuk ini. Ini praktik negara mana?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270330-childrens-day-poll",
+      "date": "2027-03-30",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di keluargamu, siapa yang benar-benar libur saat Hari Anak?",
+      "options": [
+        {
+          "id": "everyone-off",
+          "emoji": "🎏",
+          "label": "Seluruh keluarga libur"
+        },
+        {
+          "id": "kids-only",
+          "emoji": "🧒",
+          "label": "Hanya anak-anak yang libur"
+        },
+        {
+          "id": "school-event",
+          "emoji": "🏫",
+          "label": "Tidak libur, sekolah mengadakan acara"
+        },
+        {
+          "id": "no-tradition",
+          "emoji": "🤷",
+          "label": "Di tempat kami tidak ada tradisi Hari Anak"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270330-childrens-day-guess",
+      "date": "2027-03-30",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Hari Anak negara mana yang jatuh bersamaan dengan hari libur nasional untuk santo pelindung Katoliknya?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270331-ancestor-remembrance-poll",
+      "date": "2027-03-31",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di keluarga atau komunitas Anda, bagaimana biasanya cara mengenang leluhur atau berziarah ke makam?",
+      "options": [
+        {
+          "id": "fixed-date",
+          "emoji": "📅",
+          "label": "Ada tanggal tetap setiap tahun, seperti hari khusus untuk ziarah makam atau memberi persembahan"
+        },
+        {
+          "id": "varies",
+          "emoji": "🔄",
+          "label": "Ada kebiasaan seperti itu, tetapi tanggal atau caranya berbeda tiap tahun atau tiap keluarga"
+        },
+        {
+          "id": "place-no-day",
+          "emoji": "📍",
+          "label": "Ada tempat atau cara untuk mengenang, tetapi tidak ada hari khususnya"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Keluarga atau komunitas saya tidak punya kebiasaan tetap seperti ini"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270331-ancestor-remembrance-guess",
+      "date": "2027-03-31",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di satu tempat, ziarah makam tidak diselaraskan dengan tanggal tertentu, melainkan dengan kenyataan bahwa puasa akan dimulai bulan depan. Urutannya tetap: membersihkan makam, berdoa bersama, lalu ditutup dengan makan bersama. Ini kebiasaan dari mana?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270401-childrens-day-poll",
+      "date": "2027-04-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di enam tempat ini, siapa yang benar-benar libur saat Hari Anak sangat berbeda-beda — ada yang semua orang libur, ada yang hanya anak-anak, ada yang tidak ada libur sama sekali dan hanya acara di sekolah. Kalau kamu yang memutuskan, kamu ingin yang seperti apa?",
+      "options": [
+        {
+          "id": "everyone-off",
+          "emoji": "🎉",
+          "label": "Semua orang libur satu hari"
+        },
+        {
+          "id": "kids-only-off",
+          "emoji": "🧒",
+          "label": "Hanya anak-anak libur, orang dewasa tetap kerja"
+        },
+        {
+          "id": "school-event-no-holiday",
+          "emoji": "🏫",
+          "label": "Tidak libur, cukup acara di sekolah"
+        },
+        {
+          "id": "movable-by-decree",
+          "emoji": "📅",
+          "label": "Tanggalnya tidak tetap, ditentukan ulang pemerintah tiap tahun"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270401-childrens-day-guess",
+      "date": "2027-04-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara enam tempat ini, Hari Anak mana yang tujuan hukumnya secara tertulis menyebut 'berterima kasih kepada ibu'?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok Daratan"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270402-remembrance-practice",
+      "date": "2027-04-02",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Bagaimana biasanya Anda atau keluarga Anda ikut serta dalam hari-hari mengenang leluhur atau yang telah tiada?",
+      "options": [
+        {
+          "id": "fixed-visit",
+          "emoji": "🧹",
+          "label": "Setiap tahun rutin berziarah atau memberi sesaji"
+        },
+        {
+          "id": "family-led",
+          "emoji": "👴",
+          "label": "Mengikuti apa yang diatur orang tua, jarang berinisiatif sendiri"
+        },
+        {
+          "id": "personal-remember",
+          "emoji": "🕯️",
+          "label": "Tidak ada ritual tetap, tetapi tetap mengenang secara pribadi"
+        },
+        {
+          "id": "not-practice",
+          "emoji": "🚫",
+          "label": "Keluarga saya tidak punya kebiasaan semacam ini"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270402-nyadran-country",
+      "date": "2027-04-02",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tradisi mengenang di negara mana yang tidak selaras dengan tanggal tetap, melainkan dengan fakta bahwa puasa akan dimulai bulan depan?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270403-childrens-day-poll-type",
+      "date": "2027-04-03",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Hari Anak yang pernah kamu alami, paling mirip dengan yang mana di bawah ini?",
+      "options": [
+        {
+          "id": "day-off-everyone",
+          "emoji": "🏖️",
+          "label": "Semua orang libur, tak ada kerja atau sekolah"
+        },
+        {
+          "id": "kids-only-off",
+          "emoji": "🧒",
+          "label": "Hanya anak yang libur, orang tua tetap kerja"
+        },
+        {
+          "id": "school-event-no-holiday",
+          "emoji": "🏫",
+          "label": "Tidak libur, tapi sekolah mengadakan pentas atau acara"
+        },
+        {
+          "id": "shared-with-other-holiday",
+          "emoji": "🎊",
+          "label": "Jatuh bersamaan dengan hari libur atau perayaan lain"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270403-childrens-day-guess-mother",
+      "date": "2027-04-03",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "topic_slug": "childrens-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Negara mana yang menuliskan 'berterima kasih kepada ibu' ke dalam tujuan hukum Hari Anaknya?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270404-ancestor-practice-poll",
+      "date": "2027-04-04",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Kalau keluargamu punya cara menghormati leluhur atau yang telah tiada, paling mirip yang mana?",
+      "options": [
+        {
+          "id": "grave-sweeping",
+          "emoji": "🪦",
+          "label": "Ziarah dan merapikan makam, menaruh bunga"
+        },
+        {
+          "id": "communal-offering",
+          "emoji": "🙏",
+          "label": "Persembahan leluhur, ritual bersama, dupa"
+        },
+        {
+          "id": "welcome-farewell-fire",
+          "emoji": "🔥",
+          "label": "Menyalakan api untuk menyambut leluhur, lalu menyalakan lagi untuk melepas"
+        },
+        {
+          "id": "no-fixed-day",
+          "emoji": "🤷",
+          "label": "Tidak ada hari tetap, tiap keluarga mengatur sendiri"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270404-nyadran-guess",
+      "date": "2027-04-04",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BREK9FPFXH2K5JANWA1",
+      "topic_slug": "ghosts-ancestors-and-remembrance",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Ada tradisi ziarah makam yang tidak selaras dengan tanggal kalender tertentu, melainkan dengan fakta bahwa puasa akan dimulai bulan depan; urutannya tetap — bersihkan makam, berdoa bersama, lalu semua makan satu hidangan bersama untuk menutupnya. Ini tradisi dari mana?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270405-new-year-custom",
+      "date": "2027-04-05",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Dalam kehidupanmu sendiri, tahun baru paling dekat dengan gambaran yang mana di bawah ini?",
+      "options": [
+        {
+          "id": "countdown-fireworks",
+          "emoji": "🎉",
+          "label": "Hitung mundur, kembang api, dan pesta di malam sebelumnya"
+        },
+        {
+          "id": "reunion-dinner",
+          "emoji": "🍲",
+          "label": "Makan malam berkumpul keluarga di malam Tahun Baru"
+        },
+        {
+          "id": "shrine-visit",
+          "emoji": "⛩️",
+          "label": "Kunjungan pertama ke kuil dan makan hidangan osechi"
+        },
+        {
+          "id": "beach-white",
+          "emoji": "🏖️",
+          "label": "Memakai pakaian putih dan menonton kembang api di pantai"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270405-new-year-no-jan1",
+      "date": "2027-04-05",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara tujuh tempat ini, negara mana yang daftar hari libur nasionalnya sama sekali tidak memuat 1 Januari?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270406-holiday-off-poll",
+      "date": "2027-04-06",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Menurut Anda, apakah penting bagi sebuah hari peringatan atas ketidakadilan sejarah untuk benar-benar menjadi hari libur?",
+      "options": [
+        {
+          "id": "matters-a-lot",
+          "emoji": "✅",
+          "label": "Penting — hari libur adalah pengakuan negara yang nyata"
+        },
+        {
+          "id": "activities-enough",
+          "emoji": "📚",
+          "label": "Tidak penting — kegiatan peringatan dan pendidikan sudah cukup"
+        },
+        {
+          "id": "depends-on-topic",
+          "emoji": "🤔",
+          "label": "Tergantung topiknya — tidak semua hari peringatan perlu jadi libur"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "🤷",
+          "label": "Belum pernah memikirkannya secara khusus"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270406-ambedkar-guess",
+      "date": "2027-04-06",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di satu negara, tanggal yang paling dekat dengan tema penghapusan perbudakan bahkan tidak ada dalam daftar libur tahunan pemerintah pusat — hari itu libur hanya karena surat perintah baru diterbitkan setiap tahun. Negara mana?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270407-new-year-poll",
+      "date": "2027-04-07",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tahun baru versimu paling mirip yang mana di bawah ini?",
+      "options": [
+        {
+          "id": "reunion-eve",
+          "emoji": "🥟",
+          "label": "Makan malam berkumpul di rumah pada malam tahun baru"
+        },
+        {
+          "id": "countdown-fireworks",
+          "emoji": "🎆",
+          "label": "Hitung mundur sambil menonton kembang api"
+        },
+        {
+          "id": "beach-white",
+          "emoji": "🏖️",
+          "label": "Memakai baju putih dan menonton kembang api di pantai"
+        },
+        {
+          "id": "no-holiday",
+          "emoji": "📅",
+          "label": "Hari itu tetap kerja atau sekolah seperti biasa"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270407-new-year-guess",
+      "date": "2027-04-07",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "topic_slug": "new-year",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara empat tempat berikut, yang mana daftar hari libur nasionalnya sama sekali tidak memuat 1 Januari?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270408-abolition-holiday-poll",
+      "date": "2027-04-08",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Apakah di tempat tinggal Anda ada hari libur atau hari peringatan untuk penghapusan perbudakan atau sistem status/kasta?",
+      "options": [
+        {
+          "id": "holiday-yes",
+          "emoji": "🎉",
+          "label": "Ada, dan hari itu libur"
+        },
+        {
+          "id": "commemorate-no-holiday",
+          "emoji": "📅",
+          "label": "Ada harinya, tapi tidak libur"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Tidak ada peringatan semacam itu"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "Tidak yakin"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270408-abolition-holiday-guess",
+      "date": "2027-04-08",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Negara mana yang 'Hari Nasional Kesadaran Kulit Hitam'-nya lebih dulu masuk kalender sekolah, dan baru menjadi hari libur resmi setelah tiga undang-undang dan dua puluh tahun?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270409-memorial-holiday",
+      "date": "2027-04-09",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika sebuah negara menetapkan hari peringatan atas luka sejarah, apakah Anda ingin hari itu juga menjadi hari libur?",
+      "options": [
+        {
+          "id": "day-off-matters",
+          "emoji": "🏖️",
+          "label": "Libur baru menunjukkan itu benar-benar dihargai"
+        },
+        {
+          "id": "symbolism-enough",
+          "emoji": "📜",
+          "label": "Cukup tertulis di undang-undang, tak perlu libur"
+        },
+        {
+          "id": "depends-who",
+          "emoji": "🤔",
+          "label": "Tergantung siapa yang menetapkan dan untuk siapa"
+        },
+        {
+          "id": "no-strong-view",
+          "emoji": "🤷",
+          "label": "Tidak punya pendapat kuat soal ini"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270409-brazil-veto-rename",
+      "date": "2027-04-09",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Negara mana yang mengganti nama hari masyarakat adatnya melalui undang-undang yang divetokan penuh oleh presiden, lalu vetonya dianulir Kongres — dan sekaligus mengganti nama lembaga yang mengurusnya?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270410-commemorative-no-holiday",
+      "date": "2027-04-10",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Apakah negara atau daerah Anda punya hari peringatan resmi yang secara tegas dinyatakan bukan hari libur?",
+      "options": [
+        {
+          "id": "yes-know",
+          "emoji": "🗓️",
+          "label": "Ada, dan saya tahu untuk apa hari itu"
+        },
+        {
+          "id": "yes-vague",
+          "emoji": "🤔",
+          "label": "Ada, tapi saya tidak begitu ingat detailnya"
+        },
+        {
+          "id": "no",
+          "emoji": "🚫",
+          "label": "Tidak ada hari semacam itu"
+        },
+        {
+          "id": "unsure",
+          "emoji": "❓",
+          "label": "Tidak yakin, belum pernah memikirkannya"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270410-law-says-no-holiday",
+      "date": "2027-04-10",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di negara mana undang-undang sendiri secara tegas menyatakan bahwa hari peringatan terkait bukan hari libur?",
+      "options": [
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270411-holiday-or-not",
+      "date": "2027-04-11",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Apakah di negara atau daerah Anda ada hari untuk memperingati masyarakat adat atau sejarah kolonial? Apakah hari itu benar-benar hari libur resmi?",
+      "options": [
+        {
+          "id": "paid-holiday",
+          "emoji": "🎉",
+          "label": "Ada, dan itu hari libur"
+        },
+        {
+          "id": "no-holiday",
+          "emoji": "📅",
+          "label": "Ada, tapi tidak libur"
+        },
+        {
+          "id": "none",
+          "emoji": "🚫",
+          "label": "Tidak ada hari seperti itu"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "Tidak yakin / belum pernah memikirkannya"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270411-guess-country",
+      "date": "2027-04-11",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJH89V7KBBHRWEZ59QWX17",
+      "topic_slug": "indigenous-and-colonial-memory",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Sebuah negara mengganti nama hari peringatan ini, tetapi undang-undang barunya berlaku hanya karena Kongres menganulir veto penuh presiden; dekrit lama dicabut pada hari yang sama, nama baru masuk undang-undang, namun tanggal itu sampai sekarang tidak pernah masuk daftar hari libur nasional. Negara mana?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270412-abolition-holiday-poll",
+      "date": "2027-04-12",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Apakah negara atau daerah Anda punya hari libur untuk memperingati penghapusan perbudakan atau sistem penindasan serupa?",
+      "options": [
+        {
+          "id": "yes-holiday",
+          "emoji": "🎉",
+          "label": "Ada, dan itu hari libur"
+        },
+        {
+          "id": "yes-no-day-off",
+          "emoji": "📅",
+          "label": "Ada hari peringatan, tapi tidak libur"
+        },
+        {
+          "id": "no-such-day",
+          "emoji": "🤷",
+          "label": "Tidak ada hari seperti itu"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "❓",
+          "label": "Tidak yakin"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270412-abolition-holiday-guess",
+      "date": "2027-04-12",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di negara mana hari libur semacam ini ditambahkan ke daftar federal hanya dalam tiga hari pada 2021 — disahkan Senat, disahkan DPR, dan ditandatangani — tepat setelah Memorial Day?",
+      "options": [
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270413-holiday-priority",
+      "date": "2027-04-13",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Menurut Anda, apa yang paling penting dari hari yang memperingati berakhirnya perbudakan atau diskriminasi?",
+      "options": [
+        {
+          "id": "day-off",
+          "emoji": "🏖️",
+          "label": "Benar-benar libur kerja"
+        },
+        {
+          "id": "law-text",
+          "emoji": "📜",
+          "label": "Tertulis dalam undang-undang atau kurikulum, meski tanpa libur"
+        },
+        {
+          "id": "grassroots",
+          "emoji": "🤝",
+          "label": "Peringatan yang digagas masyarakat, tidak bergantung pada aturan pemerintah"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "Belum pernah memikirkannya"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270413-annual-reissue-holiday",
+      "date": "2027-04-13",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di negara mana, hari libur yang memperingati berakhirnya suatu sistem diskriminatif tidak tercantum dalam daftar libur tahunan pemerintah pusat, dan hanya berlaku lewat surat perintah tersendiri yang diterbitkan ulang setiap tahun?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270414-abolition-poll",
+      "date": "2027-04-14",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Banyak tanggal dalam topik ini mulanya tumbuh di masyarakat atau daerah, baru kemudian pelan-pelan menjadi hari libur nasional. Jika di daerahmu sendiri ingin menambahkan hari peringatan sejarah yang baru, menurutmu dari mana sebaiknya itu dimulai?",
+      "options": [
+        {
+          "id": "school-calendar",
+          "emoji": "📚",
+          "label": "Masukkan dulu ke kalender sekolah"
+        },
+        {
+          "id": "local-law",
+          "emoji": "🏛️",
+          "label": "Jadikan dulu hari libur daerah (negara bagian/kota)"
+        },
+        {
+          "id": "civil-society",
+          "emoji": "✊",
+          "label": "Biarkan tumbuh pelan-pelan lewat peringatan masyarakat akar rumput"
+        },
+        {
+          "id": "national-law",
+          "emoji": "📜",
+          "label": "Langsung ditetapkan lewat undang-undang pusat"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270414-abolition-guess",
+      "date": "2027-04-14",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB0ZAPECZM7ZSCP8FEEDD",
+      "topic_slug": "emancipation-and-abolition",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Hari itu adalah hari lahir ketua panitia perancang konstitusi sebuah negara, dan konstitusi negara itu sendiri memuat pasal khusus yang menghapus salah satu bentuk diskriminasi berdasarkan status. Namun pemerintah pusat tidak pernah memasukkan tanggal ini ke dalam daftar hari libur resmi tahunannya — apakah kantor tutup atau tidak bergantung pada surat perintah administratif yang diterbitkan ulang setiap tahun. Negara manakah ini?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }
