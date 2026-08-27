@@ -92,6 +92,76 @@ export function holidaysFor(code, year) {
     .sort((a, b) => (a.starts_on < b.starts_on ? -1 : a.starts_on > b.starts_on ? 1 : 0));
 }
 
+// ── 連假(2026-08-27)────────────────────────────────────────────────────────
+// 為什麼要有:頁首導言原本只印一個數字「最長的一段連續假期是 N 天」,但搜
+// `2027 連假`／`2027年放假安排`／`feriados prolongados 2027`／`大型連休 2027` 的人
+// 要的是**哪幾段、各是哪幾天**,不是一個最大值。這一類查詢也正好是 Google 的答案框
+// 吃不掉的(它不是單一日期),而站上原本一頁都沒有在答。
+//
+// 三個判準,每一個都有它的坑:
+//  ① **補班日會把週末變回工作日**。中國的調休就是這樣運作的(makeup_workdays),
+//     不扣掉的話會把「連假」算成一段實際上被切斷的假期。
+//  ② **只有紀念日不算放假**(status === 'commemorative')—— 台灣二十個紀念日裡只有六個放假,
+//     把它們算進去會生出一堆不存在的連假。
+//  ③ **純週末不是連假**。一段裡至少要有一天是真的假日,否則五十二個週末都會被列出來。
+const isWeekendIso = (iso) => [0, 6].includes(new Date(`${iso}T00:00:00Z`).getUTCDay());
+const addDays = (iso, n) => {
+  const d = new Date(`${iso}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + n);
+  return d.toISOString().slice(0, 10);
+};
+
+/**
+ * (國, 年) 的連假清單,依日期排序。
+ * 回 `[{ start, end, days, holidays: [{key, name}], hasMakeup }]`;
+ * `days` 含頭尾,`holidays` 只列真的放假的那幾天(不含被連進來的週末)。
+ * `minDays` 預設 3 —— 兩天就是普通週末,列出來只是雜訊。
+ */
+export function longWeekendsFor(code, year, { minDays = 3 } = {}) {
+  const rows = holidaysFor(code, year).filter((r) => r.status !== 'commemorative');
+  if (rows.length === 0) return [];
+
+  const holidayByDay = new Map();          // ISO → 那一天所屬的假日(可能多筆,取第一筆)
+  const makeup = new Set();
+  for (const row of rows) {
+    for (const iso of (row.makeup_workdays || [])) makeup.add(iso);
+    let cursor = row.starts_on;
+    const last = row.ends_on || row.starts_on;
+    // 防呆:資料若把 ends_on 寫在 starts_on 之前,只取單日,不要無限迴圈
+    for (let guard = 0; cursor <= last && guard < 400; guard += 1) {
+      if (!holidayByDay.has(cursor)) holidayByDay.set(cursor, row);
+      cursor = addDays(cursor, 1);
+    }
+  }
+
+  const isOff = (iso) => holidayByDay.has(iso) || (isWeekendIso(iso) && !makeup.has(iso));
+
+  const runs = [];
+  let cursor = `${year}-01-01`;
+  while (cursor.slice(0, 4) === String(year)) {
+    if (!isOff(cursor)) { cursor = addDays(cursor, 1); continue; }
+    const start = cursor;
+    let end = cursor;
+    while (isOff(addDays(end, 1))) end = addDays(end, 1);   // 跨年的尾巴也一起吃掉才是真實的連假
+    const days = [];
+    for (let d = start; d <= end; d = addDays(d, 1)) days.push(d);
+    const anchors = [...new Map(
+      days.filter((d) => holidayByDay.has(d)).map((d) => [holidayByDay.get(d).key, holidayByDay.get(d)]),
+    ).values()];
+    if (days.length >= minDays && anchors.length > 0) {
+      runs.push({
+        start,
+        end,
+        days: days.length,
+        holidays: anchors.map((row) => ({ key: row.key, name: row.name })),
+        hasMakeup: days.some((d) => makeup.has(d)) || anchors.some((row) => (row.makeup_workdays || []).length > 0),
+      });
+    }
+    cursor = addDays(end, 1);
+  }
+  return runs;
+}
+
 /** 沒有單一日期、但確實存在的假日(台灣的原住民族歲時祭儀)。表格放不下,另立一節。 */
 export function undatedFor(code, year) {
   const cal = holidayCalendar(code);

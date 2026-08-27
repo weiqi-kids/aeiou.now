@@ -22,6 +22,7 @@ import { LOCALE } from '../../../lib/config.mjs';
 import { countryName } from '../../../lib/data.mjs';
 import { countryFlag, calendarDate } from '../../../lib/format.mjs';
 import { paragraphs } from '../../../lib/prose.mjs';
+import { longWeekendsFor } from '../../../lib/holidays.mjs';
 import { withBase } from '../../../lib/paths.mjs';
 import { seoCopy, fillTemplate, compactDescription, sourceLabel, sourceLabels, SITE_OVERVIEW_IMAGE_PATH } from '../../../lib/seo.mjs';
 import { holidayCountries, holidayCellsFor, holidaysFor, undatedFor, holidaySystemNote, holidayYearNote, topicsByDate, YEARS } from '../../../lib/holidays.mjs';
@@ -84,6 +85,20 @@ let longestRun = 0;
   }
 }
 const discretionary = rows.filter((r) => r.status === 'discretionary').length;
+// 連假逐段列出(2026-08-27)。導言原本只印一個最大值,但搜「2027 連假」「feriados prolongados 2027」
+// 「大型連休 2027」的人要的是**哪幾段、各是哪幾天** —— 而且這一類查詢不是單一日期,
+// Google 的答案框吃不掉,站上原本一頁都沒有在答。判準與坑寫在 lib/holidays.mjs。
+const runs = longWeekendsFor(code, year);
+// ⚠ 每一段都標出它靠的是法定假日還是行政裁量,**不要替讀者猜**:
+//    `discretionary` 這個標籤在七國語意不同 —— 巴西的嘉年華(全民都放但非法定)與
+//    台灣的軍人節、中國的婦女節(特定身分才放)都掛同一個標籤,而資料裡的 `nationwide`
+//    欄位整份是空的,沒有可用的判別依據。硬選一邊會砍掉巴西最重要的五天連假,
+//    或生出中國不存在的三天連假。照實列、標清楚,讓讀者自己判斷。
+const statutoryKeys = new Set(rows.filter((r) => r.status === 'statutory').map((r) => r.key));
+const runRows = runs.map((run) => ({
+  ...run,
+  allStatutory: run.holidays.every((h) => statutoryKeys.has(h.key)),
+}));
 const systemNote = holidaySystemNote(code);
 // 這一年的日期語意與其他年不同時要當面說(見 lib/holidays.mjs 的 holidayYearNote)。
 const yearNote = holidayYearNote(code, year);
@@ -140,6 +155,28 @@ const holidaySourceLabels = sourceLabels(allSources);
     <section class="hol-system">
       <h2>{t('holidays.system_title')}</h2>
       {paragraphs(systemNote.text[LOCALE]).map((para) => <p>{para}</p>)}
+    </section>
+  )}
+
+  {runRows.length > 0 && (
+    <section class="hol-runs">
+      <h2>{t('holidays.long_weekends')}</h2>
+      <ul>
+        {runRows.map((run) => (
+          <li>
+            <span class="hol-run-when">
+              {run.start === run.end ? calendarDate(run.start) : `${calendarDate(run.start)} – ${calendarDate(run.end)}`}
+            </span>
+            <span class="hol-run-days">{fillTemplate(t('holidays.run_days'), { n: String(run.days) })}</span>
+            <span class="hol-run-names">
+              {run.holidays.map((h) => h.name[LOCALE]).filter(Boolean).join(copy.listSep)}
+            </span>
+            {!run.allStatutory && (
+              <span class="hol-run-flag">{t('holidays.status_discretionary')}</span>
+            )}
+          </li>
+        ))}
+      </ul>
     </section>
   )}
 
@@ -291,6 +328,27 @@ const holidaySourceLabels = sourceLabels(allSources);
   /* 來源橫向流排,不是一條佔一整行的縱向清單 */
   .hol-sources ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
   .hol-sources li { max-width: 100%; overflow-wrap: anywhere; }
+  /* 連假:一段一列。日期與天數是這一區的答案,給它比名稱重一階。 */
+  .hol-runs { margin-block-end: 1.5rem; }
+  .hol-runs h2 { font-size: var(--text-lg); }
+  .hol-runs ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
+  .hol-runs li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.75rem;
+    padding-block: 0.4rem;
+    border-block-end: 0.0625rem solid var(--color-line);
+  }
+  .hol-run-when { font-weight: 600; }
+  .hol-run-days {
+    font-variant-numeric: tabular-nums;
+    color: var(--color-accent-dark);
+    font-weight: 700;
+  }
+  .hol-run-names { color: var(--color-ink-soft); }
+  /* 級距不得只靠顏色:這裡印的是文字標籤本身,不是色塊 */
+  .hol-run-flag { font-size: var(--text-xs); color: var(--color-ink-muted); }
   .hol-system { margin-block-end: 1.5rem; }
   .hol-system h2 { font-size: var(--text-lg); }
   .hol-undated { margin-block-start: 1.5rem; }

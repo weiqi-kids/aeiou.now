@@ -155,6 +155,17 @@ function answerTableCells(html) {
     const text = m[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
     if (text) cells.add(text);
   }
+  // 假日總表的「連假」欄位(2026-08-27)。同一個理由的第五次,而且這一次最直白:
+  // 連假那一區印的是**日期區間與假日名稱**,而那兩樣**必然**也出現在底下的表格裡
+  //(那正是連假的定義 —— 它是由表格裡那幾天組成的)。
+  // 實測:pt-BR/en 的 holidays/br/2026 撞「Dia Nacional de Zumbi e da Consciência Negra」、
+  // holidays/cn/2027 撞「5 de fevereiro de 2027 – 8 de fevereiro de 2027」。
+  // 又是語系不對稱:中文的日期與名稱短於 D3 的 40 字門檻所以從沒觸發。
+  // 一樣**仍然計入 total/unique 字元數**,只是不進「重複段落」那份計數。
+  for (const m of html.matchAll(/<span\b[^>]*class="[^"]*\bhol-run-(?:when|days|names|flag)\b[^"]*"[^>]*>([\s\S]*?)<\/span>/gi)) {
+    const text = m[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    if (text) cells.add(text);
+  }
   // 每日一問的選項標籤(2026-08-27)。同一個理由的第四次:選項是**按鈕上的字**不是段落。
   // /questions/<topic>/ 一頁列同一個主題的二十幾題,兩題共用一個選項
   // (「Adjusted a clock for daylight saving time」「一定會」)本來就會發生,而且合理。
