@@ -1,756 +1,856 @@
 {
-  "as_of": "2026-08-14",
-  "collection_method": "manual-official-source",
-  "managed_event_source_urls": [
-    "https://tam.gov.taipei/News_Content.aspx?n=49854D6439EC40C0&sms=72544237BBE4C5F6&s=133D3D29CFCDAD86",
-    "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/350/detail.html",
-    "https://xxgk.shbsq.gov.cn/article.html?infoid=ad7e7534-18a7-45bc-bda1-99b3ce4ca731",
-    "https://visitloveland.com/sweetheartfestival/",
-    "https://newsroom.feverup.com/en-IN/262080-candlelight-s-valentine-s-day-special-brings-a-romantic-experience-to-pune-on-14th-february/",
-    "https://www.soehannahall.com/news_and_event/night-music-lights-candlelight-concerts-soehanna-hall/",
-    "https://eventos.sp.senac.br/evento/workshop-mesa-para-dois-food-design-para-o-dia-dos-namorados/",
-    "https://www.burgercarnival.taipei/",
-    "https://www.gotokyo.org/en/spot/ev093/index.html",
-    "https://english.shanghai.gov.cn/en-MajorConsumerEvents/20260706/d4819e8683d049c8a715842864ce97d2.html",
-    "https://loveland.org/events-2/corn-roast-festival/",
-    "https://www.anandampune.com/",
-    "https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026",
-    "https://amigosdaarte.org.br/atencao-sp-o-revelando-sp-sao-paulo-mudou-de-data/",
-    "https://www.2026tpe-nightmarket-festival.com/",
-    "https://tokyofestival.jp/en/about"
-  ],
-  "managed_place_source_urls": [
-    "https://www.facebook.com/chocoholic.taipei/",
-    "https://mini-mal.tokyo/pages/access",
-    "https://english.shanghai.gov.cn/en-FirstStores/20260624/50f678163fcf42a1b0dc4409376de73b.html",
-    "https://visitloveland.com/visitors-center/",
-    "https://www.choconuts.in/",
-    "https://www.godiva.co.id/our-location/",
-    "https://www.dengo.com.br/fabrica-de-dengo",
-    "https://www.ntm.gov.tw/en/cl.aspx?n=5703",
-    "https://www.gotokyo.org/en/destinations/eastern-tokyo/fukagawa/",
-    "https://english.shanghai.gov.cn/en-MuseumsGalleries/20231218/01fdd3f62d0c4877bc289ec0b1de6afa.html",
-    "https://visitloveland.com/business-directory/fairgrounds-park/",
-    "https://www.dagdushethganpati.com/?p=11699",
-    "https://www.jakarta.go.id/landmark-jakarta",
-    "https://museudofutebol.org.br/exposicoes/museu-do-futebol/",
-    "https://www.npm.edu.tw/Articles.aspx?l=2&sno=02007001",
-    "https://www.tnm.jp/modules/r_free_page/index.php?id=113Impey&lang=en",
-    "https://english.shanghai.gov.cn/en-UniqueExperience-travelinshanghai/20250729/25cfb8bce97d4e798f99ac62986255ff.html",
-    "https://pune.gov.in/en/tourist-place/aagakhan-palace/",
-    "https://turis.istiqlal.or.id/",
+ "as_of": "2026-08-27",
+ "collection_method": "manual-official-source",
+ "managed_event_source_urls": [
+  "https://tam.gov.taipei/News_Content.aspx?n=49854D6439EC40C0&sms=72544237BBE4C5F6&s=133D3D29CFCDAD86",
+  "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/350/detail.html",
+  "https://xxgk.shbsq.gov.cn/article.html?infoid=ad7e7534-18a7-45bc-bda1-99b3ce4ca731",
+  "https://visitloveland.com/sweetheartfestival/",
+  "https://newsroom.feverup.com/en-IN/262080-candlelight-s-valentine-s-day-special-brings-a-romantic-experience-to-pune-on-14th-february/",
+  "https://www.soehannahall.com/news_and_event/night-music-lights-candlelight-concerts-soehanna-hall/",
+  "https://eventos.sp.senac.br/evento/workshop-mesa-para-dois-food-design-para-o-dia-dos-namorados/",
+  "https://www.burgercarnival.taipei/",
+  "https://www.gotokyo.org/en/spot/ev093/index.html",
+  "https://english.shanghai.gov.cn/en-MajorConsumerEvents/20260706/d4819e8683d049c8a715842864ce97d2.html",
+  "https://loveland.org/events-2/corn-roast-festival/",
+  "https://www.anandampune.com/",
+  "https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026",
+  "https://amigosdaarte.org.br/atencao-sp-o-revelando-sp-sao-paulo-mudou-de-data/",
+  "https://www.2026tpe-nightmarket-festival.com/",
+  "https://tokyofestival.jp/en/about"
+ ],
+ "managed_place_source_urls": [
+  "https://www.facebook.com/chocoholic.taipei/",
+  "https://mini-mal.tokyo/pages/access",
+  "https://english.shanghai.gov.cn/en-FirstStores/20260624/50f678163fcf42a1b0dc4409376de73b.html",
+  "https://visitloveland.com/visitors-center/",
+  "https://www.choconuts.in/",
+  "https://www.godiva.co.id/our-location/",
+  "https://www.dengo.com.br/fabrica-de-dengo",
+  "https://www.ntm.gov.tw/en/cl.aspx?n=5703",
+  "https://www.gotokyo.org/en/destinations/eastern-tokyo/fukagawa/",
+  "https://english.shanghai.gov.cn/en-MuseumsGalleries/20231218/01fdd3f62d0c4877bc289ec0b1de6afa.html",
+  "https://visitloveland.com/business-directory/fairgrounds-park/",
+  "https://www.dagdushethganpati.com/?p=11699",
+  "https://www.jakarta.go.id/landmark-jakarta",
+  "https://museudofutebol.org.br/exposicoes/museu-do-futebol/",
+  "https://www.npm.edu.tw/Articles.aspx?l=2&sno=02007001",
+  "https://www.tnm.jp/modules/r_free_page/index.php?id=113Impey&lang=en",
+  "https://english.shanghai.gov.cn/en-UniqueExperience-travelinshanghai/20250729/25cfb8bce97d4e798f99ac62986255ff.html",
+  "https://pune.gov.in/en/tourist-place/aagakhan-palace/",
+  "https://turis.istiqlal.or.id/",
+  "https://museudoipiranga.org.br/en/visit/",
+  "https://www.sapporobeer.jp/brewery/y_museum/",
+  "https://www.env.go.jp/garden/chidorigafuchi/",
+  "https://prefeitura.sp.gov.br/web/turismo/w/eventos/carnaval_de_rua/271995",
+  "https://www.ketagalan.gov.taipei/"
+ ],
+ "retired_place_ids": [
+  "plc_DC1354E38584ADE45E79C7859F",
+  "plc_53E4F4151B72E03376E6B7BC7B",
+  "plc_74CC3D0401B6930DED08A8133F",
+  "plc_6B0018B4DED2DAF41380037767",
+  "plc_D6DDF357A54863722A3312B5E4",
+  "plc_D16C9C202DD07061BC2462EF4B",
+  "plc_56A587977C8FF926C1640EAF93"
+ ],
+ "markets": [
+  {
+   "locale": "zh-TW",
+   "country_code": "TW",
+   "city_code": "taipei",
+   "city_name": "Taipei"
+  },
+  {
+   "locale": "ja",
+   "country_code": "JP",
+   "city_code": "tokyo",
+   "city_name": "Tokyo"
+  },
+  {
+   "locale": "zh-CN",
+   "country_code": "CN",
+   "city_code": "shanghai",
+   "city_name": "Shanghai"
+  },
+  {
+   "locale": "en",
+   "country_code": "US",
+   "city_code": "loveland",
+   "city_name": "Loveland"
+  },
+  {
+   "locale": "hi",
+   "country_code": "IN",
+   "city_code": "pune",
+   "city_name": "Pune"
+  },
+  {
+   "locale": "id",
+   "country_code": "ID",
+   "city_code": "jakarta",
+   "city_name": "Jakarta"
+  },
+  {
+   "locale": "pt-BR",
+   "country_code": "BR",
+   "city_code": "sao-paulo",
+   "city_name": "São Paulo"
+  }
+ ],
+ "places": [
+  {
+   "name": "Chocoholic 巧克哈客（永康店）",
+   "city_code": "taipei",
+   "country_code": "TW",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "affection-and-reciprocity"
+   ],
+   "address": "台北市大安區永康街 7 巷 2 號",
+   "map_query": "Chocoholic 巧克哈客 永康店 台北",
+   "source_urls": [
+    "https://www.facebook.com/chocoholic.taipei/"
+   ],
+   "descriptions": {
+    "zh-TW": "台北永康街的巧克力專飲店，官網列有巧克力飲品、料理、甜點與禮盒，設有固定門市。",
+    "en": "A chocolate drink shop on Yongkang Street in Taipei. Its official site lists chocolate drinks, desserts, dishes and gift boxes at a fixed storefront.",
+    "ja": "台北・永康街にあるチョコレート専門店。公式サイトにはチョコレートドリンク、デザート、料理、ギフト商品と常設店の案内があります。",
+    "zh-CN": "台北永康街的巧克力专饮店，官网列有巧克力饮品、料理、甜点和礼盒，并提供固定门店地址。",
+    "hi": "ताइपे की योंगकांग स्ट्रीट पर चॉकलेट ड्रिंक की दुकान। आधिकारिक साइट पर चॉकलेट पेय, मिठाइयाँ, व्यंजन और गिफ्ट बॉक्स सूचीबद्ध हैं।",
+    "id": "Kedai minuman cokelat di Yongkang Street, Taipei. Situs resminya mencantumkan minuman, hidangan, makanan penutup, dan kotak hadiah berbahan cokelat.",
+    "pt-BR": "Uma loja de bebidas de chocolate na Yongkang Street, em Taipei. O site oficial lista bebidas, sobremesas, pratos e caixas de presente de chocolate."
+   }
+  },
+  {
+   "name": "Minimal 富ヶ谷本店",
+   "city_code": "tokyo",
+   "country_code": "JP",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "affection-and-reciprocity"
+   ],
+   "address": "〒151-0063 東京都渋谷区富ヶ谷 2-1-9",
+   "map_query": "Minimal 富ヶ谷本店 東京",
+   "source_urls": [
+    "https://mini-mal.tokyo/pages/access"
+   ],
+   "descriptions": {
+    "zh-TW": "東京富ヶ谷的常設巧克力店，官方列明可內用、外帶與營業地址，主打可可風味的巧克力。",
+    "en": "A permanent chocolate shop in Tomigaya, Tokyo. The official shop page lists dine-in and takeaway service, its address and a cacao-focused product line.",
+    "ja": "東京・富ヶ谷の常設チョコレート店。公式サイトにはイートインとテイクアウト、住所、カカオの魅力を生かした商品が案内されています。",
+    "zh-CN": "东京富谷的常设巧克力店，官网列有堂食、外带、门店地址和以可可风味为主的产品。",
+    "hi": "टोक्यो के तोमिगाया में स्थायी चॉकलेट दुकान। आधिकारिक पेज पर बैठकर खाने और टेकअवे, पता और कोको पर आधारित उत्पादों की जानकारी है।",
+    "id": "Toko cokelat permanen di Tomigaya, Tokyo. Halaman resminya mencantumkan layanan makan di tempat dan bawa pulang, alamat, serta produk yang menonjolkan rasa kakao.",
+    "pt-BR": "Uma loja permanente de chocolate em Tomigaya, Tóquio. A página oficial informa serviço para consumo no local e para viagem, endereço e produtos centrados no cacau."
+   }
+  },
+  {
+   "name": "Godiva 巧克力体验旗舰店（新天地）",
+   "city_code": "shanghai",
+   "country_code": "CN",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "affection-and-reciprocity"
+   ],
+   "address": "上海市黄浦区马当路 119 号 102 室",
+   "map_query": "Godiva 巧克力体验旗舰店 新天地 上海",
+   "source_urls": [
+    "https://english.shanghai.gov.cn/en-FirstStores/20260624/50f678163fcf42a1b0dc4409376de73b.html"
+   ],
+   "descriptions": {
+    "zh-TW": "上海新天地的巧克力體驗店，上海市政府英文頁面列有試吃、現做巧克力飲品、客製禮盒與門市地址。",
+    "en": "A chocolate experience store in Shanghai’s Xintiandi. The Shanghai government’s listing mentions tastings, made-to-order chocolate drinks, personalised gift boxes and the store address.",
+    "ja": "上海・新天地にあるチョコレート体験店。上海市政府の案内には試食、店内で作るチョコレートドリンク、ギフトのカスタマイズ、住所が掲載されています。",
+    "zh-CN": "上海新天地的巧克力体验店，上海市政府页面介绍了试吃、现做巧克力饮品、定制礼盒和门店地址。",
+    "hi": "शंघाई के शिन्तियानदी में चॉकलेट अनुभव स्टोर। शंघाई सरकार के पेज पर चखने, वहीं तैयार चॉकलेट पेय, कस्टम गिफ्ट बॉक्स और पते की जानकारी है।",
+    "id": "Toko pengalaman cokelat di Xintiandi, Shanghai. Halaman pemerintah Shanghai mencantumkan sesi mencicipi, minuman cokelat yang dibuat di tempat, kotak hadiah kustom, dan alamat toko.",
+    "pt-BR": "Uma loja de experiência com chocolate em Xintiandi, Xangai. A página do governo de Xangai menciona degustações, bebidas de chocolate preparadas na hora, caixas de presente personalizadas e o endereço."
+   }
+  },
+  {
+   "name": "Loveland East Gateway Visitors Center",
+   "city_code": "loveland",
+   "country_code": "US",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "affection-and-reciprocity"
+   ],
+   "address": "5400 Stone Creek Circle, Loveland, Colorado 80538",
+   "map_query": "Loveland East Gateway Visitors Center Colorado",
+   "source_urls": [
+    "https://visitloveland.com/visitors-center/"
+   ],
+   "descriptions": {
+    "zh-TW": "Loveland 的常設旅遊資訊中心，官方介紹這裡有 LOVE 鎖雕塑、地方工藝品與旅遊資訊。",
+    "en": "A permanent visitor centre in Loveland. The official listing describes its LOVE lock sculpture, locally made goods and visitor information.",
+    "ja": "Lovelandの常設観光案内所。公式案内では、LOVEロックの彫刻、地元の作り手の商品、観光情報を紹介しています。",
+    "zh-CN": "Loveland 的常设游客中心，官网介绍了 LOVE 锁雕塑、当地手工艺品和旅游信息。",
+    "hi": "Loveland का स्थायी पर्यटक केंद्र। आधिकारिक जानकारी में LOVE lock मूर्ति, स्थानीय कारीगरों की वस्तुएँ और यात्रा संबंधी जानकारी दी गई है।",
+    "id": "Pusat informasi wisata permanen di Loveland. Situs resminya menyebutkan patung LOVE lock, barang buatan perajin lokal, dan informasi untuk pengunjung.",
+    "pt-BR": "Um centro permanente de informações turísticas em Loveland. O site oficial destaca a escultura LOVE lock, produtos de artesãos locais e informações para visitantes."
+   }
+  },
+  {
+   "name": "Choconuts",
+   "city_code": "pune",
+   "country_code": "IN",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "affection-and-reciprocity"
+   ],
+   "address": "Shop No 1, Kumar Pavilion, East St, Pune Cantonment, Pune, Maharashtra 411001",
+   "map_query": "Choconuts Kumar Pavilion East Street Pune",
+   "source_urls": [
+    "https://www.choconuts.in/"
+   ],
+   "descriptions": {
+    "zh-TW": "Pune 的巧克力與乾果店，官方頁面列有手工巧克力、禮盒與門市地址。",
+    "en": "A chocolate and dry-fruit shop in Pune. Its official page lists handmade chocolates, gift hampers and the shop address.",
+    "ja": "プネーのチョコレート・ドライフルーツ店。公式ページには手作りチョコレート、ギフト用ハンパー、店舗住所が案内されています。",
+    "zh-CN": "Pune 的巧克力和干果店，官网列有手工巧克力、礼盒和门店地址。",
+    "hi": "पुणे की चॉकलेट और ड्राय-फ्रूट की दुकान। आधिकारिक पेज पर हाथ से बनी चॉकलेट, गिफ्ट हैम्पर और दुकान का पता दिया गया है।",
+    "id": "Toko cokelat dan buah kering di Pune. Halaman resminya mencantumkan cokelat buatan tangan, hampers hadiah, dan alamat toko.",
+    "pt-BR": "Uma loja de chocolates e frutas secas em Pune. A página oficial informa os chocolates artesanais, cestas para presente e o endereço da loja."
+   }
+  },
+  {
+   "name": "GODIVA Plaza Indonesia",
+   "city_code": "jakarta",
+   "country_code": "ID",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "affection-and-reciprocity"
+   ],
+   "address": "Level 1 Unit 114, Jalan M.H. Thamrin No. 28-30, Jakarta Pusat, DKI Jakarta 10350",
+   "map_query": "GODIVA Plaza Indonesia Jakarta",
+   "source_urls": [
+    "https://www.godiva.co.id/our-location/"
+   ],
+   "descriptions": {
+    "zh-TW": "雅加達 Plaza Indonesia 的巧克力專門店，官方門市頁列出 GODIVA 店面、樓層與地址。",
+    "en": "A GODIVA chocolate shop at Plaza Indonesia in Jakarta. The official store page lists the branch, floor and address for a local chocolate-gifting stop.",
+    "ja": "ジャカルタのPlaza IndonesiaにあるGODIVAのチョコレート店。公式の店舗ページに店舗名、階数、住所が案内されています。",
+    "zh-CN": "雅加达 Plaza Indonesia 的 GODIVA 巧克力店，官网列出门店、楼层和地址，可作为当地送礼去处。",
+    "hi": "जकार्ता के Plaza Indonesia में GODIVA की चॉकलेट दुकान। आधिकारिक स्टोर पेज पर शाखा, मंज़िल और पता दिया गया है।",
+    "id": "Toko cokelat GODIVA di Plaza Indonesia, Jakarta. Halaman lokasi resmi mencantumkan cabang, lantai, dan alamatnya.",
+    "pt-BR": "Uma loja de chocolates GODIVA no Plaza Indonesia, em Jacarta. A página oficial informa a filial, o andar e o endereço."
+   }
+  },
+  {
+   "name": "Fábrica de Dengo",
+   "city_code": "sao-paulo",
+   "country_code": "BR",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "affection-and-reciprocity"
+   ],
+   "address": "Avenida Brigadeiro Faria Lima, 196, Pinheiros, São Paulo - SP",
+   "map_query": "Fábrica de Dengo São Paulo",
+   "source_urls": [
+    "https://www.dengo.com.br/fabrica-de-dengo"
+   ],
+   "descriptions": {
+    "zh-TW": "São Paulo 的巧克力店與體驗空間，官方門市頁列出 Fábrica de Dengo 的地址與巧克力、咖啡等現場服務。",
+    "en": "A chocolate shop and experience space in São Paulo. The official store listing gives the Fábrica de Dengo address and its chocolate and café services.",
+    "ja": "サンパウロのチョコレート店・体験スペース。公式の店舗一覧にFábrica de Dengoの住所と、チョコレートやカフェのサービスが掲載されています。",
+    "zh-CN": "São Paulo 的巧克力店和体验空间，官方门店页面列出了 Fábrica de Dengo 的地址以及巧克力、咖啡等现场服务。",
+    "hi": "साओ पाउलो में चॉकलेट की दुकान और अनुभव केंद्र। आधिकारिक स्टोर सूची में Fábrica de Dengo का पता और चॉकलेट व कैफ़े सेवाएँ दी गई हैं।",
+    "id": "Toko cokelat dan ruang pengalaman di São Paulo. Daftar toko resmi mencantumkan alamat Fábrica de Dengo serta layanan cokelat dan kafe.",
+    "pt-BR": "Loja de chocolate e espaço de experiências em São Paulo. A lista oficial de lojas informa o endereço da Fábrica de Dengo e seus serviços de chocolate e café."
+   }
+  },
+  {
+   "name": "國立臺灣博物館本館",
+   "city_code": "taipei",
+   "country_code": "TW",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "national-days"
+   ],
+   "address": "100007 臺北市中正區襄陽路 2 號（二二八和平公園內）",
+   "map_query": "國立臺灣博物館本館 襄陽路2號 台北",
+   "source_urls": [
+    "https://www.ntm.gov.tw/en/cl.aspx?n=5703"
+   ],
+   "descriptions": {
+    "zh-TW": "國立臺灣博物館本館位在臺北二二八和平公園內，官方參觀資訊列明館址為襄陽路 2 號，館內長期保存臺灣的自然與文化資料。",
+    "en": "The National Taiwan Museum’s main building is in Taipei’s 228 Peace Park. Its official visitor information lists No. 2 Xiangyang Road and the museum’s long-running natural and cultural collections.",
+    "ja": "国立台湾博物館の本館は台北の二二八和平公園内にあります。公式案内に襄陽路2号の住所と、台湾の自然・文化資料を扱う博物館であることが掲載されています。",
+    "zh-CN": "国立台湾博物馆本馆位于台北二二八和平公园内，官方参观信息列出襄阳路 2 号馆址，长期保存台湾的自然与文化资料。",
+    "hi": "National Taiwan Museum का मुख्य भवन ताइपे के 228 Peace Park में है। आधिकारिक जानकारी में No. 2 Xiangyang Road का पता और प्राकृतिक व सांस्कृतिक संग्रहों का उल्लेख है।",
+    "id": "Gedung utama National Taiwan Museum berada di 228 Peace Park, Taipei. Informasi kunjungan resminya mencantumkan alamat No. 2 Xiangyang Road serta koleksi alam dan budaya Taiwan.",
+    "pt-BR": "O edifício principal do National Taiwan Museum fica no 228 Peace Park, em Taipei. A informação oficial de visita lista o endereço No. 2 Xiangyang Road e as coleções naturais e culturais de Taiwan."
+   }
+  },
+  {
+   "name": "富岡八幡宮",
+   "city_code": "tokyo",
+   "country_code": "JP",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "ghosts-ancestors-and-remembrance"
+   ],
+   "address": "〒135-0047 東京都江東区富岡 1-20-3",
+   "map_query": "富岡八幡宮 東京都江東区富岡1-20-3",
+   "source_urls": [
+    "https://www.gotokyo.org/en/destinations/eastern-tokyo/fukagawa/"
+   ],
+   "descriptions": {
+    "zh-TW": "東京深川的富岡八幡宮，官方東京旅遊指南列出 1-20-3 Tomioka 地址，並介紹神輿與深川八幡祭的地方傳統。",
+    "en": "Tomioka Hachimangu Shrine in Fukagawa, Tokyo. The official Tokyo guide lists 1-20-3 Tomioka and describes its mikoshi floats and the local Fukagawa Hachiman festival tradition.",
+    "ja": "東京・深川の富岡八幡宮。東京の公式観光ガイドに1-20-3 Tomiokaの住所と、神輿や深川八幡祭の地域文化が紹介されています。",
+    "zh-CN": "东京深川的富冈八幡宫，东京官方旅游指南列出 1-20-3 Tomioka 地址，并介绍神舆和深川八幡祭的地方传统。",
+    "hi": "टोक्यो के फुकागावा में Tomioka Hachimangu Shrine। आधिकारिक Tokyo guide में 1-20-3 Tomioka का पता और मिकोशी तथा Fukagawa Hachiman उत्सव की स्थानीय परंपरा दी गई है।",
+    "id": "Tomioka Hachimangu Shrine di Fukagawa, Tokyo. Panduan resmi Tokyo mencantumkan alamat 1-20-3 Tomioka serta tradisi mikoshi dan festival Fukagawa Hachiman.",
+    "pt-BR": "O santuário Tomioka Hachimangu, em Fukagawa, Tóquio. O guia oficial de Tóquio informa o endereço 1-20-3 Tomioka e descreve os mikoshi e a tradição do festival Fukagawa Hachiman."
+   }
+  },
+  {
+   "name": "上海博物館人民廣場館",
+   "city_code": "shanghai",
+   "country_code": "CN",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "national-days"
+   ],
+   "address": "上海市黃浦區人民大道 201 號",
+   "map_query": "上海博物館 人民大道201號",
+   "source_urls": [
+    "https://english.shanghai.gov.cn/en-MuseumsGalleries/20231218/01fdd3f62d0c4877bc289ec0b1de6afa.html"
+   ],
+   "descriptions": {
+    "zh-TW": "上海博物館人民廣場館位在人民大道 201 號，上海市政府英文頁面介紹其中國古代藝術與文物收藏。",
+    "en": "The Shanghai Museum on People’s Square is at No. 201 Renmin Avenue. A Shanghai government guide describes its collection of ancient Chinese art and cultural relics.",
+    "ja": "上海博物館の人民広場館は人民大道201号にあります。上海市政府の案内では、中国古代美術と文化財のコレクションが紹介されています。",
+    "zh-CN": "上海博物馆人民广场馆位于人民大道 201 号，上海市政府英文页面介绍了它收藏的中国古代艺术和文物。",
+    "hi": "Shanghai Museum on People’s Square का पता No. 201 Renmin Avenue है। शंघाई सरकार की जानकारी में प्राचीन चीनी कला और सांस्कृतिक अवशेषों का संग्रह बताया गया है।",
+    "id": "Shanghai Museum on People’s Square berada di No. 201 Renmin Avenue. Panduan pemerintah Shanghai menjelaskan koleksi seni Tiongkok kuno dan peninggalan budayanya.",
+    "pt-BR": "O Shanghai Museum na People’s Square fica no nº 201 da Renmin Avenue. Um guia do governo de Xangai descreve sua coleção de arte chinesa antiga e relíquias culturais."
+   }
+  },
+  {
+   "name": "Fairgrounds Park",
+   "city_code": "loveland",
+   "country_code": "US",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "harvest-and-gratitude"
+   ],
+   "address": "700 S. Railroad Avenue, Loveland, CO",
+   "map_query": "Fairgrounds Park 700 S Railroad Avenue Loveland Colorado",
+   "source_urls": [
+    "https://visitloveland.com/business-directory/fairgrounds-park/"
+   ],
+   "descriptions": {
+    "zh-TW": "Loveland 的 Fairgrounds Park 位於 700 S. Railroad Avenue，市政府列有野餐區、遊樂場、噴水區與 Farmers Market 等用途。",
+    "en": "Fairgrounds Park is at 700 S. Railroad Avenue in Loveland. The city lists its picnic area, playgrounds, spray park and farmers market among the park’s uses.",
+    "ja": "LovelandのFairgrounds Parkは700 S. Railroad Avenueにあります。市の案内にはピクニックエリア、遊具、スプレーパーク、ファーマーズマーケットなどが掲載されています。",
+    "zh-CN": "Loveland 的 Fairgrounds Park 位于 700 S. Railroad Avenue，市政府列出野餐区、游乐场、喷泉水乐园和 Farmers Market 等用途。",
+    "hi": "Loveland का Fairgrounds Park 700 S. Railroad Avenue पर है। शहर की जानकारी में पिकनिक क्षेत्र, खेल के मैदान, स्प्रे पार्क और farmers market का उल्लेख है।",
+    "id": "Fairgrounds Park berada di 700 S. Railroad Avenue, Loveland. Pemerintah kota mencantumkan area piknik, taman bermain, spray park, dan farmers market sebagai fasilitasnya.",
+    "pt-BR": "O Fairgrounds Park fica em 700 S. Railroad Avenue, Loveland. A cidade lista área de piquenique, playgrounds, spray park e farmers market entre os usos do parque."
+   }
+  },
+  {
+   "name": "Dagdusheth Halwai Ganpati Temple",
+   "city_code": "pune",
+   "country_code": "IN",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "new-year"
+   ],
+   "address": "Ganpati Bhavan, 250 Budhvar Peth, Pune, Maharashtra 411002",
+   "map_query": "Dagdusheth Halwai Ganpati Temple Ganpati Bhavan 250 Budhvar Peth Pune",
+   "source_urls": [
+    "https://www.dagdushethganpati.com/?p=11699"
+   ],
+   "descriptions": {
+    "zh-TW": "Pune 的 Dagdusheth Halwai Ganpati Temple，官方頁列出 Budhvar Peth 的地址，並介紹寺廟與年度 Ganpati 節慶。",
+    "en": "The Dagdusheth Halwai Ganpati Temple in Pune. Its official site lists the Budhvar Peth address and describes the temple and its annual Ganpati festival.",
+    "ja": "プネーのDagdusheth Halwai Ganpati Temple。公式サイトにBudhvar Pethの住所と、寺院および毎年のGanpati祭の案内があります。",
+    "zh-CN": "Pune 的 Dagdusheth Halwai Ganpati Temple，官网列出 Budhvar Peth 地址，并介绍寺庙和年度 Ganpati 节庆。",
+    "hi": "पुणे का Dagdusheth Halwai Ganpati Temple। आधिकारिक साइट पर Budhvar Peth का पता और मंदिर तथा वार्षिक Ganpati उत्सव की जानकारी है।",
+    "id": "Dagdusheth Halwai Ganpati Temple di Pune. Situs resminya mencantumkan alamat di Budhvar Peth serta menjelaskan kuil dan festival Ganpati tahunannya.",
+    "pt-BR": "O Dagdusheth Halwai Ganpati Temple, em Pune. O site oficial informa o endereço em Budhvar Peth e apresenta o templo e seu festival anual de Ganpati."
+   }
+  },
+  {
+   "name": "Monumen Nasional (MONAS)",
+   "city_code": "jakarta",
+   "country_code": "ID",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "national-days"
+   ],
+   "address": "Jalan Tugu Monas, Gambir, Jakarta Pusat, Indonesia",
+   "map_query": "Monumen Nasional MONAS Jalan Tugu Monas Gambir Jakarta",
+   "source_urls": [
+    "https://www.jakarta.go.id/landmark-jakarta"
+   ],
+   "descriptions": {
+    "zh-TW": "雅加達的國家紀念塔 MONAS 位在 Gambir 的 Jalan Tugu Monas，雅加達市政府稱它是印尼人民爭取獨立的象徵。",
+    "en": "Jakarta’s National Monument (MONAS) is on Jalan Tugu Monas in Gambir. The Jakarta government describes it as a symbol of the Indonesian people’s struggle for independence.",
+    "ja": "ジャカルタの国家記念塔MONASはGambirのJalan Tugu Monasにあります。ジャカルタ市政府は、インドネシア国民の独立闘争の象徴として紹介しています。",
+    "zh-CN": "雅加达的国家纪念塔 MONAS 位于 Gambir 的 Jalan Tugu Monas，雅加达市政府称它是印尼人民争取独立的象征。",
+    "hi": "जकार्ता का National Monument (MONAS) Gambir के Jalan Tugu Monas पर है। जकार्ता सरकार इसे इंडोनेशियाई लोगों के स्वतंत्रता संघर्ष का प्रतीक बताती है।",
+    "id": "Monumen Nasional (MONAS) berada di Jalan Tugu Monas, Gambir. Pemerintah Jakarta menyebutnya sebagai simbol perjuangan rakyat Indonesia memperoleh kemerdekaan.",
+    "pt-BR": "O Monumento Nacional (MONAS) de Jacarta fica na Jalan Tugu Monas, em Gambir. O governo de Jacarta o descreve como símbolo da luta do povo indonésio pela independência."
+   }
+  },
+  {
+   "name": "Museu do Futebol",
+   "city_code": "sao-paulo",
+   "country_code": "BR",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "national-days"
+   ],
+   "address": "Praça Charles Miller, s/n, Pacaembu, São Paulo - SP",
+   "map_query": "Museu do Futebol Praça Charles Miller Pacaembu São Paulo",
+   "source_urls": [
+    "https://museudofutebol.org.br/exposicoes/museu-do-futebol/"
+   ],
+   "descriptions": {
+    "zh-TW": "São Paulo 的足球博物館位在 Pacaembu 的 Praça Charles Miller，官方介紹主展覽如何講述足球與巴西歷史。",
+    "en": "The Football Museum in São Paulo is at Praça Charles Miller in Pacaembu. Its official site describes a main exhibition about the history of sport and Brazil.",
+    "ja": "サンパウロのサッカー博物館はPacaembuのPraça Charles Millerにあります。公式サイトでは、スポーツとブラジルの歴史をたどる常設展示を紹介しています。",
+    "zh-CN": "São Paulo 的足球博物馆位于 Pacaembu 的 Praça Charles Miller，官网介绍了讲述足球与巴西历史的主展览。",
+    "hi": "São Paulo का Football Museum Pacaembu की Praça Charles Miller पर है। आधिकारिक साइट मुख्य प्रदर्शनी में खेल और ब्राज़ील के इतिहास का वर्णन करती है।",
+    "id": "Museu do Futebol di São Paulo berada di Praça Charles Miller, Pacaembu. Situs resminya menjelaskan pameran utama tentang sejarah olahraga dan Brasil.",
+    "pt-BR": "O Museu do Futebol fica na Praça Charles Miller, no Pacaembu, em São Paulo. O site oficial apresenta a exposição principal sobre a história do esporte e do Brasil."
+   }
+  },
+  {
+   "name": "國立故宮博物院",
+   "city_code": "taipei",
+   "country_code": "TW",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "national-days"
+   ],
+   "address": "臺北市士林區至善路二段 221 號",
+   "map_query": "國立故宮博物院 臺北市士林區至善路二段221號",
+   "source_urls": [
+    "https://www.npm.edu.tw/Articles.aspx?l=2&sno=02007001"
+   ],
+   "descriptions": {
+    "zh-TW": "臺北士林的國立故宮博物院保存大量東亞文物，適合從館藏與公共記憶認識臺灣所處的文化脈絡。",
+    "en": "Taipei’s National Palace Museum preserves major East Asian collections and offers a place to connect cultural heritage with public memory.",
+    "ja": "台北・士林の国立故宮博物院は東アジアの文化財を収蔵し、コレクションと公共の記憶から台湾の文化的背景を考えられる場所です。",
+    "zh-CN": "台北士林的故宫博物院收藏大量东亚文物，可以从馆藏和公共记忆认识台湾所处的文化脉络。",
+    "hi": "ताइपे का National Palace Museum पूर्वी एशिया की बड़ी संग्रहित विरासत को रखता है; यहाँ संग्रह और सार्वजनिक स्मृति के ज़रिए ताइवान के सांस्कृतिक संदर्भ को समझा जा सकता है।",
+    "id": "National Palace Museum di Shilin, Taipei, menyimpan koleksi besar Asia Timur dan menghubungkan warisan budaya dengan ingatan publik.",
+    "pt-BR": "O National Palace Museum, em Shilin, Taipei, preserva importantes coleções do Leste Asiático e relaciona patrimônio cultural e memória pública."
+   }
+  },
+  {
+   "name": "東京國立博物館",
+   "city_code": "tokyo",
+   "country_code": "JP",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "national-days"
+   ],
+   "address": "13-9 Ueno Park, Taito-ku, Tokyo 110-8712, Japan",
+   "map_query": "Tokyo National Museum 13-9 Ueno Park Taito-ku Tokyo",
+   "source_urls": [
+    "https://www.tnm.jp/modules/r_free_page/index.php?id=113Impey&lang=en"
+   ],
+   "descriptions": {
+    "zh-TW": "東京上野的東京國立博物館以日本與亞洲文化資產為核心，能把國家文化記憶放回具體的展覽與收藏中理解。",
+    "en": "Tokyo National Museum in Ueno presents Japanese and Asian cultural heritage through long-term collections, exhibitions, and public learning.",
+    "ja": "上野の東京国立博物館は日本とアジアの文化財を紹介し、国家や地域の記憶を展示と収蔵品から具体的に見られます。",
+    "zh-CN": "上野的东京国立博物馆以日本和亚洲文化遗产为核心，通过展览和收藏呈现公共文化记忆。",
+    "hi": "उएनो स्थित Tokyo National Museum जापान और एशिया की सांस्कृतिक विरासत को संग्रह और प्रदर्शनियों के माध्यम से दिखाता है।",
+    "id": "Tokyo National Museum di Ueno menampilkan warisan budaya Jepang dan Asia melalui koleksi serta pameran publik.",
+    "pt-BR": "O Tokyo National Museum, em Ueno, apresenta o patrimônio cultural do Japão e da Ásia por meio de coleções e exposições."
+   }
+  },
+  {
+   "name": "豫園",
+   "city_code": "shanghai",
+   "country_code": "CN",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "lantern-festival"
+   ],
+   "address": "上海市黃浦區豫園老街 279 號南門",
+   "map_query": "豫園 上海市黃浦區豫園老街279號",
+   "source_urls": [
+    "https://english.shanghai.gov.cn/en-UniqueExperience-travelinshanghai/20250729/25cfb8bce97d4e798f99ac62986255ff.html"
+   ],
+   "descriptions": {
+    "zh-TW": "上海豫園是保存古典園林與城市節慶景觀的常設地點；官方旅遊資訊也介紹夜遊、光影與茶文化體驗。",
+    "en": "Yuyuan Garden is a permanent Shanghai heritage site where classical gardens, night scenes, light, and tea culture meet.",
+    "ja": "上海の豫園は古典庭園と都市の季節行事を感じられる常設の文化空間で、公式案内には夜景、光、茶文化の体験も紹介されています。",
+    "zh-CN": "上海豫园是保存古典园林与城市节庆景观的常设地点，官方旅游信息也介绍夜游、光影和茶文化体验。",
+    "hi": "शंघाई का Yuyuan Garden स्थायी सांस्कृतिक स्थल है जहाँ शास्त्रीय उद्यान, रात्रि-दृश्य, रोशनी और चाय संस्कृति मिलते हैं।",
+    "id": "Yuyuan Garden di Shanghai adalah situs warisan permanen yang memadukan taman klasik, suasana malam, cahaya, dan budaya teh.",
+    "pt-BR": "O Yuyuan Garden é um espaço permanente de patrimônio em Xangai, unindo jardins clássicos, cenas noturnas, luz e cultura do chá."
+   }
+  },
+  {
+   "name": "Aga Khan Palace",
+   "city_code": "pune",
+   "country_code": "IN",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "national-days"
+   ],
+   "address": "Pune, Maharashtra, India",
+   "map_query": "Aga Khan Palace Pune Maharashtra India",
+   "source_urls": [
+    "https://pune.gov.in/en/tourist-place/aagakhan-palace/"
+   ],
+   "descriptions": {
+    "zh-TW": "Pune 的 Aga Khan Palace 是與印度獨立運動和甘地記憶相連的歷史場所，適合從建築與地方史理解公共紀念。",
+    "en": "Aga Khan Palace in Pune is a historic site connected with India’s independence movement and Gandhi memory, linking architecture with public remembrance.",
+    "ja": "プネーのAga Khan Palaceはインド独立運動とガンディーの記憶に結び付く歴史的な場所で、建築と公共の記憶を一緒に学べます。",
+    "zh-CN": "Pune 的 Aga Khan Palace 是与印度独立运动和甘地记忆相连的历史地点，可以从建筑和地方史理解公共纪念。",
+    "hi": "पुणे का Aga Khan Palace भारत के स्वतंत्रता आंदोलन और गांधी की स्मृति से जुड़ा ऐतिहासिक स्थल है।",
+    "id": "Aga Khan Palace di Pune adalah situs sejarah yang terkait dengan gerakan kemerdekaan India dan ingatan tentang Gandhi.",
+    "pt-BR": "O Aga Khan Palace, em Pune, é um local histórico ligado ao movimento de independência da Índia e à memória de Gandhi."
+   }
+  },
+  {
+   "name": "Istiqlal Mosque",
+   "city_code": "jakarta",
+   "country_code": "ID",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "ramadan-and-eid",
+    "eid-al-adha"
+   ],
+   "address": "Jl. Taman Wijaya Kusuma, Pasar Baru, Sawah Besar, Jakarta Pusat, DKI Jakarta",
+   "map_query": "Istiqlal Mosque Jakarta",
+   "source_urls": [
+    "https://turis.istiqlal.or.id/"
+   ],
+   "descriptions": {
+    "zh-TW": "雅加達的 Istiqlal Mosque 是可參訪的國家清真寺，官方旅遊系統提供國內外訪客導覽資訊，能連結齋戒月、開齋節與宰牲節的公共宗教生活。",
+    "en": "Istiqlal Mosque in Jakarta is Indonesia’s national mosque and provides visitor guidance, making it a concrete place to understand Ramadan, Eid al-Fitr, and Eid al-Adha in public life.",
+    "ja": "ジャカルタのIstiqlal Mosqueはインドネシアの国立モスクで、公式の観光案内が国内外の訪問者を受け入れています。ラマダーンやイードの公共的な宗教生活を知る手がかりになります。",
+    "zh-CN": "雅加达的 Istiqlal Mosque 是可参访的国家清真寺，官方旅游系统为国内外访客提供导览信息，可联系斋戒月、开斋节与宰牲节的公共宗教生活。",
+    "hi": "जकार्ता की Istiqlal Mosque इंडोनेशिया की राष्ट्रीय मस्जिद है; आधिकारिक पर्यटक व्यवस्था रमज़ान और दोनों ईद के सार्वजनिक धार्मिक जीवन को समझने का ठोस स्थान देती है।",
+    "id": "Istiqlal Mosque di Jakarta adalah masjid nasional Indonesia dengan panduan bagi wisatawan, sehingga menjadi tempat nyata untuk memahami Ramadan, Idul Fitri, dan Idul Adha.",
+    "pt-BR": "A Istiqlal Mosque, em Jacarta, é a mesquita nacional da Indonésia e oferece orientação para visitantes, conectando a vida religiosa pública ao Ramadã e aos dois Eid."
+   }
+  },
+  {
+   "name": "Museu do Ipiranga",
+   "city_code": "sao-paulo",
+   "country_code": "BR",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "national-days"
+   ],
+   "address": "Rua dos Patriotas, 100 – Ipiranga – São Paulo/SP – CEP 04207-030",
+   "map_query": "Museu do Ipiranga Rua dos Patriotas 100 São Paulo",
+   "source_urls": [
     "https://museudoipiranga.org.br/en/visit/"
-  ],
-  "retired_place_ids": [
-    "plc_DC1354E38584ADE45E79C7859F",
-    "plc_53E4F4151B72E03376E6B7BC7B",
-    "plc_74CC3D0401B6930DED08A8133F",
-    "plc_6B0018B4DED2DAF41380037767",
-    "plc_D6DDF357A54863722A3312B5E4",
-    "plc_D16C9C202DD07061BC2462EF4B",
-    "plc_56A587977C8FF926C1640EAF93"
-  ],
-  "markets": [
-    {
-      "locale": "zh-TW",
-      "country_code": "TW",
-      "city_code": "taipei",
-      "city_name": "Taipei"
-    },
-    {
-      "locale": "ja",
-      "country_code": "JP",
-      "city_code": "tokyo",
-      "city_name": "Tokyo"
-    },
-    {
-      "locale": "zh-CN",
-      "country_code": "CN",
-      "city_code": "shanghai",
-      "city_name": "Shanghai"
-    },
-    {
-      "locale": "en",
-      "country_code": "US",
-      "city_code": "loveland",
-      "city_name": "Loveland"
-    },
-    {
-      "locale": "hi",
-      "country_code": "IN",
-      "city_code": "pune",
-      "city_name": "Pune"
-    },
-    {
-      "locale": "id",
-      "country_code": "ID",
-      "city_code": "jakarta",
-      "city_name": "Jakarta"
-    },
-    {
-      "locale": "pt-BR",
-      "country_code": "BR",
-      "city_code": "sao-paulo",
-      "city_name": "São Paulo"
-    }
-  ],
-  "places": [
-    {
-      "name": "Chocoholic 巧克哈客（永康店）",
-      "city_code": "taipei",
-      "country_code": "TW",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "affection-and-reciprocity"
-      ],
-      "address": "台北市大安區永康街 7 巷 2 號",
-      "map_query": "Chocoholic 巧克哈客 永康店 台北",
-      "source_urls": [
-        "https://www.facebook.com/chocoholic.taipei/"
-      ],
-      "descriptions": {
-        "zh-TW": "台北永康街的巧克力專飲店，官網列有巧克力飲品、料理、甜點與禮盒，設有固定門市。",
-        "en": "A chocolate drink shop on Yongkang Street in Taipei. Its official site lists chocolate drinks, desserts, dishes and gift boxes at a fixed storefront.",
-        "ja": "台北・永康街にあるチョコレート専門店。公式サイトにはチョコレートドリンク、デザート、料理、ギフト商品と常設店の案内があります。",
-        "zh-CN": "台北永康街的巧克力专饮店，官网列有巧克力饮品、料理、甜点和礼盒，并提供固定门店地址。",
-        "hi": "ताइपे की योंगकांग स्ट्रीट पर चॉकलेट ड्रिंक की दुकान। आधिकारिक साइट पर चॉकलेट पेय, मिठाइयाँ, व्यंजन और गिफ्ट बॉक्स सूचीबद्ध हैं।",
-        "id": "Kedai minuman cokelat di Yongkang Street, Taipei. Situs resminya mencantumkan minuman, hidangan, makanan penutup, dan kotak hadiah berbahan cokelat.",
-        "pt-BR": "Uma loja de bebidas de chocolate na Yongkang Street, em Taipei. O site oficial lista bebidas, sobremesas, pratos e caixas de presente de chocolate."
-      }
-    },
-    {
-      "name": "Minimal 富ヶ谷本店",
-      "city_code": "tokyo",
-      "country_code": "JP",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "affection-and-reciprocity"
-      ],
-      "address": "〒151-0063 東京都渋谷区富ヶ谷 2-1-9",
-      "map_query": "Minimal 富ヶ谷本店 東京",
-      "source_urls": [
-        "https://mini-mal.tokyo/pages/access"
-      ],
-      "descriptions": {
-        "zh-TW": "東京富ヶ谷的常設巧克力店，官方列明可內用、外帶與營業地址，主打可可風味的巧克力。",
-        "en": "A permanent chocolate shop in Tomigaya, Tokyo. The official shop page lists dine-in and takeaway service, its address and a cacao-focused product line.",
-        "ja": "東京・富ヶ谷の常設チョコレート店。公式サイトにはイートインとテイクアウト、住所、カカオの魅力を生かした商品が案内されています。",
-        "zh-CN": "东京富谷的常设巧克力店，官网列有堂食、外带、门店地址和以可可风味为主的产品。",
-        "hi": "टोक्यो के तोमिगाया में स्थायी चॉकलेट दुकान। आधिकारिक पेज पर बैठकर खाने और टेकअवे, पता और कोको पर आधारित उत्पादों की जानकारी है।",
-        "id": "Toko cokelat permanen di Tomigaya, Tokyo. Halaman resminya mencantumkan layanan makan di tempat dan bawa pulang, alamat, serta produk yang menonjolkan rasa kakao.",
-        "pt-BR": "Uma loja permanente de chocolate em Tomigaya, Tóquio. A página oficial informa serviço para consumo no local e para viagem, endereço e produtos centrados no cacau."
-      }
-    },
-    {
-      "name": "Godiva 巧克力体验旗舰店（新天地）",
-      "city_code": "shanghai",
-      "country_code": "CN",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "affection-and-reciprocity"
-      ],
-      "address": "上海市黄浦区马当路 119 号 102 室",
-      "map_query": "Godiva 巧克力体验旗舰店 新天地 上海",
-      "source_urls": [
-        "https://english.shanghai.gov.cn/en-FirstStores/20260624/50f678163fcf42a1b0dc4409376de73b.html"
-      ],
-      "descriptions": {
-        "zh-TW": "上海新天地的巧克力體驗店，上海市政府英文頁面列有試吃、現做巧克力飲品、客製禮盒與門市地址。",
-        "en": "A chocolate experience store in Shanghai’s Xintiandi. The Shanghai government’s listing mentions tastings, made-to-order chocolate drinks, personalised gift boxes and the store address.",
-        "ja": "上海・新天地にあるチョコレート体験店。上海市政府の案内には試食、店内で作るチョコレートドリンク、ギフトのカスタマイズ、住所が掲載されています。",
-        "zh-CN": "上海新天地的巧克力体验店，上海市政府页面介绍了试吃、现做巧克力饮品、定制礼盒和门店地址。",
-        "hi": "शंघाई के शिन्तियानदी में चॉकलेट अनुभव स्टोर। शंघाई सरकार के पेज पर चखने, वहीं तैयार चॉकलेट पेय, कस्टम गिफ्ट बॉक्स और पते की जानकारी है।",
-        "id": "Toko pengalaman cokelat di Xintiandi, Shanghai. Halaman pemerintah Shanghai mencantumkan sesi mencicipi, minuman cokelat yang dibuat di tempat, kotak hadiah kustom, dan alamat toko.",
-        "pt-BR": "Uma loja de experiência com chocolate em Xintiandi, Xangai. A página do governo de Xangai menciona degustações, bebidas de chocolate preparadas na hora, caixas de presente personalizadas e o endereço."
-      }
-    },
-    {
-      "name": "Loveland East Gateway Visitors Center",
-      "city_code": "loveland",
-      "country_code": "US",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "affection-and-reciprocity"
-      ],
-      "address": "5400 Stone Creek Circle, Loveland, Colorado 80538",
-      "map_query": "Loveland East Gateway Visitors Center Colorado",
-      "source_urls": [
-        "https://visitloveland.com/visitors-center/"
-      ],
-      "descriptions": {
-        "zh-TW": "Loveland 的常設旅遊資訊中心，官方介紹這裡有 LOVE 鎖雕塑、地方工藝品與旅遊資訊。",
-        "en": "A permanent visitor centre in Loveland. The official listing describes its LOVE lock sculpture, locally made goods and visitor information.",
-        "ja": "Lovelandの常設観光案内所。公式案内では、LOVEロックの彫刻、地元の作り手の商品、観光情報を紹介しています。",
-        "zh-CN": "Loveland 的常设游客中心，官网介绍了 LOVE 锁雕塑、当地手工艺品和旅游信息。",
-        "hi": "Loveland का स्थायी पर्यटक केंद्र। आधिकारिक जानकारी में LOVE lock मूर्ति, स्थानीय कारीगरों की वस्तुएँ और यात्रा संबंधी जानकारी दी गई है।",
-        "id": "Pusat informasi wisata permanen di Loveland. Situs resminya menyebutkan patung LOVE lock, barang buatan perajin lokal, dan informasi untuk pengunjung.",
-        "pt-BR": "Um centro permanente de informações turísticas em Loveland. O site oficial destaca a escultura LOVE lock, produtos de artesãos locais e informações para visitantes."
-      }
-    },
-    {
-      "name": "Choconuts",
-      "city_code": "pune",
-      "country_code": "IN",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "affection-and-reciprocity"
-      ],
-      "address": "Shop No 1, Kumar Pavilion, East St, Pune Cantonment, Pune, Maharashtra 411001",
-      "map_query": "Choconuts Kumar Pavilion East Street Pune",
-      "source_urls": [
-        "https://www.choconuts.in/"
-      ],
-      "descriptions": {
-        "zh-TW": "Pune 的巧克力與乾果店，官方頁面列有手工巧克力、禮盒與門市地址。",
-        "en": "A chocolate and dry-fruit shop in Pune. Its official page lists handmade chocolates, gift hampers and the shop address.",
-        "ja": "プネーのチョコレート・ドライフルーツ店。公式ページには手作りチョコレート、ギフト用ハンパー、店舗住所が案内されています。",
-        "zh-CN": "Pune 的巧克力和干果店，官网列有手工巧克力、礼盒和门店地址。",
-        "hi": "पुणे की चॉकलेट और ड्राय-फ्रूट की दुकान। आधिकारिक पेज पर हाथ से बनी चॉकलेट, गिफ्ट हैम्पर और दुकान का पता दिया गया है।",
-        "id": "Toko cokelat dan buah kering di Pune. Halaman resminya mencantumkan cokelat buatan tangan, hampers hadiah, dan alamat toko.",
-        "pt-BR": "Uma loja de chocolates e frutas secas em Pune. A página oficial informa os chocolates artesanais, cestas para presente e o endereço da loja."
-      }
-    },
-    {
-      "name": "GODIVA Plaza Indonesia",
-      "city_code": "jakarta",
-      "country_code": "ID",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "affection-and-reciprocity"
-      ],
-      "address": "Level 1 Unit 114, Jalan M.H. Thamrin No. 28-30, Jakarta Pusat, DKI Jakarta 10350",
-      "map_query": "GODIVA Plaza Indonesia Jakarta",
-      "source_urls": [
-        "https://www.godiva.co.id/our-location/"
-      ],
-      "descriptions": {
-        "zh-TW": "雅加達 Plaza Indonesia 的巧克力專門店，官方門市頁列出 GODIVA 店面、樓層與地址。",
-        "en": "A GODIVA chocolate shop at Plaza Indonesia in Jakarta. The official store page lists the branch, floor and address for a local chocolate-gifting stop.",
-        "ja": "ジャカルタのPlaza IndonesiaにあるGODIVAのチョコレート店。公式の店舗ページに店舗名、階数、住所が案内されています。",
-        "zh-CN": "雅加达 Plaza Indonesia 的 GODIVA 巧克力店，官网列出门店、楼层和地址，可作为当地送礼去处。",
-        "hi": "जकार्ता के Plaza Indonesia में GODIVA की चॉकलेट दुकान। आधिकारिक स्टोर पेज पर शाखा, मंज़िल और पता दिया गया है।",
-        "id": "Toko cokelat GODIVA di Plaza Indonesia, Jakarta. Halaman lokasi resmi mencantumkan cabang, lantai, dan alamatnya.",
-        "pt-BR": "Uma loja de chocolates GODIVA no Plaza Indonesia, em Jacarta. A página oficial informa a filial, o andar e o endereço."
-      }
-    },
-    {
-      "name": "Fábrica de Dengo",
-      "city_code": "sao-paulo",
-      "country_code": "BR",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "affection-and-reciprocity"
-      ],
-      "address": "Avenida Brigadeiro Faria Lima, 196, Pinheiros, São Paulo - SP",
-      "map_query": "Fábrica de Dengo São Paulo",
-      "source_urls": [
-        "https://www.dengo.com.br/fabrica-de-dengo"
-      ],
-      "descriptions": {
-        "zh-TW": "São Paulo 的巧克力店與體驗空間，官方門市頁列出 Fábrica de Dengo 的地址與巧克力、咖啡等現場服務。",
-        "en": "A chocolate shop and experience space in São Paulo. The official store listing gives the Fábrica de Dengo address and its chocolate and café services.",
-        "ja": "サンパウロのチョコレート店・体験スペース。公式の店舗一覧にFábrica de Dengoの住所と、チョコレートやカフェのサービスが掲載されています。",
-        "zh-CN": "São Paulo 的巧克力店和体验空间，官方门店页面列出了 Fábrica de Dengo 的地址以及巧克力、咖啡等现场服务。",
-        "hi": "साओ पाउलो में चॉकलेट की दुकान और अनुभव केंद्र। आधिकारिक स्टोर सूची में Fábrica de Dengo का पता और चॉकलेट व कैफ़े सेवाएँ दी गई हैं।",
-        "id": "Toko cokelat dan ruang pengalaman di São Paulo. Daftar toko resmi mencantumkan alamat Fábrica de Dengo serta layanan cokelat dan kafe.",
-        "pt-BR": "Loja de chocolate e espaço de experiências em São Paulo. A lista oficial de lojas informa o endereço da Fábrica de Dengo e seus serviços de chocolate e café."
-      }
-    },
-    {
-      "name": "國立臺灣博物館本館",
-      "city_code": "taipei",
-      "country_code": "TW",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "national-days"
-      ],
-      "address": "100007 臺北市中正區襄陽路 2 號（二二八和平公園內）",
-      "map_query": "國立臺灣博物館本館 襄陽路2號 台北",
-      "source_urls": [
-        "https://www.ntm.gov.tw/en/cl.aspx?n=5703"
-      ],
-      "descriptions": {
-        "zh-TW": "國立臺灣博物館本館位在臺北二二八和平公園內，官方參觀資訊列明館址為襄陽路 2 號，館內長期保存臺灣的自然與文化資料。",
-        "en": "The National Taiwan Museum’s main building is in Taipei’s 228 Peace Park. Its official visitor information lists No. 2 Xiangyang Road and the museum’s long-running natural and cultural collections.",
-        "ja": "国立台湾博物館の本館は台北の二二八和平公園内にあります。公式案内に襄陽路2号の住所と、台湾の自然・文化資料を扱う博物館であることが掲載されています。",
-        "zh-CN": "国立台湾博物馆本馆位于台北二二八和平公园内，官方参观信息列出襄阳路 2 号馆址，长期保存台湾的自然与文化资料。",
-        "hi": "National Taiwan Museum का मुख्य भवन ताइपे के 228 Peace Park में है। आधिकारिक जानकारी में No. 2 Xiangyang Road का पता और प्राकृतिक व सांस्कृतिक संग्रहों का उल्लेख है।",
-        "id": "Gedung utama National Taiwan Museum berada di 228 Peace Park, Taipei. Informasi kunjungan resminya mencantumkan alamat No. 2 Xiangyang Road serta koleksi alam dan budaya Taiwan.",
-        "pt-BR": "O edifício principal do National Taiwan Museum fica no 228 Peace Park, em Taipei. A informação oficial de visita lista o endereço No. 2 Xiangyang Road e as coleções naturais e culturais de Taiwan."
-      }
-    },
-    {
-      "name": "富岡八幡宮",
-      "city_code": "tokyo",
-      "country_code": "JP",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "ghosts-ancestors-and-remembrance"
-      ],
-      "address": "〒135-0047 東京都江東区富岡 1-20-3",
-      "map_query": "富岡八幡宮 東京都江東区富岡1-20-3",
-      "source_urls": [
-        "https://www.gotokyo.org/en/destinations/eastern-tokyo/fukagawa/"
-      ],
-      "descriptions": {
-        "zh-TW": "東京深川的富岡八幡宮，官方東京旅遊指南列出 1-20-3 Tomioka 地址，並介紹神輿與深川八幡祭的地方傳統。",
-        "en": "Tomioka Hachimangu Shrine in Fukagawa, Tokyo. The official Tokyo guide lists 1-20-3 Tomioka and describes its mikoshi floats and the local Fukagawa Hachiman festival tradition.",
-        "ja": "東京・深川の富岡八幡宮。東京の公式観光ガイドに1-20-3 Tomiokaの住所と、神輿や深川八幡祭の地域文化が紹介されています。",
-        "zh-CN": "东京深川的富冈八幡宫，东京官方旅游指南列出 1-20-3 Tomioka 地址，并介绍神舆和深川八幡祭的地方传统。",
-        "hi": "टोक्यो के फुकागावा में Tomioka Hachimangu Shrine। आधिकारिक Tokyo guide में 1-20-3 Tomioka का पता और मिकोशी तथा Fukagawa Hachiman उत्सव की स्थानीय परंपरा दी गई है।",
-        "id": "Tomioka Hachimangu Shrine di Fukagawa, Tokyo. Panduan resmi Tokyo mencantumkan alamat 1-20-3 Tomioka serta tradisi mikoshi dan festival Fukagawa Hachiman.",
-        "pt-BR": "O santuário Tomioka Hachimangu, em Fukagawa, Tóquio. O guia oficial de Tóquio informa o endereço 1-20-3 Tomioka e descreve os mikoshi e a tradição do festival Fukagawa Hachiman."
-      }
-    },
-    {
-      "name": "上海博物館人民廣場館",
-      "city_code": "shanghai",
-      "country_code": "CN",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "national-days"
-      ],
-      "address": "上海市黃浦區人民大道 201 號",
-      "map_query": "上海博物館 人民大道201號",
-      "source_urls": [
-        "https://english.shanghai.gov.cn/en-MuseumsGalleries/20231218/01fdd3f62d0c4877bc289ec0b1de6afa.html"
-      ],
-      "descriptions": {
-        "zh-TW": "上海博物館人民廣場館位在人民大道 201 號，上海市政府英文頁面介紹其中國古代藝術與文物收藏。",
-        "en": "The Shanghai Museum on People’s Square is at No. 201 Renmin Avenue. A Shanghai government guide describes its collection of ancient Chinese art and cultural relics.",
-        "ja": "上海博物館の人民広場館は人民大道201号にあります。上海市政府の案内では、中国古代美術と文化財のコレクションが紹介されています。",
-        "zh-CN": "上海博物馆人民广场馆位于人民大道 201 号，上海市政府英文页面介绍了它收藏的中国古代艺术和文物。",
-        "hi": "Shanghai Museum on People’s Square का पता No. 201 Renmin Avenue है। शंघाई सरकार की जानकारी में प्राचीन चीनी कला और सांस्कृतिक अवशेषों का संग्रह बताया गया है।",
-        "id": "Shanghai Museum on People’s Square berada di No. 201 Renmin Avenue. Panduan pemerintah Shanghai menjelaskan koleksi seni Tiongkok kuno dan peninggalan budayanya.",
-        "pt-BR": "O Shanghai Museum na People’s Square fica no nº 201 da Renmin Avenue. Um guia do governo de Xangai descreve sua coleção de arte chinesa antiga e relíquias culturais."
-      }
-    },
-    {
-      "name": "Fairgrounds Park",
-      "city_code": "loveland",
-      "country_code": "US",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "harvest-and-gratitude"
-      ],
-      "address": "700 S. Railroad Avenue, Loveland, CO",
-      "map_query": "Fairgrounds Park 700 S Railroad Avenue Loveland Colorado",
-      "source_urls": [
-        "https://visitloveland.com/business-directory/fairgrounds-park/"
-      ],
-      "descriptions": {
-        "zh-TW": "Loveland 的 Fairgrounds Park 位於 700 S. Railroad Avenue，市政府列有野餐區、遊樂場、噴水區與 Farmers Market 等用途。",
-        "en": "Fairgrounds Park is at 700 S. Railroad Avenue in Loveland. The city lists its picnic area, playgrounds, spray park and farmers market among the park’s uses.",
-        "ja": "LovelandのFairgrounds Parkは700 S. Railroad Avenueにあります。市の案内にはピクニックエリア、遊具、スプレーパーク、ファーマーズマーケットなどが掲載されています。",
-        "zh-CN": "Loveland 的 Fairgrounds Park 位于 700 S. Railroad Avenue，市政府列出野餐区、游乐场、喷泉水乐园和 Farmers Market 等用途。",
-        "hi": "Loveland का Fairgrounds Park 700 S. Railroad Avenue पर है। शहर की जानकारी में पिकनिक क्षेत्र, खेल के मैदान, स्प्रे पार्क और farmers market का उल्लेख है।",
-        "id": "Fairgrounds Park berada di 700 S. Railroad Avenue, Loveland. Pemerintah kota mencantumkan area piknik, taman bermain, spray park, dan farmers market sebagai fasilitasnya.",
-        "pt-BR": "O Fairgrounds Park fica em 700 S. Railroad Avenue, Loveland. A cidade lista área de piquenique, playgrounds, spray park e farmers market entre os usos do parque."
-      }
-    },
-    {
-      "name": "Dagdusheth Halwai Ganpati Temple",
-      "city_code": "pune",
-      "country_code": "IN",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "new-year"
-      ],
-      "address": "Ganpati Bhavan, 250 Budhvar Peth, Pune, Maharashtra 411002",
-      "map_query": "Dagdusheth Halwai Ganpati Temple Ganpati Bhavan 250 Budhvar Peth Pune",
-      "source_urls": [
-        "https://www.dagdushethganpati.com/?p=11699"
-      ],
-      "descriptions": {
-        "zh-TW": "Pune 的 Dagdusheth Halwai Ganpati Temple，官方頁列出 Budhvar Peth 的地址，並介紹寺廟與年度 Ganpati 節慶。",
-        "en": "The Dagdusheth Halwai Ganpati Temple in Pune. Its official site lists the Budhvar Peth address and describes the temple and its annual Ganpati festival.",
-        "ja": "プネーのDagdusheth Halwai Ganpati Temple。公式サイトにBudhvar Pethの住所と、寺院および毎年のGanpati祭の案内があります。",
-        "zh-CN": "Pune 的 Dagdusheth Halwai Ganpati Temple，官网列出 Budhvar Peth 地址，并介绍寺庙和年度 Ganpati 节庆。",
-        "hi": "पुणे का Dagdusheth Halwai Ganpati Temple। आधिकारिक साइट पर Budhvar Peth का पता और मंदिर तथा वार्षिक Ganpati उत्सव की जानकारी है।",
-        "id": "Dagdusheth Halwai Ganpati Temple di Pune. Situs resminya mencantumkan alamat di Budhvar Peth serta menjelaskan kuil dan festival Ganpati tahunannya.",
-        "pt-BR": "O Dagdusheth Halwai Ganpati Temple, em Pune. O site oficial informa o endereço em Budhvar Peth e apresenta o templo e seu festival anual de Ganpati."
-      }
-    },
-    {
-      "name": "Monumen Nasional (MONAS)",
-      "city_code": "jakarta",
-      "country_code": "ID",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "national-days"
-      ],
-      "address": "Jalan Tugu Monas, Gambir, Jakarta Pusat, Indonesia",
-      "map_query": "Monumen Nasional MONAS Jalan Tugu Monas Gambir Jakarta",
-      "source_urls": [
-        "https://www.jakarta.go.id/landmark-jakarta"
-      ],
-      "descriptions": {
-        "zh-TW": "雅加達的國家紀念塔 MONAS 位在 Gambir 的 Jalan Tugu Monas，雅加達市政府稱它是印尼人民爭取獨立的象徵。",
-        "en": "Jakarta’s National Monument (MONAS) is on Jalan Tugu Monas in Gambir. The Jakarta government describes it as a symbol of the Indonesian people’s struggle for independence.",
-        "ja": "ジャカルタの国家記念塔MONASはGambirのJalan Tugu Monasにあります。ジャカルタ市政府は、インドネシア国民の独立闘争の象徴として紹介しています。",
-        "zh-CN": "雅加达的国家纪念塔 MONAS 位于 Gambir 的 Jalan Tugu Monas，雅加达市政府称它是印尼人民争取独立的象征。",
-        "hi": "जकार्ता का National Monument (MONAS) Gambir के Jalan Tugu Monas पर है। जकार्ता सरकार इसे इंडोनेशियाई लोगों के स्वतंत्रता संघर्ष का प्रतीक बताती है।",
-        "id": "Monumen Nasional (MONAS) berada di Jalan Tugu Monas, Gambir. Pemerintah Jakarta menyebutnya sebagai simbol perjuangan rakyat Indonesia memperoleh kemerdekaan.",
-        "pt-BR": "O Monumento Nacional (MONAS) de Jacarta fica na Jalan Tugu Monas, em Gambir. O governo de Jacarta o descreve como símbolo da luta do povo indonésio pela independência."
-      }
-    },
-    {
-      "name": "Museu do Futebol",
-      "city_code": "sao-paulo",
-      "country_code": "BR",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "national-days"
-      ],
-      "address": "Praça Charles Miller, s/n, Pacaembu, São Paulo - SP",
-      "map_query": "Museu do Futebol Praça Charles Miller Pacaembu São Paulo",
-      "source_urls": [
-        "https://museudofutebol.org.br/exposicoes/museu-do-futebol/"
-      ],
-      "descriptions": {
-        "zh-TW": "São Paulo 的足球博物館位在 Pacaembu 的 Praça Charles Miller，官方介紹主展覽如何講述足球與巴西歷史。",
-        "en": "The Football Museum in São Paulo is at Praça Charles Miller in Pacaembu. Its official site describes a main exhibition about the history of sport and Brazil.",
-        "ja": "サンパウロのサッカー博物館はPacaembuのPraça Charles Millerにあります。公式サイトでは、スポーツとブラジルの歴史をたどる常設展示を紹介しています。",
-        "zh-CN": "São Paulo 的足球博物馆位于 Pacaembu 的 Praça Charles Miller，官网介绍了讲述足球与巴西历史的主展览。",
-        "hi": "São Paulo का Football Museum Pacaembu की Praça Charles Miller पर है। आधिकारिक साइट मुख्य प्रदर्शनी में खेल और ब्राज़ील के इतिहास का वर्णन करती है।",
-        "id": "Museu do Futebol di São Paulo berada di Praça Charles Miller, Pacaembu. Situs resminya menjelaskan pameran utama tentang sejarah olahraga dan Brasil.",
-        "pt-BR": "O Museu do Futebol fica na Praça Charles Miller, no Pacaembu, em São Paulo. O site oficial apresenta a exposição principal sobre a história do esporte e do Brasil."
-      }
-    },
-    {
-      "name": "國立故宮博物院",
-      "city_code": "taipei",
-      "country_code": "TW",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "national-days"
-      ],
-      "address": "臺北市士林區至善路二段 221 號",
-      "map_query": "國立故宮博物院 臺北市士林區至善路二段221號",
-      "source_urls": [
-        "https://www.npm.edu.tw/Articles.aspx?l=2&sno=02007001"
-      ],
-      "descriptions": {
-        "zh-TW": "臺北士林的國立故宮博物院保存大量東亞文物，適合從館藏與公共記憶認識臺灣所處的文化脈絡。",
-        "en": "Taipei’s National Palace Museum preserves major East Asian collections and offers a place to connect cultural heritage with public memory.",
-        "ja": "台北・士林の国立故宮博物院は東アジアの文化財を収蔵し、コレクションと公共の記憶から台湾の文化的背景を考えられる場所です。",
-        "zh-CN": "台北士林的故宫博物院收藏大量东亚文物，可以从馆藏和公共记忆认识台湾所处的文化脉络。",
-        "hi": "ताइपे का National Palace Museum पूर्वी एशिया की बड़ी संग्रहित विरासत को रखता है; यहाँ संग्रह और सार्वजनिक स्मृति के ज़रिए ताइवान के सांस्कृतिक संदर्भ को समझा जा सकता है।",
-        "id": "National Palace Museum di Shilin, Taipei, menyimpan koleksi besar Asia Timur dan menghubungkan warisan budaya dengan ingatan publik.",
-        "pt-BR": "O National Palace Museum, em Shilin, Taipei, preserva importantes coleções do Leste Asiático e relaciona patrimônio cultural e memória pública."
-      }
-    },
-    {
-      "name": "東京國立博物館",
-      "city_code": "tokyo",
-      "country_code": "JP",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "national-days"
-      ],
-      "address": "13-9 Ueno Park, Taito-ku, Tokyo 110-8712, Japan",
-      "map_query": "Tokyo National Museum 13-9 Ueno Park Taito-ku Tokyo",
-      "source_urls": [
-        "https://www.tnm.jp/modules/r_free_page/index.php?id=113Impey&lang=en"
-      ],
-      "descriptions": {
-        "zh-TW": "東京上野的東京國立博物館以日本與亞洲文化資產為核心，能把國家文化記憶放回具體的展覽與收藏中理解。",
-        "en": "Tokyo National Museum in Ueno presents Japanese and Asian cultural heritage through long-term collections, exhibitions, and public learning.",
-        "ja": "上野の東京国立博物館は日本とアジアの文化財を紹介し、国家や地域の記憶を展示と収蔵品から具体的に見られます。",
-        "zh-CN": "上野的东京国立博物馆以日本和亚洲文化遗产为核心，通过展览和收藏呈现公共文化记忆。",
-        "hi": "उएनो स्थित Tokyo National Museum जापान और एशिया की सांस्कृतिक विरासत को संग्रह और प्रदर्शनियों के माध्यम से दिखाता है।",
-        "id": "Tokyo National Museum di Ueno menampilkan warisan budaya Jepang dan Asia melalui koleksi serta pameran publik.",
-        "pt-BR": "O Tokyo National Museum, em Ueno, apresenta o patrimônio cultural do Japão e da Ásia por meio de coleções e exposições."
-      }
-    },
-    {
-      "name": "豫園",
-      "city_code": "shanghai",
-      "country_code": "CN",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "lantern-festival"
-      ],
-      "address": "上海市黃浦區豫園老街 279 號南門",
-      "map_query": "豫園 上海市黃浦區豫園老街279號",
-      "source_urls": [
-        "https://english.shanghai.gov.cn/en-UniqueExperience-travelinshanghai/20250729/25cfb8bce97d4e798f99ac62986255ff.html"
-      ],
-      "descriptions": {
-        "zh-TW": "上海豫園是保存古典園林與城市節慶景觀的常設地點；官方旅遊資訊也介紹夜遊、光影與茶文化體驗。",
-        "en": "Yuyuan Garden is a permanent Shanghai heritage site where classical gardens, night scenes, light, and tea culture meet.",
-        "ja": "上海の豫園は古典庭園と都市の季節行事を感じられる常設の文化空間で、公式案内には夜景、光、茶文化の体験も紹介されています。",
-        "zh-CN": "上海豫园是保存古典园林与城市节庆景观的常设地点，官方旅游信息也介绍夜游、光影和茶文化体验。",
-        "hi": "शंघाई का Yuyuan Garden स्थायी सांस्कृतिक स्थल है जहाँ शास्त्रीय उद्यान, रात्रि-दृश्य, रोशनी और चाय संस्कृति मिलते हैं।",
-        "id": "Yuyuan Garden di Shanghai adalah situs warisan permanen yang memadukan taman klasik, suasana malam, cahaya, dan budaya teh.",
-        "pt-BR": "O Yuyuan Garden é um espaço permanente de patrimônio em Xangai, unindo jardins clássicos, cenas noturnas, luz e cultura do chá."
-      }
-    },
-    {
-      "name": "Aga Khan Palace",
-      "city_code": "pune",
-      "country_code": "IN",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "national-days"
-      ],
-      "address": "Pune, Maharashtra, India",
-      "map_query": "Aga Khan Palace Pune Maharashtra India",
-      "source_urls": [
-        "https://pune.gov.in/en/tourist-place/aagakhan-palace/"
-      ],
-      "descriptions": {
-        "zh-TW": "Pune 的 Aga Khan Palace 是與印度獨立運動和甘地記憶相連的歷史場所，適合從建築與地方史理解公共紀念。",
-        "en": "Aga Khan Palace in Pune is a historic site connected with India’s independence movement and Gandhi memory, linking architecture with public remembrance.",
-        "ja": "プネーのAga Khan Palaceはインド独立運動とガンディーの記憶に結び付く歴史的な場所で、建築と公共の記憶を一緒に学べます。",
-        "zh-CN": "Pune 的 Aga Khan Palace 是与印度独立运动和甘地记忆相连的历史地点，可以从建筑和地方史理解公共纪念。",
-        "hi": "पुणे का Aga Khan Palace भारत के स्वतंत्रता आंदोलन और गांधी की स्मृति से जुड़ा ऐतिहासिक स्थल है।",
-        "id": "Aga Khan Palace di Pune adalah situs sejarah yang terkait dengan gerakan kemerdekaan India dan ingatan tentang Gandhi.",
-        "pt-BR": "O Aga Khan Palace, em Pune, é um local histórico ligado ao movimento de independência da Índia e à memória de Gandhi."
-      }
-    },
-    {
-      "name": "Istiqlal Mosque",
-      "city_code": "jakarta",
-      "country_code": "ID",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "ramadan-and-eid",
-        "eid-al-adha"
-      ],
-      "address": "Jl. Taman Wijaya Kusuma, Pasar Baru, Sawah Besar, Jakarta Pusat, DKI Jakarta",
-      "map_query": "Istiqlal Mosque Jakarta",
-      "source_urls": [
-        "https://turis.istiqlal.or.id/"
-      ],
-      "descriptions": {
-        "zh-TW": "雅加達的 Istiqlal Mosque 是可參訪的國家清真寺，官方旅遊系統提供國內外訪客導覽資訊，能連結齋戒月、開齋節與宰牲節的公共宗教生活。",
-        "en": "Istiqlal Mosque in Jakarta is Indonesia’s national mosque and provides visitor guidance, making it a concrete place to understand Ramadan, Eid al-Fitr, and Eid al-Adha in public life.",
-        "ja": "ジャカルタのIstiqlal Mosqueはインドネシアの国立モスクで、公式の観光案内が国内外の訪問者を受け入れています。ラマダーンやイードの公共的な宗教生活を知る手がかりになります。",
-        "zh-CN": "雅加达的 Istiqlal Mosque 是可参访的国家清真寺，官方旅游系统为国内外访客提供导览信息，可联系斋戒月、开斋节与宰牲节的公共宗教生活。",
-        "hi": "जकार्ता की Istiqlal Mosque इंडोनेशिया की राष्ट्रीय मस्जिद है; आधिकारिक पर्यटक व्यवस्था रमज़ान और दोनों ईद के सार्वजनिक धार्मिक जीवन को समझने का ठोस स्थान देती है।",
-        "id": "Istiqlal Mosque di Jakarta adalah masjid nasional Indonesia dengan panduan bagi wisatawan, sehingga menjadi tempat nyata untuk memahami Ramadan, Idul Fitri, dan Idul Adha.",
-        "pt-BR": "A Istiqlal Mosque, em Jacarta, é a mesquita nacional da Indonésia e oferece orientação para visitantes, conectando a vida religiosa pública ao Ramadã e aos dois Eid."
-      }
-    },
-    {
-      "name": "Museu do Ipiranga",
-      "city_code": "sao-paulo",
-      "country_code": "BR",
-      "place_type": "permanent",
-      "topic_relevance": "direct",
-      "topic_slugs": [
-        "national-days"
-      ],
-      "address": "Rua dos Patriotas, 100 – Ipiranga – São Paulo/SP – CEP 04207-030",
-      "map_query": "Museu do Ipiranga Rua dos Patriotas 100 São Paulo",
-      "source_urls": [
-        "https://museudoipiranga.org.br/en/visit/"
-      ],
-      "descriptions": {
-        "zh-TW": "São Paulo 的 Museu do Ipiranga 位在獨立公園旁，官方參觀頁列有地址與巴西獨立日免費開放資訊，是理解國家記憶的具體場所。",
-        "en": "Museu do Ipiranga in São Paulo stands beside Independence Park; its official visitor page lists the address and Brazil’s Independence Day programming.",
-        "ja": "サンパウロのMuseu do Ipirangaは独立公園にあり、公式の訪問案内には住所とブラジル独立日に関する開館情報が掲載されています。",
-        "zh-CN": "São Paulo 的 Museu do Ipiranga 位于独立公园旁，官方参观页面列出地址和巴西独立日开放信息，是理解国家记忆的具体地点。",
-        "hi": "साओ पाउलो का Museu do Ipiranga Independence Park के पास है; आधिकारिक आगंतुक पेज पर पता और ब्राज़ील के स्वतंत्रता दिवस की जानकारी है।",
-        "id": "Museu do Ipiranga di São Paulo berada di dekat Independence Park; halaman kunjungan resminya mencantumkan alamat dan informasi Hari Kemerdekaan Brasil.",
-        "pt-BR": "O Museu do Ipiranga, em São Paulo, fica junto ao Parque da Independência; a página oficial informa o endereço e a programação ligada ao Dia da Independência do Brasil."
-      }
-    }
-  ],
-  "events": [
-    {
-      "name": "Loveland Sweetheart Festival 2027",
-      "city_code": "loveland",
-      "country_code": "US",
-      "venue": "Downtown Loveland",
-      "topic_slugs": [
-        "affection-and-reciprocity"
-      ],
-      "start_at": "2027-02-12T00:00:00Z",
-      "end_at": "2027-02-13T00:00:00Z",
-      "ticket_url": null,
-      "source_url": "https://visitloveland.com/sweetheartfestival/",
-      "descriptions": {
-        "zh-TW": "Visit Loveland 官方頁面列出的 2027 年活動，2 月 12–13 日在 Loveland 市中心舉行，包含冰雕、表演、藝術與家庭活動。",
-        "en": "Visit Loveland lists this 2027 festival for February 12–13 in downtown Loveland, with ice carving, performances, art and family activities.",
-        "ja": "Visit Loveland公式ページが案内する2027年のイベント。2月12～13日にダウンタウンで開催され、氷彫刻、ステージ、アート、家族向け企画などを行います。",
-        "zh-CN": "Visit Loveland 官网列出的 2027 年活动，2 月 12–13 日在 Loveland 市中心举行，包含冰雕、表演、艺术和家庭活动。",
-        "hi": "Visit Loveland के अनुसार यह उत्सव 12–13 फ़रवरी 2027 को डाउनटाउन Loveland में होगा, जिसमें बर्फ़ की मूर्तियाँ, प्रदर्शन, कला और पारिवारिक कार्यक्रम होंगे।",
-        "id": "Menurut Visit Loveland, festival ini berlangsung pada 12–13 Februari 2027 di pusat kota Loveland, dengan pahatan es, pertunjukan, seni, dan kegiatan keluarga.",
-        "pt-BR": "Segundo o Visit Loveland, o festival acontece em 12 e 13 de fevereiro de 2027 no centro de Loveland, com esculturas de gelo, apresentações, arte e atividades para famílias."
-      }
-    },
-    {
-      "name": "Taipei Burger Carnival 2026",
-      "city_code": "taipei",
-      "country_code": "TW",
-      "venue": "Taipei Expo Park – Flower Sea Area",
-      "topic_slugs": [
-        "harvest-and-gratitude"
-      ],
-      "start_at": "2026-08-29T00:00:00Z",
-      "end_at": "2026-08-30T00:00:00Z",
-      "ticket_url": null,
-      "source_url": "https://www.burgercarnival.taipei/",
-      "descriptions": {
-        "zh-TW": "臺北旅遊網列出的 Burger Carnival 2026，8 月 29–30 日在臺北花博公園花海廣場舉行，主題是漢堡與街頭飲食。",
-        "en": "Taipei Travel lists Burger Carnival 2026 for August 29–30 at the Flower Sea Area of Taipei Expo Park, focused on burgers and street food.",
-        "ja": "台北旅遊網が案内するBurger Carnival 2026。8月29～30日に台北花博公園の花海広場で開催され、ハンバーガーとストリートフードを扱います。",
-        "zh-CN": "台北旅游网列出的 Burger Carnival 2026，8 月 29–30 日在台北花博公园花海广场举行，主题是汉堡和街头饮食。",
-        "hi": "Taipei Travel के अनुसार Burger Carnival 2026, 29–30 अगस्त को Taipei Expo Park के Flower Sea Area में होगा और इसमें बर्गर व स्ट्रीट फूड शामिल हैं।",
-        "id": "Taipei Travel mencantumkan Burger Carnival 2026 pada 29–30 Agustus di Flower Sea Area, Taipei Expo Park, dengan tema burger dan makanan jalanan.",
-        "pt-BR": "O Taipei Travel lista o Burger Carnival 2026 para 29 e 30 de agosto na Flower Sea Area do Taipei Expo Park, com foco em hambúrgueres e comida de rua."
-      }
-    },
-    {
-      "name": "上海國際光影節 2026",
-      "city_code": "shanghai",
-      "country_code": "CN",
-      "venue": "南京路、新天地與北外灘等 17 個地標場域",
-      "topic_slugs": [
-        "lantern-festival"
-      ],
-      "start_at": "2026-09-17T00:00:00Z",
-      "end_at": "2026-10-16T00:00:00Z",
-      "ticket_url": null,
-      "source_url": "https://english.shanghai.gov.cn/en-MajorConsumerEvents/20260706/d4819e8683d049c8a715842864ce97d2.html",
-      "descriptions": {
-        "zh-TW": "上海市政府英文活動指南列出的第三屆上海國際光影節，2026 年 9 月 17 日至 10 月 16 日在全市 17 個地標場域展出燈光藝術。",
-        "en": "Shanghai’s government event guide lists the 3rd Shanghai International Light Festival for September 17–October 16, 2026, with light-art programmes across 17 landmark venues.",
-        "ja": "上海市政府のイベント案内に掲載された第3回上海国際ライトフェスティバル。2026年9月17日～10月16日に17のランドマーク会場で光のアートを展開します。",
-        "zh-CN": "上海市政府英文活动指南列出的第三届上海国际光影节，2026 年 9 月 17 日至 10 月 16 日在全市 17 个地标场域展出灯光艺术。",
-        "hi": "शंघाई सरकार की कार्यक्रम सूची में 3rd Shanghai International Light Festival 17 सितंबर–16 अक्टूबर 2026 के लिए है; 17 प्रमुख स्थलों पर प्रकाश-कला कार्यक्रम होंगे।",
-        "id": "Panduan acara pemerintah Shanghai mencantumkan 3rd Shanghai International Light Festival pada 17 September–16 Oktober 2026, dengan program seni cahaya di 17 lokasi penting.",
-        "pt-BR": "O guia de eventos do governo de Xangai lista o 3rd Shanghai International Light Festival de 17 de setembro a 16 de outubro de 2026, com arte luminosa em 17 locais de referência."
-      }
-    },
-    {
-      "name": "Anandam Durga Puja 2026",
-      "city_code": "pune",
-      "country_code": "IN",
-      "venue": "Alankaran Hall, SRPF Group 2, Wanowrie, Pune",
-      "topic_slugs": [
-        "homecoming-and-reunion"
-      ],
-      "start_at": "2026-10-15T00:00:00Z",
-      "end_at": "2026-10-21T00:00:00Z",
-      "ticket_url": null,
-      "source_url": "https://www.anandampune.com/",
-      "descriptions": {
-        "zh-TW": "Pune 的 Anandam Association 公布 2026 年 Durga Puja，10 月 15–21 日在 Wanowrie 的 Alankaran Hall 舉行，包含祭典、供食與文化演出。",
-        "en": "Anandam Association in Pune lists Durga Puja 2026 for October 15–21 at Alankaran Hall in Wanowrie, with worship, bhog and cultural programmes.",
-        "ja": "プネーのAnandam Associationが案内する2026年Durga Puja。10月15～21日にWanowrieのAlankaran Hallで行われ、礼拝、bhog、文化公演があります。",
-        "zh-CN": "Pune 的 Anandam Association 公布 2026 年 Durga Puja，10 月 15–21 日在 Wanowrie 的 Alankaran Hall 举行，包含祭典、供食和文化演出。",
-        "hi": "Pune की Anandam Association ने Durga Puja 2026 की तारीख 15–21 अक्टूबर और स्थान Wanowrie का Alankaran Hall बताया है; इसमें पूजा, भोग और सांस्कृतिक कार्यक्रम होंगे।",
-        "id": "Anandam Association di Pune mencantumkan Durga Puja 2026 pada 15–21 Oktober di Alankaran Hall, Wanowrie, dengan ibadah, bhog, dan acara budaya.",
-        "pt-BR": "A Anandam Association, em Pune, informa a Durga Puja 2026 de 15 a 21 de outubro no Alankaran Hall, em Wanowrie, com culto, bhog e programação cultural."
-      }
-    },
-    {
-      "name": "Indonesia Youth Summit 2026",
-      "city_code": "jakarta",
-      "country_code": "ID",
-      "venue": "Taman Ismail Marzuki 及雅加達省政府公共設施",
-      "topic_slugs": [
-        "national-days"
-      ],
-      "start_at": "2026-10-29T00:00:00Z",
-      "end_at": "2026-10-30T00:00:00Z",
-      "ticket_url": null,
-      "source_url": "https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026",
-      "descriptions": {
-        "zh-TW": "雅加達省政府公告的 Indonesia Youth Summit 2026，10 月 29–30 日以 Taman Ismail Marzuki 等公共設施為主要場地，預計約 5,000 人參加。",
-        "en": "Jakarta’s provincial government lists Indonesia Youth Summit 2026 for October 29–30 at Taman Ismail Marzuki and other public facilities, with a target of about 5,000 participants.",
-        "ja": "ジャカルタ州政府が案内するIndonesia Youth Summit 2026。10月29～30日にTaman Ismail Marzukiなどの公共施設を中心に開催され、約5,000人の参加を見込んでいます。",
-        "zh-CN": "雅加达省政府公告的 Indonesia Youth Summit 2026，10 月 29–30 日以 Taman Ismail Marzuki 等公共设施为主要场地，预计约 5,000 人参加。",
-        "hi": "जकार्ता प्रांतीय सरकार के अनुसार Indonesia Youth Summit 2026, 29–30 अक्टूबर को Taman Ismail Marzuki और अन्य सार्वजनिक स्थलों पर होगा; लगभग 5,000 प्रतिभागियों का लक्ष्य है।",
-        "id": "Pemerintah Provinsi Jakarta mencantumkan Indonesia Youth Summit 2026 pada 29–30 Oktober di Taman Ismail Marzuki dan fasilitas publik lain, dengan sasaran sekitar 5.000 peserta.",
-        "pt-BR": "O governo provincial de Jacarta lista o Indonesia Youth Summit 2026 para 29 e 30 de outubro, no Taman Ismail Marzuki e outras instalações públicas, com meta de cerca de 5 mil participantes."
-      }
-    },
-    {
-      "name": "Revelando SP 2026",
-      "city_code": "sao-paulo",
-      "country_code": "BR",
-      "venue": "Parque do Trote, São Paulo",
-      "topic_slugs": [
-        "harvest-and-gratitude"
-      ],
-      "start_at": "2026-11-12T00:00:00Z",
-      "end_at": "2026-11-15T00:00:00Z",
-      "ticket_url": null,
-      "source_url": "https://amigosdaarte.org.br/atencao-sp-o-revelando-sp-sao-paulo-mudou-de-data/",
-      "descriptions": {
-        "zh-TW": "APAA（Amigos da Arte）官方公告的 Revelando SP 2026 聖保羅場：原訂 9 月，因主辦下半年行事曆調整改為 11 月 12–15 日，地點仍是 Parque do Trote，聚焦各地飲食、工藝與傳統文化。",
-        "en": "APAA (Amigos da Arte) announced that the São Paulo edition of Revelando SP 2026, originally set for September, moves to November 12–15 at the same venue, Parque do Trote, featuring foodways, crafts and cultural traditions from across the state.",
-        "ja": "APAA（Amigos da Arte）の公式発表によると、Revelando SP 2026 のサンパウロ会場は9月から11月12〜15日に変更。会場は Parque do Trote のままで、各地の食、工芸、文化伝統を紹介します。",
-        "zh-CN": "APAA（Amigos da Arte）官方公告的 Revelando SP 2026 圣保罗场：原定 9 月，因主办下半年日程调整改为 11 月 12–15 日，地点仍是 Parque do Trote，聚焦各地饮食、工艺和传统文化。",
-        "hi": "APAA (Amigos da Arte) की आधिकारिक घोषणा के अनुसार Revelando SP 2026 का São Paulo संस्करण सितंबर से बदलकर अब 12–15 नवंबर को होगा; स्थान वही Parque do Trote रहेगा, जहाँ राज्य भर के खान-पान, हस्तशिल्प व सांस्कृतिक परंपराएँ प्रस्तुत होंगी।",
-        "id": "APAA (Amigos da Arte) mengumumkan bahwa Revelando SP 2026 edisi São Paulo yang semula September dipindah ke 12–15 November di lokasi yang sama, Parque do Trote, dengan kuliner, kerajinan, dan tradisi budaya dari berbagai daerah.",
-        "pt-BR": "A APAA (Amigos da Arte) anunciou que a edição São Paulo do Revelando SP 2026, que aconteceria em setembro, foi remarcada para 12 a 15 de novembro, mantendo o Parque do Trote como local, com culinária, artesanato e tradições culturais de várias regiões do estado."
-      }
-    },
-    {
-      "name": "2026 Taipei Night Market Festival",
-      "city_code": "taipei",
-      "country_code": "TW",
-      "venue": "Taipei night markets",
-      "start_at": "2026-05-14T00:00:00+08:00",
-      "end_at": "2026-10-31T23:59:00+08:00",
-      "source_url": "https://www.2026tpe-nightmarket-festival.com/",
-      "topic_slugs": [
-        "harvest-and-gratitude"
-      ],
-      "descriptions": {
-        "zh-TW": "2026 臺北夜市節以城市夜市、地方小吃與夜間逛街為主題，適合把共享餐桌放回臺北的日常場景理解。",
-        "en": "The 2026 Taipei Night Market Festival connects local food, night markets, and shared city life across Taipei.",
-        "ja": "2026 Taipei Night Market Festivalは、台北の夜市、地域の食べ物、夜の街歩きを通して共有の食卓を感じる催しです。",
-        "zh-CN": "2026 台北夜市节以城市夜市、地方小吃和夜间逛街为主题，把共享餐桌放回台北的日常场景。",
-        "hi": "2026 Taipei Night Market Festival ताइपे के नाइट मार्केट, स्थानीय भोजन और साझा शहर-जीवन को जोड़ता है।",
-        "id": "2026 Taipei Night Market Festival menghubungkan pasar malam, makanan lokal, dan kehidupan kota bersama di Taipei.",
-        "pt-BR": "O 2026 Taipei Night Market Festival reúne mercados noturnos, comida local e a vida compartilhada da cidade de Taipei."
-      }
-    },
-    {
-      "name": "Tokyo Festival 2026",
-      "city_code": "tokyo",
-      "country_code": "JP",
-      "venue": "Tokyo metropolitan venues",
-      "start_at": "2026-09-01T00:00:00+09:00",
-      "end_at": "2026-11-03T23:59:00+09:00",
-      "source_url": "https://tokyofestival.jp/en/about",
-      "topic_slugs": [
-        "ask-the-world"
-      ],
-      "descriptions": {
-        "zh-TW": "Tokyo Festival 2026 在東京多個場地串起跨文化表演與交流，讓「向世界提問」落在真實的城市節目與觀眾互動裡。",
-        "en": "Tokyo Festival 2026 brings intercultural performance and exchange to venues across Tokyo, giving cross-border questions a real public setting.",
-        "ja": "Tokyo Festival 2026は東京各地で異文化の舞台と交流をつなぎ、世界に問いかける場を都市のプログラムと観客の出会いにします。",
-        "zh-CN": "Tokyo Festival 2026 在东京多个场地串联跨文化表演与交流，让“向世界提问”落在真实的城市节目和观众互动中。",
-        "hi": "Tokyo Festival 2026 टोक्यो के कई स्थलों पर अंतर-सांस्कृतिक प्रदर्शन और संवाद लाता है, जिससे दुनिया से सवाल करना सार्वजनिक अनुभव बनता है।",
-        "id": "Tokyo Festival 2026 menghubungkan pertunjukan dan pertukaran lintas budaya di berbagai tempat Tokyo, memberi ruang publik bagi pertanyaan lintas negara.",
-        "pt-BR": "O Tokyo Festival 2026 leva apresentações e intercâmbio intercultural a vários locais de Tóquio, criando um espaço público para perguntas entre países."
-      }
-    }
-  ]
+   ],
+   "descriptions": {
+    "zh-TW": "São Paulo 的 Museu do Ipiranga 位在獨立公園旁，官方參觀頁列有地址與巴西獨立日免費開放資訊，是理解國家記憶的具體場所。",
+    "en": "Museu do Ipiranga in São Paulo stands beside Independence Park; its official visitor page lists the address and Brazil’s Independence Day programming.",
+    "ja": "サンパウロのMuseu do Ipirangaは独立公園にあり、公式の訪問案内には住所とブラジル独立日に関する開館情報が掲載されています。",
+    "zh-CN": "São Paulo 的 Museu do Ipiranga 位于独立公园旁，官方参观页面列出地址和巴西独立日开放信息，是理解国家记忆的具体地点。",
+    "hi": "साओ पाउलो का Museu do Ipiranga Independence Park के पास है; आधिकारिक आगंतुक पेज पर पता और ब्राज़ील के स्वतंत्रता दिवस की जानकारी है।",
+    "id": "Museu do Ipiranga di São Paulo berada di dekat Independence Park; halaman kunjungan resminya mencantumkan alamat dan informasi Hari Kemerdekaan Brasil.",
+    "pt-BR": "O Museu do Ipiranga, em São Paulo, fica junto ao Parque da Independência; a página oficial informa o endereço e a programação ligada ao Dia da Independência do Brasil."
+   }
+  },
+  {
+   "name": "YEBISU BREWERY TOKYO",
+   "city_code": "tokyo",
+   "country_code": "JP",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "beer-festivals"
+   ],
+   "address": "東京都渋谷区恵比寿4-20-1 恵比寿ガーデンプレイス内",
+   "map_query": "YEBISU BREWERY TOKYO 恵比寿ガーデンプレイス",
+   "source_urls": [
+    "https://www.sapporobeer.jp/brewery/y_museum/"
+   ],
+   "descriptions": {
+    "zh-TW": "札幌啤酒官網列出的恵比寿常設據點，設在恵比寿花園廣場內，分成講品牌歷史的展示區、以德國設備現場釀造的釀造區，以及可以喝到限定款的品飲區，導覽行程採預約制。",
+    "en": "Sapporo Beer's official site lists this permanent site inside Yebisu Garden Place: a museum area on the brand's history, a working brewery with German equipment, and a taproom pouring limited releases. Tours are booked in advance.",
+    "ja": "サッポロビール公式サイトが案内する恵比寿ガーデンプレイス内の常設施設。ブランドの歴史をたどるミュージアム、ドイツ製設備で実際に醸造するブルワリー、限定醸造も飲めるタップルームに分かれ、見学ツアーは予約制です。",
+    "zh-CN": "札幌啤酒官网列出的惠比寿常设据点，设在惠比寿花园广场内，分成讲品牌历史的展示区、用德国设备现场酿造的酿造区，以及可以喝到限定款的品饮区，导览行程采预约制。",
+    "hi": "सापोरो बीयर की आधिकारिक साइट पर दर्ज एबिसु गार्डन प्लेस के भीतर का स्थायी ठिकाना: ब्रांड के इतिहास पर एक संग्रहालय हिस्सा, जर्मन उपकरणों से चलती असली ब्रुअरी, और सीमित संस्करण परोसने वाला टैपरूम। भ्रमण के लिए पहले से बुकिंग ज़रूरी है।",
+    "id": "Situs resmi Sapporo Beer mencantumkan tempat permanen ini di dalam Yebisu Garden Place: area museum tentang sejarah mereknya, brewery yang benar-benar memproduksi dengan peralatan Jerman, dan taproom yang menyajikan edisi terbatas. Tur harus dipesan lebih dulu.",
+    "pt-BR": "O site oficial da Sapporo Beer lista este espaço permanente dentro do Yebisu Garden Place: uma área de museu sobre a história da marca, uma cervejaria que produz ali mesmo com equipamento alemão e um taproom com edições limitadas. As visitas guiadas são por reserva."
+   }
+  },
+  {
+   "name": "千鳥ケ淵戦没者墓苑",
+   "city_code": "tokyo",
+   "country_code": "JP",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "war-dead-and-veterans"
+   ],
+   "address": "東京都千代田区三番町2",
+   "map_query": "千鳥ケ淵戦没者墓苑 東京都千代田区",
+   "source_urls": [
+    "https://www.env.go.jp/garden/chidorigafuchi/"
+   ],
+   "descriptions": {
+    "zh-TW": "日本環境省管理的國家設施，1959 年 3 月 28 日創建，安放在海外過世而無法歸還遺族的軍人與一般國民遺骨。環境省網頁寫明每年五月由厚生勞動省主辦拜禮式，全年也有各團體的追悼活動。",
+    "en": "A national facility run by Japan's Ministry of the Environment, founded on 28 March 1959 to hold the remains of soldiers and civilians who died overseas and could not be returned to their families. The ministry's page notes a memorial ceremony hosted by the health ministry each May, with other groups holding rites year-round.",
+    "ja": "環境省が管理する国の施設。昭和三四年三月二八日に創建され、海外で亡くなり遺族に返せなかった軍人・一般邦人のご遺骨を納めています。環境省のページには、毎年五月に厚生労働省主催の拝礼式が行われ、年間を通じて各団体の慰霊行事もあると記されています。",
+    "zh-CN": "日本环境省管理的国家设施，1959 年 3 月 28 日创建，安放在海外过世而无法归还遗族的军人与一般国民遗骨。环境省网页写明每年五月由厚生劳动省主办拜礼式，全年也有各团体的追悼活动。",
+    "hi": "जापान के पर्यावरण मंत्रालय द्वारा संचालित राष्ट्रीय स्थल, जिसकी स्थापना 28 मार्च 1959 को हुई। यहाँ उन सैनिकों और आम नागरिकों के अवशेष रखे हैं जिनकी मृत्यु विदेश में हुई और जिन्हें परिजनों को नहीं लौटाया जा सका। मंत्रालय के पृष्ठ के अनुसार हर मई में स्वास्थ्य मंत्रालय एक श्रद्धांजलि समारोह करता है, और साल भर अन्य संगठनों के आयोजन भी होते हैं।",
+    "id": "Fasilitas negara yang dikelola Kementerian Lingkungan Hidup Jepang, didirikan pada 28 Maret 1959 untuk menyimpan jenazah tentara dan warga sipil yang meninggal di luar negeri dan tidak dapat dikembalikan kepada keluarganya. Halaman kementerian menyebut upacara peringatan yang digelar kementerian kesehatan setiap Mei, dan acara peringatan kelompok lain sepanjang tahun.",
+    "pt-BR": "Instalação nacional administrada pelo Ministério do Meio Ambiente do Japão, criada em 28 de março de 1959 para guardar os restos de militares e civis mortos no exterior que não puderam ser devolvidos às famílias. A página do ministério registra uma cerimônia anual em maio, promovida pelo ministério da saúde, além de atos de outras entidades ao longo do ano."
+   }
+  },
+  {
+   "name": "Sambódromo do Anhembi",
+   "city_code": "sao-paulo",
+   "country_code": "BR",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "carnival"
+   ],
+   "address": "Av. Olavo Fontoura, 1209 — Santana, São Paulo — SP",
+   "map_query": "Sambódromo do Anhembi São Paulo",
+   "source_urls": [
+    "https://prefeitura.sp.gov.br/web/turismo/w/eventos/carnaval_de_rua/271995"
+   ],
+   "descriptions": {
+    "zh-TW": "聖保羅市政府觀光局頁面列出的森巴大道，位於北區 Santana 的 Olavo Fontoura 大道 1209 號，是聖保羅森巴學校遊行的固定場地，每年的遊行時間表由市府與 Liga SP 公告。",
+    "en": "The São Paulo city tourism department lists this parade ground at Avenida Olavo Fontoura 1209 in Santana. It is the fixed venue for the city's samba school parades; the running order each year is published by the city and Liga SP.",
+    "ja": "サンパウロ市観光局のページに載るサンボードロモ。北部サンタナ地区のオラーヴォ・フォントウラ通り1209番地にあり、市のサンバ学校パレードが行われる常設会場で、毎年の出場順は市とリーガSPが告示します。",
+    "zh-CN": "圣保罗市政府观光局页面列出的桑巴大道，位于北区 Santana 的 Olavo Fontoura 大道 1209 号，是圣保罗桑巴学校游行的固定场地，每年的游行时间表由市府与 Liga SP 公告。",
+    "hi": "साओ पाउलो नगर पर्यटन विभाग के पृष्ठ पर दर्ज परेड स्थल, सांताना इलाक़े की एवेनिडा ओलावो फोंटोरा 1209 पर। यह शहर के सांबा स्कूलों की परेड का स्थायी स्थल है; हर साल का क्रम नगर प्रशासन और Liga SP घोषित करते हैं।",
+    "id": "Dinas pariwisata kota São Paulo mencantumkan arena pawai ini di Avenida Olavo Fontoura 1209, kawasan Santana. Ini tempat tetap pawai sekolah samba kota tersebut; urutan tampil tiap tahun diumumkan pemerintah kota bersama Liga SP.",
+    "pt-BR": "A Secretaria Municipal de Turismo lista o sambódromo na Avenida Olavo Fontoura, 1209, em Santana. É o palco fixo dos desfiles das escolas de samba da cidade, e a ordem de cada ano é divulgada pela prefeitura e pela Liga SP."
+   }
+  },
+  {
+   "name": "凱達格蘭文化館",
+   "city_code": "taipei",
+   "country_code": "TW",
+   "place_type": "permanent",
+   "topic_relevance": "direct",
+   "topic_slugs": [
+    "indigenous-and-colonial-memory"
+   ],
+   "address": "台北市北投區中山路3-1號",
+   "map_query": "凱達格蘭文化館 台北北投",
+   "source_urls": [
+    "https://www.ketagalan.gov.taipei/"
+   ],
+   "descriptions": {
+    "zh-TW": "臺北市原住民族事務委員會所屬的館舍，官網列出地址在北投區中山路 3-1 號，週二至週日 9:00–17:00 開放、免費入場，週一休館，館內有常設展、特展與教育推廣活動。",
+    "en": "A museum under Taipei's Indigenous Peoples Commission. Its official site gives the address as 3-1 Zhongshan Road in Beitou, open Tuesday to Sunday 9:00–17:00 with free admission and closed on Mondays, running permanent and temporary exhibitions plus education programmes.",
+    "ja": "台北市原住民族事務委員会が所管する館。公式サイトによれば所在地は北投区中山路3-1号、火曜から日曜の9:00〜17:00に無料開館し、月曜は休館。常設展・特別展のほか教育普及の催しも行っています。",
+    "zh-CN": "台北市原住民族事务委员会所属的馆舍，官网列出地址在北投区中山路 3-1 号，周二至周日 9:00–17:00 开放、免费入场，周一休馆，馆内有常设展、特展与教育推广活动。",
+    "hi": "ताइपे के मूलनिवासी मामलों के आयोग के अधीन एक संग्रहालय। आधिकारिक साइट के अनुसार पता बेइतोउ का झोंगशान रोड 3-1 है; मंगलवार से रविवार 9:00–17:00 तक निःशुल्क प्रवेश, सोमवार को बंद। यहाँ स्थायी और अस्थायी प्रदर्शनियों के साथ शैक्षिक कार्यक्रम भी होते हैं।",
+    "id": "Museum di bawah Komisi Urusan Masyarakat Adat Kota Taipei. Situs resminya mencantumkan alamat Jalan Zhongshan 3-1 di Beitou, buka Selasa sampai Minggu pukul 9.00–17.00 dengan tiket gratis dan tutup Senin, dengan pameran tetap, pameran khusus, serta program edukasi.",
+    "pt-BR": "Museu ligado à Comissão de Assuntos Indígenas de Taipei. O site oficial informa o endereço na Rua Zhongshan 3-1, em Beitou, aberto de terça a domingo das 9h às 17h com entrada gratuita e fechado às segundas, com exposições permanentes e temporárias e atividades educativas."
+   }
+  }
+ ],
+ "events": [
+  {
+   "name": "Loveland Sweetheart Festival 2027",
+   "city_code": "loveland",
+   "country_code": "US",
+   "venue": "Downtown Loveland",
+   "topic_slugs": [
+    "affection-and-reciprocity"
+   ],
+   "start_at": "2027-02-12T00:00:00Z",
+   "end_at": "2027-02-13T00:00:00Z",
+   "ticket_url": null,
+   "source_url": "https://visitloveland.com/sweetheartfestival/",
+   "descriptions": {
+    "zh-TW": "Visit Loveland 官方頁面列出的 2027 年活動，2 月 12–13 日在 Loveland 市中心舉行，包含冰雕、表演、藝術與家庭活動。",
+    "en": "Visit Loveland lists this 2027 festival for February 12–13 in downtown Loveland, with ice carving, performances, art and family activities.",
+    "ja": "Visit Loveland公式ページが案内する2027年のイベント。2月12～13日にダウンタウンで開催され、氷彫刻、ステージ、アート、家族向け企画などを行います。",
+    "zh-CN": "Visit Loveland 官网列出的 2027 年活动，2 月 12–13 日在 Loveland 市中心举行，包含冰雕、表演、艺术和家庭活动。",
+    "hi": "Visit Loveland के अनुसार यह उत्सव 12–13 फ़रवरी 2027 को डाउनटाउन Loveland में होगा, जिसमें बर्फ़ की मूर्तियाँ, प्रदर्शन, कला और पारिवारिक कार्यक्रम होंगे।",
+    "id": "Menurut Visit Loveland, festival ini berlangsung pada 12–13 Februari 2027 di pusat kota Loveland, dengan pahatan es, pertunjukan, seni, dan kegiatan keluarga.",
+    "pt-BR": "Segundo o Visit Loveland, o festival acontece em 12 e 13 de fevereiro de 2027 no centro de Loveland, com esculturas de gelo, apresentações, arte e atividades para famílias."
+   }
+  },
+  {
+   "name": "Taipei Burger Carnival 2026",
+   "city_code": "taipei",
+   "country_code": "TW",
+   "venue": "Taipei Expo Park – Flower Sea Area",
+   "topic_slugs": [
+    "harvest-and-gratitude"
+   ],
+   "start_at": "2026-08-29T00:00:00Z",
+   "end_at": "2026-08-30T00:00:00Z",
+   "ticket_url": null,
+   "source_url": "https://www.burgercarnival.taipei/",
+   "descriptions": {
+    "zh-TW": "臺北旅遊網列出的 Burger Carnival 2026，8 月 29–30 日在臺北花博公園花海廣場舉行，主題是漢堡與街頭飲食。",
+    "en": "Taipei Travel lists Burger Carnival 2026 for August 29–30 at the Flower Sea Area of Taipei Expo Park, focused on burgers and street food.",
+    "ja": "台北旅遊網が案内するBurger Carnival 2026。8月29～30日に台北花博公園の花海広場で開催され、ハンバーガーとストリートフードを扱います。",
+    "zh-CN": "台北旅游网列出的 Burger Carnival 2026，8 月 29–30 日在台北花博公园花海广场举行，主题是汉堡和街头饮食。",
+    "hi": "Taipei Travel के अनुसार Burger Carnival 2026, 29–30 अगस्त को Taipei Expo Park के Flower Sea Area में होगा और इसमें बर्गर व स्ट्रीट फूड शामिल हैं।",
+    "id": "Taipei Travel mencantumkan Burger Carnival 2026 pada 29–30 Agustus di Flower Sea Area, Taipei Expo Park, dengan tema burger dan makanan jalanan.",
+    "pt-BR": "O Taipei Travel lista o Burger Carnival 2026 para 29 e 30 de agosto na Flower Sea Area do Taipei Expo Park, com foco em hambúrgueres e comida de rua."
+   }
+  },
+  {
+   "name": "上海國際光影節 2026",
+   "city_code": "shanghai",
+   "country_code": "CN",
+   "venue": "南京路、新天地與北外灘等 17 個地標場域",
+   "topic_slugs": [
+    "lantern-festival"
+   ],
+   "start_at": "2026-09-17T00:00:00Z",
+   "end_at": "2026-10-16T00:00:00Z",
+   "ticket_url": null,
+   "source_url": "https://english.shanghai.gov.cn/en-MajorConsumerEvents/20260706/d4819e8683d049c8a715842864ce97d2.html",
+   "descriptions": {
+    "zh-TW": "上海市政府英文活動指南列出的第三屆上海國際光影節，2026 年 9 月 17 日至 10 月 16 日在全市 17 個地標場域展出燈光藝術。",
+    "en": "Shanghai’s government event guide lists the 3rd Shanghai International Light Festival for September 17–October 16, 2026, with light-art programmes across 17 landmark venues.",
+    "ja": "上海市政府のイベント案内に掲載された第3回上海国際ライトフェスティバル。2026年9月17日～10月16日に17のランドマーク会場で光のアートを展開します。",
+    "zh-CN": "上海市政府英文活动指南列出的第三届上海国际光影节，2026 年 9 月 17 日至 10 月 16 日在全市 17 个地标场域展出灯光艺术。",
+    "hi": "शंघाई सरकार की कार्यक्रम सूची में 3rd Shanghai International Light Festival 17 सितंबर–16 अक्टूबर 2026 के लिए है; 17 प्रमुख स्थलों पर प्रकाश-कला कार्यक्रम होंगे।",
+    "id": "Panduan acara pemerintah Shanghai mencantumkan 3rd Shanghai International Light Festival pada 17 September–16 Oktober 2026, dengan program seni cahaya di 17 lokasi penting.",
+    "pt-BR": "O guia de eventos do governo de Xangai lista o 3rd Shanghai International Light Festival de 17 de setembro a 16 de outubro de 2026, com arte luminosa em 17 locais de referência."
+   }
+  },
+  {
+   "name": "Anandam Durga Puja 2026",
+   "city_code": "pune",
+   "country_code": "IN",
+   "venue": "Alankaran Hall, SRPF Group 2, Wanowrie, Pune",
+   "topic_slugs": [
+    "homecoming-and-reunion"
+   ],
+   "start_at": "2026-10-15T00:00:00Z",
+   "end_at": "2026-10-21T00:00:00Z",
+   "ticket_url": null,
+   "source_url": "https://www.anandampune.com/",
+   "descriptions": {
+    "zh-TW": "Pune 的 Anandam Association 公布 2026 年 Durga Puja，10 月 15–21 日在 Wanowrie 的 Alankaran Hall 舉行，包含祭典、供食與文化演出。",
+    "en": "Anandam Association in Pune lists Durga Puja 2026 for October 15–21 at Alankaran Hall in Wanowrie, with worship, bhog and cultural programmes.",
+    "ja": "プネーのAnandam Associationが案内する2026年Durga Puja。10月15～21日にWanowrieのAlankaran Hallで行われ、礼拝、bhog、文化公演があります。",
+    "zh-CN": "Pune 的 Anandam Association 公布 2026 年 Durga Puja，10 月 15–21 日在 Wanowrie 的 Alankaran Hall 举行，包含祭典、供食和文化演出。",
+    "hi": "Pune की Anandam Association ने Durga Puja 2026 की तारीख 15–21 अक्टूबर और स्थान Wanowrie का Alankaran Hall बताया है; इसमें पूजा, भोग और सांस्कृतिक कार्यक्रम होंगे।",
+    "id": "Anandam Association di Pune mencantumkan Durga Puja 2026 pada 15–21 Oktober di Alankaran Hall, Wanowrie, dengan ibadah, bhog, dan acara budaya.",
+    "pt-BR": "A Anandam Association, em Pune, informa a Durga Puja 2026 de 15 a 21 de outubro no Alankaran Hall, em Wanowrie, com culto, bhog e programação cultural."
+   }
+  },
+  {
+   "name": "Indonesia Youth Summit 2026",
+   "city_code": "jakarta",
+   "country_code": "ID",
+   "venue": "Taman Ismail Marzuki 及雅加達省政府公共設施",
+   "topic_slugs": [
+    "national-days"
+   ],
+   "start_at": "2026-10-29T00:00:00Z",
+   "end_at": "2026-10-30T00:00:00Z",
+   "ticket_url": null,
+   "source_url": "https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026",
+   "descriptions": {
+    "zh-TW": "雅加達省政府公告的 Indonesia Youth Summit 2026，10 月 29–30 日以 Taman Ismail Marzuki 等公共設施為主要場地，預計約 5,000 人參加。",
+    "en": "Jakarta’s provincial government lists Indonesia Youth Summit 2026 for October 29–30 at Taman Ismail Marzuki and other public facilities, with a target of about 5,000 participants.",
+    "ja": "ジャカルタ州政府が案内するIndonesia Youth Summit 2026。10月29～30日にTaman Ismail Marzukiなどの公共施設を中心に開催され、約5,000人の参加を見込んでいます。",
+    "zh-CN": "雅加达省政府公告的 Indonesia Youth Summit 2026，10 月 29–30 日以 Taman Ismail Marzuki 等公共设施为主要场地，预计约 5,000 人参加。",
+    "hi": "जकार्ता प्रांतीय सरकार के अनुसार Indonesia Youth Summit 2026, 29–30 अक्टूबर को Taman Ismail Marzuki और अन्य सार्वजनिक स्थलों पर होगा; लगभग 5,000 प्रतिभागियों का लक्ष्य है।",
+    "id": "Pemerintah Provinsi Jakarta mencantumkan Indonesia Youth Summit 2026 pada 29–30 Oktober di Taman Ismail Marzuki dan fasilitas publik lain, dengan sasaran sekitar 5.000 peserta.",
+    "pt-BR": "O governo provincial de Jacarta lista o Indonesia Youth Summit 2026 para 29 e 30 de outubro, no Taman Ismail Marzuki e outras instalações públicas, com meta de cerca de 5 mil participantes."
+   }
+  },
+  {
+   "name": "Revelando SP 2026",
+   "city_code": "sao-paulo",
+   "country_code": "BR",
+   "venue": "Parque do Trote, São Paulo",
+   "topic_slugs": [
+    "harvest-and-gratitude"
+   ],
+   "start_at": "2026-11-12T00:00:00Z",
+   "end_at": "2026-11-15T00:00:00Z",
+   "ticket_url": null,
+   "source_url": "https://amigosdaarte.org.br/atencao-sp-o-revelando-sp-sao-paulo-mudou-de-data/",
+   "descriptions": {
+    "zh-TW": "APAA（Amigos da Arte）官方公告的 Revelando SP 2026 聖保羅場：原訂 9 月，因主辦下半年行事曆調整改為 11 月 12–15 日，地點仍是 Parque do Trote，聚焦各地飲食、工藝與傳統文化。",
+    "en": "APAA (Amigos da Arte) announced that the São Paulo edition of Revelando SP 2026, originally set for September, moves to November 12–15 at the same venue, Parque do Trote, featuring foodways, crafts and cultural traditions from across the state.",
+    "ja": "APAA（Amigos da Arte）の公式発表によると、Revelando SP 2026 のサンパウロ会場は9月から11月12〜15日に変更。会場は Parque do Trote のままで、各地の食、工芸、文化伝統を紹介します。",
+    "zh-CN": "APAA（Amigos da Arte）官方公告的 Revelando SP 2026 圣保罗场：原定 9 月，因主办下半年日程调整改为 11 月 12–15 日，地点仍是 Parque do Trote，聚焦各地饮食、工艺和传统文化。",
+    "hi": "APAA (Amigos da Arte) की आधिकारिक घोषणा के अनुसार Revelando SP 2026 का São Paulo संस्करण सितंबर से बदलकर अब 12–15 नवंबर को होगा; स्थान वही Parque do Trote रहेगा, जहाँ राज्य भर के खान-पान, हस्तशिल्प व सांस्कृतिक परंपराएँ प्रस्तुत होंगी।",
+    "id": "APAA (Amigos da Arte) mengumumkan bahwa Revelando SP 2026 edisi São Paulo yang semula September dipindah ke 12–15 November di lokasi yang sama, Parque do Trote, dengan kuliner, kerajinan, dan tradisi budaya dari berbagai daerah.",
+    "pt-BR": "A APAA (Amigos da Arte) anunciou que a edição São Paulo do Revelando SP 2026, que aconteceria em setembro, foi remarcada para 12 a 15 de novembro, mantendo o Parque do Trote como local, com culinária, artesanato e tradições culturais de várias regiões do estado."
+   }
+  },
+  {
+   "name": "2026 Taipei Night Market Festival",
+   "city_code": "taipei",
+   "country_code": "TW",
+   "venue": "Taipei night markets",
+   "start_at": "2026-05-14T00:00:00+08:00",
+   "end_at": "2026-10-31T23:59:00+08:00",
+   "source_url": "https://www.2026tpe-nightmarket-festival.com/",
+   "topic_slugs": [
+    "harvest-and-gratitude"
+   ],
+   "descriptions": {
+    "zh-TW": "2026 臺北夜市節以城市夜市、地方小吃與夜間逛街為主題，適合把共享餐桌放回臺北的日常場景理解。",
+    "en": "The 2026 Taipei Night Market Festival connects local food, night markets, and shared city life across Taipei.",
+    "ja": "2026 Taipei Night Market Festivalは、台北の夜市、地域の食べ物、夜の街歩きを通して共有の食卓を感じる催しです。",
+    "zh-CN": "2026 台北夜市节以城市夜市、地方小吃和夜间逛街为主题，把共享餐桌放回台北的日常场景。",
+    "hi": "2026 Taipei Night Market Festival ताइपे के नाइट मार्केट, स्थानीय भोजन और साझा शहर-जीवन को जोड़ता है।",
+    "id": "2026 Taipei Night Market Festival menghubungkan pasar malam, makanan lokal, dan kehidupan kota bersama di Taipei.",
+    "pt-BR": "O 2026 Taipei Night Market Festival reúne mercados noturnos, comida local e a vida compartilhada da cidade de Taipei."
+   }
+  },
+  {
+   "name": "Tokyo Festival 2026",
+   "city_code": "tokyo",
+   "country_code": "JP",
+   "venue": "Tokyo metropolitan venues",
+   "start_at": "2026-09-01T00:00:00+09:00",
+   "end_at": "2026-11-03T23:59:00+09:00",
+   "source_url": "https://tokyofestival.jp/en/about",
+   "topic_slugs": [
+    "ask-the-world"
+   ],
+   "descriptions": {
+    "zh-TW": "Tokyo Festival 2026 在東京多個場地串起跨文化表演與交流，讓「向世界提問」落在真實的城市節目與觀眾互動裡。",
+    "en": "Tokyo Festival 2026 brings intercultural performance and exchange to venues across Tokyo, giving cross-border questions a real public setting.",
+    "ja": "Tokyo Festival 2026は東京各地で異文化の舞台と交流をつなぎ、世界に問いかける場を都市のプログラムと観客の出会いにします。",
+    "zh-CN": "Tokyo Festival 2026 在东京多个场地串联跨文化表演与交流，让“向世界提问”落在真实的城市节目和观众互动中。",
+    "hi": "Tokyo Festival 2026 टोक्यो के कई स्थलों पर अंतर-सांस्कृतिक प्रदर्शन और संवाद लाता है, जिससे दुनिया से सवाल करना सार्वजनिक अनुभव बनता है।",
+    "id": "Tokyo Festival 2026 menghubungkan pertunjukan dan pertukaran lintas budaya di berbagai tempat Tokyo, memberi ruang publik bagi pertanyaan lintas negara.",
+    "pt-BR": "O Tokyo Festival 2026 leva apresentações e intercâmbio intercultural a vários locais de Tóquio, criando um espaço público para perguntas entre países."
+   }
+  }
+ ]
 }

@@ -215,7 +215,7 @@ async function fetchSource(url) {
   throw transient;
 }
 
-// 該網域現在對「這台主機」通不通。只在 4xx 之後才會被呼叫,一個 origin 一輪只探一次。
+// 該網域現在對「這台主機」通不通。4xx 與傳輸層失敗之後都會問一次,一個 origin 一輪只探一次。
 // 不重試:探測本身失敗就是「連不上」,那正是我們要判的事。
 const originReachable = new Map();
 async function isOriginReachable(url) {
@@ -259,6 +259,21 @@ async function verifySource(url, source, event, lastOkAt = null) {
     ({ response, rawBody } = await fetchSource(url));
   } catch (error) {
     if (!error.transient) throw error;
+    // 傳輸層失敗也要問「是這一頁,還是整個網域對我們關門」(2026-08-27 補)。
+    // 原本只有 4xx 那條路會問根目錄,於是「整個網域從這台主機連不上」會被算成
+    // 三輪傳輸層失敗然後**擋掉整條 hourly** —— 而那正是 2026-08-21 立封鎖層時
+    // 講過的情形:等再久都不會變,擋下去只是懲罰七個站。
+    // 實例:www.npm.edu.tw 連根目錄都 fetch failed(本機與 WebFetch 兩條網路皆然)。
+    // ⚠ 判準仍然是**根目錄通不通**,不是狀態碼幾號、也不是失敗發生在哪一層。
+    if (!(await isOriginReachable(url))) {
+      const origin = new URL(url).origin;
+      return {
+        url,
+        blocked: true,
+        matched: [],
+        message: `${error.message};且 ${origin}/ 也連不上 —— 判定為這台主機到該網域不通,不是來源失效`,
+      };
+    }
     return { url, transient: true, message: error.message, matched: [] };
   }
   if (!response.ok) {

@@ -1,428 +1,468 @@
 {
-  "version": 1,
-  "purpose": "可重跑的在地資料來源目錄；搜尋候選詞保留找來源時的判斷脈絡，markers 用來防止頁面改版後誤匯入。",
-  "sources": [
-    {
-      "url": "https://tam.gov.taipei/News_Content.aspx?n=49854D6439EC40C0&sms=72544237BBE4C5F6&s=133D3D29CFCDAD86",
-      "market": "zh-TW",
-      "kind": "event",
-      "discovery_query": "site:tam.gov.taipei 七夕 星空愛戀音樂會 天文館",
-      "markers": [
-        "星空愛戀音樂會",
-        "天文科學教育館"
-      ],
-      "date_markers": [
-        "8月19日"
-      ]
-    },
-    {
-      "url": "https://www.facebook.com/chocoholic.taipei/",
-      "market": "zh-TW",
-      "kind": "place",
-      "discovery_query": "Chocoholic 巧克哈客 台北 官方 Facebook 專頁",
-      "markers": [
-        "巧克哈客",
-        "Chocoholic"
-      ]
-    },
-    {
-      "url": "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/350/detail.html",
-      "market": "ja",
-      "kind": "event",
-      "discovery_query": "site:tamaskc.metro.tokyo.lg.jp 煌めきバレンタインマルシェ 東京たま未来メッセ",
-      "markers": [
-        "煌めきバレンタインマルシェ",
-        "東京たま未来メッセ"
-      ],
-      "date_markers": [
-        "2026年2月1日",
-        "2026/2/1",
-        "2026.2.1"
-      ]
-    },
-    {
-      "url": "https://mini-mal.tokyo/pages/access",
-      "market": "ja",
-      "kind": "place",
-      "discovery_query": "Minimal 富ヶ谷本店 東京 公式 店舗住所",
-      "markers": [
-        "Minimal 富ヶ谷本店",
-        "富ヶ谷2-1-9"
-      ]
-    },
-    {
-      "url": "https://xxgk.shbsq.gov.cn/article.html?infoid=ad7e7534-18a7-45bc-bda1-99b3ce4ca731",
-      "market": "zh-CN",
-      "kind": "event",
-      "discovery_query": "site:shbsq.gov.cn 2026 七夕甜蜜季 龙盛活力小镇",
-      "markers": [
-        "七夕甜蜜季",
-        "龙盛活力小镇"
-      ],
-      "date_markers": [
-        "2026年8月19日"
-      ]
-    },
-    {
-      "url": "https://english.shanghai.gov.cn/en-FirstStores/20260624/50f678163fcf42a1b0dc4409376de73b.html",
-      "market": "zh-CN",
-      "kind": "place",
-      "discovery_query": "Shanghai government Godiva Xintiandi flagship store 119 Madang Road",
-      "markers": [
-        "Godiva",
-        "119 Madang Road"
-      ]
-    },
-    {
-      "url": "https://visitloveland.com/sweetheartfestival/",
-      "market": "en",
-      "kind": "event",
-      "discovery_query": "site:visitloveland.com Sweetheart Festival 2027 Loveland",
-      "markers": [
-        "Sweetheart Festival",
-        "2027"
-      ],
-      "date_markers": [
-        "FEBRUARY 12",
-        "February 12"
-      ]
-    },
-    {
-      "url": "https://visitloveland.com/visitors-center/",
-      "market": "en",
-      "kind": "place",
-      "discovery_query": "Visit Loveland East Gateway Visitors Center official address",
-      "markers": [
-        "East Gateway Visitor Center",
-        "5400 Stone Creek Circle"
-      ]
-    },
-    {
-      "url": "https://newsroom.feverup.com/en-IN/262080-candlelight-s-valentine-s-day-special-brings-a-romantic-experience-to-pune-on-14th-february/",
-      "market": "hi",
-      "kind": "event",
-      "discovery_query": "site:feverup.com Pune Candlelight Valentine's Day Nehru Memorial Hall 2026",
-      "markers": [
-        "Valentine",
-        "Pune"
-      ],
-      "date_markers": [
-        "14th February",
-        "February 14"
-      ]
-    },
-    {
-      "url": "https://www.soehannahall.com/news_and_event/night-music-lights-candlelight-concerts-soehanna-hall/",
-      "market": "id",
-      "kind": "event",
-      "discovery_query": "site:soehannahall.com Valentine's Day Special February 2026 Jakarta",
-      "markers": [
-        "Valentine",
-        "Soehanna"
-      ],
-      "date_markers": [
-        "13 February",
-        "February 13"
-      ]
-    },
-    {
-      "url": "https://eventos.sp.senac.br/evento/workshop-mesa-para-dois-food-design-para-o-dia-dos-namorados/",
-      "market": "pt-BR",
-      "kind": "event",
-      "discovery_query": "site:eventos.sp.senac.br Mesa para Dois Dia dos Namorados Senac Aclimação",
-      "markers": [
-        "Mesa para Dois",
-        "Dia dos Namorados"
-      ],
-      "date_markers": [
-        "08/06/2026",
-        "8/6/2026"
-      ]
-    },
-    {
-      "url": "https://www.choconuts.in/",
-      "market": "hi",
-      "kind": "place",
-      "discovery_query": "Choconuts Pune official chocolate shop Kumar Pavilion address",
-      "markers": [
-        "Choconuts",
-        "Kumar Pavilion",
-        "chocolates"
-      ]
-    },
-    {
-      "url": "https://www.godiva.co.id/our-location/",
-      "market": "id",
-      "kind": "place",
-      "discovery_query": "GODIVA Plaza Indonesia official store address Jakarta",
-      "markers": [
-        "GODIVA Plaza Indonesia",
-        "Level 1 Unit 114",
-        "Thamrin"
-      ]
-    },
-    {
-      "url": "https://www.dengo.com.br/fabrica-de-dengo",
-      "market": "pt-BR",
-      "kind": "place",
-      "discovery_query": "Dengo Fábrica de Dengo São Paulo página oficial",
-      "markers": [
-        "Fábrica de Dengo",
-        "Estação Faria Lima"
-      ]
-    },
-    {
-      "url": "https://www.burgercarnival.taipei/",
-      "market": "zh-TW",
-      "kind": "event",
-      "discovery_query": "漢堡嘉年華 2026台北國際美食節 官方網站",
-      "markers": [
-        "漢堡嘉年華",
-        "Burger"
-      ],
-      "date_markers": [
-        "8/29",
-        "8.29"
-      ]
-    },
-    {
-      "url": "https://www.ntm.gov.tw/en/cl.aspx?n=5703",
-      "market": "zh-TW",
-      "kind": "place",
-      "discovery_query": "National Taiwan Museum official Taipei Xiangyang Road address",
-      "markers": [
-        "National Taiwan Museum",
-        "No. 2, Xiangyang Rd."
-      ]
-    },
-    {
-      "url": "https://english.shanghai.gov.cn/en-MuseumsGalleries/20231218/01fdd3f62d0c4877bc289ec0b1de6afa.html",
-      "market": "zh-CN",
-      "kind": "place",
-      "discovery_query": "Shanghai government Shanghai Museum People’s Square official address",
-      "markers": [
-        "Shanghai Museum on People's Square",
-        "No 201 Renmin Avenue"
-      ]
-    },
-    {
-      "url": "https://www.gotokyo.org/en/spot/ev093/index.html",
-      "market": "ja",
-      "kind": "event",
-      "discovery_query": "site:gotokyo.org Fukagawa Hachiman Festival 2026 August 12 16",
-      "markers": [
-        "Fukagawa Hachiman Festival",
-        "Tomioka Hachimangu Shrine"
-      ],
-      "date_markers": [
-        "2026-8-12",
-        "2026-8-16"
-      ]
-    },
-    {
-      "url": "https://www.gotokyo.org/en/destinations/eastern-tokyo/fukagawa/",
-      "market": "ja",
-      "kind": "place",
-      "discovery_query": "site:gotokyo.org Fukagawa Tomioka Hachimangu Shrine Tokyo",
-      "markers": [
-        "Tomioka Hachimangu Shrine",
-        "built in 1627"
-      ]
-    },
-    {
-      "url": "https://english.shanghai.gov.cn/en-MajorConsumerEvents/20260706/d4819e8683d049c8a715842864ce97d2.html",
-      "market": "zh-CN",
-      "kind": "event",
-      "discovery_query": "site:english.shanghai.gov.cn 3rd Shanghai International Light Festival 2026",
-      "markers": [
-        "3rd Shanghai International Light Festival",
-        "Nanjing Road"
-      ],
-      "date_markers": [
-        "Sept 17 to Oct 16"
-      ]
-    },
-    {
-      "url": "https://visitloveland.com/business-directory/fairgrounds-park/",
-      "market": "en",
-      "kind": "place",
-      "discovery_query": "Visit Loveland Fairgrounds Park 700 S Railroad Avenue",
-      "markers": [
-        "Fairgrounds Park",
-        "700 S Railroad Avenue"
-      ]
-    },
-    {
-      "url": "https://loveland.org/events-2/corn-roast-festival/",
-      "market": "en",
-      "kind": "event",
-      "discovery_query": "Loveland Chamber 130th Corn Roast Festival 2026 official",
-      "markers": [
-        "130th Annual Old Fashioned Corn Roast Festival",
-        "August 21st & 22nd"
-      ],
-      "date_markers": [
-        "August 21st & 22nd",
-        "2026"
-      ]
-    },
-    {
-      "url": "https://www.dagdushethganpati.com/?p=11699",
-      "market": "hi",
-      "kind": "place",
-      "discovery_query": "Dagdusheth Halwai Ganpati Temple Pune official address",
-      "markers": [
-        "Shrimant Dagdusheth Halwai Ganpati",
-        "Ganpati Bhavan, 250"
-      ]
-    },
-    {
-      "url": "https://www.anandampune.com/",
-      "market": "hi",
-      "kind": "event",
-      "discovery_query": "Anandam Association Pune Durga Puja 2026 official dates",
-      "markers": [
-        "Durga Puja 2026",
-        "Alankaran Hall"
-      ],
-      "date_markers": [
-        "15–21 October 2026",
-        "17–21 October 2026"
-      ]
-    },
-    {
-      "url": "https://www.jakarta.go.id/landmark-jakarta",
-      "market": "id",
-      "kind": "place",
-      "discovery_query": "site:jakarta.go.id Landmark Jakarta Monumen Nasional MONAS address",
-      "markers": [
-        "Monumen Nasional (MONAS)",
-        "Jalan Tugu Monas"
-      ]
-    },
-    {
-      "url": "https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026",
-      "market": "id",
-      "kind": "event",
-      "discovery_query": "site:jakarta.go.id Indonesia Youth Summit 2026 Taman Ismail Marzuki",
-      "markers": [
-        "Indonesia Youth Summit 2026",
-        "Taman Ismail Marzuki"
-      ],
-      "date_markers": [
-        "29–30 Oktober 2026",
-        "29–30 October 2026"
-      ]
-    },
-    {
-      "url": "https://museudofutebol.org.br/exposicoes/museu-do-futebol/",
-      "market": "pt-BR",
-      "kind": "place",
-      "discovery_query": "Museu do Futebol official São Paulo Praça Charles Miller",
-      "markers": [
-        "Museu do Futebol",
-        "Praça Charles Miller"
-      ]
-    },
-    {
-      "url": "https://amigosdaarte.org.br/atencao-sp-o-revelando-sp-sao-paulo-mudou-de-data/",
-      "market": "pt-BR",
-      "kind": "event",
-      "discovery_query": "APAA Revelando SP 2026 Sao Paulo mudou de data Parque do Trote novembro",
-      "markers": [
-        "Revelando SP",
-        "Parque do Trote"
-      ],
-      "date_markers": [
-        "12 a 15 de novembro"
-      ]
-    },
-    {
-      "url": "https://www.npm.edu.tw/Articles.aspx?l=2&sno=02007001",
-      "market": "zh-TW",
-      "kind": "place",
-      "discovery_query": "National Palace Museum Taipei official visitor information address",
-      "markers": [
-        "National Palace Museum",
-        "Lixing St"
-      ]
-    },
-    {
-      "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=113Impey&lang=en",
-      "market": "ja",
-      "kind": "place",
-      "discovery_query": "Tokyo National Museum official visitor information Ueno Park address",
-      "markers": [
-        "TOKYO NATIONAL MUSEUM",
-        "13-9 Ueno Park"
-      ]
-    },
-    {
-      "url": "https://english.shanghai.gov.cn/en-UniqueExperience-travelinshanghai/20250729/25cfb8bce97d4e798f99ac62986255ff.html",
-      "market": "zh-CN",
-      "kind": "place",
-      "discovery_query": "Shanghai government Yuyuan Garden South Gate official visitor information",
-      "markers": [
-        "Yuyuan Garden",
-        "Yuyuan Garden South Gate"
-      ]
-    },
-    {
-      "url": "https://pune.gov.in/en/tourist-place/aagakhan-palace/",
-      "market": "hi",
-      "kind": "place",
-      "discovery_query": "District Pune government Aagakhan Palace tourist place",
-      "markers": [
-        "Aagakhan Palace",
-        "Pune"
-      ]
-    },
-    {
-      "url": "https://turis.istiqlal.or.id/",
-      "market": "id",
-      "kind": "place",
-      "discovery_query": "Istiqlal Mosque Jakarta official tourist information",
-      "markers": [
-        "Welcome to Istiqlal Mosque",
-        "INTERNATIONAL TOURIST"
-      ]
-    },
-    {
-      "url": "https://museudoipiranga.org.br/en/visit/",
-      "market": "pt-BR",
-      "kind": "place",
-      "discovery_query": "Ipiranga Museum official visit Rua dos Patriotas 100",
-      "markers": [
-        "Ipiranga Museum",
-        "Rua dos Patriotas, 100"
-      ]
-    },
-    {
-      "url": "https://www.2026tpe-nightmarket-festival.com/",
-      "market": "zh-TW",
-      "kind": "event",
-      "discovery_query": "2026 臺北夜市打牙祭 官方網站 市場處",
-      "markers": [
-        "夜市打牙祭",
-        "臺北夜市"
-      ],
-      "date_markers": [
-        "2026"
-      ]
-    },
-    {
-      "url": "https://tokyofestival.jp/en/about",
-      "market": "ja",
-      "kind": "event",
-      "discovery_query": "Tokyo Festival official 2026 September 1 November 3",
-      "markers": [
-        "Tokyo Festival",
-        "2026"
-      ],
-      "date_markers": [
-        "September 1st",
-        "November 3rd"
-      ]
-    }
-  ]
+ "version": 1,
+ "purpose": "可重跑的在地資料來源目錄；搜尋候選詞保留找來源時的判斷脈絡，markers 用來防止頁面改版後誤匯入。",
+ "sources": [
+  {
+   "url": "https://tam.gov.taipei/News_Content.aspx?n=49854D6439EC40C0&sms=72544237BBE4C5F6&s=133D3D29CFCDAD86",
+   "market": "zh-TW",
+   "kind": "event",
+   "discovery_query": "site:tam.gov.taipei 七夕 星空愛戀音樂會 天文館",
+   "markers": [
+    "星空愛戀音樂會",
+    "天文科學教育館"
+   ],
+   "date_markers": [
+    "8月19日"
+   ]
+  },
+  {
+   "url": "https://www.facebook.com/chocoholic.taipei/",
+   "market": "zh-TW",
+   "kind": "place",
+   "discovery_query": "Chocoholic 巧克哈客 台北 官方 Facebook 專頁",
+   "markers": [
+    "巧克哈客",
+    "Chocoholic"
+   ]
+  },
+  {
+   "url": "https://www.tamaskc.metro.tokyo.lg.jp/jastice-outside/event/350/detail.html",
+   "market": "ja",
+   "kind": "event",
+   "discovery_query": "site:tamaskc.metro.tokyo.lg.jp 煌めきバレンタインマルシェ 東京たま未来メッセ",
+   "markers": [
+    "煌めきバレンタインマルシェ",
+    "東京たま未来メッセ"
+   ],
+   "date_markers": [
+    "2026年2月1日",
+    "2026/2/1",
+    "2026.2.1"
+   ]
+  },
+  {
+   "url": "https://mini-mal.tokyo/pages/access",
+   "market": "ja",
+   "kind": "place",
+   "discovery_query": "Minimal 富ヶ谷本店 東京 公式 店舗住所",
+   "markers": [
+    "Minimal 富ヶ谷本店",
+    "富ヶ谷2-1-9"
+   ]
+  },
+  {
+   "url": "https://xxgk.shbsq.gov.cn/article.html?infoid=ad7e7534-18a7-45bc-bda1-99b3ce4ca731",
+   "market": "zh-CN",
+   "kind": "event",
+   "discovery_query": "site:shbsq.gov.cn 2026 七夕甜蜜季 龙盛活力小镇",
+   "markers": [
+    "七夕甜蜜季",
+    "龙盛活力小镇"
+   ],
+   "date_markers": [
+    "2026年8月19日"
+   ]
+  },
+  {
+   "url": "https://english.shanghai.gov.cn/en-FirstStores/20260624/50f678163fcf42a1b0dc4409376de73b.html",
+   "market": "zh-CN",
+   "kind": "place",
+   "discovery_query": "Shanghai government Godiva Xintiandi flagship store 119 Madang Road",
+   "markers": [
+    "Godiva",
+    "119 Madang Road"
+   ]
+  },
+  {
+   "url": "https://visitloveland.com/sweetheartfestival/",
+   "market": "en",
+   "kind": "event",
+   "discovery_query": "site:visitloveland.com Sweetheart Festival 2027 Loveland",
+   "markers": [
+    "Sweetheart Festival",
+    "2027"
+   ],
+   "date_markers": [
+    "FEBRUARY 12",
+    "February 12"
+   ]
+  },
+  {
+   "url": "https://visitloveland.com/visitors-center/",
+   "market": "en",
+   "kind": "place",
+   "discovery_query": "Visit Loveland East Gateway Visitors Center official address",
+   "markers": [
+    "East Gateway Visitor Center",
+    "5400 Stone Creek Circle"
+   ]
+  },
+  {
+   "url": "https://newsroom.feverup.com/en-IN/262080-candlelight-s-valentine-s-day-special-brings-a-romantic-experience-to-pune-on-14th-february/",
+   "market": "hi",
+   "kind": "event",
+   "discovery_query": "site:feverup.com Pune Candlelight Valentine's Day Nehru Memorial Hall 2026",
+   "markers": [
+    "Valentine",
+    "Pune"
+   ],
+   "date_markers": [
+    "14th February",
+    "February 14"
+   ]
+  },
+  {
+   "url": "https://www.soehannahall.com/news_and_event/night-music-lights-candlelight-concerts-soehanna-hall/",
+   "market": "id",
+   "kind": "event",
+   "discovery_query": "site:soehannahall.com Valentine's Day Special February 2026 Jakarta",
+   "markers": [
+    "Valentine",
+    "Soehanna"
+   ],
+   "date_markers": [
+    "13 February",
+    "February 13"
+   ]
+  },
+  {
+   "url": "https://eventos.sp.senac.br/evento/workshop-mesa-para-dois-food-design-para-o-dia-dos-namorados/",
+   "market": "pt-BR",
+   "kind": "event",
+   "discovery_query": "site:eventos.sp.senac.br Mesa para Dois Dia dos Namorados Senac Aclimação",
+   "markers": [
+    "Mesa para Dois",
+    "Dia dos Namorados"
+   ],
+   "date_markers": [
+    "08/06/2026",
+    "8/6/2026"
+   ]
+  },
+  {
+   "url": "https://www.choconuts.in/",
+   "market": "hi",
+   "kind": "place",
+   "discovery_query": "Choconuts Pune official chocolate shop Kumar Pavilion address",
+   "markers": [
+    "Choconuts",
+    "Kumar Pavilion",
+    "chocolates"
+   ]
+  },
+  {
+   "url": "https://www.godiva.co.id/our-location/",
+   "market": "id",
+   "kind": "place",
+   "discovery_query": "GODIVA Plaza Indonesia official store address Jakarta",
+   "markers": [
+    "GODIVA Plaza Indonesia",
+    "Level 1 Unit 114",
+    "Thamrin"
+   ]
+  },
+  {
+   "url": "https://www.dengo.com.br/fabrica-de-dengo",
+   "market": "pt-BR",
+   "kind": "place",
+   "discovery_query": "Dengo Fábrica de Dengo São Paulo página oficial",
+   "markers": [
+    "Fábrica de Dengo",
+    "Estação Faria Lima"
+   ]
+  },
+  {
+   "url": "https://www.burgercarnival.taipei/",
+   "market": "zh-TW",
+   "kind": "event",
+   "discovery_query": "漢堡嘉年華 2026台北國際美食節 官方網站",
+   "markers": [
+    "漢堡嘉年華",
+    "Burger"
+   ],
+   "date_markers": [
+    "8/29",
+    "8.29"
+   ]
+  },
+  {
+   "url": "https://www.ntm.gov.tw/en/cl.aspx?n=5703",
+   "market": "zh-TW",
+   "kind": "place",
+   "discovery_query": "National Taiwan Museum official Taipei Xiangyang Road address",
+   "markers": [
+    "National Taiwan Museum",
+    "No. 2, Xiangyang Rd."
+   ]
+  },
+  {
+   "url": "https://english.shanghai.gov.cn/en-MuseumsGalleries/20231218/01fdd3f62d0c4877bc289ec0b1de6afa.html",
+   "market": "zh-CN",
+   "kind": "place",
+   "discovery_query": "Shanghai government Shanghai Museum People’s Square official address",
+   "markers": [
+    "Shanghai Museum on People's Square",
+    "No 201 Renmin Avenue"
+   ]
+  },
+  {
+   "url": "https://www.gotokyo.org/en/spot/ev093/index.html",
+   "market": "ja",
+   "kind": "event",
+   "discovery_query": "site:gotokyo.org Fukagawa Hachiman Festival 2026 August 12 16",
+   "markers": [
+    "Fukagawa Hachiman Festival",
+    "Tomioka Hachimangu Shrine"
+   ],
+   "date_markers": [
+    "2026-8-12",
+    "2026-8-16"
+   ]
+  },
+  {
+   "url": "https://www.gotokyo.org/en/destinations/eastern-tokyo/fukagawa/",
+   "market": "ja",
+   "kind": "place",
+   "discovery_query": "site:gotokyo.org Fukagawa Tomioka Hachimangu Shrine Tokyo",
+   "markers": [
+    "Tomioka Hachimangu Shrine",
+    "built in 1627"
+   ]
+  },
+  {
+   "url": "https://english.shanghai.gov.cn/en-MajorConsumerEvents/20260706/d4819e8683d049c8a715842864ce97d2.html",
+   "market": "zh-CN",
+   "kind": "event",
+   "discovery_query": "site:english.shanghai.gov.cn 3rd Shanghai International Light Festival 2026",
+   "markers": [
+    "3rd Shanghai International Light Festival",
+    "Nanjing Road"
+   ],
+   "date_markers": [
+    "Sept 17 to Oct 16"
+   ]
+  },
+  {
+   "url": "https://visitloveland.com/business-directory/fairgrounds-park/",
+   "market": "en",
+   "kind": "place",
+   "discovery_query": "Visit Loveland Fairgrounds Park 700 S Railroad Avenue",
+   "markers": [
+    "Fairgrounds Park",
+    "700 S Railroad Avenue"
+   ]
+  },
+  {
+   "url": "https://loveland.org/events-2/corn-roast-festival/",
+   "market": "en",
+   "kind": "event",
+   "discovery_query": "Loveland Chamber 130th Corn Roast Festival 2026 official",
+   "markers": [
+    "130th Annual Old Fashioned Corn Roast Festival",
+    "August 21st & 22nd"
+   ],
+   "date_markers": [
+    "August 21st & 22nd",
+    "2026"
+   ]
+  },
+  {
+   "url": "https://www.dagdushethganpati.com/?p=11699",
+   "market": "hi",
+   "kind": "place",
+   "discovery_query": "Dagdusheth Halwai Ganpati Temple Pune official address",
+   "markers": [
+    "Shrimant Dagdusheth Halwai Ganpati",
+    "Ganpati Bhavan, 250"
+   ]
+  },
+  {
+   "url": "https://www.anandampune.com/",
+   "market": "hi",
+   "kind": "event",
+   "discovery_query": "Anandam Association Pune Durga Puja 2026 official dates",
+   "markers": [
+    "Durga Puja 2026",
+    "Alankaran Hall"
+   ],
+   "date_markers": [
+    "15–21 October 2026",
+    "17–21 October 2026"
+   ]
+  },
+  {
+   "url": "https://www.jakarta.go.id/landmark-jakarta",
+   "market": "id",
+   "kind": "place",
+   "discovery_query": "site:jakarta.go.id Landmark Jakarta Monumen Nasional MONAS address",
+   "markers": [
+    "Monumen Nasional (MONAS)",
+    "Jalan Tugu Monas"
+   ]
+  },
+  {
+   "url": "https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026",
+   "market": "id",
+   "kind": "event",
+   "discovery_query": "site:jakarta.go.id Indonesia Youth Summit 2026 Taman Ismail Marzuki",
+   "markers": [
+    "Indonesia Youth Summit 2026",
+    "Taman Ismail Marzuki"
+   ],
+   "date_markers": [
+    "29–30 Oktober 2026",
+    "29–30 October 2026"
+   ]
+  },
+  {
+   "url": "https://museudofutebol.org.br/exposicoes/museu-do-futebol/",
+   "market": "pt-BR",
+   "kind": "place",
+   "discovery_query": "Museu do Futebol official São Paulo Praça Charles Miller",
+   "markers": [
+    "Museu do Futebol",
+    "Praça Charles Miller"
+   ]
+  },
+  {
+   "url": "https://amigosdaarte.org.br/atencao-sp-o-revelando-sp-sao-paulo-mudou-de-data/",
+   "market": "pt-BR",
+   "kind": "event",
+   "discovery_query": "APAA Revelando SP 2026 Sao Paulo mudou de data Parque do Trote novembro",
+   "markers": [
+    "Revelando SP",
+    "Parque do Trote"
+   ],
+   "date_markers": [
+    "12 a 15 de novembro"
+   ]
+  },
+  {
+   "url": "https://www.npm.edu.tw/Articles.aspx?l=2&sno=02007001",
+   "market": "zh-TW",
+   "kind": "place",
+   "discovery_query": "National Palace Museum Taipei official visitor information address",
+   "markers": [
+    "National Palace Museum",
+    "Lixing St"
+   ]
+  },
+  {
+   "url": "https://www.tnm.jp/modules/r_free_page/index.php?id=113Impey&lang=en",
+   "market": "ja",
+   "kind": "place",
+   "discovery_query": "Tokyo National Museum official visitor information Ueno Park address",
+   "markers": [
+    "TOKYO NATIONAL MUSEUM",
+    "13-9 Ueno Park"
+   ]
+  },
+  {
+   "url": "https://english.shanghai.gov.cn/en-UniqueExperience-travelinshanghai/20250729/25cfb8bce97d4e798f99ac62986255ff.html",
+   "market": "zh-CN",
+   "kind": "place",
+   "discovery_query": "Shanghai government Yuyuan Garden South Gate official visitor information",
+   "markers": [
+    "Yuyuan Garden",
+    "Yuyuan Garden South Gate"
+   ]
+  },
+  {
+   "url": "https://pune.gov.in/en/tourist-place/aagakhan-palace/",
+   "market": "hi",
+   "kind": "place",
+   "discovery_query": "District Pune government Aagakhan Palace tourist place",
+   "markers": [
+    "Aagakhan Palace",
+    "Pune"
+   ]
+  },
+  {
+   "url": "https://turis.istiqlal.or.id/",
+   "market": "id",
+   "kind": "place",
+   "discovery_query": "Istiqlal Mosque Jakarta official tourist information",
+   "markers": [
+    "Welcome to Istiqlal Mosque",
+    "INTERNATIONAL TOURIST"
+   ]
+  },
+  {
+   "url": "https://museudoipiranga.org.br/en/visit/",
+   "market": "pt-BR",
+   "kind": "place",
+   "discovery_query": "Ipiranga Museum official visit Rua dos Patriotas 100",
+   "markers": [
+    "Ipiranga Museum",
+    "Rua dos Patriotas, 100"
+   ]
+  },
+  {
+   "url": "https://www.2026tpe-nightmarket-festival.com/",
+   "market": "zh-TW",
+   "kind": "event",
+   "discovery_query": "2026 臺北夜市打牙祭 官方網站 市場處",
+   "markers": [
+    "夜市打牙祭",
+    "臺北夜市"
+   ],
+   "date_markers": [
+    "2026"
+   ]
+  },
+  {
+   "url": "https://tokyofestival.jp/en/about",
+   "market": "ja",
+   "kind": "event",
+   "discovery_query": "Tokyo Festival official 2026 September 1 November 3",
+   "markers": [
+    "Tokyo Festival",
+    "2026"
+   ],
+   "date_markers": [
+    "September 1st",
+    "November 3rd"
+   ]
+  },
+  {
+   "url": "https://www.sapporobeer.jp/brewery/y_museum/",
+   "market": "ja",
+   "kind": "place",
+   "discovery_query": "サッポロビール 公式 YEBISU BREWERY TOKYO 恵比寿 所在地",
+   "markers": [
+    "YEBISU BREWERY TOKYO",
+    "恵比寿4-20-1"
+   ]
+  },
+  {
+   "url": "https://www.env.go.jp/garden/chidorigafuchi/",
+   "market": "ja",
+   "kind": "place",
+   "discovery_query": "環境省 国民公園 千鳥ケ淵戦没者墓苑 公式 所在地",
+   "markers": [
+    "千鳥ケ淵戦没者墓苑",
+    "三番町2"
+   ]
+  },
+  {
+   "url": "https://prefeitura.sp.gov.br/web/turismo/w/eventos/carnaval_de_rua/271995",
+   "market": "pt-BR",
+   "kind": "place",
+   "discovery_query": "prefeitura.sp.gov.br turismo Sambódromo do Anhembi endereço Olavo Fontoura",
+   "markers": [
+    "Sambódromo do Anhembi",
+    "Olavo Fontoura"
+   ]
+  },
+  {
+   "url": "https://www.ketagalan.gov.taipei/",
+   "market": "zh-TW",
+   "kind": "place",
+   "discovery_query": "臺北市原住民族事務委員會 凱達格蘭文化館 官網 地址 開放時間",
+   "markers": [
+    "凱達格蘭文化館",
+    "中山路3-1號"
+   ]
+  }
+ ]
 }
