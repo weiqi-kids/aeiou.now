@@ -59,7 +59,7 @@
 ### customs IN pongal
 印度的 Pongal 是南印度泰米爾地區的收成節，四天一組，日期依泰米爾曆與太陽入摩羯宮而定，通常落在一月中。節名就是那道菜：新收的米、牛奶與粗糖一起煮到溢出鍋緣，溢出來被視為豐足的徵兆。四天各有對象——太陽、耕牛、家族與鄰里，所以它同時是農事節、感謝畜力的日子與親屬走動的日子。印度其他地區在同一段時間有各自的名稱與做法。
 ### customs BR festa-junina
-巴西的六月節不是一天，而是繞著天主教曆上聖安東尼、聖若翰與聖伯多祿三個聖人日展開的一整個月：營火、方陣舞、玉米做的甜點與鹹點、旗幟串起的廣場。它的音樂根源 forró 在二○二一年由 IPHAN 登錄為巴西非物質文化遺產，而東北部的城市把六月節當成一年裡最大的觀光與營收檔期。宗教曆、農業曆與城市經濟在這裡疊在一起。
+巴西的六月節不是一天，而是繞著天主教曆上聖安東尼、聖若翰與聖伯多祿三個聖人日展開的一整個月：營火、方陣舞、玉米做的甜點與鹹點、旗幟串起的廣場。它的音樂根源 forró 在二○二一年由 IPHAN 登錄為巴西非物質文化遺產。宗教曆、農業曆與城市經濟在這裡疊在一起。
 ### customs CN farmers-harvest-festival
 中國大陸的「中國農民豐收節」是新的：經黨中央批准、國務院批復，自二○一八年起，把每年**農曆秋分**設為農民自己的節日，這是國家層面第一個專門為農民設立的節。選秋分是因為它是秋收、秋耕、秋種交會的節點。它不是全體公民放假的節日，而是一個由政策發動、逐年由農業農村部佈置主題的活動——與其他四地由民間長出來的收成節，來歷剛好相反。這是一個很新的節日：二○一八年設立，定在每年秋分，是中國第一個專為農民設立的全國性節日。它的日期選擇本身就說明了設計意圖——不跟農曆走，也不跟星期走，而是綁在二十四節氣的秋分上，讓全國無論南北都落在自己的收成節奏裡。慶祝方式由各地自訂，因此同一天的內容各省差異很大。
 ### customs JP kinro-kansha
@@ -83,7 +83,7 @@ Pongal is the Tamil harvest festival of South India, four days long, timed by th
 ### date_rule IN pongal
 Around the first day of the month of Thai in the Tamil calendar, a four-day festival period
 ### customs BR festa-junina
-Brazil's June festivals are not a single day but a whole month organised around the Catholic feast days of Saint Anthony, Saint John and Saint Peter: bonfires, quadrilha dancing, sweet and savoury dishes made from corn, and squares strung with bunting. Forró, the music at its root, was registered by IPHAN as Brazilian intangible cultural heritage in 2021, and cities in the Northeast treat the June season as the largest tourism and revenue window of their year. Religious calendar, agricultural calendar, and urban economy all stack up on the same dates.
+Brazil's June festivals are not a single day but a whole month organised around the Catholic feast days of Saint Anthony, Saint John and Saint Peter: bonfires, quadrilha dancing, sweet and savoury dishes made from corn, and squares strung with bunting. Forró, the music at its root, was registered by IPHAN as Brazilian intangible cultural heritage in 2021. Religious calendar, agricultural calendar, and urban economy all stack up on the same dates.
 ### date_rule BR festa-junina
 In June, around the three saints' days of St. Anthony, St. John, and St. Peter
 ### customs CN farmers-harvest-festival
@@ -115,7 +115,7 @@ Set on the day of Start of Spring (Lichun) (per the Act Governing the Observance
 ### date_rule IN pongal
 タミル暦タイ月の初日前後、4日間の祭期
 ### customs BR festa-junina
-ブラジルのフェスタ・ジュニーナは一日ではなく、カトリック暦（Catholic）の聖アントニオ、聖ヨハネ、聖ペトロの祝日をめぐる一か月である。かがり火、カドリーリャの踊り、とうもろこしの甘いもの塩気のもの、旗で飾られた広場。その根にある音楽フォホーは2021年、IPHAN によりブラジルの無形文化遺産として登録された。北東部の都市にとって六月は一年で最大の観光と収入の時期でもある。宗教暦と農業暦と都市経済が同じ日付に重なっている。
+ブラジルのフェスタ・ジュニーナは一日ではなく、カトリック暦（Catholic）の聖アントニオ、聖ヨハネ、聖ペトロの祝日をめぐる一か月である。かがり火、カドリーリャの踊り、とうもろこしの甘いもの塩気のもの、旗で飾られた広場。その根にある音楽フォホーは2021年、IPHAN によりブラジルの無形文化遺産として登録された。宗教暦と農業暦と都市経済が同じ日付に重なっている。
 ### date_rule BR festa-junina
 6月、聖アントニオ／聖ヨハネ／聖ペテロの三聖人の日前後
 ### customs CN farmers-harvest-festival
@@ -147,7 +147,7 @@ Set on the day of Start of Spring (Lichun) (per the Act Governing the Observance
 ### date_rule IN pongal
 泰米尔历Thai月首日前后，四天节期
 ### customs BR festa-junina
-巴西的六月节不是一天，而是绕着天主教历上圣安东尼、圣若翰与圣伯多禄三个圣人日展开的一整个月：篝火、方阵舞、玉米做的甜点与咸点、旗帜串起的广场。它的音乐根源 forró 在2021年由 IPHAN 登录为巴西非物质文化遗产，而东北部的城市把六月节当成一年里最大的旅游与营收档期。宗教历、农业历与城市经济在这里叠在一起。
+巴西的六月节不是一天，而是绕着天主教历上圣安东尼、圣若翰与圣伯多禄三个圣人日展开的一整个月：篝火、方阵舞、玉米做的甜点与咸点、旗帜串起的广场。它的音乐根源 forró 在2021年由 IPHAN 登录为巴西非物质文化遗产。宗教历、农业历与城市经济在这里叠在一起。
 ### date_rule BR festa-junina
 六月，圣安东尼／圣若翰／圣伯多禄三个圣人日前后
 ### customs CN farmers-harvest-festival
@@ -179,7 +179,7 @@ Set on the day of Start of Spring (Lichun) (per the Act Governing the Observance
 ### date_rule IN pongal
 तमिल कैलेंडर के थाई माह के पहले दिन के आसपास, चार दिनों का पर्व
 ### customs BR festa-junina
-ब्राज़ील के जून उत्सव एक दिन नहीं, बल्कि कैथोलिक (Catholic) पंचांग के संत एंटोनी, संत जॉन और संत पीटर के पर्व-दिनों के इर्द-गिर्द पूरा एक महीना हैं: अलाव, क्वाड्रिल्या नृत्य, मक्के से बने मीठे-नमकीन व्यंजन, और झंडियों से सजे चौक। इसकी जड़ में बसा संगीत फ़ोहो 2021 में IPHAN द्वारा ब्राज़ील की अमूर्त सांस्कृतिक धरोहर के रूप में दर्ज हुआ, और पूर्वोत्तर के शहरों के लिए जून साल का सबसे बड़ा पर्यटन और आय का मौसम है। धार्मिक पंचांग, कृषि पंचांग और शहरी अर्थव्यवस्था यहाँ एक ही तारीख़ों पर आ जुड़ते हैं।
+ब्राज़ील के जून उत्सव एक दिन नहीं, बल्कि कैथोलिक (Catholic) पंचांग के संत एंटोनी, संत जॉन और संत पीटर के पर्व-दिनों के इर्द-गिर्द पूरा एक महीना हैं: अलाव, क्वाड्रिल्या नृत्य, मक्के से बने मीठे-नमकीन व्यंजन, और झंडियों से सजे चौक। इसकी जड़ में बसा संगीत फ़ोहो 2021 में IPHAN द्वारा ब्राज़ील की अमूर्त सांस्कृतिक धरोहर के रूप में दर्ज हुआ। धार्मिक पंचांग, कृषि पंचांग और शहरी अर्थव्यवस्था यहाँ एक ही तारीख़ों पर आ जुड़ते हैं।
 ### date_rule BR festa-junina
 जून में, संत एंटनी/संत जॉन/संत पीटर के तीन संत दिवसों के आसपास
 ### customs CN farmers-harvest-festival
@@ -211,7 +211,7 @@ Pongal adalah hari panen Tamil di South India (India selatan), berlangsung empat
 ### date_rule IN pongal
 Sekitar hari pertama bulan Thai dalam kalender Tamil, periode perayaan empat hari
 ### customs BR festa-junina
-Festa Juni di Brasil bukan satu hari, melainkan sebulan penuh yang tersusun di sekitar hari raya Katolik (Catholic) Santo Antonius, Santo Yohanes, dan Santo Petrus: api unggun, tarian quadrilha, penganan manis dan gurih dari jagung, serta alun-alun yang dihiasi umbul-umbul. Forró, musik yang menjadi akarnya, didaftarkan IPHAN sebagai warisan budaya takbenda Brasil pada 2021, dan kota-kota di Timur Laut memperlakukan musim Juni sebagai jendela pariwisata dan pendapatan terbesar sepanjang tahun. Kalender keagamaan, kalender pertanian, dan ekonomi kota bertumpuk pada tanggal yang sama.
+Festa Juni di Brasil bukan satu hari, melainkan sebulan penuh yang tersusun di sekitar hari raya Katolik (Catholic) Santo Antonius, Santo Yohanes, dan Santo Petrus: api unggun, tarian quadrilha, penganan manis dan gurih dari jagung, serta alun-alun yang dihiasi umbul-umbul. Forró, musik yang menjadi akarnya, didaftarkan IPHAN sebagai warisan budaya takbenda Brasil pada 2021. Kalender keagamaan, kalender pertanian, dan ekonomi kota bertumpuk pada tanggal yang sama.
 ### date_rule BR festa-junina
 Bulan Juni, sekitar tiga hari orang suci yaitu Santo Antonius/Santo Yohanes/Santo Petrus
 ### customs CN farmers-harvest-festival
@@ -243,7 +243,7 @@ O Pongal é a festa da colheita tâmil do sul da Índia (South India), com quatr
 ### date_rule IN pongal
 Por volta do primeiro dia do mês de Thai no calendário tâmil, um período festivo de quatro dias
 ### customs BR festa-junina
-As festas juninas brasileiras não são um dia, e sim um mês inteiro organizado em torno dos dias católicos de Santo Antônio, São João e São Pedro: fogueiras, quadrilha, doces e salgados de milho, praças enfeitadas de bandeirinhas. O forró, música que está na sua raiz, foi registrado pelo IPHAN como patrimônio cultural imaterial brasileiro em 2021, e cidades do Nordeste tratam o ciclo junino como a maior janela de turismo e faturamento do ano. Calendário religioso, calendário agrícola e economia urbana se empilham nas mesmas datas.
+As festas juninas brasileiras não são um dia, e sim um mês inteiro organizado em torno dos dias católicos de Santo Antônio, São João e São Pedro: fogueiras, quadrilha, doces e salgados de milho, praças enfeitadas de bandeirinhas. O forró, música que está na sua raiz, foi registrado pelo IPHAN como patrimônio cultural imaterial brasileiro em 2021. Calendário religioso, calendário agrícola e economia urbana se empilham nas mesmas datas.
 ### date_rule BR festa-junina
 Em junho, por volta dos dias dos três santos: Santo Antônio, São João e São Pedro
 ### customs CN farmers-harvest-festival
