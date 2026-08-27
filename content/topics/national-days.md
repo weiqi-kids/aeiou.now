@@ -28,7 +28,7 @@
 - local_name: Independence Day
 - date: 08-15
 - rank: 1
-- source: https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays
+- source: https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf
 
 ## observance JP national-foundation-day
 - local_name: 建國記念の日

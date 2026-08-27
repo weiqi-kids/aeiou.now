@@ -22,7 +22,7 @@
 - local_name: Easter / Good Friday
 - date_rule: 春分後首個滿月後的星期日；全國假日清單列的是聖週五，不是復活節
 - rank: 3
-- source: https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays
+- source: https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf
 
 ## observance US easter-sunday
 - local_name: Easter Sunday

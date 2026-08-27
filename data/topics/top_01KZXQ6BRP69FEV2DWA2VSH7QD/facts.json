@@ -256,10 +256,12 @@
       "date_range_end": null,
       "popularity_rank": 5,
       "source_ids": [
-        "src_8881C7B43193D1F50ED0E47C"
+        "src_F5046CF0B0C8BCC5BD283FFA",
+        "src_A61C3F4E3D1BCAA881B75B37"
       ],
       "source_urls": [
-        "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays"
+        "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
+        "https://etribal.maharashtra.gov.in/Uploads/General/Public_Holidays_2025.pdf"
       ],
       "occurrences": [
         {
@@ -615,7 +617,9 @@
     "src_6DFD76B82DF608B35353178A",
     "src_8881C7B43193D1F50ED0E47C",
     "src_8ADF07F096907DFC86796ED4",
+    "src_A61C3F4E3D1BCAA881B75B37",
     "src_F045C3336BEF6186024CF028",
+    "src_F5046CF0B0C8BCC5BD283FFA",
     "src_F936765E8EFFBF4BDCD32B47",
     "src_FF4B224E905CC2C8CF8EAF05"
   ],
@@ -624,10 +628,12 @@
     "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
     "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays",
     "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
+    "https://etribal.maharashtra.gov.in/Uploads/General/Public_Holidays_2025.pdf",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+    "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
     "https://www.usa.gov/holidays",
     "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
   ],
-  "content_updated_at": "2026-08-27T03:00:47.744Z",
-  "content_hash": "e9e5cfa83ca9c768932f87284b2ee334f49e4d063ec98cf6dcdbd612d4d83f3b"
+  "content_updated_at": "2026-08-27T03:18:55.389Z",
+  "content_hash": "92b1a6a78fdca7a58613e37130f05bc86964ad3f7309558eb15ac72c99965f4d"
 }

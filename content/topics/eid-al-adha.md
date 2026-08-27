@@ -16,7 +16,7 @@
 - local_name: Id-ul-Zuha (Bakrid)
 - date_rule: 伊斯蘭曆 Dhul Hijjah 月初十；列在全國假日清單
 - rank: 2
-- source: https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays
+- source: https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf
 
 ## observance US eid-al-adha
 - local_name: Eid al-Adha

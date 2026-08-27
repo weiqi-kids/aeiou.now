@@ -1,4 +1,12 @@
-# 假日總表頁型:國家 × 年份(設計提案,2026-08-26;**未實作,等用戶核准**)
+# 假日總表頁型:國家 × 年份(2026-08-26 提案 → **2026-08-27 用戶核准並上線**)
+
+> 本檔是**當時的設計提案**,保留是為了留下「為什麼這樣做」的緣由。
+> 現況一律用指令查(頁數、哪幾格產得出來、線上是不是最新版都會變):
+> `curl -s https://aeiou.now/sitemap.xml | grep -c '/holidays/'`、
+> `(cd site && LOCALE=zh-TW pnpm build) && ls site/dist/holidays/*/`。
+> 實作位置:`site/src/lib/holidays.mjs`(唯一判準)、
+> `site/src/pages/holidays/[country]/[year].astro`、
+> 資料 `content/national-holiday-calendars.json` 與 `content/holiday-system-notes.json`。
 
 ## 為什麼要有這一層
 
@@ -68,9 +76,25 @@ Topic 只是**掛進去**:某一天若對應到站上的 Topic,那一列就連�
 - 版面:一張依日期排的表(日期／星期／名稱／法律位置／連到 Topic),不加熱度、不加討論室。
 - 薄頁不產出的判準沿用 `country-cells.mjs` 的做法:某國某年資料不完整就不產那一頁。
 
-## 待用戶決定
+## 用戶怎麼決定的(2026-08-27)
 
-1. 這一層要不要做(它偏離草案)。
-2. 做的話,要不要連 `content/national-holiday-calendars.json` 這份新權威資料一起做 ——
-   **不做這份就只能從 Topic 反推,而那會產出不完整的假日清單**,我不建議。
-3. 七站 × 七國全開,還是只開「本市場那一國」(需求實測集中在本國:`feriados 2027` 是巴西人問巴西)。
+1. **做**(接受它偏離草案)。
+2. **連權威資料一起做** —— `content/national-holiday-calendars.json` 逐國公告抄錄,不從 Topic 反推。
+3. **七站 × 七國全開**(不是只開本市場那一國)。
+
+## 上線後補的兩件事(2026-08-27)
+
+- **站內入口**:上線當天用 URL Inspection 抽驗四個假日頁,全部是 `URL is unknown to Google`、
+  `referringUrls` 0 —— 這個頁型當時**站內一個連結都沒有**,只有 sitemap 一條發現路徑,
+  與 `/rankings/3m/` 變成全站唯一 Discovered-not-indexed 的成因完全一樣。
+  現在逐國頁(`/topic/<slug>/<cc>/`)底部有「<國>的假日總表」入口,判準共用 `holidayCellsFor()`。
+- **IndexNow**:`scripts/indexnow.mjs` 原本只認 Topic 變動,147 個新網址一次都沒送過;
+  且它在 CI 是獨立 job(只 checkout 不 build),讀 `site/dist/sitemap.xml` 永遠讀不到 ——
+  逐國頁那一段從上線以來也是靜靜地送 0 筆。已改成抓**線上** sitemap,並讓假日總表用自己的
+  資料指紋觸發(`data/meta/stamps.json` 的 `holidays`)。
+
+## 已知的資料品質限制(逐項見 docs/TODO.md 的「假日母表」段)
+
+`date_status: estimated` 只說「日期還沒公告」,說不出「這一年的欄位語意與別年不同」——
+中國 2026 的起迄是含調休的實際放假,2027/2028 是法定天數區間。所以另有一層
+**逐年說明**(`holiday-system-notes.json` 的 `year_notes`,七語),印在表格上方。

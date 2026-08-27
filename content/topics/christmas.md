@@ -48,7 +48,7 @@
 - local_name: Christmas Day
 - date: 12-25
 - rank: 1
-- source: https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays
+- source: https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf
 
 ## locale zh-TW
 ### title

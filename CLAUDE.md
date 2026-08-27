@@ -38,6 +38,8 @@
 | i18n 有沒有未翻的佔位 | `grep -l '\[TODO\]' site/src/i18n/*.json` |
 | 七檔 i18n key 是否一致 | `python3 -c "import json,glob; s={f:set(json.load(open(f))) for f in glob.glob('site/src/i18n/*.json')}; b=s['site/src/i18n/zh-TW.json']; print(all(v==b for v in s.values()), len(b))"` |
 | 靜態 JSON 產出了什麼 | `find data -type f -name '*.json' \| sort` |
+| **假日總表產得出幾格**(七站門檻各自算,別引用寫死數字) | `curl -s https://<站網域>/sitemap.xml \| grep -c '/holidays/'`;本機逐格看 `(cd site && LOCALE=zh-TW pnpm build) && ls site/dist/holidays/*/` |
+| **某個新頁型 Google 到底來過沒有**(判「上線了但沒效果」的第一步) | `inspectUrl` 看 `coverageState` 與 `lastCrawlTime`;`referringUrls` 是 0 就是**沒有站內入口**,那是自己的問題不是 Google 的 |
 | **sitemap 的 lastmod 有沒有漏頁** | `curl -s https://aeiou.now/sitemap.xml \| grep -c '<lastmod>'` 與 `\| grep -c '<loc>'` —— 兩個數字**必須相等**;時間戳來自 `data/meta/stamps.json`(含 `render` = `site/src` 指紋,所以純模板改版也會推新) |
 | **Google 上次來爬是什麼時候**(判「改版看不到效果」是不是因為它還沒來) | 用 `inspectUrl` 看 `lastCrawlTime`;GSC 資料本身固定落後 2–3 天,改版當天查一定看不到 |
 | repo 有哪些站 | `gh repo list weiqi-kids --limit 100 \| grep aeiou` |
@@ -96,6 +98,7 @@ World
 | **排行榜**(`/rankings/<窗>/`) | 純 Topic 排名 | 24H/72H/7D/1M/3M/1Y 切換**只在這裡** |
 | **Topic 頁**(`/topic/<slug>/`) | 單一看板 | ❌ 熱度時窗切換 ❌ 徽章 `<ul>` ❌ 七語堆疊 |
 | **逐國頁**(`/topic/<slug>/<cc>/`) | 一個 Topic 在**一個國家**的答案(2026-08-26 用戶核准) | ❌ 討論室 ❌ 在地/活動區塊 ❌ 熱度 |
+| **假日總表**(`/holidays/<cc>/<年>/`) | 一個**國家**在一年裡的**全部**法定假日,依日期排(2026-08-27 用戶核准) | ❌ 熱度 ❌ 討論室 ❌ 從 Topic 反推的清單 |
 
 > **判準:同一批資料在同一頁出現兩次,就是階層沒分清楚。**
 
@@ -115,6 +118,23 @@ World
   門檻 260 字元的實測依據寫在該檔註解。
 - 查法:`(cd site && LOCALE=zh-TW pnpm build) && ls site/dist/topic/ramadan-and-eid/`
 
+### 假日總表(2026-08-27 用戶核准;草案沒有這一層,提案見 `docs/briefs/holidays-index.md`)
+
+`/holidays/<國碼小寫>/<年>/`,七站 × 七國各自算門檻。**軸與逐國頁不同**:逐國頁是
+「一個 Topic 在一個國家」,這一頁是「一個國家在一年裡的全部假日」。
+
+- 🔴 **資料是獨立權威,不從 Topic 反推**:`content/national-holiday-calendars.json`
+  (逐國年度公告抄錄)+ `content/holiday-system-notes.json`(制度說明與**逐年說明**,七語)。
+  Topic 覆蓋不等於一國的法定假日清單 —— 一份漏掉國慶日的假日表比沒有這一頁更糟。
+- **薄頁不產出**:判準只有一份 `site/src/lib/holidays.mjs`(`holidayCellsFor`),
+  getStaticPaths、sitemap、逐國頁的入口三處都吃它,所以不會連到 404。
+- **`date_status` 說不出「欄位語意逐年不同」**:中國 2026 的起迄是含調休的實際放假,
+  2027/2028 是法定天數區間。這種差異走 `year_notes`(七語),印在表格上方,不能只靠標籤。
+- **它沒有站內入口就等於不存在**:上線當天 URL Inspection 抽驗四頁全是
+  `URL is unknown to Google`、`referringUrls` 0(同 `/rankings/3m/` 那次)。
+  入口現在掛在逐國頁底部;`scripts/indexnow.mjs` 也吃 `holidays` 這份資料指紋。
+- 查法:`curl -s https://aeiou.now/sitemap.xml | grep -c '/holidays/'`;
+  逐格看:`(cd site && LOCALE=zh-TW pnpm build) && ls site/dist/holidays/*/`
 
 ### 導覽 = Topic 的排序
 
@@ -237,6 +257,12 @@ content/topics/<slug>.md   ←── 人工編輯(唯一入口)
 - `data/` 與 `db/aeiou.sqlite` 的這三張表(topic_i18n/topic_observances/topic_observance_i18n)
   都是**產物**,直接改會被下次匯入/匯出蓋掉。
 - import **不碰 `topic_scores`**(分數屬排程,不是內容)。
+
+**假日總表是另一份權威資料,不走 Topic 那條管線**:`content/national-holiday-calendars.json`
+(逐國年度公告抄錄;逐國片段用 `node scripts/merge-holiday-calendars.mjs <stageDir>` 併入)
+與 `content/holiday-system-notes.json`(制度說明 `text` + 逐年說明 `year_notes`,皆七語)。
+兩者由 `export-data.mjs` 直接輸出到 `data/holidays/`,**不進 SQLite** ——
+所以改完不必 import,跑 export 再 build 就看得到。
 
 ---
 

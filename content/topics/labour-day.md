@@ -34,7 +34,8 @@
 - local_name: Labour Day / May Day
 - date: 05-01
 - rank: 5
-- source: https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays
+- source: https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf
+- source: https://etribal.maharashtra.gov.in/Uploads/General/Public_Holidays_2025.pdf
 
 ## observance JP golden-week
 - local_name: ゴールデンウィーク
@@ -64,7 +65,7 @@
 ### customs ID hari-buruh
 印尼把五月一日的國際勞動節列為國定假日，寫在每年的三部會聯合公告裡，與宗教節日、國慶並列在同一份清單上。這是相對晚近的安排——它被放進國定假日之後，五一在印尼同時是休息日與遊行日，兩種用法在同一天並存。
 ### customs IN labour-day
-印度的全國假日清單裡**沒有**五月一日。May Day 在馬哈拉施特拉、泰米爾納德等邦是邦級假日，其他地方則照常上班——所以同一天在印度境內有的地方放假、有的沒有。這是印度假日制度的常態：全國清單很短，真正影響生活的多半是邦級與機構層級的清單。
+印度的全國假日清單裡**沒有**五月一日:二○二六年公告的十七個必放日裡,五月一日是佛陀誕辰(Budha Purnima)。五一放不放假由各邦自己決定,而且掛的名目未必是勞動節——馬哈拉施特拉邦的官方假日公告(馬拉地文的邦公報)把五月一日列為 Maharashtra Din,紀念的是一九六○年建邦,不是勞動;其他邦則各有各的清單。這是印度假日制度的常態:全國清單很短,真正影響生活的多半是邦級與機構層級的清單。
 ### customs JP golden-week
 日本的五月一日不是國民の祝日，那天照常上班上學。真正放假的是它前後：四月二十九日的昭和の日、五月三日的憲法記念日、五月四日的みどりの日、五月五日的こどもの日——四個祝日擠在一週內形成黃金週，五月一日夾在中間反而是工作日。有些公司會自行把它排成休假，但那是企業決定，不是國家的。
 ### customs US labor-day
@@ -86,7 +87,7 @@ In Brazil, 1 May is a national holiday under Law 662, sitting alongside New Year
 ### customs ID hari-buruh
 Indonesia lists International Workers' Day on 1 May as a national holiday, written into the annual joint ministerial decree alongside religious festivals and independence day on the same sheet. This is a relatively recent arrangement — since it entered the national holiday list, 1 May in Indonesia has been both a rest day and a march day, with both uses sitting on the same date.
 ### customs IN labour-day
-India's national holiday list does **not** contain 1 May. May Day is a state holiday in Maharashtra, Tamil Nadu and others, while elsewhere it is an ordinary working day — so on the same date some places in India close and some do not. This is normal for the Indian holiday system: the national list is short, and what actually shapes daily life is usually the state list and the institution's own list.
+India's national holiday list does **not** contain 1 May: among the seventeen compulsory days gazetted for 2026, that date is Budha Purnima. Whether 1 May is a day off is decided state by state, and the name on it need not be Labour Day — Maharashtra's own holiday notification (the state gazette, in Marathi) lists 1 May as Maharashtra Din, marking the state's formation in 1960 rather than labour; every other state keeps its own list. This is normal for the Indian holiday system: the national list is short, and what actually shapes daily life is usually the state list and the institution's own list.
 ### customs JP golden-week
 1 May is not a national holiday in Japan, and it is an ordinary working and school day. The holidays sit around it: Showa Day on 29 April, Constitution Day on 3 May, Greenery Day on 4 May and Children's Day on 5 May — four public holidays inside a single week make up Golden Week, with 1 May caught in the middle as a working day. Some companies schedule it as leave on their own, but that is a company decision rather than a national one.
 ### date_rule JP golden-week
@@ -112,7 +113,7 @@ The first Monday of September (not May 1).
 ### customs ID hari-buruh
 インドネシアは5月1日の国際労働者の日を国の祝日とし、毎年の三省庁合同告示に宗教の祭日や独立記念日と同じ一覧に並べて記載している。これは比較的新しい扱いである。国の祝日一覧に入って以来、インドネシアの5月1日は休息の日であると同時に行進の日でもあり、二つの用法が同じ日付の上に併存している。
 ### customs IN labour-day
-インドの全国祝日一覧に5月1日は**ない**。メーデーはマハーラーシュトラやタミル・ナードゥなどでは州の祝日だが、それ以外の地域では通常の勤務日である。したがって同じ日でもインド国内で休むところと休まないところがある。これはインドの祝日制度では普通のことだ。全国の一覧は短く、生活を実際に左右するのはたいてい州の一覧と所属機関の一覧である。
+インドの全国祝日一覧に5月1日は**ない**。二〇二六年に告示された十七日の必休日のうち、5月1日はブッダ・プールニマである。5月1日を休みにするかどうかは州ごとの判断で、しかも掲げる名目がメーデーとはかぎらない——マハーラーシュトラ州の祝日告示(マラーティー語の州官報)は5月1日を Maharashtra Din として挙げており、記念しているのは一九六〇年の州の成立であって労働ではない。ほかの州もそれぞれ自分の一覧を持つ。これはインドの祝日制度では普通のことだ。全国の一覧は短く、生活を実際に左右するのはたいてい州の一覧と所属機関の一覧である。
 ### customs JP golden-week
 日本の5月1日は国民の祝日ではなく、通常の勤務日・登校日である。休日はその前後にある。4月29日の昭和の日、5月3日の憲法記念日、5月4日のみどりの日、5月5日のこどもの日——一週間に四つの祝日が集まってゴールデンウィークを形づくり、5月1日はその間に挟まれた平日になる。独自に休業日とする企業もあるが、それは企業の判断であって国の定めではない。
 ### date_rule JP golden-week
@@ -138,7 +139,7 @@ The first Monday of September (not May 1).
 ### customs ID hari-buruh
 印度尼西亚把5月1日的国际劳动节列为国定假日，写在每年的三部会联合公告里，与宗教节日、国庆并列在同一份清单上。这是相对晚近的安排——它被放进国定假日之后，五一在印尼同时是休息日与游行日，两种用法在同一天并存。
 ### customs IN labour-day
-印度的全国假日清单里**没有**5月1日。May Day 在马哈拉施特拉、泰米尔纳德等邦是邦级假日，其他地方则照常上班——所以同一天在印度境内有的地方放假、有的没有。这是印度假日制度的常态：全国清单很短，真正影响生活的多半是邦级与机构层级的清单。
+印度的全国假日清单里**没有**5月1日:二〇二六年公告的十七个必放日里,5月1日是佛陀诞辰(Budha Purnima)。五一放不放假由各邦自己决定,而且挂的名目未必是劳动节——马哈拉施特拉邦的官方假日公告(马拉地文的邦公报)把5月1日列为 Maharashtra Din,纪念的是一九六〇年建邦,不是劳动;其他邦则各有各的清单。这是印度假日制度的常态:全国清单很短,真正影响生活的多半是邦级与机构层级的清单。
 ### customs JP golden-week
 日本的5月1日不是国民の祝日，那天照常上班上学。真正放假的是它前后：4月29日的昭和の日、5月3日的宪法记念日、5月4日的みどりの日、5月5日的こどもの日——四个祝日挤在一周内形成黄金周，5月1日夹在中间反而是工作日。有些公司会自行把它排成休假，但那是企业决定，不是国家的。
 ### date_rule JP golden-week
@@ -164,7 +165,7 @@ The first Monday of September (not May 1).
 ### customs ID hari-buruh
 इंडोनेशिया 1 मई के अंतरराष्ट्रीय श्रमिक दिवस को राष्ट्रीय अवकाश मानता है, जो हर वर्ष के तीन-मंत्री संयुक्त आदेश में धार्मिक पर्वों और स्वतंत्रता दिवस के साथ उसी सूची में दर्ज होता है। यह अपेक्षाकृत नई व्यवस्था है — राष्ट्रीय अवकाश सूची में आने के बाद से इंडोनेशिया का 1 मई एक साथ विश्राम का दिन भी है और जुलूस का दिन भी; दोनों उपयोग एक ही तारीख़ पर टिके हैं।
 ### customs IN labour-day
-भारत की राष्ट्रीय अवकाश सूची में 1 मई **नहीं** है। मई दिवस महाराष्ट्र, तमिलनाडु और कुछ अन्य राज्यों में राज्य अवकाश है, जबकि अन्यत्र वह सामान्य कार्यदिवस है — यानी एक ही तारीख़ पर भारत के भीतर कहीं बंदी है, कहीं नहीं। भारतीय अवकाश व्यवस्था में यह सामान्य है: राष्ट्रीय सूची छोटी है, और रोज़मर्रा को असल में आकार राज्य की सूची और संस्था की अपनी सूची देती है।
+भारत की राष्ट्रीय अवकाश सूची में 1 मई **नहीं** है: 2026 के लिए अधिसूचित सत्रह अनिवार्य राजपत्रित दिनों में उस तारीख़ पर बुद्ध पूर्णिमा है। 1 मई की छुट्टी होगी या नहीं, यह हर राज्य अपने स्तर पर तय करता है, और उस दिन पर लगा नाम मई दिवस ही हो, यह ज़रूरी नहीं — महाराष्ट्र की अपनी अवकाश अधिसूचना (मराठी में छपा राज्य राजपत्र) 1 मई को महाराष्ट्र दिन के रूप में दर्ज करती है, जो 1960 में राज्य के गठन का स्मरण है, श्रम का नहीं; बाक़ी हर राज्य अपनी सूची अलग रखता है। भारतीय अवकाश व्यवस्था में यह सामान्य है: राष्ट्रीय सूची छोटी है, और रोज़मर्रा को असल में आकार राज्य की सूची और संस्था की अपनी सूची देती है।
 ### customs JP golden-week
 जापान में 1 मई राष्ट्रीय अवकाश नहीं है और वह सामान्य कार्य व विद्यालय दिवस होता है। अवकाश उसके आगे-पीछे हैं: 29 अप्रैल का शोवा दिवस, 3 मई का संविधान दिवस, 4 मई का हरियाली दिवस और 5 मई का बाल दिवस — एक ही सप्ताह में चार सार्वजनिक अवकाश मिलकर गोल्डन वीक बनाते हैं, और 1 मई बीच में फँसा कार्यदिवस रह जाता है। कुछ कंपनियाँ इसे स्वयं अवकाश रखती हैं, पर वह कंपनी का निर्णय है, राष्ट्र का नहीं।
 ### date_rule JP golden-week
@@ -190,7 +191,7 @@ Di Brasil, 1 Mei adalah hari libur nasional menurut Undang-Undang 662, sejajar d
 ### customs ID hari-buruh
 Indonesia mencantumkan Hari Buruh Internasional pada 1 Mei sebagai hari libur nasional, tertulis dalam SKB tiga menteri tiap tahun, sederet dengan hari raya keagamaan dan hari kemerdekaan pada lembar yang sama. Ini pengaturan yang relatif baru — sejak masuk daftar hari libur nasional, 1 Mei di Indonesia sekaligus menjadi hari istirahat dan hari turun ke jalan, dua penggunaan yang duduk pada tanggal yang sama.
 ### customs IN labour-day
-Daftar hari libur nasional India **tidak** memuat 1 Mei. May Day adalah hari libur negara bagian di Maharashtra, Tamil Nadu, dan beberapa lainnya, sementara di tempat lain ia hari kerja biasa — jadi pada tanggal yang sama sebagian wilayah India tutup dan sebagian tidak. Ini normal bagi sistem hari libur India: daftar nasionalnya pendek, dan yang benar-benar membentuk keseharian biasanya daftar negara bagian dan daftar institusi masing-masing.
+Daftar hari libur nasional India **tidak** memuat 1 Mei: di antara tujuh belas hari wajib yang diumumkan untuk 2026, tanggal itu adalah Budha Purnima. Libur atau tidaknya 1 Mei diputuskan masing-masing negara bagian, dan nama yang dipasang pun belum tentu Hari Buruh — pengumuman hari libur Maharashtra sendiri (lembaran negara bagian, dalam bahasa Marathi) mencatat 1 Mei sebagai Maharashtra Din, yang memperingati pembentukan negara bagian itu pada 1960, bukan kaum pekerja; negara bagian lain punya daftarnya sendiri-sendiri. Ini normal bagi sistem hari libur India: daftar nasionalnya pendek, dan yang benar-benar membentuk keseharian biasanya daftar negara bagian dan daftar institusi masing-masing.
 ### customs JP golden-week
 1 Mei bukan hari libur nasional di Jepang, dan ia hari kerja serta hari sekolah biasa. Hari liburnya berada di sekitarnya: Hari Showa pada 29 April, Hari Konstitusi pada 3 Mei, Hari Hijau pada 4 Mei, dan Hari Anak pada 5 Mei — empat hari libur dalam satu pekan membentuk Golden Week, dengan 1 Mei terjepit di tengah sebagai hari kerja. Sebagian perusahaan menjadwalkannya sebagai cuti sendiri, tetapi itu keputusan perusahaan, bukan negara.
 ### date_rule JP golden-week
@@ -216,7 +217,7 @@ No Brasil, 1º de maio é feriado nacional pela Lei 662, ao lado do Ano-Novo e d
 ### customs ID hari-buruh
 A Indonésia lista o Dia Internacional dos Trabalhadores, em 1º de maio, como feriado nacional, escrito no decreto interministerial anual ao lado de festas religiosas e do dia da independência, na mesma folha. É um arranjo relativamente recente — desde que entrou na lista nacional, o 1º de maio indonésio é ao mesmo tempo dia de descanso e dia de passeata, com os dois usos ocupando a mesma data.
 ### customs IN labour-day
-A lista de feriados nacionais da Índia **não** contém 1º de maio. O Dia do Trabalho é feriado estadual em Maharashtra, Tamil Nadu e outros, enquanto em outros lugares é dia útil comum — então, na mesma data, parte da Índia fecha e parte não. Isso é normal no sistema indiano de feriados: a lista nacional é curta, e o que de fato molda o cotidiano costuma ser a lista estadual e a lista da própria instituição.
+A lista de feriados nacionais da Índia **não** contém 1º de maio: entre os dezessete dias obrigatórios publicados para 2026, essa data é o Budha Purnima. Se 1º de maio é folga ou não, quem decide é cada estado — e o nome do dia nem sempre é Dia do Trabalho: a própria notificação de feriados de Maharashtra (o diário oficial do estado, em marata) registra 1º de maio como Maharashtra Din, que lembra a criação do estado em 1960, e não os trabalhadores; cada um dos demais estados mantém a sua lista. Isso é normal no sistema indiano de feriados: a lista nacional é curta, e o que de fato molda o cotidiano costuma ser a lista estadual e a lista da própria instituição.
 ### customs JP golden-week
 1º de maio não é feriado nacional no Japão, e é um dia normal de trabalho e de aula. Os feriados ficam em volta: Dia de Showa em 29 de abril, Dia da Constituição em 3 de maio, Dia do Verde em 4 de maio e Dia das Crianças em 5 de maio — quatro feriados dentro de uma única semana formam a Golden Week, com 1º de maio preso no meio como dia útil. Algumas empresas o marcam como folga por conta própria, mas isso é decisão da empresa, não do país.
 ### date_rule JP golden-week

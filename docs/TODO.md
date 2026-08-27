@@ -829,6 +829,73 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
     ```
     契約 §1b。
 
+## 這一輪的收尾(2026-08-27):13 個新 Topic + 假日母表上線後留下的東西
+
+**成效一句都還不能講** —— 這輪改動在 08-26/27,而 GSC 的資料窗本身固定落後 2–3 天,
+新頁的曝光筆數是 0(是「還沒進資料」,不是「差」)。判「有沒有效」之前先確認 Google 重爬過:
+`inspectUrl` 的 `lastCrawlTime`。08-27 抽驗的結果**已經**回答了一件事:
+
+| 抽驗網址 | coverageState | lastCrawlTime | referringUrls |
+|---|---|---|---|
+| `/holidays/{tw,br,jp}/2027/`、`/holidays/cn/2026/` | URL is unknown to Google | never | **0** |
+| `/topic/{carnival,halloween,shopping-festivals,tanabata-and-qixi,equinox-and-seasonal-turns}/` | URL is unknown to Google | never | 0 |
+| `/topic/war-dead-and-veterans/`、`/topic/womens-day/`、`/topic/ramadan-and-eid/id/` | Submitted and indexed | 08-25～08-26 | 1–4 |
+
+→ 同一天上線的新頁,有站內連結的已被索引、沒有的一個都還沒被發現。
+**`referringUrls` 0 是自己的問題,不是 Google 慢。** 已修的兩件見下。
+
+- [x] **假日總表接上站內入口**(逐國頁底部「<國>的假日總表」,判準共用 `holidayCellsFor()`)。
+- [x] **IndexNow 涵蓋新頁**:`scripts/indexnow.mjs` 原本只認 Topic 變動 → 147 個假日網址
+      一次都沒送過;更糟的是它在 CI 是獨立 job(只 checkout 不 build),讀
+      `site/dist/sitemap.xml` **永遠讀不到**,所以逐國頁那一段從 08-26 上線以來也是
+      靜靜地送 0 筆。已改成抓**線上** sitemap(逐 origin 各自一份,就是真的上線的那一份)。
+      查:`node scripts/indexnow.mjs --dry-run`(七站各應有數百筆,不是幾十筆)。
+- [x] **17 個 active Topic 沒排進 52 週日曆**(含這輪 11 個新的與 carnival / exam-season /
+      islamic-calendar-days):已依實際發生週次補進 `content/topic-calendar.json`。
+      `check-topic-calendar.mjs` 只驗「每週至少一個」,所以它擋不下這種漏 ——
+      查法是比對兩邊:週次清單 vs `topics` 的可見 manual Topic。
+- [x] **中國 2027/2028 的日期語意**:2026 是含調休的實際放假起迄,2027/2028 是法定天數區間。
+      只靠 `date_status: estimated` 說不出這件事 → 新增 `year_notes`(七語)印在表格上方。
+- [x] **印度來源換掉觀光英文頁**(推翻 08-26 的「這台主機做不到」,見下一節)。
+- [ ] **13 個新 Topic 沒有任何 places / events**。全站掛得到地點/活動的 Topic 數用指令查:
+      `sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT topic_id) FROM place_topics"`(events 同理)。
+- [ ] **首頁同一個 Topic 仍會出現在兩個區塊**。08-26 只改了 TodayWorld 印什麼字(解掉重複文字),
+      沒有動版面。「要不要讓同一個 Topic 不同時出現在兩區」屬草案權威 + 用戶決定,不自行改。
+- [ ] **七夕拆出獨立 Topic 偏離草案 §6/§48**(把七夕畫成 Valentine's Day 的分支),
+      理由與 §58「把它列為搜尋結果的並列項」對衝。當時用戶核准了拆分,這裡只記錄這個偏離
+      本身沒有回頭處理;要收回就是把 `tanabata-and-qixi` 併回 `affection-and-reciprocity`。
+
+### 假日母表的資料品質(都已標註,尚未解)
+
+- **中國**:記者節(11/8)整筆沒收(所有可達的 `.gov.cn` 頁都驗不到日期);
+  第四條的少數民族節日整批沒收(國家層級不存在清單)。
+- **印度**:`hazrat-ali-birthday` 少了 2026-12-23 那一列 —— 2026 年有兩個 13 Rajab,
+  而 schema 是「一年一個日期」塞不下;statutory 17 天裡只有 14 天全國強制,
+  另外 3 天由各地 CGEWCC 自選,schema 也表達不出來。
+- **印尼**:Nyepi 2027 日期存疑(我方演算法 3/9,峇里曆網站 3/8);
+  commemorative 類完全沒有(Hari Kartini 等各由獨立 Keppres 訂,找不到彙整)。
+- **日本**:2028 的「無振替休日」結論繼承 estimated —— 2027 年 2 月官報公告春分/秋分後要重跑。
+- **台灣**:2028 端午(5/28 週日)的補假未填(規則上必有,公告未出,**不自己生**)。
+- **巴西**:Good Friday 的法律定性未釐清 —— MGI 表印 feriado nacional,
+  而 Lei 9.093/1995 把它列為市定宗教假日。屬 `easter.md` 的範圍。
+
+### Topic 內容的已知問題
+
+- `shopping-festivals` 的 IN `big-billion-days` 三年日期相同且無官方來源(估計佔位)。
+- `beer-festivals` 的 2027/2028 全部 estimated(從單一年度反推規律),公告出來要覆蓋;
+  兩個青島來源仍是 `http://` —— 見下面「卡點」。
+- `long-holiday-weeks` 與 `labour-day` 同時掛著 JP `golden-week`(同一個 observance 在兩個
+  Topic)。repo 有先例,判斷保留;要改就是挑一邊當主、另一邊改用 regional note。
+
+### 卡點(外部因素)
+
+- **`beer-festivals` 兩個青島來源仍是 `http://`**:伺服器只送 leaf、不送中介憑證,
+  瀏覽器走 AIA 補得回來,Node 的 fetch 不會 → 守門永遠 `fetch failed`。
+  解鎖條件:青島市政府補送中介憑證,或守門支援 AIA。
+- **74 個來源從未被驗證**:46 個被擋/暫時失敗(403/5xx)+ 28 個 robots `Disallow: /`
+  (主要 `law.moj.gov.tw`)。前者要從別的網路出口複驗,後者只能人工開。
+  🔴 403 一律當「不准抓」,不換 UA、不重試、不繞路。
+
 ## 已知缺口(記錄在案,暫不解)
 
 - [x] **列表頁 cover 縮圖**(2026-08-16):新增 `site/public/covers/thumbs/*.webp`
@@ -929,13 +996,37 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
 - **trend 與 event_website 來源從沒抓過**:`source-refresh.mjs --report` 顯示
   trend 303 筆「抓過 0」、event_website 15 筆「抓過 0」。
 
-## 印度來源換成當地語言版 —— ⛔ 這台主機做不到(2026-08-26 查證)
+## 印度來源換成當地語言版 —— ✅ 已解(2026-08-27),但**不是**靠 dopt.gov.in
+
+**08-26 的結論下錯了一半**:對的是「印度中央部會的網域從兩條網路都進不去」,
+錯的是由此推論「換不掉」。DoPT 那份年度 O.M. 本身是**被各中央機關轉貼的**,
+而那些機關的網域進得去:
+
+| 換上去的來源 | 這是什麼 | 本機 curl |
+|---|---|---|
+| `dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf` | 2026 年 17 天必放的 gazetted holidays,抬頭直接寫「As per DOPT OM No.F.No.12/2/2023-JCA dated 03 July 2025」 | 200(PDF,可抽文字) |
+| `etribal.maharashtra.gov.in/Uploads/General/Public_Holidays_2025.pdf` | 馬哈拉施特拉邦公報,**馬拉地文** | 200 |
+
+七筆 IN 的 WARN 全部消掉(`node scripts/check-content-depth.mjs` 現在 0 筆 ⚠️),
+`affection-and-reciprocity/IN/valentine-week` 那筆的「來源撐不住主張」也一併解決 ——
+那段散文本來就是在論證「全國清單十七項裡沒有情人節」,現在指的就是那份清單本身。
+
+⚠ **順帶抓到一個內容錯誤**:`labour-day/IN` 七語都寫「May Day 在馬哈拉施特拉、
+泰米爾納德等邦是邦級假日」。翻開馬拉地文的邦公報,五月一日那一列寫的是
+**महाराष्ट्र दिन(Maharashtra Din,建邦紀念日)**,不是勞動節 —— 同一天放假,
+名目是另一件事。七語散文已改成講這件事。**只用英文來源就看不到這一層**,
+這正是那條紅線要防的。(泰米爾納德那半沒有可達的官方來源佐證,已刪。)
+
+**仍然做不到的**:`dopt.gov.in` 原始 O.M.、`india.gov.in` 的印地文行事曆。
+下表是 08-26 的實測;08-27 只抽驗了 `india.gov.in`、`mha.gov.in`、`labour.gov.in`、
+`dopt.gov.in` 四個(結果與表相同),其餘未複驗,保留備查。
+
 
 `check-content-depth.mjs` 的 9 筆 WARN,其中 7 筆是 IN,全部指向同一個網址:
 `https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays`
 (labour-day、christmas、national-days、easter、eid-al-adha、affection-and-reciprocity、ramadan-and-eid)。
 
-**為什麼沒換掉:印度政府網域從這台主機與 WebFetch 兩條網路都進不去。**
+**中央部會網域從這台主機與 WebFetch 兩條網路都進不去(08-26 全表實測;08-27 抽驗四個相同)。**
 逐一實測根目錄(判準是根目錄通不通,不是狀態碼幾號 —— 見 CLAUDE.md 該條紅線):
 
 | 網域 | 本機 curl | WebFetch |
@@ -955,18 +1046,18 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
 `/hi/plan-your-trip/public-holidays` 回 404,`/en/` 那頁的 title 是 `Public holidays`、
 देवनागरी 字元數 0。所以「回頭找同一站的當地語言版」在這一站不存在。
 
-**解鎖條件**:從另一條出口網路(用戶自己的機器、或別的 egress)驗證後,把
-DoPT 的年度假日 O.M.(`dopt.gov.in`)或 india.gov.in 的印地文行事曆換進去。
+**還沒解鎖的部分**:要引用 `dopt.gov.in` 的 O.M. 原檔或 india.gov.in 的印地文行事曆,
+仍然需要另一條出口網路。但這已經不擋內容 —— 轉貼那份 O.M. 的中央機關網域可用(見本節開頭)。
 
-⚠ **順便查到一個更嚴重的**:`affection-and-reciprocity/IN/valentine-week` 的來源也是那個
-「公眾假日」頁,但 Valentine Week **不是印度的公眾假日** —— 這一筆的來源根本撐不住它的主張,
-不是語言問題。要換的是內容不是路徑,屬文案/查證工作。
+~~⚠ 順便查到一個更嚴重的:`affection-and-reciprocity/IN/valentine-week` 的來源撐不住主張~~
+→ 2026-08-27 已解:那段散文論證的就是「全國清單裡沒有情人節」,來源換成清單本身即成立。
 
 **印尼那兩筆已解**:`kemenag.go.id` 去掉 `/en/` 同網址可用(200 + `lang="id"`),三處已換。
-剩 `fathers-day/ID` 的 `pa-tulungagung.go.id/en/…` —— 那站的 Joomla 會把 `/id/`、
-`index.php/` 全部導回 `/en/`(實測),文章本文是印尼文,只有樣板語言是 en。
-候選替代 `kemenpppa.go.id` 的新聞稿**整站在維護中**(根目錄 title 也是「Pemeliharaan Sistem」),
-不是文章沒了 —— 之後複驗再換。
+`fathers-day/ID` 的 `pa-tulungagung.go.id` 已改存**正規的印尼文路徑**(不帶 `/en/`);
+那站的 Joomla 仍會把任何路徑導回 `/en/`,但文章本文是印尼文(title `Hari Ayah Nasional |
+Sabtu, 12 November 2022`),`/en/` 只是樣板語言。守門的 WARN 因此消掉,而存的網址也更正確。
+候選替代 `ham.go.id`(法務與人權部人權總局,印尼文,講 2006 梭羅那場宣告)**從本機連不上**
+(000),之後複驗再考慮補上。
 
 ## 六個 civic Topic 的標題是句子不是名詞片語(2026-08-26 記錄,未解)
 

@@ -46,7 +46,7 @@
 - date: 02-07
 - date_end: 02-14
 - rank: 1
-- source: https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays
+- source: https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf
 
 ## observance ID valentine
 - local_name: Hari Valentine

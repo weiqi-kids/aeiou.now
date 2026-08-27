@@ -24,7 +24,7 @@
 - local_name: Id-ul-Fitr
 - date_rule: 伊斯蘭曆 Shawwal 月初一；印度的公告日期常比部分國家晚一天
 - rank: 3
-- source: https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays
+- source: https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf
 
 ## observance TW eid-al-fitr
 - local_name: 開齋節

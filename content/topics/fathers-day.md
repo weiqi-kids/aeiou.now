@@ -35,7 +35,7 @@
 - local_name: Hari Ayah Nasional
 - date: 11-12
 - rank: 5
-- source: https://www.pa-tulungagung.go.id/en/peraturan-dan-kebijakan/ucapan-selamat-dan-duka/1156-hari-ayah-nasional-sabtu-12-november-2022
+- source: https://www.pa-tulungagung.go.id/peraturan-dan-kebijakan/ucapan-selamat-dan-duka/1156-hari-ayah-nasional-sabtu-12-november-2022
 
 ## observance CN fathers-day
 - local_name: 父亲节（无官方地位）
