@@ -54,18 +54,51 @@ python3 -c "import glob;h=[open(f,encoding='utf-8').read() for f in glob.glob('s
 
 ---
 
-## B. 全新的 Topic 主題領域
+## B. 全新的 Topic 主題領域(2026-08-27 用戶拍板「全部增加」)
 
-現在 57 個 Topic 全是節日與制度。要把涵蓋面從「日曆」擴到「跨國生活」。
+### 先量需求,再寫內容 —— 這是本專案既有的規矩
 
-**卡點**:新內容要人寫 —— `content/topics/<slug>.md`,七個語系 + 每國至少一個官方來源
-(格式見 `docs/03-topic-content.md`,閘門 `node scripts/check-content-depth.mjs`)。
-這是四塊裡最重的一塊,而且**主題清單是用戶的東西**,不該由 Claude 代定。
+`scripts/check-final-topic-taxonomy.mjs` 的 `FINAL_SLUGS` 是白名單,而且每一個既有主題
+的註解都附著 Bing 實測搜尋量當理由(`七夕` @tw 1,438、`ハロウィン` @jp 11,047…)。
+所以新主題也照這條路走。工具:`node /root/seo-ops/bin/keyword-demand.mjs`。
 
-**要用戶給的**:新領域的清單。已知站上完全沒有的方向(僅供起頭,不是提案):
-生活成本、租屋與搬遷、就醫與保險、簽證與居留、職場慣例、學制與升學。
+**判讀邊界(工具檔頭寫得很清楚,照抄過來免得誤用)**:
+這是 **Bing** 的量不是 Google;**有量 = 可信的下限,`0` 只代表「Bing 量不到」**
+(2026-08-27 twdro.net 實測反例:GSC 有曝光的字本工具報 0)。
+⚠ Bing **沒有 id-ID**,印尼那一欄是 `country=id language=ms-MY` 勉強配對,只能看有無、不能看大小;
+印地文 `hi-IN` 幾乎全 0,印度改用英文量(那類查詢在印度本來就多半用英文)。
 
----
+### 量到的結果(exact 比對,2026-05-29 ~ 2026-08-26)
+
+| 領域 | 台灣 | 美國 | 日本 | 中國 | 巴西 | 印度(en) | 判斷 |
+|---|---|---|---|---|---|---|---|
+| **就醫與保險** | 健保 5,256 | health insurance 22,875 | 健康保険 9,408 | 医保 15,010 | SUS 12,745 | health insurance 1,513 | ✅ 七國全部有量,最強 |
+| **職場慣例** | 特休 5,352 | paid time off 959 | 有給休暇 16,085 | 年假 13,732 | férias 4,386 | overtime 171 | ✅ 強 |
+| **租屋與搬遷** | 租屋 3,743 | security deposit 1,318 | 賃貸 38,003 | 租房 42,701 | aluguel 5,153 | rent agreement 746 | ✅ 強 |
+| **簽證與居留** | 居留證 2,359 | visa 26,071 | 在留カード 18,957 | 签证 6,752 | visto 3,351 | visa 511 | ✅ 強 |
+| **生活成本** | 生活費 **21** | cost of living 1,553 | 生活費 687 | 生活成本 **76** | custo de vida **17** | cost of living 39 | ⚠ 詞選錯了,見下 |
+| **學制與升學** | 學制 **0**、升學 **0** | school system 55 | 学費 339 | 高考 382,207 | vestibular 1,628 | education system 32 | ⚠ 詞選錯了,見下 |
+
+### 兩個主題要改名 —— 不是砍掉,是改成人們真的會搜的那個詞
+
+- **生活成本 → 最低工資**。「生活費／生活成本／custo de vida」在五個市場都是兩位數,
+  但同一個議題的制度切面有量:**最低賃金 29,677、minimum wage 14,273、最低工資 1,082、
+  salário mínimo 3,532**。讀者搜的不是抽象的「生活成本」,是「法定最低工資是多少」。
+- **學制與升學 → 升學考試**。「學制／升學」在台灣是 **0**,但 **高考 382,207**(全表最大的一個字)、
+  **vestibular 1,628**、`受験`/`college admissions` 都有量。軸是**升學考試**,不是學制本身。
+  ⚠ 學制那一半已經有 `compulsory-education`(幾歲到幾歲)在管,不要重複。
+
+**共同的發現**:六個領域裡真正有量的頭部字**全部是制度的專有名稱**——
+健保、SUS、BPJS、在留カード、高考、vestibular、有給休暇。
+這正好是站上目前排 63 名的那一類(跨國/比較/制度規則),因為根本沒有頁面在答。
+
+### 待辦
+
+- [ ] 六個 `content/topics/<slug>.md`,七語 × 七國 + 每國至少一個官方來源
+      (格式 `docs/03-topic-content.md`;閘門 `check-content-depth.mjs`、`check-source-urls.mjs`)
+- [ ] 六個 slug 加進 `check-final-topic-taxonomy.mjs` 的 `FINAL_SLUGS`,註解附上上表的實測量
+- [ ] 這六個都**沒有 observance**(不是節日),title 後綴會走 `ruleSuffix`/`practiceSuffix`,
+      分類要選對(`category` 決定走哪一個,見 `site/src/lib/seo.mjs` 的註解)
 
 ## C. 逐主題題集 `/questions/<topic-slug>/` —— ✅ 已上線,七站各 24 頁
 
