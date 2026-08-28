@@ -99,6 +99,12 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
     const live = root.querySelector('.posts-live');
     if (loading) loading.hidden = state !== 'loading';
     if (live) live.hidden = state !== 'open';
+    // unavailable = 整塊安靜收掉(2026-08-28 用戶拍板)。
+    // 這一支長在首頁與三個清單頁的每一張 Topic 卡上,API 一掛就會**每張卡各印一次故障**
+    // —— 那正是 2026-08-20 事故的形狀(一頁 30 次)。所以卡片層不出聲,
+    // 由 Topic 頁自己的 DiscussionRoom 負責誠實說「討論室暫時無法載入」。
+    // ⚠ 因此**不要**再加「unavailable 時顯示某段文字」的分支:root 一 hidden 就永遠印不出來。
+    //   同一輪已清掉 .posts-closed-title / .posts-closed-hint 兩條沒有標記使用它的死 CSS。
     root.hidden = state === 'unavailable';
     root.dataset.roomState = state;
   }
@@ -264,23 +270,9 @@ const postsConfigJson = JSON.stringify(postsConfig).replace(/</g, '\\u003c');
     padding: 0.25rem 0 0.75rem 0.875rem;
     margin-block-end: 1rem;
   }
-  .posts[data-room-state='unavailable'] {
-    border-inline-start-color: var(--color-line-strong);
-  }
-  .posts-closed-title {
-    margin: 0 0 0.15rem;
-    font-size: var(--text-sm);
-    font-weight: 700;
-    color: var(--color-ink-soft);
-  }
   .posts-noscript {
     margin: 0;
     font-size: var(--text-sm);
-    color: var(--color-ink-muted);
-  }
-  .posts-closed-hint {
-    margin: 0;
-    font-size: var(--text-xs);
     color: var(--color-ink-muted);
   }
   /* 載入中:邊線維持中性(還不知道結果),不長得像錯誤 */

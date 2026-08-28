@@ -34,21 +34,21 @@ const participationConfigJson = JSON.stringify(participationConfig).replace(/</g
     <style>.q-p { display: none; }</style>
   </noscript>
 
-  <div class="q-p-fallback" hidden>
-    <p class="q-p-closed-note">{t('q.closed')}</p>
-  </div>
-
   <div class="q-p-live" hidden></div>
 </div>
 
 <script>
   function setState(root, state) {
-    const fallback = root.querySelector('.q-p-fallback');
     const loading = root.querySelector('.q-p-loading');
     const live = root.querySelector('.q-p-live');
-    if (fallback) fallback.hidden = state !== 'unavailable';
     if (loading) loading.hidden = state !== 'loading';
     if (live) live.hidden = state !== 'open';
+    // unavailable = 整塊安靜收掉(2026-08-28 用戶拍板)。
+    // 這一支跟 TopicPosts 一樣長在首頁與清單頁的卡片上,API 一掛就會**每張卡各印一次故障**
+    // —— 那正是 2026-08-20 事故的形狀(一頁 30 次)。所以卡片層不出聲,
+    // 由 Topic 頁自己的 DiscussionRoom 負責誠實說「討論室暫時無法載入」。
+    // ⚠ 因此這裡**不要**再寫「unavailable 時顯示某段文字」的分支:root 一 hidden 就永遠印不出來,
+    //   那是 2026-08-27 巡檢抓到的死碼。要改成會出聲,得先拿掉下面這一行。
     root.hidden = state === 'unavailable';
     root.dataset.qState = state;
   }
@@ -150,15 +150,11 @@ const participationConfigJson = JSON.stringify(participationConfig).replace(/</g
     background: var(--color-white);
     box-shadow: var(--shadow-card);
   }
-  .q-p[data-q-state='unavailable'] {
-    border-block-start-color: var(--color-line-strong);
-  }
   .q-p-heading {
     margin: 0 0 1rem;
     font-family: var(--font-display);
     font-size: var(--text-lg);
   }
-  .q-p-closed-note,
   .q-p-loading-note {
     margin: 0;
     font-size: var(--text-sm);

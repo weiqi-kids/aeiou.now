@@ -210,6 +210,13 @@ const observanceHeading = (observance) => (needsLocalName(observance)
 const marketCity = MARKET_CITY[LOCALE] || null;
 const places = placesForTopic(topicId, marketCity);
 const events = eventsForTopic(topicId, marketCity);
+// 兩區都沒資料時,桌機不要再把版面切成左右各半(2026-08-28 用戶拍板)。
+// 緣由:補完在地資料之後,七站仍有 45–54/71 的 Topic 頁是兩區皆空,
+// 於是「半版兩行空話 + 討論室被壓在 50% 裡」是多數頁的常態,不是例外。
+// 收窄過的做法:只有**兩區都空**才觸發(任一區有資料就完全維持 2026-08-11 定版的 50/50);
+// 觸發時整頁走單欄,DOM 順序一個字都沒動(還是 你附近 → 相關活動 → 大家正在聊),
+// 所以視覺順序與 tab 焦點順序仍然一致 —— 不用 CSS order,那正是上面那段註解在防的事。
+const localZonesEmpty = places.length === 0 && events.length === 0;
 const copy = seoCopy();
 // 哪些國家撐得起自己的頁(2026-08-26)。判準只有一份,見 lib/country-cells.mjs。
 const countryCells = countryCellsFor(facts, i18n);
@@ -743,7 +750,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
          免得視覺順序與 tab 焦點順序對不上。 -->
     <script type="application/json" data-card-reactions-config set:html={cardReactionsConfigJson} />
 
-    <div class="topic-zones">
+    <div class:list={['topic-zones', localZonesEmpty && 'zones-solo']}>
       <div class="zone-col">
         <section class="zone-local" id="nearby">
           <div class="section-head">
@@ -1842,6 +1849,15 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     }
     .zone-col {
       gap: clamp(1.25rem, 3vw, 2rem);
+    }
+    /* 兩區皆空:單欄,討論室吃滿寬(2026-08-28 用戶拍板)。
+       左欄不移除、也不隱藏 —— 讀者仍看得到這個 Topic 有「你附近／相關活動」這種東西,
+       只是收成兩行,不再佔掉半版。有任一區有資料時這條規則完全不生效。 */
+    .topic-zones.zones-solo {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .zones-solo .zone-col {
+      gap: clamp(0.75rem, 2vw, 1.25rem);
     }
     /* 左欄變窄了,店家/活動卡片回到單欄——兩欄的話一張卡放不下七顆 emoji 加地址 */
     .zone-col .card-list {
