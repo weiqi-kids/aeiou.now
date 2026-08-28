@@ -57,14 +57,45 @@
 sqlite3 -header -column db/aeiou.sqlite "SELECT city_code,COUNT(*) n FROM places GROUP BY city_code ORDER BY n DESC"
 sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT topic_id) FROM place_topics"   # events 換 event_topics
 node scripts/update-local-data.mjs --check-only | grep 活動存量
-# Topic 頁兩區都空的比例(先 cd site && LOCALE=zh-TW pnpm build):
-python3 -c "import glob;h=[open(f,encoding='utf-8').read() for f in glob.glob('site/dist/topic/*/index.html')];print(sum(1 for x in h if '目前沒有資料' in x.split('id=\"nearby\"')[1][:1200] and '目前沒有資料' in x.split('id=\"events\"')[1][:1200]),'/',len(h))"
+# Topic 頁兩區都空的比例。⚠ 空狀態字串**逐語系不同**,寫死「目前沒有資料」只在 zh-TW 量得到
+# (2026-08-28 踩過:其餘六站一律回 0/71,看起來像全部補滿了)。一律從 i18n 讀 common.empty:
+cd site && for L in zh-TW pt-BR hi zh-CN id ja en; do LOCALE=$L pnpm build >/dev/null 2>&1 && LOC=$L python3 -c "
+import glob,json,os,html
+L=os.environ['LOC']
+e=json.load(open('src/i18n/%s.json'%L,encoding='utf-8'))['common.empty']; c={e,html.escape(e)}
+h=[open(f,encoding='utf-8').read() for f in glob.glob('dist/topic/*/index.html')]
+def em(x,s):
+    p=x.split('id=\"%s\"'%s)
+    return len(p)<2 or any(t in p[1][:1200] for t in c)
+print(L.ljust(6), sum(1 for x in h if em(x,'nearby') and em(x,'events')),'/',len(h))"; done
 ```
 
-- [ ] **活動偏少的市場要再補**:2026-08-28 那一輪七個市場裡,上海、浦那、聖保羅、雅加達
-      都低於 6–12 場的目標(雅加達 0 場)。**卡點是工具不是沒資料**:WebSearch 額度在 session
-      中途用盡,後段只能用已知網域直接 curl;印度與巴西大量政府網域是 JS 單頁或
-      Akamai/Cloudflare 整站 403。→ **下次開新 session 再跑,額度是新的。**
+- [x] **2026-08-28 第二輪已補**(四市場各派一個 subagent):聖保羅與浦那補進 6–12 目標區間,
+      上海與雅加達沒有。上一版寫的卡點是「WebSearch 額度用盡」,**那個診斷是錯的** ——
+      新 session 額度是滿的,結果一樣補不滿,所以卡點不是工具。
+- [ ] **上海:2026-09-08 之後再收一次。** 卡點是**公告還沒發**,不是查不到:中秋(9/25)與
+      國慶(10/1)專題在 `whlyj.sh.gov.cn` 與 `english.shanghai.gov.cn` 兩邊都還沒出,
+      歷年慣例是 9 月上旬才發(2025 年「經典活動季」9/8 發、「國慶中秋來上海怎麼玩」9/28 發)。
+      屆時 mid-autumn-and-moon-viewing / national-days / long-holiday-weeks /
+      homecoming-and-reunion / elders-day(敬老月)一次能補 6–8 場,而且全落在節慶 topic 上。
+- [ ] **雅加達:照紀念日各自的日期往前推 3 週收。** 印尼各部會的 pedoman/SK 慣例是活動前
+      2–4 週才發,2026-08-28 查到的 2026 屆公告**一份都還沒出**(全是去年那版)。時間點:
+      Hari Kesaktian Pancasila 9/10 後、Hari Santri 10/1 後、Sumpah Pemuda 10/7 後、
+      Hari Pahlawan 10/20 後、Hari Guru 11/4 後、Hari Ibu 12/1 後;
+      2027 年的 SKB 3 Menteri(`long-holiday-weeks`)看 setneg,2026 那份是 2025 年 9 月發的。
+      · 可用來源:`hub.ekraf.go.id/agenda-kreatif/detail/<slug>`(靜態 HTML、robots 全放行、
+        逐筆永久頁)。⚠ 它把同月區間寫成 `07 - 11 Oktober 2026`,**起日帶前導零比對不到**
+        (`7 Oktober` ≠ `07 - 11 Oktober`),挑活動時優先選起迄至少一個是兩位數的。
+      · ⛔ **結構性缺口,不要重複試**:`kemenag.go.id` 是 Next.js SPA(純文字只有導覽)、
+        `bimasislam.kemenag.go.id` robots 全站 `Disallow: /`、`istiqlal.or.id` 403
+        —— 伊斯蘭曆與 Hari Santri 在印尼側**沒有可抓的中央官方來源**,
+        要補 `ramadan-and-eid` / `islamic-calendar-days` 得另尋場館端出路。
+- [ ] **雅加達有一批「有官方來源與日期、但沒有對應 Topic」的活動**,要產品決定要不要開 Topic:
+      500 Tahun Jakarta(`jakarta500.id`,官方站、robots 全放行、頁面印著 `22 Juni 2027`,
+      機械關卡全過,卡在沒有「城市週年」這個 slug)、Jakarta Running Festival、
+      Festival Film Indonesia、JIPFEST、Pestapora、Synchronize、ICAD、SIAL Interfood。
+      同類的還有上海的體育/古典音樂/展演(環滬公路賽、UCI 場地世錦賽、上海大歌劇院開幕季、
+      進博會)與聖保羅的 Bienal do Livro。**清單裡沒有體育/音樂/影展/書展這幾類主題。**
 - [ ] 🔴 **活動只會過期,不會自己長出來。** 存量掉下去要補,判準看 `活動存量` 那一行
       (未來場次 < 10、最近一場 > 14 天、或某市場掛零都會 WARN)。
 
@@ -86,6 +117,20 @@ python3 -c "import glob;h=[open(f,encoding='utf-8').read() for f in glob.glob('s
 - 🔴 活動 `start_at` 必須是未來,而且**日期要那一頁真的寫著**(有一筆起日錯一天,
   是 date_marker 比對揪出來的;另一筆的來源頁根本沒提到該活動)
 - 🔴 查不到就不要寫。雅加達交 0 場活動是**對的**,不是失職
+- 🔴 **地點的 `topic_relevance` 只收 `direct`,`place_type` 只收 `permanent`**
+  (2026-08-28 補進 intake 的檢查;在那之前只有 update-local-data 擋得到,於是收件驗過了、
+  已經寫進 `content/` 了才整支失敗,得回滾重來)。⚠ 修法是**拿掉那一筆或換一個真的直接相關
+  的 Topic**,不准為了過關把 `indirect` 改寫成 `direct` —— 那個欄位是收集者對
+  「這個地點是不是真的在講這個 Topic」的判斷,改它跟憑空填 marker 同一種錯。
+- 🔴 **先讀 `content/topics/<slug>.md` 的 canonical 與 commonality 再決定掛哪個 slug,
+  不是先收了活動再回頭找一個看起來像的。** 2026-08-28 退掉雅加達三場(書展/工藝展/時裝週
+  掛 `shopping-festivals`,而那個 Topic 的 canonical 是「Black Friday, Singles' Day,
+  and Harbolnas」、commonality 是「零售商發明的特賣日」)。同一輪也退掉聖保羅的 Enem 2026
+  —— 來源頁通篇沒提聖保羅,`venue` 卻寫「聖保羅市的考場」。
+  **沒有誠實的 slug 就不要交那一筆**,寧可該市場少幾場。
+- ⚠ 一個 URL 可以掛多場活動(如 IISER 的學年行事曆掛三筆),但 `date_markers` 是**逐 URL**
+  的、且只要求命中其中一個 —— 所以共用 URL 的第二筆之後,日期不會被自動核對。
+  共用前先自己 curl 確認每一筆的日期都真的在那一頁上。
 
 **收件時最常見的六種錯**(intake 腳本會擋,檔頭有完整緣由):
 merged slug(有 .md 但狀態是 merged)、缺來源目錄項、marker 憑空填、
