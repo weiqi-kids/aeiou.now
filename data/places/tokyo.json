@@ -2,6 +2,121 @@
   "city_code": "tokyo",
   "places": [
     {
+      "place_id": "plc_0260E95AAEC8EDBACA3E6F7E9E",
+      "name": "湯島天満宮",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "JP",
+      "address": "東京都文京区湯島3-30-1",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%B9%AF%E5%B3%B6%E5%A4%A9%E6%BA%80%E5%AE%AE%20%E6%9D%B1%E4%BA%AC",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=%E6%B9%AF%E5%B3%B6%E5%A4%A9%E6%BA%80%E5%AE%AE%20%E6%9D%B1%E4%BA%AC",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=%E6%B9%AF%E5%B3%B6%E5%A4%A9%E6%BA%80%E5%AE%AE%20%E6%9D%B1%E4%BA%AC",
+        "amap": "https://uri.amap.com/search?keyword=%E6%B9%AF%E5%B3%B6%E5%A4%A9%E6%BA%80%E5%AE%AE%20%E6%9D%B1%E4%BA%AC"
+      },
+      "source_urls": [
+        "https://www.yushimatenjin.or.jp/pc/kigan/kigan.htm"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "湯島天滿宮的祈禱項目明列「學業成就‧合格祈願」，是東京考生在應試前常去祈求金榜題名的神社之一。",
+        "en": "Yushima Tenjin's prayer menu explicitly lists \"academic success and exam passing\" rites, making it a shrine students visit before entrance exams in Tokyo.",
+        "ja": "湯島天満宮のご祈祷案内には「学業成就・合格祈願」が明記されており、受験を控えた学生が合格を祈願に訪れる神社です。",
+        "zh-CN": "汤岛天满宫的祈祷项目明列「学业成就‧合格祈愿」，是东京考生在应试前常去祈求金榜题名的神社之一。",
+        "hi": "युशिमा तेनजिन के प्रार्थना मेनू में स्पष्ट रूप से \"शैक्षणिक सफलता और परीक्षा पास होने\" की पूजा शामिल है, जहाँ छात्र प्रवेश परीक्षा से पहले आते हैं।",
+        "id": "Menu doa Yushima Tenjin secara eksplisit mencantumkan doa \"keberhasilan akademik dan kelulusan ujian\", menjadikannya kuil yang dikunjungi siswa sebelum ujian masuk di Tokyo.",
+        "pt-BR": "O cardápio de orações do santuário Yushima Tenjin lista explicitamente \"sucesso acadêmico e aprovação em exames\", atraindo estudantes antes das provas de admissão em Tóquio."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01M1257QCASXRT1YYV0ET9PQFC",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_0B8CD6A1B1411FC7DD435E0847",
+      "name": "表参道イルミネーション",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "JP",
+      "address": "東京都渋谷区神宮前（表参道）",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E8%A1%A8%E5%8F%82%E9%81%93%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20%E6%9D%B1%E4%BA%AC",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=%E8%A1%A8%E5%8F%82%E9%81%93%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20%E6%9D%B1%E4%BA%AC",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=%E8%A1%A8%E5%8F%82%E9%81%93%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20%E6%9D%B1%E4%BA%AC",
+        "amap": "https://uri.amap.com/search?keyword=%E8%A1%A8%E5%8F%82%E9%81%93%20%E3%82%A4%E3%83%AB%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20%E6%9D%B1%E4%BA%AC"
+      },
+      "source_urls": [
+        "https://omotesando.or.jp/illumi/"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "表參道的欅樹並木每年冬季由原宿表參道商店會官方主辦點燈活動，是東京都內歷史悠久的行道樹燈飾之一。",
+        "en": "Every winter, the Harajuku-Omotesando Shopping Street Association runs an official illumination on the Omotesando zelkova-lined avenue, one of Tokyo's long-running tree-light displays.",
+        "ja": "表参道のけやき並木では、原宿表参道商店会が公式に毎年冬のイルミネーションを主催しており、東京都内でも歴史あるライトアップの一つです。",
+        "zh-CN": "表参道的榉树并木每年冬季由原宿表参道商店会官方主办点灯活动，是东京都内历史悠久的行道树灯饰之一。",
+        "hi": "हर सर्दी में, हाराजुकु-ओमोतेसांडो शॉपिंग स्ट्रीट एसोसिएशन ओमोतेसांडो के पेड़ों वाली सड़क पर आधिकारिक रोशनी सजावट आयोजित करता है, जो टोक्यो की पुरानी परंपराओं में से एक है।",
+        "id": "Setiap musim dingin, Asosiasi Jalan Belanja Harajuku-Omotesando menyelenggarakan iluminasi resmi di sepanjang jalan pohon zelkova Omotesando, salah satu pertunjukan lampu pohon tertua di Tokyo.",
+        "pt-BR": "Todo inverno, a Associação da Rua Comercial Harajuku-Omotesando organiza a iluminação oficial na avenida arborizada de Omotesando, uma das exibições de luzes mais antigas de Tóquio."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_1286F92226D0EFA648A4B69289",
+      "name": "明治記念館",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "JP",
+      "address": "東京都港区元赤坂2-2-23",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%98%8E%E6%B2%BB%E8%A8%98%E5%BF%B5%E9%A4%A8%20%E6%9D%B1%E4%BA%AC",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=%E6%98%8E%E6%B2%BB%E8%A8%98%E5%BF%B5%E9%A4%A8%20%E6%9D%B1%E4%BA%AC",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=%E6%98%8E%E6%B2%BB%E8%A8%98%E5%BF%B5%E9%A4%A8%20%E6%9D%B1%E4%BA%AC",
+        "amap": "https://uri.amap.com/search?keyword=%E6%98%8E%E6%B2%BB%E8%A8%98%E5%BF%B5%E9%A4%A8%20%E6%9D%B1%E4%BA%AC"
+      },
+      "source_urls": [
+        "https://www.meijikinenkan.gr.jp/753/",
+        "https://www.meijikinenkan.gr.jp/seijin/",
+        "https://www.meijikinenkan.gr.jp/wedding/ceremony/meijijingu.html"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "明治記念館與明治神宮官網直接連結，提供七五三參拜攝影、成人奉告參拜與神前結婚式三種人生儀禮服務，是東京少數同時承辦這些場合的場館。",
+        "en": "Meiji Kinenkan, linked directly from Meiji Jingu's own site, hosts Shichi-Go-San visits and photography, coming-of-age shrine visits, and Shinto wedding ceremonies — three life-stage rites under one roof.",
+        "ja": "明治神宮公式サイトから直接案内される明治記念館では、七五三詣・成人奉告参拝・神前結婚式という三つの人生儀礼をまとめて執り行っています。",
+        "zh-CN": "明治纪念馆与明治神宫官网直接连结，提供七五三参拜摄影、成人奉告参拜与神前结婚式三种人生仪礼服务，是东京少数同时承办这些场合的场馆。",
+        "hi": "मेइजी जिंगू की आधिकारिक साइट से सीधे जुड़ा मेइजी किनेंकान शिचि-गो-सान भ्रमण व फ़ोटोग्राफ़ी, वयस्कता पूजा और शिंटो विवाह समारोह — तीनों जीवन-चरण की रस्में एक ही जगह कराता है।",
+        "id": "Meiji Kinenkan, yang tertaut langsung dari situs resmi Meiji Jingu, menyelenggarakan kunjungan dan foto Shichi-Go-San, kunjungan syukur usia dewasa, serta upacara pernikahan Shinto dalam satu tempat.",
+        "pt-BR": "O Meiji Kinenkan, indicado diretamente pelo site oficial do Meiji Jingu, realiza visitas e fotos de Shichi-Go-San, visitas de maioridade e cerimônias de casamento xintoístas, reunindo três ritos de vida."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BR5H0VCT4WAPQM4SZXW",
+          "relevance": 0.9
+        },
+        {
+          "topic_id": "top_01KZXQ6BS8QZFDVGVBHB4PVM40",
+          "relevance": 0.9
+        },
+        {
+          "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
       "place_id": "plc_3DFEF487A8164B5C5C418583C3",
       "name": "Minimal 富ヶ谷本店",
       "place_type": "permanent",
@@ -72,6 +187,77 @@
       ]
     },
     {
+      "place_id": "plc_498B87686A0BE48721BABE8A36",
+      "name": "浅草寺",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "JP",
+      "address": "東京都台東区浅草2-3-1",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%B5%85%E8%8D%89%E5%AF%BA%20%E6%9D%B1%E4%BA%AC",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=%E6%B5%85%E8%8D%89%E5%AF%BA%20%E6%9D%B1%E4%BA%AC",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=%E6%B5%85%E8%8D%89%E5%AF%BA%20%E6%9D%B1%E4%BA%AC",
+        "amap": "https://uri.amap.com/search?keyword=%E6%B5%85%E8%8D%89%E5%AF%BA%20%E6%9D%B1%E4%BA%AC"
+      },
+      "source_urls": [
+        "https://www.senso-ji.jp/annual_event/02.html"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "淺草寺每年舉行「新年大祈禱會」，是東京歷史最悠久的寺院之一，元旦期間吸引大量參拜人潮進行新年祈福。",
+        "en": "Sensoji Temple holds its annual New Year Grand Prayer Ceremony (Shinnen Daikigankai); as one of Tokyo's oldest temples, it draws large hatsumode crowds around New Year's Day.",
+        "ja": "浅草寺では毎年「新年大祈禱会」が行われ、東京最古級の寺院として正月三が日は多くの初詣参拝者で賑わいます。",
+        "zh-CN": "浅草寺每年举行「新年大祈祷会」，是东京历史最悠久的寺院之一，元旦期间吸引大量参拜人潮进行新年祈福。",
+        "hi": "सेंसो-जी मंदिर हर साल नए साल की बड़ी प्रार्थना सभा (शिन्नेन दाइकिगनकाई) आयोजित करता है; टोक्यो के सबसे पुराने मंदिरों में से एक होने के कारण नए साल पर यहाँ भारी भीड़ जुटती है।",
+        "id": "Kuil Sensoji menggelar Upacara Doa Besar Tahun Baru (Shinnen Daikigankai) setiap tahun; sebagai salah satu kuil tertua di Tokyo, tempat ini ramai dikunjungi saat hatsumode Tahun Baru.",
+        "pt-BR": "O templo Sensoji realiza anualmente a Grande Cerimônia de Oração de Ano Novo (Shinnen Daikigankai); um dos templos mais antigos de Tóquio, recebe multidões na primeira visita do ano."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_64BD0A0BC25D48FA5C3B806723",
+      "name": "吉徳",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "JP",
+      "address": "東京都台東区浅草橋1-9-14",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E5%90%89%E5%BE%B3%20%E6%B5%85%E8%8D%89%E6%A9%8B%20%E6%9D%B1%E4%BA%AC",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=%E5%90%89%E5%BE%B3%20%E6%B5%85%E8%8D%89%E6%A9%8B%20%E6%9D%B1%E4%BA%AC",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=%E5%90%89%E5%BE%B3%20%E6%B5%85%E8%8D%89%E6%A9%8B%20%E6%9D%B1%E4%BA%AC",
+        "amap": "https://uri.amap.com/search?keyword=%E5%90%89%E5%BE%B3%20%E6%B5%85%E8%8D%89%E6%A9%8B%20%E6%9D%B1%E4%BA%AC"
+      },
+      "source_urls": [
+        "https://www.yoshitoku.co.jp/gogatsu",
+        "https://www.yoshitoku.co.jp/company"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "吉德是淺草橋的老字號人形店，官網設有專門的「五月人形」分類，五月人形是日本兒童節裝飾家中、祈求男孩健康成長的傳統擺飾。",
+        "en": "Yoshitoku, a long-established doll maker in Asakusabashi, runs a dedicated \"Gogatsu Ningyo\" section on its site for the May dolls displayed at home for Children's Day to wish boys healthy growth.",
+        "ja": "浅草橋の老舗人形店・吉徳は公式サイトに「五月人形」専用カテゴリーを設け、こどもの日に家庭で飾り男児の健やかな成長を願う五月人形を扱っています。",
+        "zh-CN": "吉德是浅草桥的老字号人形店，官网设有专门的「五月人形」分类，五月人形是日本儿童节装饰家中、祈求男孩健康成长的传统摆饰。",
+        "hi": "असाकुसाबाशी की पुरानी गुड़िया दुकान योशितोकु की वेबसाइट पर \"गोगात्सु निंग्यो\" के लिए अलग सेक्शन है — बच्चों के दिन पर घर में सजाई जाने वाली गुड़िया, जो लड़कों की सेहत की कामना करती हैं।",
+        "id": "Yoshitoku, toko boneka lama di Asakusabashi, memiliki bagian khusus \"Gogatsu Ningyo\" di situsnya untuk boneka Mei yang dipajang di rumah saat Hari Anak demi mendoakan pertumbuhan anak laki-laki.",
+        "pt-BR": "A Yoshitoku, tradicional loja de bonecas em Asakusabashi, mantém uma seção dedicada às \"Gogatsu Ningyo\" em seu site, bonecas de maio exibidas em casa no Dia das Crianças para desejar saúde aos meninos."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
       "place_id": "plc_8B1B2F33990544C65CCE7B481A",
       "name": "富岡八幡宮",
       "place_type": "permanent",
@@ -137,6 +323,120 @@
       "topics": [
         {
           "topic_id": "top_01M0ZKHEG7SET9EX18038MRV40",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_B4C5D3054759599762716EC68A",
+      "name": "東京タワー",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "JP",
+      "address": "東京都港区芝公園4-2-8",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E3%82%BF%E3%83%AF%E3%83%BC%20%E6%9D%B1%E4%BA%AC",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=%E6%9D%B1%E4%BA%AC%E3%82%BF%E3%83%AF%E3%83%BC%20%E6%9D%B1%E4%BA%AC",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=%E6%9D%B1%E4%BA%AC%E3%82%BF%E3%83%AF%E3%83%BC%20%E6%9D%B1%E4%BA%AC",
+        "amap": "https://uri.amap.com/search?keyword=%E6%9D%B1%E4%BA%AC%E3%82%BF%E3%83%AF%E3%83%BC%20%E6%9D%B1%E4%BA%AC"
+      },
+      "source_urls": [
+        "https://www.tokyotower.co.jp/lightup/"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "東京鐵塔的常態點燈分夏冬兩版，每年 7 月 7 日七夕夜晚固定切換為夏季版，並有依月份變化的鑽石帷幕十二色點燈。",
+        "en": "Tokyo Tower's standard lighting switches to its summer pattern every year on the night of July 7, Tanabata, and its Diamond Veil illumination cycles through twelve monthly colors year-round.",
+        "ja": "東京タワーのランドマークライトは毎年7月7日七夕の夜から夏バージョンに切り替わり、インフィニティ・ダイヤモンドヴェールは月ごとに12色に変化します。",
+        "zh-CN": "东京塔的常态点灯分夏冬两版，每年 7 月 7 日七夕夜晚固定切换为夏季版，并有依月份变化的钻石帷幕十二色点灯。",
+        "hi": "टोक्यो टावर की मानक लाइटिंग हर साल 7 जुलाई तानाबाता की रात को गर्मियों वाले रंग में बदल जाती है, और डायमंड वेल रोशनी हर महीने अलग रंग दिखाती है।",
+        "id": "Pencahayaan standar Tokyo Tower berganti ke pola musim panas setiap malam 7 Juli, malam Tanabata, dan Diamond Veil-nya berganti dua belas warna sepanjang tahun sesuai bulan.",
+        "pt-BR": "A iluminação padrão da Tokyo Tower muda para o padrão de verão todo dia 7 de julho, noite do Tanabata, e o Diamond Veil exibe doze cores diferentes ao longo do ano, uma por mês."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+          "relevance": 0.9
+        },
+        {
+          "topic_id": "top_01M0ZKSFF6V5Y5QDVG5R1R9X4K",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_B66CFD0600477FF5FE11C5D2DF",
+      "name": "明治神宮",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "JP",
+      "address": "東京都渋谷区代々木神園町1-1",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE%20%E6%9D%B1%E4%BA%AC",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE%20%E6%9D%B1%E4%BA%AC",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE%20%E6%9D%B1%E4%BA%AC",
+        "amap": "https://uri.amap.com/search?keyword=%E6%98%8E%E6%B2%BB%E7%A5%9E%E5%AE%AE%20%E6%9D%B1%E4%BA%AC"
+      },
+      "source_urls": [
+        "https://www.meijijingu.or.jp/hatsumoude/"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "明治神宮是日本每年跨年參拜人數最多的神社，元旦前後開放特別參拜路線與新年祈願祭，是東京最具代表性的初詣地點。",
+        "en": "Meiji Jingu draws Japan's largest hatsumode crowds each New Year, opening special routes and offering New Year prayer rites from New Year's Eve through the first days of January.",
+        "ja": "明治神宮は毎年初詣の参拝者数が全国最多の神社で、大晦日から三が日にかけて特設の参拝路と新年初祈願祭を実施しています。",
+        "zh-CN": "明治神宫是日本每年跨年参拜人数最多的神社，元旦前后开放特别参拜路线与新年祈祷祭，是东京最具代表性的初诣地点。",
+        "hi": "मेइजी जिंगू श्राइन में हर साल नए साल पर जापान में सबसे ज़्यादा लोग दर्शन के लिए आते हैं; 31 दिसंबर से जनवरी की शुरुआत तक विशेष मार्ग और नए साल की विशेष पूजा होती है।",
+        "id": "Meiji Jingu adalah kuil dengan jumlah pengunjung hatsumode (kunjungan awal tahun) terbanyak di Jepang, membuka jalur khusus dan doa Tahun Baru sejak malam tahun baru hingga awal Januari.",
+        "pt-BR": "O santuário Meiji Jingu recebe o maior número de visitantes de hatsumode (primeira visita do ano) do Japão, com rotas especiais e rituais de oração de Ano Novo da véspera aos primeiros dias de janeiro."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_CE355BE21EF33BB379C3F2CCAF",
+      "name": "東京大神宮",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "JP",
+      "address": "東京都千代田区富士見2-4-1",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E5%A4%A7%E7%A5%9E%E5%AE%AE%20%E6%9D%B1%E4%BA%AC",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=%E6%9D%B1%E4%BA%AC%E5%A4%A7%E7%A5%9E%E5%AE%AE%20%E6%9D%B1%E4%BA%AC",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=%E6%9D%B1%E4%BA%AC%E5%A4%A7%E7%A5%9E%E5%AE%AE%20%E6%9D%B1%E4%BA%AC",
+        "amap": "https://uri.amap.com/search?keyword=%E6%9D%B1%E4%BA%AC%E5%A4%A7%E7%A5%9E%E5%AE%AE%20%E6%9D%B1%E4%BA%AC"
+      },
+      "source_urls": [
+        "https://www.tokyodaijingu.or.jp/kekkon/index.html",
+        "https://www.tokyodaijingu.or.jp/shichigosan/index.html"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "東京大神宮設有神前結婚式專頁，並每年發布七五三祈願指南（含 2026 年版公告），是東京同時提供這兩種儀式服務的神社。",
+        "en": "Tokyo Daijingu maintains a dedicated Shinto wedding page and publishes an annual Shichi-Go-San guide, including a 2026 flyer, covering both rites at one shrine.",
+        "ja": "東京大神宮には神前結婚式専用のページがあり、七五三のご案内（令和8年版チラシ含む）も毎年公開しています。",
+        "zh-CN": "东京大神宫设有神前结婚式专页，并每年发布七五三祈愿指南（含 2026 年版公告），是东京同时提供这两种仪式服务的神社。",
+        "hi": "टोक्यो दाइजिंगू में शिंटो विवाह समारोह के लिए अलग पेज है और हर साल शिचि-गो-सान गाइड (2026 पर्चे सहित) भी प्रकाशित होती है。",
+        "id": "Tokyo Daijingu memiliki halaman khusus untuk upacara pernikahan Shinto dan menerbitkan panduan Shichi-Go-San tahunan, termasuk pamflet edisi 2026.",
+        "pt-BR": "O santuário Tokyo Daijingu mantém uma página dedicada ao casamento xintoísta e publica um guia anual de Shichi-Go-San, incluindo o folheto de 2026."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BS8QZFDVGVBHB4PVM40",
+          "relevance": 0.9
+        },
+        {
+          "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
           "relevance": 0.9
         }
       ]

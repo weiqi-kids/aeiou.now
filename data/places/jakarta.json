@@ -2,6 +2,76 @@
   "city_code": "jakarta",
   "places": [
     {
+      "place_id": "plc_0CFCB9EFAB8DD47CB6A4801669",
+      "name": "Pengurus Besar Persatuan Guru Republik Indonesia (PB PGRI)",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "ID",
+      "address": "Jl. Tanah Abang III No. 24, Jakarta Pusat 10160",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=PB%20PGRI%20Jl%20Tanah%20Abang%20III%20No%2024%20Jakarta%20Pusat",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=PB%20PGRI%20Jl%20Tanah%20Abang%20III%20No%2024%20Jakarta%20Pusat",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=PB%20PGRI%20Jl%20Tanah%20Abang%20III%20No%2024%20Jakarta%20Pusat",
+        "amap": "https://uri.amap.com/search?keyword=PB%20PGRI%20Jl%20Tanah%20Abang%20III%20No%2024%20Jakarta%20Pusat"
+      },
+      "source_urls": [
+        "https://pgri.or.id"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "位於中雅加達的印尼教師聯合會(PGRI)總部,官網稱其為印尼規模最大的教師專業組織,每年十一月二十五日全國教師節前後在此發布相關活動與紀念文件。",
+        "en": "Headquarters of PGRI, Indonesia's largest teachers' organisation, in Central Jakarta. Its site describes activities around National Teachers' Day on 25 November each year.",
+        "ja": "中部ジャカルタにあるインドネシア最大の教員団体PGRIの本部。公式サイトには毎年11月25日の国民教師の日に関連する活動が紹介されている。",
+        "zh-CN": "位于中雅加达的印尼教师联合会(PGRI)总部,官网称其为印尼规模最大的教师专业组织,每年十一月二十五日全国教师节前后发布相关活动。",
+        "hi": "मध्य जकार्ता में इंडोनेशिया के सबसे बड़े शिक्षक संगठन PGRI का मुख्यालय। आधिकारिक साइट पर हर साल 25 नवंबर के राष्ट्रीय शिक्षक दिवस से जुड़ी गतिविधियाँ बताई गई हैं।",
+        "id": "Kantor Pusat PB PGRI di Jakarta Pusat, organisasi guru terbesar di Indonesia. Situs resminya memuat kegiatan seputar Hari Guru Nasional setiap 25 November.",
+        "pt-BR": "Sede da PGRI, a maior organização de professores da Indonésia, no centro de Jacarta. O site oficial traz atividades ligadas ao Dia Nacional dos Professores, em 25 de novembro."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_251B4F1E0D2EA48E735B1978D6",
+      "name": "Dinas Ketahanan Pangan, Kelautan dan Pertanian (KPKP) DKI Jakarta",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "ID",
+      "address": "Jl. Gunung Sahari Raya No. 11, Gunung Sahari Utara, Sawah Besar, Jakarta Pusat 10720",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Dinas%20KPKP%20DKI%20Jakarta%20Jl%20Gunung%20Sahari%20Raya%20No%2011",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Dinas%20KPKP%20DKI%20Jakarta%20Jl%20Gunung%20Sahari%20Raya%20No%2011",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Dinas%20KPKP%20DKI%20Jakarta%20Jl%20Gunung%20Sahari%20Raya%20No%2011",
+        "amap": "https://uri.amap.com/search?keyword=Dinas%20KPKP%20DKI%20Jakarta%20Jl%20Gunung%20Sahari%20Raya%20No%2011"
+      },
+      "source_urls": [
+        "https://dkpkp.jakarta.go.id"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "雅加達的糧食海洋農業局在 2026 年七月起推出五輛「Mobil Klinik Hewan Keliling」巡迴動物診所,並提供免費貓咪絕育服務,由地方政府直接承擔寵物的醫療與絕育責任。",
+        "en": "Jakarta's food, marine, and agriculture agency launched five mobile animal-clinic vans in July 2026 and runs a free cat-sterilisation service, putting pet healthcare duties squarely on city government.",
+        "ja": "ジャカルタの食料・海洋・農業局は2026年7月から5台の巡回動物クリニック車を導入し、猫の無料不妊手術も実施。ペットの医療責任を市が直接担っている。",
+        "zh-CN": "雅加达的粮食海洋农业局在2026年七月起推出五辆「Mobil Klinik Hewan Keliling」巡回动物诊所,并提供免费猫咪绝育服务,由地方政府直接承担宠物医疗责任。",
+        "hi": "जकार्ता की खाद्य, समुद्री और कृषि एजेंसी ने जुलाई 2026 से पांच मोबाइल पशु क्लिनिक शुरू किए और मुफ्त बिल्ली नसबंदी सेवा भी देती है, जिससे पालतू पशुओं की देखभाल की ज़िम्मेदारी सीधे सरकार उठाती है।",
+        "id": "Dinas Ketahanan Pangan, Kelautan dan Pertanian DKI Jakarta meluncurkan lima unit Mobil Klinik Hewan Keliling sejak Juli 2026 dan menyediakan layanan sterilisasi kucing gratis bagi warga.",
+        "pt-BR": "A agência de alimentação, pesca e agricultura de Jacarta lançou cinco vans de clínica veterinária móvel em julho de 2026 e oferece esterilização gratuita de gatos, assumindo o cuidado com pets."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01M0Q9AQ26RG3FX2D4G7CS1M3A",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
       "place_id": "plc_3301AA7063D5C234865B82BEFE",
       "name": "Istiqlal Mosque",
       "place_type": "permanent",
@@ -45,6 +115,76 @@
       ]
     },
     {
+      "place_id": "plc_3D6349B0745FC1D04A9E12C91C",
+      "name": "BINUS University Kampus Kemanggisan",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "ID",
+      "address": "Jl. K.H. Syahdan No. 9, Kemanggisan, Palmerah, Jakarta 11480",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=BINUS%20University%20Kemanggisan%20Jl%20KH%20Syahdan%20No%209%20Jakarta",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=BINUS%20University%20Kemanggisan%20Jl%20KH%20Syahdan%20No%209%20Jakarta",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=BINUS%20University%20Kemanggisan%20Jl%20KH%20Syahdan%20No%209%20Jakarta",
+        "amap": "https://uri.amap.com/search?keyword=BINUS%20University%20Kemanggisan%20Jl%20KH%20Syahdan%20No%209%20Jakarta"
+      },
+      "source_urls": [
+        "https://binus.ac.id"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "雅加達的私立大學,設有專屬的畢業典禮入口網站(graduation.apps.binus.ac.id),反映印尼大學畢業季有一套獨立於招生系統之外的正式行政流程。",
+        "en": "A private university in Jakarta running its own dedicated graduation portal (graduation.apps.binus.ac.id), a sign of how formal and separate Indonesia's wisuda administration is from admissions.",
+        "ja": "ジャカルタの私立大学。卒業式専用のポータルサイト(graduation.apps.binus.ac.id)を運営しており、インドネシアの卒業式(ウィスダ)が入試とは別の正式な行政手続きであることを示している。",
+        "zh-CN": "雅加达的私立大学,设有专属的毕业典礼入口网站(graduation.apps.binus.ac.id),反映印尼大学毕业季有一套独立于招生系统的正式行政流程。",
+        "hi": "जकार्ता का एक निजी विश्वविद्यालय, जिसका अपना अलग स्नातक समारोह पोर्टल (graduation.apps.binus.ac.id) है — यह दिखाता है कि इंडोनेशिया में विसुदा (दीक्षांत) प्रवेश प्रक्रिया से अलग औपचारिक प्रशासन है।",
+        "id": "Universitas swasta di Jakarta yang memiliki portal wisuda tersendiri (graduation.apps.binus.ac.id), menunjukkan bagaimana prosesi wisuda dikelola terpisah dari sistem penerimaan mahasiswa.",
+        "pt-BR": "Universidade privada em Jacarta com um portal próprio para formaturas (graduation.apps.binus.ac.id), mostrando como a cerimônia de wisuda é administrada separadamente do processo de admissão."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BRFP513XZ9B02BT8XCZ",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_4C7D201BCA726B598B21FECE6D",
+      "name": "MATAKIN (Majelis Tinggi Agama Khonghucu Indonesia)",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "ID",
+      "address": "Gedung Khonghucu Yayasan Tepasalira, Jl. Jembatan Gambang II No. 77, Pejagalan, Penjaringan, Jakarta Utara 14450",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Gedung%20Khonghucu%20Yayasan%20Tepasalira%20Jl%20Jembatan%20Gambang%20II%20No%2077%20Jakarta%20Utara",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Gedung%20Khonghucu%20Yayasan%20Tepasalira%20Jl%20Jembatan%20Gambang%20II%20No%2077%20Jakarta%20Utara",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Gedung%20Khonghucu%20Yayasan%20Tepasalira%20Jl%20Jembatan%20Gambang%20II%20No%2077%20Jakarta%20Utara",
+        "amap": "https://uri.amap.com/search?keyword=Gedung%20Khonghucu%20Yayasan%20Tepasalira%20Jl%20Jembatan%20Gambang%20II%20No%2077%20Jakarta%20Utara"
+      },
+      "source_urls": [
+        "https://matakin.or.id"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "印尼孔教最高理事會(MATAKIN)的秘書處位在北雅加達,官網設有「Imlek Nasional」專區,這個機構是印尼籌辦全國性農曆新年暨元宵慶典的宗教代表單位。",
+        "en": "The secretariat of MATAKIN, Indonesia's highest Confucian religious council, sits in North Jakarta. Its site carries a dedicated \"Imlek Nasional\" section — the religious body behind Indonesia's national Lunar New Year and lantern-season events.",
+        "ja": "北ジャカルタにあるインドネシア孔子教最高評議会(MATAKIN)の事務局。公式サイトには「Imlek Nasional」の専用ページがあり、旧正月・元宵節の全国行事を担う宗教団体である。",
+        "zh-CN": "印尼孔教最高理事会(MATAKIN)的秘书处位于北雅加达,官网设有「Imlek Nasional」专区,是印尼筹办全国性农历新年暨元宵庆典的宗教代表单位。",
+        "hi": "उत्तरी जकार्ता में इंडोनेशिया की सर्वोच्च कन्फ्यूशियस धार्मिक परिषद MATAKIN का सचिवालय। इसकी साइट पर \"Imlek Nasional\" खंड है; यह चीनी नववर्ष व लालटेन उत्सव के राष्ट्रीय आयोजन से जुड़ी संस्था है।",
+        "id": "Sekretariat MATAKIN, majelis tertinggi agama Khonghucu di Indonesia, berada di Jakarta Utara. Situsnya memuat bagian khusus \"Imlek Nasional\", lembaga keagamaan di balik perayaan Imlek dan Cap Go Meh nasional.",
+        "pt-BR": "A secretaria do MATAKIN, o conselho religioso confucionista mais alto da Indonésia, fica no norte de Jacarta. Seu site tem uma seção \"Imlek Nasional\", ligada às celebrações nacionais do Ano Novo Lunar."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
       "place_id": "plc_58E753771C98E65962EB9A9A97",
       "name": "Monumen Nasional (MONAS)",
       "place_type": "permanent",
@@ -80,6 +220,112 @@
       ]
     },
     {
+      "place_id": "plc_5BD6026275F1A6726F288E05ED",
+      "name": "Gereja Katedral Jakarta",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "ID",
+      "address": "Jl. Katedral No. 7B, Pasar Baru, Sawah Besar, Jakarta Pusat 10710",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Gereja%20Katedral%20Jakarta%20Jl%20Katedral%20No%207B%20Pasar%20Baru",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Gereja%20Katedral%20Jakarta%20Jl%20Katedral%20No%207B%20Pasar%20Baru",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Gereja%20Katedral%20Jakarta%20Jl%20Katedral%20No%207B%20Pasar%20Baru",
+        "amap": "https://uri.amap.com/search?keyword=Gereja%20Katedral%20Jakarta%20Jl%20Katedral%20No%207B%20Pasar%20Baru"
+      },
+      "source_urls": [
+        "https://katedraljakarta.or.id",
+        "https://katedraljakarta.or.id/misa-dan-sakramen"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "雅加達主教座堂位於巴魯市場區,官網列出平日與週末彌撒時刻,聖誕節期間教友在此望彌撒、家庭團聚,呼應印尼把十二月二十五日列為國定假日的規定。",
+        "en": "Jakarta Cathedral sits in Pasar Baru and lists regular weekday and weekend mass times on its official site; Christmas Mass here anchors the public holiday Indonesia grants for 25 December.",
+        "ja": "パサール・バルにあるジャカルタ大聖堂。公式サイトに平日・週末のミサ時間が掲載され、クリスマスにはここで礼拝が行われる。インドネシアは12月25日を国の祝日としている。",
+        "zh-CN": "雅加达主教座堂位于巴鲁市场区,官网列出平日与周末弥撒时间,圣诞节期间教友在此参加弥撒,呼应印尼把十二月二十五日列为国定假日的规定。",
+        "hi": "पासार बारू में स्थित जकार्ता कैथेड्रल। आधिकारिक साइट पर सप्ताह के दिनों और सप्ताहांत की मास का समय दिया गया है; क्रिसमस पर यहाँ मास होती है, जो इंडोनेशिया की 25 दिसंबर की राष्ट्रीय छुट्टी से जुड़ी है।",
+        "id": "Gereja Katedral Jakarta di Pasar Baru mencantumkan jadwal misa harian dan akhir pekan di situs resminya; misa Natal di sini menjadi bagian dari libur nasional 25 Desember di Indonesia.",
+        "pt-BR": "A Catedral de Jacarta, em Pasar Baru, lista horários de missa nos dias úteis e fins de semana em seu site oficial; a Missa do Natal ali marca o feriado nacional de 25 de dezembro na Indonésia."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BR4GE1HCXJS82AYVKGB",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_9EFAD06D6FAEED824D22F24DE0",
+      "name": "Komnas Perempuan",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "ID",
+      "address": "Jalan Latuharhary No. 4B, Menteng, Jakarta Pusat 10310",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Komnas%20Perempuan%20Jalan%20Latuharhary%20No%204B%20Menteng%20Jakarta%20Pusat",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Komnas%20Perempuan%20Jalan%20Latuharhary%20No%204B%20Menteng%20Jakarta%20Pusat",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Komnas%20Perempuan%20Jalan%20Latuharhary%20No%204B%20Menteng%20Jakarta%20Pusat",
+        "amap": "https://uri.amap.com/search?keyword=Komnas%20Perempuan%20Jalan%20Latuharhary%20No%204B%20Menteng%20Jakarta%20Pusat"
+      },
+      "source_urls": [
+        "https://komnasperempuan.go.id"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "印尼國家反婦女暴力委員會(Komnas Perempuan)位在中雅加達,官網每年發布多篇聲明與監測報告,是理解婦女節這天印尼婦女權益議題的官方窗口。",
+        "en": "Indonesia's National Commission on Violence Against Women, based in Central Jakarta, regularly publishes statements and monitoring reports on its site, an official window into women's-rights debates around Women's Day.",
+        "ja": "中部ジャカルタにあるインドネシア国家女性暴力対策委員会(Komnas Perempuan)。公式サイトでは声明や監視報告を定期的に発表しており、女性の権利をめぐる議論の公式な窓口となっている。",
+        "zh-CN": "印尼国家反妇女暴力委员会(Komnas Perempuan)位于中雅加达,官网每年发布多篇声明与监测报告,是了解妇女节议题的官方窗口。",
+        "hi": "मध्य जकार्ता में स्थित Komnas Perempuan (महिलाओं के विरुद्ध हिंसा पर राष्ट्रीय आयोग)। इसकी साइट पर नियमित बयान और निगरानी रिपोर्ट प्रकाशित होती हैं, जो महिला अधिकारों की बहस की आधिकारिक झलक देती है।",
+        "id": "Komnas Perempuan, lembaga negara untuk perlindungan hak perempuan, berkantor di Menteng, Jakarta Pusat, dan rutin menerbitkan pernyataan sikap serta laporan pemantauan di situsnya.",
+        "pt-BR": "A Comissão Nacional contra a Violência à Mulher da Indonésia, sediada no centro de Jacarta, publica regularmente declarações e relatórios de monitoramento, referência oficial sobre direitos das mulheres."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_A27F4E5EB3ABF456C32A67DAED",
+      "name": "Kementerian Perhubungan RI (Kemenhub)",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "ID",
+      "address": "Jl. Medan Merdeka Barat No. 8, Jakarta 10110",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Kementerian%20Perhubungan%20RI%20Jl%20Medan%20Merdeka%20Barat%20No%208%20Jakarta",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Kementerian%20Perhubungan%20RI%20Jl%20Medan%20Merdeka%20Barat%20No%208%20Jakarta",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Kementerian%20Perhubungan%20RI%20Jl%20Medan%20Merdeka%20Barat%20No%208%20Jakarta",
+        "amap": "https://uri.amap.com/search?keyword=Kementerian%20Perhubungan%20RI%20Jl%20Medan%20Merdeka%20Barat%20No%208%20Jakarta"
+      },
+      "source_urls": [
+        "https://dephub.go.id"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "印尼交通部總部位在雅加達獨立廣場西側,官網設有「Mudik Gratis」(免費返鄉)專屬應用連結,是政府每年協調開齋節返鄉人潮的中央機關。",
+        "en": "Indonesia's Ministry of Transportation, on the west side of Merdeka Square in Jakarta, links to a dedicated \"Mudik Gratis\" free-homecoming app on its homepage — the central agency coordinating Eid homecoming travel each year.",
+        "ja": "メルデカ広場西側にあるインドネシア運輸省。公式サイトには無料帰省アプリ「Mudik Gratis」へのリンクがあり、毎年のレバラン帰省ラッシュを調整する中央機関である。",
+        "zh-CN": "印尼交通部总部位于雅加达独立广场西侧,官网设有「Mudik Gratis」(免费返乡)专属应用连结,是政府每年协调开斋节返乡人潮的中央机关。",
+        "hi": "जकार्ता के मर्देका चौक के पश्चिम में स्थित इंडोनेशिया परिवहन मंत्रालय। इसकी वेबसाइट पर मुफ्त होमकमिंग ऐप \"Mudik Gratis\" का लिंक है — यह ईद पर घर लौटने की भीड़ को समन्वित करने वाली केंद्रीय एजेंसी है।",
+        "id": "Kementerian Perhubungan RI di sisi barat Medan Merdeka, Jakarta, mencantumkan tautan aplikasi \"Mudik Gratis\" di beranda resminya — lembaga pusat yang mengoordinasikan arus mudik Lebaran setiap tahun.",
+        "pt-BR": "O Ministério dos Transportes da Indonésia, a oeste da Praça Merdeka em Jacarta, traz em seu site o link do aplicativo gratuito \"Mudik Gratis\" — o órgão central que coordena a volta para casa no Eid."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BRM2FXWG1J5XHY32NEB",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
       "place_id": "plc_C076E7897B57F90C01138F2AC0",
       "name": "GODIVA Plaza Indonesia",
       "place_type": "permanent",
@@ -110,6 +356,160 @@
       "topics": [
         {
           "topic_id": "top_01KZRR9MEXM6D9S4DF4DDXJNES",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_C7C964D9AC723DB3523579294A",
+      "name": "Universitas Negeri Jakarta (UNJ) Kampus Rawamangun",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "ID",
+      "address": "Jl. Rawamangun Muka, Rawamangun, Pulo Gadung, Jakarta Timur 13220",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Universitas%20Negeri%20Jakarta%20Jl%20Rawamangun%20Muka%20Jakarta%20Timur",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Universitas%20Negeri%20Jakarta%20Jl%20Rawamangun%20Muka%20Jakarta%20Timur",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Universitas%20Negeri%20Jakarta%20Jl%20Rawamangun%20Muka%20Jakarta%20Timur",
+        "amap": "https://uri.amap.com/search?keyword=Universitas%20Negeri%20Jakarta%20Jl%20Rawamangun%20Muka%20Jakarta%20Timur"
+      },
+      "source_urls": [
+        "https://unj.ac.id",
+        "https://penmaba.unj.ac.id/"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "雅加達的國立大學,官方招生頁列出 SNBP(在校成績)、SNBT(UTBK 測驗)與 Jalur Mandiri 三條入學管道,是理解印尼大學入學制度的具體地點。",
+        "en": "A state university in Jakarta whose admissions page lists three tracks — SNBP on report cards, SNBT via the UTBK test, and university-run Jalur Mandiri — a concrete look at Indonesia's entrance system.",
+        "ja": "ジャカルタの国立大学。公式入試ページにはSNBP(在校成績)、SNBT(UTBKテスト)、独自選抜のJalur Mandiriという3つの入学経路が案内されている。",
+        "zh-CN": "雅加达的国立大学,官方招生页列出 SNBP(在校成绩)、SNBT(UTBK 测验)与 Jalur Mandiri 三条入学管道,呈现印尼大学入学制度的实际操作。",
+        "hi": "जकार्ता का एक राजकीय विश्वविद्यालय, जिसकी प्रवेश साइट पर SNBP (रिपोर्ट कार्ड), SNBT (UTBK परीक्षा) और स्वतंत्र मार्ग Jalur Mandiri तीन प्रवेश रास्ते बताए गए हैं।",
+        "id": "Universitas negeri di Jakarta yang halaman penerimaannya mencantumkan tiga jalur masuk: SNBP berdasar rapor, SNBT lewat tes UTBK, dan Jalur Mandiri yang dikelola kampus sendiri.",
+        "pt-BR": "Universidade pública em Jacarta cuja página de admissão lista três vias de ingresso: SNBP pelo histórico escolar, SNBT pelo teste UTBK e o Jalur Mandiri, conduzido pela própria universidade."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01M0G0RS5ET7D6FXP179VCZB4Q",
+          "relevance": 0.9
+        },
+        {
+          "topic_id": "top_01M1257QCASXRT1YYV0ET9PQFC",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_D4B4DA7744835449EF9B0D4F75",
+      "name": "Perpustakaan Jakarta (Dinas Perpustakaan dan Kearsipan Provinsi DKI Jakarta)",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "ID",
+      "address": "Jl. Perintis Kemerdekaan No. 1, Kayu Putih, Pulo Gadung, Jakarta Timur 13260",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Dinas%20Perpustakaan%20dan%20Kearsipan%20DKI%20Jakarta%20Jl%20Perintis%20Kemerdekaan%20No%201",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Dinas%20Perpustakaan%20dan%20Kearsipan%20DKI%20Jakarta%20Jl%20Perintis%20Kemerdekaan%20No%201",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Dinas%20Perpustakaan%20dan%20Kearsipan%20DKI%20Jakarta%20Jl%20Perintis%20Kemerdekaan%20No%201",
+        "amap": "https://uri.amap.com/search?keyword=Dinas%20Perpustakaan%20dan%20Kearsipan%20DKI%20Jakarta%20Jl%20Perintis%20Kemerdekaan%20No%201"
+      },
+      "source_urls": [
+        "https://dispusip.jakarta.go.id",
+        "https://dispusip.jakarta.go.id/dinas/publications/news/karedok-saat-buku-jadi-panggung-cerita-musik-dan-kreativitas-anak-berpadu"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "雅加達省立圖書館暨檔案局在官網刊出「Hari Anak Jakarta Membaca」宣傳圖與 KAREDOK 巡迴故事活動報導,把兒童節閱讀推廣與開學季的巡迴圖書車服務連在一起。",
+        "en": "DKI Jakarta's library and archives agency runs a \"Hari Anak Jakarta Membaca\" children's-reading banner and a mobile-library storytelling programme called KAREDOK, tying Children's Day promotion to back-to-school literacy services.",
+        "ja": "DKIジャカルタの図書館・公文書局。公式サイトには「Hari Anak Jakarta Membaca」の告知や、移動図書館による読み聞かせ企画KAREDOKの記事が掲載されており、こどもの日の読書推進と新学期のサービスを結び付けている。",
+        "zh-CN": "雅加达省立图书馆暨档案局在官网刊出「Hari Anak Jakarta Membaca」宣传图与 KAREDOK 巡回故事活动报道,把儿童节阅读推广与开学季的巡回图书车服务连在一起。",
+        "hi": "DKI जकार्ता की पुस्तकालय एवं अभिलेखागार एजेंसी अपनी साइट पर \"Hari Anak Jakarta Membaca\" बैनर और मोबाइल-लाइब्रेरी कहानी कार्यक्रम KAREDOK दिखाती है, जो बाल दिवस के पठन प्रचार को स्कूल-वापसी सेवाओं से जोड़ता है।",
+        "id": "Dinas Perpustakaan dan Kearsipan DKI Jakarta menampilkan banner \"Hari Anak Jakarta Membaca\" dan program dongeng keliling KAREDOK di situsnya, menghubungkan promosi baca Hari Anak dengan layanan perpustakaan keliling jelang tahun ajaran baru.",
+        "pt-BR": "O órgão de bibliotecas e arquivos de Jacarta exibe em seu site o banner \"Hari Anak Jakarta Membaca\" e o programa itinerante de contação de histórias KAREDOK, ligando a promoção da leitura no Dia da Criança aos serviços de volta às aulas."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BQXKPK7H1WF1AYW0TH3",
+          "relevance": 0.9
+        },
+        {
+          "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_E0F2BA624ECEA4C37624328DDA",
+      "name": "Jakarta Convention Center (JCC)",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "ID",
+      "address": "Jl. Jenderal Gatot Subroto, Senayan, Jakarta Pusat 10270",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Jakarta%20Convention%20Center%20Senayan%20Jakarta%20Pusat",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Jakarta%20Convention%20Center%20Senayan%20Jakarta%20Pusat",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Jakarta%20Convention%20Center%20Senayan%20Jakarta%20Pusat",
+        "amap": "https://uri.amap.com/search?keyword=Jakarta%20Convention%20Center%20Senayan%20Jakarta%20Pusat"
+      },
+      "source_urls": [
+        "https://www.jcc.co.id/events/schedule-of-events.html"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "雅加達會議中心(JCC)的官方活動總表把「Graduation(畢業典禮)」與「Wedding(婚禮)」列為固定場地類別,是大學租用場地辦理畢業典禮、家庭包場舉行婚禮的具體地點。",
+        "en": "JCC's official events schedule lists \"Graduation\" and \"Wedding\" as standing venue categories, a concrete Jakarta site where universities rent halls for commencement and families book weddings.",
+        "ja": "ジャカルタ・コンベンションセンター(JCC)の公式イベント一覧には「Graduation(卒業式)」と「Wedding(結婚式)」が常設のカテゴリーとして掲載されており、大学の卒業式や家族の結婚式に使われる会場である。",
+        "zh-CN": "雅加达会议中心(JCC)的官方活动总表把「Graduation(毕业典礼)」与「Wedding(婚礼)」列为固定场地类别,是大学租用场地办毕业典礼、家庭办婚礼的具体地点。",
+        "hi": "जकार्ता कन्वेंशन सेंटर (JCC) की आधिकारिक इवेंट सूची में \"Graduation\" (दीक्षांत समारोह) और \"Wedding\" (विवाह) स्थायी श्रेणियाँ हैं — यहाँ विश्वविद्यालय दीक्षांत समारोह और परिवार शादियाँ आयोजित करते हैं।",
+        "id": "Jadwal acara resmi Jakarta Convention Center (JCC) mencantumkan \"Graduation\" dan \"Wedding\" sebagai kategori tetap, tempat konkret universitas menggelar wisuda dan keluarga menggelar pernikahan.",
+        "pt-BR": "A agenda oficial de eventos do Jakarta Convention Center (JCC) lista \"Graduation\" e \"Wedding\" como categorias fixas, local onde universidades realizam formaturas e famílias organizam casamentos."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01KZXQ6BRFP513XZ9B02BT8XCZ",
+          "relevance": 0.9
+        },
+        {
+          "topic_id": "top_01KZXQ6BSK65DHA9PEX14ECB9M",
+          "relevance": 0.9
+        }
+      ]
+    },
+    {
+      "place_id": "plc_FB0CE0A2A52F309E0CB45C424A",
+      "name": "Badan Riset dan Inovasi Nasional (BRIN)",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "country_code": "ID",
+      "address": "Gedung B.J. Habibie, Jl. M.H. Thamrin No. 8, Jakarta Pusat 10340",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Gedung%20BJ%20Habibie%20BRIN%20Jl%20MH%20Thamrin%20No%208%20Jakarta%20Pusat",
+      "nav_urls": {
+        "google": "https://www.google.com/maps/dir/?api=1&destination=Gedung%20BJ%20Habibie%20BRIN%20Jl%20MH%20Thamrin%20No%208%20Jakarta%20Pusat",
+        "baidu": "https://map.baidu.com/search/?querytype=s&wd=Gedung%20BJ%20Habibie%20BRIN%20Jl%20MH%20Thamrin%20No%208%20Jakarta%20Pusat",
+        "amap": "https://uri.amap.com/search?keyword=Gedung%20BJ%20Habibie%20BRIN%20Jl%20MH%20Thamrin%20No%208%20Jakarta%20Pusat"
+      },
+      "source_urls": [
+        "https://brin.go.id"
+      ],
+      "mention_count": 0,
+      "reaction_total": 0,
+      "reaction_actors": 0,
+      "descriptions": {
+        "zh-TW": "印尼國家研究創新署(BRIN)總部位於雅加達哈比比大樓,整合了原國家航空太空研究院(LAPAN),是解釋「無影日」(hari tanpa bayangan)等太陽過境現象的國家科研機構。",
+        "en": "BRIN, Indonesia's national research and innovation agency, is headquartered at the B.J. Habibie Building in Jakarta; it absorbed the former space agency LAPAN and is the national body behind explanations of \"hari tanpa bayangan\" solar-culmination days.",
+        "ja": "インドネシア国家研究革新庁(BRIN)は、ジャカルタのB.J.ハビビ・ビルに本部を置く。旧宇宙機関LAPANを統合しており、「影のない日」(hari tanpa bayangan)などの太陽現象を説明する国の研究機関である。",
+        "zh-CN": "印尼国家研究创新署(BRIN)总部位于雅加达哈比比大楼,整合了原国家航空太空研究院(LAPAN),是解释「无影日」(hari tanpa bayangan)等太阳过境现象的国家科研机构。",
+        "hi": "इंडोनेशिया की राष्ट्रीय अनुसंधान एवं नवाचार एजेंसी (BRIN) का मुख्यालय जकार्ता की बी.जे. हबीबी इमारत में है; इसने पूर्व अंतरिक्ष एजेंसी LAPAN को समाहित किया और \"hari tanpa bayangan\" जैसी सौर घटनाओं की व्याख्या करने वाली राष्ट्रीय संस्था है।",
+        "id": "BRIN, badan riset dan inovasi nasional Indonesia, berkantor pusat di Gedung B.J. Habibie, Jakarta. BRIN mengintegrasikan bekas lembaga antariksa LAPAN dan menjadi rujukan penjelasan fenomena \"hari tanpa bayangan\".",
+        "pt-BR": "A BRIN, agência nacional de pesquisa e inovação da Indonésia, tem sede no Edifício B.J. Habibie, em Jacarta; ela absorveu a antiga agência espacial LAPAN e é a referência nacional para explicar os dias de \"hari tanpa bayangan\" (sem sombra)."
+      },
+      "topics": [
+        {
+          "topic_id": "top_01M0ZM1173BPY7276RNZQ2ARVZ",
           "relevance": 0.9
         }
       ]
