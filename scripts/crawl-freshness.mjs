@@ -47,7 +47,7 @@ function defaultSince() {
     const out = execFileSync('git', [
       'log', '-1', '--format=%cs', '--',
       'site/src/lib/seo.mjs', 'site/src/pages/topic/[slug].astro',
-    ], { cwd: '/root/aeiou.now', encoding: 'utf8' }).trim();
+    ], { cwd: '/mnt/customer/aeiou.now', encoding: 'utf8' }).trim();
     return out || null;
   } catch { return null; }
 }
@@ -55,7 +55,7 @@ const since = flag('--since', defaultSince());
 if (!since) { console.error('✗ 推不出基準日,請用 --since YYYY-MM-DD'); process.exit(1); }
 
 // Topic 主頁 = 吃掉全部曝光的那批,只驗它們(逐國頁與假日頁不是這道閘門在管的)。
-const sitemapPath = '/root/aeiou.now/site/dist/sitemap.xml';
+const sitemapPath = '/mnt/customer/aeiou.now/site/dist/sitemap.xml';
 if (!existsSync(sitemapPath)) {
   console.error('✗ 找不到 site/dist/sitemap.xml —— 先 `cd site && LOCALE=zh-TW pnpm build`');
   process.exit(1);

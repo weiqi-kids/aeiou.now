@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # aeiou.now — 每小時匯出靜態 JSON 並推 source repo(Track D / W4.3)
-#   /root/aeiou.now/scripts/hourly-export.sh
+#   /mnt/customer/aeiou.now/scripts/hourly-export.sh
 #
 # 1. node scripts/export-data.mjs  → 主機 SQLite 匯出到根層 data/(內容 hash 沒變就不寫檔)
 #    (在它之前還有幾個 import/算分/回流步驟,見下方 0.x 與各步的註解)
@@ -8,7 +8,7 @@
 #    site/ api/ db/ docs/ 的變動不歸這支管,由人工/其他流程處理)
 # 3. push 到 source repo(weiqi-kids/aeiou.now)
 #    - HTTPS credential 走 gh 的 credential helper(主機已 gh auth login 為 LightChang)
-#    - author/committer 用 **repo local git config**(/root/aeiou.now 已設 weiqi-kids <lightman.chang@gmail.com>)
+#    - author/committer 用 **repo local git config**(/mnt/customer/aeiou.now 已設 weiqi-kids <lightman.chang@gmail.com>)
 #    - **絕不動 git config --global**(主機紅線:曾有 session 用 --global 設假身分,污染全機 cron 的 commit 作者)
 # 4. data/ 與活動快照無變更 → skip,不產生空 commit
 # 5. 無 remote / push 失敗 → 不整支噴掉,記進 jobs 表(status=failed,error_message 寫清楚)
@@ -18,7 +18,7 @@
 
 set -uo pipefail
 
-REPO="${AEIOU_REPO:-/root/aeiou.now}"   # 可覆寫僅為了在複本上做端到端演練;cron 用預設值
+REPO="${AEIOU_REPO:-/mnt/customer/aeiou.now}"   # 可覆寫僅為了在複本上做端到端演練;cron 用預設值
 NODE_BIN="${AEIOU_NODE_BIN:-/usr/bin/node}"
 LOCK_FILE="/run/lock/aeiou-hourly-export.lock"
 

@@ -33,10 +33,10 @@
 //
 // claude 子行程一律在**空目錄**跑(2026-08-13):
 //   claude CLI 會自動把 cwd 及其各層父目錄的 CLAUDE.md 讀進 context。
-//   cron 是 `cd /root/aeiou.now` 之後才呼叫本支,所以原本每次翻譯都會把
-//   /root/aeiou.now/CLAUDE.md(17KB)與 /root/CLAUDE.md(7.8KB)整份拖進去。
+//   cron 是 `cd /mnt/customer/aeiou.now` 之後才呼叫本支,所以原本每次翻譯都會把
+//   /mnt/customer/aeiou.now/CLAUDE.md(17KB)與 /root/CLAUDE.md(7.8KB)整份拖進去。
 //   實測(claude -p --output-format json,同一則 prompt):
-//     cwd=/root/aeiou.now → cache_creation 20854 tokens
+//     cwd=/mnt/customer/aeiou.now → cache_creation 20854 tokens
 //     cwd=/tmp 空目錄     → cache_creation  8635 tokens   ── 每次呼叫白花約 12,200 tokens
 //   驗證方式:問「context 裡有沒有出現『守門七條』」,repo 目錄答 YES、空目錄答 NO。
 //   除了浪費,更要命的是**翻譯結果會被手冊內容影響** —— 手冊被誰改一行,

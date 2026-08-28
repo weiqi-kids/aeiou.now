@@ -37,7 +37,7 @@
 //
 // 環境變數:
 //   AEIOU_API_URL          Worker base URL(預設 workers.dev;切自訂網域只改這裡)
-//   AEIOU_DB_PATH          主機 SQLite(預設 /root/aeiou.now/db/aeiou.sqlite)
+//   AEIOU_DB_PATH          主機 SQLite(預設 /mnt/customer/aeiou.now/db/aeiou.sqlite)
 //   AEIOU_SYNC_SECRET_FILE secret 檔(預設 ~/.config/aeiou/sync-secret)
 //   AEIOU_SYNC_STATE_FILE  上次同步指紋(預設 db/.sync-state.json;不進 git)
 //   AEIOU_SYNC_FORCE=1     忽略 hash,強制全量推(等同 --force)

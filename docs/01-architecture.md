@@ -32,7 +32,7 @@
 ```
                      ┌──────────────────────────────┐
                      │  主機 SQLite                  │
-                     │  /root/aeiou.now/db/          │
+                     │  /mnt/customer/aeiou.now/db/          │
                      │       aeiou.sqlite            │
                      │  (爬搜/Topic 生產的權威來源)   │
                      └───────┬──────────────┬────────┘
@@ -129,7 +129,7 @@ source repo:`weiqi-kids/aeiou.now`(唯一有人 commit)。語系用**目錄**分
 ## 8. Monorepo 結構
 
 ```
-/root/aeiou.now/
+/mnt/customer/aeiou.now/
 ├── docs/                 架構與資料模型文件、briefs/
 ├── db/                   schema-common.sql / schema-host.sql / schema-d1.sql、seed/
 ├── data/                 匯出的靜態 JSON(commit 進 git)
@@ -170,7 +170,7 @@ source repo:`weiqi-kids/aeiou.now`(唯一有人 commit)。語系用**目錄**分
 | 靜態站 API 位址 | 環境變數 `PUBLIC_API_URL` |
 | Deploy key secrets | `DEPLOY_KEY_ZH_TW` `DEPLOY_KEY_EN` `DEPLOY_KEY_JA` `DEPLOY_KEY_ZH_CN` `DEPLOY_KEY_HI` `DEPLOY_KEY_ID` `DEPLOY_KEY_PT_BR` |
 | `REACTION_SET` | `["❤️","😂","😮","😢","🤔","🎉","👏"]`(不含 👍) |
-| 主機 SQLite 檔 | `/root/aeiou.now/db/aeiou.sqlite` |
+| 主機 SQLite 檔 | `/mnt/customer/aeiou.now/db/aeiou.sqlite` |
 | API 路徑參數 | `/v1/topics/:id/...` 的 `:id` = **topic_id(ULID)**,不是 slug |
 | city_code | `lowercase-slugify(request.cf.city)`,無 city 時 NULL |
 | wrangler | 主機無全域指令,一律 `npx wrangler` |
@@ -210,7 +210,7 @@ cron 環境的 PATH 必須含 `/root/.local/bin`(`claude` CLI 在此),`HOME=/roo
 ### 各支腳本的行為約定
 
 - **`translate-posts.mjs`**:`GET /internal/ugc/pending-translation`(上限 50 則)→ 每則翻**六語**(七語系扣掉 `original_locale`)→ **先** upsert 進主機 `posts`/`post_i18n`,**再** `POST /internal/translations` 回寫 D1。順序刻意:主機先落地,萬一回寫 D1 失敗,D1 那幾則仍是 `translating`,下一輪重抓且主機 upsert 冪等,不會掉資料。翻譯一律用 `claude -p`(訂閱 CLI),**不是 Anthropic API**。
-  **claude 子行程一律在 `/tmp` 下的空目錄跑**(`AEIOU_CLAUDE_CWD`,預設 `/tmp/aeiou-translate-cwd`):claude CLI 會把 cwd 及各層父目錄的 `CLAUDE.md` 讀進 context,而 cron 是 `cd /root/aeiou.now` 之後才呼叫本支。實測同一則 prompt,cwd 在 repo 時 `cache_creation` 20854 tokens、在空目錄 8635 tokens——每次呼叫白花約 12,200 tokens,而且**譯文行為會被手冊內容影響**。空目錄必須在 `/root` 之外(`/root/CLAUDE.md` 會被 `/root` 底下任何 cwd 往上撿到)。
+  **claude 子行程一律在 `/tmp` 下的空目錄跑**(`AEIOU_CLAUDE_CWD`,預設 `/tmp/aeiou-translate-cwd`):claude CLI 會把 cwd 及各層父目錄的 `CLAUDE.md` 讀進 context,而 cron 是 `cd /mnt/customer/aeiou.now` 之後才呼叫本支。實測同一則 prompt,cwd 在 repo 時 `cache_creation` 20854 tokens、在空目錄 8635 tokens——每次呼叫白花約 12,200 tokens,而且**譯文行為會被手冊內容影響**。空目錄必須在 `/root` 之外(`/root/CLAUDE.md` 會被 `/root` 底下任何 cwd 往上撿到)。
 - **`sync-topics-to-d1.mjs`**:主機 `topics`/`topic_i18n` → `POST /internal/sync/topics`。`current_cycle_id` 取自主機 `topic_cycles` 裡 `ended_at IS NULL` 的那一筆;沒有進行中的期就給 NULL。upsert 覆蓋語意,M1 不刪 D1 上多出來的列。
   **內容沒變就不推**:payload 取 sha256 存 `db/.sync-state.json`(不進 git),與上次相同則直接記 success、**不發請求**——Topic 是人工改 `content/topics/*.md` 才會變的東西,但本支掛在 `*/15` 上,原本每輪都無條件全量 upsert。指紋**只在 Worker 回應成功後才寫**,失敗那輪下次仍重推。
   保底:即使指紋相同,距上次真正同步 ≥ `AEIOU_SYNC_FORCE_INTERVAL_SEC`(預設 6 小時)仍強制推一次,避免 D1 那側掉資料時主機因「我沒變」而永不補。`--force` 或 `AEIOU_SYNC_FORCE=1` 可手動忽略指紋。
@@ -222,11 +222,11 @@ cron 環境的 PATH 必須含 `/root/.local/bin`(`claude` CLI 在此),`HOME=/roo
 - 重試曲線:失敗 `next_retry_at` = +5 分 → 再失敗 +10 分 → **第三次 `status='dlq'`**(不再自動重試,`error_message` 以 `DLQ(…)` 開頭)。
   > 契約備註:`docs/02-data-model.md` §7 的 status 註解列舉沒有 `dlq`;Track D 交辦書明文要求「第三次進 DLQ 狀態」,故實作採 `status='dlq'`,語意等價於「已達 3 次失敗且 `next_retry_at IS NULL`」。
 - `translate-posts.mjs` 用 `job_locks` 防重入(同 `scope`+`job_name`+`scheduled_at` 只跑一次;前一輪行程還活著也 skip),避免 15 分鐘的 cron 撞上跑很久的前一輪。`hourly-export.sh` 用 `flock` 自我互斥。
-- log:`/root/aeiou.now/logs/cron-15min.log`、`logs/hourly-export.log`(`.gitignore` 已忽略 `*.log`)。單檔超過 5MB 由 `cron-15min.sh` 自動裁到最後 2000 行,不另設 logrotate。
+- log:`/mnt/customer/aeiou.now/logs/cron-15min.log`、`logs/hourly-export.log`(`.gitignore` 已忽略 `*.log`)。單檔超過 5MB 由 `cron-15min.sh` 自動裁到最後 2000 行,不另設 logrotate。
 - 查最近狀態:
 
 ```sh
-sqlite3 /root/aeiou.now/db/aeiou.sqlite \
+sqlite3 /mnt/customer/aeiou.now/db/aeiou.sqlite \
   "SELECT job_name,datetime(finished_at,'unixepoch'),status,attempt,records_read,error_message
      FROM jobs ORDER BY rowid DESC LIMIT 10;"
 ```
@@ -236,6 +236,6 @@ sqlite3 /root/aeiou.now/db/aeiou.sqlite \
 | 變數 | 預設 | 用途 |
 |---|---|---|
 | `AEIOU_API_URL` | `https://aeiou-api.lightman-chang.workers.dev` | Worker base URL |
-| `AEIOU_DB_PATH` | `/root/aeiou.now/db/aeiou.sqlite` | 主機 SQLite |
+| `AEIOU_DB_PATH` | `/mnt/customer/aeiou.now/db/aeiou.sqlite` | 主機 SQLite |
 | `AEIOU_SYNC_SECRET_FILE` | `~/.config/aeiou/sync-secret` | `SYNC_SECRET`(chmod 600,**不進碼、不進 log、不進 git**) |
 | `AEIOU_TRANSLATE_LIMIT` / `AEIOU_TRANSLATE_CHUNK` | `50` / `4` | 一輪抓幾則 / 一次 `claude -p` 呼叫處理幾則 |

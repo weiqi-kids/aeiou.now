@@ -7,14 +7,14 @@
 # 收斂成一次核准即可完成的動作。
 #
 # 用法(在主機上):
-#   bash /root/aeiou.now/scripts/setup-github.sh
+#   bash /mnt/customer/aeiou.now/scripts/setup-github.sh
 #
 # 冪等:全部步驟先查後建,重跑安全。
 set -euo pipefail
 
 OWNER="weiqi-kids"
 SOURCE_REPO="$OWNER/aeiou.now"
-ROOT="/root/aeiou.now"
+ROOT="/mnt/customer/aeiou.now"
 KEYDIR="$HOME/.config/aeiou/deploy-keys"
 
 # locale 小寫後綴 → GitHub secret 名後綴(secrets 只准 [A-Z0-9_])
