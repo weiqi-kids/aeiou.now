@@ -87,6 +87,16 @@ for (const file of fragments) {
       return null;
     }).filter(Boolean))].sort();
     if (x.topic_slugs.length === 0) problems.push(`${file} ${kind} 「${x.name}」 沒有任何有效 topic_slug`);
+    // update-local-data 只收 place_type='permanent' + topic_relevance='direct'(見該檔 §驗證)。
+    // 這兩條原本只有每小時那一關擋得到,於是收件驗過了、合併寫進檔案了,才在下一步整支失敗
+    // (2026-08-28 實測:三個 indirect 地點讓 update-local-data 在第一行就 fail,得整批回滾重來)。
+    // 收件端先擋,錯的那一筆才會停在片段檔裡、不會汙染 content/。
+    // ⚠ 修法只有「把那一筆拿掉或換一個真的直接相關的 Topic」——**不准為了過關把 indirect 改寫成 direct**,
+    //   那個欄位是收集者對「這個地點是不是真的在講這個 Topic」的判斷,改它等於憑空填 marker。
+    if (kind === 'place') {
+      if (x.place_type !== 'permanent') problems.push(`${file} place 「${x.name}」 place_type=${x.place_type},只收 permanent`);
+      if (x.topic_relevance !== 'direct') problems.push(`${file} place 「${x.name}」 topic_relevance=${x.topic_relevance},只收 direct(不要為了過關改寫,拿掉或換 Topic)`);
+    }
   }
   incoming.places.push(...(frag.places || []));
   incoming.events.push(...(frag.events || []));

@@ -2,18 +2,28 @@
   "as_of": "2026-08-28",
   "collection_method": "manual-official-source",
   "managed_event_source_urls": [
+    "https://2026.kisan.in/",
     "https://amigosdaarte.org.br/atencao-sp-o-revelando-sp-sao-paulo-mudou-de-data/",
     "https://bunkyo.org.br/br/2026/08/bunka-matsuri-a-festa-da-cultura-japonesa-2/",
+    "https://edu.sh.gov.cn/xxgk2_zdgz_jcjy_05/20260605/19ca2cb2e10a47fe86047bcc0bfdd0e8.html",
+    "https://english.shanghai.gov.cn/en-CulturalPerformances/20260825/004d4a8d8d304611bda9efe7d569ec45.html",
     "https://english.shanghai.gov.cn/en-FestivalsCelebrations/20260806/36e4be56b33c4d81a78ec6799d7b8c62.html",
+    "https://english.shanghai.gov.cn/en-FestivalsCelebrations/20260821/4e87519e5b2b47378e2dec9207dce68c.html",
     "https://english.shanghai.gov.cn/en-MajorConsumerEvents/20260706/d4819e8683d049c8a715842864ce97d2.html",
     "https://eventos.sp.senac.br/evento/workshop-mesa-para-dois-food-design-para-o-dia-dos-namorados/",
     "https://expofarmersmarket.taipei/news-info.php?id=784",
     "https://home.nps.gov/planyourvisit/passes.htm",
+    "https://jakartapetexpo.com/",
     "https://ligasp.com.br/desfiles/",
     "https://loveland.org/events-2/corn-roast-festival/",
     "https://mitwpu.edu.in/",
+    "https://museudaimigracao.org.br/eventos/hibrido/curso-de-formacao-linguas-migrantes",
+    "https://museudaimigracao.org.br/eventos/presencial/palestra-dialogos-migramundo-quem-sao-as-pessoas-que-migram-hoje",
+    "https://museudaimigracao.org.br/eventos/presencial/visitas-educativas-setembro-2026",
     "https://newsroom.feverup.com/en-IN/262080-candlelight-s-valentine-s-day-special-brings-a-romantic-experience-to-pune-on-14th-february/",
     "https://prefeitura.sp.gov.br/w/prefeitura-realiza-evento-de-incentivo-%C3%A0-ado%C3%A7%C3%A3o-de-animais-neste-s%C3%A1bado-29-",
+    "https://prefeitura.sp.gov.br/web/se/w/confira-os-principais-detalhes-dos-eventos-que-integram-o-calend%C3%A1rio-estrat%C3%A9gico-da-prefeitura-de-s%C3%A3o-paulo",
+    "https://saopaulooktoberfest.com.br/",
     "https://tam.gov.taipei/Active_Content.aspx?n=FD2745F0D4D22B67&ss=4828D9F1FF18CEC8",
     "https://tam.gov.taipei/News_Content.aspx?n=49854D6439EC40C0&sms=72544237BBE4C5F6&s=133D3D29CFCDAD86",
     "https://tokyofestival.jp/en/about",
@@ -25,7 +35,9 @@
     "https://www.burgercarnival.taipei/",
     "https://www.fuvest.br/vestibular-da-usp/",
     "https://www.gotokyo.org/en/spot/ev093/index.html",
+    "https://www.iiserpune.ac.in/pages/academic-calendar",
     "https://www.jakarta.go.id/siaran-pers/6855-SP-HMS-07-2026",
+    "https://www.longevidade.com.br/",
     "https://www.lungshan.org.tw/Activity/1150904/index.php",
     "https://www.newbelgium.com/events/",
     "https://www.senso-ji.jp/annual_event/10.html",
@@ -58,6 +70,8 @@
     "https://english.shanghai.gov.cn/en-MuseumsGalleries/20231226/760c2fc185754169bbda2e197147fdc5.html",
     "https://english.shanghai.gov.cn/en-MuseumsGalleries/20240711/676ab7e6c9964afb8879436aca85499d.html",
     "https://english.shanghai.gov.cn/en-MuseumsGalleries/20240717/c12d1b709741429ebcada33563c3623f.html",
+    "https://english.shanghai.gov.cn/en-MuseumsGalleries/20260818/40d07d517b924a5cbad1af088d454c9f.html",
+    "https://english.shanghai.gov.cn/en-Parks/20250224/3ab13ee8e9b9491e9c414383e6389354.html",
     "https://english.shanghai.gov.cn/en-PermanentResidence/20231218/ab67facca2f94759abddd362377bf265.html",
     "https://english.shanghai.gov.cn/en-RentaShanghai/20250620/696a580309e3481b9580ba0d8fae5bc6.html",
     "https://english.shanghai.gov.cn/en-ScenicSpots/20231226/45172d56a204477195888159d4698ac8.html",
@@ -2772,6 +2786,55 @@
         "id": "Setiap musim dingin, Asosiasi Jalan Belanja Harajuku-Omotesando menyelenggarakan iluminasi resmi di sepanjang jalan pohon zelkova Omotesando, salah satu pertunjukan lampu pohon tertua di Tokyo.",
         "pt-BR": "Todo inverno, a Associação da Rua Comercial Harajuku-Omotesando organiza a iluminação oficial na avenida arborizada de Omotesando, uma das exibições de luzes mais antigas de Tóquio."
       }
+    },
+    {
+      "name": "上海民政博物館（Museum of Shanghai Civil Affairs）",
+      "city_code": "shanghai",
+      "country_code": "CN",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "topic_slugs": [
+        "elders-day",
+        "weddings-and-customs"
+      ],
+      "address": "上海市黃浦區普育西路 105 號 公益新天地 1、2 號樓",
+      "map_query": "上海市黃浦區普育西路105號 公益新天地 上海民政博物館",
+      "source_urls": [
+        "https://english.shanghai.gov.cn/en-MuseumsGalleries/20260818/40d07d517b924a5cbad1af088d454c9f.html"
+      ],
+      "descriptions": {
+        "zh-TW": "中國第一座以民政為主題的綜合博物館，位於黃浦區公益新天地（前身為民國時期上海最大的慈善收容機構新普育堂）。館內十二個主題展廳涵蓋社會救助、養老服務、慈善事業、婚俗與社區治理，藏品逾五千件，包括民國時期的結婚證書與印花稅票、早期福利彩票與搖獎機，另有可試穿虛擬婚服的互動體驗。免費參觀，9 時至 16 時（15 時 30 分停止入場），週一閉館（法定假日除外）。",
+        "en": "The Museum of Shanghai Civil Affairs is China's first comprehensive museum devoted to the civil affairs sector, inside Gongyi Xintiandi in Huangpu district — once the site of Xin Puyutang, the largest charitable shelter in Republican-era Shanghai. Twelve themed galleries cover social assistance, elderly care, charitable services, marriage customs and community governance, with more than 5,000 artifacts including Republican-era marriage certificates and tax stamps, early welfare lottery tickets and spinning lottery machines, plus an interactive AI experience for trying on virtual wedding attire. Admission is free; open 9 am to 4 pm (last entry 3:30 pm), closed Mondays except public holidays.",
+        "ja": "中国で初めての民政（社会福祉行政）をテーマとした総合博物館で、黄浦区の公益新天地内にあります。敷地は中華民国期の上海最大の慈善収容施設・新普育堂の跡地です。12のテーマ展示室が社会扶助、高齢者ケア、慈善事業、婚礼習俗、コミュニティ運営を扱い、5,000点を超える所蔵品には民国期の結婚証書や印紙、初期の福祉宝くじと抽選機があり、バーチャル婚礼衣装を試着できる体験も。入館無料、9時〜16時（最終入館15時30分）、月曜休館（祝日を除く）。",
+        "zh-CN": "中国第一座以民政为主题的综合博物馆，位于黄浦区公益新天地（前身为民国时期上海最大的慈善收容机构新普育堂）。馆内十二个主题展厅涵盖社会救助、养老服务、慈善事业、婚俗与社区治理，藏品逾五千件，包括民国时期的结婚证书与印花税票、早期福利彩票与摇奖机，另有可试穿虚拟婚服的互动体验。免费参观，9 时至 16 时（15 时 30 分停止入场），周一闭馆（法定假日除外）。",
+        "hi": "यह चीन का पहला व्यापक संग्रहालय है जो नागरिक मामलों (सामाजिक कल्याण प्रशासन) को समर्पित है; यह हुआंगपू ज़िले के Gongyi Xintiandi में है, जहाँ कभी गणतंत्र काल के शंघाई का सबसे बड़ा धर्मार्थ आश्रय Xin Puyutang था। बारह विषयगत दीर्घाएँ सामाजिक सहायता, बुज़ुर्गों की देखभाल, दान-सेवा, विवाह-रीतियों और सामुदायिक शासन को कवर करती हैं; 5,000 से अधिक वस्तुओं में गणतंत्र काल के विवाह प्रमाणपत्र और स्टाम्प, शुरुआती कल्याण लॉटरी टिकट और लॉटरी मशीनें शामिल हैं, साथ ही आभासी विवाह-पोशाक आज़माने का इंटरैक्टिव अनुभव भी। प्रवेश निःशुल्क; सुबह 9 से शाम 4 बजे तक (अंतिम प्रवेश 3:30 बजे), सोमवार को बंद (सार्वजनिक अवकाश छोड़कर)।",
+        "id": "Museum of Shanghai Civil Affairs adalah museum komprehensif pertama di China yang khusus membahas urusan sosial-kependudukan, berlokasi di Gongyi Xintiandi, distrik Huangpu — bekas lokasi Xin Puyutang, penampungan amal terbesar di Shanghai pada masa Republik. Dua belas galeri tematik mencakup bantuan sosial, perawatan lansia, layanan amal, adat pernikahan, dan tata kelola komunitas, dengan lebih dari 5.000 artefak termasuk akta nikah dan meterai era Republik, tiket lotre kesejahteraan awal serta mesin undiannya, ditambah pengalaman interaktif mencoba busana pengantin virtual. Masuk gratis; buka pukul 09.00–16.00 (masuk terakhir 15.30), tutup hari Senin kecuali hari libur nasional.",
+        "pt-BR": "O Museum of Shanghai Civil Affairs é o primeiro museu abrangente da China dedicado à área de assistência social, dentro do Gongyi Xintiandi, no distrito de Huangpu — antigo endereço do Xin Puyutang, o maior abrigo de caridade de Xangai no período republicano. Doze galerias temáticas tratam de assistência social, cuidado de idosos, serviços de caridade, costumes matrimoniais e governança comunitária, com mais de 5.000 peças, entre elas certidões de casamento e selos fiscais do período republicano, bilhetes de loteria beneficente antigos e suas máquinas de sorteio, além de uma experiência interativa para experimentar trajes de noiva virtuais. Entrada gratuita; aberto das 9h às 16h (última entrada às 15h30), fechado às segundas, exceto feriados."
+      }
+    },
+    {
+      "name": "呂巷水果公園（Lyuxiang Fruit Park）",
+      "city_code": "shanghai",
+      "country_code": "CN",
+      "place_type": "permanent",
+      "topic_relevance": "direct",
+      "topic_slugs": [
+        "harvest-and-gratitude"
+      ],
+      "address": "上海市金山區呂巷鎮金石北路 3889 號",
+      "map_query": "上海市金山區呂巷鎮金石北路3889號 呂巷水果公園",
+      "source_urls": [
+        "https://english.shanghai.gov.cn/en-Parks/20250224/3ab13ee8e9b9491e9c414383e6389354.html"
+      ],
+      "descriptions": {
+        "zh-TW": "位於金山區呂巷鎮的果園公園，佔地逾 666 公頃，是上海市政府英文頁介紹的「中國蟠桃之鄉」，也是金山區的生態核心；呂巷鎮並是上海第一個國家級生態產品保護示範區。園區分為賞花區、葡萄採果遊覽區、疊景湖生態氧吧區與農業休閒住宿區，蟠桃年產量超過一萬公噸，另栽種葡萄、藍莓、櫻桃、瓜果、火龍果與草莓等三十多種水果，全年都有採果體驗。開放時間 8 時 30 分至 16 時 30 分，入園免費，採果與購買另計費。",
+        "en": "Lyuxiang Fruit Park, in Lyuxiang town, Jinshan district, covers more than 666 hectares and is described by Shanghai's official English page as the \"hometown of Chinese flat peaches\" and the ecological heart of Jinshan; the town is also Shanghai's first national-level ecological product protection demonstration zone. It is divided into a flower-viewing area built around the flat-peach industry, an orchard tour area for Shiquan grapes, an eco-oxygen bar area at Diejing Lake, and an agritourism and farm-stay area. Annual flat peach output exceeds 10,000 metric tons, and more than 30 other fruits — grapes, blueberries, cherries, melons, dragon fruit, strawberries — give a year-round picking season. Open 8:30 am to 4:30 pm; admission free, with fees for picking and purchases.",
+        "ja": "金山区呂巷鎮にある果樹公園で、面積は666ヘクタール超。上海市政府の英語版ページは「中国蟠桃（ばんとう）の里」であり金山区の生態的中心と紹介しています。呂巷鎮は上海初の国家級生態産品保護モデル地区でもあります。園内は蟠桃産業を中心とした花見エリア、石泉ぶどうの果樹園エリア、畳景湖の生態酸素バーエリア、農業観光・宿泊エリアに分かれ、蟠桃の年間生産量は1万トンを超えます。ぶどう、ブルーベリー、さくらんぼ、メロン、ドラゴンフルーツ、いちごなど30種類以上の果物があり、一年を通して収穫体験ができます。開園8時30分〜16時30分、入園無料（収穫・購入は有料）。",
+        "zh-CN": "位于金山区吕巷镇的果园公园，占地逾 666 公顷，是上海市政府英文页介绍的“中国蟠桃之乡”，也是金山区的生态核心；吕巷镇并是上海第一个国家级生态产品保护示范区。园区分为赏花区、葡萄采果游览区、叠景湖生态氧吧区与农业休闲住宿区，蟠桃年产量超过一万公吨，另栽种葡萄、蓝莓、樱桃、瓜果、火龙果与草莓等三十多种水果，全年都有采果体验。开放时间 8 时 30 分至 16 时 30 分，入园免费，采果与购买另计费。",
+        "hi": "जिनशान ज़िले के Lyuxiang कस्बे में स्थित Lyuxiang Fruit Park 666 हेक्टेयर से अधिक में फैला है और शंघाई सरकार के अंग्रेज़ी पेज के अनुसार यह \"चीन के चपटे आड़ू का गृहनगर\" तथा जिनशान का पारिस्थितिक केंद्र है; यह कस्बा शंघाई का पहला राष्ट्रीय स्तर का पारिस्थितिक उत्पाद संरक्षण प्रदर्शन क्षेत्र भी है। पार्क में फूल देखने का क्षेत्र, Shiquan अंगूरों का बागान भ्रमण क्षेत्र, Diejing झील का पारिस्थितिक क्षेत्र और कृषि-पर्यटन एवं फ़ार्म-स्टे क्षेत्र हैं। चपटे आड़ू का वार्षिक उत्पादन 10,000 मीट्रिक टन से अधिक है, और अंगूर, ब्लूबेरी, चेरी, खरबूजे, ड्रैगन फ्रूट तथा स्ट्रॉबेरी सहित 30 से अधिक फल साल भर तोड़ने का अनुभव देते हैं। समय: सुबह 8:30 से शाम 4:30 तक; प्रवेश निःशुल्क, फल तोड़ने और ख़रीद पर शुल्क।",
+        "id": "Lyuxiang Fruit Park di kota Lyuxiang, distrik Jinshan, seluas lebih dari 666 hektare, disebut halaman resmi berbahasa Inggris pemerintah Shanghai sebagai \"kampung halaman buah persik pipih China\" dan jantung ekologi Jinshan; kota ini juga zona percontohan perlindungan produk ekologis tingkat nasional pertama di Shanghai. Taman ini terbagi menjadi area menikmati bunga berbasis industri persik pipih, area kebun anggur Shiquan, area bar oksigen ekologis di Danau Diejing, serta area agrowisata dan penginapan pertanian. Produksi persik pipih tahunan melampaui 10.000 ton, dan lebih dari 30 jenis buah lain — anggur, blueberry, ceri, melon, buah naga, stroberi — membuat panen buah tersedia sepanjang tahun. Buka pukul 08.30–16.30; masuk gratis, ada biaya untuk memetik dan membeli buah.",
+        "pt-BR": "O Lyuxiang Fruit Park, na cidade de Lyuxiang, distrito de Jinshan, ocupa mais de 666 hectares e é descrito pela página oficial em inglês do governo de Xangai como a \"terra natal do pêssego chato chinês\" e o coração ecológico de Jinshan; a cidade é ainda a primeira zona de demonstração de proteção de produtos ecológicos de nível nacional em Xangai. O parque divide-se em uma área de contemplação de flores ligada à cultura do pêssego chato, uma área de visita a pomares de uvas Shiquan, uma área de \"bar de oxigênio\" ecológico no lago Diejing e uma área de agroturismo e hospedagem rural. A produção anual de pêssegos chatos passa de 10 mil toneladas, e mais de 30 outras frutas — uvas, mirtilos, cerejas, melões, pitaia, morangos — garantem colheita o ano todo. Aberto das 8h30 às 16h30; entrada gratuita, com taxas para colher e comprar frutas."
+      }
     }
   ],
   "events": [
@@ -3475,6 +3538,360 @@
         "hi": "असाकुसा के तोरी-नो-इची मेले का दूसरा \"मुर्गे का दिन\" 19 नवंबर 2026 (गुरुवार) को पड़ता है। यह ओतोरी तीर्थ और चोकोकु-जी में होता है, जहाँ दुकानें कारोबार में सौभाग्य के लिए सजे हुए बाँस के रेक बेचती हैं — एदो काल से चली आ रही परंपरा।",
         "id": "Hari Ayam kedua (ni-no-tori) pada pasar Tori-no-ichi di Asakusa jatuh pada 19 November 2026 (Kamis), digelar di Kuil Otori dan Chokoku-ji, dengan lapak yang menjual garu keberuntungan untuk rezeki usaha — tradisi sejak zaman Edo yang masih berjalan.",
         "pt-BR": "O segundo Dia do Galo (ni-no-tori) da feira Tori-no-ichi de Asakusa cai em 19 de novembro de 2026 (qui), no Santuário Otori e no templo Chokoku-ji, com barracas vendendo ancinhos da sorte para prosperidade nos negócios — tradição da era Edo ainda observada hoje."
+      }
+    },
+    {
+      "name": "Jakarta Pet Expo",
+      "city_code": "jakarta",
+      "country_code": "ID",
+      "venue": "Jakarta International Expo (JIExpo) Kemayoran",
+      "topic_slugs": [
+        "pets-and-family"
+      ],
+      "start_at": "2026-11-25T00:00:00Z",
+      "end_at": "2026-11-28T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://jakartapetexpo.com/",
+      "descriptions": {
+        "zh-TW": "Jakarta Pet Expo（JPE）2026 年 11 月 25 日至 28 日在雅加達 Kemayoran 的 Jakarta International Expo 舉行，每日 10:00–17:00。這是寵物照護用品的專業展，參展類別包含寵物食品、美容用品與獸醫器材，來訪對象是經銷商、零售商、獸醫與寵物店經營者。",
+        "en": "Jakarta Pet Expo (JPE) runs 25–28 November 2026, 10:00–17:00, at the Jakarta International Expo in Kemayoran, Jakarta. It is a trade expo for pet care: exhibitor categories include pet food manufacturing, grooming products and veterinary equipment, and it is aimed at distributors, retailers, vets and pet-shop owners.",
+        "ja": "Jakarta Pet Expo（JPE）は2026年11月25日から28日まで、10:00–17:00にジャカルタKemayoranのJakarta International Expoで開催されます。ペットケアの専門見本市で、ペットフードやグルーミング用品、獣医療機器などが出展し、流通業者・小売業・獣医・ペットショップ経営者が対象です。",
+        "zh-CN": "Jakarta Pet Expo（JPE）2026 年 11 月 25 日至 28 日在雅加达 Kemayoran 的 Jakarta International Expo 举行，每日 10:00–17:00。这是宠物照护用品的专业展，参展类别包含宠物食品、美容用品与兽医器材，来访对象是经销商、零售商、兽医与宠物店经营者。",
+        "hi": "Jakarta Pet Expo (JPE) 25 से 28 नवंबर 2026 तक, 10:00–17:00, जकार्ता के Kemayoran स्थित Jakarta International Expo में होगा। यह पालतू-देखभाल का ट्रेड एक्सपो है जिसमें पेट फ़ूड, ग्रूमिंग उत्पाद और पशु-चिकित्सा उपकरण प्रदर्शित होते हैं, और यह वितरकों, खुदरा विक्रेताओं, पशु-चिकित्सकों तथा पेट शॉप मालिकों के लिए है।",
+        "id": "Jakarta Pet Expo (JPE) digelar 25–28 November 2026, pukul 10:00–17:00, di Jakarta International Expo (JIExpo) Kemayoran. Ini pameran dagang perawatan hewan peliharaan: profil peserta mencakup pet food, produk grooming, dan peralatan veteriner, dengan sasaran pengunjung distributor, peritel, dokter hewan, dan pemilik pet shop.",
+        "pt-BR": "A Jakarta Pet Expo (JPE) acontece de 25 a 28 de novembro de 2026, das 10:00 às 17:00, no Jakarta International Expo, em Kemayoran, Jacarta. É uma feira de negócios de cuidados com animais: entre os expositores há fabricantes de ração, produtos de banho e tosa e equipamentos veterinários, e o público-alvo são distribuidores, varejistas, veterinários e donos de pet shops."
+      }
+    },
+    {
+      "name": "KISAN Agri Show 2026",
+      "city_code": "pune",
+      "country_code": "IN",
+      "venue": "Pune International Exhibition and Convention Centre (PIECC), Moshi",
+      "topic_slugs": [
+        "harvest-and-gratitude"
+      ],
+      "start_at": "2026-12-09T00:00:00Z",
+      "end_at": "2026-12-13T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://2026.kisan.in/",
+      "descriptions": {
+        "zh-TW": "第 34 屆 KISAN 農業展,1993 年起每年舉辦,官方網站稱其為印度規模最大的農民展覽。2026 年 12 月 9 日至 13 日在浦那莫希的 PIECC 展場舉行,每日上午 9 點到下午 5 點。",
+        "en": "The 34th edition of the KISAN Agri Show, held annually since 1993 and described by the organisers as India's largest farmer exhibition. It runs 9-13 December 2026 at PIECC, Moshi, Pune, daily from 09:00 to 17:00.",
+        "ja": "1993年から毎年開かれているKISAN農業展の第34回。主催者はインド最大の農業者向け展示会と説明している。2026年12月9日から13日まで、プネー・モシのPIECC会場で9時から17時まで開催。",
+        "zh-CN": "第 34 届 KISAN 农业展,1993 年起每年举办,主办方称其为印度规模最大的农民展览。2026 年 12 月 9 日至 13 日在浦那莫希的 PIECC 展场举行,每天上午 9 点至下午 5 点。",
+        "hi": "किसान एग्री शो का 34वां संस्करण, जो 1993 से हर साल आयोजित होता है और आयोजकों के अनुसार भारत की सबसे बड़ी किसान प्रदर्शनी है। यह 9 से 13 दिसंबर 2026 तक पुणे के मोशी स्थित PIECC में सुबह 9 से शाम 5 बजे तक चलेगा।",
+        "id": "Edisi ke-34 KISAN Agri Show, yang digelar setiap tahun sejak 1993 dan disebut penyelenggara sebagai pameran petani terbesar di India. Berlangsung 9-13 Desember 2026 di PIECC, Moshi, Pune, tiap hari pukul 09.00-17.00.",
+        "pt-BR": "A 34a edicao da KISAN Agri Show, realizada anualmente desde 1993 e descrita pelos organizadores como a maior feira de agricultores da India. Acontece de 9 a 13 de dezembro de 2026 no PIECC, em Moshi, Pune, das 9h as 17h."
+      }
+    },
+    {
+      "name": "IISER Pune Mid-Semester Examinations (August 2026 Semester)",
+      "city_code": "pune",
+      "country_code": "IN",
+      "venue": "Indian Institute of Science Education and Research Pune, Dr. Homi Bhabha Road",
+      "topic_slugs": [
+        "exam-season"
+      ],
+      "start_at": "2026-09-21T00:00:00Z",
+      "end_at": "2026-09-30T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://www.iiserpune.ac.in/pages/academic-calendar",
+      "descriptions": {
+        "zh-TW": "IISER 浦那(印度科學教育與研究學院)公布的學術行事曆載明,2026 年 8 月學期的期中考自 9 月 21 日考到 9 月 30 日,考完接著是 10 月 1 日到 4 日的期中假。",
+        "en": "The published academic calendar of IISER Pune sets the mid-semester examinations for the August 2026 semester from 21 to 30 September 2026, followed by a mid-semester break from 1 to 4 October.",
+        "ja": "IISERプネー(インド科学教育研究大学院)が公開する学年暦によると、2026年8月学期の中間試験は9月21日から30日まで行われ、その後10月1日から4日まで中間休みとなる。",
+        "zh-CN": "IISER 浦那(印度科学教育与研究学院)公布的学术日历载明,2026 年 8 月学期的期中考试自 9 月 21 日考到 9 月 30 日,之后是 10 月 1 日至 4 日的期中假。",
+        "hi": "आईआईएसईआर पुणे के प्रकाशित शैक्षणिक कैलेंडर के अनुसार अगस्त 2026 सत्र की मध्य-सत्र परीक्षाएं 21 से 30 सितंबर 2026 तक होंगी, जिसके बाद 1 से 4 अक्टूबर तक मध्य-सत्र अवकाश रहेगा।",
+        "id": "Kalender akademik resmi IISER Pune menetapkan ujian tengah semester untuk semester Agustus 2026 pada 21-30 September 2026, disusul libur tengah semester 1-4 Oktober.",
+        "pt-BR": "O calendario academico publicado pelo IISER Pune marca as provas de meio de semestre do periodo de agosto de 2026 entre 21 e 30 de setembro, seguidas de uma pausa de 1 a 4 de outubro."
+      }
+    },
+    {
+      "name": "IISER Pune End-Semester Examinations (August 2026 Semester)",
+      "city_code": "pune",
+      "country_code": "IN",
+      "venue": "Indian Institute of Science Education and Research Pune, Dr. Homi Bhabha Road",
+      "topic_slugs": [
+        "exam-season"
+      ],
+      "start_at": "2026-11-23T00:00:00Z",
+      "end_at": "2026-12-02T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://www.iiserpune.ac.in/pages/academic-calendar",
+      "descriptions": {
+        "zh-TW": "IISER 浦那的學術行事曆把 2026 年 8 月學期的期末考排在 11 月 23 日到 12 月 2 日;11 月 19 日是最後一天上課,12 月 2 日學期結束,成績 12 月 11 日公布。",
+        "en": "IISER Pune's academic calendar places the end-semester examinations for the August 2026 semester from 23 November to 2 December 2026. The last day of instruction is 19 November, the semester ends on 2 December and grades are announced on 11 December.",
+        "ja": "IISERプネーの学年暦では、2026年8月学期の期末試験は11月23日から12月2日まで。授業最終日は11月19日、学期は12月2日に終わり、成績発表は12月11日となっている。",
+        "zh-CN": "IISER 浦那的学术日历把 2026 年 8 月学期的期末考试排在 11 月 23 日至 12 月 2 日;11 月 19 日是最后一天上课,12 月 2 日学期结束,成绩 12 月 11 日公布。",
+        "hi": "आईआईएसईआर पुणे के शैक्षणिक कैलेंडर में अगस्त 2026 सत्र की सत्रांत परीक्षाएं 23 नवंबर से 2 दिसंबर 2026 तक रखी गई हैं। 19 नवंबर पढ़ाई का आखिरी दिन है, सत्र 2 दिसंबर को समाप्त होता है और परिणाम 11 दिसंबर को घोषित होंगे।",
+        "id": "Kalender akademik IISER Pune menempatkan ujian akhir semester untuk semester Agustus 2026 pada 23 November hingga 2 Desember 2026. Hari kuliah terakhir 19 November, semester berakhir 2 Desember, dan nilai diumumkan 11 Desember.",
+        "pt-BR": "O calendario academico do IISER Pune coloca as provas finais do semestre de agosto de 2026 entre 23 de novembro e 2 de dezembro. O ultimo dia de aula e 19 de novembro, o semestre termina em 2 de dezembro e as notas saem em 11 de dezembro."
+      }
+    },
+    {
+      "name": "IISER Pune: First day of instruction (January 2027 Semester)",
+      "city_code": "pune",
+      "country_code": "IN",
+      "venue": "Indian Institute of Science Education and Research Pune, Dr. Homi Bhabha Road",
+      "topic_slugs": [
+        "back-to-school"
+      ],
+      "start_at": "2027-01-04T00:00:00Z",
+      "end_at": "2027-01-04T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://www.iiserpune.ac.in/pages/academic-calendar",
+      "descriptions": {
+        "zh-TW": "依 IISER 浦那的學術行事曆,2027 年 1 月學期的第一天上課日是 1 月 4 日;在校生 1 月 3 日返校報到,選課登記則在 2026 年 12 月 18 日到 24 日辦理。",
+        "en": "According to IISER Pune's academic calendar, the first day of instruction for the January 2027 semester is 4 January 2027. Returning students report back on 3 January, and registration runs from 18 to 24 December 2026.",
+        "ja": "IISERプネーの学年暦によると、2027年1月学期の授業開始日は1月4日。在校生は1月3日に登校し、履修登録は2026年12月18日から24日に行われる。",
+        "zh-CN": "依 IISER 浦那的学术日历,2027 年 1 月学期的第一天上课日是 1 月 4 日;在校生 1 月 3 日返校报到,选课登记在 2026 年 12 月 18 日至 24 日办理。",
+        "hi": "आईआईएसईआर पुणे के शैक्षणिक कैलेंडर के अनुसार जनवरी 2027 सत्र का पहला कक्षा दिवस 4 जनवरी 2027 है। पुराने छात्र 3 जनवरी को लौटते हैं और पंजीकरण 18 से 24 दिसंबर 2026 तक चलता है।",
+        "id": "Menurut kalender akademik IISER Pune, hari kuliah pertama semester Januari 2027 jatuh pada 4 Januari 2027. Mahasiswa lama kembali ke kampus 3 Januari, dan registrasi berlangsung 18-24 Desember 2026.",
+        "pt-BR": "Segundo o calendario academico do IISER Pune, o primeiro dia de aula do semestre de janeiro de 2027 e 4 de janeiro. Os alunos veteranos se reapresentam em 3 de janeiro e a matricula ocorre de 18 a 24 de dezembro de 2026."
+      }
+    },
+    {
+      "name": "Anandam Lakshmi Puja 2026 (Kojagari Purnima)",
+      "city_code": "pune",
+      "country_code": "IN",
+      "venue": "Anandam Association, NIBM / Kondhwa / Wanowrie, Pune",
+      "topic_slugs": [
+        "mid-autumn-and-moon-viewing"
+      ],
+      "start_at": "2026-10-25T00:00:00Z",
+      "end_at": "2026-10-25T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://www.anandampune.com/",
+      "descriptions": {
+        "zh-TW": "浦那孟加拉社群團體 Anandam Association 在 2026 年 10 月 25 日的 Kojagari 滿月夜祭拜財富女神 Lakshmi,活動有 bhog、naru(椰子甜點)與吹海螺,是他們一年裡最安靜的一場晚會。",
+        "en": "Anandam Association, a Bengali socio-cultural group in Pune, holds its Lakshmi Puja on Kojagari Purnima, 25 October 2026. The full-moon worship of the goddess of prosperity comes with bhog, naru and the blowing of the conch, and is described as one of the gentlest evenings of their year.",
+        "ja": "プネーのベンガル人文化団体アナンダム協会は、2026年10月25日のコジャゴリ満月の夜にラクシュミー女神を祀る。豊穣の女神への満月の祈りにはボーグやナル(ココナツ菓子)、法螺貝の音が伴い、一年で最も静かな夕べとされる。",
+        "zh-CN": "浦那孟加拉社群团体 Anandam Association 在 2026 年 10 月 25 日的 Kojagari 满月夜祭拜财富女神 Lakshmi,活动有 bhog、naru(椰子甜点)与吹海螺,是他们一年里最安静的一场晚会。",
+        "hi": "पुणे का बंगाली सामाजिक-सांस्कृतिक समूह आनंदम एसोसिएशन 25 अक्टूबर 2026 की कोजागरी पूर्णिमा पर लक्ष्मी पूजा करता है। पूर्णिमा की इस पूजा में भोग, नारू और शंखध्वनि होती है और संस्था इसे साल की सबसे शांत शाम बताती है।",
+        "id": "Anandam Association, kelompok sosial-budaya Bengali di Pune, menggelar Lakshmi Puja pada Kojagari Purnima, 25 Oktober 2026. Pemujaan dewi kemakmuran di malam purnama ini disertai bhog, naru, dan tiupan kerang, dan disebut sebagai salah satu malam paling tenang sepanjang tahun mereka.",
+        "pt-BR": "A Anandam Association, grupo socio-cultural bengali de Pune, celebra a Lakshmi Puja na noite de lua cheia de Kojagari Purnima, em 25 de outubro de 2026. O culto a deusa da prosperidade traz bhog, naru e o som da concha, descrito pelo grupo como uma das noites mais serenas do ano."
+      }
+    },
+    {
+      "name": "Anandam Poila Boishakh 2027 (Bengali New Year)",
+      "city_code": "pune",
+      "country_code": "IN",
+      "venue": "Anandam Association, NIBM / Kondhwa / Wanowrie, Pune",
+      "topic_slugs": [
+        "new-year"
+      ],
+      "start_at": "2027-04-15T00:00:00Z",
+      "end_at": "2027-04-15T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://www.anandampune.com/",
+      "descriptions": {
+        "zh-TW": "Anandam Association 在 2027 年 4 月 15 日過 Poila Boishakh(孟加拉新年),以一場晚會慶祝孟加拉文化,主辦方形容那是他們一年行事曆裡最溫暖的開場。",
+        "en": "Anandam Association marks Poila Boishakh, the Bengali New Year, on 15 April 2027 with an evening celebrating Bengal's cultural legacy - which the association calls the warmest start to its yearly calendar.",
+        "ja": "アナンダム協会は2027年4月15日、ベンガル暦の新年ポイラ・ボイシャクを祝う。ベンガル文化の伝統をたどる夕べで、協会は一年の暦の中で最も温かい始まりだと表現している。",
+        "zh-CN": "Anandam Association 在 2027 年 4 月 15 日过 Poila Boishakh(孟加拉新年),以一场晚会庆祝孟加拉文化,主办方形容那是他们一年行事历里最温暖的开场。",
+        "hi": "आनंदम एसोसिएशन 15 अप्रैल 2027 को पोइला बोइशाख यानी बंगाली नववर्ष मनाता है। यह शाम बंगाल की सांस्कृतिक विरासत को समर्पित होती है और संस्था इसे अपने वार्षिक कैलेंडर की सबसे गर्मजोशी भरी शुरुआत कहती है।",
+        "id": "Anandam Association merayakan Poila Boishakh, Tahun Baru Bengali, pada 15 April 2027 lewat malam yang merayakan warisan budaya Bengal - yang mereka sebut sebagai pembuka paling hangat dalam kalender tahunan mereka.",
+        "pt-BR": "A Anandam Association celebra o Poila Boishakh, o Ano-Novo bengali, em 15 de abril de 2027, com uma noite dedicada ao legado cultural de Bengala - que a associacao descreve como o inicio mais caloroso de seu calendario anual."
+      }
+    },
+    {
+      "name": "Visitas Educativas | Setembro 2026",
+      "city_code": "sao-paulo",
+      "country_code": "BR",
+      "venue": "Museu da Imigração do Estado de São Paulo — Sala da Maquete",
+      "topic_slugs": [
+        "homecoming-and-reunion"
+      ],
+      "start_at": "2026-09-05T00:00:00Z",
+      "end_at": "2026-09-27T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://museudaimigracao.org.br/eventos/presencial/visitas-educativas-setembro-2026",
+      "descriptions": {
+        "zh-TW": "九月的每個週末，聖保羅州移民博物館教育組在「模型室」帶導覽，把遷徙講成人類歷史上持續發生的現象：十九、二十世紀的大移民潮、當時的相關政策、布拉斯移民收容所的日常，以及這一切如何形塑了聖保羅這座城市與這個州。週六 11 點；週日 11 點與 15 點。開演前十分鐘現場報名，名額有限；博物館門票全票 16 雷亞爾、半票 8 雷亞爾，週六免費。",
+        "en": "Every weekend in September the education team of the Museu da Imigração runs guided visits in the Sala da Maquete, presenting migration as a permanent phenomenon in human history: the great immigration waves of the 19th and 20th centuries, the policies around them, daily life at the Hospedaria de Imigrantes do Brás, and how all of it shaped the state and the city of São Paulo. Saturdays at 11h; Sundays at 11h and 15h. Sign-up opens ten minutes before each session and places are limited; museum admission is R$16 (full) or R$8 (half), free on Saturdays.",
+        "ja": "9月の週末、サンパウロ州移民博物館の教育チームが「模型の間」でガイドツアーを行う。移住を人類史に絶えず起きてきた現象として捉え、19〜20世紀の大移民、当時の政策、ブラス移民収容所の日常、そしてそれがサンパウロ州と市の形成にどう寄与したかを語る。土曜は11時、日曜は11時と15時。受付は開始10分前から、定員あり。入館料は16レアル（半額8レアル）、土曜は無料。",
+        "zh-CN": "九月的每个周末，圣保罗州移民博物馆教育组在“模型室”带导览，把迁徙讲成人类历史上持续发生的现象：十九、二十世纪的大移民潮、当时的相关政策、布拉斯移民收容所的日常，以及这一切如何塑造了圣保罗这座城市与这个州。周六 11 点；周日 11 点与 15 点。开场前十分钟现场报名，名额有限；博物馆门票全票 16 雷亚尔、半票 8 雷亚尔，周六免费。",
+        "hi": "सितंबर के हर सप्ताहांत पर साओ पाउलो राज्य के प्रवास संग्रहालय की शिक्षा टीम 'साला दा माकेते' में निर्देशित भ्रमण कराती है, जिसमें प्रवास को मानव इतिहास की एक निरंतर परिघटना के रूप में देखा जाता है: उन्नीसवीं और बीसवीं सदी की बड़ी प्रवास लहरें, उनसे जुड़ी नीतियाँ, ब्रास के प्रवासी आश्रय का रोज़मर्रा का जीवन, और इन सबने साओ पाउलो शहर और राज्य को कैसे गढ़ा। शनिवार 11 बजे; रविवार 11 और 15 बजे। हर सत्र से दस मिनट पहले पंजीकरण, सीमित स्थान; टिकट R$16 (पूर्ण) या R$8 (आधा), शनिवार को नि:शुल्क।",
+        "id": "Setiap akhir pekan pada bulan September, tim edukasi Museu da Imigração di São Paulo memandu kunjungan di Sala da Maquete, memaparkan migrasi sebagai gejala yang terus berulang dalam sejarah manusia: gelombang imigrasi besar abad ke-19 dan ke-20, kebijakan yang menyertainya, keseharian di penampungan imigran Brás, serta bagaimana semua itu membentuk kota dan negara bagian São Paulo. Sabtu pukul 11.00; Minggu pukul 11.00 dan 15.00. Pendaftaran dibuka sepuluh menit sebelum sesi dan tempat terbatas; tiket museum R$16 (penuh) atau R$8 (separuh), gratis pada hari Sabtu.",
+        "pt-BR": "Aos fins de semana de setembro, o núcleo Educativo do Museu da Imigração realiza visitas educativas na Sala da Maquete, abordando o processo migratório como um fenômeno permanente na história da humanidade: a grande imigração dos séculos XIX e XX, as políticas voltadas ao tema, o cotidiano da Hospedaria de Imigrantes do Brás e as contribuições desse processo para a formação do estado e da cidade de São Paulo. Sábados às 11h; domingos às 11h e às 15h. Inscrição 10 minutos antes da sessão, vagas limitadas; bilheteria R$16 (inteira) ou R$8 (meia), sábados gratuitos."
+      }
+    },
+    {
+      "name": "Curso de Formação | Línguas Migrantes",
+      "city_code": "sao-paulo",
+      "country_code": "BR",
+      "venue": "Museu da Imigração do Estado de São Paulo",
+      "topic_slugs": [
+        "compulsory-education",
+        "official-languages"
+      ],
+      "start_at": "2026-09-12T00:00:00Z",
+      "end_at": "2026-11-07T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://museudaimigracao.org.br/eventos/hibrido/curso-de-formacao-linguas-migrantes",
+      "descriptions": {
+        "zh-TW": "免費的教師培訓課程，九月十二日到十一月七日的週六上午十點到下午一點，在聖保羅州移民博物館上課，共五堂：市府教育局為接納移民學生所做的多語政策與行動、跨文化教育與移民家庭個案、族群關係與排外歧視、性別與交織性、拉丁美洲移民與聖保羅原住民遷徙。對象是市立、州立與私立學校教師、接待移民的非政府組織教育工作者與師培學生。由市教育局族群關係教育中心、博物館教育組、聯邦聖保羅大學與移民服務中心合辦，九月二日起開放報名。",
+        "en": "A free teacher-training course held on Saturdays from 12 September to 7 November, 10h–13h, at the Museu da Imigração in São Paulo. Five classes cover the city education department's plurilingual programmes for welcoming migrant pupils, intercultural education and case studies of migrant families, ethnic-racial relations and xenoracism, gender and intersectionality, and Latin American migration alongside indigenous migration in São Paulo. It is aimed at municipal, state and private school teachers, educators from NGOs that welcome immigrants, and student teachers. Organised by the city education department's ethnic-racial education unit, the museum's education team, UNIFESP and CRAI; registration opens on 2 September.",
+        "ja": "9月12日から11月7日までの土曜10時〜13時、サンパウロ州移民博物館で開かれる無料の教員研修講座（全5回）。市教育局が移民の子どもを受け入れるために進める複言語政策、異文化間教育と移民家族の事例、民族・人種関係と排外的差別、ジェンダーと交差性、ラテンアメリカ移民とサンパウロの先住民移動を扱う。対象は市立・州立・私立学校の教員、移民を受け入れるNGOの教育者、教職課程の学生。市教育局の民族人種関係教育部門、博物館教育組、UNIFESP、CRAI の共催で、申込は9月2日開始。",
+        "zh-CN": "免费的教师培训课程，九月十二日到十一月七日的周六上午十点到下午一点，在圣保罗州移民博物馆上课，共五堂：市府教育局为接纳移民学生所做的多语政策与行动、跨文化教育与移民家庭个案、族群关系与排外歧视、性别与交织性、拉丁美洲移民与圣保罗原住民迁徙。对象是市立、州立与私立学校教师、接待移民的非政府组织教育工作者与师培学生。由市教育局族群关系教育中心、博物馆教育组、联邦圣保罗大学与移民服务中心合办，九月二日起开放报名。",
+        "hi": "12 सितंबर से 7 नवंबर तक शनिवार को सुबह 10 से दोपहर 1 बजे तक साओ पाउलो के प्रवास संग्रहालय में नि:शुल्क शिक्षक-प्रशिक्षण पाठ्यक्रम, कुल पाँच कक्षाएँ: प्रवासी विद्यार्थियों के स्वागत के लिए नगर शिक्षा विभाग की बहुभाषी नीतियाँ, अंतर-सांस्कृतिक शिक्षा और प्रवासी परिवारों के प्रकरण, जातीय-नस्ली संबंध और विदेशी-विरोधी भेदभाव, जेंडर और अंतर्संबंधता, तथा लातिन अमेरिकी प्रवास एवं साओ पाउलो में आदिवासी प्रवास। यह नगरपालिका, राज्य और निजी विद्यालयों के शिक्षकों, प्रवासियों के साथ काम करने वाले गैर-सरकारी संगठनों के शिक्षकों तथा शिक्षण-प्रशिक्षु विद्यार्थियों के लिए है। पंजीकरण 2 सितंबर से।",
+        "id": "Kursus pelatihan guru gratis setiap Sabtu, 12 September sampai 7 November, pukul 10.00–13.00, di Museu da Imigração São Paulo, terdiri atas lima pertemuan: program plurilingual dinas pendidikan kota untuk menyambut murid migran, pendidikan interkultural dan studi kasus keluarga migran, relasi etnis-ras dan xenorasisme, gender dan interseksionalitas, serta migrasi Amerika Latin bersama perpindahan masyarakat adat di São Paulo. Sasarannya guru sekolah negeri kota, negeri provinsi dan swasta, pendidik dari organisasi non-pemerintah yang mendampingi imigran, serta mahasiswa keguruan. Pendaftaran dibuka 2 September.",
+        "pt-BR": "Curso de formação gratuito aos sábados, de 12 de setembro a 7 de novembro, das 10h às 13h, no Museu da Imigração. São cinco aulas: migrações, diversidade cultural e educação plurilíngue nas ações da Secretaria Municipal de Educação para o acolhimento de migrantes; migrações, acolhimento e educação intercultural com estudos de caso de famílias migrantes; relações étnico-raciais, xenorracismo e migrações asiáticas; gênero, sexualidade e interseccionalidades; e migrações latino-americanas na interface com migrações indígenas em São Paulo. O público-alvo são professores das redes municipal, estadual e privada, educadores de ONGs que acolhem imigrantes e estudantes de licenciatura. Organizado pelo NEER da Secretaria Municipal de Educação, pelo Núcleo Educativo do Museu da Imigração, pela UNIFESP e pelo CRAI; inscrições a partir do dia 2/9."
+      }
+    },
+    {
+      "name": "Palestra | Diálogos MigraMundo: Quem são as pessoas que Migram hoje?",
+      "city_code": "sao-paulo",
+      "country_code": "BR",
+      "venue": "Auditório do Museu da Imigração — Rua Visconde de Parnaíba, 1316, Mooca",
+      "topic_slugs": [
+        "residency-and-visas"
+      ],
+      "start_at": "2026-09-26T00:00:00Z",
+      "end_at": "2026-09-26T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://museudaimigracao.org.br/eventos/presencial/palestra-dialogos-migramundo-quem-sao-as-pessoas-que-migram-hoje",
+      "descriptions": {
+        "zh-TW": "九月二十六日下午三點，MigraMundo 在聖保羅州移民博物館的演講廳辦一場免費講座，把移民本人的經驗、公民社會、全球人才流動、學界與歷史記憶擺到同一張桌子上談人的移動：不同部門怎麼看待國際流動？改用真正遷徙的人的視角看，會有什麼不一樣？歷史能告訴我們什麼？企業、公民團體與公共政策各自的角色是什麼？講者分享後有主持人引導的對談與觀眾提問，並安排交流時間與茶點。",
+        "en": "On 26 September at 15h, MigraMundo holds a free talk in the auditorium of the Museu da Imigração in São Paulo, putting migrant experience, civil society, global mobility, academia and historical memory around the same table. The questions: how do different sectors of society perceive international mobility? What changes when migration is seen from the perspective of those who actually migrate? What can history teach us about today's movements? What is the role of companies, civil society and public policy? Speakers are followed by a moderated conversation, audience participation, networking and a coffee break.",
+        "ja": "9月26日15時、MigraMundo がサンパウロ州移民博物館の講堂で無料の講演会を開く。移民当事者の経験、市民社会、グローバル・モビリティ、学術、歴史的記憶を同じテーブルに乗せ、人の移動を論じる。社会の各セクターは国際移動をどう捉えているか。実際に移動する人の視点に立つと何が変わるか。歴史は現在の移動に何を教えるか。企業・市民社会・公共政策の役割は何か。登壇後は司会進行の対話と来場者の参加、ネットワーキングとコーヒーブレイクがある。",
+        "zh-CN": "九月二十六日下午三点，MigraMundo 在圣保罗州移民博物馆的报告厅办一场免费讲座，把移民本人的经验、公民社会、全球人才流动、学界与历史记忆摆到同一张桌子上谈人的移动：不同部门怎么看待国际流动？改用真正迁徙的人的视角看，会有什么不一样？历史能告诉我们什么？企业、公民团体与公共政策各自的角色是什么？讲者分享后有主持人引导的对谈与观众提问，并安排交流时间与茶点。",
+        "hi": "26 सितंबर को दोपहर 3 बजे MigraMundo साओ पाउलो के प्रवास संग्रहालय के सभागार में एक नि:शुल्क व्याख्यान आयोजित करता है, जिसमें प्रवासी अनुभव, नागरिक समाज, वैश्विक गतिशीलता, अकादमिक जगत और ऐतिहासिक स्मृति को एक ही मेज़ पर लाया जाता है। प्रश्न: समाज के अलग-अलग क्षेत्र अंतरराष्ट्रीय गतिशीलता को कैसे देखते हैं? जो वास्तव में प्रवास करते हैं, उनकी दृष्टि से देखने पर क्या बदलता है? इतिहास आज के आंदोलनों के बारे में क्या सिखा सकता है? कंपनियों, नागरिक समाज और सार्वजनिक नीति की क्या भूमिका है? वक्ताओं के बाद संचालित संवाद, दर्शकों की भागीदारी, नेटवर्किंग और कॉफ़ी ब्रेक।",
+        "id": "Pada 26 September pukul 15.00, MigraMundo menggelar ceramah gratis di auditorium Museu da Imigração São Paulo, mempertemukan pengalaman migran, masyarakat sipil, mobilitas global, kalangan akademik dan memori sejarah di satu meja. Pertanyaannya: bagaimana berbagai sektor masyarakat memandang mobilitas internasional? Apa yang berubah bila migrasi dilihat dari sudut pandang orang yang benar-benar berpindah? Apa yang bisa diajarkan sejarah tentang perpindahan hari ini? Apa peran perusahaan, masyarakat sipil dan kebijakan publik? Setelah para pembicara ada percakapan termoderasi, partisipasi publik, sesi jejaring dan rehat kopi.",
+        "pt-BR": "No dia 26 de setembro de 2026, às 15h, o MigraMundo promove no auditório do Museu da Imigração, em São Paulo, um encontro gratuito dedicado a ampliar a conversa sobre mobilidade humana, colocando na mesma mesa experiência migrante, sociedade civil, mobilidade global, academia e memória histórica. Como diferentes setores da sociedade percebem a mobilidade internacional? O que muda quando observamos a migração pela perspectiva de quem efetivamente migra? O que a história pode nos ensinar sobre os movimentos atuais? Qual é o papel das empresas, da sociedade civil e das políticas públicas? A programação inclui conversa mediada, participação do público, networking e coffee break."
+      }
+    },
+    {
+      "name": "São Paulo Oktoberfest 2026",
+      "city_code": "sao-paulo",
+      "country_code": "BR",
+      "venue": "Arena de Eventos do Parque Ibirapuera — Av. Pedro Álvares Cabral, s/n",
+      "topic_slugs": [
+        "beer-festivals"
+      ],
+      "start_at": "2026-09-18T00:00:00Z",
+      "end_at": "2026-10-04T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://saopaulooktoberfest.com.br/",
+      "descriptions": {
+        "zh-TW": "九月十八日到十月四日，聖保羅最大的德國文化慶典在伊比拉普埃拉公園的活動場地舉行，今年是第九屆。現場有德式餐飲（豬腳、各式香腸與配菜）、多種風格的生啤、露天啤酒花園 Biergarten 與大帳篷 Biertent、現場演出，以及為這場慶典特製的 SPOF Bier 啤酒與長三十公分、三種口味的 SPOF Wurst 香腸。巴伐利亞傳統服飾也是慶典的一部分。需購票入場。",
+        "en": "From 18 September to 4 October the largest celebration of German culture in São Paulo takes over the events arena of Parque Ibirapuera, in its 9th edition. The festival brings German gastronomy (pork knuckle, traditional sausages and the classic sides), draught beer in a range of styles, an open-air Biergarten and a covered Biertent, live music, and two creations made for the event: SPOF Bier and the 30-centimetre SPOF Wurst sausage in three flavours. Bavarian-inspired traditional dress is part of the celebration. Ticketed.",
+        "ja": "9月18日から10月4日まで、サンパウロ最大のドイツ文化の祭典がイビラプエラ公園のイベントアリーナで開かれる。今年で9回目。アイスバインや各種ソーセージといったドイツ料理、さまざまなスタイルの生ビール、屋外のビアガルテンと大型テントのビアテント、ライブ演奏に加え、この祭りのために作られた SPOF Bier と3種類の味がある30センチのソーセージ SPOF Wurst が並ぶ。バイエルンの民族衣装も祭りの一部。入場は有料。",
+        "zh-CN": "九月十八日到十月四日，圣保罗最大的德国文化庆典在伊比拉普埃拉公园的活动场地举行，今年是第九届。现场有德式餐饮（猪肘、各式香肠与配菜）、多种风格的生啤、露天啤酒花园 Biergarten 与大帐篷 Biertent、现场演出，以及为这场庆典特制的 SPOF Bier 啤酒与长三十厘米、三种口味的 SPOF Wurst 香肠。巴伐利亚传统服饰也是庆典的一部分。需购票入场。",
+        "hi": "18 सितंबर से 4 अक्टूबर तक साओ पाउलो का सबसे बड़ा जर्मन सांस्कृतिक उत्सव इबिरापुएरा पार्क के आयोजन मैदान में होता है; यह इसका नौवाँ संस्करण है। यहाँ जर्मन व्यंजन (पोर्क नकल, पारंपरिक सॉसेज और उनके साथ परोसे जाने वाले व्यंजन), कई शैलियों की ड्राफ्ट बीयर, खुला बियरगार्टेन और ढका हुआ बियरटेंट, लाइव संगीत, तथा इसी आयोजन के लिए बनाई गई SPOF Bier और तीन स्वादों वाली 30 सेंटीमीटर लंबी SPOF Wurst सॉसेज मिलती है। बवेरियन पारंपरिक पोशाक भी उत्सव का हिस्सा है। प्रवेश टिकट से।",
+        "id": "Dari 18 September sampai 4 Oktober, perayaan budaya Jerman terbesar di São Paulo berlangsung di arena acara Parque Ibirapuera, tahun ini edisi ke-9. Ada masakan Jerman (kaki babi, aneka sosis dan pendampingnya), bir tarik dalam beragam gaya, Biergarten terbuka dan Biertent beratap, musik langsung, serta dua kreasi khusus acara ini: SPOF Bier dan sosis SPOF Wurst sepanjang 30 sentimeter dalam tiga rasa. Busana tradisional bergaya Bayern juga menjadi bagian perayaan. Masuk dengan tiket.",
+        "pt-BR": "De 18 de setembro a 04 de outubro, a maior celebração da cultura alemã da cidade ocupa a Arena de Eventos do Parque Ibirapuera, nesta que é a 9ª edição. A festa reúne gastronomia alemã (joelho suíno, salsichas tradicionais e os acompanhamentos típicos), chopp em diferentes estilos e escolas cervejeiras, o Biergarten ao ar livre e a Biertent coberta, shows ao vivo e duas criações feitas para o evento: a SPOF Bier e a SPOF Wurst, salsicha de 30 centímetros em três sabores. Os trajes típicos inspirados na cultura bávara também fazem parte da celebração. Evento com ingresso."
+      }
+    },
+    {
+      "name": "8º Fórum & Festival Longevidade",
+      "city_code": "sao-paulo",
+      "country_code": "BR",
+      "venue": "Pavilhão da Bienal — Parque do Ibirapuera",
+      "topic_slugs": [
+        "caregiving-across-generations",
+        "elders-day"
+      ],
+      "start_at": "2026-09-24T00:00:00Z",
+      "end_at": "2026-09-26T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://www.longevidade.com.br/",
+      "descriptions": {
+        "zh-TW": "九月二十四日到二十六日，第八屆 Fórum & Festival Longevidade 在伊比拉普埃拉公園的雙年展館舉行，今年主題是「Reimaginando futuros」（重新想像各種未來）。三天的講座、體驗與交流，談長壽、身心健康、城市、創新、文化與理財。入場免費，但各展區、主論壇與體驗活動名額有限，建議先在官網登記。",
+        "en": "From 24 to 26 September the 8th Fórum & Festival Longevidade takes place at the Bienal Pavilion in Parque do Ibirapuera, under the theme \"Reimaginando futuros\" — reimagining futures. Three days of talks, experiences and connections covering longevity, wellbeing, cities, innovation, culture and personal finance. Entry is free, but places in the arenas, plenaries and experiences are limited, so registering in advance on the official site is recommended.",
+        "ja": "9月24日から26日まで、第8回 Fórum & Festival Longevidade がイビラプエラ公園のビエンナーレ館で開かれる。今年のテーマは「Reimaginando futuros」（さまざまな未来を想像し直す）。長寿、ウェルビーイング、都市、イノベーション、文化、家計をめぐる講演・体験・交流が3日間続く。入場は無料だが、各アリーナや全体会、体験プログラムは定員があるため、公式サイトでの事前登録が勧められている。",
+        "zh-CN": "九月二十四日到二十六日，第八届 Fórum & Festival Longevidade 在伊比拉普埃拉公园的双年展馆举行，今年主题是「Reimaginando futuros」（重新想象各种未来）。三天的讲座、体验与交流，谈长寿、身心健康、城市、创新、文化与理财。入场免费，但各展区、主论坛与体验活动名额有限，建议先在官网登记。",
+        "hi": "24 से 26 सितंबर तक 8वाँ Fórum & Festival Longevidade इबिरापुएरा पार्क के बिएनाल मंडप में आयोजित होता है; इस वर्ष का विषय है \"Reimaginando futuros\" — भविष्य की पुनर्कल्पना। तीन दिन तक व्याख्यान, अनुभव और संवाद, जिनमें दीर्घायु, स्वास्थ्य-कल्याण, शहर, नवाचार, संस्कृति और वित्त पर बात होती है। प्रवेश नि:शुल्क है, पर अरीना, पूर्ण सत्रों और अनुभव कार्यक्रमों में स्थान सीमित हैं, इसलिए आधिकारिक साइट पर पहले से पंजीकरण की सलाह दी जाती है।",
+        "id": "Pada 24 sampai 26 September, Fórum & Festival Longevidade ke-8 digelar di Pavilhão da Bienal, Parque do Ibirapuera, dengan tema \"Reimaginando futuros\" — membayangkan ulang masa depan. Tiga hari berisi ceramah, pengalaman dan pertemuan seputar umur panjang, kesejahteraan, kota, inovasi, budaya dan keuangan. Masuk gratis, tetapi tempat di arena, pleno dan aktivitas pengalaman terbatas sehingga pendaftaran lebih dulu di situs resmi dianjurkan.",
+        "pt-BR": "De 24 a 26 de setembro de 2026, o 8º Fórum & Festival Longevidade acontece no Pavilhão da Bienal, no Parque do Ibirapuera, com o tema \"Reimaginando futuros\". São três dias de palestras, experiências e conexões sobre longevidade, bem-estar, cidades, inovação, cultura e finanças. O ingresso é gratuito, mas o acesso às arenas, experiências e atividades pode ter vagas limitadas — por isso a recomendação é garantir o ingresso antecipadamente no site oficial do evento."
+      }
+    },
+    {
+      "name": "Corrida Internacional de São Silvestre",
+      "city_code": "sao-paulo",
+      "country_code": "BR",
+      "venue": "Região central da cidade de São Paulo",
+      "topic_slugs": [
+        "new-year"
+      ],
+      "start_at": "2026-12-31T00:00:00Z",
+      "end_at": "2026-12-31T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://prefeitura.sp.gov.br/web/se/w/confira-os-principais-detalhes-dos-eventos-que-integram-o-calend%C3%A1rio-estrat%C3%A9gico-da-prefeitura-de-s%C3%A3o-paulo",
+      "descriptions": {
+        "zh-TW": "巴西最有歷史的路跑賽事，第一百零一屆在十二月三十一日上午於聖保羅市中心一帶舉行。它是市府公布的年度「策略性活動行事曆」裡的十二月項目之一，也是這座城市跨年的固定節目——先跑完這一場，晚上才輪到保利斯塔大道的跨年夜。活動由主辦方負責，日期與內容可能異動。",
+        "en": "The most traditional road race in Brazil runs its 101st edition on the morning of 31 December through the central district of São Paulo. It is one of the December entries in the city's official strategic events calendar, and it is how the city starts its New Year's Eve — the race in the morning, the Avenida Paulista street party at night. The events are the responsibility of their promoters and are subject to change.",
+        "ja": "ブラジルでもっとも伝統のあるロードレースで、第101回は12月31日の午前、サンパウロ中心部で行われる。市が公表する年間「戦略イベント・カレンダー」の12月の項目のひとつで、この街の大晦日は午前のこのレースから始まり、夜のパウリスタ大通りの年越しへと続く。イベントは主催者の責任で実施され、内容や日程は変更されることがある。",
+        "zh-CN": "巴西最有历史的路跑赛事，第一百零一届在十二月三十一日上午于圣保罗市中心一带举行。它是市府公布的年度「策略性活动行事历」里的十二月项目之一，也是这座城市跨年的固定节目——先跑完这一场，晚上才轮到保利斯塔大道的跨年夜。活动由主办方负责，日期与内容可能异动。",
+        "hi": "ब्राज़ील की सबसे पुरानी सड़क दौड़ का 101वाँ संस्करण 31 दिसंबर की सुबह साओ पाउलो के केंद्रीय क्षेत्र में दौड़ा जाता है। यह नगर प्रशासन के आधिकारिक वार्षिक 'रणनीतिक आयोजन पंचांग' में दिसंबर की प्रविष्टियों में से एक है और शहर के नववर्ष की पूर्वसंध्या की शुरुआत भी — सुबह यह दौड़, रात को अवेनिदा पाउलिस्ता का जश्न। आयोजन की ज़िम्मेदारी आयोजकों की है और उनमें बदलाव संभव है।",
+        "id": "Lomba lari jalanan paling bersejarah di Brasil menggelar edisi ke-101 pada pagi 31 Desember di kawasan pusat kota São Paulo. Ia termasuk agenda Desember dalam kalender acara strategis resmi kota, sekaligus cara kota ini memulai malam pergantian tahun — lomba pada pagi hari, pesta Avenida Paulista pada malam hari. Acara menjadi tanggung jawab penyelenggara dan dapat berubah.",
+        "pt-BR": "A 101ª edição da prova pedestre mais tradicional do Brasil será realizada na manhã de 31 de dezembro, na região central da cidade. É um dos itens de dezembro do Calendário Estratégico de Eventos da Prefeitura de São Paulo, no mesmo dia do Réveillon na Paulista, que reúne milhões de pessoas à noite na Avenida Paulista. Os eventos são de responsabilidade dos promotores e estão sujeitos a alterações."
+      }
+    },
+    {
+      "name": "2026 JZ Festival",
+      "city_code": "shanghai",
+      "country_code": "CN",
+      "venue": "前灘地區 13 個場地（前灘體育公園、新灘紅巷、前灘休閒公園、上海音樂學院等）",
+      "topic_slugs": [
+        "ask-the-world"
+      ],
+      "start_at": "2026-10-16T00:00:00Z",
+      "end_at": "2026-11-01T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://english.shanghai.gov.cn/en-FestivalsCelebrations/20260821/4e87519e5b2b47378e2dec9207dce68c.html",
+      "descriptions": {
+        "zh-TW": "上海市政府英文活動頁列出的第 22 屆 JZ 音樂節，2026 年 10 月 16 日至 11 月 1 日舉行，為期 17 天，是歷屆規模最大的一次。逾 20 個國家與地區的 100 多位音樂家在前灘地區 13 個場地帶來 146 場演出與產業論壇，戶外場次全部免費；節目分為爵士年代嘉年華、爵士大道、爵士江畔、全城爵士、爵士終章與前灘爵士論壇六個板塊。",
+        "en": "Shanghai's official English event page lists the 2026 JZ Festival, the event's 22nd edition and its largest ever, running Oct 16 to Nov 1. Over 17 days, more than 100 musicians from over 20 countries and regions give 146 performances and industry forums at 13 venues across the Qiantan area; all outdoor shows and events are free. The programme is organized into six sections: Jazz Age Carnival, Jazz Avenue, Jazz Riverside, City-wide Jazz, Jazz Finale and Qiantan Jazz Talk.",
+        "ja": "上海市政府の英語版イベントページに掲載された第22回JZフェスティバル。2026年10月16日から11月1日まで、過去最大規模の17日間にわたって開催されます。20を超える国と地域から100人以上のミュージシャンが参加し、前灘エリアの13会場で146の公演と業界フォーラムを実施。屋外公演はすべて無料です。プログラムはジャズ・エイジ・カーニバル、ジャズ・アベニュー、ジャズ・リバーサイド、シティワイド・ジャズ、ジャズ・フィナーレ、前灘ジャズトークの6部門で構成されます。",
+        "zh-CN": "上海市政府英文活动页列出的第 22 届 JZ 音乐节，2026 年 10 月 16 日至 11 月 1 日举行，为期 17 天，是历届规模最大的一次。逾 20 个国家与地区的 100 多位音乐家在前滩地区 13 个场地带来 146 场演出与产业论坛，户外场次全部免费；节目分为爵士年代嘉年华、爵士大道、爵士江畔、全城爵士、爵士终章与前滩爵士论坛六个板块。",
+        "hi": "शंघाई सरकार के आधिकारिक अंग्रेज़ी कार्यक्रम पेज पर सूचीबद्ध 2026 JZ Festival इस आयोजन का 22वाँ और अब तक का सबसे बड़ा संस्करण है, जो 16 अक्टूबर से 1 नवंबर तक चलेगा। 17 दिनों में 20 से अधिक देशों और क्षेत्रों के 100 से ज़्यादा संगीतकार Qiantan इलाके के 13 स्थलों पर 146 प्रस्तुतियाँ और उद्योग मंच पेश करेंगे; सभी खुले में होने वाले कार्यक्रम निःशुल्क हैं। कार्यक्रम छह खंडों में बँटा है: Jazz Age Carnival, Jazz Avenue, Jazz Riverside, City-wide Jazz, Jazz Finale और Qiantan Jazz Talk।",
+        "id": "Halaman acara resmi berbahasa Inggris pemerintah Shanghai mencantumkan 2026 JZ Festival, edisi ke-22 sekaligus yang terbesar sepanjang sejarahnya, berlangsung 16 Oktober hingga 1 November. Selama 17 hari, lebih dari 100 musisi dari lebih dari 20 negara dan kawasan menggelar 146 pertunjukan dan forum industri di 13 lokasi di kawasan Qiantan; seluruh pertunjukan luar ruang gratis. Programnya terbagi dalam enam bagian: Jazz Age Carnival, Jazz Avenue, Jazz Riverside, City-wide Jazz, Jazz Finale, dan Qiantan Jazz Talk.",
+        "pt-BR": "A página oficial de eventos em inglês do governo de Xangai lista o 2026 JZ Festival, 22ª edição e a maior já realizada, de 16 de outubro a 1º de novembro. Em 17 dias, mais de 100 músicos de mais de 20 países e regiões apresentam 146 shows e fóruns do setor em 13 locais da região de Qiantan; todas as apresentações ao ar livre são gratuitas. A programação se divide em seis seções: Jazz Age Carnival, Jazz Avenue, Jazz Riverside, City-wide Jazz, Jazz Finale e Qiantan Jazz Talk."
+      }
+    },
+    {
+      "name": "25th China Shanghai International Arts Festival",
+      "city_code": "shanghai",
+      "country_code": "CN",
+      "venue": "上海大歌劇院（Shanghai Grand Opera House）等全市場館",
+      "topic_slugs": [
+        "ask-the-world"
+      ],
+      "start_at": "2026-10-17T00:00:00Z",
+      "end_at": "2026-11-15T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://english.shanghai.gov.cn/en-CulturalPerformances/20260825/004d4a8d8d304611bda9efe7d569ec45.html",
+      "descriptions": {
+        "zh-TW": "上海市政府英文頁列出的第 25 屆中國上海國際藝術節，2026 年 10 月 17 日至 11 月 15 日舉行，規劃近 400 個節目、約 1,100 場演出、展覽與活動。開幕演出同時是上海大歌劇院的開幕音樂會（10 月 17 日），閉幕演出為美國芭蕾舞劇院的《天鵝湖》；三部歌劇新製作在此舉行亞洲首演，另有「聚焦德國」文化週，六個製作共 15 場演出。",
+        "en": "Shanghai's official English page lists the 25th China Shanghai International Arts Festival, running Oct 17 to Nov 15, with nearly 400 programs comprising almost 1,100 performances, exhibitions and other activities. The opening performance doubles as the opening concert of the Shanghai Grand Opera House on Oct 17, and the closing performance is American Ballet Theatre's Swan Lake. Three new opera productions make their Asian premieres, and a \"Focus on Germany\" Cultural Week presents six productions across 15 performances.",
+        "ja": "上海市政府の英語版ページに掲載された第25回中国上海国際芸術祭。2026年10月17日から11月15日まで開催され、約400のプログラム、およそ1,100の公演・展覧会・関連イベントが予定されています。開幕公演は10月17日の上海大歌劇院こけら落とし公演を兼ね、閉幕公演はアメリカン・バレエ・シアターの『白鳥の湖』。3つの新制作オペラがアジア初演を迎え、「ドイツ特集」文化週間では6演目・15公演が上演されます。",
+        "zh-CN": "上海市政府英文页列出的第 25 届中国上海国际艺术节，2026 年 10 月 17 日至 11 月 15 日举行，规划近 400 个节目、约 1,100 场演出、展览与活动。开幕演出同时是上海大歌剧院的开幕音乐会（10 月 17 日），闭幕演出为美国芭蕾舞剧院的《天鹅湖》；三部歌剧新制作在此举行亚洲首演，另有“聚焦德国”文化周，六个制作共 15 场演出。",
+        "hi": "शंघाई सरकार के आधिकारिक अंग्रेज़ी पेज पर सूचीबद्ध 25th China Shanghai International Arts Festival 17 अक्टूबर से 15 नवंबर तक चलेगा, जिसमें लगभग 400 कार्यक्रमों के अंतर्गत करीब 1,100 प्रस्तुतियाँ, प्रदर्शनियाँ और अन्य गतिविधियाँ होंगी। उद्घाटन प्रस्तुति 17 अक्टूबर को Shanghai Grand Opera House का उद्घाटन संगीत-कार्यक्रम भी है, और समापन प्रस्तुति American Ballet Theatre का Swan Lake है। तीन नई ओपेरा प्रस्तुतियाँ अपना एशियाई प्रीमियर करेंगी, और \"Focus on Germany\" सांस्कृतिक सप्ताह में छह प्रोडक्शन की 15 प्रस्तुतियाँ होंगी।",
+        "id": "Halaman resmi berbahasa Inggris pemerintah Shanghai mencantumkan 25th China Shanghai International Arts Festival, yang berlangsung 17 Oktober hingga 15 November dengan hampir 400 program berisi sekitar 1.100 pertunjukan, pameran, dan kegiatan lain. Pertunjukan pembuka sekaligus menjadi konser peresmian Shanghai Grand Opera House pada 17 Oktober, sedangkan pertunjukan penutup adalah Swan Lake dari American Ballet Theatre. Tiga produksi opera baru menggelar premier Asia, dan Pekan Budaya \"Focus on Germany\" menyajikan enam produksi dalam 15 pertunjukan.",
+        "pt-BR": "A página oficial em inglês do governo de Xangai lista o 25th China Shanghai International Arts Festival, de 17 de outubro a 15 de novembro, com quase 400 programas que reúnem cerca de 1.100 apresentações, exposições e outras atividades. A apresentação de abertura é também o concerto inaugural do Shanghai Grand Opera House, em 17 de outubro, e a de encerramento é o Lago dos Cisnes do American Ballet Theatre. Três novas montagens de ópera fazem sua estreia asiática, e a Semana Cultural \"Focus on Germany\" apresenta seis produções em 15 récitas."
+      }
+    },
+    {
+      "name": "上海市中小學 2026 學年第一學期開學",
+      "city_code": "shanghai",
+      "country_code": "CN",
+      "venue": "全市中小學",
+      "topic_slugs": [
+        "back-to-school"
+      ],
+      "start_at": "2026-09-01T00:00:00Z",
+      "end_at": "2027-01-22T00:00:00Z",
+      "ticket_url": null,
+      "source_url": "https://edu.sh.gov.cn/xxgk2_zdgz_jcjy_05/20260605/19ca2cb2e10a47fe86047bcc0bfdd0e8.html",
+      "descriptions": {
+        "zh-TW": "依上海市教育委員會印發的《上海市中小学2026学年校历》（滬教委基〔2026〕14 號），全市中小學統一於 2026 年 9 月 1 日開學，第一學期至 2027 年 1 月 22 日結束，共 21 週；寒假自 2027 年 1 月 23 日起至 2 月 21 日止。校曆另規定學校依《全國年節及紀念日放假辦法》放假，不得擅自放假或調整節假日。",
+        "en": "Under the Shanghai Municipal Education Commission's school calendar for the 2026 academic year (document Hu Jiao Wei Ji [2026] No 14), all primary and secondary schools in Shanghai start the first term on Sept 1, 2026, and finish it on Jan 22, 2027 — 21 weeks in all. The winter holiday then runs from Jan 23 to Feb 21, 2027. The calendar also requires schools to follow the national regulation on public holidays and forbids them from setting or shifting holidays on their own.",
+        "ja": "上海市教育委員会が公布した「上海市中小学2026学年校暦」（滬教委基〔2026〕14号）により、市内の小中高校は2026年9月1日に一斉に始業し、第1学期は2027年1月22日まで、全21週です。冬休みは2027年1月23日から2月21日まで。校暦は各校が「全国年節及び記念日休暇弁法」に従って休業することを定め、学校が独自に休みを設けたり祝日を振り替えたりすることを禁じています。",
+        "zh-CN": "依上海市教育委员会印发的《上海市中小学2026学年校历》（沪教委基〔2026〕14 号），全市中小学统一于 2026 年 9 月 1 日开学，第一学期至 2027 年 1 月 22 日结束，共 21 周；寒假自 2027 年 1 月 23 日起至 2 月 21 日止。校历另规定学校依《全国年节及纪念日放假办法》放假，不得擅自放假或调整节假日。",
+        "hi": "शंघाई नगरपालिका शिक्षा आयोग द्वारा जारी 2026 शैक्षणिक वर्ष के स्कूल कैलेंडर (दस्तावेज़ Hu Jiao Wei Ji [2026] No 14) के अनुसार, शहर के सभी प्राथमिक और माध्यमिक विद्यालय पहला सत्र 1 सितंबर 2026 को शुरू करेंगे और 22 जनवरी 2027 को समाप्त करेंगे — कुल 21 सप्ताह। इसके बाद शीतकालीन अवकाश 23 जनवरी से 21 फ़रवरी 2027 तक रहेगा। कैलेंडर यह भी कहता है कि विद्यालय राष्ट्रीय अवकाश नियमों का पालन करें और अपनी मर्ज़ी से छुट्टियाँ तय या स्थानांतरित न करें।",
+        "id": "Menurut kalender akademik tahun ajaran 2026 yang diterbitkan Komisi Pendidikan Kota Shanghai (dokumen Hu Jiao Wei Ji [2026] No 14), seluruh sekolah dasar dan menengah di Shanghai memulai semester pertama pada 1 September 2026 dan mengakhirinya pada 22 Januari 2027 — total 21 pekan. Libur musim dingin kemudian berlangsung 23 Januari hingga 21 Februari 2027. Kalender itu juga mewajibkan sekolah mengikuti aturan nasional tentang hari libur dan melarang sekolah menetapkan atau menggeser libur sendiri.",
+        "pt-BR": "Segundo o calendário escolar do ano letivo de 2026 publicado pela Comissão Municipal de Educação de Xangai (documento Hu Jiao Wei Ji [2026] nº 14), todas as escolas de ensino fundamental e médio da cidade iniciam o primeiro semestre em 1º de setembro de 2026 e o encerram em 22 de janeiro de 2027 — 21 semanas ao todo. As férias de inverno vão então de 23 de janeiro a 21 de fevereiro de 2027. O calendário também obriga as escolas a seguir a regulamentação nacional de feriados e proíbe que criem ou desloquem feriados por conta própria."
       }
     }
   ]
