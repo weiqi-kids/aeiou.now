@@ -153,19 +153,27 @@ merged slug(有 .md 但狀態是 merged)、缺來源目錄項、marker 憑空填
 
 ---
 
-### 版面巡檢剩下的三件(2026-08-27 起,還沒動)
+### 版面巡檢剩下的三件(2026-08-27 起;2026-08-28 用戶全部拍板,已結案)
 
-- [ ] **Topic 頁「你附近」與「相關活動」兩區都空的頁面仍佔半版**(查法見上面 A 那段)。
-      版面是 2026-08-11 定版的左 50% / 右 50%,改比例等於改定版,**不自己動**。
-      在地資料補上來之後這個問題會自然縮小,先看數字再談要不要改版面。
-- [ ] **TopicPosts / Participation 的「暫時無法載入」訊息是死碼**:兩支都在 `unavailable` 態
-      `root.hidden = true`,底下寫好的 `.posts-closed-title` 永遠印不出來。
-      DiscussionRoom 只是**碰巧**沒事(它的 `[data-room-state='unavailable']` 設了 `display: flex`
-      蓋掉 `[hidden]`)。三支要一致,但「API 掛掉時首頁十列各印一次故障」是產品決定
-      (2026-08-20 那次事故的教訓正好在這條線上),**要用戶拍板**。
-- [ ] 首頁 hero「一件事,到了不同地/方」在詞中間斷行。CSS 無解:`text-wrap: balance` 與
-      `word-break: auto-phrase` 實測對中文都不改變斷點(auto-phrase 目前只對日文有效)。
-      要修只能在文案裡放斷行提示,**那是用戶的東西**。
+- [x] **兩區皆空時桌機改單欄、討論室吃滿寬**(2026-08-28 用戶拍板)。
+      收窄過:只有 nearby 與 events **都**沒資料才觸發,任一區有資料就完全維持
+      2026-08-11 定版的 50/50。DOM 順序一個字沒動(不用 CSS order),
+      所以視覺順序與 tab 焦點順序仍然一致。實作在 `site/src/pages/topic/[slug].astro`
+      的 `localZonesEmpty` 與 `.topic-zones.zones-solo`。
+      查:`(cd site && LOCALE=zh-TW pnpm build)` 後
+      `grep -c 'class="topic-zones zones-solo"' site/dist/topic/*/index.html | grep -c ':1$'`
+      —— 這個數字必須等於上面 A 段那支逐語系探針量到的 zh-TW 兩區皆空頁數。
+      ⚠ **驗這件事不能直接 grep `zones-solo`** —— 那個字串也出現在每一頁的行內 CSS 裡,
+      七十一頁全部會命中(2026-08-28 踩過)。要抓 `class="topic-zones …"` 這個屬性。
+- [x] **卡片層降級的死碼已清**(2026-08-28 用戶拍板)。拍板的一致方式是
+      **TopicPosts / Participation 安靜收掉、Topic 頁的 DiscussionRoom 照樣出聲**:
+      前兩支長在首頁與三個清單頁的每一列上,讓它們出聲就是 2026-08-20 事故的形狀(一頁 30 次)。
+      已移除 `.posts-closed-title` / `.posts-closed-hint` / `.q-p-fallback` 這些永遠印不出來的
+      標記與 CSS,並在兩支的 `root.hidden` 那一行寫明**不要再加「unavailable 時顯示某段文字」的分支**。
+      🔴 DiscussionRoom 是三支裡唯一該說話的一支,不要為了「三支一致」把它也收掉。
+- [🅤] 首頁 hero「一件事,到了不同地/方」在詞中間斷行 —— **2026-08-28 用戶決定不處理**。
+      (提過的做法:用一層 `white-space: nowrap` 的 span 包住「地方」,一個字都不改文案。
+      用戶選擇維持現狀,不要再提案。)
 
 ## 版型巡檢(2026-08-27;用 headless 實際渲染,不是讀碼)
 
@@ -194,21 +202,11 @@ merged slug(有 .md 但狀態是 merged)、缺來源目錄項、marker 憑空填
 - [x] `/questions/` 第一屏是十一行只有日期的空列:QuestionCard 在 `unavailable` 態
       `root.hidden = true`,而日期是外層 `.archive-item` 印的,卡片消失日期不會跟著消失。
 
-還沒動,要用戶拍板的三件:
-- [ ] **53/65 個 Topic 頁的「你附近」與「相關活動」兩區都是「目前沒有資料。」**
-      查法(先 `cd site && LOCALE=zh-TW pnpm build`,⚠ 每個站只看得到自己市場那一城):
-      `python3 -c "import glob;h=[open(f,encoding='utf-8').read() for f in glob.glob('site/dist/topic/*/index.html')];print(sum(1 for x in h if '目前沒有資料' in x.split('id=\"nearby\"')[1][:1200] and '目前沒有資料' in x.split('id=\"events\"')[1][:1200]),'/',len(h))"`
-      版面是 2026-08-11 定版的左 50% / 右 50%,所以八成的 Topic 頁有半版是兩行空話,
-      而右邊的討論室被壓在 50% 裡。**改比例等於改定版,不自己動**。
-      可能的做法:兩區都空時左欄收成一行、討論室吃滿寬;或維持現狀等在地資料補上來。
-- [ ] **TopicPosts / Participation 的「暫時無法載入」訊息是死碼**:兩支都在 `unavailable`
-      態 `root.hidden = true`,底下 `.posts-closed-title` / `.posts-closed-hint` 永遠印不出來。
-      DiscussionRoom 只是**碰巧**沒事 —— 它的 `[data-room-state='unavailable']` 設了
-      `display: flex`,把 `[hidden]` 蓋掉了。三支要一致,但「API 掛掉時首頁十列各印一次
-      故障」是產品決定(2026-08-20 那次事故的教訓正好在這條線上),不自己動。
-- [ ] 首頁 hero「一件事,到了不同地/方,做法可能完全不同」在「地方」中間斷行。
-      CSS 無解:`text-wrap: balance` 與 `word-break: auto-phrase` 實測對中文都不改變斷點
-      (auto-phrase 目前只對日文有效)。要修只能在文案裡放斷行提示,**那是用戶的東西**。
+三件都在 2026-08-28 由用戶拍板結案,細節見上面「版面巡檢剩下的三件」那一段
+(① 兩區皆空改單欄 ② 卡片層安靜收掉、討論室出聲 ③ hero 斷行不處理)。
+當時量到的是 53/65;2026-08-28 補完在地資料後逐語系重量是 45–54/71,
+**七站都還有六到七成的 Topic 頁兩區皆空** —— 所以那不是靠補資料就會消失的問題,
+版面那一手是必要的。逐語系查法見上面 A 段(不要再用寫死中文字串的那一版)。
 
 ## 流量診斷(2026-08-27;起因是用戶問「流量一直起不來」)
 
