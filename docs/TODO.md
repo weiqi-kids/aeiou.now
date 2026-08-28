@@ -20,6 +20,108 @@
       腳本改成**原地刷新**(一題一列,淡出時把 created_at 推到現在,不重翻、不長新列),
       被留言或 reaction 碰過的那一列不再刷新。詳見下方「Ask the World 保鮮」。
 
+## 交接:四個新區塊做到哪、還缺什麼(2026-08-28)
+
+> 這一段是給**下一個 session** 看的。現況一律用附的指令查,不要信這裡寫的數字。
+> 方向的來由與需求實測見 `docs/briefs/new-territory.md`。
+
+### 已完成並上線(四塊都推了)
+
+| 區塊 | 做了什麼 | 現況查法 |
+|---|---|---|
+| C 逐主題題集 | 題庫存量放出,`/questions/<topic-slug>/` | `curl -s https://aeiou.now/sitemap.xml \| grep -c '/questions/[a-z]'` |
+| B 六個新主題 | health-coverage / paid-leave-and-overtime / renting-a-home / residency-and-visas / minimum-wage / entrance-exams | `node scripts/check-content-depth.mjs`(看公開 Topic 數) |
+| D 連假 | 假日總表逐段列出連假 | `curl -s https://aeiou.now/holidays/tw/2027/ \| grep -c hol-run-when` |
+| A 在地與商圈 | 七市場地點與活動 | `sqlite3 db/aeiou.sqlite "SELECT city_code,COUNT(*) FROM places GROUP BY city_code"` |
+
+順帶修掉的機制問題:sitemap lastmod 逐頁誠實(`site/scripts/sitemap-lastmod.mjs`)、
+版面巡檢那一批(手機橫向溢出/國旗方框/四個不存在的 CSS token)、i18n 已無 `[TODO]` 殘留。
+
+---
+
+### ⏰ 到期就要做的一件事(最重要,別忘)
+
+- [ ] **約 2026-09-03 跑 `node scripts/crawl-freshness.mjs`**(配額吃緊加 `--sample 20`)。
+      這是 08-27 那次 lastmod 修法的**唯一驗收**:當時 57 個 Topic 主頁的最後抓取日中位數
+      停在 08-19,重爬比例 8%。判準:**重爬比例 ≥70% 之前,不要調任何標題/摘要文案** ——
+      GSC 的曝光與點擊還混著舊摘要,拿它當成績單會像 08-19/21/25/26 那樣一連改錯三次方向。
+      · 比例上來了 → 這時 GSC 的數字才第一次能當文案的成績單。
+      · 還是沒上來 → 才有理由動「縮減逐國頁」那一項(見下)。
+
+---
+
+### A 在地與商圈:資料還要續補
+
+**現況查法**(不要引用數字):
+```bash
+sqlite3 -header -column db/aeiou.sqlite "SELECT city_code,COUNT(*) n FROM places GROUP BY city_code ORDER BY n DESC"
+sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT topic_id) FROM place_topics"   # events 換 event_topics
+node scripts/update-local-data.mjs --check-only | grep 活動存量
+# Topic 頁兩區都空的比例(先 cd site && LOCALE=zh-TW pnpm build):
+python3 -c "import glob;h=[open(f,encoding='utf-8').read() for f in glob.glob('site/dist/topic/*/index.html')];print(sum(1 for x in h if '目前沒有資料' in x.split('id=\"nearby\"')[1][:1200] and '目前沒有資料' in x.split('id=\"events\"')[1][:1200]),'/',len(h))"
+```
+
+- [ ] **活動偏少的市場要再補**:2026-08-28 那一輪七個市場裡,上海、浦那、聖保羅、雅加達
+      都低於 6–12 場的目標(雅加達 0 場)。**卡點是工具不是沒資料**:WebSearch 額度在 session
+      中途用盡,後段只能用已知網域直接 curl;印度與巴西大量政府網域是 JS 單頁或
+      Akamai/Cloudflare 整站 403。→ **下次開新 session 再跑,額度是新的。**
+- [ ] 🔴 **活動只會過期,不會自己長出來。** 存量掉下去要補,判準看 `活動存量` 那一行
+      (未來場次 < 10、最近一場 > 14 天、或某市場掛零都會 WARN)。
+
+**怎麼做(這套流程已經走通一次,照著做)**:
+1. 一市場派一個 subagent(交辦書三件套見 `.claude/doctrine/30-templates.md`),
+   各寫**自己的**片段檔 `local-<city_code>.json` 到暫存目錄 —— 不要讓它們直接改
+   `content/local-sample-data.json`,七個 agent 併行改同一個檔必打架。
+   片段形狀 = `{ "places": [...], "events": [...] }`,與 `content/local-sample-data.json`
+   的兩個陣列完全一致。
+2. `node scripts/local-data-intake.mjs --dir <暫存目錄> --check` 先驗
+3. 去掉 `--check` 實際合併並產生來源目錄項
+4. `node scripts/update-local-data.mjs`(逐頁核對 markers,**這關過了才算數**)
+5. `node scripts/export-data.mjs` → 七語系 build
+
+**交辦書一定要寫死的紅線**(2026-08-28 這輪每一條都真的被違反過):
+- 🔴 絕不呼叫 Google Places API(`map_query` 只是自己組的純字串)
+- 🔴 **維基百科不算來源**(台北那輪有三筆用它,其中孔子廟只有它)
+- 🔴 401/403 一律當「不准抓」,不換 UA、不重試、不繞路,換一個來源
+- 🔴 活動 `start_at` 必須是未來,而且**日期要那一頁真的寫著**(有一筆起日錯一天,
+  是 date_marker 比對揪出來的;另一筆的來源頁根本沒提到該活動)
+- 🔴 查不到就不要寫。雅加達交 0 場活動是**對的**,不是失職
+
+**收件時最常見的六種錯**(intake 腳本會擋,檔頭有完整緣由):
+merged slug(有 .md 但狀態是 merged)、缺來源目錄項、marker 憑空填、
+名稱與頁面語言不同、Shift_JIS 頁面(管線按 UTF-8 讀,**永遠核對不了,那種來源不能用**)、
+同一網址同時當地點與活動來源。
+
+---
+
+### 還沒決定的兩個頁型問題(要用戶拍板,不要自己動)
+
+- [ ] **`/topic/<slug>/<城市>/` 這種 §7 專屬頁型要不要開。**
+      資料現在剛補厚,但 57 × 7 = 399 個新 URL 與逐國頁同一個量級,
+      而逐國頁的下場是 186 頁 Discovered - currently not indexed。
+      **先看 Google 對現有頁的反應(見上面那個 09-03 驗收)再決定。**
+- [ ] **要不要縮減 379 個逐國頁。** 2026-08-27 試過用「該國專屬文字 ÷ 共用摘要」當門檻,
+      抽 34 頁對 Google 的實際索引結果一驗:`0–0.8: 2/2`、`0.8–1: 2/4`、`1–1.2: 1/9`、
+      `1.2–1.6: 4/9`、`1.6+: 5/10` —— **不單調、樣本 2–10 是雜訊,比值預測不了索不索引**,
+      已放棄那個判準。要動的話該用**Google 自己的判決**(持續 N 天 Discovered-not-indexed
+      的退出 sitemap),不是猜一個內容量門檻。
+
+---
+
+### 版面巡檢剩下的三件(2026-08-27 起,還沒動)
+
+- [ ] **Topic 頁「你附近」與「相關活動」兩區都空的頁面仍佔半版**(查法見上面 A 那段)。
+      版面是 2026-08-11 定版的左 50% / 右 50%,改比例等於改定版,**不自己動**。
+      在地資料補上來之後這個問題會自然縮小,先看數字再談要不要改版面。
+- [ ] **TopicPosts / Participation 的「暫時無法載入」訊息是死碼**:兩支都在 `unavailable` 態
+      `root.hidden = true`,底下寫好的 `.posts-closed-title` 永遠印不出來。
+      DiscussionRoom 只是**碰巧**沒事(它的 `[data-room-state='unavailable']` 設了 `display: flex`
+      蓋掉 `[hidden]`)。三支要一致,但「API 掛掉時首頁十列各印一次故障」是產品決定
+      (2026-08-20 那次事故的教訓正好在這條線上),**要用戶拍板**。
+- [ ] 首頁 hero「一件事,到了不同地/方」在詞中間斷行。CSS 無解:`text-wrap: balance` 與
+      `word-break: auto-phrase` 實測對中文都不改變斷點(auto-phrase 目前只對日文有效)。
+      要修只能在文案裡放斷行提示,**那是用戶的東西**。
+
 ## 版型巡檢(2026-08-27;用 headless 實際渲染,不是讀碼)
 
 做法:`site/dist` 起本機 server → playwright 開 1280 與 390 兩個寬度 → 逐頁量

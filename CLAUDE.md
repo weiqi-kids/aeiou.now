@@ -337,7 +337,16 @@ bash scripts/hourly-export.sh                   # export + 只 commit data/ + pu
 cd site && LOCALE=zh-TW pnpm build
 cd site && for L in zh-TW en ja zh-CN hi id pt-BR; do LOCALE=$L pnpm build || break; done
 
+# ── 在地資料(地點/活動)──
+#   一市場一個 subagent 收集 → 各寫自己的片段 local-<city_code>.json → 這支收件
+#   六種常見交件錯誤與紅線清單見該檔檔頭與 docs/TODO.md「交接」段
+node scripts/local-data-intake.mjs --dir <片段目錄> --check   # 只驗不寫
+node scripts/local-data-intake.mjs --dir <片段目錄>           # 驗+合併+產來源目錄項
+node scripts/update-local-data.mjs               # 逐頁核對 markers(這關過了才算數)
+
 # ── 搜尋數據 ──
+node scripts/crawl-freshness.mjs                # 改文案之前先問:Google 看過新版了沒
+                                                #   重爬比例 <70% 就不要調文案(配額緊加 --sample 20)
 node scripts/seo-health.mjs                     # 量測/索引/排名/內容四層診斷(含樣本量)
 node scripts/gsc-topic-metrics.mjs              # GSC 每日 Topic 曝光累積(冪等,重跑安全)
 node scripts/gsc-topic-metrics.mjs --days 480   # 回補 GSC 全部保留期
