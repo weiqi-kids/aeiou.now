@@ -504,7 +504,9 @@
       }
     }
   ],
-  "demand_countries": {},
+  "demand_countries": {
+    "en": "CN"
+  },
   "regional_notes": [
     {
       "country_code": "US",
@@ -576,6 +578,6 @@
     "https://www.federalregister.gov/documents/2024/11/27/2024-28062/national-childs-day-2024",
     "https://www.usa.gov/holidays"
   ],
-  "content_updated_at": "2026-08-29T03:03:30.577Z",
-  "content_hash": "d277eae97b2ed2c32104cfe08a8edacae0b05ace90519ed720f7c269eed8c04d"
+  "content_updated_at": "2026-08-29T05:05:18.898Z",
+  "content_hash": "23b1dc7b318f267c0b186b46fc55f11b0cd8db36b3ca13276a12b7138119323d"
 }

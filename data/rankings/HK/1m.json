@@ -1,7 +1,7 @@
 {
   "scope": "country:HK",
   "window": "1m",
-  "thin": true,
+  "thin": false,
   "items": [
     {
       "rank": 1,
@@ -23,6 +23,12 @@
     },
     {
       "rank": 4,
+      "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
+      "slug": "childrens-day",
+      "tier": "hot"
+    },
+    {
+      "rank": 5,
       "topic_id": "top_01KZXQ6BR7QR1W2BM5TJ4387MN",
       "slug": "diwali",
       "tier": "hot"
