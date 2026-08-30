@@ -1113,12 +1113,45 @@ ls -d data/topics/top_tr_* 2>/dev/null | wc -l    # 靜態層輸出幾個趨勢 
       | Dagdusheth Ganeshotsav 2026 | 官方頁面的時程表仍停在 2025 場次 |
       | 臺北天文館 9 月活動 | 那則新聞的網址已下架(404) |
       八月底找十月以後的活動,多數主辦單位還沒公告 —— 這是季節性的,不是搜尋方法的問題。
-      所以改成**讓系統自己講**:`update-local-data.mjs` 每輪印「活動存量」,
-      未來場次 < 10、最近一場 > 14 天、或某個市場一場都沒有,就 WARN(永不擋輸出)。
-      門檻可用 `AEIOU_EVENT_RUNWAY_MIN` / `AEIOU_EVENT_RUNWAY_DAYS` 調。
-      查:`node scripts/update-local-data.mjs --check-only | grep 活動存量`。
+      所以改成**讓系統自己講**:`update-local-data.mjs` 每輪算「活動存量」。
+      ⚠ **判準 2026-08-30 從全站加總改成逐市場**,舊描述(未來場次 < 10)已作廢 ——
+      七語系是七個獨立的站,每站只看得到自己市場那一城,全站加總對任何一個真實讀者
+      都不是他看到的數字。實測那天:全站 42 場、最近一場 2 天後,三個判準全過**一個
+      WARN 都不出**,而同一時刻 jakarta 未來 30 天 0 場、taipei 一週內歸零。
+      現行判準:**某一市場**未來 < 3 場、或最近一場 > 14 天就點名該市場
+      (門檻 `AEIOU_EVENT_RUNWAY_MIN` / `AEIOU_EVENT_RUNWAY_DAYS`)。
+      而且低水位**有出口了**:寫進 jobs 表的 `local-event-runway`(`partial_success`
+      = 有市場見底,訊息裡逐市場點名)。舊版只有 console.log 印進沒人讀的 log,
+      等於沒說。查法見 CLAUDE.md「活動還夠不夠」那一列。
       🔴 補活動的硬條件:官方頁面上要**真的印著那個日期**(`date_markers`),否則收不進來 ——
       這道門是刻意的,它擋掉「我記得大概是十月」這種資料。
+
+- [~] **2026-08-30 這一輪:補了 taipei 7 場、jakarta 4 場,兩市場脫離門檻。**
+      收集目標訂成**行事曆型來源**而不是湊場次 —— 健康的市場(sao-paulo、shanghai)
+      靠的是會持續產出活動的官方目錄頁,而 taipei / jakarta 的來源幾乎全是單次公告
+      (一則新聞稿 = 一場活動,辦完就沒了)。接上的兩支:
+      `tpml.gov.taipei` 市立圖書館每月藝文活動表(每月換表、**網址不變**)、
+      `exhibition.jiexpo.com` 雅加達最大展館場次表(另有 536 筆 sitemap 可直接讀)。
+      **還沒登記但值得備用的行事曆**(這一輪查證過可抓、UTF-8、robots 允許):
+      `majorevent.gov.taipei`(消防局大型活動,787 筆,最乾淨的一支)、
+      中正紀念堂表演/展覽兩支、`jakarta.go.id/search?section=events`(省府活動專欄,
+      支援 `?q=` 生出穩定網址,但只提前 2–4 週公告)、
+      `gni.kemenbud.go.id/program/pameran`(印尼國家美術館)。
+      前三支這輪**沒用**是因為未來場次(路跑、企業家庭日、水墨聯展、音樂會)
+      沒有語意相關的 active Topic,硬掛就是湊數。
+      🔴 **十月中要再收一次**:台北 10/10 國慶、10/24 天母萬聖節、11/2 白晝之夜,
+      雅加達 10/28 青年誓言日、11/10 英雄日、12/22 母親節 —— 兩地官方一律只提前
+      2–4 週公告,2026-08-30 當天線上沒有任何印著日期的官方頁面。
+      **抓不到的來源型態**(查證過,不必再試):`travel.taipei` 對我們的 UA 回 403、
+      `cultureexpress.taipei` 的活動列表不在 robots 白名單、
+      `enjoy.jakarta.go.id` robots 是 `Disallow: /`;
+      北美館/台博館/行天宮/`indonesia-bookfair.com`/`jcc.co.id` 都是 JS 載入,
+      靜態 HTML 裡一個日期都沒有 —— 每小時的核對抓不到 marker,不能用。
+      ⚠ 同一個坑踩到一次:`doit.gov.taipei/News_Content.aspx` 也是 JS 載入,
+      收件時才被 intake 擋下(抓不到 marker),那筆活動因此拿掉。
+      **而且它會殘留在 `managed_event_source_urls`** —— intake 會把來源加進受管理
+      清單,但抓不到 marker 時不進來源目錄,兩邊不一致會讓 update-local-data
+      在下一輪整支失敗(`資料 URL 沒有來源目錄設定`)。要兩邊一起清。
 ### 假日母表的資料品質(都已標註,尚未解)
 
 - **中國**:記者節(11/8)整筆沒收(所有可達的 `.gov.cn` 頁都驗不到日期);
