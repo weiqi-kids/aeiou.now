@@ -93,12 +93,52 @@ function ulid(nowMs = Date.now()) {
 //    而 Cloudflare 的 token 偶爾會回 7403(2026-08-21 手動與 cron 各遇過一次,
 //    同一條指令隔幾秒重跑就好)。這一支是冪等的,重試沒有副作用。
 //    退避短(2s / 6s)是因為它排 4 小時一次,不該為了一次抖動空等到下一輪。
+// ── Cloudflare 認證:優先 API token,OAuth 只是退路 ────────────────────────
+// wrangler 預設走 `wrangler login` 存進 ~/.config/.wrangler/config/default.toml 的
+// **OAuth** token。那組 token 會過期,而過期是**靜默**的 —— 2026-08-30 實測:
+//   04:25 最後一次成功(wrangler 續期後寫回 default.toml,mtime 停在那一刻)
+//   12:25 三次重試全掛在「In a non-interactive environment, it's necessary to
+//         set a CLOUDFLARE_API_TOKEN」—— refresh token 自己到期,沒有任何人被通知
+// OAuth 是為**互動式登入**設計的:續期預設有人在鍵盤前。掛在 cron 上的無人值守
+// 排程不該依賴它,不然每隔一段時間就會靜靜停擺,而且只有這一支會停
+// (其餘管線走 Worker 的 /internal/sync/*,不碰 wrangler,所以整盤看起來是綠的)。
+//
+// 取用順序(缺就往下退,裸執行仍是正確且完整的行為):
+//   1. 環境變數 CLOUDFLARE_API_TOKEN —— CI 或一次性覆寫
+//   2. ~/.config/aeiou/cf-api-token —— 主機常設(chmod 600,**絕不進 git**;
+//      與 sync-secret 同一個目錄,secret 只從那裡讀是 CLAUDE.md 紅線)
+//   3. 都沒有 → 照舊讓 wrangler 自己找 OAuth
+// account_id 不在這裡設:已 pin 在 api/wrangler.jsonc,兩處都寫會多一個漂移點。
+const CF_TOKEN_FILE = join(process.env.HOME || "/root", ".config", "aeiou", "cf-api-token");
+function wranglerEnv() {
+  const env = { ...process.env };
+  if (env.CLOUDFLARE_API_TOKEN) return env;
+  if (existsSync(CF_TOKEN_FILE)) {
+    const token = readFileSync(CF_TOKEN_FILE, "utf8").trim();
+    if (token) env.CLOUDFLARE_API_TOKEN = token;
+  }
+  return env;
+}
+
+// 認證失效**不是**暫時性抖動,重試沒有意義:過期的 token 隔 2 秒還是過期的,
+// 三次重試只是把一次失敗拖成 8 秒,還讓 jobs 表的 error_message 被重試訊息淹掉。
+// 這兩種失敗要分開處理 —— 7403 那種該退避重試,認證該立刻吵出「人要做什麼」。
+const AUTH_FAILURE = /CLOUDFLARE_API_TOKEN|Authentication error|credentials|not (?:logged in|authenticated)|\[code: 10000\]/i;
+const AUTH_ACTION = [
+  "Cloudflare 認證失效,wrangler 打不到 D1。這一支是唯一真的執行 wrangler 的排程,",
+  "所以其餘管線照樣是綠的 —— 不要因為儀表板看起來正常就以為沒事。",
+  "修法(擇一,建議前者:API token 不過期,也沒有 refresh race):",
+  `  A. 建 Cloudflare API token(權限:D1 Edit),寫進 ${CF_TOKEN_FILE} 並 chmod 600`,
+  "  B. 互動式重登:cd api && npx wrangler login   (需要有人在瀏覽器完成授權)",
+].join("\n");
+
 function d1(sql, { file = false } = {}) {
   const args = ["wrangler", "d1", "execute", "aeiou-ugc", "--remote", "--json"];
   args.push(file ? "--file" : "--command", sql);
   const backoffMs = [2000, 6000];
+  const env = wranglerEnv();
   for (let attempt = 0; ; attempt += 1) {
-    const r = spawnSync("npx", args, { cwd: API_DIR, encoding: "utf8", maxBuffer: 32 * 1024 * 1024 });
+    const r = spawnSync("npx", args, { cwd: API_DIR, encoding: "utf8", maxBuffer: 32 * 1024 * 1024, env });
     const stdout = String(r.stdout || "");
     const stderr = String(r.stderr || "");
     if (!r.error && r.status === 0) {
@@ -110,6 +150,7 @@ function d1(sql, { file = false } = {}) {
       : (r.status !== 0
         ? `wrangler exited ${r.status}: stderr=${stderr.slice(0, 400)} stdout=${stdout.slice(0, 400)}`
         : `wrangler 沒有回傳 JSON:${stdout.slice(0, 400)}`);
+    if (AUTH_FAILURE.test(`${stderr}${stdout}`)) throw new Error(`${AUTH_ACTION}\n\nwrangler 原話:${why.slice(0, 300)}`);
     if (attempt >= backoffMs.length) throw new Error(why);
     log(`wrangler 失敗(第 ${attempt + 1} 次),${backoffMs[attempt] / 1000}s 後重試 —— ${why.slice(0, 200)}`);
     Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, backoffMs[attempt]);
