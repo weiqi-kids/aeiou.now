@@ -26,8 +26,8 @@
 - local_name: Black Friday
 - date_rule: 十一月的最後一個星期五
 - rank: 1
-- source: https://www.procon.df.gov.br/procon-df-orienta-consumidores-para-compras-seguras-na-black-friday/
-- source: https://www.procon.df.gov.br/fiscalizacao-sera-intensificada-para-coibir-abusos-na-black-friday-2023/
+- source: https://www.procon.df.gov.br/confira-o-passo-a-passo-do-procon-df-para-aproveitar-bem-os-descontos-do-black-friday-2/
+- source: https://www.procon.df.gov.br/tag/black-friday/
 - source: https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm
 
 ## observance CN double-eleven
