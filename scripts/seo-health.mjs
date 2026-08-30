@@ -22,7 +22,7 @@
 //   node scripts/seo-health.mjs --no-inspect   跳過 URL Inspection（那層很慢，約 3 秒/網址）
 //
 // 憑證：~/.config/aeiou/ga4-sa.json（GCP 專案 aeiou-seo 的 SA，只看得到 aeiou.now）。
-// Google API 存取沿用 /root/seo-ops/lib/google.mjs，不重造輪子。
+// Google API 存取沿用 /mnt/customers/seo-ops/lib/google.mjs，不重造輪子。
 
 import { execFileSync } from 'node:child_process';
 import { existsSync } from 'node:fs';
@@ -34,7 +34,7 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const SA = join(homedir(), '.config', 'aeiou', 'ga4-sa.json');
 const GSC_SITE = 'sc-domain:aeiou.now';
 const GA4_PROPERTY = '549586494';
-const GOOGLE_LIB = '/root/seo-ops/lib/google.mjs';
+const GOOGLE_LIB = '/mnt/customers/seo-ops/lib/google.mjs';
 
 const args = process.argv.slice(2);
 const days = Number(args[args.indexOf('--days') + 1]) || 28;

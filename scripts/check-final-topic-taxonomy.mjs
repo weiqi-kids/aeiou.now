@@ -48,7 +48,7 @@ const FINAL_SLUGS = [
   'pets-and-family', 'pet-preparedness', 'ask-the-world', 'womens-day', 'exam-season', 'islamic-calendar-days', 'elders-day', 'year-end-bonus',
   'voting-and-elections', 'parental-leave', 'military-service', 'official-languages', 'compulsory-education', 'religion-and-the-state',
   // ── 2026-08-27「開拓新的區塊」六個(用戶拍板)。挑題與命名都由 Bing 實測需求決定,
-  //    工具 /root/seo-ops/bin/keyword-demand.mjs,量測區間 2026-05-29 ~ 2026-08-26(exact 比對)。
+  //    工具 /mnt/customers/seo-ops/bin/keyword-demand.mjs,量測區間 2026-05-29 ~ 2026-08-26(exact 比對)。
   //    共同特徵:七國全部有量,而且頭部字都是**制度的專有名稱**——正好是站上排 63 名
   //    的那一類(跨國/比較/制度規則),因為在此之前根本沒有頁面在答。
   // 健保 @tw 5,256、health insurance @us 22,875、健康保険 @jp 9,408、医保 @cn 15,010、SUS @br 12,745

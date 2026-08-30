@@ -33,10 +33,10 @@
 //
 // claude 子行程一律在**空目錄**跑(2026-08-13):
 //   claude CLI 會自動把 cwd 及其各層父目錄的 CLAUDE.md 讀進 context。
-//   cron 是 `cd /mnt/customer/aeiou.now` 之後才呼叫本支,所以原本每次翻譯都會把
-//   /mnt/customer/aeiou.now/CLAUDE.md(17KB)與 /root/CLAUDE.md(7.8KB)整份拖進去。
+//   cron 是 `cd /mnt/customers/aeiou.now` 之後才呼叫本支,所以原本每次翻譯都會把
+//   /mnt/customers/aeiou.now/CLAUDE.md(17KB)與 /root/CLAUDE.md(7.8KB)整份拖進去。
 //   實測(claude -p --output-format json,同一則 prompt):
-//     cwd=/mnt/customer/aeiou.now → cache_creation 20854 tokens
+//     cwd=/mnt/customers/aeiou.now → cache_creation 20854 tokens
 //     cwd=/tmp 空目錄     → cache_creation  8635 tokens   ── 每次呼叫白花約 12,200 tokens
 //   驗證方式:問「context 裡有沒有出現『守門七條』」,repo 目錄答 YES、空目錄答 NO。
 //   除了浪費,更要命的是**翻譯結果會被手冊內容影響** —— 手冊被誰改一行,
@@ -69,7 +69,7 @@ const CLAUDE_BIN = process.env.AEIOU_CLAUDE_BIN || "/root/.local/bin/claude";
 // claude-opus-5[1m] —— 1M context 檔次,連「回兩個字 OK」都因為 ~26k tokens 的系統基線
 // (cache_creation 9,842 + cache_read 15,900)算出 $0.106。翻譯是機械任務,吃不到 Opus 的
 // 推理力,卻要付最貴的檔次;而且「預設模型」會隨 CLI 版本漂移,等於管線成本不受本檔控制。
-// seo-ops 全機隊的 reflect/brain 早就統一 sonnet(見 /root/seo-ops/sites/*.json),這裡對齊。
+// seo-ops 全機隊的 reflect/brain 早就統一 sonnet(見 /mnt/customers/seo-ops/sites/*.json),這裡對齊。
 const CLAUDE_MODEL = process.env.AEIOU_CLAUDE_MODEL || "claude-sonnet-5";
 const CLAUDE_TIMEOUT_MS = Number.parseInt(process.env.AEIOU_CLAUDE_TIMEOUT_MS || "600000", 10);
 // 固定路徑(不是 mkdtemp):每輪重用同一個空目錄,不會在 /tmp 累積;

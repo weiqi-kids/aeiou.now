@@ -105,7 +105,7 @@ if (!lock.ok) {
 const job = beginJob(db, { jobName: JOB_NAME, scheduledAt });
 
 try {
-  const { ga4RunReport } = await import("/root/seo-ops/lib/google.mjs");
+  const { ga4RunReport } = await import("/mnt/customers/seo-ops/lib/google.mjs");
   const dayStart = (s) => Math.floor(Date.parse(`${s}T00:00:00Z`) / 1000);
   const rows = [];
   const push = (bucket, dimension, id, metric, value) => {

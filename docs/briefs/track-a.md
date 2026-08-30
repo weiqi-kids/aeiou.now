@@ -1,11 +1,11 @@
 # Track A(= W1)交辦:seed + export
 
 **先讀**(缺一不可,順序如下):
-1. `/mnt/customer/aeiou.now/docs/briefs/_shared-context.md`(決策帳、介面常數、守門七條、明確延後、工作紀律)
-2. `/mnt/customer/aeiou.now/docs/02-data-model.md`(資料結構權威文件,§2–§9)
-3. `/mnt/customer/aeiou.now/db/schema-common.sql`、`schema-host.sql`(欄位以這兩檔實際內容為準)
+1. `/mnt/customers/aeiou.now/docs/briefs/_shared-context.md`(決策帳、介面常數、守門七條、明確延後、工作紀律)
+2. `/mnt/customers/aeiou.now/docs/02-data-model.md`(資料結構權威文件,§2–§9)
+3. `/mnt/customers/aeiou.now/db/schema-common.sql`、`schema-host.sql`(欄位以這兩檔實際內容為準)
 
-**你的工作目錄**:`/mnt/customer/aeiou.now/`
+**你的工作目錄**:`/mnt/customers/aeiou.now/`
 **你不 commit、不 push。** 完成後回報,由主對話統一 commit。
 **你只跑 `node scripts/init-db.mjs --host-only`,絕不碰 D1**(D1 的 create 與灌 schema 歸 Track C,平行進行中,搶建會互踩)。
 
@@ -49,7 +49,7 @@
 
 ### W1.2 匯出腳本 → `scripts/export-data.mjs`
 
-主機 SQLite(`/mnt/customer/aeiou.now/db/aeiou.sqlite`)→ 根層 `data/` JSON。目錄結構**照 `docs/02-data-model.md` §9**:
+主機 SQLite(`/mnt/customers/aeiou.now/db/aeiou.sqlite`)→ 根層 `data/` JSON。目錄結構**照 `docs/02-data-model.md` §9**:
 
 ```
 data/

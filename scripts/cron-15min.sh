@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # aeiou.now — 每 15 分鐘的管線(Track D / W4.4 的 */15 那一行)
-#   /mnt/customer/aeiou.now/scripts/cron-15min.sh
+#   /mnt/customers/aeiou.now/scripts/cron-15min.sh
 #
 # 順序刻意:
 #   1. translate-posts.mjs —— D1 待翻 post → claude -p 六語 → 回寫 D1 + **回流主機 posts/post_i18n**
@@ -14,13 +14,13 @@
 #
 # 四支各自寫 jobs 表,任一支失敗不影響其他支(所以不 set -e)。
 # 失敗看:本檔 log(見 /etc/cron.d/aeiou 的重導)+ 主機 SQLite 的 jobs 表:
-#   sqlite3 /mnt/customer/aeiou.now/db/aeiou.sqlite \
+#   sqlite3 /mnt/customers/aeiou.now/db/aeiou.sqlite \
 #     "SELECT job_name,datetime(finished_at,'unixepoch'),status,attempt,error_message
 #        FROM jobs ORDER BY rowid DESC LIMIT 10;"
 
 set -uo pipefail
 
-REPO="${AEIOU_REPO:-/mnt/customer/aeiou.now}"
+REPO="${AEIOU_REPO:-/mnt/customers/aeiou.now}"
 NODE_BIN="${AEIOU_NODE_BIN:-/usr/bin/node}"
 LOG_DIR="$REPO/logs"
 MAX_LOG_BYTES=$((5 * 1024 * 1024))

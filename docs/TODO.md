@@ -286,7 +286,7 @@ merged slug(有 .md 但狀態是 merged)、缺來源目錄項、marker 憑空填
   「推目前所在分支」,所以 checkout 留在哪條分支,每小時的 data 匯出就推到哪。2026-08-16
   PR #5 squash-merge 後功能分支沒收掉、checkout 也沒切回來,27 次匯出全堆在分支上,
   線上資料靜默停更三天 —— 而 CI 全綠、七站 `.build-id` 也與 main 相符,**既有查法完全看不出來**。
-  查:`git -C /mnt/customer/aeiou.now rev-parse --abbrev-ref HEAD` 應為 `main`。
+  查:`git -C /mnt/customers/aeiou.now rev-parse --abbrev-ref HEAD` 應為 `main`。
 - [x] **「資料新鮮度」查法已補進 CLAUDE.md**(2026-08-19):`git log -1 --format=%cr -- data/`。原問題:目前所有查法都只驗「站台是不是 main 的最新版」,
   驗不到「main 的資料是不是最近匯出的」。建議加一條比對 `data/` 最後 commit 時間與現在的差距。
 

@@ -230,7 +230,7 @@ World
 | `REACTION_SET` | `["❤️","😂","😮","😢","🤔","🎉","👏"]`(**不含 👍**,用戶明示排除) |
 | Turnstile(2026-08-21) | Worker 側 `TURNSTILE_SECRET`(secret)+ `TURNSTILE_SITEKEY`(var);**兩個都設才生效**。開關由 Worker 說了算,七個站不必為了開關重建 —— 前端問 `/v1/me` 的 `turnstile`。未設 = 不驗(碼先上線、鑰匙後到);設了之後 `POST /v1/posts` 與 `/v1/comments` 要帶 `turnstile_token` |
 | reaction 可掛的對象 | `post` / `comment` / `place` / `event` |
-| 主機 SQLite | `/mnt/customer/aeiou.now/db/aeiou.sqlite` |
+| 主機 SQLite | `/mnt/customers/aeiou.now/db/aeiou.sqlite` |
 | API 路徑參數 | `/v1/topics/:id/...` 的 `:id` = **topic_id(ULID)**,不是 slug |
 | wrangler | 主機無全域指令,一律 `npx wrangler` |
 
@@ -287,7 +287,7 @@ content/topics/<slug>.md   ←── 人工編輯(唯一入口)
 | GitHub Actions `17 * * * *` + push | `.github/workflows/build.yml` | 七語系 matrix build → SSH 推七個 publish repo(帶 `.nojekyll` 與 `.build-id`)→ 輪詢驗證**內容真的上線**(比 build-id,不是比 200) |
 
 - 排程本體:`cat /etc/cron.d/aeiou`(檔內註解有逐行說明與排錯指引)。**Actions 排 17 分是刻意錯開主機整點 push。**
-- log:`/mnt/customer/aeiou.now/logs/*.log`;成敗記在 `jobs` 表(查法見上表)。
+- log:`/mnt/customers/aeiou.now/logs/*.log`;成敗記在 `jobs` 表(查法見上表)。
 - 失敗語意:+5 分、+10 分重試,第三次進 `dlq`(不再自動重試,要人工看)。`job_locks` 防重入。
 - cron 環境 PATH 必須含 `/root/.local/bin`(`claude` CLI 在那);改 cron 檔屬 C 級,先問用戶。
 

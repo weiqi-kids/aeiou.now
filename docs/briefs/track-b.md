@@ -1,11 +1,11 @@
 # Track B(= W2)交辦:Astro 七語系靜態站
 
 **先讀**(缺一不可,順序如下):
-1. `/mnt/customer/aeiou.now/docs/briefs/_shared-context.md`(決策帳、介面常數、**守門七條**、明確延後、工作紀律)
-2. `/mnt/customer/aeiou.now/docs/briefs/api-contract.md`(**你與 Track C 平行開發的唯一契約**;前端該怎麼打 API、feed 回什麼形狀,全在裡面。特別看 §6「前端對本契約的最小使用」)
-3. `/mnt/customer/aeiou.now/docs/02-data-model.md` §9(靜態 JSON 目錄結構)
+1. `/mnt/customers/aeiou.now/docs/briefs/_shared-context.md`(決策帳、介面常數、**守門七條**、明確延後、工作紀律)
+2. `/mnt/customers/aeiou.now/docs/briefs/api-contract.md`(**你與 Track C 平行開發的唯一契約**;前端該怎麼打 API、feed 回什麼形狀,全在裡面。特別看 §6「前端對本契約的最小使用」)
+3. `/mnt/customers/aeiou.now/docs/02-data-model.md` §9(靜態 JSON 目錄結構)
 
-**你的工作目錄**:`/mnt/customer/aeiou.now/site/`(目前是空目錄)
+**你的工作目錄**:`/mnt/customers/aeiou.now/site/`(目前是空目錄)
 **你不 commit、不 push。** 完成後回報,由主對話統一 commit。
 **Track A 正在平行產 `data/`,你不能依賴它存在**——自備 fixture(見 W2.3)。
 

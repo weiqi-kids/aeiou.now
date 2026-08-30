@@ -1,12 +1,12 @@
 # Track C(= W3)交辦:Cloudflare Worker API
 
 **先讀**(缺一不可,順序如下):
-1. `/mnt/customer/aeiou.now/docs/briefs/_shared-context.md`(決策帳、介面常數、明確延後、工作紀律)
-2. `/mnt/customer/aeiou.now/docs/briefs/api-contract.md`(**你與 Track B 平行開發的唯一契約**;每個端點的 request/response 形狀、錯誤碼、CORS、cookie 規定全在裡面。**照它實作,不得自行加減欄位名**)
-3. `/mnt/customer/aeiou.now/docs/02-data-model.md` §5–§6
-4. `/mnt/customer/aeiou.now/db/schema-common.sql`、`schema-d1.sql`(D1 要灌的就是這兩檔)
+1. `/mnt/customers/aeiou.now/docs/briefs/_shared-context.md`(決策帳、介面常數、明確延後、工作紀律)
+2. `/mnt/customers/aeiou.now/docs/briefs/api-contract.md`(**你與 Track B 平行開發的唯一契約**;每個端點的 request/response 形狀、錯誤碼、CORS、cookie 規定全在裡面。**照它實作,不得自行加減欄位名**)
+3. `/mnt/customers/aeiou.now/docs/02-data-model.md` §5–§6
+4. `/mnt/customers/aeiou.now/db/schema-common.sql`、`schema-d1.sql`(D1 要灌的就是這兩檔)
 
-**你的工作目錄**:`/mnt/customer/aeiou.now/api/`(目前是空目錄)
+**你的工作目錄**:`/mnt/customers/aeiou.now/api/`(目前是空目錄)
 **你不 commit、不 push。** 完成後回報,由主對話統一 commit。
 **D1 的 create 與灌 schema 是你的權責**(Track A 只跑主機庫,不會碰 D1)。
 
@@ -37,7 +37,7 @@
 ### W3.2 D1 初始化
 
 ```bash
-cd /mnt/customer/aeiou.now/api
+cd /mnt/customers/aeiou.now/api
 npx wrangler d1 create aeiou-ugc
 ```
 
@@ -48,7 +48,7 @@ npx wrangler d1 execute aeiou-ugc --remote --file ../db/schema-common.sql
 npx wrangler d1 execute aeiou-ugc --remote --file ../db/schema-d1.sql
 ```
 
-(或直接跑 `node /mnt/customer/aeiou.now/scripts/init-db.mjs --d1-only`,它就是做這兩件事。)
+(或直接跑 `node /mnt/customers/aeiou.now/scripts/init-db.mjs --d1-only`,它就是做這兩件事。)
 
 **驗收**:`npx wrangler d1 execute aeiou-ugc --remote --command "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name"` 列出全部表(common 7 張 + d1 3 張)。
 
@@ -92,7 +92,7 @@ npx wrangler d1 execute aeiou-ugc --remote --file ../db/schema-d1.sql
 設 secret:
 
 ```bash
-cd /mnt/customer/aeiou.now/api
+cd /mnt/customers/aeiou.now/api
 npx wrangler secret put SYNC_SECRET   # 值 = cat ~/.config/aeiou/sync-secret
 ```
 
@@ -103,7 +103,7 @@ npx wrangler secret put SYNC_SECRET   # 值 = cat ~/.config/aeiou/sync-secret
 ### W3.5 部署與驗收
 
 ```bash
-cd /mnt/customer/aeiou.now/api && npx wrangler deploy
+cd /mnt/customers/aeiou.now/api && npx wrangler deploy
 ```
 
 部署後:

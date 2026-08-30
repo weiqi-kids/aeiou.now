@@ -10,9 +10,9 @@
 aeiou.now = 全球議題平台(World → Topic → People → Place → Action),七語系市場。
 本階段 = **M1 走通式骨架**:1–2 個示範 Topic 打通全鏈路,每層薄,端到端能跑。
 
-**資料結構的權威文件**:`/mnt/customer/aeiou.now/docs/02-data-model.md`(定案,照做)
-**架構文件**:`/mnt/customer/aeiou.now/docs/01-architecture.md`
-**API 契約**:`/mnt/customer/aeiou.now/docs/briefs/api-contract.md`
+**資料結構的權威文件**:`/mnt/customers/aeiou.now/docs/02-data-model.md`(定案,照做)
+**架構文件**:`/mnt/customers/aeiou.now/docs/01-architecture.md`
+**API 契約**:`/mnt/customers/aeiou.now/docs/briefs/api-contract.md`
 **版面與資訊架構的權威來源**:`/root/.claude/uploads/83eae670-5a5c-4c2f-a5cf-010b9c859fc1/e4a71c35-global_topic_platform_full_spec.md`
 —— **要碰版面就必須打開它讀**(§44 主題頁、§54 首頁、§55「現在」),
 **不准只憑本檔或計劃裡引的「草案 §44」這種編號辦事**。2026-08-11 的整站重做事故就是這樣發生的:
@@ -65,7 +65,7 @@ source repo:`weiqi-kids/aeiou.now`。語系用**目錄**分,不用 branch,全在
 | 靜態站注入的 API 位址 | 環境變數 `PUBLIC_API_URL` |
 | Deploy key secrets 名 | `DEPLOY_KEY_ZH_TW` `DEPLOY_KEY_EN` `DEPLOY_KEY_JA` `DEPLOY_KEY_ZH_CN` `DEPLOY_KEY_HI` `DEPLOY_KEY_ID` `DEPLOY_KEY_PT_BR` |
 | `REACTION_SET` | `["❤️","😂","😮","😢","🤔","🎉","👏"]`(**不含 👍,用戶明示排除**) |
-| 主機 SQLite 檔 | `/mnt/customer/aeiou.now/db/aeiou.sqlite`(絕對路徑,全部腳本引用同一個) |
+| 主機 SQLite 檔 | `/mnt/customers/aeiou.now/db/aeiou.sqlite`(絕對路徑,全部腳本引用同一個) |
 | API 路徑參數 | `/v1/topics/:id/...` 的 `:id` = **topic_id(ULID 主鍵)**,不是 slug |
 | city_code | `lowercase-slugify(request.cf.city)`;`request.cf` 無 city 時留 NULL |
 | Slack secret 名 | `SLACK_WEBHOOK_URL`(M1 可不設值) |

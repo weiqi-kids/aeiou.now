@@ -1,15 +1,15 @@
 # Track D(= W4)交辦:主機 cron 管線
 
 **先讀**(缺一不可,順序如下):
-1. `/mnt/customer/aeiou.now/docs/briefs/_shared-context.md`(決策帳、介面常數、明確延後、工作紀律)
-2. `/mnt/customer/aeiou.now/docs/briefs/api-contract.md` §5(三個內部端點的 request/response 形狀)
+1. `/mnt/customers/aeiou.now/docs/briefs/_shared-context.md`(決策帳、介面常數、明確延後、工作紀律)
+2. `/mnt/customers/aeiou.now/docs/briefs/api-contract.md` §5(三個內部端點的 request/response 形狀)
 3. **Track C 已落地的 Worker 原始碼**(路徑由派工訊息給你)——**同步契約以 C 的實作為準**,契約文件與實作衝突時信實作,並回報矛盾
-4. `/mnt/customer/aeiou.now/docs/02-data-model.md` §5、§7
-5. `/mnt/customer/aeiou.now/db/schema-common.sql`、`schema-host.sql`
+4. `/mnt/customers/aeiou.now/docs/02-data-model.md` §5、§7
+5. `/mnt/customers/aeiou.now/db/schema-common.sql`、`schema-host.sql`
 
-**你的工作目錄**:`/mnt/customer/aeiou.now/`
+**你的工作目錄**:`/mnt/customers/aeiou.now/`
 **你不 commit、不 push 到 GitHub。**(W4.3 的腳本**內容**要寫 git push 邏輯,但你自己不要真的推 source repo——見 W4.3 的驗收說明。)
-主機 SQLite 已建好並灌過 seed:`/mnt/customer/aeiou.now/db/aeiou.sqlite`。
+主機 SQLite 已建好並灌過 seed:`/mnt/customers/aeiou.now/db/aeiou.sqlite`。
 Worker 已上線(網址由派工訊息給你),`SYNC_SECRET` 已設,主機側值在 `~/.config/aeiou/sync-secret`。
 
 ---
@@ -62,7 +62,7 @@ Worker 已上線(網址由派工訊息給你),`SYNC_SECRET` 已設,主機側值�
 2. **只 commit 受管理的 `data/` 與活動快照**(`git add data/ content/local-sample-data.json` —— 不要 `git add -A`,site/api/db 的變動不歸這支)。
 3. push 到 source repo。
    - 走 gh 的 HTTPS credential helper(主機已 `gh auth login` 為 `LightChang`)。
-   - author 用 **repo local git config**(`/mnt/customer/aeiou.now` 已設 `weiqi-kids <lightman.chang@gmail.com>`)。
+   - author 用 **repo local git config**(`/mnt/customers/aeiou.now` 已設 `weiqi-kids <lightman.chang@gmail.com>`)。
    - **絕不動 `git config --global`**(這是主機紅線:曾有 session 用 `--global` 設假身分污染全機 cron 的 commit 作者)。
 4. **無變更則 skip**(不產生空 commit)。
 5. 寫 `jobs` 紀錄(`job_name='hourly-export'`)。
@@ -83,12 +83,12 @@ Worker 已上線(網址由派工訊息給你),`SYNC_SECRET` 已設,主機側值�
 
 - **PATH 必須含 `/root/.local/bin`**(`claude` CLI 在那裡),也要含 node 的路徑。
 - cron 檔內要有註解說明每一行在做什麼、失敗看哪裡(log 路徑)。
-- log 導向到一個明確位置(例:`/mnt/customer/aeiou.now/logs/`,記得 `.gitignore` 已忽略 `*.log`;若寫到別處請講明)。
+- log 導向到一個明確位置(例:`/mnt/customers/aeiou.now/logs/`,記得 `.gitignore` 已忽略 `*.log`;若寫到別處請講明)。
 
 **同一回合必須更新三處文件(這是主機紅線,不做等於沒做完)**:
-1. repo 內的文件(`/mnt/customer/aeiou.now/docs/01-architecture.md` §12 已有排程表,如與你實作不符請更新)
+1. repo 內的文件(`/mnt/customers/aeiou.now/docs/01-architecture.md` §12 已有排程表,如與你實作不符請更新)
 2. cron 檔內的註解
-3. **主機 `/root/.claude/ops/directory-map.md` 新增 `/mnt/customer/aeiou.now` 條目**(照該檔既有格式寫:這是什麼專案、哪些目錄做什麼、哪些不是線上來源)
+3. **主機 `/root/.claude/ops/directory-map.md` 新增 `/mnt/customers/aeiou.now` 條目**(照該檔既有格式寫:這是什麼專案、哪些目錄做什麼、哪些不是線上來源)
 
 **驗收**:
 - `cat /etc/cron.d/aeiou` 輸出

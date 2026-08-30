@@ -1,11 +1,11 @@
 # Track E(= W5)交辦:CI/CD 與七站上線
 
 **先讀**(缺一不可):
-1. `/mnt/customer/aeiou.now/docs/briefs/_shared-context.md`(決策帳、介面常數、守門七條、明確延後、工作紀律)
-2. `/mnt/customer/aeiou.now/site/package.json`(Track B 落地的 build 鏈——**CI 必須跑同一條**)
-3. `/mnt/customer/aeiou.now/docs/briefs/track-b.md` W2.6(build 鏈定義)
+1. `/mnt/customers/aeiou.now/docs/briefs/_shared-context.md`(決策帳、介面常數、守門七條、明確延後、工作紀律)
+2. `/mnt/customers/aeiou.now/site/package.json`(Track B 落地的 build 鏈——**CI 必須跑同一條**)
+3. `/mnt/customers/aeiou.now/docs/briefs/track-b.md` W2.6(build 鏈定義)
 
-**你的工作目錄**:`/mnt/customer/aeiou.now/`
+**你的工作目錄**:`/mnt/customers/aeiou.now/`
 **你不 commit、不 push。** 完成後回報,由主對話統一 commit 並觸發。
 
 ---

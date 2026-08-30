@@ -37,7 +37,7 @@
 // 讀的時候再除。平均名次 = SUM(position_sum)/SUM(impressions)。
 //
 // 憑證:~/.config/aeiou/ga4-sa.json(GCP 專案 aeiou-seo 的 SA,只看得到 aeiou.now)。
-// Google API 存取沿用 /root/seo-ops/lib/google.mjs,不重造輪子。
+// Google API 存取沿用 /mnt/customers/seo-ops/lib/google.mjs,不重造輪子。
 // 失敗:寫 jobs(job_name='gsc-topic-metrics'),重試 +5 分 / +10 分 / 第三次 dlq。
 
 import { existsSync } from "node:fs";
@@ -50,7 +50,7 @@ import { alpha2From } from "./lib/country-codes.mjs";
 const JOB_NAME = "gsc-topic-metrics";
 const SA = process.env.AEIOU_GSC_SA || join(homedir(), ".config", "aeiou", "ga4-sa.json");
 const GSC_SITE = "sc-domain:aeiou.now";
-const GOOGLE_LIB = "/root/seo-ops/lib/google.mjs";
+const GOOGLE_LIB = "/mnt/customers/seo-ops/lib/google.mjs";
 const PAGE_SIZE = 25000; // GSC searchAnalytics rowLimit 上限
 
 // 每次重抓的區間。預設 10 天:蓋過 GSC 的 2-3 天延遲還有餘裕,
