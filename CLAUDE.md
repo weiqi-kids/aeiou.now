@@ -24,7 +24,7 @@
 | 某站網域綁定/HTTPS 狀態 | `gh api repos/weiqi-kids/aeiou-pages-<x>/pages --jq '{cname,https_enforced,status}'` |
 | 某站的 Pages 是否還在建 | `gh api repos/weiqi-kids/aeiou-pages-<x>/pages/builds/latest --jq .status` |
 | CI 最近跑得如何 | `gh run list -R weiqi-kids/aeiou.now --limit 5` |
-| cron 排程現況 | `cat /etc/cron.d/aeiou` |
+| cron 排程現況 | `cat /etc/cron.d/aeiou*` —— ⚠ **要加星號**:核心管線在 `aeiou`,但同前綴還可能有一次性任務的獨立檔(只查 `aeiou` 會漏掉)。`ls /etc/cron.d/aeiou*` 先看有幾個 |
 | **hourly-export 連續失敗了嗎** | `sqlite3 db/aeiou.sqlite "SELECT status,datetime(scheduled_at,'unixepoch') FROM jobs WHERE job_name='hourly-export' ORDER BY scheduled_at DESC LIMIT 5"` |
 | **審核工作檯有東西等人看嗎** | `node scripts/moderation-queue.mjs --report`(pending 那一行) |
 | **活動還夠不夠**(活動只會過期,不會自己長出來) | `sqlite3 db/aeiou.sqlite "SELECT status,error_message FROM jobs WHERE job_name='local-event-runway' ORDER BY scheduled_at DESC LIMIT 1"` —— `partial_success` 就是有市場見底,訊息裡**逐市場點名**。要現算明細:`node scripts/update-local-data.mjs --offline --check-only \| grep -A9 活動存量`(不帶 `--offline` 會逐頁核對外站、跑約兩分鐘)。⚠ **判準是逐市場,不是全站加總**(2026-08-30 改):某一市場未來 < 3 場、或最近一場 > 14 天就 WARN;門檻 `AEIOU_EVENT_RUNWAY_MIN` / `AEIOU_EVENT_RUNWAY_DAYS`。舊版架在全站加總上,實測「未來 42 場」全過關的同時 jakarta 兩個月內零場 |
@@ -286,7 +286,7 @@ content/topics/<slug>.md   ←── 人工編輯(唯一入口)
 | 主機 `40 4 * * *` | `gsc-topic-metrics.mjs` | GSC「date × page × country」→ 主機 `topic_search_metrics`。HotScore 瀏覽面的**唯一**來源(不接 GA4,理由見紅線)。只累積不算分數;GSC 沒有當時快照,停掉就永久失去那段曲線 |
 | GitHub Actions `17 * * * *` + push | `.github/workflows/build.yml` | 七語系 matrix build → SSH 推七個 publish repo(帶 `.nojekyll` 與 `.build-id`)→ 輪詢驗證**內容真的上線**(比 build-id,不是比 200) |
 
-- 排程本體:`cat /etc/cron.d/aeiou`(檔內註解有逐行說明與排錯指引)。**Actions 排 17 分是刻意錯開主機整點 push。**
+- 排程本體:`cat /etc/cron.d/aeiou*`(檔內註解有逐行說明與排錯指引)。核心管線一律放 `aeiou` 那一檔;**一次性/季節性任務放同前綴的獨立檔**,生命週期不同的東西不混在一起(改核心檔屬 C 級,加獨立檔不是)。**Actions 排 17 分是刻意錯開主機整點 push。**
 - log:`/mnt/customers/aeiou.now/logs/*.log`;成敗記在 `jobs` 表(查法見上表)。
 - 失敗語意:+5 分、+10 分重試,第三次進 `dlq`(不再自動重試,要人工看)。`job_locks` 防重入。
 - cron 環境 PATH 必須含 `/root/.local/bin`(`claude` CLI 在那);改 cron 檔屬 C 級,先問用戶。
