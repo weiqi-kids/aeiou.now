@@ -38,6 +38,8 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join, resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { openDb, beginJob, finishJob } from "./lib/aeiou-lib.mjs";
+
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const INPUT_PATH = join(ROOT, "content", "local-sample-data.json");
 const SOURCES_PATH = join(ROOT, "content", "local-data-sources.json");
@@ -371,45 +373,119 @@ async function verifySource(url, source, event, lastOkAt = null) {
 }
 
 /**
- * 活動存量的低水位警告(2026-08-27)。
+ * 活動存量的低水位警告(2026-08-27;2026-08-30 判準改成**逐市場**)。
  *
  * 為什麼要有:活動**只會過期,不會自己長出來**。這支每小時都在刪掉結束的場次,
  * 卻從來沒有在「快沒了」的時候說一句話 —— 於是「未來只剩 7 場、下一場在後天」
  * 這件事是人在做別的事時順手查出來的,不是系統講的。
  *
- * 判準刻意用**兩個**數字,因為它們會壞在不同的地方:
- *   ・場次總數:全站的活動頁與「活動資訊」清單會空掉。
- *   ・最近一場還有幾天:總數還夠、但全部擠在半年後,首頁一樣沒有「現在」。
+ * ⚠ 第一版把判準架在**全站加總**上,那個單位是錯的。2026-08-30 實測:
+ *     「活動存量:未來 42 場;最近一場 2026-09-01(2 天後);沒有未來場次的市場:無」
+ *   三個判準全過,一個 WARN 都不出。但同一時刻 jakarta 未來 30 天 **0 場**
+ *   (最近一場在 60 天後)、taipei 只剩 3 場而且一週內全部結束。
+ *   **七語系是七個獨立的站,每個站只看得到自己市場那一城**(CLAUDE.md 紅線),
+ *   所以「全站 42 場」對任何一個真實讀者都不是他看到的數字;那 2 天後的最近一場
+ *   是上海或台北的,id.aeiou.now 的讀者兩個月內一場都沒有。聚合把逐格的真相蓋掉,
+ *   與「排名單位是 (Topic × 國家 × 年份) 那一格,不是 Topic」是同一類錯誤。
+ *   舊版的 emptyCities 也只抓**完全零場**,剩 2、3 場的市場照樣溜過去。
+ *
+ * 判準仍用**兩個**數字,因為它們會壞在不同的地方 —— 只是現在逐市場各算一次:
+ *   ・場次總數:該站的活動頁與「活動資訊」清單會空掉。
+ *   ・最近一場還有幾天:總數還夠、但全部擠在半年後,首頁一樣沒有「現在」(草案 §55)。
  * 只 WARN,永不擋輸出 —— 沒有活動不是錯誤,是要有人去補內容。
+ *
+ * 門檻預設值跟著單位一起改:舊的 10 是**七個市場加總**的數字,直接套到單一市場
+ * 會變成「每個市場都要 10 場」,那會天天都在 WARN(實測只有 pune 與 sao-paulo 到得了)。
+ * 改成 3 —— 讀者打開活動資訊頁至少看得到幾場,而不是孤零零一場。
  */
-const EVENT_RUNWAY_MIN_COUNT = Number(process.env.AEIOU_EVENT_RUNWAY_MIN || 10);
+const EVENT_RUNWAY_MIN_COUNT = Number(process.env.AEIOU_EVENT_RUNWAY_MIN || 3);
 const EVENT_RUNWAY_MIN_DAYS = Number(process.env.AEIOU_EVENT_RUNWAY_DAYS || 14);
 function reportEventRunway(activeEvents) {
   const today = asOf;
+  const daysFrom = (date) =>
+    Math.round((Date.parse(`${date}T00:00:00Z`) - Date.parse(`${today}T00:00:00Z`)) / 86400000);
   const future = activeEvents
     .filter((event) => event.start_at.slice(0, 10) >= today)
     .sort((a, b) => (a.start_at < b.start_at ? -1 : 1));
-  const nextAt = future[0]?.start_at?.slice(0, 10) || null;
-  const daysToNext = nextAt
-    ? Math.round((Date.parse(`${nextAt}T00:00:00Z`) - Date.parse(`${today}T00:00:00Z`)) / 86400000)
-    : null;
+
   const byCity = new Map();
-  for (const event of future) byCity.set(event.city_code, (byCity.get(event.city_code) || 0) + 1);
-  const emptyCities = (sample.markets || [])
-    .map((market) => market.city_code)
-    .filter((city) => !byCity.has(city));
-  console.log(`活動存量:未來 ${future.length} 場;最近一場 ${nextAt || "(無)"}`
-    + `${daysToNext == null ? "" : `(${daysToNext} 天後)`};沒有未來場次的市場:`
-    + `${emptyCities.length ? emptyCities.join("、") : "無"}`);
-  if (future.length < EVENT_RUNWAY_MIN_COUNT) {
-    console.log(`⚠ 活動快見底:未來只剩 ${future.length} 場(低於 ${EVENT_RUNWAY_MIN_COUNT})。`
-      + "補法見 docs/TODO.md「活動快見底」—— 要官方頁面上真的印著日期(date_markers)才收得進來。");
+  for (const event of future) {
+    if (!byCity.has(event.city_code)) byCity.set(event.city_code, []);
+    byCity.get(event.city_code).push(event);
   }
-  if (daysToNext != null && daysToNext > EVENT_RUNWAY_MIN_DAYS) {
-    console.log(`⚠ 最近一場活動在 ${daysToNext} 天後(超過 ${EVENT_RUNWAY_MIN_DAYS} 天):`
-      + "清單還有東西,但讀者這兩週看不到任何『正在發生』的場次。");
+
+  const nextAt = future[0]?.start_at?.slice(0, 10) || null;
+  console.log(`活動存量(全站摘要,判準在下面逐市場):未來 ${future.length} 場;`
+    + `最近一場 ${nextAt ? `${nextAt}(${daysFrom(nextAt)} 天後)` : "(無)"}`);
+
+  const warnings = [];
+  for (const market of sample.markets || []) {
+    const list = byCity.get(market.city_code) || [];
+    const next = list[0]?.start_at?.slice(0, 10) || null;
+    const days = next ? daysFrom(next) : null;
+    const where = `${market.city_code}(${market.locale})`;
+    const shape = `未來 ${list.length} 場`
+      + (next ? `、最近 ${next}(${days} 天後)` : "、無場次");
+
+    const reasons = [];
+    if (list.length === 0) {
+      reasons.push("未來一場都沒有:這個站的活動資訊頁會整片空白");
+    } else {
+      if (list.length < EVENT_RUNWAY_MIN_COUNT) {
+        reasons.push(`只剩 ${list.length} 場(低於 ${EVENT_RUNWAY_MIN_COUNT})`);
+      }
+      if (days != null && days > EVENT_RUNWAY_MIN_DAYS) {
+        reasons.push(`最近一場在 ${days} 天後(超過 ${EVENT_RUNWAY_MIN_DAYS} 天),`
+          + "這個站的讀者這段期間看不到任何「正在發生」的場次");
+      }
+    }
+
+    if (reasons.length) {
+      warnings.push(`${where} ${shape} —— ${reasons.join(";")}`);
+      console.log(`⚠ ${where} ${shape} —— ${reasons.join(";")}`);
+    } else {
+      console.log(`  ${where} ${shape}`);
+    }
   }
-  if (future.length === 0) console.log("⚠ 未來一場活動都沒有:活動資訊那一頁會整片空白。");
+  if (warnings.length) {
+    console.log("補法見 docs/TODO.md「活動快見底」—— 要官方頁面上真的印著日期(date_markers)才收得進來。");
+  }
+  return { total: future.length, warnings };
+}
+
+/**
+ * 低水位要有一個**出口**(2026-08-30)。
+ *
+ * 舊版只有 console.log,印進 logs/hourly-export.log(已經好幾百 KB,每小時再多一行),
+ * 不寫 jobs 表、沒有任何通知。這支上面那段註解自己寫著立法緣由是
+ * 「這件事是人在做別的事時順手查出來的,不是系統講的」—— 而加了警告之後**還是這樣**,
+ * 因為印在一個沒人讀的檔案裡等於沒說。
+ *
+ * 出口用 jobs 表:手冊「最近的 job 成敗」那條查法秒回,不必再跑這支兩分鐘的全網核對
+ * (那正是它沒人查的原因)。
+ *
+ * status 用 **partial_success**,不是 failed —— 沒有活動不是這一輪執行失敗。
+ * 標 failed 會走 +5/+10 分重試、第三次進 dlq,而重跑一百次也不會長出活動來;
+ * 事實是「這一輪跑完了,但結果需要人去補內容」,jobs.status 的既有語意正好有這一格。
+ * 用**獨立的 job_name**,不動 hourly-export 那一格的成敗(它是閘門,這一格是觀測)。
+ */
+function recordRunwayJob({ total, warnings }) {
+  let db = null;
+  try {
+    db = openDb();
+    const job = beginJob(db, { jobName: "local-event-runway" });
+    finishJob(db, job, {
+      status: warnings.length ? "partial_success" : "success",
+      read: total,
+      failed: warnings.length,
+      error: warnings.length ? `活動快見底:${warnings.join(" | ")}` : null,
+    });
+  } catch (error) {
+    // 這一格是觀測不是閘門:記不進去也不該擋掉整輪在地資料更新。
+    console.log(`⚠ 活動存量寫入 jobs 表失敗(不影響本輪輸出):${error.message}`);
+  } finally {
+    try { db?.close(); } catch { /* 已關或沒開成 */ }
+  }
 }
 
 const lastDayOf = (event) => (event.end_at || event.start_at).slice(0, 10);
@@ -515,11 +591,13 @@ async function main() {
   if (removedEvents.length) {
     console.log(`將移除 ${removedEvents.length} 個已過期活動：${removedEvents.map((event) => event.name).join("、")}`);
   }
-  reportEventRunway(activeEvents);
+  const runway = reportEventRunway(activeEvents);
   if (checkOnly) {
     console.log(`檢查完成：${activeEvents.length} 個有效活動、${managedEventUrls.length} 個受管理活動來源`);
     return;
   }
+
+  recordRunwayJob(runway);   // --check-only 走不到這裡:「只驗不寫」不該有副作用
 
   const changed = JSON.stringify(sample.events || []) !== JSON.stringify(activeEvents);
   if (changed) {
