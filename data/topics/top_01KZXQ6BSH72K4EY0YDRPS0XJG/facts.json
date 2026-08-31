@@ -2,11 +2,11 @@
   "topic_id": "top_01KZXQ6BSH72K4EY0YDRPS0XJG",
   "slug": "teachers-day",
   "canonical_name": "Teachers' Day",
-  "commonality": "comparing why each place chose its date — a philosopher's birthday, a legislative resolution, a president's refusal, an 1827 schooling decree, a union's founding day, or a week handed to school districts",
+  "commonality": "comparing why each place chose its date — a philosopher's birthday, a legislative resolution, a president's refusal, an 1827 schooling decree, a union's founding day, a school calendar, or a week handed to school districts",
   "category": "civic",
   "status": "active",
   "is_perennial": 0,
-  "updated_at": "2026-08-20T05:03:25.000Z",
+  "updated_at": "2026-08-31T05:48:25.000Z",
   "access_level": 0,
   "observances": [
     {
@@ -84,8 +84,7 @@
         ],
         "source_urls": [
           "https://www.planalto.gov.br/ccivil_03/decreto/1950-1969/D52682.htm"
-        ],
-        "distance_days": 45
+        ]
       }
     },
     {
@@ -163,8 +162,7 @@
         ],
         "source_urls": [
           "http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s3580/moe_2390/moe_2391/tnull_38105.html"
-        ],
-        "distance_days": 10
+        ]
       }
     },
     {
@@ -242,8 +240,7 @@
         ],
         "source_urls": [
           "https://ppid.inhilkab.go.id/berita/detail/hari-guru-nasional-diperingati-setiap-25-november"
-        ],
-        "distance_days": 86
+        ]
       }
     },
     {
@@ -331,8 +328,70 @@
         "source_urls": [
           "https://www.presidentofindia.gov.in/",
           "https://www.education.gov.in/"
+        ]
+      }
+    },
+    {
+      "observance_id": "obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_SG_singapore-teachers-day",
+      "observance_key": "singapore-teachers-day",
+      "country_code": "SG",
+      "local_name": "Teachers' Day",
+      "observed_date": null,
+      "date_rule": "第三學期最後一天；依新加坡教育部學校行事曆調整，通常在九月初",
+      "date_range_end": null,
+      "popularity_rank": 6,
+      "source_ids": [
+        "src_1AA43B865B6A392E301250F5"
+      ],
+      "source_urls": [
+        "https://www.stmargaretspri.moe.edu.sg/school-information/school-terms-n-holidays/"
+      ],
+      "occurrences": [
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_SG_singapore-teachers-day_2026_2026-09-04",
+          "occurrence_year": 2026,
+          "starts_on": "2026-09-04",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "Asia/Singapore",
+          "date_status": "confirmed",
+          "source_ids": [
+            "src_1AA43B865B6A392E301250F5"
+          ],
+          "source_urls": [
+            "https://www.stmargaretspri.moe.edu.sg/school-information/school-terms-n-holidays/"
+          ]
+        },
+        {
+          "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_SG_singapore-teachers-day_2027_2027-09-03",
+          "occurrence_year": 2027,
+          "starts_on": "2027-09-03",
+          "ends_on": null,
+          "calendar_system": "local",
+          "timezone": "Asia/Singapore",
+          "date_status": "estimated",
+          "source_ids": [
+            "src_1AA43B865B6A392E301250F5"
+          ],
+          "source_urls": [
+            "https://www.stmargaretspri.moe.edu.sg/school-information/school-terms-n-holidays/"
+          ]
+        }
+      ],
+      "next_occurrence": {
+        "occurrence_id": "occ_obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_SG_singapore-teachers-day_2026_2026-09-04",
+        "occurrence_year": 2026,
+        "starts_on": "2026-09-04",
+        "ends_on": null,
+        "calendar_system": "local",
+        "timezone": "Asia/Singapore",
+        "date_status": "confirmed",
+        "source_ids": [
+          "src_1AA43B865B6A392E301250F5"
         ],
-        "distance_days": 5
+        "source_urls": [
+          "https://www.stmargaretspri.moe.edu.sg/school-information/school-terms-n-holidays/"
+        ]
       }
     },
     {
@@ -410,8 +469,7 @@
         ],
         "source_urls": [
           "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
-        ],
-        "distance_days": 28
+        ]
       }
     },
     {
@@ -422,7 +480,7 @@
       "observed_date": null,
       "date_rule": "5 月第一個完整星期，地方學區日期可能不同",
       "date_range_end": null,
-      "popularity_rank": 6,
+      "popularity_rank": 7,
       "source_ids": [
         "src_07F374EE64FFF1100ED74220",
         "src_DF3F8681DFB3B654018AA81B"
@@ -499,8 +557,7 @@
         "source_urls": [
           "https://www.ed.gov/",
           "https://www.unesco.org/en/days/teachers?hub=66705"
-        ],
-        "distance_days": 245
+        ]
       }
     }
   ],
@@ -540,6 +597,12 @@
       ]
     },
     {
+      "country_code": "SG",
+      "observance_ids": [
+        "obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_SG_singapore-teachers-day"
+      ]
+    },
+    {
       "country_code": "TW",
       "observance_ids": [
         "obs_top_01KZXQ6BSH72K4EY0YDRPS0XJG_TW_teachers-day"
@@ -556,6 +619,7 @@
   "source_ids": [
     "src_02CD0D07C0794AD1A54CADB6",
     "src_07F374EE64FFF1100ED74220",
+    "src_1AA43B865B6A392E301250F5",
     "src_26935C7ABD6FCA6BF551F543",
     "src_9B84ABAFACB03ECC94ED650A",
     "src_D841A1BDECBC57CA74A2E277",
@@ -566,6 +630,7 @@
   "source_urls": [
     "https://www.planalto.gov.br/ccivil_03/decreto/1950-1969/D52682.htm",
     "https://www.ed.gov/",
+    "https://www.stmargaretspri.moe.edu.sg/school-information/school-terms-n-holidays/",
     "https://ppid.inhilkab.go.id/berita/detail/hari-guru-nasional-diperingati-setiap-25-november",
     "https://www.education.gov.in/",
     "http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s3580/moe_2390/moe_2391/tnull_38105.html",
@@ -574,6 +639,6 @@
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
     "https://www.mext.go.jp/a_menu/shougai/kyoiku-bunka/detail/1297836.htm"
   ],
-  "content_updated_at": "2026-08-31T04:06:29.889Z",
-  "content_hash": "67813e7864848acadc330e0f0cea7b4080681011475e91f0f8dd39e51d481d04"
+  "content_updated_at": "2026-08-31T05:48:32.231Z",
+  "content_hash": "f7afa7fed37419d7e31ea3f7d4aab3ebf6c5b289689d12850e399f37e6ed904e"
 }
