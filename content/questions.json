@@ -37405,6 +37405,160 @@
         "id": "Jawabannya adalah India. 14 April adalah hari lahir Ambedkar — ketua panitia perancang Konstitusi India, yang Pasal 17-nya secara eksplisit menghapus 'ketidaktersentuhan.' Namun tanggal ini tidak pernah masuk daftar libur resmi tahunan pemerintah pusat — daftar itu disusun per negara bagian berdasarkan surat DoPT No. F.No.12/2/2023-JCA, dan untuk 2026 baik Uttarakhand maupun Odisha sama-sama mencantumkan tujuh belas hari libur, tak satu pun memuat Ambedkar Jayanti; di daftar Odisha, 14 April malah muncul di lampiran libur terbatas atas nama perayaan lain. Penutupan kantor sebenarnya bergantung pada surat tersendiri yang diterbitkan ulang tiap tahun, seperti F.No.12/4/2020-JCA tahun 2022. Sebagai perbandingan, 20 November di Brasil baru menjadi hari libur resmi pada 2023 setelah dua puluh tahun dan tiga undang-undang; Juneteenth di AS disahkan hanya dalam tiga hari pada 2021 dan tercantum tetap dalam daftar 5 U.S.C. §6103(a); sementara 21 Maret di Taiwan tercantum dalam undang-undang tetapi tegas-tegas tidak diberi libur. Keempat negara menangani soal 'apakah hari itu libur' dengan cara berbeda — ciri khas India adalah berada di luar daftar dan diperintahkan ulang setiap tahun.",
         "pt-BR": "A resposta é a Índia. 14 de abril é o aniversário de Ambedkar, presidente da comissão de redação da Constituição indiana, cujo artigo 17 abole expressamente a 'intocabilidade'. Ainda assim, a data nunca entrou na lista anual de feriados oficiais do governo central — lista montada estado a estado pelo ofício do DoPT nº F.No.12/2/2023-JCA; para 2026, tanto Uttarakhand quanto Odisha têm dezessete feriados cada, nenhum incluindo o Ambedkar Jayanti, e em Odisha 14 de abril aparece no anexo de feriados restritos sob outra festa. O fechamento efetivo das repartições depende de um ofício reeditado todo ano, como o F.No.12/4/2020-JCA de 2022. Em contraste, o 20 de novembro brasileiro só virou feriado em 2023, depois de vinte anos e três leis; o Juneteenth americano foi sancionado em três dias em 2021 e está fixado na lista permanente do 5 U.S.C. §6103(a); e o 21 de março de Taiwan está previsto em lei, mas expressamente sem folga. Os quatro países tratam a questão 'há folga ou não' de formas diferentes — o traço distintivo da Índia é ficar fora da lista e precisar de ordem reeditada a cada ano."
       }
+    },
+    {
+      "id": "q-20260901-labour-day-in-practice",
+      "date": "2026-09-01",
+      "kind": "poll",
+      "topic": "labour-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你所在的地方,勞動節在實際生活中比較像哪一種日子?",
+        "en": "Where you live, what does Labour Day feel like in practice?",
+        "ja": "あなたの地域では、メーデーは実際にはどんな日ですか?",
+        "zh-CN": "你所在的地方，劳动节在实际生活中更像哪一种日子?",
+        "hi": "आपके यहाँ श्रमिक दिवस व्यवहार में किस तरह का दिन है?",
+        "id": "Di tempatmu, Hari Buruh dalam kehidupan sehari-hari lebih terasa seperti hari yang mana?",
+        "pt-BR": "Onde você mora, como o Dia do Trabalho funciona na prática?"
+      },
+      "options": [
+        {
+          "id": "national-off",
+          "emoji": "🛌",
+          "label": {
+            "zh-TW": "全國都放假",
+            "en": "A day off nationwide",
+            "ja": "全国の休日",
+            "zh-CN": "全国都放假",
+            "hi": "पूरे देश की छुट्टी",
+            "id": "Hari libur nasional",
+            "pt-BR": "Feriado nacional"
+          }
+        },
+        {
+          "id": "some-off",
+          "emoji": "👥",
+          "label": {
+            "zh-TW": "只有部分人放假",
+            "en": "Only some people get the day off",
+            "ja": "一部の人だけ休み",
+            "zh-CN": "只有部分人放假",
+            "hi": "केवल कुछ लोगों की छुट्टी",
+            "id": "Hanya sebagian orang yang libur",
+            "pt-BR": "Só algumas pessoas folgam"
+          }
+        },
+        {
+          "id": "workday",
+          "emoji": "💼",
+          "label": {
+            "zh-TW": "照常上班",
+            "en": "An ordinary working day",
+            "ja": "通常の勤務日",
+            "zh-CN": "照常上班",
+            "hi": "सामान्य कार्यदिवस",
+            "id": "Hari kerja biasa",
+            "pt-BR": "Um dia normal de trabalho"
+          }
+        },
+        {
+          "id": "local-rule",
+          "emoji": "📍",
+          "label": {
+            "zh-TW": "看州、地方或雇主決定",
+            "en": "It depends on the state, locality, or employer",
+            "ja": "州・地域・雇用主による",
+            "zh-CN": "看州、地方或雇主决定",
+            "hi": "राज्य, स्थानीय नियम या नियोक्ता पर निर्भर",
+            "id": "Tergantung negara bagian, daerah, atau pemberi kerja",
+            "pt-BR": "Depende do estado, município ou empregador"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260901-labour-day-two-days",
+      "date": "2026-09-01",
+      "kind": "guess",
+      "topic": "labour-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:2024 年修法後,哪個地方把勞動節的法定假期寫成五月一日與五月二日?",
+        "en": "Guess: after a 2024 amendment, which place writes 1 and 2 May into its statutory Labour Day break?",
+        "ja": "クイズ:2024年の改正後、労働節の法定休日を5月1日と2日と定めているのはどこですか?",
+        "zh-CN": "你猜：2024 年修法后，哪个地方把劳动节的法定假期写成5月1日与5月2日?",
+        "hi": "अंदाज़ा लगाइए: 2024 के संशोधन के बाद किस जगह के क़ानून में श्रमिक दिवस की छुट्टी 1 और 2 मई लिखी गई है?",
+        "id": "Tebak: setelah perubahan aturan pada 2024, di tempat mana libur Hari Buruh menurut aturan ditulis pada 1 dan 2 Mei?",
+        "pt-BR": "Adivinhe: depois da alteração de 2024, onde a folga legal do Dia do Trabalho passou a incluir 1º e 2 de maio?"
+      },
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國大陸",
+            "en": "Mainland China",
+            "ja": "中国大陸",
+            "zh-CN": "中国大陆",
+            "hi": "मुख्यभूमि चीन",
+            "id": "Tiongkok daratan",
+            "pt-BR": "China continental"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "answer": "zh-CN",
+      "explain": {
+        "zh-TW": "中國大陸。2024 年修訂《全國年節及紀念日放假辦法》後,勞動節法定放假日寫成五月一日與五月二日;實際連假還要看國務院辦公廳每年發布的調休安排。",
+        "en": "Mainland China. The 2024 revision of the national holiday regulation put 1 and 2 May into the statutory Labour Day break; the actual longer run still depends on the State Council General Office's annual shifted-workday arrangement.",
+        "ja": "中国大陸である。2024年の「全国年節及紀念日放假弁法」改正後、労働節の法定休日は5月1日と2日になった。実際の連休の長さは、国務院弁公庁が毎年発表する振替出勤の安排によって変わる。",
+        "zh-CN": "中国大陆。2024 年修订《全国年节及纪念日放假办法》后，劳动节法定放假日写成5月1日与5月2日；实际连假的长度还要看国务院办公厅每年发布的调休安排。",
+        "hi": "मुख्यभूमि चीन। 2024 में राष्ट्रीय अवकाश नियम में हुए संशोधन के बाद श्रमिक दिवस की वैधानिक छुट्टी में 1 और 2 मई लिखे गए; वास्तविक लंबा अवकाश अब भी राज्य परिषद के सामान्य कार्यालय की वार्षिक स्थानांतरित-कार्यदिवस व्यवस्था पर निर्भर करता है।",
+        "id": "Tiongkok daratan. Setelah perubahan aturan hari libur nasional pada 2024, libur resmi Hari Buruh mencantumkan 1 dan 2 Mei; panjang libur yang sebenarnya tetap bergantung pada pengaturan hari kerja pengganti yang diumumkan Kantor Umum Dewan Negara setiap tahun.",
+        "pt-BR": "China continental. A revisão de 2024 do regulamento nacional de feriados colocou 1º e 2 de maio no feriado legal do Dia do Trabalho; a duração real do feriadão ainda depende do calendário anual de dias úteis compensados divulgado pelo Gabinete Geral do Conselho de Estado."
+      }
     }
   ]
 }

@@ -31,8 +31,8 @@
 //
 // 裸執行(沒有上一版指紋)= 全部視為新頁、蓋上現在,與改這支之前的行為一樣。
 import { createHash } from 'node:crypto';
-import { readFileSync, writeFileSync, existsSync, readdirSync, statSync } from 'node:fs';
-import { join, relative, sep } from 'node:path';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, statSync } from 'node:fs';
+import { dirname, join, relative, sep } from 'node:path';
 
 const args = process.argv.slice(2);
 const flag = (name, fallback) => {
@@ -73,7 +73,16 @@ function routeOf(file) {
   return `/${route}`.replace(/\/+/g, '/');
 }
 
-const prev = existsSync(PREV) ? JSON.parse(readFileSync(PREV, 'utf8')) : {};
+const prev = (() => {
+  if (!existsSync(PREV)) return {};
+  try {
+    const parsed = JSON.parse(readFileSync(PREV, 'utf8'));
+    return parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? parsed : {};
+  } catch (error) {
+    console.error(`✗ 上一版 .page-stamps.json 無法讀取：${PREV} (${error.message})`);
+    process.exit(2);
+  }
+})();
 const next = {};
 let changed = 0;
 let carried = 0;
@@ -112,9 +121,14 @@ if (existsSync(sitemapPath)) {
   writeFileSync(sitemapPath, updated);
 }
 
+mkdirSync(dirname(OUT), { recursive: true });
 writeFileSync(OUT, `${JSON.stringify(next)}\n`);
 
 if (!quiet) {
+  const previousCount = Object.keys(prev).length;
+  if (previousCount > 0 && changed === walk(DIST).length && changed > 1) {
+    console.warn(`⚠ sitemap lastmod：${changed} 頁全部被判定為變更；請檢查是否把 build-time 相對值寫進 HTML。`);
+  }
   console.log(
     `✓ sitemap lastmod:${changed} 頁內容變了(蓋 ${NOW.slice(0, 19)}Z)、${carried} 頁沿用舊時間戳;`
     + `改寫 ${rewritten} 筆${missing ? `、${missing} 筆在 dist 找不到對應頁面(原樣保留)` : ''}`,

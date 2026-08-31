@@ -66,6 +66,7 @@ const DEPTH_TARGET = 1200;
 const OFFICIAL = {
   TW: [".gov.tw", ".edu.tw"], JP: [".go.jp", ".lg.jp"], CN: [".gov.cn", ".npc.gov.cn"],
   US: [".gov", ".mil"], IN: [".gov.in", ".nic.in"], ID: [".go.id"], BR: [".gov.br", ".jus.br"],
+  SG: [".gov.sg", ".edu.sg"],
 };
 
 const db = openDb();

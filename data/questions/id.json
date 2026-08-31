@@ -1151,6 +1151,72 @@
       "has_answer": false
     },
     {
+      "question_id": "q-20260901-labour-day-in-practice",
+      "date": "2026-09-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempatmu, Hari Buruh dalam kehidupan sehari-hari lebih terasa seperti hari yang mana?",
+      "options": [
+        {
+          "id": "national-off",
+          "emoji": "🛌",
+          "label": "Hari libur nasional"
+        },
+        {
+          "id": "some-off",
+          "emoji": "👥",
+          "label": "Hanya sebagian orang yang libur"
+        },
+        {
+          "id": "workday",
+          "emoji": "💼",
+          "label": "Hari kerja biasa"
+        },
+        {
+          "id": "local-rule",
+          "emoji": "📍",
+          "label": "Tergantung negara bagian, daerah, atau pemberi kerja"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260901-labour-day-two-days",
+      "date": "2026-09-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Tebak: setelah perubahan aturan pada 2024, di tempat mana libur Hari Buruh menurut aturan ditulis pada 1 dan 2 Mei?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok daratan"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
       "question_id": "q-20260901-moving-childrens-day",
       "date": "2026-09-01",
       "kind": "guess",

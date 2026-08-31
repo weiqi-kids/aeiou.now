@@ -58,7 +58,7 @@
 ### summary
 「新年」不是同一天。台灣與中國大陸過農曆正月初一，日本、美國、巴西、印尼放公曆一月一日，而印度的全國假日清單裡**根本沒有一月一日**——那裡的新年是三、四月的地方新年，各邦名字都不一樣。這一頁比較的是各地把哪一天當成起點，以及放幾天假。
 ### keywords
-新年、春節、除夕、元日、Réveillon、Tahun Baru、Ugadi、Gudi Padwa
+新年、印尼新年、春節、除夕、元日、Réveillon、Tahun Baru、Ugadi、Gudi Padwa
 ### customs TW lunar-new-year
 台灣的新年重心在農曆正月初一。依《紀念日及節日實施條例》，農曆除夕與春節屬放假的節日，實務上會與週末併成一段長假。除夕圍爐、初一走春、發紅包是骨架，之後各家依自己的節奏延伸——哪一天回哪一邊、拜不拜、走幾家，都是家內協商出來的。公曆一月一日（開國紀念日）也放假，但份量與農曆年不在同一個量級。
 ### customs CN chunjie
@@ -70,7 +70,7 @@
 ### customs BR reveillon
 巴西的一月一日由《六六二號法》列為全國假日。Réveillon 的重點在海邊：南半球的一月是盛夏，跨年常見穿白衣、到海灘看煙火、對浪跳七次浪或獻花給海洋女神 Iemanjá 的做法並存——同一晚可以同時是天主教的、非裔宗教的與純粹世俗的。
 ### customs ID tahun-baru
-印尼把公曆一月一日列為國定假日 Tahun Baru Masehi。它是印尼眾多新年之一：同一份國定假日清單裡還有伊斯蘭曆新年、峇里島的 Nyepi（靜居日）與農曆新年——一個國家在同一年裡承認好幾個「年的開始」，這在七個市場裡是最明顯的。
+印尼把公曆一月一日列為國定假日 Tahun Baru Masehi。這筆就是「印尼新年」若指公曆一月一日的對應日期，不是 Ramadan 或伊斯蘭曆新年。它是印尼眾多新年之一：同一份國定假日清單裡還有伊斯蘭曆新年、峇里島的 Nyepi（靜居日）與農曆新年——一個國家在同一年裡承認好幾個「年的開始」，這在七個市場裡是最明顯的。
 ### customs IN ugadi
 印度的全國假日清單裡沒有一月一日。這裡的新年多半落在三、四月的印度陰陽曆 Chaitra 月白分初一，而且各地名稱不同：安得拉與泰倫加納叫 Ugadi、卡納塔卡叫 Yugadi、馬哈拉施特拉叫 Gudi Padwa、泰米爾納德叫 Puthandu、喀拉拉叫 Vishu、旁遮普是 Vaisakhi、奧里薩是 Pana Sankranti、西孟加拉是 Poila Boishakh、阿薩姆是 Bohag Bihu。二○二六年的 Ugadi／Gudi Padwa 是三月十九日，二○二七年是四月七日。
 
@@ -80,7 +80,7 @@ New Year
 ### summary
 'New Year' is not one day. Taiwan and mainland China keep the first day of the first lunar month; Japan, the United States, Brazil and Indonesia take 1 January; and India's national holiday list contains **no 1 January at all** — there the new year falls in March or April and carries a different name in each state. This page compares which day each place treats as the beginning, and how many days off follow.
 ### keywords
-New Year, Lunar New Year, Chunjie, Ganjitsu, Réveillon, Tahun Baru, Ugadi, Gudi Padwa
+New Year, Indonesian New Year, Lunar New Year, Chunjie, Ganjitsu, Réveillon, Tahun Baru, Ugadi, Gudi Padwa
 ### customs TW lunar-new-year
 Taiwan's new year sits on the first day of the first lunar month. Under the Act on Commemorative Days and Holidays, Lunar New Year's Eve and the Spring Festival are days off, and in practice they merge with the weekend into one long break. The reunion dinner on the eve, the first visits on day one, and red envelopes form the frame; each household extends it from there. 1 January is also a holiday as Founding Day, but it is not in the same weight class as the lunar year.
 ### date_rule TW lunar-new-year
@@ -96,7 +96,7 @@ The United States makes 1 January a federal holiday. Its weight is on the night 
 ### customs BR reveillon
 In Brazil, 1 January is a national holiday under Law 662. The weight of Réveillon is at the shore: January is high summer south of the equator, and the night commonly brings white clothing, fireworks on the beach, and practices that sit side by side — jumping seven waves, or offering flowers to the sea deity Iemanjá. The same night can be Catholic, Afro-Brazilian and entirely secular at once.
 ### customs ID tahun-baru
-Indonesia lists 1 January as the national holiday Tahun Baru Masehi. It is one of several new years there: the same national holiday list also carries the Islamic new year, Bali's Nyepi day of silence, and the lunar new year. A single country recognising several 'beginnings of the year' in the same calendar is most visible here among the seven markets on this site.
+Indonesia lists 1 January as the national holiday Tahun Baru Masehi. This is the landing for the query 'Indonesian New Year' when it means 1 January, not Ramadan or the Islamic new year. It is one of several new years there: the same national holiday list also carries the Islamic new year, Bali's Nyepi day of silence, and the lunar new year. A single country recognising several 'beginnings of the year' in the same calendar is most visible here among the seven markets on this site.
 ### customs IN ugadi
 India's national holiday list contains no 1 January. The new year here mostly falls on the first day of the bright fortnight of Chaitra in the Hindu lunisolar calendar, in March or April, and carries a different name in each region: Ugadi in Andhra Pradesh and Telangana, Yugadi in Karnataka, Gudi Padwa in Maharashtra, Puthandu in Tamil Nadu, Vishu in Kerala, Vaisakhi in Punjab, Pana Sankranti in Odisha, Poila Boishakh in West Bengal, Bohag Bihu in Assam. Ugadi and Gudi Padwa fall on 19 March in 2026 and 7 April in 2027.
 
@@ -108,7 +108,7 @@ The first day of the bright half (Shukla Paksha) of the month of Chaitra in the 
 ### summary
 「新年」は同じ一日ではない。台湾と中国大陸は旧暦一月一日を祝い、日本・米国・ブラジル・インドネシアは新暦一月一日を休みとする。そしてインドの全国祝日一覧には**一月一日が存在しない**——そこでの新年は三月か四月にあり、州ごとに名前が違う。このページでは、どの日を始まりとみなすのか、そして何日休むのかを比べる。
 ### keywords
-新年, 春節, 除夕, 元日, レヴェイヨン, ウガディ, グディ・パドワ
+新年, インドネシアの新年, 春節, 除夕, 元日, レヴェイヨン, ウガディ, グディ・パドワ
 ### customs TW lunar-new-year
 台湾の新年の中心は旧暦一月一日である。紀念日及節日実施条例により、大晦日（除夕）と春節は休日で、実際には週末とつながって一続きの長期休暇になる。大晦日の団らんの食事、元日の年始回り、紅包が骨格で、その先は家庭ごとに広がる。新暦一月一日（開国紀念日）も休みだが、旧正月とは重みの桁が違う。
 ### date_rule TW lunar-new-year
@@ -124,7 +124,7 @@ The first day of the bright half (Shukla Paksha) of the month of Chaitra in the 
 ### customs BR reveillon
 ブラジルでは一月一日が662号法による国の祝日である。レヴェイヨンの重心は海辺にある。南半球の一月は真夏で、白い服、浜辺の花火、七つの波を跳び越える、あるいは海の女神イエマンジャーに花を捧げるといった作法が並び立つ。同じ夜がカトリックのものであり、アフロ系宗教のものであり、まったく世俗のものでもありうる。
 ### customs ID tahun-baru
-インドネシアは新暦一月一日を国の祝日 Tahun Baru Masehi としている。そこでは新年は一つではない。同じ祝日一覧にイスラム暦の新年、バリのニュピ（静寂の日）、旧正月も並ぶ。一つの国が同じ年の中で複数の「年の始まり」を認めていることが、本サイトの七つの市場の中で最もはっきり見える例である。
+インドネシアは新暦一月一日を国の祝日 Tahun Baru Masehi としている。「インドネシアの新年」を1月1日の意味で検索した場合の対応先はこの行であり、ラマダンやイスラム暦の新年ではない。そこでは新年は一つではない。同じ祝日一覧にイスラム暦の新年、バリのニュピ（静寂の日）、旧正月も並ぶ。一つの国が同じ年の中で複数の「年の始まり」を認めていることが、本サイトの七つの市場の中で最もはっきり見える例である。
 ### customs IN ugadi
 インドの全国祝日一覧に一月一日はない。ここでの新年は多くの場合、ヒンドゥー太陰太陽暦チャイトラ月の白分一日、すなわち三月か四月にあたり、地域ごとに名前が異なる。アーンドラ・プラデーシュとテランガーナではウガディ、カルナータカではユガディ、マハーラーシュトラではグディ・パドワ、タミル・ナードゥではプタンドゥ、ケーララではヴィシュ、パンジャーブではバイサキ、オリッサではパナ・サンクランティ、西ベンガルではポイラ・ボイシャク、アッサムではボハグ・ビフ。ウガディとグディ・パドワは2026年が3月19日、2027年が4月7日である。
 
@@ -136,7 +136,7 @@ The first day of the bright half (Shukla Paksha) of the month of Chaitra in the 
 ### summary
 “新年”不是同一天。台湾与中国大陆过农历正月初一，日本、美国、巴西、印度尼西亚放公历1月1日，而印度的全国假日清单里**根本没有1月1日**——那里的新年是三、四月的地方新年，各邦名字都不一样。这一页比较的是各地把哪一天当成起点，以及放几天假。
 ### keywords
-新年、春节、除夕、元日、Réveillon、Tahun Baru、Ugadi
+新年、印度尼西亚新年、春节、除夕、元日、Réveillon、Tahun Baru、Ugadi
 ### customs TW lunar-new-year
 台湾的新年重心在农历正月初一。依《纪念日及节日实施条例》，农历除夕与春节属放假的节日，实务上会与周末并成一段长假。除夕围炉、初一走春、发红包是骨架，之后各家自己延伸。公历1月1日（开国纪念日）也放假，但分量与农历年不在同一个量级。
 ### date_rule TW lunar-new-year
@@ -152,7 +152,7 @@ The first day of the bright half (Shukla Paksha) of the month of Chaitra in the 
 ### customs BR reveillon
 巴西的1月1日由第662号法列为全国假日。Réveillon 的重点在海边：南半球的1月是盛夏，跨年常见穿白衣、到海滩看烟火、对浪跳七次浪或献花给海洋女神 Iemanjá 的做法并存——同一晚可以同时是天主教的、非裔宗教的与纯粹世俗的。
 ### customs ID tahun-baru
-印度尼西亚把公历1月1日列为国定假日 Tahun Baru Masehi。它是印尼众多新年之一：同一份国定假日清单里还有伊斯兰历新年、巴厘岛的 Nyepi（静居日）与农历新年——一个国家在同一年里承认好几个“年的开始”，这在七个市场里是最明显的。
+印度尼西亚把公历1月1日列为国定假日 Tahun Baru Masehi。如果“印度尼西亚新年”指公历1月1日，应看这一笔，而不是 Ramadan 或伊斯兰历新年。它是印尼众多新年之一：同一份国定假日清单里还有伊斯兰历新年、巴厘岛的 Nyepi（静居日）与农历新年——一个国家在同一年里承认好几个“年的开始”，这在七个市场里是最明显的。
 ### customs IN ugadi
 印度的全国假日清单里没有1月1日。这里的新年多半落在三、四月的印度阴阳历 Chaitra 月白分初一，而且各地名称不同：安得拉与泰伦加纳叫 Ugadi、卡纳塔卡叫 Yugadi、马哈拉施特拉叫 Gudi Padwa、泰米尔纳德叫 Puthandu、喀拉拉叫 Vishu、旁遮普是 Vaisakhi、奥里萨是 Pana Sankranti、西孟加拉是 Poila Boishakh、阿萨姆是 Bohag Bihu。2026年的 Ugadi／Gudi Padwa 是3月19日，2027年是4月7日。
 
@@ -164,7 +164,7 @@ The first day of the bright half (Shukla Paksha) of the month of Chaitra in the 
 ### summary
 'नया साल' एक ही दिन नहीं है। ताइवान और मुख्यभूमि चीन चंद्र वर्ष के पहले महीने की पहली तिथि मनाते हैं; जापान, अमेरिका, ब्राज़ील और इंडोनेशिया 1 जनवरी को छुट्टी रखते हैं; और भारत की राष्ट्रीय अवकाश सूची में **1 जनवरी है ही नहीं** — यहाँ नया साल मार्च या अप्रैल में आता है और हर राज्य में उसका नाम अलग है। यह पृष्ठ तुलना करता है कि कौन किस दिन को शुरुआत मानता है और कितने दिन की छुट्टी मिलती है।
 ### keywords
-नया साल, चंद्र नववर्ष, गंजित्सु, रेवेयों, उगादी, गुड़ी पड़वा, पुथांडु
+नया साल, इंडोनेशियाई नववर्ष, चंद्र नववर्ष, गंजित्सु, रेवेयों, उगादी, गुड़ी पड़वा, पुथांडु
 ### customs TW lunar-new-year
 ताइवान का नया साल चंद्र वर्ष के पहले महीने की पहली तिथि पर टिका है। स्मृति-दिवस व त्योहार अधिनियम के तहत चंद्र नववर्ष की पूर्वसंध्या और वसंत पर्व दोनों अवकाश हैं, और व्यवहार में ये सप्ताहांत से जुड़कर एक लंबी छुट्टी बन जाते हैं। पूर्वसंध्या का पारिवारिक भोज, पहले दिन की मुलाक़ातें और लाल लिफ़ाफ़े ढाँचा बनाते हैं; आगे हर घर अपने ढंग से बढ़ता है। 1 जनवरी भी अवकाश है, पर उसका वज़न चंद्र नववर्ष जैसा नहीं।
 ### date_rule TW lunar-new-year
@@ -180,7 +180,7 @@ The first day of the bright half (Shukla Paksha) of the month of Chaitra in the 
 ### customs BR reveillon
 ब्राज़ील में 1 जनवरी कानून 662 के तहत राष्ट्रीय अवकाश है। रेवेयों का भार समुद्र तट पर है: दक्षिणी गोलार्ध में जनवरी भरी गर्मी है, और उस रात सफ़ेद कपड़े, समुद्र तट पर आतिशबाज़ी, सात लहरें फलाँगना या समुद्र देवी इएमांजा को फूल अर्पित करना — ये सब साथ-साथ चलते हैं। वही रात कैथोलिक भी हो सकती है, अफ़्रो-ब्राज़ीली भी और पूरी तरह लौकिक भी।
 ### customs ID tahun-baru
-इंडोनेशिया 1 जनवरी को राष्ट्रीय अवकाश Tahun Baru Masehi के रूप में सूचीबद्ध करता है। वहाँ नया साल एक नहीं है: उसी सूची में इस्लामी नववर्ष, बाली का न्येपी (मौन दिवस) और चंद्र नववर्ष भी हैं। एक ही देश एक ही वर्ष में कई 'वर्षारंभ' को मान्यता दे — यह इस साइट के सात बाज़ारों में यहीं सबसे स्पष्ट दिखता है।
+इंडोनेशिया 1 जनवरी को राष्ट्रीय अवकाश Tahun Baru Masehi के रूप में सूचीबद्ध करता है। अगर 'इंडोनेशियाई नववर्ष' से 1 जनवरी का अर्थ है, तो यही सही पृष्ठ है, Ramadan या इस्लामी नववर्ष नहीं। वहाँ नया साल एक नहीं है: उसी सूची में इस्लामी नववर्ष, बाली का न्येपी (मौन दिवस) और चंद्र नववर्ष भी हैं। एक ही देश एक ही वर्ष में कई 'वर्षारंभ' को मान्यता दे — यह इस साइट के सात बाज़ारों में यहीं सबसे स्पष्ट दिखता है।
 ### customs IN ugadi
 भारत की राष्ट्रीय अवकाश सूची में 1 जनवरी नहीं है। यहाँ नया साल प्रायः हिंदू चांद्र-सौर पंचांग के चैत्र शुक्ल प्रतिपदा को पड़ता है, यानी मार्च या अप्रैल में, और हर क्षेत्र में उसका नाम अलग है: आंध्र प्रदेश व तेलंगाना में उगादी, कर्नाटक में युगादी, महाराष्ट्र में गुड़ी पड़वा, तमिलनाडु में पुथांडु, केरल में विशु, पंजाब में वैसाखी, ओडिशा में पना संक्रांति, पश्चिम बंगाल में पोइला बोइशाख, असम में बोहाग बिहू। उगादी और गुड़ी पड़वा 2026 में 19 मार्च और 2027 में 7 अप्रैल को हैं।
 
@@ -192,7 +192,7 @@ Tahun Baru
 ### summary
 'Tahun Baru' bukan satu hari yang sama. Taiwan dan Tiongkok daratan merayakan hari pertama bulan pertama penanggalan lunar; Jepang, Amerika Serikat, Brasil, dan Indonesia libur pada 1 Januari; sedangkan daftar hari libur nasional India **sama sekali tidak memuat 1 Januari** — di sana tahun baru jatuh pada Maret atau April dan bernama berbeda di tiap negara bagian. Halaman ini membandingkan hari mana yang dianggap awal, dan berapa hari liburnya.
 ### keywords
-Tahun Baru, Imlek, Chunjie, Ganjitsu, Réveillon, Ugadi, Gudi Padwa
+Tahun Baru, Tahun Baru Indonesia, Imlek, Chunjie, Ganjitsu, Réveillon, Ugadi, Gudi Padwa
 ### customs TW lunar-new-year
 Tahun baru Taiwan bertumpu pada hari pertama bulan pertama penanggalan lunar. Menurut Undang-Undang Hari Peringatan dan Hari Raya, malam Tahun Baru Imlek dan Festival Musim Semi adalah hari libur, dan pada praktiknya menyatu dengan akhir pekan menjadi satu libur panjang. Makan malam berkumpul di malam sebelumnya, kunjungan pertama pada hari pertama, dan amplop merah menjadi kerangkanya; selanjutnya tiap rumah melanjutkan dengan caranya. 1 Januari juga libur, tetapi bobotnya tidak sekelas tahun baru lunar.
 ### date_rule TW lunar-new-year
@@ -208,7 +208,7 @@ Amerika Serikat menjadikan 1 Januari hari libur federal. Bobotnya ada pada malam
 ### customs BR reveillon
 Di Brasil, 1 Januari adalah hari libur nasional menurut Undang-Undang 662. Bobot Réveillon ada di pantai: Januari adalah puncak musim panas di belahan bumi selatan, dan malam itu lazim menghadirkan pakaian putih, kembang api di pantai, serta praktik yang berdampingan — melompati tujuh ombak, atau mempersembahkan bunga kepada dewi laut Iemanjá. Malam yang sama bisa sekaligus Katolik, Afro-Brasil, dan sepenuhnya sekuler.
 ### customs ID tahun-baru
-Indonesia mencantumkan 1 Januari sebagai hari libur nasional Tahun Baru Masehi. Ia adalah satu dari beberapa tahun baru di sini: daftar hari libur nasional yang sama juga memuat Tahun Baru Islam, Nyepi di Bali, dan Tahun Baru Imlek. Satu negara mengakui beberapa 'awal tahun' dalam kalender yang sama — dan di antara tujuh pasar di situs ini, hal itu paling kentara di Indonesia.
+Indonesia mencantumkan 1 Januari sebagai hari libur nasional Tahun Baru Masehi. Inilah halaman untuk kueri “Tahun Baru Indonesia” jika yang dimaksud adalah 1 Januari, bukan Ramadan atau Tahun Baru Islam. Ia adalah satu dari beberapa tahun baru di sini: daftar hari libur nasional yang sama juga memuat Tahun Baru Islam, Nyepi di Bali, dan Tahun Baru Imlek. Satu negara mengakui beberapa 'awal tahun' dalam kalender yang sama — dan di antara tujuh pasar di situs ini, hal itu paling kentara di Indonesia.
 ### customs IN ugadi
 Daftar hari libur nasional India tidak memuat 1 Januari. Tahun baru di sana umumnya jatuh pada hari pertama paruh terang bulan Chaitra dalam kalender lunisolar Hindu, yaitu Maret atau April, dan bernama berbeda di tiap wilayah: Ugadi di Andhra Pradesh dan Telangana, Yugadi di Karnataka, Gudi Padwa di Maharashtra, Puthandu di Tamil Nadu, Vishu di Kerala, Vaisakhi di Punjab, Pana Sankranti di Odisha, Poila Boishakh di Benggala Barat, Bohag Bihu di Assam. Ugadi dan Gudi Padwa jatuh pada 19 Maret 2026 dan 7 April 2027.
 
@@ -220,7 +220,7 @@ Ano-Novo
 ### summary
 'Ano-Novo' não é o mesmo dia. Taiwan e a China continental celebram o primeiro dia do primeiro mês lunar; Japão, Estados Unidos, Brasil e Indonésia folgam em 1º de janeiro; e a lista de feriados nacionais da Índia **não contém 1º de janeiro** — lá o ano-novo cai em março ou abril e tem um nome diferente em cada estado. Esta página compara qual dia cada lugar trata como começo, e quantos dias de folga vêm junto.
 ### keywords
-Ano-Novo, Réveillon, Ano-Novo Lunar, Chunjie, Ganjitsu, Ugadi, Gudi Padwa
+Ano-Novo, Ano-Novo da Indonésia, Réveillon, Ano-Novo Lunar, Chunjie, Ganjitsu, Ugadi, Gudi Padwa
 ### customs TW lunar-new-year
 O ano-novo de Taiwan está no primeiro dia do primeiro mês lunar. Pela Lei dos Dias Comemorativos e Feriados, a véspera do Ano-Novo Lunar e o Festival da Primavera são dias de folga e, na prática, se juntam ao fim de semana em um feriadão. O jantar de reunião na véspera, as primeiras visitas no dia um e os envelopes vermelhos formam a estrutura; daí cada casa segue seu caminho. 1º de janeiro também é feriado, mas não está na mesma categoria de peso.
 ### date_rule TW lunar-new-year
@@ -236,7 +236,7 @@ Os Estados Unidos fazem de 1º de janeiro um feriado federal. O peso está na no
 ### customs BR reveillon
 No Brasil, 1º de janeiro é feriado nacional pela Lei 662. O peso do Réveillon está na orla: janeiro é pleno verão no hemisfério sul, e a noite costuma reunir roupa branca, fogos na praia e práticas que convivem lado a lado — pular sete ondas ou levar flores para Iemanjá. A mesma noite pode ser católica, afro-brasileira e inteiramente laica ao mesmo tempo.
 ### customs ID tahun-baru
-A Indonésia lista 1º de janeiro como o feriado nacional Tahun Baru Masehi. Ele é um entre vários anos-novos: a mesma lista de feriados nacionais traz também o ano-novo islâmico, o Nyepi de Bali e o ano-novo lunar. Um único país reconhecendo vários 'começos de ano' no mesmo calendário é algo que, entre os sete mercados deste site, aparece com mais clareza ali.
+A Indonésia lista 1º de janeiro como o feriado nacional Tahun Baru Masehi. Esta é a página correspondente à busca “Ano-Novo da Indonésia” quando ela significa 1º de janeiro, e não Ramadan ou o ano-novo islâmico. Ele é um entre vários anos-novos: a mesma lista de feriados nacionais traz também o ano-novo islâmico, o Nyepi de Bali e o ano-novo lunar. Um único país reconhecendo vários 'começos de ano' no mesmo calendário é algo que, entre os sete mercados deste site, aparece com mais clareza ali.
 ### customs IN ugadi
 A lista de feriados nacionais da Índia não traz 1º de janeiro. O ano-novo ali costuma cair no primeiro dia da quinzena clara de Chaitra no calendário lunissolar hindu, em março ou abril, e tem nome diferente em cada região: Ugadi em Andhra Pradesh e Telangana, Yugadi em Karnataka, Gudi Padwa em Maharashtra, Puthandu em Tamil Nadu, Vishu em Kerala, Vaisakhi no Punjab, Pana Sankranti em Odisha, Poila Boishakh em Bengala Ocidental, Bohag Bihu em Assam. Ugadi e Gudi Padwa caem em 19 de março de 2026 e 7 de abril de 2027.
 

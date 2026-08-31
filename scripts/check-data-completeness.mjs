@@ -11,7 +11,10 @@ const ROOT = process.cwd().endsWith('/site') ? join(process.cwd(), '..') : proce
 const DATA = join(ROOT, 'data');
 const CONTENT = join(ROOT, 'content');
 const LOCALES = ['zh-TW', 'en', 'ja', 'zh-CN', 'hi', 'id', 'pt-BR'];
-const COUNTRY_CODES = new Set(['TW', 'JP', 'CN', 'US', 'IN', 'ID', 'BR']);
+// 七個站台市場仍是固定契約；observance 可以補充 GSC 驗證出需求的其他國家。
+// 不要因此放寬 perennial regional_notes 的七市場完整性要求。
+const MARKET_COUNTRY_CODES = new Set(['TW', 'JP', 'CN', 'US', 'IN', 'ID', 'BR']);
+const CONTENT_COUNTRY_CODES = new Set([...MARKET_COUNTRY_CODES, 'SG']);
 const errors = [];
 const fail = (message) => errors.push(message);
 const readJson = (path) => {
@@ -82,7 +85,7 @@ for (const topic of activeTopics) {
   observanceCount += observances.length;
   for (const observance of observances) {
     const label = `${topic.slug}/${observance.country_code}/${observance.observance_key}`;
-    if (!COUNTRY_CODES.has(observance.country_code)) fail(`${label}: country_code 無效`);
+    if (!CONTENT_COUNTRY_CODES.has(observance.country_code)) fail(`${label}: country_code 無效`);
     if (!Array.isArray(observance.source_urls) || !observance.source_urls.every(isHttp)) fail(`${label}: 缺來源`);
     const years = new Set((observance.occurrences || []).map((row) => row.occurrence_year));
     for (const year of [currentYear, currentYear + 1]) if (!years.has(year)) fail(`${label}: 缺 ${year} occurrence`);
@@ -91,8 +94,8 @@ for (const topic of activeTopics) {
     }
   }
   const regional = Array.isArray(facts.regional_notes) ? facts.regional_notes : [];
-  if (facts.is_perennial && regional.length !== COUNTRY_CODES.size) {
-    fail(`${topic.slug}: perennial regional_notes 應有 ${COUNTRY_CODES.size} 國，實際 ${regional.length}`);
+  if (facts.is_perennial && regional.length !== MARKET_COUNTRY_CODES.size) {
+    fail(`${topic.slug}: perennial regional_notes 應有 ${MARKET_COUNTRY_CODES.size} 國，實際 ${regional.length}`);
   }
   if (regional.length) {
     regionalNoteCount += regional.length;
@@ -100,7 +103,7 @@ for (const topic of activeTopics) {
     if (!unique(countries)) fail(`${topic.slug}: regional_notes country 重複`);
     for (const row of regional) {
       const label = `${topic.slug}/regional/${row.country_code}`;
-      if (!COUNTRY_CODES.has(row.country_code)) fail(`${label}: country_code 無效`);
+      if (!MARKET_COUNTRY_CODES.has(row.country_code)) fail(`${label}: country_code 無效`);
       if (!Array.isArray(row.source_urls) || !row.source_urls.every(isHttp)) fail(`${label}: 缺來源`);
       for (const locale of LOCALES) {
         if (!nonEmpty(i18n.regional_notes?.[row.country_code]?.[locale])) fail(`${label}: 缺 ${locale}`);

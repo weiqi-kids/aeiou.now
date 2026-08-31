@@ -1151,6 +1151,72 @@
       "has_answer": false
     },
     {
+      "question_id": "q-20260901-labour-day-in-practice",
+      "date": "2026-09-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके यहाँ श्रमिक दिवस व्यवहार में किस तरह का दिन है?",
+      "options": [
+        {
+          "id": "national-off",
+          "emoji": "🛌",
+          "label": "पूरे देश की छुट्टी"
+        },
+        {
+          "id": "some-off",
+          "emoji": "👥",
+          "label": "केवल कुछ लोगों की छुट्टी"
+        },
+        {
+          "id": "workday",
+          "emoji": "💼",
+          "label": "सामान्य कार्यदिवस"
+        },
+        {
+          "id": "local-rule",
+          "emoji": "📍",
+          "label": "राज्य, स्थानीय नियम या नियोक्ता पर निर्भर"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260901-labour-day-two-days",
+      "date": "2026-09-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अंदाज़ा लगाइए: 2024 के संशोधन के बाद किस जगह के क़ानून में श्रमिक दिवस की छुट्टी 1 और 2 मई लिखी गई है?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "मुख्यभूमि चीन"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
       "question_id": "q-20260901-moving-childrens-day",
       "date": "2026-09-01",
       "kind": "guess",

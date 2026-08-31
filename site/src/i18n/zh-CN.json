@@ -178,5 +178,10 @@
   "topic.tickets": "购票信息",
   "q.topic_questions": "这个主题的世界问题 →",
   "holidays.long_weekends": "连假",
-  "holidays.run_days": "{n} 天"
+  "holidays.run_days": "{n} 天",
+  "topic.country_calendar": "查看 {year} 年假日总表 →",
+  "holidays.download_title": "下载这一年的数据",
+  "holidays.download_note": "CSV 适合引用和表格使用；ICS 只包含放假日，纪念日仍保留在 CSV 中。",
+  "holidays.download_csv": "下载 CSV",
+  "holidays.download_ics": "下载 ICS 日历"
 }

@@ -204,7 +204,7 @@ try {
   //   以上三類都是站上的資產;純日期型(帶年份、when is、幾號)是 Google 答案框的標準品,不是。
   const CROSS_RE = /(哪些國家|哪些国家|各國|各国|全世界|世界|海外|all over the world|around the world|kaun sa desh|international|antarrashtriya|怎麼過|怎么过|傳統|伝統|traditions?|放假|為什麼|为什么|差別|差别|比較|比较|制度|國定|国定|public holiday|do they|how do|why do|does .* change|is .* always|libur|hari libur|feriado|छुट्टी|क्यों|कैसे)/i;
   const NAME_RE = /(中文|とは|in english|意思|是什么|什麼意思)/i;
-  const COUNTRY_RE = /(taiwan|japan|japão|japao|jepang|china|chinese|india|indonesia|usa|u\.s\.|united states|estados unidos|uae|brazil|brasil|台湾|台灣|日本|中国|中國|印度|印尼|美国|美國|巴西|韓國|韩国|भारत)/i;
+  const COUNTRY_RE = /(taiwan|japan|japão|japao|jepang|china|chinese|india|indonesia|singapore|singapura|usa|u\.s\.|united states|estados unidos|uae|brazil|brasil|台湾|台灣|日本|中国|中國|印度|印尼|新加坡|シンガポール|美国|美國|巴西|韓國|韩国|भारत|सिंगापुर)/i;
   const DATE_RE = /(\b20\d{2}\b|幾號|什麼時候|什么时候|日期|いつ|何日|何時|kapan|tanggal|when is|when i |what date|what day|what month|quando|कब|तारीख)/i;
   const intent = { cross: [], country: [], name: [], date: [] };
   for (const x of queryRows) {
@@ -260,6 +260,7 @@ try {
       [/china|chinese|中国|中國/i, 'CN'], [/india|印度|भारत/i, 'IN'],
       [/indonesia|印尼/i, 'ID'], [/usa|united states|estados unidos|美国|美國|u\.s\./i, 'US'],
       [/brazil|brasil|巴西/i, 'BR'],
+      [/singapore|singapura|新加坡|シンガポール|सिंगापुर/i, 'SG'],
     ];
     const same = []; const cross = [];
     for (const x of (qp.rows || [])) {

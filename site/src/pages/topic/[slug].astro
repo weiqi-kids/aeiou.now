@@ -46,7 +46,9 @@ import { plainText, emphasisParts } from '../../lib/emphasis.mjs';
 import { summaryLead } from '../../lib/summary.mjs';
 import { isTrendTopic } from '../../lib/topic-status.mjs';
 import { countryCellsFor } from '../../lib/country-cells.mjs';
+import { occurrenceDistance } from '../../lib/occurrence.mjs';
 import { questionTopicCells } from '../../lib/questions-data.mjs';
+import { holidayCellsFor } from '../../lib/holidays.mjs';
 import {
   listTopicIds, getTopicBundle, placesForTopic, eventsForTopic, countryName,
   observancesForFacts, customsText, dateRuleText, regionalNotesForFacts, regionalNoteText,
@@ -105,8 +107,8 @@ const heroPreloads = [
 const observances = observancesForFacts(facts)
   .slice()
   .sort((a, b) => {
-    const aDistance = a.next_occurrence?.distance_days;
-    const bDistance = b.next_occurrence?.distance_days;
+    const aDistance = occurrenceDistance(a.next_occurrence);
+    const bDistance = occurrenceDistance(b.next_occurrence);
     if (aDistance == null && bDistance == null) return (a.popularity_rank || 99) - (b.popularity_rank || 99);
     if (aDistance == null) return 1;
     if (bDistance == null) return -1;
@@ -453,6 +455,13 @@ const leadCountryEntry = worldCountries.find((country) => country.country_code =
 const homeCountryEntry = leadCountryCode === HOME_COUNTRY
   ? null
   : (worldCountries.find((country) => country.country_code === HOME_COUNTRY) || null);
+// 需求國家若有完整的年度假日表，讓日期答案直接接到可下載的年度資料資產。
+// 沒有完整表(例如學校行事曆或地方變體)就不放連結，避免承諾一個不存在或語意不合的頁面。
+const leadCalendarYear = leadCountryEntry?.next_occurrence?.starts_on?.slice(0, 4) || null;
+const leadCalendarHref = leadCountryEntry && leadCalendarYear
+  && holidayCellsFor(leadCountryEntry.country_code).includes(leadCalendarYear)
+  ? withBase(`holidays/${leadCountryEntry.country_code.toLowerCase()}/${leadCalendarYear}/`)
+  : null;
 const dateSentence = dateAnswer.length > 0
   ? `${dateAnswer.slice(0, 2).join(copy.listSep)}${copy.endMark}`
   : null;
@@ -510,7 +519,12 @@ const differenceAnswer = [
 //   `### date_rule <CC> <key>` 供應(zh-TW 退回 `- date_rule:` 原文)。
 //   拿不到就是空格 —— 空格的意思是「這一筆沒有規則可講」或「還沒補譯」,
 //   兩者都不該用中文填補。
-const answerRows = homeFirst([
+const answerCountryCode = leadCountryEntry?.country_code || HOME_COUNTRY;
+const answerFirst = (list) => [
+  ...list.filter((x) => x.country_code === answerCountryCode),
+  ...list.filter((x) => x.country_code !== answerCountryCode),
+];
+const answerRows = answerFirst([
   ...observances.map((observance) => ({
     country_code: observance.country_code,
     // 同一國兩筆(womens-day 的印度有 2/13 與 3/8;齋戒月的印尼有兩筆)在表格裡會變成
@@ -723,6 +737,25 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
             ))}
           </tbody>
         </table>
+      )}
+      {(leadCalendarHref || hasQuestionCell) && (
+        <p class="answer-actions">
+          {leadCalendarHref && (
+            <a
+              data-answer-action="holiday-calendar"
+              data-answer-country={leadCountryEntry.country_code}
+              data-answer-year={leadCalendarYear}
+              href={leadCalendarHref}
+            >{fillTemplate(t('topic.country_calendar'), { year: leadCalendarYear })}</a>
+          )}
+          {hasQuestionCell && (
+            <a
+              data-answer-action="topic-questions"
+              data-answer-topic={facts.slug}
+              href={withBase(`questions/${facts.slug}/`)}
+            >{t('q.topic_questions')}</a>
+          )}
+        </p>
       )}
       {/* 回報錯誤或補充(2026-08-21)。放在事實表底下 —— 讀者發現不對的地方就是在這裡。
           它不另開端點:按下去會把前綴插進討論室的發文框並捲過去,更正因此是公開的、
@@ -1022,14 +1055,6 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
       </section>
     )}
 
-    {/* 用 <p> 不是 <nav>:check-local-scope.mjs 的 assertWorldNavPlacement 規定
-        article 內唯一的 <nav> 只能是 #world 的國家導覽(版面 2026-08-11 定版)。 */}
-    {hasQuestionCell && (
-      <p class="topic-questions-link">
-        <a href={withBase(`questions/${facts.slug}/`)}>{t('q.topic_questions')}</a>
-      </p>
-    )}
-
     {related.length > 0 && (
       <section class="topic-related" id="related">
         <div class="section-head">
@@ -1093,6 +1118,18 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
         action: link.dataset.localAction,
         target_type: link.dataset.localType,
         target_id: link.dataset.localId,
+        locale,
+      });
+    });
+  });
+  document.querySelectorAll('[data-answer-action]').forEach((link) => {
+    link.addEventListener('click', () => {
+      track('answer_action_click', {
+        topic_slug: topicSlug,
+        action: link.dataset.answerAction,
+        target_topic: link.dataset.answerTopic,
+        country_code: link.dataset.answerCountry,
+        year: link.dataset.answerYear,
         locale,
       });
     });
@@ -1179,8 +1216,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
     color: var(--color-ink-muted);
     font-size: var(--text-sm);
   }
-  .topic-answers,
-  .topic-questions-link {
+  .topic-answers {
     margin-block-start: 1.5rem;
     font-size: var(--text-sm);
   }
@@ -1362,6 +1398,7 @@ const cardReactionsConfigJson = JSON.stringify(cardReactionsConfig).replace(/</g
   /* 加入行事曆 / 回報錯誤:同一種「次要動作列」的長相 */
   .card-calendar,
   .country-calendar,
+  .answer-actions,
   .answers-report {
     display: flex;
     flex-wrap: wrap;

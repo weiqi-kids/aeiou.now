@@ -23,6 +23,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
+import { summarizeCrawlRows, topicUrlsFromSitemap } from './lib/crawl-freshness.mjs';
 
 const args = process.argv.slice(2);
 const flag = (name, fallback) => {
@@ -32,7 +33,7 @@ const flag = (name, fallback) => {
 const SA = join(homedir(), '.config', 'aeiou', 'ga4-sa.json');
 const GOOGLE_LIB = '/mnt/customers/seo-ops/lib/google.mjs';
 const SITE = 'sc-domain:aeiou.now';
-const ORIGIN = 'https://aeiou.now';
+const origin = flag('--origin', null);
 const gate = args.includes('--gate');
 const minRatio = Number(flag('--min-ratio', '0.7'));
 const sampleSize = Number(flag('--sample', '0'));
@@ -60,10 +61,7 @@ if (!existsSync(sitemapPath)) {
   console.error('✗ 找不到 site/dist/sitemap.xml —— 先 `cd site && LOCALE=zh-TW pnpm build`');
   process.exit(1);
 }
-const locs = [...readFileSync(sitemapPath, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-let pages = locs
-  .map((u) => u.replace(/^https?:\/\/[^/]+/, ORIGIN))
-  .filter((u) => /^https:\/\/aeiou\.now\/topic\/[^/]+\/$/.test(u));
+let pages = topicUrlsFromSitemap(readFileSync(sitemapPath, 'utf8'), origin);
 if (sampleSize > 0 && pages.length > sampleSize) {
   const step = Math.ceil(pages.length / sampleSize);
   pages = pages.filter((_, i) => i % step === 0).slice(0, sampleSize);
@@ -79,15 +77,12 @@ for (const url of pages) {
   }
 }
 
-const crawled = rows.filter((r) => r.crawl);
-const fresh = crawled.filter((r) => r.crawl.slice(0, 10) >= since);
-const dates = crawled.map((r) => r.crawl.slice(0, 10)).sort();
-const median = dates.length ? dates[Math.floor(dates.length / 2)] : '—';
-const ratio = rows.length ? fresh.length / rows.length : 0;
+const summary = summarizeCrawlRows(rows, since);
 
 console.log(`基準日 ${since}（Google 看過新版了嗎）`);
-console.log(`Topic 主頁 ${rows.length} 頁：有抓取紀錄 ${crawled.length}、基準日之後重爬 ${fresh.length}（${(ratio * 100).toFixed(0)}%）`);
-console.log(`最後抓取日：最舊 ${dates[0] || '—'}　中位 ${median}　最新 ${dates[dates.length - 1] || '—'}`);
+console.log(`Topic 主頁 ${rows.length} 頁：有抓取紀錄 ${summary.crawled}、基準日之後重爬 ${summary.fresh}（${(summary.ratio * 100).toFixed(0)}%）`);
+console.log(`最後抓取日：最舊 ${summary.dates[0] || '—'}　中位 ${summary.median}　最新 ${summary.dates[summary.dates.length - 1] || '—'}`);
+if (summary.errors) console.log(`URL Inspection 錯誤 ${summary.errors} 筆；gate 會 fail-closed，避免把錯誤誤算成未重爬。`);
 
 const stale = rows.filter((r) => !r.crawl || r.crawl.slice(0, 10) < since);
 if (stale.length) {
@@ -98,10 +93,14 @@ if (stale.length) {
   if (stale.length > 15) console.log(`  …另外 ${stale.length - 15} 頁`);
 }
 
+const gateReasons = [
+  summary.ratio < minRatio ? `重爬比例 ${(summary.ratio * 100).toFixed(0)}% < ${(minRatio * 100).toFixed(0)}%` : null,
+  summary.errors > 0 ? `${summary.errors} 筆 Inspection 錯誤` : null,
+].filter(Boolean).join('；');
 console.log(
-  ratio >= minRatio
-    ? `\n✅ 重爬比例 ${(ratio * 100).toFixed(0)}% >= ${(minRatio * 100).toFixed(0)}%：現在量到的 CTR 才是新摘要的成績。`
-    : `\n⛔ 重爬比例 ${(ratio * 100).toFixed(0)}% < ${(minRatio * 100).toFixed(0)}%：**現在不要調文案**。`
+  summary.ratio >= minRatio && summary.errors === 0
+    ? `\n✅ 重爬比例 ${(summary.ratio * 100).toFixed(0)}% >= ${(minRatio * 100).toFixed(0)}%：現在量到的 CTR 才是新摘要的成績。`
+    : `\n⛔ ${gateReasons}：**現在不要調文案**。`
       + `\n   GSC 的曝光／點擊仍混著舊摘要,拿它當成績單會得到錯的結論(2026-08-19/21/25/26 已經據此改過三次)。`,
 );
-if (gate && ratio < minRatio) process.exit(1);
+if (gate && (summary.ratio < minRatio || summary.errors > 0)) process.exit(1);

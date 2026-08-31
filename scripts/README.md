@@ -30,11 +30,15 @@ cat /etc/cron.d/aeiou
 ```bash
 node scripts/gsc-topic-metrics.mjs --days 28
 node scripts/seo-growth.mjs --days 28
+# 每日維運由 hourly-export.sh 執行；手動補一筆主機快照時才加 --record
+node scripts/seo-growth.mjs --record --days 28
+node scripts/seo-growth.mjs --history
 ```
 
 `gsc_query_metrics` 只存在主機，`seo-growth.mjs` 會把前十名零點擊、
 11–20 名可搶救、查詢與落地頁可能不對題，以及未來 120 天的 T-21 季節跑道
-排成優先序；它不改內容、不改 HotScore，也不匯出查詢字串。
+排成優先序；它不改內容、不改 HotScore，也不匯出查詢字串。`--record` 只把
+聚合快照與工作項寫進主機 SQLite，方便比較改版後的趨勢。
 
 ## `scripts/oneoff/` 的紅線
 

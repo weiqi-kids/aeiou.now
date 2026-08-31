@@ -45,6 +45,7 @@ export const COUNTRY_DOMAINS = {
   IN: [/\.gov\.in$/, /\.nic\.in$/, /\.in$/],
   ID: [/\.go\.id$/, /\.id$/],
   BR: [/\.gov\.br$/, /\.br$/],
+  SG: [/\.gov\.sg$/, /\.edu\.sg$/],
 };
 
 /** 不綁國家的通用／國際來源，可以掛在 topic 層，但不得下放成某一國的逐國來源。 */

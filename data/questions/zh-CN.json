@@ -1151,6 +1151,72 @@
       "has_answer": false
     },
     {
+      "question_id": "q-20260901-labour-day-in-practice",
+      "date": "2026-09-01",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你所在的地方，劳动节在实际生活中更像哪一种日子?",
+      "options": [
+        {
+          "id": "national-off",
+          "emoji": "🛌",
+          "label": "全国都放假"
+        },
+        {
+          "id": "some-off",
+          "emoji": "👥",
+          "label": "只有部分人放假"
+        },
+        {
+          "id": "workday",
+          "emoji": "💼",
+          "label": "照常上班"
+        },
+        {
+          "id": "local-rule",
+          "emoji": "📍",
+          "label": "看州、地方或雇主决定"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20260901-labour-day-two-days",
+      "date": "2026-09-01",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BRP69FEV2DWA2VSH7QD",
+      "topic_slug": "labour-day",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你猜：2024 年修法后，哪个地方把劳动节的法定假期写成5月1日与5月2日?",
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陆"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
       "question_id": "q-20260901-moving-childrens-day",
       "date": "2026-09-01",
       "kind": "guess",

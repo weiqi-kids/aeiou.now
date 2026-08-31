@@ -16,6 +16,7 @@ import { DatabaseSync } from "node:sqlite";
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { isTrendTopic } from "./lib/topics.mjs";
+import { nextOccurrence } from "./lib/occurrences.mjs";
 // 級距門檻的唯一定義處(CLAUDE.md 顯示層規則)。這裡 import 而不是抄一份門檻,
 // 前後端才不會各自漂移。heat.mjs 是純 JS、無 import,可以跨目錄引用。
 import { heatTier } from "../site/src/lib/heat.mjs";
@@ -171,47 +172,6 @@ function trendLocaleErrors(topic, i18nByTopic) {
       ? [`${topic.slug}(${topic.topic_id}) ${locale} 缺 ${missing.join('/')}`]
       : [];
   });
-}
-
-const isoDateParts = (date, timeZone) => {
-  const parts = new Intl.DateTimeFormat('en-US', {
-    timeZone,
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-  }).formatToParts(date);
-  const values = Object.fromEntries(parts.filter((part) => part.type !== 'literal').map((part) => [part.type, part.value]));
-  return `${values.year}-${values.month}-${values.day}`;
-};
-const utcDay = (iso) => Date.parse(`${iso}T00:00:00Z`) / 86400000;
-
-// occurrence 是地方時區的日期；排序先在該 occurrence 的 timezone 取「今天」，
-// 再算到開始日的距離。這裡不讀 date_rule，也不從文化文字猜日期。
-function nextOccurrence(rows, now = new Date()) {
-  const candidates = [];
-  for (const row of rows) {
-    const today = isoDateParts(now, row.timezone);
-    const active = row.ends_on
-      ? today >= row.starts_on && today <= row.ends_on
-      : today === row.starts_on;
-    const future = row.starts_on > today;
-    if (!active && !future) continue;
-    candidates.push({
-      occurrence_id: row.occurrence_id,
-      occurrence_year: row.occurrence_year,
-      starts_on: row.starts_on,
-      ends_on: row.ends_on,
-      calendar_system: row.calendar_system,
-      timezone: row.timezone,
-      date_status: row.date_status,
-      source_ids: parseJson(row.source_ids_json, []),
-      source_urls: parseJson(row.source_ids_json, []).map((id) => sourceUrlById.get(id)).filter(Boolean),
-      distance_days: active ? 0 : utcDay(row.starts_on) - utcDay(today),
-    });
-  }
-  return candidates.sort((a, b) =>
-    a.distance_days - b.distance_days || a.starts_on.localeCompare(b.starts_on) || a.occurrence_id.localeCompare(b.occurrence_id)
-  )[0] || null;
 }
 
 // ---------- 讀庫(一次讀齊,全部 ORDER BY 保序) ----------
@@ -440,7 +400,7 @@ for (const t of topics) {
       source_ids: ids,
       source_urls: ids.map((id) => sourceUrlById.get(id)).filter(Boolean),
       occurrences,
-      next_occurrence: nextOccurrence(occurrenceRows),
+      next_occurrence: nextOccurrence(occurrenceRows, sourceUrlById),
     };
   });
   const countryObservances = new Map();

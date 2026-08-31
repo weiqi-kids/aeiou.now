@@ -149,6 +149,27 @@ const holidaySourceLabels = sourceLabels(allSources);
     <p class="hol-yearnote">{yearNote[LOCALE]}</p>
   )}
 
+  <section class="hol-downloads" aria-labelledby="hol-downloads-title">
+    <h2 id="hol-downloads-title">{t('holidays.download_title')}</h2>
+    <p>{t('holidays.download_note')}</p>
+    <p class="hol-download-links">
+      <a
+        data-calendar-asset="csv"
+        data-calendar-country={code}
+        data-calendar-year={year}
+        href={withBase(`holidays/${code.toLowerCase()}/${year}.csv`)}
+        download
+      >{t('holidays.download_csv')}</a>
+      <a
+        data-calendar-asset="ics"
+        data-calendar-country={code}
+        data-calendar-year={year}
+        href={withBase(`holidays/${code.toLowerCase()}/${year}.ics`)}
+        download
+      >{t('holidays.download_ics')}</a>
+    </p>
+  </section>
+
   {/* 制度說明分段(2026-08-27):原本整段塞一個 <p>,zh-TW 在桌機是整幅寬跑滿六行的字牆。
       paragraphs() 只在句子邊界換氣,**一個字都沒改** —— 文案是用戶的東西。 */}
   {systemNote?.text?.[LOCALE] && (
@@ -351,9 +372,33 @@ const holidaySourceLabels = sourceLabels(allSources);
   .hol-run-flag { font-size: var(--text-xs); color: var(--color-ink-muted); }
   .hol-system { margin-block-end: 1.5rem; }
   .hol-system h2 { font-size: var(--text-lg); }
+  .hol-downloads {
+    margin-block-end: 1.5rem;
+    padding: 1rem;
+    border: 0.0625rem solid var(--color-line);
+    background: var(--color-primary-soft);
+  }
+  .hol-downloads h2 { margin-block-end: 0.35rem; font-size: var(--text-lg); }
+  .hol-downloads p { margin-block-end: 0.5rem; }
+  .hol-download-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-block-end: 0; }
   .hol-undated { margin-block-start: 1.5rem; }
   .hol-undated h2 { font-size: var(--text-lg); }
   .hol-undated ul { list-style: none; padding: 0; margin: 0; }
   .hol-sources { margin-block-start: 1.5rem; }
   .hol-sources h2 { font-size: var(--text-lg); }
 </style>
+
+<script>
+  import { track } from '../../../lib/analytics.mjs';
+
+  document.querySelectorAll('[data-calendar-asset]').forEach((link) => {
+    link.addEventListener('click', () => {
+      track('calendar_asset_click', {
+        asset_type: link.dataset.calendarAsset,
+        country_code: link.dataset.calendarCountry,
+        year: link.dataset.calendarYear,
+        locale: document.documentElement.lang,
+      });
+    });
+  });
+</script>

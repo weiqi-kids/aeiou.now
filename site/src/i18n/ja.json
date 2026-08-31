@@ -178,5 +178,10 @@
   "topic.tickets": "チケット情報",
   "q.topic_questions": "このトピックの世界の問い →",
   "holidays.long_weekends": "連休",
-  "holidays.run_days": "{n}日間"
+  "holidays.run_days": "{n}日間",
+  "topic.country_calendar": "{year}年の祝日一覧を見る →",
+  "holidays.download_title": "この年のデータをダウンロード",
+  "holidays.download_note": "CSVは引用や表計算に使えます。ICSには休日だけを含め、記念日はCSVに残しています。",
+  "holidays.download_csv": "CSVをダウンロード",
+  "holidays.download_ics": "ICSカレンダーをダウンロード"
 }

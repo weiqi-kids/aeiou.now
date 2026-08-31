@@ -203,11 +203,11 @@ Indonesia menyebut 8 Maret sebagai Hari Perempuan Internasional, diselenggarakan
 
 ## locale pt-BR
 ### title
-Dia Internacional da Mulher
+Dia da Mulher
 ### summary
-8 de março cai na mesma data nos sete lugares comparados aqui, e é tratado de forma completamente diferente por cada sistema jurídico. A China concede às mulheres meio dia de folga remunerada, escrito no regulamento de feriados do Conselho de Estado. Taiwan o lista como "festividade", mas seu estatuto afirma expressamente que não é dia de folga. Os Estados Unidos não usam a data isolada e designam todo o mês de março como Mês da História das Mulheres. O Brasil é o caso mais singular: seu Dia Nacional da Mulher ficou em 30 de abril até que uma lei de 2025 o transferiu para 8 de março. Esta página não mede quem valoriza mais as mulheres, e sim até onde cada sistema reconhece formalmente a mesma data.
+O Dia da Mulher — chamado oficialmente de Dia Internacional da Mulher e, no Brasil, também de Dia Nacional da Mulher — cai em 8 de março nos sete lugares comparados aqui, mas recebe tratamentos jurídicos completamente diferentes. A China concede às mulheres meio dia de folga remunerada, escrito no regulamento de feriados do Conselho de Estado. Taiwan o lista como "festividade", mas seu estatuto afirma expressamente que não é dia de folga. Os Estados Unidos não usam a data isolada e designam todo o mês de março como Mês da História das Mulheres. No Brasil, o Dia Nacional da Mulher ficou em 30 de abril até que uma lei de 2025 o transferiu para 8 de março. Esta página não mede quem valoriza mais as mulheres, e sim até onde cada sistema reconhece formalmente a mesma data.
 ### keywords
-Dia Internacional da Mulher, Dia Nacional da Mulher, 8 de março, Mês da História das Mulheres, direitos das mulheres
+Dia da Mulher, Dia Internacional da Mulher, Dia Nacional da Mulher, 8 de março, Mês da História das Mulheres, direitos das mulheres
 ### customs TW womens-day
 O 婦女節 de Taiwan consta do artigo 5(5) da Lei sobre Datas Comemorativas e Festividades, com data de 8 de março, classificado como "festividade" e não como "data comemorativa". O artigo 6(3) da mesma lei é explícito: festividades que não constem do parágrafo primeiro não são dias de folga — e esse parágrafo abrange a véspera e o Ano-Novo Lunar, o Dia da Criança, Qingming, o Dia do Trabalho, o Barco-Dragão, o Dia dos Professores e o Festival do Meio do Outono. Ou seja, o Dia da Mulher em Taiwan tem estatuto legal, mas não gera feriado. Na prática órgãos públicos e escolas realizam palestras ou premiações, empregadores decidem por conta própria sobre flexibilidade, e o comércio trata a data como período de promoções. Note que o Dia da Criança, em 4 de abril, é feriado; os dois já foram unidos num único "Dia da Mulher e da Criança", mas a lei atual os separa.
 ### customs CN womens-day
