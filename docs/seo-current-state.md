@@ -1,13 +1,13 @@
 # SEO／多站工作現況
 
-> 這是可更新的工作交接快照，不是即時監控面板。最後量測：2026-09-01 UTC。
+> 這是可更新的工作交接快照，不是即時監控面板。最後量測：2026-09-01 UTC；最後發布驗證：commit `8369a10`。
 > 開始 GSC、GA4、SEO 或多站內容任務時先讀這份；只有快照過期、共用程式改動，或使用者明確要求重新量測，才重跑完整診斷。
 
 ## 先記住的結論
 
 - 這不是「一份內容翻成七種語言」的單一網站，而是**一份碼庫、七次 build、七個獨立發布站**。共用程式與資料模型，搜尋成效、發布版本、GSC 觀測則按站分開。
 - `en` 先做一輪是合理的市場實驗，但 en-only 文案不應自動同步到其他語系；確認搜尋意圖後，再按各站的查詢與當地叫法另寫。
-- 本輪改動目前仍在 working tree，**尚未 commit/deploy，因此 GSC 還看不到新標題**。上線後要等 Google 重爬，再比較成效。
+- 本輪改動已 commit、push 並完成七站發布；**GSC 尚未必看得到新標題，因為仍要等 Google 重爬**。目前不要把發布成功誤當成排名成效。
 
 ## 目前的站點模型
 
@@ -72,7 +72,10 @@
 
 ## 驗證狀態
 
+- CI run `33465126454` 成功：測試、來源連結檢查與七站 build／deploy 全部通過。
+- 七個正式網域的 `.build-id` 全部是 `8369a10`，代表線上版本已與本次發布一致。
 - 最新 en build 通過：571 pages、563 sitemap URLs、SEO／GEO／AEO gate 通過、內鏈 gate 通過。
+- 線上 en 四個目標頁已呈現新 title；en sitemap 有 563 個 `<loc>` 與 563 個 `<lastmod>`。
 - 最新測試通過：5 個 test files、0 failures。
 - `git diff --check` 通過。
 - 最新七語 build 全部通過；各站的 SEO／GEO／AEO、sitemap、hreflang、內鏈、渲染厚度與本地範圍守門均通過。
@@ -81,9 +84,9 @@
 
 ### 若繼續 en-only 優化
 
-1. 只看本檔的 en 證據與待測 query，編輯 `content/topics/<slug>.md` 的 `## locale en`。
-2. 跑 `node scripts/import-topics.mjs`、`node scripts/export-data.mjs`，再跑 `(cd site && LOCALE=en pnpm build)` 與既有 tests。
-3. 部署後等 GSC 重爬，再檢查四個新 title 與對應 query/page 的 impressions、clicks、position；不要在未重爬前再批量換文案。
+1. 先等這批已發布頁面被 Google 重爬；在此之前只修明顯錯誤，不再批量換文案。
+2. 重爬後只看本檔的 en 證據與待測 query，檢查四個新 title 對應的 query/page impressions、clicks、position。
+3. 確認需要第二批後，才編輯 `content/topics/<slug>.md` 的 `## locale en`，再跑 import／export、build、tests 與七站 release。
 
 ### 若改共用程式、資料模型或 UI
 
