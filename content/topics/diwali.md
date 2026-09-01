@@ -58,11 +58,11 @@
 
 ## locale en
 ### title
-Diwali
+Diwali Dates and Holidays
 ### summary
 Diwali is a five-day season, not a single day. This page separates the main day (Lakshmi–Ganesha Puja) from the opening Dhanteras and the closing Bhai Dooj, and compares two very different statuses: a national holiday with a five-day ritual sequence in India, and a public-school closure in New York City that only became law in 2023.
 ### keywords
-Diwali, Deepavali, Dhanteras, Bhai Dooj, Lakshmi Puja, festival of lights
+Diwali dates, Diwali holidays, Diwali 2026, Deepavali, Dhanteras, Bhai Dooj, Lakshmi Puja, festival of lights
 ### customs IN diwali
 The main day is the third of the five. Households light lamps and offer prayers to Ganesha and Lakshmi for prosperity. India's tourism ministry points to Ayodhya, Varanasi, Amritsar, Jaipur, and southern regions as places where the season is most visible, but how many lamps are lit, which deities are honoured, and whether there are fireworks vary a great deal between households. In 2025 Deepavali was inscribed on UNESCO's list of the Intangible Cultural Heritage of Humanity.
 ### date_rule IN diwali
@@ -86,11 +86,11 @@ Diwali is not a federal holiday in the United States, but New York State passed 
 Under New York State law, New York City public schools are closed on the day of Diwali
 ## locale ja
 ### title
-ディワリ（Diwali）
+ディワリ（Diwali、ディーワーリー）
 ### summary
-ディワリ（Diwali）は一日ではなく五日間の期間である。このページでは中心日（ラクシュミー・ガネーシャ供養）、初日のダンテラス、最終日のバーイー・ドゥージを分けて見ながら、インドでの国民の祝日としての姿と、2023年に法で定まったニューヨーク市の公立学校休校日という姿を比べる。
+ディワリ（Diwali、ディーワーリー）は一日ではなく五日間の期間である。このページでは中心日（ラクシュミー・ガネーシャ供養）、初日のダンテラス、最終日のバーイー・ドゥージを分けて見ながら、インドでの国民の祝日としての姿と、2023年に法で定まったニューヨーク市の公立学校休校日という姿を比べる。
 ### keywords
-ディワリ, Diwali, ディーパーバリ, ダンテラス, バーイー・ドゥージ, 光の祭り
+ディワリ, ディーワーリー, Diwali, ディーパーバリ, ダンテラス, バーイー・ドゥージ, 光の祭り
 ### customs IN diwali
 中心日は五日間の三日目にあたる。各家庭が灯りをともし、ガネーシャとラクシュミーに豊かさを祈る。インド観光省はアヨーディヤー、ヴァーラーナシー、アムリトサル、ジャイプル、南インド各地を規模の大きい場所として挙げるが、灯りの数、祈る対象、花火を使うかどうかは家庭ごとに大きく違う。2025年、ディーパーバリはユネスコ無形文化遺産に登録された。
 ### date_rule IN diwali

@@ -71,3 +71,45 @@ test("crawl freshness 以 sitemap 原始 host 過濾 Topic，且錯誤可被統�
     { crawled: 1, fresh: 1, errors: 1, ratio: 0.5, median: "2026-08-30", dates: ["2026-08-30"] },
   );
 });
+
+test("多 observance 的 country page 以實際日期排序，先回答最早節次", async () => {
+  const { sortByOccurrenceStart } = await import("../../site/src/lib/topic-dates.mjs");
+  const { facts } = bundle("ramadan-and-eid");
+  const indonesia = facts.observances.filter((observance) => observance.country_code === "ID");
+  assert.deepEqual(
+    sortByOccurrenceStart(indonesia).map((observance) => [
+      observance.observance_key,
+      observance.next_occurrence?.starts_on,
+    ]),
+    [
+      ["ramadan", "2027-02-08"],
+      ["eid-al-fitr", "2027-03-09"],
+    ],
+  );
+});
+
+test("crawl freshness 的小樣本會覆蓋七個網域", async () => {
+  const { CRAWL_ORIGINS, stratifiedTopicSample } = await import("../../scripts/lib/crawl-freshness.mjs");
+  const groups = CRAWL_ORIGINS.map((group, index) => ({
+    ...group,
+    urls: [`${group.origin}/topic/topic-${index}-a/`, `${group.origin}/topic/topic-${index}-b/`],
+  }));
+  const sample = stratifiedTopicSample(groups, 7);
+  assert.equal(sample.length, 7);
+  assert.deepEqual(sample.map((row) => row.locale), CRAWL_ORIGINS.map((group) => group.locale));
+});
+
+test("內部連結圖以來源頁去重，且不把自連結算成入口", async () => {
+  const { inboundLinkCounts } = await import("../../scripts/lib/internal-links.mjs");
+  const target = "https://aeiou.now/topic/target/";
+  const result = inboundLinkCounts([target], [
+    { url: "https://aeiou.now/", html: `<a href="/topic/target/">一</a><a href="/topic/target/">二</a>` },
+    { url: target, html: `<a href="/topic/target/">自己</a>` },
+    { url: "https://aeiou.now/topic/source/", html: `<a href="${target}#answers">三</a>` },
+  ]);
+  assert.equal(result.counts.get(target), 2);
+  assert.deepEqual([...result.sources.get(target)].sort(), [
+    "https://aeiou.now/",
+    "https://aeiou.now/topic/source/",
+  ]);
+});

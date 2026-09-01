@@ -75,11 +75,11 @@
 
 ## locale en
 ### title
-Exam season
+University Entrance Exams
 ### summary
 Every country here runs a national test that decides university places, but how tightly that decision is compressed varies enormously. China squeezes it into two days, June 7 and 8. Brazil does the opposite, spreading it across two Sundays a week apart in November. India goes further still, dispersing subject papers across nearly two months. Japan and Taiwan run a two-stage system: one national test, then each university's own. The United States is the only place with no national entrance exam at all. The same question — how an eighteen-year-old should be measured — gets seven different answers.
 ### keywords
-university entrance exam, gaokao, ENEM, entrance exam season, national exam
+university entrance exams, college entrance exams, college admissions tests, exam dates by country, gaokao, ENEM, Common Test, UTBK
 ### customs TW gsat
 Taiwan's first stage is the General Scholastic Ability Test (GSAT), run by the College Entrance Examination Center over three consecutive days in late January; the brochure for the 116th academic year sets it at January 22–24, 2027. The GSAT is positioned as an ability test rather than the whole verdict: it determines application thresholds and which departments are open to a candidate, while admission still depends on each university's second-stage screening, which includes portfolio review and interviews. So January is not the end point for Taiwanese candidates but a narrowing of the field; the real sorting happens in the spring application and interview season, and for those who miss out, in July's Advanced Subjects Test.
 ### date_rule TW gsat

@@ -15,15 +15,18 @@
 //   基準日預設 = 最近一次動到 site/src/lib/seo.mjs 或 topic/[slug].astro 的 commit 日期。
 //
 // 用法:
-//   node scripts/crawl-freshness.mjs                    # 報告
+//   node scripts/crawl-freshness.mjs                    # 七站分層抽驗 20 頁
 //   node scripts/crawl-freshness.mjs --since 2026-08-27 # 指定基準日
 //   node scripts/crawl-freshness.mjs --gate             # 沒過就 exit 1(給 CI/cron 用)
 //   node scripts/crawl-freshness.mjs --sample 20        # 只抽驗 N 頁(URL Inspection 有配額)
+//   node scripts/crawl-freshness.mjs --sample 0         # 七站全部 Topic 頁
 import { execFileSync } from 'node:child_process';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
-import { summarizeCrawlRows, topicUrlsFromSitemap } from './lib/crawl-freshness.mjs';
+import {
+  CRAWL_ORIGINS, summarizeCrawlRows, stratifiedTopicSample, topicUrlsFromSitemap,
+} from './lib/crawl-freshness.mjs';
 
 const args = process.argv.slice(2);
 const flag = (name, fallback) => {
@@ -36,7 +39,11 @@ const SITE = 'sc-domain:aeiou.now';
 const origin = flag('--origin', null);
 const gate = args.includes('--gate');
 const minRatio = Number(flag('--min-ratio', '0.7'));
-const sampleSize = Number(flag('--sample', '0'));
+// 七個正式網域的完整 Inspection 很吃配額；預設固定、分層抽 20 頁，
+// 明確指定 --sample 0 才跑全量。
+const sampleSize = Number(flag('--sample', '20'));
+const retries = Math.max(1, Number(flag('--retries', '3')) || 3);
+const timeoutMs = Math.max(1000, Number(flag('--timeout-ms', '15000')) || 15000);
 
 if (!existsSync(SA)) { console.error(`✗ 缺 SA 金鑰:${SA}`); process.exit(1); }
 if (!existsSync(GOOGLE_LIB)) { console.error(`✗ 缺 ${GOOGLE_LIB}`); process.exit(1); }
@@ -55,25 +62,68 @@ function defaultSince() {
 const since = flag('--since', defaultSince());
 if (!since) { console.error('✗ 推不出基準日,請用 --since YYYY-MM-DD'); process.exit(1); }
 
-// Topic 主頁 = 吃掉全部曝光的那批,只驗它們(逐國頁與假日頁不是這道閘門在管的)。
-const sitemapPath = '/mnt/customers/aeiou.now/site/dist/sitemap.xml';
-if (!existsSync(sitemapPath)) {
-  console.error('✗ 找不到 site/dist/sitemap.xml —— 先 `cd site && LOCALE=zh-TW pnpm build`');
-  process.exit(1);
-}
-let pages = topicUrlsFromSitemap(readFileSync(sitemapPath, 'utf8'), origin);
-if (sampleSize > 0 && pages.length > sampleSize) {
-  const step = Math.ceil(pages.length / sampleSize);
-  pages = pages.filter((_, i) => i % step === 0).slice(0, sampleSize);
+const requestedOrigins = origin
+  ? [{ locale: 'custom', origin: origin.replace(/\/$/, '') }]
+  : CRAWL_ORIGINS;
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const retry = async (fn) => {
+  let lastError;
+  for (let attempt = 1; attempt <= retries; attempt += 1) {
+    try { return await fn(); } catch (error) {
+      lastError = error;
+      if (attempt < retries) await sleep(250 * (2 ** (attempt - 1)));
+    }
+  }
+  throw lastError;
+};
+
+async function fetchSitemap(spec) {
+  const url = `${spec.origin}/sitemap.xml`;
+  const xml = await retry(async () => {
+    const response = await fetch(url, {
+      headers: { 'User-Agent': 'aeiou.now crawl-freshness' },
+      signal: AbortSignal.timeout(timeoutMs),
+    });
+    if (!response.ok) throw new Error(`${url} HTTP ${response.status}`);
+    return response.text();
+  });
+  const urls = topicUrlsFromSitemap(xml, spec.origin);
+  if (urls.length === 0) throw new Error(`${url} 沒有 Topic URL`);
+  return { ...spec, urls };
 }
 
+// Topic 主頁 = 吃掉全部曝光的那批，只驗它們（逐國頁與假日頁不是這道閘門在管的）。
+// 直接讀七站線上 sitemap，避免本地最後一次 build 的 LOCALE 偽裝成全站樣本。
+const sitemapResults = await Promise.all(requestedOrigins.map(async (spec) => {
+  try { return await fetchSitemap(spec); }
+  catch (error) { return { ...spec, urls: [], error: String(error?.message || error) }; }
+}));
+const sitemapErrors = sitemapResults.filter((result) => result.error);
+const groups = sitemapResults.map(({ locale, origin: siteOrigin, urls }) => ({
+  locale,
+  origin: siteOrigin,
+  urls,
+}));
+const pages = stratifiedTopicSample(groups, sampleSize);
+if (pages.length === 0) {
+  console.error('✗ 線上七站 sitemap 都沒有可驗的 Topic URL。');
+  for (const result of sitemapErrors) console.error(`  ${result.locale}: ${result.error}`);
+  process.exit(1);
+}
+console.log(`線上 sitemap：${sitemapResults.length - sitemapErrors.length}/${sitemapResults.length} 個成功；本次驗證 ${pages.length} 個 Topic URL`);
+for (const result of sitemapErrors) console.log(`  ⚠ ${result.locale} sitemap 讀取失敗：${result.error}`);
+const coverage = new Map();
+for (const page of pages) coverage.set(page.locale, (coverage.get(page.locale) || 0) + 1);
+console.log(`語系樣本：${[...coverage.entries()].map(([locale, count]) => `${locale} ${count}`).join('　')}`);
+
 const rows = [];
-for (const url of pages) {
+for (const page of pages) {
   try {
-    const r = await inspectUrl(SA, SITE, url);
-    rows.push({ url, crawl: r.lastCrawlTime || null, state: r.coverageState || '?' });
+    const r = await retry(() => inspectUrl(SA, SITE, page.url));
+    rows.push({ ...page, crawl: r.lastCrawlTime || null, state: r.coverageState || '?' });
   } catch (e) {
-    rows.push({ url, crawl: null, state: `ERR ${String(e.message).slice(0, 40)}` });
+    rows.push({ ...page, crawl: null, state: `ERR ${String(e.message).slice(0, 40)}` });
   }
 }
 
@@ -88,7 +138,7 @@ const stale = rows.filter((r) => !r.crawl || r.crawl.slice(0, 10) < since);
 if (stale.length) {
   console.log(`\n還沒重爬的 ${stale.length} 頁（Google 現在看到的仍是舊標題／舊摘要）：`);
   for (const r of stale.slice(0, 15)) {
-    console.log(`  ${(r.crawl ? r.crawl.slice(0, 10) : '從未抓取').padEnd(10)} ${r.url}`);
+    console.log(`  ${(r.crawl ? r.crawl.slice(0, 10) : '從未抓取').padEnd(10)} [${r.locale}] ${r.url}`);
   }
   if (stale.length > 15) console.log(`  …另外 ${stale.length - 15} 頁`);
 }
@@ -96,11 +146,12 @@ if (stale.length) {
 const gateReasons = [
   summary.ratio < minRatio ? `重爬比例 ${(summary.ratio * 100).toFixed(0)}% < ${(minRatio * 100).toFixed(0)}%` : null,
   summary.errors > 0 ? `${summary.errors} 筆 Inspection 錯誤` : null,
+  sitemapErrors.length > 0 ? `${sitemapErrors.length} 個 sitemap 讀取失敗` : null,
 ].filter(Boolean).join('；');
 console.log(
-  summary.ratio >= minRatio && summary.errors === 0
+  summary.ratio >= minRatio && summary.errors === 0 && sitemapErrors.length === 0
     ? `\n✅ 重爬比例 ${(summary.ratio * 100).toFixed(0)}% >= ${(minRatio * 100).toFixed(0)}%：現在量到的 CTR 才是新摘要的成績。`
     : `\n⛔ ${gateReasons}：**現在不要調文案**。`
       + `\n   GSC 的曝光／點擊仍混著舊摘要,拿它當成績單會得到錯的結論(2026-08-19/21/25/26 已經據此改過三次)。`,
 );
-if (gate && (summary.ratio < minRatio || summary.errors > 0)) process.exit(1);
+if (gate && (summary.ratio < minRatio || summary.errors > 0 || sitemapErrors.length > 0)) process.exit(1);

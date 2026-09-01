@@ -17,11 +17,11 @@
 
 ## locale en
 ### title
-Back-to-School Season
+School Start Dates
 ### summary
 There is no single back-to-school date: Japan's school year runs from 1 April to 31 March, Taiwan's administrative year starts on 1 August while pupils usually return in early September, and mainland China sets the autumn start through local calendars in late August or early September. Indonesia usually starts in the third week of July, India has a state-by-state April–June window, Brazil commonly starts in February, and US districts choose dates from late July to early September. This guide separates dates from uniforms, fees, transport, and the work families do before term begins.
 ### keywords
-Back-to-School Season,back to school dates,school uniforms,school supplies,school life around the world
+school start dates, when does school start, back-to-school dates, first day of school, school year dates, school uniforms, school supplies
 
 ## locale ja
 ### title

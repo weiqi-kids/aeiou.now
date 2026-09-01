@@ -167,7 +167,9 @@ if (existsSync(topicIndexPath)) {
     }
     const html = readFileSync(page, 'utf8');
     if (!html.includes('id="answers"')) errors.push(`${topic.slug}:缺 AEO answers 區塊`);
-    if (!html.includes('FAQPage')) errors.push(`${topic.slug}:缺可見答案對應的 FAQPage JSON-LD`);
+    // FAQPage 保留與否是語意／相容性選擇，不再是 Google Search rich-result 的必要條件；
+    // release gate 只守真正可見且可索引的答案區塊。Google 已停止 FAQ rich result，
+    // 因此不能把缺 FAQ schema 當成整站 SEO 失敗。
     // machine-owned trend Topic 先以無 cover 的輕量頁發布；manual/文化 Topic 維持
     // Discover cover 與 LCP 首圖硬要求，避免趨勢資料反過來阻塞整站發布。
     if (topic.category !== 'trend') {

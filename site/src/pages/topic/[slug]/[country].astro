@@ -35,6 +35,7 @@ import {
 } from '../../../lib/data.mjs';
 import { countryCellsFor } from '../../../lib/country-cells.mjs';
 import { holidayCellsFor } from '../../../lib/holidays.mjs';
+import { sortByOccurrenceStart } from '../../../lib/topic-dates.mjs';
 
 export function getStaticPaths() {
   const out = [];
@@ -66,6 +67,9 @@ const holidayYears = holidayCellsFor(code);
 
 const allObservances = observancesForFacts(facts);
 const observances = allObservances.filter((o) => o.country_code === code);
+// 同一國可能有多個 observance（例如印尼的 Ramadan 與 Idulfitri）。資料匯出順序
+// 是穩定的資料鍵順序，不等於讀者要看的時間順序；頁面與摘要都要先回答最早的日期。
+const orderedObservances = sortByOccurrenceStart(observances);
 const note = regionalNotesForFacts(facts).find((n) => n.country_code === code) || null;
 const isAbsence = observances.length === 0 && note?.kind === 'absence';
 
@@ -92,11 +96,11 @@ const heading = fillTemplate(t(questionKey), { country: label, topic: topicTitle
 // 非本市場那一國用「國名:Topic 名」—— 而那正好就是這一頁要接的查詢形狀:
 // zh-TW 站的 /id/ 頁 →「印尼:齋戒月與開齋節 2027」,對上 `2027印尼齋戒月`;
 // pt-BR 站的 /jp/ 頁 →「Japão: Dia dos Namorados 2027」,對上 `dia dos namorados japão`。
-const nextStart = observances.map((o) => o.next_occurrence?.starts_on).filter(Boolean).sort()[0] || null;
+const nextStart = orderedObservances.map((o) => o.next_occurrence?.starts_on).filter(Boolean).sort()[0] || null;
 const year = nextStart ? nextStart.slice(0, 4) : null;
 const isHomeMarket = code === (MARKET_COUNTRY[LOCALE] || null);
 const localNames = isHomeMarket
-  ? [...new Set(observances.map((o) => (o.local_name || '').trim()).filter(Boolean))].slice(0, 2)
+  ? [...new Set(orderedObservances.map((o) => (o.local_name || '').trim()).filter(Boolean))].slice(0, 2)
   : [];
 // title 裡的主題名取「第一個冒號之前」——否則會印出
 // 「巴西：兵役:被叫去的、只要登記的、和寫在憲法裡沒人叫的」,一個標題裡兩個冒號。
@@ -117,24 +121,49 @@ const dateLine = (observance) => {
   const end = occ.ends_on && occ.ends_on !== occ.starts_on ? `–${calendarDate(occ.ends_on)}` : '';
   return `${calendarDate(occ.starts_on)}${end}`;
 };
-const answer = observances.map((o) => customsText(i18n, o)).find(Boolean)
+// foreign observance 的原文名稱仍然是有用的答案標籤，但非 CJK 站不能把 CJK
+// 標點原樣帶進 title/description。文字保留，標點依本站 SEO_COPY 換成本站語系。
+const metaLocalName = (name) => {
+  if (!name || ['zh-TW', 'zh-CN', 'ja'].includes(LOCALE)) return name;
+  const punctuation = {
+    '、': copy.listSep,
+    '。': copy.endMark,
+    '；': copy.itemSep,
+    '｜': copy.titleSep,
+    '！': '!',
+    '？': '?',
+    '（': copy.parenOpen,
+    '）': copy.parenClose,
+  };
+  return String(name).replace(/[、。；｜！？（）]/g, (mark) => punctuation[mark] || mark);
+};
+const answer = orderedObservances.map((o) => customsText(i18n, o)).find(Boolean)
   || (note ? regionalNoteText(i18n, note) : null)
   || loc.summary
   || copy.noDate;
-const firstDate = observances.map(dateLine).find(Boolean);
+const dateSummary = orderedObservances
+  .map((observance) => ({ observance, date: dateLine(observance) }))
+  .filter((entry) => entry.date)
+  .map(({ observance, date }) => {
+    // 多個 observance 必須帶當地叫法，否則「兩段日期」無法對回哪個節次。
+    const name = orderedObservances.length > 1 ? metaLocalName(observance.local_name) : null;
+    return name ? `${name}${copy.colon}${date}` : date;
+  })
+  .join(copy.itemSep);
+const dateAnswer = dateSummary ? `${lead}${copy.colon}${dateSummary}${copy.endMark}` : null;
 // description **先答問題再講制度**,順序刻意與 Topic 頁相反。
 // 兩個理由:① 這一頁的讀者是搜「這個國家這個節日幾號」進來的,日期就是他要的;
 // ② check-rendered-depth 的 D1 不准兩個可索引頁共用同一段 description ——
 // 本市場那一格的散文與 Topic 頁的 lead 是同一段(實測 11 頁撞號),不換開頭就撞。
 // 沒有日期的格子(制度型、regional note)改用 h1 的問句當開頭,同樣不會與 Topic 頁重複。
 const metaDescription = compactDescription([
-  firstDate ? `${lead}${copy.colon}${firstDate}${copy.endMark}` : heading,
+  dateAnswer || heading,
   plainText(answer),
 ].join(' '));
 
 const sourceUrls = [...new Set([
-  ...observances.flatMap((o) => o.source_urls || []),
-  ...observances.flatMap((o) => o.next_occurrence?.source_urls || []),
+  ...orderedObservances.flatMap((o) => o.source_urls || []),
+  ...orderedObservances.flatMap((o) => o.next_occurrence?.source_urls || []),
   ...(note?.source_urls || []),
 ])].filter((url) => /^https?:\/\//.test(url));
 
@@ -148,8 +177,8 @@ const schema = {
   mainEntity: [
     { '@type': 'Question', name: heading,
       acceptedAnswer: { '@type': 'Answer', text: plainText(answer) } },
-    ...(firstDate ? [{ '@type': 'Question', name: `${lead}${copy.colon}${copy.when}`,
-      acceptedAnswer: { '@type': 'Answer', text: `${lead}${copy.colon}${firstDate}${copy.endMark}` } }] : []),
+    ...(dateAnswer ? [{ '@type': 'Question', name: `${lead}${copy.colon}${copy.when}`,
+      acceptedAnswer: { '@type': 'Answer', text: dateAnswer } }] : []),
   ],
 };
 ---
@@ -183,7 +212,7 @@ const schema = {
       )}
     </header>
 
-    {observances.map((observance) => (
+    {orderedObservances.map((observance) => (
       <section class="observance">
         <h2>{observance.local_name || topicTitle}</h2>
         <dl class="facts">

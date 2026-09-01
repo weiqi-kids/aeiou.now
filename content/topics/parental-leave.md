@@ -17,11 +17,11 @@
 
 ## locale en
 ### title
-What the law gives you after a child is born
+Maternity, Paternity and Parental Leave
 ### summary
 Taiwan's Labour Standards Act gives eight weeks of maternity leave, fully paid after six months of service. Japan's goes further in a different direction: Article 65 forbids an employer to let a woman work for eight weeks after birth — not a right but a prohibition. Brazil's Consolidation of Labour Laws sets 120 days. Indonesia's Law 4 of 2024 sets a floor of three months and a further three if needed, with the wage percentage written out month by month. The American FMLA says in plain words that the leave "may consist of unpaid leave". And India is stranger still: the constitution requires the state to provide maternity relief, in a part the constitution itself says no court may enforce.
 ### keywords
-how long is maternity leave, parental leave, paternity leave, paid maternity leave by country, unpaid family leave
+maternity leave by country, maternity leave in China, how long is maternity leave, parental leave, paternity leave, paid maternity leave, unpaid family leave
 
 ## locale ja
 ### title
