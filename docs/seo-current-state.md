@@ -52,11 +52,13 @@
 
 | 觀測 | 快照 | 解讀 |
 |---|---|---|
-| GSC query 近 28 日（全站診斷層） | 843 queries、2,251 impressions、4 clicks；最新資料至 2026-08-29；15 個有效資料日 | 樣本仍小，不能用單日或單批 title 改動宣稱因果。 |
-| en page 維度 | 1,505 impressions、2 clicks、平均位置 61.1 | en 是曝光最大但排名最弱的站，先做市場實驗。 |
-| sitemap／URL Inspection | 7 份 sitemap，0 errors／warnings；抽查 6 URLs 均 Submitted and indexed | 基本提交與索引鏈路正常。 |
-| GA4 | 271 sessions；227 筆疑似 bot，約 84%；較可信的 real-ish 流量約 44 | 不用 GA4 直接替代 GSC 來做搜尋排名或 HotScore 判斷。 |
-| Google 重爬 freshness | 20-url 分層樣本，19 筆 crawl history；8 筆在 8/26 後重爬，約 40%；12 筆仍 stale | 批量文案實驗要等重爬；明顯的資料一致性 bug 可以先修。 |
+| GSC query 近 28 日（全站診斷層） | 1,239 queries、4,039 impressions、5 clicks；最新資料至 2026-08-29；16 個有效資料日；59% 查詢在 51 名以後 | 曝光有增加，但樣本仍小，不能用這個窗宣稱單批 title 的因果。 |
+| en page 維度（較早的 page 快照） | 1,505 impressions、2 clicks、平均位置 61.1 | 目前仍把 en 視為曝光最大但排名最弱的市場；待下一次 page 維度回補再更新。 |
+| sitemap／URL Inspection | 7 份 sitemap，最後下載日 2026-09-01，0 errors／warnings；抽查 6 URLs 為 5 indexed、1 Crawled - currently not indexed | 提交正常；jp 首頁是目前唯一抽查到的索引異常，需獨立追查，不先牽動 en。 |
+| GA4 | 288 sessions；228 筆疑似 bot，約 79%；較可信的 real-ish 流量約 60；Organic Search 58 sessions、20 engaged、平均 55 秒 | 不用 GA4 直接替代 GSC 來做搜尋排名或 HotScore 判斷。 |
+| Google 重爬 freshness | 20-url 分層樣本，19 筆有 crawl history；基準日後重爬 1 筆，約 5%；19 筆仍 stale | 目前不要做第二批文案；這個樣本沒有證明四個 en 目標頁已被重爬。 |
+
+本次抽查的索引異常是 `https://jp.aeiou.now/` 的 `Crawled - currently not indexed`；它不是 en title 實驗的直接證據，後續要單獨確認首頁內容、canonical、內鏈與 Google 選擇的 canonical。
 
 ### en query × page 的第一批證據
 
