@@ -1,7 +1,7 @@
 {
   "scope": "country:MX",
   "window": "24h",
-  "thin": true,
+  "thin": false,
   "items": [
     {
       "rank": 1,
@@ -11,6 +11,30 @@
     },
     {
       "rank": 2,
+      "topic_id": "top_01M0G0RS6A55F631EY2SMSREB2",
+      "slug": "islamic-calendar-days",
+      "tier": "hot"
+    },
+    {
+      "rank": 3,
+      "topic_id": "top_01M1257QJBAGCKTBD5NB7EJD21",
+      "slug": "residency-and-visas",
+      "tier": "rising"
+    },
+    {
+      "rank": 4,
+      "topic_id": "top_01M0ZKB110Z03618QR9SKPEEXC",
+      "slug": "jewish-calendar-days",
+      "tier": "rising"
+    },
+    {
+      "rank": 5,
+      "topic_id": "top_01KZXQ6BRRS7P4YSJT3VYY4176",
+      "slug": "lantern-festival",
+      "tier": "rising"
+    },
+    {
+      "rank": 6,
       "topic_id": "top_01M0MJ5G7W8CNCNJYJBSKVNW0Y",
       "slug": "official-languages",
       "tier": "rising"

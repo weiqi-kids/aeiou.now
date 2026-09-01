@@ -329,7 +329,9 @@
       }
     }
   ],
-  "demand_countries": {},
+  "demand_countries": {
+    "zh-TW": "IN"
+  },
   "regional_notes": [
     {
       "country_code": "BR",
@@ -404,6 +406,6 @@
     "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
   ],
-  "content_updated_at": "2026-09-01T00:07:13.629Z",
-  "content_hash": "9280d0f10f01c3b05d5eb080d881f3f50ad869326e6786b3fb7ca52b9fbfed62"
+  "content_updated_at": "2026-09-01T05:04:01.503Z",
+  "content_hash": "0c2a430145a5787d1750b7cb174bf45f33ddaf09835184191cc9e97b51cd1e58"
 }
