@@ -562,7 +562,9 @@
       }
     }
   ],
-  "demand_countries": {},
+  "demand_countries": {
+    "zh-TW": "JP"
+  },
   "regional_notes": [],
   "countries": [
     {
@@ -635,6 +637,6 @@
     "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1760010",
     "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt"
   ],
-  "content_updated_at": "2026-08-31T05:48:32.253Z",
-  "content_hash": "c748699a5e8243ed50096d1533974f872266094cc8323ad71c3b0a33b87f7ec3"
+  "content_updated_at": "2026-09-02T05:04:51.364Z",
+  "content_hash": "037f0495a4c1bd6805ba7e73973ac88e906e2a962d1b5c412ff9ec8600f1aef0"
 }

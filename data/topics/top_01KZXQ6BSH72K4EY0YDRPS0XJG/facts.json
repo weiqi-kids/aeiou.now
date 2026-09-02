@@ -561,7 +561,9 @@
       }
     }
   ],
-  "demand_countries": {},
+  "demand_countries": {
+    "en": "CN"
+  },
   "regional_notes": [
     {
       "country_code": "JP",
@@ -639,6 +641,6 @@
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
     "https://www.mext.go.jp/a_menu/shougai/kyoiku-bunka/detail/1297836.htm"
   ],
-  "content_updated_at": "2026-08-31T05:48:32.231Z",
-  "content_hash": "f7afa7fed37419d7e31ea3f7d4aab3ebf6c5b289689d12850e399f37e6ed904e"
+  "content_updated_at": "2026-09-02T05:04:51.337Z",
+  "content_hash": "ea3a415d89678855862169cc52ab05b8223bd21e7ba88db4deb1877208856685"
 }

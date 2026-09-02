@@ -670,7 +670,9 @@
       }
     }
   ],
-  "demand_countries": {},
+  "demand_countries": {
+    "pt-BR": "BR"
+  },
   "regional_notes": [],
   "countries": [
     {
@@ -748,6 +750,6 @@
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
     "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf"
   ],
-  "content_updated_at": "2026-08-31T05:48:32.127Z",
-  "content_hash": "0c20bfb4ee33df1ef9aa769ab0617b3538ec0a4f262f23bda6ce810fb7554d22"
+  "content_updated_at": "2026-09-02T05:04:51.217Z",
+  "content_hash": "8c5ca05e9104afffcc566afdfe19a317dd28f509b98a2ecc69e5cc971985ad7c"
 }

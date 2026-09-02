@@ -556,7 +556,9 @@
       }
     }
   ],
-  "demand_countries": {},
+  "demand_countries": {
+    "zh-TW": "JP"
+  },
   "regional_notes": [],
   "countries": [
     {
@@ -625,6 +627,6 @@
     "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
     "https://www.usa.gov/holidays"
   ],
-  "content_updated_at": "2026-09-01T05:04:01.555Z",
-  "content_hash": "cded647271f5e5a4438d6db5ce25ac1b493b7c4ac237f04e4c9558bd10f91d64"
+  "content_updated_at": "2026-09-02T05:04:51.317Z",
+  "content_hash": "e7263dcc81a15ae6d85c9cd693bc660f4051ac7b7bb65cb947d842e912028d6c"
 }
