@@ -1,7 +1,7 @@
 {
   "scope": "country:SG",
   "window": "1m",
-  "thin": true,
+  "thin": false,
   "items": [
     {
       "rank": 1,
@@ -17,8 +17,20 @@
     },
     {
       "rank": 3,
+      "topic_id": "top_01M0ZKB0ZXZ5MD7CHP6V767D7J",
+      "slug": "founders-and-national-leaders",
+      "tier": "hot"
+    },
+    {
+      "rank": 4,
       "topic_id": "top_01KZXQ6BR1T8YKVJ0RQ7NZG4MV",
       "slug": "childrens-day",
+      "tier": "hot"
+    },
+    {
+      "rank": 5,
+      "topic_id": "top_01KZXQ6BS7YFX444JBVQJJCDQE",
+      "slug": "new-year",
       "tier": "hot"
     }
   ]

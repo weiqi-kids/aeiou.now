@@ -408,7 +408,9 @@
       }
     }
   ],
-  "demand_countries": {},
+  "demand_countries": {
+    "zh-TW": "CN"
+  },
   "regional_notes": [
     {
       "country_code": "BR",
@@ -498,6 +500,6 @@
     "https://panna.nic.in/en/festival/international-sharad-purnima-festival/",
     "https://www.usa.gov/holidays"
   ],
-  "content_updated_at": "2026-08-31T05:48:32.201Z",
-  "content_hash": "57589250fc13372d4f7767e6f5c9897b0ef69a6282377a0ed08362bd5c238d3e"
+  "content_updated_at": "2026-09-04T05:04:09.076Z",
+  "content_hash": "faff5d6d589c451f736c0449e4bb8a13ef8dcdb142c9c7e40245f0d19e22f799"
 }
