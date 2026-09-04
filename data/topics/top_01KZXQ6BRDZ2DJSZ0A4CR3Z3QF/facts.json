@@ -566,7 +566,9 @@
       }
     }
   ],
-  "demand_countries": {},
+  "demand_countries": {
+    "en": "ID"
+  },
   "regional_notes": [],
   "countries": [
     {
@@ -635,6 +637,6 @@
     "https://www.gov.cn/zhengce/content/202411/content_6986380.htm",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
   ],
-  "content_updated_at": "2026-08-31T05:48:32.172Z",
-  "content_hash": "23ddfe37ace351ad8516c744466e0b34e89a22714bdcbcc2e9ba72ef4dbe7bdb"
+  "content_updated_at": "2026-09-03T01:37:02.103Z",
+  "content_hash": "cd0ad3b6fac77c7f7ab20864cb3d667a5f9774b5dab0262dabae86dabf7f2123"
 }

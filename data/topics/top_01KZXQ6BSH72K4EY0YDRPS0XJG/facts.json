@@ -97,10 +97,12 @@
       "date_range_end": null,
       "popularity_rank": 2,
       "source_ids": [
-        "src_D841A1BDECBC57CA74A2E277"
+        "src_D841A1BDECBC57CA74A2E277",
+        "src_6DFD76B82DF608B35353178A"
       ],
       "source_urls": [
-        "http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s3580/moe_2390/moe_2391/tnull_38105.html"
+        "http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s3580/moe_2390/moe_2391/tnull_38105.html",
+        "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html"
       ],
       "occurrences": [
         {
@@ -562,7 +564,8 @@
     }
   ],
   "demand_countries": {
-    "en": "CN"
+    "en": "CN",
+    "zh-TW": "CN"
   },
   "regional_notes": [
     {
@@ -623,6 +626,7 @@
     "src_07F374EE64FFF1100ED74220",
     "src_1AA43B865B6A392E301250F5",
     "src_26935C7ABD6FCA6BF551F543",
+    "src_6DFD76B82DF608B35353178A",
     "src_9B84ABAFACB03ECC94ED650A",
     "src_D841A1BDECBC57CA74A2E277",
     "src_DF3F8681DFB3B654018AA81B",
@@ -634,6 +638,7 @@
     "https://www.ed.gov/",
     "https://www.stmargaretspri.moe.edu.sg/school-information/school-terms-n-holidays/",
     "https://ppid.inhilkab.go.id/berita/detail/hari-guru-nasional-diperingati-setiap-25-november",
+    "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
     "https://www.education.gov.in/",
     "http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s3580/moe_2390/moe_2391/tnull_38105.html",
     "https://www.unesco.org/en/days/teachers?hub=66705",
@@ -641,6 +646,6 @@
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
     "https://www.mext.go.jp/a_menu/shougai/kyoiku-bunka/detail/1297836.htm"
   ],
-  "content_updated_at": "2026-09-02T05:04:51.337Z",
-  "content_hash": "ea3a415d89678855862169cc52ab05b8223bd21e7ba88db4deb1877208856685"
+  "content_updated_at": "2026-09-04T01:28:22.320Z",
+  "content_hash": "4bbd15869bbd2050e223fc199a3745f11786c20efc56c882e4ed6037414dc94a"
 }

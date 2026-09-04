@@ -1,7 +1,7 @@
 {
   "scope": "country:DE",
   "window": "1y",
-  "thin": true,
+  "thin": false,
   "items": [
     {
       "rank": 1,
@@ -23,6 +23,12 @@
     },
     {
       "rank": 4,
+      "topic_id": "top_01KZXQ6BR92AZA5DJBBW90DPHH",
+      "slug": "easter",
+      "tier": "hot"
+    },
+    {
+      "rank": 5,
       "topic_id": "top_01M0G0RS8N8C52YFBDP723VYTQ",
       "slug": "womens-day",
       "tier": "hot"

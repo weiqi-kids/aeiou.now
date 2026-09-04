@@ -335,10 +335,18 @@
       "date_range_end": null,
       "popularity_rank": 1,
       "source_ids": [
-        "src_6F37C924172E8E4A2FC1A899"
+        "src_6F37C924172E8E4A2FC1A899",
+        "src_E71F469EB3135AB2F09023F2",
+        "src_1A80A58B5E867818100E7776",
+        "src_891839E60F8C86A5F610A5CD",
+        "src_A16E1E8AF5201C938E5B98F5"
       ],
       "source_urls": [
-        "https://laws.e-gov.go.jp/law/323AC1000000178"
+        "https://laws.e-gov.go.jp/law/323AC1000000178",
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html",
+        "https://www8.cao.go.jp/kourei/kou-kei/elderly.html",
+        "https://jsite.mhlw.go.jp/tokyo-roudoukyoku/content/contents/002093680.pdf"
       ],
       "occurrences": [
         {
@@ -613,30 +621,38 @@
   "relations": [],
   "source_ids": [
     "src_05B7C11165A06F81AE4D234D",
+    "src_1A80A58B5E867818100E7776",
     "src_2DC197BDC32AB8A3D7278D4D",
     "src_637EDF8071C44F4B93CE775B",
     "src_6F37C924172E8E4A2FC1A899",
     "src_7F43C263DDCB73525BB22084",
     "src_84C04CBABC1F0564A7A33624",
+    "src_891839E60F8C86A5F610A5CD",
     "src_951DC21FE46D2F43F751E0D6",
+    "src_A16E1E8AF5201C938E5B98F5",
     "src_C01E47D35A90E063A3F44D3D",
     "src_C73E0A73C63A23471F2D835C",
     "src_D5B3643A8804BB3443EBA30C",
-    "src_D74CFCA1045D3455A4615E43"
+    "src_D74CFCA1045D3455A4615E43",
+    "src_E71F469EB3135AB2F09023F2"
   ],
   "source_urls": [
     "https://kemenag.go.id/opini/refleksi-hari-lanjut-usia-nasional-6si366",
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html",
     "https://www.india.gov.in/calendar",
     "https://ayosehat.kemkes.go.id/hari-lanjut-usia-nasional",
     "https://laws.e-gov.go.jp/law/323AC1000000178",
     "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11433.htm",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050037",
+    "https://www8.cao.go.jp/kourei/kou-kei/elderly.html",
     "https://depart.moe.edu.tw/ED2400/News_Content.aspx?n=15388506A60ACB81&sms=87137EA6056ADFD1&s=202F85DB5615A4F8",
+    "https://jsite.mhlw.go.jp/tokyo-roudoukyoku/content/contents/002093680.pdf",
     "https://www.govinfo.gov/content/pkg/PLAW-105publ225/html/PLAW-105publ225.htm",
     "https://flk.npc.gov.cn/detail2.html?ZmY4MDgwODE2ZjNjYmIzYzAxNmY0MTBlMzYyNTA2ZDA%3D",
     "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1760010",
-    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt"
+    "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt",
+    "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
   ],
-  "content_updated_at": "2026-09-02T05:04:51.364Z",
-  "content_hash": "037f0495a4c1bd6805ba7e73973ac88e906e2a962d1b5c412ff9ec8600f1aef0"
+  "content_updated_at": "2026-09-04T01:52:16.331Z",
+  "content_hash": "7f124bf80b272a3ce8ead7c3e367f0e133876d4e38d673464422f52502f0ac90"
 }

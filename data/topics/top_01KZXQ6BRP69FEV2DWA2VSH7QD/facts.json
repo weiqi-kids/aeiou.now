@@ -489,10 +489,12 @@
       "date_range_end": null,
       "popularity_rank": 7,
       "source_ids": [
-        "src_F936765E8EFFBF4BDCD32B47"
+        "src_F936765E8EFFBF4BDCD32B47",
+        "src_7C37536E42864FB5D65C3B64"
       ],
       "source_urls": [
-        "https://www.usa.gov/holidays"
+        "https://www.usa.gov/holidays",
+        "https://www.opm.gov/frequently-asked-questions/pay-and-leave-faq/pay-administration/what-are-federal-holidays/"
       ],
       "occurrences": [
         {
@@ -610,6 +612,7 @@
   "source_ids": [
     "src_1A80A58B5E867818100E7776",
     "src_6DFD76B82DF608B35353178A",
+    "src_7C37536E42864FB5D65C3B64",
     "src_8881C7B43193D1F50ED0E47C",
     "src_8ADF07F096907DFC86796ED4",
     "src_A61C3F4E3D1BCAA881B75B37",
@@ -621,6 +624,7 @@
   "source_urls": [
     "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html",
     "https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html",
+    "https://www.opm.gov/frequently-asked-questions/pay-and-leave-faq/pay-administration/what-are-federal-holidays/",
     "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays",
     "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
     "https://etribal.maharashtra.gov.in/Uploads/General/Public_Holidays_2025.pdf",
@@ -629,6 +633,6 @@
     "https://www.usa.gov/holidays",
     "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2026"
   ],
-  "content_updated_at": "2026-08-31T05:48:32.189Z",
-  "content_hash": "6d6a79e47f29314ec572e0930afbd637a9dbe586422668fa9a045e322d38cb14"
+  "content_updated_at": "2026-09-04T01:28:22.259Z",
+  "content_hash": "f82f5823365f8cbeda79167198daad0c3d68877857d48e2e4b774c2f0edd8afb"
 }
