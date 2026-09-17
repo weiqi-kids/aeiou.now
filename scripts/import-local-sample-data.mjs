@@ -222,6 +222,75 @@ function deleteManagedEventRows(topicIds, managedEventSourceUrls, currentEventId
   return removed;
 }
 
+// 來源網址退役之後留下的孤兒列（2026-09-17 補）。
+//
+// deleteManagedEventRows 的 WHERE 有一條 `e.source_id IN (managed 清單)`，所以它只看得到
+// **來源還在清單裡**的舊列。可是 event_id 是 `國碼:城市:活動名` 的雜湊：來源網址一換、
+// 或活動名一改，新列用新 id 寫進去，舊列的來源同時退出清單 —— 於是舊列兩邊都掃不到，
+// 永遠留在資料庫裡，而且照樣渲染在頁面上。
+//
+// 實測（2026-09-17）：Museu da Imigração 的 MigraMundo 講座搬到新網址並改了標題後，
+// 舊列還在，pt-BR 站的 /topic/residency-and-visas/ 於是把同一段描述印了兩次，
+// 被 D3 渲染層厚度守門擋下整站 build。
+//
+// 判準：`events` 這張表的**唯一寫入者就是本腳本**（`grep -rn "INTO events" scripts/ api/`
+// 只有這裡），所以受管理市場的城市裡，任何一列若 source_id 不在目前的 managed 清單中、
+// 且不是這一輪要寫進去的列，就是孤兒。
+// 刻意用 city_code 而不是 topic：活動即使已經沒有任何 topic 關聯也該被清掉，
+// 而那正是孤兒最容易出現的形狀。
+function deleteRetiredSourceEventRows(cityCodes, managedEventSourceUrls, currentEventIds) {
+  if (cityCodes.length === 0) return 0;
+  const keep = new Set(managedEventSourceUrls.map(sourceId));
+  const cityPlaceholders = cityCodes.map(() => "?").join(",");
+  const rows = db.prepare(
+    `SELECT event_id, source_id FROM events WHERE city_code IN (${cityPlaceholders})`
+  ).all(...cityCodes);
+  let removed = 0;
+  for (const row of rows) {
+    if (keep.has(row.source_id)) continue;             // 來源還在清單裡：交給 deleteManagedEventRows 判
+    if (currentEventIds.has(row.event_id)) continue;   // 這一輪就要寫進去的列，不能動
+    db.prepare("DELETE FROM event_topics WHERE event_id = ?").run(row.event_id);
+    db.prepare("DELETE FROM event_i18n WHERE event_id = ?").run(row.event_id);
+    db.prepare("DELETE FROM events WHERE event_id = ?").run(row.event_id);
+    removed += 1;
+  }
+  return removed;
+}
+
+// 地點的同型孤兒（2026-09-17 補）。
+//
+// 地點沒有「不在清單就刪」這條路：deleteManagedPlaceRows 只認 retired_place_ids 這份
+// **人工**退役清單，所以換掉一個地點的來源網址、或改了地點名，舊列就留在資料庫裡，
+// 除非有人記得把舊 place_id 抄進 retired_place_ids。實測（2026-09-17）當下就有三列
+// 這樣的殘留（Loveland Farmers Market、湯島天満宮、Cosap），都還印在站上。
+//
+// 🔴 這裡**不**改成「不在清單就刪」——retired_place_ids 是刻意的人工閘門，
+//    地點比活動穩定得多，誤刪的代價也大。判準收窄成與活動同一條：
+//    只刪**來源整批退役**的列（沒有任何一個 source_url 還在 managed_place_source_urls 裡），
+//    那是「這一列的出處已經不在管線的設定中」，不是「這一輪沒列到它」。
+//    刻意留給 retired_place_ids 的仍然是：來源還在、但人決定讓它下架的那種。
+function deleteRetiredSourcePlaceRows(cityCodes, managedPlaceSourceUrls, currentPlaceIds) {
+  if (cityCodes.length === 0) return 0;
+  const keep = new Set(managedPlaceSourceUrls);
+  const cityPlaceholders = cityCodes.map(() => "?").join(",");
+  const rows = db.prepare(
+    `SELECT place_id, source_urls_json FROM places WHERE city_code IN (${cityPlaceholders})`
+  ).all(...cityCodes);
+  let removed = 0;
+  for (const row of rows) {
+    if (currentPlaceIds.has(row.place_id)) continue;   // 這一輪就要寫進去的列，不能動
+    let urls = [];
+    try { urls = JSON.parse(row.source_urls_json || "[]"); } catch { urls = []; }
+    // 還有任何一個來源留在清單裡，就不是「出處消失」，交給 retired_place_ids 處理。
+    if (urls.length === 0 || urls.some((url) => keep.has(url))) continue;
+    db.prepare("DELETE FROM place_topics WHERE place_id = ?").run(row.place_id);
+    db.prepare("DELETE FROM place_i18n WHERE place_id = ?").run(row.place_id);
+    db.prepare("DELETE FROM places WHERE place_id = ?").run(row.place_id);
+    removed += 1;
+  }
+  return removed;
+}
+
 function deleteManagedPlaceRows(topicIds, retiredPlaceIds, currentPlaceIds) {
   const placeIds = [...new Set(retiredPlaceIds)];
   if (placeIds.length === 0 || topicIds.length === 0) return 0;
@@ -307,6 +376,8 @@ function importSample() {
   const currentEventIds = new Set((input.events || []).map((event) =>
     stableId("evt", `${event.country_code}:${event.city_code}:${event.name}`)));
   let removedManagedEvents = 0;
+  let removedOrphanEvents = 0;
+  let removedOrphanPlaces = 0;
   let removedManagedPlaces = 0;
 
   db.exec("BEGIN");
@@ -318,6 +389,16 @@ function importSample() {
       currentPlaceIds,
     );
     removedManagedEvents = deleteManagedEventRows(topicIds, managedEventSourceUrls, currentEventIds);
+    removedOrphanEvents = deleteRetiredSourceEventRows(
+      markets.map((market) => market.city_code),
+      managedEventSourceUrls,
+      currentEventIds,
+    );
+    removedOrphanPlaces = deleteRetiredSourcePlaceRows(
+      markets.map((market) => market.city_code),
+      managedPlaceSourceUrls,
+      currentPlaceIds,
+    );
 
     for (const place of input.places || []) {
       const id = stableId("plc", `${place.country_code}:${place.city_code}:${place.name}`);
@@ -390,6 +471,12 @@ function importSample() {
   console.log(`已匯入 ${placeIds.length} 個地點、${eventIds.length} 個活動；市場 ${marketSummary}`);
   console.log(`已清除受管理來源中不在目前清單的舊地點 ${removedManagedPlaces} 個`);
   console.log(`已清除受管理來源中不在目前清單的舊活動 ${removedManagedEvents} 個`);
+  if (removedOrphanEvents > 0) {
+    console.log(`已清除來源已退役的孤兒活動 ${removedOrphanEvents} 個（來源網址換掉或活動改名留下的舊列）`);
+  }
+  if (removedOrphanPlaces > 0) {
+    console.log(`已清除來源已退役的孤兒地點 ${removedOrphanPlaces} 個（來源整批退役留下的舊列；人工下架仍走 retired_place_ids）`);
+  }
   console.log(`已刪除舊 demo 地點 ${OLD_DEMO_PLACE_IDS.length} 個、活動 ${OLD_DEMO_EVENT_IDS.length} 個及未被引用的假來源 ${OLD_DEMO_SOURCE_IDS.length} 個`);
 }
 
