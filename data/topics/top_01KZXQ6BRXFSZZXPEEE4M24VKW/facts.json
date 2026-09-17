@@ -556,7 +556,9 @@
       }
     }
   ],
-  "demand_countries": {},
+  "demand_countries": {
+    "pt-BR": "US"
+  },
   "regional_notes": [],
   "countries": [
     {
@@ -621,6 +623,6 @@
     "https://www.gov.cn/zhengce/content/202411/content_6986380.htm",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
   ],
-  "content_updated_at": "2026-08-31T05:48:32.206Z",
-  "content_hash": "307ba32b9c73382ec9cf1f6ae300316ddec2ab16dea4b11636233a556705be7c"
+  "content_updated_at": "2026-09-17T01:39:39.687Z",
+  "content_hash": "ea74e08b48f6d000ed9c0dc31da0443263e1d9ea516e3195c02e53f8d3a11cd1"
 }

@@ -240,10 +240,10 @@
         }
       ],
       "next_occurrence": {
-        "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_rosh-hashanah_2026_2026-09-12",
-        "occurrence_year": 2026,
-        "starts_on": "2026-09-12",
-        "ends_on": "2026-09-13",
+        "occurrence_id": "occ_obs_top_01M0ZKB110Z03618QR9SKPEEXC_US_rosh-hashanah_2027_2027-10-02",
+        "occurrence_year": 2027,
+        "starts_on": "2027-10-02",
+        "ends_on": "2027-10-03",
         "calendar_system": "local",
         "timezone": "America/New_York",
         "date_status": "confirmed",
@@ -342,7 +342,9 @@
       }
     }
   ],
-  "demand_countries": {},
+  "demand_countries": {
+    "en": "US"
+  },
   "regional_notes": [
     {
       "country_code": "BR",
@@ -427,6 +429,6 @@
     "https://laws.e-gov.go.jp/law/326AC0000000126",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095"
   ],
-  "content_updated_at": "2026-08-31T05:48:32.320Z",
-  "content_hash": "044484bd977ff0c98be3cdd3f6e1e1bbd4ea2e8a69f936ad4f1661dc869efd18"
+  "content_updated_at": "2026-09-17T01:39:39.780Z",
+  "content_hash": "5c9050903c179e3fbccab562eb7bcb5d81df3558281d32e465525d3cc2178a8e"
 }
