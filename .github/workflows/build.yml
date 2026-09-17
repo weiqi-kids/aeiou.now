@@ -207,10 +207,12 @@ jobs:
           # 「上一次部署長什麼樣」的權威副本,所以不必回寫原始碼庫(七個語系平行跑,回寫必打架)。
           # 第一次跑(檔案還不存在)= 全部視為新頁,與加這段之前的行為一樣。
           # 緣由與實測數字見 site/scripts/sitemap-lastmod.mjs 檔頭。
+          # --prev-dist 傳 clone 下來的上一版 HTML:上一版的指紋**重算**而不是讀存的 hash,
+          # 指紋規則改了也不會把整站誤推一次(2026-09-17)。這一步必須在下面清空 PUB_DIR 之前。
           PREV_STAMPS="$RUNNER_TEMP/prev-page-stamps.json"
           git -C "$PUB_DIR" show HEAD:.page-stamps.json > "$PREV_STAMPS" 2>/dev/null \
             || echo '{}' > "$PREV_STAMPS"
-          node site/scripts/sitemap-lastmod.mjs --dist site/dist --prev "$PREV_STAMPS"
+          node site/scripts/sitemap-lastmod.mjs --dist site/dist --prev "$PREV_STAMPS" --prev-dist "$PUB_DIR"
 
           git -C "$PUB_DIR" config user.name  "aeiou-ci"
           git -C "$PUB_DIR" config user.email "lightman.chang@gmail.com"
@@ -334,27 +336,9 @@ jobs:
             echo "verify OK: ${{ matrix.locale }}(dist 無變更,線上維持上一版)"
           fi
 
-      # Slack 告警:secret 未設時 gracefully skip,不讓整條紅掉。
-      # bot-token 式(chat.postMessage),與其他站台 deploy.yml 慣例一致;
-      # 需 repo secrets:SLACK_BOT_TOKEN + SLACK_CHANNEL_ID(頻道建好後設定)。
-      - name: Slack alert on failure
-        if: failure()
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
-        run: |
-          set -uo pipefail
-          if [ -z "${SLACK_BOT_TOKEN:-}" ] || [ -z "${SLACK_CHANNEL_ID:-}" ]; then
-            echo "SLACK_BOT_TOKEN/SLACK_CHANNEL_ID 未設定,跳過 Slack 告警(不視為失敗)。"
-            exit 0
-          fi
-          RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
-          TEXT="aeiou.now build 失敗:locale=${{ matrix.locale }} repo=${{ matrix.repo }}\n${RUN_URL}"
-          curl -s -X POST https://slack.com/api/chat.postMessage \
-            -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
-            -H 'Content-Type: application/json; charset=utf-8' \
-            --data "$(printf '{"channel":"%s","text":"%s"}' "$SLACK_CHANNEL_ID" "$TEXT")" \
-            || echo "Slack 送出失敗(忽略,不影響 job 結果)"
+      # Slack 告警不在這裡(2026-09-17 起):原本掛在這個 job 裡的 `if: failure()` step,
+      # 在 test job 紅掉時**永遠不會執行**(七個 build-deploy 全被 skip),於是 09-03~09-17
+      # CI 連紅 14 天、Slack 零訊息。改由最後的 notify job 在 run 層統一通知(見檔尾)。
 
   # 七站全部部署完才送 —— IndexNow 會去抓你送的 URL,提早送等於送 404。
   # best-effort:continue-on-error,失敗不影響任何已完成的部署。
@@ -374,3 +358,94 @@ jobs:
       - name: Submit changed URLs to IndexNow
         run: node scripts/indexnow.mjs
         continue-on-error: true
+
+  # run 層通知(2026-09-17 加)。三個必守事實:
+  #  1. `if: always()` + needs 三個 job —— test 紅、matrix 任一站紅、都會走到這裡;
+  #     不再有「掛在被 skip 的 job 裡所以永遠不說話」的死角。
+  #  2. **只在狀態改變時說話**:第一次失敗說一次、連續第 3 次再說一次(加 @channel)、
+  #     之後每 6 次說一次;恢復時說「恢復」。排程每小時跑,失敗一直吵等於沒人看。
+  #     「之前的 run」用 Actions API 查同一支 workflow 在 main 上已完成的 run。
+  #  3. secret 沒設就靜靜 exit 0,通知本身**絕不**讓 run 變紅(它是旁觀者不是關卡)。
+  notify:
+    name: notify
+    needs: [test, build-deploy, indexnow]
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+    steps:
+      - name: Slack(只在狀態改變時說話)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          RESULT_TEST: ${{ needs.test.result }}
+          RESULT_BUILD: ${{ needs.build-deploy.result }}
+        run: |
+          set -uo pipefail
+          RUN_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          echo "test=${RESULT_TEST} build-deploy=${RESULT_BUILD} run=${RUN_URL}"
+
+          # cancelled(concurrency 取消、手動取消)不是故障,不通知。
+          if [ "${RESULT_TEST}" = "cancelled" ] || [ "${RESULT_BUILD}" = "cancelled" ]; then
+            echo "run 被取消,不通知"; exit 0
+          fi
+          THIS_FAILED=0
+          if [ "${RESULT_TEST}" = "failure" ] || [ "${RESULT_BUILD}" = "failure" ]; then THIS_FAILED=1; fi
+
+          # 之前的 run(同一支 workflow、main、已完成、排除自己),由新到舊;算連續失敗的長度。
+          # cancelled / skipped 是中性的(排隊中被新 push 取消),跳過不中斷 —— 當成綠燈會把連敗
+          # 從中間重數、也會讓恢復訊息消失。只抓 100 筆:整頁都紅就當「至少 100」,
+          # 週期提醒改用 run 序號取模,才不會停機第三天起就沒聲音。
+          PREV="$(gh api "repos/${GITHUB_REPOSITORY}/actions/workflows/build.yml/runs?branch=main&status=completed&per_page=100" \
+                   --jq ".workflow_runs[] | select(.id != ${GITHUB_RUN_ID}) | select(.conclusion == \"success\" or .conclusion == \"failure\") | .conclusion" 2>/dev/null || true)"
+          STREAK=0; SEEN=0; CAPPED=0
+          while IFS= read -r c; do
+            [ -z "$c" ] && continue
+            SEEN=$((SEEN + 1))
+            if [ "$c" = "failure" ]; then STREAK=$((STREAK + 1)); else break; fi
+          done <<< "$PREV"
+          [ "$SEEN" -gt 0 ] && [ "$STREAK" -eq "$SEEN" ] && CAPPED=1
+          echo "之前連續失敗:${STREAK}(capped=${CAPPED})"
+
+          TEXT=""
+          if [ "$THIS_FAILED" = "1" ]; then
+            NOW=$((STREAK + 1))
+            if [ "$CAPPED" = "1" ]; then
+              SPEAK=0; [ $((GITHUB_RUN_NUMBER % 6)) -eq 0 ] && SPEAK=1
+              LABEL="連續 ≥${NOW} 次"
+            else
+              SPEAK=0; { [ "$NOW" -eq 1 ] || [ "$NOW" -eq 3 ] || [ $((NOW % 6)) -eq 0 ]; } && SPEAK=1
+              LABEL="連續第 ${NOW} 次"
+            fi
+            if [ "$SPEAK" = "1" ]; then
+              FAILED_JOBS="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/jobs?per_page=100" \
+                              --jq '[.jobs[] | select(.conclusion=="failure") | .name] | join(", ")' 2>/dev/null || echo "?")"
+              MENTION=""; [ "$NOW" -ge 3 ] && MENTION="<!channel> "
+              TEXT="${MENTION}🔴 aeiou.now CI 失敗(${LABEL}):${FAILED_JOBS:-?}\n${RUN_URL}\n${GITHUB_EVENT_NAME}:${GITHUB_SHA::7} ${GITHUB_REF_NAME}"
+            else
+              echo "${LABEL}失敗,不重複通知"
+            fi
+          elif [ "$STREAK" -ge 1 ]; then
+            PREFIX=""; [ "$CAPPED" = "1" ] && PREFIX="≥"
+            TEXT="🟢 aeiou.now CI 恢復(之前連續 ${PREFIX}${STREAK} 次失敗)\n${RUN_URL}\n${GITHUB_SHA::7} ${GITHUB_REF_NAME}"
+          else
+            echo "綠燈且之前也是綠燈,不通知"
+          fi
+          [ -z "$TEXT" ] && exit 0
+
+          if [ -z "${SLACK_BOT_TOKEN:-}" ] || [ -z "${SLACK_CHANNEL_ID:-}" ]; then
+            echo "SLACK_BOT_TOKEN/SLACK_CHANNEL_ID 未設定,跳過 Slack 通知(不視為失敗)。"; exit 0
+          fi
+          # 用 jq 組 JSON:訊息裡有 job 名稱與 URL,不能用 printf 直接拼進 JSON。
+          BODY="$(jq -cn --arg ch "$SLACK_CHANNEL_ID" --arg t "$(printf '%b' "$TEXT")" \
+                   '{channel:$ch, text:$t, unfurl_links:false, unfurl_media:false}')"
+          RESP="$(curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data "$BODY" || true)"
+          # 連不上或回空 body 時 jq 對空輸入什麼都不印,log 上會看不出送沒送 —— 補一個假回應讓它走到「失敗」那行。
+          [ -n "$RESP" ] || RESP='{"ok":false,"error":"curl failed or empty response"}'
+          echo "$RESP" | jq -r 'if .ok then "Slack 已送出" else "Slack 送出失敗(忽略):" + (.error // "unknown") end' 2>/dev/null \
+            || echo "Slack 送出失敗(忽略,不影響 run):非 JSON 回應"

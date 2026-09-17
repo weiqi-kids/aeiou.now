@@ -18,7 +18,9 @@
 // 本來就是「上一次部署長什麼樣」的權威副本,不必回寫原始碼庫(CI 七個語系平行跑,
 // 回寫必打架)。
 //
-// ⚠ 指紋前先正規化,把「與讀者無關、但每次 build 都不同」的東西洗掉:
+// ⚠ 指紋前先正規化,把「與讀者無關、但每次 build 都不同」的東西洗掉
+//   (實作與逐條緣由在 page-fingerprint.mjs;2026-09-17 起連導覽尾端的 Topic 捷徑也洗,
+//   那是同一個坑從另一個入口回來):
 //   · `_astro/<hash>.css|js` 的檔名 —— 任何一個 scoped style 改動都會換掉它,
 //     不正規化的話「改一個元件的 CSS」又會變成 469 頁一起宣告改版(同一個坑)。
 //   · `data-astro-cid-xxxx` 同理。
@@ -30,8 +32,8 @@
 //   不是推翻它。
 //
 // 裸執行(沒有上一版指紋)= 全部視為新頁、蓋上現在,與改這支之前的行為一樣。
-import { createHash } from 'node:crypto';
-import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, statSync } from 'node:fs';
+import { fingerprint } from './page-fingerprint.mjs';
+import { appendFileSync, readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, statSync } from 'node:fs';
 import { dirname, join, relative, sep } from 'node:path';
 
 const args = process.argv.slice(2);
@@ -43,18 +45,12 @@ const DIST = flag('--dist', 'dist');
 const PREV = flag('--prev', join(DIST, '.page-stamps.json'));
 const OUT = flag('--out', join(DIST, '.page-stamps.json'));
 const NOW = flag('--now', new Date().toISOString());
+// 上一次部署的 HTML 所在目錄(CI 傳 publish repo 的 clone)。給了就**重算上一版的指紋**來比,
+// 不信任 .page-stamps.json 裡存的 hash —— 指紋的正規化規則一改(2026-09-17 洗掉導覽捷徑),
+// 舊 hash 全部對不上,會把整站再誤推一次;拿舊 HTML 重算就永遠是同一套規則比同一套規則。
+// 存在檔裡的 hash 只剩「沒有上一版 HTML 可比」時(本機裸跑)才用。
+const PREV_DIST = flag('--prev-dist', null);
 const quiet = args.includes('--quiet');
-
-/** 每次 build 都會變、但讀者看不到的東西,一律洗成固定字串再取指紋。 */
-function fingerprint(html) {
-  const normalised = String(html)
-    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '<style/>')
-    .replace(/_astro\/[^"'\s>]+/g, '_astro/*')
-    .replace(/data-astro-cid-[a-z0-9]+/g, 'data-astro-cid')
-    .replace(/\s+/g, ' ')
-    .trim();
-  return createHash('sha256').update(normalised).digest('hex');
-}
 
 function walk(dir, out = []) {
   for (const name of readdirSync(dir)) {
@@ -87,12 +83,21 @@ const next = {};
 let changed = 0;
 let carried = 0;
 
+let recomputed = 0;
 for (const file of walk(DIST)) {
   const route = routeOf(file);
   const hash = fingerprint(readFileSync(file, 'utf8'));
   const before = prev[route];
-  if (before && before.hash === hash && before.updated_at) {
-    next[route] = before;
+  let beforeHash = before ? before.hash : null;
+  if (PREV_DIST) {
+    const prevFile = join(PREV_DIST, relative(DIST, file));
+    if (existsSync(prevFile)) {
+      beforeHash = fingerprint(readFileSync(prevFile, 'utf8'));
+      recomputed += 1;
+    }
+  }
+  if (before && before.updated_at && beforeHash === hash) {
+    next[route] = { hash, updated_at: before.updated_at };
     carried += 1;
   } else {
     next[route] = { hash, updated_at: NOW };
@@ -129,8 +134,20 @@ if (!quiet) {
   if (previousCount > 0 && changed === walk(DIST).length && changed > 1) {
     console.warn(`⚠ sitemap lastmod：${changed} 頁全部被判定為變更；請檢查是否把 build-time 相對值寫進 HTML。`);
   }
-  console.log(
-    `✓ sitemap lastmod:${changed} 頁內容變了(蓋 ${NOW.slice(0, 19)}Z)、${carried} 頁沿用舊時間戳;`
-    + `改寫 ${rewritten} 筆${missing ? `、${missing} 筆在 dist 找不到對應頁面(原樣保留)` : ''}`,
-  );
+  const summary = `sitemap lastmod:${changed} 頁內容變了(蓋 ${NOW.slice(0, 19)}Z)、${carried} 頁沿用舊時間戳;`
+    + `改寫 ${rewritten} 筆${missing ? `、${missing} 筆在 dist 找不到對應頁面(原樣保留)` : ''}`
+    + (PREV_DIST ? `;上一版 HTML 重算 ${recomputed} 頁` : '');
+  console.log(`✓ ${summary}`);
+  // CI 上把比例寫進 run 的 Summary 頁,讓「這一輪推新了幾頁」不用翻 log 就看得到。
+  // 只印不擋:凍結後首次部署、真的改了標題,整站變更都是誠實結果,擋門會把 CI 再次卡死。
+  // 只在有上一版可比時寫:`pnpm build` 串鏈裡那次裸跑沒有 --prev,永遠是「全部變了」,
+  // 寫進 Summary 只會誤導(CI 每個語系 job 都會跑兩次這支)。
+  const hadPrevious = Boolean(PREV_DIST) || args.includes('--prev');
+  if (process.env.GITHUB_STEP_SUMMARY && hadPrevious) {
+    try {
+      const total = changed + carried;
+      const flag = previousCount > 0 && total > 1 && changed === total ? ' ⚠ 全部頁面被判定為變更' : '';
+      appendFileSync(process.env.GITHUB_STEP_SUMMARY, `- ${summary}${flag}\n`);
+    } catch { /* Summary 寫不進去不影響部署 */ }
+  }
 }

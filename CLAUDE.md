@@ -28,6 +28,7 @@
 | 某站的 Pages 是否還在建 | `gh api repos/weiqi-kids/aeiou-pages-<x>/pages/builds/latest --jq .status` |
 | CI 最近跑得如何 | `gh run list -R weiqi-kids/aeiou.now --limit 5` |
 | cron 排程現況 | `cat /etc/cron.d/aeiou*` —— ⚠ **要加星號**:核心管線在 `aeiou`,但同前綴還可能有一次性任務的獨立檔(只查 `aeiou` 會漏掉)。`ls /etc/cron.d/aeiou*` 先看有幾個 |
+| **看門狗最近說了什麼／現在有沒有異常** | `node scripts/watchdog.mjs --report`(唯讀,不發訊息);它送過的訊息在 `logs/watchdog.log`。它守 dlq／各 job 節奏／hourly-export 連敗或超過 3 小時沒有一輪走到底／分支不在 main／CI 連紅／CI 沒綠且七站 .build-id 落後,只在**狀態改變**時發 Slack(2026-09-17 起) |
 | **hourly-export 連續失敗了嗎** | `sqlite3 db/aeiou.sqlite "SELECT status,datetime(scheduled_at,'unixepoch') FROM jobs WHERE job_name='hourly-export' ORDER BY scheduled_at DESC LIMIT 5"` |
 | **審核工作檯有東西等人看嗎** | `node scripts/moderation-queue.mjs --report`(pending 那一行) |
 | **活動還夠不夠**(活動只會過期,不會自己長出來) | `sqlite3 db/aeiou.sqlite "SELECT status,error_message FROM jobs WHERE job_name='local-event-runway' ORDER BY scheduled_at DESC LIMIT 1"` —— `partial_success` 就是有市場見底,訊息裡**逐市場點名**。要現算明細:`node scripts/update-local-data.mjs --offline --check-only \| grep -A9 活動存量`(不帶 `--offline` 會逐頁核對外站、跑約兩分鐘)。⚠ **判準是逐市場,不是全站加總**(2026-08-30 改):某一市場未來 < 3 場、或最近一場 > 14 天就 WARN;門檻 `AEIOU_EVENT_RUNWAY_MIN` / `AEIOU_EVENT_RUNWAY_DAYS`。舊版架在全站加總上,實測「未來 42 場」全過關的同時 jakarta 兩個月內零場 |
@@ -287,7 +288,8 @@ content/topics/<slug>.md   ←── 人工編輯(唯一入口)
 | 主機 `*/15 * * * *` | `scripts/cron-15min.sh` | ⑤ `moderation-queue.mjs`(草案 §33 Job 17;排最後 —— 這一輪裡唯一會改變讀者看得到什麼的一支) ① `translate-posts.mjs`:D1 撈 pending 貼文 → `claude -p` 翻六語 → 寫回 D1 + **回流主機**(UGC 進主機的唯一通道) ② `sync-topics-to-d1.mjs`:主機 Topic 副本 → D1 ③ `sync-questions-to-d1.mjs`:題庫精簡副本 → D1(2026-08-15 起) |
 | 主機 `0 * * * *` | `scripts/hourly-export.sh` | 二十步。**fail-closed 的**是 import 與內容閘門那幾支(錯了會讓讀者看到假資料);**不 fail-closed 的**是分數/快照/標籤/索引/歸檔/爬搜那幾支(錯了只是不新鮮)。兩種性質不要混。逐步說明看檔內註解,job 對照見 `docs/05-job-pipeline.md` |
 | 主機 `40 4 * * *` | `gsc-topic-metrics.mjs` | GSC「date × page × country」→ 主機 `topic_search_metrics`。HotScore 瀏覽面的**唯一**來源(不接 GA4,理由見紅線)。只累積不算分數;GSC 沒有當時快照,停掉就永久失去那段曲線 |
-| GitHub Actions `17 * * * *` + push | `.github/workflows/build.yml` | 七語系 matrix build → SSH 推七個 publish repo(帶 `.nojekyll` 與 `.build-id`)→ 輪詢驗證**內容真的上線**(比 build-id,不是比 200) |
+| 主機 `7,22,37,52 * * * *`(獨立檔 `aeiou-watchdog`) | `scripts/watchdog.mjs` | 看門狗(2026-09-17 用戶核准):唯讀讀 jobs 表／git／gh／七站 `.build-id`,異常**進入與恢復**時發 Slack,持續中每 6 小時提醒一次;狀態存 `logs/watchdog-state.json`。它是旁觀者不是關卡,壞了只會少一個提醒 |
+| GitHub Actions `17 * * * *` + push | `.github/workflows/build.yml` | 七語系 matrix build → SSH 推七個 publish repo(帶 `.nojekyll` 與 `.build-id`)→ 輪詢驗證**內容真的上線**(比 build-id,不是比 200)→ `notify` job 在 run 層發 Slack(2026-09-17 起:test 紅也會說;只在第 1、3 次與之後每 6 次連敗、以及恢復時說話 —— 舊的 per-locale step 掛在被 skip 的 job 裡,09-03~17 連紅 14 天零訊息) |
 
 - 排程本體:`cat /etc/cron.d/aeiou*`(檔內註解有逐行說明與排錯指引)。核心管線一律放 `aeiou` 那一檔;**一次性/季節性任務放同前綴的獨立檔**,生命週期不同的東西不混在一起(改核心檔屬 C 級,加獨立檔不是)。**Actions 排 17 分是刻意錯開主機整點 push。**
 - log:`/mnt/customers/aeiou.now/logs/*.log`;成敗記在 `jobs` 表(查法見上表)。
@@ -415,6 +417,11 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
   —— Google 一次都沒看過,「523 曝光 1 點擊」量到的是舊摘要。
   🔴 **不要為了「讓 Google 知道我改版了」把整站時間戳一起推新** —— 那正是這個坑。
   改標題會推(實測 46 頁)、純換 CSS 不會(實測 0 頁),這才是 2026-08-21 規則②的原意。
+  ⚠ **同一個坑 2026-09-17 從另一個入口回來過**:右上導覽尾端的兩個 Topic 捷徑吃 24h 排行,
+  每小時換,而它長在每一頁的 header 上 → 08-26~09-01 連續七天整站 lastmod=當天。指紋現在把
+  `.nav-link--topic` 洗掉(`site/scripts/page-fingerprint.mjs`,有測試)。判準只有一句:
+  **這一頁自己的內容變了才算變,整站共用的東西輪替不算。** 新增任何「每頁都有、每小時會變」
+  的區塊之前,先問它會不會讓**整站**一起宣告改版;每輪推新了幾頁看 CI 的 Summary 頁。
 - **改文案之前先確認 Google 重爬過**(2026-08-27)——`node scripts/crawl-freshness.mjs`,
   重爬比例 <70% 就不要動文案。2026-08-19/21/25/26 已經據著沒被看過的摘要改了三次方向。
 - **`description` 不得等於 `title`**(2026-08-20)——`/questions/` 原本把 description 寫成
