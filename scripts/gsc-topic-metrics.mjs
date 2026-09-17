@@ -29,6 +29,9 @@
 //      等於擲骰子。本支每次執行都會印出「就緒度」那一行,不必自己算。
 //   2. site/src/lib/heat.mjs 的 HEAT_TIERS 依真實分佈重算過(那裡目前是 M1 暫定值,
 //      檔內註解已寫明「不得沿用」)。
+// 這個門檻不是無限等待條件:預設從第一個觀測日算 28 天,到期仍未達標就印
+// `decision_required`,要求明確決定維持門檻、改視窗或先增加流量;
+// 不會自動放寬 HotScore 的安全門檻。可用 AEIOU_GSC_READINESS_* 覆寫。
 //
 // -- 資料語意 ------------------------------------------------------------
 // GSC 的 date 是**資料日**不是抓取日,而且有 2-3 天延遲 → 每次都重抓一段區間覆蓋,
@@ -40,22 +43,59 @@
 // Google API 存取沿用 /mnt/customers/seo-ops/lib/google.mjs,不重造輪子。
 // 失敗:寫 jobs(job_name='gsc-topic-metrics'),重試 +5 分 / +10 分 / 第三次 dlq。
 
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
 
-import { openDb, beginJob, finishJob, slotStart, nowSec, log } from "./lib/aeiou-lib.mjs";
+import { ROOT, openDb, beginJob, finishJob, slotStart, nowSec, log } from "./lib/aeiou-lib.mjs";
 import { alpha2From } from "./lib/country-codes.mjs";
+import {
+  DEFAULT_READINESS_DEADLINE_DAYS,
+  DEFAULT_READINESS_THRESHOLD,
+  DEFAULT_READINESS_WINDOW_DAYS,
+  assessReadiness,
+  positiveInt,
+  validateReadinessDecision,
+} from "./lib/gsc-readiness.mjs";
 
 const JOB_NAME = "gsc-topic-metrics";
 const SA = process.env.AEIOU_GSC_SA || join(homedir(), ".config", "aeiou", "ga4-sa.json");
 const GSC_SITE = "sc-domain:aeiou.now";
 const GOOGLE_LIB = "/mnt/customers/seo-ops/lib/google.mjs";
 const PAGE_SIZE = 25000; // GSC searchAnalytics rowLimit 上限
+// API 單次請求預設 30 秒,整支 job 再設 120 秒上限;超時先寫 failed 讓既有重試鏈接手。
+const JOB_TIMEOUT_MS = (() => {
+  const n = Number(process.env.AEIOU_GOOGLE_JOB_TIMEOUT_MS || 120_000);
+  return Number.isFinite(n) && n > 0 ? Math.floor(n) : 120_000;
+})();
 
 // 每次重抓的區間。預設 10 天:蓋過 GSC 的 2-3 天延遲還有餘裕,
 // 又不會每輪都把整段歷史重拉一遍。回補用 --days。
 const REACH_DAYS = Number(process.env.AEIOU_GSC_REACH_DAYS || 10);
+const READINESS_WINDOW_DAYS = positiveInt(
+  process.env.AEIOU_GSC_READINESS_WINDOW_DAYS,
+  DEFAULT_READINESS_WINDOW_DAYS,
+);
+const READINESS_THRESHOLD = positiveInt(
+  process.env.AEIOU_GSC_READINESS_THRESHOLD,
+  DEFAULT_READINESS_THRESHOLD,
+);
+const READINESS_DEADLINE_DAYS = positiveInt(
+  process.env.AEIOU_GSC_READINESS_DEADLINE_DAYS,
+  DEFAULT_READINESS_DEADLINE_DAYS,
+);
+// 就緒度的決策紀錄(2026-09-17):到期後的決定寫在這裡(何時、決定什麼、何時再看),
+// 不是用環境變數把提醒關掉。檔案壞了就當沒有決策 —— 但要吵出來。
+const READINESS_DECISION_PATH = join(ROOT, "content", "gsc-readiness-decision.json");
+const readinessDecision = (() => {
+  if (!existsSync(READINESS_DECISION_PATH)) return null;
+  try {
+    return validateReadinessDecision(JSON.parse(readFileSync(READINESS_DECISION_PATH, "utf8")));
+  } catch (error) {
+    console.error(`[${JOB_NAME}] 就緒度決策檔壞了,視為沒有決策:${error.message}`);
+    return null;
+  }
+})();
 
 const argv = process.argv.slice(2);
 const DRY_RUN = argv.includes("--dry-run");
@@ -98,6 +138,21 @@ const dayStr = (n) => new Date(Date.now() - n * 86400000).toISOString().slice(0,
 const db = openDb();
 if (!DRY_RUN) ensureQueryMetricsSchema(db);
 const job = DRY_RUN ? null : beginJob(db, { jobName: JOB_NAME, scheduledAt: slotStart(86400) });
+const watchdog = setTimeout(() => {
+  const error = `${JOB_NAME} hard timeout after ${JOB_TIMEOUT_MS}ms`;
+  if (job) {
+    try {
+      const done = finishJob(db, job, { status: "failed", error });
+      log(`[${JOB_NAME}] HARD_TIMEOUT status=${done.status} next_retry_at=${done.next_retry_at ?? "NULL"}`);
+    } catch (finishError) {
+      console.error(`[${JOB_NAME}] HARD_TIMEOUT 收尾失敗:${finishError.message || finishError}`);
+    }
+  } else {
+    log(`[${JOB_NAME}] HARD_TIMEOUT ${error}`);
+  }
+  try { db.close(); } catch {}
+  process.exit(124);
+}, JOB_TIMEOUT_MS);
 
 try {
   if (!existsSync(SA)) throw new Error(`缺 SA 金鑰:${SA}`);
@@ -268,16 +323,41 @@ try {
         WHERE scope = 'global' AND metric_date >= ?
         GROUP BY topic_id ORDER BY imp`,
     )
-    .all(dayStr(28));
+    .all(dayStr(READINESS_WINDOW_DAYS));
   const median = readiness.length ? readiness[Math.floor(readiness.length / 2)].imp : 0;
+  const firstObservedDate = db
+    .prepare("SELECT MIN(metric_date) AS metric_date FROM topic_search_metrics WHERE scope = 'global'")
+    .get()?.metric_date || null;
+  const readinessState = assessReadiness({
+    median,
+    threshold: READINESS_THRESHOLD,
+    windowDays: READINESS_WINDOW_DAYS,
+    deadlineDays: READINESS_DEADLINE_DAYS,
+    firstObservedDate,
+    today: dayStr(0),
+    decision: readinessDecision,
+  });
+  const stateMessage = readinessState.status === "ready"
+    ? "已達標"
+    : readinessState.status === "deferred"
+      ? `已決策(${readinessDecision.decided_at} ${readinessDecision.decision}),${readinessState.reviewOn} 再評估`
+      : readinessState.status === "decision_required"
+        ? (readinessDecision
+          ? `觀測期限已到(${readinessState.deadlineDate}),決策檔 review_on ${readinessDecision.review_on} 已到期,需要重新決策(content/gsc-readiness-decision.json),不自動放寬門檻`
+          : `觀測期限已到(${readinessState.deadlineDate}),需要決策,不自動放寬門檻`)
+        : readinessState.deadlineDate
+          ? `觀測中,期限${readinessState.deadlineDate}`
+          : "觀測中,尚無觀測起點";
   log(
-    `[${JOB_NAME}] 就緒度:近 28 天有曝光的 Topic ${readiness.length} 個,中位曝光 ${median}`
-      + `(判準 >=30 才可驅動 HotScore;現在${median >= 30 ? "已達標" : "未達標,繼續累積"})`,
+    `[${JOB_NAME}] 就緒度:近 ${READINESS_WINDOW_DAYS} 天有曝光的 Topic ${readiness.length} 個,中位曝光 ${median}`
+      + `(判準 >=${READINESS_THRESHOLD} 才可驅動 HotScore;${stateMessage})`,
   );
 
   if (!DRY_RUN) finishJob(db, job, { status: "success", read: rows.length + queryRows.length, created: written + queryWritten });
+  clearTimeout(watchdog);
   log(`[${JOB_NAME}] success(讀 ${rows.length} + ${queryRows.length} 列,寫 ${written} + ${queryWritten} 筆)`);
 } catch (err) {
+  clearTimeout(watchdog);
   if (!DRY_RUN) finishJob(db, job, { status: "failed", error: String(err && err.message ? err.message : err) });
   log(`[${JOB_NAME}] failed:${err && err.stack ? err.stack : err}`);
   process.exit(1);

@@ -13,6 +13,9 @@ import { fileURLToPath } from "node:url";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const DB_PATH = join(ROOT, "db", "aeiou.sqlite");
 const INPUT_PATH = join(ROOT, "content", "local-sample-data.json");
+// 隔離名單(2026-09-17;update-local-data.mjs 寫):核對失敗的來源。掛在上面的地點／活動
+// 這一輪**不匯入、既有列拿掉**,來源恢復後下一輪自動回來。content/ 的原始資料不動。
+const QUARANTINE_PATH = join(ROOT, "db", ".local-source-quarantine.json");
 const LOCALES = ["zh-TW", "en", "ja", "zh-CN", "hi", "id", "pt-BR"];
 
 const OLD_DEMO_PLACE_IDS = [
@@ -319,6 +322,22 @@ function deleteManagedPlaceRows(topicIds, retiredPlaceIds, currentPlaceIds) {
   return removed;
 }
 
+// 隔離中的地點／活動:整列拿掉(place_topics / place_i18n / places;event 同型)。
+// 與 retired_place_ids 的差別:那是人決定的下架,這是來源核對失敗的**暫時**下架,
+// 所以不動 retired_place_ids,也不碰 content/。id 是穩定雜湊,回來時同一個 id 再寫回去。
+function deleteQuarantinedRows(placeIds, eventIds) {
+  for (const id of placeIds) {
+    db.prepare("DELETE FROM place_topics WHERE place_id = ?").run(id);
+    db.prepare("DELETE FROM place_i18n WHERE place_id = ?").run(id);
+    db.prepare("DELETE FROM places WHERE place_id = ?").run(id);
+  }
+  for (const id of eventIds) {
+    db.prepare("DELETE FROM event_topics WHERE event_id = ?").run(id);
+    db.prepare("DELETE FROM event_i18n WHERE event_id = ?").run(id);
+    db.prepare("DELETE FROM events WHERE event_id = ?").run(id);
+  }
+}
+
 function upsertSource(url, row, collectedAt) {
   const parsed = new URL(url);
   const id = sourceId(url);
@@ -370,19 +389,37 @@ function importSample() {
   const now = Math.floor(Date.now() / 1000);
   const placeIds = [];
   const eventIds = [];
-  const currentPlaceIds = new Set((input.places || []).map((place) =>
+  // 隔離:驗證用完整輸入(shape 是 content/ 的事),匯入用扣掉隔離筆的清單。
+  let quarantine = {};
+  if (existsSync(QUARANTINE_PATH)) {
+    // 讀壞了當空的:名單掉了的代價只是多發布一輪未核對的資料,不該比整條管線停擺更貴。
+    try { quarantine = JSON.parse(readFileSync(QUARANTINE_PATH, "utf8")) || {}; }
+    catch (error) { console.log(`⚠ 隔離名單讀不了,視為空(下一輪 update-local-data 會重建):${error.message}`); quarantine = {}; }
+  }
+  // effective:false = 核對失敗但為了不清空市場而留著發布(update-local-data.mjs 的市場門檻),不算隔離。
+  const quarantinedUrls = new Set(Object.keys(quarantine).filter((url) => quarantine[url]?.effective !== false));
+  const placeHeld = (place) => (place.source_urls || []).some((url) => quarantinedUrls.has(url));
+  const eventHeld = (event) => quarantinedUrls.has(event.source_url);
+  const placesToImport = (input.places || []).filter((place) => !placeHeld(place));
+  const eventsToImport = (input.events || []).filter((event) => !eventHeld(event));
+  const quarantinedPlaceIds = (input.places || []).filter(placeHeld)
+    .map((place) => stableId("plc", `${place.country_code}:${place.city_code}:${place.name}`));
+  const quarantinedEventIds = (input.events || []).filter(eventHeld)
+    .map((event) => stableId("evt", `${event.country_code}:${event.city_code}:${event.name}`));
+  const currentPlaceIds = new Set(placesToImport.map((place) =>
     stableId("plc", `${place.country_code}:${place.city_code}:${place.name}`)));
   const managedEventSourceUrls = input.managed_event_source_urls || (input.events || []).map((event) => event.source_url);
-  const currentEventIds = new Set((input.events || []).map((event) =>
+  const currentEventIds = new Set(eventsToImport.map((event) =>
     stableId("evt", `${event.country_code}:${event.city_code}:${event.name}`)));
   let removedManagedEvents = 0;
   let removedOrphanEvents = 0;
   let removedOrphanPlaces = 0;
   let removedManagedPlaces = 0;
 
-  db.exec("BEGIN");
+  db.exec("BEGIN IMMEDIATE");
   try {
     deleteOldDemoData();
+    deleteQuarantinedRows(quarantinedPlaceIds, quarantinedEventIds);
     removedManagedPlaces = deleteManagedPlaceRows(
       topicIds,
       retiredPlaceIds,
@@ -400,7 +437,7 @@ function importSample() {
       currentPlaceIds,
     );
 
-    for (const place of input.places || []) {
+    for (const place of placesToImport) {
       const id = stableId("plc", `${place.country_code}:${place.city_code}:${place.name}`);
       const maps = mapUrls(place.map_query || `${place.name} ${place.city_code}`);
       const urls = place.source_urls.map((url) => {
@@ -431,7 +468,7 @@ function importSample() {
       placeIds.push(id);
     }
 
-    for (const event of input.events || []) {
+    for (const event of eventsToImport) {
       const id = stableId("evt", `${event.country_code}:${event.city_code}:${event.name}`);
       const srcId = upsertSource(event.source_url, {
         country_code: event.country_code,
@@ -469,6 +506,9 @@ function importSample() {
 
   const marketSummary = markets.map((market) => `${market.locale}:${market.city_code}`).join(" ");
   console.log(`已匯入 ${placeIds.length} 個地點、${eventIds.length} 個活動；市場 ${marketSummary}`);
+  if (quarantinedPlaceIds.length || quarantinedEventIds.length) {
+    console.log(`隔離中(來源核對失敗,本輪不發布):地點 ${quarantinedPlaceIds.length} 個、活動 ${quarantinedEventIds.length} 個(名單 ${QUARANTINE_PATH})`);
+  }
   console.log(`已清除受管理來源中不在目前清單的舊地點 ${removedManagedPlaces} 個`);
   console.log(`已清除受管理來源中不在目前清單的舊活動 ${removedManagedEvents} 個`);
   if (removedOrphanEvents > 0) {

@@ -30,6 +30,7 @@
 | cron 排程現況 | `cat /etc/cron.d/aeiou*` —— ⚠ **要加星號**:核心管線在 `aeiou`,但同前綴還可能有一次性任務的獨立檔(只查 `aeiou` 會漏掉)。`ls /etc/cron.d/aeiou*` 先看有幾個 |
 | **看門狗最近說了什麼／現在有沒有異常** | `node scripts/watchdog.mjs --report`(唯讀,不發訊息);它送過的訊息在 `logs/watchdog.log`。它守 dlq／各 job 節奏／hourly-export 連敗或超過 3 小時沒有一輪走到底／分支不在 main／CI 連紅／CI 沒綠且七站 .build-id 落後,只在**狀態改變**時發 Slack(2026-09-17 起) |
 | **hourly-export 連續失敗了嗎** | `sqlite3 db/aeiou.sqlite "SELECT status,datetime(scheduled_at,'unixepoch') FROM jobs WHERE job_name='hourly-export' ORDER BY scheduled_at DESC LIMIT 5"` |
+| **在地來源哪幾個在隔離中**(它們掛的地點／活動正在下架) | `cat db/.local-source-quarantine.json`;或 `sqlite3 db/aeiou.sqlite "SELECT status,error_message FROM jobs WHERE job_name='local-source-quarantine' ORDER BY scheduled_at DESC LIMIT 1"` —— `partial_success` 就有東西在隔離,訊息逐筆點名(2026-09-17 起來源核對失敗**逐筆隔離**,不再擋整條 hourly-export;來源恢復自動解除) |
 | **審核工作檯有東西等人看嗎** | `node scripts/moderation-queue.mjs --report`(pending 那一行) |
 | **活動還夠不夠**(活動只會過期,不會自己長出來) | `sqlite3 db/aeiou.sqlite "SELECT status,error_message FROM jobs WHERE job_name='local-event-runway' ORDER BY scheduled_at DESC LIMIT 1"` —— `partial_success` 就是有市場見底,訊息裡**逐市場點名**。要現算明細:`node scripts/update-local-data.mjs --offline --check-only \| grep -A9 活動存量`(不帶 `--offline` 會逐頁核對外站、跑約兩分鐘)。⚠ **判準是逐市場,不是全站加總**(2026-08-30 改):某一市場未來 < 3 場、或最近一場 > 14 天就 WARN;門檻 `AEIOU_EVENT_RUNWAY_MIN` / `AEIOU_EVENT_RUNWAY_DAYS`。舊版架在全站加總上,實測「未來 42 場」全過關的同時 jakarta 兩個月內零場 |
 | **哪些 Topic 掛得到地點/活動** | `sqlite3 db/aeiou.sqlite "SELECT COUNT(DISTINCT topic_id) FROM place_topics"`(events 換成 `event_topics`)。⚠ **每個站只看得到自己市場那一城**,所以驗收要在該語系的 build 裡查 |
@@ -268,7 +269,8 @@ content/topics/<slug>.md   ←── 人工編輯(唯一入口)
 ```
 
 - 每小時 cron 會自動跑匯入+匯出,**存檔後最慢一小時上線**;要立即看就手動跑再 build。
-- 七語都要在檔案裡(可先寫 zh-TW 再請 Claude 補其餘六語);每個國家至少一個 source。
+- 七語都要在檔案裡(可先寫 zh-TW 再請 Claude 補其餘六語);每個國家至少一個**活的** source。
+  來源 404 但內文要保留:那一行加 `retired=YYYY-MM-DD`(不印、不驗、仍記為出處;2026-09-17 起,見 `docs/03-topic-content.md` 規則 2)。
 - `data/` 與 `db/aeiou.sqlite` 的這三張表(topic_i18n/topic_observances/topic_observance_i18n)
   都是**產物**,直接改會被下次匯入/匯出蓋掉。
 - import **不碰 `topic_scores`**(分數屬排程,不是內容)。
@@ -286,7 +288,7 @@ content/topics/<slug>.md   ←── 人工編輯(唯一入口)
 | 排程 | 入口 | 做什麼 |
 |---|---|---|
 | 主機 `*/15 * * * *` | `scripts/cron-15min.sh` | ⑤ `moderation-queue.mjs`(草案 §33 Job 17;排最後 —— 這一輪裡唯一會改變讀者看得到什麼的一支) ① `translate-posts.mjs`:D1 撈 pending 貼文 → `claude -p` 翻六語 → 寫回 D1 + **回流主機**(UGC 進主機的唯一通道) ② `sync-topics-to-d1.mjs`:主機 Topic 副本 → D1 ③ `sync-questions-to-d1.mjs`:題庫精簡副本 → D1(2026-08-15 起) |
-| 主機 `0 * * * *` | `scripts/hourly-export.sh` | 二十步。**fail-closed 的**是 import 與內容閘門那幾支(錯了會讓讀者看到假資料);**不 fail-closed 的**是分數/快照/標籤/索引/歸檔/爬搜那幾支(錯了只是不新鮮)。兩種性質不要混。逐步說明看檔內註解,job 對照見 `docs/05-job-pipeline.md` |
+| 主機 `0 * * * *` | `scripts/hourly-export.sh` | 二十步。**fail-closed 的**是 import 與內容閘門那幾支(錯了會讓讀者看到假資料);**不 fail-closed 的**是分數/快照/標籤/索引/歸檔/爬搜那幾支(錯了只是不新鮮)。兩種性質不要混。 ⚠ 在地來源核對(`update-local-data.mjs`)2026-09-17 起**逐筆隔離**:某個來源 marker 對不上或連續傳輸失敗,只扣下它掛的那幾筆地點／活動,其餘照常輸出(名單 `db/.local-source-quarantine.json`,jobs 表 `local-source-quarantine`);整支只在 content/ 的資料本身壞掉時才 fail-closed。逐步說明看檔內註解,job 對照見 `docs/05-job-pipeline.md` |
 | 主機 `40 4 * * *` | `gsc-topic-metrics.mjs` | GSC「date × page × country」→ 主機 `topic_search_metrics`。HotScore 瀏覽面的**唯一**來源(不接 GA4,理由見紅線)。只累積不算分數;GSC 沒有當時快照,停掉就永久失去那段曲線 |
 | 主機 `7,22,37,52 * * * *`(獨立檔 `aeiou-watchdog`) | `scripts/watchdog.mjs` | 看門狗(2026-09-17 用戶核准):唯讀讀 jobs 表／git／gh／七站 `.build-id`,異常**進入與恢復**時發 Slack,持續中每 6 小時提醒一次;狀態存 `logs/watchdog-state.json`。它是旁觀者不是關卡,壞了只會少一個提醒 |
 | GitHub Actions `17 * * * *` + push | `.github/workflows/build.yml` | 七語系 matrix build → SSH 推七個 publish repo(帶 `.nojekyll` 與 `.build-id`)→ 輪詢驗證**內容真的上線**(比 build-id,不是比 200)→ `notify` job 在 run 層發 Slack(2026-09-17 起:test 紅也會說;只在第 1、3 次與之後每 6 次連敗、以及恢復時說話 —— 舊的 per-locale step 掛在被 skip 的 job 裡,09-03~17 連紅 14 天零訊息) |

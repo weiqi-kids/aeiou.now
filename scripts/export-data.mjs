@@ -32,9 +32,16 @@ const STATIC_WINDOWS = ["24h", "72h", "7d", "1m", "3m", "1y"]; // 8h 不出靜�
 
 const db = new DatabaseSync(DB_PATH, { readOnly: true });
 db.exec("PRAGMA busy_timeout = 15000;"); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)
-const sourceUrlById = new Map(
-  db.prepare("SELECT source_id, url FROM sources ORDER BY source_id").all().map((r) => [r.source_id, r.url])
-);
+// 退役來源(sources.status='retired';content/topics 的 `retired=` 語法,見 scripts/lib/topic-sources.mjs)
+// **不進 source_urls**:頁面不印、check-source-urls 不驗。另出 retired_source_urls(只在非空時出),
+// 讓「這一格的出處曾經是它」查得到。
+const sourceUrlById = new Map();
+const retiredSourceUrlById = new Map();
+for (const r of db.prepare("SELECT source_id, url, status FROM sources ORDER BY source_id").all()) {
+  (r.status === "retired" ? retiredSourceUrlById : sourceUrlById).set(r.source_id, r.url);
+}
+const retiredUrls = (ids) => ids.map((id) => retiredSourceUrlById.get(id)).filter(Boolean);
+const retiredField = (ids) => (retiredUrls(ids).length ? { retired_source_urls: retiredUrls(ids) } : {});
 const sourceIdsByTopic = new Map();
 for (const row of db.prepare("SELECT topic_id, source_id FROM source_topics ORDER BY topic_id, source_id").all()) {
   if (!sourceIdsByTopic.has(row.topic_id)) sourceIdsByTopic.set(row.topic_id, []);
@@ -386,6 +393,7 @@ for (const t of topics) {
       date_status: row.date_status,
       source_ids: parseJson(row.source_ids_json, []),
       source_urls: parseJson(row.source_ids_json, []).map((id) => sourceUrlById.get(id)).filter(Boolean),
+      ...retiredField(parseJson(row.source_ids_json, [])),
     }));
     for (const occurrence of occurrences) for (const id of occurrence.source_ids) allSourceIds.add(id);
     return {
@@ -399,6 +407,7 @@ for (const t of topics) {
       popularity_rank: o.popularity_rank,
       source_ids: ids,
       source_urls: ids.map((id) => sourceUrlById.get(id)).filter(Boolean),
+      ...retiredField(ids),
       occurrences,
       next_occurrence: nextOccurrence(occurrenceRows, sourceUrlById),
     };
@@ -448,6 +457,7 @@ for (const t of topics) {
       ...([...allSourceIds].sort().map((id) => sourceUrlById.get(id)).filter(Boolean)),
       ...regionalSourceUrls,
     ])],
+    ...retiredField([...allSourceIds].sort()),
   };
 
   // i18n.json — 七語一檔(title/summary/keywords + 各地方表現 customs_text)

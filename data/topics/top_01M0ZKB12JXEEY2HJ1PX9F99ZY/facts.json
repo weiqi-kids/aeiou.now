@@ -20,11 +20,17 @@
       "popularity_rank": 1,
       "source_ids": [
         "src_C83E51D993478EEB52CE35FA",
-        "src_B7136860E98E10882CA5C5BE"
+        "src_B7136860E98E10882CA5C5BE",
+        "src_B3CE8AA59A8C2B3C21E3A672",
+        "src_2CA07AE7DC4A0D3E97CE8D28"
       ],
       "source_urls": [
         "https://www.gov.br/mj/pt-br/assuntos/arquivos-imprensa/senacon/cartilha-black-friday-senacon-2025",
         "https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm"
+      ],
+      "retired_source_urls": [
+        "https://www.procon.df.gov.br/confira-o-passo-a-passo-do-procon-df-para-aproveitar-bem-os-descontos-do-black-friday-2/",
+        "https://www.procon.df.gov.br/tag/black-friday/"
       ],
       "occurrences": [
         {
@@ -727,6 +733,7 @@
   "source_ids": [
     "src_09C8839727B6E6F313A0D26B",
     "src_2925523C816A5DEC2472A756",
+    "src_2CA07AE7DC4A0D3E97CE8D28",
     "src_2E943055F516EA6A31B3FE4A",
     "src_3B48349759CDA1897255EA97",
     "src_3D618A92DB7A70F407D856B3",
@@ -739,6 +746,7 @@
     "src_776ED5B20FA220B3A5031D2B",
     "src_809D607516A4DEDB25398C5C",
     "src_A3F2BC47244C1BE574363BC0",
+    "src_B3CE8AA59A8C2B3C21E3A672",
     "src_B7136860E98E10882CA5C5BE",
     "src_C6523ED56EEEF98FB38A41EB",
     "src_C83E51D993478EEB52CE35FA",
@@ -770,6 +778,10 @@
     "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
     "https://www.ic3.gov/PSA/2023/PSA231115"
   ],
-  "content_updated_at": "2026-09-17T01:40:16.533Z",
-  "content_hash": "4de546626e4a406eaf4d570dcf408642a8a8fbda153b57f53cab4e596c2afe4d"
+  "retired_source_urls": [
+    "https://www.procon.df.gov.br/tag/black-friday/",
+    "https://www.procon.df.gov.br/confira-o-passo-a-passo-do-procon-df-para-aproveitar-bem-os-descontos-do-black-friday-2/"
+  ],
+  "content_updated_at": "2026-09-17T11:25:36.205Z",
+  "content_hash": "ef19dd3873d9ac66d162129fe105f2b4538545f2cb859c09e56cc19082059901"
 }

@@ -24,6 +24,7 @@
 - rank: 1                          ← 該地方表現在該國的排序(可省略)
 - source: https://www.maff.go.jp/j/seisan/kaki/flower/attach/pdf/index-113.pdf     ← 佐證來源,**至少一個,可重複多行**
 - source: https://www.britannica.com/topic/Valentines-Day
+- source: https://old.example.gov/removed retired=2026-09-17 ← 已退役:頁面不在了但內文引用的事實仍成立;不印、不驗,仍記為出處
 
 ## observance TW qixi
 - local_name: 七夕情人節
@@ -111,8 +112,13 @@ node scripts/generate-topic-cover.mjs --slug <slug> --prompt "……場景描述
 ## 硬規則(匯入器會擋,錯誤訊息會講清楚缺什麼)
 
 1. **七語都要有**(`zh-TW` `en` `ja` `zh-CN` `hi` `id` `pt-BR`),每語至少要 `### title`。
-2. **每個 observance 至少一個 `source`**——`source_ids_json` 是必填。每一條文化事實都要能點回原始來源,
+2. **每個 observance 至少一個未退役的 `source`**——`source_ids_json` 是必填。每一條文化事實都要能點回原始來源,
    這是內容品質,也是對 Google「scaled content abuse」政策的正面抗辯(草案 §44 註)。
+   **來源 404 了但內文要保留**(2026-09-17 起):在那一行後面加 `retired=YYYY-MM-DD`,
+   它就不進 `source_urls`(頁面不印、CI 的 `check-source-urls` 不驗),改進 `retired_source_urls`;
+   `sources.status='retired'`。同一格仍要另有一個活的來源,否則匯入會擋。
+   緣由:2026-09-03 五個 404 讓 CI 連紅 14 天、七站凍結,其中兩個是用戶明示「內文保留」的。
+   語法與判準在 `scripts/lib/topic-sources.mjs`。
 3. **每個 `## observance XX key` 在七語都要有對應的 `### customs XX key`**——事實一份、七語各自呈現。
 3b. **有 `- date_rule:` 的 observance,在 zh-TW 以外的六語都要有 `### date_rule XX key`**
    (2026-08-21 起,匯入會擋)。zh-TW 不用寫——`- date_rule:` 那一行本身就是中文原文,

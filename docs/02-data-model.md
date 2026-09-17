@@ -387,7 +387,7 @@ CREATE TABLE sources (
   content_hash  TEXT,
   quality_score REAL,
   trust_score   REAL,
-  status        TEXT NOT NULL,              -- new|processed|ignored|duplicate|error
+  status        TEXT NOT NULL,              -- new|processed|ignored|duplicate|error|retired(`retired`=content/topics 的 `retired=` 語法:仍是出處、不印、不驗、不爬;2026-09-17)
   updated_at    INTEGER NOT NULL
 );
 CREATE INDEX idx_sources_due ON sources(next_crawl_at) WHERE status != 'ignored';

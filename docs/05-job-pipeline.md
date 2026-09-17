@@ -88,6 +88,11 @@ Topic 頁的 description 第一句就講那一國。⚠ 那個「哪一國」是
 
 - 每一支各自寫 `jobs` 表;`+5 分 / +10 分`重試,第三次進 `dlq`(不再自動重試,要人看)。
 - `job_locks` 防重入(同一 scope+job+slot 只跑一份,並用 pid 存活檢查擋前一輪還在跑)。
+- Google OAuth／GA4／GSC 的每次請求預設 30 秒逾時(`SEO_OPS_GOOGLE_TIMEOUT_MS`),
+  `ga4-daily` 與 `gsc-topic-metrics` 整支 job 預設 120 秒逾時
+  (`AEIOU_GOOGLE_JOB_TIMEOUT_MS`);逾時會先寫 `failed`,交給既有重試鏈,不留下永久 running。
+- GSC 就緒度不是無限等待：預設用近 28 日中位曝光 30 作安全門檻，從第一個觀測日
+  起 28 日後仍未達標會記為 `decision_required`；不自動放寬 HotScore 門檻。
 - **hourly-export.sh 是 fail-closed 的**,但新加的這幾支**一律不 fail-closed** ——
   它們算的是熱度、快照、標籤、索引,錯了只是不新鮮;而 fail-closed 的那幾步錯了
   會讓讀者看到假資料。兩種性質不同,不要混。

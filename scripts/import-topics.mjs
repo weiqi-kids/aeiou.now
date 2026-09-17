@@ -30,6 +30,8 @@ import { join, resolve, dirname, basename } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 import { isCanonicalCategory } from "./lib/topics.mjs";
+import { parseSourceLine } from "./lib/topic-sources.mjs";
+import { countryOfHost, hostOf } from "./lib/content-depth.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const DB_PATH = join(ROOT, "db", "aeiou.sqlite");
@@ -127,7 +129,12 @@ function parseTopicMd(text, file) {
       if (h2.kind === "meta") doc.meta[k] = v.trim();
       else if (h2.kind === "observance") {
         const c = doc.observances[h2.id];
-        if (k === "source") c.sources.push(v.trim());
+        if (k === "source") {
+          // `retired=YYYY-MM-DD` 語法見 scripts/lib/topic-sources.mjs;格式壞了 throw → 這一檔報錯
+          const parsed = parseSourceLine(v);
+          if (parsed.retired) (c.retired_sources ??= []).push(parsed);
+          else c.sources.push(parsed.url);
+        }
         else c[k] = v.trim();
       }
       continue;
@@ -146,7 +153,15 @@ function parseTopicMd(text, file) {
   if (!/^[a-z0-9-]+$/.test(doc.meta.slug || "")) errs.push(`slug 只准小寫英數與連字號:「${doc.meta.slug}」`);
   for (const [id, c] of Object.entries(doc.observances)) {
     if (!c.local_name) errs.push(`observance ${id} 缺 local_name`);
-    if (!c.sources.length) errs.push(`observance ${id} 至少要一個 source(source_ids_json 是必填,這是 SEO 的抗辯基礎)`);
+    if (!c.sources.length) errs.push(`observance ${id} 至少要一個**未退役**的 source${c.retired_sources?.length ? `(有 ${c.retired_sources.length} 個 retired=,退役的不算)` : ""}(source_ids_json 是必填,這是 SEO 的抗辯基礎)`);
+    // 退役之後剩下的活來源要撐得起 R6(該國網域;check-content-depth.mjs):在這裡擋是單檔失敗、不中斷 export,
+    // 留到 hourly 的內容厚度閘門才爆會讓整條匯出停擺 —— 那正是 retired= 要終結的形狀。
+    if (c.sources.length && c.retired_sources?.length) {
+      const hosts = c.sources.map(hostOf).filter(Boolean);
+      if (!hosts.some((hst) => countryOfHost(hst) === c.country_code)) {
+        errs.push(`observance ${id} 退役後剩下的活來源沒有一個在 ${c.country_code} 的網域(${hosts.join(", ")});先補一個該國官方來源再退役`);
+      }
+    }
     if (!c.date && !c.date_rule) errs.push(`observance ${id} 必須有 date 或 date_rule,不可只有名稱`);
     if (c.date && !/^\d{2}-\d{2}$/.test(c.date)) errs.push(`observance ${id} 的 date 要是 MM-DD:「${c.date}」`);
     if (c.date_end && !/^\d{2}-\d{2}$/.test(c.date_end)) errs.push(`observance ${id} 的 date_end 要是 MM-DD:「${c.date_end}」`);
@@ -213,10 +228,18 @@ function importOne(db, doc, now) {
   const upSrc = db.prepare(
     `INSERT INTO sources (source_id, url, domain, source_type, next_crawl_at, crawl_freq_s, status, updated_at)
      VALUES (?, ?, ?, 'manual', ?, 86400, 'processed', ?)
-     -- DO NOTHING 而不是推新 updated_at:整個 DO UPDATE 只做時間戳這件事,
-     -- 而沒有任何地方讀 sources.updated_at(2026-08-19 實查)。與 topics 曾經的
-     -- 空推是同一個反模式,只是這裡沒有可觀測後果,所以拖到今天才一併清掉。
-     ON CONFLICT(url) DO NOTHING`
+     -- 不空推 updated_at(沒有任何地方讀它,2026-08-19 實查;與 topics 曾經的空推是同一個反模式)。
+     -- 唯一會改的情況:這個來源之前被標 retired、現在又活了 —— 只在那時把 status 改回來。
+     ON CONFLICT(url) DO UPDATE SET status = 'processed', updated_at = excluded.updated_at
+       WHERE sources.status = 'retired'`
+  );
+  // 退役來源(`retired=YYYY-MM-DD`):仍是出處,寫進 sources 與 source_ids_json,但 status='retired',
+  // export 不把它放進 source_urls(頁面不印、check-source-urls 不驗)。見 scripts/lib/topic-sources.mjs。
+  const upRetired = db.prepare(
+    `INSERT INTO sources (source_id, url, domain, source_type, next_crawl_at, crawl_freq_s, status, updated_at)
+     VALUES (?, ?, ?, 'manual', ?, 86400, 'retired', ?)
+     ON CONFLICT(url) DO UPDATE SET status = 'retired', updated_at = excluded.updated_at
+       WHERE sources.status != 'retired'`
   );
 
   // 三張內容表整組替換(md 是權威)
@@ -235,6 +258,11 @@ function importOne(db, doc, now) {
       upSrc.run(id, u, new URL(u).hostname, now + 365 * 86400, now);
       return id;
     });
+    for (const r of c.retired_sources || []) {
+      const id = srcIdOf(r.url);
+      upRetired.run(id, r.url, new URL(r.url).hostname, now + 365 * 86400, now);
+      ids.push(id);
+    }
     const existingObservance = db.prepare(
       'SELECT topic_id FROM topic_observances WHERE observance_id = ?'
     ).get(observanceId);
@@ -302,6 +330,32 @@ if (!existsSync(CONTENT_DIR)) {
 const files = readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".md")).sort();
 if (files.length === 0) { console.log("content/topics/ 沒有 .md,無事可做。"); process.exit(0); }
 
+// 先把全部檔解析完:`retired=` 是逐行語意,但 sources.status 一個 URL 只有一個值 ——
+// 同一個 URL 在 A 檔活著、在 B 檔退役,後匯入的會把狀態翻過來(37 個 URL 跨檔共用,law.moj.gov.tw 一條在 30 檔)。
+// 這種矛盾要整批擋下並點名兩個檔,不能默默讓字母序決定。
+const parsed = new Map();
+const parseErrors = new Map();
+for (const f of files) {
+  try { parsed.set(f, parseTopicMd(readFileSync(join(CONTENT_DIR, f), "utf8"), f)); }
+  catch (e) { parseErrors.set(f, e.message); }
+}
+{
+  const activeIn = new Map();
+  const retiredIn = new Map();
+  for (const [f, doc] of parsed) {
+    for (const c of Object.values(doc.observances)) {
+      for (const u of c.sources) (activeIn.get(u) ?? activeIn.set(u, new Set()).get(u)).add(f);
+      for (const r of c.retired_sources || []) (retiredIn.get(r.url) ?? retiredIn.set(r.url, new Set()).get(r.url)).add(f);
+    }
+  }
+  for (const [url, retiredFiles] of retiredIn) {
+    const activeFiles = activeIn.get(url);
+    if (!activeFiles) continue;
+    const msg = `來源 ${url} 在 ${[...retiredFiles].join(", ")} 標 retired=,卻在 ${[...activeFiles].join(", ")} 仍是活的 —— 同一個 URL 只能有一種狀態,兩邊都要改一致`;
+    for (const f of [...retiredFiles, ...activeFiles]) { parseErrors.set(f, msg); parsed.delete(f); }
+  }
+}
+
 const db = new DatabaseSync(DB_PATH);
 db.exec("PRAGMA busy_timeout = 15000;"); // 整點 */15 與 0 * * * * 兩條 cron 會併發碰同一顆 DB;遇鎖等待而非 SQLITE_BUSY 直接炸(同 lib openDb)
 
@@ -319,8 +373,13 @@ const now = Math.floor(Date.now() / 1000);
 let created = 0, updated = 0, failed = 0;
 for (const f of files) {
   try {
-    const doc = parseTopicMd(readFileSync(join(CONTENT_DIR, f), "utf8"), f);
-    db.exec("BEGIN");
+    if (parseErrors.has(f)) throw new Error(parseErrors.get(f));
+    const doc = parsed.get(f);
+    // BEGIN IMMEDIATE 不是 BEGIN(2026-09-17):整點 cron-15min 與本支同時寫同一顆 DB,
+    // 延遲交易在第一個寫入才要鎖、拿不到就直接 SQLITE_BUSY(busy_timeout 對這種升級不生效),
+    // 實測每小時都有兩個 md「database is locked」沒進 SQLite(log 裡 100 次)。
+    // IMMEDIATE 一開始就排隊等寫鎖,busy_timeout 15 秒才派得上用場。
+    db.exec("BEGIN IMMEDIATE");
     const r = importOne(db, doc, now);
     db.exec("COMMIT");
     r.isNew ? created++ : updated++;

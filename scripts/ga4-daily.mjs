@@ -28,6 +28,8 @@
 //    HotScore 的瀏覽面走 GSC(`topic_search_metrics`)。這張表的用途是**報表**。
 //
 // 失敗:寫 jobs(job_name='ga4-daily')。
+// Google 單次請求預設 30 秒、整支 job 預設 120 秒；可用
+// SEO_OPS_GOOGLE_TIMEOUT_MS / AEIOU_GOOGLE_JOB_TIMEOUT_MS 覆寫。
 
 import { existsSync } from "node:fs";
 import { homedir } from "node:os";
@@ -47,6 +49,10 @@ const DAYS = (() => {
 
 /** 與 seo-health.mjs 同一個 property —— 七站共用一個 web stream,以 hostname 區分。 */
 const GA4_PROPERTY = "549586494";
+const JOB_TIMEOUT_MS = (() => {
+  const n = Number(process.env.AEIOU_GOOGLE_JOB_TIMEOUT_MS || 120_000);
+  return Number.isFinite(n) && n > 0 ? Math.floor(n) : 120_000;
+})();
 const SA = process.env.AEIOU_GA4_SA || join(homedir(), ".config", "aeiou", "ga4-sa.json");
 /** hostname → locale。與 CLAUDE.md 的映射表同源(ja→jp、zh-CN→cn、pt-BR→br 不同名)。 */
 const LOCALE_BY_HOST = {
@@ -103,6 +109,17 @@ if (!lock.ok) {
 }
 
 const job = beginJob(db, { jobName: JOB_NAME, scheduledAt });
+const watchdog = setTimeout(() => {
+  const error = `${JOB_NAME} hard timeout after ${JOB_TIMEOUT_MS}ms`;
+  try {
+    const done = finishJob(db, job, { status: "failed", error });
+    log(`[${JOB_NAME}] HARD_TIMEOUT status=${done.status} next_retry_at=${done.next_retry_at ?? "NULL"}`);
+  } catch (finishError) {
+    console.error(`[${JOB_NAME}] HARD_TIMEOUT 收尾失敗:${finishError.message || finishError}`);
+  }
+  try { db.close(); } catch {}
+  process.exit(124);
+}, JOB_TIMEOUT_MS);
 
 try {
   const { ga4RunReport } = await import("/mnt/customers/seo-ops/lib/google.mjs");
@@ -153,6 +170,7 @@ try {
     for (const [m, n] of [...byMetric].sort()) log(`  ${m}: ${n} 列`);
     log(`[${JOB_NAME}] DRY_RUN:會寫 ${rows.length} 列,不寫入`);
     finishJob(db, job, { status: "success", read: rows.length, updated: 0 });
+    clearTimeout(watchdog);
     db.close();
     process.exit(0);
   }
@@ -179,9 +197,11 @@ try {
   log(`[${JOB_NAME}] 回補 ${DAYS} 天:寫 ${rows.length} 列;瀏覽 ${raw}、其中可當真人看 ${human}`
     + `(${raw ? ((human / raw) * 100).toFixed(1) : "0"}%)`);
   finishJob(db, job, { status: "success", read: rows.length, updated: rows.length });
+  clearTimeout(watchdog);
   log(`[${JOB_NAME}] success`);
   db.close();
 } catch (e) {
+  clearTimeout(watchdog);
   const done = finishJob(db, job, { status: "failed", error: e && (e.stack || e.message || e) });
   log(`[${JOB_NAME}] FAILED status=${done.status} next_retry_at=${done.next_retry_at ?? "NULL"}: ${e.message || e}`);
   db.close();

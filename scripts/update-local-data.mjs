@@ -7,10 +7,15 @@
 //
 // 失敗分三類，處理方式不同：
 //   內容層（4xx **且該網域的根目錄是通的**、marker 對不上、日期 marker 對不上）
-//     → 來源真的變了，立即整次失敗、擋下輸出。重抓同一頁不會有不同結果。
+//     → 來源真的變了。重抓同一頁不會有不同結果。
+//       2026-09-17 起**逐筆隔離**而不是整次失敗:這個來源掛的地點／活動這一輪不發布
+//       (匯入器會把它們從 SQLite 拿掉),其餘資料照常輸出;來源恢復就自動回來。
+//       隔離名單在 db/.local-source-quarantine.json、jobs 表 job_name='local-source-quarantine'。
+//       緣由:一個來源改版就停掉七站**全部**的 Topic／題庫／排行更新,09-15~09-16 每三小時
+//       進一次 DLQ,而擋住的東西跟那個來源毫無關係。fail-closed 的單位應該是「那一筆」。
 //   傳輸層（連線失敗、逾時、5xx）
 //     → 對方伺服器暫時掛了，不是我們的資料錯。記進健康檔並放行本輪；
-//       同一個 URL 連續 TRANSIENT_TOLERANCE 輪都是傳輸層失敗才擋下。
+//       同一個 URL 連續 TRANSIENT_TOLERANCE 輪都是傳輸層失敗才隔離(同上,逐筆,不擋整次)。
 //   不可信層（4xx **且這個 URL 24 小時內驗過 OK**）——2026-08-21 用戶拍板新增
 //     → 我們有證據它一小時前還在。重試三次仍 4xx 也不足以判死,降為傳輸層,
 //       走「連續 TRANSIENT_TOLERANCE 輪才擋」。真的被撤掉的來源會在約 3 小時後擋下。
@@ -37,7 +42,7 @@
 // 也正是 CLAUDE.md 紅線「驗來源連結不能只看狀態碼…判死前要複驗」講的事。
 // ⚠ 判準只看**根目錄通不通**，不是看狀態碼是幾號 —— 狀態碼本身會騙人。
 import { execFileSync } from "node:child_process";
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 import { join, resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -55,6 +60,8 @@ const LOCALES = ["zh-TW", "en", "ja", "zh-CN", "hi", "id", "pt-BR"];
 const DEFAULT_TIMEOUT_MS = 45_000;
 // 純本機狀態（同 db/.sync-state*.json 的慣例，不進 git）。刪掉只會讓計數從零開始。
 const HEALTH_PATH = join(ROOT, "db", ".local-source-health.json");
+// 隔離名單(2026-09-17):核對失敗的來源 → 它掛的地點／活動這一輪不發布。匯入器讀同一個檔。
+const QUARANTINE_PATH = join(ROOT, "db", ".local-source-quarantine.json");
 const TRANSIENT_TOLERANCE = Number(process.env.AEIOU_LOCAL_SOURCE_TOLERANCE || 3);
 
 const argv = process.argv.slice(2);
@@ -69,6 +76,17 @@ const asOf = option("--as-of", new Date().toISOString().slice(0, 10));
 
 const fail = (message) => { throw new Error(message); };
 const readJson = (path) => JSON.parse(readFileSync(path, "utf8"));
+// 本機狀態檔(健康計數、隔離名單):讀壞了當空的並吵一句,不讓一個截斷的 JSON 停掉整條管線;
+// 寫用 tmp+rename,行程被殺也不會留下半個檔。
+const readStateJson = (path) => {
+  if (!existsSync(path)) return {};
+  try { return JSON.parse(readFileSync(path, "utf8")) || {}; }
+  catch (error) { console.log(`⚠ ${path} 讀不了,視為空(本輪會重建):${error.message}`); return {}; }
+};
+const writeStateJson = (path, value) => {
+  writeFileSync(`${path}.tmp`, `${JSON.stringify(value, null, 2)}\n`);
+  renameSync(`${path}.tmp`, path);
+};
 const dateOnly = (value, label) => {
   if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) {
     fail(`${label} 必須是 YYYY-MM-DD：${value}`);
@@ -374,7 +392,8 @@ async function verifySource(url, source, event, lastOkAt = null) {
     }
     //   ② 是這一頁沒了,還是整個網域對我們關門?
     if (await isOriginReachable(url)) {
-      fail(`來源 HTTP ${response.status}：${url}`);
+      // 內容層:回結果、不 throw —— 隔離這一筆,不擋整輪(見檔頭)。
+      return { url, content: true, matched: [], message: `來源 HTTP ${response.status}(根目錄通,頁面真的沒了)` };
     }
     const origin = new URL(url).origin;
     return {
@@ -406,11 +425,11 @@ async function verifySource(url, source, event, lastOkAt = null) {
           + " —— 判定為對方擋下本主機,不是來源失效;這一輪等於沒核對過",
       };
     }
-    fail(`來源未找到任何 marker：${url}；搜尋詞：${source.discovery_query}`);
+    return { url, content: true, matched: [], message: `來源未找到任何 marker;搜尋詞:${source.discovery_query}` };
   }
   const matchedDates = source.date_markers?.filter((marker) => body.includes(marker)) || [];
   if (event && matchedDates.length === 0) {
-    fail(`活動來源未找到日期 marker：${url}；活動日期：${event.start_at.slice(0, 10)}；搜尋詞：${source.discovery_query}`);
+    return { url, content: true, matched, message: `活動來源未找到日期 marker;活動日期:${event.start_at.slice(0, 10)};搜尋詞:${source.discovery_query}` };
   }
   return { url, status: response.status, finalUrl: response.url, matched, matchedDates };
 }
@@ -531,6 +550,34 @@ function recordRunwayJob({ total, warnings }) {
   }
 }
 
+/**
+ * 隔離名單的出口(2026-09-17),與 recordRunwayJob 同一個理由:印在沒人讀的 log 裡等於沒說。
+ * 獨立 job_name='local-source-quarantine':有東西在隔離中就 partial_success 並逐筆點名,
+ * 名單空了就 success —— 「這一輪跑完了,但有幾筆資料被扣下」是觀測,不是這一輪執行失敗。
+ * 看門狗(scripts/watchdog.mjs)讀 db/.local-source-quarantine.json 在進入／解除時發 Slack。
+ */
+function recordQuarantineJob({ quarantine, quarantinedNow, heldPlaces, heldEvents }) {
+  let db = null;
+  try {
+    db = openDb();
+    const job = beginJob(db, { jobName: "local-source-quarantine" });
+    const urls = Object.keys(quarantine);
+    finishJob(db, job, {
+      status: urls.length ? "partial_success" : "success",
+      read: quarantinedNow.length,
+      failed: urls.length,
+      error: urls.length
+        ? `${urls.length} 個來源隔離中(下架 ${heldPlaces.length} 地點、${heldEvents.length} 活動):`
+          + urls.map((url) => `${url}(${quarantine[url].kind},自 ${quarantine[url].since})`).join(" | ")
+        : null,
+    });
+  } catch (error) {
+    console.log(`⚠ 隔離名單寫入 jobs 表失敗(不影響本輪輸出):${error.message}`);
+  } finally {
+    try { db?.close(); } catch { /* 已關或沒開成 */ }
+  }
+}
+
 const lastDayOf = (event) => (event.end_at || event.start_at).slice(0, 10);
 
 /** 仍要發布的活動:結束日還沒過。今天正在辦的當然要留著顯示。 */
@@ -567,8 +614,9 @@ async function main() {
   }
 
   console.log(`來源驗證：${urlsToVerify.length} 個目前仍使用的 URL（${offline ? "offline" : "online"}）`);
-  const health = existsSync(HEALTH_PATH) ? readJson(HEALTH_PATH) : {};
-  const blocking = [];
+  const health = readStateJson(HEALTH_PATH);
+  const quarantine = readStateJson(QUARANTINE_PATH);
+  const quarantinedNow = [];   // 這一輪判定要隔離的 URL(內容層,或傳輸層連續超過容忍)
   const blockedByOrigin = [];
   const robotsSkipped = [];
   const checks = [];
@@ -581,6 +629,9 @@ async function main() {
       // 與封鎖層同一種處理:永不擋輸出,但要留痕 —— 這一輪它沒有被核對過。
       health[url] = { robots_disallowed_since: health[url]?.robots_disallowed_since || asOf, ok_at: health[url]?.ok_at || null, last_message: result.message };
       robotsSkipped.push(`${url}：${result.message}`);
+      // robots 擋的來源永遠不會再被本支核對成功 —— 留在隔離裡就是永久下架。它與「永不擋輸出」互斥,解除。
+      if (quarantine[url]) console.log(`  SKIP ${url} 解除隔離(robots 擋,無法再核對;自 ${quarantine[url].since})`);
+      delete quarantine[url];
       console.log(`  SKIP ${url} ${result.message}`);
     }
     else if (result.blocked) {
@@ -589,7 +640,15 @@ async function main() {
       const prev = health[url]?.blocked_since;
       health[url] = { blocked_since: prev || asOf, ok_at: health[url]?.ok_at || null, last_message: result.message };
       blockedByOrigin.push(`${url}：${result.message}`);
-      console.log(`  WARN ${url} ${result.message}`);
+      // 已在隔離裡的維持隔離:上一次核對到的是「內容真的不對」,這一輪只是核對不了,不能據此解除。
+      if (quarantine[url]) quarantine[url].last_message = `${quarantine[url].last_message}(本輪被擋,無法核對,不自動解除)`;
+      console.log(`  WARN ${url} ${result.message}${quarantine[url] ? "(隔離中,本輪無法核對)" : ""}`);
+    }
+    else if (result.content) {
+      // 內容層:這個來源真的變了。隔離它掛的那幾筆,不擋整輪。
+      quarantine[url] = { since: quarantine[url]?.since || asOf, kind: "content", last_message: result.message };
+      quarantinedNow.push(`${url}:${result.message}`);
+      console.log(`  FAIL ${url} ${result.message} —— 隔離(這個來源掛的地點／活動本輪不發布)`);
     }
     else if (result.transient) {
       const n = (health[url]?.consecutive_failures || 0) + 1;
@@ -601,11 +660,18 @@ async function main() {
         ok_at: health[url]?.ok_at || null,
         last_message: result.message,
       };
-      if (n >= TRANSIENT_TOLERANCE) blocking.push(`${url} 連續 ${n} 輪傳輸層失敗（容忍上限 ${TRANSIENT_TOLERANCE}）：${result.message}`);
-      else console.log(`  WARN ${url} 傳輸層失敗第 ${n}/${TRANSIENT_TOLERANCE} 輪，本輪放行：${result.message}`);
+      if (n >= TRANSIENT_TOLERANCE) {
+        quarantine[url] = { since: quarantine[url]?.since || asOf, kind: "transient", last_message: `連續 ${n} 輪傳輸層失敗(容忍上限 ${TRANSIENT_TOLERANCE}):${result.message}` };
+        quarantinedNow.push(`${url}:${quarantine[url].last_message}`);
+        console.log(`  FAIL ${url} 連續 ${n} 輪傳輸層失敗 —— 隔離(這個來源掛的地點／活動本輪不發布)`);
+      } else {
+        console.log(`  WARN ${url} 傳輸層失敗第 ${n}/${TRANSIENT_TOLERANCE} 輪，本輪放行：${result.message}`);
+      }
     } else {
       // 一次成功就把失敗計數歸零,但**保留 ok_at** —— 下一輪的 4xx 要靠它判斷可不可信。
       health[url] = { ok_at: asOf };
+      if (quarantine[url]) console.log(`  ok   ${url} 解除隔離(自 ${quarantine[url].since})`);
+      delete quarantine[url];
       console.log(`  ok   ${url} [${result.matched.join(", ")}${result.matchedDates.length ? `; date: ${result.matchedDates.join(", ")}` : ""}]`);
     }
   }
@@ -614,7 +680,53 @@ async function main() {
   // 下一輪成功而被清,更需要這道修剪)。
   const verifying = new Set(urlsToVerify);
   for (const url of Object.keys(health)) if (!verifying.has(url)) delete health[url];
-  writeFileSync(HEALTH_PATH, `${JSON.stringify(health, null, 2)}\n`);
+  // 隔離名單的修剪判準是「還有沒有任何地點或**仍要發布的**活動掛著它」,不是「這一輪有沒有核對它」:
+  // 今天結束的活動不再核對,但它昨天才因來源錯被扣下,最後一天不該原樣放回去。
+  const stillReferenced = new Set([...placeUrls, ...activeEvents.map((event) => event.source_url)]);
+  for (const url of Object.keys(quarantine)) if (!stillReferenced.has(url)) delete quarantine[url];
+
+  // 隔離不得清空一個市場(2026-09-17):七語系是七個站,每站只看得到自己那一城;
+  // 一城的地點少到剩不到兩個 Topic、或活動歸零,site/scripts/check-local-scope.mjs 會擋下**那一站的 build**
+  // —— 隔離要避免的正是「一個來源擋住一站更新」。所以會把某市場扣到門檻以下的那幾筆**留著發布**,
+  // 名單裡標 effective:false 並大聲說:這幾筆沒核對過、也沒被下架,人要盡快修來源。
+  const marketFloor = (cityCode, entries) => {
+    const remainingPlaces = (sample.places || []).filter((place) => place.city_code === cityCode && !(place.source_urls || []).some((url) => entries.has(url)));
+    const remainingEvents = activeEvents.filter((event) => event.city_code === cityCode && !entries.has(event.source_url));
+    const topics = new Set(remainingPlaces.flatMap((place) => place.topic_slugs || []));
+    return topics.size >= 2 && remainingEvents.length >= 1;
+  };
+  for (const url of Object.keys(quarantine)) quarantine[url].effective = true;
+  for (const market of sample.markets || []) {
+    const inCity = Object.keys(quarantine).filter((url) =>
+      (sample.places || []).some((place) => place.city_code === market.city_code && (place.source_urls || []).includes(url))
+      || activeEvents.some((event) => event.city_code === market.city_code && event.source_url === url));
+    if (!inCity.length) continue;
+    const effective = new Set(inCity);
+    if (marketFloor(market.city_code, effective)) continue;
+    // 從最早隔離的開始放回去,放到市場站得住為止(最新失敗的優先留在隔離裡)。
+    for (const url of inCity.sort((a, b) => (quarantine[a].since < quarantine[b].since ? -1 : 1))) {
+      effective.delete(url);
+      quarantine[url].effective = false;
+      console.log(`  HOLD ${url} 核對失敗但它撐著 ${market.city_code} 的最後幾筆,不下架(未核對!請盡快修來源)`);
+      if (marketFloor(market.city_code, effective)) break;
+    }
+  }
+  // --check-only 是「只驗不寫」;--offline 沒有核對任何東西,隔離名單原樣保留(不清、不加)。
+  if (!checkOnly) {
+    writeStateJson(HEALTH_PATH, health);
+    if (!offline) writeStateJson(QUARANTINE_PATH, quarantine);
+  }
+  // 隔離名單會下架哪幾筆:逐筆點名,人才知道站上少了什麼。
+  const quarantinedUrls = new Set(Object.keys(quarantine).filter((url) => quarantine[url].effective !== false));
+  const heldPlaces = (sample.places || []).filter((place) => (place.source_urls || []).some((url) => quarantinedUrls.has(url)));
+  const heldEvents = activeEvents.filter((event) => quarantinedUrls.has(event.source_url));
+  const publishedEvents = activeEvents.filter((event) => !quarantinedUrls.has(event.source_url));
+  if (Object.keys(quarantine).length) {
+    console.log(`⚠ ${Object.keys(quarantine).length} 個來源在隔離中(核對失敗;effective 的那幾筆掛的資料這一輪不發布,其餘照常):`);
+    for (const [url, entry] of Object.entries(quarantine)) console.log(`   - ${url}(${entry.kind},自 ${entry.since}${entry.effective === false ? ",**未下架**:撐著市場門檻" : ""}):${entry.last_message}`);
+    console.log(`   下架中:地點 ${heldPlaces.map((p) => p.name).join("、") || "無"};活動 ${heldEvents.map((e) => e.name).join("、") || "無"}`);
+    console.log("   修法:更新 content/local-data-sources.json 的 markers 或換來源,跑 node scripts/update-local-data.mjs --check-only 驗;來源恢復會自動解除。");
+  }
   if (robotsSkipped.length) {
     console.log(`⚠ ${robotsSkipped.length} 個來源被 robots.txt 擋下(本輪未核對,已放行):`);
     for (const line of robotsSkipped) console.log(`   - ${line}`);
@@ -626,21 +738,21 @@ async function main() {
     for (const line of blockedByOrigin) console.log(`   - ${line}`);
     console.log("   要確認是不是真的失效,從別的網路打一次;查全站死連結:node scripts/check-source-urls.mjs");
   }
-  if (blocking.length) {
-    fail(`來源持續無法連線，停止輸出：\n${blocking.map((b) => `- ${b}`).join("\n")}`);
-  }
 
   const removedEvents = (sample.events || []).filter((event) => !activeEvents.includes(event));
   if (removedEvents.length) {
     console.log(`將移除 ${removedEvents.length} 個已過期活動：${removedEvents.map((event) => event.name).join("、")}`);
   }
-  const runway = reportEventRunway(activeEvents);
+  // 存量判準要看讀者真的看得到的場次:隔離中被扣下的不算(否則剛好在門檻上的市場會假綠)。
+  const runway = reportEventRunway(publishedEvents);
+  if (heldEvents.length) console.log(`   (其中 ${heldEvents.length} 場隔離中,未計入存量)`);
   if (checkOnly) {
     console.log(`檢查完成：${activeEvents.length} 個有效活動、${managedEventUrls.length} 個受管理活動來源`);
     return;
   }
 
   recordRunwayJob(runway);   // --check-only 走不到這裡:「只驗不寫」不該有副作用
+  if (!offline) recordQuarantineJob({ quarantine, quarantinedNow, heldPlaces, heldEvents });
 
   const changed = JSON.stringify(sample.events || []) !== JSON.stringify(activeEvents);
   if (changed) {

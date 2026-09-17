@@ -30,3 +30,6 @@ logs/*
 
 # 視覺驗收截圖(本機產物,不進 git)
 .screenshots/
+
+# 在地資料來源的隔離名單(update-local-data 寫、匯入器讀;純本機狀態,刪掉只會多發布一輪未核對的資料)
+db/.local-source-quarantine.json

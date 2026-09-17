@@ -24,6 +24,7 @@
 //                notify job 說;這裡是**後援**,守的是「CI 連 notify 都說不出話」那種情況)
 //   sites        最近一筆已滿 45 分鐘的 data/ commit **沒有綠燈的 CI run**,且七站 .build-id
 //                那一版比它舊超過 45 分鐘(CI 沒跑、卡住或失敗,線上停在舊版)
+//   local-quarantine  在地來源隔離名單非空(那幾筆地點／活動正在下架;update-local-data.mjs 寫的)
 //   readiness    gsc-topic-metrics 印出「需要決策」(通知,一週一次,不催)
 //
 // -- 它怎麼說話(只在狀態改變時)-------------------------------------------------
@@ -196,6 +197,17 @@ function checkSites(state) {
   return null;
 }
 
+function checkQuarantine() {
+  // 在地來源隔離名單(update-local-data.mjs 寫):有東西在裡面 = 站上少了幾筆地點／活動。
+  const path = join(ROOT, "db", ".local-source-quarantine.json");
+  if (!existsSync(path)) return null;
+  const q = JSON.parse(readFileSync(path, "utf8")) || {};
+  const urls = Object.keys(q);
+  if (!urls.length) return null;
+  const list = urls.map((u) => `${u}(${q[u].kind},自 ${q[u].since})`).join("、");
+  return { key: "local-quarantine", text: `${urls.length} 個在地來源核對失敗、隔離中(它們掛的地點／活動已下架):${list}` };
+}
+
 function checkReadiness() {
   const logPath = join(ROOT, "logs", "gsc-topic-metrics.log");
   if (!existsSync(logPath)) return null;
@@ -262,6 +274,7 @@ run("export-stale", () => checkExportStale(db));
 run("branch", () => checkBranch());
 run("ci", () => checkCi());
 run("sites", () => checkSites(state));
+run("local-quarantine", () => checkQuarantine());
 let dlqNew = null;
 try { dlqNew = checkDlq(db, state); } catch (error) { unknown.push(`dlq:${error.message}`); }
 let readiness = null;

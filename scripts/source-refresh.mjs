@@ -86,7 +86,7 @@ if (REPORT) {
   //   報表的數字說謊比沒有報表更糟。
   const due = db.prepare(
     `SELECT COUNT(*) AS n FROM sources
-      WHERE next_crawl_at <= ? AND status != 'ignored'
+      WHERE next_crawl_at <= ? AND status NOT IN ('ignored', 'retired')
         AND source_type IN (${[...VALID_TYPES].map(() => "?").join(",")})`,
   ).get(nowSec(), ...VALID_TYPES).n;
   const contents = db.prepare("SELECT COUNT(*) AS n FROM source_contents").get().n;
@@ -145,7 +145,7 @@ try {
                             next_crawl_at = MIN(next_crawl_at,
                               CASE WHEN crawled_at IS NULL THEN ? ELSE ? + ? END),
                             updated_at = ?
-          WHERE source_id = ?`,
+          WHERE source_id = ? AND status != 'retired'`, // retired(content/topics 的 retired=)不抓也不改
       );
       for (const s of list) {
         if (!s || typeof s.url !== "string" || !/^https?:\/\//.test(s.url)) continue;
@@ -184,7 +184,7 @@ try {
   // 這裡也不抓 —— 它們是別條管線的產物,不是清冊的一部分。
   const due = db.prepare(
     `SELECT source_id, url, domain, crawl_freq_s, content_hash FROM sources
-      WHERE next_crawl_at <= ? AND status != 'ignored' AND source_type IN (${
+      WHERE next_crawl_at <= ? AND status NOT IN ('ignored', 'retired') AND source_type IN (${
         [...VALID_TYPES].map(() => "?").join(",")})
       ORDER BY next_crawl_at ASC LIMIT ?`,
   ).all(now, ...VALID_TYPES, LIMIT);

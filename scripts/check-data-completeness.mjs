@@ -86,7 +86,7 @@ for (const topic of activeTopics) {
   for (const observance of observances) {
     const label = `${topic.slug}/${observance.country_code}/${observance.observance_key}`;
     if (!CONTENT_COUNTRY_CODES.has(observance.country_code)) fail(`${label}: country_code 無效`);
-    if (!Array.isArray(observance.source_urls) || !observance.source_urls.every(isHttp)) fail(`${label}: 缺來源`);
+    if (!Array.isArray(observance.source_urls) || !observance.source_urls.length || !observance.source_urls.every(isHttp)) fail(`${label}: 缺來源`);
     const years = new Set((observance.occurrences || []).map((row) => row.occurrence_year));
     for (const year of [currentYear, currentYear + 1]) if (!years.has(year)) fail(`${label}: 缺 ${year} occurrence`);
     for (const locale of LOCALES) {
@@ -104,7 +104,7 @@ for (const topic of activeTopics) {
     for (const row of regional) {
       const label = `${topic.slug}/regional/${row.country_code}`;
       if (!MARKET_COUNTRY_CODES.has(row.country_code)) fail(`${label}: country_code 無效`);
-      if (!Array.isArray(row.source_urls) || !row.source_urls.every(isHttp)) fail(`${label}: 缺來源`);
+      if (!Array.isArray(row.source_urls) || !row.source_urls.length || !row.source_urls.every(isHttp)) fail(`${label}: 缺來源`);
       for (const locale of LOCALES) {
         if (!nonEmpty(i18n.regional_notes?.[row.country_code]?.[locale])) fail(`${label}: 缺 ${locale}`);
       }
