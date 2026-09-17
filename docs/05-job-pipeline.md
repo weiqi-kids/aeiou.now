@@ -52,6 +52,7 @@
 `gsc-topic-metrics`(每日 GSC;2026-09-17 起同一次也寫站級逐日曲線 `site_search_daily`,
 查:`node scripts/gsc-topic-metrics.mjs --report`)、`seed-ask-the-world`(種子題保鮮)、
 `gsc-demand-country`(每小時,排在 `export-data` 前面 —— 結論要進 facts.json)、
+`announcement-watch`(每日;七國官方假日公告出了沒,只說話不改日期,`partial_success`=要人去抄)、`watchdog`(每 15 分;只在狀態改變時發 Slack)。
 `url-inspection-sweep`(每日;逐頁 URL Inspection 存成時間序列 `url_inspections`,
 每次最多 `AEIOU_INSPECT_BUDGET` 筆、全站跨數天掃完一輪;查:`node scripts/url-inspection-sweep.mjs --report`
 —— 印 page_type × coverage_state 與「連續 ≥3 輪 Discovered-not-indexed 且首見 ≥21 天」清單,

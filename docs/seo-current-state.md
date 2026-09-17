@@ -12,9 +12,9 @@
 
 - **事實**:GSC(原始 API,type=web)09-01 曝光 2,113、點擊 19、平均名次 14.2;09-02 198/1;09-03 起每日 16–54,至 09-14 沒有回升。七個子網域同日一起掉;GA4 organic 同步 16→0–4。頁面仍 Submitted and indexed(br /topic/halloween/ 等抽驗),熱門頁 lastCrawl 停在 08-20~08-27。GSC 介面「專人介入處理」「安全性問題」均為空(站主 09-17 確認)。
 - **判定**:演算法的站級重評／降權,不是處分。站方 08-30~09-02 的部署沒有 Google 看得到的變化(七個 publish repo 逐版比對過);最合理的觸發物是 08-26/27 兩天七站從約 385 URL 膨脹到約 3,800(逐國頁 379×7)加上 08-26~09-01 每天整站 lastmod=當天、每天 8~27 次全站重部署、外部連結 0、UGC 0。恢復以月計,沒有通知。
-- **凍結範圍(至 2026-12-16)**:① 共用 title／description／h3 規則不改(明確的 bug 逐條記錄例外);② 不開任何新頁型(Topic×城市、問題單頁、嵌入 widget 都不開);③ 不砍逐國頁、不加 noindex(它是斷崖前 74% 曝光來源,現在的「未索引」可能反映站級狀態不是頁薄;要動也照 TODO「先重爬比例、再用 Google 判決」的順序);④ 新 Topic 仍可加,但走 new-territory B 段先量需求。內容加厚(制度數字、缺漏 observance、題庫)只備料不上線,等 `crawl-freshness` ≥70%。
+- **凍結範圍(至 2026-12-16)**:① 共用 title／description／h3 規則不改(明確的 bug 逐條記錄例外);② 不開任何新頁型(Topic×城市、問題單頁、嵌入 widget 都不開);③ 不砍逐國頁、不加 noindex(它是斷崖前 74% 曝光來源,現在的「未索引」可能反映站級狀態不是頁薄;要動也照 TODO「先重爬比例、再用 Google 判決」的順序);④ 新 Topic 仍可加,但走 new-territory B 段先量需求。內容加厚(制度數字、缺漏 observance、題庫)只備料不上線,等 `crawl-freshness` ≥70%。備料在 [reports/content-thickening-prep-2026-09.md](reports/content-thickening-prep-2026-09.md)(⚠ 它引用的 GSC 數字全在斷崖前窗,解凍時用同一條查法重算再動手)。
 - **已做的止血**:sitemap 指紋洗掉每小時輪替的導覽捷徑,CI 改拿上一版 HTML 重算比對(09-17 這輪七站 0 頁誤推);CI notify job;主機看門狗;在地來源改逐筆隔離;GSC 就緒度決策記在 `content/gsc-readiness-decision.json`(維持門檻,12-16 再看)。
-- **怎麼判有沒有回來**:`node scripts/seo-health.mjs --no-inspect --days 28` 的逐日曝光;判準是舊 Topic 主頁(08-26 前就存在的那 55 個路徑)每日曝光回到約 150–200 —— 09-02 前的基線,不是逐國頁的峰值。第一次檢查 10-15,之後每兩週。
+- **怎麼判有沒有回來**:`node scripts/gsc-topic-metrics.mjs --report`(站級逐日曝光/點擊,表 `site_search_daily`,2026-09-17 起)或 `node scripts/seo-health.mjs --no-inspect --days 28` 的逐日曝光;判準是舊 Topic 主頁(08-26 前就存在的那 55 個路徑)每日曝光回到約 150–200 —— 09-02 前的基線,不是逐國頁的峰值。第一次檢查 10-15,之後每兩週。
 
 ## 先記住的結論
 
