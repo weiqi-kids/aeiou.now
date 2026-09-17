@@ -60,41 +60,99 @@ function icsText(value) {
     .replaceAll(/\r?\n/g, '\\n');
 }
 
-/**
- * Export days off only. Commemorative rows stay in CSV but should not silently
- * become a day off in somebody's personal calendar.
- */
-export function holidayIcs({ code, year, countryLabel, locale = 'en', rows = [] }) {
+// ── ICS(2026-08-21 用戶核准的三條限制,這裡守第二條)────────────────────────────
+// 「日期是估算或地方變體時不出」:把「大概是那天」寫進別人的日曆是替他做我們沒把握的決定。
+// CSV **不受此限** —— 它是資料引用,欄位裡就有 date_status 讓引用者自己判斷。
+// 紀念日(status=commemorative)也不出:那不是放假日,不該悄悄變成某人日曆上的休假。
+export function icsEligible(row) {
+  if (!row?.starts_on) return false;                          // 沒有日期的地方變體列
+  if (row.status === 'commemorative') return false;
+  const dateStatus = row.date_status || 'confirmed';
+  return dateStatus !== 'estimated' && dateStatus !== 'local-variant';
+}
+
+export function holidayEventUid(code, year, key) {
+  return `holiday-${String(code).toLowerCase()}-${year}-${key}@aeiou.now`;
+}
+
+// 共同的 VCALENDAR 外殼。年度檔與滾動檔只差「幾個年份、日曆叫什麼」,事件本體與 UID
+// 都一樣 —— 同一個假日在兩份檔裡是同一個 UID,訂閱者同時裝兩份也不會重複。
+//
+// ⚠ DTSTAMP 一律用事件起始日,**不是「現在」**:每次 build 位元組要一模一樣,
+//    否則「hash 沒變就不動」那整套保護(sitemap-lastmod / publish 的 .page-stamps)會失效。
+function buildIcs({ code, calendarName, calendarDescription, locale, sections }) {
   const upperCode = String(code).toUpperCase();
-  const events = rows.filter((row) => row.status !== 'commemorative');
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
     'PRODID:-//aeiou.now//Annual holiday calendar//EN',
     'CALSCALE:GREGORIAN',
-    `X-WR-CALNAME:${icsText(`${countryLabel || upperCode} ${year}`)}`,
+    `X-WR-CALNAME:${icsText(calendarName)}`,
   ];
-  for (const row of events) {
-    const start = row.starts_on;
-    const end = row.ends_on || start;
-    const description = [
-      `Status: ${row.status || 'unspecified'}`,
-      `Date status: ${row.date_status || 'confirmed'}`,
-      sourceList(row) ? `Sources: ${sourceList(row)}` : null,
-    ].filter(Boolean).join('\n');
-    lines.push(
-      'BEGIN:VEVENT',
-      `UID:holiday-${upperCode.toLowerCase()}-${year}-${row.key}@aeiou.now`,
-      `DTSTAMP:${isoDate(start)}T000000Z`,
-      `DTSTART;VALUE=DATE:${isoDate(start)}`,
-      `DTEND;VALUE=DATE:${isoDate(addDays(end, 1))}`,
-      `SUMMARY:${icsText(rowName(row, locale))}`,
-      `DESCRIPTION:${icsText(description)}`,
-      'END:VEVENT',
-    );
+  if (calendarDescription) lines.push(`X-WR-CALDESC:${icsText(calendarDescription)}`);
+  // 給會讀的訂閱端(Apple Calendar 讀 X-PUBLISHED-TTL,RFC 7986 讀 REFRESH-INTERVAL)一週重抓一次;
+  // 資料本來就是每小時 export、逐週才可能有新公告,再密只是白打。
+  lines.push('REFRESH-INTERVAL;VALUE=DURATION:P1W', 'X-PUBLISHED-TTL:P1W');
+  for (const { year, rows = [], pageUrl } of sections) {
+    for (const row of rows.filter(icsEligible)) {
+      const start = row.starts_on;
+      const end = row.ends_on || start;
+      const description = [
+        `Status: ${row.status || 'unspecified'}`,
+        `Date status: ${row.date_status || 'confirmed'}`,
+        sourceList(row) ? `Sources: ${sourceList(row)}` : null,
+      ].filter(Boolean).join('\n');
+      lines.push(
+        'BEGIN:VEVENT',
+        `UID:${holidayEventUid(upperCode, year, row.key)}`,
+        `DTSTAMP:${isoDate(start)}T000000Z`,
+        `DTSTART;VALUE=DATE:${isoDate(start)}`,
+        `DTEND;VALUE=DATE:${isoDate(addDays(end, 1))}`,
+        `SUMMARY:${icsText(rowName(row, locale))}`,
+        `DESCRIPTION:${icsText(description)}`,
+      );
+      if (pageUrl) lines.push(`URL:${icsText(pageUrl)}`);
+      lines.push('END:VEVENT');
+    }
   }
   lines.push('END:VCALENDAR');
   return `${lines.join('\r\n')}\r\n`;
+}
+
+/**
+ * 年度檔 `/holidays/<cc>/<year>.ics`:一國一年的放假日。
+ * `pageUrl` 是那一頁的正式網址(每個 VEVENT 掛 URL:),`calendarDescription` 由呼叫端
+ * 用該頁 i18n 的 `holidays.lead` 填好傳進來 —— 這支保持純函式,不讀 i18n。
+ */
+export function holidayIcs({ code, year, countryLabel, locale = 'en', rows = [], pageUrl = null, calendarDescription = null }) {
+  const upperCode = String(code).toUpperCase();
+  return buildIcs({
+    code,
+    locale,
+    calendarName: `${countryLabel || upperCode} ${year}`,
+    calendarDescription,
+    sections: [{ year, rows, pageUrl }],
+  });
+}
+
+/**
+ * 滾動檔 `/holidays/<cc>.ics`:同一國**全部產出年份**合成一份,給 webcal:// 訂閱用
+ * (年度檔是下載一次就凍住的;訂閱要的是「新年份公告出來就自動長出來」)。
+ * `years` = [{ year, rows, pageUrl }],排除規則與 UID 都與年度檔相同。
+ */
+export function holidayIcsFeed({ code, countryLabel, locale = 'en', years = [], calendarDescription = null }) {
+  const upperCode = String(code).toUpperCase();
+  return buildIcs({
+    code,
+    locale,
+    calendarName: countryLabel || upperCode,
+    calendarDescription,
+    sections: years,
+  });
+}
+
+export function holidayFeedFileName(code) {
+  return `aeiou-${String(code).toLowerCase()}-holidays.ics`;
 }
 
 export function holidayAssetFileName(code, year, extension) {

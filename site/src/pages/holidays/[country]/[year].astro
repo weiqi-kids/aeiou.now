@@ -110,6 +110,9 @@ const lead = [
   discretionary > 0 ? fillTemplate(t('holidays.discretionary_note'), { n: String(discretionary) }) : null,
 ].filter(Boolean).join(' ');
 const heading = fillTemplate(t('holidays.heading'), { year, country: label });
+// 訂閱連結(webcal://)指向滾動檔 /holidays/<cc>.ics —— 年度檔下載一次就凍住,訂閱要的是
+// 「新年份公告出來就自動長出來」。host 走 Astro.site(該站正式網域),只換 scheme。
+const subscribeUrl = new URL(withBase(`holidays/${code.toLowerCase()}.ics`), Astro.site).href.replace(/^https?:/, 'webcal:');
 
 // description 第一句要給答案(2026-08-26 紅線:description 不得等於 title,且第一句要說出這頁有什麼)。
 const description = compactDescription([
@@ -167,6 +170,12 @@ const holidaySourceLabels = sourceLabels(allSources);
         href={withBase(`holidays/${code.toLowerCase()}/${year}.ics`)}
         download
       >{t('holidays.download_ics')}</a>
+      <a
+        data-calendar-asset="subscribe"
+        data-calendar-country={code}
+        data-calendar-year={year}
+        href={subscribeUrl}
+      >{fillTemplate(t('holidays.subscribe'), { country: label })}</a>
     </p>
   </section>
 
