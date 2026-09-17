@@ -24,6 +24,9 @@
 //   封鎖層（4xx **且該網域的根目錄也連不上**）——2026-08-21 用戶拍板新增
 //     → 是這台主機被對方整站擋掉，不是那一頁失效。**只 WARN，永不擋輸出**，
 //       也不計入傳輸層的容忍計數（等再久都不會變，擋下去只是懲罰七個站）。
+//     ・**200 + 人機驗證擋板**也算封鎖層（2026-09-17 補）：狀態碼是 200，回來的卻是
+//       「請稍候，正在驗證您的請求」，marker 一個都對不上。那是我們被擋，不是內容變了。
+//       判準與立法緣由（連續 14 天擋停整條 hourly-export）寫在 verifySource 裡。
 //   會這樣分是因為整條 hourly-export 都掛在這支後面：任何一個來源打個嗝，
 //   Topic 與題庫的匯出也會一起停擺（2026-08-19 實際被一個 HTTP 520 擋過一次）。
 //
@@ -45,7 +48,11 @@ const INPUT_PATH = join(ROOT, "content", "local-sample-data.json");
 const SOURCES_PATH = join(ROOT, "content", "local-data-sources.json");
 const IMPORTER_PATH = join(ROOT, "scripts", "import-local-sample-data.mjs");
 const LOCALES = ["zh-TW", "en", "ja", "zh-CN", "hi", "id", "pt-BR"];
-const DEFAULT_TIMEOUT_MS = 20_000;
+// 逾時 45 秒（2026-09-17 從 20 秒放寬）：museuafrobrasil.org.br 實測每次回應要 25–30 秒，
+// 首頁本身是好的（HTTP 200、45 萬位元組），只是慢。20 秒切斷等於把「慢」判成「連不上」，
+// 於是它從 2026-09-04 起連續 81 輪算傳輸層失敗，超過容忍上限後擋停整條 hourly-export。
+// 🔴 這裡放寬的是**耐心**，不是判準：仍然重試三次、仍然分內容層／傳輸層／封鎖層。
+const DEFAULT_TIMEOUT_MS = 45_000;
 // 純本機狀態（同 db/.sync-state*.json 的慣例，不進 git）。刪掉只會讓計數從零開始。
 const HEALTH_PATH = join(ROOT, "db", ".local-source-health.json");
 const TRANSIENT_TOLERANCE = Number(process.env.AEIOU_LOCAL_SOURCE_TOLERANCE || 3);
@@ -77,6 +84,23 @@ const normalizedBody = (body) => body
   .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
   .replace(/&#(\d+);/g, (_, decimal) => String.fromCodePoint(Number(decimal)));
 const unique = (values) => [...new Set(values)];
+
+// 人機驗證擋板的特徵字串(見 verifySource 裡的說明)。回傳對上的那一句,沒對上回 null。
+// 只在頁面短於 CHALLENGE_MAX_BYTES 時才算數 —— 擋板都是幾 KB 的骨架,內容頁不是。
+const CHALLENGE_MAX_BYTES = 25000;
+const CHALLENGE_MARKERS = [
+  "Please wait while your request is being verified",
+  "Just a moment...",
+  "Enable JavaScript and cookies to continue",
+  "Checking your browser before accessing",
+  "Verifying you are human",
+  "cf-browser-verification",
+  "__cf_chl",
+];
+const botChallengeHit = (rawBody) => {
+  if (typeof rawBody !== "string" || rawBody.length >= CHALLENGE_MAX_BYTES) return null;
+  return CHALLENGE_MARKERS.find((marker) => rawBody.includes(marker)) || null;
+};
 
 if (!existsSync(INPUT_PATH) || !existsSync(SOURCES_PATH)) {
   fail("找不到 content/local-sample-data.json 或 content/local-data-sources.json");
@@ -363,6 +387,25 @@ async function verifySource(url, source, event, lastOkAt = null) {
   const body = normalizedBody(rawBody);
   const matched = source.markers.filter((marker) => body.includes(marker));
   if (matched.length === 0) {
+    // marker 對不上之前先問一次:回來的到底是不是那一頁?(2026-09-17 補)
+    // 人機驗證擋板是 **HTTP 200**,內容卻是「請稍候,正在驗證您的請求」。
+    // marker 當然一個都對不上 —— 但那是**我們被擋**,不是來源內容變了,
+    // 與封鎖層是同一件事,只是對方用 200 送過來(紅線:狀態碼本身會騙人)。
+    // 處理方式因此與封鎖層一致:只 WARN、永不擋輸出、不計入任何容忍計數。
+    // 立法緣由:turis.istiqlal.or.id 從 2026-09-03 起整站掛上 Cloudflare 人機驗證,
+    // 這一支於是連續 14 天擋停整條 hourly-export —— data/ 停在 09-05、七站停在 09-02。
+    // 判準刻意是「擋板特徵字串 **且** 頁面很短」兩個條件一起看:真的在談這些字眼的
+    // 文章不會只有兩千位元組,單看字串會把正常頁面誤判成擋板而放過真正的內容變更。
+    const challenge = botChallengeHit(rawBody);
+    if (challenge) {
+      return {
+        url,
+        blocked: true,
+        matched: [],
+        message: `HTTP ${response.status} 但回來的是人機驗證擋板（${challenge}）`
+          + " —— 判定為對方擋下本主機,不是來源失效;這一輪等於沒核對過",
+      };
+    }
     fail(`來源未找到任何 marker：${url}；搜尋詞：${source.discovery_query}`);
   }
   const matchedDates = source.date_markers?.filter((marker) => body.includes(marker)) || [];

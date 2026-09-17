@@ -48,7 +48,7 @@
 - local_name: Cap Go Meh
 - date_rule: 農曆一月十五日（Imlek 起算的第十五夜）
 - rank: 7
-- source: https://referensi.data.kemendikdasmen.go.id/budayakita/wbtb/objek/AA001528
+- source: https://bimasbuddha.kemenag.go.id/cap-go-meh-dan-ritual-keagamaan-tradisi-kearifan-lokal-di-singkawang-berita-804.html
 
 ## locale zh-TW
 ### title
