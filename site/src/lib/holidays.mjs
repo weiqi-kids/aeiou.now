@@ -87,6 +87,7 @@ export function holidaysFor(code, year) {
       source_urls: h.source_urls || [],
       makeup_workdays: h.makeup_workdays?.[year] || null,
       nationwide: h.nationwide ?? null,
+      scope: h.scope === 'group' ? 'group' : 'all',
       partial_day: h.partial_day ?? null,
     }))
     .sort((a, b) => (a.starts_on < b.starts_on ? -1 : a.starts_on > b.starts_on ? 1 : 0));

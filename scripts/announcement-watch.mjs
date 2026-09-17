@@ -36,8 +36,19 @@ import { dirname, join } from "node:path";
 
 import { ROOT, openDb, beginJob, finishJob, nowSec, log } from "./lib/aeiou-lib.mjs";
 import {
-  classify, decide, entryFound, entryKey, estimatedRows, htmlToText, isOverdue,
-  overdueDecision, parseRobots, robotsAllows, urlKey, validateWatchFile,
+  classify,
+  decide,
+  entryFound,
+  entryKey,
+  estimatedRows,
+  htmlToText,
+  isOverdue,
+  overdueDecision,
+  parseRobots,
+  robotsAllows,
+  urlKey,
+  validateWatchFile,
+  unreachableRobots,
 } from "./lib/announcement-watch.mjs";
 
 const JOB_NAME = "announcement-watch";
@@ -115,15 +126,16 @@ async function robotsFor(url) {
   if (robotsCache.has(host)) return robotsCache.get(host);
   let rules = parseRobots("", { defaultDelayMs: DEFAULT_DELAY_MS });
   try {
-    const ac = new AbortController();
-    const t = setTimeout(() => ac.abort(), FETCH_TIMEOUT_MS);
-    const res = await fetch(`${protocol}//${host}/robots.txt`, { headers: { "User-Agent": UA }, signal: ac.signal, redirect: "follow" });
-    clearTimeout(t);
-    // robots.txt 取不到(404/網路錯)→ 沒有規則 = 允許(RFC 9309 的預設)。
-    if (res.ok && /text\/plain/i.test(res.headers.get("content-type") || "")) {
+    const res = await fetch(`${protocol}//${host}/robots.txt`, { headers: { "User-Agent": UA }, signal: AbortSignal.timeout(FETCH_TIMEOUT_MS), redirect: "follow" });
+    if (res.status >= 500) {
+      // RFC 9309 §2.3.1.4:5xx = unreachable = 全站不准抓(data.gov.tw 的 robots 就回 500)。只有 4xx 才是「沒有規則」。
+      rules = unreachableRobots({ defaultDelayMs: DEFAULT_DELAY_MS });
+    } else if (res.ok && /text\/plain/i.test(res.headers.get("content-type") || "")) {
       rules = parseRobots(await res.text(), { defaultDelayMs: DEFAULT_DELAY_MS });
     }
-  } catch { /* 同上 */ }
+  } catch {
+    rules = unreachableRobots({ defaultDelayMs: DEFAULT_DELAY_MS });   // 連不上同樣是 unreachable
+  }
   robotsCache.set(host, rules);
   return rules;
 }
@@ -132,21 +144,32 @@ async function robotsFor(url) {
 async function fetchOne(url) {
   const out = { status: null, contentType: "", finalUrl: url, hash: null, text: null, error: null, robotsBlocked: false };
   const rules = await robotsFor(url);
-  if (!robotsAllows(rules, new URL(url).pathname)) { out.robotsBlocked = true; return out; }
+  const target = new URL(url);
+  if (!robotsAllows(rules, target.pathname + target.search)) { out.robotsBlocked = true; return out; }
   try {
-    const ac = new AbortController();
-    const t = setTimeout(() => ac.abort(), FETCH_TIMEOUT_MS);
+    // 逾時要蓋到 body 讀完,不只到 headers(慢速/半開連線會讓 arrayBuffer 永遠等下去);
+    // body 用串流讀到 MAX_BODY_BYTES 就取消,超大回應不吃滿記憶體。
+    const signal = AbortSignal.timeout(FETCH_TIMEOUT_MS);
     const res = await fetch(url, {
       headers: { "User-Agent": UA, Accept: "text/html,application/xhtml+xml,application/pdf,text/csv,text/calendar,*/*;q=0.5" },
-      signal: ac.signal, redirect: "follow",
+      signal, redirect: "follow",
     });
-    clearTimeout(t);
     out.status = res.status;
     out.contentType = res.headers.get("content-type") || "";
     out.finalUrl = res.url || url;
     if (res.status >= 200 && res.status < 300) {
-      const buf = Buffer.from(await res.arrayBuffer());
-      const body = buf.subarray(0, MAX_BODY_BYTES);
+      const chunks = [];
+      let total = 0;
+      if (res.body) {
+        const reader = res.body.getReader();
+        while (total < MAX_BODY_BYTES) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          chunks.push(value); total += value.length;
+        }
+        if (total >= MAX_BODY_BYTES) { try { await reader.cancel(); } catch { /* 已切斷 */ } }
+      }
+      const body = Buffer.concat(chunks.map((c) => Buffer.from(c))).subarray(0, MAX_BODY_BYTES);
       const isText = /text\/|json|xml|calendar|csv/i.test(out.contentType);
       if (isText) {
         const text = /html/i.test(out.contentType)
@@ -195,6 +218,12 @@ async function main() {
     for (const { entry, url } of items) {
       const key = urlKey(entry, url);
       let r = fetched.get(url);
+      // 401/403 一律當「不准抓」,而且不是只有這一輪:標 blocked_until 30 天,到期前不再敲(與 source-refresh 的 ignored 一致)。
+      const prevBlocked = state.urls[key];
+      if (!r && prevBlocked?.kind === "blocked" && (prevBlocked.status === 401 || prevBlocked.status === 403)
+          && prevBlocked.blocked_until && prevBlocked.blocked_until > nowIso) {
+        r = { status: prevBlocked.status, contentType: prevBlocked.content_type || "", finalUrl: prevBlocked.final_url || url, hash: prevBlocked.hash, text: null, error: null, robotsBlocked: false, reused: true };
+      }
       if (!r) {
         if (requests > 0) await sleep(rules.delayMs);
         requests += 1;
@@ -243,6 +272,9 @@ async function main() {
           final_url: cur.finalUrl, checked_at: nowIso,
           changed_at: prev && prev.kind === cur.kind && prev.hash === cur.hash ? (prev.changed_at || nowIso) : nowIso,
           last_error: cur.error || null,
+          ...((cur.status === 401 || cur.status === 403)
+            ? { blocked_until: prev?.blocked_until && prev.blocked_until > nowIso ? prev.blocked_until : new Date(Date.parse(nowIso) + 30 * 86400000).toISOString() }
+            : {}),
         };
       }
     }

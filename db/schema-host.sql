@@ -529,7 +529,7 @@ CREATE TABLE IF NOT EXISTS url_inspections (
   url              TEXT NOT NULL,              -- 線上 sitemap 裡的完整 URL
   host             TEXT NOT NULL,              -- 七個正式網域之一
   page_type        TEXT NOT NULL,              -- topic|country|holiday|question|ranking|home|other
-  sweep_id         TEXT NOT NULL,              -- 'YYYY-MM-DD',執行日(UTC)
+  sweep_id         TEXT NOT NULL,              -- 'YYYY-MM-DD',執行日(America/Los_Angeles;Google 配額日)
   inspected_at     INTEGER NOT NULL,           -- unix 秒
   verdict          TEXT,                       -- indexStatusResult.verdict(PASS|NEUTRAL|FAIL…)
   coverage_state   TEXT,                       -- coverageState 原文,退場判準只認原文

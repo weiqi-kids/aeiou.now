@@ -38,7 +38,7 @@ import { existsSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
 
-import { openDb, beginJob, finishJob, slotStart, nowSec, log } from "./lib/aeiou-lib.mjs";
+import { openDb, beginJob, finishJob, acquireLock, slotStart, nowSec, log } from "./lib/aeiou-lib.mjs";
 import { CRAWL_ORIGINS } from "./lib/crawl-freshness.mjs";
 import {
   DISCOVERED_NOT_INDEXED,
@@ -85,7 +85,9 @@ const sampleIdx = argv.indexOf("--sample");
 const SAMPLE = sampleIdx >= 0 ? positiveInt(argv[sampleIdx + 1], 0) : null;
 
 const dayStr = (n = 0) => new Date(Date.now() - n * 86400000).toISOString().slice(0, 10);
-const SWEEP_ID = dayStr(0);
+// 配額日 = 太平洋時間(Google 的 per-day quota 在太平洋午夜重置),不是 UTC 日:
+// 主機 03:10 UTC 那一輪落在「UTC 已換日、太平洋還沒」的重疊窗,用 UTC 日算會在同一個配額日打到 3000。
+const SWEEP_ID = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
 
 // schema-host.sql 是新庫的權威;這個 CREATE IF NOT EXISTS 讓既有主機庫不必 migration。
 function ensureSchema(db) {
@@ -163,7 +165,9 @@ function report(db) {
   const allRows = db.prepare(
     "SELECT url, host, page_type, sweep_id, coverage_state FROM url_inspections",
   ).all();
-  const stuck = persistentlyUnindexed(allRows, {
+  // 退場清單只留最近一輪還在 sitemap(有觀測)的 URL:已下架的頁不該永遠掛在待處理清單裡。
+  const liveUrls = new Set(latest.map((r) => r.url));
+  const stuck = persistentlyUnindexed(allRows.filter((r) => liveUrls.has(r.url)), {
     minRounds: REPORT_MIN_ROUNDS, minDays: REPORT_MIN_DAYS, today: dayStr(0),
   });
   console.log(
@@ -233,6 +237,15 @@ if (REPORT) {
 }
 
 if (!DRY_RUN) ensureSchema(db);
+// 同一天不准兩份同時跑(cron 那一輪最長 50 分鐘,期間再裸執行會把同一批 URL 掃兩次、配額燒 3000)。
+if (!DRY_RUN) {
+  const lock = acquireLock(db, { jobName: JOB_NAME, scheduledAt: slotStart(86400) });
+  if (!lock.ok) {
+    log(`[${JOB_NAME}] skip:${lock.reason}`);
+    db.close();
+    process.exit(0);
+  }
+}
 const job = DRY_RUN ? null : beginJob(db, { jobName: JOB_NAME, scheduledAt: slotStart(86400) });
 const startedAt = Date.now();
 
@@ -306,6 +319,8 @@ try {
       try {
         const result = await inspectUrl(SA, GSC_SITE, url);
         const row = inspectionRow(result);
+        // Google 回 200 但沒有 indexStatusResult(helper 以 ?? {} 吞掉)→ 沒有判決就不假造判決,走失敗計數、不寫列。
+        if (row.verdict == null && row.coverage_state == null) throw new Error("inspect 回空結果(沒有 indexStatusResult)");
         // 逐筆寫,不包整批交易:行程被殺時已掃的判決留著,不會白燒配額。
         insert.run(
           url, hostOf(url), pageTypeOf(url), SWEEP_ID, nowSec(),

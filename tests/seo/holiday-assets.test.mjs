@@ -142,3 +142,27 @@ test('rolling feed merges years with the same UIDs as the annual files and no du
   assert.match(annual, /UID:holiday-us-2028-new-years-day@aeiou\.now/);
   assert.match(feed, /DTSTART;VALUE=DATE:20280101\r\nDTEND;VALUE=DATE:20280102/);
 });
+
+test('discretionary 只有特定人放(scope=group)不進 ICS;全民放(scope=all)照出', async () => {
+  const { holidayIcs, icsEligible } = await import('../../site/src/lib/holiday-assets.mjs');
+  const group = { key: 'police-day', name: { en: 'Police Day' }, starts_on: '2027-06-15', ends_on: null, status: 'discretionary', date_status: 'confirmed', scope: 'group', source_urls: [] };
+  const all = { key: 'cuti-bersama', name: { en: 'Joint Leave' }, starts_on: '2027-03-09', ends_on: null, status: 'discretionary', date_status: 'confirmed', scope: 'all', source_urls: [] };
+  assert.equal(icsEligible(group), false);
+  assert.equal(icsEligible(all), true);
+  const ics = holidayIcs({ code: 'ID', year: '2027', countryLabel: 'Indonesia', locale: 'en', rows: [group, all] });
+  assert.equal((ics.match(/BEGIN:VEVENT/g) || []).length, 1);
+  assert.match(ics, /SUMMARY:Joint Leave/);
+});
+
+test('每一行不超過 75 octets(RFC 5545 折行),URL 不做 TEXT 逃逸,半天假寫進說明', async () => {
+  const { holidayIcs, foldIcsLine } = await import('../../site/src/lib/holiday-assets.mjs');
+  const row = { key: 'quarta', name: { en: 'Ash Wednesday' }, starts_on: '2027-02-10', ends_on: null, status: 'discretionary', date_status: 'confirmed', scope: 'all', partial_day: 'until-1400', source_urls: ['https://example.gov/a-very-long-path/'.padEnd(200, 'x')] };
+  const ics = holidayIcs({ code: 'BR', year: '2027', countryLabel: 'Brasil', locale: 'en', rows: [row], pageUrl: 'https://br.aeiou.now/holidays/br/2027/?a=1,2;3', calendarDescription: '中文說明'.repeat(40) });
+  for (const line of ics.split('\r\n')) assert.ok(Buffer.byteLength(line, 'utf8') <= 75, `超過 75 octets:${line.slice(0, 40)}`);
+  const unfolded = ics.replace(/\r\n /g, '');
+  assert.match(unfolded, /URL:https:\/\/br\.aeiou\.now\/holidays\/br\/2027\/\?a=1,2;3/);
+  assert.match(unfolded, /Partial day: until-1400/);
+  // 折行不切在多位元組字元中間:展開後中文完整
+  assert.match(unfolded, /X-WR-CALDESC:(中文說明){40}/);
+  assert.equal(foldIcsLine('short'), 'short');
+});

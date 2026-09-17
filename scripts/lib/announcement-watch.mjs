@@ -81,6 +81,9 @@ const FOUND = new Set(["matched", "present"]);
  *   reason 只在 speak=true 時有值(appeared / matched / changed);note 是只進 log 的備註。
  */
 export function decide(prev, cur, { hasMatchRule = false } = {}) {
+  // 上一輪是 error(逾時/連線錯)= 沒有觀察,不能拿來當「以前沒有」的證據 —— 否則常年 200 的清單頁
+  // 第一輪剛好逾時、第二輪恢復,就會誤報「出現了」。視同第一輪。
+  if (prev && prev.kind === "error") prev = undefined;
   const wasFound = prev ? FOUND.has(prev.kind) : false;
   const isFound = FOUND.has(cur.kind);
 
@@ -164,8 +167,11 @@ export function estimatedRows(calendar, country, year) {
  * @returns {{disallow: string[], allow: string[], delayMs: number}}
  */
 export function parseRobots(text, { botName = "aeiou-now-bot", defaultDelayMs = 2000 } = {}) {
-  const rules = { disallow: [], allow: [], delayMs: defaultDelayMs };
+  const rules = { disallow: [], allow: [], delayMs: defaultDelayMs, unreachable: false };
+  // RFC 9309 §2.2.1:連續多行 User-agent 是同一個群組;遇到第一條規則才定案「這組套不套用到我們」。
+  let groupAgents = [];
   let applies = false;
+  let inRules = false;
   for (const raw of String(text || "").split(/\r?\n/)) {
     const line = raw.replace(/#.*$/, "").trim();
     if (!line) continue;
@@ -174,9 +180,12 @@ export function parseRobots(text, { botName = "aeiou-now-bot", defaultDelayMs = 
     const key = m[1].toLowerCase();
     const val = m[2].trim();
     if (key === "user-agent") {
-      applies = val === "*" || val.toLowerCase().includes(botName);
+      if (inRules) { groupAgents = []; inRules = false; }   // 規則之後再遇到 UA = 新群組
+      groupAgents.push(val.toLowerCase());
+      applies = groupAgents.some((a) => a === "*" || a.includes(botName));
       continue;
     }
+    inRules = true;
     if (!applies) continue;
     if (key === "disallow" && val) rules.disallow.push(val);
     else if (key === "allow" && val) rules.allow.push(val);
@@ -188,11 +197,25 @@ export function parseRobots(text, { botName = "aeiou-now-bot", defaultDelayMs = 
   return rules;
 }
 
-/** 最長前綴優先;Allow 與 Disallow 同長時 Allow 勝(與主流爬蟲一致)。 */
+/** robots.txt 回 5xx 或連不上:RFC 9309 §2.3.1.4 = unreachable,必須當成全站 Disallow。 */
+export function unreachableRobots({ defaultDelayMs = 2000 } = {}) {
+  return { disallow: ["/"], allow: [], delayMs: defaultDelayMs, unreachable: true };
+}
+
+// 規則字串 → 正規式:`*` 是任意字串、結尾 `$` 是錨定,其餘逐字(前綴比對)。gov.br 的
+// `/*sendto_form$`、opm.gov 的 `/*/print/`、Drupal 的 `Allow: /core/*.css$` 都是這種寫法。
+function robotsRuleToRegExp(rule) {
+  const anchored = rule.endsWith("$");
+  const body = anchored ? rule.slice(0, -1) : rule;
+  const source = body.split("*").map((part) => part.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join(".*");
+  return new RegExp(`^${source}${anchored ? "$" : ""}`);
+}
+
+/** 最長規則優先(以規則字串長度計,與 Google 一致);同長時 Allow 勝。path 要含 query。 */
 export function robotsAllows(rules, path) {
   let best = null;
-  for (const p of rules.disallow) if (path.startsWith(p) && (!best || p.length > best.len)) best = { len: p.length, ok: false };
-  for (const p of rules.allow) if (path.startsWith(p) && (!best || p.length >= best.len)) best = { len: p.length, ok: true };
+  for (const p of rules.disallow) if (robotsRuleToRegExp(p).test(path) && (!best || p.length > best.len)) best = { len: p.length, ok: false };
+  for (const p of rules.allow) if (robotsRuleToRegExp(p).test(path) && (!best || p.length >= best.len)) best = { len: p.length, ok: true };
   return best ? best.ok : true;
 }
 

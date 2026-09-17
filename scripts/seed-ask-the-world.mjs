@@ -66,7 +66,11 @@ const WINDOW_SEC = 8 * 3600;   // 契約 §1 的 feed 時間窗;改這裡不會�
 // 這個值決定「剩餘窗不到下一輪就先刷」的門檻,寫大了會提早刷、寫小了就回到
 // 2026-09-17 之前每天兩段 4 小時空窗的狀態。必須 < WINDOW_SEC,否則每一輪都刷。
 const CRON_INTERVAL_SEC = 4 * 3600;
-if (CRON_INTERVAL_SEC >= WINDOW_SEC) throw new Error("CRON_INTERVAL_SEC 必須小於 WINDOW_SEC,否則每一輪都會刷新全部種子題");
+// 8h 窗 ÷ 4h cron 剛好是 2:1,「剩餘窗 < 4h」在 +4h 那一輪由 cron 啟動的秒差決定 —— 早一秒每 8h 刷、
+// 晚一秒每 4h 刷,行為隨機。SLACK 把判準推離刀口:採「每 8h 刷、空窗只有幾秒」(刷新次數最少,
+// 也最貼近 2026-08-21 拍板的「淡出時原地刷新」);要改成「每輪必刷、零空窗」就把減號改成加號。
+const SLACK_SEC = 300;
+if (CRON_INTERVAL_SEC + SLACK_SEC >= WINDOW_SEC) throw new Error("CRON_INTERVAL_SEC + SLACK_SEC 必須小於 WINDOW_SEC,否則每一輪都會刷新全部種子題");
 
 const log = (msg) => console.log(`${new Date().toISOString()} [ask-the-world] ${msg}`);
 
@@ -214,7 +218,7 @@ if (problems.length) {
 const now = Math.floor(Date.now() / 1000);
 const since = now - WINDOW_SEC;
 // 建立時間早於這個點的列,在下一輪 cron 醒來之前就會掉出時間窗 → 這一輪先刷。
-const fadesBeforeNextRun = now - (WINDOW_SEC - CRON_INTERVAL_SEC);
+const fadesBeforeNextRun = now - (WINDOW_SEC - CRON_INTERVAL_SEC) - SLACK_SEC;
 const q = (v) => (v == null ? "NULL" : `'${String(v).replace(/'/g, "''")}'`);
 
 const existing = d1(

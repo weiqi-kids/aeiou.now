@@ -67,8 +67,32 @@ function icsText(value) {
 export function icsEligible(row) {
   if (!row?.starts_on) return false;                          // 沒有日期的地方變體列
   if (row.status === 'commemorative') return false;
+  // discretionary 是混合語意:印尼 cuti bersama / 巴西 ponto facultativo 是全民放,
+  // 但印度的 Restricted Holidays(每人每年自選兩天)、台灣警察節、中國婦女節只有特定人放。
+  // 後者寫進訂閱者的日曆就是 34 個假的休假日(in.ics 2026 實測)。資料層用 scope='group' 標。
+  if (row.scope === 'group') return false;
   const dateStatus = row.date_status || 'confirmed';
   return dateStatus !== 'estimated' && dateStatus !== 'local-variant';
+}
+
+// RFC 5545 §3.1:一行不得超過 75 octets,超過就 CRLF + 一個空白續行;按 UTF-8 位元組切,
+// 不切在多位元組字元中間(中文 3 bytes、emoji 4 bytes)。X-WR-CALDESC 與帶 Sources 的 DESCRIPTION
+// 動輒 140–440 bytes,Apple Calendar 有拒收未折行檔的案例,滾動訂閱檔整國失效的代價太大。
+export function foldIcsLine(line) {
+  const bytes = Buffer.from(String(line), 'utf8');
+  if (bytes.length <= 75) return line;
+  const out = [];
+  let start = 0;
+  let limit = 75;                 // 第一行 75,續行前面多一個空白所以 74
+  while (start < bytes.length) {
+    let end = Math.min(start + limit, bytes.length);
+    // 退到 UTF-8 字元邊界(續位元組是 10xxxxxx)
+    while (end < bytes.length && (bytes[end] & 0xC0) === 0x80) end -= 1;
+    out.push(bytes.subarray(start, end).toString('utf8'));
+    start = end;
+    limit = 74;
+  }
+  return out.join('\r\n ');
 }
 
 export function holidayEventUid(code, year, key) {
@@ -100,6 +124,8 @@ function buildIcs({ code, calendarName, calendarDescription, locale, sections })
       const description = [
         `Status: ${row.status || 'unspecified'}`,
         `Date status: ${row.date_status || 'confirmed'}`,
+        // 半天假(巴西聖灰星期三 until-1400、聖誕夜 from-1300):全日事件說不出半天,至少在說明裡講。
+        row.partial_day ? `Partial day: ${row.partial_day}` : null,
         sourceList(row) ? `Sources: ${sourceList(row)}` : null,
       ].filter(Boolean).join('\n');
       lines.push(
@@ -111,12 +137,12 @@ function buildIcs({ code, calendarName, calendarDescription, locale, sections })
         `SUMMARY:${icsText(rowName(row, locale))}`,
         `DESCRIPTION:${icsText(description)}`,
       );
-      if (pageUrl) lines.push(`URL:${icsText(pageUrl)}`);
+      if (pageUrl) lines.push(`URL:${pageUrl}`);   // URI 型別不做 TEXT 逃逸(`,` `;` 前不加反斜線)
       lines.push('END:VEVENT');
     }
   }
   lines.push('END:VCALENDAR');
-  return `${lines.join('\r\n')}\r\n`;
+  return `${lines.map(foldIcsLine).join('\r\n')}\r\n`;
 }
 
 /**

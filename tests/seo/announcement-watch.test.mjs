@@ -77,7 +77,8 @@ test("decide:第一輪只有 matched 會說話;present 只建立基準", () => {
 test("decide:404 → 200 是「出現了」;404 → matched 是「對上了」", () => {
   assert.deepEqual(decide(H(null, "missing"), H("a", "present")), { speak: true, reason: "appeared", note: null });
   assert.deepEqual(decide(H(null, "missing"), H("a", "matched"), { hasMatchRule: true }), { speak: true, reason: "matched", note: null });
-  assert.equal(decide(H(null, "error"), H("a", "present")).reason, "appeared");
+  // 上一輪 error = 沒有觀察,不能當「以前沒有」的證據(常年 200 的頁第一輪逾時會誤報「出現了」)
+  assert.deepEqual(decide(H(null, "error"), H("a", "present")), { speak: false, reason: null, note: "first-seen" });
   assert.equal(decide(H(null, "blocked"), H("a", "present")).reason, "appeared");
 });
 
@@ -208,4 +209,33 @@ test("repo 裡的 content/announcement-watch.json 本身要合法,而且七國�
   const countries = new Set(spec.watches.map((w) => w.country));
   for (const cc of ["TW", "JP", "CN", "US", "BR", "ID", "IN"]) assert.ok(countries.has(cc), `缺 ${cc}`);
   for (const w of spec.watches) for (const u of w.urls) assert.match(u, /^https:\/\/[^/]+\.(gov\.tw|go\.jp|gov\.cn|gov|gov\.br|go\.id|gov\.in)\//, `${u} 不是官方網域`);
+});
+
+test("robots 規則支援 * 與 $ 萬用字元,並以規則長度決定優先(RFC 9309 §2.2.3)", async () => {
+  const { parseRobots, robotsAllows } = await import("../../scripts/lib/announcement-watch.mjs");
+  const rules = parseRobots("User-agent: *\nDisallow: /*.pdf$\nDisallow: /*/print/\nAllow: /core/*.css$\nDisallow: /core/");
+  assert.equal(robotsAllows(rules, "/a/b.pdf"), false);
+  assert.equal(robotsAllows(rules, "/a/b.pdf?x=1"), true);       // $ 錨定,帶 query 就不是結尾
+  assert.equal(robotsAllows(rules, "/x/print/page"), false);
+  assert.equal(robotsAllows(rules, "/core/a.css"), true);         // Allow 規則較長,勝過 /core/
+  assert.equal(robotsAllows(rules, "/core/a.js"), false);
+  assert.equal(robotsAllows(rules, "/other"), true);
+});
+
+test("robots 多行 User-agent 是同一群組;規則之後再遇到 UA 才開新組", async () => {
+  const { parseRobots } = await import("../../scripts/lib/announcement-watch.mjs");
+  const a = parseRobots("User-agent: *\nUser-agent: Googlebot\nDisallow: /\n");
+  assert.deepEqual(a.disallow, ["/"]);
+  const b = parseRobots("User-agent: Googlebot\nDisallow: /g\n\nUser-agent: *\nDisallow: /all\n");
+  assert.deepEqual(b.disallow, ["/all"]);
+});
+
+test("robots 5xx/連不上 = unreachable = 全站不准抓;decide 把上一輪 error 視同沒觀察", async () => {
+  const { unreachableRobots, robotsAllows, decide } = await import("../../scripts/lib/announcement-watch.mjs");
+  const r = unreachableRobots();
+  assert.equal(r.unreachable, true);
+  assert.equal(robotsAllows(r, "/anything"), false);
+  // 常年 200 的頁,第一輪逾時、第二輪恢復:不能說「出現了」
+  assert.equal(decide({ kind: "error" }, { kind: "present", hash: "h1", contentType: "text/html" }, { hasMatchRule: false }).speak, false);
+  assert.equal(decide({ kind: "missing" }, { kind: "present", hash: "h1", contentType: "text/html" }, { hasMatchRule: false }).speak, true);
 });
