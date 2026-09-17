@@ -48,6 +48,7 @@
 - date_rule: 9 月第一個星期一（不是 5 月 1 日）
 - rank: 7
 - source: https://www.usa.gov/holidays
+- source: https://www.opm.gov/frequently-asked-questions/pay-and-leave-faq/pay-administration/what-are-federal-holidays/
 
 ## locale zh-TW
 ### title
@@ -55,7 +56,7 @@
 ### summary
 五月一日是國際勞動節，但 2026 年美國勞動節是 9 月 7 日，不是 5 月 1 日。這七個地方沒有一個完全相同：台灣全體放假一日，中國大陸放兩天，巴西與印尼是國定假日，印度的全國假日清單裡沒有五月一日，日本五月一日照常上班，而美國把自己的 Labor Day 放在九月第一個星期一。
 ### keywords
-勞動節、五一、May Day、Labor Day、Hari Buruh、黃金週
+勞動節、五一、May Day、Labor Day、2026 美國勞動節、Hari Buruh、黃金週
 ### customs TW labour-day
 台灣的勞動節在五月一日。《紀念日及節日實施條例》第五條把它列為節日，第六條則規定「兒童節、清明節、勞動節、端午節、教師節及中秋節：均放假一日」，條文沒有區分放假對象——也就是全體適用。這是一項改變：在此之前，五一放假的依據是勞動法規，實務上只有適用勞基法的勞工放假，公教人員照常上班。台灣的勞動節有一個別處少見的性質：它是「只有部分人放假」的假日。放假對象限於適用勞動基準法的勞工，公務人員與部分行業照常上班，因此同一個家庭裡可能一個人休、一個人不休。一個以勞工為名的假日，恰好把「誰算勞工」這件事攤在行事曆上，每年重演一次。
 ### customs CN labour-day
@@ -69,15 +70,15 @@
 ### customs JP golden-week
 日本的五月一日不是國民の祝日，那天照常上班上學。真正放假的是它前後：四月二十九日的昭和の日、五月三日的憲法記念日、五月四日的みどりの日、五月五日的こどもの日——四個祝日擠在一週內形成黃金週，五月一日夾在中間反而是工作日。有些公司會自行把它排成休假，但那是企業決定，不是國家的。
 ### customs US labor-day
-美國的勞動節不在五月一日，而是九月第一個星期一，是聯邦假日。它的位置本身就是歷史選擇的結果：五月一日的國際勞動節源自美國的八小時工時運動，但美國官方紀念日最後被放在九月。實務上九月的那個週一被當成夏天的結束、開學前的最後一個長週末，勞工議題反而不是它最顯眼的內容。
+美國的 Labor Day（勞動節）不在五月一日，而是九月第一個星期一；二○二六年是九月七日，依聯邦法列為聯邦假日。這個「聯邦」層級主要規範聯邦政府與聯邦雇員的法定休假，不會自動替州政府、地方政府、學校或私營雇主決定行事曆，因此不能直接說成全國每個人都放假。它的位置本身也是歷史選擇的結果：五月一日的國際勞動節源自美國的八小時工時運動，但美國官方紀念日最後被放在九月。實務上九月的那個週一被當成夏天的結束、開學前的最後一個長週末，勞工議題反而不是它最顯眼的內容。
 
 ## locale en
 ### title
-Labour Day
+Labour Day Dates by Country
 ### summary
-1 May is International Workers' Day, but no two of these seven places treat it the same way: Taiwan only made it a universal day off under a new act in 2025, mainland China gives two days since its 2024 amendment, Brazil and Indonesia list it as a national holiday, India's national list does not contain it at all, Japan works on 1 May while the days around it are holidays, and the United States puts its Labor Day in September.
+Labour Day usually falls on 1 May, but the date and the time off depend on the country: the United States observes Labor Day on the first Monday of September, Japan works on 1 May between its Golden Week holidays, and India leaves 1 May to state and institutional calendars. Taiwan, mainland China, Brazil and Indonesia all place a public observance on 1 May, with different rules for who gets time off and how long the break lasts.
 ### keywords
-Labour Day, May Day, Labor Day, Hari Buruh, Golden Week
+Labour Day dates by country, Labour Day 2027, May Day, Labor Day date, is Labour Day a public holiday, Labor Day first Monday of September, Golden Week
 ### customs TW labour-day
 Taiwan's Labour Day is 1 May. Article 5 of the Act on Commemorative Days and Holidays lists it as a festival, and Article 6 provides that Children's Day, Tomb-Sweeping Day, Labour Day, the Dragon Boat Festival, Teachers' Day and the Mid-Autumn Festival are each a one-day holiday, with no distinction drawn as to who gets it — so it applies to everyone. That is a change: before this, the basis for the 1 May holiday was labour legislation, and in practice only employees covered by the Labor Standards Act were off while public servants worked. Taiwan's Labour Day has a property rarely seen elsewhere: it is a holiday on which only some people are off. The day off is limited to workers covered by the Labour Standards Act, while civil servants and parts of some industries work as usual, so within one household one person may rest and another may not. A holiday named for labour thus lays the question of who counts as a worker out on the calendar, replayed once a year.
 ### customs CN labour-day

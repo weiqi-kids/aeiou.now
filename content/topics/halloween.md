@@ -64,7 +64,7 @@
 ### customs TW halloween
 萬聖節不在《紀念日及節日實施條例》裡。這部條例的主管機關是內政部，第三條列了二十個紀念日、第五條列了二十八個節日，從春節、清明、農民節一路到移民日，兩份清單都沒有萬聖節；第五條第二十八款留了「其他由中央目的事業主管機關核定之日」這個開口，但沒有任何主管機關把萬聖節放進去，而第六條第三項寫明，該條所列以外的節日均不放假。台灣的萬聖節因此完全長在地方政府手上，而且是以商圈經濟的名義辦的：桃園市政府的「桃園萬聖城」二○二四年是第五屆，十月二十六日在桃園藝文廣場與藝文綠園道開城，連辦九天到十一月三日；臺南市的「海安觀光商圈萬聖節派對」二○二五年連辦兩天，在中西區海安路做變裝大遊行、DJ 派對與近百攤市集，市府並把它接到臺南購物節的抽獎上。所以在台灣問萬聖節放不放假，答案是不放；問哪裡有萬聖節，答案要看是哪一個市政府。
 ### customs BR dia-das-bruxas
-巴西人多半把這一天叫 Dia das Bruxas（女巫之日），Halloween 這個字也通用，但它在聯邦的行事曆上不存在。管理與公共服務創新部每年發一次部令，把當年的國定假日與彈性放假日一次列完——二○二六年那份是二○二五年十二月二十九日的第 11.460 號部令——十月裡只有兩筆：十月十二日顯現聖母（國定假日）與十月二十八日聯邦公務人員日（彈性放假日）。十月三十一日是正常上班日。實務上這一天活在英語課、私立學校的變裝日、購物中心與夜店的主題檔期裡，沒有任何一層政府因為它而停止上班。真正值得注意的是下一段：巴西沒有為萬聖節放過一天假，卻為了它立了另一個節日。
+巴西人多半把這一天叫 Dia das Bruxas（女巫之日），Halloween 這個字也通用，但它在聯邦的行事曆上不存在。管理與公共服務創新部每年發一次部令，把當年的國定假日與彈性放假日一次列完。二○二六年那份是二○二五年十二月二十九日的第 11.460 號部令。十月裡只有兩筆：十月十二日顯現聖母（國定假日）與十月二十八日聯邦公務人員日（彈性放假日）。十月三十一日是正常上班日。實務上這一天活在英語課、私立學校的變裝日、購物中心與夜店的主題檔期裡，沒有任何一層政府因為它而停止上班。同一天還有一項與萬聖節相對的巴西節日：巴西沒有為萬聖節放過一天假，卻為了它立了另一個節日。
 ### customs BR dia-do-saci
 同一天，巴西還有一個薩西日（Dia do Saci），而且它是為了對抗萬聖節而設的——這句話寫在法案自己的理由書裡。聯邦第 2.479/2003 號法案（Angela Guadagnin 議員提出）與併案的第 2.762/2003 號法案（Aldo Rebelo 議員，二○○三年十二月十一日提出，同月十九日併案）都主張把十月三十一日訂為薩西日；理由書明言選這一天是「刻意的」，因為那天是美國過萬聖節的日子，而這個節日「一年比一年吸引更多巴西孩子」。眾議院教育與文化委員會通過了替代文本（報告人 Chico Alencar），但這條路沒有走完：該案今天的狀態是「併入第 2.479/2003 號法案——已歸檔」。真正成法的是州級的。聖保羅州第 11.669 號法律，二○○四年一月十三日由州長 Geraldo Alckmin 公布，全文只有兩條，第一條就是「茲設立薩西日，每年十月三十一日紀念之」——沒有放假，只有一個名字進了法規。這個想法本身來自聖路易斯－杜帕萊廷加鎮的薩西之友協會（Sosaci），先由兩位市議員提案、經市議會全票通過，才一路往上走。
 
@@ -162,9 +162,9 @@ Dia do Saci jatuh pada 31 Oktober yang sama dan memang diciptakan untuk melawan 
 ### title
 Dia das Bruxas
 ### summary
-Nenhum dos sete mercados aqui transformou o 31 de outubro em feriado. O que muda é até onde cada governo vai mesmo assim. Os Estados Unidos deixam a data fora do estatuto federal de feriados, mas a FDA fiscaliza as lentes de contato de fantasia como dispositivos médicos e uma cidade de Ohio empurra o trick-or-treat de 2026 para 29 de outubro. O Japão não tem norma nacional alguma, e dois distritos de Tóquio criaram os próprios decretos — um deles com o prefeito pedindo publicamente que ninguém venha. O Brasil nunca deu folga e ainda instituiu, por lei, uma data rival exatamente no mesmo dia.
+No Brasil, o Dia das Bruxas de 2026 cai em 31 de outubro e não é feriado. Nenhum dos sete mercados aqui transformou o 31 de outubro em feriado. O que muda é até onde cada governo vai mesmo assim. Os Estados Unidos deixam a data fora do estatuto federal de feriados, mas a FDA fiscaliza as lentes de contato de fantasia como dispositivos médicos e uma cidade de Ohio empurra o trick-or-treat de 2026 para 29 de outubro. O Japão não tem norma nacional alguma, e dois distritos de Tóquio criaram os próprios decretos — um deles com o prefeito pedindo publicamente que ninguém venha. O Brasil nunca deu folga e ainda instituiu, por lei, uma data rival exatamente no mesmo dia.
 ### keywords
-Dia das Bruxas, Halloween, Dia do Saci, 31 de outubro, fantasia de Halloween, feriado nacional, Halloween Shibuya
+Dia das Bruxas 2026, Halloween 2026, Dia do Saci, 31 de outubro, fantasia de Halloween, feriado nacional, Halloween Shibuya
 ### customs BR dia-das-bruxas
 No Brasil a data costuma ser chamada de Dia das Bruxas, e Halloween corre como sinônimo — mas ela não existe no calendário federal. O Ministério da Gestão e da Inovação em Serviços Públicos publica uma portaria por ano listando todos os feriados nacionais e os pontos facultativos; para 2026 é a Portaria MGI nº 11.460, de 29 de dezembro de 2025. Outubro tem exatamente duas entradas: 12 de outubro, Nossa Senhora Aparecida, feriado nacional, e 28 de outubro, Dia do Servidor Público federal, ponto facultativo. O dia 31 é expediente normal, e nenhuma esfera de governo fecha por causa dele. Na prática a data vive nas aulas de inglês, nos dias de fantasia das escolas particulares, nos shoppings e nas casas noturnas. O que torna o caso brasileiro digno de leitura atenta é o item seguinte: o país nunca deu folga ao Halloween e, em compensação, escreveu outra festa em lei sobre a mesma data.
 ### customs BR dia-do-saci

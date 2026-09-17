@@ -43,6 +43,7 @@
 - date: 11-14
 - rank: 6
 - source: https://www.presidentofindia.gov.in/president-childrens-day
+- source: https://dopt.gov.in/sites/default/files/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%202026.pdf
 
 ## locale zh-TW
 ### title
@@ -82,7 +83,7 @@ Indonesia's National Children's Day is 23 July, established by Presidential Decr
 ### customs BR dia-das-criancas
 Brazil's Children's Day is 12 October, traced to Decree 4,867 of 1924. The same date is also the national holiday for Our Lady of Aparecida, the country's patron — so 12 October in Brazil is simultaneously a religious holiday and a day for giving children presents, with the commercial season and church observance running side by side. In Brazil the twelfth of October is also the day of Our Lady of Aparecida, a national holiday since 1980. Children's Day is therefore one of the few among these places that lands on a day off — no need to slide it to the weekend or wait for the end of the working day, because nobody is at work or school anyway. It also means the toy-retail season and the religious procession share the same date.
 ### customs IN childrens-day
-India's Children's Day is 14 November, the birthday of the first prime minister, Jawaharlal Nehru, whom children called Chacha Nehru — Uncle Nehru. It is not a day off; it happens mainly inside schools, with performances, contests and celebrations. Anchoring a children's day to one politician's birthday is unique among the six here: the origin of the day is a person, not a calendar or a religion.
+India's Children's Day is 14 November, known locally as Bal Diwas, and marks the birthday of the first prime minister, Jawaharlal Nehru, whom children called Chacha Nehru — Uncle Nehru. It is primarily a school and cultural observance, with performances, contests and celebrations. It is not listed as a gazetted holiday for Central Government Offices in 2026, so that central list should not be treated as a blanket rule for every school or local calendar. Anchoring a children's day to one politician's birthday is unique among the six here: the origin of the day is a person, not a calendar or a religion.
 
 ## locale ja
 ### title

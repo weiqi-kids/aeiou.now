@@ -13,6 +13,8 @@
 - source: https://utsav.gov.in/major-festival/diwali
 - source: https://www.incredibleindia.gov.in/en/festivals-and-events/diwali
 - source: https://www.pib.gov.in/FeaturesDeatils.aspx?NoteId=156406&ModuleId=2&reg=3&lang=2
+- source: https://www.indiapost.gov.in/holidays-list
+- source: https://dopt.gov.in/sites/default/files/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%202026.pdf
 
 ## observance IN dhanteras
 - local_name: Dhanteras
@@ -42,11 +44,11 @@
 ### title
 排燈節（Diwali）
 ### summary
-2026 年印度排燈節（Diwali）主日是 11 月 8 日，五天節期約從 11 月 6 日的 Dhanteras 到 11 月 10 日的 Bhai Dooj；紐約市公立學校也在主日停課。這一頁把五天分開看，再比較印度的全國假日與美國城市學校假日，而不是把 Diwali 簡化成一個晚上；查印度排燈節 2026 日期時，別把主日和前後四天混成同一天。
+2026 年印度排燈節（Diwali／Deepavali）的主節日是 11 月 8 日星期日；它依 Kartika 月新月日變動，五天是文化與宗教節期，不等於全印度統一放五天假。這一頁把 Dhanteras、主節日與 Bhai Dooj 分開看，再比較印度官方「All India」假日清單中的 Diwali 與美國城市學校假日；查印度排燈節 2026 日期時，不要把文化節期、中央政府清單和地方行事曆混成同一層。
 ### keywords
 印度排燈節2026、2026印度排燈節、排燈節日期2026、排燈節、屠妖節、Diwali、Deepavali、Dhanteras、Bhai Dooj、Lakshmi Puja
 ### customs IN diwali
-排燈節主日是五天節期的第三天，家戶點燈、祭拜象頭神 Ganesha 與財富女神 Lakshmi，祈求豐足。印度觀光部把阿約提亞、瓦拉納西、阿姆利則、齋浦爾與南印各地列為節期最具規模的地方，但點幾盞燈、拜哪一位、要不要放煙火，家庭之間差很多。二○二五年，Deepavali 被列入聯合國教科文組織的人類非物質文化遺產名錄。
+二○二六年印度的 Diwali（Deepavali，排燈節）主節日是十一月八日星期日；India Post 的 All India 2026 假日清單與中央政府辦公室假日通知都列這一天，但這些清單不等於所有邦、學校、銀行和私人雇主的統一行事曆。五天文化節期中的主節日常見家戶點燈、祭拜象頭神 Ganesha 與財富女神 Lakshmi，祈求豐足；不同社群與地區的儀式、神祇和煙火安排仍可能不同。印度觀光部把阿約提亞、瓦拉納西、阿姆利則、齋浦爾與南印各地列為節期最具規模的地方。二○二五年，Deepavali 被列入聯合國教科文組織的人類非物質文化遺產名錄。
 ### customs IN dhanteras
 節期從 Dhanteras 開場。這一天的習慣是採買金飾或新的金屬器皿，並在家中祭拜，把「添置」當作迎接豐足的動作。它的日期通常落在主日前兩天，但印度陰陽曆的日次會壓縮，實際哪一天要看各地曆書。買什麼、買多少，跟收入與地區關係很大。這一天在二○一六年之後多了一層官方身分：印度政府把它同時訂為全國阿育吠陀日，理由是這天也是醫神曇梵陀利的誕辰。於是同一個日期上疊著兩件事——民間持續進行的購入金屬器物與點燈，以及一場由衛生部門主導的全國性推廣。傳統的節日被拿來當公共衛生的日程，這種疊用在其他四天上都沒有。
 ### customs IN bhai-dooj
