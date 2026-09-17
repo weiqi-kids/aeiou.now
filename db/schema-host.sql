@@ -511,6 +511,54 @@ CREATE TABLE IF NOT EXISTS seo_growth_actions (
 CREATE INDEX IF NOT EXISTS idx_seo_growth_actions_priority
   ON seo_growth_actions(status, priority, last_seen_at);
 
+-- ============ §8.4 索引量測域(2026-09-17) ===================================
+-- 立法緣由:用戶拍板「逐國頁縮不縮,用 Google 的判決(持續 N 天
+-- Discovered - currently not indexed)」,但 crawl-freshness.mjs 與 seo-health.mjs
+-- 都只印不存 —— 沒有任何一張表存得到逐頁 coverageState 的時間序列,「持續 N 天」
+-- 根本無從判起。同時,主機 gsc_query_metrics 的點擊比原始 API 少一個量級
+-- (query 維度會被 Google 匿名化過濾),沒有一張表存得到「站級每日曝光/點擊」。
+-- 這兩張表都是**原始觀測值**,不算分數、不進 data/、不進 D1。
+--
+-- url_inspections:逐頁 URL Inspection 的週掃時間序列。
+--   * 一筆 = 一個 URL 在一個 sweep(以執行日 YYYY-MM-DD 為 id)的一次判決。
+--   * URL Inspection 配額 2000/日、七站共用;每日最多 AEIOU_INSPECT_BUDGET(預設 1500)筆,
+--     全站要跨兩三天才掃完一輪 —— 所以「最近一輪」= 每個 URL 各自最新的一筆,不是單一 sweep_id。
+--   * 產生者:scripts/url-inspection-sweep.mjs;判準函式在 scripts/lib/url-inspection.mjs。
+--   * 失敗的 inspect 不寫列(沒有判決就不假造判決),只在 jobs 表計數。
+CREATE TABLE IF NOT EXISTS url_inspections (
+  url              TEXT NOT NULL,              -- 線上 sitemap 裡的完整 URL
+  host             TEXT NOT NULL,              -- 七個正式網域之一
+  page_type        TEXT NOT NULL,              -- topic|country|holiday|question|ranking|home|other
+  sweep_id         TEXT NOT NULL,              -- 'YYYY-MM-DD',執行日(UTC)
+  inspected_at     INTEGER NOT NULL,           -- unix 秒
+  verdict          TEXT,                       -- indexStatusResult.verdict(PASS|NEUTRAL|FAIL…)
+  coverage_state   TEXT,                       -- coverageState 原文,退場判準只認原文
+  indexing_state   TEXT,                       -- indexingState
+  robots_state     TEXT,                       -- robotsTxtState
+  last_crawl_time  TEXT,                       -- lastCrawlTime(RFC3339),沒抓過就 NULL
+  google_canonical TEXT,                       -- googleCanonical
+  referring_count  INTEGER,                    -- referringUrls 的個數;0 = 沒有站內入口
+  PRIMARY KEY (url, sweep_id)
+);
+CREATE INDEX IF NOT EXISTS idx_ui_url_at ON url_inspections(url, inspected_at);
+CREATE INDEX IF NOT EXISTS idx_ui_sweep ON url_inspections(sweep_id, page_type, coverage_state);
+
+-- site_search_daily:站級每日曝光/點擊曲線(type=web,byPage 聚合)。
+--   * 從 gsc-topic-metrics.mjs 已抓的 date × page × country 列直接加總,不另打 API;
+--     impressions/clicks 可加,position 存 position_sum(= position × impressions)。
+--   * host = 'all'(整個 sc-domain 資源,含不在七站映射表裡的舊網域)或七個正式 host。
+--   * 同 topic_search_metrics 的冪等 upsert,每次重抓最近 REACH_DAYS 天蓋過 GSC 延遲。
+CREATE TABLE IF NOT EXISTS site_search_daily (
+  metric_date  TEXT NOT NULL,                 -- 'YYYY-MM-DD',GSC 的資料日
+  host         TEXT NOT NULL,                 -- 'all' | aeiou.now | en.aeiou.now | …
+  impressions  INTEGER NOT NULL DEFAULT 0,
+  clicks       INTEGER NOT NULL DEFAULT 0,
+  position_sum REAL NOT NULL DEFAULT 0,       -- 平均名次 = position_sum/impressions
+  fetched_at   INTEGER NOT NULL,
+  PRIMARY KEY (metric_date, host)
+);
+CREATE INDEX IF NOT EXISTS idx_ssd_host_date ON site_search_daily(host, metric_date);
+
 -- ---------------------------------------------------------------------------
 -- reaction 計數回流(2026-08-21)
 -- ---------------------------------------------------------------------------

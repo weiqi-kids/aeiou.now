@@ -49,8 +49,13 @@
 管線外另有三支(草案沒列,但這個站需要):
 `sync-topics-to-d1` / `sync-questions-to-d1` / `sync-reactions-from-d1`(主機 ↔ D1)、
 `sync-search-index`(Topic → Vectorize)、`archive-to-r2`(冷資料)、
-`gsc-topic-metrics`(每日 GSC)、`seed-ask-the-world`(種子題保鮮)、
-`gsc-demand-country`(每小時,排在 `export-data` 前面 —— 結論要進 facts.json)。
+`gsc-topic-metrics`(每日 GSC;2026-09-17 起同一次也寫站級逐日曲線 `site_search_daily`,
+查:`node scripts/gsc-topic-metrics.mjs --report`)、`seed-ask-the-world`(種子題保鮮)、
+`gsc-demand-country`(每小時,排在 `export-data` 前面 —— 結論要進 facts.json)、
+`url-inspection-sweep`(每日;逐頁 URL Inspection 存成時間序列 `url_inspections`,
+每次最多 `AEIOU_INSPECT_BUDGET` 筆、全站跨數天掃完一輪;查:`node scripts/url-inspection-sweep.mjs --report`
+—— 印 page_type × coverage_state 與「連續 ≥3 輪 Discovered-not-indexed 且首見 ≥21 天」清單,
+那是逐國頁退場判準的**輸入**,不是決定)。
 
 `gsc-demand-country` 算的是**每個 (Topic × 站) 的搜尋需求問的是哪一國**,
 Topic 頁的 description 第一句就講那一國。⚠ 那個「哪一國」是**查詢問誰**,

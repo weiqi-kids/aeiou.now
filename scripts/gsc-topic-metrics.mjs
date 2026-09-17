@@ -7,6 +7,13 @@
 //   node scripts/gsc-topic-metrics.mjs
 //   node scripts/gsc-topic-metrics.mjs --days 90    一次回補更長區間
 //   node scripts/gsc-topic-metrics.mjs --dry-run    只印不寫
+//   node scripts/gsc-topic-metrics.mjs --report     最近 14 天站級曝光/點擊(all 與各 host),不打 API
+//
+// 2026-09-17 起同一次執行也把 date × page × country 的列**直接加總**成站級逐日曲線
+// (`site_search_daily`,host='all' 與七個 host)。不另打 API:impressions/clicks 在 page
+// 維度下可加,position 存 position_sum。為什麼需要:gsc_query_metrics 的點擊比原始 API
+// 少一個量級(query 維度被 Google 匿名化過濾),沒有一張表存得到「站級每日曝光/點擊」;
+// 2026-09-02 站級降權的回復判準就是這條曲線。
 //
 // 除了 page/country 的 HotScore 累積，本支也保存 query/page/date 的主機私有聚合
 // (`gsc_query_metrics`)。這是 SEO 工作清單的證據來源，不進 data/、D1 或前端。
@@ -99,6 +106,7 @@ const readinessDecision = (() => {
 
 const argv = process.argv.slice(2);
 const DRY_RUN = argv.includes("--dry-run");
+const REPORT = argv.includes("--report");
 const days = Number(argv[argv.indexOf("--days") + 1]) || REACH_DAYS;
 
 // 子網域 → locale。唯一映射表在 CLAUDE.md 介面常數;ja→jp、zh-CN→cn、pt-BR→br 不同名。
@@ -130,12 +138,55 @@ function ensureQueryMetricsSchema(db) {
     CREATE INDEX IF NOT EXISTS idx_gqm_date ON gsc_query_metrics(metric_date);
     CREATE INDEX IF NOT EXISTS idx_gqm_page ON gsc_query_metrics(page_url, metric_date);
     CREATE INDEX IF NOT EXISTS idx_gqm_query ON gsc_query_metrics(query, metric_date);
+    CREATE TABLE IF NOT EXISTS site_search_daily (
+      metric_date  TEXT NOT NULL,
+      host         TEXT NOT NULL,
+      impressions  INTEGER NOT NULL DEFAULT 0,
+      clicks       INTEGER NOT NULL DEFAULT 0,
+      position_sum REAL NOT NULL DEFAULT 0,
+      fetched_at   INTEGER NOT NULL,
+      PRIMARY KEY (metric_date, host)
+    );
+    CREATE INDEX IF NOT EXISTS idx_ssd_host_date ON site_search_daily(host, metric_date);
   `);
+}
+
+// --report:最近 14 天的站級曲線。只讀表、不打 API、不開 job;空庫印「尚無資料」。
+function reportSiteDaily(db, daysBack = 14) {
+  const exists = db.prepare("SELECT 1 FROM sqlite_master WHERE type='table' AND name='site_search_daily'").get();
+  if (!exists) { console.log("尚無資料:site_search_daily 表還沒建(先跑一次 node scripts/gsc-topic-metrics.mjs)。"); return; }
+  const since = dayStr(daysBack);
+  const rows = db.prepare(
+    `SELECT metric_date, host, impressions, clicks, position_sum FROM site_search_daily
+      WHERE metric_date >= ? ORDER BY metric_date, host`,
+  ).all(since);
+  if (!rows.length) { console.log(`尚無資料:site_search_daily 在 ${since} 之後沒有列。`); return; }
+  const hosts = ["all", ...Object.keys(HOST_LOCALE)];
+  const byDate = new Map();
+  for (const r of rows) {
+    if (!byDate.has(r.metric_date)) byDate.set(r.metric_date, {});
+    byDate.get(r.metric_date)[r.host] = r;
+  }
+  const cell = (r) => (r ? `${r.impressions}/${r.clicks}` : "-");
+  console.log(`站級每日 曝光/點擊(type=web,byPage 加總;GSC 固定落後 2-3 天,最近兩天偏低是正常的)`);
+  console.log(["date".padEnd(10), ...hosts.map((h) => h.replace(".aeiou.now", "").replace("aeiou.now", "zh-TW").padStart(9))].join(" "));
+  for (const [date, byHost] of [...byDate.entries()].sort()) {
+    console.log([date.padEnd(10), ...hosts.map((h) => cell(byHost[h]).padStart(9))].join(" "));
+  }
+  const all = rows.filter((r) => r.host === "all");
+  const imp = all.reduce((a, r) => a + r.impressions, 0);
+  const clk = all.reduce((a, r) => a + r.clicks, 0);
+  const pos = all.reduce((a, r) => a + r.position_sum, 0);
+  console.log(`合計(all,${all.length} 天):曝光 ${imp}、點擊 ${clk}、平均名次 ${imp ? (pos / imp).toFixed(1) : "-"}`);
 }
 
 const dayStr = (n) => new Date(Date.now() - n * 86400000).toISOString().slice(0, 10);
 
 const db = openDb();
+if (REPORT) {
+  try { reportSiteDaily(db); } finally { db.close(); }
+  process.exit(0);
+}
 if (!DRY_RUN) ensureQueryMetricsSchema(db);
 const job = DRY_RUN ? null : beginJob(db, { jobName: JOB_NAME, scheduledAt: slotStart(86400) });
 const watchdog = setTimeout(() => {
@@ -176,6 +227,7 @@ try {
         startDate,
         endDate,
         dimensions,
+        type: "web", // 預設就是 web;明寫是讓「站級曲線 = 原始 API type=web」這句對得上
         rowLimit: PAGE_SIZE,
         startRow,
       });
@@ -268,6 +320,31 @@ try {
   }
   log(`[${JOB_NAME}] query/page 聚合為 ${queryAgg.size} 筆 (主機私有)`);
 
+  // 站級逐日:同一批 date × page × country 列直接加總。'all' 是整個 sc-domain 資源
+  // (含映射表外的舊網域);七個 host 各自一列。不另打 API。
+  const siteAgg = new Map();
+  const unknownHosts = new Set();
+  const addSite = (date, host, r) => {
+    const key = `${date}\t${host}`;
+    const cur = siteAgg.get(key) || { impressions: 0, clicks: 0, position_sum: 0 };
+    cur.impressions += Number(r.impressions) || 0;
+    cur.clicks += Number(r.clicks) || 0;
+    cur.position_sum += (Number(r.position) || 0) * (Number(r.impressions) || 0);
+    siteAgg.set(key, cur);
+  };
+  for (const r of rows) {
+    const [date, pageUrl] = r.keys;
+    let host;
+    try { host = new URL(pageUrl).host; } catch { continue; }
+    addSite(date, "all", r);
+    if (HOST_LOCALE[host]) addSite(date, host, r);
+    else unknownHosts.add(host);
+  }
+  if (unknownHosts.size) {
+    log(`[${JOB_NAME}] 站級曲線:${unknownHosts.size} 個非七站 host 只計入 all:${[...unknownHosts].slice(0, 5).join(", ")}`);
+  }
+  log(`[${JOB_NAME}] 站級逐日聚合為 ${siteAgg.size} 筆 (date x host)`);
+
   let written = 0;
   let queryWritten = 0;
   if (DRY_RUN) {
@@ -294,6 +371,16 @@ try {
          position_sum = excluded.position_sum,
          fetched_at = excluded.fetched_at`,
     );
+    const siteStmt = db.prepare(
+      `INSERT INTO site_search_daily
+         (metric_date, host, impressions, clicks, position_sum, fetched_at)
+       VALUES (?, ?, ?, ?, ?, ?)
+       ON CONFLICT(metric_date, host) DO UPDATE SET
+         impressions = excluded.impressions,
+         clicks = excluded.clicks,
+         position_sum = excluded.position_sum,
+         fetched_at = excluded.fetched_at`,
+    );
     // node:sqlite 沒有 better-sqlite3 的 db.transaction() —— 用 exec 手開,
     // 比照 scripts/import-questions.mjs 的寫法(失敗一律 ROLLBACK,不留半套資料)。
     db.exec("BEGIN");
@@ -306,13 +393,17 @@ try {
         const [date, locale, query, pageUrl] = key.split("\t");
         queryStmt.run(date, locale, query, pageUrl, v.impressions, v.clicks, v.position_sum, at);
       }
+      for (const [key, v] of siteAgg.entries()) {
+        const [date, host] = key.split("\t");
+        siteStmt.run(date, host, v.impressions, v.clicks, v.position_sum, at);
+      }
       db.exec("COMMIT");
     } catch (e) {
       db.exec("ROLLBACK");
       throw e;
     }
     written = agg.size;
-    queryWritten = queryAgg.size;
+    queryWritten = queryAgg.size + siteAgg.size;
   }
 
   // -- 就緒度:什麼時候可以拿來驅動 HotScore(判準見檔頭) --

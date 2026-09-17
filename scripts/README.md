@@ -33,6 +33,11 @@ node scripts/seo-growth.mjs --days 28
 # 每日維運由 hourly-export.sh 執行；手動補一筆主機快照時才加 --record
 node scripts/seo-growth.mjs --record --days 28
 node scripts/seo-growth.mjs --history
+# 站級每日曝光/點擊(all 與七個 host;同一支每日 job 順便寫 site_search_daily)
+node scripts/gsc-topic-metrics.mjs --report
+# 逐頁 URL Inspection 週掃:每日一次、每次最多 AEIOU_INSPECT_BUDGET(預設 1500)筆
+node scripts/url-inspection-sweep.mjs --dry-run      # 只列會掃哪些
+node scripts/url-inspection-sweep.mjs --report       # page_type × coverage_state,與退場判準的輸入清單
 ```
 
 `gsc_query_metrics` 只存在主機，`seo-growth.mjs` 會把前十名零點擊、
