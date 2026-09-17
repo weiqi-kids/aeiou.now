@@ -179,6 +179,25 @@ function answerTableCells(html) {
   return cells;
 }
 
+/**
+ * 全域導覽捷徑的文字（2026-09-04）。
+ *
+ * D3 擋的是同一段正文被複印；header 裡的 topic 捷徑是結構性導覽標籤，
+ * 在同一頁的「相關主題」再出現一次不代表正文重複。英文長標題會跨過 40
+ * 字門檻，若把導覽標籤算進 bodyRepeats，就會把這種正常的兩個連結誤判成
+ * 重複段落。和表格欄位一樣：仍計入 total/unique，只從 D3 的正文重複計數排除。
+ */
+function navigationLabels(html) {
+  const labels = new Set();
+  for (const nav of html.matchAll(/<nav\b[^>]*class="[^"]*\bsite-nav\b[^"]*"[^>]*>([\s\S]*?)<\/nav>/gi)) {
+    for (const anchor of nav[1].matchAll(/<a\b[^>]*>([\s\S]*?)<\/a>/gi)) {
+      const text = anchor[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      if (text) labels.add(text);
+    }
+  }
+  return labels;
+}
+
 /** 抽出 body 的可見文字，逐行切開（script/style/註解/hidden/noscript 都不算內容） */
 function visibleLines(html) {
   let body = html.includes('<body') ? html.slice(html.indexOf('<body')) : html;
@@ -214,12 +233,13 @@ for (const path of htmlFiles) {
   const unique = [...new Set(lines)].join('').length;
   const isStatusLabel = (line) => EMPTY_MARKERS.some((m) => line.includes(m));
   const tableCells = answerTableCells(html);
+  const navLabels = navigationLabels(html);
   const repeats = new Map();
   const bodyRepeats = new Map();
   for (const line of lines) {
     if (line.length < LONG_PARAGRAPH_CHARS) continue;
     repeats.set(line, (repeats.get(line) || 0) + 1);
-    if (!isStatusLabel(line) && !tableCells.has(line)) {
+    if (!isStatusLabel(line) && !tableCells.has(line) && !navLabels.has(line)) {
       bodyRepeats.set(line, (bodyRepeats.get(line) || 0) + 1);
     }
   }
