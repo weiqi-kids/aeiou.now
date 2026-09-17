@@ -1,13 +1,18 @@
 # SEO／多站工作現況
 
-> 這是可更新的工作交接快照，不是即時監控面板。最後量測與發布驗證：2026-09-01 UTC。
+> 這是可更新的工作交接快照，不是即時監控面板。最後量測：2026-09-04 UTC。
+> **2026-09-17 更新發布狀態**：本輪 Plan 2 A/B/C、Plan 3、Plan 4/6 的內容批次**已於 2026-09-17 上線**，七站 `.build-id` 已對齊 HEAD。
+> 起因是 hourly-export 自 09-03 起連續 14 天 fail-closed（在地來源腐化＋守門的兩個判準盲點），修好重啟管線時 import-topics 讀的是工作目錄，
+> 於是這批仍在 working tree 的內容隨 data/ 一併發布；原始檔已補提交，git 與線上一致。
+> ⚠ **量測數字仍是 2026-09-04 的**，而且新 title／摘要還沒等到 Google 重爬 —— 發布不等於有成效，要判效果先跑 `node scripts/crawl-freshness.mjs`。
 > 開始 GSC、GA4、SEO 或多站內容任務時先讀這份；只有快照過期、共用程式改動，或使用者明確要求重新量測，才重跑完整診斷。
+> 下一輪可執行工作拆解見 [seo-work-plans-next.md](seo-work-plans-next.md)。
 
 ## 先記住的結論
 
 - 這不是「一份內容翻成七種語言」的單一網站，而是**一份碼庫、七次 build、七個獨立發布站**。共用程式與資料模型，搜尋成效、發布版本、GSC 觀測則按站分開。
 - `en` 先做一輪是合理的市場實驗，但 en-only 文案不應自動同步到其他語系；確認搜尋意圖後，再按各站的查詢與當地叫法另寫。
-- 本輪改動已 commit、push 並完成七站發布；**GSC 尚未必看得到新標題，因為仍要等 Google 重爬**。目前不要把發布成功誤當成排名成效。
+- 所有已寫好的內容批次（含第二批與 Plan 2 A/B/C）都已 commit、push 並完成七站發布（2026-09-17）；**GSC 尚未必看得到新標題，因為仍要等 Google 重爬**。發布日與見效日是兩件事，不能把上線當成排名成效。
 
 ## 目前的站點模型
 
@@ -46,19 +51,31 @@
 
 另修正共用 Topic title year 與 description lead 使用不同國家資料的問題：先用 `facts.demand_countries[LOCALE]`，沒有可靠需求主題國時才退回本站市場／全部觀測。這是共用 route 修正，不是 en 專屬邏輯。
 
+### en 第二批（2026-09-17 已發布）
+
+依 2026-09-03 的 GSC query × page 近 28 日證據，這批只改三個英文制度／日期型 Topic 的 `title`、首段與 `keywords`：
+
+| Topic | page 證據 | 主要補強的查詢意圖 |
+|---|---:|---|
+| `labour-day` | 74 impressions、平均位置 63.5 | Labour Day dates by country、1 May、US Labor Day September |
+| `minimum-wage/cn` | 35 impressions、平均位置 79.5 | China minimum wage、minimum salary in China、Chinese minimum wage in USD |
+| `official-languages/cn` | 19 impressions、平均位置 73.3 | national language of China、China official language、official language of China |
+
+本批只修改各檔的 `## locale en`，沒有把英文文案同步到其他語系；先完成 import／export 與英文版 build，發布和 Google 重爬後才評估成效。
+
 ## GSC／GA4 快照與解讀邊界
 
-以下數字是 2026-09-01 的診斷快照，不能當成今天的即時值；GSC 最新資料約落後 2–3 天，且 page/query 維度不可直接相加。
+以下表格數字是 2026-09-03 的基準診斷快照，不能當成即時值；2026-09-04 的重新量測摘要另記在上方「2026-09-04 本輪執行與驗證紀錄」；GSC 最新資料約落後 2–3 天，且 page/query 維度不可直接相加。
 
 | 觀測 | 快照 | 解讀 |
 |---|---|---|
-| GSC query 近 28 日（全站診斷層） | 1,239 queries、4,039 impressions、5 clicks；最新資料至 2026-08-29；16 個有效資料日；59% 查詢在 51 名以後 | 曝光有增加，但樣本仍小，不能用這個窗宣稱單批 title 的因果。 |
+| GSC query 近 28 日（全站診斷層） | 1,516 queries、5,256 impressions、6 clicks；最新資料至 2026-08-31；17 個有效資料日；約 58% 查詢在 51 名以後 | 曝光有增加，但樣本仍小，不能用這個窗宣稱單批 title 的因果。 |
 | en page 維度（較早的 page 快照） | 1,505 impressions、2 clicks、平均位置 61.1 | 目前仍把 en 視為曝光最大但排名最弱的市場；待下一次 page 維度回補再更新。 |
-| sitemap／URL Inspection | 7 份 sitemap，最後下載日 2026-09-01，0 errors／warnings；抽查 6 URLs 為 5 indexed、1 Crawled - currently not indexed | 提交正常；jp 首頁是目前唯一抽查到的索引異常，需獨立追查，不先牽動 en。 |
-| GA4 | 288 sessions；228 筆疑似 bot，約 79%；較可信的 real-ish 流量約 60；Organic Search 58 sessions、20 engaged、平均 55 秒 | 不用 GA4 直接替代 GSC 來做搜尋排名或 HotScore 判斷。 |
-| Google 重爬 freshness | 20-url 分層樣本，19 筆有 crawl history；基準日後重爬 1 筆，約 5%；19 筆仍 stale | 目前不要做第二批文案；這個樣本沒有證明四個 en 目標頁已被重爬。 |
+| sitemap／URL Inspection | 7 份 sitemap，最後下載日 2026-09-01，0 errors／warnings；根首頁抽查為 en、zh-TW 已提交且已索引，jp 為 Crawled - currently not indexed | 提交與技術門檻正常；jp 首頁需獨立追查，不先牽動 en。 |
+| GA4 | 306 sessions；236 筆疑似污染，約 77%；較可信的 real-ish 流量約 70；Organic Search 67 sessions、39 engaged、平均 58 秒 | 不用 GA4 直接替代 GSC 來做搜尋排名或 HotScore 判斷。 |
+| Google 重爬 freshness（上一輪樣本） | 20-url 分層樣本，19 筆有 crawl history；基準日後重爬 1 筆，約 5%；19 筆仍 stale | 這個樣本沒有證明目標頁已被重爬；本批發布後仍需重新觀察。 |
 
-本次抽查的索引異常是 `https://jp.aeiou.now/` 的 `Crawled - currently not indexed`；它不是 en title 實驗的直接證據，後續要單獨確認首頁內容、canonical、內鏈與 Google 選擇的 canonical。
+本次抽查的索引異常是 `https://jp.aeiou.now/` 的 `Crawled - currently not indexed`。重新檢查顯示 robots、indexing allowed、sitemap／canonical 與 Google 選擇的 canonical 都沒有明顯技術阻擋，因此先視為品質／選擇訊號持續監測，不做共用程式的高風險修正。
 
 ### en query × page 的第一批證據
 
@@ -70,25 +87,57 @@
 - `when are college entrance exams in japan` → `/topic/exam-season/jp/`：2 imp，position 70。
 - `diwali holidays` → `/topic/diwali/`：3 imp，position 73.3。
 
-重點不是看到少量曝光就大改全部頁面，而是讓 title 與頁面真正回答已出現的查詢；等重爬和更多資料後再決定第二批。
+重點不是看到少量曝光就大改全部頁面，而是讓 title 與頁面真正回答已出現的查詢；本次第二批已完成本地修改，接下來等發布、重爬和更多資料再決定下一批。
+
+### en query × page 的第二批證據
+
+- `labor day date`／`when is labour day`／`is Labour Day celebrated in other countries` → `/topic/labour-day/`：合計 74 imp、平均 position 63.5；首段補上 1 May、US September 與各國放假差異。
+- `china minimum wage`／`minimum salary in china`／`chinese minimum wage in usd` → `/topic/minimum-wage/cn/`：35 imp、平均 position 79.5；title 與 keywords 直接採用這組需求叫法，首段先回答制度差異。
+- `national language of china`／`china official language`／`official language of china` → `/topic/official-languages/cn/`：19 imp、平均 position 73.3；title、keywords 與首段先區分官方語言、國家語言和法律依據。
+
+### Plan 2 跨語系需求主題國（2026-09-17 已發布）
+
+依 GSC query × page 與需求主題國報告，這輪維持「locale 不等於需求主題國」的判斷，且每批只改對應 locale：
+
+| 批次 | locale／需求主題國 | query 證據 | 實作假設與變更 |
+|---|---|---|---|
+| A | `zh-TW / ramadan-and-eid → Indonesia`；`en / childrens-day → India` | `2027印尼齋戒月時間`、`印尼齋戒月2027`；`when is children's day in india 2026`、`children day 2026 india` | 首段先回答印尼 sidang isbat／cuti bersama與印度 Bal Diwas／中央政府清單範圍，保留日期與放假差異。 |
+| B | `en / teachers-day → China`；`zh-TW / labour-day → United States`；`zh-TW / national-days → Japan` | `teachers day in china 2026`、`teachers day china 2026`；`美國勞動節 日期`；`日本国庆日`、`日本國慶日` | 先回答當地叫法、日期與制度層級：中國教師節 9/10、美国 Labor Day 2026/9/7、日文 `建国記念の日` 2/11；不把紀念日直接寫成全民放假。 |
+| C | `ja / long-holiday-weeks → Taiwan`；`zh-TW / elders-day → Japan`；`zh-TW / diwali → India` | `台湾 春節 2027`、`2027年 台湾 春節`；`日本敬老日2026`；`印度排燈節2026`、`排燈節 2026` | 補台灣 2027 政府行政機關春節 2/4–2/10 七日並標明民間適用差異；補日本 2026/9/21、`老人の日／老人週間`與私人雇主界線；補印度 Diwali 2026/11/8 的 All India／中央政府清單範圍，避免把五天文化節期寫成全印度五天公假。 |
+
+三批均先保留既有 country block，再以官方來源做最小修正；研究底稿見 [Batch A](reports/seo-research-batch-a-2026-09.md)、[Batch B](reports/seo-research-batch-b-2026-09.md)、[Batch C](reports/seo-research-batch-c-2026-09.md)。未修改共用 route、資料模型或 UI，也未發布。
+
+Diwali 的 Bhai Dooj 2026 occurrence 仍因 repo 既有 11 月 10 日與官方 11 月 11 日資料衝突而保留 `estimated`，本輪沒有擅自改動 occurrence 日期。
+
+### 2026-09-04 本輪執行與驗證紀錄
+
+- Plan 0 重新接線結果：GSC 90 日 query × page 1,631 rows、命名需求 681 impressions，72 個集中格中 14 個勝出；Plan 2 A/B/C 依序選出上述八個 locale／Topic／需求主題國組合。28 日 GSC 仍是 1,704 queries、6,271 impressions、10 clicks、18 個有效曝光日；排名 1–10／11–20／21–50／51+ 為 356／253／142／953，不能解讀為本地 build 的成效。
+- Plan 3 不需新增共用程式：現有 Topic root 已由 Astro route 產生需求主題國入口，相關 Topic 也沿用既有同語系關聯。最後 ja dist 的 gate 為 559 個 sitemap URL、567 個 rendered HTML，零入口 0、單一入口 0、最少 2。
+- Plan 4 JP 首頁診斷正常：ja build 的 `<html lang="ja">`、日文 title／H1、`https://jp.aeiou.now/` canonical、sitemap、7 個 hreflang 加 x-default 與可見 Topic 入口均存在，因此沒有改共用 SEO 程式。當次 `seo-health` 的 URL Inspection（544 頁）為 460 Submitted and indexed、69 Discovered - currently not indexed、5 Crawled - currently not indexed、9 URL unknown、1 Internal error；這是觀測快照，不是本地建置失敗。
+- Plan 6 分開保留 GA4 raw 與 heuristic：本次 28 日診斷為 308 sessions、235 筆疑似機器流量、73 筆 real-ish；`real-ish` 只是啟發式標籤，不是已完成的 bot 識別。GSC 與 GA4 不合併成單一 SEO KPI。
+- 最終內容 gate：完整性 63 Topic／243 observance／247 regional notes／108 places／54 events／172 sources；內容厚度 63 個公開 Topic（最薄 1,222 字元）；七人格 review、`git diff --check` 均通過。來源 URL 檢查為 736 個 URL 全部被擋／暫時失敗、失效 0，屬 WAF／網路可達性問題，不判定為死鏈。
+- Release-candidate QA：八組 locale／Topic／需求主題國頁面已核對 root link 與首段答案；七語 build 依序全部通過：zh-TW 552／544、en 571／563、ja 567／559、zh-CN 548／540、hi／id／pt-BR 各 571／563（pages／sitemap）。本輪只調整 `check-rendered-depth` 對全域導覽標籤的 D3 誤判排除，未改 rendered UI、route 或資料模型。
+- Plan 5 尚未進入發布後實驗：本輪內容雖已於 2026-09-17 上線，但還沒有任何**重爬後**的排名改善可報告。線上七站 `.build-id` 已對齊當時的 HEAD `328bf63`；發布是起點不是結果，成效要等 Google 重爬。
 
 ## 驗證狀態
 
 - CI run `33465126454` 成功：測試、來源連結檢查與七站 build／deploy 全部通過。
-- 七個正式網域在最後驗收時的 `.build-id` 全部與當時 repo `HEAD` 一致，代表七站沒有停在不同版本；之後若有新 commit，仍用本檔底部的指令重查。
+- 2026-09-04 唯讀重查七站 `.build-id` 全部為 `51f3af9`（2026-09-02 commit），彼此一致但落後本地 HEAD —— 後來查明那不是「尚未發布」，是 **CI 從 09-03 起連續失敗**（check-source-urls 擋在腐化的來源上），七站因此凍結了兩週。2026-09-17 修復後重查，七站 `.build-id` 已對齊 HEAD `328bf63`。
+  🔴 教訓：「七站一致但落後 HEAD」不等於尚未發布，**先看 `gh run list`**；只比 `.build-id` 看不出管線是停了還是還沒推。
 - 最新 en build 通過：571 pages、563 sitemap URLs、SEO／GEO／AEO gate 通過、內鏈 gate 通過。
-- 線上 en 四個目標頁已呈現新 title；en sitemap 有 563 個 `<loc>` 與 563 個 `<lastmod>`。
+- 本輪七語 build 均通過；共用的 D3 檢查器只做導覽標籤誤判修正，rendered UI、route 與資料模型沒有變更。
+- 上一輪線上 en 四個目標頁已呈現新 title；本地第二批 en build 產生 563 個 `<loc>` 與 563 個 `<lastmod>`。
 - 最新測試通過：5 個 test files、0 failures。
 - `git diff --check` 通過。
-- 最新七語 build 全部通過；各站的 SEO／GEO／AEO、sitemap、hreflang、內鏈、渲染厚度與本地範圍守門均通過。
+- 本輪七語 build 全部通過 SEO／GEO／AEO、sitemap、hreflang、內鏈、渲染厚度與本地範圍守門；完整測試為 5 files、0 failures。
 
 ## 下一步，不要重做整套分析
 
-### 若繼續 en-only 優化
+### 本輪內容批次發布後
 
-1. 先等這批已發布頁面被 Google 重爬；在此之前只修明顯錯誤，不再批量換文案。
-2. 重爬後只看本檔的 en 證據與待測 query，檢查四個新 title 對應的 query/page impressions、clicks、position。
-3. 確認需要第二批後，才編輯 `content/topics/<slug>.md` 的 `## locale en`，再跑 import／export、build、tests 與七站 release。
+1. 本輪已於 2026-09-17 發布，七站 `.build-id` 已確認對齊 HEAD。下一步不是再發一次，是等重爬：先跑 `node scripts/crawl-freshness.mjs`，重爬比例沒到 70% 就不要再調文案。
+2. Google 重爬後只看本檔記錄的 query × page 證據，檢查 impressions、clicks、position 是否改善。
+3. 若位置仍在 20–70，下一步優先補 country page 入口、h2、答案與內鏈；若仍幾乎無曝光，先查需求與索引，不再批量換 title。
 
 ### 若改共用程式、資料模型或 UI
 
