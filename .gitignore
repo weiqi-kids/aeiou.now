@@ -33,3 +33,6 @@ logs/*
 
 # 在地資料來源的隔離名單(update-local-data 寫、匯入器讀;純本機狀態,刪掉只會多發布一輪未核對的資料)
 db/.local-source-quarantine.json
+
+# 官方假日公告監看的上一輪觀察(announcement-watch 用;純本機狀態,刪掉只會讓第一輪重新建立基準)
+db/.announcement-watch-state.json
