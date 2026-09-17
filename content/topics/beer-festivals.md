@@ -27,7 +27,7 @@
 - date_rule: 九月第三個星期六前後、星期四到星期日；由主辦單位逐年公告
 - rank: 3
 - source: https://oktoberfestzinzinnati.com/
-- source: https://com.ohio.gov/divisions-and-programs/liquor-control/temporary-event-permits/guides-and-resources/temporary-permits-guide
+- source: https://dam.assets.ohio.gov/image/upload/com.ohio.gov/documents/liqr_TempFAQChart.pdf
 
 ## observance JP yokohama-oktoberfest
 - local_name: 横浜オクトーバーフェスト
