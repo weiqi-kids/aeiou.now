@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "note": "七國 × 年份的官方假日公告「在哪裡出、慣例幾月出」。scripts/announcement-watch.mjs 每天去看候選網址,出現/對上/變了才在 jobs 表(announcement-watch, partial_success)點名 —— 那是「要人去抄公告到 content/national-holiday-calendars.json」的訊號,腳本絕不自動改日期。抄完把那一筆的 resolved 填上日期就不再監看。expected_month 是公告慣例在 `year-1` 年的哪一個月;過完那個月還沒看到就會提醒一次(候選網址多半猜錯了)。match 是對候選頁**內文**跑的正規式:清單頁(gov.cn、data.gov.tw、cag.gov.in、mre)上天天有別的新聞,不用 match 會每天誤報;沒有 match 的網址(OPM)以內容指紋變了為準。候選網址只收官方網域,robots 不准抓的也列著給人看(腳本會標 blocked、不會去敲)。",
+  "watches": [
+    {
+      "country": "TW",
+      "year": 2028,
+      "expected_month": 6,
+      "urls": [
+        "https://data.gov.tw/dataset/14718",
+        "https://www.dgpa.gov.tw/informationlist?uid=30"
+      ],
+      "match": "117年中華民國政府行政機關辦公日曆表|一百一十七年政府行政機關辦公日曆表",
+      "note": "行政院人事行政總處《政府行政機關辦公日曆表》,由行政院核定後發布;116 年(2027)那一份 2026-09-17 已在 dgpa 與 data.gov.tw 上。慣例月份寫 6 是沿用近年「上半年核定翌年」的印象,未逐年核對過發布日 —— 逾期提醒出現時先去 dgpa 最新消息確認。⚠ dgpa.gov.tw 的 robots.txt 對所有 UA `Disallow: /`,腳本不會去敲它,只列給人看;data.gov.tw 的資料集頁(政府資料開放平臺,提供機關=人事總處)是可抓的入口。",
+      "resolved": null
+    },
+    {
+      "country": "JP",
+      "year": 2028,
+      "expected_month": 2,
+      "urls": [
+        "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv"
+      ],
+      "match": "〇令和10年（2028年）の国民の祝日|2028/1/1",
+      "note": "内閣府「国民の祝日について」。頁面自己寫明:令和10年（2028年）の国民の祝日は前年（令和9年）の２月に掲載 —— 春分・秋分の日要等国立天文台暦象年表(前年 2 月 1 日官報)。母表 JP 2028 的 2 筆 estimated 就是春分/秋分。match 排除了頁面上那句「前年の２月に掲載します」的預告文字,只認表格標題「〇令和10年」或 CSV 出現 2028/1/1。",
+      "resolved": null
+    },
+    {
+      "country": "CN",
+      "year": 2027,
+      "expected_month": 11,
+      "urls": [
+        "https://www.gov.cn/zhengce/",
+        "https://www.gov.cn/zhengce/xxgk/"
+      ],
+      "match": "2027年部分节假日安排",
+      "note": "国务院办公厅《关于 2027 年部分节假日安排的通知》。2026 年那一份是國辦發明電〔2025〕7 號,2025-11-04 發布;正文網址含不可預測的 content_id,所以看中国政府网「政策」索引頁與信息公开列表,以標題對上為準。/zhengce/zhengceku/ 對本機回 403、/zhengce/zuixin/ 是 JS 渲染,兩者都不能用。",
+      "resolved": null
+    },
+    {
+      "country": "CN",
+      "year": 2028,
+      "expected_month": 11,
+      "urls": [
+        "https://www.gov.cn/zhengce/",
+        "https://www.gov.cn/zhengce/xxgk/"
+      ],
+      "match": "2028年部分节假日安排",
+      "note": "同 CN 2027;慣例 11 月上旬發布翌年安排。",
+      "resolved": null
+    },
+    {
+      "country": "US",
+      "year": 2027,
+      "expected_month": null,
+      "urls": [
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/holidays.ics"
+      ],
+      "match": null,
+      "note": "聯邦假日由 5 U.S.C. 6103 直接規定,沒有年度公告;OPM 這一頁常年列到 2030。expected_month 留空 = 永不逾期。監看的意義是抓「法律改了」(2021 年加 Juneteenth 那種),所以不設 match、以內容指紋變了為準。",
+      "resolved": null
+    },
+    {
+      "country": "US",
+      "year": 2028,
+      "expected_month": null,
+      "urls": [
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+        "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/holidays.ics"
+      ],
+      "match": null,
+      "note": "同 US 2027。兩筆共用同一組網址,指紋變了會各說一次 —— 那是刻意的,人要逐年核對母表。",
+      "resolved": null
+    },
+    {
+      "country": "BR",
+      "year": 2027,
+      "expected_month": 12,
+      "urls": [
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+      ],
+      "match": "ano de 2027|Em 2027|dezembro de 2026",
+      "note": "Ministério da Gestão e da Inovação (MGI) 每年 12 月底發 Portaria 定翌年 feriados nacionais 與 pontos facultativos(2026 年那份是 Portaria MGI nº 11.460, 2025-12-29)。Portaria 正文在 legis.sigepe.gov.br,id 不可預測、DOU 搜尋是 JS,gov.br/gestao 的新聞列表對機器導向登入頁 —— 所以看 MRE 的 ERESP 頁:它每年抄一次那份 Portaria,對上「ano de 2027」或「dezembro de 2026」就是出來了。",
+      "resolved": null
+    },
+    {
+      "country": "BR",
+      "year": 2028,
+      "expected_month": 12,
+      "urls": [
+        "https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos"
+      ],
+      "match": "ano de 2028|Em 2028|dezembro de 2027",
+      "note": "同 BR 2027。",
+      "resolved": null
+    },
+    {
+      "country": "ID",
+      "year": 2027,
+      "expected_month": 9,
+      "urls": [
+        "https://www.setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2027",
+        "https://www.kemenkopmk.go.id/sites/default/files/pengumuman/2026-09/SKB%20Libur%20Nasional%20dan%20Cuti%20Bersama%20Tahun%202027.pdf"
+      ],
+      "match": "Cuti Bersama( Tahun)? 2027",
+      "note": "SKB 3 Menteri (Menag/Menaker/MenPANRB) Hari Libur Nasional dan Cuti Bersama Tahun 2027:2026-09-15 發布(SKB No. 1205/3/2 Tahun 2026),setneg 有新聞稿、kemenkopmk 有 PDF 正本。⚠ 2026-09-17 查:公告已出,母表 ID 2027 仍是估算 —— 第一輪就會點名,抄完填 resolved。",
+      "resolved": null
+    },
+    {
+      "country": "ID",
+      "year": 2028,
+      "expected_month": 9,
+      "urls": [
+        "https://www.setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2028",
+        "https://www.kemenkopmk.go.id/surat-keputusan-bersama-menteri-agama-menteri-ketenagakerjaan-dan-menteri-pan-rb-tentang-hari-libur"
+      ],
+      "match": "Cuti Bersama( Tahun)? 2028",
+      "note": "setneg 的新聞稿網址逐年同型(…_2026、…_2027 都在),所以直接猜 …_2028,404 → 200 就是出來了;kemenkopmk 那頁是 SKB 專頁(目前掛 2027 的 PDF),標題換成 Tahun 2028 也算。慣例 9 月(2026 年份 2025-09、2027 年份 2026-09-15)。",
+      "resolved": null
+    },
+    {
+      "country": "IN",
+      "year": 2027,
+      "expected_month": 7,
+      "urls": [
+        "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2027.pdf",
+        "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+        "https://dopt.gov.in/sites/default/files/Holiday%20list%202027.PDF"
+      ],
+      "match": "Holidays during the year 2027|Holiday list 2027|holidays[^.]{0,60}2027",
+      "note": "權威是 DoPT 的年度 OM(2026 年那份 F.No.12/2/2023-JCA 日期 2025-07-03,所以慣例 7 月);各部會(dfe.gov.in、cag.gov.in)再抄成自己的清單。⚠ 2026-09-17 實測:dfe 的 …-2027.pdf 與 …-2028.pdf 都回 200 但內容是首頁 HTML(軟 404),腳本會判 missing,不要把「回 200」當「出了」;dopt.gov.in 從本機 TLS 握手就被重設(不是 401/403,是連不上),它會一直是 error,要人用別的網路開。第三個候選留著是因為它才是正本。",
+      "resolved": null
+    },
+    {
+      "country": "IN",
+      "year": 2028,
+      "expected_month": 7,
+      "urls": [
+        "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2028.pdf",
+        "https://cag.gov.in/defence/new-delhi/en/page-defence-new-delhi-holidaylist",
+        "https://dopt.gov.in/sites/default/files/Holiday%20list%202028.PDF"
+      ],
+      "match": "Holidays during the year 2028|Holiday list 2028|holidays[^.]{0,60}2028",
+      "note": "同 IN 2027。",
+      "resolved": null
+    }
+  ]
+}

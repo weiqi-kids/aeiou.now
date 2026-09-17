@@ -21,14 +21,23 @@
 // (CLAUDE.md 紅線:寫入量應與真人流量同一個量級)。
 //
 // 所以一題只有一列,淡出時把 created_at / last_activity_at 推到現在,讓它重新進入時間窗:
-//   近 8h 內還在        → 跳過
-//   淡出了、且沒人碰過  → 原地刷新(不重翻,譯文本來就掛在同一個 post_id 上)
+//   還在線且撐得到下一輪 → 跳過(剩餘窗 >= cron 間隔;判準見下一段)
+//   淡出了或撐不到下一輪、且沒人碰過 → 原地刷新(不重翻,譯文本來就掛在同一個 post_id 上)
 //   淡出了、但有人回應  → **不動它**。有留言或 reaction 之後它就不再是種子,
 //                         而是一串有歷史的討論,不該被站方的排程改時間。
 //   還沒有這一列        → 新增(pending,交給 15 分 cron 的 translate-posts 翻六語)
 //
 // ⚠ 刷新只改 D1。主機那份副本(由 translate-posts 回流)的 created_at 不跟著動,
 //   兩邊會有時間差;主機那份是歸檔與分析用,不餵讀者,所以不追。
+//
+// ── 「還在線」不等於「撐得到下一輪」(2026-09-17)────────────────────────────
+// 第二版的判準是 `created_at >= now - 8h`:還在時間窗內就不刷。cron 排 4 小時一次,
+// 所以每一列在刷新後的第 8 小時整那一輪(T+8h−4 秒)被判「在線」、4 秒後淡出,
+// 下一輪要再等 4 小時才刷 —— logs/ask-the-world.log 實測「在線 8 / 要刷新 0」與
+// 「在線 0 / 要刷新 8」交替,等於每天有兩段 4 小時討論室連種子題都沒有。
+// 判準改成**剩餘窗 < cron 間隔就刷新**:`created_at < now - (WINDOW_SEC - CRON_INTERVAL_SEC)`。
+// 於是每一輪都刷「下一輪之前會淡出的那幾筆」,空窗趨近於零;被留言/reaction 碰過的
+// 仍然不動(既有規則)。CRON_INTERVAL_SEC 必須與 /etc/cron.d/aeiou 的排程一致,見該常數註解。
 //
 // 驗證:topic slug 必須存在,target_country 必須是該 Topic 真的涵蓋的國家
 // (問一個沒有這個節日的國家可以,但那個國家要在 regional_notes 裡有一格,
@@ -53,6 +62,11 @@ const DRY_RUN = process.argv.includes("--dry-run");
 // 這些題確實出自同一個人(站方),不是假裝成很多人。Crockford base32,不含 I/L/O/U。
 const SEED_ANON_ID = "01M0SEEDATW000000000000000";
 const WINDOW_SEC = 8 * 3600;   // 契約 §1 的 feed 時間窗;改這裡不會改 Worker,只會讓判斷失準
+// 對應 /etc/cron.d/aeiou 的 `25 */4 * * *`(4 小時一次)。**改 cron 就要同步改這裡**:
+// 這個值決定「剩餘窗不到下一輪就先刷」的門檻,寫大了會提早刷、寫小了就回到
+// 2026-09-17 之前每天兩段 4 小時空窗的狀態。必須 < WINDOW_SEC,否則每一輪都刷。
+const CRON_INTERVAL_SEC = 4 * 3600;
+if (CRON_INTERVAL_SEC >= WINDOW_SEC) throw new Error("CRON_INTERVAL_SEC 必須小於 WINDOW_SEC,否則每一輪都會刷新全部種子題");
 
 const log = (msg) => console.log(`${new Date().toISOString()} [ask-the-world] ${msg}`);
 
@@ -199,6 +213,8 @@ if (problems.length) {
 // touched = 有留言或 reaction。被碰過就交還給它自己的生命週期,排程不再管它。
 const now = Math.floor(Date.now() / 1000);
 const since = now - WINDOW_SEC;
+// 建立時間早於這個點的列,在下一輪 cron 醒來之前就會掉出時間窗 → 這一輪先刷。
+const fadesBeforeNextRun = now - (WINDOW_SEC - CRON_INTERVAL_SEC);
 const q = (v) => (v == null ? "NULL" : `'${String(v).replace(/'/g, "''")}'`);
 
 const existing = d1(
@@ -212,17 +228,22 @@ const byKey = new Map(existing.map((r) => [`${r.topic_id} ${r.content}`, r]));
 
 const toInsert = [];
 const toRefresh = [];
-let liveCount = 0;
+let liveCount = 0;     // 此刻還在 8h 窗內
+let fadingCount = 0;   // 在線,但撐不到下一輪 → 本輪刷新
 let touchedCount = 0;
 for (const item of questions) {
   const key = `${bySlug.get(item.topic).topic_id} ${String(item.content).trim()}`;
   const row = byKey.get(key);
   if (!row) { toInsert.push(item); continue; }
-  if (row.created_at >= since) { liveCount += 1; continue; }
+  const live = row.created_at >= since;
+  if (live) liveCount += 1;
+  if (row.created_at >= fadesBeforeNextRun) continue;   // 剩餘窗 >= cron 間隔,下一輪再看
   if (row.touched > 0) { touchedCount += 1; continue; }
+  if (live) fadingCount += 1;
   toRefresh.push({ item, row });
 }
-log(`題庫 ${questions.length} 題:在線 ${liveCount}、要刷新 ${toRefresh.length}、要新增 ${toInsert.length}`
+log(`題庫 ${questions.length} 題:在線 ${liveCount}(其中 ${fadingCount} 筆將在下一輪前淡出,本輪刷新)`
+  + `、要刷新 ${toRefresh.length}、要新增 ${toInsert.length}`
   + (touchedCount ? `、有人回應過所以不動 ${touchedCount}` : ""));
 
 if (DRY_RUN) {
