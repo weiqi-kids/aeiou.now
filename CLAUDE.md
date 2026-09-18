@@ -430,6 +430,14 @@ cd api && npx wrangler d1 execute aeiou-ugc --remote --command "SELECT ..."
   `.nav-link--topic` 洗掉(`site/scripts/page-fingerprint.mjs`,有測試)。判準只有一句:
   **這一頁自己的內容變了才算變,整站共用的東西輪替不算。** 新增任何「每頁都有、每小時會變」
   的區塊之前,先問它會不會讓**整站**一起宣告改版;每輪推新了幾頁看 CI 的 Summary 頁。
+  ⚠ **第三個入口 2026-09-18 才修掉**:`site/src/lib/occurrence.mjs` 的 `occurrenceDistance()`
+  原本用**每個 occurrence 自己的時區**算「今天」,於是同一天、不同國家的 observance
+  (12-25 的 IN/BR/JP/US)順序會隨 UTC 時鐘一天翻好幾次,而 `[slug].astro` 的 `starts_on`
+  tie-break 只在距離**相等**時生效、正好擋不到。實測 15 個 Topic 會翻,當天 sitemap 上
+  也正好 15 個 Topic 主頁標成當天。現在「今天」鎖 UTC(同「活動時間鎖 timeZone:'UTC'」那條),
+  守門是 `node --test tests/site/occurrence-order.test.mjs`。
+  🔴 判準補一句:**任何進到頁面的「相對於現在」的計算(距今幾天、進行中、排序、倒數)都要
+  用同一個時鐘**;每個資料列各自看自己的時區,就會製造這種一天翻好幾次的假改版。
 - **改文案之前先確認 Google 重爬過**(2026-08-27)——`node scripts/crawl-freshness.mjs`,
   重爬比例 <70% 就不要動文案。2026-08-19/21/25/26 已經據著沒被看過的摘要改了三次方向。
 - **`description` 不得等於 `title`**(2026-08-20)——`/questions/` 原本把 description 寫成

@@ -8,12 +8,24 @@
 //   node scripts/gsc-topic-metrics.mjs --days 90    一次回補更長區間
 //   node scripts/gsc-topic-metrics.mjs --dry-run    只印不寫
 //   node scripts/gsc-topic-metrics.mjs --report     最近 14 天站級曝光/點擊(all 與各 host),不打 API
+//   node scripts/gsc-topic-metrics.mjs --report-raw 站級真值曲線 + 裝置/國別留存率,不打 API
 //
-// 2026-09-17 起同一次執行也把 date × page × country 的列**直接加總**成站級逐日曲線
-// (`site_search_daily`,host='all' 與七個 host)。不另打 API:impressions/clicks 在 page
-// 維度下可加,position 存 position_sum。為什麼需要:gsc_query_metrics 的點擊比原始 API
-// 少一個量級(query 維度被 Google 匿名化過濾),沒有一張表存得到「站級每日曝光/點擊」;
-// 2026-09-02 站級降權的回復判準就是這條曲線。
+// 2026-09-17 起同一次執行也把 date × page × country 的列加總成 `site_search_daily`
+// (host='all' 與七個 host)。⚠ 那條曲線是**過濾後的尺度,不是站級真值** ——
+// Google 對每一列套匿名化門檻,列愈細被遮愈多。2026-09-18 實測(2026-08-15~09-16):
+//   dimensions=['date']                   13,702 曝光 / 69 點擊  ← 站級真值
+//   dimensions=['date','page','country']   6,639 曝光 / 11 點擊  ← site_search_daily 的來源
+// 曝光只留 48.5%、點擊只留 15.9%,而且留存率逐日在 15%~88% 之間跳,不能用常數校正回去。
+//
+// 2026-09-18 起另打 ['date'] / ['date','device'] / ['date','country'] / ['date','page']
+// 四次,原封存進 `gsc_daily_raw`(dim, key)。**站級判準一律讀 gsc_daily_raw 的 dim='date'**;
+// site_search_daily 與 gsc_query_metrics 保留原樣(不回填、不換源 —— 換源會讓曲線在
+// 切換當天跳 2~7 倍,長得像復原)。2026-09-02 斷崖的回復判準就是 gsc_daily_raw。
+//
+// 為什麼要 device 與 country:2026-09-18 用這兩個維度才看出斷崖的形狀 ——
+// 斷崖前 MOBILE 7,394 曝光/名次 10.0、DESKTOP 5,622/名次 43.5;斷崖後 MOBILE 39(留存 0.5%)、
+// DESKTOP 349(6.2%)。站上唯一的好名次一直只在行動裝置上,而那一整塊在 09-02 消失。
+// 國別同樣不對稱:ind 0.3%、idn 0.4%、twn 1.7%、bra 1.6%,但 usa 13.7%、can 14.9%、deu 16.9%。
 //
 // 除了 page/country 的 HotScore 累積，本支也保存 query/page/date 的主機私有聚合
 // (`gsc_query_metrics`)。這是 SEO 工作清單的證據來源，不進 data/、D1 或前端。
@@ -107,6 +119,7 @@ const readinessDecision = (() => {
 const argv = process.argv.slice(2);
 const DRY_RUN = argv.includes("--dry-run");
 const REPORT = argv.includes("--report");
+const REPORT_RAW = argv.includes("--report-raw");
 const days = Number(argv[argv.indexOf("--days") + 1]) || REACH_DAYS;
 
 // 子網域 → locale。唯一映射表在 CLAUDE.md 介面常數;ja→jp、zh-CN→cn、pt-BR→br 不同名。
@@ -148,6 +161,17 @@ function ensureQueryMetricsSchema(db) {
       PRIMARY KEY (metric_date, host)
     );
     CREATE INDEX IF NOT EXISTS idx_ssd_host_date ON site_search_daily(host, metric_date);
+    CREATE TABLE IF NOT EXISTS gsc_daily_raw (
+      metric_date  TEXT NOT NULL,
+      dim          TEXT NOT NULL,
+      key          TEXT NOT NULL,
+      impressions  INTEGER NOT NULL DEFAULT 0,
+      clicks       INTEGER NOT NULL DEFAULT 0,
+      position_sum REAL NOT NULL DEFAULT 0,
+      fetched_at   INTEGER NOT NULL,
+      PRIMARY KEY (metric_date, dim, key)
+    );
+    CREATE INDEX IF NOT EXISTS idx_gdr_dim_date ON gsc_daily_raw(dim, metric_date);
   `);
 }
 
@@ -180,11 +204,61 @@ function reportSiteDaily(db, daysBack = 14) {
   console.log(`合計(all,${all.length} 天):曝光 ${imp}、點擊 ${clk}、平均名次 ${imp ? (pos / imp).toFixed(1) : "-"}`);
 }
 
+
+// --report-raw:站級真值曲線(dim='date')＋裝置/國別的斷崖前後留存率。只讀表、不打 API。
+// 為什麼要跟 --report 分開:兩者尺度不同,同一張畫面上並列會讓人以為數字對不上是 bug。
+function reportRaw(db, daysBack = 30) {
+  const exists = db.prepare("SELECT 1 FROM sqlite_master WHERE type='table' AND name='gsc_daily_raw'").get();
+  if (!exists) { console.log("尚無資料:gsc_daily_raw 還沒建(先跑一次 node scripts/gsc-topic-metrics.mjs)。"); return; }
+  const CLIFF = process.env.AEIOU_CLIFF_DATE || "2026-09-02";
+  console.log(`站級真值(dimensions=['date'],未被匿名化遮罩)。GSC 固定落後 2-3 天,最近兩天偏低是正常的。`);
+  const daily = db.prepare(
+    `SELECT metric_date, impressions, clicks, position_sum FROM gsc_daily_raw
+      WHERE dim = 'date' AND metric_date >= ? ORDER BY metric_date`,
+  ).all(dayStr(daysBack));
+  if (!daily.length) { console.log(`尚無資料:gsc_daily_raw 在 ${dayStr(daysBack)} 之後沒有 dim='date' 的列。`); return; }
+  for (const r of daily) {
+    console.log(`  ${r.metric_date}  ${String(r.impressions).padStart(6)} 曝光  ${String(r.clicks).padStart(3)} 點擊  `
+      + `名次 ${r.impressions ? (r.position_sum / r.impressions).toFixed(1) : "-"}`);
+  }
+  const imp = daily.reduce((a, r) => a + r.impressions, 0);
+  const clk = daily.reduce((a, r) => a + r.clicks, 0);
+  console.log(`  合計 ${daily.length} 天:曝光 ${imp}、點擊 ${clk}、CTR ${imp ? (clk / imp * 100).toFixed(2) : "-"}%`);
+
+  // 對照:同一段區間 site_search_daily(過濾後尺度)留下多少。差額就是匿名化遮罩量。
+  const filtered = db.prepare(
+    `SELECT SUM(impressions) imp, SUM(clicks) clk FROM site_search_daily
+      WHERE host = 'all' AND metric_date >= ? AND metric_date <= ?`,
+  ).get(daily[0].metric_date, daily[daily.length - 1].metric_date);
+  if (filtered?.imp) {
+    console.log(`  同區間 site_search_daily(page×country 尺度):曝光 ${filtered.imp}(留存 ${(filtered.imp / imp * 100).toFixed(1)}%)、`
+      + `點擊 ${filtered.clk}(留存 ${clk ? (filtered.clk / clk * 100).toFixed(1) : "-"}%) ← 差額是 Google 的匿名化遮罩,不是 bug`);
+  }
+
+  for (const [dim, label] of [["device", "裝置"], ["country", "國別"]]) {
+    const rows = db.prepare(
+      `SELECT key,
+              SUM(CASE WHEN metric_date <  ? THEN impressions ELSE 0 END) b_imp,
+              SUM(CASE WHEN metric_date <  ? THEN position_sum ELSE 0 END) b_ps,
+              SUM(CASE WHEN metric_date >  ? THEN impressions ELSE 0 END) a_imp,
+              SUM(CASE WHEN metric_date >  ? THEN position_sum ELSE 0 END) a_ps
+         FROM gsc_daily_raw WHERE dim = ? GROUP BY key HAVING b_imp >= 20 ORDER BY b_imp DESC LIMIT 20`,
+    ).all(CLIFF, CLIFF, CLIFF, CLIFF, dim);
+    if (!rows.length) continue;
+    console.log(`\n${label}(${CLIFF} 前 vs 後;留存率 = 後/前,同樣長度的窗才可比,這裡只看相對大小)`);
+    for (const r of rows) {
+      console.log(`  ${r.key.padEnd(10)} 前 ${String(r.b_imp).padStart(6)} 名次 ${(r.b_ps / r.b_imp).toFixed(1).padStart(5)}`
+        + `  →  後 ${String(r.a_imp).padStart(5)} 名次 ${r.a_imp ? (r.a_ps / r.a_imp).toFixed(1).padStart(5) : "    -"}`
+        + `  留存 ${(r.a_imp / r.b_imp * 100).toFixed(1)}%`);
+    }
+  }
+}
+
 const dayStr = (n) => new Date(Date.now() - n * 86400000).toISOString().slice(0, 10);
 
 const db = openDb();
-if (REPORT) {
-  try { reportSiteDaily(db); } finally { db.close(); }
+if (REPORT || REPORT_RAW) {
+  try { if (REPORT_RAW) reportRaw(db); else reportSiteDaily(db); } finally { db.close(); }
   process.exit(0);
 }
 if (!DRY_RUN) ensureQueryMetricsSchema(db);
@@ -242,6 +316,32 @@ try {
   const rows = await fetchRows(["date", "page", "country"]);
   // query/page 不帶 country，避免把同一查詢拆成很多小列；page 的 host 已足以反查 locale。
   const queryRows = await fetchRows(["date", "query", "page"]);
+
+  // 原始維度:每個 dim 各打一次。列愈粗被匿名化遮掉的愈少,所以 ['date'] 才是站級真值。
+  // 四者彼此**不可互相加總**(遮罩門檻不同),各自獨立存進 gsc_daily_raw。
+  const RAW_DIMS = [
+    ["date", (r) => "all"],
+    ["device", (r) => r.keys[1] || "UNKNOWN"],
+    ["country", (r) => r.keys[1] || "zzz"],
+    ["page", (r) => r.keys[1] || ""],
+  ];
+  const rawAgg = new Map();   // `${date}\t${dim}\t${key}` -> 累計
+  for (const [dim, keyOf] of RAW_DIMS) {
+    const dims = dim === "date" ? ["date"] : ["date", dim];
+    const got = await fetchRows(dims);
+    for (const r of got) {
+      const date = r.keys[0];
+      const key = keyOf(r);
+      if (!date || key === "") continue;
+      const k = `${date}\t${dim}\t${key}`;
+      const cur = rawAgg.get(k) || { impressions: 0, clicks: 0, position_sum: 0 };
+      cur.impressions += Number(r.impressions) || 0;
+      cur.clicks += Number(r.clicks) || 0;
+      cur.position_sum += (Number(r.position) || 0) * (Number(r.impressions) || 0);
+      rawAgg.set(k, cur);
+    }
+    log(`[${JOB_NAME}] 原始維度 ${dims.join("x")}:${got.length} 列`);
+  }
   log(`[${JOB_NAME}] GSC 回 ${rows.length} 列 page/country、${queryRows.length} 列 query/page`);
 
   // 聚合到 (date, topic, locale, scope)。
@@ -371,6 +471,16 @@ try {
          position_sum = excluded.position_sum,
          fetched_at = excluded.fetched_at`,
     );
+    const rawStmt = db.prepare(
+      `INSERT INTO gsc_daily_raw
+         (metric_date, dim, key, impressions, clicks, position_sum, fetched_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?)
+       ON CONFLICT(metric_date, dim, key) DO UPDATE SET
+         impressions = excluded.impressions,
+         clicks = excluded.clicks,
+         position_sum = excluded.position_sum,
+         fetched_at = excluded.fetched_at`,
+    );
     const siteStmt = db.prepare(
       `INSERT INTO site_search_daily
          (metric_date, host, impressions, clicks, position_sum, fetched_at)
@@ -397,13 +507,17 @@ try {
         const [date, host] = key.split("\t");
         siteStmt.run(date, host, v.impressions, v.clicks, v.position_sum, at);
       }
+      for (const [k, v] of rawAgg.entries()) {
+        const [date, dim, key] = k.split("\t");
+        rawStmt.run(date, dim, key, v.impressions, v.clicks, v.position_sum, at);
+      }
       db.exec("COMMIT");
     } catch (e) {
       db.exec("ROLLBACK");
       throw e;
     }
     written = agg.size;
-    queryWritten = queryAgg.size + siteAgg.size;
+    queryWritten = queryAgg.size + siteAgg.size + rawAgg.size;
   }
 
   // -- 就緒度:什麼時候可以拿來驅動 HotScore(判準見檔頭) --

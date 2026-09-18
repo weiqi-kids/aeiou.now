@@ -53,12 +53,35 @@ const DATA_DIR = resolve(ROOT, "data");
 // 資料不足那幾格本來就會被門檻擋下,不會因為窗長而亂寫。
 const DEMAND_WINDOW_DAYS = Number(process.env.AEIOU_DEMAND_WINDOW_DAYS || 90);
 
+// -- 凍結期的窗底(2026-09-18 加,到期日 2026-12-16) --------------------------
+// 這支每小時重算,而它的**輸出會決定共用 title 的國家與年份、description 第一句的
+// lead country**(site/src/pages/topic/[slug].astro 的 titleCountryCode)。
+// 問題:窗內唯一有量的資料是 2026-08-19~09-01(09-02 站級斷崖之後每日只剩 13~43 曝光,
+// 遠低於 DEMAND_MIN_IMPRESSIONS)。90 天滾動窗從 2026-11-17 起會把 08-19 滾出窗外,
+// 現存的 winner 會**在沒有人動手的情況下逐日消失** → 七站的 title 與摘要集體改寫,
+// 而且會把整站 lastmod 一起推新。時間點正好落在 12-16 解凍判讀的前一個月,
+// 歸因會永久失效(docs/seo-current-state.md 的凍結條款①)。
+//
+// 所以在凍結期間把窗底釘在第一個有 GSC 資料的日子,窗只會變長不會變短:
+// 更長的窗 = 保留更多證據 = 結論更穩,而且門檻(指名曝光 >= 5 且佔該格多數)照舊,
+// 不會因此多寫出任何一格。裸執行仍然是正確且完整的行為。
+//
+// 2026-12-16 解凍時要做的事:確認斷崖是否結束 → 刪掉這個常數與下面的 min() →
+// 讓 90 天滾動窗恢復 → **預期會有一批 winner 消失**,那一次的 title 變更要單獨一天推,
+// 並記在 docs/seo-current-state.md。用 AEIOU_DEMAND_WINDOW_FLOOR= 可即時解除。
+const DEMAND_WINDOW_FLOOR = process.env.AEIOU_DEMAND_WINDOW_FLOOR ?? "2026-08-15";
+
 const argv = process.argv.slice(2);
 const REPORT = argv.includes("--report");
 const DRY_RUN = argv.includes("--dry-run") || REPORT;
 const days = Number(argv[argv.indexOf("--days") + 1]) || DEMAND_WINDOW_DAYS;
 
 const dayStr = (n) => new Date(Date.now() - n * 86400000).toISOString().slice(0, 10);
+
+// 實際窗起點:滾動窗與凍結期窗底取較早的那一個(窗只會變長,不會變短)。
+const since = DEMAND_WINDOW_FLOOR && DEMAND_WINDOW_FLOOR < dayStr(days)
+  ? DEMAND_WINDOW_FLOOR
+  : dayStr(days);
 
 // schema-host.sql 是新庫的權威;這個 CREATE IF NOT EXISTS 讓既有主機庫不必重建。
 function ensureSchema(db) {
@@ -102,7 +125,7 @@ try {
        FROM gsc_query_metrics
       WHERE metric_date >= ?
       GROUP BY locale, query, page_url`,
-  ).all(dayStr(days));
+  ).all(since);
 
   // (topic_id, locale) -> { code -> 曝光 }
   const agg = new Map();
@@ -135,7 +158,11 @@ try {
   }
 
   const slugOf = new Map([...slugToId].map(([slug, id]) => [id, slug]));
-  log(`[${JOB_NAME}] 窗 ${days} 天:query x page ${rows.length} 列、指名國家的曝光 ${named}、`
+  if (since !== dayStr(days)) {
+    log(`[${JOB_NAME}] ⚠ 凍結期窗底生效:窗起點釘在 ${since}(滾動窗本來是 ${dayStr(days)})。`
+      + ` 2026-12-16 解凍時要刪掉 DEMAND_WINDOW_FLOOR,預期會有一批 winner 消失。`);
+  }
+  log(`[${JOB_NAME}] 窗 ${days} 天(實際起點 ${since}):query x page ${rows.length} 列、指名國家的曝光 ${named}、`
     + `(topic,站) 有指名 ${agg.size} 格 -> 過門檻 ${winners.length} 格`);
   for (const w of winners.sort((a, b) => b.imp - a.imp)) {
     log(`[${JOB_NAME}]   [採用] ${slugOf.get(w.topicId)} @ ${w.locale} -> ${w.code}`

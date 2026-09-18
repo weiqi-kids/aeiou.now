@@ -559,6 +559,30 @@ CREATE TABLE IF NOT EXISTS site_search_daily (
 );
 CREATE INDEX IF NOT EXISTS idx_ssd_host_date ON site_search_daily(host, metric_date);
 
+-- gsc_daily_raw:GSC 原始維度的每日曲線(2026-09-18 新增)。
+--   * 為什麼要另存:site_search_daily / topic_search_metrics / gsc_query_metrics 三張表
+--     全部由 dimensions=['date','page','country'] 加總而來,而 Google 對每一列都套匿名化
+--     門檻,列愈細被遮愈多。2026-09-18 實測(2026-08-15~09-16):
+--       dimensions=['date']              13,702 曝光 / 69 點擊   ← 站級真值
+--       dimensions=['date','page','country'] 6,639 曝光 / 11 點擊 ← 現行三張表的來源
+--     也就是曝光只留 48.5%、點擊只留 15.9%,而且留存率逐日在 15%~88% 之間跳,
+--     不能用一個常數校正回去。站級判準(復原與否)必須讀這張表,不是 site_search_daily。
+--   * dim = 'date'(key='all')| 'device' | 'country' | 'page'(key=網址)。
+--     每個 dim 各打一次 API,彼此不可互相加總(遮罩門檻不同)。
+--   * dim='page' 存的是逐頁列,讓「08-26 擴張前既有路徑」這種 cohort 算得出來。
+--   * 同 topic_search_metrics 的冪等 upsert;--days 可回補到 GSC 保留上限(16 個月)。
+CREATE TABLE IF NOT EXISTS gsc_daily_raw (
+  metric_date  TEXT NOT NULL,                 -- 'YYYY-MM-DD',GSC 的資料日
+  dim          TEXT NOT NULL,                 -- 'date' | 'device' | 'country' | 'page'
+  key          TEXT NOT NULL,                 -- dim='date' 時固定 'all';其餘為該維度的值
+  impressions  INTEGER NOT NULL DEFAULT 0,
+  clicks       INTEGER NOT NULL DEFAULT 0,
+  position_sum REAL NOT NULL DEFAULT 0,       -- 平均名次 = position_sum/impressions
+  fetched_at   INTEGER NOT NULL,
+  PRIMARY KEY (metric_date, dim, key)
+);
+CREATE INDEX IF NOT EXISTS idx_gdr_dim_date ON gsc_daily_raw(dim, metric_date);
+
 -- ---------------------------------------------------------------------------
 -- reaction 計數回流(2026-08-21)
 -- ---------------------------------------------------------------------------
