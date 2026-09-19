@@ -38,5 +38,17 @@ cd site && LOCALE=zh-TW pnpm build             # build 一個語系(cwd 一律 s
 
 ## 授權與現況
 
-私人專案,尚未註冊網域。開發期靜態站掛在 `weiqi-kids.github.io/aeiou-pages-<locale>/`,
-Worker 掛在 workers.dev。**API 尚未加 bot 防護,網址不對外宣傳。**
+七個語系站各自有正式網域(2026-08-15 起),對照表見 [CLAUDE.md](./CLAUDE.md):
+
+| locale | 網域 | | locale | 網域 |
+|---|---|---|---|---|
+| `zh-TW` | [aeiou.now](https://aeiou.now)(主站) | | `hi` | [hi.aeiou.now](https://hi.aeiou.now) |
+| `en` | [en.aeiou.now](https://en.aeiou.now) | | `id` | [id.aeiou.now](https://id.aeiou.now) |
+| `ja` | [jp.aeiou.now](https://jp.aeiou.now) | | `pt-BR` | [br.aeiou.now](https://br.aeiou.now) |
+| `zh-CN` | [cn.aeiou.now](https://cn.aeiou.now) | | | |
+
+Worker 在 workers.dev。**寫入端點的 Turnstile 已實作但尚未啟用**
+(Worker 兩個環境變數都設了才生效;現況查 `curl -s "$API/v1/me" | grep -o '"turnstile":{[^}]*}'`)——
+入口限流則一直在。
+
+現況數字一律用指令查,不寫在文件裡(理由與查法見 CLAUDE.md 第一鐵則)。
