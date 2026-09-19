@@ -153,10 +153,30 @@ async function probe(url) {
       return { status: res.status, finalUrl: res.url || url };
     } catch (e) {
       clearTimeout(timer);
-      if (method === 'GET') return { status: 0, error: e.name === 'AbortError' ? 'timeout' : e.message };
+      if (method === 'GET') return { status: 0, error: describeFetchError(e) };
     }
   }
   return { status: 0, error: 'unreachable' };
+}
+
+// 連線失敗的原因要說出來,不能只印一句 fetch failed(2026-09-19 加)。
+// 緣由:dfe.gov.in 的憑證 2026-09-17 23:59 GMT 過期,伺服器其實還活著(curl -k 回 200),
+// 但輸出只寫「連線失敗」,於是被當成「這個來源死了、該從 content/ 移除」——那是印度政府的
+// 一級來源、被引用 53 次,刪掉是真的會弄丟東西。憑證過期通常幾天內對方就補好,屬於
+// CLAUDE.md 紅線講的「對方暫時故障,一律 WARN」,判死前要複驗。把原因印出來就不會再誤判。
+function describeFetchError(e) {
+  if (e?.name === 'AbortError') return 'timeout';
+  // undici 把真正的原因放在 cause 裡,e.message 只有一句 'fetch failed'。
+  const code = e?.cause?.code || e?.code || '';
+  const msg = String(e?.cause?.message || e?.message || e);
+  if (code === 'CERT_HAS_EXPIRED' || /certificate has expired/i.test(msg)) {
+    return 'TLS 憑證過期(對方的問題,伺服器多半還活著;判死前先用 curl -k 複驗,別急著移除來源)';
+  }
+  if (/self.signed|SELF_SIGNED/i.test(code + msg)) return 'TLS 自簽憑證(同上,不是連結死掉)';
+  if (/UNABLE_TO_VERIFY|altname|ERR_TLS/i.test(code + msg)) return `TLS 驗證失敗:${code || msg}`;
+  if (code === 'ENOTFOUND') return 'DNS 查不到這個網域';
+  if (code === 'ECONNREFUSED') return '對方拒絕連線';
+  return code ? `${code}:${msg}` : msg;
 }
 
 // 跟完 redirect 之後落在錯誤頁 —— 狀態碼是 200,但讀者點過去看到的是「找不到」。
