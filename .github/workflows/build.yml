@@ -37,8 +37,17 @@ concurrency:
 
 env:
   PUBLIC_API_URL: https://aeiou-api.lightman-chang.workers.dev
-  # GA4 量測 ID:七站共用一個 web stream,報表以 hostname 區分(介面常數,見 CLAUDE.md)
-  PUBLIC_GA4_ID: G-ZMTFG68ZJ5
+  # GA4 量測 ID(G-ZMTFG68ZJ5)2026-09-19 停用,刻意留空:
+  #   gtag 掛在七站每一頁上,而 /privacy/、/contact/、/terms/ 都是 404 —— Google Analytics
+  #   服務條款要求必須公告隱私權政策說明分析與 cookie 的使用,這一條沒有做到;對 BR/ID/IN/EU
+  #   的讀者也有資料保護曝險(gtag 沒有 consent gate,補一頁政策也解不了)。
+  #   而它的價值接近零:七到九成是機器流量(seo-health.mjs ① 層),且 CLAUDE.md 紅線本來就
+  #   規定 HotScore 的瀏覽面不接 GA4、改用 GSC。
+  #   BaseLayout.astro 寫成「PUBLIC_GA4_ID 有值才輸出 gtag」,所以留空就完全不輸出。
+  #   要恢復:填回 G-ZMTFG68ZJ5,並且**同時**要有可用的 /privacy/(那是新頁型,撞凍結②)。
+  #   ⚠ 恢復會再一次改動每一頁的指紋 = 整站 lastmod 推新(實測 zh-TW 552/552 頁),
+  #     不要順手加回去 —— 那要當成一次獨立的整站部署來排。
+  PUBLIC_GA4_ID: ""
 
 jobs:
   # 測試先跑一次,綠了才准部署 —— 七個語系的 deploy 全部 needs: test。

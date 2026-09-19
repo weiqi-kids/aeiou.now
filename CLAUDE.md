@@ -235,7 +235,7 @@ World
 | 同步 secret | Worker 側 `SYNC_SECRET`;主機側 `~/.config/aeiou/sync-secret`(chmod 600,**絕不進 git**) |
 | deploy key 私鑰 | `~/.config/aeiou/deploy-keys/aeiou-pages-<locale小寫>`(**絕不進 git**) |
 | 靜態站 API 位址 | 環境變數 `PUBLIC_API_URL` |
-| GA4 量測 ID(`PUBLIC_GA4_ID`) | `G-ZMTFG68ZJ5`(七站共用一個 web stream,報表以 hostname 區分;CI 已設,手動 build 要自帶,未設不輸出 gtag) |
+| GA4 量測 ID(`PUBLIC_GA4_ID`) | `G-ZMTFG68ZJ5` —— **2026-09-19 起 CI 刻意留空,七站不輸出 gtag**。理由:`/privacy/`、`/contact/`、`/terms/` 都是 404,而 GA 服務條款要求公告隱私權政策;加上七到九成是機器流量、紅線本來就規定 HotScore 不接 GA4。查:`curl -s https://aeiou.now/ \| grep -c googletagmanager`(應為 0)。要恢復先有 `/privacy/`(新頁型,撞凍結②),且**恢復會再推一次整站 lastmod**(實測 552/552 頁) |
 | `REACTION_SET` | `["❤️","😂","😮","😢","🤔","🎉","👏"]`(**不含 👍**,用戶明示排除) |
 | Turnstile(2026-08-21) | Worker 側 `TURNSTILE_SECRET`(secret)+ `TURNSTILE_SITEKEY`(var);**兩個都設才生效**。開關由 Worker 說了算,七個站不必為了開關重建 —— 前端問 `/v1/me` 的 `turnstile`。未設 = 不驗(碼先上線、鑰匙後到);設了之後 `POST /v1/posts` 與 `/v1/comments` 要帶 `turnstile_token` |
 | reaction 可掛的對象 | `post` / `comment` / `place` / `event` |
