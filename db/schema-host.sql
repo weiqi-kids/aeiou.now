@@ -584,6 +584,50 @@ CREATE TABLE IF NOT EXISTS gsc_daily_raw (
 CREATE INDEX IF NOT EXISTS idx_gdr_dim_date ON gsc_daily_raw(dim, metric_date);
 
 -- ---------------------------------------------------------------------------
+-- holiday_announcements:官方假日公告的**溯源事件流**(2026-09-19 新增)
+-- ---------------------------------------------------------------------------
+-- announcement-watch.mjs 每天去看七國政府的假日公告頁,判斷完就把觀察丟掉 ——
+-- 只有「現在是什麼狀態」留在 db/.announcement-watch-state.json,**歷史不留**。
+-- 這張表把每一次**狀態改變**追記下來,append-only,永不更新既有列。
+--
+-- 為什麼值得存(這是這個專案唯一能獨佔的第一手資料):
+--   timeanddate、publicholidays 這些站告訴你「是哪一天」,沒有人告訴你
+--   「這個日期出自哪一份公告、哪天發布、改過幾次、原始連結是什麼」。
+--   那是 HR／薪資／國際學校／旅遊營運真正會引用的東西,而且**只能靠每天去看累積**:
+--   沒有人保存政府公告頁的歷史快照,今天不開始存,以後補不回來
+--   (同 gsc-topic-metrics.mjs「GSC 沒有當時快照」那條理由)。
+--
+-- 只在**變化**時寫一列,不是每次檢查都寫 —— 否則每天七列全是雜訊,
+-- 真正的事件(公告出現了、內容改了、消失了)會被淹掉。
+-- change_kind:
+--   first_seen  第一次觀察到這個 URL(基線,不代表公告出現)
+--   appeared    上一輪沒有／抓不到 → 這一輪有了
+--   matched     對上了那一年的關鍵字(最強的訊號:公告真的出了)
+--   changed     還在,但內容指紋變了(公告被修訂)
+--   disappeared 上一輪還在 → 這一輪沒了
+--   overdue     慣例月份過完仍未出現(候選網址可能猜錯,要人工找新入口)
+--   transcribed 人抄錄進母表了(announcement-watch.json 的 resolved 被填上)
+--
+-- 🔴 腳本仍然**絕不自動改日期**。這張表記的是「什麼時候在哪裡看到什麼」,
+--    不是「假日是哪一天」—— 後者的權威仍是 content/national-holiday-calendars.json。
+CREATE TABLE IF NOT EXISTS holiday_announcements (
+  observed_at   TEXT NOT NULL,                -- ISO8601,這一次觀察的時間
+  country       TEXT NOT NULL,                -- ISO 3166-1 alpha-2
+  year          INTEGER NOT NULL,             -- 公告涵蓋的年度
+  url           TEXT NOT NULL,                -- 候選公告網址(requested)
+  change_kind   TEXT NOT NULL,                -- 見上
+  kind          TEXT,                         -- classify() 的判定:matched/present/missing/blocked/error
+  http_status   INTEGER,
+  content_type  TEXT,
+  content_hash  TEXT,                         -- sha256(body);公告被修訂時會變
+  final_url     TEXT,                         -- 跟完 redirect 的落點(軟 404 靠它判)
+  note          TEXT,
+  PRIMARY KEY (observed_at, country, year, url, change_kind)
+);
+CREATE INDEX IF NOT EXISTS idx_hann_country_year ON holiday_announcements(country, year, observed_at);
+CREATE INDEX IF NOT EXISTS idx_hann_kind ON holiday_announcements(change_kind, observed_at);
+
+-- ---------------------------------------------------------------------------
 -- reaction 計數回流(2026-08-21)
 -- ---------------------------------------------------------------------------
 -- reaction 的權威在 D1(讀者按的),主機沒有。於是 /topics/events/ 與 /topics/nearby/

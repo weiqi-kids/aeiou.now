@@ -146,6 +146,21 @@ function report(db) {
     `\n最近一輪(每個 URL 最新一筆;sweep ${sweeps[0]} ~ ${sweeps[sweeps.length - 1]},`
     + ` ${sweeps.length} 個 sweep,${latest.length} 個 URL;全表 ${total.n} 筆,${total.lo} ~ ${total.hi})`,
   );
+  // 逐 host 覆蓋度(2026-09-19 加)。一輪跨約三、四天,中途看到的一定是**半輪**;
+  // 沒有這一行,讀的人會把「某幾個站還沒輪到」誤讀成「那幾個站有問題」——
+  // 2026-09-18 就這樣誤判過一次(當時 hi/id/cn/br 是 0 筆,實際上只是還沒排到)。
+  {
+    const byHost = new Map();
+    for (const r of latest) byHost.set(r.host, (byHost.get(r.host) || 0) + 1);
+    const pending = db.prepare(
+      "SELECT COUNT(*) n FROM url_inspections WHERE sweep_id = ?",
+    ).get(sweeps[sweeps.length - 1])?.n ?? 0;
+    const line = [...byHost.entries()].sort((a, b) => b[1] - a[1])
+      .map(([h, n]) => `${h.replace(".aeiou.now", "").replace("aeiou.now", "zh-TW")} ${n}`).join("、");
+    console.log(`  逐 host:${line || "(無)"}`);
+    console.log(`  ⚠ 一輪要跨三到四天才掃得完全站(每次執行受 50 分鐘軟上限節流,實測約 1,100 筆/次)。`
+      + `本輪(sweep ${sweeps[sweeps.length - 1]})目前 ${pending} 筆 —— **站數不齊代表還沒輪到,不是那幾站有問題**。`);
+  }
   const matrix = coverageMatrix(latest);
   const w = Math.max(10, ...matrix.states.map((s) => s.length));
   const header = ["page_type".padEnd(9), "total".padStart(6), ...matrix.states.map((s) => s.padStart(w))];

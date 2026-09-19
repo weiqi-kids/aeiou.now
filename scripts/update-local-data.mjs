@@ -13,6 +13,10 @@
 //       隔離名單在 db/.local-source-quarantine.json、jobs 表 job_name='local-source-quarantine'。
 //       緣由:一個來源改版就停掉七站**全部**的 Topic／題庫／排行更新,09-15~09-16 每三小時
 //       進一次 DLQ,而擋住的東西跟那個來源毫無關係。fail-closed 的單位應該是「那一筆」。
+//       ⚠ 2026-09-19 起內容層也有容忍(CONTENT_TOLERANCE,預設 3):連續 N 輪對不上才隔離。
+//       原本第一次對不上就隔離、第一次對上就解除,於是時好時壞的來源每小時翻一次 ——
+//       實測 binus.ac.id 在 09-17~19 之間反覆進出,data/places/jakarta.json 三天被改寫 11 次,
+//       讀者看著印尼站一個地點出現又消失,它掛的 Topic 頁指紋每輪變動、每輪對 Google 宣告改版。
 //   傳輸層（連線失敗、逾時、5xx）
 //     → 對方伺服器暫時掛了，不是我們的資料錯。記進健康檔並放行本輪；
 //       同一個 URL 連續 TRANSIENT_TOLERANCE 輪都是傳輸層失敗才隔離(同上,逐筆,不擋整次)。
@@ -63,6 +67,16 @@ const HEALTH_PATH = join(ROOT, "db", ".local-source-health.json");
 // 隔離名單(2026-09-17):核對失敗的來源 → 它掛的地點／活動這一輪不發布。匯入器讀同一個檔。
 const QUARANTINE_PATH = join(ROOT, "db", ".local-source-quarantine.json");
 const TRANSIENT_TOLERANCE = Number(process.env.AEIOU_LOCAL_SOURCE_TOLERANCE || 3);
+// 內容層的容忍(2026-09-19 加)。原本內容層**沒有**容忍:marker 對不上就當場隔離、
+// 對上就當場解除,於是一個時好時壞的來源會每小時翻一次 —— 實測 binus.ac.id 在
+// 2026-09-17~19 之間反覆進出隔離,data/places/jakarta.json 三天被改寫 11 次。
+// 後果有兩層:① 印尼站的讀者看著一個地點出現又消失;② 它掛的 Topic 頁指紋每輪變動,
+// 每次都對 Google 宣告一次改版 —— 正是 CLAUDE.md 那條 lastmod 紅線要擋的東西。
+// marker 對不上不一定是「來源真的變了」:動態頁、CDN 邊緣節點的不同版本、截斷的回應
+// 都會造成單輪落空。所以比照傳輸層,要連續 N 輪都對不上才算數。
+// 代價與傳輸層那條一樣、也已經被接受過:真的被改掉的來源會晚約 N 小時才擋下。
+// 反過來不必另設解除門檻:進入要連續 N 輪,一個時好時壞的來源本來就湊不滿。
+const CONTENT_TOLERANCE = Number(process.env.AEIOU_LOCAL_CONTENT_TOLERANCE || 3);
 
 const argv = process.argv.slice(2);
 const checkOnly = argv.includes("--check-only");
@@ -645,14 +659,32 @@ async function main() {
       console.log(`  WARN ${url} ${result.message}${quarantine[url] ? "(隔離中,本輪無法核對)" : ""}`);
     }
     else if (result.content) {
-      // 內容層:這個來源真的變了。隔離它掛的那幾筆,不擋整輪。
-      quarantine[url] = { since: quarantine[url]?.since || asOf, kind: "content", last_message: result.message };
-      quarantinedNow.push(`${url}:${result.message}`);
-      console.log(`  FAIL ${url} ${result.message} —— 隔離(這個來源掛的地點／活動本輪不發布)`);
+      // 內容層:marker 對不上。連續 CONTENT_TOLERANCE 輪都對不上才算「來源真的變了」,
+      // 單輪落空只警告不隔離(理由見 CONTENT_TOLERANCE 的註解:會翻的來源害處大於晚一小時擋下)。
+      const n = (health[url]?.consecutive_content_failures || 0) + 1;
+      health[url] = {
+        ...health[url],
+        consecutive_content_failures: n,
+        first_content_failed_at: health[url]?.first_content_failed_at || asOf,
+        ok_at: health[url]?.ok_at || null,
+        last_message: result.message,
+      };
+      if (n >= CONTENT_TOLERANCE) {
+        quarantine[url] = {
+          since: quarantine[url]?.since || asOf,
+          kind: "content",
+          last_message: `連續 ${n} 輪內容核對失敗(容忍上限 ${CONTENT_TOLERANCE}):${result.message}`,
+        };
+        quarantinedNow.push(`${url}:${quarantine[url].last_message}`);
+        console.log(`  FAIL ${url} 連續 ${n} 輪內容核對失敗 —— 隔離(這個來源掛的地點／活動本輪不發布)`);
+      } else {
+        console.log(`  WARN ${url} 內容核對失敗第 ${n}/${CONTENT_TOLERANCE} 輪,本輪放行:${result.message}`);
+      }
     }
     else if (result.transient) {
       const n = (health[url]?.consecutive_failures || 0) + 1;
       health[url] = {
+        ...health[url],
         consecutive_failures: n,
         first_failed_at: health[url]?.first_failed_at || asOf,
         // ok_at 要留著:不留的話第一次降級就把「最近驗過」的證據弄丟,

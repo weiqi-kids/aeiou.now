@@ -193,6 +193,40 @@ const REASON_LABEL = {
   changed: "內容變了",
 };
 
+// ── 溯源事件流(2026-09-19)──────────────────────────────────────────────────
+// 只在**狀態改變**時追記一列到 holiday_announcements,append-only、永不更新既有列。
+// 為什麼:這支每天去看七國政府的公告頁,判斷完就把觀察丟掉,歷史從來沒有被保存。
+// 別人給得出「假日是哪一天」,沒有人給得出「這個日期出自哪份公告、哪天發布、改過幾次」——
+// 那只能靠每天去看累積,沒有人保存政府公告頁的歷史快照,今天不存以後補不回來
+// (同 gsc-topic-metrics.mjs「GSC 沒有當時快照」那條理由)。
+// 🔴 它仍然不改任何日期:記的是「什麼時候在哪裡看到什麼」,不是「假日是哪一天」。
+function recordAnnouncementEvents(db, rows) {
+  if (!db || !rows.length) return 0;
+  try {
+    const stmt = db.prepare(
+      `INSERT INTO holiday_announcements
+         (observed_at, country, year, url, change_kind, kind, http_status, content_type, content_hash, final_url, note)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+       ON CONFLICT(observed_at, country, year, url, change_kind) DO NOTHING`,
+    );
+    let n = 0;
+    db.exec("BEGIN");
+    try {
+      for (const r of rows) {
+        stmt.run(r.observed_at, r.country, r.year, r.url, r.change_kind, r.kind ?? null,
+          r.http_status ?? null, r.content_type ?? null, r.content_hash ?? null, r.final_url ?? null, r.note ?? null);
+        n += 1;
+      }
+      db.exec("COMMIT");
+    } catch (e) { db.exec("ROLLBACK"); throw e; }
+    return n;
+  } catch (error) {
+    // 追記失敗不影響這一輪的判斷與提醒 —— 它是旁路紀錄,不是關卡。
+    console.log(`⚠ 溯源事件追記失敗(不影響本輪監看):${error.message}`);
+    return 0;
+  }
+}
+
 async function main() {
   const now = nowSec();
   const nowIso = new Date(now * 1000).toISOString();
@@ -246,6 +280,7 @@ async function main() {
   // ── 比對狀態、決定要說什麼 ───────────────────────────────────────────────
   const speak = [];   // 進 error_message 的逐筆點名
   const notes = [];   // 只進 log
+  const events = [];  // 溯源事件流(holiday_announcements),只記狀態改變
   const nextState = { version: 1, updated_at: nowIso, urls: { ...state.urls }, entries: { ...state.entries } };
 
   for (const e of active) {
@@ -263,6 +298,16 @@ async function main() {
       const d = decide(prev, { kind: cur.kind, hash: cur.hash, contentType: cur.contentType }, { hasMatchRule: Boolean(e.match) });
       if (d.speak) speak.push(`${key}:${REASON_LABEL[d.reason]} ${u} —— ${tail}`);
       if (d.note === "disappeared") notes.push(`${key}:上一輪還在、這一輪 ${kindLabel(cur.kind, e)}(${cur.status ?? "-"}) ${u}`);
+      // 溯源事件:只有狀態改變才記(first-seen 是基線,也記,否則看不出「一開始就有」)。
+      const changeKind = d.reason || (d.note === "first-seen" ? "first_seen" : d.note === "disappeared" ? "disappeared" : null);
+      if (changeKind) {
+        events.push({
+          observed_at: nowIso, country: e.country, year: e.year, url: u, change_kind: changeKind,
+          kind: cur.kind, http_status: cur.status ?? null, content_type: cur.contentType || null,
+          content_hash: cur.hash || null, final_url: cur.finalUrl || null,
+          note: d.reason ? REASON_LABEL[d.reason] : null,
+        });
+      }
       // error 不覆蓋上一輪的觀察 —— 暫時抓不到不代表它變了;只更新 checked_at 與錯誤。
       if (cur.kind === "error" && prev) {
         nextState.urls[uk] = { ...prev, checked_at: nowIso, last_error: cur.error || `HTTP ${cur.status}` };
@@ -284,6 +329,12 @@ async function main() {
       const blocked = e.urls.filter((u) => results.get(urlKey(e, u)).kind === "blocked");
       speak.push(`${key}:慣例月份(${e.year - 1}-${String(e.expected_month).padStart(2, "0")})已過,候選網址都還沒看到公告 —— `
         + `候選可能猜錯了,請人工去找新入口${blocked.length ? `(其中 ${blocked.length} 個 robots/403 不准抓,只能人開:${blocked.join(" ")})` : ""};${tail}`);
+    }
+    if (od.speak) {
+      events.push({
+        observed_at: nowIso, country: e.country, year: e.year, url: e.urls[0] || "", change_kind: "overdue",
+        kind: null, note: `慣例月份 ${e.year - 1}-${String(e.expected_month).padStart(2, "0")} 已過仍未出現`,
+      });
     }
     nextState.entries[key] = { overdue_notified: od.notified, found, last_checked: nowIso };
   }
@@ -307,20 +358,38 @@ async function main() {
     throw new Error(`候選網址全部抓不到(${errored} 個 error),這一輪等於沒看 —— 多半是本機網路問題`);
   }
 
-  if (DRY_RUN) { say("DRY_RUN:不寫狀態檔、不寫 jobs 表"); return { speak, read: tasks.length }; }
+  // 已抄錄(resolved 被人填上)的也追記一次,補齊「從看到公告到抄進母表」這一段。
+  // 用 change_kind='transcribed' + observed_at=resolved 當自然去重鍵:同一筆重跑不會重複追記。
+  for (const e of watches) {
+    if (!e.resolved) continue;
+    events.push({
+      observed_at: e.resolved, country: e.country, year: e.year, url: e.urls[0] || "",
+      change_kind: "transcribed", kind: null,
+      note: `人工抄錄進 content/national-holiday-calendars.json`,
+    });
+  }
+
+  if (DRY_RUN) {
+    say(`DRY_RUN:不寫狀態檔、不寫 jobs 表;本輪會追記 ${events.length} 筆溯源事件`);
+    return { speak, read: tasks.length, events };
+  }
 
   mkdirSync(dirname(STATE_PATH), { recursive: true });
   const tmp = `${STATE_PATH}.tmp`;
   writeFileSync(tmp, JSON.stringify(nextState, null, 1), "utf8");
   renameSync(tmp, STATE_PATH);
-  return { speak, read: tasks.length };
+  return { speak, read: tasks.length, events };
 }
 
 // --dry-run 不記 job(它不改任何東西)。
 const db = DRY_RUN ? null : openDb();
 const job = DRY_RUN ? null : beginJob(db, { jobName: JOB_NAME });
 try {
-  const { speak, read } = await main();
+  const { speak, read, events } = await main();
+  if (db && events?.length) {
+    const n = recordAnnouncementEvents(db, events);
+    if (n) say(`溯源事件追記 ${n} 筆(holiday_announcements,append-only)`);
+  }
   if (job) {
     finishJob(db, job, {
       status: speak.length ? "partial_success" : "success",
