@@ -121,6 +121,23 @@ questions.forEach((q, idx) => {
     if (q.explain !== null && q.explain !== undefined) errs.push(`${tag}:kind=poll 的 explain 必須是 null`);
   }
 
+  // Markdown 標記不得進題庫(2026-09-22 加)。
+  // QuestionCard 與 Participation 都是**純文字渲染**(CLAUDE.md 紅線:貼文內容一律純文字轉義顯示),
+  // 所以 `**粗體**` 不會變粗體,會原封不動印出星號給讀者看。
+  // 實例:2026-09-19~10-16 那 28 題 kind=guess 全部帶 `**`,而 /questions/ 是累積式檔案庫,
+  // 過期的題目仍留著 —— 線上首頁當天就印著「有一段**連續十六天**專門用來祭祖的日子」。
+  // check-content.mjs 只掃 site/src/**/*.md,永遠看不到題庫,所以閘門要放在這裡:
+  // 這支是題庫進主機的唯一入口(generate-questions.mjs 的自驗只是先擋一層)。
+  for (const [field, value] of [["text", q.text], ["explain", q.explain]]) {
+    if (!value || typeof value !== "object") continue;
+    for (const [loc, str] of Object.entries(value)) {
+      if (typeof str !== "string") continue;
+      if (/\*\*|__/.test(str)) {
+        errs.push(`${tag}:${field}.${loc} 含 Markdown 強調標記(** 或 __) —— 前端是純文字渲染,會原樣印出星號。把標記拿掉,保留文字。`);
+      }
+    }
+  }
+
   // topic 為 null 時上面已記過 err,errs.length>0 會在下面整批擋下,resolved 不會被用到。
   resolved.push({ q, idx, topicId: topic?.topic_id ?? null, options: options || [] });
 });
