@@ -570,20 +570,18 @@
         }
       ],
       "next_occurrence": {
-        "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_shubun_2026_2026-09-23",
-        "occurrence_year": 2026,
-        "starts_on": "2026-09-23",
+        "occurrence_id": "occ_obs_top_01M0ZM1173BPY7276RNZQ2ARVZ_JP_shubun_2027_2027-09-23",
+        "occurrence_year": 2027,
+        "starts_on": "2027-09-23",
         "ends_on": null,
         "calendar_system": "solar-term",
         "timezone": "Asia/Tokyo",
         "date_status": "confirmed",
         "source_ids": [
-          "src_E71F469EB3135AB2F09023F2",
-          "src_3BD3FE55D351D839A312A4E5"
+          "src_E71F469EB3135AB2F09023F2"
         ],
         "source_urls": [
-          "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
-          "https://eco.mtk.nao.ac.jp/koyomi/yoko/2026/rekiyou261.html"
+          "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
         ]
       }
     },
@@ -1025,6 +1023,6 @@
     "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
     "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d9772.htm"
   ],
-  "content_updated_at": "2026-08-31T05:48:32.351Z",
-  "content_hash": "261b0375e1fec37d148aa96fe3002e23fc9c87048ae5a1970982e87c1be266eb"
+  "content_updated_at": "2026-09-23T15:08:45.946Z",
+  "content_hash": "2b807cbd8fd0732c3402416e486572b9c8f47a519c1b5d7d916536d6a17504ef"
 }
