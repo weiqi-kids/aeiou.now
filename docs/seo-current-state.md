@@ -114,8 +114,8 @@ hi/id/cn/br **從未被檢查過**,而 hi 正是斷崖前曝光最大的站。`u
 **Bing Webmaster Tools 一週內就能分辨**:同一批頁面、同一批查詢,Bing 若給出正常的曝光與點擊
 就是 (a);Bing 也接近零就是 (b)。金鑰已有(`/root/.config/seo-ops/bing-webmaster-api-key`,
 帳號裡已有 52 個站),提交腳本 `scripts/bing-submit-sitemaps.mjs` 已就緒並驗過七站都**不在**帳號裡。
-🅤 卡在站主登入 Bing Webmaster Tools 按一次「Import from Google Search Console」(約 5 分鐘)。
-這是整條路徑上唯一卡住的節點。
+✅ **2026-09-26 已解**:站主匯入主站;六個子網域靠 `site/public/BingSiteAuth.xml` + API `AddSite`/`VerifySite` 加入並驗證,七站 sitemap 都已提交。
+現況查 `node scripts/bing-submit-sitemaps.mjs --report`。
 
 ### 2026-09-18 已做的三件修正
 
