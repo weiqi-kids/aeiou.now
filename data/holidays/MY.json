@@ -1,0 +1,672 @@
+{
+  "country_code": "MY",
+  "source_urls": [
+    "https://www.kabinet.gov.my/storage/2025/08/HKA-2026.pdf",
+    "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf",
+    "https://www.kabinet.gov.my/hari-kelepasan-am/",
+    "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf",
+    "https://jtksm.mohr.gov.my/sites/default/files/2023-11/Akta%20Kerja%201955%20(Akta%20265).pdf",
+    "https://berita.rtm.gov.my/nasional/senarai-berita-nasional/senarai-artikel/umat-islam-di-malaysia-sambut-aidilfitri-pada-sabtu-21-mac/",
+    "https://berita.rtm.gov.my/nasional/senarai-berita-nasional/senarai-artikel/pm-umum-cuti-tambahan-hari-raya-aidifitri/",
+    "https://www.mkn.gov.my/web/ms/2026/05/20/%F0%9D%97%96%F0%9D%97%A8%F0%9D%97%A7%F0%9D%97%9C-%F0%9D%97%A8%F0%9D%97%A0%F0%9D%97%A8%F0%9D%97%A0-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-i-%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A5%F0%9D%97%9C/",
+    "https://www.mkn.gov.my/web/ms/2024/12/31/2025-johor-cuti-hujung-minggu-sabtu-ahad-antara-perkara-baharu-berkuat-kuasa-esok/"
+  ],
+  "holidays": [
+    {
+      "key": "tahun-baharu-cina",
+      "name": {
+        "zh-TW": "農曆新年",
+        "en": "Chinese New Year",
+        "ja": "旧正月（春節）",
+        "zh-CN": "农历新年",
+        "hi": "चीनी नव वर्ष",
+        "id": "Tahun Baru Imlek",
+        "pt-BR": "Ano Novo Chinês"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-02-17",
+        "2027": "2027-02-06",
+        "2028": "2028-01-26"
+      },
+      "ends_on": {
+        "2026": "2026-02-18",
+        "2027": "2027-02-07",
+        "2028": "2028-01-27"
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2025/08/HKA-2026.pdf",
+        "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf"
+      ]
+    },
+    {
+      "key": "cuti-ganti-2027-02-08",
+      "name": {
+        "zh-TW": "農曆新年補假",
+        "en": "Chinese New Year (replacement holiday)",
+        "ja": "旧正月の振替休日",
+        "zh-CN": "农历新年补假",
+        "hi": "चीनी नव वर्ष (प्रतिस्थापन अवकाश)",
+        "id": "Cuti pengganti Tahun Baru Imlek",
+        "pt-BR": "Folga compensatória do Ano Novo Chinês"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-02-08",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf"
+      ]
+    },
+    {
+      "key": "hari-raya-puasa",
+      "name": {
+        "zh-TW": "開齋節",
+        "en": "Hari Raya Aidilfitri (Eid al-Fitr)",
+        "ja": "ハリラヤ・プアサ（断食明け大祭）",
+        "zh-CN": "开斋节",
+        "hi": "ईद-उल-फ़ित्र",
+        "id": "Idulfitri (Hari Raya Aidilfitri)",
+        "pt-BR": "Eid al-Fitr (Hari Raya Aidilfitri)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-03-21",
+        "2027": "2027-03-10",
+        "2028": "2028-02-27"
+      },
+      "ends_on": {
+        "2026": "2026-03-22",
+        "2027": "2027-03-11",
+        "2028": "2028-02-28"
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2025/08/HKA-2026.pdf",
+        "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf",
+        "https://berita.rtm.gov.my/nasional/senarai-berita-nasional/senarai-artikel/umat-islam-di-malaysia-sambut-aidilfitri-pada-sabtu-21-mac/",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf"
+      ]
+    },
+    {
+      "key": "cuti-ganti-2028-02-29",
+      "name": {
+        "zh-TW": "開齋節補假",
+        "en": "Hari Raya Aidilfitri (replacement holiday)",
+        "ja": "ハリラヤ・プアサの振替休日",
+        "zh-CN": "开斋节补假",
+        "hi": "ईद-उल-फ़ित्र (प्रतिस्थापन अवकाश)",
+        "id": "Cuti pengganti Idulfitri",
+        "pt-BR": "Folga compensatória do Eid al-Fitr"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": null,
+        "2028": "2028-02-29"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf"
+      ]
+    },
+    {
+      "key": "aidilfitri-tambahan-2026-03-20",
+      "name": {
+        "zh-TW": "開齋節特別假日",
+        "en": "Additional Hari Raya Aidilfitri holiday",
+        "ja": "ハリラヤ・プアサ特別休日",
+        "zh-CN": "开斋节特别假日",
+        "hi": "ईद-उल-फ़ित्र का अतिरिक्त अवकाश",
+        "id": "Cuti tambahan Idulfitri",
+        "pt-BR": "Feriado extra do Eid al-Fitr"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-03-20",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://berita.rtm.gov.my/nasional/senarai-berita-nasional/senarai-artikel/pm-umum-cuti-tambahan-hari-raya-aidifitri/",
+        "https://cm.sabah.gov.my/siaran-media/6439",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf"
+      ]
+    },
+    {
+      "key": "cuti-ganti-2026-03-23",
+      "name": {
+        "zh-TW": "開齋節補假",
+        "en": "Hari Raya Aidilfitri (replacement holiday)",
+        "ja": "ハリラヤ・プアサの振替休日",
+        "zh-CN": "开斋节补假",
+        "hi": "ईद-उल-फ़ित्र (प्रतिस्थापन अवकाश)",
+        "id": "Cuti pengganti Idulfitri",
+        "pt-BR": "Folga compensatória do Eid al-Fitr"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-03-23",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2025/08/HKA-2026.pdf",
+        "https://berita.rtm.gov.my/nasional/senarai-berita-nasional/senarai-artikel/umat-islam-di-malaysia-sambut-aidilfitri-pada-sabtu-21-mac/",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf"
+      ]
+    },
+    {
+      "key": "hari-pekerja",
+      "name": {
+        "zh-TW": "勞動節",
+        "en": "Labour Day",
+        "ja": "メーデー",
+        "zh-CN": "劳动节",
+        "hi": "मज़दूर दिवस",
+        "id": "Hari Buruh",
+        "pt-BR": "Dia do Trabalhador"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-01",
+        "2027": "2027-05-01",
+        "2028": "2028-05-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2025/08/HKA-2026.pdf",
+        "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-11/Akta%20Kerja%201955%20(Akta%20265).pdf"
+      ]
+    },
+    {
+      "key": "hari-raya-qurban",
+      "name": {
+        "zh-TW": "宰牲節",
+        "en": "Hari Raya Haji (Eid al-Adha)",
+        "ja": "ハリラヤ・ハジ（犠牲祭）",
+        "zh-CN": "宰牲节",
+        "hi": "ईद-उल-अज़हा (बक़रीद)",
+        "id": "Iduladha (Hari Raya Haji)",
+        "pt-BR": "Eid al-Adha (Hari Raya Haji)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-27",
+        "2027": "2027-05-17",
+        "2028": "2028-05-05"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2025/08/HKA-2026.pdf",
+        "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf"
+      ]
+    },
+    {
+      "key": "hari-wesak",
+      "name": {
+        "zh-TW": "衛塞節",
+        "en": "Wesak Day",
+        "ja": "ウェーサーカ祭（仏誕節）",
+        "zh-CN": "卫塞节",
+        "hi": "वेसाक (बुद्ध पूर्णिमा)",
+        "id": "Hari Raya Waisak",
+        "pt-BR": "Dia de Vesak"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-31",
+        "2027": "2027-05-20",
+        "2028": "2028-05-09"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2025/08/HKA-2026.pdf",
+        "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf",
+        "https://www.mkn.gov.my/web/ms/2026/05/20/%F0%9D%97%96%F0%9D%97%A8%F0%9D%97%A7%F0%9D%97%9C-%F0%9D%97%A8%F0%9D%97%A0%F0%9D%97%A8%F0%9D%97%A0-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-i-%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A5%F0%9D%97%9C/"
+      ]
+    },
+    {
+      "key": "awal-muharam",
+      "name": {
+        "zh-TW": "伊斯蘭新年",
+        "en": "Awal Muharram (Islamic New Year)",
+        "ja": "イスラム暦新年（アワル・ムハッラム）",
+        "zh-CN": "伊斯兰新年",
+        "hi": "इस्लामी नव वर्ष (मुहर्रम)",
+        "id": "Tahun Baru Islam (Awal Muharam)",
+        "pt-BR": "Ano Novo Islâmico"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-06-17",
+        "2027": "2027-06-06",
+        "2028": "2028-05-26"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2025/08/HKA-2026.pdf",
+        "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf"
+      ]
+    },
+    {
+      "key": "keputeraan-agong",
+      "name": {
+        "zh-TW": "最高元首華誕",
+        "en": "Birthday of the Yang di-Pertuan Agong",
+        "ja": "国王（ヤン・ディプルトゥアン・アゴン）誕生日",
+        "zh-CN": "最高元首华诞",
+        "hi": "यांग दी-पर्तुआन अगोंग का जन्मदिन",
+        "id": "Hari Keputeraan Yang di-Pertuan Agong",
+        "pt-BR": "Aniversário do rei da Malásia (Yang di-Pertuan Agong)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-06-01",
+        "2027": "2027-06-07",
+        "2028": "2028-06-05"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2025/08/HKA-2026.pdf",
+        "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf",
+        "https://www.mkn.gov.my/web/ms/2026/05/20/%F0%9D%97%96%F0%9D%97%A8%F0%9D%97%A7%F0%9D%97%9C-%F0%9D%97%A8%F0%9D%97%A0%F0%9D%97%A8%F0%9D%97%A0-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-i-%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A5%F0%9D%97%9C/",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-11/Akta%20Kerja%201955%20(Akta%20265).pdf"
+      ]
+    },
+    {
+      "key": "cuti-ganti-2026-06-02",
+      "name": {
+        "zh-TW": "衛塞節補假",
+        "en": "Wesak Day (replacement holiday)",
+        "ja": "ウェーサーカ祭の振替休日",
+        "zh-CN": "卫塞节补假",
+        "hi": "वेसाक (प्रतिस्थापन अवकाश)",
+        "id": "Cuti pengganti Hari Raya Waisak",
+        "pt-BR": "Folga compensatória do Vesak"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-06-02",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.mkn.gov.my/web/ms/2026/05/20/%F0%9D%97%96%F0%9D%97%A8%F0%9D%97%A7%F0%9D%97%9C-%F0%9D%97%A8%F0%9D%97%A0%F0%9D%97%A8%F0%9D%97%A0-%F0%9D%9F%AE%F0%9D%9F%AC%F0%9D%9F%AE%F0%9D%9F%B2-i-%F0%9D%97%9B%F0%9D%97%94%F0%9D%97%A5%F0%9D%97%9C/",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf"
+      ]
+    },
+    {
+      "key": "cuti-ganti-2027-06-08",
+      "name": {
+        "zh-TW": "伊斯蘭新年補假",
+        "en": "Awal Muharram (replacement holiday)",
+        "ja": "イスラム暦新年の振替休日",
+        "zh-CN": "伊斯兰新年补假",
+        "hi": "इस्लामी नव वर्ष (प्रतिस्थापन अवकाश)",
+        "id": "Cuti pengganti Tahun Baru Islam",
+        "pt-BR": "Folga compensatória do Ano Novo Islâmico"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-06-08",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf"
+      ]
+    },
+    {
+      "key": "maulidur-rasul",
+      "name": {
+        "zh-TW": "先知穆罕默德誕辰",
+        "en": "Prophet Muhammad's Birthday (Maulidur Rasul)",
+        "ja": "預言者ムハンマド生誕祭",
+        "zh-CN": "先知穆罕默德诞辰",
+        "hi": "मीलाद-उन-नबी",
+        "id": "Maulid Nabi Muhammad",
+        "pt-BR": "Nascimento do Profeta Maomé"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-08-25",
+        "2027": "2027-08-15",
+        "2028": "2028-08-04"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2025/08/HKA-2026.pdf",
+        "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf"
+      ]
+    },
+    {
+      "key": "cuti-ganti-2027-08-16",
+      "name": {
+        "zh-TW": "先知誕辰補假",
+        "en": "Prophet Muhammad's Birthday (replacement holiday)",
+        "ja": "預言者生誕祭の振替休日",
+        "zh-CN": "先知诞辰补假",
+        "hi": "मीलाद-उन-नबी (प्रतिस्थापन अवकाश)",
+        "id": "Cuti pengganti Maulid Nabi",
+        "pt-BR": "Folga compensatória do Nascimento do Profeta"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-08-16",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf"
+      ]
+    },
+    {
+      "key": "hari-kebangsaan",
+      "name": {
+        "zh-TW": "國慶日（獨立日）",
+        "en": "National Day (Hari Merdeka)",
+        "ja": "独立記念日（ナショナル・デー）",
+        "zh-CN": "国庆日（独立日）",
+        "hi": "राष्ट्रीय दिवस (स्वतंत्रता दिवस)",
+        "id": "Hari Kebangsaan (Hari Merdeka)",
+        "pt-BR": "Dia Nacional (Independência)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-08-31",
+        "2027": "2027-08-31",
+        "2028": "2028-08-31"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2025/08/HKA-2026.pdf",
+        "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-11/Akta%20Kerja%201955%20(Akta%20265).pdf"
+      ]
+    },
+    {
+      "key": "hari-malaysia",
+      "name": {
+        "zh-TW": "馬來西亞日",
+        "en": "Malaysia Day",
+        "ja": "マレーシア・デー",
+        "zh-CN": "马来西亚日",
+        "hi": "मलेशिया दिवस",
+        "id": "Hari Malaysia",
+        "pt-BR": "Dia da Malásia"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-09-16",
+        "2027": "2027-09-16",
+        "2028": "2028-09-16"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2025/08/HKA-2026.pdf",
+        "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-11/Akta%20Kerja%201955%20(Akta%20265).pdf"
+      ]
+    },
+    {
+      "key": "deepavali",
+      "name": {
+        "zh-TW": "屠妖節",
+        "en": "Deepavali",
+        "ja": "ディーパバリ",
+        "zh-CN": "屠妖节",
+        "hi": "दीपावली",
+        "id": "Deepavali",
+        "pt-BR": "Deepavali (Diwali)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-11-08",
+        "2027": "2027-10-28",
+        "2028": "2028-10-17"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2025/08/HKA-2026.pdf",
+        "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf"
+      ]
+    },
+    {
+      "key": "cuti-ganti-2026-11-09",
+      "name": {
+        "zh-TW": "屠妖節補假",
+        "en": "Deepavali (replacement holiday)",
+        "ja": "ディーパバリの振替休日",
+        "zh-CN": "屠妖节补假",
+        "hi": "दीपावली (प्रतिस्थापन अवकाश)",
+        "id": "Cuti pengganti Deepavali",
+        "pt-BR": "Folga compensatória do Deepavali"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-11-09",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2025/08/HKA-2026.pdf",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf"
+      ]
+    },
+    {
+      "key": "hari-krismas",
+      "name": {
+        "zh-TW": "聖誕節",
+        "en": "Christmas Day",
+        "ja": "クリスマス",
+        "zh-CN": "圣诞节",
+        "hi": "क्रिसमस",
+        "id": "Hari Natal",
+        "pt-BR": "Natal"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-12-25",
+        "2027": "2027-12-25",
+        "2028": "2028-12-25"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.kabinet.gov.my/storage/2025/08/HKA-2026.pdf",
+        "https://www.kabinet.gov.my/storage/2026/08/HKA_2027.pdf",
+        "https://jtksm.mohr.gov.my/sites/default/files/2023-06/Akta%20369%20-%20Akta%20Hari%20Kelepasan%201951.pdf"
+      ]
+    }
+  ]
+}

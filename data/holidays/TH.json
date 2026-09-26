@@ -1,0 +1,1003 @@
+{
+  "country_code": "TH",
+  "source_urls": [
+    "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+    "https://ratchakitcha.soc.go.th/documents/126975.pdf",
+    "https://www.bot.or.th/th/financial-institutions-holiday.html",
+    "https://www.prd.go.th/th/content/category/detail/id/39/iid/524338",
+    "https://region4.prd.go.th/th/content/category/detail/id/57/iid/339065",
+    "https://www.prd.go.th/th/content/category/detail/id/31/iid/317254",
+    "https://www.mol.go.th/forums/topic/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%94%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%AB%E0%B8%A2%E0%B8%B8%E0%B8%94%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9E%E0%B8%93%E0%B8%B5-13-%E0%B8%A7%E0%B8%B1%E0%B8%99",
+    "https://pathumthani.moc.go.th/th/content/category/detail/id/161/iid/172817",
+    "https://amnatcharoencity.go.th/post/view/13-%E0%B8%9E%E0%B8%A4%E0%B8%A9%E0%B8%A0%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%9E%E0%B8%B7%E0%B8%8A%E0%B8%A1%E0%B8%87%E0%B8%84%E0%B8%A5-%22-%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9E%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%9E%E0%B8%B7%E0%B8%8A%E0%B8%A1%E0%B8%87%E0%B8%84%E0%B8%A5%E0%B8%88%E0%B8%A3%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%B1%E0%B8%A5%E0%B9%81%E0%B8%A3%E0%B8%81%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%A7%E0%B8%B1%E0%B8%8D%22/790"
+  ],
+  "holidays": [
+    {
+      "key": "new-year",
+      "name": {
+        "zh-TW": "元旦",
+        "en": "New Year's Day",
+        "ja": "元日",
+        "zh-CN": "元旦",
+        "hi": "नव वर्ष दिवस",
+        "id": "Tahun Baru",
+        "pt-BR": "Ano Novo"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-01-01",
+        "2027": "2027-01-01",
+        "2028": "2028-01-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "new-year-substitute-2028-01-03",
+      "name": {
+        "zh-TW": "元旦補假",
+        "en": "New Year's Day (substitute holiday)",
+        "ja": "元日の振替休日",
+        "zh-CN": "元旦补假",
+        "hi": "नव वर्ष दिवस (प्रतिपूरक अवकाश)",
+        "id": "Tahun Baru (hari libur pengganti)",
+        "pt-BR": "Ano Novo (folga compensatória)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": null,
+        "2028": "2028-01-03"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://www.prd.go.th/th/content/category/detail/id/31/iid/317254"
+      ]
+    },
+    {
+      "key": "special-holiday-2026-01-02",
+      "name": {
+        "zh-TW": "內閣特別加放假日",
+        "en": "Special government holiday",
+        "ja": "内閣による特別休日",
+        "zh-CN": "内阁特别加放假日",
+        "hi": "विशेष सरकारी अवकाश",
+        "id": "Hari libur khusus pemerintah",
+        "pt-BR": "Feriado especial do governo"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-01-02",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://region4.prd.go.th/th/content/category/detail/id/57/iid/339065",
+        "https://www.bot.or.th/th/financial-institutions-holiday.html"
+      ]
+    },
+    {
+      "key": "makha-bucha",
+      "name": {
+        "zh-TW": "萬佛節",
+        "en": "Makha Bucha Day",
+        "ja": "マーカブーチャー（万仏節）",
+        "zh-CN": "万佛节",
+        "hi": "माघ पूजा",
+        "id": "Hari Makha Bucha",
+        "pt-BR": "Makha Bucha"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-03-03",
+        "2027": "2027-02-21",
+        "2028": "2028-02-10"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "makha-bucha-substitute-2027-02-22",
+      "name": {
+        "zh-TW": "萬佛節補假",
+        "en": "Makha Bucha Day (substitute holiday)",
+        "ja": "マーカブーチャーの振替休日",
+        "zh-CN": "万佛节补假",
+        "hi": "माघ पूजा (प्रतिपूरक अवकाश)",
+        "id": "Hari Makha Bucha (hari libur pengganti)",
+        "pt-BR": "Makha Bucha (folga compensatória)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-02-22",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "chakri-day",
+      "name": {
+        "zh-TW": "卻克里王朝紀念日",
+        "en": "Chakri Memorial Day",
+        "ja": "チャクリー王朝記念日",
+        "zh-CN": "却克里王朝纪念日",
+        "hi": "चक्री स्मृति दिवस",
+        "id": "Hari Peringatan Chakri",
+        "pt-BR": "Dia da Dinastia Chakri"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-04-06",
+        "2027": "2027-04-06",
+        "2028": "2028-04-06"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "songkran",
+      "name": {
+        "zh-TW": "宋干節（潑水節）",
+        "en": "Songkran Festival",
+        "ja": "ソンクラーン（タイ正月）",
+        "zh-CN": "宋干节（泼水节）",
+        "hi": "सोंगक्रान (थाई नव वर्ष)",
+        "id": "Festival Songkran",
+        "pt-BR": "Songkran (Ano-Novo tailandês)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-04-13",
+        "2027": "2027-04-13",
+        "2028": "2028-04-13"
+      },
+      "ends_on": {
+        "2026": "2026-04-15",
+        "2027": "2027-04-15",
+        "2028": "2028-04-15"
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "songkran-substitute-2028-04-17",
+      "name": {
+        "zh-TW": "宋干節補假",
+        "en": "Songkran Festival (substitute holiday)",
+        "ja": "ソンクラーンの振替休日",
+        "zh-CN": "宋干节补假",
+        "hi": "सोंगक्रान (प्रतिपूरक अवकाश)",
+        "id": "Songkran (hari libur pengganti)",
+        "pt-BR": "Songkran (folga compensatória)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": null,
+        "2028": "2028-04-17"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://www.prd.go.th/th/content/category/detail/id/31/iid/317254"
+      ]
+    },
+    {
+      "key": "labour-day",
+      "name": {
+        "zh-TW": "勞動節",
+        "en": "National Labour Day",
+        "ja": "メーデー（労働者の日）",
+        "zh-CN": "劳动节",
+        "hi": "राष्ट्रीय श्रमिक दिवस",
+        "id": "Hari Buruh Nasional",
+        "pt-BR": "Dia do Trabalhador"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-01",
+        "2027": "2027-05-01",
+        "2028": "2028-05-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.prd.go.th/th/content/category/detail/id/31/iid/317254",
+        "https://www.mol.go.th/forums/topic/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%94%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%AB%E0%B8%A2%E0%B8%B8%E0%B8%94%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9E%E0%B8%93%E0%B8%B5-13-%E0%B8%A7%E0%B8%B1%E0%B8%99",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "labour-day-substitute-2027-05-03",
+      "name": {
+        "zh-TW": "勞動節補假",
+        "en": "National Labour Day (substitute holiday)",
+        "ja": "メーデーの振替休日",
+        "zh-CN": "劳动节补假",
+        "hi": "राष्ट्रीय श्रमिक दिवस (प्रतिपूरक अवकाश)",
+        "id": "Hari Buruh Nasional (hari libur pengganti)",
+        "pt-BR": "Dia do Trabalhador (folga compensatória)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-05-03",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "coronation-day",
+      "name": {
+        "zh-TW": "加冕紀念日",
+        "en": "Coronation Day",
+        "ja": "戴冠記念日",
+        "zh-CN": "加冕纪念日",
+        "hi": "राज्याभिषेक दिवस",
+        "id": "Hari Penobatan",
+        "pt-BR": "Dia da Coroação"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-04",
+        "2027": "2027-05-04",
+        "2028": "2028-05-04"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "royal-ploughing",
+      "name": {
+        "zh-TW": "春耕節（御耕儀式日）",
+        "en": "Royal Ploughing Ceremony Day",
+        "ja": "王室始耕祭",
+        "zh-CN": "春耕节（御耕仪式日）",
+        "hi": "राजकीय हल जुताई समारोह दिवस",
+        "id": "Hari Upacara Membajak Sawah Kerajaan",
+        "pt-BR": "Dia da Cerimônia Real do Arado"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-05-13",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://amnatcharoencity.go.th/post/view/13-%E0%B8%9E%E0%B8%A4%E0%B8%A9%E0%B8%A0%E0%B8%B2%E0%B8%84%E0%B8%A1-2569-%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%9E%E0%B8%B7%E0%B8%8A%E0%B8%A1%E0%B8%87%E0%B8%84%E0%B8%A5-%22-%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9E%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%9E%E0%B8%B7%E0%B8%8A%E0%B8%A1%E0%B8%87%E0%B8%84%E0%B8%A5%E0%B8%88%E0%B8%A3%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%99%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%B1%E0%B8%A5%E0%B9%81%E0%B8%A3%E0%B8%81%E0%B8%99%E0%B8%B2%E0%B8%82%E0%B8%A7%E0%B8%B1%E0%B8%8D%22/790"
+      ]
+    },
+    {
+      "key": "visakha-bucha",
+      "name": {
+        "zh-TW": "衛塞節（佛誕節）",
+        "en": "Visakha Bucha Day",
+        "ja": "ウィサーカブーチャー（仏誕節）",
+        "zh-CN": "卫塞节（佛诞节）",
+        "hi": "वैशाख पूजा (बुद्ध पूर्णिमा)",
+        "id": "Hari Waisak",
+        "pt-BR": "Vesak (Visakha Bucha)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-31",
+        "2027": "2027-05-20",
+        "2028": "2028-05-08"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "visakha-bucha-substitute-2026-06-01",
+      "name": {
+        "zh-TW": "衛塞節補假",
+        "en": "Visakha Bucha Day (substitute holiday)",
+        "ja": "ウィサーカブーチャーの振替休日",
+        "zh-CN": "卫塞节补假",
+        "hi": "वैशाख पूजा (प्रतिपूरक अवकाश)",
+        "id": "Hari Waisak (hari libur pengganti)",
+        "pt-BR": "Vesak (folga compensatória)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-06-01",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.bot.or.th/th/financial-institutions-holiday.html"
+      ]
+    },
+    {
+      "key": "queen-suthida-birthday",
+      "name": {
+        "zh-TW": "素提達王后誕辰",
+        "en": "Queen Suthida's Birthday",
+        "ja": "スティダー王妃誕生日",
+        "zh-CN": "素提达王后诞辰",
+        "hi": "रानी सुतिदा का जन्मदिन",
+        "id": "Hari Ulang Tahun Ratu Suthida",
+        "pt-BR": "Aniversário da Rainha Suthida"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-06-03",
+        "2027": "2027-06-03",
+        "2028": "2028-06-03"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "queen-suthida-birthday-substitute-2028-06-05",
+      "name": {
+        "zh-TW": "素提達王后誕辰補假",
+        "en": "Queen Suthida's Birthday (substitute holiday)",
+        "ja": "スティダー王妃誕生日の振替休日",
+        "zh-CN": "素提达王后诞辰补假",
+        "hi": "रानी सुतिदा का जन्मदिन (प्रतिपूरक अवकाश)",
+        "id": "Hari Ulang Tahun Ratu Suthida (hari libur pengganti)",
+        "pt-BR": "Aniversário da Rainha Suthida (folga compensatória)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": null,
+        "2028": "2028-06-05"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://www.prd.go.th/th/content/category/detail/id/31/iid/317254"
+      ]
+    },
+    {
+      "key": "asalha-bucha",
+      "name": {
+        "zh-TW": "三寶節（阿薩哈布差節）",
+        "en": "Asalha Bucha Day",
+        "ja": "アーサーンハブーチャー（三宝節）",
+        "zh-CN": "三宝节（阿萨哈布差节）",
+        "hi": "आषाढ़ पूजा",
+        "id": "Hari Asalha Bucha",
+        "pt-BR": "Asalha Bucha"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-07-29",
+        "2027": "2027-07-18",
+        "2028": "2028-07-06"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "asalha-bucha-substitute-2027-07-19",
+      "name": {
+        "zh-TW": "三寶節補假",
+        "en": "Asalha Bucha Day (substitute holiday)",
+        "ja": "アーサーンハブーチャーの振替休日",
+        "zh-CN": "三宝节补假",
+        "hi": "आषाढ़ पूजा (प्रतिपूरक अवकाश)",
+        "id": "Hari Asalha Bucha (hari libur pengganti)",
+        "pt-BR": "Asalha Bucha (folga compensatória)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-07-19",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "khao-phansa",
+      "name": {
+        "zh-TW": "守夏節（入雨安居日）",
+        "en": "Buddhist Lent Day (Khao Phansa)",
+        "ja": "カオパンサー（入安居）",
+        "zh-CN": "守夏节（入雨安居日）",
+        "hi": "वर्षावास आरंभ (खाओ फांसा)",
+        "id": "Hari Awal Masa Vassa (Khao Phansa)",
+        "pt-BR": "Início da Quaresma Budista (Khao Phansa)"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-07-30",
+        "2027": "2027-07-19",
+        "2028": "2028-07-07"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://pathumthani.moc.go.th/th/content/category/detail/id/161/iid/172817"
+      ]
+    },
+    {
+      "key": "king-birthday",
+      "name": {
+        "zh-TW": "泰王瓦集拉隆功誕辰",
+        "en": "King Vajiralongkorn's Birthday",
+        "ja": "ワチラロンコン国王誕生日",
+        "zh-CN": "泰王哇集拉隆功诞辰",
+        "hi": "राजा वजिरालोंगकोर्न का जन्मदिन",
+        "id": "Hari Ulang Tahun Raja Vajiralongkorn",
+        "pt-BR": "Aniversário do Rei Vajiralongkorn"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-07-28",
+        "2027": "2027-07-28",
+        "2028": "2028-07-28"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf",
+        "https://pathumthani.moc.go.th/th/content/category/detail/id/161/iid/172817"
+      ]
+    },
+    {
+      "key": "mothers-day",
+      "name": {
+        "zh-TW": "詩麗吉太后誕辰紀念日暨母親節",
+        "en": "Queen Mother Sirikit's Birthday Anniversary and Mother's Day",
+        "ja": "シリキット王太后生誕記念日・母の日",
+        "zh-CN": "诗丽吉太后诞辰纪念日暨母亲节",
+        "hi": "रानी माँ सिरिकित जयंती एवं मातृ दिवस",
+        "id": "Hari Kelahiran Ibu Suri Sirikit dan Hari Ibu",
+        "pt-BR": "Aniversário de Nascimento da Rainha-Mãe Sirikit e Dia das Mães"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-08-12",
+        "2027": "2027-08-12",
+        "2028": "2028-08-12"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.prd.go.th/th/content/category/detail/id/39/iid/524338",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "mothers-day-substitute-2028-08-14",
+      "name": {
+        "zh-TW": "母親節補假",
+        "en": "Mother's Day (substitute holiday)",
+        "ja": "母の日の振替休日",
+        "zh-CN": "母亲节补假",
+        "hi": "मातृ दिवस (प्रतिपूरक अवकाश)",
+        "id": "Hari Ibu (hari libur pengganti)",
+        "pt-BR": "Dia das Mães (folga compensatória)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": null,
+        "2028": "2028-08-14"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://www.prd.go.th/th/content/category/detail/id/31/iid/317254"
+      ]
+    },
+    {
+      "key": "king-bhumibol-memorial",
+      "name": {
+        "zh-TW": "蒲美蓬國王逝世紀念日",
+        "en": "King Bhumibol Memorial Day",
+        "ja": "プミポン前国王記念日",
+        "zh-CN": "普密蓬国王逝世纪念日",
+        "hi": "राजा भूमिबोल स्मृति दिवस",
+        "id": "Hari Peringatan Raja Bhumibol",
+        "pt-BR": "Dia em Memória do Rei Bhumibol"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-10-13",
+        "2027": "2027-10-13",
+        "2028": "2028-10-13"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "chulalongkorn-day",
+      "name": {
+        "zh-TW": "五世王紀念日（朱拉隆功紀念日）",
+        "en": "Chulalongkorn Day",
+        "ja": "チュラロンコーン大王記念日",
+        "zh-CN": "五世王纪念日（朱拉隆功纪念日）",
+        "hi": "चुलालोंगकोर्न दिवस",
+        "id": "Hari Chulalongkorn",
+        "pt-BR": "Dia de Chulalongkorn"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-10-23",
+        "2027": "2027-10-23",
+        "2028": "2028-10-23"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "chulalongkorn-day-substitute-2027-10-25",
+      "name": {
+        "zh-TW": "五世王紀念日補假",
+        "en": "Chulalongkorn Day (substitute holiday)",
+        "ja": "チュラロンコーン大王記念日の振替休日",
+        "zh-CN": "五世王纪念日补假",
+        "hi": "चुलालोंगकोर्न दिवस (प्रतिपूरक अवकाश)",
+        "id": "Hari Chulalongkorn (hari libur pengganti)",
+        "pt-BR": "Dia de Chulalongkorn (folga compensatória)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-10-25",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "national-day",
+      "name": {
+        "zh-TW": "國慶日暨父親節（蒲美蓬國王誕辰）",
+        "en": "National Day and Father's Day (King Bhumibol's Birthday)",
+        "ja": "ナショナルデー・父の日（プミポン前国王生誕記念日）",
+        "zh-CN": "国庆日暨父亲节（普密蓬国王诞辰）",
+        "hi": "राष्ट्रीय दिवस एवं पितृ दिवस (राजा भूमिबोल जयंती)",
+        "id": "Hari Nasional dan Hari Ayah (Hari Kelahiran Raja Bhumibol)",
+        "pt-BR": "Dia Nacional e Dia dos Pais (aniversário do Rei Bhumibol)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-12-05",
+        "2027": "2027-12-05",
+        "2028": "2028-12-05"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "national-day-substitute-2026-12-07",
+      "name": {
+        "zh-TW": "國慶日暨父親節補假",
+        "en": "National Day and Father's Day (substitute holiday)",
+        "ja": "ナショナルデー・父の日の振替休日",
+        "zh-CN": "国庆日暨父亲节补假",
+        "hi": "राष्ट्रीय दिवस एवं पितृ दिवस (प्रतिपूरक अवकाश)",
+        "id": "Hari Nasional dan Hari Ayah (hari libur pengganti)",
+        "pt-BR": "Dia Nacional e Dia dos Pais (folga compensatória)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-12-07",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.bot.or.th/th/financial-institutions-holiday.html"
+      ]
+    },
+    {
+      "key": "national-day-substitute-2027-12-06",
+      "name": {
+        "zh-TW": "國慶日暨父親節補假",
+        "en": "National Day and Father's Day (substitute holiday)",
+        "ja": "ナショナルデー・父の日の振替休日",
+        "zh-CN": "国庆日暨父亲节补假",
+        "hi": "राष्ट्रीय दिवस एवं पितृ दिवस (प्रतिपूरक अवकाश)",
+        "id": "Hari Nasional dan Hari Ayah (hari libur pengganti)",
+        "pt-BR": "Dia Nacional e Dia dos Pais (folga compensatória)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-12-06",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "constitution-day",
+      "name": {
+        "zh-TW": "憲法紀念日",
+        "en": "Constitution Day",
+        "ja": "憲法記念日",
+        "zh-CN": "宪法纪念日",
+        "hi": "संविधान दिवस",
+        "id": "Hari Konstitusi",
+        "pt-BR": "Dia da Constituição"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-12-10",
+        "2027": "2027-12-10",
+        "2028": "2028-12-10"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    },
+    {
+      "key": "constitution-day-substitute-2028-12-11",
+      "name": {
+        "zh-TW": "憲法紀念日補假",
+        "en": "Constitution Day (substitute holiday)",
+        "ja": "憲法記念日の振替休日",
+        "zh-CN": "宪法纪念日补假",
+        "hi": "संविधान दिवस (प्रतिपूरक अवकाश)",
+        "id": "Hari Konstitusi (hari libur pengganti)",
+        "pt-BR": "Dia da Constituição (folga compensatória)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": null,
+        "2028": "2028-12-11"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://www.prd.go.th/th/content/category/detail/id/31/iid/317254"
+      ]
+    },
+    {
+      "key": "new-years-eve",
+      "name": {
+        "zh-TW": "除夕（年末日）",
+        "en": "New Year's Eve",
+        "ja": "大晦日",
+        "zh-CN": "除夕（年末日）",
+        "hi": "वर्ष का अंतिम दिन",
+        "id": "Malam Tahun Baru",
+        "pt-BR": "Véspera de Ano-Novo"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-12-31",
+        "2027": "2027-12-31",
+        "2028": "2028-12-31"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://ratchakitcha.soc.go.th/documents/17082311.pdf",
+        "https://ratchakitcha.soc.go.th/documents/126975.pdf"
+      ]
+    }
+  ]
+}

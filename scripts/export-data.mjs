@@ -792,6 +792,10 @@ for (const scope of scopes) {
 const countryCodes = [...new Set([
   ...db.prepare("SELECT DISTINCT country_code FROM topic_observances").all().map((r) => r.country_code),
   ...db.prepare("SELECT DISTINCT country_code FROM places").all().map((r) => r.country_code),
+  // 假日總表的國家不一定有 Topic 或地點(2026-09-26 擴充到七個市場國以外),國名也要有。
+  ...(existsSync(join(ROOT, "content", "national-holiday-calendars.json"))
+    ? Object.keys(JSON.parse(readFileSync(join(ROOT, "content", "national-holiday-calendars.json"), "utf8")).countries || {})
+    : []),
 ])].sort();
 
 const displayNames = new Map(

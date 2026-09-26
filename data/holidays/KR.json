@@ -1,0 +1,877 @@
+{
+  "country_code": "KR",
+  "source_urls": [
+    "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+    "https://www.law.go.kr/법령/공휴일에관한법률",
+    "https://www.law.go.kr/법령/국경일에관한법률",
+    "https://www.law.go.kr/법령/공직선거법",
+    "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=431",
+    "https://astro.kasi.re.kr/kor/life/post/almanac",
+    "https://astro.kasi.re.kr/life/pageView/8",
+    "https://www.korea.kr/news/policyNewsView.do?newsId=148962129"
+  ],
+  "holidays": [
+    {
+      "key": "new-years-day",
+      "name": {
+        "zh-TW": "元旦",
+        "en": "New Year's Day",
+        "ja": "元日",
+        "zh-CN": "元旦",
+        "hi": "नव वर्ष दिवस",
+        "id": "Tahun Baru",
+        "pt-BR": "Ano-Novo"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-01-01",
+        "2027": "2027-01-01",
+        "2028": "2028-01-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=431"
+      ]
+    },
+    {
+      "key": "seollal",
+      "name": {
+        "zh-TW": "春節",
+        "en": "Seollal (Lunar New Year)",
+        "ja": "ソルラル（旧正月）",
+        "zh-CN": "春节",
+        "hi": "सल्लाल (चंद्र नव वर्ष)",
+        "id": "Seollal (Tahun Baru Imlek)",
+        "pt-BR": "Seollal (Ano-Novo Lunar)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-02-16",
+        "2027": "2027-02-06",
+        "2028": "2028-01-26"
+      },
+      "ends_on": {
+        "2026": "2026-02-18",
+        "2027": "2027-02-08",
+        "2028": "2028-01-28"
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=431",
+        "https://astro.kasi.re.kr/life/pageView/8"
+      ]
+    },
+    {
+      "key": "samiljeol",
+      "name": {
+        "zh-TW": "三一節",
+        "en": "Independence Movement Day",
+        "ja": "三・一節（独立運動記念日）",
+        "zh-CN": "三一节",
+        "hi": "स्वतंत्रता आंदोलन दिवस",
+        "id": "Hari Gerakan Kemerdekaan",
+        "pt-BR": "Dia do Movimento de Independência"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-03-01",
+        "2027": "2027-03-01",
+        "2028": "2028-03-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.law.go.kr/법령/국경일에관한법률"
+      ]
+    },
+    {
+      "key": "labor-day",
+      "name": {
+        "zh-TW": "勞動節",
+        "en": "Labor Day",
+        "ja": "労働節（メーデー）",
+        "zh-CN": "劳动节",
+        "hi": "श्रमिक दिवस",
+        "id": "Hari Buruh",
+        "pt-BR": "Dia do Trabalho"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-01",
+        "2027": "2027-05-01",
+        "2028": "2028-05-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.law.go.kr/법령/공휴일에관한법률",
+        "https://www.korea.kr/news/policyNewsView.do?newsId=148962129"
+      ]
+    },
+    {
+      "key": "childrens-day",
+      "name": {
+        "zh-TW": "兒童節",
+        "en": "Children's Day",
+        "ja": "こどもの日",
+        "zh-CN": "儿童节",
+        "hi": "बाल दिवस",
+        "id": "Hari Anak",
+        "pt-BR": "Dia das Crianças"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-05",
+        "2027": "2027-05-05",
+        "2028": "2028-05-05"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정"
+      ]
+    },
+    {
+      "key": "buddhas-birthday",
+      "name": {
+        "zh-TW": "佛誕日",
+        "en": "Buddha's Birthday",
+        "ja": "釈迦誕生日",
+        "zh-CN": "佛诞日",
+        "hi": "बुद्ध जयंती",
+        "id": "Hari Waisak (Kelahiran Buddha)",
+        "pt-BR": "Aniversário de Buda"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-24",
+        "2027": "2027-05-13",
+        "2028": "2028-05-02"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=431",
+        "https://astro.kasi.re.kr/life/pageView/8"
+      ]
+    },
+    {
+      "key": "memorial-day",
+      "name": {
+        "zh-TW": "顯忠日",
+        "en": "Memorial Day",
+        "ja": "顕忠日",
+        "zh-CN": "显忠日",
+        "hi": "स्मृति दिवस",
+        "id": "Hari Pahlawan (Hyeonchung-il)",
+        "pt-BR": "Dia da Memória"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-06-06",
+        "2027": "2027-06-06",
+        "2028": "2028-06-06"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정"
+      ]
+    },
+    {
+      "key": "constitution-day",
+      "name": {
+        "zh-TW": "制憲節",
+        "en": "Constitution Day",
+        "ja": "制憲節（憲法記念日）",
+        "zh-CN": "制宪节",
+        "hi": "संविधान दिवस",
+        "id": "Hari Konstitusi",
+        "pt-BR": "Dia da Constituição"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-07-17",
+        "2027": "2027-07-17",
+        "2028": "2028-07-17"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.law.go.kr/법령/국경일에관한법률",
+        "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=431"
+      ]
+    },
+    {
+      "key": "liberation-day",
+      "name": {
+        "zh-TW": "光復節",
+        "en": "Liberation Day",
+        "ja": "光復節",
+        "zh-CN": "光复节",
+        "hi": "मुक्ति दिवस",
+        "id": "Hari Pembebasan",
+        "pt-BR": "Dia da Libertação"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-08-15",
+        "2027": "2027-08-15",
+        "2028": "2028-08-15"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.law.go.kr/법령/국경일에관한법률"
+      ]
+    },
+    {
+      "key": "chuseok",
+      "name": {
+        "zh-TW": "中秋節",
+        "en": "Chuseok",
+        "ja": "秋夕（チュソク）",
+        "zh-CN": "中秋节",
+        "hi": "चुसोक",
+        "id": "Chuseok",
+        "pt-BR": "Chuseok"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-09-24",
+        "2027": "2027-09-14",
+        "2028": "2028-10-02"
+      },
+      "ends_on": {
+        "2026": "2026-09-26",
+        "2027": "2027-09-16",
+        "2028": "2028-10-04"
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=431",
+        "https://astro.kasi.re.kr/life/pageView/8"
+      ]
+    },
+    {
+      "key": "national-foundation-day",
+      "name": {
+        "zh-TW": "開天節",
+        "en": "National Foundation Day",
+        "ja": "開天節（建国記念日）",
+        "zh-CN": "开天节",
+        "hi": "राष्ट्रीय स्थापना दिवस",
+        "id": "Hari Pendirian Negara",
+        "pt-BR": "Dia da Fundação Nacional"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-10-03",
+        "2027": "2027-10-03",
+        "2028": "2028-10-03"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.law.go.kr/법령/국경일에관한법률"
+      ]
+    },
+    {
+      "key": "hangul-day",
+      "name": {
+        "zh-TW": "韓文日",
+        "en": "Hangul Day",
+        "ja": "ハングルの日",
+        "zh-CN": "韩文日",
+        "hi": "हंगुल दिवस",
+        "id": "Hari Hangul",
+        "pt-BR": "Dia do Hangul"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-10-09",
+        "2027": "2027-10-09",
+        "2028": "2028-10-09"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.law.go.kr/법령/국경일에관한법률"
+      ]
+    },
+    {
+      "key": "christmas",
+      "name": {
+        "zh-TW": "聖誕節",
+        "en": "Christmas Day",
+        "ja": "クリスマス（キリスト降誕日）",
+        "zh-CN": "圣诞节",
+        "hi": "क्रिसमस",
+        "id": "Hari Natal",
+        "pt-BR": "Natal"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-12-25",
+        "2027": "2027-12-25",
+        "2028": "2028-12-25"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정"
+      ]
+    },
+    {
+      "key": "local-election-2026-06-03",
+      "name": {
+        "zh-TW": "全國同步地方選舉投票日",
+        "en": "Local Elections Day",
+        "ja": "統一地方選挙投票日",
+        "zh-CN": "全国同步地方选举投票日",
+        "hi": "स्थानीय चुनाव मतदान दिवस",
+        "id": "Hari Pemungutan Suara Pilkada Serentak",
+        "pt-BR": "Dia das Eleições Locais"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-06-03",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.law.go.kr/법령/공직선거법"
+      ]
+    },
+    {
+      "key": "national-assembly-election-2028-04-12",
+      "name": {
+        "zh-TW": "國會議員選舉投票日",
+        "en": "National Assembly Election Day",
+        "ja": "国会議員選挙投票日",
+        "zh-CN": "国会议员选举投票日",
+        "hi": "राष्ट्रीय सभा चुनाव मतदान दिवस",
+        "id": "Hari Pemungutan Suara Pemilu Legislatif",
+        "pt-BR": "Dia da Eleição da Assembleia Nacional"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": null,
+        "2028": "2028-04-12"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.law.go.kr/법령/공직선거법"
+      ]
+    },
+    {
+      "key": "substitute-2026-03-02",
+      "name": {
+        "zh-TW": "三一節補假",
+        "en": "Substitute holiday (Independence Movement Day)",
+        "ja": "三・一節の代替公休日",
+        "zh-CN": "三一节补休",
+        "hi": "स्वतंत्रता आंदोलन दिवस का प्रतिस्थापन अवकाश",
+        "id": "Libur pengganti Hari Gerakan Kemerdekaan",
+        "pt-BR": "Feriado substituto (Dia do Movimento de Independência)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-03-02",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정"
+      ]
+    },
+    {
+      "key": "substitute-2026-05-25",
+      "name": {
+        "zh-TW": "佛誕日補假",
+        "en": "Substitute holiday (Buddha's Birthday)",
+        "ja": "釈迦誕生日の代替公休日",
+        "zh-CN": "佛诞日补休",
+        "hi": "बुद्ध जयंती का प्रतिस्थापन अवकाश",
+        "id": "Libur pengganti Hari Waisak",
+        "pt-BR": "Feriado substituto (Aniversário de Buda)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-25",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정"
+      ]
+    },
+    {
+      "key": "substitute-2026-08-17",
+      "name": {
+        "zh-TW": "光復節補假",
+        "en": "Substitute holiday (Liberation Day)",
+        "ja": "光復節の代替公休日",
+        "zh-CN": "光复节补休",
+        "hi": "मुक्ति दिवस का प्रतिस्थापन अवकाश",
+        "id": "Libur pengganti Hari Pembebasan",
+        "pt-BR": "Feriado substituto (Dia da Libertação)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-08-17",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정"
+      ]
+    },
+    {
+      "key": "substitute-2026-10-05",
+      "name": {
+        "zh-TW": "開天節補假",
+        "en": "Substitute holiday (National Foundation Day)",
+        "ja": "開天節の代替公休日",
+        "zh-CN": "开天节补休",
+        "hi": "राष्ट्रीय स्थापना दिवस का प्रतिस्थापन अवकाश",
+        "id": "Libur pengganti Hari Pendirian Negara",
+        "pt-BR": "Feriado substituto (Dia da Fundação Nacional)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-10-05",
+        "2027": null,
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정"
+      ]
+    },
+    {
+      "key": "substitute-2027-02-09",
+      "name": {
+        "zh-TW": "春節補假",
+        "en": "Substitute holiday (Seollal)",
+        "ja": "ソルラルの代替公休日",
+        "zh-CN": "春节补休",
+        "hi": "सल्लाल का प्रतिस्थापन अवकाश",
+        "id": "Libur pengganti Seollal",
+        "pt-BR": "Feriado substituto (Seollal)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-02-09",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=431"
+      ]
+    },
+    {
+      "key": "substitute-2027-05-03",
+      "name": {
+        "zh-TW": "勞動節補假",
+        "en": "Substitute holiday (Labor Day)",
+        "ja": "労働節の代替公休日",
+        "zh-CN": "劳动节补休",
+        "hi": "श्रमिक दिवस का प्रतिस्थापन अवकाश",
+        "id": "Libur pengganti Hari Buruh",
+        "pt-BR": "Feriado substituto (Dia do Trabalho)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-05-03",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=431"
+      ]
+    },
+    {
+      "key": "substitute-2027-07-19",
+      "name": {
+        "zh-TW": "制憲節補假",
+        "en": "Substitute holiday (Constitution Day)",
+        "ja": "制憲節の代替公休日",
+        "zh-CN": "制宪节补休",
+        "hi": "संविधान दिवस का प्रतिस्थापन अवकाश",
+        "id": "Libur pengganti Hari Konstitusi",
+        "pt-BR": "Feriado substituto (Dia da Constituição)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-07-19",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=431"
+      ]
+    },
+    {
+      "key": "substitute-2027-08-16",
+      "name": {
+        "zh-TW": "光復節補假",
+        "en": "Substitute holiday (Liberation Day)",
+        "ja": "光復節の代替公休日",
+        "zh-CN": "光复节补休",
+        "hi": "मुक्ति दिवस का प्रतिस्थापन अवकाश",
+        "id": "Libur pengganti Hari Pembebasan",
+        "pt-BR": "Feriado substituto (Dia da Libertação)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-08-16",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=431"
+      ]
+    },
+    {
+      "key": "substitute-2027-10-04",
+      "name": {
+        "zh-TW": "開天節補假",
+        "en": "Substitute holiday (National Foundation Day)",
+        "ja": "開天節の代替公休日",
+        "zh-CN": "开天节补休",
+        "hi": "राष्ट्रीय स्थापना दिवस का प्रतिस्थापन अवकाश",
+        "id": "Libur pengganti Hari Pendirian Negara",
+        "pt-BR": "Feriado substituto (Dia da Fundação Nacional)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-10-04",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=431"
+      ]
+    },
+    {
+      "key": "substitute-2027-10-11",
+      "name": {
+        "zh-TW": "韓文日補假",
+        "en": "Substitute holiday (Hangul Day)",
+        "ja": "ハングルの日の代替公休日",
+        "zh-CN": "韩文日补休",
+        "hi": "हंगुल दिवस का प्रतिस्थापन अवकाश",
+        "id": "Libur pengganti Hari Hangul",
+        "pt-BR": "Feriado substituto (Dia do Hangul)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-10-11",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=431"
+      ]
+    },
+    {
+      "key": "substitute-2027-12-27",
+      "name": {
+        "zh-TW": "聖誕節補假",
+        "en": "Substitute holiday (Christmas Day)",
+        "ja": "クリスマスの代替公休日",
+        "zh-CN": "圣诞节补休",
+        "hi": "क्रिसमस का प्रतिस्थापन अवकाश",
+        "id": "Libur pengganti Hari Natal",
+        "pt-BR": "Feriado substituto (Natal)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": "2027-12-27",
+        "2028": null
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://www.kasa.go.kr/prog/plcyBrf/brief/kor/sub01_01_04/view.do?plcyBrfNo=431"
+      ]
+    },
+    {
+      "key": "substitute-2028-10-05",
+      "name": {
+        "zh-TW": "中秋節與開天節同日之補假",
+        "en": "Substitute holiday (Chuseok and National Foundation Day overlap)",
+        "ja": "秋夕・開天節重複の代替公休日",
+        "zh-CN": "中秋节与开天节同日之补休",
+        "hi": "चुसोक और राष्ट्रीय स्थापना दिवस एक ही दिन का प्रतिस्थापन अवकाश",
+        "id": "Libur pengganti Chuseok bertepatan dengan Hari Pendirian Negara",
+        "pt-BR": "Feriado substituto (Chuseok coincide com o Dia da Fundação Nacional)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": null,
+        "2027": null,
+        "2028": "2028-10-05"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.law.go.kr/법령/관공서의공휴일에관한규정",
+        "https://astro.kasi.re.kr/life/pageView/8"
+      ]
+    }
+  ]
+}

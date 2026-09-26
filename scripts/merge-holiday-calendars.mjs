@@ -18,6 +18,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = join(ROOT, 'content', 'national-holiday-calendars.json');
 const LOCALES = ['zh-TW', 'en', 'ja', 'zh-CN', 'hi', 'id', 'pt-BR'];
+// 七個市場國必須有;其他國家(2026-09-26 起擴充:KR/VN/TH/PH/MY/SG…)只要是 ISO 兩碼就收。
 const COUNTRIES = ['TW', 'US', 'JP', 'CN', 'IN', 'ID', 'BR'];
 const STATUS = new Set(['statutory', 'discretionary', 'commemorative']);
 const DSTATUS = new Set(['confirmed', 'estimated', 'local-variant']);
@@ -39,6 +40,7 @@ for (const file of readdirSync(stageDir).filter((f) => /^holidays-[A-Z]{2}\.json
   const cc = file.slice(9, 11);
   const frag = JSON.parse(readFileSync(join(stageDir, file), 'utf8'));
   const at = (i, k) => `${cc}.holidays[${i}].${k}`;
+  if (!/^[A-Z]{2}$/.test(cc)) errs.push(`${cc}: 國碼必須是 ISO 3166-1 兩碼`);
   if (frag.country_code !== cc) errs.push(`${cc}: country_code 不一致(${frag.country_code})`);
   if (!Array.isArray(frag.holidays) || !frag.holidays.length) { errs.push(`${cc}: holidays 必須是非空陣列`); continue; }
   const keys = new Set();
@@ -88,7 +90,7 @@ if (!merged) { console.error(`${stageDir} 裡沒有 holidays-<CC>.json`); proces
 const missing = COUNTRIES.filter((c) => !doc.countries[c]);
 doc.as_of = new Date().toISOString().slice(0, 10);
 const tmp = `${OUT}.tmp`;
-writeFileSync(tmp, `${JSON.stringify(doc, null, 1)}\n`);
+writeFileSync(tmp, `${JSON.stringify(doc, null, 2)}\n`);
 renameSync(tmp, OUT);
 console.log(`\n✓ 併入 ${merged} 國 → ${OUT}`);
 if (missing.length) console.log(`⚠ 還缺:${missing.join(', ')}(頁型只會產出有資料的國家)`);

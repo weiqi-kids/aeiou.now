@@ -1,0 +1,748 @@
+{
+  "country_code": "PH",
+  "source_urls": [
+    "https://www.pna.gov.ph/articles/1258046",
+    "https://www.pna.gov.ph/articles/1283808",
+    "https://www.pna.gov.ph/articles/1270970",
+    "https://www.pna.gov.ph/articles/1275612",
+    "https://www.pna.gov.ph/articles/1271401",
+    "https://www.pna.gov.ph/articles/1284830"
+  ],
+  "holidays": [
+    {
+      "key": "new-years-day",
+      "name": {
+        "zh-TW": "元旦",
+        "en": "New Year's Day",
+        "ja": "元日",
+        "zh-CN": "元旦",
+        "hi": "नव वर्ष दिवस",
+        "id": "Tahun Baru",
+        "pt-BR": "Ano Novo"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-01-01",
+        "2027": "2027-01-01",
+        "2028": "2028-01-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "chinese-new-year",
+      "name": {
+        "zh-TW": "春節（農曆新年）",
+        "en": "Chinese New Year",
+        "ja": "春節（旧正月）",
+        "zh-CN": "春节（农历新年）",
+        "hi": "चीनी नव वर्ष",
+        "id": "Tahun Baru Imlek",
+        "pt-BR": "Ano-Novo Chinês"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-02-17",
+        "2027": "2027-02-06",
+        "2028": "2028-01-26"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "edsa-people-power-anniversary",
+      "name": {
+        "zh-TW": "EDSA 人民力量革命紀念日",
+        "en": "EDSA People Power Revolution Anniversary",
+        "ja": "エドゥサ革命（ピープルパワー革命）記念日",
+        "zh-CN": "EDSA 人民力量革命纪念日",
+        "hi": "एडसा जन शक्ति क्रांति वर्षगांठ",
+        "id": "Peringatan Revolusi People Power EDSA",
+        "pt-BR": "Aniversário da Revolução do Poder Popular (EDSA)"
+      },
+      "status": "commemorative",
+      "dates": {
+        "2026": "2026-02-25",
+        "2027": "2027-02-25",
+        "2028": "2028-02-25"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "eidul-fitr",
+      "name": {
+        "zh-TW": "開齋節",
+        "en": "Eid'l Fitr",
+        "ja": "イード・アル＝フィトル（断食明け大祭）",
+        "zh-CN": "开斋节",
+        "hi": "ईद-उल-फ़ित्र",
+        "id": "Idulfitri",
+        "pt-BR": "Eid al-Fitr (fim do Ramadã)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-03-20",
+        "2027": "2027-03-09",
+        "2028": "2028-02-26"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1270970",
+        "https://www.pna.gov.ph/articles/1271401",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "maundy-thursday",
+      "name": {
+        "zh-TW": "聖週四（濯足節）",
+        "en": "Maundy Thursday",
+        "ja": "聖木曜日",
+        "zh-CN": "圣周四（濯足节）",
+        "hi": "पुण्य गुरुवार (मॉन्डी थर्सडे)",
+        "id": "Kamis Putih",
+        "pt-BR": "Quinta-feira Santa"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-04-02",
+        "2027": "2027-03-25",
+        "2028": "2028-04-13"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "good-friday",
+      "name": {
+        "zh-TW": "耶穌受難日",
+        "en": "Good Friday",
+        "ja": "聖金曜日",
+        "zh-CN": "耶稣受难日",
+        "hi": "गुड फ्राइडे",
+        "id": "Jumat Agung",
+        "pt-BR": "Sexta-feira Santa"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-04-03",
+        "2027": "2027-03-26",
+        "2028": "2028-04-14"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "black-saturday",
+      "name": {
+        "zh-TW": "聖週六",
+        "en": "Black Saturday",
+        "ja": "聖土曜日",
+        "zh-CN": "圣周六",
+        "hi": "पवित्र शनिवार",
+        "id": "Sabtu Suci",
+        "pt-BR": "Sábado de Aleluia"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-04-04",
+        "2027": "2027-03-27",
+        "2028": "2028-04-15"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "araw-ng-kagitingan",
+      "name": {
+        "zh-TW": "英勇日（巴丹與科雷希多紀念日）",
+        "en": "Araw ng Kagitingan (Day of Valor)",
+        "ja": "勇者の日（バターン・コレヒドール記念日）",
+        "zh-CN": "英勇日（巴丹与科雷吉多纪念日）",
+        "hi": "वीरता दिवस (अरव न्ग कागितिंगन)",
+        "id": "Hari Keberanian (Araw ng Kagitingan)",
+        "pt-BR": "Dia do Valor (Araw ng Kagitingan)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-04-09",
+        "2027": "2027-04-09",
+        "2028": "2028-04-09"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "labor-day",
+      "name": {
+        "zh-TW": "勞動節",
+        "en": "Labor Day",
+        "ja": "メーデー（労働者の日）",
+        "zh-CN": "劳动节",
+        "hi": "मज़दूर दिवस",
+        "id": "Hari Buruh",
+        "pt-BR": "Dia do Trabalho"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-01",
+        "2027": "2027-05-01",
+        "2028": "2028-05-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "national-election-2028-05-08",
+      "name": {
+        "zh-TW": "全國大選投票日",
+        "en": "National and Local Elections Day",
+        "ja": "国政・地方選挙投票日",
+        "zh-CN": "全国大选投票日",
+        "hi": "राष्ट्रीय एवं स्थानीय चुनाव दिवस",
+        "id": "Hari Pemilu Nasional dan Daerah",
+        "pt-BR": "Dia das eleições nacionais e locais"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": null,
+        "2027": null,
+        "2028": "2028-05-08"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": null,
+        "2027": null,
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1284830"
+      ]
+    },
+    {
+      "key": "eidul-adha",
+      "name": {
+        "zh-TW": "宰牲節（古爾邦節）",
+        "en": "Eid'l Adha",
+        "ja": "イード・アル＝アドハー（犠牲祭）",
+        "zh-CN": "宰牲节（古尔邦节）",
+        "hi": "ईद-उल-अज़हा (बकरीद)",
+        "id": "Iduladha",
+        "pt-BR": "Eid al-Adha (Festa do Sacrifício)"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-05-27",
+        "2027": "2027-05-16",
+        "2028": "2028-05-05"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "estimated",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1275612",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "independence-day",
+      "name": {
+        "zh-TW": "獨立紀念日",
+        "en": "Independence Day",
+        "ja": "独立記念日",
+        "zh-CN": "独立日",
+        "hi": "स्वतंत्रता दिवस",
+        "id": "Hari Kemerdekaan",
+        "pt-BR": "Dia da Independência"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-06-12",
+        "2027": "2027-06-12",
+        "2028": "2028-06-12"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "ninoy-aquino-day",
+      "name": {
+        "zh-TW": "尼諾伊·艾奎諾紀念日",
+        "en": "Ninoy Aquino Day",
+        "ja": "ニノイ・アキノ記念日",
+        "zh-CN": "尼诺伊·阿基诺纪念日",
+        "hi": "निनॉय एक्विनो दिवस",
+        "id": "Hari Ninoy Aquino",
+        "pt-BR": "Dia de Ninoy Aquino"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-08-21",
+        "2027": "2027-08-21",
+        "2028": "2028-08-21"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "national-heroes-day",
+      "name": {
+        "zh-TW": "國家英雄節",
+        "en": "National Heroes Day",
+        "ja": "国民英雄の日",
+        "zh-CN": "国家英雄节",
+        "hi": "राष्ट्रीय नायक दिवस",
+        "id": "Hari Pahlawan Nasional",
+        "pt-BR": "Dia dos Heróis Nacionais"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-08-31",
+        "2027": "2027-08-30",
+        "2028": "2028-08-28"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "all-saints-day",
+      "name": {
+        "zh-TW": "諸聖節",
+        "en": "All Saints' Day",
+        "ja": "諸聖人の日",
+        "zh-CN": "诸圣节",
+        "hi": "सर्व संत दिवस",
+        "id": "Hari Raya Semua Orang Kudus",
+        "pt-BR": "Dia de Todos os Santos"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-11-01",
+        "2027": "2027-11-01",
+        "2028": "2028-11-01"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "all-souls-day",
+      "name": {
+        "zh-TW": "追思已亡節（萬靈節）",
+        "en": "All Souls' Day",
+        "ja": "死者の日（万霊節）",
+        "zh-CN": "追思已亡节（万灵节）",
+        "hi": "सर्व आत्मा दिवस",
+        "id": "Hari Arwah",
+        "pt-BR": "Dia de Finados"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-11-02",
+        "2027": "2027-11-02",
+        "2028": "2028-11-02"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "barangay-sk-election-2028-11-13",
+      "name": {
+        "zh-TW": "村里與青年議會選舉投票日",
+        "en": "Barangay and Sangguniang Kabataan Elections Day",
+        "ja": "バランガイ・青年評議会選挙投票日",
+        "zh-CN": "村级与青年议会选举投票日",
+        "hi": "बारांगे एवं युवा परिषद चुनाव दिवस",
+        "id": "Hari Pemilu Barangay dan Sangguniang Kabataan",
+        "pt-BR": "Dia das eleições de barangay e do conselho da juventude"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": null,
+        "2027": null,
+        "2028": "2028-11-13"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": null,
+        "2027": null,
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1284830"
+      ]
+    },
+    {
+      "key": "bonifacio-day",
+      "name": {
+        "zh-TW": "博尼法西奧紀念日",
+        "en": "Bonifacio Day",
+        "ja": "ボニファシオ記念日",
+        "zh-CN": "博尼法西奥纪念日",
+        "hi": "बोनिफ़ेसियो दिवस",
+        "id": "Hari Bonifacio",
+        "pt-BR": "Dia de Bonifacio"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-11-30",
+        "2027": "2027-11-30",
+        "2028": "2028-11-30"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "immaculate-conception",
+      "name": {
+        "zh-TW": "聖母無原罪始胎節",
+        "en": "Feast of the Immaculate Conception of Mary",
+        "ja": "無原罪の聖マリアの祭日",
+        "zh-CN": "圣母无原罪始胎节",
+        "hi": "मरियम के निष्कलंक गर्भाधान का पर्व",
+        "id": "Hari Raya Maria Dikandung Tanpa Noda",
+        "pt-BR": "Imaculada Conceição"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-12-08",
+        "2027": "2027-12-08",
+        "2028": "2028-12-08"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "christmas-eve",
+      "name": {
+        "zh-TW": "平安夜",
+        "en": "Christmas Eve",
+        "ja": "クリスマス・イブ",
+        "zh-CN": "平安夜",
+        "hi": "क्रिसमस की पूर्व संध्या",
+        "id": "Malam Natal",
+        "pt-BR": "Véspera de Natal"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-12-24",
+        "2027": "2027-12-24",
+        "2028": "2028-12-24"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "christmas-day",
+      "name": {
+        "zh-TW": "聖誕節",
+        "en": "Christmas Day",
+        "ja": "クリスマス",
+        "zh-CN": "圣诞节",
+        "hi": "क्रिसमस",
+        "id": "Hari Natal",
+        "pt-BR": "Natal"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-12-25",
+        "2027": "2027-12-25",
+        "2028": "2028-12-25"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "rizal-day",
+      "name": {
+        "zh-TW": "黎剎紀念日",
+        "en": "Rizal Day",
+        "ja": "リサール記念日",
+        "zh-CN": "黎刹纪念日",
+        "hi": "रिज़ाल दिवस",
+        "id": "Hari Rizal",
+        "pt-BR": "Dia de Rizal"
+      },
+      "status": "statutory",
+      "dates": {
+        "2026": "2026-12-30",
+        "2027": "2027-12-30",
+        "2028": "2028-12-30"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "estimated"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    },
+    {
+      "key": "last-day-of-the-year",
+      "name": {
+        "zh-TW": "除夕（年末最後一天）",
+        "en": "Last Day of the Year",
+        "ja": "大晦日",
+        "zh-CN": "年末最后一天",
+        "hi": "वर्ष का अंतिम दिन",
+        "id": "Hari Terakhir Tahun",
+        "pt-BR": "Último dia do ano"
+      },
+      "status": "discretionary",
+      "dates": {
+        "2026": "2026-12-31",
+        "2027": "2027-12-31",
+        "2028": "2028-12-31"
+      },
+      "ends_on": {
+        "2026": null,
+        "2027": null,
+        "2028": null
+      },
+      "date_status": {
+        "2026": "confirmed",
+        "2027": "confirmed",
+        "2028": "confirmed"
+      },
+      "source_urls": [
+        "https://www.pna.gov.ph/articles/1258046",
+        "https://www.pna.gov.ph/articles/1283808"
+      ]
+    }
+  ]
+}
