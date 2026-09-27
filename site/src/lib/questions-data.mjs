@@ -133,3 +133,22 @@ export function questionTopicCells() {
 // 用既有 topics index + 各 topic facts.json 的 observances[].occurrences(starts_on/ends_on),
 // 挑「進行中」或「14 天內開始」的場次,依國家分組,依距今天數排序,最多 8 國、每國最多 3 項。
 // 這裡的國家是**內容**裡的國家(節日辦在哪國),與投票的語言社群判定無關,允許出現。
+// ── 著陸頁上的一題(2026-09-27 站主核准)──────────────────────────────
+// 搜尋進來的人九成落在逐國頁、假日總表與 Topic 頁,而能「點一下」的題目原本只在首頁與
+// /questions/。這一支替一個 Topic 挑**固定**的一題掛到著陸頁上。
+//
+// 🔴 必須固定,不能輪換:它長在數百個頁面上,每天換一題就等於整站每天宣告改版
+//    (sitemap lastmod 那條紅線的第四個入口)。所以取**最早**的那一題 ——
+//    題庫只往檔尾加、日期只會更晚,最早那一題永遠不會被換掉。
+//    poll 優先:投票沒有對錯,查完日期的讀者最容易點下去。
+export function featuredQuestion(slug) {
+  if (!slug) return null;
+  const list = getQuestions().filter((q) => q.topic_slug === slug);
+  const pick = (kind) => list
+    .filter((q) => q.kind === kind)
+    .sort((a, b) => String(a.date).localeCompare(String(b.date)) || String(a.question_id).localeCompare(String(b.question_id)))[0];
+  return pick('poll') || pick('guess') || null;
+}
+
+/** 假日總表沒有直接對應的 Topic 時退回的題目來源:連假本身就是這一頁的主題。 */
+export const HOLIDAY_FALLBACK_TOPIC = 'long-holiday-weeks';

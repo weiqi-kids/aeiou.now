@@ -21,6 +21,8 @@
 // 估的是「這一頁會有的所有本地文字」:逐國散文 + 日期規則 + Topic 摘要 + 該國全部
 // observance 的當地叫法。門檻設 360(比守門的 320 多一點餘裕,免得渲染後差幾個字)。
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import QuestionCard from '../../../components/QuestionCard.astro';
+import { featuredQuestion } from '../../../lib/questions-data.mjs';
 import { t } from '../../../lib/i18n.mjs';
 import { LOCALE, MARKET_COUNTRY } from '../../../lib/config.mjs';
 import { calendarDate, countryFlag } from '../../../lib/format.mjs';
@@ -52,6 +54,8 @@ export function getStaticPaths() {
 
 const { topicId, code } = Astro.props;
 const { facts, i18n } = getTopicBundle(topicId);
+// 查完這一國的答案,順手點一下(2026-09-27;固定一題,見 featuredQuestion)。
+const countryQuestion = featuredQuestion(facts.slug);
 const copy = seoCopy();
 const loc = i18n?.locales?.[LOCALE] || {};
 const topicTitle = loc.title || facts?.canonical_name || facts?.slug;
@@ -251,6 +255,12 @@ const schema = {
       </section>
     )}
 
+    {countryQuestion && (
+      <section class="cc-question">
+        <QuestionCard question={countryQuestion} heading={t('q.inline_title')} />
+      </section>
+    )}
+
     {siblings.length > 0 && (
       <nav class="siblings" aria-labelledby="siblings-h">
         <h2 id="siblings-h">{copy.where}</h2>
@@ -296,6 +306,9 @@ const schema = {
 </BaseLayout>
 
 <style>
+  .cc-question {
+    margin-block: clamp(1.5rem, 4vw, 2.5rem);
+  }
   .country-page { display: flex; flex-direction: column; gap: 1.5rem; }
   .holidays-link h2 { font-size: var(--text-lg); }
   .holidays-link ul { list-style: none; padding: 0; margin: 0; }

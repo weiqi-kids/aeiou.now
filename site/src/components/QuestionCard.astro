@@ -121,7 +121,7 @@ const cardConfigJson = JSON.stringify(cardConfig).replace(/</g, '\\u003c');
   <div class="q-live" hidden></div>
 
   <div class="q-foot">
-    <a class="q-tell-us" data-topic-slug={question.topic_slug} href={withBase(`/topic/${question.topic_slug}/`)}>{t('q.tell_us')}</a>
+    <a class="q-tell-us" data-topic-slug={question.topic_slug} href={withBase(`/topic/${question.topic_slug}/#talking`)}>{t('q.tell_us')}</a>
     {nextHref && (
       <a class="q-next" href={nextHref}>{nextLabel}</a>
     )}

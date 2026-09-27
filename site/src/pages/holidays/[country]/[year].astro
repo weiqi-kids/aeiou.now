@@ -17,6 +17,8 @@
 // 逐國頁是「一個 Topic 在一個國家」;這一頁是「一個國家在一年裡的全部假日,依日期排」。
 // 軸不同,而且只有在資料真的完整時才成立 —— 所以薄頁不產出(見 lib/holidays.mjs 的門檻)。
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import QuestionCard from '../../../components/QuestionCard.astro';
+import { featuredQuestion, HOLIDAY_FALLBACK_TOPIC } from '../../../lib/questions-data.mjs';
 import { t } from '../../../lib/i18n.mjs';
 import { LOCALE } from '../../../lib/config.mjs';
 import { countryName } from '../../../lib/data.mjs';
@@ -42,6 +44,12 @@ const copy = seoCopy();
 const label = countryName(code);
 const rows = holidaysFor(code, year);
 const byDate = topicsByDate(code, year);
+// 查完日期順手點一下(2026-09-27)。取這一年最早一個有題目的 Topic;這一國沒有 Topic
+// 對得上(七個市場國以外的國家)就退回「連假」那一題 —— 它本來就是這一頁的主題。
+const holidayQuestion = [...byDate.entries()]
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([, topic]) => featuredQuestion(topic.slug))
+  .find(Boolean) || featuredQuestion(HOLIDAY_FALLBACK_TOPIC);
 
 // 重疊要說出來,不能讓同一天在表上出現兩列而沒有交代。
 // 實例:2028 年的中秋(10/03)落在中國國慶法定假期(10/01–10/03)之內 —— 那是農曆算出來的
@@ -248,6 +256,12 @@ const holidaySourceLabels = sourceLabels(allSources);
     </table>
   </div>
 
+  {holidayQuestion && (
+    <section class="hol-question">
+      <QuestionCard question={holidayQuestion} heading={t('q.inline_title')} />
+    </section>
+  )}
+
   {undated.length > 0 && (
     <section class="hol-undated">
       <h2>{t('holidays.no_fixed_date')}</h2>
@@ -292,6 +306,9 @@ const holidaySourceLabels = sourceLabels(allSources);
 </BaseLayout>
 
 <style>
+  .hol-question {
+    margin-block: clamp(1.5rem, 4vw, 2.5rem);
+  }
   .hol-head { margin-block-end: 1.5rem; }
   .hol-head h1 { font-size: var(--text-2xl); }
   .hol-lead { color: var(--color-ink-muted); }
