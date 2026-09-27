@@ -2680,6 +2680,160 @@
       "explain": null
     },
     {
+      "id": "q-20260901-labour-day-in-practice",
+      "date": "2026-09-01",
+      "kind": "poll",
+      "topic": "labour-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你所在的地方,勞動節在實際生活中比較像哪一種日子?",
+        "en": "Where you live, what does Labour Day feel like in practice?",
+        "ja": "あなたの地域では、メーデーは実際にはどんな日ですか?",
+        "zh-CN": "你所在的地方，劳动节在实际生活中更像哪一种日子?",
+        "hi": "आपके यहाँ श्रमिक दिवस व्यवहार में किस तरह का दिन है?",
+        "id": "Di tempatmu, Hari Buruh dalam kehidupan sehari-hari lebih terasa seperti hari yang mana?",
+        "pt-BR": "Onde você mora, como o Dia do Trabalho funciona na prática?"
+      },
+      "options": [
+        {
+          "id": "national-off",
+          "emoji": "🛌",
+          "label": {
+            "zh-TW": "全國都放假",
+            "en": "A day off nationwide",
+            "ja": "全国の休日",
+            "zh-CN": "全国都放假",
+            "hi": "पूरे देश की छुट्टी",
+            "id": "Hari libur nasional",
+            "pt-BR": "Feriado nacional"
+          }
+        },
+        {
+          "id": "some-off",
+          "emoji": "👥",
+          "label": {
+            "zh-TW": "只有部分人放假",
+            "en": "Only some people get the day off",
+            "ja": "一部の人だけ休み",
+            "zh-CN": "只有部分人放假",
+            "hi": "केवल कुछ लोगों की छुट्टी",
+            "id": "Hanya sebagian orang yang libur",
+            "pt-BR": "Só algumas pessoas folgam"
+          }
+        },
+        {
+          "id": "workday",
+          "emoji": "💼",
+          "label": {
+            "zh-TW": "照常上班",
+            "en": "An ordinary working day",
+            "ja": "通常の勤務日",
+            "zh-CN": "照常上班",
+            "hi": "सामान्य कार्यदिवस",
+            "id": "Hari kerja biasa",
+            "pt-BR": "Um dia normal de trabalho"
+          }
+        },
+        {
+          "id": "local-rule",
+          "emoji": "📍",
+          "label": {
+            "zh-TW": "看州、地方或雇主決定",
+            "en": "It depends on the state, locality, or employer",
+            "ja": "州・地域・雇用主による",
+            "zh-CN": "看州、地方或雇主决定",
+            "hi": "राज्य, स्थानीय नियम या नियोक्ता पर निर्भर",
+            "id": "Tergantung negara bagian, daerah, atau pemberi kerja",
+            "pt-BR": "Depende do estado, município ou empregador"
+          }
+        }
+      ],
+      "answer": null,
+      "explain": null
+    },
+    {
+      "id": "q-20260901-labour-day-two-days",
+      "date": "2026-09-01",
+      "kind": "guess",
+      "topic": "labour-day",
+      "asker": null,
+      "target": null,
+      "text": {
+        "zh-TW": "你猜:2024 年修法後,哪個地方把勞動節的法定假期寫成五月一日與五月二日?",
+        "en": "Guess: after a 2024 amendment, which place writes 1 and 2 May into its statutory Labour Day break?",
+        "ja": "クイズ:2024年の改正後、労働節の法定休日を5月1日と2日と定めているのはどこですか?",
+        "zh-CN": "你猜：2024 年修法后，哪个地方把劳动节的法定假期写成5月1日与5月2日?",
+        "hi": "अंदाज़ा लगाइए: 2024 के संशोधन के बाद किस जगह के क़ानून में श्रमिक दिवस की छुट्टी 1 और 2 मई लिखी गई है?",
+        "id": "Tebak: setelah perubahan aturan pada 2024, di tempat mana libur Hari Buruh menurut aturan ditulis pada 1 dan 2 Mei?",
+        "pt-BR": "Adivinhe: depois da alteração de 2024, onde a folga legal do Dia do Trabalho passou a incluir 1º e 2 de maio?"
+      },
+      "options": [
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國大陸",
+            "en": "Mainland China",
+            "ja": "中国大陸",
+            "zh-CN": "中国大陆",
+            "hi": "मुख्यभूमि चीन",
+            "id": "Tiongkok daratan",
+            "pt-BR": "China continental"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "answer": "zh-CN",
+      "explain": {
+        "zh-TW": "中國大陸。2024 年修訂《全國年節及紀念日放假辦法》後,勞動節法定放假日寫成五月一日與五月二日;實際連假還要看國務院辦公廳每年發布的調休安排。",
+        "en": "Mainland China. The 2024 revision of the national holiday regulation put 1 and 2 May into the statutory Labour Day break; the actual longer run still depends on the State Council General Office's annual shifted-workday arrangement.",
+        "ja": "中国大陸である。2024年の「全国年節及紀念日放假弁法」改正後、労働節の法定休日は5月1日と2日になった。実際の連休の長さは、国務院弁公庁が毎年発表する振替出勤の安排によって変わる。",
+        "zh-CN": "中国大陆。2024 年修订《全国年节及纪念日放假办法》后，劳动节法定放假日写成5月1日与5月2日；实际连假的长度还要看国务院办公厅每年发布的调休安排。",
+        "hi": "मुख्यभूमि चीन। 2024 में राष्ट्रीय अवकाश नियम में हुए संशोधन के बाद श्रमिक दिवस की वैधानिक छुट्टी में 1 और 2 मई लिखे गए; वास्तविक लंबा अवकाश अब भी राज्य परिषद के सामान्य कार्यालय की वार्षिक स्थानांतरित-कार्यदिवस व्यवस्था पर निर्भर करता है।",
+        "id": "Tiongkok daratan. Setelah perubahan aturan hari libur nasional pada 2024, libur resmi Hari Buruh mencantumkan 1 dan 2 Mei; panjang libur yang sebenarnya tetap bergantung pada pengaturan hari kerja pengganti yang diumumkan Kantor Umum Dewan Negara setiap tahun.",
+        "pt-BR": "China continental. A revisão de 2024 do regulamento nacional de feriados colocou 1º e 2 de maio no feriado legal do Dia do Trabalho; a duração real do feriadão ainda depende do calendário anual de dias úteis compensados divulgado pelo Gabinete Geral do Conselho de Estado."
+      }
+    },
+    {
       "id": "q-20260901-moving-childrens-day",
       "date": "2026-09-01",
       "kind": "guess",
@@ -37407,106 +37561,428 @@
       }
     },
     {
-      "id": "q-20260901-labour-day-in-practice",
-      "date": "2026-09-01",
+      "id": "q-20270415-beer-festival-organizer",
+      "date": "2027-04-15",
       "kind": "poll",
-      "topic": "labour-day",
+      "topic": "beer-festivals",
       "asker": null,
       "target": null,
+      "answer": null,
+      "explain": null,
       "text": {
-        "zh-TW": "你所在的地方,勞動節在實際生活中比較像哪一種日子?",
-        "en": "Where you live, what does Labour Day feel like in practice?",
-        "ja": "あなたの地域では、メーデーは実際にはどんな日ですか?",
-        "zh-CN": "你所在的地方，劳动节在实际生活中更像哪一种日子?",
-        "hi": "आपके यहाँ श्रमिक दिवस व्यवहार में किस तरह का दिन है?",
-        "id": "Di tempatmu, Hari Buruh dalam kehidupan sehari-hari lebih terasa seperti hari yang mana?",
-        "pt-BR": "Onde você mora, como o Dia do Trabalho funciona na prática?"
+        "zh-TW": "如果你居住的城市要辦一場「啤酒節」，你會希望由誰來主辦？",
+        "en": "If your city were to hold a beer festival, who would you want running it?",
+        "ja": "もし住んでいる街で「ビール祭り」を開くとしたら、誰に主催してほしいですか？",
+        "zh-CN": "如果你所在的城市要办一场“啤酒节”，你希望由谁来主办？",
+        "hi": "अगर आपके शहर में एक \"बीयर उत्सव\" होता, तो आप चाहेंगे कि इसे कौन आयोजित करे?",
+        "id": "Jika kotamu mengadakan \"festival bir\", siapa yang kamu inginkan sebagai penyelenggaranya?",
+        "pt-BR": "Se a sua cidade fosse realizar uma \"festa da cerveja\", quem você gostaria que a organizasse?"
       },
       "options": [
         {
-          "id": "national-off",
-          "emoji": "🛌",
+          "id": "gov-organizer",
+          "emoji": "🏛️",
           "label": {
-            "zh-TW": "全國都放假",
-            "en": "A day off nationwide",
-            "ja": "全国の休日",
-            "zh-CN": "全国都放假",
-            "hi": "पूरे देश की छुट्टी",
-            "id": "Hari libur nasional",
-            "pt-BR": "Feriado nacional"
+            "zh-TW": "政府直接主辦",
+            "en": "Run directly by the government",
+            "ja": "政府が直接主催",
+            "zh-CN": "政府直接主办",
+            "hi": "सरकार खुद सीधे आयोजित करे",
+            "id": "Diselenggarakan langsung oleh pemerintah",
+            "pt-BR": "Organizada diretamente pelo governo"
           }
         },
         {
-          "id": "some-off",
-          "emoji": "👥",
+          "id": "private-permit",
+          "emoji": "📝",
           "label": {
-            "zh-TW": "只有部分人放假",
-            "en": "Only some people get the day off",
-            "ja": "一部の人だけ休み",
-            "zh-CN": "只有部分人放假",
-            "hi": "केवल कुछ लोगों की छुट्टी",
-            "id": "Hanya sebagian orang yang libur",
-            "pt-BR": "Só algumas pessoas folgam"
+            "zh-TW": "民間主辦、政府發臨時執照",
+            "en": "Privately run, with a government temporary permit",
+            "ja": "民間主催で、政府が期限付き許可を出す",
+            "zh-CN": "民间主办、政府发临时执照",
+            "hi": "निजी आयोजन हो, सरकार बस अस्थायी अनुज्ञप्ति दे",
+            "id": "Diselenggarakan swasta, dengan izin sementara dari pemerintah",
+            "pt-BR": "Organizada por particulares, com licença temporária do governo"
           }
         },
         {
-          "id": "workday",
-          "emoji": "💼",
+          "id": "local-decide",
+          "emoji": "🗺️",
           "label": {
-            "zh-TW": "照常上班",
-            "en": "An ordinary working day",
-            "ja": "通常の勤務日",
-            "zh-CN": "照常上班",
-            "hi": "सामान्य कार्यदिवस",
-            "id": "Hari kerja biasa",
-            "pt-BR": "Um dia normal de trabalho"
+            "zh-TW": "交給地方自己決定",
+            "en": "Left up to the local/state government",
+            "ja": "地方自治体の判断に任せる",
+            "zh-CN": "交给地方自己决定",
+            "hi": "स्थानीय/राज्य सरकार पर छोड़ दिया जाए",
+            "id": "Diserahkan ke keputusan daerah/negara bagian",
+            "pt-BR": "Deixada para a decisão do governo local/estadual"
           }
         },
         {
-          "id": "local-rule",
-          "emoji": "📍",
+          "id": "no-need",
+          "emoji": "🚫",
           "label": {
-            "zh-TW": "看州、地方或雇主決定",
-            "en": "It depends on the state, locality, or employer",
-            "ja": "州・地域・雇用主による",
-            "zh-CN": "看州、地方或雇主决定",
-            "hi": "राज्य, स्थानीय नियम या नियोक्ता पर निर्भर",
-            "id": "Tergantung negara bagian, daerah, atau pemberi kerja",
-            "pt-BR": "Depende do estado, município ou empregador"
+            "zh-TW": "這種活動不需要存在",
+            "en": "This kind of event shouldn't exist",
+            "ja": "このような催しは不要",
+            "zh-CN": "这种活动不需要存在",
+            "hi": "ऐसा आयोजन होना ही नहीं चाहिए",
+            "id": "Acara semacam ini tidak perlu ada",
+            "pt-BR": "Esse tipo de evento não deveria existir"
           }
         }
-      ],
-      "answer": null,
-      "explain": null
+      ]
     },
     {
-      "id": "q-20260901-labour-day-two-days",
-      "date": "2026-09-01",
+      "id": "q-20270415-beer-festival-country",
+      "date": "2027-04-15",
       "kind": "guess",
-      "topic": "labour-day",
+      "topic": "beer-festivals",
       "asker": null,
       "target": null,
+      "answer": "pt-BR",
       "text": {
-        "zh-TW": "你猜:2024 年修法後,哪個地方把勞動節的法定假期寫成五月一日與五月二日?",
-        "en": "Guess: after a 2024 amendment, which place writes 1 and 2 May into its statutory Labour Day break?",
-        "ja": "クイズ:2024年の改正後、労働節の法定休日を5月1日と2日と定めているのはどこですか?",
-        "zh-CN": "你猜：2024 年修法后，哪个地方把劳动节的法定假期写成5月1日与5月2日?",
-        "hi": "अंदाज़ा लगाइए: 2024 के संशोधन के बाद किस जगह के क़ानून में श्रमिक दिवस की छुट्टी 1 और 2 मई लिखी गई है?",
-        "id": "Tebak: setelah perubahan aturan pada 2024, di tempat mana libur Hari Buruh menurut aturan ditulis pada 1 dan 2 Mei?",
-        "pt-BR": "Adivinhe: depois da alteração de 2024, onde a folga legal do Dia do Trabalho passou a incluir 1º e 2 de maio?"
+        "zh-TW": "下面哪一個國家的啤酒節主場館，本身就登記在市政府的官方機關名冊上？",
+        "en": "In which of these countries is the beer festival's main venue itself listed on the city government's official register of government organs?",
+        "ja": "次のうち、ビール祭りの主会場そのものが市政府の公式な機関一覧に登録されているのはどの国か？",
+        "zh-CN": "下面哪一个国家的啤酒节主场馆，本身就登记在市政府的官方机关名录上？",
+        "hi": "नीचे दिए देशों में से किसके बीयर उत्सव का मुख्य स्थल स्वयं नगर सरकार की आधिकारिक अंग-सूची में दर्ज है?",
+        "id": "Di antara negara berikut, festival bir yang lokasi utamanya sendiri tercantum dalam daftar resmi organ pemerintah kota adalah?",
+        "pt-BR": "Em qual destes países a sede da festa da cerveja está, ela mesma, listada no registro oficial de órgãos do governo municipal?"
       },
       "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
         {
           "id": "zh-CN",
           "emoji": "🇨🇳",
           "label": {
-            "zh-TW": "中國大陸",
-            "en": "Mainland China",
-            "ja": "中国大陸",
-            "zh-CN": "中国大陆",
-            "hi": "मुख्यभूमि चीन",
-            "id": "Tiongkok daratan",
-            "pt-BR": "China continental"
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印度尼西亚",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是巴西。布盧梅瑙的十月啤酒節主場館日耳曼村園區本身列在市政府網站的「政府機關」頁上，與各局處並列，辦節單位就是市政機關本身，二〇二六年是第四十一屆，十月七日到二十五日、十九天，市府觀光與休閒局稱它是僅次於慕尼黑的世界第二大同名節慶。相對地，中國青島國際啤酒節雖也由市政府主辦，但辦在七月到八月，源頭是一九〇三年德國與英國商人建的啤酒廠，性質是市府主辦的活動而非機關本身即場館；美國辛辛那提的啤酒節是民間主辦，政府只核發臨時售酒許可，且明文不得發給營利者；印尼則因酒類受總統條例管制，總統佐科威二〇二一年撤銷開放酒類產業投資的附件，這種節慶在制度上根本不存在。四者相比，只有巴西是政府機關本身直接主辦並登記在案。",
+        "en": "The answer is Brazil. Blumenau's Oktoberfest is staged at Parque Vila Germânica, a venue listed on the city government's own website among its government organs — the organizing body is the municipal administration itself. The 2026 edition, the 41st, ran 7–25 October for nineteen days, and the city's tourism and leisure secretariat calls it the world's second-largest version of the festival, after Munich. By contrast, China's Qingdao International Beer Festival is also government-hosted but falls in July–August, rooted in a brewery German and British merchants built in 1903 — a government-run event, not a government organ serving as the venue itself. Cincinnati's Oktoberfest Zinzinnati is privately run, with government limited to issuing a temporary liquor permit that by law cannot benefit a private party. Indonesia regulates alcohol under presidential regulation, and in 2021 President Joko Widodo revoked the annex opening industry investment — this kind of festival has no institutional place there at all. Among the four, only Brazil has a government organ itself directly organizing and registered as such.",
+        "ja": "答えはブラジルである。ブルメナウのオクトーバーフェストの会場ヴィラ・ジェルマニカ公園は、市の公式サイトの「政府の機関」一覧に他の局と並んで掲載されており、祭りを運営する主体が市の機関そのものである。二〇二六年は第四十一回、十月七日から二十五日までの十九日間で、市の観光・レジャー局はこれを「ミュンヘンに次ぐ世界第二の規模」と説明する。対して中国の青島国際ビール祭りも市政府主催だが、開催は七月から八月で、起点は一九〇三年にドイツとイギリスの商人が建てた醸造所であり、市が主催する催しであって機関自体が会場というわけではない。アメリカのシンシナティのオクトーバーフェストは民間主催で、行政は期限付きの酒類販売許可を出すだけ、私人の利益のためには発行できないと明記されている。インドネシアは大統領規則で酒類を管理し、二〇二一年にジョコ・ウィドド大統領が産業投資を開放する附属文書を撤回しており、この種の祭りは制度上そもそも存在しない。四か国のうち、政府機関自身が直接主催し登記されているのはブラジルだけである。",
+        "zh-CN": "答案是巴西。布卢梅瑙十月啤酒节的主场馆日耳曼村园区本身列在市政府网站的“政府机关”页上，与各局并列，办节单位就是市政机关本身。二〇二六年是第四十一届，十月七日到二十五日，共十九天，市旅游与休闲局称它是仅次于慕尼黑的世界第二大同名节庆。相比之下，中国青岛国际啤酒节虽也由市政府主办，但办在七月到八月，源头是一九〇三年德国与英国商人建的啤酒厂，性质是市府主办的活动，而不是机关本身即场馆；美国辛辛那提的啤酒节由民间主办，政府只核发临时售酒许可，且明文不得发给营利者；印度尼西亚受总统条例管制酒类，二〇二一年总统佐科威撤销了开放酒类产业投资的附件，这种节庆在制度上根本不存在。四者相比，只有巴西是政府机关本身直接主办并登记在案。",
+        "hi": "उत्तर ब्राज़ील है। ब्लूमेनाउ के ऑक्टोबरफ़ेस्ट का मुख्य स्थल पार्क विला जर्मानिका नगर सरकार की वेबसाइट पर \"सरकार के अंग\" वाली सूची में विभागों के साथ दर्ज है — यानी उत्सव चलाने वाली इकाई स्वयं नगर प्रशासन की इकाई है। 2026 का इकतालीसवाँ संस्करण 7 से 25 अक्तूबर तक, उन्नीस दिन चला, और नगर के पर्यटन विभाग ने इसे म्यूनिख के बाद विश्व का दूसरा सबसे बड़ा संस्करण बताया। इसके विपरीत, चीन का चिंगताओ अंतरराष्ट्रीय बीयर उत्सव भी नगर सरकार आयोजित करती है, पर वह जुलाई-अगस्त में होता है और 1903 में जर्मन-ब्रिटिश व्यापारियों की भट्टी से जुड़ा है — यह सरकार द्वारा आयोजित आयोजन है, न कि स्वयं सरकारी अंग जो स्थल हो। अमेरिका की सिनसिनाटी फ़ेस्टिवल निजी है, सरकार केवल अस्थायी अनुज्ञप्ति देती है जो निजी लाभ के लिए जारी नहीं हो सकती। इंडोनेशिया में शराब राष्ट्रपति विनियम से नियंत्रित है, और 2021 में राष्ट्रपति जोको विडोडो ने उद्योग निवेश खोलने वाला अनुलग्नक वापस लिया — यहाँ ऐसे आयोजन की संस्थागत जगह ही नहीं है। चारों में से केवल ब्राज़ील में सरकारी अंग स्वयं सीधे आयोजक के रूप में दर्ज है।",
+        "id": "Jawabannya adalah Brasil. Lokasi utama Oktoberfest Blumenau, Parque Vila Germânica, tercantum di situs resmi kota pada daftar \"organ pemerintah\", sejajar dengan dinas-dinas lain — badan yang menggelar festival adalah badan pemerintah kota itu sendiri. Edisi ke-41 pada 2026 berlangsung 7–25 Oktober, sembilan belas hari, dan Dinas Pariwisata kota menyebutnya versi kedua terbesar di dunia setelah Munich. Sebaliknya, Festival Bir Internasional Qingdao di Tiongkok juga digelar pemerintah kota, tetapi jatuh pada Juli–Agustus dan berakar pada pabrik bir yang didirikan pedagang Jerman-Inggris pada 1903 — ini acara yang diselenggarakan pemerintah, bukan organ pemerintah yang menjadi lokasinya sendiri. Festival Cincinnati di AS dijalankan swasta, pemerintah hanya menerbitkan izin sementara yang tidak boleh untuk keuntungan pribadi. Indonesia mengendalikan alkohol lewat peraturan presiden, dan pada 2021 Presiden Joko Widodo mencabut lampiran yang membuka investasi industri — acara semacam ini tidak punya tempat kelembagaan sama sekali di sana. Dari keempatnya, hanya Brasil yang organ pemerintahnya sendiri langsung menjadi penyelenggara dan terdaftar sebagai demikian.",
+        "pt-BR": "A resposta é o Brasil. O Parque Vila Germânica, sede da Oktoberfest de Blumenau, aparece no próprio site da prefeitura na lista de \"órgãos do governo\", ao lado das secretarias — quem realiza a festa é a própria administração municipal. A 41ª edição, em 2026, foi de 7 a 25 de outubro, dezenove dias, e a Secretaria de Turismo e Lazer a descreve como a segunda maior versão do mundo, atrás apenas de Munique. Já o Festival Internacional da Cerveja de Qingdao, na China, também é promovido pela prefeitura, mas ocorre entre julho e agosto e nasce de uma cervejaria erguida por comerciantes alemães e ingleses em 1903 — é um evento promovido pelo governo, não um órgão público que é ele mesmo a sede. Em Cincinnati, nos EUA, a festa é privada e o poder público só emite uma licença temporária que não pode beneficiar um particular. Na Indonésia, o álcool é controlado por regulamento presidencial, e em 2021 o presidente Joko Widodo revogou o anexo que abria investimento no setor — esse tipo de evento simplesmente não tem lugar institucional ali. Dos quatro, só o Brasil tem um órgão de governo atuando diretamente como organizador registrado."
+      }
+    },
+    {
+      "id": "q-20270416-entrance-exam-poll",
+      "date": "2027-04-16",
+      "kind": "poll",
+      "topic": "entrance-exams",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "如果只能靠一種方式決定能不能上大學,你會希望是哪一種?",
+        "en": "If only one method could decide whether you get into university, which would you want it to be?",
+        "ja": "大学に入れるかどうかをたった一つの方法だけで決めるとしたら、どれがいい?",
+        "zh-CN": "如果只能靠一种方式决定能不能上大学,你会希望是哪一种?",
+        "hi": "अगर सिर्फ़ एक तरीक़े से तय होना हो कि आपको विश्वविद्यालय में दाख़िला मिलेगा या नहीं, तो आप कौन-सा चाहेंगे?",
+        "id": "Kalau hanya satu cara yang menentukan kamu diterima kuliah atau tidak, kamu ingin cara yang mana?",
+        "pt-BR": "Se só um método pudesse decidir se você entra na universidade, qual você preferiria?"
+      },
+      "options": [
+        {
+          "id": "single-exam-rank",
+          "emoji": "📝",
+          "label": {
+            "zh-TW": "只看單一考試分數高低排名",
+            "en": "Rank purely by one exam score",
+            "ja": "たった一回の試験の点数だけで順位を決める",
+            "zh-CN": "只看单一考试分数高低排名",
+            "hi": "सिर्फ़ एक परीक्षा के अंकों से रैंकिंग",
+            "id": "Diurutkan murni dari nilai satu ujian",
+            "pt-BR": "Classificar só pela nota de uma prova"
+          }
+        },
+        {
+          "id": "school-record-rank",
+          "emoji": "🏫",
+          "label": {
+            "zh-TW": "只看在校成績排名,不用再考試",
+            "en": "Rank by in-school grades alone, no exam needed",
+            "ja": "在校成績の順位だけで決まり、試験は受けなくていい",
+            "zh-CN": "只看在校成绩排名,不用再考试",
+            "hi": "सिर्फ़ स्कूल के अंकों की रैंकिंग से, अलग परीक्षा नहीं",
+            "id": "Hanya berdasarkan peringkat nilai rapor, tanpa ujian lagi",
+            "pt-BR": "Só pela posição no histórico escolar, sem prova"
+          }
+        },
+        {
+          "id": "holistic-review",
+          "emoji": "🗂️",
+          "label": {
+            "zh-TW": "綜合審查:成績、面試、自傳一起看",
+            "en": "Holistic review: grades, interview and essays together",
+            "ja": "総合評価:成績・面接・志望動機書をまとめて見る",
+            "zh-CN": "综合评估:成绩、面试、自述一起看",
+            "hi": "समग्र समीक्षा: अंक, इंटरव्यू और निबंध सब साथ देखे जाएँ",
+            "id": "Penilaian menyeluruh: nilai, wawancara, dan esai sekaligus",
+            "pt-BR": "Avaliação holística: notas, entrevista e redação juntos"
+          }
+        },
+        {
+          "id": "campus-own-exam",
+          "emoji": "🏛️",
+          "label": {
+            "zh-TW": "各校自辦考試,標準自己定",
+            "en": "Each university sets and runs its own entrance exam",
+            "ja": "各大学が独自に試験を実施し、基準も決める",
+            "zh-CN": "各校自办考试,标准自己定",
+            "hi": "हर विश्वविद्यालय अपनी परीक्षा ख़ुद तय करे और ख़ुद ले",
+            "id": "Tiap universitas membuat dan menjalankan ujiannya sendiri",
+            "pt-BR": "Cada universidade cria e aplica sua própria prova"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270416-entrance-exam-guess",
+      "date": "2027-04-16",
+      "kind": "guess",
+      "topic": "entrance-exams",
+      "asker": null,
+      "target": null,
+      "answer": "hi",
+      "text": {
+        "zh-TW": "哪個國家已有約48所中央大學不再採計12年級在校成績,改用同一場每年一次的測驗分發新生?",
+        "en": "Which country has about 48 central universities that no longer count Class 12 school grades, admitting students instead by one nationwide test held once a year?",
+        "ja": "約48の中央大学が12年生の在校成績をもう使わず、年1回の全国共通試験の結果だけで学生を受け入れている国はどこ?",
+        "zh-CN": "哪个国家已有约48所中央大学不再采计12年级在校成绩,改用同一场每年一次的测验分发新生?",
+        "hi": "किस देश में क़रीब 48 केंद्रीय विश्वविद्यालय अब 12वीं के स्कूली अंक नहीं गिनते, बल्कि साल में एक बार होने वाली एक ही परीक्षा से दाख़िला देते हैं?",
+        "id": "Negara mana yang sudah punya sekitar 48 universitas pusat yang tidak lagi menghitung nilai rapor kelas 12, dan menerima mahasiswa lewat satu tes nasional yang diadakan sekali setahun?",
+        "pt-BR": "Em qual país cerca de 48 universidades centrais já não contam mais a nota do 12º ano e admitem alunos só por uma prova nacional aplicada uma vez ao ano?"
+      },
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是印度。印度的一般大學本科入學靠CUET UG,由國家考試局(NTA)每年一次(5至6月)統一舉辦,目前已有約48所中央大學(如德里大學)改採CUET成績分發新生,高三(12年級)在校成績不再列入最終錄取計算,工程類JEE Main與醫學類NEET UG則是另外兩張互不相通的考卷。相較之下,印尼國立大學的SNBP管道正好相反,靠的是高中在校成績單,不必應試,只是配額至少20%;美國聯邦教育部無權管招生,SAT/ACT是民間機構辦的測驗,多數學校用整體審查,在校成績、面試、申請文章都算數,2021年約25%的四年制大學甚至全額錄取;日本的大學入學共通測試雖然也是全國統一、一年一次,但國公立大學還會再加一關各校自辦的二次試験,不是單靠一場測驗決定。",
+        "en": "The answer is India. Undergraduate admission to general universities runs on CUET UG, held once a year (May–June) by the National Testing Agency; around 48 central universities, including the University of Delhi, now admit students by CUET score alone, with Class 12 school marks no longer counted in the final decision — engineering (JEE Main) and medicine (NEET UG) are separate, non-overlapping exams. By contrast, Indonesia's SNBP track relies on high-school report-card grades with no test at all, though it only guarantees at least 20% of seats. The US federal Department of Education has no authority over admissions, and the SAT/ACT are private tests most schools weigh alongside GPA, essays and interviews under holistic review — about 25% of four-year colleges even had open admissions in 2021. Japan's Common Test is also national and annual, but national and public universities still add a second, university-run exam on top, so no single test alone decides.",
+        "ja": "答えはインドです。一般学部の入学はCUET UGによって決まり、国家試験機関(NTA)が毎年1回(5〜6月)実施し、デリー大学を含む約48の中央大学がすでにCUETの成績のみで入学者を決め、12年生の在校成績は最終的な合否判定に含まれません。工学系のJEE Mainと医学系のNEET UGは互いに重ならない別の試験です。対照的に、インドネシアのSNBPルートは高校の在学成績表に頼り試験は課されませんが、保証されるのは定員の少なくとも20%だけです。アメリカの連邦教育省は入学者選抜に権限を持たず、SAT・ACTは民間の試験で、多くの大学はGPAやエッセイ、面接と合わせて総合的に評価するホリスティック・アドミッションを採用し、2021年秋には4年制大学の約25%がオープン・アドミッションでした。日本の共通テストも全国統一・年1回ですが、国公立大学はその上にさらに各大学独自の二次試験を課すため、一つの試験だけで決まるわけではありません。",
+        "zh-CN": "答案是印度。印度的一般大学本科入学靠CUET UG,由国家考试局(NTA)每年一次(5至6月)统一举办,目前已有约48所中央大学(如德里大学)改采CUET成绩分发新生,12年级在校成绩不再列入最终录取计算,工程类JEE Main与医学类NEET UG是另外两张互不相通的考卷。相较之下,印尼国立大学的SNBP管道正好相反,靠的是高中在校成绩单,不必应试,只是配额至少20%;美国联邦教育部无权管招生,SAT/ACT是民间机构办的测验,多数学校用整体评估,在校成绩、面试、申请文书都算数,2021年约25%的四年制大学甚至全额录取;日本的大学入学共通考试虽然也是全国统一、一年一次,但国公立大学还会再加一关各校自办的二次考试,不是单靠一场测验决定。",
+        "hi": "जवाब है भारत। सामान्य स्नातक कोर्सों में प्रवेश CUET UG से तय होता है, जिसे नेशनल टेस्टिंग एजेंसी (NTA) साल में एक बार (मई-जून) आयोजित करती है; दिल्ली विश्वविद्यालय सहित लगभग 48 केंद्रीय विश्वविद्यालय अब सिर्फ़ CUET स्कोर से दाखिला देते हैं, और 12वीं के अंक अंतिम फ़ैसले में नहीं गिने जाते — इंजीनियरिंग का JEE Main और मेडिसिन का NEET UG अलग, बिना ओवरलैप वाली परीक्षाएँ हैं। इसके उलट, इंडोनेशिया का SNBP रास्ता स्कूल रिपोर्ट-कार्ड पर टिका है, कोई परीक्षा नहीं होती, पर सिर्फ़ कम से कम 20% सीटें ही तय होती हैं। अमेरिका के संघीय शिक्षा विभाग का प्रवेश पर कोई अधिकार नहीं, SAT/ACT निजी परीक्षाएँ हैं जिन्हें ज़्यादातर कॉलेज GPA, निबंध व इंटरव्यू के साथ समग्र समीक्षा में तौलते हैं — 2021 में लगभग 25% चार-वर्षीय कॉलेजों में ओपन एडमिशन था। जापान का कॉमन टेस्ट भी राष्ट्रीय व सालाना है, पर राष्ट्रीय-सार्वजनिक विश्वविद्यालय उसके ऊपर अपनी दूसरे चरण की परीक्षा भी जोड़ते हैं, यानी सिर्फ़ एक परीक्षा से फ़ैसला नहीं होता।",
+        "id": "Jawabannya India. Penerimaan program sarjana umum ditentukan oleh CUET UG, diadakan sekali setahun (Mei–Juni) oleh National Testing Agency; sekitar 48 universitas pusat, termasuk University of Delhi, kini menerima mahasiswa hanya berdasarkan nilai CUET, dan nilai rapor kelas 12 tidak lagi dihitung dalam keputusan akhir — JEE Main (teknik) dan NEET UG (kedokteran) adalah ujian terpisah yang tidak tumpang tindih. Sebaliknya, jalur SNBP Indonesia justru mengandalkan nilai rapor SMA tanpa tes sama sekali, tetapi hanya menjamin kuota minimal 20%. Departemen Pendidikan federal AS tidak berwenang atas penerimaan, dan SAT/ACT adalah tes swasta yang ditimbang bersama IPK, esai, dan wawancara lewat penerimaan holistik — sekitar 25% kampus empat tahun bahkan menerapkan open admission pada 2021. Tes Bersama Jepang juga nasional dan tahunan, tapi universitas negeri dan publik tetap menambahkan ujian tahap kedua milik masing-masing kampus, jadi bukan satu tes saja yang menentukan.",
+        "pt-BR": "A resposta é Índia. O ingresso na graduação geral é decidido pelo CUET UG, aplicado uma vez por ano (maio–junho) pela National Testing Agency; cerca de 48 universidades centrais, incluindo a Universidade de Delhi, já admitem alunos só pela nota do CUET, e a nota do 12º ano não entra mais na decisão final — o JEE Main (engenharia) e o NEET UG (medicina) são provas separadas que não se sobrepõem. Em contraste, a via SNBP da Indonésia depende do boletim escolar, sem prova alguma, mas garante apenas 20% das vagas no mínimo. O Departamento de Educação federal dos EUA não tem autoridade sobre admissões, e o SAT/ACT são testes privados que a maioria das faculdades pondera junto com o histórico escolar, redações e entrevistas na admissão holística — cerca de 25% das faculdades de quatro anos tinham admissão aberta em 2021. O Teste Comum do Japão também é nacional e anual, mas as universidades nacionais e públicas ainda somam sua própria prova de segunda etapa, então não é uma única prova que decide."
+      }
+    },
+    {
+      "id": "q-20270417-halloween-poll",
+      "date": "2027-04-17",
+      "kind": "poll",
+      "topic": "halloween",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "十月三十一日這天,你通常怎麼過?",
+        "en": "What do you usually do on October 31st?",
+        "ja": "10月31日、あなたはふだんどう過ごしますか?",
+        "zh-CN": "10月31日这一天,你通常怎么过?",
+        "hi": "31 अक्टूबर को आप आमतौर पर क्या करते हैं?",
+        "id": "Biasanya kamu ngapain di 31 Oktober?",
+        "pt-BR": "O que você costuma fazer no dia 31 de outubro?"
+      },
+      "options": [
+        {
+          "id": "costume-fun",
+          "emoji": "🎃",
+          "label": {
+            "zh-TW": "變裝、要糖或參加派對",
+            "en": "Dress up, trick-or-treat, or hit a party",
+            "ja": "仮装してお菓子をもらったりパーティーに行く",
+            "zh-CN": "变装、要糖或参加派对",
+            "hi": "पोशाक पहनना, ट्रीट लेना या पार्टी में जाना",
+            "id": "Kostuman, minta permen, atau ke pesta",
+            "pt-BR": "Fico de fantasia, peço doces ou vou a uma festa"
+          }
+        },
+        {
+          "id": "just-another-day",
+          "emoji": "📅",
+          "label": {
+            "zh-TW": "跟平常一樣上班上課,沒特別過",
+            "en": "Just a normal work or school day",
+            "ja": "いつも通り仕事や学校で、特に何もしない",
+            "zh-CN": "跟平常一样上班上课,没什么特别的",
+            "hi": "हमेशा की तरह काम या स्कूल, कुछ ख़ास नहीं",
+            "id": "Kerja atau sekolah seperti biasa, gak ada yang spesial",
+            "pt-BR": "Trabalho ou aula normal, sem nada especial"
+          }
+        },
+        {
+          "id": "local-event",
+          "emoji": "🏬",
+          "label": {
+            "zh-TW": "去逛商圈或購物中心辦的萬聖節活動",
+            "en": "Check out a mall or shopping-district Halloween event",
+            "ja": "商業施設や街のハロウィンイベントに行く",
+            "zh-CN": "去逛商圈或购物中心办的万圣节活动",
+            "hi": "मॉल या बाज़ार के हैलोवीन आयोजन में जाना",
+            "id": "Datang ke acara Halloween di mal atau area belanja",
+            "pt-BR": "Vou a um evento de Halloween em shopping ou centro comercial"
+          }
+        },
+        {
+          "id": "skip-avoid",
+          "emoji": "🙅",
+          "label": {
+            "zh-TW": "刻意避開人潮或直接不參與",
+            "en": "Deliberately avoid the crowds or skip it entirely",
+            "ja": "人混みを避けたり、そもそも関わらない",
+            "zh-CN": "刻意避开人群或干脆不参与",
+            "hi": "जानबूझकर भीड़ से बचना या बिल्कुल शामिल न होना",
+            "id": "Sengaja menghindari keramaian atau sama sekali gak ikut",
+            "pt-BR": "Evito as aglomerações de propósito ou simplesmente não participo"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270417-halloween-guess",
+      "date": "2027-04-17",
+      "kind": "guess",
+      "topic": "halloween",
+      "asker": null,
+      "target": null,
+      "answer": "pt-BR",
+      "text": {
+        "zh-TW": "哪一個國家沒有讓萬聖節放假,卻用法律在同一天另外立了一個節日?",
+        "en": "Which country never gave Halloween a day off, yet wrote a rival festival into law on the very same date?",
+        "ja": "ハロウィンを祝日にはしなかったのに、同じ日に別の記念日を法律で立てた国はどこか?",
+        "zh-CN": "哪个国家没有让万圣节放假,却用法律在同一天另外立了一个节日?",
+        "hi": "किस देश ने हैलोवीन को कभी छुट्टी नहीं दी, फिर भी उसी तारीख़ पर क़ानून से एक प्रतिद्वंद्वी पर्व खड़ा कर दिया?",
+        "id": "Negara mana yang tidak pernah meliburkan Halloween, tetapi mendirikan hari raya tandingan lewat undang-undang pada tanggal yang sama?",
+        "pt-BR": "Qual país nunca deu folga ao Halloween, mas instituiu por lei uma festa rival na mesma data?"
+      },
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
           }
         },
         {
@@ -37523,6 +37999,147 @@
           }
         },
         {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是巴西。巴西聯邦行事曆從沒把萬聖節列為假日——管理與公共服務創新部每年發布的部令裡,十月只有顯現聖母(國定假日)與聯邦公務人員日(彈性放假),十月三十一日是正常上班日。但同一天,聖保羅州卻用第11.669號法律設立了薩西日,法案理由書明白寫著選這天是因為那是美國過萬聖節的日子,目的就是對抗它。相較之下,日本沒有全國性規定管萬聖節,只有渋谷區與新宿區各自立條例限制街頭行為,渋谷區長甚至公開請人別來;台灣的萬聖節完全不在《紀念日及節日實施條例》裡,由桃園、台南等市政府各自辦商圈活動;中國的放假辦法裡也找不到萬聖節的位置,它只活在商場與主題樂園的季節檔期。這些國家都沒放假,但只有巴西立法造了一個對手節日。",
+        "en": "The answer is Brazil. Brazil's federal calendar never gives Halloween a day off — the Ministry of Management and Innovation's annual order lists only Our Lady of Aparecida and federal Public Servant's Day in October, and 31 October is an ordinary workday. Yet on that same date, São Paulo state law (Lei nº 11.669) created Dia do Saci, with the bill's own justification stating the date was chosen deliberately because it's when Halloween is celebrated in the US, and the goal was to counter it. By contrast, Japan has no national rule at all — only Shibuya and Shinjuku wards passing their own ordinances restricting street behavior, with Shibuya's mayor publicly asking people to stay away. Taiwan's Halloween appears nowhere in its Act on Commemorative Days and Festivals, and lives instead in municipal shopping-district events in Taoyuan and Tainan. China's holiday measures never mention Halloween either — it exists only in malls and theme parks. All four skip the holiday, but only Brazil legislated a rival festival onto the same day.",
+        "ja": "答えはブラジル。連邦の祝日制度は万聖節を一度も休日にしておらず、管理・公共サービス革新省の年次省令には10月はアパレシーダの聖母(国民の祝日)と連邦公務員の日(裁量休日)しか載らず、31日は通常の勤務日である。ところが同じ日に、サンパウロ州法第11.669号がサシの日を制定し、法案の趣旨説明は「アメリカでハロウィンが祝われる日だから」意図的にこの日を選んだと明記し、対抗する狙いを隠していない。対照的に、日本には国の規定が一切なく、渋谷区と新宿区がそれぞれ条例で街頭行動を制限するのみで、渋谷区長は「来ないでほしい」と公表した。台湾のハロウィンは「紀念日及節日実施条例」のどこにもなく、桃園市や台南市が商店街イベントとして開くだけ。中国の放假弁法にも万聖節は一切登場せず、モールやテーマパークの季節企画として存在するのみだ。四カ国とも休日にはしていないが、対抗する記念日を法律で作ったのはブラジルだけである。",
+        "zh-CN": "答案是巴西。巴西联邦日历从未把万圣节列为假日——管理与公共服务创新部每年发布的部令里,十月只有显现圣母(国定假日)和联邦公务员日(弹性休假),10月31日是正常工作日。但同一天,圣保罗州却用第11669号法律设立了萨西日,法案说明里明确写着选这一天是因为那是美国过万圣节的日子,目的就是对抗它。相比之下,日本没有全国性规定,只有涩谷区和新宿区各自立条例限制街头行为,涩谷区长甚至公开请人别来;台湾的万圣节完全不在《纪念日及节日实施条例》里,由桃园、台南等市政府各办商圈活动;中国的放假办法里也找不到万圣节的位置,它只活在商场和主题乐园的季节档期里。四个国家都没放假,但只有巴西立法造了一个对手节日。",
+        "hi": "उत्तर है ब्राज़ील। ब्राज़ील के संघीय कैलेंडर ने हैलोवीन को कभी छुट्टी नहीं दी — मंत्रालय के वार्षिक आदेश में अक्टूबर में केवल अपारेसीदा की देवी माता (राष्ट्रीय अवकाश) और संघीय लोक सेवक दिवस (विवेकाधीन अवकाश) हैं, 31 तारीख़ सामान्य कार्यदिवस है। पर उसी तारीख़ पर साओ पाउलो राज्य के क़ानून संख्या 11.669 ने साकी दिवस बनाया, और विधेयक का औचित्य साफ़ कहता है कि तारीख़ जान-बूझकर चुनी गई क्योंकि यही दिन अमेरिका में हैलोवीन मनाया जाता है — मक़सद उसका मुक़ाबला करना था। इसके विपरीत, जापान में कोई राष्ट्रीय नियम नहीं, केवल शिबुया और शिंजुकु वार्डों के अपने अध्यादेश हैं, और शिबुया के मेयर ने खुले तौर पर लोगों से न आने को कहा। ताइवान का हैलोवीन स्मृति-दिवस एवं पर्व अधिनियम में कहीं नहीं, ताओयुआन और तैनान जैसे नगर इसे व्यापार-क्षेत्र आयोजन के रूप में करते हैं। चीन के अवकाश उपायों में भी हैलोवीन का कोई ज़िक्र नहीं, यह केवल मॉल और थीम पार्क में जीता है। चारों देश छुट्टी नहीं देते, पर क़ानून से प्रतिद्वंद्वी पर्व सिर्फ़ ब्राज़ील ने बनाया।",
+        "id": "Jawabannya Brasil. Kalender federal Brasil tidak pernah meliburkan Halloween — keputusan tahunan kementerian hanya mencantumkan Bunda Aparecida (libur nasional) dan Hari Aparatur Sipil federal (libur kebijakan) di bulan Oktober, dan 31 Oktober adalah hari kerja biasa. Tapi pada tanggal yang sama, undang-undang negara bagian São Paulo (Lei nº 11.669) mendirikan Dia do Saci, dan naskah justifikasinya menyebut tanggal itu dipilih dengan sengaja karena itulah hari Halloween dirayakan di AS — tujuannya melawannya. Sebaliknya, Jepang tidak punya aturan nasional sama sekali, hanya wilayah Shibuya dan Shinjuku yang membuat perda sendiri membatasi perilaku di jalan, dan wali kota Shibuya secara terbuka meminta orang tidak datang. Halloween Taiwan sama sekali tidak ada dalam Undang-Undang Hari Peringatan dan Hari Raya, dan hanya hidup sebagai acara kawasan perbelanjaan di Taoyuan dan Tainan. Ketentuan libur Tiongkok juga tidak pernah menyebut Halloween, ia cuma ada di mal dan taman hiburan. Keempat negara sama-sama tidak meliburkannya, tapi hanya Brasil yang menciptakan hari raya tandingan lewat undang-undang.",
+        "pt-BR": "A resposta é o Brasil. O calendário federal brasileiro nunca deu folga ao Halloween — a portaria anual do ministério lista em outubro apenas Nossa Senhora Aparecida (feriado nacional) e o Dia do Servidor Público federal (ponto facultativo), e o dia 31 é expediente normal. Mas na mesma data, a lei estadual de São Paulo (Lei nº 11.669) instituiu o Dia do Saci, e a justificação do projeto diz abertamente que a data foi escolhida de propósito porque é quando se comemora o Halloween nos EUA — o objetivo era fazer frente a ele. Já o Japão não tem norma nacional alguma, apenas os distritos de Shibuya e Shinjuku com decretos próprios restringindo comportamento nas ruas, e o prefeito de Shibuya pediu publicamente que as pessoas não fossem à área. O Halloween em Taiwan não aparece em nenhum ponto da Lei de Dias Comemorativos e Feriados, existindo só como evento de área comercial em Taoyuan e Tainan. As medidas de feriados da China também nunca mencionam o Halloween, que vive apenas em shoppings e parques temáticos. Os quatro países não dão folga, mas só o Brasil legislou uma festa rival na mesma data."
+      }
+    },
+    {
+      "id": "q-20270418-copay-hesitate",
+      "date": "2027-04-18",
+      "kind": "poll",
+      "topic": "health-coverage",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "看病要付的部分負擔金額,會不會影響你決定要不要去看醫生?",
+        "en": "Does the co-pay amount affect whether you decide to see a doctor?",
+        "ja": "受診時の自己負担額は、病院に行くかどうかの判断に影響しますか?",
+        "zh-CN": "看病要付的自付费用,会不会影响你要不要去看医生的决定?",
+        "hi": "डॉक्टर के पास जाने के फ़ैसले पर सह-भुगतान की रक़म कितना असर डालती है?",
+        "id": "Apakah besarnya biaya yang harus kamu bayar sendiri memengaruhi keputusanmu untuk pergi ke dokter?",
+        "pt-BR": "O valor da coparticipação influencia sua decisão de ir ou não ao médico?"
+      },
+      "options": [
+        {
+          "id": "always-go",
+          "emoji": "🏥",
+          "label": {
+            "zh-TW": "不管金額多少都會去看",
+            "en": "I go regardless of the cost",
+            "ja": "金額に関係なく受診する",
+            "zh-CN": "不管费用多少都会去看",
+            "hi": "रक़म चाहे जो हो, मैं जाता/जाती हूँ",
+            "id": "Saya tetap pergi berapa pun biayanya",
+            "pt-BR": "Vou ao médico independente do valor"
+          }
+        },
+        {
+          "id": "sometimes-hesitate",
+          "emoji": "🤔",
+          "label": {
+            "zh-TW": "偶爾會猶豫,但通常還是會去",
+            "en": "I hesitate sometimes but usually still go",
+            "ja": "たまに迷うが、たいてい受診する",
+            "zh-CN": "偶尔会犹豫,但通常还是会去",
+            "hi": "कभी-कभी झिझकता/झिझकती हूँ, पर आमतौर पर चला/चली जाता/जाती हूँ",
+            "id": "Kadang ragu, tapi biasanya tetap pergi",
+            "pt-BR": "Às vezes hesito, mas geralmente vou mesmo assim"
+          }
+        },
+        {
+          "id": "often-delay",
+          "emoji": "😖",
+          "label": {
+            "zh-TW": "常常因為費用而拖延就醫",
+            "en": "I often put off seeing a doctor because of the cost",
+            "ja": "費用のせいで受診を先延ばしにすることが多い",
+            "zh-CN": "常常因为费用而拖着不去看病",
+            "hi": "अक्सर लागत की वजह से डॉक्टर के पास जाना टाल देता/देती हूँ",
+            "id": "Sering menunda ke dokter karena biayanya",
+            "pt-BR": "Costumo adiar a ida ao médico por causa do custo"
+          }
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "沒特別想過,也不清楚要付多少",
+            "en": "I've never really thought about it or don't know the cost",
+            "ja": "特に考えたことがなく、金額もよく知らない",
+            "zh-CN": "没特别想过,也不清楚要付多少",
+            "hi": "कभी सोचा नहीं, और लागत का पता भी नहीं",
+            "id": "Belum pernah memikirkannya, dan tidak tahu biayanya",
+            "pt-BR": "Nunca pensei muito nisso e nem sei quanto custa"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270418-ward-class-reform",
+      "date": "2027-04-18",
+      "kind": "guess",
+      "topic": "health-coverage",
+      "asker": null,
+      "target": null,
+      "answer": "id",
+      "text": {
+        "zh-TW": "哪一國正在把住院病房從一到三級的分級,整併成單一標準病房級(KRIS)?",
+        "en": "Which country is merging its Class 1–3 inpatient room tiers into a single standard room class (KRIS)?",
+        "ja": "どの国が、入院病室のクラス1〜3の区分を単一の標準病室クラス(KRIS)へ統合しつつあるか?",
+        "zh-CN": "哪个国家正在把住院病房从一到三级,整并成单一标准病房级(KRIS)?",
+        "hi": "कौन-सा देश अपने क्लास 1–3 भर्ती कमरा स्तरों को एक ही मानक कमरा श्रेणी (KRIS) में बदल रहा है?",
+        "id": "Negara mana yang sedang menggabungkan kelas rawat inap 1–3 menjadi satu kelas kamar standar (KRIS)?",
+        "pt-BR": "Qual país está unificando seus níveis de internação de Classe 1 a 3 em uma única classe de quarto padrão (KRIS)?"
+      },
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印度尼西亚",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國大陸",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国大陆",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
           "id": "pt-BR",
           "emoji": "🇧🇷",
           "label": {
@@ -37533,6 +38150,160 @@
             "hi": "ब्राज़ील",
             "id": "Brasil",
             "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是印尼。印尼JKN依《2004年SJSN法》第四條g款明文規定「參保具強制性」,由BPJS Kesehatan執行,外國人只要在印尼工作滿六個月且已繳費即納入,門檻與台灣的規定幾乎相同。印尼最值得一提的地方,是它目前仍在進行中的病房等級改革——原本一至三級的住院分級制度,正過渡到單一標準病房級(KRIS),這項改革在其他六國的資料裡都找不到對應做法。相較之下,中國大陸雖把「全民醫保」覆蓋率做到95%,職工醫保與居民醫保的住院報銷比例卻仍相差18個百分點(84.1%對66.0%);巴西SUS以1988年憲法第一九六條為根基,對境內任何人一律免費,並不涉及病房分級的問題;日本自1961年達成國民皆保險後,採三層保險架構,病人自付比例依年齡從1成到3成不等。這些國家各有制度特色,但只有印尼明確處在「病房等級整併」這個仍在推進中的改革階段。",
+        "en": "The answer is Indonesia. Indonesia's JKN is mandatory by explicit statute — the 2004 SJSN Law, Article 4(g), states \"participation is compulsory\" — and is run by BPJS Kesehatan; a foreign worker becomes covered after six months on the job and paying premiums, almost the same threshold Taiwan uses. What sets Indonesia apart is an unfinished reform still underway: the old Class 1–3 inpatient tiers are being phased into a single standard room class (KRIS), something none of the other six countries' facts mention. By comparison, China reports 95% nominal \"universal\" coverage, yet its employee and resident schemes reimburse hospital stays 18 points apart (84.1% versus 66.0%); Brazil's SUS, grounded in Article 196 of its 1988 Constitution, is free to anyone within its borders and involves no room-class tiering; and Japan, having reached universal coverage in 1961, runs a three-tier insurance system where patient co-payments scale by age from 10% to 30%. Indonesia alone is caught mid-reform on hospital room classification.",
+        "ja": "答えはインドネシアである。インドネシアのJKNは2004年SJSN法第4条g項で「加入は義務である」と明文化され、BPJS Kesehatanが運営する。外国人は6か月働いて保険料を納めれば加入対象になり、これは台湾の基準とほぼ同じである。インドネシアが際立つのは、現在進行中の病室クラス改革だ——従来のクラス1〜3の入院区分が単一の標準病室クラス(KRIS)へ移行しつつあり、この改革は他の六か国の情報には見られない。比較すると、中国大陸は「国民皆保険」の名目カバー率を95%まで押し上げているが、職工医保と居民医保の入院給付率には18ポイントの差(84.1%対66.0%)がある。ブラジルのSUSは1988年憲法第196条を根拠に国内の誰にでも無料で、病室クラスの区分とは無関係である。日本は1961年に国民皆保険を達成し、三層構造の制度のもとで患者負担割合は年齢により1割から3割まで変わる。病室クラスの統合という進行中の改革を抱えているのはインドネシアだけである。",
+        "zh-CN": "答案是印度尼西亚。印尼JKN依据《2004年第40号SJSN法》第四条g款明确规定「参保具强制性」,由BPJS Kesehatan负责执行,外国人只要在印尼工作满六个月并已缴纳保费即纳入参保范围,门槛与台湾的规定几乎一致。印尼最具辨识度的一点,是它目前仍在推进中的病房等级改革——原本一至三级的住院分级制度,正逐步过渡到单一标准病房级(KRIS),这项改革在其他六国的资料里都没有对应内容。相比之下,中国大陆虽然把「全民医保」的覆盖率做到95%,但职工医保与居民医保的住院报销比例仍相差18个百分点(84.1%对66.0%);巴西SUS以1988年宪法第一九六条为根基,对境内任何人一律免费,不涉及病房分级问题;日本自1961年实现「国民皆保险」后,采用三层保险架构,患者自付比例依年龄从1成到3成不等。可以说,只有印尼明确处于「病房等级整并」这一仍在进行中的改革阶段。",
+        "hi": "उत्तर इंडोनेशिया है। इंडोनेशिया की JKN 2004 के SJSN क़ानून की धारा 4(g) के तहत स्पष्ट रूप से अनिवार्य है — \"भागीदारी अनिवार्य है\" — और इसे BPJS Kesehatan चलाता है। कोई विदेशी कर्मचारी छह महीने काम करने और प्रीमियम चुकाने के बाद कवर हो जाता है, जो ताइवान की सीमा से लगभग मेल खाता है। इंडोनेशिया की सबसे अलग बात यह है कि वहाँ अभी एक अधूरा सुधार चल रहा है — पुरानी क्लास 1–3 भर्ती श्रेणियाँ एक ही मानक कमरा श्रेणी (KRIS) में बदली जा रही हैं, जो बाक़ी छह देशों के तथ्यों में कहीं नहीं मिलता। तुलना में, चीन 95% नाममात्र \"सार्वभौमिक\" कवरेज बताता है, लेकिन उसकी कर्मचारी और निवासी योजनाएँ अस्पताल-भर्ती की प्रतिपूर्ति 18 प्रतिशत-अंक अलग दरों पर करती हैं (84.1% बनाम 66.0%)। ब्राज़ील का SUS 1988 के संविधान की धारा 196 पर आधारित है और देश के भीतर किसी के लिए भी मुफ़्त है, इसमें कमरा-श्रेणी जैसा कोई मुद्दा नहीं। जापान ने 1961 में सार्वभौमिक कवरेज हासिल की और वहाँ तीन स्तरों की व्यवस्था में मरीज़ का सह-भुगतान उम्र के अनुसार 10% से 30% तक बदलता है। कमरा-श्रेणी के अधूरे सुधार से जूझ रहा देश सिर्फ़ इंडोनेशिया है।",
+        "id": "Jawabannya adalah Indonesia. JKN Indonesia bersifat wajib berdasarkan Pasal 4 huruf g UU SJSN 2004 — \"kepesertaan bersifat wajib\" — dan dijalankan oleh BPJS Kesehatan. Pekerja asing menjadi peserta setelah bekerja enam bulan dan membayar iuran, hampir sama dengan ambang yang dipakai Taiwan. Ciri paling khas Indonesia adalah reformasi yang belum tuntas: kelas rawat inap 1–3 yang lama sedang ditransisikan menjadi satu kelas kamar standar (KRIS), sesuatu yang tidak disebutkan dalam fakta enam negara lainnya. Sebagai perbandingan, Tiongkok melaporkan cakupan nominal \"universal\" 95%, tetapi skema pekerja dan penduduknya membayar penggantian rawat inap dengan selisih 18 poin (84,1% berbanding 66,0%). SUS Brasil berlandaskan Pasal 196 Konstitusi 1988 dan gratis bagi siapa pun di wilayahnya, tanpa urusan kelas kamar. Jepang mencapai cakupan universal pada 1961 dengan sistem tiga lapis, di mana iuran bersama pasien berjenjang menurut usia dari 10% hingga 30%. Hanya Indonesia yang sedang berada di tengah reformasi kelas kamar rawat inap ini.",
+        "pt-BR": "A resposta é Indonésia. O JKN indonésio é obrigatório por lei explícita — o Artigo 4(g) da Lei SJSN de 2004 afirma que \"a participação é obrigatória\" — e é administrado pela BPJS Kesehatan. Um trabalhador estrangeiro passa a ter cobertura após seis meses de trabalho e pagamento de prêmios, quase o mesmo limiar usado por Taiwan. O que mais distingue a Indonésia é uma reforma ainda inacabada: os antigos níveis de internação de Classe 1 a 3 estão sendo transformados em uma única classe de quarto padrão (KRIS), algo que não aparece nos fatos dos outros seis países. Em comparação, a China relata uma cobertura nominal \"universal\" de 95%, mas seus esquemas de trabalhador e de residente reembolsam internações com uma diferença de 18 pontos (84,1% contra 66,0%). O SUS brasileiro, baseado no Artigo 196 da Constituição de 1988, é gratuito para qualquer pessoa em território nacional e não envolve classes de quarto. O Japão alcançou a cobertura universal em 1961 com um sistema de três camadas, no qual a coparticipação do paciente varia por idade, de 10% a 30%. Só a Indonésia está no meio dessa reforma de classificação de quartos hospitalares."
+      }
+    },
+    {
+      "id": "q-20270419-religious-calendar-experience",
+      "date": "2027-04-19",
+      "kind": "poll",
+      "topic": "jewish-calendar-days",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "你所在的地方，學校或公司是否曾因宗教節日調整過考試、上班或上課時間？",
+        "en": "Where you live, has a school or workplace ever adjusted a test, work schedule or class because of a religious holiday?",
+        "ja": "あなたの住む場所で、学校や職場が宗教上の祝日を理由に試験や勤務、授業を調整したことはありますか。",
+        "zh-CN": "你所在的地方，学校或公司是否曾因宗教节日调整过考试、上班或上课时间？",
+        "hi": "आपके यहाँ, किसी धार्मिक पर्व के कारण स्कूल या दफ़्तर ने कभी परीक्षा, काम या कक्षा का समय बदला है?",
+        "id": "Di tempat Anda, pernahkah sekolah atau kantor mengubah jadwal ujian, kerja, atau kelas karena hari raya keagamaan?",
+        "pt-BR": "Onde você vive, alguma escola ou empresa já ajustou uma prova, o expediente ou uma aula por causa de um feriado religioso?"
+      },
+      "options": [
+        {
+          "id": "experienced-personally",
+          "emoji": "🙋",
+          "label": {
+            "zh-TW": "有，我自己就遇過",
+            "en": "Yes, it happened to me",
+            "ja": "ある、自分が経験した",
+            "zh-CN": "有，我自己遇到过",
+            "hi": "हाँ, मेरे साथ हुआ",
+            "id": "Ya, saya sendiri mengalaminya",
+            "pt-BR": "Sim, já aconteceu comigo"
+          }
+        },
+        {
+          "id": "heard-of-it",
+          "emoji": "👂",
+          "label": {
+            "zh-TW": "聽過類似的例子，但沒親身遇過",
+            "en": "I've heard of it, but not experienced it myself",
+            "ja": "聞いたことはあるが自分では経験していない",
+            "zh-CN": "听过类似的例子，但没亲身遇到过",
+            "hi": "सुना है, पर ख़ुद अनुभव नहीं किया",
+            "id": "Pernah dengar, tapi belum mengalaminya sendiri",
+            "pt-BR": "Já ouvi falar, mas nunca vivi isso"
+          }
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": {
+            "zh-TW": "從來沒有，也沒聽過",
+            "en": "Never happened, never heard of it either",
+            "ja": "ない、聞いたこともない",
+            "zh-CN": "从来没有，也没听过",
+            "hi": "कभी नहीं, सुना भी नहीं",
+            "id": "Tidak pernah, dan belum pernah dengar juga",
+            "pt-BR": "Nunca aconteceu, nem ouvi falar"
+          }
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": {
+            "zh-TW": "不確定，沒特別留意過",
+            "en": "Not sure, never paid attention",
+            "ja": "わからない、気にしたことがない",
+            "zh-CN": "不确定，没特别留意过",
+            "hi": "पता नहीं, कभी ध्यान नहीं दिया",
+            "id": "Tidak yakin, belum pernah memperhatikan",
+            "pt-BR": "Não tenho certeza, nunca prestei atenção"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270419-religious-exam-excuse-law",
+      "date": "2027-04-19",
+      "kind": "guess",
+      "topic": "jewish-calendar-days",
+      "asker": null,
+      "target": null,
+      "answer": "pt-BR",
+      "text": {
+        "zh-TW": "哪一個國家的法律規定，學生只要事先具理由申請，就能在宗教戒守之日缺席考試或上課，學校必須免費提供改期補考或書面作業作為替代？",
+        "en": "Which country's law lets a student, on a prior reasoned request, be absent from a test or class on a day their religion forbids it — with the school required to offer a free make-up test or written assignment instead?",
+        "ja": "どの国の法律が、事前に理由を付した申請により、宗教が禁じる日の試験や授業を欠席でき、学校が無償で追試か筆記課題を代わりに提供しなければならないと定めているか。",
+        "zh-CN": "哪一个国家的法律规定，学生只要事先具理由申请，就能在宗教戒守之日缺席考试或上课，学校必须免费提供改期补考或书面作业作为替代？",
+        "hi": "किस देश का क़ानून यह कहता है कि छात्र पूर्व एवं सकारण अनुरोध पर धार्मिक दिन पर परीक्षा या कक्षा से अनुपस्थित रह सकता है, और स्कूल को नि:शुल्क पुनर्परीक्षा या लिखित कार्य देना ही होगा?",
+        "id": "Hukum negara mana yang memungkinkan murid, dengan permohonan lebih dahulu dan beralasan, absen dari ujian atau kelas pada hari yang dilarang agamanya, dengan sekolah wajib menyediakan ujian susulan atau tugas tertulis gratis sebagai gantinya?",
+        "pt-BR": "A lei de qual país permite que um aluno, mediante pedido prévio e justificado, falte a uma prova ou aula em um dia que sua religião proíbe, exigindo que a escola ofereça gratuitamente uma prova substitutiva ou um trabalho escrito no lugar?"
+      },
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
           }
         },
         {
@@ -37549,15 +38320,1708 @@
           }
         }
       ],
-      "answer": "zh-CN",
       "explain": {
-        "zh-TW": "中國大陸。2024 年修訂《全國年節及紀念日放假辦法》後,勞動節法定放假日寫成五月一日與五月二日;實際連假還要看國務院辦公廳每年發布的調休安排。",
-        "en": "Mainland China. The 2024 revision of the national holiday regulation put 1 and 2 May into the statutory Labour Day break; the actual longer run still depends on the State Council General Office's annual shifted-workday arrangement.",
-        "ja": "中国大陸である。2024年の「全国年節及紀念日放假弁法」改正後、労働節の法定休日は5月1日と2日になった。実際の連休の長さは、国務院弁公庁が毎年発表する振替出勤の安排によって変わる。",
-        "zh-CN": "中国大陆。2024 年修订《全国年节及纪念日放假办法》后，劳动节法定放假日写成5月1日与5月2日；实际连假的长度还要看国务院办公厅每年发布的调休安排。",
-        "hi": "मुख्यभूमि चीन। 2024 में राष्ट्रीय अवकाश नियम में हुए संशोधन के बाद श्रमिक दिवस की वैधानिक छुट्टी में 1 और 2 मई लिखे गए; वास्तविक लंबा अवकाश अब भी राज्य परिषद के सामान्य कार्यालय की वार्षिक स्थानांतरित-कार्यदिवस व्यवस्था पर निर्भर करता है।",
-        "id": "Tiongkok daratan. Setelah perubahan aturan hari libur nasional pada 2024, libur resmi Hari Buruh mencantumkan 1 dan 2 Mei; panjang libur yang sebenarnya tetap bergantung pada pengaturan hari kerja pengganti yang diumumkan Kantor Umum Dewan Negara setiap tahun.",
-        "pt-BR": "China continental. A revisão de 2024 do regulamento nacional de feriados colocou 1º e 2 de maio no feriado legal do Dia do Trabalho; a duração real do feriadão ainda depende do calendário anual de dias úteis compensados divulgado pelo Gabinete Geral do Conselho de Estado."
+        "zh-TW": "答案是巴西。巴西二〇一九年第一三七九六號法律在《教育基本法》（一九九六年第九三九四號法律）加入第七之一條，讓任何公私立學校、任何層級的在學學生，只要事先具理由申請，就能免於在其宗教戒守之日出席考試或上課，學校必須無償提供改期補考或補課、或另訂主題與期限的書面作業其中之一，完成後即取代原本義務，包括出勤紀錄的補正。這條法律依憲法第五條第八款的良心拒絕，不點名任何節日，所以同時涵蓋猶太新年、贖罪日、逾越節與安息日。相較之下，美國沒有這樣的全國性權利：聯邦假日由《美國法典》第五編第六一〇三條寫死，宗教節日只有聖誕節一個，剩下的安排落在紐約市停課、紐澤西州准假這類地方層級，做法因州而異。中國的《全國年節及紀念日放假辦法》完全不放宗教節日的假，唯一容許非主流曆法的第四條看的是少數民族與聚居地域，不是宗教。印尼二〇二四年的總統決定雖然把五套宗教曆的十六天假期整併在一起，卻沒有一天屬於猶太曆，也沒有巴西那種改期應試的機制。四個國家四種做法，只有巴西把「改期權」寫成了學生的法定權利。",
+        "en": "The answer is Brazil. Law No. 13,796 of 2019 inserted Article 7-A into the Law of Directives and Bases of Education (Law No. 9,394 of 1996), giving any enrolled student, at any level, public or private, the right to submit a prior, reasoned request to be absent from a test or class scheduled on a day their religion forbids such activity. The school must provide, at no cost, either a make-up test or class on another date, or a written assignment with a topic, aim and deadline the school sets — completing it replaces the original obligation, including the attendance record. The law rests on the conscientious-objection clause of Article 5(VIII) of the Constitution and names no festival, so it covers Rosh Hashanah, Yom Kippur, Passover and the Sabbath alike. The United States has no comparable national right: federal holidays are fixed by 5 U.S.C. 6103 with exactly one religious festival, Christmas, and everything else is handled locally — New York City closing schools, New Jersey excusing absences — and it varies state by state. China's Measures on Public Holidays grants no religious festival a day off at all; its only opening for a non-majority calendar, Article 4, runs through ethnicity and territory, not religion. Indonesia's 2024 presidential decree bundles sixteen days across five religious calendars but includes not a single Jewish date, and has nothing like Brazil's right to reschedule an exam. Of these four countries, only Brazil turned the right to reschedule into student law.",
+        "ja": "答えはブラジルである。2019年法律第13796号が教育基本法（1996年法律第9394号）に第7条のAを追加し、公立私立を問わずあらゆる段階の在学生に、事前に理由を付した申請により、宗教が禁じる日に組まれた試験や授業を欠席する権利を認めた。学校は無償で、別日の追試・補講か、主題・目的・期限を学校が定める筆記課題のいずれかを提供しなければならず、これを終えれば出席記録の是正を含め本来の義務に代わる。この規定は憲法第5条第8項の良心的拒否に基づき、祭日を一つも名指ししないため、ロシュ・ハシャナ、ヨム・キプール、過越、安息日のいずれにも及ぶ。米国にはこれに相当する全国的な権利はない。連邦の祝日は合衆国法典第五編6103条が定め、宗教の祭日はクリスマス一つだけで、残りはニューヨーク市の休校やニュージャージー州の欠席容認のように地方任せであり、州ごとに異なる。中国の休暇弁法はどの宗教の祭日にも休みを与えず、非主流の暦が入りうる唯一の入口である第4条も、宗教ではなく民族と居住地域を基準にしている。インドネシアの2024年大統領決定は五つの宗教暦にまたがる十六日をまとめたが、ユダヤ暦の日は一つもなく、ブラジルのような追試の権利も存在しない。四か国のうち、追試の権利を学生の法的権利にまで仕立てたのはブラジルだけである。",
+        "zh-CN": "答案是巴西。2019年第13796号法律在《教育基本法》(1996年第9394号法律)中加入第7-A条，让任何公立或私立学校、任何层级的在校学生，只要事先具理由提出申请，就能免于在其宗教戒守之日出席考试或上课，学校必须无偿提供改期补考或补课、或另订主题与期限的书面作业二者之一，完成后即取代原本义务，包括出勤记录的更正。这条法律依据宪法第五条第八项的良心拒绝，不点名任何节日，因此同时涵盖犹太新年、赎罪日、逾越节与安息日。相比之下，美国没有这样的全国性权利：联邦假日由《美国法典》第五编第6103条写定，宗教节日只有圣诞节一个，其余安排落在纽约市停课、新泽西州准假这类地方层面，做法因州而异。中国的放假办法完全不为任何宗教节日放假，唯一容许非主流历法的第四条看的是少数民族与聚居地域，不是宗教。印尼2024年的总统决定虽把五套宗教历的十六天假期合并在一起，却没有一天属于犹太历，也没有巴西那种改期应试的机制。四个国家四种做法，只有巴西把改期权写成了学生的法定权利。",
+        "hi": "उत्तर ब्राज़ील है। 2019 के क़ानून संख्या 13.796 ने शिक्षा के दिशा-निर्देश एवं आधार क़ानून (1996 का क़ानून संख्या 9.394) में अनुच्छेद 7-A जोड़ा, जो किसी भी स्तर के, सरकारी या निजी संस्थान के हर नामांकित छात्र को यह अधिकार देता है कि पूर्व एवं सकारण अनुरोध पर वह उस दिन तय परीक्षा या कक्षा से अनुपस्थित रह सके जिस दिन उसका धर्म ऐसे कार्य वर्जित करता है। संस्था को नि:शुल्क दो में से एक विकल्प देना ही होगा — दूसरी तारीख़ पर परीक्षा या कक्षा, या तय विषय, उद्देश्य और समय-सीमा वाला लिखित कार्य — जिसे पूरा करने पर वह उपस्थिति के अभिलेख सहित मूल दायित्व की जगह ले लेता है। यह प्रावधान संविधान के अनुच्छेद 5(VIII) की अंतरात्मा-आधारित छूट पर टिका है और किसी पर्व का नाम नहीं लेता, इसलिए रोश हशाना, योम किप्पुर, पेसाख और शब्बात सब पर लागू होता है। अमेरिका में ऐसा कोई राष्ट्रीय अधिकार नहीं है: संघीय अवकाश 5 U.S.C. 6103 से तय होते हैं और उसमें धार्मिक पर्व सिर्फ़ क्रिसमस है, बाक़ी सब न्यूयॉर्क के स्कूल बंद करने या न्यू जर्सी के अनुपस्थिति स्वीकारने जैसी स्थानीय व्यवस्था पर छूटा है, जो राज्य दर राज्य बदलती है। चीन के अवकाश उपाय किसी भी धार्मिक पर्व को छुट्टी नहीं देते; ग़ैर-बहुसंख्यक पंचांग के लिए एकमात्र रास्ता, अनुच्छेद 4, जाति और भूभाग देखता है, धर्म नहीं। इंडोनेशिया का 2024 का राष्ट्रपति आदेश पाँच धार्मिक पंचांगों के सोलह दिन जोड़ता है, पर उसमें यहूदी कैलेंडर का एक दिन भी नहीं और ब्राज़ील जैसा पुनर्परीक्षा का अधिकार भी नहीं। इन चार देशों में केवल ब्राज़ील ने पुनर्परीक्षा के अधिकार को छात्र का क़ानूनी अधिकार बनाया।",
+        "id": "Jawabannya adalah Brasil. Undang-Undang No. 13.796 Tahun 2019 menyisipkan Pasal 7-A ke dalam Undang-Undang Dasar dan Pedoman Pendidikan (UU No. 9.394 Tahun 1996), memberi setiap murid terdaftar, di jenjang mana pun, negeri maupun swasta, hak untuk—atas permohonan lebih dahulu dan beralasan—tidak mengikuti ujian atau pelajaran yang dijadwalkan pada hari yang agamanya melarang kegiatan itu. Sekolah wajib menyediakan tanpa biaya salah satu dari dua pengganti: ujian atau pelajaran susulan pada tanggal lain, atau tugas tertulis dengan tema, tujuan, dan tenggat yang ditetapkan sekolah; setelah dipenuhi, itu menggantikan kewajiban asal, termasuk pembetulan catatan kehadiran. Ketentuan ini bersandar pada keberatan hati nurani Pasal 5 ayat VIII Konstitusi dan tidak menyebut satu hari raya pun, sehingga berlaku untuk Rosh Hashanah, Yom Kippur, Paskah Yahudi, maupun Sabat. Amerika Serikat tidak punya hak nasional serupa: hari libur federal ditetapkan 5 U.S.C. 6103 dengan hanya satu hari raya keagamaan, Natal, sementara sisanya diserahkan ke tingkat lokal—New York meliburkan sekolah, New Jersey mengizinkan absen—yang berbeda-beda antarnegara bagian. Ketentuan libur Tiongkok sama sekali tidak meliburkan hari raya keagamaan mana pun; satu-satunya celah untuk kalender non-mayoritas, Pasal 4, bergantung pada suku dan wilayah, bukan agama. Keppres Indonesia 2024 memang menggabungkan enam belas hari dari lima kalender keagamaan, tetapi tidak satu pun dari kalender Yahudi, dan tidak ada mekanisme setara seperti hak menjadwal ulang ujian ala Brasil. Dari empat negara ini, hanya Brasil yang menjadikan hak menjadwal ulang sebagai hak hukum murid.",
+        "pt-BR": "A resposta é o Brasil. A Lei nº 13.796, de 2019, inseriu o art. 7º-A na Lei de Diretrizes e Bases da Educação (Lei nº 9.394, de 1996), assegurando a todo aluno matriculado, em qualquer nível, em instituição pública ou privada, o direito de, mediante requerimento prévio e motivado, ausentar-se de prova ou aula marcada para dia em que sua religião vede tais atividades. A instituição deve oferecer sem custo uma de duas alternativas: prova ou aula de reposição em outra data, ou trabalho escrito com tema, objetivo e prazo por ela definidos; cumprida a alternativa, ela substitui a obrigação original, inclusive na regularização da frequência. A lei se apoia na escusa de consciência do art. 5º, VIII da Constituição e não nomeia nenhuma festa, alcançando por igual Rosh Hashaná, Yom Kipur, Pessach e o shabat. Os Estados Unidos não têm direito nacional equivalente: os feriados federais estão fixados no 5 U.S.C. 6103 com um único festejo religioso, o Natal, e o resto fica a cargo de instâncias locais — Nova York fechando escolas, Nova Jersey abonando faltas — de forma desigual entre estados. As medidas chinesas sobre feriados não concedem folga a festa religiosa alguma; a única brecha para um calendário não majoritário, o artigo 4, depende de etnia e território, não de religião. O decreto presidencial indonésio de 2024 reúne dezesseis dias de cinco calendários religiosos, mas nenhum deles judaico, e não existe mecanismo equivalente ao direito brasileiro de refazer a prova. Entre esses quatro países, só o Brasil transformou esse direito em lei estudantil."
+      }
+    },
+    {
+      "id": "q-20270420-wage-mechanism",
+      "date": "2027-04-20",
+      "kind": "poll",
+      "topic": "minimum-wage",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "看完各國最低工資制度,你覺得哪一種調整方式最合理?",
+        "en": "After seeing how different countries set their minimum wage, which approach would you pick?",
+        "ja": "各国の最低賃金の決め方を見て、あなたならどの仕組みを選びますか?",
+        "zh-CN": "看过各国最低工资的做法,你觉得哪种调整方式比较合理?",
+        "hi": "अलग-अलग देशों में न्यूनतम मज़दूरी तय करने का तरीक़ा देखकर, आप कौन सा तरीक़ा चुनेंगे?",
+        "id": "Setelah melihat cara berbagai negara menetapkan upah minimum, mekanisme mana yang menurutmu paling masuk akal?",
+        "pt-BR": "Depois de ver como cada país define seu salário mínimo, qual mecanismo você escolheria?"
+      },
+      "options": [
+        {
+          "id": "national-single",
+          "emoji": "🎯",
+          "label": {
+            "zh-TW": "全國一個數字,不分地區",
+            "en": "One national number, no regional split",
+            "ja": "地域差なしの全国一律の金額",
+            "zh-CN": "全国一个数字,不分地区",
+            "hi": "पूरे देश में एक ही आंकड़ा, कोई क्षेत्रीय अंतर नहीं",
+            "id": "Satu angka nasional, tanpa beda wilayah",
+            "pt-BR": "Um único valor nacional, sem diferença regional"
+          }
+        },
+        {
+          "id": "regional-tiers",
+          "emoji": "🗺️",
+          "label": {
+            "zh-TW": "各地方分開訂,依當地狀況調整",
+            "en": "Let each region set its own number",
+            "ja": "地域ごとに別々に決める",
+            "zh-CN": "各地方分开订,依当地情况调整",
+            "hi": "हर क्षेत्र अपनी अलग दर तय करे",
+            "id": "Tiap daerah menetapkan angkanya sendiri",
+            "pt-BR": "Cada região define seu próprio valor"
+          }
+        },
+        {
+          "id": "formula-linked",
+          "emoji": "📈",
+          "label": {
+            "zh-TW": "用公式跟通膨、經濟成長自動連動",
+            "en": "Tie it to a formula — inflation plus growth",
+            "ja": "物価や成長率と連動する計算式で自動的に決める",
+            "zh-CN": "用公式跟通胀、经济增长自动挂钩",
+            "hi": "महंगाई और आर्थिक वृद्धि से जुड़ा एक फ़ॉर्मूला हो",
+            "id": "Dikaitkan dengan rumus inflasi dan pertumbuhan ekonomi",
+            "pt-BR": "Vincular a uma fórmula de inflação e crescimento"
+          }
+        },
+        {
+          "id": "rare-adjustment",
+          "emoji": "🐌",
+          "label": {
+            "zh-TW": "交給議會討論,沒有固定調整週期",
+            "en": "Leave it to lawmakers, adjusted only when they act",
+            "ja": "議会の判断に任せ、定期的な見直しは決めない",
+            "zh-CN": "交给议会讨论,没有固定调整周期",
+            "hi": "इसे विधायिका पर छोड़ दें, तय समय-सीमा न हो",
+            "id": "Serahkan ke parlemen, tanpa jadwal tetap",
+            "pt-BR": "Deixar a cargo do parlamento, sem prazo fixo"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270420-guess-47-rates",
+      "date": "2027-04-20",
+      "kind": "guess",
+      "topic": "minimum-wage",
+      "asker": null,
+      "target": null,
+      "answer": "ja",
+      "text": {
+        "zh-TW": "哪一個國家的最低工資不是全國一個數字,而是同一個國家裡同時存在四十七種不同金額,各地生效的數字和日期都不一樣?",
+        "en": "Which country's minimum wage isn't one national figure — it's 47 different amounts coexisting within the same country, each with its own effective date?",
+        "ja": "最低賃金が全国一律ではなく、同じ国の中に47通りもの金額が並存し、金額も発効日も地域ごとに違う国はどこ?",
+        "zh-CN": "哪个国家的最低工资不是全国统一数字,而是同一个国家里同时存在四十七种不同金额,各地生效的数字和日期都不一样?",
+        "hi": "किस देश में न्यूनतम मज़दूरी एक राष्ट्रीय आंकड़ा नहीं है, बल्कि एक ही देश के भीतर सैंतालीस अलग-अलग आंकड़े साथ-साथ चलते हैं, हर जगह की दर और लागू होने की तारीख़ अलग होती है?",
+        "id": "Negara mana yang upah minimumnya bukan satu angka nasional, melainkan 47 angka berbeda yang berlaku bersamaan dalam satu negara, dengan angka dan tanggal berlaku yang berbeda-beda antarwilayah?",
+        "pt-BR": "Em qual país o salário mínimo não é um único número nacional, mas sim 47 valores diferentes coexistindo dentro do mesmo país, cada um com seu próprio valor e data de vigência?"
+      },
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "संयुक्त राज्य अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印度尼西亚",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是日本。日本的最低工資分成地域別與產業別兩種,都依據《最低賃金法》決定:中央最低賃金審議會先依經濟狀況把四十七個都道府縣分級,提出全國性的調整目安,再由各都道府縣自己的地方審議會依據當地勞工生計費、一般工資水準與企業支付能力,各自決定實際金額與生效日。2026年度中央目安是全國加權平均時薪1,176円,但實際數字因都道府縣而異,生效日多半落在10月。相較之下,中國的最低工資雖然也分檔,但檔次只有二到四檔、由省級政府決定,而不是四十七個獨立數字;美國是聯邦訂一個底線(7.25美元),各州只能加碼,不像日本由中央與地方共同審議出四十七種並存的金額;印尼則是三十四個省各自訂省最低工資(UMP),層級和數量都跟日本的四十七都道府縣不同。",
+        "en": "The answer is Japan. Japan runs two kinds of minimum wage, both under the Minimum Wage Act: the Central Minimum Wage Council first ranks the 47 prefectures by economic conditions and issues a national adjustment guideline, then each prefecture's own local council decides the actual figure based on local living costs, general wage levels, and employers' ability to pay. For fiscal 2026 the central guideline points to a national weighted average of ¥1,176 an hour, but the real number — and effective date, mostly October — differs by prefecture, producing 47 coexisting rates. By contrast, China splits its minimum wage into only two to four tiers per province, decided by provincial government, not 47 independent figures. The US sets a single federal floor of $7.25 an hour that states can only raise. Indonesia sets a UMP for each of 34 provinces — a different tier structure and count than Japan's 47 prefectures.",
+        "ja": "答えは日本。日本の最低賃金には地域別と特定(産業別)の二種類があり、どちらも最低賃金法に基づく。中央最低賃金審議会がまず47都道府県を経済状況でいくつかのランクに分け、全国的な調整の目安を示し、その後各都道府県の地方最低賃金審議会が地元の生計費、一般的な賃金水準、企業の支払能力を踏まえて実際の金額を独自に決める。2026年度の中央の目安は全国加重平均時給1,176円だが、実際の金額と発効日(多くは10月)は都道府県ごとに異なり、結果として47通りの金額が並存する。一方、中国は省級政府が二〜四段階に分けるだけで47の独立した数字ではなく、米国は連邦が時給7.25ドルという単一の下限を定め各州はそれを上回るだけ、インドネシアは34の州がそれぞれUMPを決める仕組みで、いずれも日本の47都道府県体制とは異なる。",
+        "zh-CN": "答案是日本。日本的最低工资分成地区别与特定(行业别)两种,都依据《最低工资法》决定:中央最低工资审议会先依经济状况把47个都道府县分级,提出全国性的调整目标,再由各都道府县自己的地方审议会依据当地劳工生活费、一般工资水平与企业支付能力,各自决定实际金额与生效日。2026年度中央目标是全国加权平均时薪1176日元,但实际数字因都道府县而异,生效日多半落在10月。相比之下,中国的最低工资虽然也分档,但档次只有二到四档、由省级政府决定,而不是47个独立数字;美国是联邦订一个底线(7.25美元),各州只能加码;印度尼西亚则是34个省各自订省最低工资(UMP),层级和数量都跟日本的47个都道府县不同。",
+        "hi": "जवाब है जापान। जापान में दो तरह की न्यूनतम मज़दूरी होती है — क्षेत्रीय (地域別) और उद्योग-विशिष्ट (特定) — दोनों ही न्यूनतम मज़दूरी क़ानून के तहत। केंद्रीय परिषद पहले 47 प्रान्तों को आर्थिक स्थिति के आधार पर स्तरों में बाँटकर एक राष्ट्रीय दिशा-निर्देश जारी करती है, फिर हर प्रान्त की अपनी स्थानीय परिषद वहाँ के जीवन-यापन खर्च, आम मज़दूरी स्तर और नियोक्ताओं की क्षमता देखकर असली आंकड़ा ख़ुद तय करती है। 2026 के लिए केंद्रीय दिशा-निर्देश राष्ट्रीय औसत ¥1,176 प्रति घंटा दिखाता है, पर असली आंकड़ा और लागू होने की तारीख़ (ज़्यादातर अक्टूबर) प्रान्त-दर-प्रान्त अलग है, यानी 47 दरें साथ-साथ चलती हैं। इसके उलट, चीन में प्रांत सिर्फ़ दो से चार स्तर बनाता है, 47 अलग आंकड़े नहीं; अमेरिका में संघीय सरकार एक ही न्यूनतम ($7.25) तय करती है और राज्य केवल उससे ऊँचा जा सकते हैं; इंडोनेशिया में 34 प्रांत अपना-अपना UMP तय करते हैं — यह जापान के 47 प्रान्तों से अलग ढाँचा है。",
+        "id": "Jawabannya Jepang. Jepang punya dua jenis upah minimum — regional (地域別) dan khusus industri (特定) — keduanya diatur Undang-Undang Upah Minimum. Dewan pusat lebih dulu mengelompokkan 47 prefektur ke beberapa peringkat berdasarkan kondisi ekonomi dan menerbitkan pedoman penyesuaian nasional; dewan lokal tiap prefektur lalu menetapkan angka sebenarnya berdasarkan biaya hidup setempat, tingkat upah umum, dan kemampuan bayar perusahaan. Untuk 2026, pedoman pusat menunjuk rata-rata nasional ¥1.176 per jam, tapi angka sebenarnya dan tanggal berlaku (kebanyakan Oktober) berbeda antarprefektur, sehingga ada 47 angka yang berlaku bersamaan. Sebagai perbandingan, Tiongkok hanya membagi provinsi ke dua sampai empat kelas, bukan 47 angka independen; Amerika Serikat punya satu batas federal ($7,25) yang tiap negara bagian hanya boleh naikkan; Indonesia sendiri punya 34 provinsi yang masing-masing menetapkan UMP — struktur dan jumlahnya berbeda dari 47 prefektur Jepang.",
+        "pt-BR": "A resposta é o Japão. O Japão tem dois tipos de salário mínimo — regional (地域別) e específico por setor (特定) — ambos regidos pela Lei do Salário Mínimo. O conselho central primeiro agrupa as 47 prefeituras em faixas conforme a situação econômica e emite uma diretriz nacional de reajuste; o conselho local de cada prefeitura então fixa o valor efetivo considerando o custo de vida local, o nível salarial geral e a capacidade de pagamento das empresas. Para 2026, a diretriz central aponta uma média nacional de ¥1.176 por hora, mas o valor efetivo e a data de vigência (geralmente em outubro) variam por prefeitura, resultando em 47 valores coexistindo. Em comparação, a China só divide as províncias em duas a quatro faixas, não 47 números independentes; os Estados Unidos têm um único piso federal (US$7,25) que os estados só podem elevar; a Indonésia tem 34 províncias que fixam cada uma seu próprio UMP — estrutura e quantidade diferentes das 47 prefeituras japonesas."
+      }
+    },
+    {
+      "id": "q-20270421-family-celebration-day",
+      "date": "2027-04-21",
+      "kind": "poll",
+      "topic": "newborn-and-full-moon",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "如果是你,會希望新生兒的家庭慶祝辦在出生後第幾天?",
+        "en": "If it were up to you, which day after birth would you pick for the family celebration?",
+        "ja": "自分なら、新生児の家族の祝いを生後何日目に行いたいですか?",
+        "zh-CN": "如果是你,会希望新生儿的家庭庆祝办在出生后第几天?",
+        "hi": "अगर आपकी बात हो, तो आप नवजात के पारिवारिक उत्सव के लिए जन्म के बाद कौन-सा दिन चुनेंगे?",
+        "id": "Kalau itu keputusan Anda, hari keberapa setelah kelahiran yang Anda pilih untuk perayaan keluarga?",
+        "pt-BR": "Se dependesse de você, em que dia após o nascimento você marcaria a celebração da família?"
+      },
+      "options": [
+        {
+          "id": "day-7",
+          "emoji": "🎏",
+          "label": {
+            "zh-TW": "第七天(如命名或aqiqah)",
+            "en": "The seventh day (like a naming ceremony or aqiqah)",
+            "ja": "七日目(命名やアキーカのように)",
+            "zh-CN": "第七天(如命名或aqiqah)",
+            "hi": "सातवां दिन (नामकरण या aqiqah जैसा)",
+            "id": "Hari ketujuh (seperti penamaan atau akikah)",
+            "pt-BR": "O sétimo dia (como uma cerimônia de nomeação ou aqiqah)"
+          }
+        },
+        {
+          "id": "day-30",
+          "emoji": "🎂",
+          "label": {
+            "zh-TW": "滿一個月(辦滿月宴)",
+            "en": "The one-month mark (a full-month banquet)",
+            "ja": "満一か月(満月の祝い)",
+            "zh-CN": "满一个月(办满月宴)",
+            "hi": "एक महीना पूरा होने पर (महीने का भोज)",
+            "id": "Tonggak satu bulan (kenduri sebulan)",
+            "pt-BR": "A marca de um mês (banquete do primeiro mês)"
+          }
+        },
+        {
+          "id": "after-registration",
+          "emoji": "📄",
+          "label": {
+            "zh-TW": "等法定登記辦完再說,沒有固定的家庭儀式",
+            "en": "Whenever the legal registration is done, with no fixed family ceremony",
+            "ja": "法的な届出が済んだらそれで良く、決まった家族の儀式はない",
+            "zh-CN": "等法定登记办完再说,没有固定的家庭仪式",
+            "hi": "जब कानूनी पंजीकरण हो जाए, बिना किसी तय पारिवारिक रस्म के",
+            "id": "Setelah pencatatan resmi selesai, tanpa upacara keluarga yang tetap",
+            "pt-BR": "Assim que o registro legal estiver pronto, sem cerimônia familiar fixa"
+          }
+        },
+        {
+          "id": "no-preference",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "沒想過,沒有特別偏好",
+            "en": "Never thought about it, no particular preference",
+            "ja": "考えたことがなく、特にこだわりはない",
+            "zh-CN": "没想过,没有特别偏好",
+            "hi": "कभी नहीं सोचा, कोई खास पसंद नहीं",
+            "id": "Belum pernah memikirkannya, tidak ada preferensi khusus",
+            "pt-BR": "Nunca pensei nisso, sem preferência específica"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270421-shortest-registration-deadline",
+      "date": "2027-04-21",
+      "kind": "guess",
+      "topic": "newborn-and-full-moon",
+      "asker": null,
+      "target": null,
+      "answer": "ja",
+      "text": {
+        "zh-TW": "這四個地方裡,哪一個出生登記期限最短、只有十四天,而且法律規定要在期限內就替孩子定好名字?",
+        "en": "Among these four places, which one has the shortest birth-registration deadline — just fourteen days — with the name required to be settled within that window by law?",
+        "ja": "この四つの中で、出生届の期限が最も短い十四日で、しかも法律上その期間内に名前を決めなければならないのはどこか?",
+        "zh-CN": "这四个地方里,哪一个出生登记期限最短、只有十四天,而且法律规定要在期限内就替孩子定好名字?",
+        "hi": "इन चार जगहों में से किसमें जन्म-पंजीकरण की सीमा सबसे छोटी — केवल चौदह दिन — है, और कानून के तहत उसी अवधि में नाम तय करना ज़रूरी है?",
+        "id": "Di antara empat tempat ini, mana yang punya tenggat pendaftaran kelahiran paling pendek — hanya empat belas hari — dan menurut undang-undang nama harus sudah ditentukan dalam jangka waktu itu?",
+        "pt-BR": "Entre estes quatro lugares, qual tem o prazo mais curto para o registro de nascimento — apenas catorze dias — e por lei o nome precisa estar decidido dentro desse prazo?"
+      },
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國大陸",
+            "en": "Mainland China",
+            "ja": "中国大陸",
+            "zh-CN": "中国大陆",
+            "hi": "मुख्यभूमि चीन",
+            "id": "Tiongkok daratan",
+            "pt-BR": "China continental"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是日本。日本《戶籍法》第四十九條規定,出生之日起十四日以內必須提出出生届,是這裡最短的期限,而且出生届上必須填寫名字,所以取名的時間壓力是法律直接給的;命名式お七夜落在第七天,剛好卡在這十四天期限的中間。相較之下,印度依一九六九年《出生與死亡登記法》給二十一天,比滿月早,所以命名儀式namkaran常常和登記日期錯開;中國大陸的《戶口登記條例》給一個月,恰好和滿月宴的日子重疊;美國則沒有全國性的出生登記期限,規則由各州自訂,登記多半是醫院流程的一部分,社會安全號碼要在出生證明辦好之後才能申請。",
+        "en": "The answer is Japan. Article 49 of the Family Register Act requires the birth notification within fourteen days — the shortest deadline here — and the form requires the name to be filled in, so the time pressure on naming comes directly from the law; the naming ceremony on the seventh night falls right in the middle of that window. By contrast, India's Registration of Births and Deaths Act 1969 gives twenty-one days, earlier than the full-month mark, so the namkaran naming ceremony often falls at a different point than registration; mainland China's Household Registration Regulations give one month, which overlaps exactly with the full-month banquet; and the United States has no national deadline at all — rules are set state by state, registration is usually part of the hospital process, and the Social Security number can only be requested after the birth certificate is issued.",
+        "ja": "答えは日本。戸籍法第49条は出生の日から14日以内に出生届を提出することを定めており、これはここに挙げた中で最も短い期限で、しかも届書には名前を記入しなければならないため、命名の時間的な圧力は法律から直接来ている。お七夜の命名式はちょうど七日目にあたり、この14日間の真ん中に位置する。これに対しインドは1969年出生・死亡登録法により21日と、満一か月より早い期限を持つため、命名儀礼ナームカランは登録の時期とずれることが多い。中国大陸の戸口登記条例は1か月で、これは満月の祝いの日とちょうど重なる。米国には全国的な期限がなく、規則は州ごとに定められ、登記は病院の手続きの一部であることが多く、社会保障番号は出生証明書が発行された後でなければ申請できない。",
+        "zh-CN": "答案是日本。日本《户籍法》第四十九条规定,出生之日起十四日以内必须提出出生届,是这里最短的期限,而且出生届上必须填写名字,所以取名的时间压力是法律直接给的;命名式お七夜落在第七天,刚好卡在这十四天期限的中间。相较之下,印度依一九六九年《出生与死亡登记法》给二十一天,比满月早,所以命名仪式namkaran常常和登记日期错开;中国大陆的《户口登记条例》给一个月,恰好和满月宴的日子重叠;美国则没有全国性的出生登记期限,规则由各州自订,登记多半是医院流程的一部分,社会安全号码要在出生证明办好之后才能申请。",
+        "hi": "उत्तर है जापान। पारिवारिक रजिस्टर अधिनियम का अनुच्छेद 49 जन्म के चौदह दिन के भीतर जन्म-सूचना देना अनिवार्य करता है — यह यहाँ सबसे छोटी अवधि है — और सूचना-पत्र में नाम भरना ज़रूरी है, इसलिए नामकरण का समय-दबाव सीधे क़ानून से आता है; सातवीं रात का नामकरण समारोह ठीक इसी चौदह दिन की खिड़की के बीच में पड़ता है। इसके विपरीत, भारत का जन्म एवं मृत्यु पंजीकरण अधिनियम 1969 इक्कीस दिन देता है, जो एक महीने के पड़ाव से पहले है, इसलिए नामकरण संस्कार अक्सर पंजीकरण से अलग समय पर होता है; मुख्यभूमि चीन के नियम एक महीने की सीमा देते हैं, जो महीने भर के भोज से ठीक मेल खाती है; और अमेरिका में कोई राष्ट्रीय समय-सीमा ही नहीं है — नियम हर राज्य अपने तय करता है, पंजीकरण प्रायः अस्पताल की प्रक्रिया का हिस्सा होता है, और सामाजिक सुरक्षा संख्या जन्म प्रमाणपत्र मिलने के बाद ही माँगी जा सकती है।",
+        "id": "Jawabannya adalah Jepang. Pasal 49 Undang-Undang Register Keluarga mewajibkan pemberitahuan kelahiran dalam empat belas hari — tenggat terpendek di antara pilihan ini — dan formulirnya mewajibkan nama diisi, sehingga tekanan waktu untuk menamai datang langsung dari undang-undang; upacara penamaan pada malam ketujuh jatuh tepat di tengah jendela empat belas hari itu. Sebagai perbandingan, India di bawah Registration of Births and Deaths Act 1969 memberi dua puluh satu hari, lebih awal dari tonggak sebulan, sehingga upacara namkaran sering jatuh pada waktu berbeda dari pencatatan; peraturan Tiongkok daratan memberi satu bulan, yang bertepatan persis dengan kenduri sebulan; sementara Amerika Serikat tidak punya tenggat nasional sama sekali — aturan ditetapkan per negara bagian, pencatatan biasanya bagian dari proses rumah sakit, dan Nomor Jaminan Sosial baru bisa diminta setelah akta kelahiran terbit.",
+        "pt-BR": "A resposta é o Japão. O artigo 49 da Lei de Registro Familiar exige a notificação do nascimento em catorze dias — o prazo mais curto entre estas opções — e o formulário exige que o nome seja preenchido, então a pressão de tempo para escolher o nome vem diretamente da lei; a cerimônia de nomeação na sétima noite cai bem no meio dessa janela de catorze dias. Em comparação, a Índia, sob a Lei de Registro de Nascimentos e Óbitos de 1969, dá vinte e um dias, antes da marca de um mês, então a cerimônia namkaran costuma cair em ponto diferente do registro; o regulamento da China continental dá um mês, que coincide exatamente com o banquete do primeiro mês; e os Estados Unidos não têm prazo nacional algum — as regras são definidas por cada estado, o registro costuma ser parte do processo hospitalar, e o número de seguridade social só pode ser solicitado depois de emitida a certidão de nascimento."
+      }
+    },
+    {
+      "id": "q-20270422-unused-leave",
+      "date": "2027-04-22",
+      "kind": "poll",
+      "topic": "paid-leave-and-overtime",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "在你的實際工作經驗裡,沒休完的特休最後是怎麼處理的?",
+        "en": "In your own work experience, what happens to unused paid leave?",
+        "ja": "実際の職場経験では、消化しきれなかった有給休暇はどうなっていますか?",
+        "zh-CN": "在你实际的工作经验里,没休完的年假最后是怎么处理的?",
+        "hi": "आपके अपने कार्य अनुभव में, न ली गई सवैतनिक छुट्टी का आखिर में क्या होता है?",
+        "id": "Dalam pengalaman kerjamu sendiri, apa yang terjadi pada cuti berbayar yang tidak diambil?",
+        "pt-BR": "Na sua própria experiência de trabalho, o que acontece com as férias remuneradas não usadas?"
+      },
+      "options": [
+        {
+          "id": "paid-out",
+          "emoji": "💰",
+          "label": {
+            "zh-TW": "沒休完會拿到工資補償",
+            "en": "It gets paid out in wages",
+            "ja": "賃金として支払われる",
+            "zh-CN": "没休完会发工资补偿",
+            "hi": "इसका वेतन के रूप में भुगतान हो जाता है",
+            "id": "Dibayar tunai sebagai upah",
+            "pt-BR": "São pagas em dinheiro"
+          }
+        },
+        {
+          "id": "expires",
+          "emoji": "⏳",
+          "label": {
+            "zh-TW": "沒休完就直接過期,沒有補償",
+            "en": "It simply expires with no compensation",
+            "ja": "そのまま消滅し、補償はない",
+            "zh-CN": "没休完就直接过期,没有补偿",
+            "hi": "यह बस समाप्त हो जाती है, कोई भुगतान नहीं मिलता",
+            "id": "Langsung hangus, tanpa kompensasi",
+            "pt-BR": "Simplesmente vencem, sem compensação"
+          }
+        },
+        {
+          "id": "company-schedules",
+          "emoji": "📅",
+          "label": {
+            "zh-TW": "公司會主動幫我排休假日期",
+            "en": "My employer schedules the dates for me",
+            "ja": "会社が休暇日を指定してくれる",
+            "zh-CN": "公司会主动帮我排休假日期",
+            "hi": "मेरा नियोक्ता मेरे लिए तारीखें तय करता है",
+            "id": "Perusahaan yang menjadwalkan tanggalnya untukku",
+            "pt-BR": "Meu empregador marca as datas para mim"
+          }
+        },
+        {
+          "id": "unsure",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "沒特別注意過,不清楚規定",
+            "en": "I've never paid attention to the rule",
+            "ja": "特に気にしたことがなく、よく分からない",
+            "zh-CN": "没特别注意过,不清楚规定",
+            "hi": "मैंने कभी इस नियम पर ध्यान नहीं दिया",
+            "id": "Belum pernah memperhatikan aturannya",
+            "pt-BR": "Nunca prestei atenção a essa regra"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270422-absence-cuts-leave",
+      "date": "2027-04-22",
+      "kind": "guess",
+      "topic": "paid-leave-and-overtime",
+      "asker": null,
+      "target": null,
+      "answer": "pt-BR",
+      "text": {
+        "zh-TW": "哪一個國家的年假天數,會因為當年度無故缺勤次數增加而變少?",
+        "en": "In which country does the number of annual leave days shrink as unexcused absences increase during the year?",
+        "ja": "無断欠勤が増えるほど、その年の有給休暇の日数が減っていく国はどこか?",
+        "zh-CN": "哪个国家的年假天数,会因为当年度无故缺勤次数增加而变少?",
+        "hi": "किस देश में साल के दौरान बिना कारण अनुपस्थिति बढ़ने से वार्षिक छुट्टी के दिन घटते जाते हैं?",
+        "id": "Di negara mana jumlah hari cuti tahunan berkurang seiring bertambahnya ketidakhadiran tanpa alasan selama tahun itu?",
+        "pt-BR": "Em qual país o número de dias de férias anuais diminui conforme aumentam as faltas injustificadas durante o ano?"
+      },
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是巴西。《勞動法整編》第130條原本給30天年假,但當年度無故缺勤會把天數往下砍:缺勤6到14次剩24天,15到23次剩18天,24到32次只剩12天,缺勤愈多、假愈少,這是巴西獨有的設計,還能把三分之一的假折現(第143條)。相比之下,台灣《勞動基準法》第38條是依年資分級給假,沒休完雇主要發工資,不會因缺勤而減少;日本《勞動基準法》第39條也是依年資遞增,但沒休完的假逾兩年會依第115條失效,一樣跟缺勤無關;中國大陸《職工帶薪年休假條例》依累計工齡分5天、10天、15天三級,沒排休要按300%工資折算,同樣不會因缺勤縮水。",
+        "en": "The answer is Brazil. Under CLT Article 130, workers get 30 days of annual leave, but unjustified absences during the year cut it down: 24 days for 6 to 14 absences, 18 days for 15 to 23, and just 12 days for 24 to 32 — the more absences, the less leave, a design unique to Brazil, where up to a third of leave can also be cashed out (Art. 143). By contrast, Taiwan's Labor Standards Act Article 38 tiers leave purely by tenure, and unused days must be paid out, unaffected by absences. Japan's Article 39 also scales with tenure, but unused leave simply expires after two years under Article 115 — again unrelated to attendance. Mainland China's regulation grants 5, 10, or 15 days by cumulative tenure, with 300% pay owed for unscheduled leave, also independent of absences.",
+        "ja": "答えはブラジルである。CLT第130条は年30日の休暇を保障するが、その年の無断欠勤によって日数が削られる。欠勤6〜14回で24日、15〜23回で18日、24〜32回では12日にまで減る——欠勤が多いほど休暇が減るブラジル独自の仕組みで、最大3分の1を現金に換えることもできる(第143条)。対照的に、台湾の労働基準法第38条は勤続年数だけで休暇が決まり、未消化分は雇用主が賃金として支払う義務があり、欠勤とは無関係である。日本の第39条も勤続年数で加算されるが、未消化分は2年で第115条により消滅するだけで、これも出勤状況とは関係しない。中国本土の条例は通算勤続年数で5日・10日・15日と定め、割り当てなければ300%の賃金を支払う仕組みで、同じく欠勤による変動はない。",
+        "zh-CN": "答案是巴西。《劳动法整编》第130条本来给30天年假,但当年度无故缺勤会把天数往下砍:缺勤6到14次剩24天,15到23次剩18天,24到32次只剩12天,缺勤越多、假越少,这是巴西独有的设计,还能把三分之一的假折现(第143条)。相比之下,台湾《劳动基准法》第38条是依年资分级给假,没休完雇主要发工资,不会因缺勤而减少;日本《劳动基准法》第39条也是依年资递增,但没休完的假超过两年会依第115条失效,同样跟缺勤无关;中国大陆《职工带薪年休假条例》依累计工龄分5天、10天、15天三级,没排休要按300%工资折算,也不会因缺勤缩水。",
+        "hi": "उत्तर है ब्राज़ील। CLT की धारा 130 के तहत साल में 30 दिन की छुट्टी मिलती है, लेकिन उस साल की बिना कारण अनुपस्थिति इसे घटा देती है: 6 से 14 अनुपस्थितियों पर 24 दिन, 15 से 23 पर 18 दिन, और 24 से 32 पर सिर्फ़ 12 दिन — जितनी अधिक अनुपस्थिति, उतनी कम छुट्टी, यह ब्राज़ील की एक अनोखी व्यवस्था है, जिसमें एक-तिहाई तक छुट्टी नक़द में भी बदली जा सकती है (धारा 143)। इसके विपरीत, ताइवान की धारा 38 केवल कार्यकाल के अनुसार छुट्टी तय करती है और न ली गई छुट्टी का वेतन देना अनिवार्य है, अनुपस्थिति से इसका कोई संबंध नहीं। जापान की धारा 39 भी कार्यकाल के साथ बढ़ती है, पर न ली गई छुट्टी दो साल बाद धारा 115 के तहत बस समाप्त हो जाती है — यह भी उपस्थिति से असंबंधित है। मुख्यभूमि चीन में संचित कार्यकाल के अनुसार 5, 10 या 15 दिन मिलते हैं और न दी गई छुट्टी पर 300% वेतन देना होता है, यह भी अनुपस्थिति से प्रभावित नहीं होता।",
+        "id": "Jawabannya adalah Brasil. Pasal 130 CLT memberikan 30 hari cuti tahunan, tetapi ketidakhadiran tanpa alasan selama tahun itu mengurangi jumlahnya: 24 hari untuk 6 hingga 14 kali absen, 18 hari untuk 15 hingga 23 kali, dan hanya 12 hari untuk 24 hingga 32 kali — semakin banyak absen, semakin sedikit cuti, desain unik Brasil ini juga memungkinkan penukaran hingga sepertiga cuti menjadi uang tunai (Pasal 143). Sebaliknya, Pasal 38 Taiwan menetapkan cuti hanya berdasarkan masa kerja, dan cuti yang tidak diambil wajib dibayar tunai, tanpa hubungan dengan ketidakhadiran. Pasal 39 Jepang juga bertambah sesuai masa kerja, tetapi cuti yang tidak digunakan hangus setelah dua tahun berdasarkan Pasal 115 — juga tidak terkait kehadiran. Peraturan Tiongkok daratan memberi 5, 10, atau 15 hari berdasarkan masa kerja kumulatif, dengan kewajiban membayar 300% upah untuk cuti yang tidak dijadwalkan, juga tidak dipengaruhi ketidakhadiran.",
+        "pt-BR": "A resposta é Brasil. O Artigo 130 da CLT garante 30 dias de férias anuais, mas faltas injustificadas durante o ano reduzem esse total: 24 dias para 6 a 14 faltas, 18 dias para 15 a 23, e apenas 12 dias para 24 a 32 — quanto mais faltas, menos férias, um desenho exclusivo do Brasil, que também permite converter até um terço das férias em dinheiro (Art. 143). Em contraste, o Artigo 38 de Taiwan define as férias apenas pelo tempo de casa, e os dias não usados devem ser pagos em dinheiro, sem relação com faltas. O Artigo 39 do Japão também aumenta com o tempo de casa, mas os dias não usados simplesmente se extinguem após dois anos pelo Art. 115 — também sem relação com a frequência. O regulamento chinês concede 5, 10 ou 15 dias conforme o tempo acumulado, com pagamento obrigatório de 300% do salário para dias não programados, também independente de faltas."
+      }
+    },
+    {
+      "id": "q-20270423-pet-prep-poll",
+      "date": "2027-04-23",
+      "kind": "poll",
+      "topic": "pet-preparedness",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "你家如果要臨時離開(停電、搬家或撤離),寵物的外出準備做到哪一步了?",
+        "en": "If you suddenly had to leave home—power outage, move, or evacuation—how ready are your pets to go with you?",
+        "ja": "停電や引っ越し、避難などですぐに家を出るとしたら、あなたのペットの持ち出し準備はどのくらいできていますか?",
+        "zh-CN": "如果家里突然要临时离开(停电、搬家或撤离),你家宠物的外出准备做到哪一步了?",
+        "hi": "अगर अचानक घर छोड़ना पड़े—बिजली जाना, घर बदलना या निकासी—तो आपके पालतू पशु की तैयारी कितनी है?",
+        "id": "Jika tiba-tiba harus meninggalkan rumah—listrik padam, pindah, atau evakuasi—seberapa siap hewan peliharaan Anda untuk dibawa?",
+        "pt-BR": "Se você precisasse sair de casa de repente—falta de energia, mudança ou evacuação—o quanto seu pet está pronto para ir junto?"
+      },
+      "options": [
+        {
+          "id": "fully-ready",
+          "emoji": "🎒",
+          "label": {
+            "zh-TW": "都準備好了(外出籠、身分標示、藥品、食水都在)",
+            "en": "Fully ready — carrier, ID, meds, food and water all set",
+            "ja": "すべて準備済み(キャリー、身分表示、薬、食料と水がそろっている)",
+            "zh-CN": "都准备好了(外出笼、身份标识、药品、食水都在)",
+            "hi": "पूरी तरह तैयार — कैरियर, पहचान, दवाइयाँ, भोजन-पानी सब मौजूद",
+            "id": "Sudah siap sepenuhnya — carrier, identitas, obat, makanan dan air lengkap",
+            "pt-BR": "Totalmente pronto — caixa, identificação, remédios, comida e água prontos"
+          }
+        },
+        {
+          "id": "partial",
+          "emoji": "🧷",
+          "label": {
+            "zh-TW": "有準備一部分,但不齊全",
+            "en": "Have some things ready, but not everything",
+            "ja": "一部は準備しているが、揃っていない",
+            "zh-CN": "有准备一部分,但不齐全",
+            "hi": "कुछ चीज़ें तैयार हैं, लेकिन पूरी नहीं",
+            "id": "Sudah siapkan sebagian, tapi belum lengkap",
+            "pt-BR": "Tenho algumas coisas prontas, mas não tudo"
+          }
+        },
+        {
+          "id": "know-not-done",
+          "emoji": "🤔",
+          "label": {
+            "zh-TW": "知道該準備,但還沒動手",
+            "en": "I know I should, but haven't done it yet",
+            "ja": "必要だとは分かっているが、まだ手をつけていない",
+            "zh-CN": "知道该准备,但还没动手",
+            "hi": "पता है ज़रूरी है, पर अभी तक कुछ नहीं किया",
+            "id": "Tahu harus siap-siap, tapi belum mulai",
+            "pt-BR": "Sei que preciso, mas ainda não comecei"
+          }
+        },
+        {
+          "id": "no-pet",
+          "emoji": "🚫",
+          "label": {
+            "zh-TW": "家裡沒養寵物,這題不適用",
+            "en": "No pets at home — not applicable",
+            "ja": "ペットを飼っていないので該当しない",
+            "zh-CN": "家里没养宠物,这题不适用",
+            "hi": "घर में पालतू पशु नहीं है — यह लागू नहीं",
+            "id": "Tidak punya hewan peliharaan — tidak berlaku",
+            "pt-BR": "Não tenho pet em casa — não se aplica"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270423-pet-prep-guess",
+      "date": "2027-04-23",
+      "kind": "guess",
+      "topic": "pet-preparedness",
+      "asker": null,
+      "target": null,
+      "answer": "ja",
+      "text": {
+        "zh-TW": "官方防災用語裡,有一個詞專指「帶著寵物一起走到避難場所」,但特別強調這不等於人和寵物能待在同一個房間。這是哪個國家的用語?",
+        "en": "One official disaster-planning term specifically means \"evacuating together with your pet to a shelter,\" while stressing that this does not mean people and pets share the same room there. Which country uses this term?",
+        "ja": "「ペットと一緒に避難場所まで行くこと」を指す公式な防災用語があり、それが避難所で同じ部屋に住めるという意味ではないと特に強調されている。これはどの国の用語か?",
+        "zh-CN": "官方防灾用语里,有一个词专指“带着宠物一起前往避难场所”,并特别强调这不代表人和宠物能待在同一个房间。这是哪个国家的用语?",
+        "hi": "एक आधिकारिक आपदा-योजना शब्द है जिसका अर्थ है \"पालतू पशु के साथ आश्रय तक पहुँचना\", और यह ज़ोर देकर कहा जाता है कि इसका मतलब आश्रय में एक ही कमरे में रहना नहीं है। यह किस देश का शब्द है?",
+        "id": "Ada istilah resmi dalam perencanaan bencana yang secara khusus berarti \"mengungsi bersama hewan peliharaan ke tempat perlindungan\", dengan penekanan bahwa ini tidak berarti tinggal di ruangan yang sama di sana. Istilah ini dari negara mana?",
+        "pt-BR": "Existe um termo oficial de planejamento para desastres que significa especificamente \"evacuar junto com o animal de estimação até um abrigo\", com a ressalva de que isso não significa ficar no mesmo cômodo lá. De qual país é esse termo?"
+      },
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國大陸",
+            "en": "Mainland China",
+            "ja": "中国大陸",
+            "zh-CN": "中国大陆",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China continental"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是日本。日本環境省把「同行避難」定義為帶著寵物一起走到避難場所,並特別說明這不代表人和寵物能在避難所同一個空間生活,飼主還要考慮其他避難者、過敏者和場所規則。相較之下,台灣的官方材料把準備拆成家庭可執行的工作,如食物、水、常用藥、外出籠與登記晶片,但強調登記完成不等於準備好,避難所是否接受仍要問當地規則;美國的Ready.gov把寵物準備放進家庭應急計畫,列出身分牌、牽繩、藥品、疫苗紀錄等物品清單,並提醒公共避難所不一定收寵物;中國大陸的家庭防災建議來自國家應急廣播,強調盡量帶貓狗一起避難、準備可攜式寵物包,但同樣不代表全國避難所規則一致。這些國家都把重點放在「帶走」不等於「被收容」的落差上,但只有日本用「同行避難」這個專有名詞來表達這個區別。",
+        "en": "The answer is Japan. Japan's Ministry of the Environment defines \"同行避難\" as evacuating together with a pet to a shelter, explicitly noting this does not mean people and pets live in the same room there, and owners still need to plan for other evacuees, allergies and shelter rules. By contrast, Taiwan's official material breaks preparedness into household tasks — food, water, regular medicines, a carrier, and a microchip for identification — but stresses that being registered is not the same as being ready, since shelter entry rules still need local confirmation. The US Ready.gov folds pets into the household emergency plan with a checklist of ID tags, leashes, medicines and vaccination records, while warning that public shelters may not accept pets at all. Mainland China's household guidance, from the National Emergency Broadcasting service, tells families to bring cats and dogs when evacuating and prepare a portable pet bag, but again this is not a uniform national shelter rule. All these countries highlight the gap between \"bringing the pet\" and \"the pet being sheltered,\" but only Japan names that gap with a dedicated official term.",
+        "ja": "答えは日本である。日本の環境省は「同行避難」を、ペットと一緒に避難場所まで行くことと定義し、避難所で人とペットが同じ部屋で暮らせるという意味ではないと明記したうえで、他の避難者やアレルギー、施設のルールへの配慮も求めている。これに対し台湾の公式資料は、食料、水、常備薬、キャリー、マイクロチップといった家庭でできる準備に分けているが、登録済みであることと準備ができていることは別だとし、避難所への入所可否は地域で確認する必要があるとする。米国のReady.govは迷子札、リード、薬、予防接種記録などを家庭の非常時計画に組み込む一方、公共の避難所がペットを受け入れるとは限らないと注意している。中国大陸の家庭向け案内は国家応急放送によるもので、猫や犬をできるだけ連れて避難し、持ち運べるペット用バッグを用意するよう勧めるが、これも全国一律の避難所規則ではない。いずれの国も「連れて行く」ことと「収容される」ことの違いを扱っているが、それを専用の用語で表しているのは日本だけである。",
+        "zh-CN": "答案是日本。日本环境省把“同行避难”定义为带着宠物一起前往避难场所,并特别说明这不代表人和宠物能在避难所同一空间生活,饲主还要考虑其他避难者、过敏情况和场所规则。相比之下,台湾的官方材料把准备拆成家庭可执行的工作,如食物、水、常用药、外出笼与身份晶片,但强调登记完成不等于真正准备好,能否进入避难所仍要确认当地规则;美国的Ready.gov把宠物准备纳入家庭应急计划,列出身份牌、牵引绳、药物、疫苗记录等清单,并提醒公共避难所不一定接收宠物;中国大陆家庭防灾建议来自国家应急广播,强调尽量带猫狗一起避难、准备可携带的宠物包,但同样不是全国统一的避难所规则。这些国家都涉及“带走”与“被收容”之间的落差,但只有日本用“同行避难”这个专有名词来表达这种区别。",
+        "hi": "उत्तर जापान है। जापान का पर्यावरण मंत्रालय \"同行避難\" को पालतू पशु के साथ आश्रय तक पहुँचने के रूप में परिभाषित करता है, और साफ़ कहता है कि इसका मतलब आश्रय में मनुष्य और पशु का एक ही कमरे में रहना नहीं है; मालिकों को अन्य शरणार्थियों, एलर्जी और स्थान के नियमों का भी ध्यान रखना होता है। इसके विपरीत, ताइवान की आधिकारिक सामग्री तैयारी को घरेलू कामों में बाँटती है — भोजन, पानी, नियमित दवाइयाँ, कैरियर और माइक्रोचिप — लेकिन कहती है कि पंजीकृत होना और तैयार होना अलग बातें हैं, और आश्रय में प्रवेश स्थानीय नियमों पर निर्भर करता है। अमेरिका का Ready.gov पहचान टैग, पट्टा, दवाइयाँ और टीकाकरण रिकॉर्ड को परिवार की आपात योजना में शामिल करता है, पर चेताता है कि सार्वजनिक आश्रय पालतू पशु स्वीकार नहीं भी कर सकते। मुख्यभूमि चीन की घरेलू सलाह राष्ट्रीय आपात प्रसारण से आती है, जो बिल्ली-कुत्तों को साथ ले जाने और पोर्टेबल बैग तैयार रखने को कहती है, पर यह भी एक समान राष्ट्रीय नियम नहीं है। सभी देश \"साथ ले जाने\" और \"आश्रय में स्वीकार होने\" के अंतर को छूते हैं, पर इसे एक विशेष शब्द में बाँधने वाला केवल जापान है。",
+        "id": "Jawabannya adalah Jepang. Kementerian Lingkungan Jepang mendefinisikan \"同行避難\" sebagai mengungsi bersama hewan peliharaan ke tempat perlindungan, dengan menegaskan bahwa ini tidak berarti manusia dan hewan tinggal di ruangan yang sama di sana; pemilik juga perlu memikirkan pengungsi lain, alergi, dan aturan tempat. Sebagai perbandingan, materi resmi Taiwan membagi kesiapsiagaan menjadi tugas rumah tangga — makanan, air, obat rutin, carrier, dan microchip — tetapi menekankan bahwa terdaftar bukan berarti benar-benar siap, karena izin masuk ke tempat pengungsian tetap harus dikonfirmasi setempat. Ready.gov Amerika Serikat memasukkan tanda identitas, tali, obat, dan catatan vaksinasi ke rencana darurat keluarga, sambil mengingatkan bahwa tempat pengungsian umum belum tentu menerima hewan. Panduan rumah tangga di Tiongkok daratan, dari National Emergency Broadcasting, menganjurkan membawa kucing dan anjing saat mengungsi serta menyiapkan tas portabel, tetapi ini juga bukan aturan nasional yang seragam. Semua negara ini menyentuh celah antara \"membawa\" dan \"diterima di penampungan\", tetapi hanya Jepang yang menamainya dengan istilah resmi khusus.",
+        "pt-BR": "A resposta é o Japão. O Ministério do Meio Ambiente do Japão define \"同行避難\" como evacuar junto com o animal até um abrigo, deixando claro que isso não significa que pessoas e pets vão morar no mesmo cômodo ali, e que o tutor ainda precisa considerar outros evacuados, alergias e regras do local. Em comparação, o material oficial de Taiwan divide a preparação em tarefas domésticas — alimento, água, remédios de uso contínuo, caixa de transporte e microchip — mas destaca que estar registrado não é o mesmo que estar preparado, já que a entrada no abrigo depende de regras locais. O Ready.gov dos Estados Unidos inclui identificação, guia, remédios e registros de vacinação no plano de emergência da família, alertando que abrigos públicos podem não aceitar pets. A orientação doméstica da China continental, do serviço nacional de radiodifusão de emergência, recomenda levar cães e gatos na evacuação e preparar uma bolsa portátil, mas também não é uma regra nacional única. Todos esses países tocam na diferença entre \"levar o animal\" e \"ele ser abrigado\", mas só o Japão nomeia essa diferença com um termo oficial próprio."
+      }
+    },
+    {
+      "id": "q-20270424-pet-role",
+      "date": "2027-04-24",
+      "kind": "poll",
+      "topic": "pets-and-family",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "在你心裡,寵物比較接近家裡的哪一種存在?",
+        "en": "In your view, which best describes a pet's place at home?",
+        "ja": "あなたにとって、ペットは家の中でどんな存在に近いですか?",
+        "zh-CN": "在你心里,宠物更接近家里的哪一种存在?",
+        "hi": "आपकी नज़र में, घर में पालतू पशु सबसे ज़्यादा किस तरह की मौजूदगी है?",
+        "id": "Menurut Anda, hewan peliharaan paling mendekati peran seperti apa di rumah?",
+        "pt-BR": "Na sua visão, o que melhor descreve o papel de um pet em casa?"
+      },
+      "options": [
+        {
+          "id": "family-member",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": {
+            "zh-TW": "家人一樣的存在",
+            "en": "A member of the family",
+            "ja": "家族の一員のような存在",
+            "zh-CN": "像家人一样的存在",
+            "hi": "परिवार के सदस्य जैसा",
+            "id": "Seperti anggota keluarga",
+            "pt-BR": "Um membro da família"
+          }
+        },
+        {
+          "id": "responsibility",
+          "emoji": "🩺",
+          "label": {
+            "zh-TW": "需要用心照顧的責任",
+            "en": "A responsibility to care for",
+            "ja": "世話をする責任の対象",
+            "zh-CN": "需要用心照顾的责任",
+            "hi": "देखभाल की एक ज़िम्मेदारी",
+            "id": "Tanggung jawab untuk dirawat",
+            "pt-BR": "Uma responsabilidade de cuidado"
+          }
+        },
+        {
+          "id": "companion",
+          "emoji": "🐾",
+          "label": {
+            "zh-TW": "情感陪伴的夥伴",
+            "en": "A companion for comfort",
+            "ja": "心の支えになる伴侶",
+            "zh-CN": "情感陪伴的伙伴",
+            "hi": "भावनात्मक साथी",
+            "id": "Teman untuk kenyamanan emosional",
+            "pt-BR": "Um companheiro de afeto"
+          }
+        },
+        {
+          "id": "distant-animal",
+          "emoji": "🏠",
+          "label": {
+            "zh-TW": "家裡的動物,但保持距離",
+            "en": "An animal in the house, kept at a distance",
+            "ja": "家にいる動物だが、距離を置く存在",
+            "zh-CN": "家里的动物,但保持距离",
+            "hi": "घर का जानवर, पर दूरी बनाकर",
+            "id": "Hewan di rumah, tapi tetap berjarak",
+            "pt-BR": "Um animal em casa, mas mantido à distância"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270424-pet-registry",
+      "date": "2027-04-24",
+      "kind": "guess",
+      "topic": "pets-and-family",
+      "asker": null,
+      "target": null,
+      "answer": "pt-BR",
+      "text": {
+        "zh-TW": "哪一個國家的環境部門建置了全國性的犬貓登記工具,把疫苗、晶片、走失找回與棄養治理連結在一起?",
+        "en": "Which country's environment ministry built a national registration tool for dogs and cats linking vaccination, microchipping, lost-pet recovery, and abandonment governance?",
+        "ja": "どの国の環境省が、ワクチン、マイクロチップ、迷子の返還、遺棄対策を結びつけた犬猫の全国登録の仕組みを作ったか?",
+        "zh-CN": "哪一个国家的环境部门建立了全国性的犬猫登记工具,把疫苗、芯片、走失找回和弃养治理连结在一起?",
+        "hi": "किस देश के पर्यावरण मंत्रालय ने कुत्तों और बिल्लियों के लिए एक राष्ट्रीय पंजीकरण साधन बनाया है जो टीकाकरण, माइक्रोचिप, खोने पर वापसी और परित्याग-नियंत्रण को जोड़ता है?",
+        "id": "Kementerian lingkungan negara mana yang membangun sarana pendaftaran nasional untuk anjing dan kucing yang menghubungkan vaksinasi, microchip, pengembalian saat hilang, dan penanganan penelantaran?",
+        "pt-BR": "Qual país tem um ministério do meio ambiente que criou um cadastro nacional de cães e gatos ligado a vacinação, microchipagem, devolução em caso de perda e enfrentamento do abandono?"
+      },
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印度尼西亚",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是巴西。巴西環境部的 SinPatinhas 是全國性的犬貓登記工具,把疫苗、晶片、走失找回與棄養治理連結在一起,讓照護不再只是家庭私事,而是連到城市、收容、健康與災害應變。相比之下,日本環境省把飼養寵物定義為「託付動物的生命」,要求終生飼養、避免造成鄰里困擾、防止無計畫繁殖並了解人獸共通傳染病,重點放在飼主對鄰里與動物本身的責任,而非建立全國登記系統。印尼2025年的動物福利規則也提到識別與登記,但更強調福利教育、疾病預防與人與動物的安全互動,是把「喜歡動物」翻譯成可教、可記錄的照護行為。台灣的法律語言則聚焦在界定什麼算「寵物」,並要求飼主對受傷或患病動物提供必要醫療,並沒有類似SinPatinhas的全國性登記連結系統。四者都顯示,家庭情感之外,誰負責、哪些動物被納入才是關鍵。",
+        "en": "The answer is Brazil. Brazil's Environment Ministry runs SinPatinhas, a national registration tool for dogs and cats linking vaccination, microchipping, recovery after loss, and abandonment governance — turning pet care from a private household matter into something tied to cities, shelters, health, and disaster response. By contrast, Japan's Environment Ministry frames keeping a pet as taking responsibility for an animal's life: lifelong care, avoiding nuisance to neighbours, preventing uncontrolled breeding, and understanding zoonotic disease, with the emphasis on duty toward neighbours and the animal rather than a national registry. Indonesia's 2025 welfare regulation also names identification and registration, but centers on welfare education, disease prevention, and safe human-animal interaction, translating 'liking animals' into teachable, recordable care. Taiwan's legal language instead focuses on defining what counts as a pet and requiring owners to give necessary medical care to an injured or sick animal, without a comparable nationwide registry tied to loss and abandonment. Across all four, what matters is who carries the duty and which animals count — not simply whether an animal is called family.",
+        "ja": "答えはブラジルである。ブラジル環境省のSinPatinhasは、犬と猫のための全国的な登録の仕組みで、ワクチン、マイクロチップ、迷子の返還、遺棄対策を結びつけている。これにより、世話はもはや家庭だけの私事ではなく、都市、収容、健康、防災にもつながっている。対照的に、日本の環境省はペットを飼うことを「動物の命を預かること」と説明し、終生飼養、近隣への配慮、無計画な繁殖の防止、人獣共通感染症の理解を求めており、重点は全国登録ではなく近隣と動物自身への責任にある。インドネシアの2025年の動物福祉規則も識別と登録を挙げるが、福祉教育、疾病予防、人と動物の安全な関わりに重点があり、「動物が好き」という感情を教育・記録できる世話へ翻訳するものだ。台湾の法律は「ペット」の定義そのものと、負傷・病気の動物への必要な医療提供という飼い主の義務に焦点を当てており、SinPatinhasのような全国登録の仕組みは持たない。四か国を比べると、家族への愛情そのものより、誰が責任を負い、どの動物が対象になるかが重要だとわかる。",
+        "zh-CN": "答案是巴西。巴西环境部的SinPatinhas是全国性的犬猫登记工具,把疫苗、芯片、走失找回和弃养治理连结在一起,让照护不再只是家庭私事,而是连到城市、收容、健康和灾害应对。相比之下,日本环境省把养宠物定义为“托付一条动物的生命”,要求终生饲养、避免给邻里造成困扰、防止无计划繁殖并了解人畜共通传染病,重点放在饲主对邻里与动物本身的责任,而不是建立全国登记系统。印度尼西亚2025年的动物福利规则也提到身份识别和登记,但更强调福利教育、疾病预防与人和动物的安全互动,是把“喜欢动物”转化为可教育、可记录的照护行为。台湾的法律语言则聚焦在界定什么算“宠物”,并要求饲主为受伤或患病动物提供必要医疗,并没有类似SinPatinhas的全国性登记连结系统。四者都说明,家庭情感之外,谁承担责任、哪些动物被纳入才是关键。",
+        "hi": "उत्तर ब्राज़ील है। ब्राज़ील के पर्यावरण मंत्रालय का SinPatinhas कुत्तों और बिल्लियों के लिए एक राष्ट्रीय पंजीकरण साधन है, जो टीकाकरण, माइक्रोचिप, खोने पर वापसी और परित्याग-नियंत्रण को आपस में जोड़ता है — इससे देखभाल केवल घर का निजी मामला नहीं रह जाती, बल्कि शहर, आश्रय, स्वास्थ्य और आपदा-प्रतिक्रिया से जुड़ जाती है। इसके विपरीत, जापान का पर्यावरण मंत्रालय पालतू रखने को “एक जीव के जीवन की ज़िम्मेदारी लेना” बताता है, जिसमें आजीवन देखभाल, पड़ोस को परेशानी न पहुँचाना, अनियंत्रित प्रजनन रोकना और मनुष्य-पशु से फैलने वाली बीमारियों को समझना शामिल है — ज़ोर राष्ट्रीय पंजीकरण पर नहीं, पड़ोस और पशु के प्रति ज़िम्मेदारी पर है। इंडोनेशिया के 2025 के कल्याण नियमों में भी पहचान और पंजीकरण शामिल है, पर वहाँ कल्याण-शिक्षा, रोग-रोकथाम और सुरक्षित संपर्क पर ज़ोर है। ताइवान का क़ानून “पालतू पशु” की परिभाषा और घायल या बीमार पशु के इलाज की ज़िम्मेदारी पर केंद्रित है, न कि किसी राष्ट्रीय पंजीकरण तंत्र पर। चारों देश दिखाते हैं कि परिवार कहने से ज़्यादा मायने यह रखता है कि ज़िम्मेदारी किसकी है।",
+        "id": "Jawabannya adalah Brasil. SinPatinhas dari Kementerian Lingkungan Brasil adalah sarana pendaftaran nasional untuk anjing dan kucing yang menghubungkan vaksinasi, microchip, pengembalian saat hilang, dan penanganan penelantaran — menjadikan perawatan hewan bukan lagi urusan privat semata, tetapi terkait kota, penampungan, kesehatan, dan tanggap bencana. Sebaliknya, Kementerian Lingkungan Jepang menjelaskan memelihara hewan sebagai memikul tanggung jawab atas kehidupan makhluk hidup: merawat seumur hidup, mencegah gangguan bagi tetangga, menghindari perkembangbiakan tak terkendali, dan memahami penyakit zoonosis — fokusnya pada tanggung jawab terhadap tetangga dan hewan itu sendiri, bukan sistem pendaftaran nasional. Peraturan kesejahteraan Indonesia tahun 2025 juga menyebut identifikasi dan pendaftaran, tetapi lebih menekankan edukasi kesejahteraan, pencegahan penyakit, dan interaksi manusia-hewan yang aman. Bahasa hukum Taiwan berfokus pada definisi hewan peliharaan dan kewajiban pemilik memberi perawatan medis bagi hewan yang terluka atau sakit, tanpa sistem pendaftaran nasional serupa SinPatinhas. Dari keempatnya, yang menentukan bukan sekadar sebutan keluarga, melainkan siapa yang memikul tanggung jawab dan hewan mana yang tercakup.",
+        "pt-BR": "A resposta é o Brasil. O SinPatinhas, do Ministério do Meio Ambiente, é um cadastro nacional de cães e gatos que conecta vacinação, microchipagem, devolução em caso de perda e enfrentamento do abandono — o que retira o cuidado do âmbito puramente privado e o liga às cidades, aos abrigos, à saúde e à resposta a desastres. Em contraste, o Ministério do Meio Ambiente do Japão descreve ter um pet como assumir a responsabilidade pela vida de um ser vivo: cuidado por toda a vida, evitar incômodo à vizinhança, impedir reprodução sem controle e conhecer zoonoses — o foco recai sobre a vizinhança e o próprio animal, não sobre um cadastro nacional. O regulamento de bem-estar da Indonésia de 2025 também menciona identificação e registro, mas dá mais peso à educação sobre bem-estar, prevenção de doenças e interações seguras. A linguagem jurídica de Taiwan concentra-se em definir o que é um animal de estimação e exigir que o tutor ofereça atendimento médico necessário a um animal ferido ou doente, sem um cadastro nacional equivalente ao SinPatinhas. Nos quatro casos, o que importa não é apenas chamar o animal de família, mas quem assume a responsabilidade e quais animais são contemplados."
+      }
+    },
+    {
+      "id": "q-20270425-engagement-priority",
+      "date": "2027-04-25",
+      "kind": "poll",
+      "topic": "proposals-and-engagements",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "在你心目中，訂婚最重要的環節是什麼？",
+        "en": "In your view, what matters most in an engagement?",
+        "ja": "あなたにとって、婚約で最も重要なのはどの部分か？",
+        "zh-CN": "在你心目中，订婚最重要的环节是什么？",
+        "hi": "आपकी नज़र में सगाई में सबसे ज़्यादा अहम कौन-सा हिस्सा है？",
+        "id": "Menurut Anda, bagian mana yang paling penting dalam pertunangan?",
+        "pt-BR": "Na sua opinião, o que mais importa em um noivado?"
+      },
+      "options": [
+        {
+          "id": "family-meeting",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": {
+            "zh-TW": "雙方家庭見面",
+            "en": "The two families meeting",
+            "ja": "両家の顔合わせ",
+            "zh-CN": "双方家庭见面",
+            "hi": "दोनों परिवारों का मिलना",
+            "id": "Pertemuan kedua keluarga",
+            "pt-BR": "O encontro das duas famílias"
+          }
+        },
+        {
+          "id": "ring-exchange",
+          "emoji": "💍",
+          "label": {
+            "zh-TW": "交換戒指",
+            "en": "Exchanging rings",
+            "ja": "指輪の交換",
+            "zh-CN": "交换戒指",
+            "hi": "अँगूठियों का आदान-प्रदान",
+            "id": "Pertukaran cincin",
+            "pt-BR": "A troca de alianças"
+          }
+        },
+        {
+          "id": "public-announcement",
+          "emoji": "📢",
+          "label": {
+            "zh-TW": "公開宣布",
+            "en": "The public announcement",
+            "ja": "公表すること",
+            "zh-CN": "公开宣布",
+            "hi": "सार्वजनिक घोषणा",
+            "id": "Pengumuman terbuka",
+            "pt-BR": "O anúncio público"
+          }
+        },
+        {
+          "id": "gifts-exchange",
+          "emoji": "🎁",
+          "label": {
+            "zh-TW": "準備聘禮/禮物",
+            "en": "Preparing betrothal gifts",
+            "ja": "結納品・贈り物の準備",
+            "zh-CN": "准备聘礼/礼物",
+            "hi": "सगाई के उपहार तैयार करना",
+            "id": "Menyiapkan seserahan/hadiah",
+            "pt-BR": "Preparar os presentes de noivado"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270425-engagement-ring-hand",
+      "date": "2027-04-25",
+      "kind": "guess",
+      "topic": "proposals-and-engagements",
+      "asker": null,
+      "target": null,
+      "answer": "pt-BR",
+      "text": {
+        "zh-TW": "訂婚時戒指戴在右手，結婚時才換到左手，用同一枚戒指標記兩個階段——這是哪個國家的習俗？",
+        "en": "Rings are worn on the right hand at engagement and moved to the left hand at the wedding, so one ring marks both stages — whose custom is this?",
+        "ja": "婚約中は指輪を右手にはめ、結婚時に左手へ移し、一つの指輪で二つの段階を示す——これはどこの習慣か？",
+        "zh-CN": "订婚时戒指戴在右手，结婚时才换到左手，用同一枚戒指标记两个阶段——这是哪个国家的习俗？",
+        "hi": "सगाई के दौरान अँगूठी दाहिने हाथ में पहनी जाती है और विवाह पर बाएँ हाथ में चली जाती है, यानी एक ही अँगूठी दो चरण दिखाती है — यह किसकी परंपरा है?",
+        "id": "Cincin dikenakan di tangan kanan saat bertunangan dan berpindah ke tangan kiri saat menikah, sehingga satu cincin menandai dua tahap — ini kebiasaan negara mana?",
+        "pt-BR": "O anel é usado na mão direita durante o noivado e passa para a esquerda no casamento, de modo que um único anel marca as duas etapas — de qual país é esse costume?"
+      },
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印度尼西亚",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是巴西。巴西的訂婚（noivado）是社會階段而非法律關係，esponsais不具強制力；訂婚時交換戒指戴右手，結婚時再換到左手，用同一枚戒指標記兩個階段。相比之下，美國沒有全國性婚約制度，法律問題常縮成戒指要不要歸還的爭議，各州判斷不同；日本沒有專門婚約法律，婚約要看有無結婚合意與結納、戒指、雙方家庭見面等客觀事實，由法院逐案認定；印尼的訂婚lamaran是雙方家庭正式提親與答應的場合，帶著seserahan，是社群先承認、登記等法律程序在後。四地都用不同方式標記訂婚與結婚的界線，但巴西是唯一把換手戴戒指當作分界線的地方。",
+        "en": "The answer is Brazil. In Brazil, engagement (noivado) is a social stage rather than a legal relationship — esponsais are not enforceable — and rings are exchanged and worn on the right hand, moving to the left hand at the wedding, so a single ring marks both stages. By contrast, the United States has no national institution of betrothal, and its legal disputes usually shrink to whether the ring must be returned, decided differently state by state. Japan has no dedicated engagement statute; a betrothal is recognized only through evidence like the yuino exchange, a ring, and the two families meeting, decided case by case by courts. Indonesia's lamaran is the occasion when families formally propose and accept, accompanied by seserahan, with community recognition coming first and legal registration following later. All four mark the line between engagement and marriage differently, but Brazil is the only one where the ring moving from one hand to the other is treated as that dividing line.",
+        "ja": "答えはブラジルである。ブラジルの婚約（ノイヴァド）は法律関係ではなく社会的な段階であり、エスポンサイスに強制力はない。指輪を交換して右手にはめ、結婚時に左手へ移すことで、一つの指輪が二つの段階を示す。対照的に、米国には全国的な婚約制度がなく、法律上の争いはしばしば指輪を返すべきかという一点に縮まり、州ごとに判断が異なる。日本には婚約を専門に定める法律がなく、結納や指輪、両家の顔合わせなどの客観的事実によって婚約の成立が裁判所で個別に判断される。インドネシアのラマランは両家が正式に申し込み受け入れる場でスセラハンを伴い、共同体の承認が先に、法的な登記が後に来る。四つの地域はいずれも婚約と結婚の境目を異なる方法で示すが、指輪が手を替える瞬間を境目とするのはブラジルだけである。",
+        "zh-CN": "答案是巴西。巴西的订婚（noivado）是社会层面的阶段而非法律关系，esponsais不具强制力；订婚时交换戒指戴右手，结婚时再换到左手，用同一枚戒指标记两个阶段。相比之下，美国没有全国性的婚约制度，法律问题常缩成戒指要不要归还的争议，各州判断不同；日本没有专门的婚约法律，婚约要看有无结婚合意与结纳、戒指、双方家庭见面等客观事实，由法院逐案认定；印度尼西亚的订婚lamaran是双方家庭正式提亲与答应的场合，带着seserahan，是社群先承认、登记等法律程序在后。四地都用不同方式标记订婚与结婚的界线，但巴西是唯一把换手戴戒指当作分界线的地方。",
+        "hi": "उत्तर है ब्राज़ील। ब्राज़ील में सगाई (noivado) क़ानूनी संबंध नहीं बल्कि एक सामाजिक चरण है — esponsais प्रवर्तनीय नहीं हैं। अँगूठियाँ बदली जाती हैं और दाहिने हाथ में पहनी जाती हैं, विवाह पर वही बाएँ हाथ में चली जाती है, यानी एक ही अँगूठी दो चरणों को चिह्नित करती है। इसके विपरीत, अमेरिका में वाग्दान की कोई राष्ट्रीय संस्था नहीं है, और वहाँ क़ानूनी विवाद प्रायः इस सवाल तक सिमट जाता है कि अँगूठी लौटानी है या नहीं — जिसका निर्णय हर राज्य में अलग होता है। जापान में सगाई को नियंत्रित करने वाला कोई विशेष क़ानून नहीं है; युइनो के आदान-प्रदान, अँगूठी और दोनों परिवारों की भेंट जैसे वस्तुनिष्ठ प्रमाणों के आधार पर अदालत मामले-दर-मामले तय करती है। इंडोनेशिया में lamaran वह अवसर है जब दोनों परिवार औपचारिक रूप से प्रस्ताव और स्वीकृति करते हैं, साथ में seserahan होता है — समुदाय की स्वीकृति पहले आती है, क़ानूनी पंजीकरण बाद में। ये चार क्षेत्र सगाई और विवाह के बीच की रेखा को अलग-अलग तरीकों से चिह्नित करते हैं, पर केवल ब्राज़ील में अँगूठी के हाथ बदलने के क्षण को ही यह विभाजन माना जाता है।",
+        "id": "Jawabannya adalah Brasil. Pertunangan (noivado) di Brasil merupakan tahap sosial, bukan hubungan hukum — esponsais tidak dapat dipaksakan. Cincin dipertukarkan dan dikenakan di tangan kanan, lalu berpindah ke tangan kiri saat menikah, sehingga satu cincin menandai dua tahap. Sebaliknya, Amerika Serikat tidak memiliki pranata pertunangan nasional, dan persoalan hukumnya biasanya menyusut menjadi soal apakah cincin harus dikembalikan, yang diputuskan berbeda-beda antar negara bagian. Jepang tidak memiliki undang-undang khusus tentang pertunangan; keberadaannya ditentukan oleh bukti objektif seperti pertukaran yuino, cincin, dan pertemuan kedua keluarga, yang diputuskan pengadilan kasus per kasus. Lamaran di Indonesia adalah momen ketika kedua keluarga meminang dan menerima secara resmi, disertai seserahan — pengakuan komunitas datang lebih dulu, pencatatan hukum menyusul kemudian. Keempat wilayah ini menandai batas antara pertunangan dan perkawinan dengan cara berbeda, tetapi hanya di Brasil momen cincin berpindah tangan yang dianggap sebagai garis pemisah itu.",
+        "pt-BR": "A resposta é o Brasil. O noivado no Brasil é uma etapa social, não uma relação jurídica — os esponsais não são exigíveis. As alianças são trocadas e usadas na mão direita, passando para a esquerda no casamento, de modo que um mesmo anel marca as duas etapas. Em contraste, os Estados Unidos não têm uma instituição nacional de esponsais, e a questão jurídica costuma se reduzir a saber se o anel deve ser devolvido, decidido de forma diferente em cada estado. O Japão não tem lei específica sobre noivado; sua existência depende de provas objetivas como a troca do yuino, um anel e o encontro das famílias, decidida caso a caso pelos tribunais. O lamaran na Indonésia é a ocasião em que as famílias pedem e aceitam formalmente, acompanhado do seserahan — o reconhecimento comunitário vem primeiro, o registro legal depois. As quatro regiões marcam a linha entre noivado e casamento de formas diferentes, mas só no Brasil o momento em que o anel troca de mão é tratado como essa divisão."
+      }
+    },
+    {
+      "id": "q-20270426-deposit-refund-experience",
+      "date": "2027-04-26",
+      "kind": "poll",
+      "topic": "renting-a-home",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "退租的時候,你的押金後來怎麼樣了?",
+        "en": "When you moved out, what happened to your deposit?",
+        "ja": "退去するとき、あなたの敷金はどうなりましたか?",
+        "zh-CN": "退租的时候,你的押金后来怎么样了?",
+        "hi": "जब आपने मकान खाली किया, तो आपकी जमानत राशि का क्या हुआ?",
+        "id": "Saat kamu pindah keluar, apa yang terjadi dengan uang jaminanmu?",
+        "pt-BR": "Quando você saiu do imóvel alugado, o que aconteceu com a sua caução?"
+      },
+      "options": [
+        {
+          "id": "full-refund",
+          "emoji": "💰",
+          "label": {
+            "zh-TW": "全額退還,一毛不少",
+            "en": "Got it all back, no deductions",
+            "ja": "全額そのまま返ってきた",
+            "zh-CN": "全额退还,一分不少",
+            "hi": "पूरी राशि बिना कटौती वापस मिली",
+            "id": "Dikembalikan penuh, tanpa potongan",
+            "pt-BR": "Recebi tudo de volta, sem descontos"
+          }
+        },
+        {
+          "id": "partial-deduct",
+          "emoji": "🧾",
+          "label": {
+            "zh-TW": "被扣了一部分,說是清潔或損壞費",
+            "en": "Some was deducted for cleaning or damage",
+            "ja": "清掃費や修繕費として一部差し引かれた",
+            "zh-CN": "被扣了一部分,说是清洁或损坏费",
+            "hi": "सफ़ाई या नुकसान के नाम पर कुछ हिस्सा काट लिया गया",
+            "id": "Sebagian dipotong, katanya untuk biaya bersih-bersih atau kerusakan",
+            "pt-BR": "Descontaram uma parte, alegando limpeza ou dano"
+          }
+        },
+        {
+          "id": "dispute",
+          "emoji": "⚖️",
+          "label": {
+            "zh-TW": "房東不退,雙方吵起來甚至打官司",
+            "en": "Landlord refused to return it, ended up in a dispute",
+            "ja": "大家が返してくれず、揉め事になった",
+            "zh-CN": "房东不退,双方吵起来甚至打官司",
+            "hi": "मकान-मालिक ने लौटाने से इनकार किया, बात विवाद तक पहुँची",
+            "id": "Pemilik menolak mengembalikan, sampai jadi sengketa",
+            "pt-BR": "O locador se recusou a devolver, e virou uma briga"
+          }
+        },
+        {
+          "id": "never-rented",
+          "emoji": "🏠",
+          "label": {
+            "zh-TW": "沒租過房子,沒經歷過這件事",
+            "en": "Never rented, so no experience with this",
+            "ja": "賃貸経験がなく、当てはまらない",
+            "zh-CN": "没租过房子,没经历过这件事",
+            "hi": "कभी किराये पर नहीं रहा, यह लागू नहीं होता",
+            "id": "Belum pernah menyewa, jadi tidak relevan",
+            "pt-BR": "Nunca aluguei, não se aplica"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270426-no-deposit-cap-country",
+      "date": "2027-04-26",
+      "kind": "guess",
+      "topic": "renting-a-home",
+      "asker": null,
+      "target": null,
+      "answer": "id",
+      "text": {
+        "zh-TW": "以下七個地區裡,哪一個國家的法律完全不管押金——收不收、收多少,全交由房東與房客自行在合約裡約定?",
+        "en": "Of these seven places, in which country does the law say nothing at all about security deposits — whether one is charged, and how much, is left entirely to what landlord and tenant agree in the contract?",
+        "ja": "この七つの地域のうち、法律が敷金についてまったく何も定めていない――取るかどうか、いくらにするかを完全に大家と借主の合意任せにしている国はどこか?",
+        "zh-CN": "在这七个地方里,哪个国家的法律完全不管押金——收不收、收多少全凭房东和房客自己在合同里约定?",
+        "hi": "इन सात जगहों में से, किस देश का क़ानून जमानत राशि के बारे में बिल्कुल कुछ नहीं कहता — लेना है या नहीं, और कितना, यह पूरी तरह मकान-मालिक और किरायेदार के अनुबंध पर छोड़ दिया गया है?",
+        "id": "Dari tujuh tempat ini, di negara mana hukum sama sekali tidak mengatur uang jaminan sewa — apakah dipungut, dan berapa besarnya, sepenuhnya diserahkan pada kesepakatan pemilik dan penyewa dalam kontrak?",
+        "pt-BR": "Entre esses sete lugares, em qual país a lei não diz absolutamente nada sobre a caução — se é cobrada, e quanto, fica inteiramente a critério do que locador e locatário combinarem no contrato?"
+      },
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國大陸",
+            "en": "Mainland China",
+            "ja": "中国本土",
+            "zh-CN": "中国大陆",
+            "hi": "चीन (मुख्यभूमि)",
+            "id": "Tiongkok (Daratan)",
+            "pt-BR": "China Continental"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是印尼。印尼租賃法沿用荷屬時期民法典第1548條起的規定,押金要不要收、收多少完全由房東與房客在合約裡自行約定,法律本身沒有金額上限,也不像中國大陸那樣要求寫入合約並實名備案。中國大陸2025年9月15日施行的《住房租賃條例》雖然沒有押金金額上限,但第十條要求金額、返還時間與扣減情形一律寫進合約並實名備案,規範的是程序而非金額。美國同樣沒有聯邦押金規定,押金上限交由各州自訂,加州民法典第1950.5條經AB 12修法後,已把上限訂在一個月租金。印度2021年的《標準租賃法》建議住宅押金上限兩個月,但那只是供各邦採用的示範法,多數邦至今仍沿用自己的舊法,並未全國統一施行。相較之下,印尼是唯一連押金該不該收、該不該寫進合約都完全沒有法律規定的地方。",
+        "en": "The answer is Indonesia. Indonesian tenancy law still runs on the Dutch-era Civil Code, Articles 1548 onward, and it leaves the deposit entirely to what landlord and tenant agree — no statutory cap, and unlike mainland China, no requirement that deposit terms even be written into a filed contract. China's Housing Rental Regulation, in force since 15 September 2025, sets no cap either, but Article 10 does require the deposit amount, refund timing and deduction grounds to be written into the contract and filed under real names — it regulates procedure, not the amount. The United States has no federal deposit rule at all, but individual states fill the gap — California's Civil Code §1950.5, after the AB 12 amendment, caps deposits at one month's rent. India's Model Tenancy Act, 2021 proposes a two-month cap for residential premises, but it is only a template — most states still run their own older Rent Control Acts and have not adopted it. Indonesia stands alone as the place where the law says nothing at all, not even requiring the deposit to appear in a written contract.",
+        "ja": "答えはインドネシアである。インドネシアの賃貸法はオランダ統治時代の民法典第1548条以下に基づいており、敷金を取るかどうか、いくらにするかは完全に大家と借主の合意に委ねられ、法律上の上限はなく、中国本土のように契約書への明記や実名での届け出も義務付けられていない。中国本土で2025年9月15日に施行された住房租賃条例は、敷金の上限こそ定めていないものの、第十条で金額・返還時期・差し引く事由を契約に明記し実名で届け出ることを求めており、手続きを規制している。アメリカには連邦レベルの敷金規定はないが、各州がそれぞれ定めており、カリフォルニア州民法典第1950.5条はAB12改正後、上限を家賃一カ月分としている。インドの2021年標準賃貸法は住宅で二カ月分の上限を提案するが、これは各州が採用するか自由な模範法にすぎず、多くの州は今も独自の古い家賃統制法を使っている。これらと比べ、インドネシアは押金について契約書への記載義務すらない、法律が完全に沈黙している唯一の国である。",
+        "zh-CN": "答案是印尼。印尼租赁法沿用荷属时期民法典第1548条起的规定,押金要不要收、收多少完全由房东与房客在合同里自行约定,法律本身没有金额上限,也不像中国大陆那样要求写入合同并实名备案。中国大陆2025年9月15日起施行的《住房租赁条例》虽然没有押金金额上限,但第十条要求金额、返还时间与扣减情形一律写进合同并实名备案,规范的是程序而非金额。美国同样没有联邦押金规定,押金上限交由各州自订,加州民法典第1950.5条经AB 12修法后,已把上限订在一个月租金。印度2021年的《标准租赁法》建议住宅押金上限两个月,但那只是供各邦采用的示范法,多数邦至今仍沿用自己的旧法,并未全国统一施行。相较之下,印尼是唯一连押金该不该收、该不该写进合同都完全没有法律规定的地方。",
+        "hi": "जवाब है इंडोनेशिया। इंडोनेशिया का किरायेदारी क़ानून डच-युगीन नागरिक संहिता के अनुच्छेद 1548 और उसके बाद पर टिका है, जहाँ जमानत राशि लेना है या नहीं और कितनी, यह पूरी तरह मकान-मालिक और किरायेदार के आपसी समझौते पर छोड़ा गया है — न कोई सीमा, न ही चीन जैसी यह शर्त कि इसे अनुबंध में लिखा जाए और असली नाम से दर्ज कराया जाए। चीन का आवासीय किराया विनियमन, जो 15 सितंबर 2025 से लागू है, जमानत राशि पर कोई सीमा नहीं रखता, लेकिन धारा 10 माँगती है कि राशि, वापसी का समय और कटौती के आधार अनुबंध में लिखे जाएँ और असली नाम से दर्ज हों — यह प्रक्रिया को नियंत्रित करता है, राशि को नहीं। अमेरिका में भी कोई संघीय नियम नहीं है, पर राज्य अपने नियम बनाते हैं — कैलिफ़ोर्निया का नागरिक संहिता धारा 1950.5, AB 12 संशोधन के बाद, सीमा एक महीने के किराये पर लाती है। भारत का मॉडल टेनेंसी एक्ट, 2021 आवासीय परिसरों के लिए दो महीने की सीमा प्रस्तावित करता है, पर यह केवल एक नमूना क़ानून है — अधिकांश राज्य अब भी अपने पुराने क़ानूनों पर चलते हैं। इस तुलना में इंडोनेशिया अकेला ऐसा देश है जहाँ जमानत राशि को अनुबंध में लिखने की भी कोई क़ानूनी बाध्यता नहीं।",
+        "id": "Jawabannya adalah Indonesia. Hukum sewa Indonesia berpijak pada KUHPerdata peninggalan zaman Belanda, Pasal 1548 dan seterusnya, yang menyerahkan sepenuhnya soal uang jaminan — dipungut atau tidak, dan berapa besarnya — pada kesepakatan pemilik dan penyewa; tidak ada batas atas, dan tidak seperti Tiongkok, tidak ada kewajiban mencantumkannya dalam kontrak tertulis yang didaftarkan. Peraturan Sewa Perumahan Tiongkok, berlaku sejak 15 September 2025, juga tidak menetapkan batas jumlah uang jaminan, tetapi Pasal 10 mewajibkan besaran, waktu pengembalian, dan alasan pemotongan dicantumkan dalam kontrak serta didaftarkan dengan nama asli — ini mengatur prosedur, bukan jumlahnya. Amerika Serikat juga tidak punya aturan federal, tetapi negara bagian mengaturnya sendiri — Kode Sipil California §1950.5, setelah amendemen AB 12, membatasi satu bulan sewa. Model Tenancy Act India 2021 mengusulkan batas dua bulan untuk hunian, tetapi itu cuma templat — sebagian besar negara bagian masih memakai undang-undang lama mereka. Dibanding semua itu, Indonesia satu-satunya tempat yang bahkan tidak mewajibkan uang jaminan dicantumkan dalam kontrak.",
+        "pt-BR": "A resposta é Indonésia. A lei de locação indonésia se apoia no Código Civil da era colonial holandesa, artigos 1548 em diante, que deixa a caução inteiramente a critério do que locador e locatário combinarem — sem teto legal, e sem exigir, como na China, que conste de um contrato registrado. O Regulamento de Locação Residencial da China, em vigor desde 15 de setembro de 2025, também não fixa teto para a caução, mas o artigo 10 exige que o valor, o prazo de devolução e os motivos de dedução constem do contrato e sejam registrados com nome real — isso regula o procedimento, não o valor. Os Estados Unidos tampouco têm regra federal, mas cada estado define a sua — o Código Civil da Califórnia §1950.5, após a emenda AB 12, limita a caução a um mês de aluguel. O Model Tenancy Act indiano de 2021 propõe um teto de dois meses para uso residencial, mas é apenas um modelo — a maioria dos estados ainda segue suas próprias leis antigas. Diante disso, a Indonésia é o único lugar onde nem sequer há exigência legal de que a caução conste do contrato."
+      }
+    },
+    {
+      "id": "q-20270427-address-deadline",
+      "date": "2027-04-27",
+      "kind": "poll",
+      "topic": "residency-and-visas",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "如果你有過在國外生活的經驗,搬家或換地址時,你通常怎麼應付申報期限?",
+        "en": "If you've ever lived abroad, when you moved or changed your address, how did you usually handle the reporting deadline?",
+        "ja": "海外で暮らした経験がある人に聞きたい。引っ越しや住所変更のとき、届出の期限にはどう対応していた?",
+        "zh-CN": "如果你有过在国外生活的经验,搬家或换地址时,你通常怎么应付申报期限?",
+        "hi": "अगर आप कभी विदेश में रहे हैं, तो घर बदलने या पता बदलने पर आप रिपोर्टिंग की समय-सीमा को आमतौर पर कैसे संभालते थे?",
+        "id": "Kalau kamu pernah tinggal di luar negeri, saat pindah rumah atau ganti alamat, bagaimana biasanya kamu menangani batas waktu pelaporannya?",
+        "pt-BR": "Se você já morou fora do país, quando mudou de casa ou de endereço, como costumava lidar com o prazo de comunicação?"
+      },
+      "options": [
+        {
+          "id": "always-on-time",
+          "emoji": "🏃",
+          "label": {
+            "zh-TW": "一定卡在期限內跑一趟辦好",
+            "en": "Always rushed to file before the deadline",
+            "ja": "必ず期限内に窓口へ行って済ませていた",
+            "zh-CN": "一定卡在期限内跑一趟办好",
+            "hi": "हमेशा समय-सीमा से पहले जाकर काम निपटा लेता/लेती था/थी",
+            "id": "Selalu buru-buru mengurus sebelum batas waktu",
+            "pt-BR": "Sempre corria para resolver antes do prazo"
+          }
+        },
+        {
+          "id": "forget-sometimes",
+          "emoji": "😅",
+          "label": {
+            "zh-TW": "常常忘記,事後才想起來",
+            "en": "Often forgot and remembered too late",
+            "ja": "よく忘れていて、後から思い出す",
+            "zh-CN": "常常忘记,事后才想起来",
+            "hi": "अक्सर भूल जाता/जाती था/थी, बाद में याद आता था",
+            "id": "Sering lupa dan baru ingat belakangan",
+            "pt-BR": "Esquecia com frequência e lembrava depois"
+          }
+        },
+        {
+          "id": "never-thought",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "根本沒想過還要申報這件事",
+            "en": "Never even realized reporting was required",
+            "ja": "そもそも届出が必要だと思ってもいなかった",
+            "zh-CN": "根本没想过还要申报这件事",
+            "hi": "कभी सोचा ही नहीं कि यह रिपोर्ट करना ज़रूरी है",
+            "id": "Tidak pernah kepikiran kalau itu wajib dilaporkan",
+            "pt-BR": "Nunca imaginei que precisava comunicar isso"
+          }
+        },
+        {
+          "id": "not-applicable",
+          "emoji": "🏠",
+          "label": {
+            "zh-TW": "沒在國外住過,沒遇過這種事",
+            "en": "Never lived abroad, never dealt with this",
+            "ja": "海外に住んだことがなく、経験がない",
+            "zh-CN": "没在国外住过,没遇过这种事",
+            "hi": "कभी विदेश में नहीं रहा/रही, यह अनुभव नहीं हुआ",
+            "id": "Belum pernah tinggal di luar negeri, belum pernah mengalami ini",
+            "pt-BR": "Nunca morei fora, nunca passei por isso"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270427-longest-registration",
+      "date": "2027-04-27",
+      "kind": "guess",
+      "topic": "residency-and-visas",
+      "asker": null,
+      "target": null,
+      "answer": "pt-BR",
+      "text": {
+        "zh-TW": "這七個國家和地區之中,哪一個給臨時簽證持有人到居留機關辦理登記的期限最寬,長達90日?",
+        "en": "Among these seven countries and territories, which one gives temporary-visa holders the longest window to register with the residency authority — a full 90 days?",
+        "ja": "この七つの国・地域の中で、一時ビザ保持者に居留機関への登録猶予を最も長く与えている、90日というのはどこか。",
+        "zh-CN": "在这七个国家和地区之中,哪一个给临时签证持有人到居留机关办理登记的期限最宽,长达90日?",
+        "hi": "इन सात देशों/क्षेत्रों में से किसमें अस्थायी वीज़ा धारकों को निवास प्राधिकरण में पंजीकरण कराने के लिए सबसे लंबी मोहलत — पूरे 90 दिन — दी जाती है?",
+        "id": "Di antara ketujuh negara/wilayah ini, mana yang memberi pemegang visa sementara batas waktu paling panjang untuk mendaftar ke otoritas tempat tinggal — sampai 90 hari?",
+        "pt-BR": "Entre esses sete países/territórios, qual dá ao portador de visto temporário o prazo mais longo para se registrar no órgão de residência — até 90 dias?"
+      },
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": {
+            "zh-TW": "台灣",
+            "en": "Taiwan",
+            "ja": "台湾",
+            "zh-CN": "台湾",
+            "hi": "ताइवान",
+            "id": "Taiwan",
+            "pt-BR": "Taiwan"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是巴西。持臨時簽證入境巴西的人,有90日可以到聯邦警察辦理國家移民登記證(RNM)登記,是七個國家和地區裡最寬鬆的;若是已取得居留許可、正等公報公告的人,期限則是公告後30日。相較之下,台灣的外僑居留證要求入境後30日內申請;日本在留卡的初次住居地申報只給14日;印尼的地址變更同樣是最長14日,擔保人還要連帶申報;中國大陸的居留證件登記事項變更是10日內,借宿非旅館處所更短只有24小時;美國雖然沒有全國性的居留登記機關,但地址變更一樣受10日內書面通知的規定約束。巴西90日的空窗期,在這七個國家和地區裡最為寬裕。",
+        "en": "The answer is Brazil. A foreigner who enters on a temporary visa has 90 days to register for the National Migratory Registry (RNM) with the Federal Police — the most generous window among these seven countries and territories; those who already hold a residence authorization instead get 30 days after the approval is published in the Official Gazette. By comparison, Taiwan requires the Alien Resident Certificate application within 30 days of entry; Japan's Residence Card gives only 14 days for the first address registration; Indonesia also caps an address change at a maximum of 14 days, with the sponsor jointly responsible for reporting it; mainland China gives 10 days for a registered change and just 24 hours for staying somewhere other than a hotel; and the United States, despite having no national residency-registration office, still binds address changes to a 10-day written-notice rule. Brazil's 90-day window is the most spacious of the seven.",
+        "ja": "答えはブラジルである。一時ビザで入国した外国人は、連邦警察(Polícia Federal)で国家移住者登録(RNM)を行うのに90日の猶予があり、これは七つの国・地域の中で最も余裕がある。すでに居留許可(autorização de residência)を得ている人は、承認が官報(Diário Oficial)に掲載されてから30日以内となる。比較すると、台湾の外僑居留証(ARC)は入国後30日以内の申請が必要、日本の在留カードは初回の住居地届出がわずか14日、インドネシアも住所変更が最長14日で保証人も連帯責任を負う、中国大陸は登記事項変更が10日以内・ホテル以外への宿泊はわずか24時間、アメリカは全国的な居留登録機関がないものの住所変更は10日以内の書面通知が義務づけられている。ブラジルの90日という猶予は、七カ国の中で最も長い。",
+        "zh-CN": "答案是巴西。持临时签证入境巴西的人,有90日可以到联邦警察办理国家移民登记证(RNM)登记,是七个国家和地区里最宽松的;已经取得居留许可、等待公报公告的人,期限则是公告后30日。相比之下,台湾的外侨居留证要求入境后30日内申请;日本在留卡的初次住居地申报只给14日;印尼的地址变更同样最长14日,担保人还要连带申报;中国大陆的居留证件登记事项变更是10日内,借宿非旅馆处所更短只有24小时;美国虽然没有全国性的居留登记机关,但地址变更同样受10日内书面通知的规定约束。巴西90日的窗口期,在七个国家和地区里最为宽裕。",
+        "hi": "उत्तर है ब्राज़ील। अस्थायी वीज़ा पर ब्राज़ील में प्रवेश करने वाले विदेशी के पास संघीय पुलिस (Polícia Federal) में National Migratory Registry (RNM) के लिए पंजीकरण कराने हेतु 90 दिन होते हैं — इन सात देशों/क्षेत्रों में सबसे उदार अवधि; जिन्हें पहले ही निवास प्राधिकरण (autorização de residência) मिल चुका है, उनके लिए यह अवधि स्वीकृति के आधिकारिक राजपत्र (Diário Oficial) में प्रकाशित होने के 30 दिन बाद तक है। तुलना में, ताइवान का Alien Resident Certificate प्रवेश के 30 दिनों के भीतर आवेदन माँगता है; जापान का Residence Card पहली बार पता दर्ज कराने के लिए केवल 14 दिन देता है; इंडोनेशिया में भी पता-परिवर्तन अधिकतम 14 दिनों में करना होता है और प्रायोजक भी संयुक्त रूप से ज़िम्मेदार होता है; मुख्यभूमि चीन में पंजीकृत बदलाव के लिए 10 दिन और होटल के अलावा कहीं ठहरने पर केवल 24 घंटे मिलते हैं; अमेरिका में राष्ट्रीय पंजीकरण कार्यालय न होने के बावजूद पता-परिवर्तन 10 दिनों के लिखित सूचना नियम से बँधा है। ब्राज़ील की 90 दिन की मोहलत इन सातों में सबसे लंबी है।",
+        "id": "Jawabannya adalah Brasil. Warga asing yang masuk dengan visa sementara memiliki 90 hari untuk mendaftar Registro Nacional Migratório (RNM) di Polícia Federal — jangka waktu paling longgar di antara ketujuh negara/wilayah ini; mereka yang sudah mendapat izin tinggal (autorização de residência) punya waktu 30 hari setelah persetujuan diumumkan di Lembaran Negara (Diário Oficial). Sebagai perbandingan, ARC Taiwan wajib diurus dalam 30 hari sejak kedatangan; Residence Card Jepang hanya memberi 14 hari untuk pendaftaran alamat pertama kali; Indonesia sendiri membatasi perubahan alamat maksimal 14 hari, dengan penjamin turut bertanggung jawab melaporkannya; Tiongkok daratan memberi 10 hari untuk perubahan data terdaftar dan hanya 24 jam untuk menginap di luar hotel; Amerika Serikat, meski tak punya kantor pendaftaran tinggal nasional, tetap terikat aturan pemberitahuan tertulis 10 hari untuk perubahan alamat. Jangka waktu 90 hari Brasil adalah yang paling panjang di antara ketujuhnya.",
+        "pt-BR": "A resposta é o Brasil. Quem entra no país com visto temporário tem 90 dias para se registrar no Registro Nacional Migratório (RNM) na Polícia Federal — o prazo mais generoso entre esses sete países/territórios; quem já recebeu autorização de residência tem 30 dias após a publicação da aprovação no Diário Oficial. Em comparação, o ARC de Taiwan exige solicitação em até 30 dias da entrada; o Residence Card do Japão dá apenas 14 dias para o primeiro registro de endereço; a Indonésia também limita a mudança de endereço a no máximo 14 dias, com o patrocinador corresponsável por comunicá-la; a China continental dá 10 dias para alterações registradas e apenas 24 horas para hospedagem fora de hotel; os Estados Unidos, mesmo sem órgão nacional de registro, ainda exigem notificação por escrito em até 10 dias para mudança de endereço. Os 90 dias do Brasil são o prazo mais longo entre os sete."
+      }
+    },
+    {
+      "id": "q-20270428-shopping-return-habit",
+      "date": "2027-04-28",
+      "kind": "poll",
+      "topic": "shopping-festivals",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "購物節下單前,你會先做哪一件事?",
+        "en": "Before buying during a shopping festival, what do you do first?",
+        "ja": "セール中に買う前、まず何をしますか。",
+        "zh-CN": "购物节下单前,你会先做哪一件事?",
+        "hi": "शॉपिंग फेस्टिवल में ऑर्डर देने से पहले आप सबसे पहले क्या करते हैं?",
+        "id": "Sebelum belanja saat festival diskon, apa yang biasanya Anda lakukan lebih dulu?",
+        "pt-BR": "Antes de comprar na Black Friday, o que você costuma fazer primeiro?"
+      },
+      "options": [
+        {
+          "id": "check-return-policy",
+          "emoji": "🔍",
+          "label": {
+            "zh-TW": "先查退貨規則",
+            "en": "Check the return policy first",
+            "ja": "先に返品ルールを確認する",
+            "zh-CN": "先查退货规则",
+            "hi": "पहले वापसी की शर्तें देखता/देखती हूँ",
+            "id": "Cek dulu kebijakan pengembalian",
+            "pt-BR": "Confiro a política de devolução antes"
+          }
+        },
+        {
+          "id": "screenshot-price",
+          "emoji": "📸",
+          "label": {
+            "zh-TW": "先截圖原價",
+            "en": "Screenshot the original price first",
+            "ja": "先に元値のスクリーンショットを撮る",
+            "zh-CN": "先截图原价",
+            "hi": "पहले असली दाम का स्क्रीनशॉट लेता/लेती हूँ",
+            "id": "Screenshot dulu harga aslinya",
+            "pt-BR": "Tiro print do preço original antes"
+          }
+        },
+        {
+          "id": "just-buy",
+          "emoji": "🛒",
+          "label": {
+            "zh-TW": "什麼都不查,直接下單",
+            "en": "Skip all that and just buy",
+            "ja": "何も確認せずそのまま買う",
+            "zh-CN": "什么都不查,直接下单",
+            "hi": "कुछ नहीं देखता/देखती, सीधे खरीद लेता/लेती हूँ",
+            "id": "Tidak cek apa-apa, langsung beli",
+            "pt-BR": "Não confiro nada, só compro"
+          }
+        },
+        {
+          "id": "skip-festival",
+          "emoji": "🙅",
+          "label": {
+            "zh-TW": "乾脆不參加購物節",
+            "en": "Skip shopping festivals altogether",
+            "ja": "そもそもセールに参加しない",
+            "zh-CN": "干脆不参加购物节",
+            "hi": "मैं शॉपिंग फेस्टिवल में हिस्सा ही नहीं लेता/लेती",
+            "id": "Memilih tidak ikut festival belanja sama sekali",
+            "pt-BR": "Prefiro nem participar da Black Friday"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270428-livestream-minister",
+      "date": "2027-04-28",
+      "kind": "guess",
+      "topic": "shopping-festivals",
+      "asker": null,
+      "target": null,
+      "answer": "id",
+      "text": {
+        "zh-TW": "哪個國家的貿易部長本人到電商公司辦公室,直播賣中小企業的商品?",
+        "en": "In which country did the trade minister personally go to an e-commerce company's office to sell small-business products on livestream?",
+        "ja": "貿易大臣自らが電子商取引企業のオフィスに出向き、中小企業の商品をライブ配信で売った国はどこか。",
+        "zh-CN": "哪个国家的贸易部长本人到电商公司办公室,直播卖中小企业的商品?",
+        "hi": "किस देश में व्यापार मंत्री खुद एक ई-कॉमर्स कंपनी के दफ़्तर जाकर छोटे उद्यमों के उत्पाद लाइव-स्ट्रीम पर बेचते हैं?",
+        "id": "Di negara mana menteri perdagangan sendiri datang ke kantor perusahaan niaga elektronik untuk menjual produk UMKM lewat siaran langsung?",
+        "pt-BR": "Em qual país o próprio ministro do Comércio foi ao escritório de uma empresa de comércio eletrônico vender produtos de pequenos negócios ao vivo?"
+      },
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印度尼西亚",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": {
+            "zh-TW": "印度",
+            "en": "India",
+            "ja": "インド",
+            "zh-CN": "印度",
+            "hi": "भारत",
+            "id": "India",
+            "pt-BR": "Índia"
+          }
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是印尼。二〇二四年十二月十二日,貿易部長布迪·桑托索本人到 Shopee 位於雅加達的辦公室,直播銷售中小微企業的產品,那一天正是 Harbolnas(全國網購日),依據是二〇一九年第八十號政府條例。七個市場裡,只有印尼的購物節由中央政府直接背書、部長親自下場賣貨,動機是拉抬國產品銷售與線上出口。相對地,中國的市場監管總局只在雙十一前逐年發合規提示,規定折扣基準是促銷前七日內最低成交價,監管者不下場賣東西;印度的中央消費者保護局管的是介面裡的暗黑模式,不是折扣真假;巴西的聯邦區消費者保護院只負責稽查購物中心與電商網站的廣告與客服,同樣不曾直播賣貨。",
+        "en": "The answer is Indonesia. On 12 December 2024, Trade Minister Budi Santoso personally went to Shopee's Jakarta office and sold micro and small business products on livestream, on Harbolnas, the national online shopping day set up under Government Regulation No. 80 of 2019. Of the seven markets, only Indonesia's shopping festival carries a national government's direct endorsement, with the minister himself selling, aimed at boosting domestic sales and online exports. By contrast, China's market regulator only sends annual compliance notices before Double Eleven, fixing the discount reference at the lowest price of the previous seven days, without selling anything itself; India's Central Consumer Protection Authority polices dark patterns in the interface, not whether discounts are real; Brazil's Federal District consumer body only inspects malls and e-commerce sites for honest advertising and customer service, and never goes live to sell.",
+        "ja": "答えはインドネシアである。二〇二四年十二月十二日、貿易大臣ブディ・サントソ本人がジャカルタの Shopee 事務所に赴き、中小零細企業の商品をライブ配信で販売した。この日は二〇一九年政令第八十号を根拠とする Harbolnas(全国オンラインショッピングの日)にあたる。七つの市場のうち、中央政府が直接後押しし、大臣自らが売り手として登場するのはインドネシアだけで、狙いは国産品の販売とオンライン輸出を押し上げることにある。対照的に、中国の市場監督管理総局は双十一の前に毎年コンプライアンス通知を出すだけで、値引きの基準を直前七日間の最安値と定めるにとどまり、自ら売ることはない。インドの中央消費者保護庁が取り締まるのは画面上のダークパターンであり、値引きの真偽ではない。ブラジルの連邦直轄区消費者保護院はショッピングセンターや通販サイトの広告と顧客対応を検査するだけで、やはりライブ配信で売ることはない。",
+        "zh-CN": "答案是印度尼西亚。二〇二四年十二月十二日,贸易部长布迪·桑托索本人到 Shopee 位于雅加达的办公室,直播销售中小微企业的产品,那天正是 Harbolnas(全国网购日),依据是二〇一九年第八十号政府条例。七个市场里,只有印尼的购物节由中央政府直接背书、部长亲自下场卖货,目的是拉动国产品销售与线上出口。相比之下,中国的市场监管总局只在双十一前逐年发合规提示,规定折扣基准是促销前七日内最低成交价,监管者并不下场卖货;印度的中央消费者保护局管的是界面里的暗黑模式,不是折扣真假;巴西的联邦区消费者保护院只负责检查购物中心与电商网站的广告与客服,同样从未直播卖货。",
+        "hi": "उत्तर है इंडोनेशिया। 12 दिसंबर 2024 को व्यापार मंत्री बुदी सांतोसो स्वयं जकार्ता स्थित Shopee के कार्यालय गए और सूक्ष्म व लघु उद्यमों के उत्पाद लाइव-स्ट्रीम पर बेचे — यह दिन Harbolnas था, जिसका आधार 2019 का सरकारी विनियम संख्या 80 है। सातों बाज़ारों में केवल इंडोनेशिया का शॉपिंग फेस्टिवल केंद्र सरकार का सीधा समर्थन पाता है और मंत्री खुद बिक्री करते हैं, मकसद घरेलू उत्पादों की बिक्री व ऑनलाइन निर्यात बढ़ाना है। इसके उलट, चीन का बाज़ार नियामक डबल इलेवन से पहले हर साल सिर्फ़ अनुपालन निर्देश भेजता है और छूट का आधार पिछले सात दिनों का सबसे कम दाम तय करता है, खुद बिक्री नहीं करता; भारत का केंद्रीय उपभोक्ता संरक्षण प्राधिकरण स्क्रीन के डार्क पैटर्न पर नज़र रखता है, छूट सच्ची है या नहीं इस पर नहीं; ब्राज़ील का संघीय ज़िला उपभोक्ता संस्थान सिर्फ़ मॉल और ई-कॉमर्स साइटों के विज्ञापन व सेवा की जाँच करता है, वह भी कभी लाइव बेचता नहीं।",
+        "id": "Jawabannya adalah Indonesia. Pada 12 Desember 2024, Menteri Perdagangan Budi Santoso sendiri datang ke kantor Shopee di Jakarta dan menjual produk usaha mikro dan kecil lewat siaran langsung, bertepatan dengan Harbolnas yang berdasar pada Peraturan Pemerintah Nomor 80 Tahun 2019. Dari ketujuh pasar, hanya festival belanja Indonesia yang didukung langsung oleh pemerintah pusat dengan menterinya sendiri turun berjualan, demi mendorong penjualan produk domestik dan ekspor daring. Sebagai perbandingan, regulator pasar Tiongkok hanya mengirim pemberitahuan kepatuhan tiap tahun menjelang Double Eleven dan menetapkan harga acuan diskon sebagai harga terendah tujuh hari sebelumnya, tanpa ikut berjualan; Otoritas Perlindungan Konsumen Pusat India mengawasi dark pattern pada antarmuka, bukan keaslian diskon; lembaga perlindungan konsumen Distrik Federal Brasil hanya memeriksa iklan dan layanan pelanggan di pusat perbelanjaan serta situs niaga elektronik, dan juga tidak pernah berjualan lewat siaran langsung.",
+        "pt-BR": "A resposta é Indonésia. Em 12 de dezembro de 2024, o ministro do Comércio, Budi Santoso, foi pessoalmente ao escritório da Shopee em Jacarta vender produtos de micro e pequenas empresas em transmissão ao vivo, no dia do Harbolnas, respaldado pelo Regulamento Governamental nº 80 de 2019. Dos sete mercados, só o festival de compras indonésio recebe endosso direto do governo central, com o próprio ministro vendendo, para impulsionar produto nacional e exportação on-line. Em contraste, o regulador de mercado chinês só envia avisos de conformidade todo ano antes do Dia 11 de Novembro, fixando o preço de referência do desconto no menor valor dos sete dias anteriores, sem vender nada; a Autoridade Central de Proteção ao Consumidor da Índia fiscaliza os dark patterns da tela, não a veracidade do desconto; o instituto distrital de defesa do consumidor do Brasil só fiscaliza propaganda e atendimento em shoppings e sites de comércio eletrônico, também sem nunca vender ao vivo."
+      }
+    },
+    {
+      "id": "q-20270429-tanabata-celebrate",
+      "date": "2027-04-29",
+      "kind": "poll",
+      "topic": "tanabata-and-qixi",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "如果你住的地方也有類似七夕的節日,你通常會怎麼過?",
+        "en": "If a Tanabata- or Qixi-like day existed where you live, how would you spend it?",
+        "ja": "あなたの住む地域にも七夕のような行事があったら、どう過ごしますか?",
+        "zh-CN": "如果你所在的地方也有类似七夕的节日,你通常会怎么过?",
+        "hi": "अगर आपके यहाँ भी तनाबाता/छीशी जैसा कोई दिन होता, तो आप उसे कैसे मनाते?",
+        "id": "Jika ada hari seperti Tanabata atau Qixi di tempat tinggal Anda, bagaimana Anda akan merayakannya?",
+        "pt-BR": "Se existisse um dia como o Tanabata ou o Qixi onde você vive, como você o celebraria?"
+      },
+      "options": [
+        {
+          "id": "date-night",
+          "emoji": "💑",
+          "label": {
+            "zh-TW": "跟伴侶約會過節",
+            "en": "Go on a date with a partner",
+            "ja": "パートナーとデートする",
+            "zh-CN": "和伴侣约会过节",
+            "hi": "साथी के साथ डेट पर जाना",
+            "id": "Berkencan dengan pasangan",
+            "pt-BR": "Sair em um encontro com o par"
+          }
+        },
+        {
+          "id": "wish-on-paper",
+          "emoji": "🎋",
+          "label": {
+            "zh-TW": "寫下願望掛起來",
+            "en": "Write a wish and hang it up",
+            "ja": "願い事を書いて飾る",
+            "zh-CN": "写下愿望挂起来",
+            "hi": "इच्छा लिखकर टांगना",
+            "id": "Menulis harapan dan menggantungnya",
+            "pt-BR": "Escrever um desejo e pendurá-lo"
+          }
+        },
+        {
+          "id": "family-ritual",
+          "emoji": "🏮",
+          "label": {
+            "zh-TW": "參加家族或成年儀式",
+            "en": "Take part in a family or coming-of-age ceremony",
+            "ja": "家族の儀式や成人の儀礼に参加する",
+            "zh-CN": "参加家族或成年仪式",
+            "hi": "परिवार या वयस्कता समारोह में भाग लेना",
+            "id": "Mengikuti upacara keluarga atau kedewasaan",
+            "pt-BR": "Participar de um rito familiar ou de maioridade"
+          }
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": {
+            "zh-TW": "完全不會特別過",
+            "en": "Not celebrate it at all",
+            "ja": "特に何もしない",
+            "zh-CN": "完全不会特别过",
+            "hi": "बिल्कुल नहीं मनाना",
+            "id": "Tidak merayakannya sama sekali",
+            "pt-BR": "Não comemorar de forma alguma"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270429-tanabata-guess-country",
+      "date": "2027-04-29",
+      "kind": "guess",
+      "topic": "tanabata-and-qixi",
+      "asker": null,
+      "target": null,
+      "answer": "pt-BR",
+      "text": {
+        "zh-TW": "依上文,哪個國家的「七夕」慶典日期完全脫離固定曆法,是主辦單位每年自己挑一個七月週末辦的?",
+        "en": "Based on the facts above, in which country has the Tanabata-style festival's date come completely loose from any fixed calendar, with organizers choosing a July weekend each year?",
+        "ja": "上の内容によると、七夕を模した祭りの日付が固定の暦から完全に外れ、主催者が毎年7月の週末を選んで開催している国はどこですか?",
+        "zh-CN": "依上文,哪个国家的\"七夕\"庆典日期完全脱离固定历法,是主办单位每年自己挑一个七月周末办的?",
+        "hi": "ऊपर दी गई जानकारी के अनुसार, किस देश में तनाबाता जैसे उत्सव की तारीख़ किसी भी निश्चित पंचांग से पूरी तरह अलग हो गई है, जिसे आयोजक हर वर्ष जुलाई के किसी सप्ताहांत के रूप में चुनते हैं?",
+        "id": "Berdasarkan uraian di atas, di negara mana tanggal festival bergaya Tanabata sudah benar-benar lepas dari kalender tetap, karena panitia memilih sendiri satu akhir pekan Juli setiap tahun?",
+        "pt-BR": "Com base no texto acima, em qual país a data do festival ao estilo Tanabata se soltou por completo de qualquer calendário fixo, sendo escolhida pelos organizadores como um fim de semana de julho a cada ano?"
+      },
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": {
+            "zh-TW": "日本",
+            "en": "Japan",
+            "ja": "日本",
+            "zh-CN": "日本",
+            "hi": "जापान",
+            "id": "Jepang",
+            "pt-BR": "Japão"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "संयुक्त राज्य अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是巴西。聖保羅自由區的「Tanabata Matsuri」自一九七九年起由自由區文化互助協會與巴西宮城縣人會主辦,但日期年年不同——二○○七年第二十九屆辦在七月七日至八日,二○一○年第三十二屆挪到七月二十四日至二十五日,二○一九年第四十一屆又移到七月十三日至十四日,完全是主辦單位每年自選的七月週末,早已脫離農曆七月初七。相對照,中國把七夕列為國家級非物質文化遺產第四五二項,卻連「明列但不放假」的名單都沒進去,節慶本身仍緊貼農曆日期,只是制度上不放假;日本把七夕整個搬到明治改曆後的國曆七月七日,固定不動,連仙台的月遲れ也只是把它整整挪後一個月、同樣固定在八月六日至八日;美國聯邦則從一開始就沒有這一天,《美國法典》第六一○三條的十一項法定假日全部寫死在公曆或「某月第幾個星期幾」,不存在把陰陽曆日期讀入假日的機制。三者都有固定或可查的日期規則,唯獨巴西的日期是每年重新決定的。",
+        "en": "The answer is Brazil. Since 1979, the Liberdade district's Tanabata Matsuri has been organized by ACAL and the Miyagi prefectural association of Brazil, but the dates shift every year: the 29th edition ran 7-8 July 2007, the 32nd moved to 24-25 July 2010, and the 41st shifted again to 13-14 July 2019 — a July weekend the organizers pick fresh each time, with no tie at all to the seventh lunar month. By contrast, China lists Qixi as national intangible heritage item 452 yet doesn't even make the list of named non-holidays; the festival still sits on its lunar date, it's just not a day off. Japan moved Tanabata wholesale onto the Gregorian 7 July after the Meiji calendar reform and keeps it fixed there; even Sendai's tsukiokure only pushes it a fixed month later, to 6-8 August. The U.S. federal government has no such day at all — the eleven holidays in Title 5 Section 6103 are all fixed Gregorian dates or \"nth weekday of a month,\" with no mechanism to read a lunisolar date into the calendar. All three others follow a fixed or lookup-able rule; only Brazil's date is chosen anew each year.",
+        "ja": "答えはブラジルである。サンパウロのリベルダーデ地区の「タナバタ・マツリ」は1979年からACALとブラジル宮城県人会が主催しているが、日付は年によって違う。2007年の第29回は7月7日から8日、2010年の第32回は7月24日から25日、2019年の第41回は7月13日から14日で、いずれも主催者がその年の7月の週末を選んだものであり、旧暦七月七日とはもはや無関係である。対照的に、中国は七夕を国家級無形文化遺産の452番目として認めながら、「休まない日」として名前が挙がる一覧にも入れておらず、行事自体は旧暦の日付に留まっているだけで休日ではない。日本は明治の改暦後、七夕を新暦7月7日にそのまま固定し、仙台の月遅れも一か月後ろの8月6日から8日に固定しているにすぎない。米国連邦にはそもそもこの日がなく、合衆国法典第6103条の十一の祝日はすべて固定の西暦日か「何月の第何曜日」で書かれ、旧暦日付を祝日に変換する仕組み自体が存在しない。他の三つはいずれも固定または算出可能な規則を持つが、日付そのものが毎年選び直されるのはブラジルだけである。",
+        "zh-CN": "答案是巴西。圣保罗自由区的「Tanabata Matsuri」自1979年起由自由区文化互助协会与巴西宫城县人会主办,但日期年年不同——2007年第29届办在7月7日至8日,2010年第32届挪到7月24日至25日,2019年第41届又移到7月13日至14日,完全是主办单位每年自选的七月周末,早已脱离农历七月初七。相对照,中国把七夕列为国家级非物质文化遗产第452项,却连「明列但不放假」的名单都没进去,节庆本身仍紧贴农历日期,只是制度上不放假;日本把七夕整个搬到明治改历后的公历7月7日,固定不动,仙台的月迟れ也只是把它整整挪后一个月、同样固定在8月6日至8日;美国联邦则从一开始就没有这一天,《美国法典》第6103条的十一项法定假日全部写死在公历或「某月第几个星期几」,不存在把阴阳历日期读入假日的机制。三者都有固定或可查的日期规则,唯独巴西的日期是每年重新决定的。",
+        "hi": "उत्तर ब्राज़ील है। साओ पाउलो के लिबेरदादे इलाक़े में 1979 से ACAL और ब्राज़ील के मियागी प्रांतीय संघ द्वारा आयोजित \"तनाबाता मात्सुरी\" की तारीख़ हर साल बदलती है — 2007 का 29वाँ आयोजन 7-8 जुलाई को हुआ, 2010 का 32वाँ 24-25 जुलाई को खिसका, और 2019 का 41वाँ 13-14 जुलाई को — यानी हर बार आयोजक स्वयं जुलाई का सप्ताहांत चुनते हैं, जिसका चंद्र सातवें महीने की सातवीं तिथि से कोई संबंध नहीं बचा। इसके विपरीत, चीन ने छीशी को राष्ट्रीय अमूर्त सांस्कृतिक विरासत क्रमांक 452 पर दर्ज किया, पर \"छुट्टी नहीं\" वाली सूची में भी नहीं रखा — त्योहार अब भी चंद्र तिथि पर टिका है, बस अवकाश नहीं मिलता। जापान ने मेइजी पंचांग-परिवर्तन के बाद तनाबाता को ग्रेगोरियन 7 जुलाई पर स्थायी रूप से टिका दिया; सेंदाई का त्सुकिओकुरे भी बस एक महीना पीछे खिसकाकर 6-8 अगस्त पर स्थिर कर देता है। अमेरिका में यह दिन शुरू से ही नहीं है — अमेरिकी संहिता की धारा 6103 के ग्यारह अवकाश सभी निश्चित ग्रेगोरियन तिथि या \"महीने का अमुक सप्ताहांत\" के रूप में लिखे हैं, चंद्र-सौर तिथि को पढ़ने की कोई व्यवस्था ही नहीं। बाक़ी तीनों में तिथि निश्चित या परिकलित है; केवल ब्राज़ील में तिथि हर साल नए सिरे से चुनी जाती है。",
+        "id": "Jawabannya adalah Brasil. Tanabata Matsuri di distrik Liberdade, Sao Paulo, diselenggarakan ACAL dan Miyagi Kenjinkai Brasil sejak 1979, tetapi tanggalnya berubah setiap tahun: edisi ke-29 pada 2007 berlangsung 7-8 Juli, edisi ke-32 pada 2010 bergeser ke 24-25 Juli, dan edisi ke-41 pada 2019 bergeser lagi ke 13-14 Juli — sepenuhnya akhir pekan Juli yang dipilih sendiri oleh panitia setiap tahun, dan sudah lepas total dari hari ketujuh bulan ketujuh Imlek. Sebagai perbandingan, Tiongkok mendaftarkan Qixi sebagai warisan budaya takbenda nasional nomor 452, tetapi tidak memasukkannya bahkan ke daftar \"disebut tapi tidak libur\" — perayaannya tetap mengikuti tanggal lunar, hanya saja tidak memberi libur. Jepang memindahkan Tanabata sepenuhnya ke 7 Juli Gregorius sejak reformasi kalender Meiji dan mempertahankannya tetap di sana; tsukiokure Sendai pun hanya menggesernya tepat satu bulan, tetap di 6-8 Agustus. Amerika Serikat sama sekali tidak memiliki hari ini — sebelas hari libur dalam Bagian 6103 Kitab Undang-Undang AS semuanya ditulis sebagai tanggal Gregorius tetap atau \"hari-ke-sekian dalam sebuah bulan\", tanpa mekanisme membaca tanggal lunisolar. Ketiga negara lain memiliki aturan tanggal yang tetap atau bisa dihitung; hanya Brasil yang tanggalnya dipilih ulang setiap tahun.",
+        "pt-BR": "A resposta é o Brasil. O Tanabata Matsuri do bairro da Liberdade, em São Paulo, é organizado desde 1979 pela ACAL e pelo Miyagui Kenjikai do Brasil, mas a data muda todo ano: a 29ª edição, em 2007, foi em 7-8 de julho; a 32ª, em 2010, passou para 24-25 de julho; a 41ª, em 2019, foi para 13-14 de julho — sempre um fim de semana de julho escolhido pelos próprios organizadores, sem nenhuma ligação com o sétimo dia do sétimo mês lunar. Em contraste, a China registrou o Qixi como patrimônio imaterial nacional de número 452, mas não o incluiu nem na lista de dias nomeados sem folga — a festa continua na data lunar, só não dá feriado. O Japão moveu o Tanabata de vez para o 7 de julho gregoriano após a reforma do calendário Meiji e o mantém fixo ali; o tsukiokure de Sendai apenas adia um mês certo, fixando-o em 6 a 8 de agosto. Os Estados Unidos simplesmente não têm esse dia — os onze feriados do título 5, seção 6103, são todos datas gregorianas fixas ou o \"enésimo dia da semana de um mês\", sem mecanismo para converter uma data lunissolar. Os outros três têm regras de data fixas ou calculáveis; só no Brasil a data é escolhida de novo a cada ano."
+      }
+    },
+    {
+      "id": "q-20270430-commemoration-style",
+      "date": "2027-04-30",
+      "kind": "poll",
+      "topic": "war-dead-and-veterans",
+      "asker": null,
+      "target": null,
+      "answer": null,
+      "explain": null,
+      "text": {
+        "zh-TW": "如果由你決定,你希望自己國家用什麼方式紀念陣亡軍人與在世退伍軍人?",
+        "en": "If it were up to you, how would you want your country to mark those who died in war and those who served and came home?",
+        "ja": "もしあなたが決めるとしたら、自分の国は戦死者と生還した退役軍人をどのように記念すべきだと思うか?",
+        "zh-CN": "如果由你决定,你希望自己国家用什么方式纪念阵亡军人与在世退伍军人?",
+        "hi": "यदि यह आप पर निर्भर हो, तो आप चाहेंगे कि आपका देश युद्ध में मारे गए और सेवा से लौटे लोगों को किस तरह याद करे?",
+        "id": "Jika keputusannya ada di tanganmu, bagaimana kamu ingin negaramu mengenang mereka yang gugur dan mereka yang bertugas lalu pulang?",
+        "pt-BR": "Se dependesse de você, como você gostaria que seu país homenageasse os que morreram na guerra e os que serviram e voltaram?"
+      },
+      "options": [
+        {
+          "id": "split-two-days",
+          "emoji": "🕊️",
+          "label": {
+            "zh-TW": "悼念死者與感謝生還者分成兩天",
+            "en": "Separate days for mourning the dead and thanking the living",
+            "ja": "死者への追悼と生還者への感謝を別の日に分ける",
+            "zh-CN": "悼念死者与感谢生还者分成两天",
+            "hi": "मृतकों के शोक और जीवितों के आभार के लिए अलग-अलग दिन",
+            "id": "Hari terpisah untuk berkabung dan berterima kasih kepada yang hidup",
+            "pt-BR": "Dias separados para lamentar os mortos e agradecer os vivos"
+          }
+        },
+        {
+          "id": "public-holiday",
+          "emoji": "📅",
+          "label": {
+            "zh-TW": "訂一天,全民放假",
+            "en": "One day, and make it a public holiday",
+            "ja": "一日に定め、休日にする",
+            "zh-CN": "定一天,全民放假",
+            "hi": "एक दिन तय करें और उसे सार्वजनिक अवकाश बनाएं",
+            "id": "Satu hari, dan jadikan hari libur umum",
+            "pt-BR": "Um único dia, e que seja feriado nacional"
+          }
+        },
+        {
+          "id": "workday-ceremony",
+          "emoji": "🏢",
+          "label": {
+            "zh-TW": "訂一天紀念,但照常上班上課",
+            "en": "One day of ceremony, but life goes on as normal",
+            "ja": "式典は行うが、生活は普段どおり",
+            "zh-CN": "定一天纪念,但照常上班上课",
+            "hi": "एक दिन समारोह हो, पर जीवन सामान्य रहे",
+            "id": "Satu hari upacara, tapi semua tetap bekerja",
+            "pt-BR": "Um dia de cerimônia, mas a vida segue normal"
+          }
+        },
+        {
+          "id": "fundraising-day",
+          "emoji": "🎗️",
+          "label": {
+            "zh-TW": "用募款與實質協助取代形式上的紀念",
+            "en": "Replace symbolic mourning with fundraising and concrete help",
+            "ja": "形式的な追悼より募金と実質的な支援を",
+            "zh-CN": "用募款与实质协助取代形式上的纪念",
+            "hi": "प्रतीकात्मक शोक के बजाय चंदा और ठोस सहायता",
+            "id": "Ganti peringatan simbolis dengan penggalangan dana dan bantuan nyata",
+            "pt-BR": "Substituir o luto simbólico por arrecadação e ajuda concreta"
+          }
+        }
+      ]
+    },
+    {
+      "id": "q-20270430-soldiers-day-origin",
+      "date": "2027-04-30",
+      "kind": "guess",
+      "topic": "war-dead-and-veterans",
+      "asker": null,
+      "target": null,
+      "answer": "pt-BR",
+      "text": {
+        "zh-TW": "這七個國家中,哪一個的『軍人節』紀念的其實是一位十九世紀將領的生日,而不是某場戰役或戰爭事件?",
+        "en": "Among these seven countries, which one's 'Soldiers' Day' actually commemorates a nineteenth-century general's birthday, rather than a battle or war event?",
+        "ja": "これら七か国のうち、『軍人の日』が実は十九世紀の将軍の誕生日を記念していて、戦闘や戦争の出来事ではないのはどこか?",
+        "zh-CN": "这七个国家中,哪一个的『军人节』纪念的其实是一位十九世纪将领的生日,而不是某场战役或战争事件?",
+        "hi": "इन सात देशों में से किसका 'सैनिक दिवस' वास्तव में एक उन्नीसवीं सदी के सेनापति के जन्मदिन की स्मृति है, किसी युद्ध या लड़ाई की घटना की नहीं?",
+        "id": "Di antara tujuh negara ini, negara mana yang 'Hari Prajurit'-nya sebenarnya memperingati hari lahir seorang jenderal abad kesembilan belas, bukan pertempuran atau peristiwa perang?",
+        "pt-BR": "Entre esses sete países, qual tem um 'Dia do Soldado' que na verdade comemora o aniversário de um general do século dezenove, e não uma batalha ou evento de guerra?"
+      },
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": {
+            "zh-TW": "巴西",
+            "en": "Brazil",
+            "ja": "ブラジル",
+            "zh-CN": "巴西",
+            "hi": "ब्राज़ील",
+            "id": "Brasil",
+            "pt-BR": "Brasil"
+          }
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": {
+            "zh-TW": "美國",
+            "en": "United States",
+            "ja": "アメリカ",
+            "zh-CN": "美国",
+            "hi": "अमेरिका",
+            "id": "Amerika Serikat",
+            "pt-BR": "Estados Unidos"
+          }
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": {
+            "zh-TW": "中國",
+            "en": "China",
+            "ja": "中国",
+            "zh-CN": "中国",
+            "hi": "चीन",
+            "id": "Tiongkok",
+            "pt-BR": "China"
+          }
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": {
+            "zh-TW": "印尼",
+            "en": "Indonesia",
+            "ja": "インドネシア",
+            "zh-CN": "印尼",
+            "hi": "इंडोनेशिया",
+            "id": "Indonesia",
+            "pt-BR": "Indonésia"
+          }
+        }
+      ],
+      "explain": {
+        "zh-TW": "答案是巴西。巴西的軍人節(Dia do Soldado)訂在八月二十五日,那不是哪一場戰役的日期,而是卡希亞斯公爵路易斯·阿爾維斯·德利馬-席爾瓦的誕辰(一八〇三年)——他是巴西陸軍的主保人,國防部與陸軍在這一天辦儀式,但它不是法定假日,一般人照常上班。巴西把「勝利」另外放在五月八日的 Dia da Vitória,紀念一九四五年歐洲戰場結束與巴西遠征軍在義大利的參戰。相對地,美國把死者與生還者拆成兩個聯邦假日:五月的陣亡將士紀念日與十一月十一日的退伍軍人節,兩者都跟戰爭事件或停戰時刻綁在一起,不是任何人的生日。中國的烈士紀念日訂在九月三十日,由全國人大常委會二〇一四年設立,日期選在國慶日前一天,同樣跟人物生日無關。印尼的英雄節在十一月十日,紀念一九四五年泗水戰役,總統令明文把它列為「不是假日的國定日」。七個國家裡,只有巴西用一位將領的生日來紀念軍人本身。",
+        "en": "The answer is Brazil. Brazil's Soldiers' Day (Dia do Soldado) falls on 25 August — not the date of any battle, but the birth date (1803) of Luís Alves de Lima e Silva, Duke of Caxias, patron of the Brazilian Army. The Ministry of Defence and the Army hold ceremonies that day, but it is not a public holiday; the country works as usual. Brazil marks victory separately, on 8 May, with Dia da Vitória, for the end of the war in Europe in 1945 and the Brazilian Expeditionary Force that fought in Italy. By contrast, the United States splits the dead from the living into two federal holidays — Memorial Day in May and Veterans Day on 11 November — both tied to war events or the armistice hour, not anyone's birthday. China's Martyrs' Day falls on 30 September, established in 2014 by the National People's Congress Standing Committee and placed deliberately before National Day — again unrelated to a birthday. Indonesia's Heroes' Day on 10 November marks the 1945 Battle of Surabaya and is filed by presidential decree as a national day that is not a holiday. Of these seven countries, only Brazil commemorates the soldier through a general's birthday.",
+        "ja": "答えはブラジルである。ブラジルの軍人の日(Dia do Soldado)は八月二十五日で、これはどの戦闘の日付でもなく、ブラジル陸軍の守護者(patrono)であるカシアス公爵ルイス・アルヴェス・デ・リマ・エ・シルヴァの生誕日(一八〇三年)にあたる。国防省と陸軍がこの日に式典を行うが、法定休日ではなく国は平常どおり動く。ブラジルは勝利を別の日、五月八日の Dia da Vitória に置き、一九四五年のヨーロッパ戦線終結とイタリアで戦ったブラジル遠征軍を記念している。対照的にアメリカは死者と生還者を二つの連邦祝日に分けており、五月の戦没将兵追悼記念日と十一月十一日の復員軍人の日はいずれも戦争の出来事や休戦の時刻に結びつき、誰の誕生日でもない。中国の烈士紀念日は九月三十日で、二〇一四年に全国人民代表大会常務委員会が設け、国慶節の前日に意図的に置かれており、これも誕生日とは無関係だ。インドネシアの英雄の日(十一月十日)は一九四五年のスラバヤの戦いを記念し、大統領令で「休日ではない国の日」とされている。七か国のうち、将軍の誕生日で軍人そのものを記念しているのはブラジルだけである。",
+        "zh-CN": "答案是巴西。巴西的军人节(Dia do Soldado)定在八月二十五日,那不是哪一场战役的日期,而是卡希亚斯公爵路易斯·阿尔维斯·德利马-席尔瓦的诞辰(一八〇三年)——他是巴西陆军的主保人,国防部与陆军在这一天举办仪式,但它不是法定假日,一般人照常上班。巴西把「胜利」另外放在五月八日的 Dia da Vitória,纪念一九四五年欧洲战场结束与巴西远征军在意大利的参战。相对地,美国把死者与生还者拆成两个联邦假日:五月的阵亡将士纪念日与十一月十一日的退伍军人节,两者都跟战争事件或停战时刻绑在一起,不是任何人的生日。中国的烈士纪念日订在九月三十日,由全国人大常委会二〇一四年设立,日期选在国庆日前一天,同样跟人物生日无关。印尼的英雄节在十一月十日,纪念一九四五年泗水战役,总统令明文把它列为「不是假日的国定日」。七个国家里,只有巴西用一位将领的生日来纪念军人本身。",
+        "hi": "उत्तर ब्राज़ील है। ब्राज़ील का सैनिक दिवस (Dia do Soldado) 25 अगस्त को पड़ता है — यह किसी युद्ध की तारीख़ नहीं, बल्कि ब्राज़ीलियाई थलसेना के संरक्षक (patrono) लुईस आल्वेस दे लीमा ए सिल्वा, ड्यूक ऑफ़ काशियास, के जन्मदिन (1803) की तारीख़ है। रक्षा मंत्रालय और सेना उस दिन समारोह करते हैं, पर यह सार्वजनिक अवकाश नहीं है और देश सामान्य रूप से काम करता है। विजय के लिए ब्राज़ील अलग तारीख़ रखता है — 8 मई, Dia da Vitória — जो 1945 में यूरोप में युद्ध की समाप्ति और इटली में लड़ी ब्राज़ीलियाई अभियान सेना को याद करती है। इसके विपरीत, अमेरिका मृतकों और जीवित बचे लोगों को दो अलग संघीय अवकाशों में बाँटता है — मई का मेमोरियल डे और 11 नवंबर का वेटरन्स डे — दोनों ही युद्ध की घटनाओं या युद्धविराम की घड़ी से जुड़े हैं, किसी के जन्मदिन से नहीं। चीन का शहीद दिवस 30 सितंबर को पड़ता है, जिसे 2014 में राष्ट्रीय जन कांग्रेस की स्थायी समिति ने स्थापित किया और जानबूझकर राष्ट्रीय दिवस से एक दिन पहले रखा — यह भी किसी जन्मदिन से असंबंधित है। इंडोनेशिया का वीर दिवस (10 नवंबर) 1945 के सुराबाया युद्ध की याद में है और राष्ट्रपति आदेश में इसे 'छुट्टी न होने वाला राष्ट्रीय दिवस' कहा गया है। इन सात देशों में केवल ब्राज़ील ही एक सेनापति के जन्मदिन से सैनिक को स्वयं याद करता है。",
+        "id": "Jawabannya adalah Brasil. Hari Prajurit Brasil (Dia do Soldado) jatuh pada 25 Agustus — bukan tanggal pertempuran apa pun, melainkan hari lahir (1803) Luís Alves de Lima e Silva, Duke of Caxias, pelindung (patrono) Angkatan Darat Brasil. Kementerian Pertahanan dan Angkatan Darat menggelar upacara pada hari itu, tetapi ini bukan hari libur umum dan negara tetap bekerja seperti biasa. Brasil menandai kemenangan pada tanggal lain, 8 Mei, dengan Dia da Vitória, untuk berakhirnya perang di Eropa pada 1945 dan Pasukan Ekspedisi Brasil yang bertempur di Italia. Sebaliknya, Amerika Serikat memisahkan yang gugur dari yang selamat menjadi dua hari libur federal — Memorial Day pada Mei dan Veterans Day pada 11 November — keduanya terikat pada peristiwa perang atau jam gencatan senjata, bukan hari lahir siapa pun. Hari Pahlawan Gugur Tiongkok jatuh pada 30 September, ditetapkan pada 2014 oleh Komite Tetap Kongres Rakyat Nasional dan sengaja diletakkan sehari sebelum Hari Nasional — juga tidak terkait hari lahir. Hari Pahlawan Indonesia (10 November) memperingati Pertempuran Surabaya 1945 dan oleh keputusan presiden digolongkan sebagai 'hari nasional yang bukan hari libur'. Dari tujuh negara ini, hanya Brasil yang mengenang prajurit lewat hari lahir seorang jenderal.",
+        "pt-BR": "A resposta é o Brasil. O Dia do Soldado brasileiro cai em 25 de agosto — não a data de nenhuma batalha, mas o aniversário de nascimento (1803) de Luís Alves de Lima e Silva, o Duque de Caxias, patrono do Exército Brasileiro. O Ministério da Defesa e o Exército realizam cerimônias nesse dia, mas não é feriado nacional e o país trabalha normalmente. O Brasil marca a vitória em outra data, 8 de maio, com o Dia da Vitória, pelo fim da guerra na Europa em 1945 e pela Força Expedicionária Brasileira que combateu na Itália. Em contraste, os Estados Unidos separam os mortos dos sobreviventes em dois feriados federais — o Memorial Day, em maio, e o Veterans Day, em 11 de novembro — ambos ligados a eventos da guerra ou à hora do armistício, não ao aniversário de ninguém. O Dia dos Mártires da China cai em 30 de setembro, estabelecido em 2014 pelo Comitê Permanente da Assembleia Popular Nacional e colocado deliberadamente na véspera do Dia Nacional — também sem relação com aniversário. O Dia dos Heróis da Indonésia (10 de novembro) marca a Batalha de Surabaia de 1945 e é classificado por decreto presidencial como um 'dia nacional que não é feriado'. Entre esses sete países, só o Brasil comemora o soldado pelo aniversário de um general."
       }
     }
   ]

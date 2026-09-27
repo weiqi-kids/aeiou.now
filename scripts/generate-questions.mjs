@@ -10,6 +10,7 @@
 //   node scripts/generate-questions.mjs --concurrency 6      同時跑幾個 claude(預設 4)
 //   node scripts/generate-questions.mjs --dry-run            只印,不寫檔
 //   node scripts/generate-questions.mjs --from 2026-10-17
+//   node scripts/generate-questions.mjs --missing-topics     只替一題都沒有的 Topic 各補一天
 //
 // -- 為什麼要有這一支 ------------------------------------------------------
 // 題庫是人工編輯的(content/questions.json,規格見 docs/briefs/daily-question.md),
@@ -151,7 +152,21 @@ function pickTopic(date, avoid) {
 // 放到 worker 裡算會變成「看誰先跑完」,同一份輸入跑兩次結果不同。
 const plan = [];
 let prev = null;
-for (let i = 0; i < DAYS; i += 1) {
+// --missing-topics(2026-09-27):只替題庫裡**一題都沒有**的 Topic 各排一天。
+// 著陸頁上的題目卡片吃 featuredQuestion(),沒有題目的 Topic 那幾頁就沒有卡片可點。
+// 它們一律往最後一題之後的空日期排,不動既有日期。
+const MISSING = argv.includes("--missing-topics")
+  ? [...material.values()].filter((m) => !existing.some((q) => q.topic === m.slug)).sort((a, b) => a.slug.localeCompare(b.slug))
+  : null;
+if (MISSING) {
+  for (let i = 0, k = 0; k < MISSING.length; i += 1) {
+    const date = addDays(FROM, i);
+    if (datesWithQuestions.has(date)) continue;
+    plan.push({ date, topic: MISSING[k] });
+    k += 1;
+  }
+}
+for (let i = 0; !MISSING && i < DAYS; i += 1) {
   const date = addDays(FROM, i);
   if (datesWithQuestions.has(date)) { prev = null; continue; } // 已有題目 → 冪等跳過
   const topic = pickTopic(date, prev);
