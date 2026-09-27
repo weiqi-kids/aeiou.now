@@ -16098,6 +16098,1062 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20270415-beer-festival-organizer",
+      "date": "2027-04-15",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKHEG7SET9EX18038MRV40",
+      "topic_slug": "beer-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果你居住的城市要辦一場「啤酒節」，你會希望由誰來主辦？",
+      "options": [
+        {
+          "id": "gov-organizer",
+          "emoji": "🏛️",
+          "label": "政府直接主辦"
+        },
+        {
+          "id": "private-permit",
+          "emoji": "📝",
+          "label": "民間主辦、政府發臨時執照"
+        },
+        {
+          "id": "local-decide",
+          "emoji": "🗺️",
+          "label": "交給地方自己決定"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🚫",
+          "label": "這種活動不需要存在"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270415-beer-festival-country",
+      "date": "2027-04-15",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKHEG7SET9EX18038MRV40",
+      "topic_slug": "beer-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "下面哪一個國家的啤酒節主場館，本身就登記在市政府的官方機關名冊上？",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270416-entrance-exam-poll",
+      "date": "2027-04-16",
+      "kind": "poll",
+      "topic_id": "top_01M1257QCASXRT1YYV0ET9PQFC",
+      "topic_slug": "entrance-exams",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果只能靠一種方式決定能不能上大學,你會希望是哪一種?",
+      "options": [
+        {
+          "id": "single-exam-rank",
+          "emoji": "📝",
+          "label": "只看單一考試分數高低排名"
+        },
+        {
+          "id": "school-record-rank",
+          "emoji": "🏫",
+          "label": "只看在校成績排名,不用再考試"
+        },
+        {
+          "id": "holistic-review",
+          "emoji": "🗂️",
+          "label": "綜合審查:成績、面試、自傳一起看"
+        },
+        {
+          "id": "campus-own-exam",
+          "emoji": "🏛️",
+          "label": "各校自辦考試,標準自己定"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270416-entrance-exam-guess",
+      "date": "2027-04-16",
+      "kind": "guess",
+      "topic_id": "top_01M1257QCASXRT1YYV0ET9PQFC",
+      "topic_slug": "entrance-exams",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪個國家已有約48所中央大學不再採計12年級在校成績,改用同一場每年一次的測驗分發新生?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270417-halloween-poll",
+      "date": "2027-04-17",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ9GWHQ7WPFS4WVQMGKTW1",
+      "topic_slug": "halloween",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "十月三十一日這天,你通常怎麼過?",
+      "options": [
+        {
+          "id": "costume-fun",
+          "emoji": "🎃",
+          "label": "變裝、要糖或參加派對"
+        },
+        {
+          "id": "just-another-day",
+          "emoji": "📅",
+          "label": "跟平常一樣上班上課,沒特別過"
+        },
+        {
+          "id": "local-event",
+          "emoji": "🏬",
+          "label": "去逛商圈或購物中心辦的萬聖節活動"
+        },
+        {
+          "id": "skip-avoid",
+          "emoji": "🙅",
+          "label": "刻意避開人潮或直接不參與"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270417-halloween-guess",
+      "date": "2027-04-17",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ9GWHQ7WPFS4WVQMGKTW1",
+      "topic_slug": "halloween",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個國家沒有讓萬聖節放假,卻用法律在同一天另外立了一個節日?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270418-copay-hesitate",
+      "date": "2027-04-18",
+      "kind": "poll",
+      "topic_id": "top_01M1257QEM0QBKD5NA79X2BMW3",
+      "topic_slug": "health-coverage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "看病要付的部分負擔金額,會不會影響你決定要不要去看醫生?",
+      "options": [
+        {
+          "id": "always-go",
+          "emoji": "🏥",
+          "label": "不管金額多少都會去看"
+        },
+        {
+          "id": "sometimes-hesitate",
+          "emoji": "🤔",
+          "label": "偶爾會猶豫,但通常還是會去"
+        },
+        {
+          "id": "often-delay",
+          "emoji": "😖",
+          "label": "常常因為費用而拖延就醫"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "沒特別想過,也不清楚要付多少"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270418-ward-class-reform",
+      "date": "2027-04-18",
+      "kind": "guess",
+      "topic_id": "top_01M1257QEM0QBKD5NA79X2BMW3",
+      "topic_slug": "health-coverage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一國正在把住院病房從一到三級的分級,整併成單一標準病房級(KRIS)?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270419-religious-calendar-experience",
+      "date": "2027-04-19",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB110Z03618QR9SKPEEXC",
+      "topic_slug": "jewish-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你所在的地方，學校或公司是否曾因宗教節日調整過考試、上班或上課時間？",
+      "options": [
+        {
+          "id": "experienced-personally",
+          "emoji": "🙋",
+          "label": "有，我自己就遇過"
+        },
+        {
+          "id": "heard-of-it",
+          "emoji": "👂",
+          "label": "聽過類似的例子，但沒親身遇過"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "從來沒有，也沒聽過"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "不確定，沒特別留意過"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270419-religious-exam-excuse-law",
+      "date": "2027-04-19",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB110Z03618QR9SKPEEXC",
+      "topic_slug": "jewish-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個國家的法律規定，學生只要事先具理由申請，就能在宗教戒守之日缺席考試或上課，學校必須免費提供改期補考或書面作業作為替代？",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270420-wage-mechanism",
+      "date": "2027-04-20",
+      "kind": "poll",
+      "topic_id": "top_01M1257QGJ9B13A6ZNTKZ199D1",
+      "topic_slug": "minimum-wage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "看完各國最低工資制度,你覺得哪一種調整方式最合理?",
+      "options": [
+        {
+          "id": "national-single",
+          "emoji": "🎯",
+          "label": "全國一個數字,不分地區"
+        },
+        {
+          "id": "regional-tiers",
+          "emoji": "🗺️",
+          "label": "各地方分開訂,依當地狀況調整"
+        },
+        {
+          "id": "formula-linked",
+          "emoji": "📈",
+          "label": "用公式跟通膨、經濟成長自動連動"
+        },
+        {
+          "id": "rare-adjustment",
+          "emoji": "🐌",
+          "label": "交給議會討論,沒有固定調整週期"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270420-guess-47-rates",
+      "date": "2027-04-20",
+      "kind": "guess",
+      "topic_id": "top_01M1257QGJ9B13A6ZNTKZ199D1",
+      "topic_slug": "minimum-wage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個國家的最低工資不是全國一個數字,而是同一個國家裡同時存在四十七種不同金額,各地生效的數字和日期都不一樣?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270421-family-celebration-day",
+      "date": "2027-04-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS8QZFDVGVBHB4PVM40",
+      "topic_slug": "newborn-and-full-moon",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果是你,會希望新生兒的家庭慶祝辦在出生後第幾天?",
+      "options": [
+        {
+          "id": "day-7",
+          "emoji": "🎏",
+          "label": "第七天(如命名或aqiqah)"
+        },
+        {
+          "id": "day-30",
+          "emoji": "🎂",
+          "label": "滿一個月(辦滿月宴)"
+        },
+        {
+          "id": "after-registration",
+          "emoji": "📄",
+          "label": "等法定登記辦完再說,沒有固定的家庭儀式"
+        },
+        {
+          "id": "no-preference",
+          "emoji": "🤷",
+          "label": "沒想過,沒有特別偏好"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270421-shortest-registration-deadline",
+      "date": "2027-04-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS8QZFDVGVBHB4PVM40",
+      "topic_slug": "newborn-and-full-moon",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這四個地方裡,哪一個出生登記期限最短、只有十四天,而且法律規定要在期限內就替孩子定好名字?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270422-unused-leave",
+      "date": "2027-04-22",
+      "kind": "poll",
+      "topic_id": "top_01M1257QHQ6H6GXFX0CE8V5GN6",
+      "topic_slug": "paid-leave-and-overtime",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你的實際工作經驗裡,沒休完的特休最後是怎麼處理的?",
+      "options": [
+        {
+          "id": "paid-out",
+          "emoji": "💰",
+          "label": "沒休完會拿到工資補償"
+        },
+        {
+          "id": "expires",
+          "emoji": "⏳",
+          "label": "沒休完就直接過期,沒有補償"
+        },
+        {
+          "id": "company-schedules",
+          "emoji": "📅",
+          "label": "公司會主動幫我排休假日期"
+        },
+        {
+          "id": "unsure",
+          "emoji": "🤷",
+          "label": "沒特別注意過,不清楚規定"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270422-absence-cuts-leave",
+      "date": "2027-04-22",
+      "kind": "guess",
+      "topic_id": "top_01M1257QHQ6H6GXFX0CE8V5GN6",
+      "topic_slug": "paid-leave-and-overtime",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個國家的年假天數,會因為當年度無故缺勤次數增加而變少?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270423-pet-prep-poll",
+      "date": "2027-04-23",
+      "kind": "poll",
+      "topic_id": "top_01M0QAYAE8ZZ4FFRTZEJ4MGYYS",
+      "topic_slug": "pet-preparedness",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "你家如果要臨時離開(停電、搬家或撤離),寵物的外出準備做到哪一步了?",
+      "options": [
+        {
+          "id": "fully-ready",
+          "emoji": "🎒",
+          "label": "都準備好了(外出籠、身分標示、藥品、食水都在)"
+        },
+        {
+          "id": "partial",
+          "emoji": "🧷",
+          "label": "有準備一部分,但不齊全"
+        },
+        {
+          "id": "know-not-done",
+          "emoji": "🤔",
+          "label": "知道該準備,但還沒動手"
+        },
+        {
+          "id": "no-pet",
+          "emoji": "🚫",
+          "label": "家裡沒養寵物,這題不適用"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270423-pet-prep-guess",
+      "date": "2027-04-23",
+      "kind": "guess",
+      "topic_id": "top_01M0QAYAE8ZZ4FFRTZEJ4MGYYS",
+      "topic_slug": "pet-preparedness",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "官方防災用語裡,有一個詞專指「帶著寵物一起走到避難場所」,但特別強調這不等於人和寵物能待在同一個房間。這是哪個國家的用語?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270424-pet-role",
+      "date": "2027-04-24",
+      "kind": "poll",
+      "topic_id": "top_01M0Q9AQ26RG3FX2D4G7CS1M3A",
+      "topic_slug": "pets-and-family",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你心裡,寵物比較接近家裡的哪一種存在?",
+      "options": [
+        {
+          "id": "family-member",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": "家人一樣的存在"
+        },
+        {
+          "id": "responsibility",
+          "emoji": "🩺",
+          "label": "需要用心照顧的責任"
+        },
+        {
+          "id": "companion",
+          "emoji": "🐾",
+          "label": "情感陪伴的夥伴"
+        },
+        {
+          "id": "distant-animal",
+          "emoji": "🏠",
+          "label": "家裡的動物,但保持距離"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270424-pet-registry",
+      "date": "2027-04-24",
+      "kind": "guess",
+      "topic_id": "top_01M0Q9AQ26RG3FX2D4G7CS1M3A",
+      "topic_slug": "pets-and-family",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪一個國家的環境部門建置了全國性的犬貓登記工具,把疫苗、晶片、走失找回與棄養治理連結在一起?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270425-engagement-priority",
+      "date": "2027-04-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSAMVV85AN3D1HXTEYY",
+      "topic_slug": "proposals-and-engagements",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "在你心目中，訂婚最重要的環節是什麼？",
+      "options": [
+        {
+          "id": "family-meeting",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": "雙方家庭見面"
+        },
+        {
+          "id": "ring-exchange",
+          "emoji": "💍",
+          "label": "交換戒指"
+        },
+        {
+          "id": "public-announcement",
+          "emoji": "📢",
+          "label": "公開宣布"
+        },
+        {
+          "id": "gifts-exchange",
+          "emoji": "🎁",
+          "label": "準備聘禮/禮物"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270425-engagement-ring-hand",
+      "date": "2027-04-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSAMVV85AN3D1HXTEYY",
+      "topic_slug": "proposals-and-engagements",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "訂婚時戒指戴在右手，結婚時才換到左手，用同一枚戒指標記兩個階段——這是哪個國家的習俗？",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270426-deposit-refund-experience",
+      "date": "2027-04-26",
+      "kind": "poll",
+      "topic_id": "top_01M1257QJ92HV1HDB7T79KH25E",
+      "topic_slug": "renting-a-home",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "退租的時候,你的押金後來怎麼樣了?",
+      "options": [
+        {
+          "id": "full-refund",
+          "emoji": "💰",
+          "label": "全額退還,一毛不少"
+        },
+        {
+          "id": "partial-deduct",
+          "emoji": "🧾",
+          "label": "被扣了一部分,說是清潔或損壞費"
+        },
+        {
+          "id": "dispute",
+          "emoji": "⚖️",
+          "label": "房東不退,雙方吵起來甚至打官司"
+        },
+        {
+          "id": "never-rented",
+          "emoji": "🏠",
+          "label": "沒租過房子,沒經歷過這件事"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270426-no-deposit-cap-country",
+      "date": "2027-04-26",
+      "kind": "guess",
+      "topic_id": "top_01M1257QJ92HV1HDB7T79KH25E",
+      "topic_slug": "renting-a-home",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "以下七個地區裡,哪一個國家的法律完全不管押金——收不收、收多少,全交由房東與房客自行在合約裡約定?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國大陸"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270427-address-deadline",
+      "date": "2027-04-27",
+      "kind": "poll",
+      "topic_id": "top_01M1257QJBAGCKTBD5NB7EJD21",
+      "topic_slug": "residency-and-visas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果你有過在國外生活的經驗,搬家或換地址時,你通常怎麼應付申報期限?",
+      "options": [
+        {
+          "id": "always-on-time",
+          "emoji": "🏃",
+          "label": "一定卡在期限內跑一趟辦好"
+        },
+        {
+          "id": "forget-sometimes",
+          "emoji": "😅",
+          "label": "常常忘記,事後才想起來"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "🤷",
+          "label": "根本沒想過還要申報這件事"
+        },
+        {
+          "id": "not-applicable",
+          "emoji": "🏠",
+          "label": "沒在國外住過,沒遇過這種事"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270427-longest-registration",
+      "date": "2027-04-27",
+      "kind": "guess",
+      "topic_id": "top_01M1257QJBAGCKTBD5NB7EJD21",
+      "topic_slug": "residency-and-visas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這七個國家和地區之中,哪一個給臨時簽證持有人到居留機關辦理登記的期限最寬,長達90日?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台灣"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270428-shopping-return-habit",
+      "date": "2027-04-28",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB12JXEEY2HJ1PX9F99ZY",
+      "topic_slug": "shopping-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "購物節下單前,你會先做哪一件事?",
+      "options": [
+        {
+          "id": "check-return-policy",
+          "emoji": "🔍",
+          "label": "先查退貨規則"
+        },
+        {
+          "id": "screenshot-price",
+          "emoji": "📸",
+          "label": "先截圖原價"
+        },
+        {
+          "id": "just-buy",
+          "emoji": "🛒",
+          "label": "什麼都不查,直接下單"
+        },
+        {
+          "id": "skip-festival",
+          "emoji": "🙅",
+          "label": "乾脆不參加購物節"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270428-livestream-minister",
+      "date": "2027-04-28",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB12JXEEY2HJ1PX9F99ZY",
+      "topic_slug": "shopping-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "哪個國家的貿易部長本人到電商公司辦公室,直播賣中小企業的商品?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "印度"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270429-tanabata-celebrate",
+      "date": "2027-04-29",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKSFF6V5Y5QDVG5R1R9X4K",
+      "topic_slug": "tanabata-and-qixi",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果你住的地方也有類似七夕的節日,你通常會怎麼過?",
+      "options": [
+        {
+          "id": "date-night",
+          "emoji": "💑",
+          "label": "跟伴侶約會過節"
+        },
+        {
+          "id": "wish-on-paper",
+          "emoji": "🎋",
+          "label": "寫下願望掛起來"
+        },
+        {
+          "id": "family-ritual",
+          "emoji": "🏮",
+          "label": "參加家族或成年儀式"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "完全不會特別過"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270429-tanabata-guess-country",
+      "date": "2027-04-29",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKSFF6V5Y5QDVG5R1R9X4K",
+      "topic_slug": "tanabata-and-qixi",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "依上文,哪個國家的「七夕」慶典日期完全脫離固定曆法,是主辦單位每年自己挑一個七月週末辦的?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270430-commemoration-style",
+      "date": "2027-04-30",
+      "kind": "poll",
+      "topic_id": "top_01M0ZFDXZ0BAJS6E9GMMSP9NE0",
+      "topic_slug": "war-dead-and-veterans",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "如果由你決定,你希望自己國家用什麼方式紀念陣亡軍人與在世退伍軍人?",
+      "options": [
+        {
+          "id": "split-two-days",
+          "emoji": "🕊️",
+          "label": "悼念死者與感謝生還者分成兩天"
+        },
+        {
+          "id": "public-holiday",
+          "emoji": "📅",
+          "label": "訂一天,全民放假"
+        },
+        {
+          "id": "workday-ceremony",
+          "emoji": "🏢",
+          "label": "訂一天紀念,但照常上班上課"
+        },
+        {
+          "id": "fundraising-day",
+          "emoji": "🎗️",
+          "label": "用募款與實質協助取代形式上的紀念"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270430-soldiers-day-origin",
+      "date": "2027-04-30",
+      "kind": "guess",
+      "topic_id": "top_01M0ZFDXZ0BAJS6E9GMMSP9NE0",
+      "topic_slug": "war-dead-and-veterans",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "這七個國家中,哪一個的『軍人節』紀念的其實是一位十九世紀將領的生日,而不是某場戰役或戰爭事件?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "巴西"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "美國"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中國"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "印尼"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

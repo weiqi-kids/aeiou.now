@@ -16098,6 +16098,1062 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20270415-beer-festival-organizer",
+      "date": "2027-04-15",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKHEG7SET9EX18038MRV40",
+      "topic_slug": "beer-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika kotamu mengadakan \"festival bir\", siapa yang kamu inginkan sebagai penyelenggaranya?",
+      "options": [
+        {
+          "id": "gov-organizer",
+          "emoji": "🏛️",
+          "label": "Diselenggarakan langsung oleh pemerintah"
+        },
+        {
+          "id": "private-permit",
+          "emoji": "📝",
+          "label": "Diselenggarakan swasta, dengan izin sementara dari pemerintah"
+        },
+        {
+          "id": "local-decide",
+          "emoji": "🗺️",
+          "label": "Diserahkan ke keputusan daerah/negara bagian"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🚫",
+          "label": "Acara semacam ini tidak perlu ada"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270415-beer-festival-country",
+      "date": "2027-04-15",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKHEG7SET9EX18038MRV40",
+      "topic_slug": "beer-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara negara berikut, festival bir yang lokasi utamanya sendiri tercantum dalam daftar resmi organ pemerintah kota adalah?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270416-entrance-exam-poll",
+      "date": "2027-04-16",
+      "kind": "poll",
+      "topic_id": "top_01M1257QCASXRT1YYV0ET9PQFC",
+      "topic_slug": "entrance-exams",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Kalau hanya satu cara yang menentukan kamu diterima kuliah atau tidak, kamu ingin cara yang mana?",
+      "options": [
+        {
+          "id": "single-exam-rank",
+          "emoji": "📝",
+          "label": "Diurutkan murni dari nilai satu ujian"
+        },
+        {
+          "id": "school-record-rank",
+          "emoji": "🏫",
+          "label": "Hanya berdasarkan peringkat nilai rapor, tanpa ujian lagi"
+        },
+        {
+          "id": "holistic-review",
+          "emoji": "🗂️",
+          "label": "Penilaian menyeluruh: nilai, wawancara, dan esai sekaligus"
+        },
+        {
+          "id": "campus-own-exam",
+          "emoji": "🏛️",
+          "label": "Tiap universitas membuat dan menjalankan ujiannya sendiri"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270416-entrance-exam-guess",
+      "date": "2027-04-16",
+      "kind": "guess",
+      "topic_id": "top_01M1257QCASXRT1YYV0ET9PQFC",
+      "topic_slug": "entrance-exams",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Negara mana yang sudah punya sekitar 48 universitas pusat yang tidak lagi menghitung nilai rapor kelas 12, dan menerima mahasiswa lewat satu tes nasional yang diadakan sekali setahun?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270417-halloween-poll",
+      "date": "2027-04-17",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ9GWHQ7WPFS4WVQMGKTW1",
+      "topic_slug": "halloween",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Biasanya kamu ngapain di 31 Oktober?",
+      "options": [
+        {
+          "id": "costume-fun",
+          "emoji": "🎃",
+          "label": "Kostuman, minta permen, atau ke pesta"
+        },
+        {
+          "id": "just-another-day",
+          "emoji": "📅",
+          "label": "Kerja atau sekolah seperti biasa, gak ada yang spesial"
+        },
+        {
+          "id": "local-event",
+          "emoji": "🏬",
+          "label": "Datang ke acara Halloween di mal atau area belanja"
+        },
+        {
+          "id": "skip-avoid",
+          "emoji": "🙅",
+          "label": "Sengaja menghindari keramaian atau sama sekali gak ikut"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270417-halloween-guess",
+      "date": "2027-04-17",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ9GWHQ7WPFS4WVQMGKTW1",
+      "topic_slug": "halloween",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Negara mana yang tidak pernah meliburkan Halloween, tetapi mendirikan hari raya tandingan lewat undang-undang pada tanggal yang sama?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270418-copay-hesitate",
+      "date": "2027-04-18",
+      "kind": "poll",
+      "topic_id": "top_01M1257QEM0QBKD5NA79X2BMW3",
+      "topic_slug": "health-coverage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Apakah besarnya biaya yang harus kamu bayar sendiri memengaruhi keputusanmu untuk pergi ke dokter?",
+      "options": [
+        {
+          "id": "always-go",
+          "emoji": "🏥",
+          "label": "Saya tetap pergi berapa pun biayanya"
+        },
+        {
+          "id": "sometimes-hesitate",
+          "emoji": "🤔",
+          "label": "Kadang ragu, tapi biasanya tetap pergi"
+        },
+        {
+          "id": "often-delay",
+          "emoji": "😖",
+          "label": "Sering menunda ke dokter karena biayanya"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "Belum pernah memikirkannya, dan tidak tahu biayanya"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270418-ward-class-reform",
+      "date": "2027-04-18",
+      "kind": "guess",
+      "topic_id": "top_01M1257QEM0QBKD5NA79X2BMW3",
+      "topic_slug": "health-coverage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Negara mana yang sedang menggabungkan kelas rawat inap 1–3 menjadi satu kelas kamar standar (KRIS)?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270419-religious-calendar-experience",
+      "date": "2027-04-19",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB110Z03618QR9SKPEEXC",
+      "topic_slug": "jewish-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di tempat Anda, pernahkah sekolah atau kantor mengubah jadwal ujian, kerja, atau kelas karena hari raya keagamaan?",
+      "options": [
+        {
+          "id": "experienced-personally",
+          "emoji": "🙋",
+          "label": "Ya, saya sendiri mengalaminya"
+        },
+        {
+          "id": "heard-of-it",
+          "emoji": "👂",
+          "label": "Pernah dengar, tapi belum mengalaminya sendiri"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "Tidak pernah, dan belum pernah dengar juga"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "Tidak yakin, belum pernah memperhatikan"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270419-religious-exam-excuse-law",
+      "date": "2027-04-19",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB110Z03618QR9SKPEEXC",
+      "topic_slug": "jewish-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Hukum negara mana yang memungkinkan murid, dengan permohonan lebih dahulu dan beralasan, absen dari ujian atau kelas pada hari yang dilarang agamanya, dengan sekolah wajib menyediakan ujian susulan atau tugas tertulis gratis sebagai gantinya?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270420-wage-mechanism",
+      "date": "2027-04-20",
+      "kind": "poll",
+      "topic_id": "top_01M1257QGJ9B13A6ZNTKZ199D1",
+      "topic_slug": "minimum-wage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Setelah melihat cara berbagai negara menetapkan upah minimum, mekanisme mana yang menurutmu paling masuk akal?",
+      "options": [
+        {
+          "id": "national-single",
+          "emoji": "🎯",
+          "label": "Satu angka nasional, tanpa beda wilayah"
+        },
+        {
+          "id": "regional-tiers",
+          "emoji": "🗺️",
+          "label": "Tiap daerah menetapkan angkanya sendiri"
+        },
+        {
+          "id": "formula-linked",
+          "emoji": "📈",
+          "label": "Dikaitkan dengan rumus inflasi dan pertumbuhan ekonomi"
+        },
+        {
+          "id": "rare-adjustment",
+          "emoji": "🐌",
+          "label": "Serahkan ke parlemen, tanpa jadwal tetap"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270420-guess-47-rates",
+      "date": "2027-04-20",
+      "kind": "guess",
+      "topic_id": "top_01M1257QGJ9B13A6ZNTKZ199D1",
+      "topic_slug": "minimum-wage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Negara mana yang upah minimumnya bukan satu angka nasional, melainkan 47 angka berbeda yang berlaku bersamaan dalam satu negara, dengan angka dan tanggal berlaku yang berbeda-beda antarwilayah?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270421-family-celebration-day",
+      "date": "2027-04-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS8QZFDVGVBHB4PVM40",
+      "topic_slug": "newborn-and-full-moon",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Kalau itu keputusan Anda, hari keberapa setelah kelahiran yang Anda pilih untuk perayaan keluarga?",
+      "options": [
+        {
+          "id": "day-7",
+          "emoji": "🎏",
+          "label": "Hari ketujuh (seperti penamaan atau akikah)"
+        },
+        {
+          "id": "day-30",
+          "emoji": "🎂",
+          "label": "Tonggak satu bulan (kenduri sebulan)"
+        },
+        {
+          "id": "after-registration",
+          "emoji": "📄",
+          "label": "Setelah pencatatan resmi selesai, tanpa upacara keluarga yang tetap"
+        },
+        {
+          "id": "no-preference",
+          "emoji": "🤷",
+          "label": "Belum pernah memikirkannya, tidak ada preferensi khusus"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270421-shortest-registration-deadline",
+      "date": "2027-04-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS8QZFDVGVBHB4PVM40",
+      "topic_slug": "newborn-and-full-moon",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara empat tempat ini, mana yang punya tenggat pendaftaran kelahiran paling pendek — hanya empat belas hari — dan menurut undang-undang nama harus sudah ditentukan dalam jangka waktu itu?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok daratan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270422-unused-leave",
+      "date": "2027-04-22",
+      "kind": "poll",
+      "topic_id": "top_01M1257QHQ6H6GXFX0CE8V5GN6",
+      "topic_slug": "paid-leave-and-overtime",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Dalam pengalaman kerjamu sendiri, apa yang terjadi pada cuti berbayar yang tidak diambil?",
+      "options": [
+        {
+          "id": "paid-out",
+          "emoji": "💰",
+          "label": "Dibayar tunai sebagai upah"
+        },
+        {
+          "id": "expires",
+          "emoji": "⏳",
+          "label": "Langsung hangus, tanpa kompensasi"
+        },
+        {
+          "id": "company-schedules",
+          "emoji": "📅",
+          "label": "Perusahaan yang menjadwalkan tanggalnya untukku"
+        },
+        {
+          "id": "unsure",
+          "emoji": "🤷",
+          "label": "Belum pernah memperhatikan aturannya"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270422-absence-cuts-leave",
+      "date": "2027-04-22",
+      "kind": "guess",
+      "topic_id": "top_01M1257QHQ6H6GXFX0CE8V5GN6",
+      "topic_slug": "paid-leave-and-overtime",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di negara mana jumlah hari cuti tahunan berkurang seiring bertambahnya ketidakhadiran tanpa alasan selama tahun itu?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270423-pet-prep-poll",
+      "date": "2027-04-23",
+      "kind": "poll",
+      "topic_id": "top_01M0QAYAE8ZZ4FFRTZEJ4MGYYS",
+      "topic_slug": "pet-preparedness",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika tiba-tiba harus meninggalkan rumah—listrik padam, pindah, atau evakuasi—seberapa siap hewan peliharaan Anda untuk dibawa?",
+      "options": [
+        {
+          "id": "fully-ready",
+          "emoji": "🎒",
+          "label": "Sudah siap sepenuhnya — carrier, identitas, obat, makanan dan air lengkap"
+        },
+        {
+          "id": "partial",
+          "emoji": "🧷",
+          "label": "Sudah siapkan sebagian, tapi belum lengkap"
+        },
+        {
+          "id": "know-not-done",
+          "emoji": "🤔",
+          "label": "Tahu harus siap-siap, tapi belum mulai"
+        },
+        {
+          "id": "no-pet",
+          "emoji": "🚫",
+          "label": "Tidak punya hewan peliharaan — tidak berlaku"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270423-pet-prep-guess",
+      "date": "2027-04-23",
+      "kind": "guess",
+      "topic_id": "top_01M0QAYAE8ZZ4FFRTZEJ4MGYYS",
+      "topic_slug": "pet-preparedness",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Ada istilah resmi dalam perencanaan bencana yang secara khusus berarti \"mengungsi bersama hewan peliharaan ke tempat perlindungan\", dengan penekanan bahwa ini tidak berarti tinggal di ruangan yang sama di sana. Istilah ini dari negara mana?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270424-pet-role",
+      "date": "2027-04-24",
+      "kind": "poll",
+      "topic_id": "top_01M0Q9AQ26RG3FX2D4G7CS1M3A",
+      "topic_slug": "pets-and-family",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Menurut Anda, hewan peliharaan paling mendekati peran seperti apa di rumah?",
+      "options": [
+        {
+          "id": "family-member",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": "Seperti anggota keluarga"
+        },
+        {
+          "id": "responsibility",
+          "emoji": "🩺",
+          "label": "Tanggung jawab untuk dirawat"
+        },
+        {
+          "id": "companion",
+          "emoji": "🐾",
+          "label": "Teman untuk kenyamanan emosional"
+        },
+        {
+          "id": "distant-animal",
+          "emoji": "🏠",
+          "label": "Hewan di rumah, tapi tetap berjarak"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270424-pet-registry",
+      "date": "2027-04-24",
+      "kind": "guess",
+      "topic_id": "top_01M0Q9AQ26RG3FX2D4G7CS1M3A",
+      "topic_slug": "pets-and-family",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Kementerian lingkungan negara mana yang membangun sarana pendaftaran nasional untuk anjing dan kucing yang menghubungkan vaksinasi, microchip, pengembalian saat hilang, dan penanganan penelantaran?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270425-engagement-priority",
+      "date": "2027-04-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSAMVV85AN3D1HXTEYY",
+      "topic_slug": "proposals-and-engagements",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Menurut Anda, bagian mana yang paling penting dalam pertunangan?",
+      "options": [
+        {
+          "id": "family-meeting",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": "Pertemuan kedua keluarga"
+        },
+        {
+          "id": "ring-exchange",
+          "emoji": "💍",
+          "label": "Pertukaran cincin"
+        },
+        {
+          "id": "public-announcement",
+          "emoji": "📢",
+          "label": "Pengumuman terbuka"
+        },
+        {
+          "id": "gifts-exchange",
+          "emoji": "🎁",
+          "label": "Menyiapkan seserahan/hadiah"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270425-engagement-ring-hand",
+      "date": "2027-04-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSAMVV85AN3D1HXTEYY",
+      "topic_slug": "proposals-and-engagements",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Cincin dikenakan di tangan kanan saat bertunangan dan berpindah ke tangan kiri saat menikah, sehingga satu cincin menandai dua tahap — ini kebiasaan negara mana?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270426-deposit-refund-experience",
+      "date": "2027-04-26",
+      "kind": "poll",
+      "topic_id": "top_01M1257QJ92HV1HDB7T79KH25E",
+      "topic_slug": "renting-a-home",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Saat kamu pindah keluar, apa yang terjadi dengan uang jaminanmu?",
+      "options": [
+        {
+          "id": "full-refund",
+          "emoji": "💰",
+          "label": "Dikembalikan penuh, tanpa potongan"
+        },
+        {
+          "id": "partial-deduct",
+          "emoji": "🧾",
+          "label": "Sebagian dipotong, katanya untuk biaya bersih-bersih atau kerusakan"
+        },
+        {
+          "id": "dispute",
+          "emoji": "⚖️",
+          "label": "Pemilik menolak mengembalikan, sampai jadi sengketa"
+        },
+        {
+          "id": "never-rented",
+          "emoji": "🏠",
+          "label": "Belum pernah menyewa, jadi tidak relevan"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270426-no-deposit-cap-country",
+      "date": "2027-04-26",
+      "kind": "guess",
+      "topic_id": "top_01M1257QJ92HV1HDB7T79KH25E",
+      "topic_slug": "renting-a-home",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Dari tujuh tempat ini, di negara mana hukum sama sekali tidak mengatur uang jaminan sewa — apakah dipungut, dan berapa besarnya, sepenuhnya diserahkan pada kesepakatan pemilik dan penyewa dalam kontrak?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok (Daratan)"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270427-address-deadline",
+      "date": "2027-04-27",
+      "kind": "poll",
+      "topic_id": "top_01M1257QJBAGCKTBD5NB7EJD21",
+      "topic_slug": "residency-and-visas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Kalau kamu pernah tinggal di luar negeri, saat pindah rumah atau ganti alamat, bagaimana biasanya kamu menangani batas waktu pelaporannya?",
+      "options": [
+        {
+          "id": "always-on-time",
+          "emoji": "🏃",
+          "label": "Selalu buru-buru mengurus sebelum batas waktu"
+        },
+        {
+          "id": "forget-sometimes",
+          "emoji": "😅",
+          "label": "Sering lupa dan baru ingat belakangan"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "🤷",
+          "label": "Tidak pernah kepikiran kalau itu wajib dilaporkan"
+        },
+        {
+          "id": "not-applicable",
+          "emoji": "🏠",
+          "label": "Belum pernah tinggal di luar negeri, belum pernah mengalami ini"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270427-longest-registration",
+      "date": "2027-04-27",
+      "kind": "guess",
+      "topic_id": "top_01M1257QJBAGCKTBD5NB7EJD21",
+      "topic_slug": "residency-and-visas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara ketujuh negara/wilayah ini, mana yang memberi pemegang visa sementara batas waktu paling panjang untuk mendaftar ke otoritas tempat tinggal — sampai 90 hari?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270428-shopping-return-habit",
+      "date": "2027-04-28",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB12JXEEY2HJ1PX9F99ZY",
+      "topic_slug": "shopping-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Sebelum belanja saat festival diskon, apa yang biasanya Anda lakukan lebih dulu?",
+      "options": [
+        {
+          "id": "check-return-policy",
+          "emoji": "🔍",
+          "label": "Cek dulu kebijakan pengembalian"
+        },
+        {
+          "id": "screenshot-price",
+          "emoji": "📸",
+          "label": "Screenshot dulu harga aslinya"
+        },
+        {
+          "id": "just-buy",
+          "emoji": "🛒",
+          "label": "Tidak cek apa-apa, langsung beli"
+        },
+        {
+          "id": "skip-festival",
+          "emoji": "🙅",
+          "label": "Memilih tidak ikut festival belanja sama sekali"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270428-livestream-minister",
+      "date": "2027-04-28",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB12JXEEY2HJ1PX9F99ZY",
+      "topic_slug": "shopping-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di negara mana menteri perdagangan sendiri datang ke kantor perusahaan niaga elektronik untuk menjual produk UMKM lewat siaran langsung?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "India"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270429-tanabata-celebrate",
+      "date": "2027-04-29",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKSFF6V5Y5QDVG5R1R9X4K",
+      "topic_slug": "tanabata-and-qixi",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika ada hari seperti Tanabata atau Qixi di tempat tinggal Anda, bagaimana Anda akan merayakannya?",
+      "options": [
+        {
+          "id": "date-night",
+          "emoji": "💑",
+          "label": "Berkencan dengan pasangan"
+        },
+        {
+          "id": "wish-on-paper",
+          "emoji": "🎋",
+          "label": "Menulis harapan dan menggantungnya"
+        },
+        {
+          "id": "family-ritual",
+          "emoji": "🏮",
+          "label": "Mengikuti upacara keluarga atau kedewasaan"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Tidak merayakannya sama sekali"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270429-tanabata-guess-country",
+      "date": "2027-04-29",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKSFF6V5Y5QDVG5R1R9X4K",
+      "topic_slug": "tanabata-and-qixi",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Berdasarkan uraian di atas, di negara mana tanggal festival bergaya Tanabata sudah benar-benar lepas dari kalender tetap, karena panitia memilih sendiri satu akhir pekan Juli setiap tahun?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Jepang"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270430-commemoration-style",
+      "date": "2027-04-30",
+      "kind": "poll",
+      "topic_id": "top_01M0ZFDXZ0BAJS6E9GMMSP9NE0",
+      "topic_slug": "war-dead-and-veterans",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Jika keputusannya ada di tanganmu, bagaimana kamu ingin negaramu mengenang mereka yang gugur dan mereka yang bertugas lalu pulang?",
+      "options": [
+        {
+          "id": "split-two-days",
+          "emoji": "🕊️",
+          "label": "Hari terpisah untuk berkabung dan berterima kasih kepada yang hidup"
+        },
+        {
+          "id": "public-holiday",
+          "emoji": "📅",
+          "label": "Satu hari, dan jadikan hari libur umum"
+        },
+        {
+          "id": "workday-ceremony",
+          "emoji": "🏢",
+          "label": "Satu hari upacara, tapi semua tetap bekerja"
+        },
+        {
+          "id": "fundraising-day",
+          "emoji": "🎗️",
+          "label": "Ganti peringatan simbolis dengan penggalangan dana dan bantuan nyata"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270430-soldiers-day-origin",
+      "date": "2027-04-30",
+      "kind": "guess",
+      "topic_id": "top_01M0ZFDXZ0BAJS6E9GMMSP9NE0",
+      "topic_slug": "war-dead-and-veterans",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Di antara tujuh negara ini, negara mana yang 'Hari Prajurit'-nya sebenarnya memperingati hari lahir seorang jenderal abad kesembilan belas, bukan pertempuran atau peristiwa perang?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Amerika Serikat"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "Tiongkok"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonesia"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

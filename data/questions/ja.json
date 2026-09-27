@@ -16098,6 +16098,1062 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20270415-beer-festival-organizer",
+      "date": "2027-04-15",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKHEG7SET9EX18038MRV40",
+      "topic_slug": "beer-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もし住んでいる街で「ビール祭り」を開くとしたら、誰に主催してほしいですか？",
+      "options": [
+        {
+          "id": "gov-organizer",
+          "emoji": "🏛️",
+          "label": "政府が直接主催"
+        },
+        {
+          "id": "private-permit",
+          "emoji": "📝",
+          "label": "民間主催で、政府が期限付き許可を出す"
+        },
+        {
+          "id": "local-decide",
+          "emoji": "🗺️",
+          "label": "地方自治体の判断に任せる"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🚫",
+          "label": "このような催しは不要"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270415-beer-festival-country",
+      "date": "2027-04-15",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKHEG7SET9EX18038MRV40",
+      "topic_slug": "beer-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "次のうち、ビール祭りの主会場そのものが市政府の公式な機関一覧に登録されているのはどの国か？",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270416-entrance-exam-poll",
+      "date": "2027-04-16",
+      "kind": "poll",
+      "topic_id": "top_01M1257QCASXRT1YYV0ET9PQFC",
+      "topic_slug": "entrance-exams",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "大学に入れるかどうかをたった一つの方法だけで決めるとしたら、どれがいい?",
+      "options": [
+        {
+          "id": "single-exam-rank",
+          "emoji": "📝",
+          "label": "たった一回の試験の点数だけで順位を決める"
+        },
+        {
+          "id": "school-record-rank",
+          "emoji": "🏫",
+          "label": "在校成績の順位だけで決まり、試験は受けなくていい"
+        },
+        {
+          "id": "holistic-review",
+          "emoji": "🗂️",
+          "label": "総合評価:成績・面接・志望動機書をまとめて見る"
+        },
+        {
+          "id": "campus-own-exam",
+          "emoji": "🏛️",
+          "label": "各大学が独自に試験を実施し、基準も決める"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270416-entrance-exam-guess",
+      "date": "2027-04-16",
+      "kind": "guess",
+      "topic_id": "top_01M1257QCASXRT1YYV0ET9PQFC",
+      "topic_slug": "entrance-exams",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "約48の中央大学が12年生の在校成績をもう使わず、年1回の全国共通試験の結果だけで学生を受け入れている国はどこ?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270417-halloween-poll",
+      "date": "2027-04-17",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ9GWHQ7WPFS4WVQMGKTW1",
+      "topic_slug": "halloween",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "10月31日、あなたはふだんどう過ごしますか?",
+      "options": [
+        {
+          "id": "costume-fun",
+          "emoji": "🎃",
+          "label": "仮装してお菓子をもらったりパーティーに行く"
+        },
+        {
+          "id": "just-another-day",
+          "emoji": "📅",
+          "label": "いつも通り仕事や学校で、特に何もしない"
+        },
+        {
+          "id": "local-event",
+          "emoji": "🏬",
+          "label": "商業施設や街のハロウィンイベントに行く"
+        },
+        {
+          "id": "skip-avoid",
+          "emoji": "🙅",
+          "label": "人混みを避けたり、そもそも関わらない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270417-halloween-guess",
+      "date": "2027-04-17",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ9GWHQ7WPFS4WVQMGKTW1",
+      "topic_slug": "halloween",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ハロウィンを祝日にはしなかったのに、同じ日に別の記念日を法律で立てた国はどこか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270418-copay-hesitate",
+      "date": "2027-04-18",
+      "kind": "poll",
+      "topic_id": "top_01M1257QEM0QBKD5NA79X2BMW3",
+      "topic_slug": "health-coverage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "受診時の自己負担額は、病院に行くかどうかの判断に影響しますか?",
+      "options": [
+        {
+          "id": "always-go",
+          "emoji": "🏥",
+          "label": "金額に関係なく受診する"
+        },
+        {
+          "id": "sometimes-hesitate",
+          "emoji": "🤔",
+          "label": "たまに迷うが、たいてい受診する"
+        },
+        {
+          "id": "often-delay",
+          "emoji": "😖",
+          "label": "費用のせいで受診を先延ばしにすることが多い"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "特に考えたことがなく、金額もよく知らない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270418-ward-class-reform",
+      "date": "2027-04-18",
+      "kind": "guess",
+      "topic_id": "top_01M1257QEM0QBKD5NA79X2BMW3",
+      "topic_slug": "health-coverage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国が、入院病室のクラス1〜3の区分を単一の標準病室クラス(KRIS)へ統合しつつあるか?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270419-religious-calendar-experience",
+      "date": "2027-04-19",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB110Z03618QR9SKPEEXC",
+      "topic_slug": "jewish-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住む場所で、学校や職場が宗教上の祝日を理由に試験や勤務、授業を調整したことはありますか。",
+      "options": [
+        {
+          "id": "experienced-personally",
+          "emoji": "🙋",
+          "label": "ある、自分が経験した"
+        },
+        {
+          "id": "heard-of-it",
+          "emoji": "👂",
+          "label": "聞いたことはあるが自分では経験していない"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "ない、聞いたこともない"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "わからない、気にしたことがない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270419-religious-exam-excuse-law",
+      "date": "2027-04-19",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB110Z03618QR9SKPEEXC",
+      "topic_slug": "jewish-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国の法律が、事前に理由を付した申請により、宗教が禁じる日の試験や授業を欠席でき、学校が無償で追試か筆記課題を代わりに提供しなければならないと定めているか。",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270420-wage-mechanism",
+      "date": "2027-04-20",
+      "kind": "poll",
+      "topic_id": "top_01M1257QGJ9B13A6ZNTKZ199D1",
+      "topic_slug": "minimum-wage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "各国の最低賃金の決め方を見て、あなたならどの仕組みを選びますか?",
+      "options": [
+        {
+          "id": "national-single",
+          "emoji": "🎯",
+          "label": "地域差なしの全国一律の金額"
+        },
+        {
+          "id": "regional-tiers",
+          "emoji": "🗺️",
+          "label": "地域ごとに別々に決める"
+        },
+        {
+          "id": "formula-linked",
+          "emoji": "📈",
+          "label": "物価や成長率と連動する計算式で自動的に決める"
+        },
+        {
+          "id": "rare-adjustment",
+          "emoji": "🐌",
+          "label": "議会の判断に任せ、定期的な見直しは決めない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270420-guess-47-rates",
+      "date": "2027-04-20",
+      "kind": "guess",
+      "topic_id": "top_01M1257QGJ9B13A6ZNTKZ199D1",
+      "topic_slug": "minimum-wage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "最低賃金が全国一律ではなく、同じ国の中に47通りもの金額が並存し、金額も発効日も地域ごとに違う国はどこ?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270421-family-celebration-day",
+      "date": "2027-04-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS8QZFDVGVBHB4PVM40",
+      "topic_slug": "newborn-and-full-moon",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "自分なら、新生児の家族の祝いを生後何日目に行いたいですか?",
+      "options": [
+        {
+          "id": "day-7",
+          "emoji": "🎏",
+          "label": "七日目(命名やアキーカのように)"
+        },
+        {
+          "id": "day-30",
+          "emoji": "🎂",
+          "label": "満一か月(満月の祝い)"
+        },
+        {
+          "id": "after-registration",
+          "emoji": "📄",
+          "label": "法的な届出が済んだらそれで良く、決まった家族の儀式はない"
+        },
+        {
+          "id": "no-preference",
+          "emoji": "🤷",
+          "label": "考えたことがなく、特にこだわりはない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270421-shortest-registration-deadline",
+      "date": "2027-04-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS8QZFDVGVBHB4PVM40",
+      "topic_slug": "newborn-and-full-moon",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この四つの中で、出生届の期限が最も短い十四日で、しかも法律上その期間内に名前を決めなければならないのはどこか?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270422-unused-leave",
+      "date": "2027-04-22",
+      "kind": "poll",
+      "topic_id": "top_01M1257QHQ6H6GXFX0CE8V5GN6",
+      "topic_slug": "paid-leave-and-overtime",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "実際の職場経験では、消化しきれなかった有給休暇はどうなっていますか?",
+      "options": [
+        {
+          "id": "paid-out",
+          "emoji": "💰",
+          "label": "賃金として支払われる"
+        },
+        {
+          "id": "expires",
+          "emoji": "⏳",
+          "label": "そのまま消滅し、補償はない"
+        },
+        {
+          "id": "company-schedules",
+          "emoji": "📅",
+          "label": "会社が休暇日を指定してくれる"
+        },
+        {
+          "id": "unsure",
+          "emoji": "🤷",
+          "label": "特に気にしたことがなく、よく分からない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270422-absence-cuts-leave",
+      "date": "2027-04-22",
+      "kind": "guess",
+      "topic_id": "top_01M1257QHQ6H6GXFX0CE8V5GN6",
+      "topic_slug": "paid-leave-and-overtime",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "無断欠勤が増えるほど、その年の有給休暇の日数が減っていく国はどこか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270423-pet-prep-poll",
+      "date": "2027-04-23",
+      "kind": "poll",
+      "topic_id": "top_01M0QAYAE8ZZ4FFRTZEJ4MGYYS",
+      "topic_slug": "pet-preparedness",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "停電や引っ越し、避難などですぐに家を出るとしたら、あなたのペットの持ち出し準備はどのくらいできていますか?",
+      "options": [
+        {
+          "id": "fully-ready",
+          "emoji": "🎒",
+          "label": "すべて準備済み(キャリー、身分表示、薬、食料と水がそろっている)"
+        },
+        {
+          "id": "partial",
+          "emoji": "🧷",
+          "label": "一部は準備しているが、揃っていない"
+        },
+        {
+          "id": "know-not-done",
+          "emoji": "🤔",
+          "label": "必要だとは分かっているが、まだ手をつけていない"
+        },
+        {
+          "id": "no-pet",
+          "emoji": "🚫",
+          "label": "ペットを飼っていないので該当しない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270423-pet-prep-guess",
+      "date": "2027-04-23",
+      "kind": "guess",
+      "topic_id": "top_01M0QAYAE8ZZ4FFRTZEJ4MGYYS",
+      "topic_slug": "pet-preparedness",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "「ペットと一緒に避難場所まで行くこと」を指す公式な防災用語があり、それが避難所で同じ部屋に住めるという意味ではないと特に強調されている。これはどの国の用語か?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国大陸"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270424-pet-role",
+      "date": "2027-04-24",
+      "kind": "poll",
+      "topic_id": "top_01M0Q9AQ26RG3FX2D4G7CS1M3A",
+      "topic_slug": "pets-and-family",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたにとって、ペットは家の中でどんな存在に近いですか?",
+      "options": [
+        {
+          "id": "family-member",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": "家族の一員のような存在"
+        },
+        {
+          "id": "responsibility",
+          "emoji": "🩺",
+          "label": "世話をする責任の対象"
+        },
+        {
+          "id": "companion",
+          "emoji": "🐾",
+          "label": "心の支えになる伴侶"
+        },
+        {
+          "id": "distant-animal",
+          "emoji": "🏠",
+          "label": "家にいる動物だが、距離を置く存在"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270424-pet-registry",
+      "date": "2027-04-24",
+      "kind": "guess",
+      "topic_id": "top_01M0Q9AQ26RG3FX2D4G7CS1M3A",
+      "topic_slug": "pets-and-family",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "どの国の環境省が、ワクチン、マイクロチップ、迷子の返還、遺棄対策を結びつけた犬猫の全国登録の仕組みを作ったか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270425-engagement-priority",
+      "date": "2027-04-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSAMVV85AN3D1HXTEYY",
+      "topic_slug": "proposals-and-engagements",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたにとって、婚約で最も重要なのはどの部分か？",
+      "options": [
+        {
+          "id": "family-meeting",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": "両家の顔合わせ"
+        },
+        {
+          "id": "ring-exchange",
+          "emoji": "💍",
+          "label": "指輪の交換"
+        },
+        {
+          "id": "public-announcement",
+          "emoji": "📢",
+          "label": "公表すること"
+        },
+        {
+          "id": "gifts-exchange",
+          "emoji": "🎁",
+          "label": "結納品・贈り物の準備"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270425-engagement-ring-hand",
+      "date": "2027-04-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSAMVV85AN3D1HXTEYY",
+      "topic_slug": "proposals-and-engagements",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "婚約中は指輪を右手にはめ、結婚時に左手へ移し、一つの指輪で二つの段階を示す——これはどこの習慣か？",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270426-deposit-refund-experience",
+      "date": "2027-04-26",
+      "kind": "poll",
+      "topic_id": "top_01M1257QJ92HV1HDB7T79KH25E",
+      "topic_slug": "renting-a-home",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "退去するとき、あなたの敷金はどうなりましたか?",
+      "options": [
+        {
+          "id": "full-refund",
+          "emoji": "💰",
+          "label": "全額そのまま返ってきた"
+        },
+        {
+          "id": "partial-deduct",
+          "emoji": "🧾",
+          "label": "清掃費や修繕費として一部差し引かれた"
+        },
+        {
+          "id": "dispute",
+          "emoji": "⚖️",
+          "label": "大家が返してくれず、揉め事になった"
+        },
+        {
+          "id": "never-rented",
+          "emoji": "🏠",
+          "label": "賃貸経験がなく、当てはまらない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270426-no-deposit-cap-country",
+      "date": "2027-04-26",
+      "kind": "guess",
+      "topic_id": "top_01M1257QJ92HV1HDB7T79KH25E",
+      "topic_slug": "renting-a-home",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この七つの地域のうち、法律が敷金についてまったく何も定めていない――取るかどうか、いくらにするかを完全に大家と借主の合意任せにしている国はどこか?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国本土"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270427-address-deadline",
+      "date": "2027-04-27",
+      "kind": "poll",
+      "topic_id": "top_01M1257QJBAGCKTBD5NB7EJD21",
+      "topic_slug": "residency-and-visas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "海外で暮らした経験がある人に聞きたい。引っ越しや住所変更のとき、届出の期限にはどう対応していた?",
+      "options": [
+        {
+          "id": "always-on-time",
+          "emoji": "🏃",
+          "label": "必ず期限内に窓口へ行って済ませていた"
+        },
+        {
+          "id": "forget-sometimes",
+          "emoji": "😅",
+          "label": "よく忘れていて、後から思い出す"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "🤷",
+          "label": "そもそも届出が必要だと思ってもいなかった"
+        },
+        {
+          "id": "not-applicable",
+          "emoji": "🏠",
+          "label": "海外に住んだことがなく、経験がない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270427-longest-registration",
+      "date": "2027-04-27",
+      "kind": "guess",
+      "topic_id": "top_01M1257QJBAGCKTBD5NB7EJD21",
+      "topic_slug": "residency-and-visas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "この七つの国・地域の中で、一時ビザ保持者に居留機関への登録猶予を最も長く与えている、90日というのはどこか。",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "台湾"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270428-shopping-return-habit",
+      "date": "2027-04-28",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB12JXEEY2HJ1PX9F99ZY",
+      "topic_slug": "shopping-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "セール中に買う前、まず何をしますか。",
+      "options": [
+        {
+          "id": "check-return-policy",
+          "emoji": "🔍",
+          "label": "先に返品ルールを確認する"
+        },
+        {
+          "id": "screenshot-price",
+          "emoji": "📸",
+          "label": "先に元値のスクリーンショットを撮る"
+        },
+        {
+          "id": "just-buy",
+          "emoji": "🛒",
+          "label": "何も確認せずそのまま買う"
+        },
+        {
+          "id": "skip-festival",
+          "emoji": "🙅",
+          "label": "そもそもセールに参加しない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270428-livestream-minister",
+      "date": "2027-04-28",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB12JXEEY2HJ1PX9F99ZY",
+      "topic_slug": "shopping-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "貿易大臣自らが電子商取引企業のオフィスに出向き、中小企業の商品をライブ配信で売った国はどこか。",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "インド"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270429-tanabata-celebrate",
+      "date": "2027-04-29",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKSFF6V5Y5QDVG5R1R9X4K",
+      "topic_slug": "tanabata-and-qixi",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "あなたの住む地域にも七夕のような行事があったら、どう過ごしますか?",
+      "options": [
+        {
+          "id": "date-night",
+          "emoji": "💑",
+          "label": "パートナーとデートする"
+        },
+        {
+          "id": "wish-on-paper",
+          "emoji": "🎋",
+          "label": "願い事を書いて飾る"
+        },
+        {
+          "id": "family-ritual",
+          "emoji": "🏮",
+          "label": "家族の儀式や成人の儀礼に参加する"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "特に何もしない"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270429-tanabata-guess-country",
+      "date": "2027-04-29",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKSFF6V5Y5QDVG5R1R9X4K",
+      "topic_slug": "tanabata-and-qixi",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "上の内容によると、七夕を模した祭りの日付が固定の暦から完全に外れ、主催者が毎年7月の週末を選んで開催している国はどこですか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "日本"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270430-commemoration-style",
+      "date": "2027-04-30",
+      "kind": "poll",
+      "topic_id": "top_01M0ZFDXZ0BAJS6E9GMMSP9NE0",
+      "topic_slug": "war-dead-and-veterans",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "もしあなたが決めるとしたら、自分の国は戦死者と生還した退役軍人をどのように記念すべきだと思うか?",
+      "options": [
+        {
+          "id": "split-two-days",
+          "emoji": "🕊️",
+          "label": "死者への追悼と生還者への感謝を別の日に分ける"
+        },
+        {
+          "id": "public-holiday",
+          "emoji": "📅",
+          "label": "一日に定め、休日にする"
+        },
+        {
+          "id": "workday-ceremony",
+          "emoji": "🏢",
+          "label": "式典は行うが、生活は普段どおり"
+        },
+        {
+          "id": "fundraising-day",
+          "emoji": "🎗️",
+          "label": "形式的な追悼より募金と実質的な支援を"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270430-soldiers-day-origin",
+      "date": "2027-04-30",
+      "kind": "guess",
+      "topic_id": "top_01M0ZFDXZ0BAJS6E9GMMSP9NE0",
+      "topic_slug": "war-dead-and-veterans",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "これら七か国のうち、『軍人の日』が実は十九世紀の将軍の誕生日を記念していて、戦闘や戦争の出来事ではないのはどこか?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ブラジル"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "アメリカ"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "中国"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "インドネシア"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

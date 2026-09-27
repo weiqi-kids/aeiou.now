@@ -16098,6 +16098,1062 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20270415-beer-festival-organizer",
+      "date": "2027-04-15",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKHEG7SET9EX18038MRV40",
+      "topic_slug": "beer-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर आपके शहर में एक \"बीयर उत्सव\" होता, तो आप चाहेंगे कि इसे कौन आयोजित करे?",
+      "options": [
+        {
+          "id": "gov-organizer",
+          "emoji": "🏛️",
+          "label": "सरकार खुद सीधे आयोजित करे"
+        },
+        {
+          "id": "private-permit",
+          "emoji": "📝",
+          "label": "निजी आयोजन हो, सरकार बस अस्थायी अनुज्ञप्ति दे"
+        },
+        {
+          "id": "local-decide",
+          "emoji": "🗺️",
+          "label": "स्थानीय/राज्य सरकार पर छोड़ दिया जाए"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🚫",
+          "label": "ऐसा आयोजन होना ही नहीं चाहिए"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270415-beer-festival-country",
+      "date": "2027-04-15",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKHEG7SET9EX18038MRV40",
+      "topic_slug": "beer-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "नीचे दिए देशों में से किसके बीयर उत्सव का मुख्य स्थल स्वयं नगर सरकार की आधिकारिक अंग-सूची में दर्ज है?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270416-entrance-exam-poll",
+      "date": "2027-04-16",
+      "kind": "poll",
+      "topic_id": "top_01M1257QCASXRT1YYV0ET9PQFC",
+      "topic_slug": "entrance-exams",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर सिर्फ़ एक तरीक़े से तय होना हो कि आपको विश्वविद्यालय में दाख़िला मिलेगा या नहीं, तो आप कौन-सा चाहेंगे?",
+      "options": [
+        {
+          "id": "single-exam-rank",
+          "emoji": "📝",
+          "label": "सिर्फ़ एक परीक्षा के अंकों से रैंकिंग"
+        },
+        {
+          "id": "school-record-rank",
+          "emoji": "🏫",
+          "label": "सिर्फ़ स्कूल के अंकों की रैंकिंग से, अलग परीक्षा नहीं"
+        },
+        {
+          "id": "holistic-review",
+          "emoji": "🗂️",
+          "label": "समग्र समीक्षा: अंक, इंटरव्यू और निबंध सब साथ देखे जाएँ"
+        },
+        {
+          "id": "campus-own-exam",
+          "emoji": "🏛️",
+          "label": "हर विश्वविद्यालय अपनी परीक्षा ख़ुद तय करे और ख़ुद ले"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270416-entrance-exam-guess",
+      "date": "2027-04-16",
+      "kind": "guess",
+      "topic_id": "top_01M1257QCASXRT1YYV0ET9PQFC",
+      "topic_slug": "entrance-exams",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में क़रीब 48 केंद्रीय विश्वविद्यालय अब 12वीं के स्कूली अंक नहीं गिनते, बल्कि साल में एक बार होने वाली एक ही परीक्षा से दाख़िला देते हैं?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270417-halloween-poll",
+      "date": "2027-04-17",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ9GWHQ7WPFS4WVQMGKTW1",
+      "topic_slug": "halloween",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "31 अक्टूबर को आप आमतौर पर क्या करते हैं?",
+      "options": [
+        {
+          "id": "costume-fun",
+          "emoji": "🎃",
+          "label": "पोशाक पहनना, ट्रीट लेना या पार्टी में जाना"
+        },
+        {
+          "id": "just-another-day",
+          "emoji": "📅",
+          "label": "हमेशा की तरह काम या स्कूल, कुछ ख़ास नहीं"
+        },
+        {
+          "id": "local-event",
+          "emoji": "🏬",
+          "label": "मॉल या बाज़ार के हैलोवीन आयोजन में जाना"
+        },
+        {
+          "id": "skip-avoid",
+          "emoji": "🙅",
+          "label": "जानबूझकर भीड़ से बचना या बिल्कुल शामिल न होना"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270417-halloween-guess",
+      "date": "2027-04-17",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ9GWHQ7WPFS4WVQMGKTW1",
+      "topic_slug": "halloween",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश ने हैलोवीन को कभी छुट्टी नहीं दी, फिर भी उसी तारीख़ पर क़ानून से एक प्रतिद्वंद्वी पर्व खड़ा कर दिया?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270418-copay-hesitate",
+      "date": "2027-04-18",
+      "kind": "poll",
+      "topic_id": "top_01M1257QEM0QBKD5NA79X2BMW3",
+      "topic_slug": "health-coverage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "डॉक्टर के पास जाने के फ़ैसले पर सह-भुगतान की रक़म कितना असर डालती है?",
+      "options": [
+        {
+          "id": "always-go",
+          "emoji": "🏥",
+          "label": "रक़म चाहे जो हो, मैं जाता/जाती हूँ"
+        },
+        {
+          "id": "sometimes-hesitate",
+          "emoji": "🤔",
+          "label": "कभी-कभी झिझकता/झिझकती हूँ, पर आमतौर पर चला/चली जाता/जाती हूँ"
+        },
+        {
+          "id": "often-delay",
+          "emoji": "😖",
+          "label": "अक्सर लागत की वजह से डॉक्टर के पास जाना टाल देता/देती हूँ"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "कभी सोचा नहीं, और लागत का पता भी नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270418-ward-class-reform",
+      "date": "2027-04-18",
+      "kind": "guess",
+      "topic_id": "top_01M1257QEM0QBKD5NA79X2BMW3",
+      "topic_slug": "health-coverage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "कौन-सा देश अपने क्लास 1–3 भर्ती कमरा स्तरों को एक ही मानक कमरा श्रेणी (KRIS) में बदल रहा है?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270419-religious-calendar-experience",
+      "date": "2027-04-19",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB110Z03618QR9SKPEEXC",
+      "topic_slug": "jewish-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके यहाँ, किसी धार्मिक पर्व के कारण स्कूल या दफ़्तर ने कभी परीक्षा, काम या कक्षा का समय बदला है?",
+      "options": [
+        {
+          "id": "experienced-personally",
+          "emoji": "🙋",
+          "label": "हाँ, मेरे साथ हुआ"
+        },
+        {
+          "id": "heard-of-it",
+          "emoji": "👂",
+          "label": "सुना है, पर ख़ुद अनुभव नहीं किया"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "कभी नहीं, सुना भी नहीं"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "पता नहीं, कभी ध्यान नहीं दिया"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270419-religious-exam-excuse-law",
+      "date": "2027-04-19",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB110Z03618QR9SKPEEXC",
+      "topic_slug": "jewish-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश का क़ानून यह कहता है कि छात्र पूर्व एवं सकारण अनुरोध पर धार्मिक दिन पर परीक्षा या कक्षा से अनुपस्थित रह सकता है, और स्कूल को नि:शुल्क पुनर्परीक्षा या लिखित कार्य देना ही होगा?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270420-wage-mechanism",
+      "date": "2027-04-20",
+      "kind": "poll",
+      "topic_id": "top_01M1257QGJ9B13A6ZNTKZ199D1",
+      "topic_slug": "minimum-wage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अलग-अलग देशों में न्यूनतम मज़दूरी तय करने का तरीक़ा देखकर, आप कौन सा तरीक़ा चुनेंगे?",
+      "options": [
+        {
+          "id": "national-single",
+          "emoji": "🎯",
+          "label": "पूरे देश में एक ही आंकड़ा, कोई क्षेत्रीय अंतर नहीं"
+        },
+        {
+          "id": "regional-tiers",
+          "emoji": "🗺️",
+          "label": "हर क्षेत्र अपनी अलग दर तय करे"
+        },
+        {
+          "id": "formula-linked",
+          "emoji": "📈",
+          "label": "महंगाई और आर्थिक वृद्धि से जुड़ा एक फ़ॉर्मूला हो"
+        },
+        {
+          "id": "rare-adjustment",
+          "emoji": "🐌",
+          "label": "इसे विधायिका पर छोड़ दें, तय समय-सीमा न हो"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270420-guess-47-rates",
+      "date": "2027-04-20",
+      "kind": "guess",
+      "topic_id": "top_01M1257QGJ9B13A6ZNTKZ199D1",
+      "topic_slug": "minimum-wage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में न्यूनतम मज़दूरी एक राष्ट्रीय आंकड़ा नहीं है, बल्कि एक ही देश के भीतर सैंतालीस अलग-अलग आंकड़े साथ-साथ चलते हैं, हर जगह की दर और लागू होने की तारीख़ अलग होती है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "संयुक्त राज्य अमेरिका"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270421-family-celebration-day",
+      "date": "2027-04-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS8QZFDVGVBHB4PVM40",
+      "topic_slug": "newborn-and-full-moon",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर आपकी बात हो, तो आप नवजात के पारिवारिक उत्सव के लिए जन्म के बाद कौन-सा दिन चुनेंगे?",
+      "options": [
+        {
+          "id": "day-7",
+          "emoji": "🎏",
+          "label": "सातवां दिन (नामकरण या aqiqah जैसा)"
+        },
+        {
+          "id": "day-30",
+          "emoji": "🎂",
+          "label": "एक महीना पूरा होने पर (महीने का भोज)"
+        },
+        {
+          "id": "after-registration",
+          "emoji": "📄",
+          "label": "जब कानूनी पंजीकरण हो जाए, बिना किसी तय पारिवारिक रस्म के"
+        },
+        {
+          "id": "no-preference",
+          "emoji": "🤷",
+          "label": "कभी नहीं सोचा, कोई खास पसंद नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270421-shortest-registration-deadline",
+      "date": "2027-04-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS8QZFDVGVBHB4PVM40",
+      "topic_slug": "newborn-and-full-moon",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन चार जगहों में से किसमें जन्म-पंजीकरण की सीमा सबसे छोटी — केवल चौदह दिन — है, और कानून के तहत उसी अवधि में नाम तय करना ज़रूरी है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "मुख्यभूमि चीन"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270422-unused-leave",
+      "date": "2027-04-22",
+      "kind": "poll",
+      "topic_id": "top_01M1257QHQ6H6GXFX0CE8V5GN6",
+      "topic_slug": "paid-leave-and-overtime",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपके अपने कार्य अनुभव में, न ली गई सवैतनिक छुट्टी का आखिर में क्या होता है?",
+      "options": [
+        {
+          "id": "paid-out",
+          "emoji": "💰",
+          "label": "इसका वेतन के रूप में भुगतान हो जाता है"
+        },
+        {
+          "id": "expires",
+          "emoji": "⏳",
+          "label": "यह बस समाप्त हो जाती है, कोई भुगतान नहीं मिलता"
+        },
+        {
+          "id": "company-schedules",
+          "emoji": "📅",
+          "label": "मेरा नियोक्ता मेरे लिए तारीखें तय करता है"
+        },
+        {
+          "id": "unsure",
+          "emoji": "🤷",
+          "label": "मैंने कभी इस नियम पर ध्यान नहीं दिया"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270422-absence-cuts-leave",
+      "date": "2027-04-22",
+      "kind": "guess",
+      "topic_id": "top_01M1257QHQ6H6GXFX0CE8V5GN6",
+      "topic_slug": "paid-leave-and-overtime",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में साल के दौरान बिना कारण अनुपस्थिति बढ़ने से वार्षिक छुट्टी के दिन घटते जाते हैं?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270423-pet-prep-poll",
+      "date": "2027-04-23",
+      "kind": "poll",
+      "topic_id": "top_01M0QAYAE8ZZ4FFRTZEJ4MGYYS",
+      "topic_slug": "pet-preparedness",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर अचानक घर छोड़ना पड़े—बिजली जाना, घर बदलना या निकासी—तो आपके पालतू पशु की तैयारी कितनी है?",
+      "options": [
+        {
+          "id": "fully-ready",
+          "emoji": "🎒",
+          "label": "पूरी तरह तैयार — कैरियर, पहचान, दवाइयाँ, भोजन-पानी सब मौजूद"
+        },
+        {
+          "id": "partial",
+          "emoji": "🧷",
+          "label": "कुछ चीज़ें तैयार हैं, लेकिन पूरी नहीं"
+        },
+        {
+          "id": "know-not-done",
+          "emoji": "🤔",
+          "label": "पता है ज़रूरी है, पर अभी तक कुछ नहीं किया"
+        },
+        {
+          "id": "no-pet",
+          "emoji": "🚫",
+          "label": "घर में पालतू पशु नहीं है — यह लागू नहीं"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270423-pet-prep-guess",
+      "date": "2027-04-23",
+      "kind": "guess",
+      "topic_id": "top_01M0QAYAE8ZZ4FFRTZEJ4MGYYS",
+      "topic_slug": "pet-preparedness",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "एक आधिकारिक आपदा-योजना शब्द है जिसका अर्थ है \"पालतू पशु के साथ आश्रय तक पहुँचना\", और यह ज़ोर देकर कहा जाता है कि इसका मतलब आश्रय में एक ही कमरे में रहना नहीं है। यह किस देश का शब्द है?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270424-pet-role",
+      "date": "2027-04-24",
+      "kind": "poll",
+      "topic_id": "top_01M0Q9AQ26RG3FX2D4G7CS1M3A",
+      "topic_slug": "pets-and-family",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपकी नज़र में, घर में पालतू पशु सबसे ज़्यादा किस तरह की मौजूदगी है?",
+      "options": [
+        {
+          "id": "family-member",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": "परिवार के सदस्य जैसा"
+        },
+        {
+          "id": "responsibility",
+          "emoji": "🩺",
+          "label": "देखभाल की एक ज़िम्मेदारी"
+        },
+        {
+          "id": "companion",
+          "emoji": "🐾",
+          "label": "भावनात्मक साथी"
+        },
+        {
+          "id": "distant-animal",
+          "emoji": "🏠",
+          "label": "घर का जानवर, पर दूरी बनाकर"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270424-pet-registry",
+      "date": "2027-04-24",
+      "kind": "guess",
+      "topic_id": "top_01M0Q9AQ26RG3FX2D4G7CS1M3A",
+      "topic_slug": "pets-and-family",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश के पर्यावरण मंत्रालय ने कुत्तों और बिल्लियों के लिए एक राष्ट्रीय पंजीकरण साधन बनाया है जो टीकाकरण, माइक्रोचिप, खोने पर वापसी और परित्याग-नियंत्रण को जोड़ता है?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270425-engagement-priority",
+      "date": "2027-04-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSAMVV85AN3D1HXTEYY",
+      "topic_slug": "proposals-and-engagements",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "आपकी नज़र में सगाई में सबसे ज़्यादा अहम कौन-सा हिस्सा है？",
+      "options": [
+        {
+          "id": "family-meeting",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": "दोनों परिवारों का मिलना"
+        },
+        {
+          "id": "ring-exchange",
+          "emoji": "💍",
+          "label": "अँगूठियों का आदान-प्रदान"
+        },
+        {
+          "id": "public-announcement",
+          "emoji": "📢",
+          "label": "सार्वजनिक घोषणा"
+        },
+        {
+          "id": "gifts-exchange",
+          "emoji": "🎁",
+          "label": "सगाई के उपहार तैयार करना"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270425-engagement-ring-hand",
+      "date": "2027-04-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSAMVV85AN3D1HXTEYY",
+      "topic_slug": "proposals-and-engagements",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "सगाई के दौरान अँगूठी दाहिने हाथ में पहनी जाती है और विवाह पर बाएँ हाथ में चली जाती है, यानी एक ही अँगूठी दो चरण दिखाती है — यह किसकी परंपरा है?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270426-deposit-refund-experience",
+      "date": "2027-04-26",
+      "kind": "poll",
+      "topic_id": "top_01M1257QJ92HV1HDB7T79KH25E",
+      "topic_slug": "renting-a-home",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "जब आपने मकान खाली किया, तो आपकी जमानत राशि का क्या हुआ?",
+      "options": [
+        {
+          "id": "full-refund",
+          "emoji": "💰",
+          "label": "पूरी राशि बिना कटौती वापस मिली"
+        },
+        {
+          "id": "partial-deduct",
+          "emoji": "🧾",
+          "label": "सफ़ाई या नुकसान के नाम पर कुछ हिस्सा काट लिया गया"
+        },
+        {
+          "id": "dispute",
+          "emoji": "⚖️",
+          "label": "मकान-मालिक ने लौटाने से इनकार किया, बात विवाद तक पहुँची"
+        },
+        {
+          "id": "never-rented",
+          "emoji": "🏠",
+          "label": "कभी किराये पर नहीं रहा, यह लागू नहीं होता"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270426-no-deposit-cap-country",
+      "date": "2027-04-26",
+      "kind": "guess",
+      "topic_id": "top_01M1257QJ92HV1HDB7T79KH25E",
+      "topic_slug": "renting-a-home",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन सात जगहों में से, किस देश का क़ानून जमानत राशि के बारे में बिल्कुल कुछ नहीं कहता — लेना है या नहीं, और कितना, यह पूरी तरह मकान-मालिक और किरायेदार के अनुबंध पर छोड़ दिया गया है?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन (मुख्यभूमि)"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270427-address-deadline",
+      "date": "2027-04-27",
+      "kind": "poll",
+      "topic_id": "top_01M1257QJBAGCKTBD5NB7EJD21",
+      "topic_slug": "residency-and-visas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर आप कभी विदेश में रहे हैं, तो घर बदलने या पता बदलने पर आप रिपोर्टिंग की समय-सीमा को आमतौर पर कैसे संभालते थे?",
+      "options": [
+        {
+          "id": "always-on-time",
+          "emoji": "🏃",
+          "label": "हमेशा समय-सीमा से पहले जाकर काम निपटा लेता/लेती था/थी"
+        },
+        {
+          "id": "forget-sometimes",
+          "emoji": "😅",
+          "label": "अक्सर भूल जाता/जाती था/थी, बाद में याद आता था"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "🤷",
+          "label": "कभी सोचा ही नहीं कि यह रिपोर्ट करना ज़रूरी है"
+        },
+        {
+          "id": "not-applicable",
+          "emoji": "🏠",
+          "label": "कभी विदेश में नहीं रहा/रही, यह अनुभव नहीं हुआ"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270427-longest-registration",
+      "date": "2027-04-27",
+      "kind": "guess",
+      "topic_id": "top_01M1257QJBAGCKTBD5NB7EJD21",
+      "topic_slug": "residency-and-visas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन सात देशों/क्षेत्रों में से किसमें अस्थायी वीज़ा धारकों को निवास प्राधिकरण में पंजीकरण कराने के लिए सबसे लंबी मोहलत — पूरे 90 दिन — दी जाती है?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "ताइवान"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270428-shopping-return-habit",
+      "date": "2027-04-28",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB12JXEEY2HJ1PX9F99ZY",
+      "topic_slug": "shopping-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "शॉपिंग फेस्टिवल में ऑर्डर देने से पहले आप सबसे पहले क्या करते हैं?",
+      "options": [
+        {
+          "id": "check-return-policy",
+          "emoji": "🔍",
+          "label": "पहले वापसी की शर्तें देखता/देखती हूँ"
+        },
+        {
+          "id": "screenshot-price",
+          "emoji": "📸",
+          "label": "पहले असली दाम का स्क्रीनशॉट लेता/लेती हूँ"
+        },
+        {
+          "id": "just-buy",
+          "emoji": "🛒",
+          "label": "कुछ नहीं देखता/देखती, सीधे खरीद लेता/लेती हूँ"
+        },
+        {
+          "id": "skip-festival",
+          "emoji": "🙅",
+          "label": "मैं शॉपिंग फेस्टिवल में हिस्सा ही नहीं लेता/लेती"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270428-livestream-minister",
+      "date": "2027-04-28",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB12JXEEY2HJ1PX9F99ZY",
+      "topic_slug": "shopping-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "किस देश में व्यापार मंत्री खुद एक ई-कॉमर्स कंपनी के दफ़्तर जाकर छोटे उद्यमों के उत्पाद लाइव-स्ट्रीम पर बेचते हैं?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "भारत"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270429-tanabata-celebrate",
+      "date": "2027-04-29",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKSFF6V5Y5QDVG5R1R9X4K",
+      "topic_slug": "tanabata-and-qixi",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "अगर आपके यहाँ भी तनाबाता/छीशी जैसा कोई दिन होता, तो आप उसे कैसे मनाते?",
+      "options": [
+        {
+          "id": "date-night",
+          "emoji": "💑",
+          "label": "साथी के साथ डेट पर जाना"
+        },
+        {
+          "id": "wish-on-paper",
+          "emoji": "🎋",
+          "label": "इच्छा लिखकर टांगना"
+        },
+        {
+          "id": "family-ritual",
+          "emoji": "🏮",
+          "label": "परिवार या वयस्कता समारोह में भाग लेना"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "बिल्कुल नहीं मनाना"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270429-tanabata-guess-country",
+      "date": "2027-04-29",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKSFF6V5Y5QDVG5R1R9X4K",
+      "topic_slug": "tanabata-and-qixi",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "ऊपर दी गई जानकारी के अनुसार, किस देश में तनाबाता जैसे उत्सव की तारीख़ किसी भी निश्चित पंचांग से पूरी तरह अलग हो गई है, जिसे आयोजक हर वर्ष जुलाई के किसी सप्ताहांत के रूप में चुनते हैं?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "जापान"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "संयुक्त राज्य अमेरिका"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270430-commemoration-style",
+      "date": "2027-04-30",
+      "kind": "poll",
+      "topic_id": "top_01M0ZFDXZ0BAJS6E9GMMSP9NE0",
+      "topic_slug": "war-dead-and-veterans",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "यदि यह आप पर निर्भर हो, तो आप चाहेंगे कि आपका देश युद्ध में मारे गए और सेवा से लौटे लोगों को किस तरह याद करे?",
+      "options": [
+        {
+          "id": "split-two-days",
+          "emoji": "🕊️",
+          "label": "मृतकों के शोक और जीवितों के आभार के लिए अलग-अलग दिन"
+        },
+        {
+          "id": "public-holiday",
+          "emoji": "📅",
+          "label": "एक दिन तय करें और उसे सार्वजनिक अवकाश बनाएं"
+        },
+        {
+          "id": "workday-ceremony",
+          "emoji": "🏢",
+          "label": "एक दिन समारोह हो, पर जीवन सामान्य रहे"
+        },
+        {
+          "id": "fundraising-day",
+          "emoji": "🎗️",
+          "label": "प्रतीकात्मक शोक के बजाय चंदा और ठोस सहायता"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270430-soldiers-day-origin",
+      "date": "2027-04-30",
+      "kind": "guess",
+      "topic_id": "top_01M0ZFDXZ0BAJS6E9GMMSP9NE0",
+      "topic_slug": "war-dead-and-veterans",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "इन सात देशों में से किसका 'सैनिक दिवस' वास्तव में एक उन्नीसवीं सदी के सेनापति के जन्मदिन की स्मृति है, किसी युद्ध या लड़ाई की घटना की नहीं?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "ब्राज़ील"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "अमेरिका"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "चीन"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "इंडोनेशिया"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }

@@ -16098,6 +16098,1062 @@
         }
       ],
       "has_answer": true
+    },
+    {
+      "question_id": "q-20270415-beer-festival-organizer",
+      "date": "2027-04-15",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKHEG7SET9EX18038MRV40",
+      "topic_slug": "beer-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Se a sua cidade fosse realizar uma \"festa da cerveja\", quem você gostaria que a organizasse?",
+      "options": [
+        {
+          "id": "gov-organizer",
+          "emoji": "🏛️",
+          "label": "Organizada diretamente pelo governo"
+        },
+        {
+          "id": "private-permit",
+          "emoji": "📝",
+          "label": "Organizada por particulares, com licença temporária do governo"
+        },
+        {
+          "id": "local-decide",
+          "emoji": "🗺️",
+          "label": "Deixada para a decisão do governo local/estadual"
+        },
+        {
+          "id": "no-need",
+          "emoji": "🚫",
+          "label": "Esse tipo de evento não deveria existir"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270415-beer-festival-country",
+      "date": "2027-04-15",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKHEG7SET9EX18038MRV40",
+      "topic_slug": "beer-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Em qual destes países a sede da festa da cerveja está, ela mesma, listada no registro oficial de órgãos do governo municipal?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270416-entrance-exam-poll",
+      "date": "2027-04-16",
+      "kind": "poll",
+      "topic_id": "top_01M1257QCASXRT1YYV0ET9PQFC",
+      "topic_slug": "entrance-exams",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Se só um método pudesse decidir se você entra na universidade, qual você preferiria?",
+      "options": [
+        {
+          "id": "single-exam-rank",
+          "emoji": "📝",
+          "label": "Classificar só pela nota de uma prova"
+        },
+        {
+          "id": "school-record-rank",
+          "emoji": "🏫",
+          "label": "Só pela posição no histórico escolar, sem prova"
+        },
+        {
+          "id": "holistic-review",
+          "emoji": "🗂️",
+          "label": "Avaliação holística: notas, entrevista e redação juntos"
+        },
+        {
+          "id": "campus-own-exam",
+          "emoji": "🏛️",
+          "label": "Cada universidade cria e aplica sua própria prova"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270416-entrance-exam-guess",
+      "date": "2027-04-16",
+      "kind": "guess",
+      "topic_id": "top_01M1257QCASXRT1YYV0ET9PQFC",
+      "topic_slug": "entrance-exams",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Em qual país cerca de 48 universidades centrais já não contam mais a nota do 12º ano e admitem alunos só por uma prova nacional aplicada uma vez ao ano?",
+      "options": [
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270417-halloween-poll",
+      "date": "2027-04-17",
+      "kind": "poll",
+      "topic_id": "top_01M0ZJ9GWHQ7WPFS4WVQMGKTW1",
+      "topic_slug": "halloween",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "O que você costuma fazer no dia 31 de outubro?",
+      "options": [
+        {
+          "id": "costume-fun",
+          "emoji": "🎃",
+          "label": "Fico de fantasia, peço doces ou vou a uma festa"
+        },
+        {
+          "id": "just-another-day",
+          "emoji": "📅",
+          "label": "Trabalho ou aula normal, sem nada especial"
+        },
+        {
+          "id": "local-event",
+          "emoji": "🏬",
+          "label": "Vou a um evento de Halloween em shopping ou centro comercial"
+        },
+        {
+          "id": "skip-avoid",
+          "emoji": "🙅",
+          "label": "Evito as aglomerações de propósito ou simplesmente não participo"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270417-halloween-guess",
+      "date": "2027-04-17",
+      "kind": "guess",
+      "topic_id": "top_01M0ZJ9GWHQ7WPFS4WVQMGKTW1",
+      "topic_slug": "halloween",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Qual país nunca deu folga ao Halloween, mas instituiu por lei uma festa rival na mesma data?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270418-copay-hesitate",
+      "date": "2027-04-18",
+      "kind": "poll",
+      "topic_id": "top_01M1257QEM0QBKD5NA79X2BMW3",
+      "topic_slug": "health-coverage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "O valor da coparticipação influencia sua decisão de ir ou não ao médico?",
+      "options": [
+        {
+          "id": "always-go",
+          "emoji": "🏥",
+          "label": "Vou ao médico independente do valor"
+        },
+        {
+          "id": "sometimes-hesitate",
+          "emoji": "🤔",
+          "label": "Às vezes hesito, mas geralmente vou mesmo assim"
+        },
+        {
+          "id": "often-delay",
+          "emoji": "😖",
+          "label": "Costumo adiar a ida ao médico por causa do custo"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤷",
+          "label": "Nunca pensei muito nisso e nem sei quanto custa"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270418-ward-class-reform",
+      "date": "2027-04-18",
+      "kind": "guess",
+      "topic_id": "top_01M1257QEM0QBKD5NA79X2BMW3",
+      "topic_slug": "health-coverage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Qual país está unificando seus níveis de internação de Classe 1 a 3 em uma única classe de quarto padrão (KRIS)?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270419-religious-calendar-experience",
+      "date": "2027-04-19",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB110Z03618QR9SKPEEXC",
+      "topic_slug": "jewish-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Onde você vive, alguma escola ou empresa já ajustou uma prova, o expediente ou uma aula por causa de um feriado religioso?",
+      "options": [
+        {
+          "id": "experienced-personally",
+          "emoji": "🙋",
+          "label": "Sim, já aconteceu comigo"
+        },
+        {
+          "id": "heard-of-it",
+          "emoji": "👂",
+          "label": "Já ouvi falar, mas nunca vivi isso"
+        },
+        {
+          "id": "never",
+          "emoji": "🚫",
+          "label": "Nunca aconteceu, nem ouvi falar"
+        },
+        {
+          "id": "not-sure",
+          "emoji": "🤔",
+          "label": "Não tenho certeza, nunca prestei atenção"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270419-religious-exam-excuse-law",
+      "date": "2027-04-19",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB110Z03618QR9SKPEEXC",
+      "topic_slug": "jewish-calendar-days",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "A lei de qual país permite que um aluno, mediante pedido prévio e justificado, falte a uma prova ou aula em um dia que sua religião proíbe, exigindo que a escola ofereça gratuitamente uma prova substitutiva ou um trabalho escrito no lugar?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270420-wage-mechanism",
+      "date": "2027-04-20",
+      "kind": "poll",
+      "topic_id": "top_01M1257QGJ9B13A6ZNTKZ199D1",
+      "topic_slug": "minimum-wage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Depois de ver como cada país define seu salário mínimo, qual mecanismo você escolheria?",
+      "options": [
+        {
+          "id": "national-single",
+          "emoji": "🎯",
+          "label": "Um único valor nacional, sem diferença regional"
+        },
+        {
+          "id": "regional-tiers",
+          "emoji": "🗺️",
+          "label": "Cada região define seu próprio valor"
+        },
+        {
+          "id": "formula-linked",
+          "emoji": "📈",
+          "label": "Vincular a uma fórmula de inflação e crescimento"
+        },
+        {
+          "id": "rare-adjustment",
+          "emoji": "🐌",
+          "label": "Deixar a cargo do parlamento, sem prazo fixo"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270420-guess-47-rates",
+      "date": "2027-04-20",
+      "kind": "guess",
+      "topic_id": "top_01M1257QGJ9B13A6ZNTKZ199D1",
+      "topic_slug": "minimum-wage",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Em qual país o salário mínimo não é um único número nacional, mas sim 47 valores diferentes coexistindo dentro do mesmo país, cada um com seu próprio valor e data de vigência?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270421-family-celebration-day",
+      "date": "2027-04-21",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BS8QZFDVGVBHB4PVM40",
+      "topic_slug": "newborn-and-full-moon",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Se dependesse de você, em que dia após o nascimento você marcaria a celebração da família?",
+      "options": [
+        {
+          "id": "day-7",
+          "emoji": "🎏",
+          "label": "O sétimo dia (como uma cerimônia de nomeação ou aqiqah)"
+        },
+        {
+          "id": "day-30",
+          "emoji": "🎂",
+          "label": "A marca de um mês (banquete do primeiro mês)"
+        },
+        {
+          "id": "after-registration",
+          "emoji": "📄",
+          "label": "Assim que o registro legal estiver pronto, sem cerimônia familiar fixa"
+        },
+        {
+          "id": "no-preference",
+          "emoji": "🤷",
+          "label": "Nunca pensei nisso, sem preferência específica"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270421-shortest-registration-deadline",
+      "date": "2027-04-21",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BS8QZFDVGVBHB4PVM40",
+      "topic_slug": "newborn-and-full-moon",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Entre estes quatro lugares, qual tem o prazo mais curto para o registro de nascimento — apenas catorze dias — e por lei o nome precisa estar decidido dentro desse prazo?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China continental"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270422-unused-leave",
+      "date": "2027-04-22",
+      "kind": "poll",
+      "topic_id": "top_01M1257QHQ6H6GXFX0CE8V5GN6",
+      "topic_slug": "paid-leave-and-overtime",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Na sua própria experiência de trabalho, o que acontece com as férias remuneradas não usadas?",
+      "options": [
+        {
+          "id": "paid-out",
+          "emoji": "💰",
+          "label": "São pagas em dinheiro"
+        },
+        {
+          "id": "expires",
+          "emoji": "⏳",
+          "label": "Simplesmente vencem, sem compensação"
+        },
+        {
+          "id": "company-schedules",
+          "emoji": "📅",
+          "label": "Meu empregador marca as datas para mim"
+        },
+        {
+          "id": "unsure",
+          "emoji": "🤷",
+          "label": "Nunca prestei atenção a essa regra"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270422-absence-cuts-leave",
+      "date": "2027-04-22",
+      "kind": "guess",
+      "topic_id": "top_01M1257QHQ6H6GXFX0CE8V5GN6",
+      "topic_slug": "paid-leave-and-overtime",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Em qual país o número de dias de férias anuais diminui conforme aumentam as faltas injustificadas durante o ano?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270423-pet-prep-poll",
+      "date": "2027-04-23",
+      "kind": "poll",
+      "topic_id": "top_01M0QAYAE8ZZ4FFRTZEJ4MGYYS",
+      "topic_slug": "pet-preparedness",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Se você precisasse sair de casa de repente—falta de energia, mudança ou evacuação—o quanto seu pet está pronto para ir junto?",
+      "options": [
+        {
+          "id": "fully-ready",
+          "emoji": "🎒",
+          "label": "Totalmente pronto — caixa, identificação, remédios, comida e água prontos"
+        },
+        {
+          "id": "partial",
+          "emoji": "🧷",
+          "label": "Tenho algumas coisas prontas, mas não tudo"
+        },
+        {
+          "id": "know-not-done",
+          "emoji": "🤔",
+          "label": "Sei que preciso, mas ainda não comecei"
+        },
+        {
+          "id": "no-pet",
+          "emoji": "🚫",
+          "label": "Não tenho pet em casa — não se aplica"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270423-pet-prep-guess",
+      "date": "2027-04-23",
+      "kind": "guess",
+      "topic_id": "top_01M0QAYAE8ZZ4FFRTZEJ4MGYYS",
+      "topic_slug": "pet-preparedness",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Existe um termo oficial de planejamento para desastres que significa especificamente \"evacuar junto com o animal de estimação até um abrigo\", com a ressalva de que isso não significa ficar no mesmo cômodo lá. De qual país é esse termo?",
+      "options": [
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China continental"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270424-pet-role",
+      "date": "2027-04-24",
+      "kind": "poll",
+      "topic_id": "top_01M0Q9AQ26RG3FX2D4G7CS1M3A",
+      "topic_slug": "pets-and-family",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Na sua visão, o que melhor descreve o papel de um pet em casa?",
+      "options": [
+        {
+          "id": "family-member",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": "Um membro da família"
+        },
+        {
+          "id": "responsibility",
+          "emoji": "🩺",
+          "label": "Uma responsabilidade de cuidado"
+        },
+        {
+          "id": "companion",
+          "emoji": "🐾",
+          "label": "Um companheiro de afeto"
+        },
+        {
+          "id": "distant-animal",
+          "emoji": "🏠",
+          "label": "Um animal em casa, mas mantido à distância"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270424-pet-registry",
+      "date": "2027-04-24",
+      "kind": "guess",
+      "topic_id": "top_01M0Q9AQ26RG3FX2D4G7CS1M3A",
+      "topic_slug": "pets-and-family",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Qual país tem um ministério do meio ambiente que criou um cadastro nacional de cães e gatos ligado a vacinação, microchipagem, devolução em caso de perda e enfrentamento do abandono?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270425-engagement-priority",
+      "date": "2027-04-25",
+      "kind": "poll",
+      "topic_id": "top_01KZXQ6BSAMVV85AN3D1HXTEYY",
+      "topic_slug": "proposals-and-engagements",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Na sua opinião, o que mais importa em um noivado?",
+      "options": [
+        {
+          "id": "family-meeting",
+          "emoji": "👨‍👩‍👧‍👦",
+          "label": "O encontro das duas famílias"
+        },
+        {
+          "id": "ring-exchange",
+          "emoji": "💍",
+          "label": "A troca de alianças"
+        },
+        {
+          "id": "public-announcement",
+          "emoji": "📢",
+          "label": "O anúncio público"
+        },
+        {
+          "id": "gifts-exchange",
+          "emoji": "🎁",
+          "label": "Preparar os presentes de noivado"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270425-engagement-ring-hand",
+      "date": "2027-04-25",
+      "kind": "guess",
+      "topic_id": "top_01KZXQ6BSAMVV85AN3D1HXTEYY",
+      "topic_slug": "proposals-and-engagements",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "O anel é usado na mão direita durante o noivado e passa para a esquerda no casamento, de modo que um único anel marca as duas etapas — de qual país é esse costume?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270426-deposit-refund-experience",
+      "date": "2027-04-26",
+      "kind": "poll",
+      "topic_id": "top_01M1257QJ92HV1HDB7T79KH25E",
+      "topic_slug": "renting-a-home",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Quando você saiu do imóvel alugado, o que aconteceu com a sua caução?",
+      "options": [
+        {
+          "id": "full-refund",
+          "emoji": "💰",
+          "label": "Recebi tudo de volta, sem descontos"
+        },
+        {
+          "id": "partial-deduct",
+          "emoji": "🧾",
+          "label": "Descontaram uma parte, alegando limpeza ou dano"
+        },
+        {
+          "id": "dispute",
+          "emoji": "⚖️",
+          "label": "O locador se recusou a devolver, e virou uma briga"
+        },
+        {
+          "id": "never-rented",
+          "emoji": "🏠",
+          "label": "Nunca aluguei, não se aplica"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270426-no-deposit-cap-country",
+      "date": "2027-04-26",
+      "kind": "guess",
+      "topic_id": "top_01M1257QJ92HV1HDB7T79KH25E",
+      "topic_slug": "renting-a-home",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Entre esses sete lugares, em qual país a lei não diz absolutamente nada sobre a caução — se é cobrada, e quanto, fica inteiramente a critério do que locador e locatário combinarem no contrato?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China Continental"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270427-address-deadline",
+      "date": "2027-04-27",
+      "kind": "poll",
+      "topic_id": "top_01M1257QJBAGCKTBD5NB7EJD21",
+      "topic_slug": "residency-and-visas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Se você já morou fora do país, quando mudou de casa ou de endereço, como costumava lidar com o prazo de comunicação?",
+      "options": [
+        {
+          "id": "always-on-time",
+          "emoji": "🏃",
+          "label": "Sempre corria para resolver antes do prazo"
+        },
+        {
+          "id": "forget-sometimes",
+          "emoji": "😅",
+          "label": "Esquecia com frequência e lembrava depois"
+        },
+        {
+          "id": "never-thought",
+          "emoji": "🤷",
+          "label": "Nunca imaginei que precisava comunicar isso"
+        },
+        {
+          "id": "not-applicable",
+          "emoji": "🏠",
+          "label": "Nunca morei fora, nunca passei por isso"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270427-longest-registration",
+      "date": "2027-04-27",
+      "kind": "guess",
+      "topic_id": "top_01M1257QJBAGCKTBD5NB7EJD21",
+      "topic_slug": "residency-and-visas",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Entre esses sete países/territórios, qual dá ao portador de visto temporário o prazo mais longo para se registrar no órgão de residência — até 90 dias?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-TW",
+          "emoji": "🇹🇼",
+          "label": "Taiwan"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270428-shopping-return-habit",
+      "date": "2027-04-28",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKB12JXEEY2HJ1PX9F99ZY",
+      "topic_slug": "shopping-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Antes de comprar na Black Friday, o que você costuma fazer primeiro?",
+      "options": [
+        {
+          "id": "check-return-policy",
+          "emoji": "🔍",
+          "label": "Confiro a política de devolução antes"
+        },
+        {
+          "id": "screenshot-price",
+          "emoji": "📸",
+          "label": "Tiro print do preço original antes"
+        },
+        {
+          "id": "just-buy",
+          "emoji": "🛒",
+          "label": "Não confiro nada, só compro"
+        },
+        {
+          "id": "skip-festival",
+          "emoji": "🙅",
+          "label": "Prefiro nem participar da Black Friday"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270428-livestream-minister",
+      "date": "2027-04-28",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKB12JXEEY2HJ1PX9F99ZY",
+      "topic_slug": "shopping-festivals",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Em qual país o próprio ministro do Comércio foi ao escritório de uma empresa de comércio eletrônico vender produtos de pequenos negócios ao vivo?",
+      "options": [
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "hi",
+          "emoji": "🇮🇳",
+          "label": "Índia"
+        },
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270429-tanabata-celebrate",
+      "date": "2027-04-29",
+      "kind": "poll",
+      "topic_id": "top_01M0ZKSFF6V5Y5QDVG5R1R9X4K",
+      "topic_slug": "tanabata-and-qixi",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Se existisse um dia como o Tanabata ou o Qixi onde você vive, como você o celebraria?",
+      "options": [
+        {
+          "id": "date-night",
+          "emoji": "💑",
+          "label": "Sair em um encontro com o par"
+        },
+        {
+          "id": "wish-on-paper",
+          "emoji": "🎋",
+          "label": "Escrever um desejo e pendurá-lo"
+        },
+        {
+          "id": "family-ritual",
+          "emoji": "🏮",
+          "label": "Participar de um rito familiar ou de maioridade"
+        },
+        {
+          "id": "none",
+          "emoji": "🤷",
+          "label": "Não comemorar de forma alguma"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270429-tanabata-guess-country",
+      "date": "2027-04-29",
+      "kind": "guess",
+      "topic_id": "top_01M0ZKSFF6V5Y5QDVG5R1R9X4K",
+      "topic_slug": "tanabata-and-qixi",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Com base no texto acima, em qual país a data do festival ao estilo Tanabata se soltou por completo de qualquer calendário fixo, sendo escolhida pelos organizadores como um fim de semana de julho a cada ano?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "ja",
+          "emoji": "🇯🇵",
+          "label": "Japão"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        }
+      ],
+      "has_answer": true
+    },
+    {
+      "question_id": "q-20270430-commemoration-style",
+      "date": "2027-04-30",
+      "kind": "poll",
+      "topic_id": "top_01M0ZFDXZ0BAJS6E9GMMSP9NE0",
+      "topic_slug": "war-dead-and-veterans",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Se dependesse de você, como você gostaria que seu país homenageasse os que morreram na guerra e os que serviram e voltaram?",
+      "options": [
+        {
+          "id": "split-two-days",
+          "emoji": "🕊️",
+          "label": "Dias separados para lamentar os mortos e agradecer os vivos"
+        },
+        {
+          "id": "public-holiday",
+          "emoji": "📅",
+          "label": "Um único dia, e que seja feriado nacional"
+        },
+        {
+          "id": "workday-ceremony",
+          "emoji": "🏢",
+          "label": "Um dia de cerimônia, mas a vida segue normal"
+        },
+        {
+          "id": "fundraising-day",
+          "emoji": "🎗️",
+          "label": "Substituir o luto simbólico por arrecadação e ajuda concreta"
+        }
+      ],
+      "has_answer": false
+    },
+    {
+      "question_id": "q-20270430-soldiers-day-origin",
+      "date": "2027-04-30",
+      "kind": "guess",
+      "topic_id": "top_01M0ZFDXZ0BAJS6E9GMMSP9NE0",
+      "topic_slug": "war-dead-and-veterans",
+      "asker_locale": null,
+      "target_locale": null,
+      "text": "Entre esses sete países, qual tem um 'Dia do Soldado' que na verdade comemora o aniversário de um general do século dezenove, e não uma batalha ou evento de guerra?",
+      "options": [
+        {
+          "id": "pt-BR",
+          "emoji": "🇧🇷",
+          "label": "Brasil"
+        },
+        {
+          "id": "en",
+          "emoji": "🇺🇸",
+          "label": "Estados Unidos"
+        },
+        {
+          "id": "zh-CN",
+          "emoji": "🇨🇳",
+          "label": "China"
+        },
+        {
+          "id": "id",
+          "emoji": "🇮🇩",
+          "label": "Indonésia"
+        }
+      ],
+      "has_answer": true
     }
   ]
 }
