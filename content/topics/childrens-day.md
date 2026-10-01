@@ -28,7 +28,7 @@
 - local_name: Hari Anak Nasional
 - date: 07-23
 - rank: 4
-- source: https://www.kemenpppa.go.id/page/view/MTQ1NA==
+- source: https://www.kemenpppa.go.id/page/view/MTQ1NA== retired=2026-10-01
 - source: https://www.kemendikdasmen.go.id/siaran-pers/15794-hari-anak-nasional-2026-kemendikdasmen-ajak-anak-kembali-bermain-dan-kurangi-pemakaian-gawai
 
 ## observance BR dia-das-criancas

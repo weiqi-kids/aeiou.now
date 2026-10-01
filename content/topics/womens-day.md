@@ -55,7 +55,9 @@
 - local_name: Hari Perempuan Internasional
 - date: 03-08
 - rank: 1
-- source: https://www.kemenpppa.go.id/page/view/NTc1OA==
+- source: https://www.kemenpppa.go.id/page/view/NTc1OA== retired=2026-10-01
+- source: https://komnasperempuan.go.id/siaran-pers-detail/peringatan-hari-perempuan-internasional-2022-dan-peluncuran-catatan-tahunan-tentang-kekerasan-berbasis-gender-terhadap-perempuan
+- source: https://arsip.kemenkopmk.go.id/artikel/kemenko-pmk-hadiri-peringatan-hari-perempuan-internasional
 
 ## locale zh-TW
 ### title
