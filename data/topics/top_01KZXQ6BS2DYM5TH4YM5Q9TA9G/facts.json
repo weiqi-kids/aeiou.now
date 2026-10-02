@@ -409,10 +409,14 @@
       "date_range_end": null,
       "popularity_rank": 1,
       "source_ids": [
-        "src_35289CEE1B6C357FD2D98A79"
+        "src_35289CEE1B6C357FD2D98A79",
+        "src_F045C3336BEF6186024CF028",
+        "src_A5DA686B2588C31F58E0E6FE"
       ],
       "source_urls": [
-        "https://www.moi.gov.tw/News_Content.aspx?n=18683&s=207543&sms=9015"
+        "https://www.moi.gov.tw/News_Content.aspx?n=18683&s=207543&sms=9015",
+        "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
+        "https://www.dgpa.gov.tw/information?uid=2&pid=12574"
       ],
       "occurrences": [
         {
@@ -612,8 +616,10 @@
     "src_4E7E151DED2D9D7D8291FD00",
     "src_8881C7B43193D1F50ED0E47C",
     "src_8ADF07F096907DFC86796ED4",
+    "src_A5DA686B2588C31F58E0E6FE",
     "src_B85FD60157689DB2DE3829B8",
     "src_BC89514E4D7BF213AE54D2E0",
+    "src_F045C3336BEF6186024CF028",
     "src_F5046CF0B0C8BCC5BD283FFA",
     "src_F936765E8EFFBF4BDCD32B47"
   ],
@@ -623,11 +629,13 @@
     "https://www.kemlu.go.id/baghdad/pelayanan-perwakilan/pengumuman/hari-libur-nasional--setempat/pengumuan-hari-libur-setempat--cuti-bersama-nasional-tahun-2026?type=publication",
     "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays",
     "https://www.planalto.gov.br/ccivil_03/leis/l0662.htm",
+    "https://www.dgpa.gov.tw/information?uid=2&pid=12574",
     "https://www.beijing.gov.cn/gate/big5/www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202511/t20251104_4258838.html",
     "https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/jiedu/tujie/202411/content_6986437.htm",
+    "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095",
     "https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf",
     "https://www.usa.gov/holidays"
   ],
-  "content_updated_at": "2026-10-01T16:04:40.948Z",
-  "content_hash": "4b5f95b8d1bf4ccdf99038b36b8f5e23718f726d2bbd7d2f44c8929bdf7e7dc7"
+  "content_updated_at": "2026-10-02T15:06:00.986Z",
+  "content_hash": "a40c1f7786c36cc49464bfe60847bee6f9c1ec31df73aac1ec1a184f596f3f0b"
 }
