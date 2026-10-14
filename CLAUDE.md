@@ -136,6 +136,13 @@ World
 - **薄頁不產出**:判準只有一份 `site/src/lib/country-cells.mjs`(`countryCellsFor`),
   getStaticPaths、sitemap、Topic 頁的 h3 連結三處都吃它,所以不會連到 404。
   門檻 260 字元的實測依據寫在該檔註解。
+- **產出≠收錄**(2026-10-14 用戶拍板縮小可收錄範圍):判準只有一份 `site/src/lib/indexability.mjs`
+  (該國獨有字數以 zh-TW 段量、低於門檻或與兄弟國頁太像=薄)。薄的格子在 en/jp/hi/id/br 五站
+  標 `noindex, follow` 並移出 sitemap;zh-TW、cn 一律可收錄;近 90 天 GSC 有曝光的網址一律保留
+  (`site/src/lib/index-keep.generated.mjs`,由 `node scripts/gsc-index-keep.mjs` 產生,只增不減)。
+  頁面模板、sitemap、`check-seo.mjs` 三處吃同一支。⚠ hreflang 仍由 BaseLayout 全列七站,
+  被 noindex 的頁還會出現在其他語系的 hreflang 裡(未處理)。
+  查前後數字:`cd site && node scripts/indexability-report.mjs`(加 `--list en` 列出名單)
 - 查法:`(cd site && LOCALE=zh-TW pnpm build) && ls site/dist/topic/ramadan-and-eid/`
 
 ### 假日總表(2026-08-27 用戶核准;草案沒有這一層,提案見 `docs/briefs/holidays-index.md`)

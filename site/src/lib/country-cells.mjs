@@ -23,13 +23,15 @@ import {
 export const MIN_LOCAL_TEXT = 260;
 
 /** 這一格會出現在頁面上的本地文字總量(去掉空白後的字元數)。 */
-export function localTextLength({ facts, i18n, observances, note }) {
+// `locale` 預設本站語系;indexability.mjs 要在一次 build 裡判斷七站各自有沒有這一格
+// (hreflang 只能指向真的存在的頁),所以開放傳入。
+export function localTextLength({ facts, i18n, observances, note, locale = LOCALE }) {
   const parts = [
-    ...observances.map((o) => customsText(i18n, o) || ''),
-    ...observances.map((o) => dateRuleText(i18n, o) || ''),
+    ...observances.map((o) => customsText(i18n, o, locale) || ''),
+    ...observances.map((o) => dateRuleText(i18n, o, locale) || ''),
     ...observances.map((o) => o.local_name || ''),
-    note ? regionalNoteText(i18n, note) || '' : '',
-    (i18n?.locales?.[LOCALE]?.summary) || facts?.commonality || '',
+    note ? regionalNoteText(i18n, note, locale) || '' : '',
+    (i18n?.locales?.[locale]?.summary) || facts?.commonality || '',
   ];
   return parts.join('').replace(/\s+/g, '').length;
 }
@@ -38,7 +40,7 @@ export function localTextLength({ facts, i18n, observances, note }) {
  * 一個 Topic 底下「撐得起獨立頁」的國家清單(ISO 3166-1 alpha-2 大寫)。
  * 頁面本體列兄弟頁時用同一支,所以不會連到沒被產出的網址。
  */
-export function countryCellsFor(facts, i18n) {
+export function countryCellsFor(facts, i18n, locale = LOCALE) {
   if (!facts?.slug) return [];
   const all = observancesForFacts(facts);
   const notes = regionalNotesForFacts(facts);
@@ -49,6 +51,6 @@ export function countryCellsFor(facts, i18n) {
   return codes.filter((code) => {
     const observances = all.filter((o) => o.country_code === code);
     const note = notes.find((n) => n.country_code === code) || null;
-    return localTextLength({ facts, i18n, observances, note }) >= MIN_LOCAL_TEXT;
+    return localTextLength({ facts, i18n, observances, note, locale }) >= MIN_LOCAL_TEXT;
   });
 }

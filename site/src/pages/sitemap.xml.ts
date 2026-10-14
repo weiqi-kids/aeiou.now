@@ -1,6 +1,7 @@
 import { WINDOWS } from '../lib/config.mjs';
 import { coverPath, getGlobalRanking, getTopicBundle, listTopicIds, readJson } from '../lib/data.mjs';
 import { countryCellsFor } from '../lib/country-cells.mjs';
+import { isCountryPageIndexable } from '../lib/indexability.mjs';
 import { questionTopicCells } from '../lib/questions-data.mjs';
 import { holidayCountries, holidayCellsFor } from '../lib/holidays.mjs';
 import { withBase } from '../lib/paths.mjs';
@@ -121,7 +122,10 @@ export function GET({ site }) {
     // 沒有自己的資料來源;priority 低一階,母頁仍然是這個 Topic 的主入口。
     // 只列**真的有產出的**格子(countryCellsFor 與 getStaticPaths 同一支判準),
     // 否則 sitemap 會指向 404。
-    for (const code of countryCellsFor(facts, getTopicBundle(topicId).i18n)) {
+    // 2026-10-14 起再過一層 isCountryPageIndexable:薄的逐國頁標 noindex,不進 sitemap
+    // (判準見 lib/indexability.mjs;頁面模板吃同一支,check-sitemap-noindex 在 build 後對帳)。
+    const { i18n } = getTopicBundle(topicId);
+    for (const code of countryCellsFor(facts, i18n).filter((c) => isCountryPageIndexable(facts, i18n, c))) {
       add(`topic/${facts.slug}/${code.toLowerCase()}/`, {
         lastmod: facts.content_updated_at || facts.updated_at,
         changefreq: facts.is_perennial ? 'monthly' : 'weekly',

@@ -3,6 +3,9 @@
 // 「元件裡有寫」但實際頁面漏掉 canonical、JSON-LD、sitemap 或答案段落。
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
+import { getTopicBundle, listTopicIds } from '../src/lib/data.mjs';
+import { countryCellsFor } from '../src/lib/country-cells.mjs';
+import { isCountryPageIndexable } from '../src/lib/indexability.mjs';
 
 const DIST = 'dist';
 const LOCALE = process.env.LOCALE || 'zh-TW';
@@ -25,7 +28,21 @@ const thinRankingPaths = new Set(
     .filter((name) => JSON.parse(readFileSync(join(rankingDir, name), 'utf8'))?.thin === true)
     .map((name) => `rankings/${name.replace(/\.json$/, '')}/index.html`),
 );
-const noindexAllowed = (rel) => aliasPaths.has(rel) || thinRankingPaths.has(rel);
+
+// 允許 noindex 的第三類：判薄的逐國頁（2026-10-14 用戶拍板縮小可收錄範圍）。
+// 判準只在 src/lib/indexability.mjs（頁面模板與 sitemap 吃同一支），這裡同樣是資料驅動：
+// 判準說薄就必須 noindex，判準說可收錄就不准 noindex。
+const thinCountryPaths = new Set();
+for (const topicId of listTopicIds()) {
+  const { facts, i18n } = getTopicBundle(topicId);
+  if (!facts?.slug) continue;
+  for (const code of countryCellsFor(facts, i18n)) {
+    if (!isCountryPageIndexable(facts, i18n, code)) {
+      thinCountryPaths.add(`topic/${facts.slug}/${code.toLowerCase()}/index.html`);
+    }
+  }
+}
+const noindexAllowed = (rel) => aliasPaths.has(rel) || thinRankingPaths.has(rel) || thinCountryPaths.has(rel);
 
 function files(dir) {
   if (!existsSync(dir)) return [];
@@ -117,7 +134,8 @@ for (const path of htmlFiles) {
     }
   }
   if (!noindex && count(html, /<h1\b/gi) !== 1) errors.push(`${rel}:indexable page 必須恰好一個 h1`);
-  if (noindex && !noindexAllowed(rel)) errors.push(`${rel}:只有 merged Topic alias 與 thin 排行榜時窗可以輸出 noindex`);
+  if (noindex && !noindexAllowed(rel)) errors.push(`${rel}:只有 merged Topic alias、thin 排行榜時窗與判薄的逐國頁可以輸出 noindex`);
+  if (thinCountryPaths.has(rel) && !noindex) errors.push(`${rel}:判薄的逐國頁必須 noindex（見 src/lib/indexability.mjs）`);
   if (thinRankingPaths.has(rel) && !noindex) errors.push(`${rel}:筆數不足的排行榜時窗必須 noindex（見 export-data.mjs 的 thin 旗標）`);
   if (aliasPaths.has(rel)) {
     if (!noindex) errors.push(`${rel}:merged Topic alias 必須 noindex`);

@@ -79,15 +79,15 @@ export function getTopicBundle(topicId) {
 }
 
 /** customs 文字:i18n.json 的 observances[observance_id][locale]。 */
-export function customsText(i18n, observance) {
+export function customsText(i18n, observance, locale = LOCALE) {
   if (!i18n || !observance) return null;
   const id = typeof observance === 'string' ? observance : observance.observance_id;
   const current = i18n.observances && i18n.observances[id];
-  if (current && current[LOCALE]) return current[LOCALE];
+  if (current && current[locale]) return current[locale];
   // 舊 fixture/data 相容:customs 仍以 country_code 為 key。
   const countryCode = typeof observance === 'string' ? observance : observance.country_code;
   const legacy = i18n.countries && i18n.countries[countryCode];
-  return (legacy && legacy[LOCALE]) || null;
+  return (legacy && legacy[locale]) || null;
 }
 
 /**
@@ -96,11 +96,11 @@ export function customsText(i18n, observance) {
  * en/ja/hi/id/pt-BR 五個站在畫面上漏中文。這裡只回本站語系那一段；沒有就回 null，
  * 呼叫端要能接受「這一格是空的」。
  */
-export function dateRuleText(i18n, observance) {
+export function dateRuleText(i18n, observance, locale = LOCALE) {
   if (!i18n || !observance) return null;
   const id = typeof observance === 'string' ? observance : observance.observance_id;
   const entry = i18n.observance_date_rules && i18n.observance_date_rules[id];
-  return (entry && entry[LOCALE]) || null;
+  return (entry && entry[locale]) || null;
 }
 
 /** 長青 Topic 的國別生活筆記；沒有固定日期，不應被當成 observance 排序。 */
@@ -109,10 +109,10 @@ export function regionalNotesForFacts(facts) {
 }
 
 /** 取得某國的 regional note 當前語系文字。 */
-export function regionalNoteText(i18n, note) {
+export function regionalNoteText(i18n, note, locale = LOCALE) {
   if (!i18n || !note?.country_code) return null;
   const row = i18n.regional_notes?.[note.country_code];
-  return row?.[LOCALE] || row?.en || null;
+  return row?.[locale] || row?.en || null;
 }
 
 /** 六窗的名次與級距:topics index 是來源(facts.json 不帶)。
