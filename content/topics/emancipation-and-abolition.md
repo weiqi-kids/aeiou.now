@@ -37,8 +37,10 @@
 - rank: 1
 - source: https://cdnbbsr.s3waas.gov.in/s3978d76676f5e7918f81d28e7d092ca0d/uploads/2021/09/2021092040.pdf
 - source: https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf
-- source: https://cag.gov.in/uploads/media/Circular-on-Declaration-of-Holiday-on-14th-April-2022-06256b3cce56c18-14983523.pdf
-- source: https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf
+- source: https://d7i5wg8xwe4hf.cloudfront.net/uploads/media/Circular-on-Declaration-of-Holiday-on-14th-April-2022-06256b3cce56c18-14983523.pdf
+- source: https://cag.gov.in/uploads/media/Circular-on-Declaration-of-Holiday-on-14th-April-2022-06256b3cce56c18-14983523.pdf retired=2026-10-14
+- source: https://d7i5wg8xwe4hf.cloudfront.net/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf
+- source: https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf retired=2026-10-14
 
 ## observance TW ethnic-equality
 - local_name: 民族平等紀念日

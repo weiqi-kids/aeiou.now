@@ -18,6 +18,11 @@ export const LOCALE_ORIGINS = {
   'pt-BR': 'https://br.aeiou.now',
 };
 
+// hreflang x-default 指哪一站(2026-10-14 用戶拍板:改指 zh-TW 主站)。
+// 原本寫死 en,但 en 站多數頁是「Crawled - currently not indexed」,x-default 指向一個
+// Google 不收的版本等於沒有預設。主站是七站裡收錄最完整、曝光最多的一站。
+export const X_DEFAULT_LOCALE = 'zh-TW';
+
 export const OG_LOCALES = {
   'zh-TW': 'zh_TW',
   en: 'en_US',

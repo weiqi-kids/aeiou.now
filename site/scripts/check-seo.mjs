@@ -5,7 +5,8 @@ import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { getTopicBundle, listTopicIds } from '../src/lib/data.mjs';
 import { countryCellsFor } from '../src/lib/country-cells.mjs';
-import { isCountryPageIndexable } from '../src/lib/indexability.mjs';
+import { countryPageHreflangLocales, isCountryPageIndexable } from '../src/lib/indexability.mjs';
+import { holidayCountries, holidayCellsFor } from '../src/lib/holidays.mjs';
 
 const DIST = 'dist';
 const LOCALE = process.env.LOCALE || 'zh-TW';
@@ -33,13 +34,24 @@ const thinRankingPaths = new Set(
 // 判準只在 src/lib/indexability.mjs（頁面模板與 sitemap 吃同一支），這裡同樣是資料驅動：
 // 判準說薄就必須 noindex，判準說可收錄就不准 noindex。
 const thinCountryPaths = new Set();
+// hreflang 群組(2026-10-14):逐國頁與假日總表只列「存在且可收錄」的語系,其餘頁七語全列。
+// 值是期望的語系清單;不在表裡的頁預設 LOCALES。
+const expectedHreflang = new Map();
 for (const topicId of listTopicIds()) {
   const { facts, i18n } = getTopicBundle(topicId);
   if (!facts?.slug) continue;
   for (const code of countryCellsFor(facts, i18n)) {
-    if (!isCountryPageIndexable(facts, i18n, code)) {
-      thinCountryPaths.add(`topic/${facts.slug}/${code.toLowerCase()}/index.html`);
-    }
+    const rel = `topic/${facts.slug}/${code.toLowerCase()}/index.html`;
+    if (!isCountryPageIndexable(facts, i18n, code)) thinCountryPaths.add(rel);
+    expectedHreflang.set(rel, countryPageHreflangLocales(facts, i18n, code));
+  }
+}
+for (const code of holidayCountries()) {
+  for (const year of holidayCellsFor(code)) {
+    expectedHreflang.set(
+      `holidays/${code.toLowerCase()}/${year}/index.html`,
+      LOCALES.filter((locale) => holidayCellsFor(code, locale).includes(year)),
+    );
   }
 }
 const noindexAllowed = (rel) => aliasPaths.has(rel) || thinRankingPaths.has(rel) || thinCountryPaths.has(rel);
@@ -102,8 +114,24 @@ for (const path of htmlFiles) {
     if (!new RegExp(`property=["']${property.replace(':', '\\:')}["']`, 'i').test(html)) errors.push(`${rel}:缺 ${property}`);
   }
   if (!/name=["']twitter:card["']/i.test(html)) errors.push(`${rel}:缺 twitter:card`);
-  if (count(html, /rel=["']alternate["'][^>]*hreflang=/gi) < LOCALES.length + 1) errors.push(`${rel}:hreflang 少於七語加 x-default`);
   const noindex = /name=["'](?:robots|googlebot)["'][^>]*content=["'][^"']*noindex/i.test(html);
+  {
+    const got = [...html.matchAll(/<link\b[^>]*rel=["']alternate["'][^>]*hreflang=["']([^"']+)["'][^>]*href=["']([^"']+)["']/gi)]
+      .map((m) => ({ lang: m[1], href: m[2] }));
+    const langs = got.map((g) => g.lang).filter((l) => l !== 'x-default').sort();
+    const want = noindex ? [] : [...(expectedHreflang.get(rel) || LOCALES)].sort();
+    if (langs.join(',') !== want.join(',')) {
+      errors.push(`${rel}:hreflang 應為 [${want.join(',')}],實際 [${langs.join(',')}](不存在或 noindex 的頁不得列入)`);
+    }
+    const xd = got.find((g) => g.lang === 'x-default');
+    if (want.length && !xd) errors.push(`${rel}:缺 x-default`);
+    if (!want.length && xd) errors.push(`${rel}:noindex 或沒有群組的頁不得輸出 x-default`);
+    if (xd) {
+      const target = want.includes('zh-TW') ? 'zh-TW' : want[0];
+      const self = got.find((g) => g.lang === target);
+      if (!self || self.href !== xd.href) errors.push(`${rel}:x-default 應指向 ${target}`);
+    }
+  }
   const ogImage = html.match(/<meta\b[^>]*property=["']og:image["'][^>]*content=["']([^"']+)["']/i)?.[1] || '';
   const ogImageWidth = html.match(/<meta\b[^>]*property=["']og:image:width["'][^>]*content=["']([^"']+)["']/i)?.[1] || '';
   const ogImageHeight = html.match(/<meta\b[^>]*property=["']og:image:height["'][^>]*content=["']([^"']+)["']/i)?.[1] || '';
@@ -201,4 +229,4 @@ if (errors.length) {
   console.error(`SEO/GEO/AEO 輸出稽核失敗，共 ${errors.length} 項：\n${errors.map((error) => `- ${error}`).join('\n')}`);
   process.exit(1);
 }
-console.log(`SEO/GEO/AEO 輸出稽核通過：${htmlFiles.length} HTML、${LOCALES.length} hreflang、sitemap、robots、JSON-LD 與 Topic answers 全數存在。`);
+console.log(`SEO/GEO/AEO 輸出稽核通過：${htmlFiles.length} HTML、hreflang 群組與 x-default、sitemap、robots、JSON-LD 與 Topic answers 全數存在。`);

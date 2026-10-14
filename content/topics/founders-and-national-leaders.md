@@ -40,7 +40,8 @@
 - local_name: Gandhi Jayanti
 - date: 10-02
 - rank: 1
-- source: https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf
+- source: https://d7i5wg8xwe4hf.cloudfront.net/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf
+- source: https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf retired=2026-10-14
 - source: https://www.cgisf.gov.in/page/holidays-2026/
 
 ## observance BR tiradentes

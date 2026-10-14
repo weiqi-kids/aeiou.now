@@ -20,7 +20,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import QuestionCard from '../../../components/QuestionCard.astro';
 import { featuredQuestion, HOLIDAY_FALLBACK_TOPIC } from '../../../lib/questions-data.mjs';
 import { t } from '../../../lib/i18n.mjs';
-import { LOCALE } from '../../../lib/config.mjs';
+import { LOCALE, LOCALES } from '../../../lib/config.mjs';
 import { countryName } from '../../../lib/data.mjs';
 import { countryFlag, calendarDate } from '../../../lib/format.mjs';
 import { paragraphs } from '../../../lib/prose.mjs';
@@ -40,6 +40,8 @@ export function getStaticPaths() {
 }
 
 const { code, year } = Astro.props;
+// 七站的產出門檻各自算(2026-10-14):hreflang 與頁尾語系連結只連到真的有這一格的站。
+const pageLocales = LOCALES.filter((locale) => holidayCellsFor(code, locale).includes(year));
 const copy = seoCopy();
 const label = countryName(code);
 const rows = holidaysFor(code, year);
@@ -147,6 +149,7 @@ const holidaySourceLabels = sourceLabels(allSources);
 <BaseLayout
   title={heading}
   description={description}
+  pageLocales={pageLocales}
   pageType="CollectionPage"
   image={withBase(SITE_OVERVIEW_IMAGE_PATH)}
   imageAlt={heading}

@@ -27,10 +27,9 @@
 //   · 該網址近 90 天在 GSC 有過曝光或點擊(index-keep.generated.mjs;
 //     Google 已經拿它回答過真實查詢,實測勝過推估)
 //
-// ── hreflang(這一版沒處理,2026-10-14) ──────────────────────────────────
-// hreflang 由 layouts/BaseLayout.astro 依 LOCALES 全列,頁面無法傳入,所以被 noindex 的頁
-// 仍會出現在其他語系頁的 hreflang 裡(七站的產出門檻各自算,也可能指向沒產出的頁)。
-// 要修得改 BaseLayout(共用版面),另案處理;下面的 countryPageLocales 是給那時用的。
+// ── hreflang ──────────────────────────────────────────────────────────
+// 被 noindex 的頁不得出現在任何語系的 hreflang 裡,也不得當 x-default;沒產出的頁同理
+// (七站的產出門檻各自算)。頁面把下面兩支的結果傳給 BaseLayout 的 pageLocales／hreflangLocales。
 import { LOCALE, LOCALES } from './config.mjs';
 import { countryCellsFor } from './country-cells.mjs';
 import {
@@ -143,4 +142,9 @@ export function isCountryPageIndexable(facts, i18n, code, locale = LOCALE, keep 
 /** 有產出這一格的語系(頁尾語系切換器用 —— 連得到,但不一定可收錄)。 */
 export function countryPageLocales(facts, i18n, code) {
   return LOCALES.filter((locale) => countryPageExists(facts, i18n, code, locale));
+}
+
+/** 可以出現在 hreflang 的語系:必須存在且可收錄。 */
+export function countryPageHreflangLocales(facts, i18n, code, keep = KEEP) {
+  return LOCALES.filter((locale) => isCountryPageIndexable(facts, i18n, code, locale, keep));
 }

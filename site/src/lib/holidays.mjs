@@ -173,9 +173,10 @@ export function undatedFor(code, year) {
 }
 
 /** (國, 年) 這一格撐不撐得起一頁。getStaticPaths 與 sitemap 共用這一支。 */
-export function holidayCellsFor(code) {
+// locale 預設本站;假日頁的 hreflang 要知道別站有沒有產出同一格(2026-10-14)。
+export function holidayCellsFor(code, locale = LOCALE) {
   return YEARS.filter((y) => holidaysFor(code, y).length >= MIN_HOLIDAY_ROWS
-    && holidayTextLength(code, y, LOCALE) >= MIN_HOLIDAY_TEXT);
+    && holidayTextLength(code, y, locale) >= MIN_HOLIDAY_TEXT);
 }
 
 /**

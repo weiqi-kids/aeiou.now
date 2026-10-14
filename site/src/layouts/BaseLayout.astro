@@ -29,7 +29,7 @@ import { navSorts } from '../lib/nav.mjs';
 import { hotTopics } from '../lib/data.mjs';
 import { withBase } from '../lib/paths.mjs';
 import {
-  OG_LOCALES, SITE_NAME, localeRoutePath, localeUrl, siteDescription,
+  OG_LOCALES, SITE_NAME, X_DEFAULT_LOCALE, localeRoutePath, localeUrl, siteDescription,
 } from '../lib/seo.mjs';
 
 interface Props {
@@ -49,6 +49,10 @@ interface Props {
   modified?: string | null;
   canonicalPath?: string | null;
   indexable?: boolean;
+  /** 這一頁在哪些語系站真的有產出(頁尾語系切換器與 hreflang 都只連得到這些)。省略=七站都有。 */
+  pageLocales?: string[] | null;
+  /** 可以寫進 hreflang 的語系(必須存在且可收錄)。省略=同 pageLocales。 */
+  hreflangLocales?: string[] | null;
   redirectTo?: string | null;
   breadcrumbs?: Array<{ name: string; url?: string }>;
   structuredData?: Record<string, any> | Array<Record<string, any>>;
@@ -64,6 +68,8 @@ const {
   modified = null,
   canonicalPath = null,
   indexable = true,
+  pageLocales = null,
+  hreflangLocales = null,
   redirectTo = null,
   breadcrumbs = [],
   structuredData = [],
@@ -84,10 +90,20 @@ const base = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
 const routePath = localeRoutePath(canonical.pathname, base);
-const alternates = LOCALES.map((locale) => ({
+const existingLocales = pageLocales || LOCALES;
+const alternates = LOCALES.filter((locale) => existingLocales.includes(locale)).map((locale) => ({
   locale,
   href: localeUrl(site, locale, routePath).toString(),
 }));
+// hreflang 群組(2026-10-14):不存在或被 noindex 的頁不得出現在任何語系的 hreflang,也不得當
+// x-default;本頁 noindex 就整組不輸出。x-default 指主站(X_DEFAULT_LOCALE),主站不在群組時退給第一個。
+// 這幾個 <link> 不進 sitemap lastmod 的指紋(見 site/scripts/page-fingerprint.mjs)。
+const hreflangSet = indexable ? (hreflangLocales || existingLocales) : [];
+const hreflangAlternates = alternates.filter(({ locale }) => hreflangSet.includes(locale));
+const xDefaultLocale = hreflangAlternates.some(({ locale }) => locale === X_DEFAULT_LOCALE)
+  ? X_DEFAULT_LOCALE
+  : hreflangAlternates[0]?.locale;
+const xDefaultHref = xDefaultLocale ? localeUrl(site, xDefaultLocale, routePath).toString() : null;
 const sitemapUrl = new URL(`${base}sitemap.xml`, site).toString();
 const homeUrl = new URL(base, site).toString();
 const breadcrumbItems = breadcrumbs.length > 0
@@ -182,8 +198,8 @@ const jumpTopics = hotTopics(2).filter((topic) => topic && topic.slug);
     <link rel="icon" href={withBase('/favicon.ico')} sizes="32x32" />
     <link rel="apple-touch-icon" href={withBase('/apple-touch-icon.png')} />
     <link rel="sitemap" type="application/xml" href={sitemapUrl} />
-    {alternates.map(({ locale, href }) => <link rel="alternate" hreflang={locale} href={href} />)}
-    <link rel="alternate" hreflang="x-default" href={localeUrl(site, 'en', routePath)} />
+    {hreflangAlternates.map(({ locale, href }) => <link rel="alternate" hreflang={locale} href={href} />)}
+    {xDefaultHref && <link rel="alternate" hreflang="x-default" href={xDefaultHref} />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={pageType === 'Article' ? 'article' : 'website'} />

@@ -36,7 +36,9 @@ import {
   coverPath,
 } from '../../../lib/data.mjs';
 import { countryCellsFor } from '../../../lib/country-cells.mjs';
-import { isCountryPageIndexable } from '../../../lib/indexability.mjs';
+import {
+  countryPageHreflangLocales, countryPageLocales, isCountryPageIndexable,
+} from '../../../lib/indexability.mjs';
 import { holidayCellsFor } from '../../../lib/holidays.mjs';
 import { sortByOccurrenceStart } from '../../../lib/topic-dates.mjs';
 
@@ -62,6 +64,8 @@ const loc = i18n?.locales?.[LOCALE] || {};
 // 收錄(2026-10-14 用戶拍板):判準只在 lib/indexability.mjs,sitemap 吃同一支。
 // 薄的格子照樣產出、照樣可點,只是 noindex, follow 且不進 sitemap(rankings 頁 thin 同一種做法)。
 const pageIndexable = isCountryPageIndexable(facts, i18n, code);
+const pageLocales = countryPageLocales(facts, i18n, code);
+const hreflangLocales = countryPageHreflangLocales(facts, i18n, code);
 const topicTitle = loc.title || facts?.canonical_name || facts?.slug;
 const label = countryName(code);
 
@@ -195,6 +199,8 @@ const schema = {
   title={pageTitle}
   description={metaDescription}
   indexable={pageIndexable}
+  pageLocales={pageLocales}
+  hreflangLocales={hreflangLocales}
   image={coverSrc}
   imageAlt={topicTitle}
   pageType="WebPage"

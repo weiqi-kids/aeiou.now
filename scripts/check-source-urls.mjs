@@ -19,6 +19,8 @@
 //                         defense.gov、justica.pr.gov.br、nhc.gov.cn。
 //                         把這些判成錯誤，等於因為別人的 WAF 而擋自己的部署。
 //   5xx / 連線失敗       → WARN。對方暫時掛掉或網路抖動，不該變成我們的紅燈。
+//                         (逾時 ETIMEDOUT／UND_ERR_CONNECT_TIMEOUT、DNS、TLS、ECONNRESET 都算;
+//                          判定在 scripts/lib/source-url-status.mjs,分界由 tests/seo/source-url-status.test.mjs 守)
 //   2xx / 3xx           → OK……除非**跟完 redirect 落在錯誤頁**（見下）。
 //   2xx 但最終網址是錯誤頁 → ERROR。2026-08-20 抓到:www.tad.gov.tw（觀光局舊網域）
 //                         的十個來源全部 302 到 eng.taiwan.net.tw/ErrorPage.html，
@@ -38,6 +40,7 @@
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { classifyProbe, needsRecheck } from './lib/source-url-status.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -179,23 +182,6 @@ function describeFetchError(e) {
   return code ? `${code}:${msg}` : msg;
 }
 
-// 跟完 redirect 之後落在錯誤頁 —— 狀態碼是 200,但讀者點過去看到的是「找不到」。
-// 只認路徑上的明確標記,不做語意猜測(不抓網頁內文,那會誤判正常的錯誤處理說明頁)。
-const ERROR_PATH = /(^|\/)(errorpage|error|404|notfound|not-found|nopage)(\.\w+)?(\/|$)/i;
-// 登入牆也算「讀者點過去看不到那份文件」(2026-08-26 抓到):
-//   www.gov.br/gestao/…/confira-o-calendario-oficial-…-2026 回 200,
-//   但跟完 redirect 落在 /gestao/acl_users/credentials_cookie_auth/require_login。
-//   carnival 與 long-holiday-weeks 都曾引到這一類網址。與 ErrorPage 同型:狀態碼不會亮紅燈。
-const LOGIN_PATH = /(^|\/)(require_login|login|signin|sign-in|credentials_cookie_auth)(\.\w+)?(\/|$)/i;
-function landsOnErrorPage(url, finalUrl) {
-  if (!finalUrl || finalUrl === url) return false;
-  let a, b;
-  try { a = new URL(url); b = new URL(finalUrl); } catch { return false; }
-  const bad = (p) => ERROR_PATH.test(p) || LOGIN_PATH.test(p);
-  if (!bad(b.pathname)) return false;
-  return bad(b.pathname) && !bad(a.pathname);
-}
-
 const dead = [];
 const blocked = [];
 const ok = [];
@@ -217,15 +203,16 @@ await Promise.all(Array.from({ length: CONCURRENCY }, async () => {
     // 判死之前一定複驗一次 —— 2026-08-20:bndigital.bn.gov.br 從本主機回 403(WAF),
     // 從 GitHub Actions 的網路回 404,同一個網址依來源網路給不同狀態碼。
     // 只驗一次會讓 CI 因為對方 WAF 的地域差異而間歇性紅燈。
-    if (status === 404 || status === 410 || (status >= 200 && status < 400 && landsOnErrorPage(url, finalUrl))) {
+    if (needsRecheck({ url, status, finalUrl })) {
       await new Promise((r) => setTimeout(r, 1500));
       ({ status, error, finalUrl } = await probe(url));
     }
-    if (status === 404 || status === 410) dead.push({ url, status, where });
-    else if (status >= 200 && status < 400 && landsOnErrorPage(url, finalUrl)) {
-      dead.push({ url, status: `${status}→錯誤頁`, where, finalUrl });
-    }
-    else if (status >= 200 && status < 400) ok.push(url);
+    const verdict = classifyProbe({ url, status, finalUrl });
+    if (verdict === 'dead') {
+      dead.push(status === 404 || status === 410
+        ? { url, status, where }
+        : { url, status: `${status}→錯誤頁`, where, finalUrl });
+    } else if (verdict === 'ok') ok.push(url);
     else blocked.push({ url, status: status || error, where });
   }
 }));

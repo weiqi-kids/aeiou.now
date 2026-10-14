@@ -30,13 +30,17 @@
 - local_name: मुहर्रम (Muharram / Ashura)
 - date_rule: 伊斯蘭曆 Muharram 月十日（阿舒拉），非該月一日；日期列入中央政府年度 gazetted holidays
 - rank: 1
-- source: https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf
+- source: https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf
+- source: https://d7i5wg8xwe4hf.cloudfront.net/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf
+- source: https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf retired=2026-10-14
 
 ## observance IN milad-un-nabi
 - local_name: मिलाद-उन-नबी (Milad-un-Nabi / Id-e-Milad)
 - date_rule: 伊斯蘭曆 Rabiul Awal 月十二日；日期列入中央政府年度 gazetted holidays
 - rank: 2
-- source: https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf
+- source: https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf
+- source: https://d7i5wg8xwe4hf.cloudfront.net/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf
+- source: https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf retired=2026-10-14
 
 ## locale zh-TW
 ### title

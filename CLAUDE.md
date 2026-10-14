@@ -140,8 +140,10 @@ World
   (該國獨有字數以 zh-TW 段量、低於門檻或與兄弟國頁太像=薄)。薄的格子在 en/jp/hi/id/br 五站
   標 `noindex, follow` 並移出 sitemap;zh-TW、cn 一律可收錄;近 90 天 GSC 有曝光的網址一律保留
   (`site/src/lib/index-keep.generated.mjs`,由 `node scripts/gsc-index-keep.mjs` 產生,只增不減)。
-  頁面模板、sitemap、`check-seo.mjs` 三處吃同一支。⚠ hreflang 仍由 BaseLayout 全列七站,
-  被 noindex 的頁還會出現在其他語系的 hreflang 裡(未處理)。
+  頁面模板、sitemap、`check-seo.mjs` 三處吃同一支。hreflang 只列「存在且可收錄」的語系
+  (逐國頁與假日總表由頁面傳 `pageLocales`／`hreflangLocales` 給 BaseLayout;noindex 頁不輸出 hreflang),
+  x-default 指 zh-TW 主站(`X_DEFAULT_LOCALE`,seo.mjs);`check-seo.mjs` 逐頁對帳。
+  hreflang 的 `<link>` 不進 lastmod 指紋(page-fingerprint.mjs),改群組不會推全站 lastmod。
   查前後數字:`cd site && node scripts/indexability-report.mjs`(加 `--list en` 列出名單)
 - 查法:`(cd site && LOCALE=zh-TW pnpm build) && ls site/dist/topic/ramadan-and-eid/`
 

@@ -66,3 +66,13 @@ test('JSON 設定塊不會被當成 style 洗掉', () => {
   assert.match(normaliseForFingerprint(page({ nav: navA })), /application\/json/);
   assert.doesNotMatch(normaliseForFingerprint(page({ nav: navA })), /color:red/);
 });
+
+test('hreflang 群組變了(x-default 換站、少一個語系)不算這一頁變了;頁尾語系連結照算', () => {
+  const head = (links) => `<html><head><title>t</title>${links}</head><body><p>正文</p></body></html>`;
+  const a = head('<link rel="alternate" hreflang="zh-TW" href="https://aeiou.now/x/"><link rel="alternate" hreflang="en" href="https://en.aeiou.now/x/"><link rel="alternate" hreflang="x-default" href="https://en.aeiou.now/x/">');
+  const b = head('<link rel="alternate" hreflang="zh-TW" href="https://aeiou.now/x/"><link rel="alternate" hreflang="x-default" href="https://aeiou.now/x/">');
+  assert.equal(fingerprint(a), fingerprint(b));
+  const footA = '<html><body><a class="footer-link" href="https://en.aeiou.now/x/" hreflang="en">English</a></body></html>';
+  const footB = '<html><body></body></html>';
+  assert.notEqual(fingerprint(footA), fingerprint(footB));
+});

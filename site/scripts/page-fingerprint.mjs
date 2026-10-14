@@ -28,6 +28,11 @@ export function normaliseForFingerprint(html) {
     // 導覽尾端的 Topic 捷徑:連續幾個 <a> 連同文字一起洗成**一個**佔位(href、文字、
     // 幾個捷徑都跟著排行走,沒有一樣是這一頁的內容)。
     .replace(/(?:<a\b[^>]*\bclass="nav-link nav-link--topic"[^>]*>[\s\S]*?<\/a>\s*)+/g, '<a class="nav-link nav-link--topic"/>')
+    // hreflang 的 <link>(2026-10-14):它說的是「別站有沒有同一頁」,不是這一頁的內容。
+    // x-default 改指主站、或某語系那一頁被 noindex,都會改到全站每一頁的 <head>;
+    // 不洗掉的話 lastmod 會整站變今天(正是 sitemap-lastmod.mjs 檔頭那個坑)。
+    // 連續幾個洗成**一個**佔位:群組裡少一個語系也不算這一頁變了。
+    .replace(/(?:<link\b[^>]*\brel="alternate"[^>]*\bhreflang="[^"]*"[^>]*>\s*)+/g, '<link hreflang/>')
     .replace(/\s+/g, ' ')
     .trim();
 }

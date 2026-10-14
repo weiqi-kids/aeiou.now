@@ -995,7 +995,7 @@ const absences = {
       TW: ['https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095'],
       JP: ['https://laws.e-gov.go.jp/law/323AC1000000178', 'https://laws.e-gov.go.jp/law/326AC0000000126'],
       CN: ['https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html', 'https://www.gov.cn/gongbao/content/2017/content_5225861.htm'],
-      IN: ['https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf', 'https://www.incredibleindia.gov.in/en/maharashtra/mumbai/magen-david-synagogue'],
+      IN: ['https://d7i5wg8xwe4hf.cloudfront.net/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf', 'https://www.incredibleindia.gov.in/en/maharashtra/mumbai/magen-david-synagogue'],
       ID: ['https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/'],
       BR: ['https://www.planalto.gov.br/ccivil_03/leis/2002/l10607.htm', 'https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/L13796.htm', 'https://www.gov.br/mre/pt-br/eresp/feriados-e-pontos-facultativos'],
     },
@@ -1127,7 +1127,7 @@ const absences = {
       TW: ['https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020095'],
       JP: ['https://laws.e-gov.go.jp/law/323AC1000000178'],
       CN: ['https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html'],
-      IN: ['https://cag.gov.in/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf'],
+      IN: ['https://dfe.gov.in/uploads/documents/list-of-gazetted-holidays-2026.pdf', 'https://dfe.gov.in/uploads/documents/list-of-restricted-holiidays-2026.pdf', 'https://d7i5wg8xwe4hf.cloudfront.net/uploads/media/List-of-Gazetted-Holidays-and-Restricted-Holidays-2026-069492ddf80fa39-36385303.pdf'],
     },
     TW: text(
       '復活節推算出來的那一串日子，在台灣的假期制度裡完全不存在。《紀念日及節日實施條例》列了十九個紀念日與一份節日清單，裡面沒有聖灰星期三、沒有受難日、沒有升天日、沒有五旬節、也沒有基督聖體聖血節。唯一與基督宗教同日的是十二月二十五日的行憲紀念日——那一天放假一日，理由是中華民國憲法在一九四七年的這一天施行，與聖誕節只是日期重疊，法律上沒有任何關係。台灣的教會當然照教會曆過這些日子，抹灰、拜苦路、守聖週都有，但那是各教會自己的行事曆，不影響上班日。',
