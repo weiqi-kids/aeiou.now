@@ -27,7 +27,7 @@
 //   AEIOU_CODEX_TIMEOUT_MS  單次出圖逾時(預設 600000)
 
 import { spawnSync } from "node:child_process";
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, copyFileSync, statSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, copyFileSync, statSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -36,6 +36,8 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const COVER_DIR = join(ROOT, "site", "public", "covers");
 const CODEX_BIN = process.env.AEIOU_CODEX_BIN || "/root/.local/bin/codex";
 const TIMEOUT_MS = Number(process.env.AEIOU_CODEX_TIMEOUT_MS || 600000);
+// codex 0.15x 起 image_gen 把圖存在這裡,不一定交得回給模型存成 cover.png(見下方取圖段)。
+const CODEX_IMAGES_DIR = join(process.env.CODEX_HOME || join(process.env.HOME || "/root", ".codex"), "generated_images");
 const WIDTH = 1200;
 const HEIGHT = 675; // check-topic-calendar.mjs 寫死驗這個尺寸,不要改
 
@@ -93,6 +95,7 @@ const workdir = mkdtempSync(join(tmpdir(), "aeiou-cover-"));
 console.log(`[cover] slug=${slug} workdir=${workdir}`);
 console.log(`[cover] 呼叫 codex(逾時 ${Math.round(TIMEOUT_MS / 1000)}s)……`);
 
+const startedAt = Date.now();
 const r = spawnSync(CODEX_BIN, ["exec", "--skip-git-repo-check", "-s", "workspace-write", prompt], {
   cwd: workdir,           // 空目錄:不讓 codex 撿到 repo 的 AGENTS.md / CLAUDE.md
   encoding: "utf8",
@@ -102,13 +105,65 @@ const r = spawnSync(CODEX_BIN, ["exec", "--skip-git-repo-check", "-s", "workspac
 });
 if (r.error) { console.error(`✗ codex spawn 失敗:${r.error.message}`); process.exit(1); }
 
-const produced = join(workdir, "cover.png");
+// 取圖(2026-10-15 改):codex-cli 0.158 實測 image_gen 會把圖存進 ~/.codex/generated_images/<thread>/,
+// 卻「沒有回傳可存檔的圖片」給模型,於是 cover.png 不存在、exit 0。先找 cover.png,
+// 沒有就拿本次執行期間 generated_images 底下最新的一張 PNG。
+const pngSize = (file) => {
+  const b = readFileSync(file);
+  const ok = b.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
+  return ok ? { w: b.readUInt32BE(16), h: b.readUInt32BE(20) } : null;
+};
+const newestGenerated = () => {
+  if (!existsSync(CODEX_IMAGES_DIR)) return null;
+  let best = null;
+  for (const d of readdirSync(CODEX_IMAGES_DIR, { withFileTypes: true })) {
+    if (!d.isDirectory()) continue;
+    const dir = join(CODEX_IMAGES_DIR, d.name);
+    for (const f of readdirSync(dir)) {
+      if (!f.endsWith(".png")) continue;
+      const full = join(dir, f);
+      const m = statSync(full).mtimeMs;
+      if (m >= startedAt - 1000 && (!best || m > best.m)) best = { full, m };
+    }
+  }
+  return best?.full || null;
+};
+let produced = join(workdir, "cover.png");
+if (!existsSync(produced)) {
+  const fallback = newestGenerated();
+  if (fallback) {
+    console.log(`[cover] codex 沒存 cover.png,改取 image_gen 落檔:${fallback}`);
+    produced = fallback;
+  }
+}
 if (!existsSync(produced)) {
   // codex 的錯誤常印在 stdout 而不是 stderr,兩邊都要留(同 translate-posts.mjs 的教訓)
   console.error(`✗ codex 沒有產出 cover.png(exit ${r.status})`);
   console.error(`stdout 尾段:${String(r.stdout || "").slice(-800)}`);
   console.error(`stderr 尾段:${String(r.stderr || "").slice(-400)}`);
   process.exit(1);
+}
+
+// 尺寸不對就縮放＋置中裁切到 1200×675(image_gen 實測給 1672×941 這類近 16:9 尺寸)。
+{
+  const size = pngSize(produced);
+  if (size && (size.w !== WIDTH || size.h !== HEIGHT)) {
+    const ratio = size.w / size.h;
+    if (Math.abs(ratio - WIDTH / HEIGHT) > 0.15) {
+      console.error(`✗ 產出比例 ${size.w}x${size.h} 離 16:9 太遠,不硬裁(會切掉主體)。檔案:${produced}`);
+      process.exit(1);
+    }
+    const resized = join(workdir, "cover-1200.png");
+    const ff = spawnSync("ffmpeg", ["-y", "-loglevel", "error", "-i", produced,
+      "-vf", `scale=${WIDTH}:${HEIGHT}:force_original_aspect_ratio=increase,crop=${WIDTH}:${HEIGHT}`,
+      resized], { encoding: "utf8" });
+    if (ff.status !== 0 || !existsSync(resized)) {
+      console.error(`✗ ffmpeg 縮放失敗:${(ff.stderr || ff.error?.message || "").toString().slice(0, 200)}`);
+      process.exit(1);
+    }
+    console.log(`[cover] ${size.w}x${size.h} → ${WIDTH}x${HEIGHT}`);
+    produced = resized;
+  }
 }
 
 // 直接讀 PNG 檔頭驗尺寸,不依賴 codex 的自我回報(它說 DONE 不代表尺寸真的對)。
