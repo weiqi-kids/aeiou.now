@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { SQL_PUBLICLY_VISIBLE, isTrendTopic } from "./lib/topics.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const DB_PATH = join(ROOT, 'db', 'aeiou.sqlite');
+const DB_PATH = process.env.AEIOU_DB_PATH || join(ROOT, 'db', 'aeiou.sqlite'); // 暫存庫見 scripts/topic-gate.mjs
 const CALENDAR_PATH = join(ROOT, 'content', 'topic-calendar.json');
 const COVER_DIR = join(ROOT, 'site', 'public', 'covers');
 const calendar = JSON.parse(readFileSync(CALENDAR_PATH, 'utf8'));

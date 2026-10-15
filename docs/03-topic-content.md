@@ -102,12 +102,17 @@ node scripts/generate-topic-cover.mjs --slug <slug> --prompt "……場景描述
 所以四樣東西要嘛一起進,要嘛一起不進;寫好但還缺 cover 的 Topic 放
 `content/topics-pending/`(該目錄不在任何管線的掃描路徑上),別放 `content/topics/`。
 
-⚠️ **`import-topics.mjs` 無視 `AEIOU_DB_PATH`**——它沒走 `lib/aeiou-lib.mjs` 的
-`CONFIG.dbPath`,而是自己 `const DB_PATH = join(ROOT,"db","aeiou.sqlite")` 寫死。
-想拿測試庫試跑會直接寫進正式庫(2026-08-20 踩過,清乾淨要手動 DELETE 六張表:
-`topic_observance_i18n`、`topic_observance_occurrences`、`topic_observances`、
-`topic_cycles`、`topic_i18n`、`topics`)。驗「清乾淨了沒」的方法是跑 `export-data.mjs`
-再看 `git status --porcelain data/` 是不是空的。
+**先驗再進(2026-10-15 起)**:`node scripts/topic-gate.mjs` 把正式庫複製成暫存庫,
+用 `AEIOU_DB_PATH` 讓 import-topics → check-topic-calendar → import-topic-occurrences → export-data
+只碰暫存庫,跑完刪掉;四樣東西缺一樣就 exit 1,正式庫一筆都不會多。seo-ops 大腦的 gate 用的就是它。
+它仍會改工作樹的 `data/`(後面 build 要吃),`data/` 不要跟著 commit,留給 hourly-export。
+
+⚠️ 歷史(2026-08-20 踩過,10-15 修掉):`import-topics.mjs` 原本寫死 `db/aeiou.sqlite`、無視 `AEIOU_DB_PATH`,
+拿測試庫試跑會直接寫進正式庫,清乾淨要手動 DELETE 六張表(`topic_observance_i18n`、
+`topic_observance_occurrences`、`topic_observances`、`topic_cycles`、`topic_i18n`、`topics`)。
+現在 import-topics／retire-merged-topics／check-topic-calendar／import-topic-occurrences／export-data
+都吃 `AEIOU_DB_PATH`(守門 `tests/scripts/db-path-override.test.mjs`)。驗「正式庫乾淨了沒」的方法仍是跑
+`export-data.mjs` 再看 `git status --porcelain data/` 是不是空的。
 
 ## 硬規則(匯入器會擋,錯誤訊息會講清楚缺什麼)
 

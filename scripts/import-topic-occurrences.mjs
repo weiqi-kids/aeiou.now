@@ -11,7 +11,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const DB_PATH = join(ROOT, 'db', 'aeiou.sqlite');
+const DB_PATH = process.env.AEIOU_DB_PATH || join(ROOT, 'db', 'aeiou.sqlite'); // 暫存庫見 scripts/topic-gate.mjs
 const INPUT_PATH = join(ROOT, 'content', 'observance-occurrences.json');
 const MOVES_PATH = join(ROOT, 'content', 'topic-observance-moves.json');
 const CALENDARS = new Set([

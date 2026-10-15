@@ -282,6 +282,7 @@ content/topics/<slug>.md   ←── 人工編輯(唯一入口)
 ```
 
 - 每小時 cron 會自動跑匯入+匯出,**存檔後最慢一小時上線**;要立即看就手動跑再 build。
+- **只想驗、不想寫正式庫**:`node scripts/topic-gate.mjs`(暫存庫跑匯入＋cover/日曆＋occurrence＋匯出,正式庫不動;seo-ops 大腦的 gate)。
 - 七語都要在檔案裡(可先寫 zh-TW 再請 Claude 補其餘六語);每個國家至少一個**活的** source。
   來源 404 但內文要保留:那一行加 `retired=YYYY-MM-DD`(不印、不驗、仍記為出處;2026-09-17 起,見 `docs/03-topic-content.md` 規則 2)。
 - `data/` 與 `db/aeiou.sqlite` 的這三張表(topic_i18n/topic_observances/topic_observance_i18n)

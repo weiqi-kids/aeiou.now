@@ -34,7 +34,7 @@ import { parseSourceLine } from "./lib/topic-sources.mjs";
 import { countryOfHost, hostOf } from "./lib/content-depth.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const DB_PATH = join(ROOT, "db", "aeiou.sqlite");
+const DB_PATH = process.env.AEIOU_DB_PATH || join(ROOT, "db", "aeiou.sqlite"); // 測試庫/暫存庫走 AEIOU_DB_PATH(同 lib CONFIG.dbPath;scripts/topic-gate.mjs 靠它)
 const CONTENT_DIR = join(ROOT, "content", "topics");
 const LOCALES = ["zh-TW", "en", "ja", "zh-CN", "hi", "id", "pt-BR"];
 

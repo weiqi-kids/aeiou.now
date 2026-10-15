@@ -7,7 +7,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const DB_PATH = join(ROOT, 'db', 'aeiou.sqlite');
+const DB_PATH = process.env.AEIOU_DB_PATH || join(ROOT, 'db', 'aeiou.sqlite'); // import-topics 會帶著同一個環境叫本支
 const MERGES_PATH = join(ROOT, 'content', 'topic-merges.json');
 
 if (!existsSync(DB_PATH) || !existsSync(MERGES_PATH)) process.exit(0);

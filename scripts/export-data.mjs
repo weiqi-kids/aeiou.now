@@ -24,7 +24,7 @@ import { dirname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const DB_PATH = join(ROOT, "db", "aeiou.sqlite"); // 介面常數,不得改
+const DB_PATH = process.env.AEIOU_DB_PATH || join(ROOT, "db", "aeiou.sqlite"); // 介面常數,不得改(AEIOU_DB_PATH 只給暫存庫用,見 scripts/topic-gate.mjs)
 const OUT_DIR = join(ROOT, "data");
 
 const LOCALES = ["zh-TW", "en", "ja", "zh-CN", "hi", "id", "pt-BR"];
