@@ -14,7 +14,7 @@
 - source: https://www.incredibleindia.gov.in/en/festivals-and-events/diwali
 - source: https://www.pib.gov.in/FeaturesDeatils.aspx?NoteId=156406&ModuleId=2&reg=3&lang=2
 - source: https://www.indiapost.gov.in/holidays-list
-- source: https://dopt.gov.in/sites/default/files/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%202026.pdf
+- source: https://www.india.gov.in/calendar
 
 ## observance IN dhanteras
 - local_name: Dhanteras

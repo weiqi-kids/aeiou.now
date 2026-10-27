@@ -46,7 +46,7 @@
 - date: 08-25
 - rank: 1
 - source: https://www.gov.br/defesa/pt-br/arquivos/2012/Pronunciamentos/comandantes/discursoa_comandantea_exercitoa_diaa_soldadoa_2011.pdf
-- source: https://www.gov.br/mj/pt-br/assuntos/noticias-1/dia-do-soldado-e-celebrado-com-solenidade-e-participacao-de-autoridades-em-brasilia
+- source: https://www.gov.br/mj/pt-br/assuntos/noticias/dia-do-soldado-e-celebrado-com-solenidade-e-participacao-de-autoridades-em-brasilia
 
 ## observance IN kargil-vijay-diwas
 - local_name: Kargil Vijay Diwas

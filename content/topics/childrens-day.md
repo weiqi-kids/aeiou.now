@@ -43,7 +43,7 @@
 - date: 11-14
 - rank: 6
 - source: https://www.presidentofindia.gov.in/president-childrens-day
-- source: https://dopt.gov.in/sites/default/files/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%202026.pdf
+- source: https://www.india.gov.in/calendar
 
 ## locale zh-TW
 ### title

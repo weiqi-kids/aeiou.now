@@ -960,7 +960,7 @@ const absences = {
     country_sources: {
       JP: ['https://laws.e-gov.go.jp/law/428AC1000000109', 'https://laws.e-gov.go.jp/law/323AC1000000178', 'https://www.moj.go.jp/JINKEN/jinken04_00127.html'],
       CN: ['https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html', 'https://www.xizang.gov.cn/xwzx_406/ztzl_416/gdzt/jnxzbwnnjf61zn/'],
-      ID: ['https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/', 'https://jdih.bkn.go.id/common/dokumen/UU%20NOMOR%2039%20TAHUN%201999@HAK%20ASASI%20MANUSIA.pdf'],
+      ID: ['https://setkab.go.id/inilah-isi-keppres-nomor-8-tahun-2024-tentang-hari-hari-libur/', 'https://web.archive.org/web/20260317125554/https://jdih.bkn.go.id/common/dokumen/UU%20NOMOR%2039%20TAHUN%201999@HAK%20ASASI%20MANUSIA.pdf'],
     },
     JP: text(
       '日本的國定假日裡沒有紀念身分制廢除或解放的日子。《國民の祝日に関する法律》（昭和二十三年法律第一七八號）第二條列出十六個祝日，從元日到勤勞感謝之日，沒有一個處理這個主題；祝日是封閉清單，要增加只能修法，都道府縣與市町村不能自己加。制度走的是另一條路：二○一六年通過《部落差別の解消の推進に関する法律》（平成二十八年法律第一○九號），全文只有六條，第一條就寫明「現在仍然存在部落差別」，接著規定國與地方公共團體的責務、諮詢體制的充實、教育與啟發，以及由國家對部落差別實態進行調查。法務省在人權擁護的框架下負責啟發，官網也把這部法律的條文與兩院法務委員會的附帶決議一併掛出。也就是說，日本在這件事上有法律，但沒有日期。',

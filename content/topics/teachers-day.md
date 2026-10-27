@@ -16,7 +16,7 @@
 - local_name: 教师节
 - date: 09-10
 - rank: 2
-- source: http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s3580/moe_2390/moe_2391/tnull_38105.html
+- source: https://web.archive.org/web/20260914202510/http://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s3580/moe_2390/moe_2391/tnull_38105.html
 - source: https://www.gov.cn/gongbao/2024/issue_11726/202411/content_6989774.html
 
 ## observance IN teachers-day
