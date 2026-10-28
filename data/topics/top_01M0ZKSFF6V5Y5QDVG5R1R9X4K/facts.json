@@ -532,7 +532,9 @@
       }
     }
   ],
-  "demand_countries": {},
+  "demand_countries": {
+    "zh-TW": "JP"
+  },
   "regional_notes": [
     {
       "country_code": "BR",
@@ -635,6 +637,6 @@
     "https://www.incredibleindia.gov.in/en/plan-your-trip/public-holidays",
     "https://www.govinfo.gov/content/pkg/USCODE-2023-title5/html/USCODE-2023-title5-partIII-subpartE-chap61-subchapI-sec6103.htm"
   ],
-  "content_updated_at": "2026-08-31T05:48:32.343Z",
-  "content_hash": "0bc8e4a187916002fb7bb5d679d971ade7b8f1ca8461f5b7ef2a62958bf92d64"
+  "content_updated_at": "2026-10-28T05:06:10.286Z",
+  "content_hash": "b45c5ce05b9b57cf7be7ebd520bc486edf8032a5ceb50ea95740554853e4a0af"
 }
