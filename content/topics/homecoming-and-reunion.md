@@ -27,9 +27,9 @@
 ### keywords
 返鄉與團聚、返鄉、團聚、回家
 ### customs ID eid-homecoming
-印尼開齋節前後的 mudik 是大規模返鄉現象，家庭拜訪和互相求寬恕很重要。不是每個人都有能力或意願搭上返鄉路。
+與台灣春運、美國感恩節返鄉相比，印尼 mudik 的返鄉潮集中在開齋節前後單一高峰，而非分散在整個假期；家庭拜訪和互相求寬恕是這一週的重點，能不能回去常取決於交通工具與請假天數。
 ### customs JP obon
-日本盂蘭盆會常是迎接、送別祖先並返鄉的時期，盆踊り和地方行事也很重要。不同地區的日期與安排並不一致。お盆的返鄉之所以能同時發生，是因為多數企業自行把休假排在同一週；它不是法定假日，卻比許多法定假日更能讓全國同時停下來。
+日本的お盆沒有法定假日身分，返鄉能同時發生純粹是因為多數企業自行把休假排在同一週；相較台灣春運長達數週疏運、印尼 mudik 由政府統一公告，日本的交通壓力集中在這一週內靠企業自律分攤。
 
 ## locale en
 ### title
@@ -39,11 +39,11 @@ Homecoming is not one holiday pattern: Taiwan's main wave is Lunar New Year; Jap
 ### keywords
 Homecoming and Reunion, Homecoming, Family Reunion, Returning Home
 ### customs ID eid-homecoming
-Mudik around Idul Fitri is one of Indonesia's major homecoming movements, alongside family visits and asking forgiveness. Not everyone can afford the journey or wants to make it.
+Compared with Taiwan's weeks-long chunyun or the single Thanksgiving Thursday in the US, Indonesia's mudik peaks in one tight window around Idul Fitri; family visits and asking forgiveness matter, and whether people can go often depends on transport and how many leave days they have.
 ### date_rule ID eid-homecoming
 Around the 1st day of the month of Shawwal in the Islamic calendar
 ### customs JP obon
-Obon is often a time to return home, welcome ancestors, and see them off. Bon odori and local events matter too, while dates and travel patterns differ by region. The Obon homecoming can happen all at once because most firms place their closure in the same week; it is not a statutory holiday, yet it stops the country together more completely than many statutory ones do.
+Obon has no statutory holiday status; the homecoming wave happens together only because most firms place their closures in the same week. Unlike Taiwan's multi-week chunyun or Indonesia's government-coordinated mudik notices, Japan's travel pressure concentrates into that one week through employer scheduling alone.
 
 ### date_rule JP obon
 08-13 to 08-16 in most regions; local dates may vary
@@ -55,11 +55,11 @@ Obon is often a time to return home, welcome ancestors, and see them off. Bon od
 ### keywords
 帰省と再会, 帰省, 再会, 里帰り
 ### customs ID eid-homecoming
-インドネシアではイドゥル・フィトリの前後に大規模なムディック帰省が起こる。家族訪問と謝罪が重視されるが、誰もが帰省できるわけではない。
+台湾の数週間にわたる春運や米国の感謝祭の一日とは異なり、インドネシアのムディックはイドゥル・フィトリ前後の一つの山に集中する。家族訪問と謝罪が重視され、帰れるかどうかは交通手段と休暇日数に左右されることが多い。
 ### date_rule ID eid-homecoming
 イスラム暦シャウワール月1日前後
 ### customs JP obon
-日本のお盆は、先祖を迎え、送り出し、帰省する時期とされることが多い。盆踊りなどの地域行事もあり、日程と移動の形は地域で違う。お盆の帰省が一斉に起こりうるのは、多くの企業が自ら休みを同じ週に置くからである。法定の休日ではないが、多くの法定休日よりも確かに全国を同時に止める。
+お盆には法定休日の身分がなく、帰省の波が一斉に起こるのは多くの企業が休みを同じ週に置くからにすぎない。台湾の数週間に及ぶ春運や政府が一斉に案内するインドネシアのムディックとは異なり、日本の交通圧力は企業の休暇設定だけでその一週間に集中する。
 
 ### date_rule JP obon
 多くの地域では08-13から08-16、地域によって日付が異なる場合がある
@@ -71,11 +71,11 @@ Obon is often a time to return home, welcome ancestors, and see them off. Bon od
 ### keywords
 返乡与团聚、返乡、团聚、回家
 ### customs ID eid-homecoming
-印尼开斋节前后的 mudik 是大规模返乡现象，家庭拜访和互相求宽恕很重要。不是每个人都有能力或愿意踏上返乡路。
+跟台湾长达数周的春运、美国感恩节单日返乡相比，印度尼西亚的 mudik 集中在开斋节前后一个高峰；家庭拜访和互相求宽恕是重点，能不能回去常取决于交通工具和能请几天假。
 ### date_rule ID eid-homecoming
 伊斯兰历Shawwal月初一前后
 ### customs JP obon
-日本盂兰盆会常被视为迎接和送别祖先、返乡的时节，盆踊等地方活动也很重要。日期和安排因地区而异。お盆的返乡之所以能同时发生，是因为多数企业自行把休假排在同一周；它不是法定假日，却比许多法定假日更能让全国同时停下来。
+日本的お盆没有法定假日身份，返乡潮能同时发生只是因为多数企业自行把休假排在同一周；相比台湾长达数周的春运、印度尼西亚由政府统一公告的 mudik，日本的交通压力完全靠企业自律集中在这一周。
 
 ### date_rule JP obon
 多数地区08-13至08-16，地方日期可能不同
@@ -87,11 +87,11 @@ Obon is often a time to return home, welcome ancestors, and see them off. Bon od
 ### keywords
 घर वापसी और पुनर्मिलन, घर वापसी, पुनर्मिलन
 ### customs ID eid-homecoming
-इंडोनेशिया में ईद उल-फ़ित्र के आसपास mudik की बड़ी आवाजाही होती है। परिवार से मिलना और माफ़ी माँगना महत्वपूर्ण है, पर हर कोई यात्रा कर सके या करना चाहे, ऐसा नहीं।
+ताइवान के हफ़्तों लंबे चुनयुन या अमेरिका के एक दिन के Thanksgiving के मुकाबले, इंडोनेशिया का mudik ईद-उल-फ़ित्र के आसपास एक ही चोटी पर केंद्रित होता है; परिवार से मिलना और माफ़ी माँगना अहम है, और जा पाना अक्सर यातायात और छुट्टी के दिनों पर निर्भर करता है।
 ### date_rule ID eid-homecoming
 इस्लामी कैलेंडर के शव्वाल महीने की पहली तारीख के आसपास
 ### customs JP obon
-जापान का ओबोन पूर्वजों का स्वागत और विदाई करने तथा घर लौटने का समय माना जाता है। Bon odori और स्थानीय कार्यक्रम भी होते हैं; तारीख़ क्षेत्र के अनुसार बदलती है। ओबोन का घर लौटना एक साथ इसलिए हो पाता है क्योंकि अधिकांश कंपनियाँ अपनी बंदी उसी सप्ताह रखती हैं; यह वैधानिक अवकाश नहीं है, फिर भी कई वैधानिक अवकाशों से अधिक पूर्णता के साथ पूरे देश को एक साथ रोक देता है।
+ओबोन को वैधानिक अवकाश का दर्जा नहीं है; घर वापसी की लहर एक साथ इसलिए होती है क्योंकि अधिकांश कंपनियाँ अपनी बंदी एक ही सप्ताह में रखती हैं। ताइवान के हफ़्तों लंबे चुनयुन या इंडोनेशिया के सरकारी तौर पर समन्वित mudik के विपरीत, जापान का यातायात दबाव सिर्फ़ कंपनियों के छुट्टी-निर्धारण से उस एक सप्ताह में सिमट जाता है।
 
 ### date_rule JP obon
 अधिकांश क्षेत्रों में 08-13 से 08-16 तक, स्थानीय तारीखें भिन्न हो सकती हैं
@@ -103,11 +103,11 @@ Pulang kampung bukan pola satu hari raya: di Taiwan gelombang utamanya Tahun Bar
 ### keywords
 Mudik dan Reuni, Mudik, Reuni Keluarga
 ### customs ID eid-homecoming
-Mudik sekitar Idulfitri merupakan arus pulang kampung besar di Indonesia, disertai kunjungan keluarga dan saling meminta maaf. Tidak semua orang mampu atau ingin melakukan perjalanan itu.
+Berbeda dari chunyun Taiwan yang berlangsung berminggu-minggu atau Thanksgiving AS yang hanya satu hari, mudik Indonesia memusat pada satu puncak di sekitar Idulfitri; kunjungan keluarga dan saling meminta maaf jadi inti, dan kemampuan pulang sering bergantung pada transportasi dan jumlah hari cuti.
 ### date_rule ID eid-homecoming
 Sekitar tanggal 1 bulan Syawal penanggalan Hijriah
 ### customs JP obon
-Obon di Jepang sering menjadi waktu pulang untuk menyambut dan melepas leluhur. Bon odori dan acara daerah ikut membentuknya, dengan jadwal yang berbeda menurut wilayah. Mudik Obon bisa terjadi serentak karena kebanyakan perusahaan menaruh liburnya pada pekan yang sama; ia bukan hari libur menurut undang-undang, namun menghentikan negeri itu bersama-sama lebih tuntas daripada banyak hari libur resmi.
+Obon tidak berstatus hari libur resmi; gelombang pulang bisa terjadi serentak hanya karena kebanyakan perusahaan menaruh liburnya pada pekan yang sama. Berbeda dari chunyun Taiwan yang berminggu-minggu atau mudik Indonesia yang diatur pemerintah, tekanan transportasi Jepang terpusat pada satu pekan itu semata karena jadwal perusahaan.
 
 ### date_rule JP obon
 Sebagian besar wilayah tanggal 08-13 hingga 08-16, tanggal setempat dapat berbeda
@@ -119,11 +119,11 @@ Voltar para casa não segue um único feriado: em Taiwan, a maior onda vem do An
 ### keywords
 Volta para Casa e Reencontros, Volta para Casa, Reencontro
 ### customs ID eid-homecoming
-Na Indonésia, o mudik em torno do Eid al-Fitr é um grande movimento de volta para casa, acompanhado de visitas e pedidos de perdão. Nem todos podem ou querem fazer a viagem.
+Diferente do chunyun taiwanês, que dura semanas, ou do Thanksgiving americano, que é um único dia, o mudik indonésio se concentra em um único pico em torno do Eid al-Fitr; visitas à família e pedidos de perdão são o centro, e poder viajar depende do transporte e dos dias de licença disponíveis.
 ### date_rule ID eid-homecoming
 Por volta do 1º dia do mês de Shawwal no calendário islâmico
 ### customs JP obon
-No Japão, o Obon costuma ser um período de retorno para receber e despedir-se dos ancestrais. O Bon odori e as festas locais também contam, e as datas variam por região. O retorno para casa no Obon pode acontecer todo de uma vez porque a maioria das empresas coloca seu fechamento na mesma semana; não é feriado legal, e ainda assim para o país em conjunto de modo mais completo que muitos feriados legais.
+O Obon não tem status de feriado legal; a onda de retorno acontece de uma vez só porque a maioria das empresas marca seu fechamento na mesma semana. Diferente do chunyun taiwanês, de semanas, ou do mudik indonésio, coordenado pelo governo, a pressão sobre o transporte no Japão se concentra nessa única semana apenas pelo calendário das empresas.
 
 ### date_rule JP obon
 Na maioria das regiões, de 08-13 a 08-16; as datas locais podem variar
