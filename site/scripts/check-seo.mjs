@@ -5,7 +5,7 @@ import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { getTopicBundle, listTopicIds } from '../src/lib/data.mjs';
 import { countryCellsFor } from '../src/lib/country-cells.mjs';
-import { countryPageHreflangLocales, isCountryPageIndexable } from '../src/lib/indexability.mjs';
+import { countryPageHreflangLocales, isCountryPageIndexable, isRouteLimited } from '../src/lib/indexability.mjs';
 import { holidayCountries, holidayCellsFor } from '../src/lib/holidays.mjs';
 
 const DIST = 'dist';
@@ -54,7 +54,8 @@ for (const code of holidayCountries()) {
     );
   }
 }
-const noindexAllowed = (rel) => aliasPaths.has(rel) || thinRankingPaths.has(rel) || thinCountryPaths.has(rel);
+const routeOf = (rel) => rel.replace(/index\.html$/, '');
+const noindexAllowed = (rel) => aliasPaths.has(rel) || thinRankingPaths.has(rel) || thinCountryPaths.has(rel) || isRouteLimited(routeOf(rel));
 
 function files(dir) {
   if (!existsSync(dir)) return [];
@@ -119,7 +120,7 @@ for (const path of htmlFiles) {
     const got = [...html.matchAll(/<link\b[^>]*rel=["']alternate["'][^>]*hreflang=["']([^"']+)["'][^>]*href=["']([^"']+)["']/gi)]
       .map((m) => ({ lang: m[1], href: m[2] }));
     const langs = got.map((g) => g.lang).filter((l) => l !== 'x-default').sort();
-    const want = noindex ? [] : [...(expectedHreflang.get(rel) || LOCALES)].sort();
+    const want = noindex ? [] : [...(expectedHreflang.get(rel) || LOCALES)].filter((locale) => !isRouteLimited(routeOf(rel), locale)).sort();
     if (langs.join(',') !== want.join(',')) {
       errors.push(`${rel}:hreflang 應為 [${want.join(',')}],實際 [${langs.join(',')}](不存在或 noindex 的頁不得列入)`);
     }

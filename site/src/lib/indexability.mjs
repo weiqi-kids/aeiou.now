@@ -36,7 +36,6 @@ import {
   observancesForFacts, regionalNotesForFacts, customsText, dateRuleText, regionalNoteText,
 } from './topics-data.mjs';
 import { LOCALE_ORIGINS } from './seo.mjs';
-import { INDEX_KEEP_URLS } from './index-keep.generated.mjs';
 
 export const QUALITY_LOCALE = 'zh-TW';
 export const ALWAYS_INDEX_LOCALES = ['zh-TW', 'zh-CN'];
@@ -52,7 +51,19 @@ export const MIN_UNIQUE_CHARS = 300;
 // 現在沒有任何一格會被這條擋;它是給未來「批次生成、只換國名」的內容當護欄。
 export const MAX_SIBLING_SIMILARITY = 0.5;
 
-const KEEP = new Set(INDEX_KEEP_URLS);
+// 2026-11-03 用戶拍板：取消「GSC 有過曝光就保留」的白名單。那批曝光多半來自崩跌前 6 天，
+// 615 個判薄頁因此留在收錄範圍。keep 參數只留給測試。
+const KEEP = new Set();
+
+// 2026-11-03 用戶拍板：id、jp 收錄率只剩 0.5%，只留首頁和 Topic 頁，其餘 noindex, follow 並移出 sitemap。
+// 頁面模板（BaseLayout）、sitemap、check-seo 都吃這一支。
+export const HOME_AND_TOPIC_ONLY_LOCALES = ['ja', 'id'];
+
+export function isRouteLimited(routePath, locale = LOCALE) {
+  if (!HOME_AND_TOPIC_ONLY_LOCALES.includes(locale)) return false;
+  const path = `/${String(routePath).replace(/^\/+|\/+$/g, '')}/`.replace(/^\/\/$/, '/');
+  return !(path === '/' || /^\/topic\/[^/]+\/$/.test(path));
+}
 
 /** 一格只屬於該國的文字(去空白)。Topic 共用摘要不算。 */
 export function uniqueCountryText(facts, i18n, code, locale = QUALITY_LOCALE) {
@@ -129,6 +140,7 @@ export function countryPageExists(facts, i18n, code, locale = LOCALE) {
  */
 export function countryPageIndexability(facts, i18n, code, locale = LOCALE, keep = KEEP) {
   if (!countryPageExists(facts, i18n, code, locale)) return { indexable: false, reason: 'missing' };
+  if (HOME_AND_TOPIC_ONLY_LOCALES.includes(locale)) return { indexable: false, reason: 'home-topic-only' };
   if (ALWAYS_INDEX_LOCALES.includes(locale)) return { indexable: true, reason: 'locale' };
   if (keep.has(countryPageUrl(locale, facts.slug, code))) return { indexable: true, reason: 'gsc-keep' };
   const q = cellQuality(facts, i18n, code);

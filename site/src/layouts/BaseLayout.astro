@@ -21,6 +21,7 @@
 //   折行則保證每一項都在畫面內、都在 tab 焦點順序裡,不需要任何捲動暗示或 JS。
 //   代價是窄螢幕的刊頭會高幾行——那是可以接受的,點不到不行。
 //   同一病灶的時窗切換列(首頁 .board-tabs、rankings .window-nav、Topic 頁 .trend-tabs)一併改折行。
+import { isRouteLimited } from '../lib/indexability.mjs';
 import '../styles/variables.css';
 import '../styles/global.css';
 import { LOCALE, LOCALES } from '../lib/config.mjs';
@@ -98,7 +99,8 @@ const alternates = LOCALES.filter((locale) => existingLocales.includes(locale)).
 // hreflang 群組(2026-10-14):不存在或被 noindex 的頁不得出現在任何語系的 hreflang,也不得當
 // x-default;本頁 noindex 就整組不輸出。x-default 指主站(X_DEFAULT_LOCALE),主站不在群組時退給第一個。
 // 這幾個 <link> 不進 sitemap lastmod 的指紋(見 site/scripts/page-fingerprint.mjs)。
-const hreflangSet = indexable ? (hreflangLocales || existingLocales) : [];
+const routeIndexable = indexable && !isRouteLimited(routePath);
+const hreflangSet = routeIndexable ? (hreflangLocales || existingLocales).filter((locale) => !isRouteLimited(routePath, locale)) : [];
 const hreflangAlternates = alternates.filter(({ locale }) => hreflangSet.includes(locale));
 const xDefaultLocale = hreflangAlternates.some(({ locale }) => locale === X_DEFAULT_LOCALE)
   ? X_DEFAULT_LOCALE
@@ -181,8 +183,8 @@ const jumpTopics = hotTopics(2).filter((topic) => topic && topic.slug);
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content={indexable ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' : 'noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
-    <meta name="googlebot" content={indexable ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' : 'noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
+    <meta name="robots" content={routeIndexable ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' : 'noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
+    <meta name="googlebot" content={routeIndexable ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' : 'noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'} />
     {redirectUrl && <meta http-equiv="refresh" content={`0;url=${redirectUrl}`} />}
     <title>{title}</title>
     <meta name="description" content={description} />

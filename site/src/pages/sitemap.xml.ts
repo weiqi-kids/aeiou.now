@@ -1,7 +1,7 @@
 import { WINDOWS } from '../lib/config.mjs';
 import { coverPath, getGlobalRanking, getTopicBundle, listTopicIds, readJson } from '../lib/data.mjs';
 import { countryCellsFor } from '../lib/country-cells.mjs';
-import { isCountryPageIndexable } from '../lib/indexability.mjs';
+import { isCountryPageIndexable, isRouteLimited } from '../lib/indexability.mjs';
 import { questionTopicCells } from '../lib/questions-data.mjs';
 import { holidayCountries, holidayCellsFor } from '../lib/holidays.mjs';
 import { withBase } from '../lib/paths.mjs';
@@ -48,6 +48,7 @@ export function GET({ site }) {
   const origin = site || new URL(process.env.SITE_URL || 'https://weiqi-kids.github.io');
   const entries = new Map();
   const add = (path, options = {}) => {
+    if (isRouteLimited(path)) return;
     const loc = new URL(withBase(path), origin).toString();
     entries.set(loc, { loc, ...options });
   };

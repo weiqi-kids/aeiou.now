@@ -15,6 +15,8 @@ export function GET({ site }) {
     'User-agent: Bingbot',
     'Allow: /',
     `Sitemap: ${sitemap}`,
+    // 暫時的：讓 Google 回來看到新標的 noindex，到期自動消失（site/scripts/retired-sitemap.mjs）
+    ...(new Date() < new Date('2027-01-01') ? [`Sitemap: ${new URL(`${base}sitemap-retired.xml`, origin)}`] : []),
     '',
   ].join('\n');
   return new Response(body, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });

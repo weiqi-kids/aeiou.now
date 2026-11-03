@@ -138,8 +138,8 @@ World
   門檻 260 字元的實測依據寫在該檔註解。
 - **產出≠收錄**(2026-10-14 用戶拍板縮小可收錄範圍):判準只有一份 `site/src/lib/indexability.mjs`
   (該國獨有字數以 zh-TW 段量、低於門檻或與兄弟國頁太像=薄)。薄的格子在 en/jp/hi/id/br 五站
-  標 `noindex, follow` 並移出 sitemap;zh-TW、cn 一律可收錄;近 90 天 GSC 有曝光的網址一律保留
-  (`site/src/lib/index-keep.generated.mjs`,由 `node scripts/gsc-index-keep.mjs` 產生,只增不減)。
+  標 `noindex, follow` 並移出 sitemap;zh-TW、cn 一律可收錄
+  （2026-11-03 用戶拍板取消 GSC 白名單；id、jp 另外只留首頁和 Topic 頁，見 `site/src/lib/indexability.mjs`）。
   頁面模板、sitemap、`check-seo.mjs` 三處吃同一支。hreflang 只列「存在且可收錄」的語系
   (逐國頁與假日總表由頁面傳 `pageLocales`／`hreflangLocales` 給 BaseLayout;noindex 頁不輸出 hreflang),
   x-default 指 zh-TW 主站(`X_DEFAULT_LOCALE`,seo.mjs);`check-seo.mjs` 逐頁對帳。

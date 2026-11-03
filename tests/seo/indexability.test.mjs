@@ -74,3 +74,12 @@ test("白名單網址形狀與 sitemap 的 <loc> 一致(子網域、小寫國碼
   assert.equal(countryPageUrl("pt-BR", "diwali", "IN"), "https://br.aeiou.now/topic/diwali/in/");
   assert.equal(countryPageUrl("ja", "diwali", "IN"), "https://jp.aeiou.now/topic/diwali/in/");
 });
+
+test("id、jp 只留首頁和 Topic 頁", async () => {
+  const { isRouteLimited } = await import("../../site/src/lib/indexability.mjs");
+  for (const route of ["/", "", "topic/diwali/", "/topic/diwali/"]) assert.equal(isRouteLimited(route, "ja"), false, route);
+  for (const route of ["about/", "topic/diwali/in/", "holidays/in/2026/", "topics/today/", "questions/"]) {
+    assert.equal(isRouteLimited(route, "id"), true, route);
+    assert.equal(isRouteLimited(route, "en"), false, route);
+  }
+});
