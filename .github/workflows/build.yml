@@ -222,7 +222,6 @@ jobs:
           git -C "$PUB_DIR" show HEAD:.page-stamps.json > "$PREV_STAMPS" 2>/dev/null \
             || echo '{}' > "$PREV_STAMPS"
           node site/scripts/sitemap-lastmod.mjs --dist site/dist --prev "$PREV_STAMPS" --prev-dist "$PUB_DIR"
-          node site/scripts/retired-sitemap.mjs --dist site/dist
 
           git -C "$PUB_DIR" config user.name  "aeiou-ci"
           git -C "$PUB_DIR" config user.email "lightman.chang@gmail.com"
