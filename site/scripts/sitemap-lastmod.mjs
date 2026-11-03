@@ -134,6 +134,11 @@ if (!quiet) {
   if (previousCount > 0 && changed === walk(DIST).length && changed > 1) {
     console.warn(`⚠ sitemap lastmod：${changed} 頁全部被判定為變更；請檢查是否把 build-time 相對值寫進 HTML。`);
   }
+  // 2026-09-27 共用元件改版把九成頁面蓋成同一天。真改版要人工確認，lastmod 才不會變成假訊號。
+  const pageCount = walk(DIST).length;
+  if (previousCount > 0 && changed < pageCount && changed > 20 && changed / pageCount > 0.3) {
+    console.warn(`⚠ sitemap lastmod：${changed}／${pageCount} 頁同時被判定為變更；共用元件改版不是內容更新，請確認。`);
+  }
   const summary = `sitemap lastmod:${changed} 頁內容變了(蓋 ${NOW.slice(0, 19)}Z)、${carried} 頁沿用舊時間戳;`
     + `改寫 ${rewritten} 筆${missing ? `、${missing} 筆在 dist 找不到對應頁面(原樣保留)` : ''}`
     + (PREV_DIST ? `;上一版 HTML 重算 ${recomputed} 頁` : '');
