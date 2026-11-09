@@ -240,7 +240,7 @@ const personaChecks = [
   ]],
   ['印尼人格', [
     ['mudik 與 Idul Fitri 同時出現', () => /mudik/.test(contentTextBySlug.get('homecoming-and-reunion') || '') && /Idul Fitri|開齋節|开斋节/.test(contentTextBySlug.get('homecoming-and-reunion') || '')],
-    ['不返鄉的選擇被保留', () => /不是每個人|Not everyone|Tidak semua|Nem todos/.test(contentTextBySlug.get('homecoming-and-reunion') || '')],
+    // 2026-11-09 用戶裁示拿掉「不返鄉的選擇被保留」：Jev 11-03 改寫 mudik 段後這條擋下整批 hourly-export 6 天，用戶接受新寫法。
     ['Idul Fitri 不被混寫成公曆新年', () => /不是公曆新年|not about the Gregorian calendar|bukan kalender|não ao calendário gregoriano/.test(contentTextBySlug.get('ramadan-and-eid') || '')],
   ]],
   ['巴西人格', [
