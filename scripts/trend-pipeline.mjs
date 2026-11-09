@@ -84,7 +84,12 @@ function ensureSchema(db) {
   // adapter 的正式名稱時保留既有 state/publication，避免下一輪重複建題。
   const legacyProvider = "google-trends-rss";
   if (PROVIDER !== PROVIDER_NAME) return;
-  db.exec("BEGIN");
+  // IMMEDIATE:一開始就拿寫鎖,搶不到時走 busy_timeout 等待。
+  // 原本是 deferred BEGIN —— 先 SELECT 拿到讀快照、再 UPDATE 升級成寫入;
+  // 升級時若別的連線(整點的 hourly-export)正持有寫鎖或已在這中間 commit,SQLite
+  // **不呼叫 busy handler**、立刻回 SQLITE_BUSY(busy_timeout 形同虛設),於是 :00 那輪約兩成以
+  // "database is locked" fatal,而且是在開 jobs 列之前,看門狗看不到。
+  db.exec("BEGIN IMMEDIATE");
   try {
     const legacyStates = db.prepare(
       "SELECT event_key FROM trend_topic_state WHERE provider = ?"
@@ -443,7 +448,7 @@ function publishOne(db, content, now) {
 
   const sourceId = upsertSource(db, input, now);
   const score = scoreFor(input);
-  db.exec("BEGIN");
+  db.exec("BEGIN IMMEDIATE"); // 同 ensureSchema:先讀後寫的交易要一開始就拿寫鎖
   try {
     db.prepare(
       `INSERT INTO topics (topic_id, slug, canonical_name, commonality, category, status, merged_into,
@@ -503,17 +508,42 @@ function publishOne(db, content, now) {
   return { topicId, slug, score, contentHash };
 }
 
+// 開 jobs 列之前就失敗(schema/鎖/開列本身)時補記一筆 failed,
+// 否則這類失敗只留在 cron log,jobs 表與看門狗都看不到。
+// 記錄本身也可能撞鎖(同樣走 busy_timeout);再失敗就只能留 log。
+function recordPreJobFailure(db, scheduledAt, error) {
+  try {
+    const job = beginJob(db, { jobName: JOB_NAME, scheduledAt });
+    const done = finishJob(db, job, {
+      status: "failed",
+      error: `pre-job: ${String(error?.stack || error?.message || error)}`,
+    });
+    log(`[${JOB_NAME}] FAILED before job start, recorded job_id=${done.job_id} status=${done.status} attempt=${done.attempt}`);
+  } catch (recordError) {
+    console.error(`[${JOB_NAME}] could not record failure in jobs: ${recordError.message || recordError}`);
+  }
+}
+
 async function main() {
   const db = openDb();
-  ensureSchema(db);
   const scheduledAt = slotStart(900);
-  const lock = acquireTrendLock(db, scheduledAt);
-  if (!lock.ok) {
-    log(`[${JOB_NAME}] skip: ${lock.reason}`);
+  let job;
+  try {
+    ensureSchema(db);
+    const lock = acquireTrendLock(db, scheduledAt);
+    if (!lock.ok) {
+      log(`[${JOB_NAME}] skip: ${lock.reason}`);
+      db.close();
+      return;
+    }
+    job = beginJob(db, { jobName: JOB_NAME, scheduledAt });
+  } catch (error) {
+    console.error(`[${JOB_NAME}] fatal: ${error.stack || error}`);
+    recordPreJobFailure(db, scheduledAt, error);
     db.close();
+    process.exitCode = 1;
     return;
   }
-  const job = beginJob(db, { jobName: JOB_NAME, scheduledAt });
   const now = nowSec();
   let read = 0, created = 0, failed = 0;
   const errors = [];
