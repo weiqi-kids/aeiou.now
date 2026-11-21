@@ -62,7 +62,7 @@
 ### title
 Diwali Dates and Holidays
 ### summary
-Diwali is a five-day season, not a single day. This page separates the main day (Lakshmi–Ganesha Puja) from the opening Dhanteras and the closing Bhai Dooj, and compares two very different statuses: a national holiday with a five-day ritual sequence in India, and a public-school closure in New York City that only became law in 2023.
+In 2026 the main day of Diwali, Lakshmi–Ganesha Puja, fell on Sunday 8 November. The next main day is expected on Friday 29 October 2027, an estimate until Indian almanacs and the central holiday list confirm it. Diwali is a five-day season, not a single day. This page separates the main day (Lakshmi–Ganesha Puja) from the opening Dhanteras and the closing Bhai Dooj, and compares two very different statuses: a national holiday with a five-day ritual sequence in India, and a public-school closure in New York City that only became law in 2023.
 ### keywords
 Diwali dates, Diwali holidays, Diwali 2026, Deepavali, Dhanteras, Bhai Dooj, Lakshmi Puja, festival of lights
 ### customs IN diwali
@@ -144,9 +144,9 @@ Under New York State law, New York City public schools are closed on the day of 
 依纽约州法，纽约市公立学校在排灯节当天停课
 ## locale hi
 ### title
-दीवाली
+दीवाली की तारीख़ और छुट्टियाँ
 ### summary
-दीवाली एक दिन नहीं, पाँच दिनों का पर्व है। यह पृष्ठ मुख्य दिन (लक्ष्मी–गणेश पूजा), शुरुआत के धनतेरस और अंत के भाई दूज को अलग-अलग देखता है, और दो बहुत भिन्न स्थितियों की तुलना करता है: भारत में पाँच दिन की रीति के साथ राष्ट्रीय अवकाश, और न्यूयॉर्क शहर में 2023 में कानून बनने के बाद मिला स्कूल अवकाश।
+2026 में दीवाली का मुख्य दिन, लक्ष्मी–गणेश पूजा, रविवार 8 नवंबर को था। अगला मुख्य दिन शुक्रवार 29 अक्टूबर 2027 को अनुमानित है, जब तक पंचांग और केंद्र सरकार की छुट्टियों की सूची इसकी पुष्टि न करें। दीवाली एक दिन नहीं, पाँच दिनों का पर्व है। यह पृष्ठ मुख्य दिन (लक्ष्मी–गणेश पूजा), शुरुआत के धनतेरस और अंत के भाई दूज को अलग-अलग देखता है, और दो बहुत भिन्न स्थितियों की तुलना करता है: भारत में पाँच दिन की रीति के साथ राष्ट्रीय अवकाश, और न्यूयॉर्क शहर में 2023 में कानून बनने के बाद मिला स्कूल अवकाश।
 ### keywords
 दीवाली, दीपावली, धनतेरस, भाई दूज, लक्ष्मी पूजा
 ### customs IN diwali

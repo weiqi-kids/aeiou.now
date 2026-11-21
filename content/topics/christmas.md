@@ -75,9 +75,9 @@
 
 ## locale en
 ### title
-Christmas
+Is Christmas a Public Holiday? December 25 in Seven Places
 ### summary
-December 25 is not the same thing in seven places. Brazil, the United States, Indonesia, and India list it as a statutory holiday; Taiwan closes that day for Constitution Day instead; Japan and mainland China treat it as a working day. This page compares its legal standing, the rhythm of the days around it, and how households and commerce each take part.
+December 25, 2026 is a Friday, and whether it is a day off depends on where you are. Brazil, the United States, Indonesia, and India list it as a statutory holiday; Taiwan closes that day for Constitution Day instead; Japan and mainland China treat it as a working day. This page compares its legal standing, the rhythm of the days around it, and how households and commerce each take part.
 ### keywords
 Christmas, Christmas Day, Natal, Constitution Day, public holiday
 ### customs BR christmas
