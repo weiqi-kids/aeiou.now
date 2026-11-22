@@ -1,28 +1,34 @@
 {
   "scope": "country:UA",
   "window": "1m",
-  "thin": true,
+  "thin": false,
   "items": [
     {
       "rank": 1,
+      "topic_id": "top_01KZXQ6BRDZ2DJSZ0A4CR3Z3QF",
+      "slug": "fathers-day",
+      "tier": "blast"
+    },
+    {
+      "rank": 2,
       "topic_id": "top_01M0ZKB0ZFVVJ0KNDJH484VEFD",
       "slug": "environment-days",
       "tier": "hot"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "topic_id": "top_01M0JGWTASZ6E6HEVG90KZYYRZ",
       "slug": "elders-day",
       "tier": "hot"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "topic_id": "top_01M1257QJBAGCKTBD5NB7EJD21",
       "slug": "residency-and-visas",
       "tier": "rising"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "topic_id": "top_01M0YNDARW4N54N5F89EWDX75T",
       "slug": "carnival",
       "tier": "rising"
