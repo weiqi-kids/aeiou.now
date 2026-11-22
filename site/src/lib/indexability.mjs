@@ -22,8 +22,8 @@
 // (每個國家頁都印同一段)不算 —— 那正是讓逐國頁彼此長得像的部分。
 //
 // 判薄之後,以下情況仍保留可收錄:
-//   · 本站是 zh-TW 或 zh-CN(ALWAYS_INDEX_LOCALES;用戶指示優先保留繁中主站與 cn,
-//     這兩站目前是全站僅剩有曝光的地方)
+//   · 本站在 ALWAYS_INDEX_LOCALES(2026-10-14 起原本放 zh-TW、zh-CN;2026-11-22 用戶拍板
+//     兩站比照其他五站收窄,清單改為空,七站同一套門檻)
 //   · 該網址近 90 天在 GSC 有過曝光或點擊(index-keep.generated.mjs;
 //     Google 已經拿它回答過真實查詢,實測勝過推估)
 //
@@ -38,7 +38,8 @@ import {
 import { LOCALE_ORIGINS } from './seo.mjs';
 
 export const QUALITY_LOCALE = 'zh-TW';
-export const ALWAYS_INDEX_LOCALES = ['zh-TW', 'zh-CN'];
+// 2026-11-22 用戶拍板:zh-TW、zh-CN 也照同一套門檻判薄,不再豁免。
+export const ALWAYS_INDEX_LOCALES = [];
 
 // 門檻怎麼定的(2026-10-14 實測,zh-TW 段,全部 (Topic, 國家) 格):
 //   獨有字數分佈 p10 148、p25 178、中位 241、p75 336。

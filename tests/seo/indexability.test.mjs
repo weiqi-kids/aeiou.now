@@ -43,7 +43,7 @@ test("獨有字數不含 Topic 共用摘要", () => {
   assert.equal(cellQuality(facts, i18n, code).chars, text.length);
 });
 
-test("薄的格子:五站 noindex,zh-TW/zh-CN 照樣收錄,GSC 白名單救回", () => {
+test("薄的格子:七站都 noindex(2026-11-22 起含 zh-TW/zh-CN),keep 參數救回", () => {
   const cell = findCell(true);
   assert.ok(cell, "資料裡應該至少有一格判薄");
   const { facts, i18n, code } = cell;
@@ -55,7 +55,7 @@ test("薄的格子:五站 noindex,zh-TW/zh-CN 照樣收錄,GSC 白名單救回",
   assert.equal(countryPageIndexability(facts, i18n, code, "en", keep).indexable, true);
   for (const locale of ["zh-TW", "zh-CN"]) {
     if (countryCellsFor(facts, i18n, locale).includes(code)) {
-      assert.equal(countryPageIndexability(facts, i18n, code, locale, empty).indexable, true);
+      assert.deepEqual(countryPageIndexability(facts, i18n, code, locale, empty), { indexable: false, reason: "thin" });
     }
   }
 });
