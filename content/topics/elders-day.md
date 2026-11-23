@@ -47,7 +47,7 @@
 - local_name: Hari Lanjut Usia Nasional
 - date: 05-29
 - rank: 1
-- source: https://ayosehat.kemkes.go.id/hari-lanjut-usia-nasional
+- source: https://ayosehat.kemkes.go.id/hari-lanjut-usia-nasional retired=2026-11-24
 - source: https://kemenag.go.id/opini/refleksi-hari-lanjut-usia-nasional-6si366
 
 ## observance BR dia-do-idoso

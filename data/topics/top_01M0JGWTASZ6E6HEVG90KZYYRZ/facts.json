@@ -175,12 +175,14 @@
       "date_range_end": null,
       "popularity_rank": 1,
       "source_ids": [
-        "src_637EDF8071C44F4B93CE775B",
-        "src_05B7C11165A06F81AE4D234D"
+        "src_05B7C11165A06F81AE4D234D",
+        "src_637EDF8071C44F4B93CE775B"
       ],
       "source_urls": [
-        "https://ayosehat.kemkes.go.id/hari-lanjut-usia-nasional",
         "https://kemenag.go.id/opini/refleksi-hari-lanjut-usia-nasional-6si366"
+      ],
+      "retired_source_urls": [
+        "https://ayosehat.kemkes.go.id/hari-lanjut-usia-nasional"
       ],
       "occurrences": [
         {
@@ -194,7 +196,8 @@
           "source_ids": [
             "src_637EDF8071C44F4B93CE775B"
           ],
-          "source_urls": [
+          "source_urls": [],
+          "retired_source_urls": [
             "https://ayosehat.kemkes.go.id/hari-lanjut-usia-nasional"
           ]
         },
@@ -209,7 +212,8 @@
           "source_ids": [
             "src_637EDF8071C44F4B93CE775B"
           ],
-          "source_urls": [
+          "source_urls": [],
+          "retired_source_urls": [
             "https://ayosehat.kemkes.go.id/hari-lanjut-usia-nasional"
           ]
         },
@@ -224,7 +228,8 @@
           "source_ids": [
             "src_637EDF8071C44F4B93CE775B"
           ],
-          "source_urls": [
+          "source_urls": [],
+          "retired_source_urls": [
             "https://ayosehat.kemkes.go.id/hari-lanjut-usia-nasional"
           ]
         }
@@ -240,9 +245,7 @@
         "source_ids": [
           "src_637EDF8071C44F4B93CE775B"
         ],
-        "source_urls": [
-          "https://ayosehat.kemkes.go.id/hari-lanjut-usia-nasional"
-        ]
+        "source_urls": []
       }
     },
     {
@@ -640,7 +643,6 @@
     "https://kemenag.go.id/opini/refleksi-hari-lanjut-usia-nasional-6si366",
     "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou/kaku.html",
     "https://www.india.gov.in/calendar",
-    "https://ayosehat.kemkes.go.id/hari-lanjut-usia-nasional",
     "https://laws.e-gov.go.jp/law/323AC1000000178",
     "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11433.htm",
     "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050037",
@@ -653,6 +655,9 @@
     "https://www.hko.gov.hk/tc/gts/time/calendar/text/files/T2028c.txt",
     "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html"
   ],
-  "content_updated_at": "2026-10-18T16:03:39.620Z",
-  "content_hash": "f2ff679d04cef3ea87bcbcd0e3232f1044334a56174fbf28c929b252f6716f42"
+  "retired_source_urls": [
+    "https://ayosehat.kemkes.go.id/hari-lanjut-usia-nasional"
+  ],
+  "content_updated_at": "2026-11-23T22:36:50.603Z",
+  "content_hash": "f05ba79630d1560022d4533b856fb27497217a1cd662cafd3fe13f8d80a32089"
 }
