@@ -275,3 +275,19 @@ export function localeUrl(site, locale, routePath) {
   const route = String(routePath || '/').replace(/^\/+/, '');
   return new URL(`/${route}`, origin);
 }
+
+// 同一國家的相關網址:給 JSON-LD 或頁尾的「相關主題」區塊用,直接回傳完整網址
+// (走 localeUrl,所以會自動對應到各語系自己的網域)。只找「共用同一國家」的 Topic,
+// 順序照 topicsIndex 原本的順序,不自己排名、不截斷。
+export function sameCountryRelatedUrls(locale, currentSlug, countries, topicsIndex) {
+  const codes = new Set((Array.isArray(countries) ? countries : []).map((code) => String(code).toUpperCase()));
+  if (!codes.size) return [];
+  const urls = [];
+  for (const entry of Array.isArray(topicsIndex) ? topicsIndex : []) {
+    if (!entry || entry.slug === currentSlug) continue;
+    const entryCountries = Array.isArray(entry.countries) ? entry.countries : [];
+    const shared = entryCountries.some((code) => codes.has(String(code).toUpperCase()));
+    if (shared) urls.push(localeUrl(null, locale, `/topic/${entry.slug}/`).toString());
+  }
+  return urls;
+}
